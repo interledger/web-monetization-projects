@@ -115,11 +115,9 @@ export class Stream extends EventEmitter {
     }
   }
 
-  async start(resuming = false) {
+  async start() {
     if (!this._active) {
-      if (!resuming) {
-        this._packetNumber = 0
-      }
+      this._packetNumber = 0
       this._active = true
 
       // Hack for for issue #144
@@ -387,6 +385,6 @@ export class Stream extends EventEmitter {
   }
 
   async resume() {
-    this.start(true)
+    this.start()
   }
 }

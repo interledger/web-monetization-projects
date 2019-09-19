@@ -2,6 +2,7 @@ import MessageSender = chrome.runtime.MessageSender
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { HistoryDb } from '@web-monetization/wext/services'
+import { MonetizationState } from '@web-monetization/types'
 
 import { makeLogger } from '../../util/logging'
 import { notNullOrUndef } from '../../util/nullables'
@@ -22,7 +23,6 @@ import {
 } from '../../types/commands'
 import { LocalStorageProxy, STORAGE_KEY } from '../../types/storage'
 import { TabState } from '../../types/TabState'
-import { User } from '../../types/user'
 import { WextApi } from '../../types/wextApi'
 
 import { StreamMoneyEvent } from './Stream'
@@ -179,8 +179,8 @@ export class BackgroundScript {
         const message: MonetizationStart = {
           command: 'monetizationStart',
           data: {
-            requestId: details.id,
-            paymentPointer: details.paymentPointer
+            paymentPointer: details.paymentPointer,
+            requestId: details.id
           }
         }
         this.api.tabs.sendMessage(tab, message)
@@ -407,8 +407,7 @@ export class BackgroundScript {
   ) {
     const tab = getTab(sender)
     this.tabStates.logLastMonetizationCommand(tab, 'start')
-
-    // This used to be here
+    // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender)
 
     log('startWebMonetization, request', request)
@@ -419,10 +418,12 @@ export class BackgroundScript {
     if (!token) {
       // not signed in.
       console.warn('startWebMonetization cancelled; no token')
+      this.sendSetMonetizationStateMessage(tab, 'stopped')
       return false
     }
-    const user = this.storage.get<User>('user')
+    const user = this.store.user
     if (!user || !user.subscription || !user.subscription.active) {
+      this.sendSetMonetizationStateMessage(tab, 'stopped')
       console.warn('startWebMonetization cancelled; no active subscription')
       return false
     }
@@ -436,6 +437,7 @@ export class BackgroundScript {
     log('starting stream', requestId)
     this.tabsToStreams[tab] = requestId
     this.streamsToTabs[requestId] = tab
+    this.sendSetMonetizationStateMessage(tab, 'pending')
     this.streams.beginStream(requestId, {
       token,
       ...request.data,
@@ -451,6 +453,7 @@ export class BackgroundScript {
     if (id) {
       log('pausing stream', id)
       this.streams.pauseStream(id)
+      this.sendSetMonetizationStateMessage(tab, 'stopped')
     }
     return true
   }
@@ -461,6 +464,7 @@ export class BackgroundScript {
     const id = this.tabsToStreams[tab]
     if (id) {
       log('resuming stream', id)
+      this.sendSetMonetizationStateMessage(tab, 'pending')
       this.streams.resumeStream(id)
     }
     return true
@@ -484,15 +488,8 @@ export class BackgroundScript {
   stopWebMonetization(sender: MessageSender) {
     const tab = getTab(sender)
     this.tabStates.logLastMonetizationCommand(tab, 'stop')
-
     const closed = this._closeStream(tab)
-    const message: SetMonetizationState = {
-      command: 'setMonetizationState',
-      data: {
-        state: 'pending'
-      }
-    }
-    chrome.tabs.sendMessage(tab, message)
+    this.sendSetMonetizationStateMessage(tab, 'stopped')
     // clear the tab state, and set things to default
     // no need to send runContent message to check for adapted sites as
     // that will happen automatically on url change (html5 push state also)
@@ -504,6 +501,16 @@ export class BackgroundScript {
       from: 'stopWebMonetization'
     })
     return true
+  }
+
+  sendSetMonetizationStateMessage(tabId: number, state: MonetizationState) {
+    const message: SetMonetizationState = {
+      command: 'setMonetizationState',
+      data: {
+        state
+      }
+    }
+    chrome.tabs.sendMessage(tabId, message)
   }
 
   _closeStream(tabId: number) {

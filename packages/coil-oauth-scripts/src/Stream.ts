@@ -16,7 +16,7 @@ import { getDoc } from './documentExtensions'
 
 const UPDATE_AMOUNT_INTERVAL = 2000
 
-export enum MonetizationState {
+export enum MonetizationStateEnum {
   STOPPED,
   STARTED
 }
@@ -42,7 +42,7 @@ export class Stream {
   private paymentPointer?: string
   private pageUrl?: string
 
-  private state: MonetizationState = MonetizationState.STOPPED
+  private state: MonetizationStateEnum = MonetizationStateEnum.STOPPED
   private active = false
 
   private activeChanges: EventEmitter = new EventEmitter()
@@ -219,8 +219,8 @@ export class Stream {
     connection: IlpStream.Connection,
     sentAmount: string
   ) {
-    if (this.state === MonetizationState.STOPPED) {
-      this.state = MonetizationState.STARTED
+    if (this.state === MonetizationStateEnum.STOPPED) {
+      this.state = MonetizationStateEnum.STARTED
       this.dispatchMonetizationStart()
     }
 

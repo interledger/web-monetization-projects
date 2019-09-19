@@ -24,8 +24,25 @@ export interface MonetizationProgressEvent {
   }
 }
 
+export interface MonetizationPendingEvent {
+  type: 'monetizationpending'
+  detail: {
+    requestId: string
+    paymentPointer: string
+  }
+}
+
+export interface MonetizationStopEvent {
+  type: 'monetizationstop'
+  detail: {
+    requestId: string
+    paymentPointer: string
+  }
+}
+
+export type MonetizationState = 'pending' | 'started' | 'stopped'
 export type MonetizationObject = EventTarget & {
-  state: 'pending' | 'started'
+  state: MonetizationState
 }
 
 export interface MonetizationDocumentExtensions {
@@ -38,6 +55,8 @@ export type MonetizationExtendedDocument = Document &
 export type MonetizationEvent =
   | MonetizationProgressEvent
   | MonetizationStartEvent
+  | MonetizationPendingEvent
+  | MonetizationStopEvent
 
 export interface MonetizationProvider {
   id: string
@@ -98,6 +117,10 @@ export interface StreamEventsEmitter extends NodeJS.EventEmitter {
     val: StreamEventCallback<MonetizationStartEvent>
   ): this
   on(
+    event: 'monetizationstop',
+    val: StreamEventCallback<MonetizationStopEvent>
+  ): this
+  on(
     event: 'monetizationprogress',
     val: StreamEventCallback<MonetizationProgressEvent>
   ): this
@@ -117,19 +140,11 @@ export interface Amount extends Asset {
   amount: string
 }
 
-export interface Packet {
-  timeMs: number
-  sent: Amount
-  received: Amount
-}
-
 export interface MonetizationStream<
   Request extends MinimumRequest = MonetizationRequest
 > extends StreamControl, StreamEventsEmitter {
   request: Request
-  state: 'started' | 'paused' | 'stopped'
-  // TODO: probably don't want these ?
-  packets: Packet[]
+  state: 'started' | 'pending' | 'stopped'
 }
 
 /**

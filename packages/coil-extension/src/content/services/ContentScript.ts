@@ -45,6 +45,7 @@ export class ContentScript {
 
   handleMonetizationTag() {
     const runtime = this.runtime
+    const monetization = this.monetization
 
     function startMonetization(details: PaymentDetails) {
       const request: StartWebMonetization = {
@@ -52,13 +53,14 @@ export class ContentScript {
         data: details
       }
 
+      monetization.setRequested({
+        paymentPointer: details.metaContent,
+        requestId: details.id
+      })
       runtime.sendMessage(request)
     }
 
-    function stopMonetization(
-      details: PaymentDetails,
-      opts: { from?: string }
-    ) {
+    function stopMonetization(details: PaymentDetails) {
       const request: StopWebMonetization = {
         command: 'stopWebMonetization',
         data: details
@@ -76,7 +78,7 @@ export class ContentScript {
           )
         } else {
           if (stopped) {
-            stopMonetization(stopped, { from: 'changed meta tag' })
+            stopMonetization(stopped)
           }
           if (started) {
             startMonetization(started)
@@ -101,9 +103,7 @@ export class ContentScript {
           debug(e, 'origin=', window.origin, 'iframe=', this.frames.isIFrame)
         })
       } else if (request.command === 'setMonetizationState') {
-        this.scripts.inject(
-          `document.monetization.state = '${request.data.state}'`
-        )
+        this.monetization.setState(request.data.state)
       } else if (request.command === 'monetizationProgress') {
         const detail: MonetizationProgressEvent['detail'] = {
           amount: request.data.amount,
@@ -134,6 +134,11 @@ export class ContentScript {
       })
       this.setRuntimeMessageListener()
       this.monetization.injectDocumentMonetization()
+      this.scripts.inject(`
+document.monetization.addEventListener('monetizationstart',   (e) => console.log(e.type, e.detail) )    
+document.monetization.addEventListener('monetizationstop',    (e) => console.log(e.type, e.detail) )
+document.monetization.addEventListener('monetizationpending', (e) => console.log(e.type, e.detail) )
+`)
     }
 
     if (this.frames.isAnyCoilFrame) {
