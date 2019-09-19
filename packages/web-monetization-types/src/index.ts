@@ -1,14 +1,16 @@
 // For the moment, if only for coil internal convenience we are keeping the
 // original field names
 
+export interface MonetizationCommonEventDetail {
+  // Web-Monetization-Id header present in the SPSP request
+  requestId: string
+  // The meta[@name="monetization"] @content value
+  paymentPointer: string
+}
+
 export interface MonetizationStartEvent {
   type: 'monetizationstart'
-  detail: {
-    // Web-Monetization-Id header present in the SPSP request
-    requestId: string
-    // The meta[@name="monetization"] @content value
-    paymentPointer: string
-  }
+  detail: MonetizationCommonEventDetail
 }
 
 export interface MonetizationProgressEvent {
@@ -18,26 +20,17 @@ export interface MonetizationProgressEvent {
     amount: string
     assetCode: string
     assetScale: number
-    // "NEW" fields, while keeping the old fields
-    requestId: string
-    paymentPointer: string
-  }
+  } & MonetizationCommonEventDetail
 }
 
 export interface MonetizationPendingEvent {
   type: 'monetizationpending'
-  detail: {
-    requestId: string
-    paymentPointer: string
-  }
+  detail: MonetizationCommonEventDetail
 }
 
 export interface MonetizationStopEvent {
   type: 'monetizationstop'
-  detail: {
-    requestId: string
-    paymentPointer: string
-  }
+  detail: MonetizationCommonEventDetail
 }
 
 /**
