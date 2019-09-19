@@ -6,7 +6,6 @@ import {
 } from '@web-monetization/polyfill-utils'
 import {
   DocumentMonetization,
-  ScriptInjection,
   IdleDetection
 } from '@web-monetization/wext/content'
 import { MonetizationProgressEvent } from '@web-monetization/types'
@@ -27,6 +26,7 @@ import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
 import { Frames } from './Frames'
 import { RunContentHandler } from './RunContentHandler'
 import { ContentAuthService } from './ContentAuthService'
+import { MonetizationEventsLogger } from './MonetizationEventsLogger'
 
 @injectable()
 export class ContentScript {
@@ -40,7 +40,7 @@ export class ContentScript {
     private idle: IdleDetection,
     private monetization: DocumentMonetization,
     private auth: ContentAuthService,
-    private scripts: ScriptInjection
+    private monetizationEventsLogger: MonetizationEventsLogger
   ) {}
 
   handleMonetizationTag() {
@@ -53,9 +53,9 @@ export class ContentScript {
         data: details
       }
 
-      monetization.setRequested({
-        paymentPointer: details.metaContent,
-        requestId: details.id
+      monetization.setMonetizationRequest({
+        paymentPointer: details.paymentPointer,
+        requestId: details.requestId
       })
       runtime.sendMessage(request)
     }
@@ -124,6 +124,25 @@ export class ContentScript {
     })
   }
 
+  watchPageEvents() {
+    const { setWatch } = this.idle.watchPageEvents()
+    const runtime = this.runtime
+    setWatch({
+      pause: () => {
+        const pause: PauseWebMonetization = {
+          command: 'pauseWebMonetization'
+        }
+        runtime.sendMessage(pause)
+      },
+      resume: () => {
+        const resume: ResumeWebMonetization = {
+          command: 'resumeWebMonetization'
+        }
+        runtime.sendMessage(resume)
+      }
+    })
+  }
+
   init() {
     if (this.frames.isTopFrame) {
       const message: ContentScriptInit = { command: 'contentScriptInit' }
@@ -134,11 +153,7 @@ export class ContentScript {
       })
       this.setRuntimeMessageListener()
       this.monetization.injectDocumentMonetization()
-      this.scripts.inject(`
-document.monetization.addEventListener('monetizationstart',   (e) => console.log(e.type, e.detail) )    
-document.monetization.addEventListener('monetizationstop',    (e) => console.log(e.type, e.detail) )
-document.monetization.addEventListener('monetizationpending', (e) => console.log(e.type, e.detail) )
-`)
+      this.monetizationEventsLogger.bindLoggersToEvents()
     }
 
     if (this.frames.isAnyCoilFrame) {

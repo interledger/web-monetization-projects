@@ -510,7 +510,7 @@ export class BackgroundScript {
         state
       }
     }
-    chrome.tabs.sendMessage(tabId, message)
+    this.api.tabs.sendMessage(tabId, message)
   }
 
   _closeStream(tabId: number) {
@@ -555,14 +555,14 @@ export class BackgroundScript {
     }
   }
 
-  private logout(_: chrome.runtime.MessageSender) {
+  private logout(_: MessageSender) {
     for (const tabId of this.tabStates.tabKeys()) {
       this._closeStream(tabId)
       this.tabStates.clear(tabId)
       // TODO: this is hacky, but should do the trick for now
       const message: SetMonetizationState = {
         command: 'setMonetizationState',
-        data: { state: 'pending' }
+        data: { state: 'stopped' }
       }
       this.api.tabs.sendMessage(tabId, message)
     }
@@ -574,19 +574,18 @@ export class BackgroundScript {
     return true
   }
 
-  private setStreamControls(
-    request: SetStreamControls,
-    _: chrome.runtime.MessageSender
-  ) {
+  private setStreamControls(request: SetStreamControls, _: MessageSender) {
     const tab = this.activeTab
     this.tabStates.set(tab, {
       stickyState: request.data.sticky,
       playState: request.data.play
     })
-    if (request.data.play === 'paused') {
-      this.doPauseWebMonetization(tab)
-    } else if (request.data.play === 'playing') {
-      this.doResumeWebMonetization(tab)
+    if (request.data.action === 'togglePlayOrPause') {
+      if (request.data.play === 'paused') {
+        this.doPauseWebMonetization(tab)
+      } else if (request.data.play === 'playing') {
+        this.doResumeWebMonetization(tab)
+      }
     }
     this.reloadTabState({ from: request.command })
     return true

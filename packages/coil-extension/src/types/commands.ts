@@ -3,7 +3,11 @@ import {
   MonetizationState
 } from '@web-monetization/types'
 
-import { PlayOrPauseState, StickyState } from './streamControls'
+import {
+  PlayOrPauseState,
+  StickyState,
+  ToggleControlsAction
+} from './streamControls'
 
 /**
  * browser.runtime.sendMessage
@@ -27,6 +31,7 @@ export interface SetStreamControls extends Command {
   data: {
     sticky: StickyState
     play: PlayOrPauseState
+    action: ToggleControlsAction
   }
 }
 

@@ -13,7 +13,7 @@ import { ScriptInjection } from './ScriptInjection'
 @injectable()
 export class DocumentMonetization {
   private state: MonetizationState = 'stopped'
-  private requested?: MonetizationStartEvent['detail']
+  private request?: MonetizationStartEvent['detail']
 
   constructor(
     @inject(tokens.Window)
@@ -36,7 +36,7 @@ export class DocumentMonetization {
       // language=JavaScript
       `
       document.monetization = document.createElement('div')
-      document.monetization.state = '${this.state}'
+      document.monetization.state = 'stopped'
       window.addEventListener('message', function (event) {
         if (event.source === window && event.data.webMonetization) {
           document.monetization.dispatchEvent(
@@ -49,8 +49,8 @@ export class DocumentMonetization {
     )
   }
 
-  setRequested(requested?: MonetizationStartEvent['detail']) {
-    this.requested = requested
+  setMonetizationRequest(request?: MonetizationStartEvent['detail']) {
+    this.request = request
   }
 
   setState(state: MonetizationState) {
@@ -58,10 +58,10 @@ export class DocumentMonetization {
     this.state = state
     if (changed) {
       this.scripts.inject(`document.monetization.state = '${state}'`)
-      if (this.requested && (state === 'stopped' || state === 'pending')) {
-        this.sendMonetizationEvent(
+      if (this.request && (state === 'stopped' || state === 'pending')) {
+        this.postMonetizationMessage(
           state === 'pending' ? 'monetizationpending' : 'monetizationstop',
-          this.requested
+          this.request
         )
       }
     }
@@ -77,10 +77,10 @@ export class DocumentMonetization {
       throw new Error(`expecting state transition`)
     }
     // First nonzero packet has been fulfilled
-    this.sendMonetizationEvent('monetizationstart', detail)
+    this.postMonetizationMessage('monetizationstart', detail)
   }
 
-  sendMonetizationEvent(
+  postMonetizationMessage(
     name: MonetizationEvent['type'],
     detail: MonetizationEvent['detail']
   ) {
@@ -97,7 +97,7 @@ export class DocumentMonetization {
   postMonetizationProgressWindowMessage(
     detail: MonetizationProgressEvent['detail']
   ) {
-    this.sendMonetizationEvent('monetizationprogress', detail)
+    this.postMonetizationMessage('monetizationprogress', detail)
   }
 
   setMetaTagContent(paymentPointer?: string) {

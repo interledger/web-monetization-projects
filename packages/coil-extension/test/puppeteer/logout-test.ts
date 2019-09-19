@@ -91,7 +91,7 @@ async function run() {
     const monetizationState = await checkMonetizationState(currentPage)
     debug('monetization state', monetizationState)
     if (
-      monetizationState.state !== 'pending' ||
+      monetizationState.state !== 'stopped' ||
       !monetizationState.hasMonetizationMeta
     ) {
       debug('test page failed to close stream. page=' + currentPage.url())

@@ -121,6 +121,10 @@ export interface StreamEventsEmitter extends NodeJS.EventEmitter {
     val: StreamEventCallback<MonetizationStopEvent>
   ): this
   on(
+    event: 'monetizationpending',
+    val: StreamEventCallback<MonetizationPendingEvent>
+  ): this
+  on(
     event: 'monetizationprogress',
     val: StreamEventCallback<MonetizationProgressEvent>
   ): this
@@ -144,7 +148,7 @@ export interface MonetizationStream<
   Request extends MinimumRequest = MonetizationRequest
 > extends StreamControl, StreamEventsEmitter {
   request: Request
-  state: 'started' | 'pending' | 'stopped'
+  state: MonetizationState
 }
 
 /**
