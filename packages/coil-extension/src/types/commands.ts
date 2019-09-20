@@ -1,7 +1,5 @@
 import { PaymentDetails } from '@web-monetization/polyfill-utils'
-import {
-  MonetizationState
-} from '@web-monetization/types'
+import { MonetizationState } from '@web-monetization/types'
 
 import {
   PlayOrPauseState,

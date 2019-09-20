@@ -34,7 +34,7 @@ export interface MonetizationStopEvent {
 }
 
 /**
- * Streaming has been initiated
+ * Streaming has been initiated, yet first non zero packet is "pending"
  * It will normally transition from this `state` to `started`, yet not
  * always.
  */
@@ -48,11 +48,12 @@ export type StartedState = 'started'
 /**
  * Streaming is inactive.
  * In the interest of keeping the amount of states necessary to handle down
- * this could mean a variety of things.
+ * this could mean a variety of things:
  *  - monetization may not be supported (no provider enabled)
  *  - may not have started yet
  *  - paused (potentially resumed)
  *  - finished completely (awaiting another request)
+ *  - payment request denied by user intervention
  */
 export type StoppedState = 'stopped'
 
