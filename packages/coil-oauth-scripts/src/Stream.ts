@@ -102,6 +102,7 @@ export class Stream {
       }
 
       try {
+        getDoc().monetization.state = 'pending'
         await this.streamPayment(
           await getSPSPResponse(this.spspEndpoint, this.requestId)
         )
@@ -196,7 +197,7 @@ export class Stream {
             addSentAmount()
             this.activeChanges.removeListener('stop', onStop)
             this.lastDelivered = 0
-            getDoc().monetization.state = 'pending'
+            getDoc().monetization.state = 'stopped'
             clearInterval(updateAmountInterval)
           })
         }
