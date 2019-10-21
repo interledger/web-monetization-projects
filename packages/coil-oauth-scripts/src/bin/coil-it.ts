@@ -1,0 +1,160 @@
+import { inspect } from 'util'
+
+import fetch from 'node-fetch'
+import IlpPluginBtp from 'ilp-plugin-btp'
+import * as IlpStream from 'ilp-protocol-stream'
+import { GraphQlClient } from '@coil/client'
+import * as uuid from 'uuid'
+
+export const env = (key: string, defaultValue?: string): string => {
+  const value = process.env[key]
+  if (value === undefined) {
+    if (defaultValue === undefined) {
+      throw new Error(`expecting process.env.${key} to be defined`)
+    } else {
+      return defaultValue
+    }
+  }
+  return value
+}
+
+const COIL_DOMAIN = env('COIL_DOMAIN', 'https://coil.com')
+const COIL_USER = env('COIL_USER')
+const COIL_PASSWORD = env('COIL_PASSWORD')
+
+const ClientOptions = class Options extends GraphQlClient.Options {
+  coilDomain = COIL_DOMAIN
+}
+
+const client = new GraphQlClient(new ClientOptions())
+
+const dbg = console.log
+
+function pretty(val: any): string {
+  return inspect(val, { depth: Infinity })
+}
+
+const pointerToUrl = (url: string) => url.replace(/^\$/, 'https://')
+
+interface SPSPResponse {
+  destination_account: string
+  shared_secret: string
+}
+
+async function getPaymentDetails(
+  paymentPointerUrl: string,
+  monetizationId: string
+): Promise<SPSPResponse> {
+  const response = await fetch(paymentPointerUrl, {
+    headers: {
+      Accept: 'application/spsp4+json',
+      'Web-Monetization-Id': monetizationId
+    }
+  })
+  return response.json()
+}
+
+function startStream(
+  id: number | string,
+  connection: IlpStream.Connection
+): IlpStream.DataAndMoneyStream {
+  const startedAt = Date.now()
+  let last = startedAt
+
+  const stream = connection.createStream()
+  stream.setSendMax(2 ** 55)
+
+  stream.on('error', (error): void => {
+    dbg({ error })
+  })
+
+  let totalPackets = 0
+
+  stream.on('outgoing_money', (sentAmount): void => {
+    const msSinceLastOutgoing = Date.now() - last
+    last = Date.now()
+
+    if (connection.sourceAssetCode !== 'USD') {
+      throw new Error('expecting USD')
+    }
+
+    totalPackets++
+
+    const dollarsSent =
+      parseFloat(sentAmount) / Math.pow(10, connection.sourceAssetScale)
+    const totalDollarsSent =
+      parseFloat(stream.totalSent) / Math.pow(10, connection.sourceAssetScale)
+    const cents = totalDollarsSent * 100
+    const msPassed = last - startedAt
+    const minutesPerCent = msPassed / (60 * 1000) / cents
+    const averageMsPerPacket = msPassed / totalPackets
+
+    const totalTimeSeconds = msPassed / 1000
+    dbg({
+      streamId: id,
+      dollarsSent,
+      totalDollarsSent,
+      raw: {
+        assetCode: connection.sourceAssetCode,
+        sentAmount,
+        assetScale: connection.sourceAssetScale
+      },
+      minutesPerCent,
+      totalTimeSeconds,
+      msSinceLastOutgoing,
+      averageMsPerPacket
+    })
+  })
+  return stream
+}
+
+async function main(): Promise<void> {
+  if (!(COIL_USER && COIL_PASSWORD)) {
+    throw new Error('Must set COIL_USER and COIL_PASSWORD env vars')
+  }
+
+  const argv = process.argv.slice(2)
+  const paymentPointer = argv[0] || '$twitter.xrptipbot.com/nfcpasses'
+  const token = await client.login(COIL_USER, COIL_PASSWORD)
+  const btpToken = await client.refreshBtpToken(token)
+  dbg({ token, btpToken })
+
+  const spspUrl = pointerToUrl(paymentPointer)
+  dbg({ spspUrl })
+
+  const btpBase = COIL_DOMAIN.replace(/^http/, 'btp+ws')
+
+  const plugin = new IlpPluginBtp({
+    server: `${btpBase}/btp?tier=100000`,
+    btpToken
+  })
+  const monetizationId = uuid.v4()
+  const details = await getPaymentDetails(spspUrl, monetizationId)
+  dbg({ details })
+
+  dbg('Connecting to plugin')
+  await plugin.connect()
+  dbg('Connected')
+
+  const connection = await IlpStream.createConnection({
+    plugin,
+    destinationAccount: details.destination_account,
+    sharedSecret: Buffer.from(details.shared_secret, 'base64')
+  })
+
+  connection.on('close', () => {
+    dbg('connection close')
+  })
+
+  connection.on('error', () => {
+    dbg('connection error')
+  })
+  dbg('Creating connection')
+  await connection.connect()
+  dbg('Connected')
+  startStream(`main`, connection)
+}
+
+if (require.main === module) {
+  main().catch(console.error)
+}

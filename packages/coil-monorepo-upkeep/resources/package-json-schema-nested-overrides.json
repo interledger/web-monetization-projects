@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "allOf": [{"$ref": "package-json-schema.json"}],
+  "properties": {
+    "$overRideUpKeep": {"$ref": "package-json-schema.json"}
+  }
+}

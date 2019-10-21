@@ -1,0 +1,55 @@
+{
+  "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
+  "name": "@interledger/minute-extension",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Using Interledger, automatically support content creators.",
+  "keywords": [
+    "ilp",
+    "web-monetization"
+  ],
+  "homepage": "https://github.com/coilhq/web-monetization/tree/master/packages/interledger-minute-extension",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coilhq/web-monetization.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Coil Team <info@coil.com>",
+  "main": "./build",
+  "types": "./build",
+  "scripts": {
+    "build-prod": "./build.sh prod",
+    "build:ts": "tsc --build tsconfig.build.json",
+    "build:ts:verbose": "yarn build:ts --verbose",
+    "build:ts:watch": "yarn build:ts --watch",
+    "clean:build": "rimraf build",
+    "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
+    "postinstall": "rimraf ../../node_modules/@types/react-native",
+    "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
+    "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "precommit": "echo lint-staged runs from root",
+    "prettier": "prettier --write 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "yarn test --verbose --coverage",
+    "upkeep": "cd ../.. && yarn upkeep"
+  },
+  "dependencies": {
+    "@web-monetization/polyfill-utils": "0.0.0",
+    "@web-monetization/types": "0.0.0",
+    "@webexts/build-utils": "0.0.0",
+    "bootstrap": "^3.4.1",
+    "ilp-plugin-btp": "^1.4.2",
+    "jquery": "^3.4.1",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/uuid": "^3.4.5",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "http-server": "^0.11.1",
+    "json-loader": "^0.5.7",
+    "null-loader": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0"
+  }
+}

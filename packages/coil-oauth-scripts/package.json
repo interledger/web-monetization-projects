@@ -1,0 +1,57 @@
+{
+  "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
+  "name": "@coil/oauth-scripts",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Scripts for sites that use 'Sign in with Coil'",
+  "keywords": [
+    "ilp",
+    "web-monetization"
+  ],
+  "homepage": "https://github.com/coilhq/web-monetization/tree/master/packages/coil-oauth-scripts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coilhq/web-monetization.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Coil Team <info@coil.com>",
+  "main": "./build",
+  "types": "./build",
+  "scripts": {
+    "build": "webpack-cli --config webpack.config.js",
+    "build-prod": "webpack-cli --config webpack.config.js --mode production",
+    "build:ts": "tsc --build tsconfig.build.json",
+    "build:ts:verbose": "yarn build:ts --verbose",
+    "build:ts:watch": "yarn build:ts --watch",
+    "clean:build": "rimraf build",
+    "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
+    "get-btp-token": "ts-node -P ../../tsconfig.json -r tsconfig-paths/register -T src/bin/coil-it.ts",
+    "postinstall": "rimraf ../../node_modules/@types/react-native",
+    "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
+    "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "precommit": "echo lint-staged runs from root",
+    "prettier": "prettier --write 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "serve": "python -m http.server 4000",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "yarn test --verbose --coverage",
+    "upkeep": "cd ../.. && yarn upkeep",
+    "webpack-comments": "if have -cli (for -dev-server) and -command installed",
+    "webpack-comments_": "must explicitly set webpack-command"
+  },
+  "dependencies": {
+    "@coil/client": "0.0.0",
+    "@coil/puppeteer-utils": "0.0.0",
+    "@web-monetization/polyfill-utils": "0.0.0",
+    "@web-monetization/types": "0.0.0",
+    "ilp-plugin-btp": "1.4.2",
+    "ilp-protocol-stream": "2.1.0",
+    "node-fetch": "^2.6.0",
+    "reduct": "^3.3.1",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/long": "^4.0.0",
+    "@types/node-fetch": "^2.5.2",
+    "@types/uuid": "^3.4.5"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@web-monetization/wext/content",
+  "private": true,
+  "version": "0.0.0",
+  "main": "../build/content",
+  "types": "../build/content"
+}

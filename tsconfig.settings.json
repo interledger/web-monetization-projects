@@ -1,0 +1,29 @@
+{
+  "$schema": "packages/coil-monorepo-upkeep/resources/tsconfig-schema.json",
+  "compilerOptions": {
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "target": "es5",
+    "noEmit": false,
+
+    "jsx": "react",
+    "downlevelIteration": true,
+    "moduleResolution": "node",
+
+    "declarationMap": false,
+    "sourceMap": false,
+    "declaration": false,
+
+    "preserveSymlinks": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "allowJs": false,
+    "removeComments": true,
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}

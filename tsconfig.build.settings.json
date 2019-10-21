@@ -1,0 +1,9 @@
+{
+  "$schema": "packages/coil-monorepo-upkeep/resources/tsconfig-schema.json",
+  "extends": "./tsconfig.settings.json",
+  "compilerOptions": {
+    "declarationMap": true,
+    "sourceMap": true,
+    "declaration": true
+  }
+}

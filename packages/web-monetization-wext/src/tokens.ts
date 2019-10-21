@@ -1,0 +1,5 @@
+export const WextApi = Symbol('WextApi')
+export const Storage = Symbol('Storage')
+export const Window = Symbol('Window')
+export const Document = Symbol('Document')
+export const Null = Symbol('Null')

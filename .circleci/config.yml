@@ -1,0 +1,206 @@
+version: 2.1
+
+jobs:
+  # Run Linting
+  lint-all:
+    docker:
+      - image: circleci/node:10.16.3-buster-browsers
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - &restore_cache
+        restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v2-dependencies-
+      - &lerna_bootstrap
+        run:
+          name: Lerna Bootstrap
+          command: |
+            # postinstall script will run lerna bootstrap
+            yarn
+      - run:
+          name: Lint Project
+          command: |
+            # show only errors with --quiet
+            yarn lint:all --quiet
+      - &save_cache
+        save_cache:
+          paths:
+          - node_modules
+          key: v2-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+
+  coil-extension-package:
+    docker:
+      - image: circleci/node:10.16.3-buster-browsers
+    steps:
+      - checkout
+      - *restore_cache
+      - *lerna_bootstrap
+      - run:
+          name: Package for firefox
+          command: |
+            cd packages/coil-extension
+            ./package.sh firefox
+      - run:
+          name: Package for chrome
+          command: |
+            cd packages/coil-extension
+            ./package.sh chrome
+      - run:
+          name: Lint firefox package
+          command: |
+            cd packages/coil-extension
+            npx addons-linter coilfirefoxextension@coil.com.xpi
+      - *save_cache
+
+  coil-extension-puppeteer:
+    docker:
+      - image: circleci/node:10.16.3-buster-browsers
+    steps:
+      - checkout
+      - *restore_cache
+      - *lerna_bootstrap
+      - run:
+          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
+          command: |
+            cd packages/coil-extension
+            export BROWSER_TYPE=chrome
+            yarn build-prod $BROWSER_TYPE
+            xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
+      - run:
+          name: BROWSER_TYPE=firefox test.sh test/puppeteer/basic-test.ts
+          command: |
+            cd packages/coil-extension
+            export BROWSER_TYPE=firefox
+            yarn build-prod $BROWSER_TYPE
+            xvfb-run -a ./test.sh test/puppeteer/basic-test.ts
+
+  coil-extension-puppeteer-transpile-only:
+    docker:
+      - image: circleci/node:10.16.3-buster-browsers
+    steps:
+      - checkout
+      - *restore_cache
+      - *lerna_bootstrap
+      - run:
+          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
+          command: |
+            cd packages/coil-extension
+            export BROWSER_TYPE=chrome
+            BUILD=false TS_LOADER_TRANSPILE_ONLY=true yarn build-prod $BROWSER_TYPE
+            xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
+
+      - run:
+          name: BROWSER_TYPE=firefox test.sh test/puppeteer/basic-test.ts
+          command: |
+            cd packages/coil-extension
+            export BROWSER_TYPE=firefox
+            BUILD=false TS_LOADER_TRANSPILE_ONLY=true yarn build-prod $BROWSER_TYPE
+            xvfb-run -a ./test.sh test/puppeteer/basic-test.ts
+
+  build-all-package-references-typescript:
+    docker:
+      - image: circleci/node:10.16.3-buster-browsers
+    steps:
+      - checkout
+      - *restore_cache
+      - *lerna_bootstrap
+      - run:
+          name: Build Root TypeScript Project
+          command: |
+            yarn build:ts --verbose
+      - *save_cache
+
+  jest-all:
+    docker:
+      - image: circleci/node:10.16.3-buster-browsers
+    resource_class: large
+    steps:
+      - checkout
+      - *restore_cache
+      - *lerna_bootstrap
+      - run:
+          name: Run jest via dynamic compilation
+          command: |
+            export DEBUG='coil*'
+            export TS_JEST_MAP_PATHS_TO_MODULES=true
+            xvfb-run -a yarn test:coverage
+      - run:
+          name: Run jest from build
+          command: |
+            export DEBUG='coil*'
+            yarn clean:build
+            yarn build:ts:verbose
+            export TS_JEST_MAP_PATHS_TO_MODULES=false
+            xvfb-run -a yarn test:coverage
+      - *save_cache
+
+  jest-lerna-all:
+    docker:
+      - image: circleci/node:10.16.3-buster-browsers
+    steps:
+      - checkout
+      - *restore_cache
+      - *lerna_bootstrap
+      - run:
+          name: Lerna run jest via dynamic compilation
+          command: |
+            export TS_JEST_MAP_PATHS_TO_MODULES=true
+            xvfb-run -a npx lerna run --stream test:coverage
+      - run:
+          name: Lerna run jest from build
+          command: |
+            yarn clean:build
+            yarn build:ts:verbose
+            export TS_JEST_MAP_PATHS_TO_MODULES=false
+            xvfb-run -a npx lerna run --stream test:coverage
+      - *save_cache
+
+  coil-oauth-scripts-build:
+    docker:
+      - image: circleci/node:10.16.3-buster-browsers
+    steps:
+      - checkout
+      - *restore_cache
+      - *lerna_bootstrap
+      - run:
+          name: Webpack Oauth Script
+          command: |
+            cd packages/coil-oauth-scripts
+            yarn build:ts:verbose
+            yarn build
+      - *save_cache
+
+  yarn-format-and-upkeep-diff-check:
+    docker:
+      - image: circleci/node:10.16.3-buster-browsers
+    steps:
+      - checkout
+      - *restore_cache
+      - *lerna_bootstrap
+      - run:
+          name: Yarn format git diff --exit-code
+          command: |
+            yarn format
+            yarn upkeep
+            # yarn.lock sometimes (rarely) changes for unknown reasons
+            # perhaps different versions of yarn ??
+            # we don't *really* care so exclude it from the diff check
+            git diff --exit-code -- . ':!yarn.lock'
+      - *save_cache
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - lint-all
+      - jest-all
+      - jest-lerna-all
+      - yarn-format-and-upkeep-diff-check
+      - build-all-package-references-typescript
+      - coil-extension-package
+      - coil-oauth-scripts-build
+      - coil-extension-puppeteer
+      - coil-extension-puppeteer-transpile-only

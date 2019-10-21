@@ -1,0 +1,7 @@
+{
+  "reject": [
+    "@types/node",
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint/parser"
+  ]
+}
