@@ -43,8 +43,8 @@
     "ilp-protocol-stream": "^2.1.0",
     "inversify": "^5.0.1",
     "inversify-express-utils": "^6.3.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-hot-loader": "^4.12.15"
   },
   "devDependencies": {

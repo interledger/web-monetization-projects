@@ -43,8 +43,8 @@
   "dependencies": {
     "JSON2016": "^1.0.0",
     "copy-dir": "^1.2.0",
-    "deepmerge": "^4.1.1",
-    "npm-check-updates": "^3.1.24",
+    "deepmerge": "^4.2.1",
+    "npm-check-updates": "^3.1.25",
     "reduct": "^3.3.1",
     "sort-package-json": "^1.22.1",
     "yaml": "^1.7.2"
