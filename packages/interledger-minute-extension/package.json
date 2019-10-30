@@ -37,7 +37,7 @@
     "@web-monetization/polyfill-utils": "0.0.0",
     "@web-monetization/types": "0.0.0",
     "@webexts/build-utils": "0.0.0",
-    "bootstrap": "^3.4.1",
+    "bootstrap": "^4.1.2",
     "ilp-plugin-btp": "^1.4.2",
     "jquery": "^3.4.1",
     "uuid": "^3.3.3"
