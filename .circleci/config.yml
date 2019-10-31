@@ -14,11 +14,10 @@ jobs:
             - v2-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v2-dependencies-
-      - &lerna_bootstrap
+      - &yarn_install
         run:
-          name: Lerna Bootstrap
+          name: Yarn Install
           command: |
-            # postinstall script will run lerna bootstrap
             yarn
       - run:
           name: Lint Project
@@ -37,7 +36,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - *lerna_bootstrap
+      - *yarn_install
       - run:
           name: Package for firefox
           command: |
@@ -61,7 +60,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - *lerna_bootstrap
+      - *yarn_install
       - run:
           name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
           command: |
@@ -83,7 +82,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - *lerna_bootstrap
+      - *yarn_install
       - run:
           name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
           command: |
@@ -106,7 +105,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - *lerna_bootstrap
+      - *yarn_install
       - run:
           name: Build Root TypeScript Project
           command: |
@@ -120,7 +119,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - *lerna_bootstrap
+      - *yarn_install
       - run:
           name: Run jest via dynamic compilation
           command: |
@@ -143,7 +142,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - *lerna_bootstrap
+      - *yarn_install
       - run:
           name: Lerna run jest via dynamic compilation
           command: |
@@ -164,7 +163,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - *lerna_bootstrap
+      - *yarn_install
       - run:
           name: Webpack Oauth Script
           command: |
@@ -179,7 +178,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - *lerna_bootstrap
+      - *yarn_install
       - run:
           name: Yarn format git diff --exit-code
           command: |
