@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "postinstall_comments": "@types/styled-components brings in types that conflict",
-    "postinstall": "lerna bootstrap && rm -rf node_modules/@types/react-native",
+    "postinstall": "rm -rf node_modules/@types/react-native",
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --coverage --verbose",
