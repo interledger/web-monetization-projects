@@ -35,12 +35,6 @@ git clone git@github.com:coilhq/web-monetization.git
 yarn
 ```
 
-Run lerna bootstrap to install and link all packages
-
-```sh
-npx lerna bootstrap
-```
-
 ## Why Vanilla Prettier ?
 
 We used prettier-standard (based on prettierx, a fork of prettier) but found that it
@@ -51,7 +45,7 @@ closely as possible (no semicolon, single-quoted strings etc).
 The one main difference is the lack of a space before parentheses in function declarations.
 e.g.
 
-```typescript
+```
 // There *SHOULD* be a space before the parens here
 function prettierStandard () {}
 // maybe prettier was run on this markdown :)
