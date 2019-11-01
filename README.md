@@ -16,7 +16,7 @@ manual release checklist on each PR/commit.
 Till then:
 
 - **do not assume master branch is in a good state** !
-  - Go through the release checklist carefully! (see the checklist in the extension [readme](packages/coil-extension/README.md#release-checklist))
+  - Go through the release [release checklist](packages/coil-extension/docs/release-checklist.md) carefully! 
 
 ## Setting up dev environment
 
