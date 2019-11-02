@@ -110,8 +110,15 @@ export class Stream extends EventEmitter {
     const server = new URL(this._coilDomain)
     server.pathname = '/btp'
     this._server = server.href.replace(/^http/, 'btp+ws')
-    if (paymentPointer.match(/http:\/\/localhost:4000\/spsp/)) {
-      this._server = 'btp+ws://localhost:3000'
+
+    if (this._pageUrl.match(/http:\/\/localhost:[34]000/)) {
+      if (paymentPointer.match(/http:\/\/localhost:4000\/spsp/)) {
+        this._server = 'btp+ws://localhost:3000'
+      }
+      // Support local dev SPSP server
+      if (paymentPointer.match(/http:\/\/localhost:8080/)) {
+        this._server = 'btp+ws://localhost:7768'
+      }
     }
   }
 
