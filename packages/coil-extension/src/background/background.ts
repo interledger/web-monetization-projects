@@ -27,7 +27,7 @@ async function configureContainer(container: Container) {
   container.bind(Container).toConstantValue(container)
   container.bind(BackgroundScript).toSelf()
 
-  container.bind(tokens.LocalStorage).toDynamicValue(context => {
+  container.bind(tokens.LocalStorageProxy).toDynamicValue(context => {
     return context.container.get(StorageService).makeProxy(['token'])
   })
 
