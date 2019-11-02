@@ -1,4 +1,4 @@
-import { LocalStorage } from '../../types/storage'
+import { LocalStorageProxy } from '../../types/storage'
 import { User } from '../../types/user'
 import { StorageService } from '../../services/storage'
 import { PlayOrPauseState, StickyState } from '../../types/streamControls'
@@ -15,7 +15,7 @@ const STORAGE_KEYS = [
   'validToken'
 ]
 
-export type PopupStateType = Omit<LocalStorage, 'token'>
+export type PopupStateType = Omit<LocalStorageProxy, 'token'>
 
 export class PopupState implements PopupStateType {
   readonly adapted!: boolean

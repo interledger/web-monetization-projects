@@ -3,7 +3,7 @@ import { EventEmitter } from 'events'
 import { GraphQlClient, tokenUtils } from '@coil/client'
 import { inject, injectable } from 'inversify'
 
-import { LocalStorage } from '../../types/storage'
+import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 
 import { SiteToken } from './SiteToken'
@@ -11,8 +11,8 @@ import { SiteToken } from './SiteToken'
 @injectable()
 export class AuthService extends EventEmitter {
   constructor(
-    @inject(tokens.LocalStorage)
-    private store: LocalStorage,
+    @inject(tokens.LocalStorageProxy)
+    private store: LocalStorageProxy,
     private client: GraphQlClient,
     private siteToken: SiteToken
   ) {
@@ -20,38 +20,57 @@ export class AuthService extends EventEmitter {
   }
 
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
-    let token = this.store.token || null
-    const stored = token
+    let token = this.getStoredToken()
 
     if (!token) {
       token = await this.siteToken.retrieve()
     }
 
     if (!token || tokenUtils.isExpired({ token })) {
-      this.store.validToken = false
-      delete this.store.user
-      delete this.store.token
+      token = null
+    } else if (tokenUtils.isExpired({ token, withinHrs: 12 })) {
+      // Update the stored token/user
+      token = await this.refreshTokenAndUpdateWhoAmi(token)
     } else {
-      if (tokenUtils.isExpired({ token, withinHrs: 12 }) || !this.store.user) {
-        const resp = await this.client.queryToken(token)
-        if (
-          resp.data &&
-          resp.data.refreshToken &&
-          resp.data.refreshToken.token &&
-          resp.data.whoami
-        ) {
-          token = resp.data.refreshToken.token
-          this.store.user = resp.data.whoami
-          this.store.validToken = true
-        } else {
-          this.store.validToken = false
-        }
-      }
+      // Routinely do a whoami query to check for subscription status
+      // Query could fail if token is invalid
+      token = await this.updateWhoAmi(token)
     }
-    if (token && stored != token) {
+
+    if (token) {
+      this.store.validToken = true
       this.store.token = token
+    } else {
+      this.store.validToken = false
+      delete this.store.token
+      delete this.store.user
     }
     return token
+  }
+
+  private async updateWhoAmi(token: string): Promise<string | null> {
+    const resp = await this.client.whoAmI(token)
+    if (resp.data && resp.data.whoami) {
+      this.store.user = resp.data.whoami
+      return token
+    } else {
+      return null
+    }
+  }
+
+  private async refreshTokenAndUpdateWhoAmi(token: string) {
+    const resp = await this.client.queryToken(token)
+    if (
+      resp.data &&
+      resp.data.refreshToken &&
+      resp.data.refreshToken.token &&
+      resp.data.whoami
+    ) {
+      this.store.user = resp.data.whoami
+      return resp.data.refreshToken.token
+    } else {
+      return null
+    }
   }
 
   getStoredToken() {

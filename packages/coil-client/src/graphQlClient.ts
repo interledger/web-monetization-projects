@@ -1,6 +1,6 @@
 import { portableFetch } from './utils/portableFetch'
 import { GraphQlResponse } from './types'
-import { login, queryToken, refreshBtpToken } from './queries'
+import { login, queryToken, refreshBtpToken, whoAmI } from './queries'
 
 // Reference class for DI/reduct
 export class GraphQlClientOptions {
@@ -21,6 +21,7 @@ export class GraphQlClient {
   public login = login
   public refreshBtpToken = refreshBtpToken
   public queryToken = queryToken
+  public whoAmI = whoAmI
 
   public constructor(private config = new GraphQlClientOptions()) {
     this.fetch = this.config.fetch

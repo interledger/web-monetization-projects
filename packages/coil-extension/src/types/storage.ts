@@ -17,7 +17,7 @@ export const STORAGE_KEY = {
  * All values are JSON encoded unless as stored
  * unless stated otherwise
  */
-export interface LocalStorage {
+export interface LocalStorageProxy {
   /**
    * The refresh token for authenticating to the coil site
    * NOT JSON encoded

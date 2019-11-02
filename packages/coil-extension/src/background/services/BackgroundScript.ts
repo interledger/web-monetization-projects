@@ -20,7 +20,7 @@ import {
   StartWebMonetization,
   ToBackgroundMessage
 } from '../../types/commands'
-import { LocalStorage, STORAGE_KEY } from '../../types/storage'
+import { LocalStorageProxy, STORAGE_KEY } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { User } from '../../types/user'
 import { WextApi } from '../../types/wextApi'
@@ -50,8 +50,8 @@ export class BackgroundScript {
     private streams: Streams,
     private tabStates: TabStates,
     private storage: StorageService,
-    @inject(tokens.LocalStorage)
-    private store: LocalStorage,
+    @inject(tokens.LocalStorageProxy)
+    private store: LocalStorageProxy,
     private auth: AuthService,
     private client: GraphQlClient,
     private db: HistoryDb,
