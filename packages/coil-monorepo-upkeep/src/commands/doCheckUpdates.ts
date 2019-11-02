@@ -33,7 +33,7 @@ export function doCheckUpdates() {
     const packageFolder = pathMod.basename(path)
     const ncurc = readFileJSON<NcuRcJson>(pathMod.join(path, '.ncurc.json'))
     log(
-      `Checking for updates for${packageFolder}, rejecting ${pretty(
+      `Checking for updates for ${packageFolder}, rejecting ${pretty(
         ncurc.reject
       )}`
     )
