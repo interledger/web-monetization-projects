@@ -1,6 +1,6 @@
 import { injectable } from 'inversify'
 
-import { TabState } from '../../types/TabState'
+import { MonetizationCommand, TabState } from '../../types/TabState'
 import { IconState } from '../../types/commands'
 import { Colors } from '../consts/Colors'
 import { Icons } from '../consts/Icons'
@@ -28,6 +28,10 @@ export class TabStates {
 
   private makeDefault() {
     const state: TabState = {
+      lastMonetization: {
+        command: null,
+        timeMs: Date.now()
+      },
       playState: 'playing',
       monetized: false,
       adapted: false,
@@ -85,5 +89,14 @@ export class TabStates {
       default:
         break
     }
+  }
+
+  logLastMonetizationCommand(tab: number, command: MonetizationCommand) {
+    this.set(tab, {
+      lastMonetization: {
+        command,
+        timeMs: Date.now()
+      }
+    })
   }
 }

@@ -1,5 +1,7 @@
 import { PlayOrPauseState, StickyState } from './streamControls'
 
+export type MonetizationCommand = 'pause' | 'stop' | 'start' | 'resume'
+
 export interface TabState {
   favicon?: string
   coilSite?: string
@@ -9,6 +11,10 @@ export interface TabState {
   total: number
   stickyState: StickyState
   playState: PlayOrPauseState
+  lastMonetization: {
+    command: MonetizationCommand | null
+    timeMs: number
+  }
   icon?: {
     path: string
   }

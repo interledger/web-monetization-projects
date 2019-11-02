@@ -405,12 +405,14 @@ export class BackgroundScript {
     request: StartWebMonetization,
     sender: MessageSender
   ) {
+    const tab = getTab(sender)
+    this.tabStates.logLastMonetizationCommand(tab, 'start')
+
     // This used to be here
     this.mayMonetizeSite(sender)
 
     log('startWebMonetization, request', request)
     const { requestId } = request.data
-    const tab = getTab(sender)
 
     log('loading token for monetization', requestId)
     const token = await this.auth.getTokenMaybeRefreshAndStoreState()
@@ -422,6 +424,12 @@ export class BackgroundScript {
     const user = this.storage.get<User>('user')
     if (!user || !user.subscription || !user.subscription.active) {
       console.warn('startWebMonetization cancelled; no active subscription')
+      return false
+    }
+
+    const lastCommand = this.tabStates.get(tab).lastMonetization.command
+    if (lastCommand !== 'start') {
+      console.warn('startWebMonetization cancelled via', lastCommand)
       return false
     }
 
@@ -438,6 +446,7 @@ export class BackgroundScript {
   }
 
   private doPauseWebMonetization(tab: number) {
+    this.tabStates.logLastMonetizationCommand(tab, 'pause')
     const id = this.tabsToStreams[tab]
     if (id) {
       log('pausing stream', id)
@@ -447,6 +456,8 @@ export class BackgroundScript {
   }
 
   private doResumeWebMonetization(tab: number) {
+    this.tabStates.logLastMonetizationCommand(tab, 'resume')
+
     const id = this.tabsToStreams[tab]
     if (id) {
       log('resuming stream', id)
@@ -471,21 +482,23 @@ export class BackgroundScript {
   }
 
   stopWebMonetization(sender: MessageSender) {
-    const tabId = getTab(sender)
-    const closed = this._closeStream(tabId)
+    const tab = getTab(sender)
+    this.tabStates.logLastMonetizationCommand(tab, 'stop')
+
+    const closed = this._closeStream(tab)
     const message: SetMonetizationState = {
       command: 'setMonetizationState',
       data: {
         state: 'pending'
       }
     }
-    chrome.tabs.sendMessage(tabId, message)
+    chrome.tabs.sendMessage(tab, message)
     // clear the tab state, and set things to default
     // no need to send runContent message to check for adapted sites as
     // that will happen automatically on url change (html5 push state also)
     // via the tabs.onUpdated
     if (closed) {
-      this.tabStates.clear(tabId)
+      this.tabStates.clear(tab)
     }
     this.reloadTabState({
       from: 'stopWebMonetization'

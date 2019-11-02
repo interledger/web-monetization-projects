@@ -86,4 +86,8 @@ export class IdleDetection {
       }
     }
   }
+
+  isBackgrounded() {
+    return this.document.visibilityState === 'hidden'
+  }
 }
