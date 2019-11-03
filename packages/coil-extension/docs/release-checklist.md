@@ -96,8 +96,8 @@ When releasing, we can copy this markdown into the PR for a release.
   - `adb devices # make note of device id`
   - `adb shell pm grant org.mozilla.firefox android.permission.READ_EXTERNAL_STORAGE`
   - `adb shell pm grant org.mozilla.firefox android.permission.WRITE_EXTERNAL_STORAGE`
-  - Build the extension then `cd dist`
-  - `yarn web-ext run --target=firefox-android --android-device=WUJ01PNSVY # from adb devices step` 
+  - Build the extension
+  - `yarn web-ext run -s $PWD/dist --target=firefox-android --android-device=WUJ01PNSVY # from adb devices step` 
   - Issue: [coil/coilhq#2084][ci2084]
   - Fix PRs: [#166][p166] [#295][p295]
 
