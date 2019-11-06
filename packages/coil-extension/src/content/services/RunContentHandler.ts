@@ -42,6 +42,8 @@ export class RunContentHandler {
       variables: { url }
     })
 
+    debug({ paymentPointerQuery })
+
     const data = paymentPointerQuery.data
     const adaptedPage = data && data.adaptedPage
     const paymentPointer = adaptedPage && adaptedPage.paymentPointer
