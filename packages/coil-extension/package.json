@@ -68,12 +68,12 @@
     "@types/long": "^4.0.0",
     "@types/node-fetch": "^2.5.3",
     "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.9.3",
+    "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.1.21",
     "@webexts/build-utils": "^0.0.0",
     "@wext/shipit": "^0.2.1",
     "addons-linter": "^1.15.3",
-    "copy-webpack-plugin": "^5.0.4",
+    "copy-webpack-plugin": "^5.0.5",
     "crx-hotreload": "^1.0.4",
     "web-ext": "^3.2.1"
   }
