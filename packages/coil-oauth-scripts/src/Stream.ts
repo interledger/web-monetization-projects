@@ -143,12 +143,8 @@ export class Stream {
       return
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const tier = await this.tiers.getTier(this.pageUrl!)
-    const serverWithTier = `${this.btpEndpoint}?tier=${tier}`
-
     const plugin = new PluginBtp({
-      server: serverWithTier,
+      server: this.btpEndpoint,
       btpToken: this.btpToken
     })
 
