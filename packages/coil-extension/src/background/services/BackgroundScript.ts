@@ -83,6 +83,7 @@ export class BackgroundScript {
     this.setTabsOnRemovedListener()
     this.setTabsOnUpdatedListener()
     this.routeStreamsMoneyEventsToContentScript()
+    this.handleStreamsAbortEvent()
     void this.auth.getTokenMaybeRefreshAndStoreState()
   }
 
@@ -174,13 +175,13 @@ export class BackgroundScript {
   private routeStreamsMoneyEventsToContentScript() {
     // pass stream monetization events to the correct tab
     this.streams.on('money', (details: StreamMoneyEvent) => {
-      const tab = this.streamsToTabs[details.id]
+      const tab = this.streamsToTabs[details.requestId]
       if (details.packetNumber === 0) {
         const message: MonetizationStart = {
           command: 'monetizationStart',
           data: {
             paymentPointer: details.paymentPointer,
-            requestId: details.id
+            requestId: details.requestId
           }
         }
         this.api.tabs.sendMessage(tab, message)
@@ -192,13 +193,13 @@ export class BackgroundScript {
           paymentPointer: details.paymentPointer,
           amount: details.amount,
           assetCode: details.assetCode,
-          requestId: details.id,
+          requestId: details.requestId,
           assetScale: details.assetScale,
           sentAmount: details.sentAmount
         }
       }
       log('sending money message.', tab, details)
-      this.handleMonetizedSite(tab, details.url, details)
+      this.handleMonetizedSite(tab, details.initiatingUrl, details)
       this.api.tabs.sendMessage(tab, message)
       this.savePacketToHistoryDb(details)
     })
@@ -211,7 +212,7 @@ export class BackgroundScript {
   private setBrowserActionStateFromAuthAndTabState() {
     const tabId = this.activeTab
     const token = this.auth.getStoredToken()
-    if (!token || !this.storage.getBoolean(STORAGE_KEY.validToken)) {
+    if (!token || !this.store.validToken) {
       this.popup.disable()
     }
     if (token == null && tabId) {
@@ -485,8 +486,22 @@ export class BackgroundScript {
     return this.doResumeWebMonetization(getTab(sender))
   }
 
+  private handleStreamsAbortEvent() {
+    this.streams.on('abort', requestId => {
+      debug('aborting monetization request', requestId)
+      const tab = this.streamsToTabs[requestId]
+      if (tab) {
+        this.doStopWebMonetization(tab)
+      }
+    })
+  }
+
   stopWebMonetization(sender: MessageSender) {
     const tab = getTab(sender)
+    return this.doStopWebMonetization(tab)
+  }
+
+  private doStopWebMonetization(tab: number) {
     this.tabStates.logLastMonetizationCommand(tab, 'stop')
     const closed = this._closeStream(tab)
     this.sendSetMonetizationStateMessage(tab, 'stopped')
