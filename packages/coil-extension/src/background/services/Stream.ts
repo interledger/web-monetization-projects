@@ -110,16 +110,21 @@ export class Stream extends EventEmitter {
     const server = new URL(this._coilDomain)
     server.pathname = '/btp'
     this._server = server.href.replace(/^http/, 'btp+ws')
-    if (paymentPointer.match(/http:\/\/localhost:4000\/spsp/)) {
-      this._server = 'btp+ws://localhost:3000'
+
+    if (this._pageUrl.match(/http:\/\/localhost:[34]000/)) {
+      if (paymentPointer.match(/http:\/\/localhost:4000\/spsp/)) {
+        this._server = 'btp+ws://localhost:3000'
+      }
+      // Support local dev SPSP server
+      if (paymentPointer.match(/http:\/\/localhost:8080/)) {
+        this._server = 'btp+ws://localhost:7768'
+      }
     }
   }
 
-  async start(resuming = false) {
+  async start() {
     if (!this._active) {
-      if (!resuming) {
-        this._packetNumber = 0
-      }
+      this._packetNumber = 0
       this._active = true
 
       // Hack for for issue #144
@@ -387,6 +392,6 @@ export class Stream extends EventEmitter {
   }
 
   async resume() {
-    this.start(true)
+    this.start()
   }
 }

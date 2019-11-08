@@ -6,7 +6,6 @@ import {
 } from '@web-monetization/polyfill-utils'
 import {
   DocumentMonetization,
-  ScriptInjection,
   IdleDetection
 } from '@web-monetization/wext/content'
 import { MonetizationProgressEvent } from '@web-monetization/types'
@@ -27,6 +26,7 @@ import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
 import { Frames } from './Frames'
 import { RunContentHandler } from './RunContentHandler'
 import { ContentAuthService } from './ContentAuthService'
+import { MonetizationEventsLogger } from './MonetizationEventsLogger'
 
 @injectable()
 export class ContentScript {
@@ -40,11 +40,12 @@ export class ContentScript {
     private idle: IdleDetection,
     private monetization: DocumentMonetization,
     private auth: ContentAuthService,
-    private scripts: ScriptInjection
+    private monetizationEventsLogger: MonetizationEventsLogger
   ) {}
 
   handleMonetizationTag() {
     const runtime = this.runtime
+    const monetization = this.monetization
 
     function startMonetization(details: PaymentDetails) {
       const request: StartWebMonetization = {
@@ -52,13 +53,14 @@ export class ContentScript {
         data: details
       }
 
+      monetization.setMonetizationRequest({
+        paymentPointer: details.paymentPointer,
+        requestId: details.requestId
+      })
       runtime.sendMessage(request)
     }
 
-    function stopMonetization(
-      details: PaymentDetails,
-      opts: { from?: string }
-    ) {
+    function stopMonetization(details: PaymentDetails) {
       const request: StopWebMonetization = {
         command: 'stopWebMonetization',
         data: details
@@ -76,7 +78,7 @@ export class ContentScript {
           )
         } else {
           if (stopped) {
-            stopMonetization(stopped, { from: 'changed meta tag' })
+            stopMonetization(stopped)
           }
           if (started) {
             startMonetization(started)
@@ -101,9 +103,7 @@ export class ContentScript {
           debug(e, 'origin=', window.origin, 'iframe=', this.frames.isIFrame)
         })
       } else if (request.command === 'setMonetizationState') {
-        this.scripts.inject(
-          `document.monetization.state = '${request.data.state}'`
-        )
+        this.monetization.setState(request.data.state)
       } else if (request.command === 'monetizationProgress') {
         const detail: MonetizationProgressEvent['detail'] = {
           amount: request.data.amount,
@@ -124,6 +124,25 @@ export class ContentScript {
     })
   }
 
+  watchPageEvents() {
+    const { setWatch } = this.idle.watchPageEvents()
+    const runtime = this.runtime
+    setWatch({
+      pause: () => {
+        const pause: PauseWebMonetization = {
+          command: 'pauseWebMonetization'
+        }
+        runtime.sendMessage(pause)
+      },
+      resume: () => {
+        const resume: ResumeWebMonetization = {
+          command: 'resumeWebMonetization'
+        }
+        runtime.sendMessage(resume)
+      }
+    })
+  }
+
   init() {
     if (this.frames.isTopFrame) {
       const message: ContentScriptInit = { command: 'contentScriptInit' }
@@ -134,6 +153,7 @@ export class ContentScript {
       })
       this.setRuntimeMessageListener()
       this.monetization.injectDocumentMonetization()
+      this.monetizationEventsLogger.bindLoggersToEvents()
     }
 
     if (this.frames.isAnyCoilFrame) {

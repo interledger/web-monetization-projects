@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 import { EventEmitter } from 'events'
 
 import PluginBtp from 'ilp-plugin-btp'
@@ -11,12 +13,18 @@ import {
   getSPSPResponse,
   SPSPResponse
 } from '@web-monetization/polyfill-utils'
+import {
+  MonetizationEvent,
+  MonetizationProgressEvent,
+  MonetizationStartEvent
+} from '@web-monetization/types'
 
 import { getDoc } from './documentExtensions'
+import { DocumentMonetization } from './DocumentMonetization'
 
 const UPDATE_AMOUNT_INTERVAL = 2000
 
-export enum MonetizationState {
+export enum MonetizationStateEnum {
   STOPPED,
   STARTED
 }
@@ -42,7 +50,7 @@ export class Stream {
   private paymentPointer?: string
   private pageUrl?: string
 
-  private state: MonetizationState = MonetizationState.STOPPED
+  private state: MonetizationStateEnum = MonetizationStateEnum.STOPPED
   private active = false
 
   private activeChanges: EventEmitter = new EventEmitter()
@@ -52,6 +60,7 @@ export class Stream {
 
   private readonly tiers: BandwidthTiers
   private adaptiveBandwidth!: AdaptiveBandwidth
+  private monetization: DocumentMonetization
 
   refreshBtpToken(btpToken: string) {
     this.btpToken = btpToken
@@ -59,6 +68,7 @@ export class Stream {
 
   constructor(deps: Injector) {
     this.tiers = deps(BandwidthTiers)
+    this.monetization = new DocumentMonetization(document)
   }
 
   start(opts: StreamStartOpts) {
@@ -70,6 +80,10 @@ export class Stream {
     this.spspEndpoint = opts.spspEndpoint
     this.pageUrl = opts.pageUrl
     this.adaptiveBandwidth = new AdaptiveBandwidth(opts.pageUrl, this.tiers)
+    this.monetization.setMonetizationRequest({
+      paymentPointer: opts.paymentPointer,
+      requestId: opts.requestId
+    })
 
     if (!this.loop) {
       this.loop = this.streamRetryLoop()
@@ -79,6 +93,8 @@ export class Stream {
 
   stop() {
     this.active = false
+    this.monetization.setState('stopped')
+    this.monetization.setMonetizationRequest(undefined)
     this.activeChanges.emit('stop')
   }
 
@@ -102,6 +118,7 @@ export class Stream {
       }
 
       try {
+        this.monetization.setState('pending')
         await this.streamPayment(
           await getSPSPResponse(this.spspEndpoint, this.requestId)
         )
@@ -196,7 +213,7 @@ export class Stream {
             addSentAmount()
             this.activeChanges.removeListener('stop', onStop)
             this.lastDelivered = 0
-            getDoc().monetization.state = 'pending'
+            this.monetization.setState('stopped')
             clearInterval(updateAmountInterval)
           })
         }
@@ -215,18 +232,14 @@ export class Stream {
     }
   }
 
-  private onOutgoingMoney(
-    connection: IlpStream.Connection,
-    sentAmount: string
-  ) {
-    if (this.state === MonetizationState.STOPPED) {
-      this.state = MonetizationState.STARTED
+  private onOutgoingMoney(connection: IlpStream.Connection, _: string) {
+    if (this.state === MonetizationStateEnum.STOPPED) {
+      this.state = MonetizationStateEnum.STARTED
       this.dispatchMonetizationStart()
     }
 
     // WM api deals in receiver units so we need to calculate how much the
     // receiver got from this packet.
-    // TODO: should we be using some kind of bignumber for this?
     const deliveredAmount =
       Number(connection.totalDelivered) - this.lastDelivered
     this.lastDelivered = Number(connection.totalDelivered)
@@ -234,20 +247,12 @@ export class Stream {
   }
 
   private dispatchMonetizationStart() {
-    const monetization = getDoc().monetization
-    monetization.state = 'started'
-    monetization.dispatchEvent(
-      new CustomEvent('monetizationstart', {
-        detail: {
-          // TODO: We want meta[content] to support https:// urls as well
-          // so what do we actually call this
-          paymentPointer: this.paymentPointer,
-          // TODO: correlation id makes more sense again ...
-          // or stream id ... though STREAM id already has some kind of meaning
-          // TODO: use new types
-          requestId: this.requestId
-        }
-      })
+    const detail: MonetizationStartEvent['detail'] = {
+      paymentPointer: this.paymentPointer!,
+      requestId: this.requestId!
+    }
+    this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
+      detail
     )
   }
 
@@ -255,18 +260,13 @@ export class Stream {
     connection: IlpStream.Connection,
     amount: string
   ) {
-    const detail = {
+    const detail: MonetizationProgressEvent['detail'] = {
       amount,
-      assetCode: connection.destinationAssetCode,
-      assetScale: connection.destinationAssetScale,
-      paymentPointer: this.paymentPointer,
-      requestId: this.requestId
-      // TODO: sourceAmount/sourceAssetCode/sourceAssetScale ?
+      assetCode: connection.destinationAssetCode!,
+      assetScale: connection.destinationAssetScale!,
+      paymentPointer: this.paymentPointer!,
+      requestId: this.requestId!
     }
-    getDoc().monetization.dispatchEvent(
-      new CustomEvent('monetizationprogress', {
-        detail: detail
-      })
-    )
+    this.monetization.dispatchMonetizationProgressEvent(detail)
   }
 }

@@ -1,6 +1,11 @@
 import { PaymentDetails } from '@web-monetization/polyfill-utils'
+import { MonetizationState } from '@web-monetization/types'
 
-import { PlayOrPauseState, StickyState } from './streamControls'
+import {
+  PlayOrPauseState,
+  StickyState,
+  ToggleControlsAction
+} from './streamControls'
 
 /**
  * browser.runtime.sendMessage
@@ -24,6 +29,7 @@ export interface SetStreamControls extends Command {
   data: {
     sticky: StickyState
     play: PlayOrPauseState
+    action: ToggleControlsAction
   }
 }
 
@@ -194,7 +200,7 @@ export interface ClosePopup {
 export interface SetMonetizationState {
   command: 'setMonetizationState'
   data: {
-    state: 'pending' | 'started'
+    state: MonetizationState
   }
 }
 

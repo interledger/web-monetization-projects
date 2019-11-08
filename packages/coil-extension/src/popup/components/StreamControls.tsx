@@ -5,7 +5,11 @@ import { Tooltip, withStyles } from '@material-ui/core'
 import { PopupProps } from '../types'
 import { Colors } from '../../shared-theme/colors'
 import { SetStreamControls, ToPopupMessage } from '../../types/commands'
-import { PlayOrPauseState, StickyState } from '../../types/streamControls'
+import {
+  PlayOrPauseState,
+  StickyState,
+  ToggleControlsAction
+} from '../../types/streamControls'
 
 const ControlBar = styled.div`
   display: flex;
@@ -163,6 +167,7 @@ const PauseIconSvg = () => {
 interface SetStreamControlsParams {
   sticky: StickyState
   play: PlayOrPauseState
+  action: ToggleControlsAction
 }
 
 export const StreamControls = (props: PopupProps) => {
@@ -173,13 +178,10 @@ export const StreamControls = (props: PopupProps) => {
     props.context.store.playState || 'playing'
   )
 
-  const setStreamControls = ({ sticky, play }: SetStreamControlsParams) => {
+  const setStreamControls = (data: SetStreamControlsParams) => {
     const message: SetStreamControls = {
       command: 'setStreamControls',
-      data: {
-        sticky,
-        play
-      }
+      data
     }
     props.context.runtime.sendMessage(message)
   }
@@ -189,6 +191,7 @@ export const StreamControls = (props: PopupProps) => {
       if (message.command === 'localStorageUpdate') {
         if (message.key === 'stickyState') {
           const sticky = props.context.store.stickyState
+          // TODO: document why have and why need to ignore null changes
           sticky != null && setStickyState(sticky)
         } else if (message.key === 'playState') {
           const play = props.context.store.playState
@@ -214,13 +217,21 @@ export const StreamControls = (props: PopupProps) => {
   const toggleStickyState = () => {
     const sticky = stickyState === 'auto' ? 'sticky' : 'auto'
     setStickyState(sticky)
-    setStreamControls({ sticky: sticky, play: playOrPauseState })
+    setStreamControls({
+      sticky: sticky,
+      play: playOrPauseState,
+      action: 'toggleSticky'
+    })
   }
 
   const togglePlayOrPausedState = () => {
     const play = playOrPauseState === 'paused' ? 'playing' : 'paused'
     setPlayOrPauseState(play)
-    setStreamControls({ sticky: stickyState, play })
+    setStreamControls({
+      sticky: stickyState,
+      play,
+      action: 'togglePlayOrPause'
+    })
   }
 
   const iconState =

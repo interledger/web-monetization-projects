@@ -1,14 +1,16 @@
 // For the moment, if only for coil internal convenience we are keeping the
 // original field names
 
+export interface MonetizationCommonEventDetail {
+  // Web-Monetization-Id header present in the SPSP request
+  requestId: string
+  // The meta[@name="monetization"] @content value
+  paymentPointer: string
+}
+
 export interface MonetizationStartEvent {
   type: 'monetizationstart'
-  detail: {
-    // Web-Monetization-Id header present in the SPSP request
-    requestId: string
-    // The meta[@name="monetization"] @content value
-    paymentPointer: string
-  }
+  detail: MonetizationCommonEventDetail
 }
 
 export interface MonetizationProgressEvent {
@@ -18,14 +20,46 @@ export interface MonetizationProgressEvent {
     amount: string
     assetCode: string
     assetScale: number
-    // "NEW" fields, while keeping the old fields
-    requestId: string
-    paymentPointer: string
-  }
+  } & MonetizationCommonEventDetail
 }
 
+export interface MonetizationPendingEvent {
+  type: 'monetizationpending'
+  detail: MonetizationCommonEventDetail
+}
+
+export interface MonetizationStopEvent {
+  type: 'monetizationstop'
+  detail: MonetizationCommonEventDetail
+}
+
+/**
+ * Streaming has been initiated, yet first non zero packet is "pending"
+ * It will normally transition from this `state` to `started`, yet not
+ * always.
+ */
+export type PendingState = 'pending'
+
+/**
+ * Streaming has received a non zero packet and is still active
+ */
+export type StartedState = 'started'
+
+/**
+ * Streaming is inactive.
+ * In the interest of keeping the amount of states necessary to handle down
+ * this could mean a variety of things:
+ *  - monetization may not be supported (no provider enabled)
+ *  - may not have started yet
+ *  - paused (potentially resumed)
+ *  - finished completely (awaiting another request)
+ *  - payment request denied by user intervention
+ */
+export type StoppedState = 'stopped'
+
+export type MonetizationState = PendingState | StartedState | StoppedState
 export type MonetizationObject = EventTarget & {
-  state: 'pending' | 'started'
+  state: MonetizationState
 }
 
 export interface MonetizationDocumentExtensions {
@@ -38,6 +72,8 @@ export type MonetizationExtendedDocument = Document &
 export type MonetizationEvent =
   | MonetizationProgressEvent
   | MonetizationStartEvent
+  | MonetizationPendingEvent
+  | MonetizationStopEvent
 
 export interface MonetizationProvider {
   id: string
@@ -98,6 +134,14 @@ export interface StreamEventsEmitter extends NodeJS.EventEmitter {
     val: StreamEventCallback<MonetizationStartEvent>
   ): this
   on(
+    event: 'monetizationstop',
+    val: StreamEventCallback<MonetizationStopEvent>
+  ): this
+  on(
+    event: 'monetizationpending',
+    val: StreamEventCallback<MonetizationPendingEvent>
+  ): this
+  on(
     event: 'monetizationprogress',
     val: StreamEventCallback<MonetizationProgressEvent>
   ): this
@@ -117,19 +161,11 @@ export interface Amount extends Asset {
   amount: string
 }
 
-export interface Packet {
-  timeMs: number
-  sent: Amount
-  received: Amount
-}
-
 export interface MonetizationStream<
   Request extends MinimumRequest = MonetizationRequest
 > extends StreamControl, StreamEventsEmitter {
   request: Request
-  state: 'started' | 'paused' | 'stopped'
-  // TODO: probably don't want these ?
-  packets: Packet[]
+  state: MonetizationState
 }
 
 /**

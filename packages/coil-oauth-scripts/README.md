@@ -18,7 +18,7 @@ would all be in the scope of this package.
         document.monetizationExtensionInstalled = true
       } else {
         document.monetization = document.createElement('div')
-        document.monetization.state = 'pending'
+        document.monetization.state = 'stopped'
       }
     </script>
     <!-- working title -->
