@@ -71,7 +71,7 @@ export interface ResumeWebMonetization extends Command {
  */
 export interface StartWebMonetization extends Command {
   command: 'startWebMonetization'
-  data: PaymentDetails
+  data: PaymentDetails & { initiatingUrl: string }
 }
 
 /**
