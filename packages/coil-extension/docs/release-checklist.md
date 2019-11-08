@@ -101,15 +101,6 @@ When releasing, we can copy this markdown into the PR for a release.
   - Issue: [coil/coilhq#2084][ci2084]
   - Fix PRs: [#166][p166] [#295][p295]
 
-- [ ] Check extension doesn't attempt to stream when unsubscribed
-
-  - Log in with coil user that doesn't have active subscription
-  - Open the developer tools and check the logging
-  - SHOULD NOT even attempt to stream
-  - ![image](https://user-images.githubusercontent.com/525211/66631124-c9840000-ec2f-11e9-95a4-3bebe7fdebd6.png)
-  - Issue: [#213][i213]
-  - Fix PR: [#222][p222]
-
 - [ ] On MacOS Chrome check that the monetized animation is working
       on non primary monitors.
 
@@ -136,6 +127,21 @@ When releasing, we can copy this markdown into the PR for a release.
   - Issue: [#507][i507]
   - Fix PR: [#508][p508]
 
+- [ ] Check extension doesn't attempt to stream when unsubscribed
+
+  - Log in with coil user that doesn't have active subscription
+  - Open the developer tools and check the logging
+  - SHOULD NOT even attempt to stream
+  - ![image](https://user-images.githubusercontent.com/525211/66631124-c9840000-ec2f-11e9-95a4-3bebe7fdebd6.png)
+  - Issue: [#213][i213]
+  - Fix PR: [#222][p222]
+
+- [ ] Check can stream immediately after subscribing
+  - Likely best to test this with staging where can use a test card
+  - Log in with coil user that doesn't have active subscription
+  - Add a subscription (can use [testing card](https://stripe.com/docs/testing) 4242 4242 4242 4242 )
+  - Go to a monetized page and check that streaming works immediately
+
 ### Zipping Extension Source Files
 
 - [ ] Zip the source code for the extension
@@ -160,3 +166,5 @@ When releasing, we can copy this markdown into the PR for a release.
 [p332]: https://github.com/coilhq/web-monetization/pull/332
 [i507]: https://github.com/coilhq/web-monetization/issues/507
 [p508]: https://github.com/coilhq/web-monetization/pull/508
+[np28]: https://github.com/coilhq/web-monetization-projects/pull/28
+[ni21]: https://github.com/coilhq/web-monetization-projects/issue/21
