@@ -46,11 +46,12 @@ export class ContentScript {
   handleMonetizationTag() {
     const runtime = this.runtime
     const monetization = this.monetization
+    const window = this.window
 
     function startMonetization(details: PaymentDetails) {
       const request: StartWebMonetization = {
         command: 'startWebMonetization',
-        data: details
+        data: { ...details, initiatingUrl: window.location.href }
       }
 
       monetization.setMonetizationRequest({

@@ -57,7 +57,7 @@ export class Stream extends EventEmitter {
   private readonly _debug: (...args: any[]) => void
   private readonly _server: string
   private readonly _tiers: BandwidthTiers
-  private readonly _pageUrl: string
+  private readonly _initiatingUrl: string
 
   private _lastDelivered: number
   private _lastOutgoingMs!: number
@@ -77,10 +77,10 @@ export class Stream extends EventEmitter {
       spspEndpoint,
       paymentPointer,
       token,
-      pageUrl
+      initiatingUrl
     }: PaymentDetails & {
       token: string
-      pageUrl: string
+      initiatingUrl: string
     }
   ) {
     super()
@@ -100,9 +100,9 @@ export class Stream extends EventEmitter {
 
     this._active = false
     this._lastDelivered = 0
-    this._pageUrl = pageUrl
+    this._initiatingUrl = initiatingUrl
     this._bandwidth = new AdaptiveBandwidth(
-      this._pageUrl,
+      this._initiatingUrl,
       this._tiers,
       this._debug
     )
@@ -111,7 +111,7 @@ export class Stream extends EventEmitter {
     server.pathname = '/btp'
     this._server = server.href.replace(/^http/, 'btp+ws')
 
-    if (this._pageUrl.match(/http:\/\/localhost:[34]000/)) {
+    if (this._initiatingUrl.match(/http:\/\/localhost:[34]000/)) {
       if (paymentPointer.match(/http:\/\/localhost:4000\/spsp/)) {
         this._server = 'btp+ws://localhost:3000'
       }
@@ -174,7 +174,7 @@ export class Stream extends EventEmitter {
     // is severed before full establishment
     if (!this._active) throw new Error('aborted monetization')
 
-    const tier = await this._tiers.getTier(this._pageUrl)
+    const tier = await this._tiers.getTier(this._initiatingUrl)
     const serverWithTier = `${this._server}?tier=${tier}`
 
     if (!this._active) throw new Error('aborted monetization')
@@ -329,7 +329,7 @@ export class Stream extends EventEmitter {
         paymentPointer: this._paymentPointer,
         packetNumber: this._packetNumber++,
         id: this._id,
-        url: this._pageUrl,
+        url: this._initiatingUrl,
         msSinceLastPacket: msSinceLastPacket,
         sentAmount: sentAmount,
 

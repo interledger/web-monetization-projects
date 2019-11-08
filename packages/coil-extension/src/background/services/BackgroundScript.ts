@@ -441,7 +441,7 @@ export class BackgroundScript {
     this.streams.beginStream(requestId, {
       token,
       ...request.data,
-      pageUrl: notNullOrUndef(sender.url)
+      initiatingUrl: request.data.initiatingUrl
     })
 
     return true

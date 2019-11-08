@@ -20,13 +20,18 @@ export class Streams extends EventEmitter {
     this._streams = {}
   }
 
+  /*
+   * Note re: `initiatingUrl`. A monetization request may persist throughout
+   * different urls in the case of HTML5 history.pushState and a site wide
+   * meta tag.
+   */
   beginStream(
     id: string,
-    options: PaymentDetails & { token: string; pageUrl: string }
+    options: PaymentDetails & { token: string; initiatingUrl: string }
   ) {
     this._streams[id] = new Stream(this.container, { ...options })
     this._streams[id].on('money', details => {
-      this.emit('money', { url: options.pageUrl, id, ...details })
+      this.emit('money', { url: options.initiatingUrl, id, ...details })
     })
     void this._streams[id].start()
   }
