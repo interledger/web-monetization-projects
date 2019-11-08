@@ -27,7 +27,7 @@ async function getBtpTokenFromEnv() {
 }
 
 async function buildOauthScript() {
-  const command = 'yarn build:ts:verbose && yarn build'
+  const command = 'yarn build'
   log('running', command)
   await promisify(exec)(command, {
     cwd: fromHere('../..')

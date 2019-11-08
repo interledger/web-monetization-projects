@@ -33,6 +33,7 @@ module.exports = {
             options: {
               // https://github.com/TypeStrong/ts-loader#transpileonly-boolean-defaultfalse
               transpileOnly: TRANSPILE_ONLY,
+              projectReferences: !TRANSPILE_ONLY,
               configFile: TRANSPILE_ONLY
                 ? `${__dirname}/test/tsconfig.json`
                 : `${__dirname}/tsconfig.build.json`
