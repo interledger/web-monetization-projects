@@ -12,7 +12,9 @@ import {
   asyncUtils,
   BandwidthTiers,
   getSPSPResponse,
-  PaymentDetails
+  PaymentDetails,
+  SPSPResponse,
+  SPSPError
 } from '@web-monetization/polyfill-utils'
 import { GraphQlClient } from '@coil/client'
 import { Container } from 'inversify'
@@ -31,9 +33,9 @@ export interface StreamMoneyEvent {
   packetNumber: number
 
   // requestId
-  id: string
+  requestId: string
   paymentPointer: string
-  url: string
+  initiatingUrl: string
 
   msSinceLastPacket: number
   sentAmount: string
@@ -50,7 +52,7 @@ export interface StreamMoneyEvent {
 }
 
 export class Stream extends EventEmitter {
-  private readonly _id: string
+  private readonly _requestId: string
   private readonly _spspUrl: string
   private readonly _paymentPointer: string
   private _token: string
@@ -86,7 +88,7 @@ export class Stream extends EventEmitter {
     super()
 
     this._paymentPointer = paymentPointer
-    this._id = requestId
+    this._requestId = requestId
     this._spspUrl = spspEndpoint
     this._token = token
     this._client = container.get(GraphQlClient)
@@ -96,7 +98,11 @@ export class Stream extends EventEmitter {
     // this._debug = makeDebug('coil-extension:stream:' + this._id)
     // We use bind rather than an anonymous function so that the line
     // numbers are maintained in developer tools to aid in debugging.
-    this._debug = console.log.bind(console, 'coil-extension:stream:' + this._id)
+    // eslint-disable-next-line no-console
+    this._debug = console.log.bind(
+      console,
+      `coil-extension:stream:${this._requestId}`
+    )
 
     this._active = false
     this._lastDelivered = 0
@@ -193,7 +199,19 @@ export class Stream extends EventEmitter {
 
   async _getSPSPDetails() {
     this._debug('fetching spsp details. url=', this._spspUrl)
-    const details = await getSPSPResponse(this._spspUrl, this._id)
+    let details: SPSPResponse
+    try {
+      details = await getSPSPResponse(this._spspUrl, this._requestId)
+    } catch (e) {
+      if (e instanceof SPSPError) {
+        const status = e.response ? e.response.status : undefined
+        // Abort on Bad Request 4XX
+        if (!status || (status >= 400 && status < 500)) {
+          this.abort()
+        }
+      }
+      throw e
+    }
     if (!this._active) throw new Error('aborted monetization')
     return details
   }
@@ -328,8 +346,8 @@ export class Stream extends EventEmitter {
       const event: StreamMoneyEvent = {
         paymentPointer: this._paymentPointer,
         packetNumber: this._packetNumber++,
-        id: this._id,
-        url: this._initiatingUrl,
+        requestId: this._requestId,
+        initiatingUrl: this._initiatingUrl,
         msSinceLastPacket: msSinceLastPacket,
         sentAmount: sentAmount,
 
@@ -393,5 +411,11 @@ export class Stream extends EventEmitter {
 
   async resume() {
     this.start()
+  }
+
+  private async abort() {
+    // Don't call this.stop() directly, let BackgroundScript orchestrate the
+    // stop.
+    this.emit('abort', this._requestId)
   }
 }

@@ -9,7 +9,7 @@ export { watchMouseMovement, watchVisibility } from './lib/idle'
 export { whenDocumentReady } from './lib/whenDocumentReady'
 
 export { BandwidthTiers } from './lib/BandwidthTiers'
-export { getSPSPResponse, SPSPResponse } from './lib/getSPSPResponse'
+export { getSPSPResponse, SPSPResponse, SPSPError } from './lib/getSPSPResponse'
 export { portableFetch } from './lib/portableFetch'
 export { AdaptiveBandwidth } from './lib/AdaptiveBandwidth'
 export { StreamControl } from './lib/idle'
