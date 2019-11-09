@@ -180,13 +180,8 @@ export class Stream extends EventEmitter {
     // is severed before full establishment
     if (!this._active) throw new Error('aborted monetization')
 
-    const tier = await this._tiers.getTier(this._initiatingUrl)
-    const serverWithTier = `${this._server}?tier=${tier}`
-
-    if (!this._active) throw new Error('aborted monetization')
-
     this._plugin = new IlpPluginBtp({
-      server: serverWithTier,
+      server: this._server,
       btpToken
     })
 
