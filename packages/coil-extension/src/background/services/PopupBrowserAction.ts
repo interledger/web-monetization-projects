@@ -15,7 +15,7 @@ export class PopupBrowserAction {
   private readonly openLogin: () => void
   private disabled = false
   private ignoreDefaultToggling = false
-  private action: (Action) | null = null
+  private action: Action | null = null
 
   constructor(
     private tabOpener: TabOpener,

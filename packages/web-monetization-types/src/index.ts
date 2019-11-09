@@ -121,7 +121,8 @@ export type MonetizationRequest = {
       // the details of the request beyond the ILP address.
       readonly type: 'SPSPResponse'
       readonly receiver: SPSPResponse
-    })
+    }
+)
 
 export type StreamEventCallback<T> = (
   val: T,

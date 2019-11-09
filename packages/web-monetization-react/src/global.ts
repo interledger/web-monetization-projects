@@ -51,20 +51,28 @@ export class GlobalWebMonetizationState extends EventEmitter {
   init() {
     if (!this.initialized && doc.monetization) {
       this.initialized = true
-      doc.monetization.addEventListener('monetizationstart', (this
-        .onMonetizationStart as unknown) as EventListener)
-      doc.monetization.addEventListener('monetizationprogress', (this
-        .onMonetizationProgress as unknown) as EventListener)
+      doc.monetization.addEventListener(
+        'monetizationstart',
+        (this.onMonetizationStart as unknown) as EventListener
+      )
+      doc.monetization.addEventListener(
+        'monetizationprogress',
+        (this.onMonetizationProgress as unknown) as EventListener
+      )
     }
   }
 
   terminate() {
     if (this.initialized && doc.monetization) {
       this.initialized = false
-      doc.monetization.removeEventListener('monetizationstart', (this
-        .onMonetizationStart as unknown) as EventListener)
-      doc.monetization.removeEventListener('monetizationprogress', (this
-        .onMonetizationProgress as unknown) as EventListener)
+      doc.monetization.removeEventListener(
+        'monetizationstart',
+        (this.onMonetizationStart as unknown) as EventListener
+      )
+      doc.monetization.removeEventListener(
+        'monetizationprogress',
+        (this.onMonetizationProgress as unknown) as EventListener
+      )
     }
   }
 
