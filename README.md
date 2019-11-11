@@ -1,7 +1,7 @@
 # Web Monetization Projects
 
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io/)
-[![CircleCI](https://circleci.com/gh/coilhq/web-monetization/tree/master.svg?style=svg&circle-token=fe496c364cbfce5bea2c0ec7b877f925db4e1ddf)](https://circleci.com/gh/coilhq/web-monetization/tree/master)
+[![CircleCI](https://circleci.com/gh/coilhq/web-monetization-projects.svg?style=svg)](https://circleci.com/gh/coilhq/web-monetization-projects)
 
 ## Development Process
 
