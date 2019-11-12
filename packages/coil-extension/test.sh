@@ -23,5 +23,5 @@ export DEBUG='coil*'
 # This will all get ported to jest, but in the mean time it's useful
 
 # shellcheck disable=SC2086
-npx $COMMAND \
+yarn $COMMAND \
     "$TESTFILE"
