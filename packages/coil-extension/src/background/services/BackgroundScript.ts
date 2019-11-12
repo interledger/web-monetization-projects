@@ -354,7 +354,7 @@ export class BackgroundScript {
   ) {
     const tabState = this.tabStates.get(tab)
     const tabTotal = (tabState && tabState.total) || 0
-    const newTabTotal = tabTotal + Number((packet && packet.sentAmount) || 0)
+    const newTabTotal = tabTotal + Number(packet?.sentAmount ?? 0)
     this.setTabMonetized(tab, url, newTabTotal)
   }
 

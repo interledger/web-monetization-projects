@@ -50,7 +50,7 @@ export class AuthService extends EventEmitter {
 
   private async updateWhoAmi(token: string): Promise<string | null> {
     const resp = await this.client.whoAmI(token)
-    if (resp.data && resp.data.whoami) {
+    if (resp.data?.whoami) {
       this.store.user = resp.data.whoami
       return token
     } else {
@@ -60,12 +60,7 @@ export class AuthService extends EventEmitter {
 
   private async refreshTokenAndUpdateWhoAmi(token: string) {
     const resp = await this.client.queryToken(token)
-    if (
-      resp.data &&
-      resp.data.refreshToken &&
-      resp.data.refreshToken.token &&
-      resp.data.whoami
-    ) {
+    if (resp.data?.refreshToken?.token && resp.data?.whoami) {
       this.store.user = resp.data.whoami
       return resp.data.refreshToken.token
     } else {
