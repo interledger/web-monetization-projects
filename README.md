@@ -32,7 +32,7 @@ brew install yarn
 Clone and setup the dev env.
 
 ```sh
-git clone git@github.com:coilhq/web-monetization.git
+git clone git@github.com:coilhq/web-monetization-projects.git
 yarn
 ```
 
