@@ -72,7 +72,7 @@
     "@types/styled-components": "^4.4.0",
     "@webexts/build-utils": "^0.0.0",
     "@wext/shipit": "^0.2.1",
-    "addons-linter": "^1.15.3",
+    "addons-linter": "^1.16.0",
     "copy-webpack-plugin": "^5.0.5",
     "crx-hotreload": "^1.0.4",
     "web-ext": "^3.2.1"
