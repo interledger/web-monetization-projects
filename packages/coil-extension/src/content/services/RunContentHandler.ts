@@ -45,9 +45,9 @@ export class RunContentHandler {
     debug({ paymentPointerQuery })
 
     const data = paymentPointerQuery.data
-    const adaptedPage = data && data.adaptedPage
-    const paymentPointer = adaptedPage && adaptedPage.paymentPointer
-    const channelImage = adaptedPage && adaptedPage.channelImage
+    const adaptedPage = data?.adaptedPage
+    const paymentPointer = adaptedPage?.paymentPointer
+    const channelImage = adaptedPage?.channelImage
     return {
       channelImage,
       paymentPointer

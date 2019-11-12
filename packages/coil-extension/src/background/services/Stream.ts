@@ -199,7 +199,7 @@ export class Stream extends EventEmitter {
       details = await getSPSPResponse(this._spspUrl, this._requestId)
     } catch (e) {
       if (e instanceof SPSPError) {
-        const status = e.response ? e.response.status : undefined
+        const status = e.response?.status
         // Abort on Bad Request 4XX
         if (!status || (status >= 400 && status < 500)) {
           this.abort()
