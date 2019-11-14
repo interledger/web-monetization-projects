@@ -8,7 +8,7 @@
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --coverage --verbose",
-    "prettier": "prettier --write 'packages/*/{src,test}/**/*.ts*'",
+    "prettier": "prettier --write 'packages/*/*.{html,js,ts,tsx,jsx,md}' 'packages/*/{src,test}/**/*.{ts,tsx,js,jsx,html,md}'",
     "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
     "upkeep": "ts-node -T packages/coil-monorepo-upkeep/upkeep.ts",
     "upkeep:new-package": "ts-node -T packages/coil-monorepo-upkeep/new-package.ts",
@@ -29,10 +29,14 @@
     "packages/*"
   ],
   "lint-staged": {
+    "*.{md,js,jsx,html}": [
+      "prettier --write",
+      "git add"
+    ],
     "*.ts*": [
       "prettier --write",
       "YARN_LINT_FIX=1 yarn lint --fix",
-      "echo 'git commit --amend --no-edit --no-verify' after review with git diff"
+      "git add"
     ]
   },
   "husky": {

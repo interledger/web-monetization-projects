@@ -94,7 +94,8 @@ function setCommonScriptsAndMergeOverrides(
       ...(subPackageJSON.scripts || {}),
       postinstall: 'rimraf ../../node_modules/@types/react-native',
       precommit: 'echo lint-staged runs from root',
-      prettier: "prettier --write 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+      prettier:
+        "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
       format: 'yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet',
       'build:ts': 'tsc --build tsconfig.build.json',
       'build:ts:watch': 'yarn build:ts --watch',
