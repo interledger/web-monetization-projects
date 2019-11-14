@@ -6,9 +6,9 @@ API.tabs.get
 API.tabs.create
 
 API.tabs.sendMessage
-  Used to send a message to the content script
-  Listen with API.runtime.onMessage.addListener 
-  
+Used to send a message to the content script
+Listen with API.runtime.onMessage.addListener
+
 API.tabs.onActivated.addListener
 API.tabs.onRemoved.addListener
 API.tabs.onUpdated.addListener
@@ -23,11 +23,10 @@ API.browserAction.onClicked.removeListener
 
 API.runtime.onMessage.addListener
 API.runtime.onConnect.addListener
-  Called in background page when other page
-  opens a port with API.runtime.connect
-  
+Called in background page when other page
+opens a port with API.runtime.connect
+
 API.runtime.sendMessage
 
 API.runtime.getURL
 API.runtime.connect
-

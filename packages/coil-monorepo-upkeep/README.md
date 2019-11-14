@@ -10,12 +10,12 @@
 
 This ensures the pckage configuration follows a convention by scripting the updates
 of various files like:
+
 - jest.config.js
 - tsconfig.build.json
 - package.json
-   - various `scripts` such as 
-      - yarn build:ts
-      - yarn format   
-      - etc
+  - various `scripts` such as
+    - yarn build:ts
+    - yarn format
+    - etc
 - etc
-

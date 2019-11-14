@@ -1,4 +1,5 @@
 # Coil Oauth Scripts (working title)
+
 > Scripts for sites that use 'Sign in with Coil'
 
 This package contains scripts that can be embedded on third party sites who use
@@ -22,8 +23,7 @@ would all be in the scope of this package.
       }
     </script>
     <!-- working title -->
-    <script src='https://cdn.coil.com/coil-oauth-wm.js' defer>
-    </script>
+    <script src="https://cdn.coil.com/coil-oauth-wm.js" defer></script>
   </head>
   <body>
     ...
@@ -48,6 +48,6 @@ yarn get-btp-token
 
 ```bash
 yarn build
-python -m http.server 4000 
+python -m http.server 4000
 # open in an icognito window (extension disabled) http://localhost:4000/examples
 ```

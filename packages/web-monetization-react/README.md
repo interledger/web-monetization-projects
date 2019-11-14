@@ -1,4 +1,5 @@
 # Web Monetization React
+
 > React module that lets you access the state of Web Monetization
 
 ## Examples
@@ -36,11 +37,13 @@ import { useMonetizationState } from 'react-web-monetization'
 const MyMessage = props => {
   const monetization = useMonetizationState()
 
-  return <p>
-    {monetization.state === 'pending' && 'Loading...'}
-    {monetization.state === 'started' && 'Thanks for supporting our site!'}
-    {!monetization.state && 'Sign up for Coil to support our site!'}
-  </p>
+  return (
+    <p>
+      {monetization.state === 'pending' && 'Loading...'}
+      {monetization.state === 'started' && 'Thanks for supporting our site!'}
+      {!monetization.state && 'Sign up for Coil to support our site!'}
+    </p>
+  )
 }
 
 export default MyMessage
@@ -62,10 +65,14 @@ import { useMonetizationCounter } from 'react-web-monetization'
 const MyCounter = props => {
   const monetization = useMonetizationCounter()
 
-  return <p>
-    {(monetization.totalAmount / (10 ** monetization.assetScale)).toFixed(monetization.assetScale)}
-    {monetization.assetCode}
-  </p>
+  return (
+    <p>
+      {(monetization.totalAmount / 10 ** monetization.assetScale).toFixed(
+        monetization.assetScale
+      )}
+      {monetization.assetCode}
+    </p>
+  )
 }
 
 export default MyCounter
@@ -87,9 +94,11 @@ import React from 'react'
 import { IfWebMonetized } from 'react-web-monetization'
 
 const MyMessage = props => {
-  return <IfWebMonetized>
-    <p>Thanks for supporting me!</p>
-  </IfWebMonetized>
+  return (
+    <IfWebMonetized>
+      <p>Thanks for supporting me!</p>
+    </IfWebMonetized>
+  )
 }
 ```
 
@@ -98,9 +107,11 @@ import React from 'react'
 import { IfNotWebMonetized } from 'react-web-monetization'
 
 const MyMessage = props => {
-  return <IfNotWebMonetized>
-    <p>Please support me with Web Monetization!</p>
-  </IfNotWebMonetized>
+  return (
+    <IfNotWebMonetized>
+      <p>Please support me with Web Monetization!</p>
+    </IfNotWebMonetized>
+  )
 }
 ```
 
