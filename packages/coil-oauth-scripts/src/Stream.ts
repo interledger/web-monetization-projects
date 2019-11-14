@@ -95,6 +95,7 @@ export class Stream {
     this.active = false
     this.monetization.setState('stopped')
     this.monetization.setMonetizationRequest(undefined)
+    this.state = MonetizationStateEnum.STOPPED
     this.activeChanges.emit('stop')
   }
 
@@ -210,6 +211,8 @@ export class Stream {
             this.activeChanges.removeListener('stop', onStop)
             this.lastDelivered = 0
             this.monetization.setState('stopped')
+            this.state = MonetizationStateEnum.STOPPED
+            // eslint-disable-next-line @typescript-eslint/no-use-before-define
             clearInterval(updateAmountInterval)
           })
         }
