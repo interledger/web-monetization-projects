@@ -18,3 +18,5 @@ packages/*/dist
 
 .eslintrc.local.js
 jest.config.local.js
+
+packages/coil-extension/test/fixtures/coil-oauth-wm.js
