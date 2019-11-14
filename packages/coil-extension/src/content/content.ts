@@ -1,4 +1,4 @@
-import '../util/importReflectMetadata'
+import '@abraham/reflection'
 
 import { Container } from 'inversify'
 import { GraphQlClient } from '@coil/client'
