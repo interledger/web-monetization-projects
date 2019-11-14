@@ -410,6 +410,7 @@ export class BackgroundScript {
     this.tabStates.logLastMonetizationCommand(tab, 'start')
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender)
+    this.sendSetMonetizationStateMessage(tab, 'pending')
 
     log('startWebMonetization, request', request)
     const { requestId } = request.data
@@ -438,7 +439,6 @@ export class BackgroundScript {
     log('starting stream', requestId)
     this.tabsToStreams[tab] = requestId
     this.streamsToTabs[requestId] = tab
-    this.sendSetMonetizationStateMessage(tab, 'pending')
     this.streams.beginStream(requestId, {
       token,
       ...request.data,
