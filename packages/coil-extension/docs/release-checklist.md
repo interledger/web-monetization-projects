@@ -84,6 +84,14 @@ When releasing, we can copy this markdown into the PR for a release.
   - SHOULD NOT initiate a stream or SPSP request
     [#144][i144]
 
+- [ ] Open the [event-logger.html](test/fixtures/event-logger.html) file:
+
+  - Use a localhost server so WM works (e.g. with `python -m http.server 4000`)
+  - Look for unusual timings, check that pending state is emitted nearly 
+     immediately after page load or meta tag added
+  - Issue: [#63][ni63]
+  - Fix PR: [#69][np69]
+
 - [ ] Run a local web server (e.g. with `python -m http.server 4000`) serving
       the dist folder, then open [static/popup.html](static/popup.html) in a
       normal tab and check the popup rendering in various states.
@@ -168,3 +176,5 @@ When releasing, we can copy this markdown into the PR for a release.
 [p508]: https://github.com/coilhq/web-monetization/pull/508
 [np28]: https://github.com/coilhq/web-monetization-projects/pull/28
 [ni21]: https://github.com/coilhq/web-monetization-projects/issue/21
+[ni63]: https://github.com/coilhq/web-monetization-projects/issue/63
+[np69]: https://github.com/coilhq/web-monetization-projects/pull/69
