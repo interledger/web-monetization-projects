@@ -35,6 +35,6 @@
     "@web-monetization/types": "0.0.0"
   },
   "peerDependencies": {
-    "react": "^16.11"
+    "react": "^16.12"
   }
 }
