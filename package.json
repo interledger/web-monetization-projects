@@ -46,7 +46,7 @@
     }
   },
   "resolutions": {
-    "@types/webpack": "4.39.8",
+    "@types/webpack": "4.39.9",
     "@types/react": "^16.9.11"
   },
   "devDependencies": {
@@ -59,9 +59,9 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@types/copy-webpack-plugin": "^5.0.0",
     "@types/jest": "^24.0.23",
-    "@types/node": "^12.12.7",
+    "@types/node": "^12.12.8",
     "@types/puppeteer": "^1.20.2",
-    "@types/webpack": "4.39.8",
+    "@types/webpack": "4.39.9",
     "@types/webpack-merge": "^4.1.5",
     "@typescript-eslint/eslint-plugin": "2.7.x",
     "@typescript-eslint/parser": "2.7.x",
