@@ -17,7 +17,7 @@ manual release checklist on each PR/commit.
 Till then:
 
 - **do not assume master branch is in a good state** !
-  - Go through the release [release checklist](packages/coil-extension/docs/release-checklist.md) carefully! 
+  - Go through the release [release checklist](packages/coil-extension/docs/release-checklist.md) carefully!
 
 ## Setting up dev environment
 
@@ -110,10 +110,3 @@ serially in a single worker. This can often make things drastically faster.
 
 Some editors offer the ability to run scoped tests which also seems to
 run everything in a single worker when only one file is in scope.
-
-### Watch the root repo
-
-```
-yarn build:ts --watch --verbose
-
-```
