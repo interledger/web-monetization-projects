@@ -1,5 +1,7 @@
 # Web Monetization Projects
 
+# OK
+
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io/)
 [![CircleCI](https://circleci.com/gh/coilhq/web-monetization-projects.svg?style=svg)](https://circleci.com/gh/coilhq/web-monetization-projects)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=coilhq/web-monetization-projects)](https://dependabot.com)
