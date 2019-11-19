@@ -65,10 +65,8 @@ export class Stream extends EventEmitter {
   private _lastOutgoingMs!: number
   private _packetNumber!: number
   private _active: boolean
-  private _plugin!: IlpPluginBtp
-  private _ilpStream!: DataAndMoneyStream
-  private _connection!: Connection
-  private _bandwidth: AdaptiveBandwidth
+  private _looping: boolean
+  private _attempt: StreamAttempt | null
   private _client: GraphQlClient
   private _coilDomain: string
 
@@ -105,13 +103,10 @@ export class Stream extends EventEmitter {
     )
 
     this._active = false
+    this._looping = false
+    this._attempt = null
     this._lastDelivered = 0
     this._initiatingUrl = initiatingUrl
-    this._bandwidth = new AdaptiveBandwidth(
-      this._initiatingUrl,
-      this._tiers,
-      this._debug
-    )
 
     const server = new URL(this._coilDomain)
     server.pathname = '/btp'
@@ -129,38 +124,55 @@ export class Stream extends EventEmitter {
   }
 
   async start() {
-    if (!this._active) {
-      this._packetNumber = 0
-      this._active = true
+    if (this._active) return
+    this._active = true
+    if (this._looping) return
+    this._looping = true
 
-      // Hack for for issue #144
-      // Let pause() stream when tab is backgrounded have a chance to
-      // to work to avoid wasted refreshBtpToken/SPSP queries
-      await timeout(1)
-      if (!this._active) return
+    this._packetNumber = 0
+    if (this._attempt) {
+      void this._attempt.stop()
+      this._attempt = null
+    }
 
-      // reset our timer when we start streaming.
-      this._bandwidth.reset()
+    // Hack for for issue #144
+    // Let pause() stream when tab is backgrounded have a chance to
+    // to work to avoid wasted refreshBtpToken/SPSP queries
+    await timeout(1)
+    if (!this._active) return
 
-      while (this._active) {
-        try {
-          await this._stream()
+    // reset our timer when we start streaming.
+    const bandwidth = new AdaptiveBandwidth(
+      this._initiatingUrl,
+      this._tiers,
+      this._debug
+    )
+
+    while (this._active) {
+      const attempt = (this._attempt = new StreamAttempt({
+        bandwidth,
+        onMoney: this.onMoney.bind(this),
+        requestId: this._requestId
+      }))
+      let plugin
+      try {
+        plugin = await this._makePlugin()
+        const spspDetails = await this._getSPSPDetails()
+        if (this._active) {
+          await attempt.start(plugin, spspDetails)
           await timeout(1000)
-        } catch (e) {
-          this._debug('error streaming. retry in 2s. err=', e.message)
-          await this._cleanUpFailedStream()
-          await timeout(2000)
         }
+      } catch (e) {
+        this._debug('error streaming. retry in 2s. err=', e.message, e.stack)
+        if (this._active) await timeout(2000)
+      } finally {
+        if (attempt) bandwidth.addSentAmount(attempt.getTotalSent())
+        if (plugin) await plugin.disconnect()
       }
-
-      this._debug('aborted because stream is no longer active.')
     }
-  }
 
-  async _cleanUpFailedStream() {
-    if (this._plugin) {
-      await this._plugin.disconnect()
-    }
+    this._looping = false
+    this._debug('aborted because stream is no longer active.')
   }
 
   async _getBtpToken() {
@@ -173,26 +185,25 @@ export class Stream extends EventEmitter {
     }
   }
 
-  async _getPlugin() {
+  async _makePlugin() {
     const btpToken = await this._getBtpToken()
 
     // these are interspersed in order to not waste time if connection
     // is severed before full establishment
     if (!this._active) throw new Error('aborted monetization')
 
-    this._plugin = new IlpPluginBtp({
+    const plugin = new IlpPluginBtp({
       server: this._server,
       btpToken
     })
 
     this._debug('connecting ilp plugin. server=', this._server)
     // createConnection(...) does this, so this is somewhat superfluous
-    await this._plugin.connect()
-
-    return this._plugin
+    await plugin.connect()
+    return plugin
   }
 
-  async _getSPSPDetails() {
+  async _getSPSPDetails(): Promise<SPSPResponse> {
     this._debug('fetching spsp details. url=', this._spspUrl)
     let details: SPSPResponse
     try {
@@ -211,14 +222,86 @@ export class Stream extends EventEmitter {
     return details
   }
 
-  async _stream() {
-    this._lastOutgoingMs = Date.now()
+  onMoney(data: {
+    sentAmount: string
+    amount: number
+    assetCode: string
+    assetScale: number
+    sourceAmount: string
+    sourceAssetCode: string
+    sourceAssetScale: number
+  }) {
+    if (data.amount <= 0) return
 
-    const [plugin, spspDetails] = await Promise.all([
-      this._getPlugin(),
-      this._getSPSPDetails()
-    ])
+    this._debug(`emitting money. amount=${data.amount}`)
+    const now = Date.now()
+    const msSinceLastPacket = now - this._lastOutgoingMs
+    this._lastOutgoingMs = now
+    const event: StreamMoneyEvent = Object.assign(data, {
+      paymentPointer: this._paymentPointer,
+      packetNumber: this._packetNumber++,
+      requestId: this._requestId,
+      initiatingUrl: this._initiatingUrl,
+      msSinceLastPacket: msSinceLastPacket,
+      amount: data.amount.toString()
+    })
+    this.emit('money', event)
+  }
 
+  async stop() {
+    this._active = false
+    if (this._attempt) {
+      await this._attempt.stop()
+      this._attempt = null
+    }
+  }
+
+  async pause() {
+    this.stop()
+  }
+
+  async resume() {
+    this.start()
+  }
+
+  private async abort() {
+    // Don't call this.stop() directly, let BackgroundScript orchestrate the
+    // stop.
+    this.emit('abort', this._requestId)
+  }
+}
+
+interface StreamAttemptOptions {
+  bandwidth: AdaptiveBandwidth
+  onMoney: (event: any) => void
+  requestId: string
+}
+
+let ATTEMPT = 0
+
+class StreamAttempt {
+  private readonly _onMoney: (event: any) => void
+  private readonly _bandwidth: AdaptiveBandwidth
+  private readonly _debug: (...args: any[]) => void
+
+  private _plugin!: IlpPluginBtp
+  private _ilpStream!: DataAndMoneyStream
+  private _connection!: Connection
+  private _active = true
+  private _lastDelivered = 0
+
+  constructor(opts: StreamAttemptOptions) {
+    this._onMoney = opts.onMoney
+    this._bandwidth = opts.bandwidth
+    const attemptId = opts.requestId + ':' + ++ATTEMPT
+    this._debug = console.log.bind(
+      console,
+      'coil-extension:stream:' + attemptId
+    )
+  }
+
+  async start(plugin: IlpPluginBtp, spspDetails: SPSPResponse): Promise<void> {
+    this._plugin = plugin
     if (!this._active) return
 
     this._debug('creating ilp/stream connection.')
@@ -238,7 +321,6 @@ export class Stream extends EventEmitter {
     // TODO: does doing this async allow a race condition if we stop right away
     const initialSendAmount = await this._bandwidth.getStreamSendMax()
     this._ilpStream.setSendMax(initialSendAmount)
-    this._lastDelivered = 0
 
     return new Promise((resolve, reject) => {
       const onMoney = (sentAmount: string) => {
@@ -267,9 +349,9 @@ export class Stream extends EventEmitter {
           this._debug('connection destroyed')
         }
 
-        if (this._plugin.isConnected()) {
+        if (plugin.isConnected()) {
           this._debug('waiting plugin disconnect')
-          await this._plugin.disconnect()
+          await plugin.disconnect()
           this._debug('plugin disconnected')
         }
 
@@ -303,15 +385,10 @@ export class Stream extends EventEmitter {
         }
       }
 
-      const addSentOnce = onlyOnce(() => {
-        this._bandwidth.addSentAmount(this._ilpStream.totalSent)
-      })
-
       const cleanUp = () => {
         this._debug('cleanup()')
         this._ilpStream.removeListener('outgoing_money', onMoney)
         this._connection.removeListener('close', onConnectionClose)
-        addSentOnce()
         plugin.removeListener('disconnect', onPluginDisconnect)
         // eslint-disable-next-line @typescript-eslint/no-use-before-define
         clearTimeout(updateAmountTimeout)
@@ -327,68 +404,60 @@ export class Stream extends EventEmitter {
     })
   }
 
-  onMoney(sentAmount: string) {
+  async stop(): Promise<void> {
+    this._active = false
+    if (!this._connection) return
+
+    this._debug('initiating stream shutdown')
+    if (this._ilpStream.isOpen()) {
+      // Stop it sending any more than is already sent
+      this._ilpStream.setSendMax(this._ilpStream.totalSent)
+    }
+    await this.waitHoldsUptoMs(2e3)
+    await new Promise(resolve => {
+      this._debug('severing ilp/stream connection.')
+      this._ilpStream.once('close', resolve)
+      this._ilpStream.destroy()
+    })
+    this._debug(
+      'stream close event fired; plugin connected=',
+      this._plugin.isConnected()
+    )
+    await this._connection.end()
+    this._debug('connection destroyed')
+    // stream createConnection() automatically closes the plugin as of
+    // time of writing: https://github.com/interledgerjs/ilp-protocol-stream/blob/9b49b1cad11d4b7a71fb31a8da61c729fbba7d9a/src/index.ts#L69-L71
+    if (this._plugin.isConnected()) {
+      this._debug('disconnecting plugin')
+      await this._plugin.disconnect()
+      this._debug('plugin disconnected')
+    }
+  }
+
+  getTotalSent(): string {
+    return this._ilpStream ? this._ilpStream.totalSent : '0'
+  }
+
+  private onMoney(sentAmount: string): void {
     const delivered = Number(this._connection.totalDelivered)
     const amount = delivered - this._lastDelivered
     this._debug('delivered', delivered, 'lastDelivered', this._lastDelivered)
     this._lastDelivered = delivered
 
-    if (amount > 0) {
-      this._debug(`emitting money. amount=${amount}`)
-      const now = Date.now()
-      const msSinceLastPacket = now - this._lastOutgoingMs
-      this._lastOutgoingMs = now
-      const event: StreamMoneyEvent = {
-        paymentPointer: this._paymentPointer,
-        packetNumber: this._packetNumber++,
-        requestId: this._requestId,
-        initiatingUrl: this._initiatingUrl,
-        msSinceLastPacket: msSinceLastPacket,
-        sentAmount: sentAmount,
-
-        // dest=received
-        amount: String(amount),
-        assetCode: notNullOrUndef(this._connection.destinationAssetCode),
-        assetScale: notNullOrUndef(this._connection.destinationAssetScale),
-
-        // source=source
-        sourceAmount: sentAmount,
-        sourceAssetCode: this._connection.sourceAssetCode,
-        sourceAssetScale: this._connection.sourceAssetScale
-      }
-      this.emit('money', event)
-    }
+    this._onMoney({
+      sentAmount,
+      // dest=received
+      amount,
+      assetCode: notNullOrUndef(this._connection.destinationAssetCode),
+      assetScale: notNullOrUndef(this._connection.destinationAssetScale),
+      // source=source
+      sourceAmount: sentAmount,
+      sourceAssetCode: this._connection.sourceAssetCode,
+      sourceAssetScale: this._connection.sourceAssetScale
+    })
   }
 
-  async stop() {
-    this._active = false
-    if (this._connection) {
-      this._debug('initiating stream shutdown')
-      if (this._ilpStream.isOpen()) {
-        // Stop it sending any more than is already sent
-        this._ilpStream.setSendMax(this._ilpStream.totalSent)
-      }
-      await this.waitHoldsUptoMs(2e3)
-      await new Promise(resolve => {
-        this._debug('severing ilp/stream connection.')
-        this._ilpStream.once('close', resolve)
-        this._ilpStream.destroy()
-      })
-      this._debug('stream close event fired')
-      this._debug('plugin connected', this._plugin.isConnected())
-      await this._connection.end()
-      this._debug('connection destroyed')
-      // stream createConnection() automatically closes the plugin as of
-      // time of writing: https://github.com/interledgerjs/ilp-protocol-stream/blob/9b49b1cad11d4b7a71fb31a8da61c729fbba7d9a/src/index.ts#L69-L71
-      if (this._plugin.isConnected()) {
-        this._debug('disconnecting plugin')
-        await this._plugin.disconnect()
-        this._debug('plugin disconnected')
-      }
-    }
-  }
-
-  async waitHoldsUptoMs(totalMs: number) {
+  private async waitHoldsUptoMs(totalMs: number): Promise<void> {
     while ((totalMs -= 100) >= 0) {
       const holds = Object.keys(this._ilpStream['holds']).length
       this._debug({ holds: holds })
@@ -398,19 +467,5 @@ export class Stream extends EventEmitter {
         await timeout(100)
       }
     }
-  }
-
-  async pause() {
-    this.stop()
-  }
-
-  async resume() {
-    this.start()
-  }
-
-  private async abort() {
-    // Don't call this.stop() directly, let BackgroundScript orchestrate the
-    // stop.
-    this.emit('abort', this._requestId)
   }
 }
