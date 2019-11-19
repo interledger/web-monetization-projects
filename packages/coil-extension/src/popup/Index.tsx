@@ -21,7 +21,7 @@ const CoilContainer = styled(Container)`
 const OuterDiv = styled.div`
   min-width: 308px;
   max-width: 308px;
-  max-height: 352.625px;
+  height: auto;
   min-height: 260px;
 `
 

@@ -16,6 +16,8 @@ const ControlBar = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  min-height: 0;
+  height: auto;
   width: 100%;
 `
 
