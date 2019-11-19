@@ -200,22 +200,22 @@ workflows:
       - coil-extension-package
       - coil-oauth-scripts-build
       - jest-all:
-        filters:
-          branches:
-            # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-            ignore: /pull\/[0-9]+/
+          filters:
+            branches:
+              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+              ignore: /pull\/[0-9]+/
       - jest-lerna-all:
-        filters:
-          branches:
-            # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-            ignore: /pull\/[0-9]+/
+          filters:
+            branches:
+              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+              ignore: /pull\/[0-9]+/
       - coil-extension-puppeteer:
-        filters:
-          branches:
-            # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-            ignore: /pull\/[0-9]+/
+          filters:
+            branches:
+              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+              ignore: /pull\/[0-9]+/
       - coil-extension-puppeteer-transpile-only:
-        filters:
-          branches:
-            # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-            ignore: /pull\/[0-9]+/
+          filters:
+            branches:
+              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+              ignore: /pull\/[0-9]+/
