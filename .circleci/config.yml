@@ -199,6 +199,20 @@ workflows:
       - build-all-package-references-typescript
       - coil-extension-package
       - coil-oauth-scripts-build
+      - approve-tests:
+          type: approval
+          filters:
+            branches:
+              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+              only: /pull\/[0-9]+/
+      - jest-all:
+          context: web-monetization-tests
+          requires:
+            - approve-tests
+          filters:
+            branches:
+              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+              only: /pull\/[0-9]+/
       - jest-all:
           filters:
             branches:
