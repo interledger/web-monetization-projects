@@ -195,11 +195,27 @@ workflows:
   build:
     jobs:
       - lint-all
-      - jest-all
-      - jest-lerna-all
       - yarn-format-and-upkeep-diff-check
       - build-all-package-references-typescript
       - coil-extension-package
       - coil-oauth-scripts-build
-      - coil-extension-puppeteer
-      - coil-extension-puppeteer-transpile-only
+      - jest-all:
+        filters:
+          branches:
+            # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+            ignore: /pull\/[0-9]+/
+      - jest-lerna-all:
+        filters:
+          branches:
+            # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+            ignore: /pull\/[0-9]+/
+      - coil-extension-puppeteer:
+        filters:
+          branches:
+            # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+            ignore: /pull\/[0-9]+/
+      - coil-extension-puppeteer-transpile-only:
+        filters:
+          branches:
+            # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+            ignore: /pull\/[0-9]+/
