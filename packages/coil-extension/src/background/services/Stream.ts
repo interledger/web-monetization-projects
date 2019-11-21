@@ -149,17 +149,19 @@ export class Stream extends EventEmitter {
     )
 
     while (this._active) {
-      const attempt = (this._attempt = new StreamAttempt({
-        bandwidth,
-        onMoney: this.onMoney.bind(this),
-        requestId: this._requestId
-      }))
-      let plugin
+      let plugin, attempt
       try {
         plugin = await this._makePlugin()
         const spspDetails = await this._getSPSPDetails()
+        attempt = this._attempt = new StreamAttempt({
+          bandwidth,
+          onMoney: this.onMoney.bind(this),
+          requestId: this._requestId,
+          plugin,
+          spspDetails
+        })
         if (this._active) {
-          await attempt.start(plugin, spspDetails)
+          await attempt.start()
           await timeout(1000)
         }
       } catch (e) {
@@ -275,6 +277,8 @@ interface StreamAttemptOptions {
   bandwidth: AdaptiveBandwidth
   onMoney: (event: any) => void
   requestId: string
+  plugin: IlpPluginBtp
+  spspDetails: SPSPResponse
 }
 
 let ATTEMPT = 0
@@ -283,8 +287,9 @@ class StreamAttempt {
   private readonly _onMoney: (event: any) => void
   private readonly _bandwidth: AdaptiveBandwidth
   private readonly _debug: (...args: any[]) => void
+  private readonly _plugin: IlpPluginBtp
+  private readonly _spspDetails: SPSPResponse
 
-  private _plugin!: IlpPluginBtp
   private _ilpStream!: DataAndMoneyStream
   private _connection!: Connection
   private _active = true
@@ -293,6 +298,8 @@ class StreamAttempt {
   constructor(opts: StreamAttemptOptions) {
     this._onMoney = opts.onMoney
     this._bandwidth = opts.bandwidth
+    this._plugin = opts.plugin
+    this._spspDetails = opts.spspDetails
     const attemptId = opts.requestId + ':' + ++ATTEMPT
     this._debug = console.log.bind(
       console,
@@ -300,13 +307,13 @@ class StreamAttempt {
     )
   }
 
-  async start(plugin: IlpPluginBtp, spspDetails: SPSPResponse): Promise<void> {
-    this._plugin = plugin
+  async start(): Promise<void> {
     if (!this._active) return
+    const plugin = this._plugin
 
     this._debug('creating ilp/stream connection.')
     this._connection = await createConnection({
-      ...spspDetails,
+      ...this._spspDetails,
       plugin,
       slippage: 0.05
     })
