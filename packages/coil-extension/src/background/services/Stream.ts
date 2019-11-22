@@ -20,7 +20,9 @@ import { GraphQlClient } from '@coil/client'
 import { Container } from 'inversify'
 
 import { notNullOrUndef } from '../../util/nullables'
-import * as tokens from '../../types/tokens'
+
+import { Config } from './Config'
+import { CachedClient } from './CachedClient'
 
 const { timeout } = asyncUtils
 
@@ -82,8 +84,16 @@ export class Stream extends EventEmitter {
   private _active: boolean
   private _looping: boolean
   private _attempt: StreamAttempt | null
-  private _client: GraphQlClient
-  private _coilDomain: string
+  private _config: Config
+  private _clients: CachedClient
+
+  private get _client(): GraphQlClient {
+    return this._clients.get()
+  }
+
+  get _coilDomain(): string {
+    return this._config.coilDomain
+  }
 
   constructor(
     container: Container,
@@ -104,9 +114,9 @@ export class Stream extends EventEmitter {
     this._requestId = requestId
     this._spspUrl = spspEndpoint
     this._token = token
-    this._client = container.get(GraphQlClient)
     this._tiers = container.get(BandwidthTiers)
-    this._coilDomain = container.get(tokens.CoilDomain)
+    this._config = container.get(Config)
+    this._clients = container.get(CachedClient)
 
     // this._debug = makeDebug('coil-extension:stream:' + this._id)
     // We use bind rather than an anonymous function so that the line

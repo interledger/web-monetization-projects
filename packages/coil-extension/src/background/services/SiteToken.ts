@@ -3,6 +3,8 @@ import { inject, injectable } from 'inversify'
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 
+import { Config } from './Config'
+
 /**
  * See {@link handleCoilTokenMessage}
  *
@@ -15,13 +17,14 @@ import * as tokens from '../../types/tokens'
  */
 @injectable()
 export class SiteToken {
-  constructor(
-    @inject(tokens.CoilDomain)
-    private coilDomain: string
-  ) {}
+  constructor(private config: Config) {
+    setInterval(() => {
+      console.log({ coilDomain: config.coilDomain })
+    }, 5e3)
+  }
 
   async retrieve(path = '/handler.html'): Promise<string | null> {
-    const coilDomain = this.coilDomain
+    const coilDomain = this.config.coilDomain
     const coilFrame = document.createElement('iframe')
     coilFrame.src = coilDomain + path
     document.body.appendChild(coilFrame)

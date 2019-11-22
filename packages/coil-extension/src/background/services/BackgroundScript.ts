@@ -15,7 +15,9 @@ import {
   MonetizationProgress,
   MonetizationStart,
   PauseWebMonetization,
+  RegisterContentScript,
   ResumeWebMonetization,
+  SetCoilDomain,
   SetMonetizationState,
   SetStreamControls,
   StartWebMonetization,
@@ -31,6 +33,7 @@ import { Streams } from './Streams'
 import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
 import { Config } from './Config'
+import { CachedClient } from './CachedClient'
 
 const debug = makeLogger('background')
 // eslint-disable-next-line no-console
@@ -54,11 +57,10 @@ export class BackgroundScript {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private auth: AuthService,
-    private client: GraphQlClient,
+    private clients: CachedClient,
     private db: HistoryDb,
     @inject(tokens.WextApi)
     private api: typeof window.chrome,
-    @inject(tokens.Config)
     private config: Config
   ) {}
 
@@ -74,6 +76,13 @@ export class BackgroundScript {
    */
   set activeTab(value: number) {
     this.tabStates.activeTab = value
+    const setCoilDomain: SetCoilDomain = {
+      command: 'setCoilDomain',
+      data: {
+        value: this.config.coilDomain
+      }
+    }
+    this.api.runtime.sendMessage(setCoilDomain)
   }
 
   async run() {
@@ -257,8 +266,11 @@ export class BackgroundScript {
         sendResponse(true)
         break
       case 'setCoilDomain':
-        this.setCoilDomain(sender, request.data)
+        this.setCoilDomain(sender, request)
         sendResponse(true)
+        break
+      case 'registerContentScript':
+        this.registerContentScript(sender, request)
         break
       case 'injectToken':
         sendResponse(
@@ -558,7 +570,7 @@ export class BackgroundScript {
       }
     }
 
-    const response = await this.client.query<ResponseData>({
+    const response = await this.clients.get().query<ResponseData>({
       query: `query isRateLimited {
       whoami {
         usage {
@@ -623,16 +635,21 @@ export class BackgroundScript {
     // it loaded. Noop if no stream for tab.
     this._closeStream(tabId)
     this.tabStates.clear(tabId)
-    this.reloadTabState({
-      from: 'onTabsUpdated status === contentScriptInit'
-    })
+    if (this.activeTab === tabId) {
+      this.reloadTabState({
+        from: 'onTabsUpdated status === contentScriptInit'
+      })
+    }
     return true
   }
 
-  private setCoilDomain(sender: MessageSender, data: { value: string }) {
+  private setCoilDomain(
+    sender: chrome.runtime.MessageSender,
+    message: SetCoilDomain
+  ) {
     const currentCoilDomain = this.config.coilDomain
     const currentKey = `${currentCoilDomain}:store`
-    const coilDomain = data.value
+    const coilDomain = message.data.value
     const key = `${coilDomain}:store`
     const serialized = this.storage.serialize(Object.keys(STORAGE_KEY))
     this.storage.setRaw(currentKey, serialized)
@@ -643,6 +660,23 @@ export class BackgroundScript {
 
     this.store.coilDomain = coilDomain
     this.stopStreamsAndClearTabStates()
+    if (this.activeTab) {
+      this.api.tabs.sendMessage(this.activeTab, message)
+    }
     this.reloadTabState({ from: 'setCoilDomain' })
+  }
+
+  private registerContentScript(
+    sender: MessageSender,
+    request: RegisterContentScript
+  ) {
+    console.log('registerContentScript')
+    const message: SetCoilDomain = {
+      command: 'setCoilDomain',
+      data: {
+        value: this.config.coilDomain
+      }
+    }
+    this.api.tabs.sendMessage(getTab(sender), message)
   }
 }

@@ -7,13 +7,14 @@ import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 
 import { SiteToken } from './SiteToken'
+import { CachedClient } from './CachedClient'
 
 @injectable()
 export class AuthService extends EventEmitter {
   constructor(
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
-    private client: GraphQlClient,
+    private clients: CachedClient,
     private siteToken: SiteToken
   ) {
     super()
@@ -49,7 +50,7 @@ export class AuthService extends EventEmitter {
   }
 
   private async updateWhoAmi(token: string): Promise<string | null> {
-    const resp = await this.client.whoAmI(token)
+    const resp = await this.clients.get().whoAmI(token)
     if (resp.data?.whoami) {
       this.store.user = resp.data.whoami
       return token
@@ -59,7 +60,7 @@ export class AuthService extends EventEmitter {
   }
 
   private async refreshTokenAndUpdateWhoAmi(token: string) {
-    const resp = await this.client.queryToken(token)
+    const resp = await this.clients.get().queryToken(token)
     if (resp.data?.refreshToken?.token && resp.data?.whoami) {
       this.store.user = resp.data.whoami
       return resp.data.refreshToken.token

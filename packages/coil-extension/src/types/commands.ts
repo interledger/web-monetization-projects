@@ -34,7 +34,7 @@ export interface SetStreamControls extends Command {
 }
 
 /**
- * popup -> background
+ * popup -> background, background -> content
  * browser.runtime.sendMessage
  */
 export interface SetCoilDomain extends Command {
@@ -58,6 +58,14 @@ export interface Logout extends Command {
  */
 export interface ContentScriptInit extends Command {
   command: 'contentScriptInit'
+}
+
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface RegisterContentScript extends Command {
+  command: 'registerContentScript'
 }
 
 /**
@@ -127,6 +135,7 @@ export type ToBackgroundMessage =
   | IsRateLimited
   | ContentScriptInit
   | SetCoilDomain
+  | RegisterContentScript
 
 export type IconState =
   | 'streaming-paused'
@@ -221,5 +230,6 @@ export type ToContentMessage =
   | MonetizationProgress
   | MonetizationStart
   | SetMonetizationState
+  | SetCoilDomain
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup

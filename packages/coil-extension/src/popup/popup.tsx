@@ -19,9 +19,10 @@ export function run() {
 
   store.sync()
 
+  const stored = localStorage.getItem('coilDomain')
   const context: Omit<PopupContext, 'runtime'> = {
     isExtension,
-    coilDomain: COIL_DOMAIN,
+    coilDomain: stored ? JSON.parse(stored) : COIL_DOMAIN,
     store
   }
 

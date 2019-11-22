@@ -19,7 +19,7 @@ export class PopupBrowserAction {
 
   constructor(
     private tabOpener: TabOpener,
-    @inject(tokens.Config) private config: Config,
+    private config: Config,
     @inject(tokens.WextApi) private api: typeof window.chrome
   ) {
     this.openLogin = () =>

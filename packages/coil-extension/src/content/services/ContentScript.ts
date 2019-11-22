@@ -13,8 +13,10 @@ import { MonetizationProgressEvent } from '@web-monetization/types'
 import * as tokens from '../../types/tokens'
 import {
   ContentScriptInit,
+  MonetizationProgress,
   PauseWebMonetization,
   ResumeWebMonetization,
+  SetCoilDomain,
   StartWebMonetization,
   StopWebMonetization,
   ToContentMessage
@@ -35,6 +37,8 @@ export class ContentScript {
     @inject(tokens.Window) private window: Window,
     @inject(tokens.Document) private document: Document,
     @inject(tokens.ContentRuntime) private runtime: ContentRuntime,
+    @inject(tokens.CoilDomain)
+    private coilDomain: string,
     private runContentHandler: RunContentHandler,
     private frames: Frames,
     private idle: IdleDetection,
@@ -95,35 +99,55 @@ export class ContentScript {
 
   setRuntimeMessageListener() {
     this.runtime.onMessage.addListener((request: ToContentMessage) => {
-      if (request.command === 'runContent') {
-        if (request.data && request.data.from) {
-          debug('runContent with from', JSON.stringify(request.data))
-        } else {
-          debug('runContent without from')
-        }
-        this.runContentHandler.runContent().catch(e => {
-          debug(e, 'origin=', window.origin, 'iframe=', this.frames.isIFrame)
-        })
-      } else if (request.command === 'setMonetizationState') {
-        this.monetization.setState(request.data.state)
-      } else if (request.command === 'monetizationProgress') {
-        const detail: MonetizationProgressEvent['detail'] = {
-          amount: request.data.amount,
-          assetCode: request.data.assetCode,
-          assetScale: request.data.assetScale,
-          paymentPointer: request.data.paymentPointer,
-          requestId: request.data.requestId
-        }
-        this.monetization.postMonetizationProgressWindowMessage(detail)
-      } else if (request.command === 'monetizationStart') {
-        debug('monetizationStart event')
-        this.monetization.postMonetizationStartWindowMessageAndSetMonetizationState(
-          request.data
-        )
+      switch (request.command) {
+        case 'runContent':
+          if (request.data && request.data.from) {
+            debug('runContent with from', JSON.stringify(request.data))
+          } else {
+            debug('runContent without from')
+          }
+          this.runContentHandler.runContent().catch(e => {
+            debug(e, 'origin=', window.origin, 'iframe=', this.frames.isIFrame)
+          })
+          break
+        case 'setMonetizationState':
+          this.monetization.setState(request.data.state)
+          break
+        case 'setCoilDomain':
+          this.handleSetCoilDomain(request)
+          break
+        case 'monetizationProgress':
+          this.handleMonetizationProgress(request)
+          break
+        case 'monetizationStart':
+          debug('monetizationStart event')
+          this.monetization.postMonetizationStartWindowMessageAndSetMonetizationState(
+            request.data
+          )
+          break
       }
       // Don't need to return true here, not using sendResponse
       // https://developer.chrome.com/apps/runtime#event-onMessage
     })
+  }
+
+  private handleSetCoilDomain(request: SetCoilDomain) {
+    const newCoilDomain = request.data.value
+    if (this.coilDomain !== newCoilDomain) {
+      this.storage.setItem(this.runtime.getURL('/coil-domain'), newCoilDomain)
+      this.window.location.reload()
+    }
+  }
+
+  private handleMonetizationProgress(request: MonetizationProgress) {
+    const detail: MonetizationProgressEvent['detail'] = {
+      amount: request.data.amount,
+      assetCode: request.data.assetCode,
+      assetScale: request.data.assetScale,
+      paymentPointer: request.data.paymentPointer,
+      requestId: request.data.requestId
+    }
+    this.monetization.postMonetizationProgressWindowMessage(detail)
   }
 
   watchPageEvents() {
