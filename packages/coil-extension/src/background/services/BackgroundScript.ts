@@ -651,11 +651,14 @@ export class BackgroundScript {
     const currentKey = `${currentCoilDomain}:store`
     const coilDomain = message.data.value
     const key = `${coilDomain}:store`
-    const serialized = this.storage.serialize(Object.keys(STORAGE_KEY))
+    const storageConfigKeys = Object.keys(STORAGE_KEY)
+    const serialized = this.storage.serialize(storageConfigKeys)
     this.storage.setRaw(currentKey, serialized)
     const other = this.storage.getRaw(key)
     if (other) {
       this.storage.setFromSerialized(other)
+    } else {
+      this.storage.clearKeys(storageConfigKeys)
     }
 
     this.store.coilDomain = coilDomain
