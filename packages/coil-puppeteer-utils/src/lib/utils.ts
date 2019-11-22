@@ -86,6 +86,7 @@ export async function initBrowser({
 
 export async function initBrowserAndLoginFromEnv(): Promise<InitCoilReturn> {
   const browser = await initBrowser()
+  await timeout(1000)
   return initCoil({ browser, user: COIL_USER, password: COIL_PASSWORD })
 }
 
