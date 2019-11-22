@@ -82,7 +82,7 @@ export class BackgroundScript {
         value: this.config.coilDomain
       }
     }
-    this.api.runtime.sendMessage(setCoilDomain)
+    this.api.tabs.sendMessage(value, setCoilDomain)
   }
 
   async run() {
