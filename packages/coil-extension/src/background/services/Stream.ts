@@ -22,7 +22,7 @@ import { Container } from 'inversify'
 import { notNullOrUndef } from '../../util/nullables'
 
 import { Config } from './Config'
-import { CachedClient } from './CachedClient'
+import { CachedCoilDomainClient } from './CachedCoilDomainClient'
 
 const { timeout } = asyncUtils
 
@@ -85,7 +85,7 @@ export class Stream extends EventEmitter {
   private _looping: boolean
   private _attempt: StreamAttempt | null
   private _config: Config
-  private _cachedClient: CachedClient
+  private _cachedClient: CachedCoilDomainClient
 
   private get _client(): GraphQlClient {
     return this._cachedClient.get()
@@ -116,7 +116,7 @@ export class Stream extends EventEmitter {
     this._token = token
     this._tiers = container.get(BandwidthTiers)
     this._config = container.get(Config)
-    this._cachedClient = container.get(CachedClient)
+    this._cachedClient = container.get(CachedCoilDomainClient)
 
     // this._debug = makeDebug('coil-extension:stream:' + this._id)
     // We use bind rather than an anonymous function so that the line

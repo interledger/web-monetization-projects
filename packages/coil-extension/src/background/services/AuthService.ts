@@ -7,14 +7,14 @@ import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 
 import { SiteToken } from './SiteToken'
-import { CachedClient } from './CachedClient'
+import { CachedCoilDomainClient } from './CachedCoilDomainClient'
 
 @injectable()
 export class AuthService extends EventEmitter {
   constructor(
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
-    private client: CachedClient,
+    private client: CachedCoilDomainClient,
     private siteToken: SiteToken
   ) {
     super()

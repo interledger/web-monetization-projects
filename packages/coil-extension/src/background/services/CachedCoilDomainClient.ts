@@ -6,7 +6,7 @@ import * as tokens from '../../types/tokens'
 import { Config } from './Config'
 
 @injectable()
-export class CachedClient {
+export class CachedCoilDomainClient {
   private clients = new Map<string, GraphQlClient>()
 
   constructor(private container: Container, private config: Config) {}

@@ -33,7 +33,7 @@ import { Streams } from './Streams'
 import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
 import { Config } from './Config'
-import { CachedClient } from './CachedClient'
+import { CachedCoilDomainClient } from './CachedCoilDomainClient'
 
 const debug = makeLogger('background')
 // eslint-disable-next-line no-console
@@ -57,7 +57,7 @@ export class BackgroundScript {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private auth: AuthService,
-    private client: CachedClient,
+    private client: CachedCoilDomainClient,
     private db: HistoryDb,
     @inject(tokens.WextApi)
     private api: typeof window.chrome,
