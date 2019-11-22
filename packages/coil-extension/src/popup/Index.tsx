@@ -28,15 +28,15 @@ const OuterDiv = styled.div`
 export function Index(props: PopupProps) {
   const [_, setLastMonetizationProgress] = useState(Date.now())
 
-  function syncStoreAndSetState() {
-    props.context.store.sync()
+  function syncStoreAndSetState(key: string) {
+    props.context.store.sync([key])
     setLastMonetizationProgress(Date.now())
   }
 
   function bindMessageListener(): void {
     props.context.runtime.onMessageAddListener((message: ToPopupMessage) => {
       if (message.command === 'localStorageUpdate') {
-        syncStoreAndSetState()
+        syncStoreAndSetState(message.key)
       }
       return false
     })
@@ -44,7 +44,10 @@ export function Index(props: PopupProps) {
 
   useEffect(bindMessageListener, [])
 
-  const context = { ...props.context }
+  const context = {
+    ...props.context,
+    coilDomain: props.context.store.coilDomain || props.context.coilDomain
+  }
 
   return (
     <OuterDiv>

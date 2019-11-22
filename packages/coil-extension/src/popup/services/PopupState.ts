@@ -22,6 +22,7 @@ export class PopupState implements PopupStateType {
   readonly stickyState!: StickyState
   readonly playState!: PlayOrPauseState
   readonly coilSite!: string
+  readonly coilDomain!: string
   readonly monetized!: boolean
   readonly monetizedFavicon!: string
   readonly monetizedTotal!: number

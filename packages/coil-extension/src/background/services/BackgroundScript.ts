@@ -23,7 +23,6 @@ import {
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
-import { WextApi } from '../../types/wextApi'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -31,6 +30,7 @@ import { TabStates } from './TabStates'
 import { Streams } from './Streams'
 import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
+import { Config } from './Config'
 
 const debug = makeLogger('background')
 // eslint-disable-next-line no-console
@@ -57,9 +57,9 @@ export class BackgroundScript {
     private client: GraphQlClient,
     private db: HistoryDb,
     @inject(tokens.WextApi)
-    private api: WextApi,
-    @inject(tokens.CoilDomain)
-    private coilDomain: string
+    private api: typeof window.chrome,
+    @inject(tokens.Config)
+    private config: Config
   ) {}
 
   get activeTab() {
@@ -256,6 +256,10 @@ export class BackgroundScript {
         this.adaptedSite(request.data)
         sendResponse(true)
         break
+      case 'setCoilDomain':
+        this.setCoilDomain(sender, request.data)
+        sendResponse(true)
+        break
       case 'injectToken':
         sendResponse(
           await this.injectToken(request.data.token, notNullOrUndef(sender.url))
@@ -291,7 +295,7 @@ export class BackgroundScript {
 
   setCoilUrlForPopupIfNeeded(tab: number, url: string | undefined) {
     debug('setting coil url for popup', url)
-    if (url && !url.startsWith(this.coilDomain)) {
+    if (url && !url.startsWith(this.config.coilDomain)) {
       url = undefined
     }
     this.tabStates.set(tab, {
@@ -302,7 +306,7 @@ export class BackgroundScript {
 
   async injectToken(siteToken: string | null, url: string) {
     const { origin } = new URL(url)
-    if (origin !== this.coilDomain) {
+    if (origin !== this.config.coilDomain) {
       return null
     }
     // When logged out siteToken will be an empty string so normalize it to
@@ -574,6 +578,16 @@ export class BackgroundScript {
   }
 
   private logout(_: MessageSender) {
+    this.stopStreamsAndClearTabStates()
+    // Clear the token and any other state the popup relies upon
+    // reloadTabState will reset them below.
+    this.storage.clear()
+    this.tabStates.setIcon(this.activeTab, 'unavailable')
+    this.reloadTabState()
+    return true
+  }
+
+  private stopStreamsAndClearTabStates() {
     for (const tabId of this.tabStates.tabKeys()) {
       this._closeStream(tabId)
       this.tabStates.clear(tabId)
@@ -584,12 +598,6 @@ export class BackgroundScript {
       }
       this.api.tabs.sendMessage(tabId, message)
     }
-    // Clear the token and any other state the popup relies upon
-    // reloadTabState will reset them below.
-    this.storage.clear()
-    this.tabStates.setIcon(this.activeTab, 'unavailable')
-    this.reloadTabState()
-    return true
   }
 
   private setStreamControls(request: SetStreamControls, _: MessageSender) {
@@ -619,5 +627,22 @@ export class BackgroundScript {
       from: 'onTabsUpdated status === contentScriptInit'
     })
     return true
+  }
+
+  private setCoilDomain(sender: MessageSender, data: { value: string }) {
+    const currentCoilDomain = this.config.coilDomain
+    const currentKey = `${currentCoilDomain}:store`
+    const coilDomain = data.value
+    const key = `${coilDomain}:store`
+    const serialized = this.storage.serialize(Object.keys(STORAGE_KEY))
+    this.storage.setRaw(currentKey, serialized)
+    const other = this.storage.getRaw(key)
+    if (other) {
+      this.storage.setFromSerialized(other)
+    }
+
+    this.store.coilDomain = coilDomain
+    this.stopStreamsAndClearTabStates()
+    this.reloadTabState({ from: 'setCoilDomain' })
   }
 }

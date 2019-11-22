@@ -4,9 +4,9 @@ import { TabState } from '../../types/TabState'
 import * as tokens from '../../types/tokens'
 import { Colors } from '../consts/Colors'
 import { Icons } from '../consts/Icons'
-import { WextApi } from '../../types/wextApi'
 
 import { TabOpener } from './TabOpener'
+import { Config } from './Config'
 
 type Action = (tab: chrome.tabs.Tab) => void
 
@@ -19,10 +19,11 @@ export class PopupBrowserAction {
 
   constructor(
     private tabOpener: TabOpener,
-    @inject(tokens.CoilDomain) private coilDomain: string,
-    @inject(tokens.WextApi) private api: WextApi
+    @inject(tokens.Config) private config: Config,
+    @inject(tokens.WextApi) private api: typeof window.chrome
   ) {
-    this.openLogin = this.tabOpener.opener(`${this.coilDomain}/login`)
+    this.openLogin = () =>
+      this.tabOpener.open(`${this.config.coilDomain}/login`)
     // disable popup if on android
     this.api.runtime.getPlatformInfo(result => {
       if (result.os === 'android') {

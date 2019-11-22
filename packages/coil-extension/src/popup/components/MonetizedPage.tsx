@@ -9,6 +9,7 @@ import { StatusTypography } from './util/StatusTypography'
 import { MonetizeAnimation } from './MonetizationAnimation'
 import { StreamControls } from './StreamControls'
 import { useShowIfClicked } from './util/useShowIfClicked'
+import { CoilDomainRadioGroup } from './CoilDomainRadioGroup'
 
 const FlexBox = styled.div`
   margin-top: ${({ theme }) => theme.spacing(2)}px;
@@ -66,7 +67,12 @@ export function MonetizedPage(props: PopupProps) {
           )}
         </div>
       </Grid>
-      {showControls && <StreamControls context={context} />}
+      {showControls && (
+        <>
+          <StreamControls context={context} />
+          <CoilDomainRadioGroup context={context} />
+        </>
+      )}
     </>
   )
 }

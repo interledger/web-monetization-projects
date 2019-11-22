@@ -1,18 +1,6 @@
 import { User } from './user'
 import { PlayOrPauseState, StickyState } from './streamControls'
 
-export const STORAGE_KEY = {
-  // BACKGROUND/POPUP
-  token: 'token',
-  user: 'user',
-  validToken: 'validToken',
-  adapted: 'adapted',
-  monetized: 'monetized',
-  coilSite: 'coilSite',
-  monetizedTotal: 'monetizedTotal',
-  monetizedFavicon: 'monetizedFavicon'
-}
-
 /**
  * All values are JSON encoded unless as stored
  * unless stated otherwise
@@ -37,9 +25,32 @@ export interface LocalStorageProxy {
   monetized: boolean | null
   coilSite: string | null
 
+  coilDomain: string | null
+
   stickyState: StickyState | null
   playState: PlayOrPauseState | null
 
   monetizedTotal: number | null
   monetizedFavicon: string | null
 }
+
+const keysList = {
+  // BACKGROUND/POPUP
+  token: 'token',
+  user: 'user',
+  validToken: 'validToken',
+  adapted: 'adapted',
+  monetized: 'monetized',
+  coilSite: 'coilSite',
+  coilDomain: 'coilDomain',
+  monetizedTotal: 'monetizedTotal',
+  monetizedFavicon: 'monetizedFavicon',
+  stickyState: 'stickyState',
+  playState: 'playState'
+} as const
+
+export const STORAGE_KEY: typeof keysList &
+  Record<
+    keyof LocalStorageProxy,
+    LocalStorageProxy[keyof LocalStorageProxy]
+  > = keysList

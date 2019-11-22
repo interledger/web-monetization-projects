@@ -34,6 +34,17 @@ export interface SetStreamControls extends Command {
 }
 
 /**
+ * popup -> background
+ * browser.runtime.sendMessage
+ */
+export interface SetCoilDomain extends Command {
+  command: 'setCoilDomain'
+  data: {
+    value: string
+  }
+}
+
+/**
  * content -> background
  * browser.runtime.sendMessage
  */
@@ -115,6 +126,7 @@ export type ToBackgroundMessage =
   | StartWebMonetization
   | IsRateLimited
   | ContentScriptInit
+  | SetCoilDomain
 
 export type IconState =
   | 'streaming-paused'

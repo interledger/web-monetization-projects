@@ -35,6 +35,24 @@ export class StorageService {
     }
   }
 
+  serialize(keys: string[]): string {
+    const obj: Record<string, string | null> = {}
+    keys.forEach(k => {
+      obj[k] = this.storage.getItem(k)
+    })
+    return JSON.stringify(obj)
+  }
+
+  setFromSerialized(serialized: string) {
+    Object.entries(JSON.parse(serialized)).forEach(([k, v]) => {
+      if (v != null) {
+        this.storage.setItem(k, v as string)
+      } else {
+        this.storage.removeItem(k)
+      }
+    })
+  }
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   get<T = any>(key: string): T | null {
     const val = this.storage.getItem(key)

@@ -13,6 +13,7 @@ export interface PopupContext {
   isExtension: boolean
   runtime: PopupRuntime
   store: PopupState
+  // This default may be overridden by coilDomain in the store
   coilDomain: string
 }
 
