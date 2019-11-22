@@ -133,8 +133,8 @@ export class ContentScript {
 
   private handleSetCoilDomain(request: SetCoilDomain) {
     const newCoilDomain = request.data.value
+    this.storage.setItem(this.runtime.getURL('/coil-domain'), newCoilDomain)
     if (this.coilDomain !== newCoilDomain) {
-      this.storage.setItem(this.runtime.getURL('/coil-domain'), newCoilDomain)
       this.window.location.reload()
     }
   }

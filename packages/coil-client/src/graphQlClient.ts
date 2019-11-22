@@ -42,12 +42,18 @@ export class GraphQlClient {
       },
       body: JSON.stringify({ query, variables })
     }
+    console.log(
+      'graphql request',
+      JSON.stringify({ ...init, body: { query, variables } }, null, 2)
+    )
     const res = await this.fetch(`${this.config.coilDomain}/graphql`, init)
     if (!res.ok) {
       throw new Error(
         `graphql query failed. status=${res.status} query=\`${query}\``
       )
     }
-    return (await res.json()) as GraphQlResponse<T>
+    const resp = await res.json()
+    console.log('graphql resp', JSON.stringify({ resp }, null, 2))
+    return resp as GraphQlResponse<T>
   }
 }

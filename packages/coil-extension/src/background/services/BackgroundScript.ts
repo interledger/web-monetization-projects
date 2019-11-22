@@ -639,6 +639,13 @@ export class BackgroundScript {
         from: 'onTabsUpdated status === contentScriptInit'
       })
     }
+    const message: SetCoilDomain = {
+      command: 'setCoilDomain',
+      data: {
+        value: this.config.coilDomain
+      }
+    }
+    this.api.tabs.sendMessage(tabId, message)
     return true
   }
 
@@ -684,6 +691,13 @@ export class BackgroundScript {
         value: this.config.coilDomain
       }
     }
-    this.api.tabs.sendMessage(getTab(sender), message)
+
+    try {
+      const tab = getTab(sender)
+      this.api.tabs.sendMessage(tab, message)
+    } catch (e) {
+      console.log('registerCOntentScript', JSON.stringify(sender.tab))
+      return
+    }
   }
 }

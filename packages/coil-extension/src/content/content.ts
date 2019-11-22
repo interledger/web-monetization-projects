@@ -19,7 +19,10 @@ function configureContainer(container: Container) {
   container.bind(GraphQlClient.Options).to(ClientOptions)
 }
 
-function main(coilDomain: string) {
+const coilDomainStorageKey = API.runtime.getURL('/coil-domain')
+
+function main(coilDomain: string = COIL_DOMAIN) {
+  localStorage.setItem(coilDomainStorageKey, coilDomain)
   decorateCoilClient()
   const container = new Container({
     defaultScope: 'Singleton',
@@ -30,14 +33,7 @@ function main(coilDomain: string) {
   container.get(ContentScript).init()
 }
 
-function register() {
-  const message: RegisterContentScript = { command: 'registerContentScript' }
-  API.runtime.onMessage.addListener((message: ToContentMessage) => {
-    if (message.command === 'setCoilDomain') {
-      main(message.data.value)
-    }
-  })
-  API.runtime.sendMessage(message)
-}
-
-register()
+main(
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  localStorage.getItem(coilDomainStorageKey)!
+)

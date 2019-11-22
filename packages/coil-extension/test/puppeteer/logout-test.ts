@@ -12,6 +12,7 @@ import {
   TestPageResults,
   timeout
 } from '@coil/puppeteer-utils'
+import { DEV } from '@coil/puppeteer-utils/src/lib/env'
 
 import { testUrls } from './testUrls'
 
@@ -102,6 +103,7 @@ async function run() {
   }
 
   checkCondition({
+    exitOnSuccess: !DEV,
     success: logoutSuccess,
     failMessage: 'One or more test pages failed to close its payment stream!',
     successMessage: 'All test pages closed payment stream!'
