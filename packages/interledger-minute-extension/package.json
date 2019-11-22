@@ -45,11 +45,11 @@
   "devDependencies": {
     "@types/uuid": "^3.4.6",
     "css-loader": "^3.2.0",
-    "file-loader": "^4.2.0",
+    "file-loader": "^4.3.0",
     "http-server": "^0.11.1",
     "json-loader": "^0.5.7",
     "null-loader": "^3.0.0",
     "style-loader": "^1.0.0",
-    "url-loader": "^2.2.0"
+    "url-loader": "^2.3.0"
   }
 }
