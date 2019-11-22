@@ -85,10 +85,10 @@ export class Stream extends EventEmitter {
   private _looping: boolean
   private _attempt: StreamAttempt | null
   private _config: Config
-  private _clients: CachedClient
+  private _cachedClient: CachedClient
 
   private get _client(): GraphQlClient {
-    return this._clients.get()
+    return this._cachedClient.get()
   }
 
   get _coilDomain(): string {
@@ -116,7 +116,7 @@ export class Stream extends EventEmitter {
     this._token = token
     this._tiers = container.get(BandwidthTiers)
     this._config = container.get(Config)
-    this._clients = container.get(CachedClient)
+    this._cachedClient = container.get(CachedClient)
 
     // this._debug = makeDebug('coil-extension:stream:' + this._id)
     // We use bind rather than an anonymous function so that the line

@@ -57,7 +57,7 @@ export class BackgroundScript {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private auth: AuthService,
-    private clients: CachedClient,
+    private client: CachedClient,
     private db: HistoryDb,
     @inject(tokens.WextApi)
     private api: typeof window.chrome,
@@ -570,7 +570,7 @@ export class BackgroundScript {
       }
     }
 
-    const response = await this.clients.get().query<ResponseData>({
+    const response = await this.client.get().query<ResponseData>({
       query: `query isRateLimited {
       whoami {
         usage {

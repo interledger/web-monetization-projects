@@ -14,7 +14,7 @@ export class AuthService extends EventEmitter {
   constructor(
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
-    private clients: CachedClient,
+    private client: CachedClient,
     private siteToken: SiteToken
   ) {
     super()
@@ -50,7 +50,7 @@ export class AuthService extends EventEmitter {
   }
 
   private async updateWhoAmi(token: string): Promise<string | null> {
-    const resp = await this.clients.get().whoAmI(token)
+    const resp = await this.client.get().whoAmI(token)
     if (resp.data?.whoami) {
       this.store.user = resp.data.whoami
       return token
@@ -60,7 +60,7 @@ export class AuthService extends EventEmitter {
   }
 
   private async refreshTokenAndUpdateWhoAmi(token: string) {
-    const resp = await this.clients.get().queryToken(token)
+    const resp = await this.client.get().queryToken(token)
     if (resp.data?.refreshToken?.token && resp.data?.whoami) {
       this.store.user = resp.data.whoami
       return resp.data.refreshToken.token
