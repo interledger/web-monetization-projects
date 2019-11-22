@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { Colors } from '../../shared-theme/colors'
 import { PopupProps } from '../types'
 
+import { CoilDomainRadioGroup } from './CoilDomainRadioGroup'
+
 const CoilBar = styled.div`
   display: flex;
   flex-direction: column;

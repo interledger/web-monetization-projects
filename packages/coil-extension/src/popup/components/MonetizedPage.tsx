@@ -70,7 +70,6 @@ export function MonetizedPage(props: PopupProps) {
       {showControls && (
         <>
           <StreamControls context={context} />
-          <CoilDomainRadioGroup context={context} />
         </>
       )}
     </>

@@ -1,6 +1,5 @@
 import MessageSender = chrome.runtime.MessageSender
 import { inject, injectable } from 'inversify'
-import { GraphQlClient } from '@coil/client'
 import { HistoryDb } from '@web-monetization/wext/services'
 import { MonetizationState } from '@web-monetization/types'
 
@@ -662,11 +661,16 @@ export class BackgroundScript {
     }
 
     this.store.coilDomain = coilDomain
+    this.store.validToken = false
+    delete this.store.token
     this.stopStreamsAndClearTabStates()
     if (this.activeTab) {
       this.api.tabs.sendMessage(this.activeTab, message)
     }
     this.reloadTabState({ from: 'setCoilDomain' })
+    this.auth.getTokenMaybeRefreshAndStoreState().then(() => {
+      this.reloadTabState({ from: 'setCoilDomain authed' })
+    })
   }
 
   private registerContentScript(

@@ -35,6 +35,7 @@ const user = {
 
 function mockState(partial: Partial<PopupStateType>): PopupStateType {
   const ret: PopupStateType = {
+    coilDomain: null,
     validToken: null,
     user: null,
     adapted: null,
