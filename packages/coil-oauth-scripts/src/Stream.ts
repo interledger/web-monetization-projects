@@ -57,6 +57,7 @@ export class Stream {
   private backoff = new BackoffWaiter()
   private lastDelivered = 0
   private loop: Promise<void> | null = null
+  private existing?: Promise<void>
 
   private readonly tiers: BandwidthTiers
   private adaptiveBandwidth!: AdaptiveBandwidth
@@ -71,7 +72,8 @@ export class Stream {
     this.monetization = new DocumentMonetization(document)
   }
 
-  start(opts: StreamStartOpts) {
+  async start(opts: StreamStartOpts) {
+    await this.finalizeExisting()
     this.active = true
     this.btpToken = opts.btpToken
     this.btpEndpoint = opts.btpEndpoint || BTP_ENDPOINT_DEFAULT
@@ -79,6 +81,7 @@ export class Stream {
     this.paymentPointer = opts.paymentPointer
     this.spspEndpoint = opts.spspEndpoint
     this.pageUrl = opts.pageUrl
+    // VVVVV
     this.adaptiveBandwidth = new AdaptiveBandwidth(opts.pageUrl, this.tiers)
     this.monetization.setMonetizationRequest({
       paymentPointer: opts.paymentPointer,
@@ -91,12 +94,25 @@ export class Stream {
     this.activeChanges.emit('start')
   }
 
-  stop() {
+  async finalizeExisting() {
+    if (this.existing) {
+      try {
+        await this.existing
+      } catch (e) {
+        //
+      } finally {
+        this.existing = undefined
+      }
+    }
+  }
+
+  async stop() {
     this.active = false
     this.monetization.setState('stopped')
     this.monetization.setMonetizationRequest(undefined)
     this.state = MonetizationStateEnum.STOPPED
     this.activeChanges.emit('stop')
+    return this.finalizeExisting()
   }
 
   isActive() {
@@ -172,7 +188,7 @@ export class Stream {
       const stream = connection.createStream()
       stream.setSendMax(initialSendMaxAmount)
 
-      await new Promise((resolve, reject) => {
+      const promise = (this.existing = new Promise((resolve, reject) => {
         const boundOutgoingMoney = this.onOutgoingMoney.bind(this, connection)
         const onPluginDisconnect = async () => {
           cleanUp()
@@ -201,31 +217,37 @@ export class Stream {
           this.adaptiveBandwidth.addSentAmount(stream.totalSent)
         })
 
-        const cleanUp = () => {
+        const cleanUp = asyncUtils.onlyOnce(() => {
+          console.log('cleanUp()')
+
           // TODO: comment why using setImmediate here
-          setImmediate(() => {
-            plugin.removeListener('disconnect', onPluginDisconnect)
-            stream.removeListener('outgoing_money', boundOutgoingMoney)
-            connection.removeListener('close', onConnectionClose)
-            addSentAmount()
-            this.activeChanges.removeListener('stop', onStop)
-            this.lastDelivered = 0
-            this.monetization.setState('stopped')
-            this.state = MonetizationStateEnum.STOPPED
-            // eslint-disable-next-line @typescript-eslint/no-use-before-define
-            clearInterval(updateAmountInterval)
-          })
-        }
+          // setTimeout(() => {
+          plugin.removeListener('disconnect', onPluginDisconnect)
+          stream.removeListener('outgoing_money', boundOutgoingMoney)
+          connection.removeListener('close', onConnectionClose)
+          addSentAmount()
+          this.activeChanges.removeListener('stop', onStop)
+          this.lastDelivered = 0
+          this.monetization.setState('stopped')
+          this.state = MonetizationStateEnum.STOPPED
+          // eslint-disable-next-line @typescript-eslint/no-use-before-define
+          clearInterval(updateAmountInterval)
+          // }, 10)
+        })
 
         plugin.on('disconnect', onPluginDisconnect)
         stream.on('outgoing_money', boundOutgoingMoney)
         connection.on('close', onConnectionClose)
-        this.activeChanges.on('stop', onStop)
+        this.activeChanges.on('stop', () => {
+          console.log('activeChanges on stop!')
+          onStop()
+        })
         const updateAmountInterval = setInterval(
           onUpdateAmountInterval,
           UPDATE_AMOUNT_INTERVAL
         )
-      })
+      }))
+      await promise
     } finally {
       await plugin.disconnect()
     }
