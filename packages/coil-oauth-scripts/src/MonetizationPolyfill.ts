@@ -79,9 +79,10 @@ export class MonetizationPolyfill {
     const monitor = new MonetizationTagObserver(
       document,
       async ({ started, stopped }) => {
-        if (started || stopped) {
+        console.log({ started, stopped })
+        if (stopped) {
           clearWatch()
-          this.stream.stop()
+          await this.stream.stop()
         }
 
         if (started) {
