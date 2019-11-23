@@ -5,11 +5,11 @@ import React, { useState } from 'react'
 import { Amount } from '@web-monetization/types'
 import styled from 'styled-components'
 import {
-  Checkbox,
   Divider,
   FormControlLabel,
   FormGroup,
   Grid,
+  Switch,
   Typography
 } from '@material-ui/core'
 
@@ -87,18 +87,38 @@ const MainPanel = styled.div`
   background: #ffffff;
   border-radius: 10px;
 `
-const AdaptedLogos = styled.div`
-  padding: 8px 0 0 0;
+const AdaptedLogos = styled(Grid)`
+  && {
+    padding: 8px 0 16px 16px;
+    flex: 0 1 120px;
+  }
 `
 const TwitchLogo = styled.img`
-  height: 20px;
+  height: 24px;
   position: relative;
-  top: 4px;
+  top: 11px;
   display: inline-flex;
+`
+
+const YoutubeLogo = styled.img`
+  height: 18px;
+  position: relative;
+  top: 13px;
+  display: inline-flex;
+`
+
+const LogoCircle = styled.div`
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 5px #c3d3d0;
+  height: 44px;
+  text-align: center;
+  width: 44px;
+  margin-right: 8px;
 `
 const YoutubeTwitchCheckbox = styled(Grid)`
   && {
-    margin: 16px 0;
+    margin: 10px 0 16px 0;
     img {
       width: 24px;
       text-align: left;
@@ -114,11 +134,22 @@ const YoutubeTwitchCheckbox = styled(Grid)`
   }
 `
 
+const OptionsRow = styled(Grid)`
+  && {
+    margin: 16px 0;
+  }
+`
+
 function Options() {
   const [privacyChecked, setPrivacyChecked] = useState(false)
+  const [domain, setDomain] = useState('local')
 
   const handlePrivacyChange = () => {
     setPrivacyChecked(!privacyChecked)
+  }
+
+  const handleDomainChange = (event: any) => {
+    setDomain(event.target.value)
   }
 
   const totalSeconds = totals.reduce(
@@ -136,24 +167,40 @@ function Options() {
           <Divider variant='middle' />
           <Grid container direction='column'>
             <Grid item xs={12}>
-              <YoutubeTwitchCheckbox>
-                <FormGroup row>
-                  {/*<AdaptedLogos>*/}
-                  {/*  <img src='../../res/youtube.svg' alt='YouTube'/>*/}
-                  {/*  <TwitchLogo src='../../res/twitch.svg' alt='Twitch'/>*/}
-                  {/*</AdaptedLogos>*/}
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        checked={privacyChecked}
-                        onChange={handlePrivacyChange}
-                        value='privacyChecked'
-                      />
-                    }
-                    label={label}
-                  />
-                </FormGroup>
-              </YoutubeTwitchCheckbox>
+              <OptionsRow container justify='space-between' direction='row'>
+                <Grid item xs={12} sm={10}>
+                  <Grid container direction='row'>
+                    <AdaptedLogos item xs>
+                      <Grid container direction='row'>
+                        <LogoCircle>
+                          <YoutubeLogo
+                            src='../../res/youtube.svg'
+                            alt='YouTube'
+                          />
+                        </LogoCircle>
+                        <LogoCircle>
+                          <TwitchLogo src='../../res/twitch.svg' alt='Twitch' />
+                        </LogoCircle>
+                      </Grid>
+                    </AdaptedLogos>
+                    <YoutubeTwitchCheckbox item xs>
+                      <FormGroup row>
+                        <FormControlLabel
+                          control={
+                            <Switch
+                              checked={privacyChecked}
+                              onChange={handlePrivacyChange}
+                              value='privacyChecked'
+                              color='primary'
+                            />
+                          }
+                          label={label}
+                        />
+                      </FormGroup>
+                    </YoutubeTwitchCheckbox>
+                  </Grid>
+                </Grid>
+              </OptionsRow>
             </Grid>
           </Grid>
         </Grid>
