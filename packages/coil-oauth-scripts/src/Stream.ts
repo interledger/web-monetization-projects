@@ -192,10 +192,10 @@ export class Stream {
         const boundOutgoingMoney = this.onOutgoingMoney.bind(this, connection)
         const onPluginDisconnect = async () => {
           cleanUp()
-          stream.destroy()
-          // We need to wait for this else we get nasty errors in the console
-          // re: messages trying to be written, perhaps by plugin.disconnect()
-          await connection.destroy()
+          // stream.destroy()
+          // // We need to wait for this else we get nasty errors in the console
+          // // re: messages trying to be written, perhaps by plugin.disconnect()
+          // await connection.destroy()
           resolve()
         }
 
