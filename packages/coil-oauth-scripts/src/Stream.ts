@@ -173,7 +173,9 @@ export class Stream {
       stream.setSendMax(initialSendMaxAmount)
 
       await new Promise((resolve, reject) => {
-        const boundOutgoingMoney = this.onOutgoingMoney.bind(this, connection)
+        const boundOutgoingMoney = (sentAmount: string) => {
+          setImmediate(this.onOutgoingMoney.bind(this), connection)
+        }
         const onPluginDisconnect = async () => {
           cleanUp()
           stream.destroy()
