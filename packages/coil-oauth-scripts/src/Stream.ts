@@ -174,7 +174,7 @@ export class Stream {
 
       await new Promise((resolve, reject) => {
         const boundOutgoingMoney = (sentAmount: string) => {
-          setImmediate(this.onOutgoingMoney.bind(this), connection)
+          setImmediate(this.onOutgoingMoney.bind(this), connection, sentAmount)
         }
         const onPluginDisconnect = async () => {
           cleanUp()
