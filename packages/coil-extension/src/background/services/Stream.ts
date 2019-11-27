@@ -331,7 +331,8 @@ class StreamAttempt {
 
     return new Promise((resolve, reject) => {
       const onMoney = (sentAmount: string) => {
-        this.onMoney(sentAmount)
+        // Wait until `setImmediate` so that `connection.totalDelivered` has been updated.
+        setImmediate(this.onMoney.bind(this), sentAmount)
       }
 
       const onPluginDisconnect = async () => {
