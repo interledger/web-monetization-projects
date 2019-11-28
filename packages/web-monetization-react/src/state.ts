@@ -1,35 +1,54 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { getDocument, getGlobalWebMonetizationState } from './global'
 
 export function useMonetizationState() {
   // get the singleton WM state
   const webMonetizationState = getGlobalWebMonetizationState()
+
   webMonetizationState.init()
 
-  const { state, requestId, paymentPointer } = webMonetizationState.getState()
+  const {
+    state,
+    requestId,
+    paymentPointer,
+    hasPaid
+  } = webMonetizationState.getState()
+
   const [monetizationState, setMonetizationState] = useState({
     state,
     requestId,
-    paymentPointer
+    paymentPointer,
+    hasPaid
   })
 
   useEffect(() => {
     if (!getDocument().monetization) return
 
-    const onStart = () => {
+    const stateChange = () => {
       const {
         state,
         requestId,
-        paymentPointer
+        paymentPointer,
+        hasPaid
       } = webMonetizationState.getState()
-      setMonetizationState({ state, requestId, paymentPointer })
+
+      setMonetizationState({
+        state,
+        requestId,
+        paymentPointer,
+        hasPaid
+      })
     }
 
-    webMonetizationState.on('monetizationstart', onStart)
+    webMonetizationState.on('monetizationpending', stateChange)
+    webMonetizationState.on('monetizationstart', stateChange)
+    webMonetizationState.on('monetizationstop', stateChange)
 
     return () => {
-      webMonetizationState.removeListener('monetizationstart', onStart)
+      webMonetizationState.removeListener('monetizationstart', stateChange)
+      webMonetizationState.removeListener('monetizationpending', stateChange)
+      webMonetizationState.removeListener('monetizationstop', stateChange)
     }
   })
 
