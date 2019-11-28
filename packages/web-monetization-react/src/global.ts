@@ -2,8 +2,10 @@ import { EventEmitter } from 'events'
 
 import {
   MonetizationExtendedDocument,
+  MonetizationPendingEvent,
   MonetizationProgressEvent,
-  MonetizationStartEvent
+  MonetizationStartEvent,
+  MonetizationState
 } from '@web-monetization/types'
 
 export function getDocument() {
@@ -14,7 +16,7 @@ const doc = getDocument()
 
 // TODO: is there a more elegant pattern for this?
 export class GlobalWebMonetizationState extends EventEmitter {
-  private state: string | null
+  private state: MonetizationState | null
   private paymentPointer: string | null
   private requestId: string | null
   private assetCode: string | null
@@ -24,8 +26,7 @@ export class GlobalWebMonetizationState extends EventEmitter {
 
   constructor() {
     super()
-    const doc = getDocument()
-    this.state = doc.monetization && doc.monetization.state
+    this.state = this.setStateFromDocumentMonetization()
     this.paymentPointer = null
     this.requestId = null
     this.assetCode = null
@@ -35,6 +36,16 @@ export class GlobalWebMonetizationState extends EventEmitter {
 
     this.onMonetizationStart = this.onMonetizationStart.bind(this)
     this.onMonetizationProgress = this.onMonetizationProgress.bind(this)
+    this.onMonetizationPending = this.onMonetizationPending.bind(this)
+    this.onMonetizationStart = this.onMonetizationStart.bind(this)
+  }
+
+  resetState() {
+    this.paymentPointer = null
+    this.requestId = null
+    this.assetCode = null
+    this.assetScale = null
+    this.totalAmount = 0
   }
 
   getState() {
@@ -44,42 +55,72 @@ export class GlobalWebMonetizationState extends EventEmitter {
       requestId: this.requestId,
       assetCode: this.assetCode,
       assetScale: this.assetScale,
-      totalAmount: this.totalAmount
+      totalAmount: this.totalAmount,
+      // synthetic state
+      hasPaid: this.totalAmount !== 0 || this.state === 'started'
     }
   }
 
   init() {
     if (!this.initialized && doc.monetization) {
       this.initialized = true
-      doc.monetization.addEventListener(
-        'monetizationstart',
-        (this.onMonetizationStart as unknown) as EventListener
-      )
-      doc.monetization.addEventListener(
-        'monetizationprogress',
-        (this.onMonetizationProgress as unknown) as EventListener
-      )
+      const addListener = (event: string, listener: Function) =>
+        doc.monetization.addEventListener(event, listener as EventListener)
+      addListener('monetizationstart', this.onMonetizationStart)
+      addListener('monetizationstop', this.onMonetizationStop)
+      addListener('monetizationpending', this.onMonetizationPending)
+      addListener('monetizationprogress', this.onMonetizationProgress)
     }
   }
 
   terminate() {
     if (this.initialized && doc.monetization) {
       this.initialized = false
-      doc.monetization.removeEventListener(
-        'monetizationstart',
-        (this.onMonetizationStart as unknown) as EventListener
-      )
-      doc.monetization.removeEventListener(
-        'monetizationprogress',
-        (this.onMonetizationProgress as unknown) as EventListener
-      )
+      const removeListener = (event: string, listener: Function) =>
+        doc.monetization.removeEventListener(event, listener as EventListener)
+      removeListener('monetizationstart', this.onMonetizationStart)
+      removeListener('monetizationstop', this.onMonetizationStop)
+      removeListener('monetizationpending', this.onMonetizationPending)
+      removeListener('monetizationprogress', this.onMonetizationProgress)
     }
+  }
+
+  onMonetizationStop() {
+    const metaTag: HTMLMetaElement | null = document.head.querySelector(
+      'meta[name="monetization"]'
+    )
+    if (!metaTag || metaTag.content !== this.paymentPointer) {
+      this.resetState()
+    }
+
+    this.setStateFromDocumentMonetization()
+    this.emit('monetizationstop')
+  }
+
+  setStateFromDocumentMonetization() {
+    return (this.state =
+      typeof document !== 'undefined'
+        ? getDocument().monetization?.state
+        : null)
+  }
+
+  onMonetizationPending(ev: MonetizationPendingEvent) {
+    const { paymentPointer, requestId } = ev.detail
+
+    if (this.requestId !== requestId) {
+      this.resetState()
+    }
+
+    this.setStateFromDocumentMonetization()
+    this.paymentPointer = paymentPointer
+    this.requestId = requestId
+    this.emit('monetizationstart')
   }
 
   onMonetizationStart(ev: MonetizationStartEvent) {
     const { paymentPointer, requestId } = ev.detail
 
-    this.state = doc.monetization && doc.monetization.state
+    this.setStateFromDocumentMonetization()
     this.paymentPointer = paymentPointer
     this.requestId = requestId
     this.emit('monetizationstart')

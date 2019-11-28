@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@abraham/reflection": "^0.7.0",
-    "@web-monetization/react": "0.0.0",
+    "@web-monetization/react": "0.0.12",
     "@web-monetization/types": "0.0.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",

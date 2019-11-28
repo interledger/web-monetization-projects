@@ -1,7 +1,11 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
+  "$overRideUpKeep": {
+    "author": "ben@sharafian.me",
+    "version": "0.0.12"
+  },
   "name": "@web-monetization/react",
-  "version": "0.0.0",
+  "version": "0.0.12",
   "private": false,
   "keywords": [
     "ilp",
@@ -13,7 +17,7 @@
     "url": "git@github.com:coilhq/web-monetization.git"
   },
   "license": "Apache-2.0",
-  "author": "Coil Team <info@coil.com>",
+  "author": "ben@sharafian.me",
   "main": "./build",
   "types": "./build",
   "scripts": {
