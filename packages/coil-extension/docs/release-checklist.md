@@ -10,6 +10,7 @@ the issue/PR.
 When releasing, we can copy this markdown into the PR for a release.
 
 - [ ] Build for prod with release settings
+
   - e.g. `yarn build-prod chrome -p --run-prod --devtool=none`
     - as per [package.sh](../package.sh)
 
@@ -21,15 +22,19 @@ When releasing, we can copy this markdown into the PR for a release.
   - For Chrome, go to `chrome://extensions` and `Load Unpacked`
 
 - [ ] [example.com](http://example.com/) should say "This website is not supported"
+
   - ![image](https://user-images.githubusercontent.com/525211/66626576-f4b42280-ec22-11e9-9f77-4a95be08643e.png)
 
 - [ ] [xrpcommunity.blog](https://xrpcommunity.blog/) should monetize
-  - ![image](https://user-images.githubusercontent.com/525211/66626655-3c3aae80-ec23-11e9-981a-0e317ab80b42.png)  
+
+  - ![image](https://user-images.githubusercontent.com/525211/66626655-3c3aae80-ec23-11e9-981a-0e317ab80b42.png)
 
 - [ ] [twitch.tv](https://twitch.tv/vinesauce) works
+
   - ![image](https://user-images.githubusercontent.com/525211/66626721-815ee080-ec23-11e9-8139-59a563822eb0.png)
 
 - [ ] [monetized youtube video](https://www.youtube.com/watch?v=-QMbZx_w2_Y)
+
   - ![image](https://user-images.githubusercontent.com/525211/66626878-0a761780-ec24-11e9-8015-19bf8348807b.png)
 
 - [ ] Coil welcome and welcome to explore pages
@@ -40,18 +45,19 @@ When releasing, we can copy this markdown into the PR for a release.
   - [ ] Once on explore page should show `Start Exploring` with a rocket-ship graphic
     - ![image](https://user-images.githubusercontent.com/525211/66627053-a2740100-ec24-11e9-8759-76f40c46d6fa.png)
 
-- [ ] Will route to $coildomain.com/login rather than open popup if logged out
-    
-    - Log out from extension
-    - Check that icon is in 'unavailable' state
-      - ![image](https://user-images.githubusercontent.com/525211/66627206-2a5a0b00-ec25-11e9-9c0c-74dc34370e13.png)
-    - Click on browser action
-    - Check that routed to login page
-      - ![image](https://user-images.githubusercontent.com/525211/66627301-6beab600-ec25-11e9-8045-a4e35686dc34.png)
+- [ ] Will route to \$coildomain.com/login rather than open popup if logged out
+
+  - Log out from extension
+  - Check that icon is in 'unavailable' state
+    - ![image](https://user-images.githubusercontent.com/525211/66627206-2a5a0b00-ec25-11e9-9c0c-74dc34370e13.png)
+  - Click on browser action
+  - Check that routed to login page
+    - ![image](https://user-images.githubusercontent.com/525211/66627301-6beab600-ec25-11e9-8045-a4e35686dc34.png)
 
 - [ ] Make sure the manifest version was bumped but doesn't skip versions
 
 - [ ] Check the monetization animation works properly
+
   - ![image](https://user-images.githubusercontent.com/525211/66627467-04813600-ec26-11e9-855a-517700af4e26.png)
   - Only required on desktop browsers
   - Should animate when monetized and packets received
@@ -61,8 +67,9 @@ When releasing, we can copy this markdown into the PR for a release.
       - `sudo sleep 10 && sudo ifconfig en0 down && sleep 10 && sudo ifconfig en0 up`
 
 - [ ] Run the puppeteer [tests](./test.sh) (look at the [circle jobs](../../../.circleci/config.yml))
-    - export BROWSER_TYPE='chrome' # or 'firefox' 
-    - logout test currently fails on Firefox due to puppeteer-firefox limitations
+
+  - export BROWSER_TYPE='chrome' # or 'firefox'
+  - logout test currently fails on Firefox due to puppeteer-firefox limitations
 
 - [ ] Go to a [youtube video](https://www.youtube.com/watch?v=l1btEwwRePs),
       manually skip to near end of video, and when autoplay of a video from
@@ -87,10 +94,18 @@ When releasing, we can copy this markdown into the PR for a release.
 - [ ] Open the [event-logger.html](test/fixtures/event-logger.html) file:
 
   - Use a localhost server so WM works (e.g. with `python -m http.server 4000`)
-  - Look for unusual timings, check that pending state is emitted nearly 
-     immediately after page load or meta tag added
+  - Look for unusual timings, check that pending state is emitted nearly
+    immediately after page load or meta tag added
   - Issue: [#63][ni63]
   - Fix PR: [#69][np69]
+
+- [ ] Check started event fires when quickly switching between tabs
+
+  - Open the [event-logger.html](test/fixtures/event-logger.html) file
+  - Switch to another (non-monetized) tab. The payments stop. Quickly switch back to the first tab.
+  - The payments restart. Make sure there is a monetizationstart event
+  - Issue: [#105][ni105]
+  - Fix PR: [#117][np117]
 
 - [ ] Run a local web server (e.g. with `python -m http.server 4000`) serving
       the dist folder, then open [static/popup.html](static/popup.html) in a
@@ -98,14 +113,15 @@ When releasing, we can copy this markdown into the PR for a release.
 
 - [ ] If the browser is running on android, check that the "popup" browser action
       simply opens settings.
+
   - Install android-sdk on PC and Firefox on android
   - Enable developer mode on android and enable usb debugging
-  - Plug in android to PC via usb    
+  - Plug in android to PC via usb
   - `adb devices # make note of device id`
   - `adb shell pm grant org.mozilla.firefox android.permission.READ_EXTERNAL_STORAGE`
   - `adb shell pm grant org.mozilla.firefox android.permission.WRITE_EXTERNAL_STORAGE`
   - Build the extension
-  - `yarn web-ext run -s $PWD/dist --target=firefox-android --android-device=WUJ01PNSVY # from adb devices step` 
+  - `yarn web-ext run -s $PWD/dist --target=firefox-android --android-device=WUJ01PNSVY # from adb devices step`
   - Issue: [coil/coilhq#2084][ci2084]
   - Fix PRs: [#166][p166] [#295][p295]
 
@@ -129,8 +145,9 @@ When releasing, we can copy this markdown into the PR for a release.
   - Go to e.g. https://www.wevolver.com/
   - Change other pages which uses HTML5 history.pushState
   - Check that streaming is maintained throughout
+
     - if not, use browser devtools to check if meta exists
-        - `document.head.querySelector('meta[name="monetization"]')`
+      - `document.head.querySelector('meta[name="monetization"]')`
 
   - Issue: [#507][i507]
   - Fix PR: [#508][p508]
@@ -178,3 +195,5 @@ When releasing, we can copy this markdown into the PR for a release.
 [ni21]: https://github.com/coilhq/web-monetization-projects/issue/21
 [ni63]: https://github.com/coilhq/web-monetization-projects/issue/63
 [np69]: https://github.com/coilhq/web-monetization-projects/pull/69
+[ni105]: https://github.com/coilhq/web-monetization-projects/issue/105
+[np117]: https://github.com/coilhq/web-monetization-projects/pull/117
