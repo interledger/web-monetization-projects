@@ -21,7 +21,7 @@ import {
   StartWebMonetization,
   ToBackgroundMessage
 } from '../../types/commands'
-import { LocalStorageProxy, STORAGE_KEY } from '../../types/storage'
+import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { WextApi } from '../../types/wextApi'
 
@@ -33,6 +33,7 @@ import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
 
 const debug = makeLogger('background')
+// eslint-disable-next-line no-console
 const log = console.log
 
 function getTab(sender: { tab?: { id?: number } }) {

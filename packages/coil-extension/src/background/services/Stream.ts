@@ -13,8 +13,8 @@ import {
   BandwidthTiers,
   getSPSPResponse,
   PaymentDetails,
-  SPSPResponse,
-  SPSPError
+  SPSPError,
+  SPSPResponse
 } from '@web-monetization/polyfill-utils'
 import { GraphQlClient } from '@coil/client'
 import { Container } from 'inversify'
@@ -22,7 +22,7 @@ import { Container } from 'inversify'
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 
-const { timeout, onlyOnce } = asyncUtils
+const { timeout } = asyncUtils
 
 const UPDATE_AMOUNT_TIMEOUT = 2000
 
@@ -30,6 +30,10 @@ const UPDATE_AMOUNT_TIMEOUT = 2000
 // while the web-monetization-scripts which use the monetizationprogress
 // event show received amounts.
 export interface StreamMoneyEvent {
+  /**
+   * Currently means packet number for a given StreamAttempt.
+   * Could change.
+   */
   packetNumber: number
 
   // requestId
@@ -51,11 +55,22 @@ export interface StreamMoneyEvent {
   sourceAssetScale: number
 }
 
+type OnMoneyEvent = {
+  sentAmount: string
+  amount: number
+  assetCode: string
+  assetScale: number
+  sourceAmount: string
+  sourceAssetCode: string
+  sourceAssetScale: number
+}
+
 export class Stream extends EventEmitter {
   private readonly _requestId: string
   private readonly _spspUrl: string
   private readonly _paymentPointer: string
   private _token: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private readonly _debug: (...args: any[]) => void
   private readonly _server: string
   private readonly _tiers: BandwidthTiers
@@ -126,10 +141,13 @@ export class Stream extends EventEmitter {
   async start() {
     if (this._active) return
     this._active = true
+
+    // reset this upon every start *before* early exit while _looping
+    this._packetNumber = 0
+
     if (this._looping) return
     this._looping = true
 
-    this._packetNumber = 0
     if (this._attempt) {
       void this._attempt.stop()
       this._attempt = null
@@ -224,15 +242,7 @@ export class Stream extends EventEmitter {
     return details
   }
 
-  onMoney(data: {
-    sentAmount: string
-    amount: number
-    assetCode: string
-    assetScale: number
-    sourceAmount: string
-    sourceAssetCode: string
-    sourceAssetScale: number
-  }) {
+  onMoney(data: OnMoneyEvent) {
     if (data.amount <= 0) return
 
     this._debug(`emitting money. amount=${data.amount}`)
@@ -275,7 +285,7 @@ export class Stream extends EventEmitter {
 
 interface StreamAttemptOptions {
   bandwidth: AdaptiveBandwidth
-  onMoney: (event: any) => void
+  onMoney: (event: OnMoneyEvent) => void
   requestId: string
   plugin: IlpPluginBtp
   spspDetails: SPSPResponse
@@ -284,8 +294,9 @@ interface StreamAttemptOptions {
 let ATTEMPT = 0
 
 class StreamAttempt {
-  private readonly _onMoney: (event: any) => void
+  private readonly _onMoney: (event: OnMoneyEvent) => void
   private readonly _bandwidth: AdaptiveBandwidth
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private readonly _debug: (...args: any[]) => void
   private readonly _plugin: IlpPluginBtp
   private readonly _spspDetails: SPSPResponse
@@ -466,13 +477,14 @@ class StreamAttempt {
   }
 
   private async waitHoldsUptoMs(totalMs: number): Promise<void> {
-    while ((totalMs -= 100) >= 0) {
+    while (totalMs > 0) {
       const holds = Object.keys(this._ilpStream['holds']).length
       this._debug({ holds: holds })
       if (holds === 0) {
         break
       } else {
         await timeout(100)
+        totalMs -= 100
       }
     }
   }
