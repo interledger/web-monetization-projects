@@ -6,12 +6,18 @@ import { login, queryToken, refreshBtpToken, whoAmI } from './queries'
 export class GraphQlClientOptions {
   public coilDomain = 'https://coil.com'
   public fetch: typeof fetch = portableFetch
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  public logger?: (...args: any[]) => void = undefined
 }
 
 export interface GraphQlQueryParameters {
   query: string
   token?: string | null
   variables?: {}
+}
+
+function pretty(val: unknown) {
+  return JSON.stringify(val, null, 2)
 }
 
 export class GraphQlClient {
@@ -42,10 +48,12 @@ export class GraphQlClient {
       },
       body: JSON.stringify({ query, variables })
     }
-    console.log(
-      'graphql request',
-      JSON.stringify({ ...init, body: { query, variables } }, null, 2)
-    )
+    if (this.config.logger) {
+      this.config.logger(
+        'graphql request',
+        pretty({ ...init, body: { query, variables } })
+      )
+    }
     const res = await this.fetch(`${this.config.coilDomain}/graphql`, init)
     if (!res.ok) {
       throw new Error(
@@ -53,7 +61,9 @@ export class GraphQlClient {
       )
     }
     const resp = await res.json()
-    console.log('graphql resp', JSON.stringify({ resp }, null, 2))
+    if (this.config.logger) {
+      this.config.logger('graphql resp', pretty({ resp }))
+    }
     return resp as GraphQlResponse<T>
   }
 }

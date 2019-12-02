@@ -49,8 +49,6 @@ const keysList = {
   playState: 'playState'
 } as const
 
+type StorageKeyType = keyof LocalStorageProxy
 export const STORAGE_KEY: typeof keysList &
-  Record<
-    keyof LocalStorageProxy,
-    LocalStorageProxy[keyof LocalStorageProxy]
-  > = keysList
+  Record<StorageKeyType, LocalStorageProxy[StorageKeyType]> = keysList

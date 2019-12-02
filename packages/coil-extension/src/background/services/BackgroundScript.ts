@@ -653,28 +653,34 @@ export class BackgroundScript {
     sender: chrome.runtime.MessageSender,
     message: SetCoilDomain
   ) {
+    // The current coil domain
     const currentCoilDomain = this.config.coilDomain
+    // The localStorage key to persist serialized storage to
     const currentKey = `${currentCoilDomain}:store`
+    // The new coil domain
     const coilDomain = message.data.value
     const key = `${coilDomain}:store`
+    // Persist the current localStorage keys (minus :store etc)
     const storageConfigKeys = Object.keys(STORAGE_KEY)
     const serialized = this.storage.serialize(storageConfigKeys)
     this.storage.setRaw(currentKey, serialized)
-    const other = this.storage.getRaw(key)
-    if (other) {
-      this.storage.setFromSerialized(other)
+    // Restore storage for new domain or clear
+    const restoredForNewDomain = this.storage.getRaw(key)
+    if (restoredForNewDomain) {
+      this.storage.setFromSerialized(restoredForNewDomain)
     } else {
       this.storage.clearKeys(storageConfigKeys)
     }
 
     this.store.coilDomain = coilDomain
-    this.store.validToken = false
-    delete this.store.token
     this.stopStreamsAndClearTabStates()
+    // Set the coil domain for content script in active tab
     if (this.activeTab) {
       this.api.tabs.sendMessage(this.activeTab, message)
     }
+    // Reload tab state
     this.reloadTabState({ from: 'setCoilDomain' })
+    // Try and get the token if necessary
     this.auth.getTokenMaybeRefreshAndStoreState().then(() => {
       this.reloadTabState({ from: 'setCoilDomain authed' })
     })
