@@ -34,7 +34,7 @@ export interface LocalStorageProxy {
   monetizedFavicon: string | null
 }
 
-const keysList = {
+export const STORAGE_KEY = {
   // BACKGROUND/POPUP
   token: 'token',
   user: 'user',
@@ -47,8 +47,4 @@ const keysList = {
   monetizedFavicon: 'monetizedFavicon',
   stickyState: 'stickyState',
   playState: 'playState'
-} as const
-
-type StorageKeyType = keyof LocalStorageProxy
-export const STORAGE_KEY: typeof keysList &
-  Record<StorageKeyType, LocalStorageProxy[StorageKeyType]> = keysList
+}

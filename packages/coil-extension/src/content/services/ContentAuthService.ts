@@ -31,7 +31,7 @@ export class ContentAuthService {
 
   handleCoilWriteTokenWindowEvent() {
     this.window.addEventListener('coil_writeToken', event => {
-      const token = this.storage.getItem('token')
+      const token = this.storage.getItem(STORAGE_KEY.token)
       if (token) {
         this.syncViaInjectToken()
       } else {
