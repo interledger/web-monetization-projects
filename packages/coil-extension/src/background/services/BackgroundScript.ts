@@ -22,7 +22,7 @@ import {
   StartWebMonetization,
   ToBackgroundMessage
 } from '../../types/commands'
-import { LocalStorageProxy } from '../../types/storage'
+import { LocalStorageProxy, STORAGE_KEY } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 
 import { StreamMoneyEvent } from './Stream'
