@@ -676,6 +676,9 @@ export class BackgroundScript {
       }
       this.api.tabs.sendMessage(this.activeTab, message)
     }
+    this.auth.getTokenMaybeRefreshAndStoreState().then(() => {
+      this.reloadTabState({ from: 'setCoilDomain getAuth' })
+    })
     // Reload tab state
     this.reloadTabState({ from: 'setCoilDomain' })
   }
