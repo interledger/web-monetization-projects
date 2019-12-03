@@ -25,6 +25,7 @@ import { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
 import { Config } from '../../services/Config'
+import { API } from '../../webpackDefines'
 
 import { Frames } from './Frames'
 import { RunContentHandler } from './RunContentHandler'
@@ -140,6 +141,8 @@ export class ContentScript {
 
   private handleSetCoilDomain(request: SetCoilDomain) {
     const newCoilDomain = request.data.value
+    const coilDomainStorageKey = API.runtime.getURL('/coil-domain')
+    this.storage.setItem(coilDomainStorageKey, newCoilDomain)
     if (this.config.coilDomain !== newCoilDomain) {
       this.config.overRideCoilDomain = newCoilDomain
     }
