@@ -66,6 +66,7 @@ export class ContentScript {
         command: 'stopWebMonetization',
         data: details
       }
+      monetization.setState('stopped')
       runtime.sendMessage(request)
     }
 

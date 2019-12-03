@@ -97,7 +97,12 @@ export class DocumentMonetization {
   postMonetizationProgressWindowMessage(
     detail: MonetizationProgressEvent['detail']
   ) {
-    this.postMonetizationMessage('monetizationprogress', detail)
+    // Protect against extremely unlikely race condition
+    // A progress message coming before a content -> background script
+    // stopWebMonetization message handler has had a chance to run.
+    if (this.request?.requestId === detail.requestId) {
+      this.postMonetizationMessage('monetizationprogress', detail)
+    }
   }
 
   setMetaTagContent(paymentPointer?: string) {
