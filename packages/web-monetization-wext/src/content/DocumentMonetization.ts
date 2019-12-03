@@ -12,7 +12,7 @@ import { ScriptInjection } from './ScriptInjection'
 
 @injectable()
 export class DocumentMonetization {
-  private state: MonetizationState = 'stopped'
+  state: MonetizationState = 'stopped'
   private request?: MonetizationStartEvent['detail']
 
   constructor(

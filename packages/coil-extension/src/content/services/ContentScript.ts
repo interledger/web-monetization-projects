@@ -24,21 +24,25 @@ import {
 import { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
+import { Config } from '../../services/Config'
 
 import { Frames } from './Frames'
 import { RunContentHandler } from './RunContentHandler'
 import { ContentAuthService } from './ContentAuthService'
 import { MonetizationEventsLogger } from './MonetizationEventsLogger'
+import { ContentConfig } from './ContentConfig'
 
 @injectable()
 export class ContentScript {
+  private monitor!: MonetizationTagObserver
+
   constructor(
     @inject(tokens.Storage) private storage: Storage,
     @inject(tokens.Window) private window: Window,
     @inject(tokens.Document) private document: Document,
     @inject(tokens.ContentRuntime) private runtime: ContentRuntime,
-    @inject(tokens.CoilDomain)
-    private coilDomain: string,
+    @inject(Config)
+    private config: ContentConfig,
     private runContentHandler: RunContentHandler,
     private frames: Frames,
     private idle: IdleDetection,
@@ -74,7 +78,7 @@ export class ContentScript {
       runtime.sendMessage(request)
     }
 
-    const monitor = new MonetizationTagObserver(
+    const monitor = (this.monitor = new MonetizationTagObserver(
       this.document,
       ({ started, stopped }) => {
         if (this.frames.isIFrame) {
@@ -91,7 +95,7 @@ export class ContentScript {
           }
         }
       }
-    )
+    ))
 
     // // Scan for WM meta tags when page is interactive
     monitor.startWhenDocumentReady()
@@ -116,6 +120,9 @@ export class ContentScript {
         case 'setCoilDomain':
           this.handleSetCoilDomain(request)
           break
+        case 'resumeWebMonetization':
+          this.handleResumeWebMonetization()
+          break
         case 'monetizationProgress':
           this.handleMonetizationProgress(request)
           break
@@ -133,9 +140,12 @@ export class ContentScript {
 
   private handleSetCoilDomain(request: SetCoilDomain) {
     const newCoilDomain = request.data.value
-    this.storage.setItem(this.runtime.getURL('/coil-domain'), newCoilDomain)
-    if (this.coilDomain !== newCoilDomain) {
-      this.window.location.reload()
+    // this.storage.setItem(this.runtime.getURL('/coil-domain'), newCoilDomain)
+    if (this.config.coilDomain !== newCoilDomain) {
+      this.config.overRideCoilDomain = newCoilDomain
+      if (this.monetization.state === 'stopped') {
+        // this.monitor.notifyObserversOfExisting()
+      }
     }
   }
 
@@ -218,5 +228,11 @@ export class ContentScript {
         runtime.sendMessage(resume)
       }
     })
+  }
+
+  private handleResumeWebMonetization() {
+    if (this.monetization.state === 'stopped') {
+      this.monitor.notifyObserversOfExisting()
+    }
   }
 }

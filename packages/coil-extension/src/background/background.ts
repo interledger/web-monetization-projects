@@ -10,9 +10,11 @@ import { StorageService } from '../services/storage'
 import * as tokens from '../types/tokens'
 import { ClientOptions } from '../services/ClientOptions'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
+import { Config } from '../services/Config'
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { BackgroundStorageService } from './services/BackgroundStorageService'
+import { BackgroundConfig } from './services/BackgroundConfig'
 
 async function configureContainer(container: Container) {
   const logger = makeLoggerMiddleware()
@@ -23,6 +25,7 @@ async function configureContainer(container: Container) {
   container.bind(tokens.WextApi).toConstantValue(API)
   container.bind(tokens.Null).toConstantValue(null)
   container.bind(GraphQlClient.Options).to(ClientOptions)
+  container.bind(Config).to(BackgroundConfig)
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
   container.bind(BackgroundScript).toSelf()

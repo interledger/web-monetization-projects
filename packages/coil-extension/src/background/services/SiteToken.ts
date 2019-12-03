@@ -2,8 +2,7 @@ import { inject, injectable } from 'inversify'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
-
-import { Config } from './Config'
+import { Config } from '../../services/Config'
 
 /**
  * See {@link handleCoilTokenMessage}

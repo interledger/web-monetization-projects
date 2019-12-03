@@ -20,9 +20,8 @@ import { GraphQlClient } from '@coil/client'
 import { Container } from 'inversify'
 
 import { notNullOrUndef } from '../../util/nullables'
-
-import { Config } from './Config'
-import { CachedCoilDomainClient } from './CachedCoilDomainClient'
+import { Config } from '../../services/Config'
+import { CachedCoilDomainClient } from '../../services/CachedCoilDomainClient'
 
 const { timeout } = asyncUtils
 
@@ -255,7 +254,7 @@ export class Stream extends EventEmitter {
   onMoney(data: OnMoneyEvent) {
     if (data.amount <= 0) return
 
-    this._debug(`emitting money. amount=${data.amount}`)
+    // this._debug(`emitting money. amount=${data.amount}`)
     const now = Date.now()
     const msSinceLastPacket = now - this._lastOutgoingMs
     this._lastOutgoingMs = now

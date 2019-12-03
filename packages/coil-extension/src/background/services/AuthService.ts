@@ -5,9 +5,9 @@ import { inject, injectable } from 'inversify'
 
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
+import { CachedCoilDomainClient } from '../../services/CachedCoilDomainClient'
 
 import { SiteToken } from './SiteToken'
-import { CachedCoilDomainClient } from './CachedCoilDomainClient'
 
 @injectable()
 export class AuthService extends EventEmitter {

@@ -2,6 +2,7 @@ import MessageSender = chrome.runtime.MessageSender
 import { inject, injectable } from 'inversify'
 import { HistoryDb } from '@web-monetization/wext/services'
 import { MonetizationState } from '@web-monetization/types'
+import { pretty } from '@coil/monorepo-upkeep/src/utils'
 
 import { makeLogger } from '../../util/logging'
 import { notNullOrUndef } from '../../util/nullables'
@@ -23,6 +24,8 @@ import {
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
+import { Config } from '../../services/Config'
+import { CachedCoilDomainClient } from '../../services/CachedCoilDomainClient'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -30,8 +33,6 @@ import { TabStates } from './TabStates'
 import { Streams } from './Streams'
 import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
-import { Config } from './Config'
-import { CachedCoilDomainClient } from './CachedCoilDomainClient'
 
 const debug = makeLogger('background')
 // eslint-disable-next-line no-console
@@ -215,7 +216,7 @@ export class BackgroundScript {
           sentAmount: details.sentAmount
         }
       }
-      log('sending money message.', tab, details)
+      // log('sending money message.', tab, details)
       this.handleMonetizedSite(tab, details.initiatingUrl, details)
       this.api.tabs.sendMessage(tab, message)
       this.savePacketToHistoryDb(details)
@@ -229,20 +230,31 @@ export class BackgroundScript {
   private setBrowserActionStateFromAuthAndTabState() {
     const tabId = this.activeTab
     const token = this.auth.getStoredToken()
+    const tabState = this.tabStates.getActiveOrDefault()
+    console.log(
+      JSON.stringify({
+        setBrowserActionStateFromAuthAndTabState: {
+          tabId,
+          tabState
+        }
+      })
+    )
+
     if (!token || !this.store.validToken) {
       this.popup.disable()
+    }
+    if (tabState.monetized && tabId) {
+      this.tabStates.setIcon(tabId, 'monetized')
     }
     if (token == null && tabId) {
       this.tabStates.setIcon(tabId, 'unavailable')
     } else if (token && tabId) {
       this.popup.enable()
 
-      const tabState = this.tabStates.getActiveOrDefault()
       const hasStream = tabState.monetized
       const hasBeenPaid = hasStream && tabState.total > 0
 
       if (hasStream) {
-        this.tabStates.setIcon(tabId, 'monetized')
         if (hasBeenPaid) {
           const state =
             tabState.playState === 'playing' ? 'streaming' : 'streaming-paused'
@@ -260,6 +272,7 @@ export class BackgroundScript {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     sendResponse: (response: any) => any
   ) {
+    console.log(JSON.stringify({ request, sender }, null, 2))
     switch (request.command) {
       case 'log':
         log('log command:', request.data)
@@ -337,6 +350,8 @@ export class BackgroundScript {
 
     if (this.activeTab === tab) {
       this.reloadTabState()
+    } else {
+      console.log('setTabMonetized', 'tab not active tab!')
     }
 
     // Channel image is provided if site is adapted
@@ -356,6 +371,7 @@ export class BackgroundScript {
   }
 
   mayMonetizeSite(sender: MessageSender) {
+    console.log('may monetize site, no sender?', !sender.tab)
     if (!sender.tab) return
     this.setTabMonetized(
       notNullOrUndef(sender.tab.id),
@@ -423,9 +439,11 @@ export class BackgroundScript {
     request: StartWebMonetization,
     sender: MessageSender
   ) {
+    console.log('\n'.repeat(10))
     const tab = getTab(sender)
     this.tabStates.logLastMonetizationCommand(tab, 'start')
     // This used to be sent from content script as a separate message
+    await new Promise(resolve => setTimeout(resolve, 10))
     this.mayMonetizeSite(sender)
     this.sendSetMonetizationStateMessage(tab, 'pending')
 
@@ -482,8 +500,12 @@ export class BackgroundScript {
     const id = this.tabsToStreams[tab]
     if (id) {
       log('resuming stream', id)
+      // this.mayMonetizeSite({tab: {id: tab, url: ''}} as MessageSender)
       this.sendSetMonetizationStateMessage(tab, 'pending')
       this.streams.resumeStream(id)
+    } else {
+      log('not resuming stream, proxying message to ContentScript')
+      this.api.tabs.sendMessage(tab, { command: 'resumeWebMonetization' })
     }
     return true
   }

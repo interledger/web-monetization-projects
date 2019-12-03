@@ -106,11 +106,15 @@ export class MonetizationTagObserver {
 
   private start() {
     this.head = this.document.head
-    const metas: MetaList = this.head.querySelectorAll(
+    this.notifyObserversOfExisting()
+    this.headObserver.observe(this.head, { childList: true })
+  }
+
+  notifyObserversOfExisting() {
+    const metas: MetaList = this.document.head.querySelectorAll(
       'meta[name="monetization"]'
     )
     metas.forEach(this.onAddedMeta.bind(this))
-    this.headObserver.observe(this.head, { childList: true })
   }
 
   private onHeadChildListObserved(records: MutationRecord[]) {

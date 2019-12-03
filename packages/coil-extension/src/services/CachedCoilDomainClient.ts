@@ -1,9 +1,9 @@
 import { Container, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 
-import * as tokens from '../../types/tokens'
-import { ClientOptions } from '../../services/ClientOptions'
+import * as tokens from '../types/tokens'
 
+import { ClientOptions } from './ClientOptions'
 import { Config } from './Config'
 
 @injectable()

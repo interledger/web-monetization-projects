@@ -222,5 +222,6 @@ export type ToContentMessage =
   | MonetizationStart
   | SetMonetizationState
   | SetCoilDomain
+  | ResumeWebMonetization
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup

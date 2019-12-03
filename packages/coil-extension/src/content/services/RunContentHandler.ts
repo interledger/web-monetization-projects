@@ -6,6 +6,7 @@ import * as tokens from '../../types/tokens'
 import { isAdaptedSite } from '../util/adaptedRegex'
 import { debug } from '../util/logging'
 import { ContentRuntime } from '../types/ContentRunTime'
+import { CachedCoilDomainClient } from '../../services/CachedCoilDomainClient'
 
 import { Frames } from './Frames'
 
@@ -25,13 +26,13 @@ export class RunContentHandler {
     @inject(tokens.Window)
     private window: Window,
     private frames: Frames,
-    private client: GraphQlClient
+    private client: CachedCoilDomainClient
   ) {}
 
   async adaptedPageDetails(url: string) {
     debug('fetching payment pointer for this page', url)
 
-    const paymentPointerQuery = await this.client.query<GetPageData>({
+    const paymentPointerQuery = await this.client.get().query<GetPageData>({
       query: `query getPage($url: String!) {
     adaptedPage(videoUrl: $url) {
       paymentPointer

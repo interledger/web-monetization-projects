@@ -4,9 +4,9 @@ import { TabState } from '../../types/TabState'
 import * as tokens from '../../types/tokens'
 import { Colors } from '../consts/Colors'
 import { Icons } from '../consts/Icons'
+import { Config } from '../../services/Config'
 
 import { TabOpener } from './TabOpener'
-import { Config } from './Config'
 
 type Action = (tab: chrome.tabs.Tab) => void
 

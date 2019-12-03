@@ -2,17 +2,20 @@ import { injectable, inject } from 'inversify'
 
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
+import { Config } from '../../services/Config'
 
 @injectable()
-export class Config {
+export class BackgroundConfig extends Config {
   get coilDomain() {
     return this.store.coilDomain || this.coilDomainDefault
   }
 
   constructor(
     @inject(tokens.CoilDomain)
-    private coilDomainDefault: string,
+    coilDomainDefault: string,
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy
-  ) {}
+  ) {
+    super(coilDomainDefault)
+  }
 }
