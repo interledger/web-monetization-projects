@@ -66,11 +66,7 @@ export function MonetizedPage(props: PopupProps) {
           )}
         </div>
       </Grid>
-      {showControls && (
-        <>
-          <StreamControls context={context} />
-        </>
-      )}
+      {showControls && <StreamControls context={context} />}
     </>
   )
 }

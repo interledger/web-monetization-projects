@@ -103,7 +103,6 @@ async function run() {
   }
 
   checkCondition({
-    exitOnSuccess: !DEV,
     success: logoutSuccess,
     failMessage: 'One or more test pages failed to close its payment stream!',
     successMessage: 'All test pages closed payment stream!'

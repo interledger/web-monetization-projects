@@ -65,12 +65,6 @@ export class StorageService {
     this.cache.delete(key)
   }
 
-  clearKeys(keys: string[]) {
-    keys.forEach(key => {
-      this.remove(key)
-    })
-  }
-
   clear() {
     this.cache.clear()
     this.storage.clear()

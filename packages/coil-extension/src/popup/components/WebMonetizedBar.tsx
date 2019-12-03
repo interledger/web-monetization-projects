@@ -21,13 +21,20 @@ const BarBadge = styled.img`
   margin-right: 4px;
 `
 
+const Muted = styled.span`
+  color: ${Colors.Grey500};
+  font-size: 12px;
+`
+
 export const WebMonetizedBar = (props: PopupProps) => {
+  const { coilDomain } = props.context
   const { monetized, adapted, coilSite } = props.context.store
   if (coilSite && !monetized) {
     return null
   } else {
+    const notProduction = coilDomain !== 'https://coil.com'
     return (
-      <CoilBar>
+      <CoilBar style={{ height: notProduction ? 60 : 40 }}>
         <Typography variant='caption'>
           {monetized ? (
             <BarBadge src='/res/dollar.svg' width='13' height='14' />
@@ -39,6 +46,7 @@ export const WebMonetizedBar = (props: PopupProps) => {
             : ' This page is'}
           {monetized ? '' : ' not'}
           {monetized && adapted ? '' : ' Web-Monetized'}
+          <Muted> {notProduction ? new URL(coilDomain).host : ''}</Muted>
         </Typography>
       </CoilBar>
     )
