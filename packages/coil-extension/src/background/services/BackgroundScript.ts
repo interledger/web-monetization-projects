@@ -215,7 +215,7 @@ export class BackgroundScript {
           sentAmount: details.sentAmount
         }
       }
-      // log('sending money message.', tab, details)
+      log('sending money message.', tab, details)
       this.handleMonetizedSite(tab, details.initiatingUrl, details)
       this.api.tabs.sendMessage(tab, message)
       this.savePacketToHistoryDb(details)
@@ -488,7 +488,6 @@ export class BackgroundScript {
     const id = this.tabsToStreams[tab]
     if (id) {
       log('resuming stream', id)
-      // this.mayMonetizeSite({tab: {id: tab, url: ''}} as MessageSender)
       this.sendSetMonetizationStateMessage(tab, 'pending')
       this.streams.resumeStream(id)
     } else {
