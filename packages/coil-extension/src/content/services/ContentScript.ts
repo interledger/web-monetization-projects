@@ -140,12 +140,8 @@ export class ContentScript {
 
   private handleSetCoilDomain(request: SetCoilDomain) {
     const newCoilDomain = request.data.value
-    // this.storage.setItem(this.runtime.getURL('/coil-domain'), newCoilDomain)
     if (this.config.coilDomain !== newCoilDomain) {
       this.config.overRideCoilDomain = newCoilDomain
-      if (this.monetization.state === 'stopped') {
-        // this.monitor.notifyObserversOfExisting()
-      }
     }
   }
 

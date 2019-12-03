@@ -22,10 +22,7 @@ function configureContainer(container: Container) {
   container.bind(GraphQlClient.Options).to(ClientOptions)
 }
 
-const coilDomainStorageKey = API.runtime.getURL('/coil-domain')
-
 function main(coilDomain: string) {
-  localStorage.setItem(coilDomainStorageKey, coilDomain)
   decorateCoilClient()
   const container = new Container({
     defaultScope: 'Singleton',
@@ -36,4 +33,4 @@ function main(coilDomain: string) {
   container.get(ContentScript).init()
 }
 
-main(localStorage.getItem(coilDomainStorageKey) || COIL_DOMAIN)
+main(COIL_DOMAIN)

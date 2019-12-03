@@ -2,7 +2,6 @@ import MessageSender = chrome.runtime.MessageSender
 import { inject, injectable } from 'inversify'
 import { HistoryDb } from '@web-monetization/wext/services'
 import { MonetizationState } from '@web-monetization/types'
-import { pretty } from '@coil/monorepo-upkeep/src/utils'
 
 import { makeLogger } from '../../util/logging'
 import { notNullOrUndef } from '../../util/nullables'
@@ -231,14 +230,6 @@ export class BackgroundScript {
     const tabId = this.activeTab
     const token = this.auth.getStoredToken()
     const tabState = this.tabStates.getActiveOrDefault()
-    console.log(
-      JSON.stringify({
-        setBrowserActionStateFromAuthAndTabState: {
-          tabId,
-          tabState
-        }
-      })
-    )
 
     if (!token || !this.store.validToken) {
       this.popup.disable()
@@ -272,7 +263,6 @@ export class BackgroundScript {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     sendResponse: (response: any) => any
   ) {
-    console.log(JSON.stringify({ request, sender }, null, 2))
     switch (request.command) {
       case 'log':
         log('log command:', request.data)
@@ -350,8 +340,6 @@ export class BackgroundScript {
 
     if (this.activeTab === tab) {
       this.reloadTabState()
-    } else {
-      console.log('setTabMonetized', 'tab not active tab!')
     }
 
     // Channel image is provided if site is adapted
@@ -371,7 +359,6 @@ export class BackgroundScript {
   }
 
   mayMonetizeSite(sender: MessageSender) {
-    console.log('may monetize site, no sender?', !sender.tab)
     if (!sender.tab) return
     this.setTabMonetized(
       notNullOrUndef(sender.tab.id),
@@ -439,10 +426,11 @@ export class BackgroundScript {
     request: StartWebMonetization,
     sender: MessageSender
   ) {
-    console.log('\n'.repeat(10))
     const tab = getTab(sender)
     this.tabStates.logLastMonetizationCommand(tab, 'start')
     // This used to be sent from content script as a separate message
+    // TODO: this seems to be needed for the mayMonetizedSite to work properly
+    // theory: activeTab !== sender.tab.id until after the 10ms ?
     await new Promise(resolve => setTimeout(resolve, 10))
     this.mayMonetizeSite(sender)
     this.sendSetMonetizationStateMessage(tab, 'pending')

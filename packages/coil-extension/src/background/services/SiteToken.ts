@@ -16,11 +16,7 @@ import { Config } from '../../services/Config'
  */
 @injectable()
 export class SiteToken {
-  constructor(private config: Config) {
-    setInterval(() => {
-      console.log({ coilDomain: config.coilDomain })
-    }, 5e3)
-  }
+  constructor(private config: Config) {}
 
   async retrieve(path = '/handler.html'): Promise<string | null> {
     const coilDomain = this.config.coilDomain

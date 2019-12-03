@@ -12,7 +12,6 @@ import {
   TestPageResults,
   timeout
 } from '@coil/puppeteer-utils'
-import { DEV } from '@coil/puppeteer-utils/src/lib/env'
 
 import { testUrls } from './testUrls'
 
