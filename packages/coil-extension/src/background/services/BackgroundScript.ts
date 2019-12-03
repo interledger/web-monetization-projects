@@ -505,6 +505,8 @@ export class BackgroundScript {
   private doStopWebMonetization(tab: number) {
     this.tabStates.logLastMonetizationCommand(tab, 'stop')
     const closed = this._closeStream(tab)
+    // May be noop other side if stop monetization was initiated from
+    // ContentScript
     this.sendSetMonetizationStateMessage(tab, 'stopped')
     // clear the tab state, and set things to default
     // no need to send runContent message to check for adapted sites as

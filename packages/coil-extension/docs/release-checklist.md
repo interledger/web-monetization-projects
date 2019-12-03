@@ -107,6 +107,14 @@ When releasing, we can copy this markdown into the PR for a release.
   - Issue: [#105][ni105]
   - Fix PR: [#117][np117]
 
+- [ ] Check stopped event fires with correct requestId
+
+  - Open the [event-logger.html](test/fixtures/event-logger.html) file
+  - Induce a stop/start in same js 'tick'
+  - Check that the stopped event has the correct requestId
+  - Issue: [#127][ni127]
+  - Fix PR: [#128][np128]
+
 - [ ] Run a local web server (e.g. with `python -m http.server 4000`) serving
       the dist folder, then open [static/popup.html](static/popup.html) in a
       normal tab and check the popup rendering in various states.
@@ -197,3 +205,5 @@ When releasing, we can copy this markdown into the PR for a release.
 [np69]: https://github.com/coilhq/web-monetization-projects/pull/69
 [ni105]: https://github.com/coilhq/web-monetization-projects/issue/105
 [np117]: https://github.com/coilhq/web-monetization-projects/pull/117
+[ni127]: https://github.com/coilhq/web-monetization-projects/issue/127
+[np128]: https://github.com/coilhq/web-monetization-projects/pull/128
