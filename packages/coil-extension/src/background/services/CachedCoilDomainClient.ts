@@ -2,6 +2,7 @@ import { Container, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 
 import * as tokens from '../../types/tokens'
+import { ClientOptions } from '../../services/ClientOptions'
 
 import { Config } from './Config'
 
@@ -19,6 +20,7 @@ export class CachedCoilDomainClient {
     } else {
       const child = this.container.createChild()
       child.bind(tokens.CoilDomain).toConstantValue(key)
+      child.bind(GraphQlClient.Options).to(ClientOptions)
       const client = child.get(GraphQlClient)
       this.clients.set(key, client)
       return client

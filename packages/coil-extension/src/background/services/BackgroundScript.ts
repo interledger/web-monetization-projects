@@ -14,7 +14,6 @@ import {
   MonetizationProgress,
   MonetizationStart,
   PauseWebMonetization,
-  RegisterContentScript,
   ResumeWebMonetization,
   SetCoilDomain,
   SetMonetizationState,
@@ -22,7 +21,7 @@ import {
   StartWebMonetization,
   ToBackgroundMessage
 } from '../../types/commands'
-import { LocalStorageProxy, STORAGE_KEY } from '../../types/storage'
+import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 
 import { StreamMoneyEvent } from './Stream'
@@ -101,6 +100,13 @@ export class BackgroundScript {
     this.api.tabs.onActivated.addListener(activeInfo => {
       this.activeTab = activeInfo.tabId
       this.reloadTabState({ from: 'onActivated' })
+      this.checkActiveTabForDynamicCoilDomain()
+    })
+  }
+
+  private checkActiveTabForDynamicCoilDomain() {
+    this.api.tabs.get(this.activeTab, tab => {
+      this.maybeSetCoilDomain(tab.url)
     })
   }
 
@@ -120,6 +126,7 @@ export class BackgroundScript {
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
           if (tabs.length === 0 || tabs[0].id == null) return
           this.activeTab = tabs[0].id
+          this.maybeSetCoilDomain(tabs[0].url)
           this.reloadTabState({ from: 'onFocusChanged' })
         })
       })
@@ -169,6 +176,7 @@ export class BackgroundScript {
 
       if (status === 'loading') {
         this.setCoilUrlForPopupIfNeeded(tabId, url)
+        this.maybeSetCoilDomain(url)
       }
 
       if (status === 'complete') {
@@ -263,13 +271,6 @@ export class BackgroundScript {
       case 'adaptedSite':
         this.adaptedSite(request.data)
         sendResponse(true)
-        break
-      case 'setCoilDomain':
-        this.setCoilDomain(sender, request)
-        sendResponse(true)
-        break
-      case 'registerContentScript':
-        this.registerContentScript(sender, request)
         break
       case 'injectToken':
         sendResponse(
@@ -650,60 +651,39 @@ export class BackgroundScript {
   }
 
   private setCoilDomain(
-    sender: chrome.runtime.MessageSender,
-    message: SetCoilDomain
-  ) {
-    // The current coil domain
-    const currentCoilDomain = this.config.coilDomain
-    // The localStorage key to persist serialized storage to
-    const currentKey = `${currentCoilDomain}:store`
     // The new coil domain
-    const coilDomain = message.data.value
-    const key = `${coilDomain}:store`
-    // Persist the current localStorage keys (minus :store etc)
-    const storageConfigKeys = Object.keys(STORAGE_KEY)
-    const serialized = this.storage.serialize(storageConfigKeys)
-    this.storage.setRaw(currentKey, serialized)
-    // Restore storage for new domain or clear
-    const restoredForNewDomain = this.storage.getRaw(key)
-    if (restoredForNewDomain) {
-      this.storage.setFromSerialized(restoredForNewDomain)
-    } else {
-      this.storage.clearKeys(storageConfigKeys)
-    }
-
+    coilDomain: string
+  ) {
+    this.storage.clear()
     this.store.coilDomain = coilDomain
     this.stopStreamsAndClearTabStates()
     // Set the coil domain for content script in active tab
     if (this.activeTab) {
+      const message: SetCoilDomain = {
+        command: 'setCoilDomain',
+        data: {
+          value: coilDomain
+        }
+      }
       this.api.tabs.sendMessage(this.activeTab, message)
     }
     // Reload tab state
     this.reloadTabState({ from: 'setCoilDomain' })
-    // Try and get the token if necessary
-    this.auth.getTokenMaybeRefreshAndStoreState().then(() => {
-      this.reloadTabState({ from: 'setCoilDomain authed' })
-    })
   }
 
-  private registerContentScript(
-    sender: MessageSender,
-    request: RegisterContentScript
-  ) {
-    console.log('registerContentScript')
-    const message: SetCoilDomain = {
-      command: 'setCoilDomain',
-      data: {
-        value: this.config.coilDomain
+  private maybeSetCoilDomain(url: string | undefined) {
+    if (url) {
+      const options = [
+        ['https://coil.com', 'Production'],
+        ['https://staging.coil.com', 'Staging']
+        // This could be annoying
+        // ['http://localhost:3000', 'Local']
+      ]
+      for (const [prefix] of options) {
+        if (url.startsWith(prefix) && this.config.coilDomain !== prefix) {
+          this.setCoilDomain(prefix)
+        }
       }
-    }
-
-    try {
-      const tab = getTab(sender)
-      this.api.tabs.sendMessage(tab, message)
-    } catch (e) {
-      console.log('registerCOntentScript', JSON.stringify(sender.tab))
-      return
     }
   }
 }

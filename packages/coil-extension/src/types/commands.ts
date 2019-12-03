@@ -64,14 +64,6 @@ export interface ContentScriptInit extends Command {
  * content -> background
  * browser.runtime.sendMessage
  */
-export interface RegisterContentScript extends Command {
-  command: 'registerContentScript'
-}
-
-/**
- * content -> background
- * browser.runtime.sendMessage
- */
 export interface PauseWebMonetization extends Command {
   command: 'pauseWebMonetization'
 }
@@ -135,7 +127,6 @@ export type ToBackgroundMessage =
   | IsRateLimited
   | ContentScriptInit
   | SetCoilDomain
-  | RegisterContentScript
 
 export type IconState =
   | 'streaming-paused'

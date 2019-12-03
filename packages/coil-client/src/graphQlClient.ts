@@ -48,13 +48,16 @@ export class GraphQlClient {
       },
       body: JSON.stringify({ query, variables })
     }
+    const url = `${this.config.coilDomain}/graphql`
     if (this.config.logger) {
       this.config.logger(
         'graphql request',
+        url,
         pretty({ ...init, body: { query, variables } })
       )
     }
-    const res = await this.fetch(`${this.config.coilDomain}/graphql`, init)
+
+    const res = await this.fetch(url, init)
     if (!res.ok) {
       throw new Error(
         `graphql query failed. status=${res.status} query=\`${query}\``
@@ -62,7 +65,7 @@ export class GraphQlClient {
     }
     const resp = await res.json()
     if (this.config.logger) {
-      this.config.logger('graphql resp', pretty({ resp }))
+      this.config.logger('graphql resp', url, pretty({ resp }))
     }
     return resp as GraphQlResponse<T>
   }

@@ -11,8 +11,6 @@ import { withStyles } from '@material-ui/core'
 import { Colors } from '../../shared-theme/colors'
 import { PopupProps } from '../types'
 
-import { CoilDomainRadioGroup } from './CoilDomainRadioGroup'
-
 const Flex = styled.div`
   flex: 1;
 `
@@ -69,8 +67,6 @@ export const AccountBar = (props: PopupProps) => {
       ) : (
         <Muted>Not Logged in</Muted>
       )}
-      <Flex />
-      <CoilDomainRadioGroup context={props.context} />
       <Flex />
       <IconButton aria-label='Menu' onClick={handleMenuClick}>
         <More />
