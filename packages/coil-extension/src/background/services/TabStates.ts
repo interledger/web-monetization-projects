@@ -92,11 +92,13 @@ export class TabStates {
   }
 
   logLastMonetizationCommand(tab: number, command: MonetizationCommand) {
+    const timeMs = Date.now()
     this.set(tab, {
       lastMonetization: {
         command,
-        timeMs: Date.now()
+        timeMs: timeMs
       }
     })
+    return timeMs
   }
 }

@@ -230,8 +230,8 @@ export class ContentScript {
   }
 
   private handleResumeWebMonetization() {
-    if (this.monetization.state === 'stopped') {
-      this.monitor.notifyObserversOfExisting()
-    }
+    // if (this.monetization.state === 'stopped') {
+    this.monitor.notifyObserversOfExisting()
+    // }
   }
 }

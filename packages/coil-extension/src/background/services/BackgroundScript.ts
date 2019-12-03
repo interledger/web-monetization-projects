@@ -263,6 +263,7 @@ export class BackgroundScript {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     sendResponse: (response: any) => any
   ) {
+    console.log('handleMessage', JSON.stringify({ request }, null, 2))
     switch (request.command) {
       case 'log':
         log('log command:', request.data)
@@ -427,7 +428,8 @@ export class BackgroundScript {
     sender: MessageSender
   ) {
     const tab = getTab(sender)
-    this.tabStates.logLastMonetizationCommand(tab, 'start')
+    const startCoilDomain = this.config.coilDomain
+    const started = this.tabStates.logLastMonetizationCommand(tab, 'start')
     // This used to be sent from content script as a separate message
     // TODO: this seems to be needed for the mayMonetizedSite to work properly
     // theory: activeTab !== sender.tab.id until after the 10ms ?
@@ -453,13 +455,26 @@ export class BackgroundScript {
       return false
     }
 
-    const lastCommand = this.tabStates.get(tab).lastMonetization.command
-    if (lastCommand !== 'start') {
-      console.warn('startWebMonetization cancelled via', lastCommand)
+    const lastMonetization = this.tabStates.get(tab).lastMonetization
+    const lastCommand = lastMonetization.command
+    if (
+      lastCommand !== 'start' ||
+      lastMonetization.timeMs !== started ||
+      this.config.coilDomain !== startCoilDomain
+    ) {
+      console.warn(
+        'startWebMonetization cancelled via',
+        started,
+        lastMonetization,
+        startCoilDomain,
+        this.config.coilDomain
+      )
       return false
     }
 
     log('starting stream', requestId)
+    this._closeStream(tab)
+
     this.tabsToStreams[tab] = requestId
     this.streamsToTabs[requestId] = tab
     this.streams.beginStream(requestId, {
@@ -619,6 +634,11 @@ export class BackgroundScript {
       }
       this.api.tabs.sendMessage(tabId, message)
     }
+    // Clear up any left overs ...
+    Object.keys(this.streamsToTabs).forEach(requestId => {
+      this.streams.closeStream(requestId)
+      delete this.streamsToTabs[requestId]
+    })
   }
 
   private setStreamControls(request: SetStreamControls, _: MessageSender) {

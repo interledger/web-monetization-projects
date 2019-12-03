@@ -6,6 +6,7 @@ import { inject, injectable } from 'inversify'
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { CachedCoilDomainClient } from '../../services/CachedCoilDomainClient'
+import { Config } from '../../services/Config'
 
 import { SiteToken } from './SiteToken'
 
@@ -15,6 +16,7 @@ export class AuthService extends EventEmitter {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private client: CachedCoilDomainClient,
+    private config: Config,
     private siteToken: SiteToken
   ) {
     super()
@@ -22,9 +24,13 @@ export class AuthService extends EventEmitter {
 
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
     let token = this.getStoredToken()
+    const coilDomain = this.config.coilDomain
 
     if (!token) {
       token = await this.siteToken.retrieve()
+      if (coilDomain !== this.config.coilDomain) {
+        throw new Error()
+      }
     }
 
     if (!token || tokenUtils.isExpired({ token })) {
@@ -50,7 +56,11 @@ export class AuthService extends EventEmitter {
   }
 
   private async updateWhoAmi(token: string): Promise<string | null> {
+    const coilDomain = this.config.coilDomain
     const resp = await this.client.get().whoAmI(token)
+    if (coilDomain !== this.config.coilDomain) {
+      throw new Error()
+    }
     if (resp.data?.whoami) {
       this.store.user = resp.data.whoami
       return token
@@ -60,7 +70,12 @@ export class AuthService extends EventEmitter {
   }
 
   private async refreshTokenAndUpdateWhoAmi(token: string) {
+    const coilDomain = this.config.coilDomain
     const resp = await this.client.get().queryToken(token)
+    if (coilDomain !== this.config.coilDomain) {
+      throw new Error()
+    }
+
     if (resp.data?.refreshToken?.token && resp.data?.whoami) {
       this.store.user = resp.data.whoami
       return resp.data.refreshToken.token
