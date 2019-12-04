@@ -39,13 +39,13 @@
           document.getElementById('log').innerText = ''
         })
 
-        document.getElementById('remove').addEventListener('click', () => {
+        const remove = () => {
           document.getElementById('money').remove()
           document.getElementById('remove').disabled = true
           document.getElementById('add').disabled = false
-        })
+        }
 
-        document.getElementById('add').addEventListener('click', () => {
+        const add = () => {
           if (!document.getElementById('money')) {
             const meta = document.createElement('meta')
             meta.id = 'money'
@@ -55,7 +55,19 @@
             document.getElementById('remove').disabled = false
             document.getElementById('add').disabled = true
           }
-        })
+        }
+
+        // For testing checklist
+        const removeThenAddQuicklyToCheckStoppedEventHasCorrectRequestId = () => {
+          setTimeout(() => {
+            remove()
+            add()
+          }, 5000)
+        }
+        // removeThenAddQuicklyToCheckStoppedEventHasCorrectRequestId()
+
+        document.getElementById('remove').addEventListener('click', remove)
+        document.getElementById('add').addEventListener('click', add)
 
         if (document.monetization) {
           setInterval(() => {
