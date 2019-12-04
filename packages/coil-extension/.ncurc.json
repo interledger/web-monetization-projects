@@ -1,4 +1,5 @@
 {
   "reject": [
+    "addons-linter"
   ]
 }
