@@ -37,7 +37,7 @@ When releasing, we can copy this markdown into the PR for a release.
 
   - ![image](https://user-images.githubusercontent.com/525211/66626878-0a761780-ec24-11e9-8015-19bf8348807b.png)
 
-- [ ] Coil welcome and welcome to explore pages
+- Coil welcome and welcome to explore pages
 
   - [ ] Go to coil.com, the browser action popup should show welcome to coil
     - ![image](https://user-images.githubusercontent.com/525211/66626988-6b9deb00-ec24-11e9-86c3-b55c17e891c2.png)
