@@ -2479,7 +2479,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.13":
+"@types/react@*", "@types/react@^16.9.14":
   version "16.9.14"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.14.tgz#7f1158ce450b4b5aa83b1c5e1324fa75f348bdd1"
   integrity sha512-Q4tW4RGmR+u/CgzR8VqZcsUWjP4Pz/LcHfs9AzSG+aBnwq8As3Bid3vG1eGGsXg/xuR2k2tqNlI8pzyV8kxe0g==
@@ -5038,7 +5038,7 @@ css-jss@10.0.0:
     jss "10.0.0"
     jss-preset-default "10.0.0"
 
-css-loader@^3.2.0:
+css-loader@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-3.2.1.tgz#62849b45a414b7bde0bfba17325a026471040eae"
   integrity sha512-q40kYdcBNzMvkIImCL2O+wk8dh+RGwPPV9Dfz3n7XtOYPXqe2Z6VgtvoxjkLHz02gmhepG9sOAJOUlx+3hHsBg==
@@ -13711,7 +13711,7 @@ sort-object-keys@^1.1.2:
   resolved "https://registry.yarnpkg.com/sort-object-keys/-/sort-object-keys-1.1.2.tgz#d3a6c48dc2ac97e6bc94367696e03f6d09d37952"
   integrity sha1-06bEjcKsl+a8lDZ2luA/bQnTeVI=
 
-sort-package-json@^1.27.0:
+sort-package-json@^1.30.0:
   version "1.30.0"
   resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.30.0.tgz#bd7df0261ff10d3708f587defd9fcf81ff0569ec"
   integrity sha512-1QMmOyfurS1X6PfIGqZTYcGjuCKxki4uMwzw87oAwPQiQeaDdgI7eE5bZN5CSFU5P3Hc2UgV5o4e+wIuhueoOg==
