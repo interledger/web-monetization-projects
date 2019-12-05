@@ -1,12 +1,16 @@
-export const ADAPTED_REGEX = [
-  /https?:\/\/(www\.)?twitch\.tv(\/.*)?/i,
-  /https?:\/\/(www\.)?youtube\.com(\/.*)?/i
-]
+interface AdaptedRegexInterface {
+  [key: string]: RegExp
+}
 
-export function isAdaptedSite(url: string) {
-  for (const item of ADAPTED_REGEX) {
-    if (item.test(url)) {
-      return true
+export const ADAPTED_REGEX: AdaptedRegexInterface = {
+  twitch: /https?:\/\/(www\.)?twitch\.tv(\/.*)?/i,
+  youtube: /https?:\/\/(www\.)?youtube\.com(\/.*)?/i
+}
+
+export function getAdaptedSite(url: string) {
+  for (const site in ADAPTED_REGEX) {
+    if (ADAPTED_REGEX[site].test(url)) {
+      return site
     }
   }
 

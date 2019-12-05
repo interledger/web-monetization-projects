@@ -3,7 +3,7 @@ import { GraphQlClient } from '@coil/client'
 import { DocumentMonetization } from '@web-monetization/wext/content'
 
 import * as tokens from '../../types/tokens'
-import { isAdaptedSite } from '../util/adaptedRegex'
+import { getAdaptedSite } from '../util/adaptedRegex'
 import { debug } from '../util/logging'
 import { ContentRuntime } from '../types/ContentRunTime'
 
@@ -15,6 +15,12 @@ interface GetPageData {
     channelImage: string
   }
 }
+
+interface HyperlinkElement extends Element {
+  href: string
+}
+
+const CHANNEL_ID_REGEX = /https?:\/\/(www\.)?youtube\.com\/channel\//i
 
 @injectable()
 export class RunContentHandler {
@@ -28,18 +34,43 @@ export class RunContentHandler {
     private client: GraphQlClient
   ) {}
 
-  async adaptedPageDetails(url: string) {
+  async adaptedPageDetails(url: string, site: string) {
     debug('fetching payment pointer for this page', url)
 
+    // Wait for page to load to ensure there's a channel url to grab
+    if (document.readyState !== 'complete' && site === 'youtube') {
+      await new Promise(resolve => {
+        window.addEventListener('load', () => {
+          resolve()
+        })
+      })
+    }
+
+    const variables = { url }
+
+    try {
+      if (site === 'youtube') {
+        const channelElem = document.querySelector(
+          '#text > a'
+        ) as HyperlinkElement
+        const { href: channelUrl } = channelElem
+        if (channelUrl) {
+          Object.assign(variables, { channelUrl })
+        }
+      }
+    } catch (err) {
+      debug('Failed to grab channel URL from Youtube page. err=', err)
+    }
+
     const paymentPointerQuery = await this.client.query<GetPageData>({
-      query: `query getPage($url: String!) {
-    adaptedPage(videoUrl: $url) {
+      query: `query getPage($url: String!, $channelUrl: String) {
+    adaptedPage(videoUrl: $url, channelUrl: $channelUrl) {
       paymentPointer
       channelImage
     }
   }`,
       token: null,
-      variables: { url }
+      variables
     })
 
     debug({ paymentPointerQuery })
@@ -63,9 +94,11 @@ export class RunContentHandler {
       this.frames.isIFrame
     )
 
-    if (this.frames.isTopFrame && isAdaptedSite(currentUrl)) {
+    const adaptedSite = getAdaptedSite(currentUrl)
+    if (this.frames.isTopFrame && adaptedSite) {
       const { channelImage, paymentPointer } = await this.adaptedPageDetails(
-        currentUrl
+        currentUrl,
+        adaptedSite
       )
 
       if (!paymentPointer) {
