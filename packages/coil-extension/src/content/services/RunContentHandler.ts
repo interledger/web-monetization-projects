@@ -37,10 +37,12 @@ export class RunContentHandler {
   async adaptedPageDetails(url: string, site: string) {
     debug('fetching payment pointer for this page', url, site)
 
-    // Wait for page to load to ensure there's a channel url to grab
     const variables = { url }
 
     if (site === 'youtube') {
+      // Wait for page to load and the element containing the channelId is
+      // available
+
       await this.windowLoaded()
       const channelUrl = await this.pollForYouTubeChannelId({ everyMs: 100 })
       if (channelUrl) {
