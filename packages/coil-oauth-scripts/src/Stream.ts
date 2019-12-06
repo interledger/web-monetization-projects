@@ -14,13 +14,12 @@ import {
   SPSPResponse
 } from '@web-monetization/polyfill-utils'
 import {
-  MonetizationEvent,
   MonetizationProgressEvent,
   MonetizationStartEvent
 } from '@web-monetization/types'
 
-import { getDoc } from './documentExtensions'
 import { DocumentMonetization } from './DocumentMonetization'
+import { debug } from './logging'
 
 const UPDATE_AMOUNT_INTERVAL = 2000
 
@@ -57,6 +56,7 @@ export class Stream {
   private backoff = new BackoffWaiter()
   private lastDelivered = 0
   private loop: Promise<void> | null = null
+  private existing?: Promise<void>
 
   private readonly tiers: BandwidthTiers
   private adaptiveBandwidth!: AdaptiveBandwidth
@@ -71,7 +71,8 @@ export class Stream {
     this.monetization = new DocumentMonetization(document)
   }
 
-  start(opts: StreamStartOpts) {
+  async start(opts: StreamStartOpts) {
+    await this.finalizeExisting()
     this.active = true
     this.btpToken = opts.btpToken
     this.btpEndpoint = opts.btpEndpoint || BTP_ENDPOINT_DEFAULT
@@ -91,7 +92,19 @@ export class Stream {
     this.activeChanges.emit('start')
   }
 
-  stop() {
+  async finalizeExisting() {
+    if (this.existing) {
+      try {
+        await this.existing
+      } catch (e) {
+        //
+      } finally {
+        this.existing = undefined
+      }
+    }
+  }
+
+  async stop() {
     this.active = false
     this.monetization.setState('stopped')
     this.monetization.setMonetizationRequest(undefined)
@@ -119,10 +132,14 @@ export class Stream {
       }
 
       try {
+        // await this.finalizeExisting()
         this.monetization.setState('pending')
-        await this.streamPayment(
+        debug('Start streamPayment()')
+        const promise = (this.existing = this.streamPayment(
           await getSPSPResponse(this.spspEndpoint, this.requestId)
-        )
+        ))
+        await promise
+        debug('End streamPayment()')
       } catch (e) {
         // TODO: a way to toggle this?
         console.error(`streaming error; retry in ${this.backoff} ms. error=`, e)
@@ -168,20 +185,21 @@ export class Stream {
         return
       }
 
-      const initialSendMaxAmount = await this.adaptiveBandwidth.getStreamSendMax()
+      const adaptiveBandwidth = this.adaptiveBandwidth
+      const initialSendMaxAmount = await adaptiveBandwidth.getStreamSendMax()
       const stream = connection.createStream()
       stream.setSendMax(initialSendMaxAmount)
 
-      await new Promise((resolve, reject) => {
+      const promise = new Promise((resolve, reject) => {
         const boundOutgoingMoney = (sentAmount: string) => {
           setImmediate(this.onOutgoingMoney.bind(this), connection, sentAmount)
         }
         const onPluginDisconnect = async () => {
           cleanUp()
-          stream.destroy()
-          // We need to wait for this else we get nasty errors in the console
-          // re: messages trying to be written, perhaps by plugin.disconnect()
-          await connection.destroy()
+          // stream.destroy()
+          // // We need to wait for this else we get nasty errors in the console
+          // // re: messages trying to be written, perhaps by plugin.disconnect()
+          // await connection.destroy()
           resolve()
         }
 
@@ -193,41 +211,44 @@ export class Stream {
         const onStop = onPluginDisconnect
 
         const onUpdateAmountInterval = async () => {
-          const sendMaxAmount = await this.adaptiveBandwidth.getStreamSendMax()
+          const sendMaxAmount = await adaptiveBandwidth.getStreamSendMax()
           if (stream.isOpen()) {
             stream.setSendMax(sendMaxAmount)
           }
         }
 
         const addSentAmount = asyncUtils.onlyOnce(() => {
-          this.adaptiveBandwidth.addSentAmount(stream.totalSent)
+          adaptiveBandwidth.addSentAmount(stream.totalSent)
         })
 
-        const cleanUp = () => {
-          // TODO: comment why using setImmediate here
-          setImmediate(() => {
-            plugin.removeListener('disconnect', onPluginDisconnect)
-            stream.removeListener('outgoing_money', boundOutgoingMoney)
-            connection.removeListener('close', onConnectionClose)
-            addSentAmount()
-            this.activeChanges.removeListener('stop', onStop)
-            this.lastDelivered = 0
-            this.monetization.setState('stopped')
-            this.state = MonetizationStateEnum.STOPPED
-            // eslint-disable-next-line @typescript-eslint/no-use-before-define
-            clearInterval(updateAmountInterval)
-          })
-        }
+        const cleanUp = asyncUtils.onlyOnce(() => {
+          debug('cleanUp()')
+          plugin.removeListener('disconnect', onPluginDisconnect)
+          stream.removeListener('outgoing_money', boundOutgoingMoney)
+          connection.removeListener('close', onConnectionClose)
+          addSentAmount()
+          this.activeChanges.removeListener('stop', onStop)
+          this.lastDelivered = 0
+          this.monetization.setState('stopped')
+          this.monetization.setMonetizationRequest(undefined)
+          this.state = MonetizationStateEnum.STOPPED
+          // eslint-disable-next-line @typescript-eslint/no-use-before-define
+          clearInterval(updateAmountInterval)
+        })
 
         plugin.on('disconnect', onPluginDisconnect)
         stream.on('outgoing_money', boundOutgoingMoney)
         connection.on('close', onConnectionClose)
-        this.activeChanges.on('stop', onStop)
+        this.activeChanges.once('stop', () => {
+          debug('activeChanges on stop!')
+          onStop()
+        })
         const updateAmountInterval = setInterval(
           onUpdateAmountInterval,
           UPDATE_AMOUNT_INTERVAL
         )
       })
+      await promise
     } finally {
       await plugin.disconnect()
     }
