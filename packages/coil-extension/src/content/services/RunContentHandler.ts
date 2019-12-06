@@ -18,6 +18,7 @@ interface GetPageData {
 
 interface PollForYouTubeChannelIdParams {
   everyMs: number
+  times: number
 }
 
 @injectable()
@@ -44,7 +45,10 @@ export class RunContentHandler {
       // available
 
       await this.windowLoaded()
-      const channelUrl = await this.pollForYouTubeChannelId({ everyMs: 100 })
+      const channelUrl = await this.pollForYouTubeChannelId({
+        times: 10,
+        everyMs: 100
+      })
       if (channelUrl) {
         Object.assign(variables, { channelUrl })
       }
@@ -74,11 +78,12 @@ export class RunContentHandler {
   }
 
   private async pollForYouTubeChannelId({
-    everyMs
+    everyMs,
+    times
   }: PollForYouTubeChannelIdParams) {
     try {
       let polls = 0
-      while (++polls <= 10) {
+      while (++polls <= times) {
         const channelElem = this.document.querySelector<HTMLAnchorElement>(
           '.ytd-channel-name > a.yt-simple-endpoint'
         )
