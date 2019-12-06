@@ -6,6 +6,7 @@ import {
 } from '@web-monetization/types'
 
 import { getDoc } from './documentExtensions'
+import { debug } from './logging'
 
 export class DocumentMonetization {
   private state: MonetizationState = 'stopped'
@@ -18,6 +19,7 @@ export class DocumentMonetization {
   }
 
   setState(state: MonetizationState) {
+    debug('SET STATE', 'new:', state, 'old:', this.state)
     const changed = this.state != state
     this.state = state
     if (changed) {

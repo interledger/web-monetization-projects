@@ -14,13 +14,12 @@ import {
   SPSPResponse
 } from '@web-monetization/polyfill-utils'
 import {
-  MonetizationEvent,
   MonetizationProgressEvent,
   MonetizationStartEvent
 } from '@web-monetization/types'
 
-import { getDoc } from './documentExtensions'
 import { DocumentMonetization } from './DocumentMonetization'
+import { debug } from './logging'
 
 const UPDATE_AMOUNT_INTERVAL = 2000
 
@@ -81,7 +80,6 @@ export class Stream {
     this.paymentPointer = opts.paymentPointer
     this.spspEndpoint = opts.spspEndpoint
     this.pageUrl = opts.pageUrl
-    // VVVVV
     this.adaptiveBandwidth = new AdaptiveBandwidth(opts.pageUrl, this.tiers)
     this.monetization.setMonetizationRequest({
       paymentPointer: opts.paymentPointer,
@@ -112,7 +110,6 @@ export class Stream {
     this.monetization.setMonetizationRequest(undefined)
     this.state = MonetizationStateEnum.STOPPED
     this.activeChanges.emit('stop')
-    return this.finalizeExisting()
   }
 
   isActive() {
@@ -135,10 +132,14 @@ export class Stream {
       }
 
       try {
+        // await this.finalizeExisting()
         this.monetization.setState('pending')
-        await this.streamPayment(
+        debug('Start streamPayment()')
+        const promise = (this.existing = this.streamPayment(
           await getSPSPResponse(this.spspEndpoint, this.requestId)
-        )
+        ))
+        await promise
+        debug('End streamPayment()')
       } catch (e) {
         // TODO: a way to toggle this?
         console.error(`streaming error; retry in ${this.backoff} ms. error=`, e)
@@ -184,11 +185,12 @@ export class Stream {
         return
       }
 
-      const initialSendMaxAmount = await this.adaptiveBandwidth.getStreamSendMax()
+      const adaptiveBandwidth = this.adaptiveBandwidth
+      const initialSendMaxAmount = await adaptiveBandwidth.getStreamSendMax()
       const stream = connection.createStream()
       stream.setSendMax(initialSendMaxAmount)
 
-      const promise = (this.existing = new Promise((resolve, reject) => {
+      const promise = new Promise((resolve, reject) => {
         const boundOutgoingMoney = (sentAmount: string) => {
           setImmediate(this.onOutgoingMoney.bind(this), connection, sentAmount)
         }
@@ -209,21 +211,18 @@ export class Stream {
         const onStop = onPluginDisconnect
 
         const onUpdateAmountInterval = async () => {
-          const sendMaxAmount = await this.adaptiveBandwidth.getStreamSendMax()
+          const sendMaxAmount = await adaptiveBandwidth.getStreamSendMax()
           if (stream.isOpen()) {
             stream.setSendMax(sendMaxAmount)
           }
         }
 
         const addSentAmount = asyncUtils.onlyOnce(() => {
-          this.adaptiveBandwidth.addSentAmount(stream.totalSent)
+          adaptiveBandwidth.addSentAmount(stream.totalSent)
         })
 
         const cleanUp = asyncUtils.onlyOnce(() => {
-          console.log('cleanUp()')
-
-          // TODO: comment why using setImmediate here
-          // setTimeout(() => {
+          debug('cleanUp()')
           plugin.removeListener('disconnect', onPluginDisconnect)
           stream.removeListener('outgoing_money', boundOutgoingMoney)
           connection.removeListener('close', onConnectionClose)
@@ -231,24 +230,24 @@ export class Stream {
           this.activeChanges.removeListener('stop', onStop)
           this.lastDelivered = 0
           this.monetization.setState('stopped')
+          this.monetization.setMonetizationRequest(undefined)
           this.state = MonetizationStateEnum.STOPPED
           // eslint-disable-next-line @typescript-eslint/no-use-before-define
           clearInterval(updateAmountInterval)
-          // }, 10)
         })
 
         plugin.on('disconnect', onPluginDisconnect)
         stream.on('outgoing_money', boundOutgoingMoney)
         connection.on('close', onConnectionClose)
-        this.activeChanges.on('stop', () => {
-          console.log('activeChanges on stop!')
+        this.activeChanges.once('stop', () => {
+          debug('activeChanges on stop!')
           onStop()
         })
         const updateAmountInterval = setInterval(
           onUpdateAmountInterval,
           UPDATE_AMOUNT_INTERVAL
         )
-      }))
+      })
       await promise
     } finally {
       await plugin.disconnect()

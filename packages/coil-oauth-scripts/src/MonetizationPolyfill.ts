@@ -7,6 +7,7 @@ import {
 
 import { Stream } from './Stream'
 import { getDoc } from './documentExtensions'
+import { debug } from './logging'
 
 export interface MonetizationPolyfillOpts {
   btpToken: string
@@ -29,6 +30,7 @@ export class MonetizationPolyfill {
   private stream: Stream
 
   constructor(deps: Injector) {
+    debug('MonetizationPolyfill constructor!')
     this.stream = deps(Stream)
   }
 
@@ -79,10 +81,10 @@ export class MonetizationPolyfill {
     const monitor = new MonetizationTagObserver(
       document,
       async ({ started, stopped }) => {
-        console.log({ started, stopped })
+        debug({ started, stopped })
         if (stopped) {
           clearWatch()
-          await this.stream.stop()
+          void this.stream.stop()
         }
 
         if (started) {
