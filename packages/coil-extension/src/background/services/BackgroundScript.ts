@@ -411,7 +411,18 @@ export class BackgroundScript {
     this.tabStates.logLastMonetizationCommand(tab, 'start')
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender)
-    this.sendSetMonetizationStateMessage(tab, 'pending')
+    const userBeforeReAuth = this.store.user
+    let emittedPending = false
+    const emitPending = () =>
+      this.sendSetMonetizationStateMessage(tab, 'pending')
+
+    // If we are optimistic we have an active subscription (things could have
+    // changed since our last cached whoami query), emit pending immediately,
+    // otherwise wait until recheck auth/whoami, potentially not even emitting.
+    if (userBeforeReAuth?.subscription?.active) {
+      emittedPending = true
+      emitPending()
+    }
 
     log('startWebMonetization, request', request)
     const { requestId } = request.data
@@ -424,11 +435,14 @@ export class BackgroundScript {
       this.sendSetMonetizationStateMessage(tab, 'stopped')
       return false
     }
-    const user = this.store.user
-    if (!user || !user.subscription || !user.subscription.active) {
+    if (!this.store.user?.subscription?.active) {
       this.sendSetMonetizationStateMessage(tab, 'stopped')
       console.warn('startWebMonetization cancelled; no active subscription')
       return false
+    }
+
+    if (!emittedPending) {
+      emitPending()
     }
 
     const lastCommand = this.tabStates.get(tab).lastMonetization.command
