@@ -42,8 +42,7 @@ export class RunContentHandler {
     if (site === 'youtube') {
       // Wait for page to load and the element containing the channelId is
       // available
-
-      await this.dom.windowLoaded()
+      await this.dom.documentReady()
       const channelUrl = await this.pollForYouTubeChannelId()
       if (channelUrl) {
         Object.assign(variables, { channelUrl })
@@ -84,7 +83,8 @@ export class RunContentHandler {
       if (channelElem) {
         const channelUrl = channelElem.href
         debug('channelUrl', channelUrl)
-        if (channelUrl.match(/^\/channel\/\w+/)) {
+        // TODO: channelUrl validation
+        if (channelUrl) {
           return channelUrl
         } else {
           return

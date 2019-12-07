@@ -1,4 +1,7 @@
+import { injectable } from 'inversify'
+
 import { timeout } from '../util/timeout'
+import { debug } from '../util/logging'
 
 export interface PollForElementParams {
   selector: string
@@ -6,6 +9,7 @@ export interface PollForElementParams {
   times: number
 }
 
+@injectable()
 export class DomService {
   constructor(private document: Document, private window: Window) {}
 
@@ -16,6 +20,7 @@ export class DomService {
   }: PollForElementParams): Promise<T | null> {
     let polls = 0
     while (++polls <= times) {
+      debug(`poll attempt ${polls} for ${JSON.stringify(selector)}`)
       const el = this.document.querySelector<T>(selector)
       if (el) {
         return el
@@ -26,11 +31,11 @@ export class DomService {
     return null
   }
 
-  async windowLoaded() {
+  async documentReady() {
     if (this.document.readyState !== 'complete') {
       await new Promise(resolve => {
-        this.window.addEventListener(
-          'load',
+        this.document.addEventListener(
+          'DOMContentLoaded',
           () => {
             resolve()
           },
