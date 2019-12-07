@@ -11,7 +11,7 @@ export function logEvents() {
     'monetizationstart',
     'monetizationstop',
     'monetizationpending'
-  ]
+  ] as const
 
   events.forEach(e => {
     getDoc(document).monetization.addEventListener(e, ev => {
