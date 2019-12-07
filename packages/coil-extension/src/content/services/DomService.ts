@@ -1,6 +1,6 @@
 import { timeout } from '../util/timeout'
 
-interface PollForYouTubeChannelIdParams {
+export interface PollForElementParams {
   selector: string
   everyMs: number
   times: number
@@ -13,7 +13,7 @@ export class DomService {
     selector,
     everyMs,
     times
-  }: PollForYouTubeChannelIdParams): Promise<T | null> {
+  }: PollForElementParams): Promise<T | null> {
     let polls = 0
     while (++polls <= times) {
       const el = this.document.querySelector<T>(selector)
