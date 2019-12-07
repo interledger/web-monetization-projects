@@ -56,8 +56,8 @@ export class RunContentHandler {
     channelImage
   }
 }`
-    const query = `query getPage($url: String!, $channelUrl: String) {
-  adaptedPage(videoUrl: $url, channelUrl: $channelUrl) {
+    const query = `query getPage($url: String!) {
+  adaptedPage(videoUrl: $url) {
     paymentPointer
     channelImage
   }
