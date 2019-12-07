@@ -1,36 +1,37 @@
-// For the moment, if only for coil internal convenience we are keeping the
-// original field names
+import { TEventListenerOrListenerObject } from './genericEventListeners'
 
-export interface MonetizationCommonEventDetail {
+export interface MonetizationEventDetail {
   // Web-Monetization-Id header present in the SPSP request
   requestId: string
   // The meta[@name="monetization"] @content value
   paymentPointer: string
 }
 
-export interface MonetizationStartEvent {
+export type MonetizationEventBase = CustomEvent<MonetizationEventDetail>
+
+export interface MonetizationStartEvent extends MonetizationEventBase {
   type: 'monetizationstart'
-  detail: MonetizationCommonEventDetail
 }
 
-export interface MonetizationProgressEvent {
-  type: 'monetizationprogress'
-  detail: {
-    // The amount * received * at the destination specified in the SPSP endpoint
-    amount: string
-    assetCode: string
-    assetScale: number
-  } & MonetizationCommonEventDetail
-}
-
-export interface MonetizationPendingEvent {
+export interface MonetizationPendingEvent extends MonetizationEventBase {
   type: 'monetizationpending'
-  detail: MonetizationCommonEventDetail
 }
 
-export interface MonetizationStopEvent {
+export interface MonetizationStopEvent extends MonetizationEventBase {
   type: 'monetizationstop'
-  detail: MonetizationCommonEventDetail
+}
+
+export interface MonetizationProgressEventDetail
+  extends MonetizationEventDetail {
+  // The amount * received * at the destination specified in the SPSP endpoint
+  amount: string
+  assetCode: string
+  assetScale: number
+}
+
+export interface MonetizationProgressEvent
+  extends CustomEvent<MonetizationProgressEventDetail> {
+  type: 'monetizationprogress'
 }
 
 /**
@@ -58,28 +59,40 @@ export type StartedState = 'started'
 export type StoppedState = 'stopped'
 
 export type MonetizationState = PendingState | StartedState | StoppedState
-export type MonetizationObject = EventTarget & {
-  state: MonetizationState
+
+export interface MonetizationEventMap {
+  monetizationpending: MonetizationPendingEvent
+  monetizationstart: MonetizationStartEvent
+  monetizationstop: MonetizationStopEvent
+  monetizationprogress: MonetizationProgressEvent
 }
 
-export interface MonetizationDocumentExtensions {
+export type MonetizationEventType = keyof MonetizationEventMap
+
+export interface MonetizationObject extends EventTarget {
+  state: MonetizationState
+  addEventListener<T extends MonetizationEventType>(
+    type: T,
+    listener: TEventListenerOrListenerObject<MonetizationEventMap[T]> | null,
+    options?: boolean | AddEventListenerOptions
+  ): void
+
+  removeEventListener<T extends MonetizationEventType>(
+    type: T,
+    listener: TEventListenerOrListenerObject<MonetizationEventMap[T]> | null,
+    options?: EventListenerOptions | boolean
+  ): void
+}
+
+export interface MonetizationExtendedDocument extends Document {
   monetization: MonetizationObject
 }
-
-export type MonetizationExtendedDocument = Document &
-  MonetizationDocumentExtensions
 
 export type MonetizationEvent =
   | MonetizationProgressEvent
   | MonetizationStartEvent
   | MonetizationPendingEvent
   | MonetizationStopEvent
-
-export interface MonetizationProvider {
-  id: string
-  handleMonetizationRequest(request: MonetizationRequest): void
-  stopMonetization(requestId: string): void
-}
 
 export interface SPSPResponse {
   destination_account: string
@@ -130,21 +143,9 @@ export type StreamEventCallback<T> = (
 ) => void
 
 export interface StreamEventsEmitter extends NodeJS.EventEmitter {
-  on(
-    event: 'monetizationstart',
-    val: StreamEventCallback<MonetizationStartEvent>
-  ): this
-  on(
-    event: 'monetizationstop',
-    val: StreamEventCallback<MonetizationStopEvent>
-  ): this
-  on(
-    event: 'monetizationpending',
-    val: StreamEventCallback<MonetizationPendingEvent>
-  ): this
-  on(
-    event: 'monetizationprogress',
-    val: StreamEventCallback<MonetizationProgressEvent>
+  on<T extends MonetizationEventType>(
+    event: T,
+    val: StreamEventCallback<MonetizationEventMap[T]>
   ): this
 }
 
@@ -244,9 +245,4 @@ export interface StreamAssociationManager<
   get(anyId: string): MonetizationStream<Request>
   // returns all streams
   getAll(anyId: string): MonetizationStream<Request>[]
-}
-
-export function extendedDocument(): MonetizationExtendedDocument {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return document as any
 }
