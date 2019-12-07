@@ -49,13 +49,21 @@ export class RunContentHandler {
       }
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const queryWithChannel = `query getPage($url: String!, $channelUrl: String) {
+  adaptedPage(videoUrl: $url, channelUrl: $channelUrl) {
+    paymentPointer
+    channelImage
+  }
+}`
+    const query = `query getPage($url: String!, $channelUrl: String) {
+  adaptedPage(videoUrl: $url, channelUrl: $channelUrl) {
+    paymentPointer
+    channelImage
+  }
+}`
     const paymentPointerQuery = await this.client.query<GetPageData>({
-      query: `query getPage($url: String!, $channelUrl: String) {
-    adaptedPage(videoUrl: $url, channelUrl: $channelUrl) {
-      paymentPointer
-      channelImage
-    }
-  }`,
+      query,
       token: null,
       variables
     })
@@ -74,9 +82,9 @@ export class RunContentHandler {
 
   private async pollForYouTubeChannelId() {
     try {
-      const selectors = '.ytd-channel-name > a.yt-simple-endpoint'
+      const selector = '.ytd-channel-name > a.yt-simple-endpoint'
       const channelElem = await this.dom.pollForElement<HTMLAnchorElement>({
-        selector: selectors,
+        selector,
         everyMs: 100,
         times: 10
       })
