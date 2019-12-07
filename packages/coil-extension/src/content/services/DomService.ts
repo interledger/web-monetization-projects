@@ -11,7 +11,7 @@ export interface PollForElementParams {
 
 @injectable()
 export class DomService {
-  constructor(private document: Document, private window: Window) {}
+  constructor(private document: Document) {}
 
   async pollForElement<T extends HTMLElement = HTMLElement>({
     selector,
