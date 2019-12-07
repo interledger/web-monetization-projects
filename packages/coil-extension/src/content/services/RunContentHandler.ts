@@ -3,7 +3,7 @@ import { GraphQlClient } from '@coil/client'
 import { DocumentMonetization } from '@web-monetization/wext/content'
 
 import * as tokens from '../../types/tokens'
-import { getAdaptedSite } from '../util/adaptedRegex'
+import { getAdaptedSite } from '../util/getAdaptedSite'
 import { debug } from '../util/logging'
 import { ContentRuntime } from '../types/ContentRunTime'
 
