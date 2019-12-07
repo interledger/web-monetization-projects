@@ -17,14 +17,17 @@ import {
   SPSPResponse
 } from '@web-monetization/polyfill-utils'
 import { GraphQlClient } from '@coil/client'
-import { Container } from 'inversify'
+import { Container, inject, injectable } from 'inversify'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 
+import { logger, ILogger } from './utils'
+
 const { timeout } = asyncUtils
 
 const UPDATE_AMOUNT_TIMEOUT = 2000
+let ATTEMPT = 0
 
 // @sharafian explained to me that the extension popup shows source amounts,
 // while the web-monetization-scripts which use the monetizationprogress
@@ -65,13 +68,13 @@ type OnMoneyEvent = {
   sourceAssetScale: number
 }
 
+@injectable()
 export class Stream extends EventEmitter {
   private readonly _requestId: string
   private readonly _spspUrl: string
   private readonly _paymentPointer: string
   private _token: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private readonly _debug: (...args: any[]) => void
+
   private readonly _server: string
   private readonly _tiers: BandwidthTiers
   private readonly _initiatingUrl: string
@@ -86,7 +89,10 @@ export class Stream extends EventEmitter {
   private _coilDomain: string
 
   constructor(
-    container: Container,
+    @logger()
+    private readonly _debug: ILogger,
+    private container: Container,
+    @inject(tokens.StreamDetails)
     {
       requestId,
       spspEndpoint,
@@ -107,15 +113,6 @@ export class Stream extends EventEmitter {
     this._client = container.get(GraphQlClient)
     this._tiers = container.get(BandwidthTiers)
     this._coilDomain = container.get(tokens.CoilDomain)
-
-    // this._debug = makeDebug('coil-extension:stream:' + this._id)
-    // We use bind rather than an anonymous function so that the line
-    // numbers are maintained in developer tools to aid in debugging.
-    // eslint-disable-next-line no-console
-    this._debug = console.log.bind(
-      console,
-      `coil-extension:stream:${this._requestId}`
-    )
 
     this._active = false
     this._looping = false
@@ -171,12 +168,16 @@ export class Stream extends EventEmitter {
       try {
         plugin = await this._makePlugin()
         const spspDetails = await this._getSPSPDetails()
+        this.container
+          .rebind(tokens.NoContextLoggerName)
+          .toConstantValue(`StreamAttempt:${this._requestId}:${++ATTEMPT}`)
         attempt = this._attempt = new StreamAttempt({
           bandwidth,
           onMoney: this.onMoney.bind(this),
           requestId: this._requestId,
           plugin,
-          spspDetails
+          spspDetails,
+          debug: this.container.get(tokens.Logger)
         })
         if (this._active) {
           await attempt.start()
@@ -289,15 +290,14 @@ interface StreamAttemptOptions {
   requestId: string
   plugin: IlpPluginBtp
   spspDetails: SPSPResponse
+  debug: ILogger
 }
-
-let ATTEMPT = 0
 
 class StreamAttempt {
   private readonly _onMoney: (event: OnMoneyEvent) => void
   private readonly _bandwidth: AdaptiveBandwidth
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private readonly _debug: (...args: any[]) => void
+  private readonly _debug: ILogger
   private readonly _plugin: IlpPluginBtp
   private readonly _spspDetails: SPSPResponse
 
@@ -311,11 +311,7 @@ class StreamAttempt {
     this._bandwidth = opts.bandwidth
     this._plugin = opts.plugin
     this._spspDetails = opts.spspDetails
-    const attemptId = opts.requestId + ':' + ++ATTEMPT
-    this._debug = console.log.bind(
-      console,
-      'coil-extension:stream:' + attemptId
-    )
+    this._debug = opts.debug
   }
 
   async start(): Promise<void> {

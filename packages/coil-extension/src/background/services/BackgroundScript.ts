@@ -4,7 +4,6 @@ import { GraphQlClient } from '@coil/client'
 import { HistoryDb } from '@web-monetization/wext/services'
 import { MonetizationState } from '@web-monetization/types'
 
-import { makeLogger } from '../../util/logging'
 import { notNullOrUndef } from '../../util/nullables'
 import { StorageService } from '../../services/storage'
 import * as tokens from '../../types/tokens'
@@ -31,10 +30,7 @@ import { TabStates } from './TabStates'
 import { Streams } from './Streams'
 import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
-
-const debug = makeLogger('background')
-// eslint-disable-next-line no-console
-const log = console.log
+import { ILogger, logger } from './utils'
 
 function getTab(sender: { tab?: { id?: number } }) {
   return notNullOrUndef(notNullOrUndef(sender.tab).id)
@@ -54,10 +50,14 @@ export class BackgroundScript {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private auth: AuthService,
+
+    @logger()
+    private log: ILogger,
+
     private client: GraphQlClient,
     private db: HistoryDb,
     @inject(tokens.WextApi)
-    private api: WextApi,
+    private api: typeof window.chrome,
     @inject(tokens.CoilDomain)
     private coilDomain: string
   ) {}
@@ -121,7 +121,9 @@ export class BackgroundScript {
   private setRuntimeMessageListener() {
     // A tab wants to change its state
     this.api.runtime.onMessage.addListener((request, sender, sendResponse) => {
-      debug('received message. request=', JSON.stringify(request))
+      const serialized = JSON.stringify(request)
+      const redacted = serialized.replace(/"token":\s*".*"/, '<redacted>')
+      this.log('received message. request=', redacted)
       void this.handleMessage(request, sender, sendResponse)
 
       // important: this tells chrome to expect an async response.
@@ -143,7 +145,7 @@ export class BackgroundScript {
   private setTabsOnRemovedListener() {
     // Remove tab state when the tab is closed to prevent memory leak
     this.api.tabs.onRemoved.addListener(tabId => {
-      log('removing tab with id', tabId)
+      this.log('removing tab with id', tabId)
       this.tabStates.clear(tabId)
 
       // clean up the stream of that tab
@@ -199,7 +201,7 @@ export class BackgroundScript {
           sentAmount: details.sentAmount
         }
       }
-      log('sending money message.', tab, details)
+      this.log('sending money message.', tab, details)
       this.handleMonetizedSite(tab, details.initiatingUrl, details)
       this.api.tabs.sendMessage(tab, message)
       this.savePacketToHistoryDb(details)
@@ -246,7 +248,7 @@ export class BackgroundScript {
   ) {
     switch (request.command) {
       case 'log':
-        log('log command:', request.data)
+        this.log('log command:', request.data)
         sendResponse(true)
         break
       case 'logout':
@@ -262,7 +264,7 @@ export class BackgroundScript {
         )
         break
       case 'startWebMonetization':
-        log('got startwebmonetization')
+        this.log('got startwebmonetization')
         sendResponse(await this.startWebMonetization(request, sender))
         break
       case 'pauseWebMonetization':
@@ -290,7 +292,7 @@ export class BackgroundScript {
   }
 
   setCoilUrlForPopupIfNeeded(tab: number, url: string | undefined) {
-    debug('setting coil url for popup', url)
+    this.log('setting coil url for popup', url)
     if (url && !url.startsWith(this.coilDomain)) {
       url = undefined
     }
@@ -375,7 +377,7 @@ export class BackgroundScript {
     // Don't work off stale state, set(...) creates a copy ...
     this.popup.setBrowserAction(this.activeTab, state())
     if (from) {
-      log('reloadTabState from=', from, JSON.stringify(state(), null, 2))
+      this.log('reloadTabState from=', from, JSON.stringify(state(), null, 2))
     }
   }
 
@@ -424,10 +426,10 @@ export class BackgroundScript {
       emitPending()
     }
 
-    log('startWebMonetization, request', request)
+    this.log('startWebMonetization, request', request)
     const { requestId } = request.data
 
-    log('loading token for monetization', requestId)
+    this.log('loading token for monetization', requestId)
     const token = await this.auth.getTokenMaybeRefreshAndStoreState()
     if (!token) {
       // not signed in.
@@ -437,7 +439,7 @@ export class BackgroundScript {
     }
     if (!this.store.user?.subscription?.active) {
       this.sendSetMonetizationStateMessage(tab, 'stopped')
-      console.warn('startWebMonetization cancelled; no active subscription')
+      this.log('startWebMonetization cancelled; no active subscription')
       return false
     }
 
@@ -447,11 +449,11 @@ export class BackgroundScript {
 
     const lastCommand = this.tabStates.get(tab).lastMonetization.command
     if (lastCommand !== 'start') {
-      console.warn('startWebMonetization cancelled via', lastCommand)
+      this.log('startWebMonetization cancelled via', lastCommand)
       return false
     }
 
-    log('starting stream', requestId)
+    this.log('starting stream', requestId)
     this.tabsToStreams[tab] = requestId
     this.streamsToTabs[requestId] = tab
     this.streams.beginStream(requestId, {
@@ -467,7 +469,7 @@ export class BackgroundScript {
     this.tabStates.logLastMonetizationCommand(tab, 'pause')
     const id = this.tabsToStreams[tab]
     if (id) {
-      log('pausing stream', id)
+      this.log('pausing stream', id)
       this.streams.pauseStream(id)
       this.sendSetMonetizationStateMessage(tab, 'stopped')
     }
@@ -479,7 +481,7 @@ export class BackgroundScript {
 
     const id = this.tabsToStreams[tab]
     if (id) {
-      log('resuming stream', id)
+      this.log('resuming stream', id)
       this.sendSetMonetizationStateMessage(tab, 'pending')
       this.streams.resumeStream(id)
     }
@@ -503,7 +505,7 @@ export class BackgroundScript {
 
   private handleStreamsAbortEvent() {
     this.streams.on('abort', requestId => {
-      debug('aborting monetization request', requestId)
+      this.log('aborting monetization request', requestId)
       const tab = this.streamsToTabs[requestId]
       if (tab) {
         this.doStopWebMonetization(tab)
@@ -548,7 +550,7 @@ export class BackgroundScript {
   _closeStream(tabId: number) {
     const streamId = this.tabsToStreams[tabId]
     if (streamId) {
-      log('closing stream with id', streamId)
+      this.log('closing stream with id', streamId)
       this.streams.closeStream(streamId)
       delete this.streamsToTabs[streamId]
       delete this.tabsToStreams[tabId]

@@ -1,0 +1,58 @@
+import { inject, named, interfaces } from 'inversify'
+
+import Context = interfaces.Context
+
+import * as tokens from '../../types/tokens'
+
+export function logger(name?: string) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return function decorator(
+    target: any,
+    targetKey: string,
+    index?: number | undefined
+  ) {
+    inject(tokens.Logger)(target, targetKey, index)
+    if (name) {
+      named(name)(target, targetKey, index)
+    }
+  }
+}
+
+export type ILogger = typeof console.log
+
+const getColor = (() => {
+  let ix = 0
+  const colors = [
+    'cyan',
+    'yellow',
+    'green',
+    'magenta',
+    'orange',
+    'purple',
+    'blue'
+  ]
+  return () => {
+    return colors[ix++ % colors.length]
+  }
+})()
+
+export function createLogger(context: Context) {
+  const tag = context.currentRequest.target.getNamedTag()
+  let name = tag?.value
+  const identifier = context.currentRequest.parentRequest?.serviceIdentifier
+  if (!name && typeof identifier === 'function') {
+    name = identifier.name
+  }
+  if (!name) {
+    name = context.container.get(tokens.NoContextLoggerName)
+  }
+  const namespace = `background${name ? `:${name}` : ''}`
+  // eslint-disable-next-line no-console
+  return console.log.bind(
+    // eslint-disable-next-line no-console
+    console,
+    `%c coil-extension:${namespace} %c`,
+    `color: ${getColor()};`,
+    `color: white;`
+  )
+}
