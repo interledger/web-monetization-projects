@@ -1,6 +1,7 @@
 import { EventEmitter } from 'events'
 
 import {
+  MonetizationEventType,
   MonetizationExtendedDocument,
   MonetizationPendingEvent,
   MonetizationProgressEvent,
@@ -64,7 +65,7 @@ export class GlobalWebMonetizationState extends EventEmitter {
   init() {
     if (!this.initialized && doc.monetization) {
       this.initialized = true
-      const addListener = (event: string, listener: Function) =>
+      const addListener = (event: MonetizationEventType, listener: Function) =>
         doc.monetization.addEventListener(event, listener as EventListener)
       addListener('monetizationstart', this.onMonetizationStart)
       addListener('monetizationstop', this.onMonetizationStop)
@@ -76,7 +77,10 @@ export class GlobalWebMonetizationState extends EventEmitter {
   terminate() {
     if (this.initialized && doc.monetization) {
       this.initialized = false
-      const removeListener = (event: string, listener: Function) =>
+      const removeListener = (
+        event: MonetizationEventType,
+        listener: Function
+      ) =>
         doc.monetization.removeEventListener(event, listener as EventListener)
       removeListener('monetizationstart', this.onMonetizationStart)
       removeListener('monetizationstop', this.onMonetizationStop)

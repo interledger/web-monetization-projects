@@ -67,15 +67,17 @@ export interface MonetizationEventMap {
   monetizationprogress: MonetizationProgressEvent
 }
 
+export type MonetizationEventType = keyof MonetizationEventMap
+
 export interface MonetizationObject extends EventTarget {
   state: MonetizationState
-  addEventListener<T extends keyof MonetizationEventMap>(
+  addEventListener<T extends MonetizationEventType>(
     type: T,
     listener: TEventListenerOrListenerObject<MonetizationEventMap[T]> | null,
     options?: boolean | AddEventListenerOptions
   ): void
 
-  removeEventListener<T extends keyof MonetizationEventMap>(
+  removeEventListener<T extends MonetizationEventType>(
     type: T,
     listener: TEventListenerOrListenerObject<MonetizationEventMap[T]> | null,
     options?: EventListenerOptions | boolean
@@ -141,7 +143,7 @@ export type StreamEventCallback<T> = (
 ) => void
 
 export interface StreamEventsEmitter extends NodeJS.EventEmitter {
-  on<T extends keyof MonetizationEventMap>(
+  on<T extends MonetizationEventType>(
     event: T,
     val: StreamEventCallback<MonetizationEventMap[T]>
   ): this
