@@ -4,7 +4,7 @@ import * as tokens from '../tokens'
 
 @injectable()
 export class ScriptInjection {
-  constructor(@inject(tokens.Document) private document: Document) {}
+  constructor(private document: Document) {}
 
   inject(code: string) {
     const document = this.document

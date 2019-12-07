@@ -3,11 +3,12 @@ import { GraphQlClient } from '@coil/client'
 import { DocumentMonetization } from '@web-monetization/wext/content'
 
 import * as tokens from '../../types/tokens'
-import { isAdaptedSite } from '../util/adaptedRegex'
+import { getAdaptedSite } from '../util/getAdaptedSite'
 import { debug } from '../util/logging'
 import { ContentRuntime } from '../types/ContentRunTime'
 
 import { Frames } from './Frames'
+import { DomService } from './DomService'
 
 interface GetPageData {
   adaptedPage: {
@@ -16,30 +17,55 @@ interface GetPageData {
   }
 }
 
+interface PollForYouTubeChannelIdParams {
+  everyMs: number
+  times: number
+}
+
 @injectable()
 export class RunContentHandler {
   private constructor(
     private monetization: DocumentMonetization,
+    private dom: DomService,
     @inject(tokens.ContentRuntime)
     private contentRuntime: ContentRuntime,
-    @inject(tokens.Window)
     private window: Window,
     private frames: Frames,
     private client: GraphQlClient
   ) {}
 
-  async adaptedPageDetails(url: string) {
-    debug('fetching payment pointer for this page', url)
+  async adaptedPageDetails(url: string, site: string) {
+    debug('fetching payment pointer for this page', url, site)
 
-    const paymentPointerQuery = await this.client.query<GetPageData>({
-      query: `query getPage($url: String!) {
-    adaptedPage(videoUrl: $url) {
-      paymentPointer
-      channelImage
+    const variables = { url }
+
+    if (site === 'youtube') {
+      // Wait for page to load and the element containing the channelId is
+      // available
+      await this.dom.documentReady()
+      const channelUrl = await this.pollForYouTubeChannelId()
+      if (channelUrl) {
+        Object.assign(variables, { channelUrl })
+      }
     }
-  }`,
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const queryWithChannel = `query getPage($url: String!, $channelUrl: String) {
+  adaptedPage(videoUrl: $url, channelUrl: $channelUrl) {
+    paymentPointer
+    channelImage
+  }
+}`
+    const query = `query getPage($url: String!) {
+  adaptedPage(videoUrl: $url) {
+    paymentPointer
+    channelImage
+  }
+}`
+    const paymentPointerQuery = await this.client.query<GetPageData>({
+      query,
       token: null,
-      variables: { url }
+      variables
     })
 
     debug({ paymentPointerQuery })
@@ -54,6 +80,29 @@ export class RunContentHandler {
     }
   }
 
+  private async pollForYouTubeChannelId() {
+    try {
+      const selector = '.ytd-channel-name > a.yt-simple-endpoint'
+      const channelElem = await this.dom.pollForElement<HTMLAnchorElement>({
+        selector,
+        everyMs: 100,
+        times: 10
+      })
+      if (channelElem) {
+        const channelUrl = channelElem.href
+        debug('channelUrl', channelUrl)
+        // TODO: channelUrl validation
+        if (channelUrl) {
+          return channelUrl
+        } else {
+          return
+        }
+      }
+    } catch (err) {
+      debug('Failed to grab channel URL from Youtube page. err=', err)
+    }
+  }
+
   async runContent() {
     const currentUrl = this.window.location.href
     debug(
@@ -63,9 +112,11 @@ export class RunContentHandler {
       this.frames.isIFrame
     )
 
-    if (this.frames.isTopFrame && isAdaptedSite(currentUrl)) {
+    const adaptedSite = getAdaptedSite(currentUrl)
+    if (this.frames.isTopFrame && adaptedSite) {
       const { channelImage, paymentPointer } = await this.adaptedPageDetails(
-        currentUrl
+        currentUrl,
+        adaptedSite
       )
 
       if (!paymentPointer) {

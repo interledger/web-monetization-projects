@@ -1,6 +1,6 @@
 import '@abraham/reflection'
 
-import { Container, decorate, injectable, unmanaged } from 'inversify'
+import { Container } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 import { HistoryDb } from '@web-monetization/wext/services'
@@ -19,10 +19,9 @@ async function configureContainer(container: Container) {
   container.applyMiddleware(logger)
 
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
-  container.bind(tokens.Storage).toConstantValue(localStorage)
   container.bind(tokens.WextApi).toConstantValue(API)
-  container.bind(tokens.Null).toConstantValue(null)
   container.bind(GraphQlClient.Options).to(ClientOptions)
+  container.bind(Storage).toConstantValue(localStorage)
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
   container.bind(BackgroundScript).toSelf()

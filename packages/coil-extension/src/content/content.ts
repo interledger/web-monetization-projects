@@ -13,10 +13,10 @@ import { ContentScript } from './services/ContentScript'
 function configureContainer(container: Container) {
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
-  container.bind(tokens.Window).toConstantValue(window)
-  container.bind(tokens.Storage).toConstantValue(localStorage)
-  container.bind(tokens.Document).toConstantValue(document)
   container.bind(GraphQlClient.Options).to(ClientOptions)
+  container.bind(Storage).toConstantValue(localStorage)
+  container.bind(Window).toConstantValue(window)
+  container.bind(Document).toConstantValue(document)
 }
 
 function main() {

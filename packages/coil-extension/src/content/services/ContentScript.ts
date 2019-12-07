@@ -31,9 +31,9 @@ import { MonetizationEventsLogger } from './MonetizationEventsLogger'
 @injectable()
 export class ContentScript {
   constructor(
-    @inject(tokens.Storage) private storage: Storage,
-    @inject(tokens.Window) private window: Window,
-    @inject(tokens.Document) private document: Document,
+    private storage: Storage,
+    private window: Window,
+    private document: Document,
     @inject(tokens.ContentRuntime) private runtime: ContentRuntime,
     private runContentHandler: RunContentHandler,
     private frames: Frames,

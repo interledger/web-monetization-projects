@@ -7,8 +7,8 @@ import * as tokens from '../../types/tokens'
 @injectable()
 export class ContentAuthService {
   constructor(
-    @inject(tokens.Window) private window: Window,
-    @inject(tokens.Storage) private storage: Storage,
+    private window: Window,
+    private storage: Storage,
     @inject(tokens.ContentRuntime) private contentRuntime: ContentRuntime
   ) {}
 
