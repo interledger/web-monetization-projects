@@ -8,6 +8,7 @@ import { debug } from '../util/logging'
 import { ContentRuntime } from '../types/ContentRunTime'
 
 import { Frames } from './Frames'
+import { DomService } from './DomService'
 
 interface GetPageData {
   adaptedPage: {
@@ -25,12 +26,10 @@ interface PollForYouTubeChannelIdParams {
 export class RunContentHandler {
   private constructor(
     private monetization: DocumentMonetization,
+    private dom: DomService,
     @inject(tokens.ContentRuntime)
     private contentRuntime: ContentRuntime,
-    @inject(tokens.Window)
     private window: Window,
-    @inject(tokens.Document)
-    private document: Document,
     private frames: Frames,
     private client: GraphQlClient
   ) {}
@@ -44,11 +43,8 @@ export class RunContentHandler {
       // Wait for page to load and the element containing the channelId is
       // available
 
-      await this.windowLoaded()
-      const channelUrl = await this.pollForYouTubeChannelId({
-        times: 10,
-        everyMs: 100
-      })
+      await this.dom.windowLoaded()
+      const channelUrl = await this.pollForYouTubeChannelId()
       if (channelUrl) {
         Object.assign(variables, { channelUrl })
       }
@@ -77,44 +73,25 @@ export class RunContentHandler {
     }
   }
 
-  private async pollForYouTubeChannelId({
-    everyMs,
-    times
-  }: PollForYouTubeChannelIdParams) {
+  private async pollForYouTubeChannelId() {
     try {
-      let polls = 0
-      while (++polls <= times) {
-        const channelElem = this.document.querySelector<HTMLAnchorElement>(
-          '.ytd-channel-name > a.yt-simple-endpoint'
-        )
-        if (channelElem) {
-          const channelUrl = channelElem.href
-          debug('channelUrl', channelUrl)
-          if (channelUrl.match(/^\/channel\/\w+/)) {
-            return channelUrl
-          } else {
-            break
-          }
+      const selectors = '.ytd-channel-name > a.yt-simple-endpoint'
+      const channelElem = await this.dom.pollForElement<HTMLAnchorElement>({
+        selector: selectors,
+        everyMs: 100,
+        times: 10
+      })
+      if (channelElem) {
+        const channelUrl = channelElem.href
+        debug('channelUrl', channelUrl)
+        if (channelUrl.match(/^\/channel\/\w+/)) {
+          return channelUrl
         } else {
-          await new Promise(resolve => setTimeout(resolve, everyMs))
+          return
         }
       }
     } catch (err) {
       debug('Failed to grab channel URL from Youtube page. err=', err)
-    }
-  }
-
-  async windowLoaded() {
-    if (this.document.readyState !== 'complete') {
-      await new Promise(resolve => {
-        this.window.addEventListener(
-          'load',
-          () => {
-            resolve()
-          },
-          { once: true }
-        )
-      })
     }
   }
 

@@ -10,7 +10,7 @@ export class Frames {
   isCoilTopFrame: boolean
 
   constructor(
-    @inject(tokens.Window) private window: Window,
+    private window: Window,
     @inject(tokens.CoilDomain) private coilDomain: string
   ) {
     this.isTopFrame = window === window.top

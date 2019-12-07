@@ -16,9 +16,7 @@ export class DocumentMonetization {
   private request?: MonetizationStartEvent['detail']
 
   constructor(
-    @inject(tokens.Window)
     private window: Window,
-    @inject(tokens.Document)
     private doc: Document,
     private scripts: ScriptInjection
   ) {}

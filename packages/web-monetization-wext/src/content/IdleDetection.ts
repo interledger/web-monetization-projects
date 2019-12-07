@@ -1,6 +1,4 @@
-import { inject, injectable } from 'inversify'
-
-import * as tokens from '../tokens'
+import { injectable } from 'inversify'
 
 const IDLE_TIMEOUT = 30 * 60 * 1000 // 30 minutes
 
@@ -11,7 +9,7 @@ export interface StreamControl {
 
 @injectable()
 export class IdleDetection {
-  constructor(@inject(tokens.Document) private document: Document) {}
+  constructor(private document: Document) {}
 
   watchVisibility({ pause, resume }: StreamControl) {
     const document = this.document

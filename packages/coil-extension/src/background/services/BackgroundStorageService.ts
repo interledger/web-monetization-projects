@@ -7,10 +7,7 @@ import { WextApi } from '../../types/wextApi'
 
 @injectable()
 export class BackgroundStorageService extends StorageService {
-  constructor(
-    @inject(tokens.Storage) storage: Storage,
-    @inject(tokens.WextApi) private api: WextApi
-  ) {
+  constructor(storage: Storage, @inject(tokens.WextApi) private api: WextApi) {
     super(storage, (key: string) => {
       const message: LocalStorageUpdate = {
         command: 'localStorageUpdate',
