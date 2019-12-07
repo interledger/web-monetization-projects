@@ -1,6 +1,6 @@
 import '@abraham/reflection'
 
-import { Container } from 'inversify'
+import { Container, interfaces } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 import { HistoryDb } from '@web-monetization/wext/services'
@@ -13,6 +13,8 @@ import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { BackgroundStorageService } from './services/BackgroundStorageService'
+import { Stream } from './services/Stream'
+import { createLogger } from './services/utils'
 
 async function configureContainer(container: Container) {
   const logger = makeLoggerMiddleware()
@@ -24,7 +26,20 @@ async function configureContainer(container: Container) {
   container.bind(Storage).toConstantValue(localStorage)
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
-  container.bind(BackgroundScript).toSelf()
+
+  container
+    .bind(Stream)
+    .toSelf()
+    .inTransientScope()
+
+  container
+    .bind(tokens.NoContextLoggerName)
+    .toConstantValue('tokens.NoContextLoggerName')
+
+  container
+    .bind(tokens.Logger)
+    .toDynamicValue(createLogger)
+    .inTransientScope()
 
   container.bind(tokens.LocalStorageProxy).toDynamicValue(context => {
     return context.container.get(StorageService).makeProxy(['token'])
@@ -35,6 +50,10 @@ async function configureContainer(container: Container) {
 }
 
 async function main() {
+  if (!localStorage.debug) {
+    localStorage.debug = 'coil-extension*'
+  }
+
   decorateThirdPartyClasses()
 
   const container = new Container({
