@@ -9,6 +9,9 @@
       "path": "packages/coil-monorepo-upkeep/tsconfig.build.json"
     },
     {
+      "path": "packages/coil-polyfill-utils/tsconfig.build.json"
+    },
+    {
       "path": "packages/web-monetization-polyfill-utils/tsconfig.build.json"
     },
     {

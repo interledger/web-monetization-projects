@@ -12,6 +12,9 @@
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
       ],
+      "@coil/polyfill-utils": [
+        "packages/coil-polyfill-utils/src"
+      ],
       "@web-monetization/polyfill-utils": [
         "packages/web-monetization-polyfill-utils/src"
       ],

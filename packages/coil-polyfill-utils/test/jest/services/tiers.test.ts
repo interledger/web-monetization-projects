@@ -1,4 +1,4 @@
-import { BandwidthTiers } from '@web-monetization/polyfill-utils'
+import { BandwidthTiers } from '@coil/polyfill-utils'
 
 describe('BandwidthTiers#getTier', () => {
   class TestGetTier extends BandwidthTiers {
