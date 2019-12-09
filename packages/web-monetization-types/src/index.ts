@@ -19,6 +19,15 @@ export interface MonetizationPendingEvent extends MonetizationEventBase {
 
 export interface MonetizationStopEvent extends MonetizationEventBase {
   type: 'monetizationstop'
+  /**
+   * @experimental
+   * Currently undocumented in spec.
+   * Will be true when the meta[@content] has changed
+   * Will be true if a meta has been removed
+   * Will be false if streaming has been stopped for some other reason where
+   * it's possible that streaming could commence with the same requestId.
+   */
+  finalized?: boolean
 }
 
 export interface MonetizationProgressEventDetail
