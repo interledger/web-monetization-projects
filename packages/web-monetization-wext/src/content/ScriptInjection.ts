@@ -1,4 +1,4 @@
-import { injectable } from 'inversify'
+import { injectable } from '@dier-makr/annotations'
 
 @injectable()
 export class ScriptInjection {

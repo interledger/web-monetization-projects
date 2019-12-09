@@ -12,6 +12,9 @@
   ],
   "references": [
     {
+      "path": "../dier-makr-annotations/tsconfig.build.json"
+    },
+    {
       "path": "../web-monetization-polyfill-utils/tsconfig.build.json"
     },
     {

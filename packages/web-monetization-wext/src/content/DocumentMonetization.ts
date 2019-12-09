@@ -1,10 +1,10 @@
-import { injectable } from 'inversify'
 import {
   MonetizationEvent,
   MonetizationProgressEvent,
   MonetizationStartEvent,
   MonetizationState
 } from '@web-monetization/types'
+import { injectable } from '@dier-makr/annotations'
 
 import { ScriptInjection } from './ScriptInjection'
 

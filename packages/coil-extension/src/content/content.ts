@@ -2,11 +2,12 @@ import '@abraham/reflection'
 
 import { Container } from 'inversify'
 import { GraphQlClient } from '@coil/client'
+import { inversifyModule } from '@dier-makr/inversify'
+import { GlobalModule } from '@dier-makr/annotations'
 
 import * as tokens from '../types/tokens'
 import { API, COIL_DOMAIN } from '../webpackDefines'
 import { ClientOptions } from '../services/ClientOptions'
-import { decorateCoilClient } from '../services/decorateCoilClient'
 
 import { ContentScript } from './services/ContentScript'
 
@@ -20,7 +21,8 @@ function configureContainer(container: Container) {
 }
 
 function main() {
-  decorateCoilClient()
+  inversifyModule(GlobalModule)
+
   const container = new Container({
     defaultScope: 'Singleton',
     autoBindInjectable: true

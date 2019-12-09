@@ -1,4 +1,4 @@
-import { injectable, unmanaged } from 'inversify'
+import { injectable, unmanaged } from '@dier-makr/annotations'
 
 const VERSION = 8
 const NAME = 'monetization-history'
