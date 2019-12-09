@@ -89,7 +89,7 @@ export class Stream extends EventEmitter {
   private _coilDomain: string
 
   constructor(
-    @logger()
+    @logger('Stream')
     private readonly _debug: ILogger,
     private container: Container,
     @inject(tokens.StreamDetails)

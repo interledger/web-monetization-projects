@@ -1,13 +1,13 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
-  "name": "@coil/client",
+  "name": "@dier-makr/annotations",
   "version": "0.0.0",
   "private": false,
   "keywords": [
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization/tree/master/packages/coil-client",
+  "homepage": "https://github.com/coilhq/web-monetization/tree/master/packages/dier-makr-annotations",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization.git"
@@ -31,12 +31,5 @@
     "test:coverage": "yarn test --verbose --coverage",
     "upkeep": "cd ../.. && yarn upkeep"
   },
-  "dependencies": {
-    "@dier-makr/annotations": "0.0.0",
-    "jsonwebtoken": "^8.5.1",
-    "node-fetch": "^2.6.0"
-  },
-  "devDependencies": {
-    "@types/jsonwebtoken": "^8.3.5"
-  }
+  "dependencies": {}
 }

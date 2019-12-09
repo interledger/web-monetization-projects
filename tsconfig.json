@@ -6,14 +6,14 @@
     "baseUrl": ".",
     "skipLibCheck": false,
     "paths": {
-      "@coil/client": [
-        "packages/coil-client/src"
-      ],
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
       ],
       "@coil/polyfill-utils": [
         "packages/coil-polyfill-utils/src"
+      ],
+      "@dier-makr/annotations": [
+        "packages/dier-makr-annotations/src"
       ],
       "@web-monetization/polyfill-utils": [
         "packages/web-monetization-polyfill-utils/src"
@@ -24,8 +24,11 @@
       "@webexts/build-utils": [
         "packages/webexts-build-utils/src"
       ],
-      "@coil/puppeteer-utils": [
-        "packages/coil-puppeteer-utils/src"
+      "@coil/client": [
+        "packages/coil-client/src"
+      ],
+      "@dier-makr/inversify": [
+        "packages/dier-makr-inversify/src"
       ],
       "@interledger/minute-extension": [
         "packages/interledger-minute-extension/src"
@@ -48,14 +51,17 @@
       "@web-monetization/wext/content": [
         "packages/web-monetization-wext/src/content"
       ],
+      "@coil/puppeteer-utils": [
+        "packages/coil-puppeteer-utils/src"
+      ],
+      "@web-monetization/demo": [
+        "packages/web-monetization-demo/src"
+      ],
       "@coil/extension": [
         "packages/coil-extension/src"
       ],
       "@coil/oauth-scripts": [
         "packages/coil-oauth-scripts/src"
-      ],
-      "@web-monetization/demo": [
-        "packages/web-monetization-demo/src"
       ]
     }
   },

@@ -4,9 +4,9 @@ import { Container } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 
 import * as tokens from '../types/tokens'
-import { decorateCoilClient } from '../services/decorateThirdPartyClasses'
 import { API, COIL_DOMAIN } from '../webpackDefines'
 import { ClientOptions } from '../services/ClientOptions'
+import { decorateCoilClient } from '../services/decorateCoilClient'
 
 import { ContentScript } from './services/ContentScript'
 

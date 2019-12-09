@@ -51,7 +51,7 @@ export class BackgroundScript {
     private store: LocalStorageProxy,
     private auth: AuthService,
 
-    @logger()
+    @logger('BackgroundScript')
     private log: ILogger,
 
     private client: GraphQlClient,
