@@ -4,8 +4,9 @@ export interface Injections {
   params: { index: number; token: any }[]
 }
 
-export const InjectionsSymbol = Symbol.for('__dier_makr_injections__')
-export const GlobalModule = Symbol.for('rootModule')
+export const InjectionsSymbol = Symbol('Dier Makr Injections')
+export const GlobalModule = Symbol('Dier Makr GlobalModule')
+export const UnmanagedSymbol = Symbol('Dier Makr @unmanaged() Parameter')
 
 const defaultInjections = (module?: symbol) => {
   return {
@@ -13,7 +14,7 @@ const defaultInjections = (module?: symbol) => {
     params: []
   }
 }
-export function Injectable(module: symbol = GlobalModule) {
+export function injectable(module: symbol = GlobalModule) {
   return function(target: any) {
     const injections: Injections = target[InjectionsSymbol]
     if (!injections) {
@@ -21,19 +22,19 @@ export function Injectable(module: symbol = GlobalModule) {
     } else {
       injections.module = module
     }
-    if (!Injectable.modules.has(module)) {
-      Injectable.modules.set(module, [])
+    if (!injectable.modules.has(module)) {
+      injectable.modules.set(module, [])
     }
-    Injectable.modules.get(module)?.push(target)
+    injectable.modules.get(module)?.push(target)
   }
 }
-Injectable.modules = new Map<symbol, any[]>([[GlobalModule, []]])
+injectable.modules = new Map<symbol, any[]>([[GlobalModule, []]])
 
-Injectable.forModule = (module: symbol) => {
-  return Injectable.modules.get(module) ?? []
+injectable.forModule = (module: symbol) => {
+  return injectable.modules.get(module) ?? []
 }
 
-export function Inject(token: any) {
+export function inject(token: any) {
   return function(target: any, key?: string, index?: number): void {
     let injections: Injections = target[InjectionsSymbol]
     if (!injections) {
@@ -52,3 +53,5 @@ export function Inject(token: any) {
     }
   }
 }
+
+export const unmanaged = inject.bind(null, UnmanagedSymbol)

@@ -1,4 +1,4 @@
-import { injectable } from 'inversify'
+import { injectable } from '@dier-makr/annotations'
 
 const IDLE_TIMEOUT = 30 * 60 * 1000 // 30 minutes
 

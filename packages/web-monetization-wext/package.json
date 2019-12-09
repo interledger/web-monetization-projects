@@ -38,8 +38,8 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
+    "@dier-makr/annotations": "0.0.0",
     "@web-monetization/polyfill-utils": "0.0.0",
-    "@web-monetization/types": "0.0.0",
-    "inversify": "^5.0.1"
+    "@web-monetization/types": "0.0.0"
   }
 }

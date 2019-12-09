@@ -1,12 +1,11 @@
-import { Inject } from '@dier-makr/annotations'
+import { injectable } from '@dier-makr/annotations'
 
 import { portableFetch } from './utils/portableFetch'
 import { GraphQlResponse } from './types'
 import { login, queryToken, refreshBtpToken, whoAmI } from './queries'
-import { injectable } from './dier-makr'
 
 // Reference class for DI/reduct
-@injectable
+@injectable()
 export class GraphQlClientOptions {
   public coilDomain = 'https://coil.com'
   public fetch: typeof fetch = portableFetch
@@ -18,7 +17,7 @@ export interface GraphQlQueryParameters {
   variables?: {}
 }
 
-@injectable
+@injectable()
 export class GraphQlClient {
   public static Options = GraphQlClientOptions
   protected readonly fetch: typeof fetch

@@ -1,21 +1,16 @@
-/**
- * This class is not decorated with @injectable() or @inject() due to demand
- * to keep popups 'snappy' without lag. Inversify can be somewhat a heavy
- * dependency.
- *
- * https://github.com/inversify/InversifyJS
- *
- * TODO: investigate standardized decorators
- *   perhaps propose a package that adds metadata to various functions
- */
+import { injectable, unmanaged } from '@dier-makr/annotations'
+
+@injectable()
 export class StorageService {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private cache: Map<string, string>
   constructor(
+    @unmanaged()
     private storage: Pick<
       Storage,
       'getItem' | 'setItem' | 'removeItem' | 'clear'
     > = localStorage,
+    @unmanaged()
     private onChanged?: (key: string) => void
   ) {
     this.cache = new Map()

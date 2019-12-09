@@ -1,27 +1,41 @@
-import { decorate, inject, injectable } from 'inversify'
 import {
-  Injectable,
+  decorate,
+  inject,
+  injectable as injectableInversify,
+  unmanaged
+} from 'inversify'
+import {
+  injectable,
   Injections,
-  InjectionsSymbol
+  InjectionsSymbol,
+  UnmanagedSymbol
 } from '@dier-makr/annotations'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function inversifyAnnotated(target: any) {
   const injections: Injections | undefined = target[InjectionsSymbol]
   if (injections) {
-    decorate(injectable(), target)
+    decorate(injectableInversify(), target)
     if (injections.params) {
       injections.params.forEach(p => {
-        decorate(
-          (inject(p.token) as unknown) as ParameterDecorator,
-          target,
-          p.index
-        )
+        if (p.token === UnmanagedSymbol) {
+          decorate(
+            (unmanaged() as unknown) as ParameterDecorator,
+            target,
+            p.index
+          )
+        } else {
+          decorate(
+            (inject(p.token) as unknown) as ParameterDecorator,
+            target,
+            p.index
+          )
+        }
       })
     }
   }
 }
 
 export function inversifyModule(module: symbol) {
-  Injectable.forModule(module).forEach(inversifyAnnotated)
+  injectable.forModule(module).forEach(inversifyAnnotated)
 }
