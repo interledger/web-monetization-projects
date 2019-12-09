@@ -12,10 +12,10 @@
   ],
   "references": [
     {
-      "path": "../coil-client/tsconfig.build.json"
+      "path": "../coil-polyfill-utils/tsconfig.build.json"
     },
     {
-      "path": "../coil-polyfill-utils/tsconfig.build.json"
+      "path": "../dier-makr-annotations/tsconfig.build.json"
     },
     {
       "path": "../web-monetization-polyfill-utils/tsconfig.build.json"
@@ -27,10 +27,16 @@
       "path": "../webexts-build-utils/tsconfig.build.json"
     },
     {
-      "path": "../coil-puppeteer-utils/tsconfig.build.json"
+      "path": "../coil-client/tsconfig.build.json"
+    },
+    {
+      "path": "../dier-makr-inversify/tsconfig.build.json"
     },
     {
       "path": "../web-monetization-wext/tsconfig.build.json"
+    },
+    {
+      "path": "../coil-puppeteer-utils/tsconfig.build.json"
     }
   ]
 }

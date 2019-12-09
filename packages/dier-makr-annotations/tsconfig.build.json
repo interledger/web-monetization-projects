@@ -9,16 +9,5 @@
   },
   "include": [
     "src"
-  ],
-  "references": [
-    {
-      "path": "../dier-makr-annotations/tsconfig.build.json"
-    },
-    {
-      "path": "../web-monetization-types/tsconfig.build.json"
-    },
-    {
-      "path": "../coil-client/tsconfig.build.json"
-    }
   ]
 }
