@@ -1,6 +1,7 @@
 import { Injector } from 'reduct'
 import {
   MonetizationTagObserver,
+  resolvePaymentEndpoint,
   StreamControl,
   watchPageEvents
 } from '@web-monetization/polyfill-utils'
@@ -90,7 +91,7 @@ export class MonetizationPolyfill {
         if (started) {
           setWatch(streamControl)
 
-          this.resolvedEndpoint = started.spspEndpoint
+          this.resolvedEndpoint = resolvePaymentEndpoint(started.paymentPointer)
           this.requestId = started.requestId
           this.paymentPointer = started.paymentPointer
           streamControl.resume()
