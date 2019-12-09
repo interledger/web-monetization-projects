@@ -15,5 +15,5 @@ export { AdaptiveBandwidth } from './lib/AdaptiveBandwidth'
 export { StreamControl } from './lib/idle'
 export { watchPageEvents } from './lib/idle'
 export { BackoffWaiter } from './lib/BackoffWaiter'
-
+export { resolvePaymentEndpoint } from './lib/resolvePaymentEndpoint'
 export { asyncUtils }

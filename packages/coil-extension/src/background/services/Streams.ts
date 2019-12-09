@@ -29,7 +29,11 @@ export class Streams extends EventEmitter {
    */
   beginStream(
     id: string,
-    options: PaymentDetails & { token: string; initiatingUrl: string }
+    options: PaymentDetails & {
+      spspEndpoint: string
+      token: string
+      initiatingUrl: string
+    }
   ) {
     const child = this.container.createChild()
     child.bind(tokens.StreamDetails).toConstantValue({ ...options })

@@ -3,6 +3,7 @@ import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { HistoryDb } from '@web-monetization/wext/services'
 import { MonetizationState } from '@web-monetization/types'
+import { resolvePaymentEndpoint } from '@web-monetization/polyfill-utils'
 
 import { notNullOrUndef } from '../../util/nullables'
 import { StorageService } from '../../services/storage'
@@ -408,6 +409,8 @@ export class BackgroundScript {
     request: StartWebMonetization,
     sender: MessageSender
   ) {
+    const spspEndpoint = resolvePaymentEndpoint(request.data.paymentPointer)
+
     const tab = getTab(sender)
     this.tabStates.logLastMonetizationCommand(tab, 'start')
     // This used to be sent from content script as a separate message
@@ -457,6 +460,7 @@ export class BackgroundScript {
     this.streamsToTabs[requestId] = tab
     this.streams.beginStream(requestId, {
       token,
+      spspEndpoint,
       ...request.data,
       initiatingUrl: request.data.initiatingUrl
     })

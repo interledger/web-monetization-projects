@@ -7,7 +7,7 @@ const fetchFn: typeof fetch = require('node-fetch')
  * Don't use @types/node-fetch as we want to set credentials/cache
  * settings.
  */
-export function portableFetch(
+export async function portableFetch(
   input: RequestInfo,
   init?: RequestInit
 ): Promise<Response> {
