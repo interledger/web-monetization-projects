@@ -1,6 +1,8 @@
-import { BandwidthTiers } from './BandwidthTiers'
-
 const defaultLogger = console.log.bind(console, 'adaptive-bandwidth:')
+
+export interface AdaptiveBandwidthTiers {
+  getBandwidth(url: string): Promise<number>
+}
 
 export class AdaptiveBandwidth {
   // Fields for calculation of outgoing money
@@ -9,7 +11,7 @@ export class AdaptiveBandwidth {
 
   constructor(
     private _pageUrl: string,
-    private _tiers: BandwidthTiers,
+    private _tiers: AdaptiveBandwidthTiers,
     private _debug: (...args: any[]) => void = defaultLogger
   ) {
     this.reset()

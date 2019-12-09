@@ -1,10 +1,8 @@
 import { EventEmitter } from 'events'
 
-import {
-  BandwidthTiers,
-  PaymentDetails
-} from '@web-monetization/polyfill-utils'
+import { PaymentDetails } from '@web-monetization/polyfill-utils'
 import { Container, injectable } from 'inversify'
+import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import * as tokens from '../../types/tokens'
 

@@ -9,7 +9,6 @@ import {
   AdaptiveBandwidth,
   asyncUtils,
   BackoffWaiter,
-  BandwidthTiers,
   getSPSPResponse,
   SPSPResponse
 } from '@web-monetization/polyfill-utils'
@@ -17,6 +16,7 @@ import {
   MonetizationProgressEvent,
   MonetizationStartEvent
 } from '@web-monetization/types'
+import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import { DocumentMonetization } from './DocumentMonetization'
 import { debug } from './logging'

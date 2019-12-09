@@ -10,7 +10,6 @@ import IlpPluginBtp from 'ilp-plugin-btp'
 import {
   AdaptiveBandwidth,
   asyncUtils,
-  BandwidthTiers,
   getSPSPResponse,
   PaymentDetails,
   SPSPError,
@@ -18,6 +17,7 @@ import {
 } from '@web-monetization/polyfill-utils'
 import { GraphQlClient } from '@coil/client'
 import { Container, inject, injectable } from 'inversify'
+import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'

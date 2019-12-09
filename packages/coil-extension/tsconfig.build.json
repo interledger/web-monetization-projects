@@ -15,6 +15,9 @@
       "path": "../coil-client/tsconfig.build.json"
     },
     {
+      "path": "../coil-polyfill-utils/tsconfig.build.json"
+    },
+    {
       "path": "../web-monetization-polyfill-utils/tsconfig.build.json"
     },
     {
