@@ -2,11 +2,11 @@ import ReactDOM from 'react-dom'
 import React, { useEffect, useState } from 'react'
 import { hot } from 'react-hot-loader/root'
 import {
-  IfWebMonetized,
-  IfWebMonetizationPending,
   IfNotWebMonetized,
-  useMonetizationState,
-  useMonetizationCounter
+  IfWebMonetizationPending,
+  IfWebMonetized,
+  useMonetizationCounter,
+  useMonetizationState
 } from '@web-monetization/react'
 
 function pretty(val: unknown) {

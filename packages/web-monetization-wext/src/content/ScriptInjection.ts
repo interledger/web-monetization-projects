@@ -1,6 +1,4 @@
-import { inject, injectable } from 'inversify'
-
-import * as tokens from '../tokens'
+import { injectable } from 'inversify'
 
 @injectable()
 export class ScriptInjection {

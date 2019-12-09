@@ -22,7 +22,7 @@ import { Container, inject, injectable } from 'inversify'
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 
-import { logger, ILogger } from './utils'
+import { ILogger, logger } from './utils'
 
 const { timeout } = asyncUtils
 

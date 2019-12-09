@@ -1,6 +1,6 @@
 import '@abraham/reflection'
 
-import { Container, interfaces } from 'inversify'
+import { Container } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 import { HistoryDb } from '@web-monetization/wext/services'
