@@ -1,8 +1,8 @@
-import { inject, named, interfaces } from 'inversify'
-
-import Context = interfaces.Context
+import { inject, interfaces, named } from 'inversify'
 
 import * as tokens from '../../types/tokens'
+
+import Context = interfaces.Context
 
 export function logger(name?: string) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

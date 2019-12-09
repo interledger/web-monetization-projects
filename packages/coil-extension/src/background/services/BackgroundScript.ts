@@ -22,7 +22,6 @@ import {
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
-import { WextApi } from '../../types/wextApi'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'

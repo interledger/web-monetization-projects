@@ -1,12 +1,10 @@
-import { inject, injectable } from 'inversify'
+import { injectable } from 'inversify'
 import {
   MonetizationEvent,
   MonetizationProgressEvent,
   MonetizationStartEvent,
   MonetizationState
 } from '@web-monetization/types'
-
-import * as tokens from '../tokens'
 
 import { ScriptInjection } from './ScriptInjection'
 
