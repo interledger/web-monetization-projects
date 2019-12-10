@@ -89,9 +89,10 @@ export class MonetizationPolyfill {
         }
 
         if (started) {
-          setWatch(streamControl)
-
+          // May throw an Error so do this before setWatch
           this.resolvedEndpoint = resolvePaymentEndpoint(started.paymentPointer)
+
+          setWatch(streamControl)
           this.requestId = started.requestId
           this.paymentPointer = started.paymentPointer
           streamControl.resume()
