@@ -27,9 +27,6 @@
       "path": "packages/dier-makr-inversify/tsconfig.build.json"
     },
     {
-      "path": "packages/interledger-minute-extension/tsconfig.build.json"
-    },
-    {
       "path": "packages/web-monetization-react/tsconfig.build.json"
     },
     {
@@ -46,6 +43,9 @@
     },
     {
       "path": "packages/coil-oauth-scripts/tsconfig.build.json"
+    },
+    {
+      "path": "packages/interledger-minute-extension/tsconfig.build.json"
     }
   ]
 }
