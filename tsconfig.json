@@ -30,9 +30,6 @@
       "@dier-makr/inversify": [
         "packages/dier-makr-inversify/src"
       ],
-      "@interledger/minute-extension": [
-        "packages/interledger-minute-extension/src"
-      ],
       "@web-monetization/react": [
         "packages/web-monetization-react/src"
       ],
@@ -62,6 +59,9 @@
       ],
       "@coil/oauth-scripts": [
         "packages/coil-oauth-scripts/src"
+      ],
+      "@interledger/minute-extension": [
+        "packages/interledger-minute-extension/src"
       ]
     }
   },
