@@ -23,6 +23,7 @@
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",
     "clean:build": "rimraf build",
+    "dev-chrome-prod": "TSCONFIG_DEBUG=true TS_LOADER_TRANSPILE_ONLY=true LIVE_RELOAD=true yarn build-prod chrome --watch",
     "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
     "postinstall": "rimraf ../../node_modules/@types/react-native",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
@@ -52,6 +53,7 @@
     "jsonwebtoken": "^8.5.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "typeface-roboto": "^0.0.75",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
@@ -62,6 +64,10 @@
     "addons-linter": "^1.20.0",
     "copy-webpack-plugin": "^5.1.1",
     "crx-hotreload": "^1.0.4",
-    "web-ext": "^4.0.0"
+    "web-ext": "^4.0.0",
+    "css-loader": "^3.3.0",
+    "file-loader": "^5.0.2",
+    "style-loader": "^1.0.1",
+    "web-ext": "^3.2.1"
   }
 }
