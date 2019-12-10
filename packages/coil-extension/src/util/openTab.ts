@@ -1,6 +1,4 @@
-import { WextApi } from '../types/wextApi'
-
-export function openTab(api: WextApi, url: string) {
+export function openTab(api: typeof window.chrome, url: string) {
   api.tabs.query({ currentWindow: true }, tabs => {
     const existingTab = tabs.find(el => {
       return el.url === url
