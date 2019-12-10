@@ -3059,9 +3059,9 @@ addons-linter@1.14.0:
     fsevents "2.0.7"
 
 addons-linter@^1.17.0:
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.17.0.tgz#05c1e588a879ff53da4c9cfdd4a8db816e55a342"
-  integrity sha512-WZqU3XB9iITO2mDrSbRYWZe5t9d4XkP/wdVOOKM5VWmXIQgaJycVg3m6SaMhMoOKjXO2sgwjks5KvyEm1Ex9MQ==
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.19.0.tgz#cbb3683520833f771a5941335348b938fee486e1"
+  integrity sha512-pnfrdQqatZeEnBcRcMq9KWZJRmS9YiPyWu3gZbJl12Ee3dUlvke+2C0DcYhNfm4hciRB4wrr4OiQTYAXh1CyzA==
   dependencies:
     ajv "6.10.2"
     ajv-merge-patch "4.1.0"
@@ -3070,7 +3070,7 @@ addons-linter@^1.17.0:
     columnify "1.5.4"
     common-tags "1.8.0"
     deepmerge "4.2.2"
-    dispensary "0.47.0"
+    dispensary "0.48.1"
     es6-promisify "6.0.2"
     eslint "5.16.0"
     eslint-plugin-no-unsafe-innerhtml "1.0.16"
@@ -3082,10 +3082,10 @@ addons-linter@^1.17.0:
     glob "7.1.6"
     is-mergeable-object "1.1.1"
     jed "1.1.1"
-    mdn-browser-compat-data "0.0.98"
+    mdn-browser-compat-data "1.0.1"
     os-locale "4.0.0"
-    pino "5.13.6"
-    postcss "7.0.23"
+    pino "5.14.0"
+    postcss "7.0.24"
     probe-image-size "5.0.0"
     regenerator-runtime "0.13.3"
     relaxed-json "1.0.3"
@@ -5527,14 +5527,14 @@ dispensary@0.40.0:
     source-map-support "~0.5.4"
     yargs "~14.0.0"
 
-dispensary@0.47.0:
-  version "0.47.0"
-  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.47.0.tgz#2969ce777b43ecb2204e3b12bba3cac6d5405cfe"
-  integrity sha512-n2n8m2Q1HfVdav1QhvFWDzVK2nBqa6DAzmEIZRtJEkpC1e8Is7AFvlAJkNPRK58YhoS2LpT3w3/FgFUSUulaIQ==
+dispensary@0.48.1:
+  version "0.48.1"
+  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.48.1.tgz#15457838a68e7423bae58eba673b35dca5dcdc89"
+  integrity sha512-oC9ItJ7YtO/DKsp24T90k7z0NxfkZQkvJ3USTxUoVjBKrfMRz1/kMd+NcFgDG+KrJg14GChiv1sbdFdxeKRUUw==
   dependencies:
     async "~3.1.0"
     natural-compare-lite "~1.4.0"
-    pino "~5.13.0"
+    pino "~5.14.0"
     request "~2.88.0"
     sha.js "~2.4.4"
     source-map-support "~0.5.4"
@@ -10275,10 +10275,10 @@ mdn-browser-compat-data@0.0.94:
   dependencies:
     extend "3.0.2"
 
-mdn-browser-compat-data@0.0.98:
-  version "0.0.98"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.98.tgz#b1ef237767ddb9dce98cbae8de912de35a715891"
-  integrity sha512-aixrkulXdvMp90I5rWuzBCks9GruwEyNfMgX5qg9lSATyOvI5OPzuFnO98BAsXG5x5MrA9BSxu0jwJbRFaAG/g==
+mdn-browser-compat-data@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-1.0.1.tgz#52657b4418e809a49d61877b50e20662cdd0b317"
+  integrity sha512-FxRIu4UYu4rRdFs5JFf6del6J+OpbOq2tYfIEK7N/PtEtz6yGVcWcytmh5L5hZxe58kuxUzjgR8+/0TRyRzRqA==
   dependencies:
     extend "3.0.2"
 
@@ -11901,7 +11901,19 @@ pino@5.13.3:
     quick-format-unescaped "^3.0.2"
     sonic-boom "^0.7.5"
 
-pino@5.13.6, pino@~5.13.0:
+pino@5.14.0, pino@~5.14.0:
+  version "5.14.0"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-5.14.0.tgz#eec56c6388797528e526f969ee022592cc538d4e"
+  integrity sha512-Vj1f2wAojTGesogT0hsA/ua8ALltCOBCcA1nkEoDfnTsVWpgBu5UVSY7OdjiGmrMOKHBm24nd3nKXzyPUYJ3ig==
+  dependencies:
+    fast-redact "^2.0.0"
+    fast-safe-stringify "^2.0.7"
+    flatstr "^1.0.12"
+    pino-std-serializers "^2.4.2"
+    quick-format-unescaped "^3.0.3"
+    sonic-boom "^0.7.5"
+
+pino@~5.13.0:
   version "5.13.6"
   resolved "https://registry.yarnpkg.com/pino/-/pino-5.13.6.tgz#c7669cb02add833b3afa75e2dd8c6e4cb411295e"
   integrity sha512-cYhvK4lopLnW/OtU3uRqBNsPiBt0Cdv97LGJg4yPGbGajlOjWWaODwD66q3Ynqnj6bSNw8HSofYcEOKZqh4Gcg==
@@ -12006,10 +12018,10 @@ postcss@7.0.18:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@7.0.23:
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.23.tgz#9f9759fad661b15964f3cfc3140f66f1e05eadc1"
-  integrity sha512-hOlMf3ouRIFXD+j2VJecwssTwbvsPGJVMzupptg+85WA+i7MwyrydmQAgY3R+m0Bc0exunhbJmijy8u8+vufuQ==
+postcss@7.0.24:
+  version "7.0.24"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.24.tgz#972c3c5be431b32e40caefe6c81b5a19117704c2"
+  integrity sha512-Xl0XvdNWg+CblAXzNvbSOUvgJXwSjmbAKORqyw9V2AlHrm1js2gFw9y3jibBAhpKZi8b5JzJCVh/FyzPsTtgTA==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
