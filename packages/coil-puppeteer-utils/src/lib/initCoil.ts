@@ -1,0 +1,55 @@
+import { Browser, Page } from 'puppeteer'
+
+import { COIL_DOMAIN, COIL_TOKEN } from './env'
+import { timeout } from './timeout'
+
+export interface InitCoilParameters {
+  browser: Browser
+  user: string
+  password: string
+}
+
+export interface InitCoilReturn {
+  browser: Browser
+  page: Page
+}
+
+export async function injectCoilTokenFromEnv(page: Page) {
+  await page.goto(`${COIL_DOMAIN}`)
+  await page.evaluate(
+    (token: string) => {
+      localStorage.setItem('token', token)
+      window.dispatchEvent(new Event('coil_writeToken'))
+    },
+    [COIL_TOKEN]
+  )
+  await timeout(100)
+}
+
+export async function initCoil({
+  browser,
+  user,
+  password
+}: InitCoilParameters): Promise<InitCoilReturn> {
+  const page = await browser.newPage()
+  if (COIL_TOKEN) {
+    await injectCoilTokenFromEnv(page)
+    await timeout(100)
+  } else {
+    await page.goto(`${COIL_DOMAIN}/login`)
+
+    const loginSelector = '[data-cy="login-email"]'
+    const passwordSelector = '[data-cy="login-password"]'
+    const submitSelector = '[data-cy="login-submit"]'
+
+    await page.click(loginSelector)
+    await page.keyboard.type(user)
+    await page.click(passwordSelector)
+    await page.keyboard.type(password)
+
+    await page.click(submitSelector)
+    await page.waitForNavigation()
+  }
+
+  return { browser, page }
+}
