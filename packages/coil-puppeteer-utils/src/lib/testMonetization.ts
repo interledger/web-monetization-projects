@@ -1,12 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   MonetizationEvent,
-  MonetizationExtendedDocument
+  MonetizationEventType,
+  MonetizationExtendedDocument,
+  MonetizationPendingEvent,
+  MonetizationStartEvent,
+  MonetizationState
 } from '@web-monetization/types'
 import { Browser, Page } from 'puppeteer'
 
 import { debug } from './debug'
-import { isValidProgressEvent, isValidStartEvent } from './validators'
+import {
+  hasCommonRequestIdAndPaymentPointer,
+  isValidPendingEvent,
+  isValidProgressEvent,
+  isValidStartEvent
+} from './validators'
 import { AWAIT_MONETIZATION_TIMEOUT_MS } from './env'
 
 export interface TestPageResults {
@@ -33,35 +42,54 @@ export async function testMonetization({
     localStorage['debug'] = 'coil-extension:*'
   })
 
-  const monetizePromise = new Promise<boolean>(resolve => {
-    let started = false
-    let gotProgress = false
+  let nthEvent = 0
+  const statesSeen = new Set<MonetizationState>()
+  const eventsSeen = new Set<MonetizationEventType>()
+  let pendingEvent: MonetizationPendingEvent
 
+  const monetizePromise = new Promise<boolean>(resolve => {
     void page.exposeFunction(
       'onCustomEvent',
-      (e: MonetizationEvent, monetizationState: string) => {
-        debug(`${e.type} fired`, e.detail || '')
+      (e: MonetizationEvent, monetizationState: MonetizationState) => {
+        if (nthEvent === 3) {
+          return
+        }
+        eventsSeen.add(e.type)
+        statesSeen.add(monetizationState)
+
+        debug(`${e.type} fired`, e.detail)
         if (
+          nthEvent === 0 &&
+          e.type === 'monetizationpending' &&
+          isValidPendingEvent(e.detail) &&
+          monetizationState === 'pending'
+        ) {
+          pendingEvent = e
+          nthEvent++
+        }
+        if (
+          nthEvent === 1 &&
           e.type === 'monetizationstart' &&
           isValidStartEvent(e.detail) &&
+          hasCommonRequestIdAndPaymentPointer(pendingEvent.detail, e.detail) &&
           monetizationState === 'started'
         ) {
-          {
-            started = true
-          }
+          nthEvent++
         } else if (
+          nthEvent === 2 &&
           e.type === 'monetizationprogress' &&
           isValidProgressEvent(e.detail) &&
+          hasCommonRequestIdAndPaymentPointer(pendingEvent.detail, e.detail) &&
           monetizationState === 'started'
         ) {
           if (Number(e.detail.amount) === 0) {
             // We should only get non zero packets (logging above ea event)
             resolve(false)
           } else {
-            gotProgress = true
+            nthEvent++
           }
         }
-        if (started && gotProgress) {
+        if (nthEvent === 3) {
           resolve(true)
         }
       }
@@ -90,6 +118,7 @@ export async function testMonetization({
     }, type)
   }
 
+  await listenFor('monetizationpending')
   await listenFor('monetizationstart')
   await listenFor('monetizationprogress')
 
@@ -107,6 +136,7 @@ export async function testMonetization({
     state = await page.evaluate(() => (document as any).monetization.state)
   }
 
+  debug('seen states: %s, events: %s', statesSeen, eventsSeen)
   debug('document.monetization.state', state)
   return { page, success: success && state === 'started', url }
 }

@@ -12,6 +12,7 @@ import {
   TestPageResults,
   timeout
 } from '@coil/puppeteer-utils'
+import { MonetizationExtendedDocument } from '@web-monetization/types'
 
 import { testUrls } from './testUrls'
 
@@ -25,7 +26,8 @@ async function checkMonetizationState(
   return page.evaluate(() => {
     const meta = document.head.querySelector('meta[name="monetization"]')
     return {
-      state: (document as any).monetization.state,
+      state: ((document as unknown) as MonetizationExtendedDocument)
+        .monetization.state,
       hasMonetizationMeta: Boolean(meta)
     }
   })

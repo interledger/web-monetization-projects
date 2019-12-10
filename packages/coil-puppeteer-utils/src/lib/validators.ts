@@ -1,4 +1,6 @@
 import {
+  MonetizationEvent,
+  MonetizationPendingEvent,
   MonetizationProgressEvent,
   MonetizationStartEvent
 } from '@web-monetization/types'
@@ -16,6 +18,15 @@ export function isValidStartEvent(details: MonetizationStartEvent['detail']) {
     paymentPointer: 'string'
   })
 }
+
+export function hasCommonRequestIdAndPaymentPointer(
+  e1: MonetizationEvent['detail'],
+  e2: MonetizationEvent['detail']
+) {
+  return e1.requestId === e2.requestId && e1.paymentPointer == e2.paymentPointer
+}
+
+export const isValidPendingEvent = isValidStartEvent
 
 export function isValidProgressEvent(
   details: MonetizationProgressEvent['detail']
