@@ -1,6 +1,8 @@
 import React from 'react'
 import { Grid, makeStyles, Typography } from '@material-ui/core'
 
+import { Colors } from '../variables'
+
 const useStyles = makeStyles({
   '@keyframes rotate': {
     to: {
@@ -9,7 +11,7 @@ const useStyles = makeStyles({
   },
   header: {
     paddingBottom: '1rem',
-    borderBottom: '1px solid #BBBBBB'
+    borderBottom: `1px solid ${Colors.greyMid}`
   },
   logo: {
     width: '41px',
@@ -20,7 +22,7 @@ const useStyles = makeStyles({
     width: '36px',
     height: '36px',
     borderRadius: '18px',
-    background: '#EDEDED',
+    background: Colors.greyLight,
     boxShadow: '0 3px 6px rgba(0,0,0,0.31)'
   },
   settingsIcon: {
@@ -75,6 +77,7 @@ export const PopupHeader = () => {
             width='40.988'
             height='40.988'
             viewBox='0 0 40.988 40.988'
+            fill={Colors.black}
           >
             <g id='logo-circle' transform='translate(-1361 -157)'>
               <path
@@ -97,6 +100,7 @@ export const PopupHeader = () => {
             width='13.172'
             height='13.892'
             viewBox='0 0 13.172 13.892'
+            fill={Colors.black}
           >
             <path
               id='logo-m'
@@ -119,6 +123,7 @@ export const PopupHeader = () => {
             width='19.477'
             height='19.97'
             viewBox='0 0 19.477 19.97'
+            fill={Colors.black}
           >
             <path
               id='settings'
