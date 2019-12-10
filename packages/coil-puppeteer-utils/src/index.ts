@@ -13,4 +13,8 @@ export { injectCoilTokenFromEnv } from './lib/initCoil'
 export { InitCoilReturn } from './lib/initCoil'
 export { InitCoilParameters } from './lib/initCoil'
 export { logoutCoil } from './lib/logoutCoil'
-export { testMonetization } from './lib/testMonetization'
+export {
+  testMonetization,
+  TestPageParameters,
+  TestPageResults
+} from './lib/testMonetization'
