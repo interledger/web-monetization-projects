@@ -46,7 +46,7 @@
     }
   },
   "resolutions": {
-    "@types/react": "^16.9.15"
+    "@types/react": "^16.9.16"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
@@ -58,16 +58,16 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@types/copy-webpack-plugin": "^5.0.0",
     "@types/jest": "^24.0.23",
-    "@types/node": "^12.12.14",
+    "@types/node": "^12.12.16",
     "@types/puppeteer": "^2.0.0",
     "@types/webpack": "4.41.0",
     "@types/webpack-merge": "^4.1.5",
-    "@typescript-eslint/eslint-plugin": "2.10.x",
-    "@typescript-eslint/parser": "2.10.x",
+    "@typescript-eslint/eslint-plugin": "2.11.x",
+    "@typescript-eslint/parser": "2.11.x",
     "JSON2016": "^1.0.0",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jest": "^23.1.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-node": "^10.0.0",
