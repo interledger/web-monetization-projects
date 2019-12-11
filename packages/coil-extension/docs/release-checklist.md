@@ -9,6 +9,8 @@ the issue/PR.
 
 When releasing, we can copy this markdown into the PR for a release.
 
+- [ ] Update the [CHANGELOG.md](../CHANGELOG.md)
+
 - [ ] Build for prod with release settings
 
   - e.g. `yarn build-prod chrome -p --run-prod --devtool=none`
