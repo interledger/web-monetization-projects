@@ -16,7 +16,7 @@ interface SetStateParams {
 
 @injectable()
 export class DocumentMonetization {
-  private finalized = false
+  private finalized = true
   private state: MonetizationState = 'stopped'
   private request?: MonetizationStartEvent['detail']
 
@@ -54,7 +54,7 @@ export class DocumentMonetization {
 
   setMonetizationRequest(request?: MonetizationStartEvent['detail']) {
     this.request = request
-    this.finalized = false
+    this.finalized = true
   }
 
   /**
