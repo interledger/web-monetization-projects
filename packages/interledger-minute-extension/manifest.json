@@ -14,6 +14,7 @@
   "background": {
     "page": "static/background.html"
   },
+  "options_page": "static/options.html",
   "content_scripts": [
     {
       "matches": ["https://*/*","http://*/*"],
@@ -23,7 +24,6 @@
       "run_at": "document_start"
     }
   ],
-  "key_comment": "https://stackoverflow.com/a/37318349/11587288",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA14i/iPZHcqcO2sIMqDeOv42vA9zKlvIWvkn5XxNMRGTA8cG6BWexrWCvZisnBBGUPqGwJJgd96ClwmG/HwtjGpnlXzNZ2cUEBxtjBgD1xR/iYAJ8+gzfmI6ySCejRXB1NPvzjBaPBNdukdGjSPdz/DJ63S1ts+yPk1wyTnMIfb9XSuYk9z2lVKBaNcO31dMifxHRiHuBY5NFmqLQculAwh4BXYyEJoMzVRXJyFu/oN1H9nVGL3Pm2v52Ib8RLf0PJjTgoZNWDqPHj6+FfISrkv5dw0y5WhB8CcY/aVBfS7anKz6EeWq6TZyz84x/OKkVFHIKEaSv4kuvhaoexqOlzQIDAQAB",
   "permissions": [ "tabs", "http://localhost:7768/", "http://localhost:7768/" ]
 }
