@@ -26,6 +26,7 @@
     "clean:build": "rimraf build",
     "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
     "get-btp-token": "ts-node -P ../../tsconfig.json -r tsconfig-paths/register -T src/bin/coil-it.ts",
+    "serve-it": "ts-node -P ../../tsconfig.json -r tsconfig-paths/register -T src/bin/serve-it.ts",
     "postinstall": "rimraf ../../node_modules/@types/react-native",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",

@@ -10,7 +10,8 @@ import {
   logoutCoil,
   testMonetization,
   TestPageResults,
-  timeout
+  timeout,
+  isValidStopEvent
 } from '@coil/puppeteer-utils'
 import { MonetizationExtendedDocument } from '@web-monetization/types'
 
@@ -64,18 +65,22 @@ function checkCondition({
 async function run() {
   const { browser, page: coilPage } = await initBrowserAndLoginFromEnv()
 
-  const pages: { [url: string]: TestPageResults } = {}
+  const results: Record<string, TestPageResults> = {}
   let initSuccess = true
   for (const url of Object.keys(testUrls)) {
     debug('opening url to start monetization', url)
-    const page = await testMonetization({ browser, url: testUrls[url] })
-    if (!page.success) {
+    const result = await testMonetization({
+      listenStopped: true,
+      browser,
+      url: testUrls[url]
+    })
+    if (!result.success) {
       debug('test page failed to open stream. page=', url)
       initSuccess = false
     } else {
       debug('test page successfully opened stream. page=', url)
     }
-    pages[url] = page
+    results[url] = result
   }
 
   checkCondition({
@@ -84,17 +89,27 @@ async function run() {
     exitOnSuccess: false
   })
   await logoutCoil(coilPage)
-
   let logoutSuccess = true
   debug('testing pages for logout')
-  for (const page in pages) {
+  for (const page of Object.keys(results)) {
     debug('testing logout status for page=', page)
-    const currentPage = pages[page].page
+    const result = results[page]
+    const currentPage = result.page
+    const stopped = await result.stoppedPromise
+    debug('stopped event', JSON.stringify(stopped))
     const monetizationState = await checkMonetizationState(currentPage)
+
     debug('monetization state', monetizationState)
+    // TODO: proper assertions/error messages
+    // this sucks, but at least all this is logged
     if (
       monetizationState.state !== 'stopped' ||
-      !monetizationState.hasMonetizationMeta
+      !monetizationState.hasMonetizationMeta ||
+      !isValidStopEvent(stopped.event.detail) ||
+      // we just logged out but we still have a meta tag so finalized should
+      // not be emitted
+      stopped.event.detail.finalized ||
+      stopped.state !== 'stopped'
     ) {
       debug('test page failed to close stream. page=' + currentPage.url())
       logoutSuccess = false

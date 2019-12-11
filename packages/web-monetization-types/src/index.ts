@@ -17,8 +17,7 @@ export interface MonetizationPendingEvent extends MonetizationEventBase {
   type: 'monetizationpending'
 }
 
-export interface MonetizationStopEvent extends MonetizationEventBase {
-  type: 'monetizationstop'
+export interface MonetizationStopEventDetail extends MonetizationEventDetail {
   /**
    * @experimental
    * Currently undocumented in spec.
@@ -28,6 +27,11 @@ export interface MonetizationStopEvent extends MonetizationEventBase {
    * it's possible that streaming could commence with the same requestId.
    */
   finalized?: boolean
+}
+
+export interface MonetizationStopEvent
+  extends CustomEvent<MonetizationStopEventDetail> {
+  type: 'monetizationstop'
 }
 
 export interface MonetizationProgressEventDetail

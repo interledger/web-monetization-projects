@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path')
 const TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
 
 module.exports = {
@@ -10,8 +11,8 @@ module.exports = {
   },
 
   output: {
-    filename: 'build/[name].js',
-    path: __dirname,
+    filename: '[name].js',
+    path: process.env.OUTPUT_TO || path.resolve(__dirname, 'build'),
     libraryTarget: 'umd'
   },
 

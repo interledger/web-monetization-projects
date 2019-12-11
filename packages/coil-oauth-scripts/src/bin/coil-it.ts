@@ -6,27 +6,7 @@ import * as IlpStream from 'ilp-protocol-stream'
 import { GraphQlClient } from '@coil/client'
 import * as uuid from 'uuid'
 
-export const env = (key: string, defaultValue?: string): string => {
-  const value = process.env[key]
-  if (value === undefined) {
-    if (defaultValue === undefined) {
-      throw new Error(`expecting process.env.${key} to be defined`)
-    } else {
-      return defaultValue
-    }
-  }
-  return value
-}
-
-const COIL_DOMAIN = env('COIL_DOMAIN', 'https://coil.com')
-const COIL_USER = env('COIL_USER')
-const COIL_PASSWORD = env('COIL_PASSWORD')
-
-const ClientOptions = class Options extends GraphQlClient.Options {
-  coilDomain = COIL_DOMAIN
-}
-
-const client = new GraphQlClient(new ClientOptions())
+import { client, COIL_DOMAIN, COIL_PASSWORD, COIL_USER, login } from './env'
 
 const dbg = console.log
 
@@ -115,8 +95,7 @@ async function main(): Promise<void> {
 
   const argv = process.argv.slice(2)
   const paymentPointer = argv[0] || '$twitter.xrptipbot.com/nfcpasses'
-  const token = await client.login(COIL_USER, COIL_PASSWORD)
-  const btpToken = await client.refreshBtpToken(token)
+  const { token, btpToken } = await login()
   dbg({ token, btpToken })
 
   const spspUrl = pointerToUrl(paymentPointer)

@@ -2,13 +2,23 @@ import {
   MonetizationEvent,
   MonetizationProgressEvent,
   MonetizationStartEvent,
-  MonetizationState
+  MonetizationState,
+  MonetizationStopEventDetail
 } from '@web-monetization/types'
 
 import { getDoc } from './documentExtensions'
 import { debug } from './logging'
 
+interface SetStateParams {
+  state: MonetizationState
+  /**
+   * Should only be set when state === 'stopped'
+   */
+  finalized?: boolean
+}
+
 export class DocumentMonetization {
+  private finalized = false
   private state: MonetizationState = 'stopped'
   private request?: MonetizationStartEvent['detail']
 
@@ -18,16 +28,32 @@ export class DocumentMonetization {
     this.request = request
   }
 
-  setState(state: MonetizationState) {
-    debug('SET STATE', 'new:', state, 'old:', this.state)
-    const changed = this.state != state
+  setState({ state, finalized }: SetStateParams) {
+    debug('SET STATE', 'new:', { state, finalized }, 'old:', {
+      state: this.state,
+      finalized: this.finalized
+    })
+    if (typeof finalized !== 'undefined' && state !== 'stopped') {
+      throw new Error('invalid_state: finalized set when not stopped state')
+    }
+
+    finalized = Boolean(finalized)
+
+    const changedFinalized = finalized != this.finalized
+    const changedState = this.state != state
+    const changed = changedState || changedFinalized
     this.state = state
+    this.finalized = finalized
+
     if (changed) {
-      getDoc(this.doc).monetization.state = state
+      if (changedState) {
+        getDoc(this.doc).monetization.state = state
+      }
       if (this.request && (state === 'stopped' || state === 'pending')) {
         this.dispatchMonetizationEvent(
           state === 'pending' ? 'monetizationpending' : 'monetizationstop',
-          this.request
+          this.request,
+          finalized
         )
       }
     }
@@ -38,7 +64,7 @@ export class DocumentMonetization {
     detail: MonetizationStartEvent['detail']
   ) {
     // Indicate that payment has started.
-    const changed = this.setState('started')
+    const changed = this.setState({ state: 'started' })
     if (!changed) {
       throw new Error(`expecting state transition`)
     }
@@ -47,11 +73,17 @@ export class DocumentMonetization {
   }
 
   private dispatchMonetizationEvent(
-    name: MonetizationEvent['type'],
-    detail: MonetizationEvent['detail']
+    type: MonetizationEvent['type'],
+    detailSource: MonetizationEvent['detail'],
+    finalized?: boolean
   ) {
+    const detail = { ...detailSource }
+    if (type === 'monetizationstop') {
+      ;(detail as MonetizationStopEventDetail).finalized = Boolean(finalized)
+    }
+
     getDoc(this.doc).monetization.dispatchEvent(
-      new CustomEvent(name, { detail })
+      new CustomEvent(type, { detail })
     )
   }
 

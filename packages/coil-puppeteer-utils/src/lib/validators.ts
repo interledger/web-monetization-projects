@@ -1,8 +1,8 @@
 import {
   MonetizationEvent,
-  MonetizationPendingEvent,
   MonetizationProgressEvent,
-  MonetizationStartEvent
+  MonetizationStartEvent,
+  MonetizationStopEvent
 } from '@web-monetization/types'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -16,6 +16,14 @@ export function isValidStartEvent(details: MonetizationStartEvent['detail']) {
   return validateObject(details, {
     requestId: 'string',
     paymentPointer: 'string'
+  })
+}
+
+export function isValidStopEvent(details: MonetizationStopEvent['detail']) {
+  return validateObject(details, {
+    requestId: 'string',
+    paymentPointer: 'string',
+    finalized: 'boolean'
   })
 }
 

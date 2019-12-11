@@ -201,6 +201,10 @@ export interface SetMonetizationState {
   command: 'setMonetizationState'
   data: {
     state: MonetizationState
+    /**
+     * Only the content script can be the source of a finalized event
+     */
+    finalized?: undefined
   }
 }
 
