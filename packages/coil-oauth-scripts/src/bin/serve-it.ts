@@ -24,8 +24,13 @@ async function main() {
       res.end(html.replace('$BTP_TOKEN$', replaceValue))
     } else if (req.url) {
       const path = pathMod.resolve(fnWd, './' + req.url)
-      const stream = fs.createReadStream(path)
-      stream.pipe(res)
+      if (await promisify(fs.exists)(path)) {
+        const stream = fs.createReadStream(path)
+        stream.pipe(res)
+      } else {
+        res.writeHead(404)
+        res.end()
+      }
     }
   })
   server.listen(PORT, () => {
