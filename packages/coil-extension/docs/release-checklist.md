@@ -56,6 +56,12 @@ When releasing, we can copy this markdown into the PR for a release.
   - Check that routed to login page
     - ![image](https://user-images.githubusercontent.com/525211/66627301-6beab600-ec25-11e9-8045-a4e35686dc34.png)
 
+- [ ] Popup icon should show if page is monetized even when logged out
+
+  - Log out from extension
+  - Go to a monetized page and check that the icon "monetized" black and in 'unavailable' state
+    - ![image](https://user-images.githubusercontent.com/525211/70715784-8f150d00-1d1d-11ea-8f82-fe116b2e9a16.png)
+
 - [ ] Make sure the manifest version was bumped but doesn't skip versions
 
 - [ ] Check the monetization animation works properly
@@ -209,3 +215,5 @@ When releasing, we can copy this markdown into the PR for a release.
 [np117]: https://github.com/coilhq/web-monetization-projects/pull/117
 [ni127]: https://github.com/coilhq/web-monetization-projects/issue/127
 [np128]: https://github.com/coilhq/web-monetization-projects/pull/128
+[ni184]: https://github.com/coilhq/web-monetization-projects/issue/184
+[np185]: https://github.com/coilhq/web-monetization-projects/pull/185

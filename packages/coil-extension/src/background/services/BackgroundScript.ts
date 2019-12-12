@@ -213,29 +213,42 @@ export class BackgroundScript {
   }
 
   private setBrowserActionStateFromAuthAndTabState() {
-    const tabId = this.activeTab
     const token = this.auth.getStoredToken()
+
     if (!token || !this.store.validToken) {
       this.popup.disable()
     }
-    if (token == null && tabId) {
-      this.tabStates.setIcon(tabId, 'unavailable')
-    } else if (token && tabId) {
-      this.popup.enable()
 
+    const tabId = this.activeTab
+
+    if (tabId) {
       const tabState = this.tabStates.getActiveOrDefault()
-      const hasStream = tabState.monetized
-      const hasBeenPaid = hasStream && tabState.total > 0
 
-      if (hasStream) {
+      if (tabState.monetized && tabId) {
         this.tabStates.setIcon(tabId, 'monetized')
-        if (hasBeenPaid) {
-          const state =
-            tabState.playState === 'playing' ? 'streaming' : 'streaming-paused'
-          this.tabStates.setIcon(tabId, state)
+      }
+
+      if (token == null && tabId) {
+        this.tabStates.setIcon(tabId, 'unavailable')
+      } else if (token && tabId) {
+        this.popup.enable()
+
+        const tabState = this.tabStates.getActiveOrDefault()
+        const hasStream = tabState.monetized
+        const hasBeenPaid = hasStream && tabState.total > 0
+
+        if (hasStream) {
+          this.tabStates.setIcon(tabId, 'monetized')
+          if (hasBeenPaid) {
+            const state =
+              tabState.playState === 'playing'
+                ? 'streaming'
+                : 'streaming-paused'
+            this.tabStates.setIcon(tabId, state)
+          }
+        } else {
+          this.tabStates.setIcon(tabId, 'inactive')
         }
-      } else {
-        this.tabStates.setIcon(tabId, 'inactive')
       }
     }
   }
@@ -371,13 +384,18 @@ export class BackgroundScript {
   reloadTabState(opts: { from?: string } = {}) {
     const { from } = opts
 
-    const state = () => this.tabStates.get(this.activeTab)
+    const tab = this.activeTab
+    const state = () => this.tabStates.get(tab)
     this.setLocalStorageFromState(state())
     this.setBrowserActionStateFromAuthAndTabState()
     // Don't work off stale state, set(...) creates a copy ...
-    this.popup.setBrowserAction(this.activeTab, state())
+    this.popup.setBrowserAction(tab, state())
     if (from) {
-      this.log('reloadTabState from=', from, JSON.stringify(state(), null, 2))
+      this.log(
+        `reloadTabState tab=${tab}`,
+        `from=${from}`,
+        JSON.stringify(state(), null, 2)
+      )
     }
   }
 
@@ -409,12 +427,15 @@ export class BackgroundScript {
     request: StartWebMonetization,
     sender: MessageSender
   ) {
-    const spspEndpoint = resolvePaymentEndpoint(request.data.paymentPointer)
-
     const tab = getTab(sender)
     this.tabStates.logLastMonetizationCommand(tab, 'start')
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender)
+
+    // This may throw so do after mayMonetizeSite has had a chance to set
+    // the page as being monetized (or attempted to be)
+    const spspEndpoint = resolvePaymentEndpoint(request.data.paymentPointer)
+
     const userBeforeReAuth = this.store.user
     let emittedPending = false
     const emitPending = () =>
