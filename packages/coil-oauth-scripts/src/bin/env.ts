@@ -20,10 +20,9 @@ const ClientOptions = class Options extends GraphQlClient.Options {
   coilDomain = COIL_DOMAIN
 }
 
-export const client = new GraphQlClient(new ClientOptions())
-
 export async function login() {
+  const client = new GraphQlClient(new ClientOptions())
   const token = await client.login(COIL_USER, COIL_PASSWORD)
   const btpToken = await client.refreshBtpToken(token)
-  return { token, btpToken }
+  return { client, token, btpToken }
 }

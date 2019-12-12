@@ -3,10 +3,9 @@ import { inspect } from 'util'
 import fetch from 'node-fetch'
 import IlpPluginBtp from 'ilp-plugin-btp'
 import * as IlpStream from 'ilp-protocol-stream'
-import { GraphQlClient } from '@coil/client'
 import * as uuid from 'uuid'
 
-import { client, COIL_DOMAIN, COIL_PASSWORD, COIL_USER, login } from './env'
+import { COIL_DOMAIN, COIL_PASSWORD, COIL_USER, login } from './env'
 
 const dbg = console.log
 

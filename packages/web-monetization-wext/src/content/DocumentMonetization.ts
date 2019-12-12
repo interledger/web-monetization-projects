@@ -43,7 +43,7 @@ export class DocumentMonetization {
       window.addEventListener('message', function (event) {
         if (event.source === window && event.data.webMonetization) {
           document.monetization.dispatchEvent(
-            new CustomEvent(event.data.name, {
+            new CustomEvent(event.data.type, {
               detail: event.data.detail
             }))
         }
@@ -116,7 +116,7 @@ export class DocumentMonetization {
     this.window.postMessage(
       {
         webMonetization: true,
-        name: type,
+        type,
         detail
       },
       this.window.location.origin

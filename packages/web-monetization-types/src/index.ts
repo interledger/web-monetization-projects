@@ -26,7 +26,7 @@ export interface MonetizationStopEventDetail extends MonetizationEventDetail {
    * Will be false if streaming has been stopped for some other reason where
    * it's possible that streaming could commence with the same requestId.
    */
-  finalized?: boolean
+  finalized: boolean
 }
 
 export interface MonetizationStopEvent
