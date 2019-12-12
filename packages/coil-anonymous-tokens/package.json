@@ -1,0 +1,34 @@
+{
+  "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
+  "name": "@coil/anonymous-tokens",
+  "version": "0.0.0",
+  "private": false,
+  "keywords": [
+    "ilp",
+    "web-monetization"
+  ],
+  "homepage": "https://github.com/coilhq/web-monetization/tree/master/packages/anonymous-tokens",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coilhq/web-monetization-projects.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Coil Team <info@coil.com>",
+  "main": "./build",
+  "types": "./build",
+  "scripts": {
+    "build:ts": "tsc --build tsconfig.build.json",
+    "build:ts:verbose": "yarn build:ts --verbose",
+    "build:ts:watch": "yarn build:ts --watch",
+    "clean:build": "rimraf build",
+    "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
+    "postinstall": "rimraf ../../node_modules/@types/react-native",
+    "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
+    "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "precommit": "echo lint-staged runs from root",
+    "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "yarn test --verbose --coverage",
+    "upkeep": "cd ../.. && yarn upkeep"
+  }
+}
