@@ -540,10 +540,7 @@ export class BackgroundScript {
     return true
   }
 
-  sendSetMonetizationStateMessage(
-    tabId: number,
-    state: MonetizationState
-  ): void {
+  sendSetMonetizationStateMessage(tabId: number, state: MonetizationState) {
     const message: SetMonetizationState = {
       command: 'setMonetizationState',
       data: {

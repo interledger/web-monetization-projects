@@ -104,7 +104,6 @@ export async function testMonetization({
           if (resolveStopped) {
             resolveStopped({ event: e, state: monetizationState })
           }
-          nthEvent++
         }
         if (nthEvent === 3) {
           resolve(true)
