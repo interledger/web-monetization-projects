@@ -11,10 +11,10 @@
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization/tree/master/packages/web-monetization-react",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/web-monetization-react",
   "repository": {
     "type": "git",
-    "url": "git@github.com:coilhq/web-monetization.git"
+    "url": "git@github.com:coilhq/web-monetization-projects.git"
   },
   "license": "Apache-2.0",
   "author": "ben@sharafian.me",
