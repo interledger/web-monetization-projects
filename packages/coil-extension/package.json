@@ -10,10 +10,10 @@
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization/tree/master/packages/coil-extension",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/coil-extension",
   "repository": {
     "type": "git",
-    "url": "git@github.com:coilhq/web-monetization.git"
+    "url": "git@github.com:coilhq/web-monetization-projects.git"
   },
   "license": "Apache-2.0",
   "author": "Coil Team <info@coil.com>",
