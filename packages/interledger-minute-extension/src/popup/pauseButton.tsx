@@ -52,6 +52,7 @@ const PlayOrPause = styled.a`
     height: 60px;
     width: 60px;
     display: block;
+    margin: 0 12px;
     transition: ${Settings.buttonTransition};
     .pauseSvg {
       transition: ${Settings.buttonTransition};
