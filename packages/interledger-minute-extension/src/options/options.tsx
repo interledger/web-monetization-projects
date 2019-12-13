@@ -7,6 +7,7 @@ import {
   ThemeProvider,
   createMuiTheme
 } from '@material-ui/core'
+import Tooltip from '@material-ui/core/Tooltip'
 
 import { Colors, Settings } from '../variables'
 import { Logo } from '../logo'

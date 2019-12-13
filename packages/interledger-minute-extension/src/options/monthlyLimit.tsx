@@ -4,6 +4,7 @@ import {
   InputAdornment,
   makeStyles,
   TextField,
+  Tooltip,
   Typography,
   withStyles
 } from '@material-ui/core'
@@ -39,8 +40,25 @@ const useStyles = makeStyles({
   infoIcon: {
     marginTop: '0.425rem',
     marginLeft: '0.25rem'
+  },
+  tooltipWidth: {
+    maxWidth: 180
   }
 })
+
+const ControlsTooltip = withStyles(theme => ({
+  tooltip: {
+    backgroundColor: Colors.white,
+    color: Colors.black,
+    boxShadow: theme.shadows[0],
+    fontFamily: 'Roboto',
+    border: `1px solid ${Colors.grey}`,
+    fontWeight: 500,
+    fontSize: 11,
+    padding: '10px',
+    borderRadius: 0
+  }
+}))(Tooltip)
 
 export const MonthlyLimit = (props: { limit: number }) => {
   const classes = useStyles()
@@ -71,7 +89,15 @@ export const MonthlyLimit = (props: { limit: number }) => {
         </form>
       </Grid>
       <Grid item className={classes.infoIcon}>
-        <InfoIcon />
+        <ControlsTooltip
+          title='The limit in XRP to be used per month'
+          placement='right'
+          classes={{ tooltip: classes.tooltipWidth }}
+        >
+          <div>
+            <InfoIcon />
+          </div>
+        </ControlsTooltip>
       </Grid>
     </Grid>
   )
