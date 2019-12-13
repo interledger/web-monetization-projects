@@ -60,7 +60,7 @@
     "@types/uuid": "^3.4.6",
     "@wext/shipit": "^0.2.1",
     "addons-linter": "^1.19.0",
-    "copy-webpack-plugin": "^5.1.0",
+    "copy-webpack-plugin": "^5.1.1",
     "crx-hotreload": "^1.0.4",
     "web-ext": "^3.2.1"
   }
