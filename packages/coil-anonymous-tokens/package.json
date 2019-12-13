@@ -7,7 +7,7 @@
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization/tree/master/packages/anonymous-tokens",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/coil-anonymous-tokens",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
