@@ -78,11 +78,11 @@ function setCommonScriptsAndMergeOverrides(
   let updated: PackageJSON = {
     ...subPackageJSON,
     version: '0.0.0',
-    homepage: `https://github.com/coilhq/web-monetization/tree/master/packages/${folderName}`,
+    homepage: `https://github.com/coilhq/web-monetization-projects/tree/master/packages/${folderName}`,
     keywords: ['ilp', 'web-monetization'],
     repository: {
       type: 'git',
-      url: 'git@github.com:coilhq/web-monetization.git'
+      url: 'git@github.com:coilhq/web-monetization-projects.git'
     },
     main: './build',
     types: './build',
