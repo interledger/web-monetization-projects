@@ -104,10 +104,12 @@ export class Stream {
     }
   }
 
-  async stop() {
+  async stop(finalized = true) {
     this.active = false
-    this.monetization.setState('stopped')
-    this.monetization.setMonetizationRequest(undefined)
+    this.monetization.setState({ state: 'stopped', finalized: finalized })
+    if (finalized) {
+      this.monetization.setMonetizationRequest(undefined)
+    }
     this.state = MonetizationStateEnum.STOPPED
     this.activeChanges.emit('stop')
   }
@@ -133,7 +135,7 @@ export class Stream {
 
       try {
         // await this.finalizeExisting()
-        this.monetization.setState('pending')
+        this.monetization.setState({ state: 'pending' })
         debug('Start streamPayment()')
         const promise = (this.existing = this.streamPayment(
           await getSPSPResponse(this.spspEndpoint, this.requestId)
@@ -229,8 +231,7 @@ export class Stream {
           addSentAmount()
           this.activeChanges.removeListener('stop', onStop)
           this.lastDelivered = 0
-          this.monetization.setState('stopped')
-          this.monetization.setMonetizationRequest(undefined)
+          this.monetization.setState({ state: 'stopped' })
           this.state = MonetizationStateEnum.STOPPED
           // eslint-disable-next-line @typescript-eslint/no-use-before-define
           clearInterval(updateAmountInterval)
@@ -290,5 +291,9 @@ export class Stream {
       requestId: this.requestId!
     }
     this.monetization.dispatchMonetizationProgressEvent(detail)
+  }
+
+  pause() {
+    return this.stop(false)
   }
 }

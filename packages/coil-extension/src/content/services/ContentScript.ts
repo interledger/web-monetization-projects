@@ -66,7 +66,8 @@ export class ContentScript {
         command: 'stopWebMonetization',
         data: details
       }
-      monetization.setState('stopped')
+      monetization.setState({ state: 'stopped', finalized: true })
+      monetization.setMonetizationRequest(undefined)
       runtime.sendMessage(request)
     }
 
@@ -105,7 +106,7 @@ export class ContentScript {
           debug(e, 'origin=', window.origin, 'iframe=', this.frames.isIFrame)
         })
       } else if (request.command === 'setMonetizationState') {
-        this.monetization.setState(request.data.state)
+        this.monetization.setState(request.data)
       } else if (request.command === 'monetizationProgress') {
         const detail: MonetizationProgressEvent['detail'] = {
           amount: request.data.amount,

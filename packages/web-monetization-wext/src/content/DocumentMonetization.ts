@@ -2,14 +2,21 @@ import {
   MonetizationEvent,
   MonetizationProgressEvent,
   MonetizationStartEvent,
-  MonetizationState
+  MonetizationState,
+  MonetizationStopEvent
 } from '@web-monetization/types'
 import { injectable } from '@dier-makr/annotations'
 
 import { ScriptInjection } from './ScriptInjection'
 
+interface SetStateParams {
+  state: MonetizationState
+  finalized?: boolean
+}
+
 @injectable()
 export class DocumentMonetization {
+  private finalized = true
   private state: MonetizationState = 'stopped'
   private request?: MonetizationStartEvent['detail']
 
@@ -36,7 +43,7 @@ export class DocumentMonetization {
       window.addEventListener('message', function (event) {
         if (event.source === window && event.data.webMonetization) {
           document.monetization.dispatchEvent(
-            new CustomEvent(event.data.name, {
+            new CustomEvent(event.data.type, {
               detail: event.data.detail
             }))
         }
@@ -47,17 +54,36 @@ export class DocumentMonetization {
 
   setMonetizationRequest(request?: MonetizationStartEvent['detail']) {
     this.request = request
+    this.finalized = true
   }
 
-  setState(state: MonetizationState) {
-    const changed = this.state != state
+  /**
+   * Set the document state first, then emit associated event.
+   * Only emit if state has changed.
+   * This needs to handle multiple requests to change to the same state
+   * (where state can be a composite, eg. {state: 'stopped', finalized: false})
+   */
+  setState({ state, finalized }: SetStateParams) {
+    finalized = Boolean(finalized)
+    // We may need to emit a stop event more than once in the case of the user
+    // pausing (monetizationstop event with finalized: false) then the tag
+    // being removed (monetizationstop event with finalized: true)
+    const changedFinalized = this.finalized !== finalized
+    const changedState = this.state != state
+    const changed = changedState || changedFinalized
+
+    this.finalized = finalized
     this.state = state
+
     if (changed) {
-      this.scripts.inject(`document.monetization.state = '${state}'`)
+      if (changedState) {
+        this.scripts.inject(`document.monetization.state = '${state}'`)
+      }
       if (this.request && (state === 'stopped' || state === 'pending')) {
         this.postMonetizationMessage(
           state === 'pending' ? 'monetizationpending' : 'monetizationstop',
-          this.request
+          this.request,
+          finalized
         )
       }
     }
@@ -68,7 +94,7 @@ export class DocumentMonetization {
     detail: MonetizationStartEvent['detail']
   ) {
     // Indicate that payment has started.
-    const changed = this.setState('started')
+    const changed = this.setState({ state: 'started' })
     if (!changed) {
       throw new Error(`expecting state transition`)
     }
@@ -77,13 +103,20 @@ export class DocumentMonetization {
   }
 
   postMonetizationMessage(
-    name: MonetizationEvent['type'],
-    detail: MonetizationEvent['detail']
+    type: MonetizationEvent['type'],
+    detailSource: MonetizationEvent['detail'],
+    finalized?: boolean
   ) {
+    // Don't mutate the request
+    const detail = { ...detailSource }
+    if (type === 'monetizationstop') {
+      const stop = detail as MonetizationStopEvent['detail']
+      stop.finalized = Boolean(finalized)
+    }
     this.window.postMessage(
       {
         webMonetization: true,
-        name,
+        type,
         detail
       },
       this.window.location.origin

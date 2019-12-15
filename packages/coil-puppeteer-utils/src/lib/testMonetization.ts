@@ -4,8 +4,8 @@ import {
   MonetizationEventType,
   MonetizationExtendedDocument,
   MonetizationPendingEvent,
-  MonetizationStartEvent,
-  MonetizationState
+  MonetizationState,
+  MonetizationStopEvent
 } from '@web-monetization/types'
 import { Browser, Page } from 'puppeteer'
 
@@ -14,26 +14,35 @@ import {
   hasCommonRequestIdAndPaymentPointer,
   isValidPendingEvent,
   isValidProgressEvent,
-  isValidStartEvent
+  isValidStartEvent,
+  isValidStopEvent
 } from './validators'
 import { AWAIT_MONETIZATION_TIMEOUT_MS } from './env'
+
+export interface OnMonetizationEvent {
+  event: MonetizationStopEvent
+  state: MonetizationState
+}
 
 export interface TestPageResults {
   success: boolean
   page: Page
   url: string
+  stoppedPromise: Promise<OnMonetizationEvent>
 }
 
 export interface TestPageParameters {
   browser: Browser
   url: string
   newPage?: boolean
+  listenStopped?: boolean
 }
 
 export async function testMonetization({
   browser,
   url,
-  newPage = true
+  newPage = true,
+  listenStopped = false
 }: TestPageParameters): Promise<TestPageResults> {
   const page = newPage ? await browser.newPage() : (await browser.pages())[0]
 
@@ -45,15 +54,18 @@ export async function testMonetization({
   let nthEvent = 0
   const statesSeen = new Set<MonetizationState>()
   const eventsSeen = new Set<MonetizationEventType>()
+
   let pendingEvent: MonetizationPendingEvent
+  let resolveStopped: Function | null = null
+
+  const stoppedPromise = new Promise<OnMonetizationEvent>(resolve => {
+    resolveStopped = resolve
+  })
 
   const monetizePromise = new Promise<boolean>(resolve => {
     void page.exposeFunction(
       'onCustomEvent',
       (e: MonetizationEvent, monetizationState: MonetizationState) => {
-        if (nthEvent === 3) {
-          return
-        }
         eventsSeen.add(e.type)
         statesSeen.add(monetizationState)
 
@@ -88,6 +100,10 @@ export async function testMonetization({
           } else {
             nthEvent++
           }
+        } else if (listenStopped && e.type === 'monetizationstop') {
+          if (resolveStopped) {
+            resolveStopped({ event: e, state: monetizationState })
+          }
         }
         if (nthEvent === 3) {
           resolve(true)
@@ -121,6 +137,9 @@ export async function testMonetization({
   await listenFor('monetizationpending')
   await listenFor('monetizationstart')
   await listenFor('monetizationprogress')
+  if (listenStopped) {
+    await listenFor('monetizationstop')
+  }
 
   await Promise.all([page.waitForNavigation(), page.goto(url)])
 
@@ -138,5 +157,5 @@ export async function testMonetization({
 
   debug('seen states: %s, events: %s', statesSeen, eventsSeen)
   debug('document.monetization.state', state)
-  return { page, success: success && state === 'started', url }
+  return { stoppedPromise, page, success: success && state === 'started', url }
 }

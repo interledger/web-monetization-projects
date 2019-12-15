@@ -57,7 +57,7 @@ export class MonetizationPolyfill {
     this.btpEndpoint = opts.btpEndpoint
 
     const streamControl: StreamControl = {
-      pause: () => this.stream.stop(),
+      pause: () => this.stream.pause(),
       resume: () => {
         const selector = 'meta[name="monetization"]'
         // We don't ever expect this state to occur
