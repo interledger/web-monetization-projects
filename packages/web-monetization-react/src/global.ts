@@ -6,7 +6,8 @@ import {
   MonetizationPendingEvent,
   MonetizationProgressEvent,
   MonetizationStartEvent,
-  MonetizationState
+  MonetizationState,
+  MonetizationStopEvent
 } from '@web-monetization/types'
 
 export function getDocument() {
@@ -89,14 +90,19 @@ export class GlobalWebMonetizationState extends EventEmitter {
     }
   }
 
-  onMonetizationStop() {
-    const metaTag: HTMLMetaElement | null = document.head.querySelector(
-      'meta[name="monetization"]'
-    )
-    if (!metaTag || metaTag.content !== this.paymentPointer) {
+  onMonetizationStop(ev: MonetizationStopEvent) {
+    if (ev.detail.finalized) {
       this.resetState()
+    } else if (typeof ev.detail.finalized === 'undefined') {
+      // Old implementation of web-monetization that didn't have finalized
+      // event
+      const metaTag: HTMLMetaElement | null = document.head.querySelector(
+        'meta[name="monetization"]'
+      )
+      if (!metaTag || metaTag.content !== this.paymentPointer) {
+        this.resetState()
+      }
     }
-
     this.setStateFromDocumentMonetization()
     this.emit('monetizationstop')
   }
