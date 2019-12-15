@@ -1992,10 +1992,10 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@material-ui/core@^4.7.2":
-  version "4.7.2"
-  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.7.2.tgz#b4396eded7c85214c43c17a18bad66e94742f92c"
-  integrity sha512-ZbeO6xshTEHcMU2jMNjBY26u9p5ILQFj0y7HvOPZ9WT6POaN6qNKYX2PdXnnRDE1MpN8W2K1cxM4KKkiYWNkCQ==
+"@material-ui/core@^4.8.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.8.0.tgz#8fb4f4df2b35e3e781b1eec17d4aaf388edf3099"
+  integrity sha512-ODyvWlDOP0D3tU32wVlYRNrdS+LeJxB3xJbXdDxq6gnG4JhKk79+ylP0cImjPBI2yEZw0hcYHWFZOGD+0R1X4g==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@material-ui/styles" "^4.7.1"
@@ -8170,10 +8170,10 @@ ilp-protocol-ildcp@^2.0.1, ilp-protocol-ildcp@^2.0.2:
     ilp-packet "^3.0.9"
     oer-utils "^5.0.1"
 
-ilp-protocol-stream@2.2.0, ilp-protocol-stream@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.2.0.tgz#e1813ace8b7cbf5bdacc3c2af890946d85a12aa3"
-  integrity sha512-8LPLdG4yf3U4O/SK9RVDIXQG4YNsYs5U+YzhIirMXALgr9DbTrkeUF33GUhE1KDo3WNueziHZugS1nR+o7XC8w==
+ilp-protocol-stream@2.2.1, ilp-protocol-stream@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.2.1.tgz#8eee1626d18605f385130e8a79b6af0edeab8b7f"
+  integrity sha512-FXbzWTpUaXJv6ETJTr6F5cYFd/heLd9pbJI5TqWekc5ifp0xiE5NX07wjGBj7tlsPFzTTb4EB78h56kjwg5+vw==
   dependencies:
     "@types/node" "^10.14.22"
     ilp-logger "^1.2.1"
