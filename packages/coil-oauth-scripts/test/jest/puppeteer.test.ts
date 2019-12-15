@@ -45,7 +45,7 @@ async function setUpHttpServer(btpTokenPromise: Promise<string>) {
     if (req.url === '/') {
       res.end(
         (await html).replace(
-          '$BTP_TOKEN$',
+          /'\$BTP_TOKEN\$'/g,
           JSON.stringify(await btpTokenPromise)
         )
       )
