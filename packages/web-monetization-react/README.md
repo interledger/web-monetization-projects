@@ -2,6 +2,11 @@
 
 > React module that lets you access the state of Web Monetization
 
+## Credits
+
+Written by [Ben Sharafian](https://github.com/sharafian) and inlined from
+https://github.com/sharafian/react-web-monetization
+
 ## Examples
 
 This repo contains several usage examples in `example/`. To host the site and
@@ -39,6 +44,7 @@ const MyMessage = props => {
 
   return (
     <p>
+      {monetization.state === 'stopped' && 'Stopped'}
       {monetization.state === 'pending' && 'Loading...'}
       {monetization.state === 'started' && 'Thanks for supporting our site!'}
       {!monetization.state && 'Sign up for Coil to support our site!'}
@@ -128,8 +134,3 @@ import { initGlobalWebMonetizationState } from 'react-web-monetization'
 
 initGlobalWebMonetizationState()
 ```
-
-## Credits
-
-Written by [Ben Sharafian](https://github.com/sharafian) and inlined from
-https://github.com/sharafian/react-web-monetization
