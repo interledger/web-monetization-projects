@@ -131,9 +131,13 @@
     <script>
       if (!document.monetizationExtensionInstalled) {
         // Use `yarn serve-it` from coil-oauth-scripts packages to log in
-        // and get a btp token, replacing $BTP_TOKEN$ automatically
+        // and get a btp token, replacing /'\$BTP_TOKEN\$'/g automatically
         log('Using OAuth Scripts')
-        document.coilMonetizationPolyfill.init({ btpToken: $BTP_TOKEN$ })
+        const polyfillInitArgs = {}
+        document.coilMonetizationPolyfill.init({
+          btpToken: '$BTP_TOKEN$',
+          ...polyfillInitArgs
+        })
       } else {
         log('Using Extension')
       }

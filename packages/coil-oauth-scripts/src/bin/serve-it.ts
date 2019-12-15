@@ -16,8 +16,8 @@ const log = console.log
  * This will login to coil, using COIL_USER/COIL_PASSWORD sourced from
  * environment variables, finally getting a btp token via a graphql request.
  *
- * The first arg points to a file to be served which will have the symbol
- * $BTP_TOKEN$ replaced with an actual token JSON serialized.
+ * The first arg points to a file to be served which will have the string
+ * '$BTP_TOKEN$' replaced with an actual token JSON serialized.
  *
  * Any files referenced by the served file (e.g. <script src='oauth-scripts.js'>)
  * will be served relative to the folder containing the file.
@@ -31,11 +31,22 @@ async function main() {
     : pathMod.resolve(process.cwd(), fnSpec)
   const fnWd = pathMod.dirname(fnAbsolute)
   log({ fnSpec, fnWd, fnAbsolute, btpToken })
+  const fromEnv = process.env.POLYFILL_INIT_ARGS
+  const polyFillInitArgs = fromEnv ? JSON.parse(fromEnv) : {}
+  const polyfillInitArgsSearch = 'const polyfillInitArgs = {}'
+  const polyfillInitArgsReplacement = `const polyfillInitArgs = ${JSON.stringify(
+    polyFillInitArgs
+  )}`
 
   const server = http.createServer(async (req, res) => {
     if (req.url === '/') {
-      const html = await promisify(fs.readFile)(fnSpec, { encoding: 'utf8' })
-      res.end(html.replace('$BTP_TOKEN$', replaceValue))
+      const html: string = await promisify(fs.readFile)(fnSpec, {
+        encoding: 'utf8'
+      })
+      const replaced = html
+        .replace(/'\$BTP_TOKEN\$'/g, replaceValue)
+        .replace(polyfillInitArgsSearch, polyfillInitArgsReplacement)
+      res.end(replaced)
     } else if (req.url) {
       const path = pathMod.resolve(fnWd, './' + req.url)
       if (await promisify(fs.exists)(path)) {
@@ -48,7 +59,19 @@ async function main() {
     }
   })
   server.listen(PORT, () => {
-    log('$BTP_TOKEN will be replaced in', fnSpec)
+    log(
+      `\`'$BTP_TOKEN'\` will be replaced with \`"${btpToken.slice(
+        0,
+        20
+      )}..."\` in`,
+      fnSpec
+    )
+    log(
+      `\`${polyfillInitArgsSearch}\` will be replaced with`,
+      `\`${polyfillInitArgsReplacement}\``,
+      'in',
+      fnSpec
+    )
     log('listening on', PORT, 'serving', fnSpec, 'working dir', fnWd)
   })
 }
