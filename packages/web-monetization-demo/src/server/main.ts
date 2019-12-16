@@ -14,7 +14,9 @@ async function main() {
     autoBindInjectable: true,
     defaultScope: 'Singleton'
   })
-  container.bind<number>(tokens.BtpPort).toConstantValue(3000)
+  const serverPort = Number(process.env.SERVER_PORT || 4000)
+  const btpPort = Number(process.env.BTP_PORT || 3000)
+  container.bind<number>(tokens.BtpPort).toConstantValue(btpPort)
 
   const server = new InversifyExpressServer(container)
   server.setConfig(app => {
@@ -27,10 +29,9 @@ async function main() {
   })
 
   const app = server.build()
-  const port = 4000
   await container.get(StreamServer).start()
-  app.listen(port, () => {
-    dbg(`listening on ${port}`)
+  app.listen(serverPort, () => {
+    dbg(`listening on ${serverPort}`)
   })
 }
 
