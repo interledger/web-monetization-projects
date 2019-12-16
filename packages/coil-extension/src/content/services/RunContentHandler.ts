@@ -45,23 +45,18 @@ export class RunContentHandler {
       await this.dom.documentReady()
       const channelUrl = await this.pollForYouTubeChannelId()
       if (channelUrl) {
-        Object.assign(variables, { channelUrl })
+        const channelId = channelUrl.split('/channel/')[1]
+        Object.assign(variables, { channelId })
       }
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const queryWithChannel = `query getPage($url: String!, $channelUrl: String) {
-  adaptedPage(videoUrl: $url, channelUrl: $channelUrl) {
+    const query = `query getPage($url: String!, $channelId: String) {
+  adaptedPage(videoUrl: $url, channelId: $channelId) {
     paymentPointer
     channelImage
   }
 }`
-    const query = `query getPage($url: String!) {
-  adaptedPage(videoUrl: $url) {
-    paymentPointer
-    channelImage
-  }
-}`
+
     const paymentPointerQuery = await this.client.query<GetPageData>({
       query,
       token: null,
