@@ -18,7 +18,7 @@ export function logger(name?: string) {
   }
 }
 
-export type ILogger = typeof console.log
+export type Logger = typeof console.log
 
 const getColor = (() => {
   let ix = 0
@@ -48,6 +48,11 @@ export function createLogger(context: Context) {
   }
   const namespace = `background${name ? `:${name}` : ''}`
   // eslint-disable-next-line no-console
+  if (localStorage.debug) {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    return require('debug')(`coil-extension:${namespace}`)
+  }
+
   return console.log.bind(
     // eslint-disable-next-line no-console
     console,

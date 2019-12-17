@@ -31,11 +31,11 @@ export class DomService {
     return null
   }
 
-  async documentReady() {
-    if (this.document.readyState !== 'complete') {
+  async documentReadyStateComplete() {
+    while (this.document.readyState !== 'complete') {
       await new Promise(resolve => {
         this.document.addEventListener(
-          'DOMContentLoaded',
+          'readystatechange',
           () => {
             resolve()
           },

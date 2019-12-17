@@ -103,6 +103,17 @@ export interface LogCommand extends Command {
   data: string
 }
 
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface FetchYoutubeChannelId extends Command {
+  command: 'fetchYoutubeChannelId'
+  data: {
+    youtubeUrl: string
+  }
+}
+
 export type ToBackgroundMessage =
   | PauseWebMonetization
   | ResumeWebMonetization
@@ -115,6 +126,7 @@ export type ToBackgroundMessage =
   | StartWebMonetization
   | IsRateLimited
   | ContentScriptInit
+  | FetchYoutubeChannelId
 
 export type IconState =
   | 'streaming-paused'
@@ -150,9 +162,9 @@ export interface IsRateLimited extends Command {
  *  background -> content
  *  browser.tabs.sendMessage
  */
-export interface RunContent {
-  command: 'runContent'
-  data: { from?: string }
+export interface CheckAdaptedContent {
+  command: 'checkAdaptedContent'
+  data: { from?: string; url?: string }
 }
 
 /**
@@ -209,7 +221,7 @@ export interface SetMonetizationState {
 }
 
 export type ToContentMessage =
-  | RunContent
+  | CheckAdaptedContent
   | MonetizationProgress
   | MonetizationStart
   | SetMonetizationState
