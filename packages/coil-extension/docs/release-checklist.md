@@ -11,6 +11,9 @@ When releasing, we can copy this markdown into the PR for a release.
 
 - [ ] Update the [CHANGELOG.md](../CHANGELOG.md)
 
+  - You can compare with latest commit before tagging via something like:
+    `https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.43...df9abc06b3b1ece6098889446d1444fb9bd58dd7`
+
 - [ ] Build for prod with release settings
 
   - e.g. `yarn build-prod chrome -p --run-prod --devtool=none`

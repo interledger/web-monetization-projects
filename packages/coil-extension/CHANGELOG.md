@@ -1,3 +1,18 @@
+<a name="coil-extension@0.0.44"></a>
+
+# [coil-extension@0.0.44](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.43...coil-extension@0.0.44) (2019-12-17)
+
+### Features
+
+- Optimized Youtube adaptation to workaround daily API quota [#161](https://github.com/coilhq/web-monetization-projects/pull/161)
+- Optimized STREAM performance for better time-to-monetization [#187](https://github.com/coilhq/web-monetization-projects/pull/187)
+- Add finalized: boolean to monetizationstop event detail [#180](https://github.com/coilhq/web-monetization-projects/pull/180)
+- Add festive iconography [#216](https://github.com/coilhq/web-monetization-projects/pull/216) [#218](https://github.com/coilhq/web-monetization-projects/pull/218)
+
+### Bug Fixes
+
+- Popup icon shows page is monetized even if logged out [#185](https://github.com/coilhq/web-monetization-projects/pull/185)
+
 <a name="coil-extension@0.0.43"></a>
 
 # [coil-extension@0.0.43](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.42...coil-extension@0.0.43) (2019-12-10)
