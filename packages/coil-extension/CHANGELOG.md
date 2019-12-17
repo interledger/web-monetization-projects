@@ -4,7 +4,7 @@
 
 ### Features
 
-- Optimized Youtube adaptation to workaround daily API quota [#161](https://github.com/coilhq/web-monetization-projects/pull/161)
+- Optimized Youtube adaptation to workaround daily API quota [#213](https://github.com/coilhq/web-monetization-projects/pull/213) [#161](https://github.com/coilhq/web-monetization-projects/pull/161)
 - Optimized STREAM performance for better time-to-monetization [#187](https://github.com/coilhq/web-monetization-projects/pull/187)
 - Add finalized: boolean to monetizationstop event detail [#180](https://github.com/coilhq/web-monetization-projects/pull/180)
 - Add festive iconography [#216](https://github.com/coilhq/web-monetization-projects/pull/216) [#218](https://github.com/coilhq/web-monetization-projects/pull/218)

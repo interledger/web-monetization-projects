@@ -9,10 +9,29 @@ the issue/PR.
 
 When releasing, we can copy this markdown into the PR for a release.
 
+## Chores
+
+- [ ] Make sure the manifest version was bumped but doesn't skip versions
+
 - [ ] Update the [CHANGELOG.md](../CHANGELOG.md)
 
   - You can compare with latest commit before tagging via something like:
     `https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.43...df9abc06b3b1ece6098889446d1444fb9bd58dd7`
+
+### Zipping Extension Source Files
+
+- [ ] Zip the source code for the extension
+
+  - Some web stores will require the submission of source files.
+  - So far, zipping the `coil-extension` folder (instead of zipping at the project root)
+    has given us the least trouble with passing review.
+    - For example, `zip -r coil-extension.zip coil-extension/`
+  - `node_modules` should be deleted prior to zipping the source files.
+
+## $Platform $Browser \$Version
+
+Copy below for each platform/browser/version tested, filtering steps where it
+make sense.
 
 - [ ] Build for prod with release settings
 
@@ -26,7 +45,8 @@ When releasing, we can copy this markdown into the PR for a release.
     - Load Temporary Add-on...
   - For Chrome, go to `chrome://extensions` and `Load Unpacked`
 
-- [ ] Ensure that you are logged in with a use with valid subscription
+- [ ] Ensure that you are logged in with a user with valid subscription
+  - ![image](https://user-images.githubusercontent.com/525211/71150879-28d04300-2265-11ea-96da-7d720c101575.png)
 
 - [ ] [example.com](http://example.com/) should say "This website is not supported"
 
@@ -67,8 +87,6 @@ When releasing, we can copy this markdown into the PR for a release.
   - Go to a monetized page and check that the icon "monetized" black and in 'unavailable' state
     - ![image](https://user-images.githubusercontent.com/525211/70715784-8f150d00-1d1d-11ea-8f82-fe116b2e9a16.png)
 
-- [ ] Make sure the manifest version was bumped but doesn't skip versions
-
 - [ ] Check the monetization animation works properly
 
   - ![image](https://user-images.githubusercontent.com/525211/66627467-04813600-ec26-11e9-855a-517700af4e26.png)
@@ -86,8 +104,9 @@ When releasing, we can copy this markdown into the PR for a release.
 
 - [ ] Go to a [youtube video](https://www.youtube.com/watch?v=l1btEwwRePs),
       manually skip to near end of video, and when autoplay of a video from
-      another channel starts, check that monetization has stopped.
-      [#33][i33]
+      another channel starts, check that monetization has stopped. 
+   - Issues: [#33][i33] 
+   - PRs: [#213][np213]
 
 - [ ] Go to [xrpcommunity.blog](https://xrpcommunity.blog/) and as page
       is loading very quickly open the popup.
@@ -188,16 +207,6 @@ When releasing, we can copy this markdown into the PR for a release.
   - Add a subscription (can use [testing card](https://stripe.com/docs/testing) 4242 4242 4242 4242 )
   - Go to a monetized page and check that streaming works immediately
 
-### Zipping Extension Source Files
-
-- [ ] Zip the source code for the extension
-
-  - Some web stores will require the submission of source files.
-  - So far, zipping the `coil-extension` folder (instead of zipping at the project root)
-    has given us the least trouble with passing review.
-    - For example, `zip -r coil-extension.zip coil-extension/`
-  - `node_modules` should be deleted prior to zipping the source files.
-
 [i33]: https://github.com/coilhq/web-monetization/issues/33
 [i120]: https://github.com/coilhq/web-monetization/issues/120
 [i144]: https://github.com/coilhq/web-monetization/issues/144
@@ -222,3 +231,4 @@ When releasing, we can copy this markdown into the PR for a release.
 [np128]: https://github.com/coilhq/web-monetization-projects/pull/128
 [ni184]: https://github.com/coilhq/web-monetization-projects/issue/184
 [np185]: https://github.com/coilhq/web-monetization-projects/pull/185
+[np213]: https://github.com/coilhq/web-monetization-projects/pull/213
