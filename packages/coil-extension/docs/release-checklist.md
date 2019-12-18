@@ -23,6 +23,8 @@ When releasing, we can copy this markdown into the PR for a release.
     - Load Temporary Add-on...
   - For Chrome, go to `chrome://extensions` and `Load Unpacked`
 
+- [ ] Ensure that you are logged in with a use with valid subscription
+
 - [ ] [example.com](http://example.com/) should say "This website is not supported"
 
   - ![image](https://user-images.githubusercontent.com/525211/66626576-f4b42280-ec22-11e9-9f77-4a95be08643e.png)

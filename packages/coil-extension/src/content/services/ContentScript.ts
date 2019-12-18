@@ -24,7 +24,7 @@ import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
 
 import { Frames } from './Frames'
-import { RunContentHandler } from './RunContentHandler'
+import { AdaptedContentService } from './AdaptedContentService'
 import { ContentAuthService } from './ContentAuthService'
 import { MonetizationEventsLogger } from './MonetizationEventsLogger'
 
@@ -35,7 +35,7 @@ export class ContentScript {
     private window: Window,
     private document: Document,
     @inject(tokens.ContentRuntime) private runtime: ContentRuntime,
-    private runContentHandler: RunContentHandler,
+    private adaptedContent: AdaptedContentService,
     private frames: Frames,
     private idle: IdleDetection,
     private monetization: DocumentMonetization,
@@ -96,15 +96,26 @@ export class ContentScript {
 
   setRuntimeMessageListener() {
     this.runtime.onMessage.addListener((request: ToContentMessage) => {
-      if (request.command === 'runContent') {
-        if (request.data && request.data.from) {
-          debug('runContent with from', JSON.stringify(request.data))
+      if (request.command === 'checkAdaptedContent') {
+        if (this.window.location.href === request.data.url) {
+          if (request.data && request.data.from) {
+            debug(
+              'checkAdaptedContent with from',
+              this.document.readyState,
+              JSON.stringify(request.data),
+              window.location.href
+            )
+          } else {
+            debug('checkAdaptedContent without from')
+          }
+          this.adaptedContent.checkAdaptedContent()
         } else {
-          debug('runContent without from')
+          debug(
+            'ignoring checkAdaptedContent with different url',
+            this.window.location.href,
+            request.data.url
+          )
         }
-        this.runContentHandler.runContent().catch(e => {
-          debug(e, 'origin=', window.origin, 'iframe=', this.frames.isIFrame)
-        })
       } else if (request.command === 'setMonetizationState') {
         this.monetization.setState(request.data)
       } else if (request.command === 'monetizationProgress') {

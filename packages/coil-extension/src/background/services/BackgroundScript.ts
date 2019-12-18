@@ -10,6 +10,7 @@ import { StorageService } from '../../services/storage'
 import * as tokens from '../../types/tokens'
 import {
   AdaptedSite,
+  CheckAdaptedContent,
   ClosePopup,
   ContentScriptInit,
   MonetizationProgress,
@@ -30,7 +31,8 @@ import { TabStates } from './TabStates'
 import { Streams } from './Streams'
 import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
-import { ILogger, logger } from './utils'
+import { Logger, logger } from './utils'
+import { YoutubeService } from './YoutubeService'
 
 function getTab(sender: { tab?: { id?: number } }) {
   return notNullOrUndef(notNullOrUndef(sender.tab).id)
@@ -50,9 +52,10 @@ export class BackgroundScript {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private auth: AuthService,
+    private youtube: YoutubeService,
 
     @logger('BackgroundScript')
-    private log: ILogger,
+    private log: Logger,
 
     private client: GraphQlClient,
     private db: HistoryDb,
@@ -167,10 +170,20 @@ export class BackgroundScript {
 
       if (status === 'complete') {
         this.setCoilUrlForPopupIfNeeded(tabId, url)
-        this.api.tabs.sendMessage(tabId, {
-          command: 'runContent',
-          data: { from: 'onTabsUpdated directly, status===complete' }
-        })
+        const from =
+          `onTabsUpdated directly, windowId=${tab.windowId}, ` +
+          `tab=${JSON.stringify(tab)}, ` +
+          `status===complete, changeInfo=${JSON.stringify(changeInfo)}`
+        // Unfortunately this event handler is run for all windows/iframes in
+        // a given tab so we send the url and, inter alia, abort when the url
+        // is not the same. Extremely unlikely, but likely harmless if an url
+        // includes itself as an iframe hall-of-mirrors styles.
+        const message: CheckAdaptedContent = {
+          command: 'checkAdaptedContent',
+          data: { from, url }
+        }
+        this.log('sending checkAdaptedContent message', message)
+        this.api.tabs.sendMessage(tabId, message)
       }
     })
   }
@@ -201,7 +214,6 @@ export class BackgroundScript {
           sentAmount: details.sentAmount
         }
       }
-      this.log('sending money message.', tab, details)
       this.handleMonetizedSite(tab, details.initiatingUrl, details)
       this.api.tabs.sendMessage(tab, message)
       this.savePacketToHistoryDb(details)
@@ -297,6 +309,9 @@ export class BackgroundScript {
         break
       case 'contentScriptInit':
         sendResponse(this.contentScriptInit(request, sender))
+        break
+      case 'fetchYoutubeChannelId':
+        sendResponse(await this.youtube.fetchChannelId(request.data.youtubeUrl))
         break
       default:
         sendResponse(false)
@@ -549,7 +564,7 @@ export class BackgroundScript {
     // ContentScript
     this.sendSetMonetizationStateMessage(tab, 'stopped')
     // clear the tab state, and set things to default
-    // no need to send runContent message to check for adapted sites as
+    // no need to send checkAdaptedContent message to check for adapted sites as
     // that will happen automatically on url change (html5 push state also)
     // via the tabs.onUpdated
     if (closed) {

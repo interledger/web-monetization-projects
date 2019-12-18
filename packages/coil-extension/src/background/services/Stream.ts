@@ -22,7 +22,7 @@ import { BandwidthTiers } from '@coil/polyfill-utils'
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 
-import { ILogger, logger } from './utils'
+import { Logger, logger } from './utils'
 
 const { timeout } = asyncUtils
 
@@ -90,7 +90,7 @@ export class Stream extends EventEmitter {
 
   constructor(
     @logger('Stream')
-    private readonly _debug: ILogger,
+    private readonly _debug: Logger,
     private container: Container,
     @inject(tokens.StreamDetails)
     {
@@ -291,14 +291,14 @@ interface StreamAttemptOptions {
   requestId: string
   plugin: IlpPluginBtp
   spspDetails: SPSPResponse
-  debug: ILogger
+  debug: Logger
 }
 
 class StreamAttempt {
   private readonly _onMoney: (event: OnMoneyEvent) => void
   private readonly _bandwidth: AdaptiveBandwidth
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private readonly _debug: ILogger
+  private readonly _debug: Logger
   private readonly _plugin: IlpPluginBtp
   private readonly _spspDetails: SPSPResponse
 
