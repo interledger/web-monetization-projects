@@ -3,12 +3,15 @@ import { injectable } from 'inversify'
 import { MonetizationCommand, TabState } from '../../types/TabState'
 import { IconState } from '../../types/commands'
 import { Colors } from '../consts/Colors'
-import { Icons } from '../consts/Icons'
+
+import { PopupIconService } from './PopupIconService'
 
 @injectable()
 export class TabStates {
   activeTab: number | null = null
   private tabStates: { [tab: number]: TabState } = {}
+
+  constructor(private icons: PopupIconService) {}
 
   set(tab: number, state: Partial<TabState> = {}) {
     const existingState = this.get(tab)
@@ -57,14 +60,14 @@ export class TabStates {
     switch (state) {
       case 'inactive':
         this.set(tab, {
-          icon: { path: Icons.Inactive },
+          icon: { path: this.icons.getInactive() },
           badge: { text: '' }
         })
         break
 
       case 'monetized':
         this.set(tab, {
-          icon: { path: Icons.Active }
+          icon: { path: this.icons.getActive() }
         })
         break
 

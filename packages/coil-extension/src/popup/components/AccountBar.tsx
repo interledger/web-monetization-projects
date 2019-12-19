@@ -10,6 +10,7 @@ import { withStyles } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
 import { PopupProps } from '../types'
+import { getMonthAndDay, isXMASPeriod } from '../../util/seasons'
 
 const Flex = styled.div`
   flex: 1;
@@ -38,6 +39,23 @@ const CoilMenu = withStyles({
 
 type ClickEvent = FormEvent<HTMLElement>
 
+export const CoilLogoImg = () => {
+  const [month, day] = getMonthAndDay()
+  const isXMAS = isXMASPeriod(month, day)
+  const logo = isXMAS ? '/res/CoilLogoXMAS.svg' : '/res/CoilLogo.svg'
+  const logoWidth = isXMAS ? 28 : 24
+  const style = isXMAS ? { marginTop: '-3px' } : {}
+  return (
+    <CoilImg
+      style={style}
+      width={logoWidth}
+      height={logoWidth}
+      src={logo}
+      alt=''
+    />
+  )
+}
+
 export const AccountBar = (props: PopupProps) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
@@ -61,7 +79,7 @@ export const AccountBar = (props: PopupProps) => {
 
   return (
     <CoilToolbar>
-      <CoilImg width='24' height='24' src='/res/CoilLogo.svg' alt='' />
+      <CoilLogoImg />
       {loggedIn && user ? (
         <Typography variant='body1'>{user.fullName}</Typography>
       ) : (
