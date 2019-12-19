@@ -3,9 +3,9 @@ import { inject, injectable } from 'inversify'
 import { TabState } from '../../types/TabState'
 import * as tokens from '../../types/tokens'
 import { Colors } from '../consts/Colors'
-import { Icons } from '../consts/Icons'
 
 import { TabOpener } from './TabOpener'
+import { PopupIconService } from './PopupIconService'
 
 type Action = (tab: chrome.tabs.Tab) => void
 
@@ -18,6 +18,7 @@ export class PopupBrowserAction {
 
   constructor(
     private tabOpener: TabOpener,
+    private icons: PopupIconService,
     @inject(tokens.CoilDomain) private coilDomain: string,
     @inject(tokens.WextApi) private api: typeof window.chrome
   ) {
@@ -66,21 +67,21 @@ export class PopupBrowserAction {
     if (api.browserAction.setIcon) {
       api.browserAction.setIcon({
         tabId,
-        path: (state && state.icon && state.icon.path) || Icons.Inactive
+        path: state?.icon?.path ?? this.icons.getInactive()
       })
     }
 
     if (api.browserAction.setBadgeText) {
       api.browserAction.setBadgeText({
         tabId,
-        text: (state && state.badge && state.badge.text) || ''
+        text: state?.badge?.text ?? ''
       })
     }
 
     if (api.browserAction.setBadgeBackgroundColor) {
       api.browserAction.setBadgeBackgroundColor({
         tabId,
-        color: (state && state.badge && state.badge.color) || Colors.White
+        color: state?.badge?.color ?? Colors.White
       })
     }
   }
