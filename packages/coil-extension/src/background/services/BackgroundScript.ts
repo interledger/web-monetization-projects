@@ -236,13 +236,13 @@ export class BackgroundScript {
     if (tabId) {
       const tabState = this.tabStates.getActiveOrDefault()
 
-      if (tabState.monetized && tabId) {
+      if (tabState.monetized) {
         this.tabStates.setIcon(tabId, 'monetized')
       }
 
-      if (token == null && tabId) {
+      if (token == null) {
         this.tabStates.setIcon(tabId, 'unavailable')
-      } else if (token && tabId) {
+      } else if (token) {
         this.popup.enable()
 
         const tabState = this.tabStates.getActiveOrDefault()
