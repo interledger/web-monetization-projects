@@ -38,6 +38,23 @@ const CoilMenu = withStyles({
 
 type ClickEvent = FormEvent<HTMLElement>
 
+export const CoilLogoImg = () => {
+  // 0 based months
+  const isXMAS = new Date().getMonth() === 11
+  const logo = isXMAS ? '/res/CoilLogoXMAS.svg' : '/res/CoilLogo.svg'
+  const logoWidth = isXMAS ? 28 : 24
+  const style = isXMAS ? { marginTop: '-3px' } : {}
+  return (
+    <CoilImg
+      style={style}
+      width={logoWidth}
+      height={logoWidth}
+      src={logo}
+      alt=''
+    />
+  )
+}
+
 export const AccountBar = (props: PopupProps) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
@@ -61,7 +78,7 @@ export const AccountBar = (props: PopupProps) => {
 
   return (
     <CoilToolbar>
-      <CoilImg width='24' height='24' src='/res/CoilLogo.svg' alt='' />
+      <CoilLogoImg />
       {loggedIn && user ? (
         <Typography variant='body1'>{user.fullName}</Typography>
       ) : (
