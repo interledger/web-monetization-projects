@@ -34,7 +34,7 @@
   "dependencies": {
     "@coil/client": "0.0.0",
     "@web-monetization/types": "0.0.0",
-    "get-port": "^5.0.0",
+    "get-port": "^5.1.0",
     "web-ext": "^3.2.1"
   },
   "devDependencies": {
