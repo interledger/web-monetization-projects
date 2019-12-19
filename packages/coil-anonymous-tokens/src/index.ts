@@ -1,7 +1,14 @@
 import { randomBytes } from 'crypto'
 
-import { longHash } from './lib/hash'
-import { hexString, blindMessageHash, unblindBlindSignature } from './lib/blind'
+import { BigInteger } from 'jsbn'
+import {
+  longHash,
+  hexString,
+  hashAndBlindMessage,
+  unblindSignature,
+  verifySignature,
+  PublicRSAKey
+} from 'blind-signature'
 
 export function base64url(buf: Buffer) {
   return buf
@@ -23,9 +30,7 @@ export interface TimestampedSignature {
   month: string
 }
 
-export interface PublicFields {
-  e: number
-  n: string
+export interface PublicFields extends PublicRSAKey {
   month: string
 }
 
@@ -77,7 +82,12 @@ export class AnonymousTokens {
       throw new Error('could not fetch key params from coil')
     }
 
-    return paramsRes.json() as Promise<PublicFields>
+    const result = await paramsRes.json()
+    return {
+      n: new BigInteger(result.n, 16),
+      e: result.e,
+      month: result.month
+    }
   }
 
   async _signToken(
@@ -110,37 +120,31 @@ export class AnonymousTokens {
   // TODO: what's the way to get coil auth token in here?
   async populateTokens(coilAuthToken: string, tokenCount: number) {
     const key = await this._getKeyParams()
-    const nBits = (key.n.length / 2) * 8
 
     // TODO: handle errors in here
-    // TODO: should we batch in any way?
+    // TODO: we should generate all tokens first so you can't use the timing in
+    // between tokens to learn anything about token or blinding factor
     for (let i = 0; i < tokenCount; ++i) {
       const token = this._getRandomToken()
-      const hashedToken = longHash(nBits, token).toString('hex')
       const {
         blindedMessageHash: blindedTokenHash,
         blindingFactor
-      } = blindMessageHash({
-        n: key.n,
-        e: key.e,
-        messageHash: hashedToken
-      })
+      } = hashAndBlindMessage(key, token)
 
-      const { month, signature } = await this._signToken(
+      const { month, signature: blindSignature } = await this._signToken(
         blindedTokenHash,
         coilAuthToken
       )
 
-      // TODO: should we test the signature?
-      const unblindedSignature = unblindBlindSignature({
-        n: key.n,
-        blindingFactor,
-        blindSignature: signature
-      })
+      const signature = unblindSignature(key, blindSignature, blindingFactor)
+      if (!verifySignature(key, token, signature)) {
+        // TODO: how do we handle this properly? invalid signature means the server might be trying to trick us by signing our message with a different key than advertised to try to deanonymize us
+        throw new Error('produced invalid signature!')
+      }
 
       await this.store.setItem(
         TOKEN_PREFIX + token,
-        JSON.stringify({ month, signature: unblindedSignature })
+        JSON.stringify({ month, signature })
       )
     }
   }
