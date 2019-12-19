@@ -50,10 +50,6 @@ async function configureContainer(container: Container) {
 }
 
 async function main() {
-  if (!localStorage.debug) {
-    localStorage.debug = 'coil-extension*'
-  }
-
   decorateThirdPartyClasses()
 
   const container = new Container({
