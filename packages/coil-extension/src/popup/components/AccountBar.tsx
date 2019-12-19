@@ -10,6 +10,7 @@ import { withStyles } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
 import { PopupProps } from '../types'
+import { getMonthAndDay, isXMASPeriod } from '../../util/seasons'
 
 const Flex = styled.div`
   flex: 1;
@@ -39,8 +40,8 @@ const CoilMenu = withStyles({
 type ClickEvent = FormEvent<HTMLElement>
 
 export const CoilLogoImg = () => {
-  // 0 based months
-  const isXMAS = new Date().getMonth() === 11
+  const [month, day] = getMonthAndDay()
+  const isXMAS = isXMASPeriod(month, day)
   const logo = isXMAS ? '/res/CoilLogoXMAS.svg' : '/res/CoilLogo.svg'
   const logoWidth = isXMAS ? 28 : 24
   const style = isXMAS ? { marginTop: '-3px' } : {}

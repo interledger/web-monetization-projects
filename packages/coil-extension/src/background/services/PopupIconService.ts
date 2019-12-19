@@ -2,12 +2,7 @@ import { inject, injectable } from 'inversify'
 
 import * as tokens from '../../types/tokens'
 import { Icons } from '../consts/Icons'
-
-function getMonthAndDay() {
-  const now = new Date()
-  // O based months, getDate() will return 11 for December
-  return [now.getMonth() + 1, now.getDate()]
-}
+import { getMonthAndDay, isNewYears, isXMASPeriod } from '../../util/seasons'
 
 @injectable()
 export class PopupIconService {
@@ -17,20 +12,24 @@ export class PopupIconService {
   ) {}
 
   getActive() {
-    const [month, day] = getMonthAndDay()
-    if (month === 12) {
+    const [month, day, date] = getMonthAndDay()
+    if (isXMASPeriod(month, day)) {
       return Icons.ActiveXMAS
+    } else if (isNewYears(month, day, date)) {
+      return Icons.ActiveNewYears
     } else {
-      return month === 1 && day === 1 ? Icons.ActiveNewYears : Icons.Active
+      return Icons.Active
     }
   }
 
   getInactive() {
-    const [month, day] = getMonthAndDay()
-    if (month === 12) {
+    const [month, day, date] = getMonthAndDay()
+    if (isXMASPeriod(month, day)) {
       return Icons.InactiveXMAS
+    } else if (isNewYears(month, day, date)) {
+      return Icons.InactiveNewYears
     } else {
-      return month === 1 && day === 1 ? Icons.InactiveNewYears : Icons.Inactive
+      return Icons.Inactive
     }
   }
 }
