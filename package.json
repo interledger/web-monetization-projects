@@ -2,6 +2,10 @@
   "name": "web-monetization",
   "version": "0.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coilhq/web-monetization-projects.git"
+  },
   "scripts": {
     "postinstall_comments": "@types/styled-components brings in types that conflict",
     "postinstall": "rm -rf node_modules/@types/react-native",
@@ -20,8 +24,8 @@
     "lint:staged": "lint-staged --shell"
   },
   "keywords": [
-    "web-monetization",
-    "ilp"
+    "ilp",
+    "web-monetization"
   ],
   "author": "Coil Team <info@coil.com>",
   "license": "Apache-2.0",

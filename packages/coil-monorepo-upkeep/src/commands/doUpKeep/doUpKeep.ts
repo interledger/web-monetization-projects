@@ -70,25 +70,32 @@ function checkDependencies(
 }
 
 function setCommonScriptsAndMergeOverrides(
+  rootPackageJSON: PackageJSON,
   subPackage: LernaListItem,
   subPackageJSON: PackageJSON
 ) {
   const folderName = getPackageFolder(subPackage)
+  if (
+    !rootPackageJSON.repository ||
+    !rootPackageJSON.repository.url ||
+    rootPackageJSON.repository.type !== 'git'
+  ) {
+    throw new Error('expecting git url for repository in root package.json')
+  }
+  const githubPath = rootPackageJSON.repository.url.split(':')[1].slice(0, -4)
 
   let updated: PackageJSON = {
     ...subPackageJSON,
     version: '0.0.0',
-    homepage: `https://github.com/coilhq/web-monetization-projects/tree/master/packages/${folderName}`,
-    keywords: ['ilp', 'web-monetization'],
-    repository: {
-      type: 'git',
-      url: 'git@github.com:coilhq/web-monetization-projects.git'
-    },
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    homepage: `https://github.com/${githubPath}/tree/master/packages/${folderName}`,
+    keywords: rootPackageJSON.keywords,
+    repository: rootPackageJSON.repository,
     main: './build',
     types: './build',
-    private: false,
-    author: 'Coil Team <info@coil.com>',
-    license: 'Apache-2.0',
+    private: rootPackageJSON.upkeep?.privatePackages ?? false,
+    author: rootPackageJSON.author,
+    license: rootPackageJSON.license,
     $schema: `../${PACKAGE_FOLDER_NAME}/resources/package-json-schema-nested-overrides.json`,
     scripts: {
       ...(subPackageJSON.scripts || {}),
@@ -271,8 +278,9 @@ function upKeepIntelliJExcludes(subPackages: LernaListItem[]) {
   </component>
 </module>
     `
-  const path = fromRoot('./.idea/web-monetization.iml')
   const root = fromRoot('.')
+  const moduleName = pathModule.basename(root)
+  const path = fromRoot(`./.idea/${moduleName}.iml`)
   const locations = subPackages.map(li => li.location).concat(root)
   if (existsSync(path)) {
     const excludes = flatMapSlow(locations, li => {
@@ -283,6 +291,8 @@ function upKeepIntelliJExcludes(subPackages: LernaListItem[]) {
       })
     }).join('\n')
     writeFileSync(path, xml.replace(/%EXCLUDES%/, excludes))
+  } else if (existsSync(fromRoot('./.idea'))) {
+    console.warn('warning: IDEA user expecting to exist', path)
   }
 }
 
@@ -298,7 +308,11 @@ export function doUpKeep() {
     const subPackageJSON = readPackageJSON(
       `${subPackage.location}/package.json`
     )
-    setCommonScriptsAndMergeOverrides(subPackage, subPackageJSON)
+    setCommonScriptsAndMergeOverrides(
+      rootPackageJSON,
+      subPackage,
+      subPackageJSON
+    )
     upKeepTypeScriptBuildConfig(subPackage)
     upKeepStaticSharedTemplates(subPackage)
     copyInDefaultFiles(subPackage)

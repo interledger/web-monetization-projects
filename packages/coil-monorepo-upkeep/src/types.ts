@@ -17,6 +17,9 @@ export interface PackageJSON extends Record<string, string | any> {
   main?: string
   subpackages?: string[]
   resolutions?: StringMap
+  upkeep?: {
+    privatePackages?: boolean
+  }
 }
 
 export interface LernaListItem {
