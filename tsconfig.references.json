@@ -3,6 +3,9 @@
   "files": [],
   "references": [
     {
+      "path": "packages/coil-anonymous-tokens/tsconfig.build.json"
+    },
+    {
       "path": "packages/coil-monorepo-upkeep/tsconfig.build.json"
     },
     {

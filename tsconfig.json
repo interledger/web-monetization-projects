@@ -6,6 +6,9 @@
     "baseUrl": ".",
     "skipLibCheck": false,
     "paths": {
+      "@coil/anonymous-tokens": [
+        "packages/coil-anonymous-tokens/src"
+      ],
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
       ],

@@ -38,7 +38,7 @@ export interface PublicFields extends PublicRSAKey {
 // TODO: went for localforage-like, could chang
 export interface TokenStore {
   getItem: (key: string) => Promise<string>
-  setItem: (key: string, value: string) => Promise<void>
+  setItem: (key: string, value: string) => Promise<string>
   removeItem: (key: string) => Promise<void>
   iterate: (
     fn: (
