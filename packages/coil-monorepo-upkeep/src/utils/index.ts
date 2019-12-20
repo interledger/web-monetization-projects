@@ -70,7 +70,7 @@ export function getPackages({
 }: GetPackagesParameters = {}): LernaListItem[] {
   const opts = { cwd: fromRoot('.') }
 
-  const topPackages = cmd('npx lerna list --toposort --ndjson', opts)
+  const topPackages = cmd('npx lerna list -a --toposort --ndjson', opts)
     .split('\n')
     .map(v => JSON.parse(v) as LernaListItem)
 
@@ -79,10 +79,13 @@ export function getPackages({
   }
 
   return topPackages.map(li => {
-    const command = `npx lerna list --scope ${li.name} --toposort --include-filtered-dependencies`
-    const deps = cmd(command, opts).split('\n')
+    const command = `npx lerna list -a --scope ${li.name} --toposort --include-dependencies --ndjson`
+    const deps = cmd(command, opts)
+      .split('\n')
+      .map(v => JSON.parse(v) as LernaListItem)
+
     li.dependencies = topPackages.filter(
-      tp => tp.name !== li.name && deps.includes(tp.name)
+      tp => tp.name !== li.name && deps.find(d => d.name === tp.name)
     )
     return li
   })
