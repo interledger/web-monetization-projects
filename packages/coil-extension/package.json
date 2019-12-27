@@ -78,6 +78,6 @@
     "addons-linter": "^1.19.0",
     "copy-webpack-plugin": "^5.1.1",
     "crx-hotreload": "^1.0.4",
-    "web-ext": "^3.2.1"
+    "web-ext": "^4.0.0"
   }
 }
