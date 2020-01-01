@@ -46,7 +46,7 @@
     "deepmerge": "^4.2.2",
     "npm-check-updates": "^4.0.1",
     "reduct": "^3.3.1",
-    "sort-package-json": "^1.31.0",
+    "sort-package-json": "^1.35.0",
     "yaml": "^1.7.2"
   },
   "devDependencies": {
