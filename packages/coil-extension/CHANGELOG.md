@@ -1,3 +1,11 @@
+<a name="coil-extension@0.0.45"></a>
+
+# [coil-extension@0.0.45](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.44...coil-extension@0.0.45) (2020-01-04)
+
+### Bug Fixes
+
+- Revert flaky STREAM performance optimization [#242](https://github.com/coilhq/web-monetization-projects/pull/242)
+
 <a name="coil-extension@0.0.44"></a>
 
 # [coil-extension@0.0.44](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.43...coil-extension@0.0.44) (2019-12-19)
