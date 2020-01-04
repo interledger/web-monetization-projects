@@ -45,7 +45,7 @@ make sense.
     - Load Temporary Add-on...
   - For Chrome, go to `chrome://extensions` and `Load Unpacked`
 
-- [ ] Ensure that you are logged in with a user with valid subscription
+- [ ] Ensure that you are [logged in with a user with valid subscription](https://coil.com/settings/payment)
 
   - ![image](https://user-images.githubusercontent.com/525211/71150879-28d04300-2265-11ea-96da-7d720c101575.png)
 
@@ -93,7 +93,7 @@ make sense.
 
 - [ ] Will route to \$coildomain.com/login rather than open popup if logged out
 
-  - Log out from extension
+  - Log out from \$coildomain.com
   - Check that icon is in 'unavailable' state
     - ![image](https://user-images.githubusercontent.com/525211/66627206-2a5a0b00-ec25-11e9-9c0c-74dc34370e13.png)
   - Click on browser action
