@@ -323,9 +323,7 @@ class StreamAttempt {
     this._connection = await createConnection({
       ...this._spspDetails,
       plugin,
-      slippage: 1.0,
-      exchangeRate: 1.0,
-      maximumPacketAmount: '10000000'
+      slippage: 0.05
     })
 
     if (!this._active) return
