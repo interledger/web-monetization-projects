@@ -46,6 +46,7 @@ make sense.
   - For Chrome, go to `chrome://extensions` and `Load Unpacked`
 
 - [ ] Ensure that you are logged in with a user with valid subscription
+
   - ![image](https://user-images.githubusercontent.com/525211/71150879-28d04300-2265-11ea-96da-7d720c101575.png)
 
 - [ ] [example.com](http://example.com/) should say "This website is not supported"
@@ -72,6 +73,24 @@ make sense.
   - [ ] Once on explore page should show `Start Exploring` with a rocket-ship graphic
     - ![image](https://user-images.githubusercontent.com/525211/66627053-a2740100-ec24-11e9-8759-76f40c46d6fa.png)
 
+- [ ] Check the monetization animation works properly
+
+  - ![image](https://user-images.githubusercontent.com/525211/66627467-04813600-ec26-11e9-855a-517700af4e26.png)
+  - Only required on desktop browsers
+  - Should animate when monetized and packets received
+  - Should stop animation when network disconnected
+    - Note that on Firefox/MacOS the popup automatically closes when the
+      tab loses focus so can use something like this in terminal:
+      - `sudo sleep 10 && sudo ifconfig en0 down && sleep 10 && sudo ifconfig en0 up`
+
+- [ ] Check monetization works consistently
+
+  - In the same tab, go to http://www.travisvcrist.com/gatehub
+    - refresh and make sure streaming works 10 times in a rowg
+      - should not get 'stuck' in 'setting up payment' state
+  - Issue: [coil/coilhq#3038][ci3038]
+  - Fix PRs: [#242][np242]
+
 - [ ] Will route to \$coildomain.com/login rather than open popup if logged out
 
   - Log out from extension
@@ -87,16 +106,6 @@ make sense.
   - Go to a monetized page and check that the icon "monetized" black and in 'unavailable' state
     - ![image](https://user-images.githubusercontent.com/525211/70715784-8f150d00-1d1d-11ea-8f82-fe116b2e9a16.png)
 
-- [ ] Check the monetization animation works properly
-
-  - ![image](https://user-images.githubusercontent.com/525211/66627467-04813600-ec26-11e9-855a-517700af4e26.png)
-  - Only required on desktop browsers
-  - Should animate when monetized and packets received
-  - Should stop animation when network disconnected
-    - Note that on Firefox/MacOS the popup automatically closes when the
-      tab loses focus so can use something like this in terminal:
-      - `sudo sleep 10 && sudo ifconfig en0 down && sleep 10 && sudo ifconfig en0 up`
-
 - [ ] Run the puppeteer [tests](./test.sh) (look at the [circle jobs](../../../.circleci/config.yml))
 
   - export BROWSER_TYPE='chrome' # or 'firefox'
@@ -104,9 +113,10 @@ make sense.
 
 - [ ] Go to a [youtube video](https://www.youtube.com/watch?v=l1btEwwRePs),
       manually skip to near end of video, and when autoplay of a video from
-      another channel starts, check that monetization has stopped. 
-   - Issues: [#33][i33] 
-   - PRs: [#213][np213]
+      another channel starts, check that monetization has stopped.
+
+  - Issues: [#33][i33]
+  - PRs: [#213][np213]
 
 - [ ] Go to [xrpcommunity.blog](https://xrpcommunity.blog/) and as page
       is loading very quickly open the popup.
@@ -215,6 +225,7 @@ make sense.
 [p222]: https://github.com/coilhq/web-monetization/pull/222
 [p295]: https://github.com/coilhq/web-monetization/pull/295
 [ci2084]: https://github.com/coilhq/coil/issues/2084
+[ci3038]: https://github.com/coilhq/coil/issues/3038
 [i312]: https://github.com/coilhq/web-monetization/issues/312
 [p317]: https://github.com/coilhq/web-monetization/pull/317
 [i313]: https://github.com/coilhq/web-monetization/issues/313
@@ -232,3 +243,4 @@ make sense.
 [ni184]: https://github.com/coilhq/web-monetization-projects/issue/184
 [np185]: https://github.com/coilhq/web-monetization-projects/pull/185
 [np213]: https://github.com/coilhq/web-monetization-projects/pull/213
+[np242]: https://github.com/coilhq/web-monetization-projects/pull/242
