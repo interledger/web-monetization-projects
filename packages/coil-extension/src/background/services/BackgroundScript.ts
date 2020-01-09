@@ -41,7 +41,6 @@ function getTab(sender: { tab?: { id?: number } }) {
 
 interface DoStopWebMonetizationParams {
   tab: number
-  aborted?: boolean
   error?: StreamError
 }
 
@@ -560,7 +559,7 @@ export class BackgroundScript {
       this.log('aborting monetization request', requestId)
       const tab = this.streamsToTabs[requestId]
       if (tab) {
-        this.doStopWebMonetization({ tab: tab, aborted: true, error })
+        this.doStopWebMonetization({ tab: tab, error })
       }
     })
   }
@@ -570,11 +569,7 @@ export class BackgroundScript {
     return this.doStopWebMonetization({ tab: tab })
   }
 
-  private doStopWebMonetization({
-    tab,
-    aborted = false,
-    error
-  }: DoStopWebMonetizationParams) {
+  private doStopWebMonetization({ tab, error }: DoStopWebMonetizationParams) {
     this.tabStates.logLastMonetizationCommand(tab, 'stop')
     const closed = this._closeStream(tab)
     // May be noop other side if stop monetization was initiated from
@@ -586,7 +581,7 @@ export class BackgroundScript {
     // via the tabs.onUpdated
     if (closed) {
       // This assumes a meta tag has been removed
-      if (!aborted) {
+      if (!error) {
         this.tabStates.clear(tab)
       } else {
         this.tabStates.set(tab, { error: error })
