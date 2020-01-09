@@ -73,17 +73,14 @@ export function MonetizedPage(props: PopupProps) {
 
 function Donating(props: PopupProps) {
   const { monetizedTotal, error } = props.context.store
-  const onTimeIsClicked = useCallback(
-    props.context.runtime.tabOpener('https://time.is'),
-    []
-  )
+  const onTimeIsClicked = props.context.runtime.tabOpener('https://time.is')
 
   const paymentStarted = monetizedTotal !== 0
   // eslint-disable-next-line no-nested-ternary
-  const message = paymentStarted
-    ? 'Coil is paying the creator.'
-    : error
+  const message = error
     ? null
+    : paymentStarted
+    ? 'Coil is paying the creator.'
     : 'Setting up payment.'
 
   return (
@@ -101,7 +98,7 @@ function Donating(props: PopupProps) {
           {error.message}
           {error.type === 'clock_skew' && (
             <p>
-              Please go to{' '}
+              Please go to {/* "href" while unused gives the click underline */}
               <a href='https://time.is' onClick={onTimeIsClicked}>
                 time.is
               </a>
