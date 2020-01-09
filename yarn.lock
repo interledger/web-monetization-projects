@@ -7551,10 +7551,10 @@ gettext-parser@1.1.0:
   dependencies:
     encoding "^0.1.11"
 
-git-hooks-list@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/git-hooks-list/-/git-hooks-list-1.0.1.tgz#769ed509303a05fc86ca5aad9c47843f62e99c4a"
-  integrity sha512-3XliYrVkz8HP9MqW7Zs2UUOwG8bPrURtsOEQECbGglEVG6KKuEF+h3FJBjIa6Tioo6BAk/iG/z4Xx2ZLvX2gng==
+git-hooks-list@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/git-hooks-list/-/git-hooks-list-1.0.2.tgz#b023b76872f00d81b353efd1458fb4a165035575"
+  integrity sha512-C3c/FG6Pgh053+yK/CnNNYJo5mgCa3OeI+cPxPIl0tyMLm1mGfiV0NX0LrhnjVoX7dfkR78WyW2kvFVHvAlneg==
 
 git-raw-commits@2.0.0:
   version "2.0.0"
@@ -12769,10 +12769,10 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer-firefox@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/puppeteer-firefox/-/puppeteer-firefox-0.5.0.tgz#5800e48cbbe135adae5fbf3032114064a612d87a"
-  integrity sha512-80wl29/Lb0URQ1f77yVXfq+cxCW30Q+1GbpRb32HbzTR9/amOn6D5G99xo8OsDJ6kIfuLyYTLj6HZgwMuDPBBQ==
+puppeteer-firefox@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/puppeteer-firefox/-/puppeteer-firefox-0.5.1.tgz#ceaf2058adbaa1f83443041fed6efef7162df75f"
+  integrity sha512-3BIgcBPoSzlmmzG0+xGRlYjq8ow0H9Avi6pHHfdYqaQOtUjdxqHfnGmKuHjdO4QdzCipvh68n8Pk9OZWl19f3g==
   dependencies:
     debug "^4.1.0"
     extract-zip "^1.6.6"
@@ -14175,14 +14175,14 @@ sort-object-keys@^1.1.3:
   resolved "https://registry.yarnpkg.com/sort-object-keys/-/sort-object-keys-1.1.3.tgz#bff833fe85cab147b34742e45863453c1e190b45"
   integrity sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==
 
-sort-package-json@^1.35.0:
-  version "1.35.0"
-  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.35.0.tgz#1e978be03920a83ab4d48b2005e087ea7e3fceaf"
-  integrity sha512-QpsWjUspXyKblcF8E/4/joeJswV3vMG+W0oLC9Ec3hfuYp5EbkEQm4tZkjzOZse9CagPsBqs+DO7/xpiU4qNiQ==
+sort-package-json@^1.38.2:
+  version "1.38.2"
+  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.38.2.tgz#38f264bfab8ed079109adaf7c1fd0aaa70d00999"
+  integrity sha512-mRV3T6lEO8n+O8v2zsKNSSccP+5fXw6TWh/4Gm/RzPGC7Noyegtw96Z1ld2/yfGXNq5dZfQV3AeAgUOsAhhHQg==
   dependencies:
     detect-indent "^6.0.0"
     detect-newline "3.1.0"
-    git-hooks-list "1.0.1"
+    git-hooks-list "1.0.2"
     globby "10.0.1"
     sort-object-keys "^1.1.3"
 
