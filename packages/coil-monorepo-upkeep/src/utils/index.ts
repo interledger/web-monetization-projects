@@ -2,7 +2,7 @@ import { inspect } from 'util'
 import { readFileSync, writeFileSync } from 'fs'
 import * as pathModule from 'path'
 
-import { sortPackageJson } from 'sort-package-json'
+import sortPackageJson from 'sort-package-json'
 
 import { LernaListItem, PackageJSON } from '../types'
 
