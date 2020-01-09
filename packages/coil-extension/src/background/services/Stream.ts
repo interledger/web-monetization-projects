@@ -21,8 +21,10 @@ import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
+import { StreamError } from '../../types/errors'
 
 import { Logger, logger } from './utils'
+import { ClockSyncService } from './ClockSyncService'
 
 const { timeout } = asyncUtils
 
@@ -92,6 +94,7 @@ export class Stream extends EventEmitter {
     @logger('Stream')
     private readonly _debug: Logger,
     private container: Container,
+    private clockSyncService: ClockSyncService,
     @inject(tokens.StreamDetails)
     {
       requestId,
@@ -185,7 +188,11 @@ export class Stream extends EventEmitter {
           await timeout(1000)
         }
       } catch (e) {
-        this._debug('error streaming. retry in 2s. err=', e.message, e.stack)
+        if (this.clockSyncService.onStreamError(e)) {
+          this.abort({ type: 'clock_skew', message: 'System clock skew' })
+        } else {
+          this._debug('error streaming. retry in 2s. err=', e.message, e.stack)
+        }
         if (this._active) await timeout(2000)
       } finally {
         if (attempt) bandwidth.addSentAmount(attempt.getTotalSent())
@@ -235,7 +242,10 @@ export class Stream extends EventEmitter {
         const status = e.response?.status
         // Abort on Bad Request 4XX
         if (!status || (status >= 400 && status < 500)) {
-          this.abort()
+          this.abort({
+            type: 'spsp_request',
+            message: 'Error getting SPSP details'
+          })
         }
       }
       throw e
@@ -278,10 +288,10 @@ export class Stream extends EventEmitter {
     this.start()
   }
 
-  private async abort() {
+  private async abort(error: StreamError) {
     // Don't call this.stop() directly, let BackgroundScript orchestrate the
     // stop.
-    this.emit('abort', this._requestId)
+    this.emit('abort', this._requestId, error)
   }
 }
 

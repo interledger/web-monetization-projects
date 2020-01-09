@@ -24,6 +24,7 @@ import {
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
+import { StreamError } from '../../types/errors'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -36,6 +37,12 @@ import { YoutubeService } from './YoutubeService'
 
 function getTab(sender: { tab?: { id?: number } }) {
   return notNullOrUndef(notNullOrUndef(sender.tab).id)
+}
+
+interface DoStopWebMonetizationParams {
+  tab: number
+  aborted?: boolean
+  error?: StreamError
 }
 
 @injectable()
@@ -240,7 +247,7 @@ export class BackgroundScript {
         this.tabStates.setIcon(tabId, 'monetized')
       }
 
-      if (token == null) {
+      if (token == null || tabState.error) {
         this.tabStates.setIcon(tabId, 'unavailable')
       } else if (token) {
         this.popup.enable()
@@ -431,6 +438,12 @@ export class BackgroundScript {
       delete this.store.stickyState
     }
 
+    if (state.error) {
+      this.store.error = state.error
+    } else {
+      delete this.store.error
+    }
+
     this.storage.set('monetizedTotal', (state && state.total) || 0)
     this.storage.set(
       'monetizedFavicon',
@@ -543,21 +556,25 @@ export class BackgroundScript {
   }
 
   private handleStreamsAbortEvent() {
-    this.streams.on('abort', requestId => {
+    this.streams.on('abort', (requestId: string, error: StreamError) => {
       this.log('aborting monetization request', requestId)
       const tab = this.streamsToTabs[requestId]
       if (tab) {
-        this.doStopWebMonetization(tab)
+        this.doStopWebMonetization({ tab: tab, aborted: true, error })
       }
     })
   }
 
   stopWebMonetization(sender: MessageSender) {
     const tab = getTab(sender)
-    return this.doStopWebMonetization(tab)
+    return this.doStopWebMonetization({ tab: tab })
   }
 
-  private doStopWebMonetization(tab: number) {
+  private doStopWebMonetization({
+    tab,
+    aborted = false,
+    error
+  }: DoStopWebMonetizationParams) {
     this.tabStates.logLastMonetizationCommand(tab, 'stop')
     const closed = this._closeStream(tab)
     // May be noop other side if stop monetization was initiated from
@@ -568,7 +585,12 @@ export class BackgroundScript {
     // that will happen automatically on url change (html5 push state also)
     // via the tabs.onUpdated
     if (closed) {
-      this.tabStates.clear(tab)
+      // This assumes a meta tag has been removed
+      if (!aborted) {
+        this.tabStates.clear(tab)
+      } else {
+        this.tabStates.set(tab, { error: error })
+      }
     }
     this.reloadTabState({
       from: 'stopWebMonetization'

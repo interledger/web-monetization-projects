@@ -37,6 +37,7 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
   const ret: PopupStateType = {
     validToken: null,
     user: null,
+    error: null,
     adapted: null,
     monetized: null,
     stickyState: null,
