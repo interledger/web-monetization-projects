@@ -94,7 +94,7 @@ const clockSkewError = mockState({
   error: {
     type: 'clock_skew',
     // TODO: repeating ?
-    message: 'System Clock Skew'
+    message: 'System clock skew'
   }
 })
 
