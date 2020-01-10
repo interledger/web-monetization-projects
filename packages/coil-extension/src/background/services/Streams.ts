@@ -39,8 +39,8 @@ export class Streams extends EventEmitter {
     this._streams[id].on('money', details => {
       this.emit('money', { url: options.initiatingUrl, id, ...details })
     })
-    this._streams[id].on('abort', requestId => {
-      this.emit('abort', requestId)
+    this._streams[id].on('abort', (...args: unknown[]) => {
+      this.emit('abort', ...args)
     })
     void this._streams[id].start()
   }

@@ -1,4 +1,5 @@
 import { PlayOrPauseState, StickyState } from './streamControls'
+import { StreamError } from './errors'
 
 export type MonetizationCommand = 'pause' | 'stop' | 'start' | 'resume'
 
@@ -15,6 +16,7 @@ export interface TabState {
     command: MonetizationCommand | null
     timeMs: number
   }
+  error?: StreamError
   icon?: {
     path: string
   }
