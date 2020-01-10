@@ -1,11 +1,11 @@
 import React from 'react'
 import { AppBar, Grid, Toolbar, Typography } from '@material-ui/core'
-import styled from 'styled-components'
+import { styled } from '@material-ui/core/styles'
 
-const CoilAppBar: typeof AppBar = styled(AppBar)`
-  background-color: ${({ theme }) => theme.palette.primary.light};
-  text-align: center;
-`
+const CoilAppBar = styled(AppBar)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.light,
+  textAlign: 'center'
+}))
 
 export const Header = () => {
   return (

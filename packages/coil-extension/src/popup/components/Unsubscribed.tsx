@@ -1,6 +1,5 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
-import styled from 'styled-components'
+import { Grid, styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
 import { PopupProps } from '../types'
@@ -13,11 +12,11 @@ const subheading1 = 'To use Coil you need an active subscription'
 const footerString =
   'You can cancel your subscription any time in the account settings page.'
 
-const Muted = styled.p`
-  color: ${Colors.Grey500};
-  font-size: 12px;
-  font-weight: 550;
-`
+const Muted = styled('p')({
+  color: Colors.Grey500,
+  fontSize: '12px',
+  fontWeight: 600
+})
 
 export const Unsubscribed = (props: PopupProps) => {
   const {

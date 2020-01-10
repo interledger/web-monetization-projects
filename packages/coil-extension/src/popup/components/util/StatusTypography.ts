@@ -1,7 +1,6 @@
-import styled from 'styled-components'
-import { Typography } from '@material-ui/core'
+import { styled, Typography } from '@material-ui/core'
 
-export const StatusTypography = styled(Typography)`
-  padding-top: ${({ theme }) => theme.spacing(1)}px;
-  padding-bottom: ${({ theme }) => theme.spacing(1)}px;
-`
+export const StatusTypography = styled(Typography)(({ theme }) => ({
+  paddingTop: `${theme.spacing(1)}px`,
+  paddingBottom: `${theme.spacing(1)}px`
+}))

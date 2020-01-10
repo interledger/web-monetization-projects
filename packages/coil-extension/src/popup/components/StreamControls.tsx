@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
-import { Tooltip, withStyles } from '@material-ui/core'
+import { Tooltip, withStyles, styled } from '@material-ui/core'
 
 import { PopupProps } from '../types'
 import { Colors } from '../../shared-theme/colors'
@@ -11,15 +10,15 @@ import {
   ToggleControlsAction
 } from '../../types/streamControls'
 
-const ControlBar = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-height: 0;
-  height: auto;
-  width: 100%;
-`
+const ControlBar = styled('div')({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  minHeight: 0,
+  height: 'auto',
+  width: '100%'
+})
 
 const buttonTransition = 'all 0.2s ease-in-out'
 const buttonScale = 'scale(0.94)'
@@ -28,54 +27,35 @@ const playStickyFillColor = '#40C28D'
 const playStickyDisabledFillColor = Colors.Grey550
 const pauseFillColor = Colors.Grey550
 
-const PlayOrPause = styled.a`
-  &.paused,
-  &.playing {
-    padding: 5px;
-    height: 44px;
-    display: block;
-    transition: ${buttonTransition};
-    .pauseSvg {
-      transition: ${buttonTransition};
-      fill: ${pauseFillColor};
-    }
-    :hover {
-      transform: ${buttonScale};
-    }
+const controlStyles = {
+  padding: '5px',
+  height: '44px',
+  display: 'block',
+  transition: buttonTransition,
+  '&:hover': {
+    transform: buttonScale
   }
-  &.playing {
-    .playSvg {
-      transition: ${buttonTransition};
-      fill: ${playStickyFillColor};
-    }
-  }
-`
+}
 
-const Sticky = styled.a`
-  &.auto,
-  &.sticky {
-    padding: 5px;
-    height: 44px;
-    display: block;
-    transition: ${buttonTransition};
-    .playStickySvg {
-      transition: ${buttonTransition};
-      fill: ${playStickyDisabledFillColor};
-    }
-    :hover {
-      transform: ${buttonScale};
-    }
+const PlayOrPause = styled('a')({
+  ...controlStyles,
+  '&.paused .pauseSvg': {
+    fill: pauseFillColor
+  },
+  '&.playing .playSvg': {
+    fill: playStickyFillColor
   }
+})
 
-  &.sticky {
-    .playStickySvg {
-      fill: ${playStickyFillColor};
-    }
-    :hover {
-      transform: ${buttonScale};
-    }
+const Sticky = styled('a')({
+  ...controlStyles,
+  '&.auto .playStickySvg': {
+    fill: playStickyDisabledFillColor
+  },
+  '&.sticky .playStickySvg': {
+    fill: playStickyFillColor
   }
-`
+})
 
 const ControlsTooltip = withStyles(theme => ({
   tooltip: {

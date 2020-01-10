@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import { Grid } from '@material-ui/core'
-import styled from 'styled-components'
+import { Grid, styled } from '@material-ui/core'
 
 import { PopupProps } from '../types'
 
@@ -10,18 +9,14 @@ import { MonetizeAnimation } from './MonetizationAnimation'
 import { StreamControls } from './StreamControls'
 import { useShowIfClicked } from './util/useShowIfClicked'
 
-const FlexBox = styled.div`
-  margin-top: ${({ theme }) => theme.spacing(2)}px;
-  margin-bottom: ${({ theme }) => theme.spacing(2)}px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-`
-
-const SpacerImg = styled.img`
-  flex: 1;
-`
+const FlexBox = styled('div')(({ theme }) => ({
+  marginTop: `${theme.spacing(2)} + px`,
+  marginBottom: `${theme.spacing(2)} + px`,
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  width: '100%'
+}))
 
 export function MonetizedPage(props: PopupProps) {
   const [limitRefreshDate, setLimitRefreshDate] = useState<string | null>(null)

@@ -166,50 +166,63 @@ const embossedBorder = {
   borderTop: '1px solid #FFF'
 }
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    background: '#DDD',
-    padding: '2rem',
-    width: '100%',
-    boxSizing: 'border-box'
-  },
-  inner: {
-    maxWidth: '1132px',
-    margin: '0 auto',
-    boxSizing: 'border-box'
-  },
-  paper: {
-    borderRadius: 2,
-    background: '#FFF'
-  },
-  heading: {
-    variant: 'h3',
-    align: 'center',
-    marginTop: '0.75rem',
-    padding: '1rem 0',
-    fontSize: theme.typography.pxToRem(18),
-    fontWeight: theme.typography.fontWeightBold
-  },
-  popup: {
-    margin: '0.5rem 0',
-    paddingBottom: '1.5rem',
-    transition: 'all 0.2s ease-in-out',
-    border: '1px solid transparent',
-    background: 'rgba(255,255,255,0.16)'
-  },
-  statePanel: {
-    ...embossedBorder,
-    marginTop: '1.475rem',
-    background: 'rgba(255, 255, 255, 0.4)'
-  },
-  active: {
-    ...embossedBorder,
-    background: 'rgba(255, 255, 255, 0.4)'
-  },
-  statePanelWrap: {
-    background: '#CCC'
-  }
-}))
+const useStyles = makeStyles(theme => {
+  console.log('breakpoint: ', [theme.breakpoints.up('md')])
+
+  return {
+    root: {
+      background: '#DDD',
+      padding: '2rem',
+      width: '100%',
+      boxSizing: 'border-box'
+    },
+    inner: {
+      maxWidth: '1132px',
+      margin: '0 auto',
+      boxSizing: 'border-box'
+    },
+    layoutContainer: {
+      flexDirection: 'column-reverse',
+      width: '100%'
+    },
+    paper: {
+      borderRadius: 2,
+      background: '#FFF'
+    },
+    heading: {
+      variant: 'h3',
+      align: 'center',
+      marginTop: '0.75rem',
+      padding: '1rem 0',
+      fontSize: theme.typography.pxToRem(18),
+      fontWeight: theme.typography.fontWeightBold
+    },
+    popup: {
+      margin: '0.5rem 0',
+      paddingBottom: '1.5rem',
+      transition: 'all 0.2s ease-in-out',
+      border: '1px solid transparent',
+      background: 'rgba(255,255,255,0.16)'
+    },
+    statePanel: {
+      ...embossedBorder,
+      marginTop: '1.475rem',
+      background: 'rgba(255, 255, 255, 0.4)'
+    },
+    active: {
+      ...embossedBorder,
+      background: 'rgba(255, 255, 255, 0.4)'
+    },
+    statePanelWrap: {
+      background: '#CCC'
+    },
+    [theme.breakpoints.up('md')]: {
+      layoutContainer: {
+        flexDirection: 'row'
+      }
+    }
+  } as const
+})
 
 const mockRuntime: MockRuntime = new MockRuntime()
 
@@ -285,13 +298,13 @@ export const mockPopupsPage = (
         <div className={classes.inner}>
           <Grid
             container
-            direction='row'
+            className={classes.layoutContainer}
             justify='center'
             alignContent='center'
             spacing={4}
             alignItems='stretch'
           >
-            <Grid item xs={12} sm={6} md={5}>
+            <Grid item xs={12} md={6} lg={5}>
               <Grid
                 alignContent='center'
                 container
@@ -305,8 +318,8 @@ export const mockPopupsPage = (
               ref={parentRef}
               item
               xs={12}
-              md={7}
-              sm={6}
+              md={6}
+              lg={7}
               className={classes.statePanel}
             >
               <StatePanel
