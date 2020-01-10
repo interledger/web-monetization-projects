@@ -1,5 +1,5 @@
-import styled from 'styled-components'
+import { styled } from '@material-ui/core'
 
-export const Flex = styled.div`
-  flex: 1;
-`
+export const Flex = styled('div')({
+  flex: 1
+})

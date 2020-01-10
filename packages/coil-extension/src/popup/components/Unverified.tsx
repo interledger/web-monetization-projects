@@ -1,26 +1,25 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
-import styled from 'styled-components'
+import { Grid, styled } from '@material-ui/core'
 
 import { PopupProps } from '../types'
 
 import { StatusTypography } from './util/StatusTypography'
 import { StatusButton } from './StatusButton'
 
-const UnverifiedFooter = styled.div`
-  padding-right: ${({ theme }) => theme.spacing(2)}px;
-  padding-left: ${({ theme }) => theme.spacing(2)}px;
-  position: absolute;
-  bottom: ${({ theme }) => theme.spacing(4)}vh;
-  left: 0;
-  right: 0;
-  margin: auto;
-`
+const UnverifiedFooter = styled('div')(({ theme }) => ({
+  paddingRight: `${theme.spacing(2)}px`,
+  paddingLeft: `${theme.spacing(2)}px`,
+  position: 'absolute',
+  bottom: `${theme.spacing(4)}vh`,
+  left: 0,
+  right: 0,
+  margin: 'auto'
+}))
 
-const NoBreak = styled.span`
-  display: inline-block;
-  white-space: nowrap;
-`
+const NoBreak = styled('span')({
+  display: 'inline-block',
+  whiteSpace: 'nowrap'
+})
 
 const titleString = 'Verify your account'
 const subheading1 =

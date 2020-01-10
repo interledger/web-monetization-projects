@@ -1,96 +1,98 @@
 import React from 'react'
-import { Grid, Hidden, Typography } from '@material-ui/core'
-import styled from 'styled-components'
+import { Grid, Hidden, Typography, styled, makeStyles } from '@material-ui/core'
 
 import { formatAmount } from '../util/currencyFormatting'
 import { Colors } from '../shared-theme/colors'
-import { xsBreak } from '../shared-theme/theme'
 
 import { PageTimeBar } from './pageTimeBar'
 import { PageTotal } from './options'
 
-const CenterElement = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  @media only screen and (min-width: ${xsBreak}) {
-    justify: center;
-    flex-direction: column;
-  }
-`
-
-const PageHistoryH4 = styled(Typography)`
-  && {
-    margin: ${({ theme }) => theme.spacing(2)}px 0;
-  }
-`
-// need && to set styles to override default mui styles
-const Origin = styled(Typography)`
-  && {
-    display: inline-flex;
-    font-size: 16px;
-    margin: 8px 0;
-    color: ${Colors.Grey800};
-  }
-`
-
-const MobileHeading = styled(Typography)`
-  && {
-    margin: 12px 0 12px 0;
-    display: inline-flex;
-  }
-`
-
-const Favicon = styled.img`
-  margin: 9px 8px 8px 0;
-  width: 16px;
-`
-
-const Headings = styled.div`
-  margin: 16px 24px;
-`
-
-const Row = styled.div`
-  margin: 4px 8px 0;
-  padding: 8px 16px;
-  border-bottom: 2px solid ${Colors.Grey50};
-  flex-direction: row;
-`
-
-const DomainRow = styled(Grid)`
-  && {
-    flex-direction: row;
-    margin: 8px 0;
-    ${Origin} {
-      font-size: 20px;
-      margin-top: 5px;
-    }
-    @media only screen and (min-width: ${xsBreak}) {
-      margin: 0;
-      ${Origin} {
-        font-size: 16px;
-        margin: 8px 0;
+// styles for responsiveness
+const useStyles = makeStyles(theme => {
+  return {
+    centerElement: {
+      display: 'flex',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      flexDirection: 'row'
+    },
+    domainRow: {
+      marginTop: '12px'
+    },
+    domainH4: {
+      display: 'inline-flex',
+      color: Colors.Grey800,
+      marginTop: '5px',
+      fontSize: '20px'
+    },
+    favicon: {
+      margin: '9px 8px 8px 0'
+    },
+    [theme.breakpoints.up('sm')]: {
+      domainH4: {
+        fontSize: '16px',
+        margin: '6px 0'
+      },
+      centerElement: {
+        justify: 'center',
+        flexDirection: 'column'
+      },
+      favicon: {
+        margin: '7px 8px 8px 0'
+      },
+      domainRow: {
+        marginTop: 0
       }
     }
-  }
-`
+  } as const
+})
 
-const PageHistoryAmount = styled.div`
-  border-radius: 20px;
-  background: ${Colors.Grey900};
-  color: ${Colors.White};
-  font-size: 14px;
-  padding: 2px 16px;
-  margin: 2px 0 2px 0;
-  display: inline-flex;
-  justify-items: center;
-  align-content: center;
-`
+const PageHistoryH4 = styled(Typography)(({ theme }) => ({
+  margin: `${theme.spacing(2)}px 0`
+}))
+
+const MobileHeading = styled(Typography)({
+  margin: '12px 0 12px 0',
+  display: 'inline-flex'
+})
+
+const Favicon = styled('img')({
+  width: '16px'
+})
+
+const Headings = styled('div')({
+  margin: '16px 24px'
+})
+
+const Row = styled('div')({
+  margin: '4px 8px 0',
+  padding: '8px 16px',
+  borderBottom: `2px solid ${Colors.Grey50}`,
+  flexDirection: 'row'
+})
+
+const DomainRow = styled(Grid)({
+  flexDirection: 'row'
+})
+
+const PageHistoryAmount = styled('div')({
+  borderRadius: '20px',
+  background: Colors.Grey900,
+  color: Colors.White,
+  fontSize: '14px',
+  padding: '2px 16px',
+  margin: '2px 0 2px 0',
+  display: 'inline-flex',
+  justifyItems: 'center',
+  alignContent: 'center'
+})
+
 export const PageHistory = (props: {
   totalStreamingTimeSeconds: number
   totals: Array<PageTotal>
 }) => {
+  const classes = useStyles()
+
   return (
     <>
       <Hidden xsDown>
@@ -114,15 +116,15 @@ export const PageHistory = (props: {
         return (
           <Row key={`pageTotal-${i}`}>
             <Grid container direction='row'>
-              {/*<Hidden smUp>*/}
-              {/*  <Grid item xs={12}>*/}
-              {/*    <MobileHeading variant='h4'>URL</MobileHeading>*/}
-              {/*  </Grid>*/}
-              {/*</Hidden>*/}
               <Grid item xs={12} sm={5}>
-                <DomainRow container direction='row'>
+                <DomainRow
+                  container
+                  direction='row'
+                  className={classes.domainRow}
+                >
                   <Grid item>
                     <Favicon
+                      className={classes.favicon}
                       width='16'
                       src={
                         total.favIcon
@@ -133,7 +135,9 @@ export const PageHistory = (props: {
                     />
                   </Grid>
                   <Grid item>
-                    <Origin variant='h4'>{total.key.origin}</Origin>
+                    <Typography variant='h4' className={classes.domainH4}>
+                      {total.key.origin}
+                    </Typography>
                   </Grid>
                 </DomainRow>
               </Grid>
@@ -172,11 +176,11 @@ export const PageHistory = (props: {
                     </Grid>
                   </Hidden>
                   <Grid item xs={6} sm={12}>
-                    <CenterElement>
+                    <div className={classes.centerElement}>
                       <PageHistoryAmount>
                         {formatAmount(total.total)}
                       </PageHistoryAmount>
-                    </CenterElement>
+                    </div>
                   </Grid>
                 </Grid>
               </Grid>

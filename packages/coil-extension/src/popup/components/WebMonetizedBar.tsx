@@ -1,25 +1,25 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
-import styled from 'styled-components'
+import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
 import { PopupProps } from '../types'
 
-const CoilBar = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-top: 0.5px solid ${Colors.Grey89};
-  background-color: ${Colors.White};
-  height: 40px;
-  text-align: center;
-`
+const CoilBar = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  borderTop: `0.5px solid ${Colors.Grey89}`,
+  backgroundColor: Colors.White,
+  height: '40px',
+  textAlign: 'center'
+})
 
-const BarBadge = styled.img`
-  position: relative;
-  top: 0.13em;
-  margin-right: 4px;
-`
+const BarBadge = styled('img')({
+  position: 'relative',
+  top: '0.13em',
+  marginRight: '4px'
+})
 
 export const WebMonetizedBar = (props: PopupProps) => {
   const { monetized, adapted, coilSite } = props.context.store

@@ -2,7 +2,15 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
 import { Colors } from './colors'
 
-export const xsBreak = '600px'
+const breakpoints = {
+  values: {
+    xs: 0,
+    sm: 600,
+    md: 760,
+    lg: 980,
+    xl: 1200
+  }
+}
 
 const body = {
   fontFamily: 'CircularStd',
@@ -23,6 +31,7 @@ export const theme = createMuiTheme({
       main: Colors.Grey100
     }
   },
+  breakpoints,
   overrides: {
     MuiMenuItem: {
       root: {

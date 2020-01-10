@@ -3,12 +3,12 @@ import '@abraham/reflection'
 import ReactDOM from 'react-dom'
 import React, { useState } from 'react'
 import { Amount } from '@web-monetization/types'
-import styled from 'styled-components'
 import {
   Divider,
   FormControlLabel,
   FormGroup,
   Grid,
+  styled,
   Switch,
   Typography
 } from '@material-ui/core'
@@ -76,69 +76,66 @@ const totals: Array<PageTotal> = [
   }
 ]
 
-const MainPanel = styled.div`
-  margin-top: ${({ theme }) => theme.spacing(4)}px;
-  margin-bottom: ${({ theme }) => theme.spacing(2)}px;
-  width: 100%;
-  max-width: 1032px;
-  margin-left: ${({ theme }) => theme.spacing(2)}px;
-  margin-right: ${({ theme }) => theme.spacing(2)}px;
-  padding: ${({ theme }) => theme.spacing(2)}px;
-  background: #ffffff;
-  border-radius: 10px;
-`
-const AdaptedLogos = styled(Grid)`
-  && {
-    padding: 8px 0 16px 16px;
-    flex: 0 1 120px;
-  }
-`
-const TwitchLogo = styled.img`
-  height: 24px;
-  position: relative;
-  top: 11px;
-  display: inline-flex;
-`
+const MainPanel = styled('div')(({ theme }) => ({
+  marginTop: `${theme.spacing(4)}px`,
+  marginBottom: `${theme.spacing(2)}px`,
+  width: '100%',
+  maxWidth: '1032px',
+  marginLeft: `${theme.spacing(2)}px`,
+  marginRight: `${theme.spacing(2)}px`,
+  padding: `${theme.spacing(2)}px`,
+  background: '#ffffff',
+  borderRadius: '10px'
+}))
 
-const YoutubeLogo = styled.img`
-  height: 18px;
-  position: relative;
-  top: 13px;
-  display: inline-flex;
-`
+const AdaptedLogos = styled(Grid)({
+  padding: '8px 0 16px 16px',
+  flex: '0 1 120px'
+})
 
-const LogoCircle = styled.div`
-  background: #fff;
-  border-radius: 2rem;
-  box-shadow: 1px 1px 5px #c3d3d0;
-  height: 44px;
-  text-align: center;
-  width: 44px;
-  margin-right: 8px;
-`
-const YoutubeTwitchCheckbox = styled(Grid)`
-  && {
-    margin: 10px 0 16px 0;
-    img {
-      width: 24px;
-      text-align: left;
-      padding-left: 5px;
-    }
-    label {
-      padding: 0 0 0 12px;
-      margin: 0;
-    }
-    span {
-      font-weight: 400;
-    }
-  }
-`
+const TwitchLogo = styled('img')({
+  height: '24px',
+  position: 'relative',
+  top: '11px',
+  display: 'inline-flex'
+})
 
-const OptionsRow = styled(Grid)`
-  && {
-    margin: 16px 0;
+const YoutubeLogo = styled('img')({
+  height: '18px',
+  position: 'relative',
+  top: '13px',
+  display: 'inline-flex'
+})
+
+const LogoCircle = styled('div')({
+  background: '#fff',
+  borderRadius: '2rem',
+  boxShadow: '1px 1px 5px #c3d3d0',
+  height: '44px',
+  textAlign: 'center',
+  width: '44px',
+  marginRight: '8px'
+})
+
+const YoutubeTwitchCheckbox = styled(Grid)({
+  margin: '10px 0 16px 0',
+  '& img': {
+    width: '24px',
+    textAlign: 'left',
+    paddingLeft: '5px'
+  },
+  '& label': {
+    padding: '0 0 0 12px',
+    margin: 0
+  },
+  '& span': {
+    fontWeight: 400
   }
-`
+})
+
+const OptionsRow = styled(Grid)({
+  margin: '16px 0'
+})
 
 function Options() {
   const [privacyChecked, setPrivacyChecked] = useState(false)

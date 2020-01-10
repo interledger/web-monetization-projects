@@ -52,7 +52,10 @@ export function run() {
       rootEl
     )
   } else {
-    const MockPopupsPage = mockPopupsPage(IndexWithRoot, context)
+    const MockPopupsPage = withSharedTheme(
+      mockPopupsPage(IndexWithRoot, context)
+    )
+
     ReactDOM.render(<MockPopupsPage />, rootEl)
   }
 }

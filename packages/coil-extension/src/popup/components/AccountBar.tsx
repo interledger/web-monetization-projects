@@ -5,31 +5,30 @@ import Toolbar from '@material-ui/core/Toolbar'
 import More from '@material-ui/icons/MoreVert'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
-import styled from 'styled-components'
-import { withStyles } from '@material-ui/core'
+import { styled, withStyles } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
 import { PopupProps } from '../types'
 import { getMonthAndDay, isXMASPeriod } from '../../util/seasons'
 
-const Flex = styled.div`
-  flex: 1;
-`
+const Flex = styled('div')({
+  flex: 1
+})
 
-const Muted = styled.p`
-  color: ${Colors.Grey500};
-  font-size: 14px;
-`
+const Muted = styled('p')({
+  color: Colors.Grey500,
+  fontSize: '14px'
+})
 
-const CoilImg = styled.img`
-  margin-right: 8px;
-`
+const CoilImg = styled('img')({
+  marginRight: '8px'
+})
 
-const CoilToolbar = styled(Toolbar)`
-  background-color: ${Colors.White};
-  border-bottom: 0.5px solid ${Colors.Grey89};
-  height: 56px;
-`
+const CoilToolbar = styled(Toolbar)({
+  backgroundColor: Colors.White,
+  borderBottom: `0.5px solid ${Colors.Grey89}`,
+  height: '56px'
+})
 
 const CoilMenu = withStyles({
   paper: {
