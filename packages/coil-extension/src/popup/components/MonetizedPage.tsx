@@ -10,8 +10,8 @@ import { StreamControls } from './StreamControls'
 import { useShowIfClicked } from './util/useShowIfClicked'
 
 const FlexBox = styled('div')(({ theme }) => ({
-  marginTop: `${theme.spacing(2)} + px`,
-  marginBottom: `${theme.spacing(2)} + px`,
+  marginTop: `${theme.spacing(2)}px`,
+  marginBottom: `${theme.spacing(2)}px`,
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
