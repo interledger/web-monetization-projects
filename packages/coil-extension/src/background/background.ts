@@ -15,7 +15,6 @@ import { BackgroundScript } from './services/BackgroundScript'
 import { BackgroundStorageService } from './services/BackgroundStorageService'
 import { Stream } from './services/Stream'
 import { createLogger } from './services/utils'
-import { ClockSyncService } from './services/ClockSyncService'
 
 async function configureContainer(container: Container) {
   const logger = makeLoggerMiddleware()
@@ -30,10 +29,6 @@ async function configureContainer(container: Container) {
 
   container
     .bind(Stream)
-    .toSelf()
-    .inTransientScope()
-  container
-    .bind(ClockSyncService)
     .toSelf()
     .inTransientScope()
 
