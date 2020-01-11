@@ -1,6 +1,5 @@
 import { User } from './user'
 import { PlayOrPauseState, StickyState } from './streamControls'
-import { StreamError } from './errors'
 
 export const STORAGE_KEY = {
   // BACKGROUND/POPUP
@@ -40,7 +39,6 @@ export interface LocalStorageProxy {
 
   stickyState: StickyState | null
   playState: PlayOrPauseState | null
-  error: StreamError | null
 
   monetizedTotal: number | null
   monetizedFavicon: string | null

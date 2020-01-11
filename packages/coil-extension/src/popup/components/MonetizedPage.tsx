@@ -67,46 +67,24 @@ export function MonetizedPage(props: PopupProps) {
 }
 
 function Donating(props: PopupProps) {
-  const { monetizedTotal, error } = props.context.store
-  const onTimeIsClicked = props.context.runtime.tabOpener('https://time.is')
-
+  const { monetizedTotal } = props.context.store
   const paymentStarted = monetizedTotal !== 0
-  // eslint-disable-next-line no-nested-ternary
-  const message = error
-    ? null
-    : paymentStarted
+  const payingOrSettingUpPayment = paymentStarted
     ? 'Coil is paying the creator.'
     : 'Setting up payment.'
 
   return (
     <Fragment>
       <StatusTypography variant='h6' align='center'>
-        {!error ? 'Coil is paying' : 'Error paying'}
+        Coil is paying
       </StatusTypography>
-      {!error && (
-        <StatusTypography variant='subtitle1' align='center'>
-          This content is included in your subscription. {message}
-        </StatusTypography>
-      )}
-      {error && (
-        <StatusTypography variant='subtitle1' align='center'>
-          {error.message}
-          {error.type === 'clock_skew' && (
-            <p>
-              Please go to {/* "href" while unused gives the click underline */}
-              <a href='https://time.is' onClick={onTimeIsClicked}>
-                time.is
-              </a>
-              , sync your clock and refresh the page.
-            </p>
-          )}
-        </StatusTypography>
-      )}
-      {!error && (
-        <FlexBox>
-          <MonetizeAnimation context={props.context} />
-        </FlexBox>
-      )}
+      <StatusTypography variant='subtitle1' align='center'>
+        This content is included in your subscription.{' '}
+        {payingOrSettingUpPayment}
+      </StatusTypography>
+      <FlexBox>
+        <MonetizeAnimation context={props.context} />
+      </FlexBox>
     </Fragment>
   )
 }

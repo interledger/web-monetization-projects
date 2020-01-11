@@ -37,7 +37,6 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
   const ret: PopupStateType = {
     validToken: null,
     user: null,
-    error: null,
     adapted: null,
     monetized: null,
     stickyState: null,
@@ -85,19 +84,6 @@ const payingNonCoilSite = mockState({
   adapted: false
 })
 
-const clockSkewError = mockState({
-  monetized: true,
-  monetizedTotal: 0,
-  user: user,
-  validToken: true,
-  adapted: false,
-  error: {
-    type: 'clock_skew',
-    // TODO: repeating ?
-    message: 'System clock skew'
-  }
-})
-
 const welcomeToCoil = mockState({
   coilSite: 'https://coil.com/',
   monetizedTotal: 0,
@@ -130,8 +116,7 @@ const MOCK_STATES = [
   { name: 'Start Exploring', state: startExploring },
   { name: 'Paying', state: payingNonCoilSite },
   { name: 'Welcome To Coil', state: welcomeToCoil },
-  { name: 'Alice Unsubscribed', state: aliceUnsubscribed },
-  { name: 'Clock Skew', state: clockSkewError }
+  { name: 'Alice Unsubscribed', state: aliceUnsubscribed }
 ]
 
 const argsLogger = (name: string) => {
