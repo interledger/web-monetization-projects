@@ -7,10 +7,10 @@ import { PopupProps } from '../types'
 import { StatusButton } from './StatusButton'
 import { StatusTypography } from './util/StatusTypography'
 
-const titleString = 'Get a subscription'
-const subheading1 = 'To use Coil you need an active subscription'
+const titleString = 'Get a membership'
+const subheading1 = 'To use Coil you need an active membership'
 const footerString =
-  'You can cancel your subscription any time in the account settings page.'
+  'You can cancel your membership any time in the account settings page.'
 
 const Muted = styled('p')({
   color: Colors.Grey500,
