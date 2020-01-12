@@ -30,7 +30,6 @@
     "dev-chrome-prod": "TSCONFIG_DEBUG=true TS_LOADER_TRANSPILE_ONLY=true LIVE_RELOAD=true yarn build-prod chrome --watch",
     "dev-firefox-prod": "TSCONFIG_DEBUG=true TS_LOADER_TRANSPILE_ONLY=true LIVE_RELOAD=true yarn build-prod firefox --watch",
     "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
-    "postinstall": "rimraf ../../node_modules/@types/react-native",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "precommit": "echo lint-staged runs from root",

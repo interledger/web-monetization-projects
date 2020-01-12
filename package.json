@@ -7,8 +7,6 @@
     "url": "git@github.com:coilhq/web-monetization-projects.git"
   },
   "scripts": {
-    "postinstall_comments": "@types/styled-components brings in types that conflict",
-    "postinstall": "rm -rf node_modules/@types/react-native",
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --coverage --verbose",

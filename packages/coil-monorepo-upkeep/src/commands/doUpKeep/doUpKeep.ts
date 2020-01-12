@@ -99,7 +99,8 @@ function setCommonScriptsAndMergeOverrides(
     $schema: `../${PACKAGE_FOLDER_NAME}/resources/package-json-schema-nested-overrides.json`,
     scripts: {
       ...(subPackageJSON.scripts || {}),
-      postinstall: 'rimraf ../../node_modules/@types/react-native',
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      postinstall: undefined!,
       precommit: 'echo lint-staged runs from root',
       prettier:
         "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
