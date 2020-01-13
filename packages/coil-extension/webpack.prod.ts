@@ -6,7 +6,10 @@ import { config } from './webpack.common'
 module.exports = merge(config, {
   plugins: [
     new webpack.DefinePlugin({
-      WEBPACK_DEFINE_COIL_DOMAIN: JSON.stringify('https://coil.com')
+      WEBPACK_DEFINE_COIL_DOMAIN: JSON.stringify('https://coil.com'),
+      // TODO use the real domains
+      WEBPACK_DEFINE_COIL_REDEEMER: JSON.stringify('https://redeemer.coil.com'),
+      WEBPACK_DEFINE_COIL_SIGNER: JSON.stringify('https://signer.coil.com')
     })
   ]
 })

@@ -2,7 +2,6 @@ import { randomBytes } from 'crypto'
 
 import { BigInteger } from 'jsbn'
 import {
-  longHash,
   hexString,
   hashAndBlindMessage,
   unblindSignature,
@@ -10,7 +9,7 @@ import {
   PublicRSAKey
 } from 'blind-signature'
 
-export function base64url(buf: Buffer) {
+export function base64url(buf: Buffer): string {
   return buf
     .toString('base64')
     .replace(/\+/g, '-')
@@ -18,9 +17,13 @@ export function base64url(buf: Buffer) {
     .replace(/=/g, '')
 }
 
+function _getRandomToken(): string {
+  return base64url(randomBytes(16))
+}
+
 export const TOKEN_PREFIX = 'anonymous_token:'
 export interface SignedToken {
-  value: string
+  message: string
   month: string
   signature: hexString
 }
@@ -37,7 +40,7 @@ export interface PublicFields extends PublicRSAKey {
 // TODO: should these be allowed to be async?
 // TODO: went for localforage-like, could chang
 export interface TokenStore {
-  getItem: (key: string) => Promise<string>
+  //getItem: (key: string) => Promise<string>
   setItem: (key: string, value: string) => Promise<string>
   removeItem: (key: string) => Promise<void>
   iterate: (
@@ -49,21 +52,66 @@ export interface TokenStore {
   ) => Promise<SignedToken | undefined>
 }
 
-export class AnonymousTokens {
-  private store: TokenStore
+export interface AnonymousTokensOptions {
+  // The `protocol://host` of the coil services.
+  redeemerUrl: string
+  signerUrl: string
+  store: TokenStore
+  debug?: typeof console.log
+}
 
-  constructor(store: TokenStore) {
+export class AnonymousTokens {
+  private redeemerUrl: string
+  private signerUrl: string
+  private store: TokenStore
+  // Maps btpToken => SignedToken.message
+  private tokenMap: Map<string, string> = new Map()
+  private debug: typeof console.log
+
+  constructor({
+    redeemerUrl,
+    signerUrl,
+    store,
+    debug
+  }: AnonymousTokensOptions) {
+    this.redeemerUrl = redeemerUrl
+    this.signerUrl = signerUrl
     this.store = store
+    this.debug = debug || function() {}
   }
 
-  async getToken(): Promise<SignedToken | undefined> {
+  async getToken(): Promise<string | undefined> {
+    // eslint-disable-next-line no-constant-condition
+    while (true) {
+      const signedToken = await this._getSignedToken()
+      if (!signedToken) return
+      const response = await fetch(this.redeemerUrl + '/redeem', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(signedToken)
+      })
+      if (response.status === 400) {
+        // The stored token was invalid or expired (the server wouldn't verify it).
+        await this._removeSignedToken(signedToken.message)
+        continue
+      }
+      if (!response.ok) {
+        throw new Error(`failed to redeem token. code=${response.status}`)
+      }
+      const body = await response.json()
+      const btpToken = body.token
+      this.tokenMap.set(btpToken, signedToken.message)
+      return btpToken
+    }
+  }
+
+  private _getSignedToken(): Promise<SignedToken | undefined> {
     return this.store.iterate((blob: string, name: string) => {
       if (name.startsWith(TOKEN_PREFIX)) {
-        const value = name.substring(TOKEN_PREFIX.length)
+        const message = name.substring(TOKEN_PREFIX.length)
         const { signature, month } = JSON.parse(blob)
-
         return {
-          value,
+          message,
           signature,
           month
         }
@@ -71,14 +119,22 @@ export class AnonymousTokens {
     })
   }
 
-  async removeToken(token: SignedToken) {
-    await this.store.removeItem(TOKEN_PREFIX + token.value)
+  removeToken(btpToken: string): Promise<void> {
+    const anonUserId = this.tokenMap.get(btpToken)
+    this.tokenMap.delete(btpToken)
+    if (anonUserId) return this._removeSignedToken(anonUserId)
+    else return Promise.resolve()
   }
 
-  async _getKeyParams(): Promise<PublicFields> {
-    // TODO: get the actual domain/path of redeemer service
-    const paramsRes = await fetch('redeemer.coil.com/parameters')
+  private _removeSignedToken(anonUserId: string): Promise<void> {
+    this.debug('removing token anonUserId=%s', anonUserId)
+    return this.store.removeItem(TOKEN_PREFIX + anonUserId)
+  }
+
+  private async _getKeyParams(): Promise<PublicFields> {
+    const paramsRes = await fetch(this.signerUrl + '/parameters')
     if (!paramsRes.ok) {
+      this.debug('error fetching parameters status=%d', paramsRes.status)
       throw new Error('could not fetch key params from coil')
     }
 
@@ -90,62 +146,85 @@ export class AnonymousTokens {
     }
   }
 
-  async _signToken(
+  private async _signToken(
     blindedTokenHash: hexString,
-    coilAuthToken: string
+    coilAuthToken: string,
+    month: string
   ): Promise<TimestampedSignature> {
-    // TODO: pass the month in here so we don't get errors on month boundary
-    const signRes = await fetch('redeemer.coil.com/sign', {
+    const signRes = await fetch(this.signerUrl + '/sign', {
       method: 'POST',
       headers: {
         authorization: `Bearer ${coilAuthToken}`,
         'content-type': 'application/json'
       },
       body: JSON.stringify({
-        blinded_message_hash: blindedTokenHash
+        blinded_message_hash: blindedTokenHash,
+        month
       })
     })
 
     if (!signRes.ok) {
+      this.debug('token /sign failed status=%d', signRes.status)
       throw new Error(`failed to get token signature. code=${signRes.status}`)
     }
+    const body = await signRes.json()
+    if (!body.success) {
+      this.debug('token /sign failed message=%s', body.mesage)
+      throw new Error(`failed to get token signature. message=${body.message}`)
+    }
 
-    return signRes.json() as Promise<TimestampedSignature>
+    return body as TimestampedSignature
   }
 
-  _getRandomToken() {
-    return base64url(randomBytes(16))
-  }
-
-  // TODO: what's the way to get coil auth token in here?
-  async populateTokens(coilAuthToken: string, tokenCount: number) {
+  async populateTokens(
+    coilAuthToken: string,
+    tokenCount: number
+  ): Promise<void> {
     const key = await this._getKeyParams()
-
-    // TODO: handle errors in here
-    // TODO: we should generate all tokens first so you can't use the timing in
-    // between tokens to learn anything about token or blinding factor
-    for (let i = 0; i < tokenCount; ++i) {
-      const token = this._getRandomToken()
+    const tokens = []
+    // Generate all tokens first so the timing in between tokens can't be used
+    // to learn anything about the token or blinding factor.
+    for (let i = 0; i < tokenCount; i++) {
+      const token = _getRandomToken()
       const {
         blindedMessageHash: blindedTokenHash,
         blindingFactor
       } = hashAndBlindMessage(key, token)
+      tokens.push({ token, blindedTokenHash, blindingFactor })
+    }
 
-      const { month, signature: blindSignature } = await this._signToken(
-        blindedTokenHash,
-        coilAuthToken
-      )
+    let gotTokens = 0
+    for (const tokenData of tokens) {
+      const signPromise = this._signToken(
+        tokenData.blindedTokenHash,
+        coilAuthToken,
+        key.month
+      ).then(({ month, signature: blindSignature }) => {
+        const signature = unblindSignature(
+          key,
+          blindSignature,
+          tokenData.blindingFactor
+        )
+        if (!verifySignature(key, tokenData.token, signature)) {
+          // TODO: how do we handle this properly? invalid signature means the server might be trying to trick us by signing our message with a different key than advertised to try to deanonymize us
+          throw new Error('produced invalid signature!')
+        }
 
-      const signature = unblindSignature(key, blindSignature, blindingFactor)
-      if (!verifySignature(key, token, signature)) {
-        // TODO: how do we handle this properly? invalid signature means the server might be trying to trick us by signing our message with a different key than advertised to try to deanonymize us
-        throw new Error('produced invalid signature!')
-      }
+        return this.store.setItem(
+          TOKEN_PREFIX + tokenData.token,
+          JSON.stringify({ month, signature })
+        )
+      })
+      await signPromise
+        .then(() => gotTokens++)
+        .catch(err => {
+          this.debug('failed to generate token err=%s', err.message)
+        })
+    }
+    this.debug('populateTokens got=%d want=%d tokens', gotTokens, tokenCount)
 
-      await this.store.setItem(
-        TOKEN_PREFIX + token,
-        JSON.stringify({ month, signature })
-      )
+    if (gotTokens === 0) {
+      throw new Error('no anonymous tokens could be prepared')
     }
   }
 }

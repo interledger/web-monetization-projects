@@ -5,12 +5,13 @@ import { GraphQlClient } from '@coil/client'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 import { HistoryDb } from '@web-monetization/wext/services'
 
-import { API, COIL_DOMAIN } from '../webpackDefines'
+import { API, COIL_DOMAIN, COIL_REDEEMER, COIL_SIGNER } from '../webpackDefines'
 import { StorageService } from '../services/storage'
 import * as tokens from '../types/tokens'
 import { ClientOptions } from '../services/ClientOptions'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
 
+import { AnonymousTokens } from './services/AnonymousTokens'
 import { BackgroundScript } from './services/BackgroundScript'
 import { BackgroundStorageService } from './services/BackgroundStorageService'
 import { Stream } from './services/Stream'
@@ -21,11 +22,14 @@ async function configureContainer(container: Container) {
   container.applyMiddleware(logger)
 
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
+  container.bind(tokens.CoilRedeemerUrl).toConstantValue(COIL_REDEEMER)
+  container.bind(tokens.CoilSignerUrl).toConstantValue(COIL_SIGNER)
   container.bind(tokens.WextApi).toConstantValue(API)
   container.bind(GraphQlClient.Options).to(ClientOptions)
   container.bind(Storage).toConstantValue(localStorage)
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
+  container.bind(AnonymousTokens).to(AnonymousTokens)
 
   container
     .bind(Stream)
