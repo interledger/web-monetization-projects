@@ -7,7 +7,7 @@ import { PopupProps } from '../types'
 import { StatusButton } from './StatusButton'
 import { StatusTypography } from './util/StatusTypography'
 
-const titleString = 'Get a membership'
+const titleString = 'Become a member'
 const subheading1 = 'To use Coil you need an active membership'
 const footerString =
   'You can cancel your membership any time in the account settings page.'
