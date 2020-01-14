@@ -36,7 +36,7 @@ export const Unsubscribed = (props: PopupProps) => {
         <StatusTypography variant='subtitle1' align='center'>
           {subheading1}
         </StatusTypography>
-        <StatusButton text='Subscribe' variant='contained' onClick={onClick} />
+        <StatusButton text='join' variant='contained' onClick={onClick} />
         <Muted>{footerString}</Muted>
       </div>
     </Grid>
