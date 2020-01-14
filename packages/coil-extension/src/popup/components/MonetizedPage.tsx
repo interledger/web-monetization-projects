@@ -132,8 +132,7 @@ function RateLimited(props: PopupProps & { limitRefreshDate: string }) {
 
       <StatusTypography variant='body1' align='left'>
         Your membership is still active. Your usage will be restored on{' '}
-        {limitRefreshDate}, when your membership renews. Please adhere to the
-        Terms of Service in the future.
+        {limitRefreshDate}. Please adhere to the Terms of Service in the future.
       </StatusTypography>
     </Fragment>
   )
