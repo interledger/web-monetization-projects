@@ -3151,9 +3151,9 @@ addons-linter@1.19.0:
     fsevents "2.1.2"
 
 addons-linter@^1.20.0:
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.20.0.tgz#e748d4c1f67ef82be39450864e9a13d6ad3e7b29"
-  integrity sha512-EIyJnIkvXhBKgOzVFR873uGa4ny07odIl8i8qWxHAuVJWM/ZQtLouAbndA+cVRDbD66sK6HsO1oWN6WkdCr/uA==
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.21.0.tgz#1df291c5477cf51d104259a704a5f8ee7e714aca"
+  integrity sha512-5l8UucQ6mH8D9unGLnf3atZFaxmRGZYE2nlLQ/dgfPic329NtyXRsfYrjul4qs2nBqmVvA34uwzb0CLhpjLenA==
   dependencies:
     ajv "6.10.2"
     ajv-merge-patch "4.1.0"
@@ -3162,7 +3162,7 @@ addons-linter@^1.20.0:
     columnify "1.5.4"
     common-tags "1.8.0"
     deepmerge "4.2.2"
-    dispensary "0.49.0"
+    dispensary "0.50.0"
     es6-promisify "6.0.2"
     eslint "5.16.0"
     eslint-plugin-no-unsafe-innerhtml "1.0.16"
@@ -3174,9 +3174,9 @@ addons-linter@^1.20.0:
     glob "7.1.6"
     is-mergeable-object "1.1.1"
     jed "1.1.1"
-    mdn-browser-compat-data "1.0.3"
+    mdn-browser-compat-data "1.0.4"
     os-locale "4.0.0"
-    pino "5.15.0"
+    pino "5.16.0"
     postcss "7.0.26"
     probe-image-size "5.0.0"
     regenerator-runtime "0.13.3"
@@ -5723,14 +5723,14 @@ dispensary@0.48.1:
     source-map-support "~0.5.4"
     yargs "~15.0.0"
 
-dispensary@0.49.0:
-  version "0.49.0"
-  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.49.0.tgz#0ea2c62f1d7353b6e9a27f5dac08b0bad586b74f"
-  integrity sha512-szH0vDORmGWEfwQgIqrhmrMpSGU2yXL3z7oe0NGx4sCbmnJdXXr5SQvRccPNCPrRuRPn2zPIITvwD9Lf+pcOew==
+dispensary@0.50.0:
+  version "0.50.0"
+  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.50.0.tgz#069c814529cc24b5e8db0b23fe65dfac2c740df6"
+  integrity sha512-BBAsqe6fT0KmicIrhF0/gP+fSMxSuZg+hMVxuglu1ba8CMPK+PW5FSbDuFsms4PMvQise+AjQRcJmLYKN/7OmA==
   dependencies:
     async "~3.1.0"
     natural-compare-lite "~1.4.0"
-    pino "~5.15.0"
+    pino "~5.16.0"
     request "~2.88.0"
     sha.js "~2.4.4"
     source-map-support "~0.5.4"
@@ -10608,10 +10608,10 @@ mdn-browser-compat-data@1.0.1:
   dependencies:
     extend "3.0.2"
 
-mdn-browser-compat-data@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-1.0.3.tgz#62f248a6fc457c01b6243425af0b45fdf11054bf"
-  integrity sha512-5n7c20IVrUiuOPSuhbkd5xoJPSzEEGsoMrmrdEtPHIw6gRPzonydcsguAmqGfSBd4d2DRoDQg533sijLUpeJLg==
+mdn-browser-compat-data@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-1.0.4.tgz#3e160d6a323aacf8dab6f37f828064cd4b102193"
+  integrity sha512-lH3KvOceTX/aI2DNJkvmCV/Bz6znC2tTS4wDAmLZNs4aiJpRCdEZJsnfY0b3omVsQv+dHHKytQe07S5enupiVQ==
   dependencies:
     extend "3.0.2"
 
@@ -12292,10 +12292,10 @@ pino@5.14.0, pino@~5.14.0:
     quick-format-unescaped "^3.0.3"
     sonic-boom "^0.7.5"
 
-pino@5.15.0, pino@~5.15.0:
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-5.15.0.tgz#6703164ce74dd4786d44887cd33268e13fd463d8"
-  integrity sha512-7+FXMTA3H3sNP5+2miY2K9JKnAAW5GKuhHfNWsukFCsPprGQY3ctqpwbV74wAHW3Nl93cEEQ1G82MgOLM8P7TQ==
+pino@5.16.0, pino@~5.16.0:
+  version "5.16.0"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-5.16.0.tgz#94d01cb38b5f4a16dd4d7c47aa489fbfe40c3c06"
+  integrity sha512-k9cDzHd9S/oYSQ9B9g9+7RXkfsZX78sQXERC8x4p2XArECZXULx9nqNwZvJHsLj779wPCt+ybN+dG8jFR70p6Q==
   dependencies:
     fast-redact "^2.0.0"
     fast-safe-stringify "^2.0.7"
