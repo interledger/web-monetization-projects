@@ -178,7 +178,9 @@ export class Stream {
 
       const connection = await IlpStream.createConnection({
         plugin,
-        slippage: 0.05,
+        slippage: 1.0,
+        exchangeRate: 1.0,
+        maximumPacketAmount: '10000000',
         ...details
       })
 
