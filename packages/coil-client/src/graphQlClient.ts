@@ -1,4 +1,4 @@
-import { injectable } from '@dier-makr/annotations'
+import { inject, injectable } from '@dier-makr/annotations'
 
 import { portableFetch } from './utils/portableFetch'
 import { GraphQlResponse } from './types'
@@ -29,6 +29,7 @@ export class GraphQlClient {
   public whoAmI = whoAmI
 
   public constructor(
+    @inject(GraphQlClientOptions)
     private config: GraphQlClientOptions = new GraphQlClientOptions()
   ) {
     this.fetch = this.config.fetch
@@ -51,7 +52,9 @@ export class GraphQlClient {
     }
     if (this.config.log) {
       this.config.log(
-        'GraphQL Query:',
+        'Domain:',
+        this.config.coilDomain,
+        'Url:',
         JSON.stringify({ ...init, body: { query, variables } }, null, 2)
       )
     }
