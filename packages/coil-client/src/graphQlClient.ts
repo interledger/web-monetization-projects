@@ -9,6 +9,7 @@ import { login, queryToken, refreshBtpToken, whoAmI } from './queries'
 export class GraphQlClientOptions {
   public coilDomain = 'https://coil.com'
   public fetch: typeof fetch = portableFetch
+  public log?: typeof console.log
 }
 
 export interface GraphQlQueryParameters {
@@ -47,6 +48,12 @@ export class GraphQlClient {
         Authorization: token ? `Bearer ${token}` : ''
       },
       body: JSON.stringify({ query, variables })
+    }
+    if (this.config.log) {
+      this.config.log(
+        'GraphQL Query:',
+        JSON.stringify({ ...init, body: { query, variables } }, null, 2)
+      )
     }
     const res = await this.fetch(`${this.config.coilDomain}/graphql`, init)
     if (!res.ok) {
