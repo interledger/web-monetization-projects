@@ -11,7 +11,6 @@ import * as tokens from '../types/tokens'
 import { ClientOptions } from '../services/ClientOptions'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
 
-import { AnonymousTokens } from './services/AnonymousTokens'
 import { BackgroundScript } from './services/BackgroundScript'
 import { BackgroundStorageService } from './services/BackgroundStorageService'
 import { Stream } from './services/Stream'
@@ -29,7 +28,6 @@ async function configureContainer(container: Container) {
   container.bind(Storage).toConstantValue(localStorage)
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
-  container.bind(AnonymousTokens).to(AnonymousTokens)
 
   container
     .bind(Stream)

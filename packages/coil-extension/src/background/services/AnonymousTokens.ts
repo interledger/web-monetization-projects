@@ -13,7 +13,7 @@ export class AnonymousTokens extends anonymousTokens.AnonymousTokens {
     @inject(tokens.CoilRedeemerUrl) redeemerUrl: string,
     @inject(tokens.CoilSignerUrl) signerUrl: string,
     @inject(Storage) storage: Storage,
-    @inject(tokens.Logger) debug: Logger
+    @logger('AnonymousTokens') debug: Logger
   ) {
     super({
       redeemerUrl,
