@@ -1,4 +1,5 @@
 import { inject, injectable } from 'inversify'
+import * as uuid from 'uuid'
 import {
   MonetizationTagObserver,
   PaymentDetails,
@@ -15,7 +16,7 @@ import {
   ContentScriptInit,
   PauseWebMonetization,
   ResumeWebMonetization,
-  StartWebMonetization,
+  StartIFrameWebMonetization,
   StopWebMonetization,
   ToContentMessage
 } from '../../types/commands'
@@ -30,6 +31,8 @@ import { MonetizationEventsLogger } from './MonetizationEventsLogger'
 
 @injectable()
 export class ContentScript {
+  uuid = uuid.v4()
+
   constructor(
     private storage: Storage,
     private window: Window,
@@ -44,46 +47,45 @@ export class ContentScript {
   ) {}
 
   handleMonetizationTag() {
-    const { runtime, monetization, window } = this
-
-    function startMonetization(details: PaymentDetails) {
-      const request: StartWebMonetization = {
-        command: 'startWebMonetization',
-        data: { ...details, initiatingUrl: window.location.href }
-      }
-
-      monetization.setMonetizationRequest({
+    const startMonetization = (details: PaymentDetails) => {
+      this.uuid = uuid.v4()
+      this.monetization.setMonetizationRequest({
         paymentPointer: details.paymentPointer,
-        requestId: details.requestId
+        requestId: details.requestId,
+        initiatingUrl: details.initiatingUrl
       })
-      runtime.sendMessage(request)
+      if (this.frames.isTopFrame) {
+        this.runtime.sendMessage(
+          this.monetization.startWebMonetizationMessage()
+        )
+      } else {
+        const request: StartIFrameWebMonetization = {
+          command: 'startIFrameWebMonetization',
+          data: { frameUuid: this.uuid }
+        }
+        this.runtime.sendMessage(request)
+      }
     }
 
-    function stopMonetization(details: PaymentDetails) {
+    const stopMonetization = (details: PaymentDetails) => {
       const request: StopWebMonetization = {
         command: 'stopWebMonetization',
         data: details
       }
-      monetization.setState({ state: 'stopped', finalized: true })
-      monetization.setMonetizationRequest(undefined)
-      runtime.sendMessage(request)
+      this.monetization.setState({ state: 'stopped', finalized: true })
+      this.monetization.setMonetizationRequest(undefined)
+      this.runtime.sendMessage(request)
     }
 
     const monitor = new MonetizationTagObserver(
+      this.window,
       this.document,
       ({ started, stopped }) => {
-        if (this.frames.isIFrame) {
-          console.error(
-            'This <iframe> is not authorized to use Web Monetization:',
-            this.window.location.href
-          )
-        } else {
-          if (stopped) {
-            stopMonetization(stopped)
-          }
-          if (started) {
-            startMonetization(started)
-          }
+        if (stopped) {
+          stopMonetization(stopped)
+        }
+        if (started) {
+          startMonetization(started)
         }
       }
     )
@@ -130,6 +132,8 @@ export class ContentScript {
         this.monetization.postMonetizationStartWindowMessageAndSetMonetizationState(
           request.data
         )
+      } else if (request.command === 'checkAllowedIFrames') {
+        this.frames.sendAllowMessages(request.data.frameUuid)
       }
       // Don't need to return true here, not using sendResponse
       // https://developer.chrome.com/apps/runtime#event-onMessage
@@ -156,7 +160,36 @@ export class ContentScript {
   }
 
   init() {
-    if (this.frames.isTopFrame) {
+    if (this.frames.isMonetizableFrame) {
+      this.frames.monitor()
+    }
+
+    // TODO: we could allow arbitrary frames
+    if (this.frames.isDirectChildFrame) {
+      this.window.addEventListener('message', event => {
+        const data = event.data
+        if (typeof data.wmIframe === 'object') {
+          const {
+            forId,
+            allowed
+          }: { forId: string; allowed: boolean } = data.wmIframe
+          if (forId === this.uuid) {
+            if (allowed && this.monetization.hasRequest()) {
+              this.runtime.sendMessage(
+                this.monetization.startWebMonetizationMessage()
+              )
+            } else {
+              console.error(
+                '<iframe href="%s"> is not authorized to allow web monetization',
+                window.location.href
+              )
+            }
+          }
+        }
+      })
+    }
+
+    if (this.frames.isMonetizableFrame) {
       const message: ContentScriptInit = { command: 'contentScriptInit' }
       this.runtime.sendMessage(message)
       whenDocumentReady(this.document, () => {

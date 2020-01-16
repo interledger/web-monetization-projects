@@ -28,7 +28,6 @@ export class AdaptedContentService {
     @inject(tokens.ContentRuntime)
     private contentRuntime: ContentRuntime,
     private window: Window,
-    private frames: Frames,
     private client: GraphQlClient
   ) {}
 
@@ -51,6 +50,7 @@ export class AdaptedContentService {
 
     if (site === 'youtube') {
       const channelId = await this.fetchChannelId(url)
+      debug('channelId', { channelId })
       if (channelId) {
         debug('found channel id', channelId, 'for', url)
         Object.assign(variables, { channelId })

@@ -1,8 +1,9 @@
 import { injectable } from 'inversify'
 
-import { MonetizationCommand, TabState } from '../../types/TabState'
+import { FrameState, MonetizationCommand, TabState } from '../../types/TabState'
 import { IconState } from '../../types/commands'
 import { Colors } from '../consts/Colors'
+import { FrameSpec } from '../../types/FrameSpec'
 
 import { PopupIconService } from './PopupIconService'
 
@@ -18,6 +19,22 @@ export class TabStates {
     this.tabStates[tab] = { ...existingState, ...state }
   }
 
+  setFrame({ tabId, frameId }: FrameSpec, state: Partial<FrameState> = {}) {
+    const frameStates = this.get(tabId).frameStates
+    const existingFrameState =
+      this.get(tabId).frameStates[frameId] ?? this.makeFrameStateDefault()
+    this.set(tabId, {
+      frameStates: {
+        ...frameStates,
+        ...{ [frameId]: { ...existingFrameState, ...state } }
+      }
+    })
+  }
+
+  clearFrame({ tabId, frameId }: FrameSpec) {
+    delete this.tabStates[tabId]?.frameStates[frameId]
+  }
+
   tabKeys(): number[] {
     return Object.keys(this.tabStates).map(Number)
   }
@@ -31,17 +48,25 @@ export class TabStates {
 
   private makeDefault() {
     const state: TabState = {
-      lastMonetization: {
-        command: null,
-        timeMs: Date.now()
-      },
       playState: 'playing',
+      stickyState: 'auto',
+      frameStates: {
+        [0]: this.makeFrameStateDefault()
+      }
+    }
+    return state
+  }
+
+  private makeFrameStateDefault() {
+    return {
       monetized: false,
       adapted: false,
       total: 0,
-      stickyState: 'auto'
+      lastMonetization: {
+        command: null,
+        timeMs: Date.now()
+      }
     }
-    return state
   }
 
   /**
@@ -94,8 +119,8 @@ export class TabStates {
     }
   }
 
-  logLastMonetizationCommand(tab: number, command: MonetizationCommand) {
-    this.set(tab, {
+  logLastMonetizationCommand(frame: FrameSpec, command: MonetizationCommand) {
+    this.setFrame(frame, {
       lastMonetization: {
         command,
         timeMs: Date.now()

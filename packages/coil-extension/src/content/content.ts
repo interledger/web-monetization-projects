@@ -10,11 +10,11 @@ import { API, COIL_DOMAIN } from '../webpackDefines'
 import { ClientOptions } from '../services/ClientOptions'
 
 import { ContentScript } from './services/ContentScript'
-import { Frames } from './services/Frames'
 
 function configureContainer(container: Container) {
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
+  container.bind(tokens.WextApi).toConstantValue(API)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const noop = (..._: unknown[]) => undefined
   container
@@ -28,16 +28,12 @@ function configureContainer(container: Container) {
 }
 
 function main() {
-  const frames = new Frames(window, COIL_DOMAIN)
-  if (frames.isTopFrame || frames.isAnyCoilFrame) {
-    const container = new Container({
-      defaultScope: 'Singleton',
-      autoBindInjectable: true
-    })
-    inversifyModule(GlobalModule)
-    configureContainer(container)
-    container.get(ContentScript).init()
-  }
+  const container = new Container({
+    defaultScope: 'Singleton',
+    autoBindInjectable: true
+  })
+  inversifyModule(GlobalModule)
+  configureContainer(container)
+  container.get(ContentScript).init()
 }
-
 main()

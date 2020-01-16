@@ -6,6 +6,8 @@ import {
   MonetizationStopEvent
 } from '@web-monetization/types'
 import { injectable } from '@dier-makr/annotations'
+import { PaymentDetails } from '@web-monetization/polyfill-utils'
+import { StartWebMonetization } from '@coil/extension/src/types/commands'
 
 import { ScriptInjection } from './ScriptInjection'
 
@@ -15,11 +17,13 @@ interface SetStateParams {
   finalized?: boolean
 }
 
+type MonetizationRequest = PaymentDetails
+
 @injectable()
 export class DocumentMonetization {
   private finalized = true
   private state: MonetizationState = 'stopped'
-  private request?: MonetizationStartEvent['detail']
+  private request?: MonetizationRequest
 
   constructor(
     private window: Window,
@@ -53,9 +57,20 @@ export class DocumentMonetization {
     )
   }
 
-  setMonetizationRequest(request?: MonetizationStartEvent['detail']) {
+  setMonetizationRequest(request?: MonetizationRequest) {
     this.request = request
     this.finalized = true
+  }
+
+  startWebMonetizationMessage() {
+    if (!this.request) {
+      throw new Error(`Expecting request to be set`)
+    }
+    const request: StartWebMonetization = {
+      command: 'startWebMonetization',
+      data: { ...this.request }
+    }
+    return request
   }
 
   /**
@@ -154,5 +169,9 @@ export class DocumentMonetization {
     } else if (meta && paymentPointer) {
       meta.content = paymentPointer
     }
+  }
+
+  hasRequest() {
+    return !!this.request
   }
 }
