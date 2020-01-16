@@ -75,6 +75,7 @@ export class BackgroundFramesService {
             frame.state = state
           }
         }
+        this.logTabs()
       }
     )
     this.api.tabs.onUpdated.addListener((tabId, change, tab) => {
@@ -87,7 +88,23 @@ export class BackgroundFramesService {
       // this.logTabs()
       // this.log('</tabs.onUpdated>')
       assertFullySpec(tab)
-      // const frames = (this.tabs[tabId] = this.tabs[tabId] ?? [])
+
+      // Seems only to change for top frame, as opposed to status
+      // which will fire for iframes
+      const frames = (this.tabs[tabId] = this.tabs[tabId] ?? [])
+      const top = frames.find(f => f.top)
+
+      if (change.url) {
+        if (top) {
+          top.href = change.url
+        }
+      }
+      if (change.title) {
+        if (top) {
+          top.title = change.title
+        }
+      }
+      this.logTabs()
     })
   }
 
