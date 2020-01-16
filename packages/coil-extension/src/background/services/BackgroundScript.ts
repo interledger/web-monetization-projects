@@ -23,6 +23,7 @@ import {
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
+import { getTab } from '../../util/tabs'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -32,10 +33,7 @@ import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
 import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
-
-function getTab(sender: { tab?: { id?: number } }) {
-  return notNullOrUndef(notNullOrUndef(sender.tab).id)
-}
+import { BackgroundFramesService } from './BackgroundFramesService'
 
 @injectable()
 export class BackgroundScript {
@@ -52,6 +50,7 @@ export class BackgroundScript {
     private store: LocalStorageProxy,
     private auth: AuthService,
     private youtube: YoutubeService,
+    private framesService: BackgroundFramesService,
 
     @logger('BackgroundScript')
     private log: Logger,
@@ -86,6 +85,7 @@ export class BackgroundScript {
     this.setTabsOnUpdatedListener()
     this.routeStreamsMoneyEventsToContentScript()
     this.handleStreamsAbortEvent()
+    this.framesService.monitor()
     void this.auth.getTokenMaybeRefreshAndStoreState()
   }
 

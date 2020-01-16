@@ -156,6 +156,8 @@ export class ContentScript {
   }
 
   init() {
+    this.frames.monitor()
+
     if (this.frames.isTopFrame) {
       const message: ContentScriptInit = { command: 'contentScriptInit' }
       this.runtime.sendMessage(message)

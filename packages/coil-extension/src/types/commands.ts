@@ -114,6 +114,32 @@ export interface FetchYoutubeChannelId extends Command {
   }
 }
 
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface FrameStateChange extends Command {
+  command: 'frameStateChange'
+  data: {
+    state: Document['readyState']
+    uuid: string
+    href: string
+    title: string
+    top: boolean
+  }
+}
+
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface UnloadFrame extends Command {
+  command: 'unloadFrame'
+  data: {
+    uuid: string
+  }
+}
+
 export type ToBackgroundMessage =
   | PauseWebMonetization
   | ResumeWebMonetization
@@ -127,6 +153,8 @@ export type ToBackgroundMessage =
   | IsRateLimited
   | ContentScriptInit
   | FetchYoutubeChannelId
+  | FrameStateChange
+  | UnloadFrame
 
 export type IconState =
   | 'streaming-paused'
