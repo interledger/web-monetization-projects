@@ -1,7 +1,7 @@
 import '@abraham/reflection'
 
 import { Container } from 'inversify'
-import { GraphQlClient } from '@coil/client'
+import { GraphQlClientOptions } from '@coil/client'
 import { inversifyModule } from '@dier-makr/inversify'
 import { GlobalModule } from '@dier-makr/annotations'
 
@@ -14,7 +14,13 @@ import { ContentScript } from './services/ContentScript'
 function configureContainer(container: Container) {
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
-  container.bind(GraphQlClient.Options).to(ClientOptions)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const noop = (..._: unknown[]) => undefined
+  container
+    .bind(tokens.Logger)
+    .toConstantValue(noop)
+    .whenTargetNamed('CoilClient')
+  container.bind(GraphQlClientOptions).to(ClientOptions)
   container.bind(Storage).toConstantValue(localStorage)
   container.bind(Window).toConstantValue(window)
   container.bind(Document).toConstantValue(document)

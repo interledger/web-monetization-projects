@@ -1,11 +1,16 @@
 import { inject, injectable } from 'inversify'
-import { GraphQlClient } from '@coil/client'
+import { GraphQlClientOptions } from '@coil/client'
 
 import * as tokens from '../types/tokens'
+import { Logger, logger } from '../background/services/utils'
 
 @injectable()
-export class ClientOptions extends GraphQlClient.Options {
-  constructor(@inject(tokens.CoilDomain) public coilDomain: string) {
+export class ClientOptions extends GraphQlClientOptions {
+  constructor(
+    @logger('CoilClient')
+    public log: Logger,
+    @inject(tokens.CoilDomain) public coilDomain: string
+  ) {
     super()
   }
 }
