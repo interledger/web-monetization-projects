@@ -1,7 +1,7 @@
 import { inject, injectable } from 'inversify'
 
 import * as tokens from '../../types/tokens'
-import { FrameStateChange, UnloadFrame } from '../../types/commands'
+import { FrameStateChange } from '../../types/commands'
 import { ContentRuntime } from '../types/ContentRunTime'
 
 @injectable()
@@ -30,12 +30,6 @@ export class Frames {
     this.sendStateChange()
     this.doc.addEventListener('readystatechange', () => {
       this.sendStateChange()
-    })
-    this.window.addEventListener('unload', () => {
-      const unload: UnloadFrame = {
-        command: 'unloadFrame'
-      }
-      this.runtime.sendMessage(unload)
     })
   }
 

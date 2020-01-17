@@ -126,15 +126,6 @@ export interface FrameStateChange extends Command {
   }
 }
 
-/**
- * content -> background
- * browser.runtime.sendMessage
- */
-export interface UnloadFrame extends Command {
-  command: 'unloadFrame'
-  // frameId is retrieved via MessageSender['frameId']
-}
-
 export type ToBackgroundMessage =
   | PauseWebMonetization
   | ResumeWebMonetization
@@ -149,7 +140,6 @@ export type ToBackgroundMessage =
   | ContentScriptInit
   | FetchYoutubeChannelId
   | FrameStateChange
-  | UnloadFrame
 
 export type IconState =
   | 'streaming-paused'
