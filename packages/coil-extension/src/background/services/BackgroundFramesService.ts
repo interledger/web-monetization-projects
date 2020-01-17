@@ -135,14 +135,13 @@ export class BackgroundFramesService extends EventEmitter {
           frameId,
           frame: update
         }
-        // const changedEvent: FrameChangedEvent = {
-        //   ...event,
-        //   type: 'frameChanged',
-        //   changed: update
-        // }
+        const changedEvent: FrameChangedEvent = {
+          ...event,
+          type: 'frameChanged',
+          changed: update
+        }
         this.emit(event.type, event)
-        // TODO: does this make sense?
-        // this.emit('frameChanged', changedEvent)
+        this.emit(changedEvent.type, changedEvent)
       } else {
         this.log(
           'error in frameAdded from=%s update=%s',
@@ -191,7 +190,7 @@ export class BackgroundFramesService extends EventEmitter {
   }
 
   monitor() {
-    const events = ['frameChanged', 'frameAdded', 'frameRemoved']
+    const events = ['frameChanged', 'frameAdded', 'frameRemoved'] as const
     events.forEach(e => {
       this.on(e, (event: FrameEvent) => {
         this.log(e, JSON.stringify(event, null, 2))
@@ -390,4 +389,28 @@ export class BackgroundFramesService extends EventEmitter {
     this.log('tabs', JSON.stringify(this.tabs, null, 2))
     // this.log('tabs', JSON.stringify(Object.keys(this.tabs), null, 2))
   }
+}
+
+export type FrameEvents =
+  | FrameAddedEvent
+  | FrameRemovedEvent
+  | FrameChangedEvent
+
+export type FramesEventType = FrameEvents['type']
+
+export interface FramesEventMap extends Record<FramesEventType, FrameEvents> {
+  frameAdded: FrameAddedEvent
+  frameRemoved: FrameRemovedEvent
+  frameChanged: FrameChangedEvent
+}
+export interface BackgroundFramesService extends EventEmitter {
+  on<T extends FramesEventType>(
+    event: T,
+    listener: (ev: FramesEventMap[T]) => void
+  ): this
+  once<T extends FramesEventType>(
+    event: T,
+    listener: (ev: FramesEventMap[T]) => void
+  ): this
+  emit<T extends FramesEventType>(event: T, ev: FramesEventMap[T]): boolean
 }
