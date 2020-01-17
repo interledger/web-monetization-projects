@@ -54,6 +54,14 @@ export class BackgroundFramesService {
   }
 
   monitor() {
+    this.api.tabs.query({}, tabs => {
+      tabs.forEach(tab => {
+        if (tab.id) {
+          this.useWebNavigationToUpdateFrames(tab.id)
+        }
+      })
+    })
+
     setInterval(() => {
       this.logTabs()
     }, 2e3)
@@ -167,7 +175,15 @@ export class BackgroundFramesService {
   }
 
   private onTabActivated(tabId: number) {
-    const tabFrames = this.getFrames(tabId)
+    this.log('tabActivated', tabId)
+    // const tabFrames = this.getFrames(tabId)
+    /// this.useWebNavigationToUpdateFrames(tabId, tabFrames)
+  }
+
+  private useWebNavigationToUpdateFrames(
+    tabId: number,
+    tabFrames = this.getFrames(tabId)
+  ) {
     this.api.webNavigation.getAllFrames({ tabId }, frames => {
       frames?.forEach(frame => {
         if (!frame.url.startsWith('http')) {
@@ -175,6 +191,13 @@ export class BackgroundFramesService {
         }
         const storedFrame = this.getFrame(tabId, frame.frameId)
         if (!storedFrame) {
+          tabFrames.push({
+            frameId: frame.frameId,
+            top: frame.frameId === 0,
+            href: frame.url,
+            state: null,
+            parentFrameId: frame.parentFrameId
+          })
           this.api.tabs.executeScript(tabId, {
             frameId: frame.frameId,
             code: `
@@ -187,13 +210,6 @@ export class BackgroundFramesService {
 }
 chrome.runtime.sendMessage(frameStateChange)
  `
-          })
-          tabFrames.push({
-            frameId: frame.frameId,
-            top: frame.frameId === 0,
-            href: frame.url,
-            state: null,
-            parentFrameId: frame.parentFrameId
           })
         }
       })
