@@ -28,7 +28,10 @@ interface Frame {
    */
   frameId: number
 
-  parentFrameId: number | null
+  /**
+   * Will be -1 for topmost iframe
+   */
+  parentFrameId: number
 }
 
 @injectable()
