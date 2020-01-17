@@ -10,6 +10,7 @@ export class Frames {
   isAnyCoilFrame: boolean
   isIFrame: boolean
   isCoilTopFrame: boolean
+  isDirectChild: boolean
 
   constructor(
     private doc: Document,
@@ -22,6 +23,7 @@ export class Frames {
     this.isAnyCoilFrame = window.origin === coilDomain
     this.isIFrame = !this.isTopFrame
     this.isCoilTopFrame = this.isTopFrame && this.isAnyCoilFrame
+    this.isDirectChild = this.isIFrame && window.parent === window.top
   }
 
   monitor() {

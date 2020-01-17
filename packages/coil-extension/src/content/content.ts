@@ -28,7 +28,7 @@ function configureContainer(container: Container) {
 }
 
 function main() {
-  const frames = new Frames(window, COIL_DOMAIN)
+  const frames = new Frames(document, window, API.runtime, COIL_DOMAIN)
   if (frames.isTopFrame || frames.isAnyCoilFrame) {
     const container = new Container({
       defaultScope: 'Singleton',
@@ -38,6 +38,12 @@ function main() {
     configureContainer(container)
     container.get(ContentScript).init()
   }
+  console.log(
+    '%c coil-extension content.ts isDirectChild=%s href=%s',
+    'color: red;',
+    frames.isDirectChild,
+    window.location.href
+  )
 }
 
 main()
