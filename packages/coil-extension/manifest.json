@@ -31,5 +31,5 @@
       "run_at": "document_start"
     }
   ],
-  "permissions": [ "activeTab", "storage", "notifications", "tabs", "<all_urls>" ]
+  "permissions": [ "webNavigation", "activeTab", "storage", "notifications", "tabs", "<all_urls>" ]
 }

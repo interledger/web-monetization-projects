@@ -1,5 +1,4 @@
 import { inject, injectable } from 'inversify'
-import * as uuid from 'uuid'
 
 import * as tokens from '../../types/tokens'
 import { FrameStateChange, UnloadFrame } from '../../types/commands'
@@ -11,7 +10,6 @@ export class Frames {
   isAnyCoilFrame: boolean
   isIFrame: boolean
   isCoilTopFrame: boolean
-  uuid: string = uuid.v4()
 
   constructor(
     private doc: Document,
@@ -33,10 +31,7 @@ export class Frames {
     })
     this.window.addEventListener('unload', () => {
       const unload: UnloadFrame = {
-        command: 'unloadFrame',
-        data: {
-          uuid: this.uuid
-        }
+        command: 'unloadFrame'
       }
       this.runtime.sendMessage(unload)
     })
@@ -46,11 +41,8 @@ export class Frames {
     const frameStateChange: FrameStateChange = {
       command: 'frameStateChange',
       data: {
-        top: this.isTopFrame,
         state: this.doc.readyState,
-        uuid: this.uuid,
-        href: this.window.location.href,
-        title: this.doc.title
+        href: this.window.location.href
       }
     }
     this.runtime.sendMessage(frameStateChange)

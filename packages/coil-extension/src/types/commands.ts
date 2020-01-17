@@ -122,10 +122,7 @@ export interface FrameStateChange extends Command {
   command: 'frameStateChange'
   data: {
     state: Document['readyState']
-    uuid: string
     href: string
-    title: string
-    top: boolean
   }
 }
 
@@ -135,9 +132,7 @@ export interface FrameStateChange extends Command {
  */
 export interface UnloadFrame extends Command {
   command: 'unloadFrame'
-  data: {
-    uuid: string
-  }
+  // frameId is retrieved via MessageSender['frameId']
 }
 
 export type ToBackgroundMessage =

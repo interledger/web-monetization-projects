@@ -6,8 +6,14 @@
   <body>
     <h1>IFrame 2</h1>
     <script>
+      window.addEventListener('message', message => {
+        console.log('received message', message)
+      })
       setTimeout(() => {
-        window.location.href = 'http://localhost:4000/frame1.html'
+        window.location.href = 'http://localhost:4001/frame1.html'
+        window.addEventListener('message', message => {
+          console.log('received message second listener', message)
+        })
       }, 10e3)
     </script>
   </body>
