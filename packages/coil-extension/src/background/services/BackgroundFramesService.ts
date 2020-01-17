@@ -17,7 +17,14 @@ interface Frame extends Record<string, any> {
   lastUpdateTimeMS: number
 
   /**
-   *
+   *loading
+   *    The document is still loading.
+   * interactive
+   *    The document has finished loading and the document has been parsed but
+   *    sub-resources such as images, stylesheets and frames are still loading.
+   * complete
+   *    The document and all sub-resources have finished loading. The state
+   *    indicates that the load event is about to fire.
    */
   state: Document['readyState'] | null
   /**
@@ -77,7 +84,7 @@ export interface FrameChangedEvent extends FrameEventWithFrame {
 export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
   traceLogging = false
-  logTabsInterval = 0
+  logTabsInterval = 2000
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
@@ -352,6 +359,7 @@ export class BackgroundFramesService extends EventEmitter {
   }
 
   private logTabs() {
-    this.log('tabs', JSON.stringify(Object.keys(this.tabs), null, 2))
+    this.log('tabs', JSON.stringify(this.tabs, null, 2))
+    // this.log('tabs', JSON.stringify(Object.keys(this.tabs), null, 2))
   }
 }
