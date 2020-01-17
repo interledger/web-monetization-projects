@@ -1,3 +1,5 @@
+import { EventEmitter } from 'events'
+
 import { inject, injectable } from 'inversify'
 import * as tokens from '@web-monetization/wext/tokens'
 
@@ -9,7 +11,10 @@ import { logger, Logger } from './utils'
 
 import GetFrameResultDetails = chrome.webNavigation.GetFrameResultDetails
 
-interface Frame {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+interface Frame extends Record<string, any> {
+  lastUpdateTimeMS: number
+
   /**
    *
    */
@@ -34,16 +39,38 @@ interface Frame {
   parentFrameId: number
 }
 
+const isFullFrame = (partial: Partial<Frame>): partial is Frame => {
+  return Boolean(
+    typeof partial.frameId === 'number' &&
+      typeof partial.parentFrameId === 'number' &&
+      typeof partial.href === 'string' &&
+      typeof partial.top === 'boolean'
+  )
+}
+
+export interface FrameEvent {
+  tabId: number
+  frameId: number
+  frame: Frame
+}
+
+export interface FrameChangedEvent extends FrameEvent {
+  changed: Partial<Frame>
+}
+
 @injectable()
-export class BackgroundFramesService {
+export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
+  traceLogging = false
 
   constructor(
     @logger('BackgroundFramesService')
     private log: Logger,
     @inject(tokens.WextApi)
     private api: typeof window.chrome
-  ) {}
+  ) {
+    super()
+  }
 
   getFrame(tabId: number, frameId: number) {
     const frames = this.getFrames(tabId)
@@ -56,7 +83,62 @@ export class BackgroundFramesService {
     return (this.tabs[tabId] = this.tabs[tabId] ?? [])
   }
 
+  updateOrAddFrame(
+    tabId: number,
+    frameId: number,
+    partial: Readonly<Partial<Frame>>
+  ) {
+    const frame = this.getFrame(tabId, frameId)
+    if (
+      frame &&
+      frame.lastUpdateTimeMS &&
+      partial.lastUpdateTimeMS &&
+      frame.lastUpdateTimeMS > partial.lastUpdateTimeMS
+    ) {
+      this.log('ignoring frame update', { tabId, frameId, changed: partial })
+      return
+    }
+
+    const update = { ...partial, lastUpdateTimeMS: Date.now() }
+    const frames = this.getFrames(tabId)
+    const changed: Partial<Frame> = {}
+    let hasChanged = false
+
+    if (!frame) {
+      if (isFullFrame(update)) {
+        frames.push(update)
+        const event: FrameEvent = { tabId, frameId, frame: update }
+        const changedEvent: FrameChangedEvent = {
+          changed: update,
+          tabId,
+          frameId,
+          frame: update
+        }
+        this.emit('frameAdded', event)
+        this.emit('frameChanged', changedEvent)
+      } else {
+        this.log('error in frameAdded', JSON.stringify(update))
+      }
+    } else if (frame) {
+      Object.entries(update).forEach(([key, val]) => {
+        if (frame[key] !== val) {
+          frame[key] = val
+          changed[key] = val
+          hasChanged = true
+        }
+      })
+      if (hasChanged) {
+        const args: FrameChangedEvent = { tabId, frameId, changed, frame }
+        this.emit('frameChanged', args)
+      }
+    }
+  }
+
   monitor() {
+    this.on('frameChanged', (event: FrameChangedEvent) => {
+      this.log('frameChanged', JSON.stringify(event, null, 2))
+    })
+
     this.api.tabs.query({}, tabs => {
       tabs.forEach(tab => {
         if (tab.id) {
@@ -66,18 +148,20 @@ export class BackgroundFramesService {
     })
 
     setInterval(() => {
-      this.logTabs()
+      // this.logTabs()
     }, 2e3)
 
     const makeCallback = (event: string) => {
       return (details: { url: string; tabId: number; frameId: number }) => {
         const frame = this.getFrame(details.tabId, details.frameId)
-        this.log(
-          'webNavigation.%s details:%s frame=%s',
-          event,
-          JSON.stringify(details),
-          JSON.stringify({ frame })
-        )
+        if (this.traceLogging) {
+          this.log(
+            'webNavigation.%s details:%s frame=%s',
+            event,
+            JSON.stringify(details),
+            JSON.stringify({ frame })
+          )
+        }
         if (frame) {
           frame.href = details.url
         }
@@ -87,9 +171,6 @@ export class BackgroundFramesService {
     this.api.webNavigation.onHistoryStateUpdated.addListener(
       makeCallback('onHistoryStateUpdated')
     )
-    this.api.webNavigation.onHistoryStateUpdated.addListener(() => {
-      this.logTabs()
-    })
     this.api.webNavigation.onReferenceFragmentUpdated.addListener(
       makeCallback('onReferenceFragmentUpdated')
     )
@@ -111,11 +192,11 @@ export class BackgroundFramesService {
       this.onTabActivated(info.tabId)
     })
     this.api.windows.onFocusChanged.addListener(async windowId => {
-      this.log('windows.onFocusChanged windowId=%s', windowId)
       if (windowId === -1) {
         // special window (devtools etc)
         return
       }
+      this.log('windows.onFocusChanged windowId=%s', windowId)
       const tabId = await this.getActiveTabId(windowId)
       this.onTabActivated(tabId)
     })
@@ -130,34 +211,33 @@ export class BackgroundFramesService {
         const frameId = notNullOrUndef(sender.frameId)
         const top = frameId === 0
         if (message.command === 'frameStateChange') {
-          this.log(
-            'frameStateChange, frameId=%s, tabId=%s, message=%s',
-            sender.frameId,
-            tabId,
-            JSON.stringify(message, null, 2)
-          )
+          if (this.traceLogging) {
+            this.log(
+              'frameStateChange, frameId=%s, tabId=%s, message=%s',
+              sender.frameId,
+              tabId,
+              JSON.stringify(message, null, 2)
+            )
+          }
 
           const { href, state } = message.data
-          const frames = this.getFrames(tabId)
           const frame = this.getFrame(tabId, frameId)
           if (!frame) {
-            const navFrame = await this.webNavigationGetFrame(tabId, frameId)
+            /*const navFrame = await this.webNavigationGetFrame(tabId, frameId)
             if (!this.getFrame(tabId, frameId)) {
-              frames.push({
+              this.updateOrAddFrame(tabId, frameId, {
                 frameId,
                 href: navFrame.url,
                 state,
                 top,
                 parentFrameId: navFrame.parentFrameId
               })
-            }
+            }*/
           } else {
             // top and frameId, parentFrameId don't change
-            frame.href = href
-            frame.state = state
+            this.updateOrAddFrame(tabId, frameId, { href, state })
           }
         }
-        this.logTabs()
       }
     )
   }
@@ -183,24 +263,21 @@ export class BackgroundFramesService {
     /// this.useWebNavigationToUpdateFrames(tabId, tabFrames)
   }
 
-  private useWebNavigationToUpdateFrames(
-    tabId: number,
-    tabFrames = this.getFrames(tabId)
-  ) {
+  private useWebNavigationToUpdateFrames(tabId: number) {
     this.api.webNavigation.getAllFrames({ tabId }, frames => {
       frames?.forEach(frame => {
         if (!frame.url.startsWith('http')) {
           return
         }
-        const storedFrame = this.getFrame(tabId, frame.frameId)
-        if (!storedFrame) {
-          tabFrames.push({
-            frameId: frame.frameId,
-            top: frame.frameId === 0,
-            href: frame.url,
-            state: null,
-            parentFrameId: frame.parentFrameId
-          })
+        this.updateOrAddFrame(tabId, frame.frameId, {
+          frameId: frame.frameId,
+          top: frame.frameId === 0,
+          href: frame.url,
+          state: null,
+          parentFrameId: frame.parentFrameId
+        })
+
+        if (this.getFrame(tabId, frame.frameId)?.state == null) {
           this.api.tabs.executeScript(tabId, {
             frameId: frame.frameId,
             code: `
@@ -229,6 +306,6 @@ chrome.runtime.sendMessage(frameStateChange)
   }
 
   private logTabs() {
-    this.log('tabs', JSON.stringify(this.tabs, null, 2))
+    this.log('tabs', JSON.stringify(Object.keys(this.tabs), null, 2))
   }
 }
