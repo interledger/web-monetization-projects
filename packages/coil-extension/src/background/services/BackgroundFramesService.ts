@@ -140,7 +140,7 @@ export class BackgroundFramesService extends EventEmitter {
         //   type: 'frameChanged',
         //   changed: update
         // }
-        this.emit('frameAdded', event)
+        this.emit(event.type, event)
         // TODO: does this make sense?
         // this.emit('frameChanged', changedEvent)
       } else {
@@ -162,7 +162,7 @@ export class BackgroundFramesService extends EventEmitter {
         }
       })
       if (changes) {
-        const args: FrameChangedEvent = {
+        const changedEvent: FrameChangedEvent = {
           type: 'frameChanged',
           from,
           tabId,
@@ -170,7 +170,7 @@ export class BackgroundFramesService extends EventEmitter {
           changed,
           frame
         }
-        this.emit('frameChanged', args)
+        this.emit(changedEvent.type, changedEvent)
       }
     }
   }
@@ -191,7 +191,7 @@ export class BackgroundFramesService extends EventEmitter {
   }
 
   monitor() {
-    const events = ['frameChanged', 'frameAdded']
+    const events = ['frameChanged', 'frameAdded', 'frameRemoved']
     events.forEach(e => {
       this.on(e, (event: FrameEvent) => {
         this.log(e, JSON.stringify(event, null, 2))
@@ -224,6 +224,7 @@ export class BackgroundFramesService extends EventEmitter {
         }
 
         const frame = this.getFrame(details.tabId, details.frameId)
+        this.log('webNavigation.' + event)
         if (this.traceLogging) {
           this.log(
             'webNavigation.%s details:%s frame=%s',
@@ -278,7 +279,25 @@ export class BackgroundFramesService extends EventEmitter {
       async (message: ToBackgroundMessage, sender) => {
         const tabId = getTab(sender)
         const frameId = notNullOrUndef(sender.frameId)
-        if (message.command === 'frameStateChange') {
+        if (message.command === 'unloadFrame') {
+          this.log('unloadFrame %s', frameId)
+          const frames = (this.tabs[tabId] = this.tabs[tabId] ?? [])
+          const ix = frames.findIndex(f => f.frameId === frameId)
+          if (ix !== -1) {
+            this.log('removing', ix)
+            frames.splice(ix, 1)
+            const removedEvent: FrameRemovedEvent = {
+              from: 'unloadFrame',
+              type: 'frameRemoved',
+              frameId,
+              tabId
+            }
+            this.emit(removedEvent.type, removedEvent)
+          }
+          if (frames.length === 0) {
+            delete this.tabs[tabId]
+          }
+        } else if (message.command === 'frameStateChange') {
           if (this.traceLogging) {
             this.log(
               'frameStateChange, frameId=%s, tabId=%s, message=%s',
@@ -340,22 +359,31 @@ export class BackgroundFramesService extends EventEmitter {
   }
 
   private requestFrameState(tabId: number, frameId: number) {
-    this.api.tabs.executeScript(tabId, {
-      frameId: frameId,
-      // language=JavaScript
-      code: `
-        (function sendMessage() {
-          const frameStateChange = {
-            command: 'frameStateChange',
-            data: {
-              state: document.readyState,
-              href: window.location.href
+    this.api.tabs.executeScript(
+      tabId,
+      {
+        frameId: frameId,
+        // language=JavaScript
+        code: `
+          (function sendMessage() {
+            const frameStateChange = {
+              command: 'frameStateChange',
+              data: {
+                state: document.readyState,
+                href: window.location.href
+              }
             }
-          }
-          chrome.runtime.sendMessage(frameStateChange)
-        })()
-      `
-    })
+            chrome.runtime.sendMessage(frameStateChange)
+          })()
+        `
+      },
+      err => {
+        const lastError = chrome.runtime.lastError
+        if (lastError) {
+          this.log('LAST_ERROR', lastError)
+        }
+      }
+    )
   }
 
   private logTabs() {
