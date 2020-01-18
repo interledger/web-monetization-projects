@@ -197,6 +197,20 @@ export class BackgroundFramesService extends EventEmitter {
       })
     })
 
+    /**
+     * Be wary of context invalidation during extension reloading causing
+     * confusion here.
+     *
+     * This will pick up state from tabs which need reloading to refresh the
+     * context state.
+     *
+     * Perhaps should periodically prune, at least in dev mode.
+     *
+     * TODO: Is there a webNavigation (read: not content script) API for
+     *       determining window unload ?
+     *
+     * {@see Frames#sendUnloadMessage}
+     */
     this.api.tabs.query({}, tabs => {
       tabs.forEach(tab => {
         if (tab.id) {
@@ -262,6 +276,15 @@ export class BackgroundFramesService extends EventEmitter {
     this.api.webNavigation.onBeforeNavigate.addListener(
       makeCallback('onBeforeNavigate')
     )
+
+    /**
+     *
+     * If a navigation was triggered via Chrome Instant or Instant Pages, a
+     * completely loaded page is swapped into the current tab. In that case,
+     * an onTabReplaced event is fired.
+     *
+     * TODO: ??
+     */
     this.api.webNavigation.onTabReplaced.addListener(details => {
       this.log(
         'webNavigation.onTabReplaced details=%s',
@@ -279,7 +302,7 @@ export class BackgroundFramesService extends EventEmitter {
         const tabId = getTab(sender)
         const frameId = notNullOrUndef(sender.frameId)
         if (message.command === 'unloadFrame') {
-          this.log('unloadFrame %s', frameId)
+          this.log('unloadFrame %s', frameId, message.data)
           const frames = (this.tabs[tabId] = this.tabs[tabId] ?? [])
           const ix = frames.findIndex(f => f.frameId === frameId)
           if (ix !== -1) {
@@ -357,6 +380,10 @@ export class BackgroundFramesService extends EventEmitter {
     })
   }
 
+  /**
+   * Somewhat interestingly, this seems to work even when a content script context
+   * is invalidated.
+   */
   private requestFrameState(tabId: number, frameId: number) {
     this.api.tabs.executeScript(
       tabId,
@@ -376,11 +403,9 @@ export class BackgroundFramesService extends EventEmitter {
           })()
         `
       },
-      err => {
-        const lastError = chrome.runtime.lastError
-        if (lastError) {
-          this.log('LAST_ERROR', lastError)
-        }
+      () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const ignored = chrome.runtime.lastError
       }
     )
   }

@@ -3,6 +3,7 @@ import { inject, injectable } from 'inversify'
 import * as tokens from '../../types/tokens'
 import { FrameStateChange, UnloadFrame } from '../../types/commands'
 import { ContentRuntime } from '../types/ContentRunTime'
+import { API } from '../../webpackDefines'
 
 @injectable()
 export class Frames {
@@ -26,7 +27,13 @@ export class Frames {
     this.isDirectChild = this.isIFrame && window.parent === window.top
 
     if (this.isDirectChild) {
-      console.log(this.window.frameElement?.getAttribute('id'))
+      // Note that this is generally only possible for frames from the same
+      // origin. For example, it does not work for cinnamon/youtube
+      // So getting access to the frameElement is useless.
+      console.log(
+        "this.window.frameElement?.getAttribute('id')",
+        this.window.frameElement?.getAttribute('id')
+      )
     }
   }
 
@@ -35,11 +42,13 @@ export class Frames {
     this.doc.addEventListener('readystatechange', () => {
       this.sendStateChange()
     })
+
+    /**
+     * Be wary of context invalidation during extension reloading causing
+     * confusion here.
+     */
     this.window.addEventListener('unload', () => {
-      const unload: UnloadFrame = {
-        command: 'unloadFrame'
-      }
-      this.runtime.sendMessage(unload)
+      this.sendUnloadMessage()
     })
     this.window.addEventListener('message', message => {
       console.log(
@@ -75,6 +84,13 @@ export class Frames {
         })
       }, 1000)
     }
+  }
+
+  private sendUnloadMessage() {
+    const unload: UnloadFrame = {
+      command: 'unloadFrame'
+    }
+    this.runtime.sendMessage(unload)
   }
 
   private sendStateChange() {
