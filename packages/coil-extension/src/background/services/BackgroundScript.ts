@@ -110,7 +110,10 @@ export class BackgroundScript {
         const message: ClosePopup = {
           command: 'closePopup'
         }
-        this.api.runtime.sendMessage(message)
+        this.api.runtime.sendMessage(message, () => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const ignored = chrome.runtime.lastError
+        })
 
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
           if (tabs.length === 0 || tabs[0].id == null) return

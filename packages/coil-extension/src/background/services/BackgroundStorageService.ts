@@ -15,7 +15,10 @@ export class BackgroundStorageService extends StorageService {
         command: 'localStorageUpdate',
         key
       }
-      this.api.runtime.sendMessage(message)
+      this.api.runtime.sendMessage(message, () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const ignored = this.api.runtime.lastError
+      })
     })
   }
 }
