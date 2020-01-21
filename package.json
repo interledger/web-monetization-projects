@@ -32,13 +32,11 @@
   ],
   "lint-staged": {
     "*.{md,js,jsx,html}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.ts*": [
       "prettier --write",
-      "YARN_LINT_FIX=1 yarn lint --fix",
-      "git add"
+      "YARN_LINT_FIX=1 yarn lint --fix"
     ]
   },
   "husky": {
