@@ -30,6 +30,8 @@
     "dev": "TSCONFIG_DEBUG=true TS_LOADER_TRANSPILE_ONLY=true LIVE_RELOAD=true yarn",
     "dev-chrome-prod": "yarn dev build-prod chrome --watch",
     "dev-chrome-staging": "yarn dev build-staging chrome --watch",
+    "dev-edge-prod": "yarn dev build-prod edge --watch",
+    "dev-edge-staging": "yarn dev build-staging edge --watch",
     "dev-firefox-prod": "yarn dev build-prod firefox --watch",
     "dev-firefox-staging": "yarn dev build-staging firefox --watch",
     "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",

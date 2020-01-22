@@ -4,6 +4,8 @@ import * as fs from 'fs'
 import * as webpack from 'webpack'
 import CopyPlugin from 'copy-webpack-plugin'
 
+const CHROMIUM_BASED_BROWSER = /chrome|edge/
+
 export function makeWebpackConfig(rootDir: string) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const prettyJSON = (obj: any) => JSON.stringify(obj, null, 2)
@@ -61,7 +63,7 @@ export function makeWebpackConfig(rootDir: string) {
       transform: (content: Buffer, path: string) => {
         if (
           LIVE_RELOAD &&
-          BROWSER === 'chrome' &&
+          BROWSER.match(CHROMIUM_BASED_BROWSER) &&
           path.endsWith('background.html')
         ) {
           return content
@@ -70,7 +72,10 @@ export function makeWebpackConfig(rootDir: string) {
               '<!--INSERT_HOT_RELOAD-->',
               '<script src="../hot-reload.js"></script>'
             )
-        } else if (BROWSER === 'chrome' && path.endsWith('popup.html')) {
+        } else if (
+          BROWSER.match(CHROMIUM_BASED_BROWSER) &&
+          path.endsWith('popup.html')
+        ) {
           return content
             .toString()
             .replace(

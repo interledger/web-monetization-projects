@@ -29,6 +29,9 @@ then
 elif [[ ${BROWSER_NAME} = "chrome" ]]
 then
   BROWSER_API=chrome
+elif [[ ${BROWSER_NAME} = "edge" ]]
+then
+  BROWSER_API=chrome
 else
   BROWSER_API=chrome
 fi
