@@ -53,7 +53,7 @@
     "@web-monetization/wext": "^0.0.0",
     "debug": "^4.1.1",
     "ilp-plugin-btp": "1.4.2",
-    "ilp-protocol-stream": "2.2.1",
+    "ilp-protocol-stream": "2.3.0",
     "inversify": "^5.0.1",
     "inversify-logger-middleware": "^3.1.0",
     "jsonwebtoken": "^8.5.1",
