@@ -8,7 +8,7 @@ set -ex
 BROWSER_NAME=${1:-chrome}
 FIREFOX_PACKAGE_ZIP=${2}
 CHROME_PACKAGE_ZIP=${3}
-EDGE_PACKAGE_ZIP=${3}
+EDGE_PACKAGE_ZIP=${4}
 # -p works for webpack-cli, --run-prod for webpack-command
 WEBPACK_OVERRIDES="-p --run-prod --devtool=none"
 
