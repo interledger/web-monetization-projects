@@ -2,6 +2,7 @@ import { Browser, Page } from 'puppeteer'
 
 import { COIL_DOMAIN, COIL_TOKEN } from './env'
 import { timeout } from './timeout'
+import { addCloudFlareAccessHeaders } from './addCloudFlareAccessHeaders'
 
 export interface InitCoilParameters {
   browser: Browser
@@ -32,6 +33,10 @@ export async function initCoil({
   password
 }: InitCoilParameters): Promise<InitCoilReturn> {
   const page = await browser.newPage()
+  // After the first request, the `CF_Authorization` cookie is set which
+  // seems to work in the extension background page.
+  await addCloudFlareAccessHeaders(page)
+
   if (COIL_TOKEN) {
     await injectCoilTokenFromEnv(page)
     await timeout(100)

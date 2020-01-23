@@ -13,11 +13,18 @@ export const COIL_DOMAIN = process.env.COIL_DOMAIN || 'https://coil.com'
 export const AWAIT_MONETIZATION_TIMEOUT_MS = Number(
   process.env.AWAIT_MONETIZATION_TIMEOUT_MS || (IS_CI ? 60e3 : 20e3)
 )
+
+export const CF_ACCESS_CLIENT_ID = process.env.CF_ACCESS_CLIENT_ID
+export const CF_ACCESS_CLIENT_SECRET = process.env.CF_ACCESS_CLIENT_SECRET
+
 export const HEADLESS = Boolean(process.env.PUPPETEER_HEADLESS)
 export const DEVTOOLS = Boolean(process.env.PUPPETEER_DEVTOOLS)
+
+// TODO: edge ? chrome|edge -> chromium ?
 export const BROWSER_TYPE = (process.env.BROWSER_TYPE || 'chrome') as
   | 'chrome'
   | 'firefox'
+
 export const BROWSER_PATH = process.env.BROWSER_PATH || undefined
 export const EXTENSION_PATH =
   process.env.EXTENSION_PATH ||
