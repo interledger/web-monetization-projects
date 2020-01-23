@@ -8,7 +8,6 @@ import { GlobalModule } from '@dier-makr/annotations'
 import * as tokens from '../types/tokens'
 import { API, COIL_DOMAIN } from '../webpackDefines'
 import { ClientOptions } from '../services/ClientOptions'
-import { addCloudflareCredentials } from '../util/addCloudFlareCredentials'
 
 import { ContentScript } from './services/ContentScript'
 
@@ -25,7 +24,6 @@ function configureContainer(container: Container) {
   container.bind(Storage).toConstantValue(localStorage)
   container.bind(Window).toConstantValue(window)
   container.bind(Document).toConstantValue(document)
-  addCloudflareCredentials(container)
 }
 
 function main() {

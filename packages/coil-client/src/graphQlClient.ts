@@ -10,10 +10,6 @@ export class GraphQlClientOptions {
   public coilDomain = 'https://coil.com'
   public fetch: typeof fetch = portableFetch
   public log?: typeof console.log
-  public cloudflareAccess?: {
-    clientId: string
-    clientSecret: string
-  }
 }
 
 export interface GraphQlQueryParameters {
@@ -45,20 +41,12 @@ export class GraphQlClient {
     token = null,
     variables = {}
   }: GraphQlQueryParameters) {
-    const cloudFlareHeaders: Record<string, string> = this.config
-      .cloudflareAccess
-      ? {
-          'CF-Access-Client-Id': this.config.cloudflareAccess.clientId,
-          'CF-Access-Client-Secret': this.config.cloudflareAccess.clientSecret
-        }
-      : {}
     const init: RequestInit = {
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: token ? `Bearer ${token}` : '',
-        ...cloudFlareHeaders
+        Authorization: token ? `Bearer ${token}` : ''
       },
       body: JSON.stringify({ query, variables })
     }
@@ -66,7 +54,8 @@ export class GraphQlClient {
       this.config.log(
         'Domain:',
         this.config.coilDomain,
-        JSON.stringify({ body: { query, variables } }, null, 2)
+        'Url:',
+        JSON.stringify({ ...init, body: { query, variables } }, null, 2)
       )
     }
     const res = await this.fetch(`${this.config.coilDomain}/graphql`, init)

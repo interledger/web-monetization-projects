@@ -10,7 +10,6 @@ import { StorageService } from '../services/storage'
 import * as tokens from '../types/tokens'
 import { ClientOptions } from '../services/ClientOptions'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
-import { addCloudflareCredentials } from '../util/addCloudFlareCredentials'
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { BackgroundStorageService } from './services/BackgroundStorageService'
@@ -45,8 +44,6 @@ async function configureContainer(container: Container) {
   container.bind(tokens.LocalStorageProxy).toDynamicValue(context => {
     return context.container.get(StorageService).makeProxy(['token'])
   })
-
-  addCloudflareCredentials(container)
 
   const db = await HistoryDb.create()
   container.bind(HistoryDb).toConstantValue(db)

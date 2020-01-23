@@ -17,8 +17,7 @@ import {
   isValidStartEvent,
   isValidStopEvent
 } from './validators'
-import { AWAIT_MONETIZATION_TIMEOUT_MS, COIL_DOMAIN } from './env'
-import { addCloudFlareAccessHeaders } from './addCloudFlareAccessHeaders'
+import { AWAIT_MONETIZATION_TIMEOUT_MS } from './env'
 
 export interface OnMonetizationEvent {
   event: MonetizationStopEvent
@@ -46,10 +45,6 @@ export async function testMonetization({
   listenStopped = false
 }: TestPageParameters): Promise<TestPageResults> {
   const page = newPage ? await browser.newPage() : (await browser.pages())[0]
-
-  if (url.startsWith(COIL_DOMAIN)) {
-    await addCloudFlareAccessHeaders(page)
-  }
 
   // Show the extension debugging
   await page.evaluateOnNewDocument(() => {

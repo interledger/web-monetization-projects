@@ -33,6 +33,8 @@ export async function initCoil({
   password
 }: InitCoilParameters): Promise<InitCoilReturn> {
   const page = await browser.newPage()
+  // After the first request, the `CF_Authorization` cookie is set which
+  // seems to work in the extension background page.
   await addCloudFlareAccessHeaders(page)
 
   if (COIL_TOKEN) {
