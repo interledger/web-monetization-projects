@@ -43,7 +43,7 @@ make sense.
   - For Firefox, go to `about:debugging`
     - Enable add-on debugging
     - Load Temporary Add-on...
-  - For Chrome, go to `chrome://extensions` and `Load Unpacked`
+  - For Chrome or MS Edge, go to `chrome://extensions` (or `edge://extensions`) and `Load Unpacked`
 
 - [ ] Ensure that you are [logged in with a user with valid subscription](https://coil.com/settings/payment)
 
