@@ -128,6 +128,12 @@ export function makeWebpackConfig(rootDir: string) {
 
     entry: entry,
 
+    stats: {
+      warningsFilter: TS_LOADER_TRANSPILE_ONLY
+        ? [/export .* was not found in(.|\n)*\.ts$/]
+        : []
+    },
+
     plugins: [
       new webpack.DefinePlugin({
         WEBPACK_DEFINE_API: API,
