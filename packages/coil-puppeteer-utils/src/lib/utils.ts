@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Browser, Page } from 'puppeteer'
-
 import { COIL_PASSWORD, COIL_USER } from './env'
 import { initBrowser } from './initBrowser'
 import { initCoil, InitCoilReturn } from './initCoil'
