@@ -440,7 +440,6 @@ export class BackgroundFramesService extends EventEmitter {
 
   private logTabs() {
     this.log('tabs', JSON.stringify(this.tabs, null, 2))
-    // this.log('tabs', JSON.stringify(Object.keys(this.tabs), null, 2))
   }
 }
 

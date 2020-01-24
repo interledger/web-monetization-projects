@@ -25,16 +25,6 @@ export class Frames {
     this.isIFrame = !this.isTopFrame
     this.isCoilTopFrame = this.isTopFrame && this.isAnyCoilFrame
     this.isDirectChild = this.isIFrame && window.parent === window.top
-
-    if (this.isDirectChild) {
-      // Note that this is generally only possible for frames from the same
-      // origin. For example, it does not work for cinnamon/youtube
-      // So getting access to the frameElement is useless.
-      console.log(
-        "this.window.frameElement?.getAttribute('id')",
-        this.window.frameElement?.getAttribute('id')
-      )
-    }
   }
 
   monitor() {
@@ -49,14 +39,6 @@ export class Frames {
      */
     this.window.addEventListener('unload', () => {
       this.sendUnloadMessage()
-    })
-    this.window.addEventListener('message', message => {
-      console.log(
-        'window.message to',
-        window.location.href,
-        message.origin,
-        message.data
-      )
     })
     if (this.isTopFrame) {
       setTimeout(() => {
