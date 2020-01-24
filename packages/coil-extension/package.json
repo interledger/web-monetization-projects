@@ -70,7 +70,7 @@
     "@types/firefox": "^0.0.29",
     "@types/jest-environment-puppeteer": "^4.3.1",
     "@types/jsonwebtoken": "^8.3.6",
-    "@types/long": "^4.0.0",
+    "@types/long": "^4.0.1",
     "@types/node-fetch": "^2.5.4",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",

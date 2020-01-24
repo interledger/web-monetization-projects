@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@coil/puppeteer-utils": "0.0.0",
-    "@types/long": "^4.0.0",
+    "@types/long": "^4.0.1",
     "@types/node-fetch": "^2.5.4",
     "@types/uuid": "^3.4.6"
   }
