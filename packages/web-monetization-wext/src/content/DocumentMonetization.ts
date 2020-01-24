@@ -6,7 +6,8 @@ import {
   MonetizationStopEvent
 } from '@web-monetization/types'
 import { inject, injectable } from '@dier-makr/annotations'
-import { WextApi } from '@web-monetization/wext/tokens'
+
+import { WextApi } from '../tokens'
 
 import { ScriptInjection } from './ScriptInjection'
 
