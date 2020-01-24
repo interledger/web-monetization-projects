@@ -1,4 +1,5 @@
 import { inject, injectable } from 'inversify'
+import { parsePolicyDirectives } from '@web-monetization/polyfill-utils'
 
 import * as tokens from '../../types/tokens'
 import { FrameStateChange, UnloadFrame } from '../../types/commands'
@@ -41,30 +42,36 @@ export class Frames {
       this.sendUnloadMessage()
     })
     if (this.isTopFrame) {
-      setTimeout(() => {
-        // Can't really use *= or ~= because of potential monetization in a string etc
-        // need an allow syntax parser ....
-        const frames = document.querySelectorAll<HTMLIFrameElement>(
-          'iframe[allow]'
-        )
-        Array.from(frames).forEach((frame, ix) => {
-          // WOULD need to parse here ...
-          if (!frame.allow.match(/.*monetization.*/)) {
-            console.log('monetization not allowed', frame.allow)
-            return
-          }
-          const origin = new URL(frame.src).origin
-          console.log({ origin, hasWindow: Boolean(frame.contentWindow) })
-          frame.contentWindow?.postMessage(
-            {
-              // Need frameId/tabId
-              msg: `hello to iframe[@id="${frame.getAttribute('id')}"]`,
-              allow: frame.allow
-            },
-            origin
+      this.window.addEventListener(
+        'load',
+        () => {
+          // Can't really use *= or ~= because of potential monetization in a string etc
+          // need an allow syntax parser ....
+          const frames = document.querySelectorAll<HTMLIFrameElement>(
+            'iframe[allow]'
           )
-        })
-      }, 1000)
+          Array.from(frames).forEach((frame, ix) => {
+            if (!frame.allow) {
+              return
+            }
+            // WOULD need to parse here ...
+            const parsed = parsePolicyDirectives(frame.allow)
+            if (!('monetization' in parsed)) {
+              return
+            }
+            const origin = new URL(frame.src).origin
+            frame.contentWindow?.postMessage(
+              {
+                // Need frameId/tabId
+                msg: `hello to iframe[@id="${frame.getAttribute('id')}"]`,
+                allow: frame.allow
+              },
+              origin
+            )
+          })
+        },
+        { once: true }
+      )
     }
   }
 
