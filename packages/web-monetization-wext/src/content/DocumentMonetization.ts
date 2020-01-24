@@ -5,7 +5,8 @@ import {
   MonetizationState,
   MonetizationStopEvent
 } from '@web-monetization/types'
-import { injectable } from '@dier-makr/annotations'
+import { inject, injectable } from '@dier-makr/annotations'
+import { WextApi } from '@web-monetization/wext/tokens'
 
 import { ScriptInjection } from './ScriptInjection'
 
@@ -24,7 +25,9 @@ export class DocumentMonetization {
   constructor(
     private window: Window,
     private doc: Document,
-    private scripts: ScriptInjection
+    private scripts: ScriptInjection,
+    @inject(WextApi)
+    private api: typeof window.chrome
   ) {}
 
   /**
@@ -42,7 +45,8 @@ export class DocumentMonetization {
       document.monetization = document.createElement('div')
       document.monetization.state = 'stopped'
       window.addEventListener('message', function (event) {
-        if (event.source === window && event.data.webMonetization) {
+        if (event.source === window && event.data.webMonetization && event.origin
+         .startsWith( ${JSON.stringify(this.api.runtime.getURL(''))}) ) {
           document.monetization.dispatchEvent(
             new CustomEvent(event.data.type, {
               detail: event.data.detail

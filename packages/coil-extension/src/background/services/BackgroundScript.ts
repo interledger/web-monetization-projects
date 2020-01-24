@@ -110,7 +110,7 @@ export class BackgroundScript {
         }
         this.api.runtime.sendMessage(message, () => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          const ignored = chrome.runtime.lastError
+          const ignored = this.api.runtime.lastError
         })
 
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
@@ -128,6 +128,7 @@ export class BackgroundScript {
       const serialized = JSON.stringify(request)
       const redacted = serialized.replace(/"token":\s*".*"/, '<redacted>')
       this.log('received message. request=', redacted)
+
       void this.handleMessage(request, sender, sendResponse)
 
       // important: this tells chrome to expect an async response.
@@ -166,15 +167,18 @@ export class BackgroundScript {
       }
 
       const { tabId } = event
-      const status = event.frame.state
+      const status = event.changed.state
+      const isComplete = event.frame.state === 'complete'
+      const becameComplete = status === 'complete'
+      const changedUrl = Boolean(event.changed.href)
+
       // Always get the url from the tab
       const url = event.frame.href
-
       if (status === 'loading') {
         this.setCoilUrlForPopupIfNeeded(tabId, url)
       }
 
-      if (status === 'complete') {
+      if (becameComplete || (isComplete && changedUrl)) {
         this.setCoilUrlForPopupIfNeeded(tabId, url)
         const from = `onFrameChanged directly, event=${JSON.stringify(event)}, `
         // Unfortunately this event handler is run for all windows/iframes in
@@ -186,7 +190,14 @@ export class BackgroundScript {
           data: { from, url }
         }
         this.log('sending checkAdaptedContent message', message)
-        this.api.tabs.sendMessage(tabId, message, { frameId: event.frameId })
+        this.api.tabs.sendMessage(
+          tabId,
+          message,
+          { frameId: event.frameId },
+          () => {
+            console.log('lastError', this.api.runtime.lastError)
+          }
+        )
       }
     })
   }

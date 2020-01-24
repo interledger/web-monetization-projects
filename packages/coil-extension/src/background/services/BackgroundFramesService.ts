@@ -10,6 +10,7 @@ import { notNullOrUndef } from '../../util/nullables'
 import { logger, Logger } from './utils'
 
 import GetFrameResultDetails = chrome.webNavigation.GetFrameResultDetails
+import MessageSender = chrome.runtime.MessageSender
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface Frame extends Record<string, any> {
@@ -310,65 +311,75 @@ export class BackgroundFramesService extends EventEmitter {
     })
 
     this.api.runtime.onMessage.addListener(
-      async (message: ToBackgroundMessage, sender) => {
-        if (!sender.tab) {
-          this.log('onMessage, no tab', JSON.stringify({ message, sender }))
-          return
-        }
-
-        const tabId = getTab(sender)
-        const frameId = notNullOrUndef(sender.frameId)
-        if (message.command === 'unloadFrame') {
-          this.log('unloadFrame %s', frameId, message.data)
-          const frames = (this.tabs[tabId] = this.tabs[tabId] ?? [])
-          const ix = frames.findIndex(f => f.frameId === frameId)
-          if (ix !== -1) {
-            this.log('removing', ix)
-            frames.splice(ix, 1)
-            const removedEvent: FrameRemovedEvent = {
-              from: 'unloadFrame',
-              type: 'frameRemoved',
-              frameId,
-              tabId
-            }
-            this.emit(removedEvent.type, removedEvent)
-          }
-          if (frames.length === 0) {
-            delete this.tabs[tabId]
-          }
-        } else if (message.command === 'frameStateChange') {
-          if (this.traceLogging) {
-            this.log(
-              'frameStateChange, frameId=%s, tabId=%s, message=%s',
-              sender.frameId,
-              tabId,
-              JSON.stringify(message, null, 2)
-            )
-          }
-
-          const { href, state } = message.data
-          const frame = this.getFrame(tabId, frameId)
-          // Don't add frames, only update
-          // TODO: remember why ?
-          if (frame) {
-            // top and frameId, parentFrameId don't change
-            this.updateOrAddFrame('frameStateChange', tabId, frameId, {
-              href,
-              state
-            })
-          } else {
-            const navFrame = await this.getWebNavigationFrame(tabId, frameId)
-            this.updateOrAddFrame('frameStateChange', tabId, frameId, {
-              frameId,
-              href: navFrame.url,
-              state,
-              top: frameId === 0,
-              parentFrameId: navFrame.parentFrameId
-            })
-          }
-        }
+      (message: ToBackgroundMessage, sender) => {
+        // Important: On Firefox, don't return a Promise directly (e.g. async
+        // function) else other listeners do not get run!!
+        // See: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
+        void this.onMessageAsync(sender, message)
       }
     )
+  }
+
+  private async onMessageAsync(
+    sender: MessageSender,
+    message: ToBackgroundMessage
+  ) {
+    if (!sender.tab) {
+      this.log('onMessage, no tab', JSON.stringify({ message, sender }))
+      return
+    }
+
+    const tabId = getTab(sender)
+    const frameId = notNullOrUndef(sender.frameId)
+    if (message.command === 'unloadFrame') {
+      this.log('unloadFrame %s', frameId, message.data)
+      const frames = (this.tabs[tabId] = this.tabs[tabId] ?? [])
+      const ix = frames.findIndex(f => f.frameId === frameId)
+      if (ix !== -1) {
+        this.log('removing', ix)
+        frames.splice(ix, 1)
+        const removedEvent: FrameRemovedEvent = {
+          from: 'unloadFrame',
+          type: 'frameRemoved',
+          frameId,
+          tabId
+        }
+        this.emit(removedEvent.type, removedEvent)
+      }
+      if (frames.length === 0) {
+        delete this.tabs[tabId]
+      }
+    } else if (message.command === 'frameStateChange') {
+      if (this.traceLogging) {
+        this.log(
+          'frameStateChange, frameId=%s, tabId=%s, message=%s',
+          sender.frameId,
+          tabId,
+          JSON.stringify(message, null, 2)
+        )
+      }
+
+      const { href, state } = message.data
+      const frame = this.getFrame(tabId, frameId)
+      // Don't add frames, only update
+      // TODO: remember why ?
+      if (frame) {
+        // top and frameId, parentFrameId don't change
+        this.updateOrAddFrame('frameStateChange', tabId, frameId, {
+          href,
+          state
+        })
+      } else {
+        const navFrame = await this.getWebNavigationFrame(tabId, frameId)
+        this.updateOrAddFrame('frameStateChange', tabId, frameId, {
+          frameId,
+          href: navFrame.url,
+          state,
+          top: frameId === 0,
+          parentFrameId: navFrame.parentFrameId
+        })
+      }
+    }
   }
 
   private useWebNavigationToUpdateFrames(tabId: number) {
@@ -422,7 +433,7 @@ export class BackgroundFramesService extends EventEmitter {
       },
       () => {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const ignored = chrome.runtime.lastError
+        const ignored = this.api.runtime.lastError
       }
     )
   }
