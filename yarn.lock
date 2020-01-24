@@ -8575,7 +8575,7 @@ ilp-plugin-mini-accounts@^4.2.0:
     int64 "0.0.5"
     ws "^6.0.0"
 
-ilp-protocol-ildcp@^2.0.1, ilp-protocol-ildcp@^2.0.2:
+ilp-protocol-ildcp@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/ilp-protocol-ildcp/-/ilp-protocol-ildcp-2.0.2.tgz#7b3dffefb0797f7c7c589cc0c61355938145fe65"
   integrity sha512-imKeesH2+nNRTohfAjNmcesvD72hgtdlvHtrqPNqx+rtTsnhNIWfpBHEKjKWavDvZNmteuxjM7uEnc0gHF+gpw==
@@ -8593,19 +8593,7 @@ ilp-protocol-ildcp@^2.1.4:
     ilp-packet "^3.1.0-alpha.0"
     oer-utils "^5.1.0-alpha.0"
 
-ilp-protocol-stream@2.2.1, ilp-protocol-stream@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.2.1.tgz#8eee1626d18605f385130e8a79b6af0edeab8b7f"
-  integrity sha512-FXbzWTpUaXJv6ETJTr6F5cYFd/heLd9pbJI5TqWekc5ifp0xiE5NX07wjGBj7tlsPFzTTb4EB78h56kjwg5+vw==
-  dependencies:
-    "@types/node" "^10.14.22"
-    ilp-logger "^1.2.1"
-    ilp-packet "^3.0.9"
-    ilp-protocol-ildcp "^2.0.2"
-    long "^4.0.0"
-    oer-utils "^5.0.1"
-
-ilp-protocol-stream@2.3.0:
+ilp-protocol-stream@2.3.0, ilp-protocol-stream@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.3.0.tgz#19bb662da619490d861cc86d390372288e3bf1df"
   integrity sha512-SpzbyGIFjMnbHI8FBRhRlGI+qNsJh2wufJX+zVMbskBH9TqPf3zbvN5dD6m+d65HDyrKRaTRowdzLW7w+9G05g==
