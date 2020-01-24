@@ -47,12 +47,23 @@ interface Frame extends Record<string, any> {
   parentFrameId: number
 }
 
+/**
+ * We don't check for state, which could be null (a transient state where
+ * it is undetermined due to webNavigation api limitations)
+ *
+ * Note that in the case where don't have the state we inject a script to send
+ * a message to the frames content script to send a message with the current
+ * document.readyState.
+ *
+ */
 const isFullFrame = (partial: Partial<Frame>): partial is Frame => {
   return Boolean(
+    // typeof partial.state === 'string' &&
     typeof partial.frameId === 'number' &&
       typeof partial.parentFrameId === 'number' &&
       typeof partial.href === 'string' &&
-      typeof partial.top === 'boolean'
+      typeof partial.top === 'boolean' &&
+      typeof partial.lastUpdateTimeMS === 'number'
   )
 }
 
@@ -84,7 +95,7 @@ export interface FrameChangedEvent extends FrameEventWithFrame {
 export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
   traceLogging = false
-  logTabsInterval = 2000
+  logTabsInterval = 0
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
@@ -94,6 +105,7 @@ export class BackgroundFramesService extends EventEmitter {
     private api: typeof window.chrome
   ) {
     super()
+    // Set localStorage.debug to '' or `delete` then use this if need
     this.log = console.log.bind(console, 'BackgroundFramesService')
   }
 
@@ -144,7 +156,7 @@ export class BackgroundFramesService extends EventEmitter {
         this.emit(changedEvent.type, changedEvent)
       } else {
         this.log(
-          'error in frameAdded from=%s update=%s',
+          'ERROR in frameAdded from=%s update=%s',
           from,
           JSON.stringify(update)
         )
@@ -299,6 +311,11 @@ export class BackgroundFramesService extends EventEmitter {
 
     this.api.runtime.onMessage.addListener(
       async (message: ToBackgroundMessage, sender) => {
+        if (!sender.tab) {
+          this.log('onMessage, no tab', JSON.stringify({ message, sender }))
+          return
+        }
+
         const tabId = getTab(sender)
         const frameId = notNullOrUndef(sender.frameId)
         if (message.command === 'unloadFrame') {

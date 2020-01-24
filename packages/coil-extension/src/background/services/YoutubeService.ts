@@ -1,4 +1,4 @@
-import { injectable } from '@dier-makr/annotations'
+import { injectable } from 'inversify'
 
 import { logger, Logger } from './utils'
 

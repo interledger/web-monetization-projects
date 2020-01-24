@@ -160,10 +160,15 @@ export class BackgroundScript {
   private setTabsOnUpdatedListener() {
     // Reset tab state and content script when tab changes location
     // Note: this actually runs as the pages loads as well as changes
-    this.api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-      const { status } = changeInfo
+    this.framesService.on('frameChanged', event => {
+      if (!event.frame.top) {
+        return
+      }
+
+      const { tabId } = event
+      const status = event.frame.state
       // Always get the url from the tab
-      const { url } = tab
+      const url = event.frame.href
 
       if (status === 'loading') {
         this.setCoilUrlForPopupIfNeeded(tabId, url)
@@ -171,10 +176,7 @@ export class BackgroundScript {
 
       if (status === 'complete') {
         this.setCoilUrlForPopupIfNeeded(tabId, url)
-        const from =
-          `onTabsUpdated directly, windowId=${tab.windowId}, ` +
-          `tab=${JSON.stringify(tab)}, ` +
-          `status===complete, changeInfo=${JSON.stringify(changeInfo)}`
+        const from = `onFrameChanged directly, event=${JSON.stringify(event)}, `
         // Unfortunately this event handler is run for all windows/iframes in
         // a given tab so we send the url and, inter alia, abort when the url
         // is not the same. Extremely unlikely, but likely harmless if an url
@@ -184,7 +186,7 @@ export class BackgroundScript {
           data: { from, url }
         }
         this.log('sending checkAdaptedContent message', message)
-        this.api.tabs.sendMessage(tabId, message)
+        this.api.tabs.sendMessage(tabId, message, { frameId: event.frameId })
       }
     })
   }
@@ -328,7 +330,9 @@ export class BackgroundScript {
     this.tabStates.set(tab, {
       coilSite: url
     })
-    this.reloadTabState({ from: 'setCoilUrlForPopupIfNeeded' })
+    if (url) {
+      this.reloadTabState({ from: 'setCoilUrlForPopupIfNeeded' })
+    }
   }
 
   async injectToken(siteToken: string | null, url: string) {
