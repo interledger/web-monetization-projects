@@ -11,7 +11,8 @@ import {
   testMonetization,
   TestPageResults,
   timeout,
-  isValidStopEvent
+  isValidStopEvent,
+  env
 } from '@coil/puppeteer-utils'
 import { MonetizationExtendedDocument } from '@web-monetization/types'
 
@@ -67,20 +68,21 @@ async function run() {
 
   const results: Record<string, TestPageResults> = {}
   let initSuccess = true
-  for (const url of Object.keys(testUrls)) {
-    debug('opening url to start monetization', url)
+  const urls = testUrls[env.COIL_DOMAIN]
+  for (const site of Object.keys(urls)) {
+    debug('opening url to start monetization', site)
     const result = await testMonetization({
       listenStopped: true,
       browser,
-      url: testUrls[url]
+      url: urls[site]
     })
     if (!result.success) {
-      debug('test page failed to open stream. page=', url)
+      debug('test page failed to open stream. page=', site)
       initSuccess = false
     } else {
-      debug('test page successfully opened stream. page=', url)
+      debug('test page successfully opened stream. page=', site)
     }
-    results[url] = result
+    results[site] = result
   }
 
   checkCondition({

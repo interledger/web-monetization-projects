@@ -1,26 +1,29 @@
 import {
   debug,
   initBrowserAndLoginFromEnv,
-  testMonetization
+  testMonetization,
+  env
 } from '@coil/puppeteer-utils'
 
 import { testUrls } from './testUrls'
 
 async function run() {
   const { browser } = await initBrowserAndLoginFromEnv()
-  const { success: youtubeRes } = await testMonetization({
-    browser,
-    url: testUrls.youtubeUrl
-  })
-  debug('Youtube Result=', youtubeRes)
-  const { success: twitchRes } = await testMonetization({
-    browser,
-    url: testUrls.twitchUrl
-  })
-  debug('Twitch Result=', twitchRes)
+  let success = true
+  for (const [name, url] of Object.entries(testUrls[env.COIL_DOMAIN])) {
+    const { success: siteResult } = await testMonetization({
+      browser,
+      url: url
+    })
+    if (!siteResult) {
+      success = false
+    }
+    debug('%s Result=%s', name, siteResult)
+  }
+
   // noinspection ES6MissingAwait
   void browser.close()
-  process.exit(youtubeRes && twitchRes ? 0 : 1)
+  process.exit(success ? 0 : 1)
 }
 
 run().catch(e => {
