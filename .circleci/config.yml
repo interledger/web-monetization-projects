@@ -117,6 +117,9 @@ jobs:
       - image: circleci/node:12.14.1-buster-browsers
     resource_class: large
     steps:
+      - run:
+          name: echo TESTING_ENV_VAR $TESTING_ENV_VAR
+          command: echo TESTING_ENV_VAR $TESTING_ENV_VAR
       - checkout
       - *restore_cache
       - *yarn_install
@@ -176,6 +179,9 @@ jobs:
     docker:
       - image: circleci/node:12.14.1-buster-browsers
     steps:
+      - run:
+          name: echo TESTING_ENV_VAR $TESTING_ENV_VAR
+          command: echo TESTING_ENV_VAR $TESTING_ENV_VAR
       - checkout
       - *restore_cache
       - *yarn_install
@@ -200,21 +206,25 @@ workflows:
       - coil-extension-package
       - coil-oauth-scripts-build
       - jest-all:
+          context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
       - jest-lerna-all:
+          context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
       - coil-extension-puppeteer:
+          context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
       - coil-extension-puppeteer-transpile-only:
+          context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
