@@ -15,7 +15,7 @@ export function logEvents() {
 
   events.forEach(e => {
     getDoc(document).monetization.addEventListener(e, ev => {
-      debug('WM EVENT: ', e, ((ev as unknown) as CustomEvent).detail)
+      debug('WM EVENT: ', e, ev.detail)
     })
   })
 }
