@@ -1,8 +1,8 @@
 import {
   debug,
+  env,
   initBrowserAndLoginFromEnv,
-  testMonetization,
-  env
+  testMonetization
 } from '@coil/puppeteer-utils'
 
 import { testUrls } from './testUrls'
