@@ -118,7 +118,7 @@ jobs:
     resource_class: large
     steps:
       - run:
-          name: echo TESTING_ENV_VAR $TESTING_ENV_VAR
+          name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be masked
           command: echo TESTING_ENV_VAR $TESTING_ENV_VAR
       - checkout
       - *restore_cache
@@ -180,7 +180,7 @@ jobs:
       - image: circleci/node:12.14.1-buster-browsers
     steps:
       - run:
-          name: echo TESTING_ENV_VAR $TESTING_ENV_VAR
+          name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be empty
           command: echo TESTING_ENV_VAR $TESTING_ENV_VAR
       - checkout
       - *restore_cache
