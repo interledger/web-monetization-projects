@@ -13,7 +13,8 @@ import {
   getSPSPResponse,
   PaymentDetails,
   SPSPError,
-  SPSPResponse
+  SPSPResponse,
+  getFarFutureExpiry
 } from '@web-monetization/polyfill-utils'
 import { GraphQlClient } from '@coil/client'
 import { Container, inject, injectable } from 'inversify'
@@ -326,7 +327,7 @@ class StreamAttempt {
       slippage: 1.0,
       exchangeRate: 1.0,
       maximumPacketAmount: '10000000',
-      getExpiry
+      getExpiry: getFarFutureExpiry
     })
 
     if (!this._active) return
@@ -488,14 +489,4 @@ class StreamAttempt {
       }
     }
   }
-}
-
-// Use a fixed date in the distant future (2100-01-01T00:00:00.000Z) as the
-// expiry of all outgoing packets. This ensures that payment will work even
-// if the OS's clock is skewed. It will be replaced with a more reasonable
-// expiry by the connector.
-const FAR_FUTURE_EXPIRY = new Date(4102444800000)
-
-function getExpiry(destination: string): Date {
-  return FAR_FUTURE_EXPIRY
 }

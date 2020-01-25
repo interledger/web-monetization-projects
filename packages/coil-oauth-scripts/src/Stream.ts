@@ -10,7 +10,8 @@ import {
   asyncUtils,
   BackoffWaiter,
   getSPSPResponse,
-  SPSPResponse
+  SPSPResponse,
+  getFarFutureExpiry
 } from '@web-monetization/polyfill-utils'
 import {
   MonetizationProgressEvent,
@@ -181,7 +182,8 @@ export class Stream {
         slippage: 1.0,
         exchangeRate: 1.0,
         maximumPacketAmount: '10000000',
-        ...details
+        ...details,
+        getExpiry: getFarFutureExpiry
       })
 
       if (!this.isActive()) {
