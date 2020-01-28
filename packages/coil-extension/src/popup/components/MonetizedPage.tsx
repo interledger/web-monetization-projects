@@ -7,6 +7,7 @@ import { Link } from './util/Link'
 import { StatusTypography } from './util/StatusTypography'
 import { MonetizeAnimation } from './MonetizationAnimation'
 import { StreamControls } from './StreamControls'
+import { TipButton } from './TipButton'
 import { useShowIfClicked } from './util/useShowIfClicked'
 
 const FlexBox = styled('div')(({ theme }) => ({
@@ -62,6 +63,9 @@ export function MonetizedPage(props: PopupProps) {
         </div>
       </Grid>
       {showControls && <StreamControls context={context} />}
+
+      {/* this will only show if user is enabled */}
+      <TipButton context={context} />
     </>
   )
 }

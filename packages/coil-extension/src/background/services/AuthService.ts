@@ -63,7 +63,10 @@ export class AuthService extends EventEmitter {
     const resp = await this.client.whoAmI(token)
     this.log('updateWhoAmi resp', resp.data)
     if (resp.data?.whoami) {
-      this.store.user = resp.data.whoami
+      this.store.user = {
+        ...resp.data.whoami,
+        canTip: true
+      }
       return token
     } else {
       return null
