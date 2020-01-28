@@ -22,6 +22,18 @@ export const TipButton = (props: PopupProps) => {
     }, 500)
   }
 
+  /* TODO: use something like this to tip the current page.
+ * TODO: how do we grab the payment pointer from here?
+ * TODO: should we just handle the response inline?
+  const setStreamControls = (data: SetStreamControlsParams) => {
+    const message: SetStreamControls = {
+      command: 'setStreamControls',
+      data
+    }
+    props.context.runtime.sendMessage(message)
+  }
+  */
+
   if (props.context.store.user.canTip) {
     switch (tipState) {
       case TipState.READY:
