@@ -2,37 +2,50 @@ import React, { useState } from 'react'
 import { Button } from '@material-ui/core'
 
 import { PopupProps } from '../types'
+import { SendTip, SendTipResult } from '../../types/commands'
 
 export enum TipState {
   READY = 0,
   LOADING,
-  COMPLETE
+  COMPLETE,
+  ERROR
 }
 
 export const TipButton = (props: PopupProps) => {
   const [tipState, setTipState] = useState(TipState.READY)
-  const onClickTip = () => {
+  const onClickTip = async () => {
     setTipState(TipState.LOADING)
-    // TODO: kick off async tip instead
-    setTimeout(() => {
+
+    // TODO: get the real payment pointer
+    const { success } = await sendTip('$example.com')
+
+    if (success) {
       setTipState(TipState.COMPLETE)
-      setTimeout(() => {
-        setTipState(TipState.READY)
-      }, 1000)
-    }, 500)
+    } else {
+      setTipState(TipState.ERROR)
+    }
+
+    setTimeout(() => {
+      setTipState(TipState.READY)
+    }, 1000)
   }
 
   /* TODO: use something like this to tip the current page.
- * TODO: how do we grab the payment pointer from here?
- * TODO: should we just handle the response inline?
-  const setStreamControls = (data: SetStreamControlsParams) => {
-    const message: SetStreamControls = {
-      command: 'setStreamControls',
-      data
+   * TODO: how do we grab the payment pointer from here?
+   * TODO: should we just handle the response inline?*/
+  const sendTip = async (receiver: string) => {
+    const message: SendTip = {
+      command: 'sendTip',
+      data: {
+        receiver
+      }
     }
-    props.context.runtime.sendMessage(message)
+
+    // TODO: is this the right typing?
+    return (props.context.runtime.sendMessage(message) as unknown) as Promise<
+      SendTipResult
+    >
   }
-  */
 
   if (props.context.store.user.canTip) {
     switch (tipState) {
@@ -44,6 +57,9 @@ export const TipButton = (props: PopupProps) => {
 
       case TipState.COMPLETE:
         return <Button disabled>Tip complete!</Button>
+
+      case TipState.ERROR:
+        return <Button disabled>Something went wrong.</Button>
     }
   } else {
     return <></>

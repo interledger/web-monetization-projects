@@ -221,6 +221,25 @@ export interface SetMonetizationState {
   }
 }
 
+/**
+ * popup -> background
+ * browser.runtime.sendMessage
+ */
+export interface SendTip {
+  command: 'sendTip'
+  data: {
+    receiver: string
+  }
+}
+
+/**
+ * background -> popup
+ * reply to browser.runtime.sendMessage
+ */
+export interface SendTipResult {
+  success: boolean
+}
+
 export type ToContentMessage =
   | CheckAdaptedContent
   | MonetizationProgress
