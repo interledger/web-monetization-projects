@@ -3,7 +3,6 @@ import '@abraham/reflection'
 import { Container } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'
-import { HistoryDb } from '@web-monetization/wext/services'
 
 import { API, COIL_DOMAIN } from '../webpackDefines'
 import { StorageService } from '../services/storage'
@@ -44,9 +43,6 @@ async function configureContainer(container: Container) {
   container.bind(tokens.LocalStorageProxy).toDynamicValue(context => {
     return context.container.get(StorageService).makeProxy(['token'])
   })
-
-  const db = await HistoryDb.create()
-  container.bind(HistoryDb).toConstantValue(db)
 }
 
 async function main() {

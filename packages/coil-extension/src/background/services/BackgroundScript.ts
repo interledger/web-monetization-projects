@@ -1,7 +1,6 @@
 import MessageSender = chrome.runtime.MessageSender
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
-import { HistoryDb } from '@web-monetization/wext/services'
 import { MonetizationState } from '@web-monetization/types'
 import { resolvePaymentEndpoint } from '@web-monetization/polyfill-utils'
 
@@ -58,7 +57,6 @@ export class BackgroundScript {
     private log: Logger,
 
     private client: GraphQlClient,
-    private db: HistoryDb,
     @inject(tokens.WextApi)
     private api: typeof window.chrome,
     @inject(tokens.CoilDomain)
