@@ -188,7 +188,13 @@ export class Stream extends EventEmitter {
           await timeout(1000)
         }
       } catch (e) {
-        if (e.message.includes('exhausted capacity.') && btpToken) {
+        const { ilpReject } = e
+        if (
+          btpToken &&
+          ilpReject &&
+          ilpReject.message === 'exhausted capacity.' &&
+          ilpReject.data.toString() === btpToken
+        ) {
           this._debug('anonymous token exhausted; retrying, err=%s', e.message)
           this._anonTokens.removeToken(btpToken)
           continue
