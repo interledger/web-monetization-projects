@@ -10,12 +10,19 @@ export class MonetizationEventsLogger {
       'monetizationstart',
       'monetizationstop',
       'monetizationpending'
+      // Don't log these events
+      // 'monetizationprogress'
     ]
     const code = events
       .map(
         e =>
           `document.monetization.addEventListener('${e}', ` +
-          `(e) => console.log(e.type, JSON.stringify(e.detail)) )`
+          `(e) => console.log(
+           '%c Web-Monetization %s event:  %s',
+           'color: aqua;',
+           e.type,
+           JSON.stringify(e.detail)) )
+          `
       )
       .join(';')
     this.scripts.inject(code)

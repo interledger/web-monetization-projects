@@ -27,11 +27,6 @@ function configureContainer(container: Container) {
 }
 
 function main() {
-  console.log(
-    '%c coil-extension content.ts',
-    'color: red;',
-    window.location.href
-  )
   inversifyModule(GlobalModule)
 
   const container = new Container({
