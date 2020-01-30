@@ -27,7 +27,6 @@ import { Logger, logger } from './utils'
 
 const { timeout } = asyncUtils
 
-const ANON_TOKEN_BATCH_SIZE = 10
 const UPDATE_AMOUNT_TIMEOUT = 2000
 let ATTEMPT = 0
 
@@ -170,7 +169,7 @@ export class Stream extends EventEmitter {
       let btpToken: string | undefined
       let plugin, attempt
       try {
-        btpToken = await this._getBtpToken()
+        btpToken = await this._anonTokens.getToken(this._authToken)
         plugin = await this._makePlugin(btpToken)
         const spspDetails = await this._getSPSPDetails()
         this.container
@@ -204,19 +203,6 @@ export class Stream extends EventEmitter {
 
     this._looping = false
     this._debug('aborted because stream is no longer active.')
-  }
-
-  async _getBtpToken(): Promise<string> {
-    const cachedAnonToken = await this._anonTokens.getToken()
-    if (cachedAnonToken) return cachedAnonToken
-
-    await this._anonTokens.populateTokens(
-      this._authToken,
-      ANON_TOKEN_BATCH_SIZE
-    )
-    const newAnonToken = await this._anonTokens.getToken()
-    if (newAnonToken) return newAnonToken
-    throw new Error('Unable to acquire anonymous token')
   }
 
   async _makePlugin(btpToken: string) {

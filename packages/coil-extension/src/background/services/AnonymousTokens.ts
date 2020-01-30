@@ -7,6 +7,8 @@ import { Logger, logger } from './utils'
 
 decorate(injectable(), anonymousTokens.AnonymousTokens)
 
+const ANON_TOKEN_BATCH_SIZE = 10
+
 @injectable()
 export class AnonymousTokens extends anonymousTokens.AnonymousTokens {
   constructor(
@@ -19,7 +21,8 @@ export class AnonymousTokens extends anonymousTokens.AnonymousTokens {
       redeemerUrl,
       signerUrl,
       store: new TokenStore(storage),
-      debug
+      debug,
+      batchSize: ANON_TOKEN_BATCH_SIZE
     })
   }
 }

@@ -58,6 +58,7 @@ export interface AnonymousTokensOptions {
   signerUrl: string
   store: TokenStore
   debug?: typeof console.log
+  batchSize: number
 }
 
 export class AnonymousTokens {
@@ -67,42 +68,76 @@ export class AnonymousTokens {
   // Maps btpToken => SignedToken.message
   private tokenMap: Map<string, string> = new Map()
   private debug: typeof console.log
+  private batchSize: number
+
+  private storedTokenCount: number
+  private _populateTokensPromise: Promise<void> | null = null
 
   constructor({
     redeemerUrl,
     signerUrl,
     store,
-    debug
+    debug,
+    batchSize
   }: AnonymousTokensOptions) {
     this.redeemerUrl = redeemerUrl
     this.signerUrl = signerUrl
     this.store = store
     this.debug = debug || function() {}
+    this.batchSize = batchSize
+
+    let count = 0
+    this.store.iterate((_blob: string, name: string) => {
+      if (name.startsWith(TOKEN_PREFIX)) count++
+      return undefined
+    })
+    this.storedTokenCount = count
   }
 
-  async getToken(): Promise<string | undefined> {
+  async getToken(coilAuthToken: string): Promise<string> {
+    // When there is only 1 token left, fetch some more in the background.
+    if (this.storedTokenCount === 1) {
+      this.populateTokens(coilAuthToken)
+    }
+
     // eslint-disable-next-line no-constant-condition
     while (true) {
       const signedToken = await this._getSignedToken()
-      if (!signedToken) return
-      const response = await fetch(this.redeemerUrl + '/redeem', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(signedToken)
-      })
-      if (response.status === 400) {
-        // The stored token was invalid or expired (the server wouldn't verify it).
-        await this._removeSignedToken(signedToken.message)
+      if (!signedToken) {
+        await this.populateTokens(coilAuthToken)
         continue
       }
-      if (!response.ok) {
-        throw new Error(`failed to redeem token. code=${response.status}`)
-      }
-      const body = await response.json()
-      const btpToken = body.token
-      this.tokenMap.set(btpToken, signedToken.message)
-      return btpToken
+      const btpToken = await this._redeemToken(signedToken)
+      if (btpToken) return btpToken
+      // Otherwise, try again, since the retrieved token was likely expired.
     }
+  }
+
+  private async _redeemToken(
+    signedToken: SignedToken
+  ): Promise<string | undefined> {
+    const response = await fetch(this.redeemerUrl + '/redeem', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(signedToken)
+    })
+    if (response.status === 400) {
+      // The stored token was invalid or expired (the server wouldn't verify it).
+      await this._removeSignedToken(signedToken.message)
+      return
+    }
+    if (!response.ok) {
+      throw new Error(`failed to redeem token. code=${response.status}`)
+    }
+    const body = await response.json()
+    const btpToken = body.token
+    if (!btpToken) {
+      throw new Error(
+        `invalid redeemed token. response=${JSON.stringify(body)}`
+      )
+    }
+    this.tokenMap.set(btpToken, signedToken.message)
+    return btpToken
   }
 
   private _getSignedToken(): Promise<SignedToken | undefined> {
@@ -127,6 +162,7 @@ export class AnonymousTokens {
   }
 
   private _removeSignedToken(anonUserId: string): Promise<void> {
+    this.storedTokenCount--
     this.debug('removing token anonUserId=%s', anonUserId)
     return this.store.removeItem(TOKEN_PREFIX + anonUserId)
   }
@@ -176,15 +212,24 @@ export class AnonymousTokens {
     return body as TimestampedSignature
   }
 
-  async populateTokens(
-    coilAuthToken: string,
-    tokenCount: number
-  ): Promise<void> {
+  // TODO private?
+  private async populateTokens(coilAuthToken: string): Promise<void> {
+    // Ensure that at most one `_populateTokens` call runs simultaneously.
+    if (this._populateTokensPromise) return this._populateTokensPromise
+    this._populateTokensPromise = this._populateTokensNow(coilAuthToken)
+    try {
+      await this._populateTokensPromise
+    } finally {
+      this._populateTokensPromise = null
+    }
+  }
+
+  private async _populateTokensNow(coilAuthToken: string): Promise<void> {
     const key = await this._getKeyParams()
     const tokens = []
     // Generate all tokens first so the timing in between tokens can't be used
     // to learn anything about the token or blinding factor.
-    for (let i = 0; i < tokenCount; i++) {
+    for (let i = 0; i < this.batchSize; i++) {
       const token = _getRandomToken()
       const {
         blindedMessageHash: blindedTokenHash,
@@ -221,7 +266,12 @@ export class AnonymousTokens {
           this.debug('failed to generate token err=%s', err.message)
         })
     }
-    this.debug('populateTokens got=%d want=%d tokens', gotTokens, tokenCount)
+    this.debug(
+      'populateTokens got=%d want=%d tokens',
+      gotTokens,
+      this.batchSize
+    )
+    this.storedTokenCount += gotTokens
 
     if (gotTokens === 0) {
       throw new Error('no anonymous tokens could be prepared')
