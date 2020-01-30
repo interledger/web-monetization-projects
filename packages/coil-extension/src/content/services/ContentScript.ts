@@ -40,7 +40,7 @@ export class ContentScript {
     private idle: IdleDetection,
     private monetization: DocumentMonetization,
     private auth: ContentAuthService,
-    private monetizationEventsLogger: MonetizationEventsLogger
+    private eventsLogger: MonetizationEventsLogger
   ) {}
 
   handleMonetizationTag() {
@@ -165,7 +165,9 @@ export class ContentScript {
       })
       this.setRuntimeMessageListener()
       this.monetization.injectDocumentMonetization()
-      this.monetizationEventsLogger.bindLoggersToEvents()
+      if (this.storage.getItem('WM_DEBUG')) {
+        this.eventsLogger.bindLoggersToEvents()
+      }
     }
 
     if (this.frames.isAnyCoilFrame) {
