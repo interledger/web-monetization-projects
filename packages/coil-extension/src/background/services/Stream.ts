@@ -23,6 +23,7 @@ import { BandwidthTiers } from '@coil/polyfill-utils'
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 
+import { AnonymousTokens } from './AnonymousTokens'
 import { Logger, logger } from './utils'
 
 const { timeout } = asyncUtils
@@ -74,7 +75,7 @@ export class Stream extends EventEmitter {
   private readonly _requestId: string
   private readonly _spspUrl: string
   private readonly _paymentPointer: string
-  private _token: string
+  private _authToken: string
 
   private readonly _server: string
   private readonly _tiers: BandwidthTiers
@@ -86,8 +87,8 @@ export class Stream extends EventEmitter {
   private _active: boolean
   private _looping: boolean
   private _attempt: StreamAttempt | null
-  private _client: GraphQlClient
   private _coilDomain: string
+  private _anonTokens: AnonymousTokens
 
   constructor(
     @logger('Stream')
@@ -111,10 +112,10 @@ export class Stream extends EventEmitter {
     this._paymentPointer = paymentPointer
     this._requestId = requestId
     this._spspUrl = spspEndpoint
-    this._token = token
-    this._client = container.get(GraphQlClient)
+    this._authToken = token
     this._tiers = container.get(BandwidthTiers)
     this._coilDomain = container.get(tokens.CoilDomain)
+    this._anonTokens = container.get(AnonymousTokens)
 
     this._active = false
     this._looping = false
@@ -166,9 +167,11 @@ export class Stream extends EventEmitter {
     )
 
     while (this._active) {
+      let btpToken: string | undefined
       let plugin, attempt
       try {
-        plugin = await this._makePlugin()
+        btpToken = await this._anonTokens.getToken(this._authToken)
+        plugin = await this._makePlugin(btpToken)
         const spspDetails = await this._getSPSPDetails()
         this.container
           .rebind(tokens.NoContextLoggerName)
@@ -186,6 +189,17 @@ export class Stream extends EventEmitter {
           await timeout(1000)
         }
       } catch (e) {
+        const { ilpReject } = e
+        if (
+          btpToken &&
+          ilpReject &&
+          ilpReject.message === 'exhausted capacity.' &&
+          ilpReject.data.toString() === btpToken
+        ) {
+          this._debug('anonymous token exhausted; retrying, err=%s', e.message)
+          this._anonTokens.removeToken(btpToken)
+          continue
+        }
         this._debug('error streaming. retry in 2s. err=', e.message, e.stack)
         if (this._active) await timeout(2000)
       } finally {
@@ -198,19 +212,7 @@ export class Stream extends EventEmitter {
     this._debug('aborted because stream is no longer active.')
   }
 
-  async _getBtpToken() {
-    try {
-      this._debug('fetching btp token')
-      return await this._client.refreshBtpToken(this._token)
-    } catch (e) {
-      this._debug('error fetching btp token', e.message)
-      throw e
-    }
-  }
-
-  async _makePlugin() {
-    const btpToken = await this._getBtpToken()
-
+  async _makePlugin(btpToken: string) {
     // these are interspersed in order to not waste time if connection
     // is severed before full establishment
     if (!this._active) throw new Error('aborted monetization')
@@ -383,14 +385,14 @@ class StreamAttempt {
         resolve()
       }
 
-      const onConnectionClose = () => {
+      const onConnectionClose = (err?: Error) => {
         // TODO: this seems to *always* run despite the cleanup() call in
         //   the onPluginDisconnect() callback.
         //   This then is essentially a noop ? Is there any case where plugin
         //    disconnected won't be run first ?
-        this._debug('onConnectionClose()')
+        this._debug('onConnectionClose(%s)', err)
         cleanUp()
-        reject(new Error('connection closed.'))
+        reject(err || new Error('connection closed.'))
       }
 
       const onUpdateAmountTimeout = async () => {
@@ -411,6 +413,7 @@ class StreamAttempt {
       const cleanUp = () => {
         this._debug('cleanup()')
         this._ilpStream.removeListener('outgoing_money', onMoney)
+        this._connection.removeListener('error', onConnectionClose)
         this._connection.removeListener('close', onConnectionClose)
         plugin.removeListener('disconnect', onPluginDisconnect)
         // eslint-disable-next-line @typescript-eslint/no-use-before-define
@@ -419,6 +422,7 @@ class StreamAttempt {
 
       plugin.once('disconnect', onPluginDisconnect)
       this._ilpStream.on('outgoing_money', onMoney)
+      this._connection.once('error', onConnectionClose)
       this._connection.once('close', onConnectionClose)
       let updateAmountTimeout = setTimeout(
         onUpdateAmountTimeout,

@@ -12,6 +12,9 @@
   ],
   "references": [
     {
+      "path": "../coil-anonymous-tokens/tsconfig.build.json"
+    },
+    {
       "path": "../coil-polyfill-utils/tsconfig.build.json"
     },
     {
