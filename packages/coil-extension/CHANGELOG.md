@@ -1,5 +1,24 @@
 <a name="coil-extension@0.0.45"></a>
 
+# [coil-extension@0.0.45](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.45...coil-extension@0.0.46) (2020-01-31)
+
+### Features
+
+- Re-enable STREAM performance optimization [#282](https://github.com/coilhq/web-monetization-projects/pull/282)
+- Remove styled-components in favor of material-ui builtins for reduced bundle size [#260](https://github.com/coilhq/web-monetization-projects/pull/260)
+- Update ilp-protocol-stream to version 2.3.0
+
+### Bug Fixes
+
+- Fix Clock Skew issue [#307](https://github.com/coilhq/web-monetization-projects/pull/307)
+- Make logging from content script optional [#342](https://github.com/coilhq/web-monetization-projects/pull/342)
+- Squelch (expected) background script errors shown only in FF [#288](https://github.com/coilhq/web-monetization-projects/pull/288)
+- Fix extension working with staging environment [#284](https://github.com/coilhq/web-monetization-projects/pull/284)
+- Remove unused HistoryDb (IndexedDB) service [#343](https://github.com/coilhq/web-monetization-projects/pull/343)
+- Fix race condition causing errant stop event to be fired [#353](https://github.com/coilhq/web-monetization-projects/pull/353)
+
+<a name="coil-extension@0.0.45"></a>
+
 # [coil-extension@0.0.45](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.44...coil-extension@0.0.45) (2020-01-04)
 
 ### Bug Fixes
