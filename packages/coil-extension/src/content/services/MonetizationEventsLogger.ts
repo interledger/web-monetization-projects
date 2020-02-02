@@ -19,7 +19,7 @@ export class MonetizationEventsLogger {
           `document.monetization.addEventListener('${e}', ` +
           `(e) => console.log(
            '%c Web-Monetization %s event:  %s',
-           'color: aqua;',
+           'color: aqua; background-color: black',
            e.type,
            JSON.stringify(e.detail)) )
           `

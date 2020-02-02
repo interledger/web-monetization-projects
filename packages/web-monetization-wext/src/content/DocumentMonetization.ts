@@ -11,6 +11,7 @@ import { ScriptInjection } from './ScriptInjection'
 
 interface SetStateParams {
   state: MonetizationState
+  requestId?: string
   finalized?: boolean
 }
 
@@ -63,7 +64,11 @@ export class DocumentMonetization {
    * This needs to handle multiple requests to change to the same state
    * (where state can be a composite, eg. {state: 'stopped', finalized: false})
    */
-  setState({ state, finalized }: SetStateParams) {
+  setState({ requestId, state, finalized }: SetStateParams) {
+    if (requestId && this.request?.requestId !== requestId) {
+      return
+    }
+
     finalized = Boolean(finalized)
     // We may need to emit a stop event more than once in the case of the user
     // pausing (monetizationstop event with finalized: false) then the tag

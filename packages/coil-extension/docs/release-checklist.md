@@ -175,7 +175,7 @@ make sense.
   - Issue: [coil/coilhq#2084][ci2084]
   - Fix PRs: [#166][p166] [#295][p295]
 
-- [ ] On MacOS Chrome check that the monetized animation is working
+- [ ] On MacOS Chromium browsers (Chrome/Edge) check that the monetized animation is working
       on non primary monitors.
 
   - Issue: [#312][i312]

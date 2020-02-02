@@ -560,10 +560,11 @@ export class BackgroundScript {
 
   private doStopWebMonetization(tab: number) {
     this.tabStates.logLastMonetizationCommand(tab, 'stop')
+    const requestId = this.tabsToStreams[tab]
     const closed = this._closeStream(tab)
     // May be noop other side if stop monetization was initiated from
     // ContentScript
-    this.sendSetMonetizationStateMessage(tab, 'stopped')
+    this.sendSetMonetizationStateMessage(tab, 'stopped', requestId)
     // clear the tab state, and set things to default
     // no need to send checkAdaptedContent message to check for adapted sites as
     // that will happen automatically on url change (html5 push state also)
@@ -577,10 +578,15 @@ export class BackgroundScript {
     return true
   }
 
-  sendSetMonetizationStateMessage(tabId: number, state: MonetizationState) {
+  sendSetMonetizationStateMessage(
+    tabId: number,
+    state: MonetizationState,
+    requestId?: string
+  ) {
     const message: SetMonetizationState = {
       command: 'setMonetizationState',
       data: {
+        requestId: this.tabsToStreams[tabId] ?? requestId,
         state
       }
     }
@@ -631,12 +637,13 @@ export class BackgroundScript {
 
   private logout(_: MessageSender) {
     for (const tabId of this.tabStates.tabKeys()) {
+      const requestId = this.tabsToStreams[tabId]
       this._closeStream(tabId)
       this.tabStates.clear(tabId)
       // TODO: this is hacky, but should do the trick for now
       const message: SetMonetizationState = {
         command: 'setMonetizationState',
-        data: { state: 'stopped' }
+        data: { state: 'stopped', requestId }
       }
       this.api.tabs.sendMessage(tabId, message)
     }
