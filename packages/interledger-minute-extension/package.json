@@ -39,7 +39,7 @@
     "@coil/puppeteer-utils": "^0.0.0",
     "@dier-makr/inversify": "^0.0.0",
     "@material-ui/core": "^4.9.0",
-    "@material-ui/icons": "^4.5.1",
+    "@material-ui/icons": "^4.9.1",
     "@web-monetization/polyfill-utils": "^0.0.0",
     "@web-monetization/types": "^0.0.0",
     "@web-monetization/wext": "^0.0.0",
