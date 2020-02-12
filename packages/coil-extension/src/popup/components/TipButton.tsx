@@ -17,7 +17,7 @@ export const TipButton = (props: PopupProps) => {
     setTipState(TipState.LOADING)
 
     // TODO: get the real payment pointer
-    const { success } = await sendTip('$example.com')
+    const { success } = await sendTip()
 
     if (success) {
       setTipState(TipState.COMPLETE)
@@ -33,18 +33,14 @@ export const TipButton = (props: PopupProps) => {
   /* TODO: use something like this to tip the current page.
    * TODO: how do we grab the payment pointer from here?
    * TODO: should we just handle the response inline?*/
-  const sendTip = async (receiver: string) => {
-    const message: SendTip = {
-      command: 'sendTip',
-      data: {
-        receiver
-      }
-    }
+  const sendTip = async () => {
+    const message: SendTip = { command: 'sendTip' }
 
-    // TODO: is this the right typing?
-    return (props.context.runtime.sendMessage(message) as unknown) as Promise<
-      SendTipResult
-    >
+    return new Promise(resolve => {
+      props.context.runtime.sendMessage(message, (result: SendTipResult) => {
+        resolve(result)
+      })
+    }) as Promise<SendTipResult>
   }
 
   if (props.context.store.user.canTip) {

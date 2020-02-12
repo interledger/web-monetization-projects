@@ -127,6 +127,7 @@ export type ToBackgroundMessage =
   | IsRateLimited
   | ContentScriptInit
   | FetchYoutubeChannelId
+  | SendTip
 
 export type IconState =
   | 'streaming-paused'
@@ -227,9 +228,6 @@ export interface SetMonetizationState {
  */
 export interface SendTip {
   command: 'sendTip'
-  data: {
-    receiver: string
-  }
 }
 
 /**

@@ -64,4 +64,8 @@ export class Streams extends EventEmitter {
       delete this._streams[id]
     }
   }
+
+  getStream(id: string) {
+    return this._streams[id]
+  }
 }
