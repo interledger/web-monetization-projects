@@ -2703,15 +2703,6 @@
     regexpp "^3.0.0"
     tsutils "^3.17.1"
 
-"@typescript-eslint/experimental-utils@2.19.0":
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.19.0.tgz#d5ca732f22c009e515ba09fcceb5f2127d841568"
-  integrity sha512-zwpg6zEOPbhB3+GaQfufzlMUOO6GXCNZq6skk+b2ZkZAIoBhVoanWK255BS1g5x9bMwHpLhX0Rpn5Fc3NdCZdg==
-  dependencies:
-    "@types/json-schema" "^7.0.3"
-    "@typescript-eslint/typescript-estree" "2.19.0"
-    eslint-scope "^5.0.0"
-
 "@typescript-eslint/experimental-utils@2.19.2", "@typescript-eslint/experimental-utils@^2.5.0":
   version "2.19.2"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.19.2.tgz#4611d44cf0f0cb460c26aa7676fc0a787281e233"
@@ -2730,19 +2721,6 @@
     "@typescript-eslint/experimental-utils" "2.19.2"
     "@typescript-eslint/typescript-estree" "2.19.2"
     eslint-visitor-keys "^1.1.0"
-
-"@typescript-eslint/typescript-estree@2.19.0":
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-2.19.0.tgz#6bd7310b9827e04756fe712909f26956aac4b196"
-  integrity sha512-n6/Xa37k0jQdwpUszffi19AlNbVCR0sdvCs3DmSKMD7wBttKY31lhD2fug5kMD91B2qW4mQldaTEc1PEzvGu8w==
-  dependencies:
-    debug "^4.1.1"
-    eslint-visitor-keys "^1.1.0"
-    glob "^7.1.6"
-    is-glob "^4.0.1"
-    lodash "^4.17.15"
-    semver "^6.3.0"
-    tsutils "^3.17.1"
 
 "@typescript-eslint/typescript-estree@2.19.2":
   version "2.19.2"
@@ -3114,19 +3092,19 @@ addons-linter@1.14.0:
   optionalDependencies:
     fsevents "2.0.7"
 
-addons-linter@1.19.0:
-  version "1.19.0"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.19.0.tgz#cbb3683520833f771a5941335348b938fee486e1"
-  integrity sha512-pnfrdQqatZeEnBcRcMq9KWZJRmS9YiPyWu3gZbJl12Ee3dUlvke+2C0DcYhNfm4hciRB4wrr4OiQTYAXh1CyzA==
+addons-linter@1.20.0:
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.20.0.tgz#e748d4c1f67ef82be39450864e9a13d6ad3e7b29"
+  integrity sha512-EIyJnIkvXhBKgOzVFR873uGa4ny07odIl8i8qWxHAuVJWM/ZQtLouAbndA+cVRDbD66sK6HsO1oWN6WkdCr/uA==
   dependencies:
     ajv "6.10.2"
     ajv-merge-patch "4.1.0"
-    chalk "2.4.2"
+    chalk "3.0.0"
     cheerio "1.0.0-rc.3"
     columnify "1.5.4"
     common-tags "1.8.0"
     deepmerge "4.2.2"
-    dispensary "0.48.1"
+    dispensary "0.49.0"
     es6-promisify "6.0.2"
     eslint "5.16.0"
     eslint-plugin-no-unsafe-innerhtml "1.0.16"
@@ -3138,20 +3116,20 @@ addons-linter@1.19.0:
     glob "7.1.6"
     is-mergeable-object "1.1.1"
     jed "1.1.1"
-    mdn-browser-compat-data "1.0.1"
+    mdn-browser-compat-data "1.0.3"
     os-locale "4.0.0"
-    pino "5.14.0"
-    postcss "7.0.24"
+    pino "5.15.0"
+    postcss "7.0.26"
     probe-image-size "5.0.0"
     regenerator-runtime "0.13.3"
     relaxed-json "1.0.3"
-    semver "6.3.0"
+    semver "7.1.1"
     source-map-support "0.5.16"
     strip-bom-stream "4.0.0"
     tosource "1.0.0"
     upath "1.2.0"
-    whatwg-url "7.1.0"
-    yargs "14.0.0"
+    whatwg-url "8.0.0"
+    yargs "15.1.0"
     yauzl "2.10.0"
   optionalDependencies:
     fsevents "2.1.2"
@@ -5152,10 +5130,10 @@ core-js-pure@^3.0.0:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.6.4.tgz#4bf1ba866e25814f149d4e9aaa08c36173506e3a"
   integrity sha512-epIhRLkXdgv32xIUFaaAry2wdxZYBi6bgM7cB136dzzXXa+dFyRLTZeLUJxnd8ShrmyVXBub63n2NHo2JAt8Cw==
 
-core-js@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.0.tgz#2b854e451de1967d1e29896025cdc13a2518d9ea"
-  integrity sha512-AHPTNKzyB+YwgDWoSOCaid9PUSEF6781vsfiK8qUz62zRR448/XgK2NtCbpiUGizbep8Lrpt0Du19PpGGZvw3Q==
+core-js@3.6.4:
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.4.tgz#440a83536b458114b9cb2ac1580ba377dc470647"
+  integrity sha512-4paDGScNgZP2IXXilaffL9X7968RuvwlkK3xWtZRVqgd8SYNiVKRJvkFd1aqqEuPfN7E68ZHEp9hDj6lHj4Hyw==
 
 core-js@^2.4.0, core-js@^2.5.0, core-js@^2.6.5:
   version "2.6.11"
@@ -5742,18 +5720,18 @@ dispensary@0.40.0:
     source-map-support "~0.5.4"
     yargs "~14.0.0"
 
-dispensary@0.48.1:
-  version "0.48.1"
-  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.48.1.tgz#15457838a68e7423bae58eba673b35dca5dcdc89"
-  integrity sha512-oC9ItJ7YtO/DKsp24T90k7z0NxfkZQkvJ3USTxUoVjBKrfMRz1/kMd+NcFgDG+KrJg14GChiv1sbdFdxeKRUUw==
+dispensary@0.49.0:
+  version "0.49.0"
+  resolved "https://registry.yarnpkg.com/dispensary/-/dispensary-0.49.0.tgz#0ea2c62f1d7353b6e9a27f5dac08b0bad586b74f"
+  integrity sha512-szH0vDORmGWEfwQgIqrhmrMpSGU2yXL3z7oe0NGx4sCbmnJdXXr5SQvRccPNCPrRuRPn2zPIITvwD9Lf+pcOew==
   dependencies:
     async "~3.1.0"
     natural-compare-lite "~1.4.0"
-    pino "~5.14.0"
+    pino "~5.15.0"
     request "~2.88.0"
     sha.js "~2.4.4"
     source-map-support "~0.5.4"
-    yargs "~15.0.0"
+    yargs "~15.1.0"
 
 dispensary@0.50.0:
   version "0.50.0"
@@ -10734,10 +10712,10 @@ mdn-browser-compat-data@0.0.94:
   dependencies:
     extend "3.0.2"
 
-mdn-browser-compat-data@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-1.0.1.tgz#52657b4418e809a49d61877b50e20662cdd0b317"
-  integrity sha512-FxRIu4UYu4rRdFs5JFf6del6J+OpbOq2tYfIEK7N/PtEtz6yGVcWcytmh5L5hZxe58kuxUzjgR8+/0TRyRzRqA==
+mdn-browser-compat-data@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-1.0.3.tgz#62f248a6fc457c01b6243425af0b45fdf11054bf"
+  integrity sha512-5n7c20IVrUiuOPSuhbkd5xoJPSzEEGsoMrmrdEtPHIw6gRPzonydcsguAmqGfSBd4d2DRoDQg533sijLUpeJLg==
   dependencies:
     extend "3.0.2"
 
@@ -12420,10 +12398,10 @@ pino@5.13.3:
     quick-format-unescaped "^3.0.2"
     sonic-boom "^0.7.5"
 
-pino@5.14.0, pino@~5.14.0:
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-5.14.0.tgz#eec56c6388797528e526f969ee022592cc538d4e"
-  integrity sha512-Vj1f2wAojTGesogT0hsA/ua8ALltCOBCcA1nkEoDfnTsVWpgBu5UVSY7OdjiGmrMOKHBm24nd3nKXzyPUYJ3ig==
+pino@5.15.0, pino@~5.15.0:
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-5.15.0.tgz#6703164ce74dd4786d44887cd33268e13fd463d8"
+  integrity sha512-7+FXMTA3H3sNP5+2miY2K9JKnAAW5GKuhHfNWsukFCsPprGQY3ctqpwbV74wAHW3Nl93cEEQ1G82MgOLM8P7TQ==
   dependencies:
     fast-redact "^2.0.0"
     fast-safe-stringify "^2.0.7"
@@ -12586,15 +12564,6 @@ postcss@7.0.18:
   version "7.0.18"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.18.tgz#4b9cda95ae6c069c67a4d933029eddd4838ac233"
   integrity sha512-/7g1QXXgegpF+9GJj4iN7ChGF40sYuGYJ8WZu8DZWnmhQ/G36hfdk3q9LBJmoK+lZ+yzZ5KYpOoxq7LF1BxE8g==
-  dependencies:
-    chalk "^2.4.2"
-    source-map "^0.6.1"
-    supports-color "^6.1.0"
-
-postcss@7.0.24:
-  version "7.0.24"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.24.tgz#972c3c5be431b32e40caefe6c81b5a19117704c2"
-  integrity sha512-Xl0XvdNWg+CblAXzNvbSOUvgJXwSjmbAKORqyw9V2AlHrm1js2gFw9y3jibBAhpKZi8b5JzJCVh/FyzPsTtgTA==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -14083,13 +14052,13 @@ sign-addon@0.3.1:
     stream-to-promise "2.2.0"
     when "3.7.7"
 
-sign-addon@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/sign-addon/-/sign-addon-2.0.4.tgz#77a9700cc1187d3757875e38ae5f47e8524eb60d"
-  integrity sha512-QKfE558nIQ2o9VACAIMQBI4I+IhlL+k9bxhVsQUb4B6Bu+tC8IDSlnHrydcYPf3AB6K+g+BVzbDD1JlSw4bRDg==
+sign-addon@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/sign-addon/-/sign-addon-2.0.5.tgz#bfb1033bd77436c2f7c49168c6ea794f65c01b44"
+  integrity sha512-dVjIWe1VJ2VQCdScREWXWECmJhgjpJMqwPKkW+L78PPx2Jyr/t+//kNHqG1hYrmIsvQN7vGjAjv9s7ix0vw0zA==
   dependencies:
     common-tags "1.8.0"
-    core-js "3.6.0"
+    core-js "3.6.4"
     deepcopy "2.0.0"
     es6-error "4.1.1"
     es6-promisify "6.0.2"
@@ -15792,17 +15761,17 @@ web-ext@^3.2.0:
     yargs "13.3.0"
     zip-dir "1.0.2"
 
-web-ext@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/web-ext/-/web-ext-4.0.0.tgz#bf3d1c9abb539864b34a0dfda177749551d218bd"
-  integrity sha512-778HKIoWpIrZzOq7rPA7Fu7YQ/fnZ6w9XCKUqGJRjo2NgOtgtkLmkd7lCw3gU7KJYe7hurI5XYossJMgjmyNaQ==
+web-ext@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/web-ext/-/web-ext-4.1.0.tgz#7175a539971014d9334017b98d6d7a59aea23ace"
+  integrity sha512-nhAeZ3BHI4rCT/J+s7JHg0U3G6qUMV8Bi44ohWm8X6GjlQV8tGcD6rkvN4Zk2zzMGaF9sHUOcRjyN79Ih8P/PQ==
   dependencies:
     "@babel/polyfill" "7.7.0"
     "@babel/runtime" "7.7.7"
     "@cliqz-oss/firefox-client" "0.3.1"
     "@cliqz-oss/node-firefox-connect" "1.2.1"
     adbkit "2.11.1"
-    addons-linter "1.19.0"
+    addons-linter "1.20.0"
     bunyan "1.8.12"
     camelcase "5.3.1"
     chrome-launcher "0.12.0"
@@ -15820,7 +15789,7 @@ web-ext@^4.0.0:
     node-notifier "6.0.0"
     open "7.0.0"
     parse-json "5.0.0"
-    sign-addon "2.0.4"
+    sign-addon "2.0.5"
     source-map-support "0.5.16"
     stream-to-promise "2.2.0"
     strip-bom "4.0.0"
@@ -15829,7 +15798,7 @@ web-ext@^4.0.0:
     update-notifier "4.0.0"
     watchpack "1.6.0"
     ws "7.2.1"
-    yargs "15.0.2"
+    yargs "15.1.0"
     zip-dir "1.0.2"
 
 webidl-conversions@^4.0.2:
@@ -16067,15 +16036,6 @@ whatwg-url@7.0.0:
     tr46 "^1.0.1"
     webidl-conversions "^4.0.2"
 
-whatwg-url@7.1.0, whatwg-url@^7.0.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-7.1.0.tgz#c2c492f1eca612988efd3d2266be1b9fc6170d06"
-  integrity sha512-WUu7Rg1DroM7oQvGWfOiAK21n74Gg+T4elXEQYkOhtyLeWiJFoOGLXPKI/9gzIie9CtwVLm8wtw6YJdKyxSjeg==
-  dependencies:
-    lodash.sortby "^4.7.0"
-    tr46 "^1.0.1"
-    webidl-conversions "^4.0.2"
-
 whatwg-url@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-8.0.0.tgz#37f256cb746398e19b107bd6ef820b4ae2d15871"
@@ -16084,6 +16044,15 @@ whatwg-url@8.0.0:
     lodash.sortby "^4.7.0"
     tr46 "^2.0.0"
     webidl-conversions "^5.0.0"
+
+whatwg-url@^7.0.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-7.1.0.tgz#c2c492f1eca612988efd3d2266be1b9fc6170d06"
+  integrity sha512-WUu7Rg1DroM7oQvGWfOiAK21n74Gg+T4elXEQYkOhtyLeWiJFoOGLXPKI/9gzIie9CtwVLm8wtw6YJdKyxSjeg==
+  dependencies:
+    lodash.sortby "^4.7.0"
+    tr46 "^1.0.1"
+    webidl-conversions "^4.0.2"
 
 when@3.7.7:
   version "3.7.7"
@@ -16487,23 +16456,6 @@ yargs@14.0.0, yargs@~14.0.0:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^13.1.1"
-
-yargs@15.0.2, yargs@~15.0.0:
-  version "15.0.2"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-15.0.2.tgz#4248bf218ef050385c4f7e14ebdf425653d13bd3"
-  integrity sha512-GH/X/hYt+x5hOat4LMnCqMd8r5Cv78heOMIJn1hr7QPPBqfeC6p89Y78+WB9yGDvfpCvgasfmWLzNzEioOUD9Q==
-  dependencies:
-    cliui "^6.0.0"
-    decamelize "^1.2.0"
-    find-up "^4.1.0"
-    get-caller-file "^2.0.1"
-    require-directory "^2.1.1"
-    require-main-filename "^2.0.0"
-    set-blocking "^2.0.0"
-    string-width "^4.2.0"
-    which-module "^2.0.0"
-    y18n "^4.0.0"
-    yargs-parser "^16.1.0"
 
 yargs@15.1.0, yargs@^15.0.0, yargs@~15.1.0:
   version "15.1.0"
