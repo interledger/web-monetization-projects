@@ -9,6 +9,8 @@ import {
 } from '@web-monetization/types'
 import { Browser, Page } from 'puppeteer'
 
+import { env, timeout } from '../index'
+
 import { debug } from './debug'
 import {
   hasCommonRequestIdAndPaymentPointer,
@@ -132,6 +134,10 @@ export async function testMonetization({
       }
       setListener()
     }, type)
+  }
+
+  if (env.IS_CI) {
+    await timeout(1e3)
   }
 
   await listenFor('monetizationpending')
