@@ -79,8 +79,7 @@ function Donating(props: PopupProps) {
         Coil is paying
       </StatusTypography>
       <StatusTypography variant='subtitle1' align='center'>
-        This content is included in your subscription.{' '}
-        {payingOrSettingUpPayment}
+        This content is included in your membership. {payingOrSettingUpPayment}
       </StatusTypography>
       <FlexBox>
         <MonetizeAnimation context={props.context} />
@@ -132,9 +131,8 @@ function RateLimited(props: PopupProps & { limitRefreshDate: string }) {
       </StatusTypography>
 
       <StatusTypography variant='body1' align='left'>
-        Your subscription is still active. Your usage will be restored on{' '}
-        {limitRefreshDate}, when your subscription renews. Please adhere to the
-        Terms of Service in the future.
+        Your membership is still active. Your usage will be restored on{' '}
+        {limitRefreshDate}. Please adhere to the Terms of Service in the future.
       </StatusTypography>
     </Fragment>
   )

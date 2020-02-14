@@ -36,7 +36,7 @@ export const WebMonetizedBar = (props: PopupProps) => {
           )}
           {adapted && monetized
             ? ' Coil can donate to this channel'
-            : ' This page is'}
+            : ' This content is'}
           {monetized ? '' : ' not'}
           {monetized && adapted ? '' : ' Web-Monetized'}
         </Typography>
