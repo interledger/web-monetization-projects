@@ -75,6 +75,17 @@ const startExploring = mockState({
   adapted: false
 })
 
+const payingYouTube = mockState({
+  monetized: true,
+  monetizedTotal: 2326667,
+  playState: 'playing',
+  monetizedFavicon: 'https://s.ytimg.com/yts/img/favicon_32-vflOogEID.png',
+  stickyState: 'auto',
+  user: user,
+  validToken: true,
+  adapted: true
+})
+
 const payingNonCoilSite = mockState({
   monetized: true,
   monetizedTotal: 22817800,
@@ -116,7 +127,8 @@ const MOCK_STATES = [
   { name: 'Start Exploring', state: startExploring },
   { name: 'Paying', state: payingNonCoilSite },
   { name: 'Welcome To Coil', state: welcomeToCoil },
-  { name: 'Alice Unsubscribed', state: aliceUnsubscribed }
+  { name: 'Alice Unsubscribed', state: aliceUnsubscribed },
+  { name: 'Paying Youtube', state: payingYouTube }
 ]
 
 const argsLogger = (name: string) => {
