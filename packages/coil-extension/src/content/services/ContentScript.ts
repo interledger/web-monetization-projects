@@ -156,7 +156,9 @@ export class ContentScript {
   }
 
   init() {
-    this.frames.monitor()
+    if (this.frames.isMonetizableFrame) {
+      this.frames.monitor()
+    }
 
     if (this.frames.isTopFrame) {
       const message: ContentScriptInit = { command: 'contentScriptInit' }

@@ -4,7 +4,6 @@ import { parsePolicyDirectives } from '@web-monetization/polyfill-utils'
 import * as tokens from '../../types/tokens'
 import { FrameStateChange, UnloadFrame } from '../../types/commands'
 import { ContentRuntime } from '../types/ContentRunTime'
-import { API } from '../../webpackDefines'
 
 @injectable()
 export class Frames {
@@ -12,7 +11,8 @@ export class Frames {
   isAnyCoilFrame: boolean
   isIFrame: boolean
   isCoilTopFrame: boolean
-  isDirectChild: boolean
+  isDirectChildFrame: boolean
+  isMonetizableFrame: boolean
 
   constructor(
     private doc: Document,
@@ -25,7 +25,8 @@ export class Frames {
     this.isAnyCoilFrame = window.origin === coilDomain
     this.isIFrame = !this.isTopFrame
     this.isCoilTopFrame = this.isTopFrame && this.isAnyCoilFrame
-    this.isDirectChild = this.isIFrame && window.parent === window.top
+    this.isDirectChildFrame = this.isIFrame && window.parent === window.top
+    this.isMonetizableFrame = this.isTopFrame || this.isDirectChildFrame
   }
 
   monitor() {
@@ -45,33 +46,30 @@ export class Frames {
       this.window.addEventListener(
         'load',
         () => {
-          // Can't really use *= or ~= because of potential monetization in a string etc
-          // need an allow syntax parser ....
-          const frames = document.querySelectorAll<HTMLIFrameElement>(
-            'iframe[allow]'
-          )
-          Array.from(frames).forEach((frame, ix) => {
-            if (!frame.allow) {
-              return
-            }
-            // WOULD need to parse here ...
-            const parsed = parsePolicyDirectives(frame.allow)
-            if (!('monetization' in parsed)) {
-              return
-            }
-            const origin = new URL(frame.src).origin
-            frame.contentWindow?.postMessage(
-              {
-                // Need frameId/tabId
-                msg: `hello to iframe[@id="${frame.getAttribute('id')}"]`,
-                allow: frame.allow
-              },
-              origin
-            )
-          })
+          void this.checkForAllowedIFrames()
         },
         { once: true }
       )
+    }
+  }
+
+  private async checkForAllowedIFrames() {
+    // Can't really use *= or ~= because of potential monetization in a string etc
+    // need an allow syntax parser ....
+    const frames = document.querySelectorAll<HTMLIFrameElement>('iframe[allow]')
+    const allowed = Array.from(frames).filter((frame, ix) => {
+      if (!frame.allow) {
+        return false
+      }
+      const parsed = parsePolicyDirectives(frame.allow)
+      return 'monetization' in parsed
+    })
+
+    if (allowed.length) {
+      // send allowIFrames (implied tabId/frameId and number frames) message
+      // create uuidv4 in background page ...
+      //
+      this.reportAllowedToBackgroundPageThenPostAllowTokens(allowed)
     }
   }
 
@@ -92,4 +90,8 @@ export class Frames {
     }
     this.runtime.sendMessage(frameStateChange)
   }
+
+  private reportAllowedToBackgroundPageThenPostAllowTokens(
+    allowed: HTMLIFrameElement[]
+  ) {}
 }

@@ -40,9 +40,9 @@ function main() {
     container.get(ContentScript).init()
   }
   console.log(
-    '%c coil-extension content.ts isDirectChild=%s href=%s',
+    '%c coil-extension content.ts isDirectChildFrame=%s href=%s',
     'color: red;',
-    frames.isDirectChild,
+    frames.isDirectChildFrame,
     window.location.href
   )
 }

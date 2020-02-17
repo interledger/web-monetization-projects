@@ -96,7 +96,7 @@ export interface FrameChangedEvent extends FrameEventWithFrame {
 export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
   traceLogging = false
-  logTabsInterval = 0
+  logTabsInterval = 1000
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
@@ -246,7 +246,10 @@ export class BackgroundFramesService extends EventEmitter {
         frameId: number
         parentFrameId?: number
       }) => {
-        if (!details.url.startsWith('http')) {
+        if (
+          !details.url.startsWith('http') ||
+          (details.parentFrameId !== 0 && details.frameId !== 0)
+        ) {
           return
         }
 
@@ -285,6 +288,8 @@ export class BackgroundFramesService extends EventEmitter {
     this.api.webNavigation.onReferenceFragmentUpdated.addListener(
       makeCallback('onReferenceFragmentUpdated')
     )
+
+    // TODO: is this necessary given content script will send state?
     this.api.webNavigation.onCommitted.addListener(makeCallback('onCommitted'))
     this.api.webNavigation.onCompleted.addListener(makeCallback('onCompleted'))
     this.api.webNavigation.onBeforeNavigate.addListener(
@@ -362,8 +367,6 @@ export class BackgroundFramesService extends EventEmitter {
 
       const { href, state } = message.data
       const frame = this.getFrame(tabId, frameId)
-      // Don't add frames, only update
-      // TODO: remember why ?
       if (frame) {
         // top and frameId, parentFrameId don't change
         this.updateOrAddFrame('frameStateChange', tabId, frameId, {
@@ -386,7 +389,10 @@ export class BackgroundFramesService extends EventEmitter {
   private useWebNavigationToUpdateFrames(tabId: number) {
     this.api.webNavigation.getAllFrames({ tabId }, frames => {
       frames?.forEach(frame => {
-        if (!frame.url.startsWith('http')) {
+        if (
+          !frame.url.startsWith('http') ||
+          (frame.frameId !== 0 && frame.parentFrameId !== 0)
+        ) {
           return
         }
         this.updateOrAddFrame(
