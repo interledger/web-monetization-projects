@@ -67,10 +67,11 @@ export function MonetizedPage(props: PopupProps) {
 }
 
 function Donating(props: PopupProps) {
-  const { monetizedTotal } = props.context.store
+  const { monetizedTotal, adapted } = props.context.store
   const paymentStarted = monetizedTotal !== 0
+  const emptyWhenNotAdapted = adapted ? 'Coil is paying the creator.' : ''
   const payingOrSettingUpPayment = paymentStarted
-    ? 'Coil is paying the creator.'
+    ? emptyWhenNotAdapted
     : 'Setting up payment.'
 
   return (
