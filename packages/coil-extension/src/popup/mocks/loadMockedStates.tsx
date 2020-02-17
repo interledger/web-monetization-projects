@@ -86,6 +86,18 @@ const payingYouTube = mockState({
   adapted: true
 })
 
+const payingTwitch = mockState({
+  monetized: true,
+  monetizedTotal: 5910000,
+  playState: 'playing',
+  monetizedFavicon:
+    'https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png',
+  stickyState: 'auto',
+  user: user,
+  validToken: true,
+  adapted: true
+})
+
 const payingNonCoilSite = mockState({
   monetized: true,
   monetizedTotal: 22817800,
@@ -128,7 +140,8 @@ const MOCK_STATES = [
   { name: 'Paying', state: payingNonCoilSite },
   { name: 'Welcome To Coil', state: welcomeToCoil },
   { name: 'Alice Unsubscribed', state: aliceUnsubscribed },
-  { name: 'Paying Youtube', state: payingYouTube }
+  { name: 'Paying Youtube', state: payingYouTube },
+  { name: 'Paying Twitch', state: payingTwitch }
 ]
 
 const argsLogger = (name: string) => {
