@@ -2,19 +2,22 @@ import { PlayOrPauseState, StickyState } from './streamControls'
 
 export type MonetizationCommand = 'pause' | 'stop' | 'start' | 'resume'
 
-export interface TabState {
-  favicon?: string
-  coilSite?: string
+export interface FrameState {
   adapted: boolean
   monetized: boolean
   // Tracks the total amount of `source` money sent (not was received)
   total: number
-  stickyState: StickyState
-  playState: PlayOrPauseState
   lastMonetization: {
     command: MonetizationCommand | null
     timeMs: number
   }
+}
+
+export interface TabState extends FrameState {
+  favicon?: string
+  coilSite?: string
+  stickyState: StickyState
+  playState: PlayOrPauseState
   icon?: {
     path: string
   }
