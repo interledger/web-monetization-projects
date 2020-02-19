@@ -5,16 +5,9 @@
  */
 import sjcl from 'sjcl'
 import { createShake256 } from 'keccak'
+import { ASN1, PEM } from 'asn1-parser'
 
 import { h2Curve } from './hashToCurve'
-
-let PEM
-let ASN1
-// TODO: fix this and actually load these libraries
-if (typeof window !== 'undefined') {
-  PEM = window['PEM']
-  ASN1 = window['ASN1']
-}
 
 const shake256 = () => {
   return createShake256()
