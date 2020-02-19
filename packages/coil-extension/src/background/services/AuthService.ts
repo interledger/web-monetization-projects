@@ -65,7 +65,6 @@ export class AuthService extends EventEmitter {
     if (resp.data?.whoami) {
       this.store.user = {
         ...resp.data.whoami,
-        canTip: true
       }
       return token
     } else {

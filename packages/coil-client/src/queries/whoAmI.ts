@@ -12,6 +12,7 @@ export const whoamiQuery = `{
     id
     fullName
     customerId
+    canTip
 
     subscription {
       active
