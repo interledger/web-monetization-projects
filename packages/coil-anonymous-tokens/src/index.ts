@@ -33,6 +33,12 @@ export interface TimestampedSignature {
   month: string
 }
 
+export interface Token {
+  token: string
+  blindedTokenHash: string
+  blindingFactor: string
+}
+
 export interface PublicFields extends PublicRSAKey {
   month: string
 }
@@ -226,7 +232,7 @@ export class AnonymousTokens {
 
   private async _populateTokensNow(coilAuthToken: string): Promise<void> {
     const key = await this._getKeyParams()
-    const tokens = []
+    const tokens: Token[] = []
     // Generate all tokens first so the timing in between tokens can't be used
     // to learn anything about the token or blinding factor.
     for (let i = 0; i < this.batchSize; i++) {

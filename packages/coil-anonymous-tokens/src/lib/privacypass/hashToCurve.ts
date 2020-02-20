@@ -36,7 +36,7 @@ const precomputedP256 = {
  * @return {sjcl.codec.bytes}
  */
 function i2osp(x: number, n: number) {
-  const bytes = []
+  const bytes: number[] = []
   for (let i = n - 1; i > -1; i--) {
     bytes[i] = x & 0xff
     x = x >> 8

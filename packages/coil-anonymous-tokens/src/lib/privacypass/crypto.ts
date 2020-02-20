@@ -143,7 +143,7 @@ export function newRandomPoint() {
  * @return {sjcl.codec.bytes}
  */
 export function sec1Encode(P, compressed) {
-  let out = []
+  let out: number[] = []
   if (!compressed) {
     const xyBytes = sjcl.codec.bytes.fromBits(P.toBits())
     out = [0x04].concat(xyBytes)
@@ -270,7 +270,7 @@ export function decompressPoint(bytes) {
  */
 export function getCurvePoints(signatures) {
   const compression = { on: false, set: false }
-  const sigBytes = []
+  const sigBytes: number[][] = []
   signatures.forEach(function(signature) {
     const buf = sjcl.codec.bytes.fromBits(sjcl.codec.base64.toBits(signature))
     let setting = false
@@ -295,7 +295,8 @@ export function getCurvePoints(signatures) {
     sigBytes.push(buf)
   })
 
-  const usablePoints = []
+  // TODO: no any
+  const usablePoints: any[] = []
   sigBytes.forEach(function(buf) {
     const usablePoint = sec1DecodeFromBytes(buf)
     if (usablePoint == null) {
