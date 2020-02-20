@@ -5,19 +5,7 @@
 import sjcl from 'sjcl'
 
 import { unblindPoint, getActiveECSettings, sec1Encode } from './crypto'
-
-// TODO: manage config like this
-function sendH2CParams() {
-  return false
-}
-
-function h2cParams() {
-  return {
-    curve: 'p256',
-    hash: 'sha256',
-    method: 'increment'
-  }
-}
+import { sendH2CParams, h2cParams } from './config'
 
 /**
  * Constructs the header 'challenge-bypass-token' for redeeming a token with the

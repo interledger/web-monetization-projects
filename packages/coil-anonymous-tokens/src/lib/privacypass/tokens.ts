@@ -62,6 +62,15 @@ export function getTokenEncoding(
 }
 
 // TODO: storeTokens
+export function storeTokens() {}
+
 // TODO: storeNewTokens
+export function storeNewTokens(_: any, __: any) {}
+
 // TODO: loadTokens
+export function loadTokens() {}
+
 // TODO: countStoredTokens
+export function countStoredTokens() {
+  return 1
+}
