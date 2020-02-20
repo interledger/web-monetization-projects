@@ -5,7 +5,8 @@
     "composite": true,
     "outDir": "./build",
     "tsBuildInfoFile": "./build/tsconfig.build.tsbuildinfo",
-    "rootDir": "src"
+    "rootDir": "src",
+    "noImplicitAny": false
   },
   "include": [
     "src"
