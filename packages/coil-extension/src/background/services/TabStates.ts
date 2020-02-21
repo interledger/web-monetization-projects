@@ -21,11 +21,12 @@ export class TabStates {
 
   setFrame({ tabId, frameId }: FrameSpec, state: Partial<FrameState> = {}) {
     const frameStates = this.get(tabId).frameStates
-    const existingState = this.get(tabId).frameStates[frameId]
+    const existingFrameState =
+      this.get(tabId).frameStates[frameId] ?? this.makeFrameStateDefault()
     this.set(tabId, {
       frameStates: {
         ...frameStates,
-        ...{ [frameId]: { ...existingState, ...state } }
+        ...{ [frameId]: { ...existingFrameState, ...state } }
       }
     })
   }
@@ -50,18 +51,22 @@ export class TabStates {
       playState: 'playing',
       stickyState: 'auto',
       frameStates: {
-        [0]: {
-          monetized: false,
-          adapted: false,
-          total: 0,
-          lastMonetization: {
-            command: null,
-            timeMs: Date.now()
-          }
-        }
+        [0]: this.makeFrameStateDefault()
       }
     }
     return state
+  }
+
+  private makeFrameStateDefault() {
+    return {
+      monetized: false,
+      adapted: false,
+      total: 0,
+      lastMonetization: {
+        command: null,
+        timeMs: Date.now()
+      }
+    }
   }
 
   /**
