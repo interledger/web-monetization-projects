@@ -25,4 +25,5 @@ export interface TabState extends FrameState {
     text: string
     color?: string
   }
+  frameStates: Record<number, FrameState>
 }

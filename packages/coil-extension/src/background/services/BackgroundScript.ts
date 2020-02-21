@@ -472,7 +472,7 @@ export class BackgroundScript {
   ) {
     const tab = getTab(sender)
     const frameId = notNullOrUndef(sender.frameId)
-    this.tabStates.logLastMonetizationCommand(tab, 'start')
+    this.tabStates.logLastMonetizationCommand(tab, frameId, 'start')
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender)
 
@@ -533,8 +533,8 @@ export class BackgroundScript {
     return true
   }
 
-  private doPauseWebMonetization(tab: number, frameId = 0) {
-    this.tabStates.logLastMonetizationCommand(tab, 'pause')
+  private doPauseWebMonetization(tab: number, frameId: number) {
+    this.tabStates.logLastMonetizationCommand(tab, frameId, 'pause')
     const id = this.getRequestId(tab, frameId)
     if (id) {
       this.log('pausing stream', id)
@@ -556,8 +556,8 @@ export class BackgroundScript {
     ensured[frameId] = requestId
   }
 
-  private doResumeWebMonetization(tab: number, frameId = 0) {
-    this.tabStates.logLastMonetizationCommand(tab, 'resume')
+  private doResumeWebMonetization(tab: number, frameId: number) {
+    this.tabStates.logLastMonetizationCommand(tab, frameId, 'resume')
 
     const id = this.getRequestId(tab, frameId)
     if (id) {
@@ -573,14 +573,20 @@ export class BackgroundScript {
     if (this.tabStates.get(getTab(sender)).stickyState === 'sticky') {
       return
     }
-    return this.doPauseWebMonetization(getTab(sender))
+    return this.doPauseWebMonetization(
+      getTab(sender),
+      notNullOrUndef(sender.frameId)
+    )
   }
 
   resumeWebMonetization(request: ResumeWebMonetization, sender: MessageSender) {
     if (this.tabStates.get(getTab(sender)).playState === 'paused') {
       return
     }
-    return this.doResumeWebMonetization(getTab(sender))
+    return this.doResumeWebMonetization(
+      getTab(sender),
+      notNullOrUndef(sender.frameId)
+    )
   }
 
   private handleStreamsAbortEvent() {
@@ -595,11 +601,11 @@ export class BackgroundScript {
 
   stopWebMonetization(sender: MessageSender) {
     const tab = getTab(sender)
-    return this.doStopWebMonetization(tab)
+    return this.doStopWebMonetization(tab, notNullOrUndef(sender.frameId))
   }
 
-  private doStopWebMonetization(tab: number, frameId = 0) {
-    this.tabStates.logLastMonetizationCommand(tab, 'stop')
+  private doStopWebMonetization(tab: number, frameId: number) {
+    this.tabStates.logLastMonetizationCommand(tab, frameId, 'stop')
     const closed = this._closeStreams(tab, frameId)
     // May be noop other side if stop monetization was initiated from
     // ContentScript
@@ -714,15 +720,19 @@ export class BackgroundScript {
 
   private setStreamControls(request: SetStreamControls, _: MessageSender) {
     const tab = this.activeTab
+    const frameId = notNullOrUndef(_.frameId)
+
     this.tabStates.set(tab, {
       stickyState: request.data.sticky,
       playState: request.data.play
     })
     if (request.data.action === 'togglePlayOrPause') {
       if (request.data.play === 'paused') {
-        this.doPauseWebMonetization(tab)
+        // TODO: pause ALL tab streams
+        this.doPauseWebMonetization(tab, frameId)
       } else if (request.data.play === 'playing') {
-        this.doResumeWebMonetization(tab)
+        // TODO: resume ALL tab streams
+        this.doResumeWebMonetization(tab, frameId)
       }
     }
     this.reloadTabState({ from: request.command })

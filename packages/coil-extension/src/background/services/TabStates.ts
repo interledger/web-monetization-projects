@@ -39,7 +39,8 @@ export class TabStates {
       monetized: false,
       adapted: false,
       total: 0,
-      stickyState: 'auto'
+      stickyState: 'auto',
+      frameStates: {}
     }
     return state
   }
@@ -94,7 +95,15 @@ export class TabStates {
     }
   }
 
-  logLastMonetizationCommand(tab: number, command: MonetizationCommand) {
+  logLastMonetizationCommand(
+    tab: number,
+    frameID: number,
+    command: MonetizationCommand
+  ) {
+    // TODO!
+    if (frameID !== 0) {
+      return
+    }
     this.set(tab, {
       lastMonetization: {
         command,
