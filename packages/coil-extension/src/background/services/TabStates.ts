@@ -1,6 +1,6 @@
 import { injectable } from 'inversify'
 
-import { MonetizationCommand, TabState } from '../../types/TabState'
+import { FrameState, MonetizationCommand, TabState } from '../../types/TabState'
 import { IconState } from '../../types/commands'
 import { Colors } from '../consts/Colors'
 
@@ -18,6 +18,17 @@ export class TabStates {
     this.tabStates[tab] = { ...existingState, ...state }
   }
 
+  setFrame(tab: number, frame: number, state: Partial<FrameState> = {}) {
+    const frameStates = this.get(tab).frameStates
+    const existingState = this.get(tab).frameStates[frame]
+    this.set(tab, {
+      frameStates: {
+        ...frameStates,
+        ...{ [frame]: { ...existingState, ...state } }
+      }
+    })
+  }
+
   tabKeys(): number[] {
     return Object.keys(this.tabStates).map(Number)
   }
@@ -31,16 +42,19 @@ export class TabStates {
 
   private makeDefault() {
     const state: TabState = {
-      lastMonetization: {
-        command: null,
-        timeMs: Date.now()
-      },
       playState: 'playing',
-      monetized: false,
-      adapted: false,
-      total: 0,
       stickyState: 'auto',
-      frameStates: {}
+      frameStates: {
+        [0]: {
+          monetized: false,
+          adapted: false,
+          total: 0,
+          lastMonetization: {
+            command: null,
+            timeMs: Date.now()
+          }
+        }
+      }
     }
     return state
   }
@@ -100,11 +114,7 @@ export class TabStates {
     frameID: number,
     command: MonetizationCommand
   ) {
-    // TODO!
-    if (frameID !== 0) {
-      return
-    }
-    this.set(tab, {
+    this.setFrame(tab, frameID, {
       lastMonetization: {
         command,
         timeMs: Date.now()

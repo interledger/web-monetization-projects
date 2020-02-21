@@ -13,7 +13,7 @@ export interface FrameState {
   }
 }
 
-export interface TabState extends FrameState {
+export interface TabState {
   favicon?: string
   coilSite?: string
   stickyState: StickyState

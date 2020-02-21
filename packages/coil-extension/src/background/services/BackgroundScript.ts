@@ -240,7 +240,7 @@ export class BackgroundScript {
           sentAmount: details.sentAmount
         }
       }
-      this.handleMonetizedSite(tab, details.initiatingUrl, details)
+      this.handleMonetizedSite(tab, frameId, details.initiatingUrl, details)
       this.api.tabs.sendMessage(tab, message, { frameId })
       this.savePacketToHistoryDb(details)
     })
@@ -262,7 +262,7 @@ export class BackgroundScript {
     if (tabId) {
       const tabState = this.tabStates.getActiveOrDefault()
 
-      if (tabState.monetized) {
+      if (Object.values(tabState.frameStates).find(f => f.monetized)) {
         this.tabStates.setIcon(tabId, 'monetized')
       }
 
@@ -272,8 +272,12 @@ export class BackgroundScript {
         this.popup.enable()
 
         const tabState = this.tabStates.getActiveOrDefault()
-        const hasStream = tabState.monetized
-        const hasBeenPaid = hasStream && tabState.total > 0
+        const hasStream = Object.values(tabState.frameStates).find(
+          f => f.monetized
+        )
+        const hasBeenPaid =
+          hasStream &&
+          Object.values(tabState.frameStates).find(f => f.total > 0)
 
         if (hasStream) {
           this.tabStates.setIcon(tabId, 'monetized')
@@ -306,7 +310,7 @@ export class BackgroundScript {
         sendResponse(this.logout(sender))
         break
       case 'adaptedSite':
-        this.adaptedSite(request.data)
+        this.adaptedSite(request.data, sender)
         sendResponse(true)
         break
       case 'injectToken':
@@ -369,12 +373,17 @@ export class BackgroundScript {
     return this.auth.getTokenMaybeRefreshAndStoreState()
   }
 
-  setTabMonetized(tab: number, senderUrl: string, total?: number) {
+  setTabMonetized(
+    tab: number,
+    frameId: number,
+    senderUrl: string,
+    total?: number
+  ) {
     const tabState = this.tabStates.get(tab)
 
-    this.tabStates.set(tab, {
+    this.tabStates.setFrame(tab, frameId, {
       monetized: true,
-      total: total || tabState.total || 0
+      total: total || (tabState.frameStates[frameId]?.total ?? 0)
     })
 
     if (this.activeTab === tab) {
@@ -401,6 +410,7 @@ export class BackgroundScript {
     if (!sender.tab) return
     this.setTabMonetized(
       notNullOrUndef(sender.tab.id),
+      notNullOrUndef(sender.frameId),
       notNullOrUndef(sender.tab.url)
     )
     return true
@@ -408,19 +418,26 @@ export class BackgroundScript {
 
   handleMonetizedSite(
     tab: number,
+    frameId: number,
     url: string,
     packet: { sentAmount: string }
   ) {
     const tabState = this.tabStates.get(tab)
-    const tabTotal = (tabState && tabState.total) || 0
+    const tabTotal = tabState?.frameStates[frameId]?.total ?? 0
     const newTabTotal = tabTotal + Number(packet?.sentAmount ?? 0)
-    this.setTabMonetized(tab, url, newTabTotal)
+    this.setTabMonetized(tab, frameId, url, newTabTotal)
   }
 
-  adaptedSite(data: AdaptedSite['data']) {
-    this.tabStates.set(this.activeTab, {
-      adapted: data.state,
-      favicon: data.channelImage
+  adaptedSite(data: AdaptedSite['data'], sender: MessageSender) {
+    const tabId = getTab(sender)
+    const frameId = notNullOrUndef(sender.frameId)
+    if (frameId === 0 && data.channelImage) {
+      this.tabStates.set(this.activeTab, {
+        favicon: data.channelImage
+      })
+    }
+    this.tabStates.setFrame(tabId, frameId, {
+      adapted: data.state
     })
   }
 
@@ -446,8 +463,10 @@ export class BackgroundScript {
     state && state.coilSite
       ? this.storage.set('coilSite', state.coilSite)
       : this.storage.remove('coilSite')
-    this.storage.set('adapted', Boolean(state && state.adapted))
-    state && state.monetized
+    // TODO: Another valid case might be a singular adapted iframe inside a non
+    // monetized top page.
+    this.storage.set('adapted', Boolean(state?.frameStates[0]?.adapted))
+    state && Object.values(state.frameStates).find(f => f.monetized)
       ? this.storage.set('monetized', true)
       : this.storage.remove('monetized')
 
@@ -459,7 +478,11 @@ export class BackgroundScript {
       delete this.store.stickyState
     }
 
-    this.storage.set('monetizedTotal', (state && state.total) || 0)
+    const total = Object.values(state.frameStates).reduce(
+      (acc, val) => acc + val.total,
+      0
+    )
+    this.storage.set('monetizedTotal', (state && total) || 0)
     this.storage.set(
       'monetizedFavicon',
       (state && state.favicon) || '/res/icon-page.svg'
@@ -514,7 +537,8 @@ export class BackgroundScript {
       emitPending()
     }
 
-    const lastCommand = this.tabStates.get(tab).lastMonetization.command
+    const lastCommand = this.tabStates.get(tab).frameStates[frameId]
+      .lastMonetization.command
     if (lastCommand !== 'start') {
       this.log('startWebMonetization cancelled via', lastCommand)
       return false
@@ -697,7 +721,8 @@ export class BackgroundScript {
 
   private logout(_: MessageSender) {
     for (const tabId of this.tabStates.tabKeys()) {
-      // Make a copy
+      // Make a copy as _closeStreams mutates and we want to actually close
+      // the streams before we set the state to stopped.
       const requestIds = { ...this.tabsToFrameToStreams[tabId] }
       this._closeStreams(tabId)
       this.tabStates.clear(tabId)
@@ -746,6 +771,7 @@ export class BackgroundScript {
     // it loaded. Noop if no stream for tab.
     this._closeStreams(tabId, frameId)
     if (frameId === 0) {
+      // TODO: clear only the FrameState for the given tabId/frameId
       this.tabStates.clear(tabId)
       this.reloadTabState({
         from: 'onTabsUpdated status === contentScriptInit'
