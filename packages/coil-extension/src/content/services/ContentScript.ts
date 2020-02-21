@@ -72,18 +72,11 @@ export class ContentScript {
     const monitor = new MonetizationTagObserver(
       this.document,
       ({ started, stopped }) => {
-        if (this.frames.isIFrame) {
-          console.error(
-            'This <iframe> is not authorized to use Web Monetization:',
-            this.window.location.href
-          )
-        } else {
-          if (stopped) {
-            stopMonetization(stopped)
-          }
-          if (started) {
-            startMonetization(started)
-          }
+        if (stopped) {
+          stopMonetization(stopped)
+        }
+        if (started) {
+          startMonetization(started)
         }
       }
     )
@@ -160,7 +153,7 @@ export class ContentScript {
       this.frames.monitor()
     }
 
-    if (this.frames.isTopFrame) {
+    if (this.frames.isMonetizableFrame) {
       const message: ContentScriptInit = { command: 'contentScriptInit' }
       this.runtime.sendMessage(message)
       whenDocumentReady(this.document, () => {

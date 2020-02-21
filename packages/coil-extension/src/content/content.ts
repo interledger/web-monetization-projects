@@ -30,7 +30,7 @@ function configureContainer(container: Container) {
 
 function main() {
   const frames = new Frames(document, window, API.runtime, COIL_DOMAIN)
-  if (frames.isTopFrame || frames.isAnyCoilFrame) {
+  if (frames.isMonetizableFrame || frames.isAnyCoilFrame) {
     const container = new Container({
       defaultScope: 'Singleton',
       autoBindInjectable: true

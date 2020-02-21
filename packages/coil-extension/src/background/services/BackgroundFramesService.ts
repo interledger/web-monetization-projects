@@ -96,7 +96,7 @@ export interface FrameChangedEvent extends FrameEventWithFrame {
 export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
   traceLogging = false
-  logTabsInterval = 1000
+  logTabsInterval = 0
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
