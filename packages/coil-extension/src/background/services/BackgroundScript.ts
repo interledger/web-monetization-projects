@@ -159,8 +159,7 @@ export class BackgroundScript {
   }
 
   private setTabsOnUpdatedListener() {
-    // Reset tab state and content script when tab changes location
-    // Note: this actually runs as the pages loads as well as changes
+    // Reset tab state and recheck adapted content when tab changes location
     this.framesService.on('frameChanged', event => {
       if (!event.frame.top) {
         return
@@ -181,10 +180,6 @@ export class BackgroundScript {
       if (becameComplete || (isComplete && changedUrl)) {
         this.setCoilUrlForPopupIfNeeded(tabId, url)
         const from = `onFrameChanged directly, event=${JSON.stringify(event)}, `
-        // Unfortunately this event handler is run for all windows/iframes in
-        // a given tab so we send the url and, inter alia, abort when the url
-        // is not the same. Extremely unlikely, but likely harmless if an url
-        // includes itself as an iframe hall-of-mirrors styles.
         const message: CheckAdaptedContent = {
           command: 'checkAdaptedContent',
           data: { from, url }
@@ -195,7 +190,8 @@ export class BackgroundScript {
           message,
           { frameId: event.frameId },
           () => {
-            console.log('lastError', this.api.runtime.lastError)
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            const ignored = this.api.runtime.lastError
           }
         )
       }
