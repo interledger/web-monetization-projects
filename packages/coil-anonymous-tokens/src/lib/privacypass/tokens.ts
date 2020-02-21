@@ -12,7 +12,7 @@ export function CreateBlindToken(): BlindToken | void {
   const randomPoint = newRandomPoint()
 
   if (randomPoint) {
-    const blindedPoint = blindPoint(randomPoint)
+    const blindedPoint = blindPoint(randomPoint.point)
     return {
       data: randomPoint.data,
       point: blindedPoint.point,

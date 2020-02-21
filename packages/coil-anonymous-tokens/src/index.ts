@@ -17,7 +17,9 @@ import {
   parseIssueResp,
   getCurvePoints,
   verifyProof,
-  getTokenEncoding
+  getTokenEncoding,
+  initECSettings,
+  h2cParams
 } from './lib/privacypass'
 
 export function base64url(buf: Buffer): string {
@@ -122,6 +124,9 @@ export class AnonymousTokens {
       return undefined
     })
     this.storedTokenCount = count
+
+    // TODO: better config management
+    initECSettings(h2cParams())
   }
 
   async getToken(coilAuthToken: string): Promise<string> {
