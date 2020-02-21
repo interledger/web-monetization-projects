@@ -745,10 +745,12 @@ export class BackgroundScript {
     // Content script used to send a stopWebMonetization message every time
     // it loaded. Noop if no stream for tab.
     this._closeStreams(tabId, frameId)
-    this.tabStates.clear(tabId)
-    this.reloadTabState({
-      from: 'onTabsUpdated status === contentScriptInit'
-    })
+    if (frameId === 0) {
+      this.tabStates.clear(tabId)
+      this.reloadTabState({
+        from: 'onTabsUpdated status === contentScriptInit'
+      })
+    }
     return true
   }
 }
