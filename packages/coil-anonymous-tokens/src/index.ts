@@ -9,6 +9,16 @@ import {
   PublicRSAKey
 } from 'blind-signature'
 
+import {
+  GenerateNewTokens,
+  BuildIssueRequest,
+  BlindToken,
+  parseIssueResp,
+  getCurvePoints,
+  verifyProof,
+  getTokenEncoding
+} from './lib/privacypass'
+
 export function base64url(buf: Buffer): string {
   return buf
     .toString('base64')
@@ -31,6 +41,19 @@ export interface SignedToken {
 export interface TimestampedSignature {
   signature: string
   month: string
+}
+
+export interface RawIssueResponse {
+  sigs: string[]
+  proof: string
+  version: string
+}
+
+export interface IssueResponse {
+  signatures: string[]
+  proof: string
+  version: string
+  prng: string
 }
 
 export interface Token {
@@ -189,36 +212,30 @@ export class AnonymousTokens {
   }
 
   private async _signToken(
-    blindedTokenHash: hexString,
     coilAuthToken: string,
-    month: string
-  ): Promise<TimestampedSignature> {
-    const signRes = await fetch(this.signerUrl + '/sign', {
+    request: string
+  ): Promise<IssueResponse> {
+    const signRes = await fetch(this.signerUrl + '/issue', {
       method: 'POST',
       headers: {
         authorization: `Bearer ${coilAuthToken}`,
         'content-type': 'application/json'
       },
       body: JSON.stringify({
-        blinded_message_hash: blindedTokenHash,
-        month
+        // TODO: this might need to be base64'd
+        bl_sig_req: request
       })
     })
 
     if (!signRes.ok) {
-      this.debug('token /sign failed status=%d', signRes.status)
+      this.debug('token /issue failed status=%d', signRes.status)
       throw new Error(`failed to get token signature. code=${signRes.status}`)
     }
-    const body = await signRes.json()
-    if (!body.success) {
-      this.debug('token /sign failed message=%s', body.mesage)
-      throw new Error(`failed to get token signature. message=${body.message}`)
-    }
 
-    return body as TimestampedSignature
+    const body = (await signRes.json()) as RawIssueResponse
+    return parseIssueResp(body) as IssueResponse
   }
 
-  // TODO private?
   private async populateTokens(coilAuthToken: string): Promise<void> {
     // Ensure that at most one `_populateTokens` call runs simultaneously.
     if (this._populateTokensPromise) return this._populateTokensPromise
@@ -231,56 +248,54 @@ export class AnonymousTokens {
   }
 
   private async _populateTokensNow(coilAuthToken: string): Promise<void> {
-    const key = await this._getKeyParams()
-    const tokens: Token[] = []
+    // TODO: how do we manage commitments?
+    // const key = await this._getKeyParams()
+
     // Generate all tokens first so the timing in between tokens can't be used
     // to learn anything about the token or blinding factor.
-    for (let i = 0; i < this.batchSize; i++) {
-      const token = _getRandomToken()
-      const {
-        blindedMessageHash: blindedTokenHash,
-        blindingFactor
-      } = hashAndBlindMessage(key, token)
-      tokens.push({ token, blindedTokenHash, blindingFactor })
-    }
+    const tokens = GenerateNewTokens(this.batchSize)
+    const request = BuildIssueRequest(tokens)
 
-    let gotTokens = 0
-    for (const tokenData of tokens) {
-      const signPromise = this._signToken(
-        tokenData.blindedTokenHash,
-        coilAuthToken,
-        key.month
-      ).then(({ month, signature: blindSignature }) => {
-        const signature = unblindSignature(
-          key,
-          blindSignature,
-          tokenData.blindingFactor
-        )
-        if (!verifySignature(key, tokenData.token, signature)) {
-          // TODO: how do we handle this properly? invalid signature means the server might be trying to trick us by signing our message with a different key than advertised to try to deanonymize us
-          throw new Error('produced invalid signature!')
-        }
+    const signPromise = this._signToken(coilAuthToken, request).then(
+      async (issueResp: IssueResponse) => {
+        const curvePoints = getCurvePoints(issueResp.signatures)
 
-        return this.store.setItem(
-          TOKEN_PREFIX + tokenData.token,
-          JSON.stringify({ month, signature })
+        await this._verifyProof(
+          issueResp.proof,
+          issueResp.prng,
+          curvePoints,
+          tokens
         )
-      })
-      await signPromise
-        .then(() => gotTokens++)
-        .catch(err => {
-          this.debug('failed to generate token err=%s', err.message)
-        })
-    }
-    this.debug(
-      'populateTokens got=%d want=%d tokens',
-      gotTokens,
-      this.batchSize
+        this._storeNewTokens(tokens, curvePoints.points)
+      }
     )
-    this.storedTokenCount += gotTokens
 
-    if (gotTokens === 0) {
-      throw new Error('no anonymous tokens could be prepared')
+    await signPromise
+  }
+
+  // TODO: no any
+  private _storeNewTokens(tokens: BlindToken[], signedPoints: any) {
+    for (let i = 0; i < tokens.length; ++i) {
+      // TODO: is t.data even a string?
+      const encoded = getTokenEncoding(tokens[i], signedPoints[i])
+      this.store.setItem(TOKEN_PREFIX + tokens[i].data, JSON.stringify(encoded))
+    }
+  }
+
+  private async _getCommitments() {
+    return { G: 'todo', H: 'todo' }
+  }
+
+  // TODO: no any
+  private async _verifyProof(
+    proof: string,
+    prng: string,
+    curvePoints: any,
+    tokens: BlindToken[]
+  ) {
+    const commitments = await this._getCommitments()
+    if (!verifyProof(proof, tokens, curvePoints, commitments, prng)) {
+      throw new Error('[privacy pass]: unable to verify dleq proof.')
     }
   }
 }

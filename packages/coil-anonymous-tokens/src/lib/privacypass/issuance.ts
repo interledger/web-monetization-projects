@@ -291,7 +291,7 @@ function parseSigString(data) {
  * optional commitment version
  * @return {Object} Formatted object for inputs
  */
-function parseIssueResp(issueResp) {
+export function parseIssueResp(issueResp) {
   let signatures
   let batchProof
   let version
@@ -321,7 +321,7 @@ function parseIssueResp(issueResp) {
  * @param {Array<Object>} tokens contains curve points for server signing
  * @return {string} base64-encoded issuance request
  */
-function BuildIssueRequest(tokens) {
+export function BuildIssueRequest(tokens) {
   const contents: string[] = []
   for (let i = 0; i < tokens.length; i++) {
     const encodedPoint = sec1EncodeToBase64(tokens[i].point, true)
