@@ -14,11 +14,13 @@ import {
   BuildIssueRequest,
   BuildRedeemHeader,
   BlindToken,
+  StorableBlindToken,
   parseIssueResp,
   getCurvePoints,
   verifyProof,
   getTokenEncoding,
   initECSettings,
+  deserializeToken,
   h2cParams
 } from './lib/privacypass'
 
@@ -30,7 +32,7 @@ export function base64url(buf: Buffer): string {
     .replace(/=/g, '')
 }
 
-function tokenName(token: BlindToken): string {
+function tokenName(token: StorableBlindToken | BlindToken): string {
   return Buffer.from(token.data).toString('base64')
 }
 
@@ -80,8 +82,8 @@ export interface TokenStore {
       value: string,
       key: string,
       iterationNumber: number
-    ) => BlindToken | undefined
-  ) => Promise<BlindToken | undefined>
+    ) => StorableBlindToken | undefined
+  ) => Promise<StorableBlindToken | undefined>
 }
 
 export interface AnonymousTokensOptions {
@@ -148,8 +150,11 @@ export class AnonymousTokens {
     }
   }
 
-  private async _redeemToken(token: BlindToken): Promise<string | undefined> {
-    const redeemRequest = BuildRedeemHeader(token, '', '')
+  private async _redeemToken(
+    token: StorableBlindToken
+  ): Promise<string | undefined> {
+    const usableToken = deserializeToken(token)
+    const redeemRequest = BuildRedeemHeader(usableToken, '', '')
     const response = await fetch(this.redeemerUrl + '/redeem', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
@@ -181,10 +186,10 @@ export class AnonymousTokens {
     return btpToken
   }
 
-  private _getSignedToken(): Promise<BlindToken | undefined> {
+  private _getSignedToken(): Promise<StorableBlindToken | undefined> {
     return this.store.iterate((blob: string, name: string) => {
       if (name.startsWith(TOKEN_PREFIX)) {
-        return JSON.parse(blob) as BlindToken
+        return JSON.parse(blob) as StorableBlindToken
       }
     })
   }
