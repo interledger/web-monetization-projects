@@ -39,12 +39,6 @@ function main() {
     configureContainer(container)
     container.get(ContentScript).init()
   }
-  console.log(
-    '%c coil-extension content.ts isDirectChildFrame=%s href=%s',
-    'color: red;',
-    frames.isDirectChildFrame,
-    window.location.href
-  )
 }
 
 main()
