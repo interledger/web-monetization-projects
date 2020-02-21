@@ -1,4 +1,4 @@
-import { BlindToken } from '../../src/lib/privacypass'
+import { StorableBlindToken } from '../../src/lib/privacypass'
 
 interface StringMap {
   [key: string]: string
@@ -16,7 +16,11 @@ export class MockStore {
   }
 
   public async iterate(
-    fn: (value: string, key: string, i: number) => BlindToken | undefined
+    fn: (
+      value: string,
+      key: string,
+      i: number
+    ) => StorableBlindToken | undefined
   ) {
     let i = 0
     for (const key in this.store) {
