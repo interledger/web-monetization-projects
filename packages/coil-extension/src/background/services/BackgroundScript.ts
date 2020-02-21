@@ -640,7 +640,7 @@ export class BackgroundScript {
     // that will happen automatically on url change (html5 push state also)
     // via the tabs.onUpdated
     if (closed) {
-      this.tabStates.clear(tab)
+      this.tabStates.clearFrame(tab, frameId)
     }
     this.reloadTabState({
       from: 'stopWebMonetization'
@@ -770,13 +770,10 @@ export class BackgroundScript {
     // Content script used to send a stopWebMonetization message every time
     // it loaded. Noop if no stream for tab.
     this._closeStreams(tabId, frameId)
-    if (frameId === 0) {
-      // TODO: clear only the FrameState for the given tabId/frameId
-      this.tabStates.clear(tabId)
-      this.reloadTabState({
-        from: 'onTabsUpdated status === contentScriptInit'
-      })
-    }
+    this.tabStates.clearFrame(tabId, frameId)
+    this.reloadTabState({
+      from: 'onTabsUpdated status === contentScriptInit'
+    })
     return true
   }
 }

@@ -29,6 +29,10 @@ export class TabStates {
     })
   }
 
+  clearFrame(tab: number, frame: number) {
+    delete this.tabStates[tab]?.frameStates[frame]
+  }
+
   tabKeys(): number[] {
     return Object.keys(this.tabStates).map(Number)
   }
