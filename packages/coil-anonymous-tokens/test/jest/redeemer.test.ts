@@ -12,6 +12,7 @@ import { AnonymousTokens } from '../../src/index'
 import { MockStore } from '../mocks/store'
 
 const APP_SECRET = process.env.APP_SECRET || 'test'
+const BTP_SECRET = process.env.BTP_SECRET || 'btp_test'
 
 // Integration test against the redeemer service running locally
 describe('Anonymous tokens service', () => {
@@ -39,9 +40,24 @@ describe('Anonymous tokens service', () => {
     })
   })
 
-  it('should successfully get tokens issued', async () => {
+  it('should successfully get tokens issued & redeemed', async () => {
     await (tokens as any).populateTokens(coilAuthToken)
+
     const btpToken = await tokens.getToken(coilAuthToken)
-    console.log(btpToken)
+    const decoded = jwt.verify(btpToken, BTP_SECRET) as any
+
+    expect(decoded.userId).toMatch(/^anon:/)
+    expect(decoded.anon).toBe(true)
+  })
+
+  it('should redeem twice', async () => {
+    await (tokens as any).populateTokens(coilAuthToken)
+
+    const btpToken = await tokens.getToken(coilAuthToken)
+    const btpToken2 = await tokens.getToken(coilAuthToken)
+    const decoded = jwt.verify(btpToken, BTP_SECRET) as any
+    const decoded2 = jwt.verify(btpToken2, BTP_SECRET) as any
+
+    expect(decoded.userId).toEqual(decoded2.userId)
   })
 })
