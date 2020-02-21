@@ -658,10 +658,12 @@ export class BackgroundScript {
 
   _closeStreams(tabId: number, frameId?: number) {
     const streamIds = this.tabsToFrameToRequestIds[tabId]
+    const haveFrameId = typeof frameId !== 'undefined'
+
     let streams = 0
     if (streamIds) {
       Object.entries(streamIds).forEach(([innerFrameId, streamId]) => {
-        if (frameId && Number(innerFrameId) !== frameId) {
+        if (haveFrameId && Number(innerFrameId) !== frameId) {
           return
         }
 
@@ -670,8 +672,8 @@ export class BackgroundScript {
         delete this.streamsToFrames[streamId]
         streams++
       })
-      if (typeof frameId !== 'undefined') {
-        delete this.tabsToFrameToRequestIds[tabId][frameId]
+      if (haveFrameId) {
+        delete this.tabsToFrameToRequestIds[tabId][frameId as number]
       } else {
         delete this.tabsToFrameToRequestIds[tabId]
       }
@@ -753,7 +755,7 @@ export class BackgroundScript {
         })
       } else if (request.data.play === 'playing') {
         framesForTab.forEach(frameId => {
-          this.doPauseWebMonetization({ frameId, tabId })
+          this.doResumeWebMonetization({ frameId, tabId })
         })
       }
     }
