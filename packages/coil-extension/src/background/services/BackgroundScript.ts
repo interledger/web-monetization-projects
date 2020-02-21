@@ -94,7 +94,8 @@ export class BackgroundScript {
     this.setTabsOnActivatedListener()
     this.setWindowsOnFocusedListener()
     this.setTabsOnRemovedListener()
-    this.setTabsOnUpdatedListener()
+    this.setFramesOnChangedListener()
+    this.setFramesOnRemovedListener()
     this.routeStreamsMoneyEventsToContentScript()
     this.handleStreamsAbortEvent()
     this.framesService.monitor()
@@ -170,7 +171,14 @@ export class BackgroundScript {
     })
   }
 
-  private setTabsOnUpdatedListener() {
+  private setFramesOnRemovedListener() {
+    this.framesService.on('frameRemoved', event => {
+      this.tabStates.clearFrame(event)
+      this._closeStreams(event.tabId, event.frameId)
+    })
+  }
+
+  private setFramesOnChangedListener() {
     // Reset tab state and recheck adapted content when tab changes location
     this.framesService.on('frameChanged', event => {
       if (!(event.frame.top || event.frame.parentFrameId === 0)) {
@@ -471,11 +479,13 @@ export class BackgroundScript {
       delete this.store.stickyState
     }
 
-    const total = Object.values(state.frameStates).reduce(
-      (acc, val) => acc + val.total,
-      0
-    )
-    this.storage.set('monetizedTotal', (state && total) || 0)
+    if (state) {
+      const total = Object.values(state.frameStates).reduce(
+        (acc, val) => acc + val.total,
+        0
+      )
+      this.storage.set('monetizedTotal', total)
+    }
     this.storage.set(
       'monetizedFavicon',
       (state && state.favicon) || '/res/icon-page.svg'
@@ -585,7 +595,6 @@ export class BackgroundScript {
     return true
   }
 
-  // TODO: this won't handle iframes
   pauseWebMonetization(request: PauseWebMonetization, sender: MessageSender) {
     if (this.tabStates.get(getTab(sender)).stickyState === 'sticky') {
       return
@@ -603,9 +612,9 @@ export class BackgroundScript {
   private handleStreamsAbortEvent() {
     this.streams.on('abort', requestId => {
       this.log('aborting monetization request', requestId)
-      const tabAndFrame = this.streamsToFrames[requestId]
-      if (tabAndFrame) {
-        // this.doStopWebMonetization(tabAndFrame)
+      const frame = this.streamsToFrames[requestId]
+      if (frame) {
+        this.doStopWebMonetization(frame)
       }
     })
   }
@@ -621,10 +630,7 @@ export class BackgroundScript {
     // ContentScript
     const requestId = this.getRequestId(frame)
     this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
-    // clear the tab state, and set things to default
-    // no need to send checkAdaptedContent message to check for adapted sites as
-    // that will happen automatically on url change (html5 push state also)
-    // via the tabs.onUpdated
+    // TODO:
     if (closed) {
       this.tabStates.clearFrame(frame)
     }
@@ -664,7 +670,7 @@ export class BackgroundScript {
         delete this.streamsToFrames[streamId]
         streams++
       })
-      if (frameId) {
+      if (typeof frameId !== 'undefined') {
         delete this.tabsToFrameToRequestIds[tabId][frameId]
       } else {
         delete this.tabsToFrameToRequestIds[tabId]
@@ -730,19 +736,25 @@ export class BackgroundScript {
 
   private setStreamControls(request: SetStreamControls, _: MessageSender) {
     // TODO: this doesn't seem right!
-    const { tabId: tab, spec } = getFrameSpec(_)
+    const tabId = this.activeTab
+    this.log('setStreamControls', request)
 
-    this.tabStates.set(tab, {
+    this.tabStates.set(tabId, {
       stickyState: request.data.sticky,
       playState: request.data.play
     })
     if (request.data.action === 'togglePlayOrPause') {
+      const tabState = this.tabStates.get(tabId)
+      const framesForTab = Object.keys(tabState.frameStates).map(Number)
+      this.log({ framesForTab })
       if (request.data.play === 'paused') {
-        // TODO: pause ALL tab streams
-        this.doPauseWebMonetization(spec)
+        framesForTab.forEach(frameId => {
+          this.doPauseWebMonetization({ frameId, tabId })
+        })
       } else if (request.data.play === 'playing') {
-        // TODO: resume ALL tab streams
-        this.doResumeWebMonetization(spec)
+        framesForTab.forEach(frameId => {
+          this.doPauseWebMonetization({ frameId, tabId })
+        })
       }
     }
     this.reloadTabState({ from: request.command })
