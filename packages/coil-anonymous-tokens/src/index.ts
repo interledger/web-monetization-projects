@@ -12,6 +12,7 @@ import {
 import {
   GenerateNewTokens,
   BuildIssueRequest,
+  BuildRedeemHeader,
   BlindToken,
   parseIssueResp,
   getCurvePoints,
@@ -27,8 +28,8 @@ export function base64url(buf: Buffer): string {
     .replace(/=/g, '')
 }
 
-function _getRandomToken(): string {
-  return base64url(randomBytes(16))
+function tokenName(token: BlindToken): string {
+  return Buffer.from(token.data).toString('base64')
 }
 
 export const TOKEN_PREFIX = 'anonymous_token:'
@@ -77,8 +78,8 @@ export interface TokenStore {
       value: string,
       key: string,
       iterationNumber: number
-    ) => SignedToken | undefined
-  ) => Promise<SignedToken | undefined>
+    ) => BlindToken | undefined
+  ) => Promise<BlindToken | undefined>
 }
 
 export interface AnonymousTokensOptions {
@@ -131,33 +132,38 @@ export class AnonymousTokens {
 
     // eslint-disable-next-line no-constant-condition
     while (true) {
-      const signedToken = await this._getSignedToken()
-      if (!signedToken) {
+      const token = await this._getSignedToken()
+      if (!token) {
         await this.populateTokens(coilAuthToken)
         continue
       }
-      const btpToken = await this._redeemToken(signedToken)
+      const btpToken = await this._redeemToken(token)
       if (btpToken) return btpToken
       // Otherwise, try again, since the retrieved token was likely expired.
     }
   }
 
-  private async _redeemToken(
-    signedToken: SignedToken
-  ): Promise<string | undefined> {
+  private async _redeemToken(token: BlindToken): Promise<string | undefined> {
+    // TODO: I've no idea what the host & path should be
+    const redeemRequest = BuildRedeemHeader(token, 'https://coil.com', '/')
     const response = await fetch(this.redeemerUrl + '/redeem', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(signedToken)
+      body: JSON.stringify({
+        bl_sig_req: redeemRequest
+      })
     })
+
     if (response.status === 400) {
       // The stored token was invalid or expired (the server wouldn't verify it).
-      await this._removeSignedToken(signedToken.message)
+      await this._removeSignedToken(tokenName(token))
       return
     }
+
     if (!response.ok) {
       throw new Error(`failed to redeem token. code=${response.status}`)
     }
+
     const body = await response.json()
     const btpToken = body.token
     if (!btpToken) {
@@ -165,20 +171,16 @@ export class AnonymousTokens {
         `invalid redeemed token. response=${JSON.stringify(body)}`
       )
     }
-    this.tokenMap.set(btpToken, signedToken.message)
+
+    // TODO: make sure the token data is a string and is a good identifier for the token
+    this.tokenMap.set(btpToken, tokenName(token))
     return btpToken
   }
 
-  private _getSignedToken(): Promise<SignedToken | undefined> {
+  private _getSignedToken(): Promise<BlindToken | undefined> {
     return this.store.iterate((blob: string, name: string) => {
       if (name.startsWith(TOKEN_PREFIX)) {
-        const message = name.substring(TOKEN_PREFIX.length)
-        const { signature, month } = JSON.parse(blob)
-        return {
-          message,
-          signature,
-          month
-        }
+        return JSON.parse(blob) as BlindToken
       }
     })
   }
@@ -222,7 +224,6 @@ export class AnonymousTokens {
         'content-type': 'application/json'
       },
       body: JSON.stringify({
-        // TODO: this might need to be base64'd
         bl_sig_req: request
       })
     })
@@ -254,9 +255,9 @@ export class AnonymousTokens {
     // Generate all tokens first so the timing in between tokens can't be used
     // to learn anything about the token or blinding factor.
     const tokens = GenerateNewTokens(this.batchSize)
-    const request = BuildIssueRequest(tokens)
+    const issueRequest = BuildIssueRequest(tokens)
 
-    const signPromise = this._signToken(coilAuthToken, request).then(
+    const signPromise = this._signToken(coilAuthToken, issueRequest).then(
       async (issueResp: IssueResponse) => {
         const curvePoints = getCurvePoints(issueResp.signatures)
 
@@ -276,12 +277,16 @@ export class AnonymousTokens {
   // TODO: no any
   private _storeNewTokens(tokens: BlindToken[], signedPoints: any) {
     for (let i = 0; i < tokens.length; ++i) {
-      // TODO: is t.data even a string?
       const encoded = getTokenEncoding(tokens[i], signedPoints[i])
-      this.store.setItem(TOKEN_PREFIX + tokens[i].data, JSON.stringify(encoded))
+      this.store.setItem(
+        TOKEN_PREFIX + tokenName(tokens[i]),
+        JSON.stringify(encoded)
+      )
+      this.storedTokenCount++
     }
   }
 
+  // TODO: todo
   private async _getCommitments() {
     return { G: 'todo', H: 'todo' }
   }
