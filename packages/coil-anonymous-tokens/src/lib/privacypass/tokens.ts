@@ -1,6 +1,11 @@
-import { BigNumber, SjclEllipticalPoint } from 'sjcl'
+import sjcl, { BigNumber, SjclEllipticalPoint } from 'sjcl'
 
-import { newRandomPoint, blindPoint, sec1EncodeToBase64 } from './crypto'
+import {
+  newRandomPoint,
+  blindPoint,
+  sec1EncodeToBase64,
+  sec1DecodeFromBase64
+} from './crypto'
 
 export interface BlindToken {
   data: any
@@ -69,6 +74,16 @@ export function storeNewTokens(_: any, __: any) {}
 
 // TODO: loadTokens
 export function loadTokens() {}
+
+export function deserializeToken(token: StorableBlindToken): BlindToken {
+  const usablePoint = sec1DecodeFromBase64(token.point)
+  const usableBlind = new sjcl.bn(token.blind)
+  return {
+    data: token.data,
+    point: usablePoint,
+    blind: usableBlind
+  }
+}
 
 // TODO: countStoredTokens
 export function countStoredTokens() {

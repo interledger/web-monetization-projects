@@ -41,5 +41,7 @@ describe('Anonymous tokens service', () => {
 
   it('should successfully get tokens issued', async () => {
     await (tokens as any).populateTokens(coilAuthToken)
+    const btpToken = await tokens.getToken(coilAuthToken)
+    console.log(btpToken)
   })
 })
