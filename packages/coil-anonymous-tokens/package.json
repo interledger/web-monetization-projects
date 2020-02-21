@@ -44,6 +44,7 @@
     "@types/jsonwebtoken": "^8.3.7",
     "@types/node-fetch": "^2.5.4",
     "@types/sjcl": "^1.0.29",
+    "atob": "^2.1.2",
     "btoa": "^1.2.1",
     "jsonwebtoken": "^8.5.1",
     "localforage": "^1.7.3",

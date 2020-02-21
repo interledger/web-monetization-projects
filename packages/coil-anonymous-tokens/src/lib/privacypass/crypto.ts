@@ -4,13 +4,13 @@
  * https://github.com/privacypass/challenge-bypass-extension/blob/master/src/crypto/local.js
  */
 import sjcl from 'sjcl'
-import { createShake256 } from 'keccak'
+import keccak from 'keccak'
 import { ASN1, PEM } from 'asn1-parser'
 
 import { h2Curve } from './hashToCurve'
 
 const shake256 = () => {
-  return createShake256()
+  return keccak('shake256')
 }
 
 const BATCH_PROOF_PREFIX = 'batch-proof='
