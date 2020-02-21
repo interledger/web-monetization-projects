@@ -1,8 +1,10 @@
 import btoa from 'btoa'
+import atob from 'atob'
 import fetch from 'node-fetch'
-;
 
-(global as any).btoa = btoa(global as any).fetch = fetch
+global.btoa = btoa
+global.atob = atob
+global.fetch = fetch
 
 import * as jwt from 'jsonwebtoken'
 
@@ -29,8 +31,8 @@ describe('Anonymous tokens service', () => {
     )
 
     tokens = new AnonymousTokens({
-      redeemerUrl: 'http://localhost:8080/redeemer',
-      signerUrl: 'http://localhost:8081/redeemer',
+      redeemerUrl: 'http://localhost:8081/redeemer',
+      signerUrl: 'http://localhost:8080/redeemer',
       store: new MockStore(),
       debug: console.debug,
       batchSize: 10

@@ -149,8 +149,7 @@ export class AnonymousTokens {
   }
 
   private async _redeemToken(token: BlindToken): Promise<string | undefined> {
-    // TODO: I've no idea what the host & path should be
-    const redeemRequest = BuildRedeemHeader(token, 'https://coil.com', '/')
+    const redeemRequest = BuildRedeemHeader(token, '', '')
     const response = await fetch(this.redeemerUrl + '/redeem', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
@@ -293,7 +292,12 @@ export class AnonymousTokens {
 
   // TODO: todo
   private async _getCommitments() {
-    return { G: 'todo', H: 'todo' }
+    return {
+      G:
+        'BCyENEmEdWz3Wivy7iwXFcLZ0xOW7PCe2BtoMD6sYBqUK+PBZad5euc1tP9ekcdSDxxK3ijgHsQ1PqQim4VqDGo=',
+      H:
+        'BJj8hRLfPSe+GNfbS3Jd2XmYU3XTEJw+TaTxx7M9lxVY9BDI6toWVpmffMR0P28XJcV3W0SGWX2OOrRLaBYGhwM='
+    }
   }
 
   // TODO: no any
