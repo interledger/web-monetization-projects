@@ -3,9 +3,9 @@ import { EventEmitter } from 'events'
 import { inject, injectable } from 'inversify'
 import * as tokens from '@web-monetization/wext/tokens'
 
-import { getTab } from '../../util/tabs'
+import { getFrameSpec } from '../../util/tabs'
 import { ToBackgroundMessage } from '../../types/commands'
-import { notNullOrUndef } from '../../util/nullables'
+import { FrameSpec } from '../../types/FrameSpec'
 
 import { logger, Logger } from './utils'
 
@@ -110,10 +110,10 @@ export class BackgroundFramesService extends EventEmitter {
     this.log = console.log.bind(console, 'BackgroundFramesService')
   }
 
-  getFrame(tabId: number, frameId: number): Readonly<Frame> | undefined {
-    const frames = this.getFrames(tabId)
+  getFrame(frame: FrameSpec): Readonly<Frame> | undefined {
+    const frames = this.getFrames(frame.tabId)
     return frames.find(f => {
-      return f.frameId == frameId
+      return f.frameId == frame.frameId
     })
   }
 
@@ -128,7 +128,7 @@ export class BackgroundFramesService extends EventEmitter {
     partial: Readonly<Partial<Frame>>
   ) {
     const lastUpdateTimeMS = partial.lastUpdateTimeMS ?? Date.now()
-    const frame = this.getFrame(tabId, frameId)
+    const frame = this.getFrame({ tabId, frameId })
     if (frame && frame.lastUpdateTimeMS > lastUpdateTimeMS) {
       this.log('ignoring frame update', { tabId, frameId, changed: partial })
       return
@@ -252,8 +252,11 @@ export class BackgroundFramesService extends EventEmitter {
         ) {
           return
         }
-
-        const frame = this.getFrame(details.tabId, details.frameId)
+        const frameSpec = {
+          tabId: details.tabId,
+          frameId: details.frameId
+        }
+        const frame = this.getFrame(frameSpec)
         this.log('webNavigation.' + event)
         if (this.traceLogging) {
           this.log(
@@ -276,8 +279,8 @@ export class BackgroundFramesService extends EventEmitter {
           details.frameId,
           partial
         )
-        if (this.getFrame(details.tabId, details.frameId)?.state == null) {
-          this.requestFrameState(details.tabId, details.frameId)
+        if (this.getFrame(frameSpec)?.state == null) {
+          this.requestFrameState(frameSpec)
         }
       }
     }
@@ -335,8 +338,8 @@ export class BackgroundFramesService extends EventEmitter {
       return
     }
 
-    const tabId = getTab(sender)
-    const frameId = notNullOrUndef(sender.frameId)
+    const { tabId, frameId } = getFrameSpec(sender)
+
     if (message.command === 'unloadFrame') {
       this.log('unloadFrame %s', frameId, message.data)
       const frames = (this.tabs[tabId] = this.tabs[tabId] ?? [])
@@ -366,7 +369,7 @@ export class BackgroundFramesService extends EventEmitter {
       }
 
       const { href, state } = message.data
-      const frame = this.getFrame(tabId, frameId)
+      const frame = this.getFrame({ tabId, frameId })
       if (frame) {
         // top and frameId, parentFrameId don't change
         this.updateOrAddFrame('frameStateChange', tabId, frameId, {
@@ -407,9 +410,9 @@ export class BackgroundFramesService extends EventEmitter {
             parentFrameId: frame.parentFrameId
           }
         )
-
-        if (this.getFrame(tabId, frame.frameId)?.state == null) {
-          this.requestFrameState(tabId, frame.frameId)
+        const frameSpec = { tabId, frameId: frame.frameId }
+        if (this.getFrame(frameSpec)?.state == null) {
+          this.requestFrameState(frameSpec)
         }
       })
     })
@@ -419,7 +422,7 @@ export class BackgroundFramesService extends EventEmitter {
    * Somewhat interestingly, this seems to work even when a content script context
    * is invalidated.
    */
-  private requestFrameState(tabId: number, frameId: number) {
+  private requestFrameState({ tabId, frameId }: FrameSpec) {
     this.api.tabs.executeScript(
       tabId,
       {

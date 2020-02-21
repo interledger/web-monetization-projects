@@ -3,6 +3,7 @@ import { injectable } from 'inversify'
 import { FrameState, MonetizationCommand, TabState } from '../../types/TabState'
 import { IconState } from '../../types/commands'
 import { Colors } from '../consts/Colors'
+import { FrameSpec } from '../../types/FrameSpec'
 
 import { PopupIconService } from './PopupIconService'
 
@@ -18,19 +19,19 @@ export class TabStates {
     this.tabStates[tab] = { ...existingState, ...state }
   }
 
-  setFrame(tab: number, frame: number, state: Partial<FrameState> = {}) {
-    const frameStates = this.get(tab).frameStates
-    const existingState = this.get(tab).frameStates[frame]
-    this.set(tab, {
+  setFrame({ tabId, frameId }: FrameSpec, state: Partial<FrameState> = {}) {
+    const frameStates = this.get(tabId).frameStates
+    const existingState = this.get(tabId).frameStates[frameId]
+    this.set(tabId, {
       frameStates: {
         ...frameStates,
-        ...{ [frame]: { ...existingState, ...state } }
+        ...{ [frameId]: { ...existingState, ...state } }
       }
     })
   }
 
-  clearFrame(tab: number, frame: number) {
-    delete this.tabStates[tab]?.frameStates[frame]
+  clearFrame({ tabId, frameId }: FrameSpec) {
+    delete this.tabStates[tabId]?.frameStates[frameId]
   }
 
   tabKeys(): number[] {
@@ -113,12 +114,8 @@ export class TabStates {
     }
   }
 
-  logLastMonetizationCommand(
-    tab: number,
-    frameID: number,
-    command: MonetizationCommand
-  ) {
-    this.setFrame(tab, frameID, {
+  logLastMonetizationCommand(frame: FrameSpec, command: MonetizationCommand) {
+    this.setFrame(frame, {
       lastMonetization: {
         command,
         timeMs: Date.now()

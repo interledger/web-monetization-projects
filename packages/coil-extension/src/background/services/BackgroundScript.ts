@@ -23,7 +23,8 @@ import {
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
-import { getTab } from '../../util/tabs'
+import { getFrameSpec, getTab } from '../../util/tabs'
+import { FrameSpec } from '../../types/FrameSpec'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -38,7 +39,7 @@ import { BackgroundFramesService } from './BackgroundFramesService'
 @injectable()
 export class BackgroundScript {
   // TODO: extract these two variables into some kind of service
-  tabsToFrameToStreams: {
+  tabsToFrameToRequestIds: {
     [tab: number]: Record<
       // frameId
       number,
@@ -47,13 +48,8 @@ export class BackgroundScript {
     >
   } = {}
 
-  streamsToTabAndFrame: {
-    [stream: string]: [
-      // tabId
-      number,
-      // frameId
-      number
-    ]
+  streamsToFrames: {
+    [stream: string]: FrameSpec
   } = {}
 
   constructor(
@@ -217,7 +213,8 @@ export class BackgroundScript {
   private routeStreamsMoneyEventsToContentScript() {
     // pass stream monetization events to the correct tab
     this.streams.on('money', (details: StreamMoneyEvent) => {
-      const [tab, frameId] = this.streamsToTabAndFrame[details.requestId]
+      const spec = this.streamsToFrames[details.requestId]
+      const { tabId, frameId } = spec
       if (details.packetNumber === 0) {
         const message: MonetizationStart = {
           command: 'monetizationStart',
@@ -226,7 +223,7 @@ export class BackgroundScript {
             requestId: details.requestId
           }
         }
-        this.api.tabs.sendMessage(tab, message, { frameId })
+        this.api.tabs.sendMessage(tabId, message, { frameId })
       }
 
       const message: MonetizationProgress = {
@@ -240,8 +237,8 @@ export class BackgroundScript {
           sentAmount: details.sentAmount
         }
       }
-      this.handleMonetizedSite(tab, frameId, details.initiatingUrl, details)
-      this.api.tabs.sendMessage(tab, message, { frameId })
+      this.handleMonetizedSite(spec, details.initiatingUrl, details)
+      this.api.tabs.sendMessage(tabId, message, { frameId })
       this.savePacketToHistoryDb(details)
     })
   }
@@ -374,19 +371,21 @@ export class BackgroundScript {
   }
 
   setTabMonetized(
-    tab: number,
-    frameId: number,
+    { tabId, frameId }: FrameSpec,
     senderUrl: string,
     total?: number
   ) {
-    const tabState = this.tabStates.get(tab)
+    const tabState = this.tabStates.get(tabId)
 
-    this.tabStates.setFrame(tab, frameId, {
-      monetized: true,
-      total: total || (tabState.frameStates[frameId]?.total ?? 0)
-    })
+    this.tabStates.setFrame(
+      { tabId, frameId },
+      {
+        monetized: true,
+        total: total || (tabState.frameStates[frameId]?.total ?? 0)
+      }
+    )
 
-    if (this.activeTab === tab) {
+    if (this.activeTab === tabId) {
       this.reloadTabState()
     }
 
@@ -398,7 +397,7 @@ export class BackgroundScript {
       this.favIcons
         .getFavicon(host)
         .then(favicon => {
-          this.tabStates.set(tab, { favicon })
+          this.tabStates.set(tabId, { favicon })
         })
         .catch(e => {
           console.error('failed to fetch favicon. e=' + e.stack)
@@ -408,35 +407,29 @@ export class BackgroundScript {
 
   mayMonetizeSite(sender: MessageSender) {
     if (!sender.tab) return
-    this.setTabMonetized(
-      notNullOrUndef(sender.tab.id),
-      notNullOrUndef(sender.frameId),
-      notNullOrUndef(sender.tab.url)
-    )
+    this.setTabMonetized(getFrameSpec(sender), notNullOrUndef(sender.tab.url))
     return true
   }
 
   handleMonetizedSite(
-    tab: number,
-    frameId: number,
+    { tabId, frameId }: FrameSpec,
     url: string,
     packet: { sentAmount: string }
   ) {
-    const tabState = this.tabStates.get(tab)
+    const tabState = this.tabStates.get(tabId)
     const tabTotal = tabState?.frameStates[frameId]?.total ?? 0
     const newTabTotal = tabTotal + Number(packet?.sentAmount ?? 0)
-    this.setTabMonetized(tab, frameId, url, newTabTotal)
+    this.setTabMonetized({ tabId, frameId }, url, newTabTotal)
   }
 
   adaptedSite(data: AdaptedSite['data'], sender: MessageSender) {
-    const tabId = getTab(sender)
-    const frameId = notNullOrUndef(sender.frameId)
+    const { frameId, spec } = getFrameSpec(sender)
     if (frameId === 0 && data.channelImage) {
       this.tabStates.set(this.activeTab, {
         favicon: data.channelImage
       })
     }
-    this.tabStates.setFrame(tabId, frameId, {
+    this.tabStates.setFrame(spec, {
       adapted: data.state
     })
   }
@@ -493,9 +486,9 @@ export class BackgroundScript {
     request: StartWebMonetization,
     sender: MessageSender
   ) {
-    const tab = getTab(sender)
-    const frameId = notNullOrUndef(sender.frameId)
-    this.tabStates.logLastMonetizationCommand(tab, frameId, 'start')
+    const frameSpec = getFrameSpec(sender)
+    const { tabId, frameId } = frameSpec
+    this.tabStates.logLastMonetizationCommand(frameSpec, 'start')
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender)
 
@@ -506,7 +499,7 @@ export class BackgroundScript {
     const userBeforeReAuth = this.store.user
     let emittedPending = false
     const emitPending = () =>
-      this.sendSetMonetizationStateMessage(tab, frameId, 'pending')
+      this.sendSetMonetizationStateMessage(frameSpec, 'pending')
 
     // If we are optimistic we have an active subscription (things could have
     // changed since our last cached whoami query), emit pending immediately,
@@ -524,11 +517,11 @@ export class BackgroundScript {
     if (!token) {
       // not signed in.
       console.warn('startWebMonetization cancelled; no token')
-      this.sendSetMonetizationStateMessage(tab, frameId, 'stopped')
+      this.sendSetMonetizationStateMessage(frameSpec, 'stopped')
       return false
     }
     if (!this.store.user?.subscription?.active) {
-      this.sendSetMonetizationStateMessage(tab, frameId, 'stopped')
+      this.sendSetMonetizationStateMessage(frameSpec, 'stopped')
       this.log('startWebMonetization cancelled; no active subscription')
       return false
     }
@@ -537,7 +530,7 @@ export class BackgroundScript {
       emitPending()
     }
 
-    const lastCommand = this.tabStates.get(tab).frameStates[frameId]
+    const lastCommand = this.tabStates.get(tabId).frameStates[frameId]
       .lastMonetization.command
     if (lastCommand !== 'start') {
       this.log('startWebMonetization cancelled via', lastCommand)
@@ -545,8 +538,8 @@ export class BackgroundScript {
     }
 
     this.log('starting stream', requestId)
-    this.setRequestId(tab, frameId, requestId)
-    this.streamsToTabAndFrame[requestId] = [tab, frameId]
+    this.setRequestId(frameSpec, requestId)
+    this.streamsToFrames[requestId] = { tabId, frameId }
     this.streams.beginStream(requestId, {
       token,
       spspEndpoint,
@@ -557,36 +550,36 @@ export class BackgroundScript {
     return true
   }
 
-  private doPauseWebMonetization(tab: number, frameId: number) {
-    this.tabStates.logLastMonetizationCommand(tab, frameId, 'pause')
-    const id = this.getRequestId(tab, frameId)
+  private doPauseWebMonetization(frame: FrameSpec) {
+    this.tabStates.logLastMonetizationCommand(frame, 'pause')
+    const id = this.getRequestId(frame)
     if (id) {
       this.log('pausing stream', id)
       this.streams.pauseStream(id)
-      this.sendSetMonetizationStateMessage(tab, frameId, 'stopped')
+      this.sendSetMonetizationStateMessage(frame, 'stopped')
     }
     return true
   }
 
-  private getRequestId(tab: number, frameId: number) {
-    return this.tabsToFrameToStreams[tab]
-      ? this.tabsToFrameToStreams[tab][frameId]
+  private getRequestId({ tabId, frameId }: FrameSpec) {
+    return this.tabsToFrameToRequestIds[tabId]
+      ? this.tabsToFrameToRequestIds[tabId][frameId]
       : undefined
   }
 
-  private setRequestId(tab: number, frameId: number, requestId: string) {
-    const ensured = (this.tabsToFrameToStreams[tab] =
-      this.tabsToFrameToStreams[tab] ?? {})
+  private setRequestId({ tabId, frameId }: FrameSpec, requestId: string) {
+    const ensured = (this.tabsToFrameToRequestIds[tabId] =
+      this.tabsToFrameToRequestIds[tabId] ?? {})
     ensured[frameId] = requestId
   }
 
-  private doResumeWebMonetization(tab: number, frameId: number) {
-    this.tabStates.logLastMonetizationCommand(tab, frameId, 'resume')
+  private doResumeWebMonetization(frame: FrameSpec) {
+    this.tabStates.logLastMonetizationCommand(frame, 'resume')
 
-    const id = this.getRequestId(tab, frameId)
+    const id = this.getRequestId(frame)
     if (id) {
       this.log('resuming stream', id)
-      this.sendSetMonetizationStateMessage(tab, frameId, 'pending')
+      this.sendSetMonetizationStateMessage(frame, 'pending')
       this.streams.resumeStream(id)
     }
     return true
@@ -597,50 +590,43 @@ export class BackgroundScript {
     if (this.tabStates.get(getTab(sender)).stickyState === 'sticky') {
       return
     }
-    return this.doPauseWebMonetization(
-      getTab(sender),
-      notNullOrUndef(sender.frameId)
-    )
+    return this.doPauseWebMonetization(getFrameSpec(sender))
   }
 
   resumeWebMonetization(request: ResumeWebMonetization, sender: MessageSender) {
     if (this.tabStates.get(getTab(sender)).playState === 'paused') {
       return
     }
-    return this.doResumeWebMonetization(
-      getTab(sender),
-      notNullOrUndef(sender.frameId)
-    )
+    return this.doResumeWebMonetization(getFrameSpec(sender))
   }
 
   private handleStreamsAbortEvent() {
     this.streams.on('abort', requestId => {
       this.log('aborting monetization request', requestId)
-      const tabAndFrame = this.streamsToTabAndFrame[requestId]
+      const tabAndFrame = this.streamsToFrames[requestId]
       if (tabAndFrame) {
-        this.doStopWebMonetization(...tabAndFrame)
+        // this.doStopWebMonetization(tabAndFrame)
       }
     })
   }
 
   stopWebMonetization(sender: MessageSender) {
-    const tab = getTab(sender)
-    return this.doStopWebMonetization(tab, notNullOrUndef(sender.frameId))
+    return this.doStopWebMonetization(getFrameSpec(sender))
   }
 
-  private doStopWebMonetization(tab: number, frameId: number) {
-    this.tabStates.logLastMonetizationCommand(tab, frameId, 'stop')
-    const closed = this._closeStreams(tab, frameId)
+  private doStopWebMonetization(frame: FrameSpec) {
+    this.tabStates.logLastMonetizationCommand(frame, 'stop')
+    const closed = this._closeStreams(frame.tabId, frame.frameId)
     // May be noop other side if stop monetization was initiated from
     // ContentScript
-    const requestId = this.getRequestId(tab, frameId)
-    this.sendSetMonetizationStateMessage(tab, frameId, 'stopped', requestId)
+    const requestId = this.getRequestId(frame)
+    this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
     // clear the tab state, and set things to default
     // no need to send checkAdaptedContent message to check for adapted sites as
     // that will happen automatically on url change (html5 push state also)
     // via the tabs.onUpdated
     if (closed) {
-      this.tabStates.clearFrame(tab, frameId)
+      this.tabStates.clearFrame(frame)
     }
     this.reloadTabState({
       from: 'stopWebMonetization'
@@ -649,8 +635,7 @@ export class BackgroundScript {
   }
 
   sendSetMonetizationStateMessage(
-    tabId: number,
-    frameId: number,
+    { tabId, frameId }: FrameSpec,
     state: MonetizationState,
     requestId?: string
   ) {
@@ -658,7 +643,7 @@ export class BackgroundScript {
       command: 'setMonetizationState',
       data: {
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        requestId: (this.getRequestId(tabId, frameId) ?? requestId)!,
+        requestId: (this.getRequestId({ tabId, frameId }) ?? requestId)!,
         state
       }
     }
@@ -666,7 +651,7 @@ export class BackgroundScript {
   }
 
   _closeStreams(tabId: number, frameId?: number) {
-    const streamIds = this.tabsToFrameToStreams[tabId]
+    const streamIds = this.tabsToFrameToRequestIds[tabId]
     let streams = 0
     if (streamIds) {
       Object.entries(streamIds).forEach(([innerFrameId, streamId]) => {
@@ -676,13 +661,13 @@ export class BackgroundScript {
 
         this.log('closing stream with id', streamId)
         this.streams.closeStream(streamId)
-        delete this.streamsToTabAndFrame[streamId]
+        delete this.streamsToFrames[streamId]
         streams++
       })
       if (frameId) {
-        delete this.tabsToFrameToStreams[tabId][frameId]
+        delete this.tabsToFrameToRequestIds[tabId][frameId]
       } else {
-        delete this.tabsToFrameToStreams[tabId]
+        delete this.tabsToFrameToRequestIds[tabId]
       }
     }
     return !!streams
@@ -723,7 +708,7 @@ export class BackgroundScript {
     for (const tabId of this.tabStates.tabKeys()) {
       // Make a copy as _closeStreams mutates and we want to actually close
       // the streams before we set the state to stopped.
-      const requestIds = { ...this.tabsToFrameToStreams[tabId] }
+      const requestIds = { ...this.tabsToFrameToRequestIds[tabId] }
       this._closeStreams(tabId)
       this.tabStates.clear(tabId)
       Object.entries(requestIds).forEach(([frameId, requestId]) => {
@@ -744,8 +729,8 @@ export class BackgroundScript {
   }
 
   private setStreamControls(request: SetStreamControls, _: MessageSender) {
-    const tab = this.activeTab
-    const frameId = notNullOrUndef(_.frameId)
+    // TODO: this doesn't seem right!
+    const { tabId: tab, spec } = getFrameSpec(_)
 
     this.tabStates.set(tab, {
       stickyState: request.data.sticky,
@@ -754,10 +739,10 @@ export class BackgroundScript {
     if (request.data.action === 'togglePlayOrPause') {
       if (request.data.play === 'paused') {
         // TODO: pause ALL tab streams
-        this.doPauseWebMonetization(tab, frameId)
+        this.doPauseWebMonetization(spec)
       } else if (request.data.play === 'playing') {
         // TODO: resume ALL tab streams
-        this.doResumeWebMonetization(tab, frameId)
+        this.doResumeWebMonetization(spec)
       }
     }
     this.reloadTabState({ from: request.command })
@@ -770,7 +755,7 @@ export class BackgroundScript {
     // Content script used to send a stopWebMonetization message every time
     // it loaded. Noop if no stream for tab.
     this._closeStreams(tabId, frameId)
-    this.tabStates.clearFrame(tabId, frameId)
+    this.tabStates.clearFrame({ tabId: tabId, frameId: frameId })
     this.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
