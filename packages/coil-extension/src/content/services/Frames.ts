@@ -42,15 +42,6 @@ export class Frames {
     this.window.addEventListener('unload', () => {
       this.sendUnloadMessage()
     })
-    if (this.isTopFrame) {
-      this.window.addEventListener(
-        'load',
-        () => {
-          void this.checkForAllowedIFrames()
-        },
-        { once: true }
-      )
-    }
   }
 
   private async checkForAllowedIFrames() {
