@@ -10,7 +10,6 @@ import { API, COIL_DOMAIN } from '../webpackDefines'
 import { ClientOptions } from '../services/ClientOptions'
 
 import { ContentScript } from './services/ContentScript'
-import { Frames } from './services/Frames'
 
 function configureContainer(container: Container) {
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
@@ -29,16 +28,12 @@ function configureContainer(container: Container) {
 }
 
 function main() {
-  const frames = new Frames(document, window, API.runtime, COIL_DOMAIN)
-  if (frames.isMonetizableFrame || frames.isAnyCoilFrame) {
-    const container = new Container({
-      defaultScope: 'Singleton',
-      autoBindInjectable: true
-    })
-    inversifyModule(GlobalModule)
-    configureContainer(container)
-    container.get(ContentScript).init()
-  }
+  const container = new Container({
+    defaultScope: 'Singleton',
+    autoBindInjectable: true
+  })
+  inversifyModule(GlobalModule)
+  configureContainer(container)
+  container.get(ContentScript).init()
 }
-
 main()
