@@ -106,8 +106,6 @@ export class BackgroundFramesService extends EventEmitter {
     private api: typeof window.chrome
   ) {
     super()
-    // Set localStorage.debug to '' or `delete` then use this if need
-    this.log = console.log.bind(console, 'BackgroundFramesService')
   }
 
   getFrame(frame: FrameSpec): Readonly<Frame> | undefined {
