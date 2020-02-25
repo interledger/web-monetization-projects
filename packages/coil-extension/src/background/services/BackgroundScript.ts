@@ -737,7 +737,6 @@ export class BackgroundScript {
   }
 
   private setStreamControls(request: SetStreamControls, _: MessageSender) {
-    // TODO: this doesn't seem right!
     const tabId = this.activeTab
     this.log('setStreamControls', request)
 
