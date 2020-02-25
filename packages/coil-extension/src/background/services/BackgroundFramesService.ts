@@ -292,28 +292,6 @@ export class BackgroundFramesService extends EventEmitter {
       makeCallback('onReferenceFragmentUpdated')
     )
 
-    // TODO: is this necessary given content script will send state?
-    this.api.webNavigation.onCommitted.addListener(makeCallback('onCommitted'))
-    this.api.webNavigation.onCompleted.addListener(makeCallback('onCompleted'))
-    this.api.webNavigation.onBeforeNavigate.addListener(
-      makeCallback('onBeforeNavigate')
-    )
-
-    /**
-     *
-     * If a navigation was triggered via Chrome Instant or Instant Pages, a
-     * completely loaded page is swapped into the current tab. In that case,
-     * an onTabReplaced event is fired.
-     *
-     * TODO: ??
-     */
-    this.api.webNavigation.onTabReplaced.addListener(details => {
-      this.log(
-        'webNavigation.onTabReplaced details=%s',
-        JSON.stringify(details)
-      )
-      delete this.tabs[details.replacedTabId]
-    })
     this.api.tabs.onRemoved.addListener(tabId => {
       this.log('tabs.onTabRemoved %s', tabId)
       delete this.tabs[tabId]
