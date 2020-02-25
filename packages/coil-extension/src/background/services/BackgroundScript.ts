@@ -660,7 +660,7 @@ export class BackgroundScript {
     const streamIds = this.tabsToFrameToRequestIds[tabId]
     const haveFrameId = typeof frameId !== 'undefined'
 
-    let streams = 0
+    let closed = 0
     if (streamIds) {
       Object.entries(streamIds).forEach(([innerFrameId, streamId]) => {
         if (haveFrameId && Number(innerFrameId) !== frameId) {
@@ -670,7 +670,7 @@ export class BackgroundScript {
         this.log('closing stream with id', streamId)
         this.streams.closeStream(streamId)
         delete this.streamsToFrames[streamId]
-        streams++
+        closed++
       })
       if (haveFrameId) {
         delete this.tabsToFrameToRequestIds[tabId][frameId as number]
@@ -678,7 +678,7 @@ export class BackgroundScript {
         delete this.tabsToFrameToRequestIds[tabId]
       }
     }
-    return !!streams
+    return !!closed
   }
 
   async isRateLimited() {
