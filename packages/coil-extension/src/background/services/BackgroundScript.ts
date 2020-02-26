@@ -10,6 +10,7 @@ import * as tokens from '../../types/tokens'
 import {
   AdaptedSite,
   CheckAdaptedContent,
+  CheckAllowedIFrames,
   ClosePopup,
   ContentScriptInit,
   MonetizationProgress,
@@ -18,6 +19,7 @@ import {
   ResumeWebMonetization,
   SetMonetizationState,
   SetStreamControls,
+  StartIFrameWebMonetization,
   StartWebMonetization,
   ToBackgroundMessage
 } from '../../types/commands'
@@ -347,6 +349,9 @@ export class BackgroundScript {
         break
       case 'fetchYoutubeChannelId':
         sendResponse(await this.youtube.fetchChannelId(request.data.youtubeUrl))
+        break
+      case 'startIFrameWebMonetization':
+        sendResponse(await this.startIFrameWebMonetization(request, sender))
         break
       default:
         sendResponse(false)
@@ -772,6 +777,26 @@ export class BackgroundScript {
     this.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
+    return true
+  }
+
+  private async startIFrameWebMonetization(
+    request: StartIFrameWebMonetization,
+    sender: chrome.runtime.MessageSender
+  ) {
+    const frame = getFrameSpec(sender)
+    const parentId = this.framesService.getFrame(frame)?.parentFrameId
+    if (typeof parentId !== 'undefined') {
+      const checkAllowed: CheckAllowedIFrames = {
+        command: 'checkAllowedIFrames',
+        data: {
+          frameUuid: request.data.frameUuid
+        }
+      }
+      this.api.tabs.sendMessage(frame.tabId, checkAllowed, {
+        frameId: parentId
+      })
+    }
     return true
   }
 }

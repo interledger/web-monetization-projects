@@ -1,4 +1,5 @@
 import { inject, injectable } from 'inversify'
+import * as uuid from 'uuid'
 import {
   MonetizationTagObserver,
   PaymentDetails,
@@ -15,7 +16,7 @@ import {
   ContentScriptInit,
   PauseWebMonetization,
   ResumeWebMonetization,
-  StartWebMonetization,
+  StartIFrameWebMonetization,
   StopWebMonetization,
   ToContentMessage
 } from '../../types/commands'
@@ -30,6 +31,8 @@ import { MonetizationEventsLogger } from './MonetizationEventsLogger'
 
 @injectable()
 export class ContentScript {
+  uuid = uuid.v4()
+
   constructor(
     private storage: Storage,
     private window: Window,
@@ -44,20 +47,23 @@ export class ContentScript {
   ) {}
 
   handleMonetizationTag() {
-    const { runtime, monetization } = this
+    const { frames, runtime, monetization, uuid: frameUuid } = this
 
     function startMonetization(details: PaymentDetails) {
-      const request: StartWebMonetization = {
-        command: 'startWebMonetization',
-        data: { ...details }
-      }
-
       monetization.setMonetizationRequest({
         paymentPointer: details.paymentPointer,
         requestId: details.requestId,
         initiatingUrl: details.initiatingUrl
       })
-      runtime.sendMessage(request)
+      if (frames.isTopFrame) {
+        runtime.sendMessage(monetization.startWebMonetizationMessage(frameUuid))
+      } else {
+        const request: StartIFrameWebMonetization = {
+          command: 'startIFrameWebMonetization',
+          data: { frameUuid }
+        }
+        runtime.sendMessage(request)
+      }
     }
 
     function stopMonetization(details: PaymentDetails) {
@@ -125,6 +131,8 @@ export class ContentScript {
         this.monetization.postMonetizationStartWindowMessageAndSetMonetizationState(
           request.data
         )
+      } else if (request.command === 'checkAllowedIFrames') {
+        this.frames.sendAllowMessages(request.data.frameUuid)
       }
       // Don't need to return true here, not using sendResponse
       // https://developer.chrome.com/apps/runtime#event-onMessage
@@ -153,6 +161,31 @@ export class ContentScript {
   init() {
     if (this.frames.isMonetizableFrame) {
       this.frames.monitor()
+    }
+
+    // TODO: we could allow arbitrary frames
+    if (this.frames.isDirectChildFrame) {
+      this.window.addEventListener('message', event => {
+        const data = event.data
+        if (typeof data.wmIframe === 'object') {
+          const {
+            forId,
+            allowed
+          }: { forId: string; allowed: boolean } = data.wmIframe
+          if (forId === this.uuid) {
+            if (allowed && this.monetization.hasRequest()) {
+              this.runtime.sendMessage(
+                this.monetization.startWebMonetizationMessage(forId)
+              )
+            } else {
+              console.error(
+                '<iframe href="%s"> is not authorized to allow web monetization',
+                window.location.href
+              )
+            }
+          }
+        }
+      })
     }
 
     if (this.frames.isMonetizableFrame) {

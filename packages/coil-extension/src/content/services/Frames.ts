@@ -5,10 +5,6 @@ import * as tokens from '../../types/tokens'
 import { FrameStateChange, UnloadFrame } from '../../types/commands'
 import { ContentRuntime } from '../types/ContentRunTime'
 
-type AllowedInfo = { allow: string; allowed: true; token: string }
-type DisallowedInfo = { allow?: string; allowed: false; token?: undefined }
-type Allowance = AllowedInfo | DisallowedInfo
-
 @injectable()
 export class Frames {
   isTopFrame: boolean
@@ -17,8 +13,6 @@ export class Frames {
   isCoilTopFrame: boolean
   isDirectChildFrame: boolean
   isMonetizableFrame: boolean
-
-  iFrames2Tokens = new WeakMap<HTMLIFrameElement, Allowance>()
 
   constructor(
     private doc: Document,
@@ -48,39 +42,33 @@ export class Frames {
     this.window.addEventListener('unload', () => {
       this.sendUnloadMessage()
     })
-
-    if (this.isTopFrame) {
-      // setInterval(async () => {
-      //   const frames = document.querySelectorAll<HTMLIFrameElement>('iframe')
-      //   frames.forEach(frame => {
-      //     if (this.iFrames2Tokens.has(frame)) {
-      //       console.log('already has frame!')
-      //     } else {
-      //       console.log('putting frame', frame)
-      //       this.iFrames2Tokens.set(frame, { allow: frame.allow, allowed: true, token: 'yes!' })
-      //     }
-      //   })
-      // }, 5e3)
-    }
   }
 
-  private async checkForAllowedIFrames() {
-    // Can't really use *= or ~= because of potential monetization in a string etc
-    // need an allow syntax parser ....
-    const frames = document.querySelectorAll<HTMLIFrameElement>('iframe[allow]')
-    const allowed = Array.from(frames).filter((frame, ix) => {
-      if (!frame.allow) {
-        return false
+  sendAllowMessages(forId: string) {
+    const iframes = Array.from(
+      this.doc.querySelectorAll<HTMLIFrameElement>('iframe')
+    )
+    for (const frame of iframes) {
+      let allowed = false
+      try {
+        if (frame.allow) {
+          const parsed = parsePolicyDirectives(frame.allow)
+          allowed = 'monetization' in parsed
+        }
+      } catch (e) {
+        allowed = false
       }
-      const parsed = parsePolicyDirectives(frame.allow)
-      return 'monetization' in parsed
-    })
-
-    if (allowed.length) {
-      // send allowIFrames (implied tabId/frameId and number frames) message
-      // create uuidv4 in background page ...
-      //
-      this.reportAllowedToBackgroundPageThenPostAllowTokens(allowed)
+      if (frame.contentWindow) {
+        frame.contentWindow.postMessage(
+          {
+            wmIframe: {
+              forId,
+              allowed
+            }
+          },
+          '*'
+        )
+      }
     }
   }
 
@@ -101,8 +89,4 @@ export class Frames {
     }
     this.runtime.sendMessage(frameStateChange)
   }
-
-  private reportAllowedToBackgroundPageThenPostAllowTokens(
-    allowed: HTMLIFrameElement[]
-  ) {}
 }

@@ -71,7 +71,16 @@ export interface ResumeWebMonetization extends Command {
  */
 export interface StartWebMonetization extends Command {
   command: 'startWebMonetization'
-  data: PaymentDetails & { initiatingUrl: string }
+  data: PaymentDetails & { frameUuid: string }
+}
+
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface StartIFrameWebMonetization extends Command {
+  command: 'startIFrameWebMonetization'
+  data: { frameUuid: string }
 }
 
 /**
@@ -150,6 +159,7 @@ export type ToBackgroundMessage =
   | FetchYoutubeChannelId
   | FrameStateChange
   | UnloadFrame
+  | StartIFrameWebMonetization
 
 export type IconState =
   | 'streaming-paused'
@@ -244,10 +254,22 @@ export interface SetMonetizationState {
   }
 }
 
+/**
+ *  background -> content
+ *  browser.tabs.sendMessage
+ */
+export interface CheckAllowedIFrames {
+  command: 'checkAllowedIFrames'
+  data: {
+    frameUuid: string
+  }
+}
+
 export type ToContentMessage =
   | CheckAdaptedContent
   | MonetizationProgress
   | MonetizationStart
   | SetMonetizationState
+  | CheckAllowedIFrames
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup
