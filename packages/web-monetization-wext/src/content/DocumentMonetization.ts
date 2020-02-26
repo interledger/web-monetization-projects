@@ -62,13 +62,13 @@ export class DocumentMonetization {
     this.finalized = true
   }
 
-  startWebMonetizationMessage(frameUuid: string) {
+  startWebMonetizationMessage() {
     if (!this.request) {
       throw new Error(`Expecting request to be set`)
     }
     const request: StartWebMonetization = {
       command: 'startWebMonetization',
-      data: { ...this.request, frameUuid }
+      data: { ...this.request }
     }
     return request
   }

@@ -47,42 +47,34 @@ export class ContentScript {
   ) {}
 
   handleMonetizationTag() {
-    const { frames, runtime, monetization } = this
-    // eslint-disable-next-line @typescript-eslint/no-this-alias
-    const updateUuid = () => {
+    const startMonetization = (details: PaymentDetails) => {
       this.uuid = uuid.v4()
-    }
-    const getUuid = () => {
-      return this.uuid
-    }
-
-    function startMonetization(details: PaymentDetails) {
-      updateUuid()
-
-      monetization.setMonetizationRequest({
+      this.monetization.setMonetizationRequest({
         paymentPointer: details.paymentPointer,
         requestId: details.requestId,
         initiatingUrl: details.initiatingUrl
       })
-      if (frames.isTopFrame) {
-        runtime.sendMessage(monetization.startWebMonetizationMessage(getUuid()))
+      if (this.frames.isTopFrame) {
+        this.runtime.sendMessage(
+          this.monetization.startWebMonetizationMessage()
+        )
       } else {
         const request: StartIFrameWebMonetization = {
           command: 'startIFrameWebMonetization',
-          data: { frameUuid: getUuid() }
+          data: { frameUuid: this.uuid }
         }
-        runtime.sendMessage(request)
+        this.runtime.sendMessage(request)
       }
     }
 
-    function stopMonetization(details: PaymentDetails) {
+    const stopMonetization = (details: PaymentDetails) => {
       const request: StopWebMonetization = {
         command: 'stopWebMonetization',
         data: details
       }
-      monetization.setState({ state: 'stopped', finalized: true })
-      monetization.setMonetizationRequest(undefined)
-      runtime.sendMessage(request)
+      this.monetization.setState({ state: 'stopped', finalized: true })
+      this.monetization.setMonetizationRequest(undefined)
+      this.runtime.sendMessage(request)
     }
 
     const monitor = new MonetizationTagObserver(
@@ -184,7 +176,7 @@ export class ContentScript {
           if (forId === this.uuid) {
             if (allowed && this.monetization.hasRequest()) {
               this.runtime.sendMessage(
-                this.monetization.startWebMonetizationMessage(forId)
+                this.monetization.startWebMonetizationMessage()
               )
             } else {
               console.error(
