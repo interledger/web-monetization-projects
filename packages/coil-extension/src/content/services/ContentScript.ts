@@ -47,20 +47,29 @@ export class ContentScript {
   ) {}
 
   handleMonetizationTag() {
-    const { frames, runtime, monetization, uuid: frameUuid } = this
+    const { frames, runtime, monetization } = this
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const updateUuid = () => {
+      this.uuid = uuid.v4()
+    }
+    const getUuid = () => {
+      return this.uuid
+    }
 
     function startMonetization(details: PaymentDetails) {
+      updateUuid()
+
       monetization.setMonetizationRequest({
         paymentPointer: details.paymentPointer,
         requestId: details.requestId,
         initiatingUrl: details.initiatingUrl
       })
       if (frames.isTopFrame) {
-        runtime.sendMessage(monetization.startWebMonetizationMessage(frameUuid))
+        runtime.sendMessage(monetization.startWebMonetizationMessage(getUuid()))
       } else {
         const request: StartIFrameWebMonetization = {
           command: 'startIFrameWebMonetization',
-          data: { frameUuid }
+          data: { frameUuid: getUuid() }
         }
         runtime.sendMessage(request)
       }

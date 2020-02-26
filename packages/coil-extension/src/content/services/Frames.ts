@@ -48,6 +48,7 @@ export class Frames {
     const iframes = Array.from(
       this.doc.querySelectorAll<HTMLIFrameElement>('iframe')
     )
+
     for (const frame of iframes) {
       let allowed = false
       try {
