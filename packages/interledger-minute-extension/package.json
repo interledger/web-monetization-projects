@@ -58,7 +58,7 @@
   "devDependencies": {
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
-    "@types/uuid": "^3.4.7",
+    "@types/uuid": "^7.0.0",
     "@wext/shipit": "^0.2.1",
     "addons-linter": "^1.21.0",
     "copy-webpack-plugin": "^5.1.1",
