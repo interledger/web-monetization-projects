@@ -9,6 +9,7 @@ export interface PaymentDetails {
   // Web-Monetization-Id
   requestId: string
   paymentPointer: string
+  initiatingUrl: string
 }
 
 export enum IDGenerationStrategy {
@@ -51,6 +52,7 @@ export class MonetizationTagObserver {
   >()
 
   constructor(
+    private window: Window,
     private document: HTMLDocument,
     private callback: PaymentDetailsChangeCallback,
     private maxMetas = 1,
@@ -163,7 +165,8 @@ export class MonetizationTagObserver {
   private getPaymentDetails(meta: HTMLMetaElement): PaymentDetails {
     return {
       requestId: this.getWebMonetizationId(),
-      paymentPointer: meta.content
+      paymentPointer: meta.content,
+      initiatingUrl: this.window.location.href
     }
   }
 

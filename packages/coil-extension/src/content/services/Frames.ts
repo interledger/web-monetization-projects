@@ -5,6 +5,10 @@ import * as tokens from '../../types/tokens'
 import { FrameStateChange, UnloadFrame } from '../../types/commands'
 import { ContentRuntime } from '../types/ContentRunTime'
 
+type AllowedInfo = { allow: string; allowed: true; token: string }
+type DisallowedInfo = { allow?: string; allowed: false; token?: undefined }
+type Allowance = AllowedInfo | DisallowedInfo
+
 @injectable()
 export class Frames {
   isTopFrame: boolean
@@ -13,6 +17,8 @@ export class Frames {
   isCoilTopFrame: boolean
   isDirectChildFrame: boolean
   isMonetizableFrame: boolean
+
+  iFrames2Tokens = new WeakMap<HTMLIFrameElement, Allowance>()
 
   constructor(
     private doc: Document,
@@ -42,6 +48,20 @@ export class Frames {
     this.window.addEventListener('unload', () => {
       this.sendUnloadMessage()
     })
+
+    if (this.isTopFrame) {
+      // setInterval(async () => {
+      //   const frames = document.querySelectorAll<HTMLIFrameElement>('iframe')
+      //   frames.forEach(frame => {
+      //     if (this.iFrames2Tokens.has(frame)) {
+      //       console.log('already has frame!')
+      //     } else {
+      //       console.log('putting frame', frame)
+      //       this.iFrames2Tokens.set(frame, { allow: frame.allow, allowed: true, token: 'yes!' })
+      //     }
+      //   })
+      // }, 5e3)
+    }
   }
 
   private async checkForAllowedIFrames() {

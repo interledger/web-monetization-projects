@@ -44,17 +44,18 @@ export class ContentScript {
   ) {}
 
   handleMonetizationTag() {
-    const { runtime, monetization, window } = this
+    const { runtime, monetization } = this
 
     function startMonetization(details: PaymentDetails) {
       const request: StartWebMonetization = {
         command: 'startWebMonetization',
-        data: { ...details, initiatingUrl: window.location.href }
+        data: { ...details }
       }
 
       monetization.setMonetizationRequest({
         paymentPointer: details.paymentPointer,
-        requestId: details.requestId
+        requestId: details.requestId,
+        initiatingUrl: details.initiatingUrl
       })
       runtime.sendMessage(request)
     }
@@ -70,6 +71,7 @@ export class ContentScript {
     }
 
     const monitor = new MonetizationTagObserver(
+      this.window,
       this.document,
       ({ started, stopped }) => {
         if (stopped) {
