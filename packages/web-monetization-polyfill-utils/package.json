@@ -41,6 +41,6 @@
   },
   "devDependencies": {
     "@types/node-fetch": "^2.5.5",
-    "@types/uuid": "^3.4.7"
+    "@types/uuid": "^7.0.0"
   }
 }
