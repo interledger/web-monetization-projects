@@ -430,9 +430,9 @@ export class BackgroundScript {
     packet: { sentAmount: string }
   ) {
     const tabState = this.tabStates.get(tabId)
-    const tabTotal = tabState?.frameStates[frameId]?.total ?? 0
-    const newTabTotal = tabTotal + Number(packet?.sentAmount ?? 0)
-    this.setTabMonetized({ tabId, frameId }, url, newTabTotal)
+    const frameTotal = tabState?.frameStates[frameId]?.total ?? 0
+    const newFrameTotal = frameTotal + Number(packet?.sentAmount ?? 0)
+    this.setTabMonetized({ tabId, frameId }, url, newFrameTotal)
   }
 
   adaptedSite(data: AdaptedSite['data'], sender: MessageSender) {
