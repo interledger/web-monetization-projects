@@ -190,12 +190,16 @@ export class ContentScript {
             allowed
           }: { allowToken: string; allowed: boolean } = data.wmIframe
           if (allowToken === this.allowToken) {
-            if (allowed && this.monetization.hasRequest()) {
-              this.runtime.sendMessage(
-                startWebMonetizationMessage(
-                  this.monetization.getMonetizationRequest()
+            // allowToken is 'listened to' only once
+            this.allowToken = ''
+            if (allowed) {
+              if (this.monetization.hasRequest()) {
+                this.runtime.sendMessage(
+                  startWebMonetizationMessage(
+                    this.monetization.getMonetizationRequest()
+                  )
                 )
-              )
+              }
             } else {
               console.error(
                 '<iframe href="%s"> is not authorized to allow web monetization',
