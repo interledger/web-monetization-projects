@@ -17,6 +17,7 @@ import {
   PauseWebMonetization,
   ResumeWebMonetization,
   StartIFrameWebMonetization,
+  StartWebMonetization,
   StopWebMonetization,
   ToContentMessage
 } from '../../types/commands'
@@ -29,9 +30,20 @@ import { AdaptedContentService } from './AdaptedContentService'
 import { ContentAuthService } from './ContentAuthService'
 import { MonetizationEventsLogger } from './MonetizationEventsLogger'
 
+function startWebMonetizationMessage(request?: PaymentDetails) {
+  if (!request) {
+    throw new Error(`Expecting request to be set`)
+  }
+  const message: StartWebMonetization = {
+    command: 'startWebMonetization',
+    data: { ...request }
+  }
+  return message
+}
+
 @injectable()
 export class ContentScript {
-  uuid = uuid.v4()
+  allowToken = ''
 
   constructor(
     private storage: Storage,
@@ -48,7 +60,6 @@ export class ContentScript {
 
   handleMonetizationTag() {
     const startMonetization = (details: PaymentDetails) => {
-      this.uuid = uuid.v4()
       this.monetization.setMonetizationRequest({
         paymentPointer: details.paymentPointer,
         requestId: details.requestId,
@@ -56,12 +67,15 @@ export class ContentScript {
       })
       if (this.frames.isTopFrame) {
         this.runtime.sendMessage(
-          this.monetization.startWebMonetizationMessage()
+          startWebMonetizationMessage(
+            this.monetization.getMonetizationRequest()
+          )
         )
       } else {
+        this.allowToken = uuid.v4()
         const request: StartIFrameWebMonetization = {
           command: 'startIFrameWebMonetization',
-          data: { frameUuid: this.uuid }
+          data: { allowToken: this.allowToken }
         }
         this.runtime.sendMessage(request)
       }
@@ -108,7 +122,7 @@ export class ContentScript {
           } else {
             debug('checkAdaptedContent without from')
           }
-          this.adaptedContent.checkAdaptedContent()
+          void this.adaptedContent.checkAdaptedContent()
         } else {
           debug(
             'ignoring checkAdaptedContent with different url',
@@ -133,7 +147,7 @@ export class ContentScript {
           request.data
         )
       } else if (request.command === 'checkAllowedIFrames') {
-        this.frames.sendAllowMessages(request.data.frameUuid)
+        this.frames.sendAllowMessages(request.data.forAllowToken)
       }
       // Don't need to return true here, not using sendResponse
       // https://developer.chrome.com/apps/runtime#event-onMessage
@@ -170,13 +184,15 @@ export class ContentScript {
         const data = event.data
         if (typeof data.wmIframe === 'object') {
           const {
-            forId,
+            allowToken,
             allowed
-          }: { forId: string; allowed: boolean } = data.wmIframe
-          if (forId === this.uuid) {
+          }: { allowToken: string; allowed: boolean } = data.wmIframe
+          if (allowToken === this.allowToken) {
             if (allowed && this.monetization.hasRequest()) {
               this.runtime.sendMessage(
-                this.monetization.startWebMonetizationMessage()
+                startWebMonetizationMessage(
+                  this.monetization.getMonetizationRequest()
+                )
               )
             } else {
               console.error(

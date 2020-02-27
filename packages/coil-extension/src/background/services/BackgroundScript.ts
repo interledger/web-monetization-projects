@@ -806,7 +806,7 @@ export class BackgroundScript {
       const checkAllowed: CheckAllowedIFrames = {
         command: 'checkAllowedIFrames',
         data: {
-          frameUuid: request.data.frameUuid
+          forAllowToken: request.data.allowToken
         }
       }
       this.api.tabs.sendMessage(frame.tabId, checkAllowed, {

@@ -80,7 +80,7 @@ export interface StartWebMonetization extends Command {
  */
 export interface StartIFrameWebMonetization extends Command {
   command: 'startIFrameWebMonetization'
-  data: { frameUuid: string }
+  data: { allowToken: string }
 }
 
 /**
@@ -278,7 +278,7 @@ export interface SendTipResult {
 export interface CheckAllowedIFrames {
   command: 'checkAllowedIFrames'
   data: {
-    frameUuid: string
+    forAllowToken: string
   }
 }
 

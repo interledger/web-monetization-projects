@@ -44,7 +44,7 @@ export class Frames {
     })
   }
 
-  sendAllowMessages(forId: string) {
+  sendAllowMessages(allowToken: string) {
     const iframes = Array.from(
       this.doc.querySelectorAll<HTMLIFrameElement>('iframe')
     )
@@ -63,7 +63,7 @@ export class Frames {
         frame.contentWindow.postMessage(
           {
             wmIframe: {
-              forId,
+              allowToken,
               allowed
             }
           },
