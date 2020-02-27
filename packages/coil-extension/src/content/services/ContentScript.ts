@@ -71,9 +71,7 @@ export class ContentScript {
             this.monetization.getMonetizationRequest()
           )
         )
-        // eslint-disable-next-line no-constant-condition
       } else {
-        // noinspection UnreachableCodeJS
         this.allowToken = uuid.v4()
         const request: StartIFrameWebMonetization = {
           command: 'startIFrameWebMonetization',
