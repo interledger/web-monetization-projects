@@ -1,9 +1,28 @@
 import { inject, injectable } from 'inversify'
 import { parsePolicyDirectives } from '@web-monetization/polyfill-utils'
+import * as uuid from 'uuid'
 
 import * as tokens from '../../types/tokens'
 import { FrameStateChange, UnloadFrame } from '../../types/commands'
 import { ContentRuntime } from '../types/ContentRunTime'
+import { FrameSpec } from '../../types/FrameSpec'
+
+function isMonetizationAllowed(frame: HTMLIFrameElement) {
+  let allowed = false
+  try {
+    if (frame.allow) {
+      const parsed = parsePolicyDirectives(frame.allow)
+      allowed = 'monetization' in parsed
+    }
+  } catch (e) {
+    allowed = false
+  }
+  return allowed
+}
+
+function sameFrame(f1: FrameSpec, f2: FrameSpec) {
+  return f1.tabId === f2.tabId && f1.frameId === f2.frameId
+}
 
 @injectable()
 export class Frames {
@@ -44,33 +63,61 @@ export class Frames {
     })
   }
 
-  sendAllowMessages(allowToken: string) {
+  // iframe to FrameSpc
+  frames = new WeakMap<
+    HTMLIFrameElement,
+    {
+      frame: Promise<FrameSpec>
+    }
+  >()
+
+  // correlationId to resolve/reject
+  frameQueue = new Map<
+    string,
+    {
+      resolve: (val: FrameSpec) => void
+      reject: (error: Error) => void
+    }
+  >()
+
+  async checkIfIframeIsAllowedFromBackground(
+    frameSpec: FrameSpec
+  ): Promise<boolean> {
     const iframes = Array.from(
       this.doc.querySelectorAll<HTMLIFrameElement>('iframe')
     )
-
-    for (const frame of iframes) {
-      let allowed = false
-      try {
-        if (frame.allow) {
-          const parsed = parsePolicyDirectives(frame.allow)
-          allowed = 'monetization' in parsed
+    for (const frameEl of iframes) {
+      let result = this.frames.get(frameEl)
+      if (!result) {
+        const correlationId = uuid.v4()
+        const framePromise = new Promise<FrameSpec>((resolve, reject) => {
+          console.log('framePromise created!')
+          // Handler for this will report to background page with the correlationId
+          // The background page will get the parentId from the frames service
+          // The correlationId will
+          this.frameQueue.set(correlationId, { resolve, reject })
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+          frameEl.contentWindow!.postMessage(
+            {
+              wmIFrameCorrelationId: correlationId
+            },
+            '*'
+          )
+        })
+        result = {
+          frame: framePromise
         }
-      } catch (e) {
-        allowed = false
+        this.frames.set(frameEl, result)
       }
-      if (frame.contentWindow) {
-        frame.contentWindow.postMessage(
-          {
-            wmIframe: {
-              allowToken,
-              allowed
-            }
-          },
-          '*'
-        )
+      // No else! result should be set if not in frames WeakMap
+      if (result) {
+        if (sameFrame(await result.frame, frameSpec)) {
+          console.log('frame promise resolved!')
+          return isMonetizationAllowed(frameEl)
+        }
       }
     }
+    return false
   }
 
   private sendUnloadMessage() {
@@ -89,5 +136,17 @@ export class Frames {
       }
     }
     this.runtime.sendMessage(frameStateChange)
+  }
+
+  reportCorrelation(data: { frame: FrameSpec; correlationId: string }) {
+    console.error('reporting correlation', data)
+    const key = data.correlationId
+    const queued = this.frameQueue.get(key)
+    if (queued) {
+      this.frameQueue.delete(key)
+      queued.resolve(data.frame)
+    } else {
+      console.warn('unknown correlation id/frame', data)
+    }
   }
 }

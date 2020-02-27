@@ -10,16 +10,17 @@ import * as tokens from '../../types/tokens'
 import {
   AdaptedSite,
   CheckAdaptedContent,
-  CheckAllowedIFrames,
+  CheckIFrameIsAllowedFromBackground,
   ClosePopup,
   ContentScriptInit,
   MonetizationProgress,
   MonetizationStart,
   PauseWebMonetization,
+  ReportCorrelationIdFromIFrameContentScript,
+  ReportCorrelationIdToParentContentScript,
   ResumeWebMonetization,
   SetMonetizationState,
   SetStreamControls,
-  StartIFrameWebMonetization,
   StartWebMonetization,
   ToBackgroundMessage
 } from '../../types/commands'
@@ -27,6 +28,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
+import { timeout } from '../../content/util/timeout'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -350,8 +352,15 @@ export class BackgroundScript {
       case 'sendTip':
         sendResponse(await this.sendTip())
         break
-      case 'startIFrameWebMonetization':
-        sendResponse(await this.startIFrameWebMonetization(request, sender))
+      case 'checkIFrameIsAllowedFromIFrameContentScript':
+        sendResponse(
+          await this.checkIFrameIsAllowedFromIFrameContentScript(sender)
+        )
+        break
+      case 'reportCorrelationIdFromIFrameContentScript':
+        sendResponse(
+          await this.reportCorrelationIdFromIFrameContentScript(request, sender)
+        )
         break
       default:
         sendResponse(false)
@@ -495,12 +504,73 @@ export class BackgroundScript {
     )
   }
 
+  async checkIFrameIsAllowedFromIFrameContentScript(sender: MessageSender) {
+    const frame = getFrameSpec(sender)
+    const { tabId, frameId } = frame
+
+    if (frameId !== 0) {
+      while (!this.framesService.getFrame(frame)) {
+        await timeout(100)
+      }
+
+      const parentId = this.framesService.getFrame(frame)?.parentFrameId
+      if (typeof parentId === 'undefined') {
+        throw new Error(
+          `expecting ${JSON.stringify(frame)} to have parentFrameId`
+        )
+      }
+      const allowed = new Promise<boolean>((resolve, reject) => {
+        const message: CheckIFrameIsAllowedFromBackground = {
+          command: 'checkIFrameIsAllowedFromBackground',
+          data: {
+            frame
+          }
+        }
+        this.api.tabs.sendMessage(
+          tabId,
+          message,
+          { frameId: parentId },
+          (result: boolean) => {
+            if (this.api.runtime.lastError) {
+              reject(this.api.runtime.lastError)
+            } else {
+              resolve(result)
+            }
+          }
+        )
+      })
+      return await allowed
+    } else {
+      throw new Error(`sender must be non top frame`)
+    }
+  }
+
+  async reportCorrelationIdFromIFrameContentScript(
+    request: ReportCorrelationIdFromIFrameContentScript,
+    sender: MessageSender
+  ) {
+    const frame = getFrameSpec(sender)
+    const parentId = this.framesService.getFrame(frame)?.parentFrameId
+    if (typeof parentId === 'undefined') {
+      throw new Error(`expecting ${frame} to have parentFrameId`)
+    }
+    const message: ReportCorrelationIdToParentContentScript = {
+      command: 'reportCorrelationIdToParentContentScript',
+      data: {
+        frame,
+        correlationId: request.data.correlationId
+      }
+    }
+    this.api.tabs.sendMessage(frame.tabId, message, { frameId: parentId })
+  }
+
   async startWebMonetization(
     request: StartWebMonetization,
     sender: MessageSender
   ) {
     const frame = getFrameSpec(sender)
     const { tabId, frameId } = frame
+
     this.tabStates.logLastMonetizationCommand(frame, 'start')
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender)
@@ -674,7 +744,6 @@ export class BackgroundScript {
     // ContentScript
     const requestId = this.getRequestId(frame)
     this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
-    // TODO:
     if (closed) {
       this.tabStates.clearFrame(frame)
     }
@@ -792,26 +861,6 @@ export class BackgroundScript {
     this.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
-    return true
-  }
-
-  private async startIFrameWebMonetization(
-    request: StartIFrameWebMonetization,
-    sender: chrome.runtime.MessageSender
-  ) {
-    const frame = getFrameSpec(sender)
-    const parentId = this.framesService.getFrame(frame)?.parentFrameId
-    if (typeof parentId !== 'undefined') {
-      const checkAllowed: CheckAllowedIFrames = {
-        command: 'checkAllowedIFrames',
-        data: {
-          forAllowToken: request.data.allowToken
-        }
-      }
-      this.api.tabs.sendMessage(frame.tabId, checkAllowed, {
-        frameId: parentId
-      })
-    }
     return true
   }
 }

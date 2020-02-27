@@ -1,5 +1,4 @@
 import { inject, injectable } from 'inversify'
-import * as uuid from 'uuid'
 import {
   MonetizationTagObserver,
   PaymentDetails,
@@ -13,10 +12,11 @@ import { MonetizationProgressEvent } from '@web-monetization/types'
 
 import * as tokens from '../../types/tokens'
 import {
+  CheckIFrameIsAllowedFromIFrameContentScript,
   ContentScriptInit,
   PauseWebMonetization,
+  ReportCorrelationIdFromIFrameContentScript,
   ResumeWebMonetization,
-  StartIFrameWebMonetization,
   StartWebMonetization,
   StopWebMonetization,
   ToContentMessage
@@ -59,26 +59,30 @@ export class ContentScript {
   ) {}
 
   handleMonetizationTag() {
-    const startMonetization = (details: PaymentDetails) => {
+    const startMonetization = async (details: PaymentDetails) => {
       this.monetization.setMonetizationRequest({
         paymentPointer: details.paymentPointer,
         requestId: details.requestId,
         initiatingUrl: details.initiatingUrl
       })
-      if (this.frames.isTopFrame) {
-        this.runtime.sendMessage(
-          startWebMonetizationMessage(
-            this.monetization.getMonetizationRequest()
+      if (this.frames.isIFrame) {
+        const allowed = await new Promise<boolean>(resolve => {
+          const newVar: CheckIFrameIsAllowedFromIFrameContentScript = {
+            command: 'checkIFrameIsAllowedFromIFrameContentScript'
+          }
+          this.runtime.sendMessage(newVar, resolve)
+        })
+        if (!allowed) {
+          console.error(
+            '<iframe href="%s"> is not authorized to allow web monetization',
+            window.location.href
           )
-        )
-      } else {
-        this.allowToken = uuid.v4()
-        const request: StartIFrameWebMonetization = {
-          command: 'startIFrameWebMonetization',
-          data: { allowToken: this.allowToken }
+          return
         }
-        this.runtime.sendMessage(request)
       }
+      this.runtime.sendMessage(
+        startWebMonetizationMessage(this.monetization.getMonetizationRequest())
+      )
     }
 
     const stopMonetization = (details: PaymentDetails) => {
@@ -109,49 +113,58 @@ export class ContentScript {
   }
 
   setRuntimeMessageListener() {
-    this.runtime.onMessage.addListener((request: ToContentMessage) => {
-      if (request.command === 'checkAdaptedContent') {
-        if (this.window.location.href === request.data.url) {
-          if (request.data && request.data.from) {
-            debug(
-              'checkAdaptedContent with from',
-              this.document.readyState,
-              JSON.stringify(request.data),
-              window.location.href
-            )
+    this.runtime.onMessage.addListener(
+      (request: ToContentMessage, sender, sendResponse) => {
+        if (request.command === 'checkAdaptedContent') {
+          if (this.window.location.href === request.data.url) {
+            if (request.data && request.data.from) {
+              debug(
+                'checkAdaptedContent with from',
+                this.document.readyState,
+                JSON.stringify(request.data),
+                window.location.href
+              )
+            } else {
+              debug('checkAdaptedContent without from')
+            }
+            void this.adaptedContent.checkAdaptedContent()
           } else {
-            debug('checkAdaptedContent without from')
+            debug(
+              'ignoring checkAdaptedContent with different url',
+              this.window.location.href,
+              request.data.url
+            )
           }
-          void this.adaptedContent.checkAdaptedContent()
-        } else {
-          debug(
-            'ignoring checkAdaptedContent with different url',
-            this.window.location.href,
-            request.data.url
+        } else if (request.command === 'setMonetizationState') {
+          this.monetization.setState(request.data)
+        } else if (request.command === 'monetizationProgress') {
+          const detail: MonetizationProgressEvent['detail'] = {
+            amount: request.data.amount,
+            assetCode: request.data.assetCode,
+            assetScale: request.data.assetScale,
+            paymentPointer: request.data.paymentPointer,
+            requestId: request.data.requestId
+          }
+          this.monetization.postMonetizationProgressWindowMessage(detail)
+        } else if (request.command === 'monetizationStart') {
+          debug('monetizationStart event')
+          this.monetization.postMonetizationStartWindowMessageAndSetMonetizationState(
+            request.data
           )
+        } else if (request.command === 'checkIFrameIsAllowedFromBackground') {
+          this.frames
+            .checkIfIframeIsAllowedFromBackground(request.data.frame)
+            .then(sendResponse)
+          return true
+        } else if (
+          request.command === 'reportCorrelationIdToParentContentScript'
+        ) {
+          this.frames.reportCorrelation(request.data)
         }
-      } else if (request.command === 'setMonetizationState') {
-        this.monetization.setState(request.data)
-      } else if (request.command === 'monetizationProgress') {
-        const detail: MonetizationProgressEvent['detail'] = {
-          amount: request.data.amount,
-          assetCode: request.data.assetCode,
-          assetScale: request.data.assetScale,
-          paymentPointer: request.data.paymentPointer,
-          requestId: request.data.requestId
-        }
-        this.monetization.postMonetizationProgressWindowMessage(detail)
-      } else if (request.command === 'monetizationStart') {
-        debug('monetizationStart event')
-        this.monetization.postMonetizationStartWindowMessageAndSetMonetizationState(
-          request.data
-        )
-      } else if (request.command === 'checkAllowedIFrames') {
-        this.frames.sendAllowMessages(request.data.forAllowToken)
+        // Don't need to return true here, not using sendResponse
+        // https://developer.chrome.com/apps/runtime#event-onMessage
       }
-      // Don't need to return true here, not using sendResponse
-      // https://developer.chrome.com/apps/runtime#event-onMessage
-    })
+    )
   }
 
   watchPageEvents() {
@@ -178,33 +191,18 @@ export class ContentScript {
       this.frames.monitor()
     }
 
-    // TODO: we could allow arbitrary frames
     if (this.frames.isDirectChildFrame) {
       this.window.addEventListener('message', event => {
         const data = event.data
-        if (typeof data.wmIframe === 'object') {
-          const {
-            allowToken,
-            allowed
-          }: { allowToken: string; allowed: boolean } = data.wmIframe
-          if (allowToken === this.allowToken) {
-            // allowToken is 'listened to' only once
-            this.allowToken = ''
-            if (allowed) {
-              if (this.monetization.hasRequest()) {
-                this.runtime.sendMessage(
-                  startWebMonetizationMessage(
-                    this.monetization.getMonetizationRequest()
-                  )
-                )
-              }
-            } else {
-              console.error(
-                '<iframe href="%s"> is not authorized to allow web monetization',
-                window.location.href
-              )
+        if (typeof data.wmIFrameCorrelationId === 'string') {
+          console.error('reporting correlation id', data.wmIFrameCorrelationId)
+          const message: ReportCorrelationIdFromIFrameContentScript = {
+            command: 'reportCorrelationIdFromIFrameContentScript',
+            data: {
+              correlationId: data.wmIFrameCorrelationId
             }
           }
+          this.runtime.sendMessage(message)
         }
       })
     }

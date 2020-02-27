@@ -6,6 +6,7 @@ import {
   StickyState,
   ToggleControlsAction
 } from './streamControls'
+import { FrameSpec } from './FrameSpec'
 
 /**
  * browser.runtime.sendMessage
@@ -78,29 +79,9 @@ export interface StartWebMonetization extends Command {
  * content -> background
  * browser.runtime.sendMessage
  */
-export interface StartIFrameWebMonetization extends Command {
-  command: 'startIFrameWebMonetization'
-  data: { allowToken: string }
-}
-
-/**
- * content -> background
- * browser.runtime.sendMessage
- */
 export interface StopWebMonetization extends Command {
   command: 'stopWebMonetization'
   data: PaymentDetails
-}
-
-/**
- * content -> backround
- * browser.runtime.sendMessage
- */
-export interface CheckToken extends Command {
-  command: 'checkToken'
-  data: {
-    token: string
-  }
 }
 
 /**
@@ -144,6 +125,29 @@ export interface UnloadFrame extends Command {
   // frameId is retrieved via MessageSender['frameId']
 }
 
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface ReportCorrelationIdFromIFrameContentScript extends Command {
+  command: 'reportCorrelationIdFromIFrameContentScript'
+  data: {
+    correlationId: string
+    // FrameSpec is implied
+  }
+}
+
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface CheckIFrameIsAllowedFromIFrameContentScript extends Command {
+  command: 'checkIFrameIsAllowedFromIFrameContentScript'
+  // data: {
+  // FrameSpec is implied
+  // }
+}
+
 export type ToBackgroundMessage =
   | PauseWebMonetization
   | ResumeWebMonetization
@@ -160,7 +164,8 @@ export type ToBackgroundMessage =
   | SendTip
   | FrameStateChange
   | UnloadFrame
-  | StartIFrameWebMonetization
+  | CheckIFrameIsAllowedFromIFrameContentScript
+  | ReportCorrelationIdFromIFrameContentScript
 
 export type IconState =
   | 'streaming-paused'
@@ -275,10 +280,22 @@ export interface SendTipResult {
  *  background -> content
  *  browser.tabs.sendMessage
  */
-export interface CheckAllowedIFrames {
-  command: 'checkAllowedIFrames'
+export interface CheckIFrameIsAllowedFromBackground {
+  command: 'checkIFrameIsAllowedFromBackground'
   data: {
-    forAllowToken: string
+    frame: FrameSpec
+  }
+}
+
+/**
+ *  background -> content
+ *  browser.tabs.sendMessage
+ */
+export interface ReportCorrelationIdToParentContentScript {
+  command: 'reportCorrelationIdToParentContentScript'
+  data: {
+    frame: FrameSpec
+    correlationId: string
   }
 }
 
@@ -287,6 +304,7 @@ export type ToContentMessage =
   | MonetizationProgress
   | MonetizationStart
   | SetMonetizationState
-  | CheckAllowedIFrames
+  | CheckIFrameIsAllowedFromBackground
+  | ReportCorrelationIdToParentContentScript
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup

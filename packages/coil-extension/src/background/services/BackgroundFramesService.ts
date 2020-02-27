@@ -98,6 +98,7 @@ export interface FrameChangedEvent extends FrameEventWithFrame {
 export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
   traceLogging = false
+  logEvents = false
   logTabsInterval = 0
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
@@ -205,11 +206,14 @@ export class BackgroundFramesService extends EventEmitter {
 
   monitor() {
     const events = ['frameChanged', 'frameAdded', 'frameRemoved'] as const
-    events.forEach(e => {
-      this.on(e, (event: FrameEvent) => {
-        this.log(e, JSON.stringify(event, null, 2))
+
+    if (this.logEvents) {
+      events.forEach(e => {
+        this.on(e, (event: FrameEvent) => {
+          this.log(e, JSON.stringify(event, null, 2))
+        })
       })
-    })
+    }
 
     /**
      * Be wary of context invalidation during extension reloading causing

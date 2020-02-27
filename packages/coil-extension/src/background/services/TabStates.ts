@@ -22,7 +22,7 @@ export class TabStates {
   setFrame({ tabId, frameId }: FrameSpec, state: Partial<FrameState> = {}) {
     const frameStates = this.get(tabId).frameStates
     const existingFrameState =
-      this.get(tabId).frameStates[frameId] ?? this.makeFrameStateDefault()
+      frameStates[frameId] ?? this.makeFrameStateDefault()
     this.set(tabId, {
       frameStates: {
         ...frameStates,
@@ -32,7 +32,15 @@ export class TabStates {
   }
 
   clearFrame({ tabId, frameId }: FrameSpec) {
-    delete this.tabStates[tabId]?.frameStates[frameId]
+    const tabState = this.tabStates[tabId]
+    if (tabState) {
+      if (frameId !== 0) {
+        delete tabState.frameStates[frameId]
+      } else {
+        // maintain default
+        tabState.frameStates[0] = this.makeFrameStateDefault()
+      }
+    }
   }
 
   tabKeys(): number[] {
