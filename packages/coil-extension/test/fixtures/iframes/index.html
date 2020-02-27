@@ -4,6 +4,7 @@
     <title>TOP Frame</title>
   </head>
   <body>
+    <div id="log"></div>
     <iframe allow="monetization" id="frame1" src="./frame1.html"></iframe>
     <iframe
       allow="monetization another"
@@ -27,6 +28,14 @@
       src="https://www.cinnamon.video/aussieninja/watch?v=233496874017883674"
       frameborder="0"
     ></iframe>
-    <script></script>
+    <script type="text/javascript">
+      const log = document.querySelector('#log')
+      let ms = Date.now()
+      document.addEventListener('readystatechange', event => {
+        const now = Date.now()
+        log.innerHTML += `<p>${document.readyState} +${now - ms}</p>`
+        ms = now
+      })
+    </script>
   </body>
 </html>

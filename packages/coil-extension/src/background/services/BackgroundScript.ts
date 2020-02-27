@@ -41,11 +41,11 @@ import { BackgroundFramesService } from './BackgroundFramesService'
 @injectable()
 export class BackgroundScript {
   // TODO: extract these two variables into some kind of service
-  tabsToFrameToRequestIds: {
+  tabsToFramesToStreams: {
     [tab: number]: Record<
       // frameId
       number,
-      // requestId
+      // streamId
       string
     >
   } = {}
@@ -617,14 +617,14 @@ export class BackgroundScript {
   }
 
   private getRequestId({ tabId, frameId }: FrameSpec) {
-    return this.tabsToFrameToRequestIds[tabId]
-      ? this.tabsToFrameToRequestIds[tabId][frameId]
+    return this.tabsToFramesToStreams[tabId]
+      ? this.tabsToFramesToStreams[tabId][frameId]
       : undefined
   }
 
   private setRequestId({ tabId, frameId }: FrameSpec, requestId: string) {
-    const ensured = (this.tabsToFrameToRequestIds[tabId] =
-      this.tabsToFrameToRequestIds[tabId] ?? {})
+    const ensured = (this.tabsToFramesToStreams[tabId] =
+      this.tabsToFramesToStreams[tabId] ?? {})
     ensured[frameId] = requestId
   }
 
@@ -702,7 +702,7 @@ export class BackgroundScript {
   }
 
   _closeStreams(tabId: number, frameId?: number) {
-    const streamIds = this.tabsToFrameToRequestIds[tabId]
+    const streamIds = this.tabsToFramesToStreams[tabId]
     const haveFrameId = typeof frameId !== 'undefined'
 
     let closed = 0
@@ -718,9 +718,9 @@ export class BackgroundScript {
         closed++
       })
       if (haveFrameId) {
-        delete this.tabsToFrameToRequestIds[tabId][frameId as number]
+        delete this.tabsToFramesToStreams[tabId][frameId as number]
       } else {
-        delete this.tabsToFrameToRequestIds[tabId]
+        delete this.tabsToFramesToStreams[tabId]
       }
     }
     return !!closed
@@ -737,7 +737,7 @@ export class BackgroundScript {
     for (const tabId of this.tabStates.tabKeys()) {
       // Make a copy as _closeStreams mutates and we want to actually close
       // the streams before we set the state to stopped.
-      const requestIds = { ...this.tabsToFrameToRequestIds[tabId] }
+      const requestIds = { ...this.tabsToFramesToStreams[tabId] }
       this._closeStreams(tabId)
       this.tabStates.clear(tabId)
       Object.entries(requestIds).forEach(([frameId, requestId]) => {
