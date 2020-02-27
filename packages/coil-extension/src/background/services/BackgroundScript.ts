@@ -279,12 +279,9 @@ export class BackgroundScript {
         this.popup.enable()
 
         const tabState = this.tabStates.getActiveOrDefault()
-        const hasStream = Object.values(tabState.frameStates).find(
-          f => f.monetized
-        )
-        const hasBeenPaid =
-          hasStream &&
-          Object.values(tabState.frameStates).find(f => f.total > 0)
+        const frameStates = Object.values(tabState.frameStates)
+        const hasStream = frameStates.find(f => f.monetized)
+        const hasBeenPaid = hasStream && frameStates.find(f => f.total > 0)
 
         if (hasStream) {
           this.tabStates.setIcon(tabId, 'monetized')
@@ -413,7 +410,7 @@ export class BackgroundScript {
           this.tabStates.set(tabId, { favicon })
         })
         .catch(e => {
-          console.error('failed to fetch favicon. e=' + e.stack)
+          console.error(`failed to fetch favicon. e=${e.stack}`)
         })
     }
   }
@@ -466,13 +463,15 @@ export class BackgroundScript {
   }
 
   private setLocalStorageFromState(state: TabState) {
+    const frameStates = Object.values(state.frameStates)
+
     state && state.coilSite
       ? this.storage.set('coilSite', state.coilSite)
       : this.storage.remove('coilSite')
     // TODO: Another valid case might be a singular adapted iframe inside a non
     // monetized top page.
     this.storage.set('adapted', Boolean(state?.frameStates[0]?.adapted))
-    state && Object.values(state.frameStates).find(f => f.monetized)
+    state && frameStates.find(f => f.monetized)
       ? this.storage.set('monetized', true)
       : this.storage.remove('monetized')
 
@@ -485,10 +484,7 @@ export class BackgroundScript {
     }
 
     if (state) {
-      const total = Object.values(state.frameStates).reduce(
-        (acc, val) => acc + val.total,
-        0
-      )
+      const total = frameStates.reduce((acc, val) => acc + val.total, 0)
       this.storage.set('monetizedTotal', total)
     }
     this.storage.set(
@@ -501,9 +497,9 @@ export class BackgroundScript {
     request: StartWebMonetization,
     sender: MessageSender
   ) {
-    const frameSpec = getFrameSpec(sender)
-    const { tabId, frameId } = frameSpec
-    this.tabStates.logLastMonetizationCommand(frameSpec, 'start')
+    const frame = getFrameSpec(sender)
+    const { tabId, frameId } = frame
+    this.tabStates.logLastMonetizationCommand(frame, 'start')
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender)
 
@@ -514,7 +510,7 @@ export class BackgroundScript {
     const userBeforeReAuth = this.store.user
     let emittedPending = false
     const emitPending = () =>
-      this.sendSetMonetizationStateMessage(frameSpec, 'pending')
+      this.sendSetMonetizationStateMessage(frame, 'pending')
 
     // If we are optimistic we have an active subscription (things could have
     // changed since our last cached whoami query), emit pending immediately,
@@ -532,11 +528,11 @@ export class BackgroundScript {
     if (!token) {
       // not signed in.
       console.warn('startWebMonetization cancelled; no token')
-      this.sendSetMonetizationStateMessage(frameSpec, 'stopped')
+      this.sendSetMonetizationStateMessage(frame, 'stopped')
       return false
     }
     if (!this.store.user?.subscription?.active) {
-      this.sendSetMonetizationStateMessage(frameSpec, 'stopped')
+      this.sendSetMonetizationStateMessage(frame, 'stopped')
       this.log('startWebMonetization cancelled; no active subscription')
       return false
     }
@@ -553,7 +549,7 @@ export class BackgroundScript {
     }
 
     this.log('starting stream', requestId)
-    this.setRequestId(frameSpec, requestId)
+    this.setRequestId(frame, requestId)
     this.streamsToFrames[requestId] = { tabId, frameId }
     this.streams.beginStream(requestId, {
       token,
