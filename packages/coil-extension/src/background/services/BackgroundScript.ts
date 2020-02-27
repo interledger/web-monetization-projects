@@ -223,8 +223,8 @@ export class BackgroundScript {
   private routeStreamsMoneyEventsToContentScript() {
     // pass stream monetization events to the correct tab
     this.streams.on('money', (details: StreamMoneyEvent) => {
-      const spec = this.streamsToFrames[details.requestId]
-      const { tabId, frameId } = spec
+      const frame = this.streamsToFrames[details.requestId]
+      const { tabId, frameId } = frame
       if (details.packetNumber === 0) {
         const message: MonetizationStart = {
           command: 'monetizationStart',
@@ -247,7 +247,7 @@ export class BackgroundScript {
           sentAmount: details.sentAmount
         }
       }
-      this.handleMonetizedSite(spec, details.initiatingUrl, details)
+      this.handleMonetizedSite(frame, details.initiatingUrl, details)
       this.api.tabs.sendMessage(tabId, message, { frameId })
       this.savePacketToHistoryDb(details)
     })
