@@ -402,10 +402,9 @@ export class BackgroundScript {
       this.reloadTabState()
     }
 
-    // Channel image is provided if site is adapted
-    if (this.storage.getBoolean('adapted')) {
-      // Load favicon from this.runTime
-
+    // TODO: this doesn't actually seem to be used anywhere
+    // Channel image is provided if top frame is adapted
+    if (tabState.frameStates[0].adapted) {
       const { host } = new URL(senderUrl)
       this.favIcons
         .getFavicon(host)
