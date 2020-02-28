@@ -63,7 +63,7 @@ export class ContentScript {
         requestId: details.requestId,
         initiatingUrl: details.initiatingUrl
       })
-      if (this.frames.isIFrame) {
+      if (this.frames.isDirectChildFrame) {
         const allowed = await new Promise<boolean>(resolve => {
           const message: CheckIFrameIsAllowedFromIFrameContentScript = {
             command: 'checkIFrameIsAllowedFromIFrameContentScript'
