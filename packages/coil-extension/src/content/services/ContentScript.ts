@@ -63,13 +63,15 @@ export class ContentScript {
         requestId: details.requestId,
         initiatingUrl: details.initiatingUrl
       })
-      if (this.frames.isDirectChildFrame) {
-        const allowed = await new Promise<boolean>(resolve => {
-          const message: CheckIFrameIsAllowedFromIFrameContentScript = {
-            command: 'checkIFrameIsAllowedFromIFrameContentScript'
-          }
-          this.runtime.sendMessage(message, resolve)
-        })
+      if (this.frames.isIFrame) {
+        const allowed = !this.frames.isDirectChildFrame
+          ? false
+          : await new Promise<boolean>(resolve => {
+              const message: CheckIFrameIsAllowedFromIFrameContentScript = {
+                command: 'checkIFrameIsAllowedFromIFrameContentScript'
+              }
+              this.runtime.sendMessage(message, resolve)
+            })
         if (!allowed) {
           console.error(
             '<iframe> is not authorized to allow web monetization, %s',
