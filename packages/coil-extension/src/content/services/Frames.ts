@@ -47,7 +47,7 @@ export class Frames {
     })
   }
 
-  // iframe to FrameSpc
+  // iframe to FrameSpec
   frames = new WeakMap<
     HTMLIFrameElement,
     {
@@ -55,7 +55,7 @@ export class Frames {
     }
   >()
 
-  // correlationId to resolve/reject
+  // correlationId to promise resolver
   frameQueue = new Map<
     string,
     {
@@ -92,11 +92,8 @@ export class Frames {
         }
         this.frames.set(frameEl, result)
       }
-      // No else! result should be set if not in frames WeakMap
-      if (result) {
-        if (sameFrame(await result.frame, frameSpec)) {
-          return isMonetizationAllowed(frameEl)
-        }
+      if (sameFrame(await result.frame, frameSpec)) {
+        return isMonetizationAllowed(frameEl)
       }
     }
     return false
