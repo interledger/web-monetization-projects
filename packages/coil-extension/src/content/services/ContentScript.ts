@@ -185,7 +185,6 @@ export class ContentScript {
       this.window.addEventListener('message', event => {
         const data = event.data
         if (typeof data.wmIFrameCorrelationId === 'string') {
-          console.error('reporting correlation id', data.wmIFrameCorrelationId)
           const message: ReportCorrelationIdFromIFrameContentScript = {
             command: 'reportCorrelationIdFromIFrameContentScript',
             data: {

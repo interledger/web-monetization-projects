@@ -129,7 +129,9 @@ export class BackgroundFramesService extends EventEmitter {
     const lastUpdateTimeMS = partial.lastUpdateTimeMS ?? Date.now()
     const frame = this.getFrame({ tabId, frameId })
     if (frame && frame.lastUpdateTimeMS > lastUpdateTimeMS) {
-      this.log('ignoring frame update', { tabId, frameId, changed: partial })
+      if (this.traceLogging) {
+        this.log('ignoring frame update', { tabId, frameId, changed: partial })
+      }
       return
     }
     const update = { lastUpdateTimeMS, ...partial }
