@@ -203,7 +203,7 @@ export interface IsRateLimited extends Command {
  */
 export interface CheckAdaptedContent {
   command: 'checkAdaptedContent'
-  data: { from?: string; url?: string }
+  data: { from?: string }
 }
 
 /**

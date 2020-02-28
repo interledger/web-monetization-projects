@@ -1,28 +1,12 @@
 import { inject, injectable } from 'inversify'
-import { parsePolicyDirectives } from '@web-monetization/polyfill-utils'
 import * as uuid from 'uuid'
 
 import * as tokens from '../../types/tokens'
 import { FrameStateChange, UnloadFrame } from '../../types/commands'
 import { ContentRuntime } from '../types/ContentRunTime'
-import { FrameSpec } from '../../types/FrameSpec'
-
-function isMonetizationAllowed(frame: HTMLIFrameElement) {
-  let allowed = false
-  try {
-    if (frame.allow) {
-      const parsed = parsePolicyDirectives(frame.allow)
-      allowed = 'monetization' in parsed
-    }
-  } catch (e) {
-    allowed = false
-  }
-  return allowed
-}
-
-function sameFrame(f1: FrameSpec, f2: FrameSpec) {
-  return f1.tabId === f2.tabId && f1.frameId === f2.frameId
-}
+import { FrameSpec, sameFrame } from '../../types/FrameSpec'
+import { isMonetizationAllowed } from '../util/isMonetizationAllowed'
+import { notNullOrUndef } from '../../util/nullables'
 
 @injectable()
 export class Frames {
@@ -76,10 +60,10 @@ export class Frames {
     string,
     {
       resolve: (val: FrameSpec) => void
-      reject: (error: Error) => void
     }
   >()
 
+  // TODO:disentangle allow checking from enqueuing correlations
   async checkIfIframeIsAllowedFromBackground(
     frameSpec: FrameSpec
   ): Promise<boolean> {
@@ -90,14 +74,13 @@ export class Frames {
       let result = this.frames.get(frameEl)
       if (!result) {
         const correlationId = uuid.v4()
-        const framePromise = new Promise<FrameSpec>((resolve, reject) => {
-          console.log('framePromise created!')
+        const framePromise = new Promise<FrameSpec>(resolve => {
           // Handler for this will report to background page with the correlationId
           // The background page will get the parentId from the frames service
-          // The correlationId will
-          this.frameQueue.set(correlationId, { resolve, reject })
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          frameEl.contentWindow!.postMessage(
+          // The correlationId will be sent to the parent page which will then
+          // find the promise in the queue and `resolve` it with {tabId, frameId}
+          this.frameQueue.set(correlationId, { resolve })
+          notNullOrUndef(frameEl.contentWindow).postMessage(
             {
               wmIFrameCorrelationId: correlationId
             },
@@ -112,7 +95,6 @@ export class Frames {
       // No else! result should be set if not in frames WeakMap
       if (result) {
         if (sameFrame(await result.frame, frameSpec)) {
-          console.log('frame promise resolved!')
           return isMonetizationAllowed(frameEl)
         }
       }
@@ -139,7 +121,6 @@ export class Frames {
   }
 
   reportCorrelation(data: { frame: FrameSpec; correlationId: string }) {
-    console.error('reporting correlation', data)
     const key = data.correlationId
     const queued = this.frameQueue.get(key)
     if (queued) {

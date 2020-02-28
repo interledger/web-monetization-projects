@@ -43,8 +43,6 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 
 @injectable()
 export class ContentScript {
-  allowToken = ''
-
   constructor(
     private storage: Storage,
     private window: Window,
@@ -67,14 +65,14 @@ export class ContentScript {
       })
       if (this.frames.isIFrame) {
         const allowed = await new Promise<boolean>(resolve => {
-          const newVar: CheckIFrameIsAllowedFromIFrameContentScript = {
+          const message: CheckIFrameIsAllowedFromIFrameContentScript = {
             command: 'checkIFrameIsAllowedFromIFrameContentScript'
           }
-          this.runtime.sendMessage(newVar, resolve)
+          this.runtime.sendMessage(message, resolve)
         })
         if (!allowed) {
           console.error(
-            '<iframe href="%s"> is not authorized to allow web monetization',
+            '<iframe> is not authorized to allow web monetization, %s',
             window.location.href
           )
           return
@@ -116,25 +114,17 @@ export class ContentScript {
     this.runtime.onMessage.addListener(
       (request: ToContentMessage, sender, sendResponse) => {
         if (request.command === 'checkAdaptedContent') {
-          if (this.window.location.href === request.data.url) {
-            if (request.data && request.data.from) {
-              debug(
-                'checkAdaptedContent with from',
-                this.document.readyState,
-                JSON.stringify(request.data),
-                window.location.href
-              )
-            } else {
-              debug('checkAdaptedContent without from')
-            }
-            void this.adaptedContent.checkAdaptedContent()
-          } else {
+          if (request.data && request.data.from) {
             debug(
-              'ignoring checkAdaptedContent with different url',
-              this.window.location.href,
-              request.data.url
+              'checkAdaptedContent with from',
+              this.document.readyState,
+              JSON.stringify(request.data),
+              window.location.href
             )
+          } else {
+            debug('checkAdaptedContent without from')
           }
+          void this.adaptedContent.checkAdaptedContent()
         } else if (request.command === 'setMonetizationState') {
           this.monetization.setState(request.data)
         } else if (request.command === 'monetizationProgress') {

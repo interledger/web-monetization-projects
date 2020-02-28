@@ -46,8 +46,6 @@ interface Frame extends Record<string, any> {
    * Will be -1 for topmost iframe
    */
   parentFrameId: number
-
-  allowToken?: string
 }
 
 /**

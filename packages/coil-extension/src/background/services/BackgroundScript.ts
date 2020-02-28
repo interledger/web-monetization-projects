@@ -206,7 +206,7 @@ export class BackgroundScript {
         const from = `onFrameChanged directly, event=${JSON.stringify(event)}, `
         const message: CheckAdaptedContent = {
           command: 'checkAdaptedContent',
-          data: { from, url }
+          data: { from }
         }
         this.log('sending checkAdaptedContent message', message)
         this.api.tabs.sendMessage(
@@ -392,7 +392,7 @@ export class BackgroundScript {
     return this.auth.getTokenMaybeRefreshAndStoreState()
   }
 
-  setTabMonetized(
+  setFrameMonetized(
     { tabId, frameId }: FrameSpec,
     senderUrl: string,
     total?: number
@@ -428,7 +428,7 @@ export class BackgroundScript {
 
   mayMonetizeSite(sender: MessageSender) {
     if (!sender.tab) return
-    this.setTabMonetized(getFrameSpec(sender), notNullOrUndef(sender.tab.url))
+    this.setFrameMonetized(getFrameSpec(sender), notNullOrUndef(sender.tab.url))
     return true
   }
 
@@ -440,7 +440,7 @@ export class BackgroundScript {
     const tabState = this.tabStates.get(tabId)
     const frameTotal = tabState?.frameStates[frameId]?.total ?? 0
     const newFrameTotal = frameTotal + Number(packet?.sentAmount ?? 0)
-    this.setTabMonetized({ tabId, frameId }, url, newFrameTotal)
+    this.setFrameMonetized({ tabId, frameId }, url, newFrameTotal)
   }
 
   adaptedSite(data: AdaptedSite['data'], sender: MessageSender) {
@@ -509,8 +509,15 @@ export class BackgroundScript {
     const { tabId, frameId } = frame
 
     if (frameId !== 0) {
+      // Handle race between monetization tag driven frame checking and
+      // framesService frame info.
+      // TODO: ?
+      let iterations = 5
       while (!this.framesService.getFrame(frame)) {
-        await timeout(100)
+        await timeout(50)
+        if (--iterations === 0) {
+          throw new Error()
+        }
       }
 
       const parentId = this.framesService.getFrame(frame)?.parentFrameId
