@@ -1,5 +1,8 @@
+import { injectable } from 'inversify'
+
 import { FrameSpec } from '../../types/FrameSpec'
 
+@injectable()
 export class StreamAssociations {
   // TODO: extract these two variables into some kind of service
   private tabsToFramesToStreams: {
