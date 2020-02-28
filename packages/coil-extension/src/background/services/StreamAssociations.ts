@@ -4,7 +4,6 @@ import { FrameSpec } from '../../types/FrameSpec'
 
 @injectable()
 export class StreamAssociations {
-  // TODO: extract these two variables into some kind of service
   private tabsToFramesToStreams: {
     [tab: number]: Record<
       // frameId
@@ -15,7 +14,7 @@ export class StreamAssociations {
   } = {}
 
   private streamsToFrames: {
-    [stream: string]: FrameSpec
+    [streamId: string]: FrameSpec
   } = {}
 
   getTabStreams(tabId: number) {
@@ -42,13 +41,13 @@ export class StreamAssociations {
     delete this.tabsToFramesToStreams[tabId][frameId as number]
   }
 
-  getStreamID({ tabId, frameId }: FrameSpec) {
+  getStreamId({ tabId, frameId }: FrameSpec) {
     return this.tabsToFramesToStreams[tabId]
       ? this.tabsToFramesToStreams[tabId][frameId]
       : undefined
   }
 
-  setStreamID({ tabId, frameId }: FrameSpec, streamId: string) {
+  setStreamId({ tabId, frameId }: FrameSpec, streamId: string) {
     const ensured = (this.tabsToFramesToStreams[tabId] =
       this.tabsToFramesToStreams[tabId] ?? {})
     ensured[frameId] = streamId

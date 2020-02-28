@@ -616,7 +616,7 @@ export class BackgroundScript {
     }
 
     this.log('starting stream', requestId)
-    this.assoc.setStreamID(frame, requestId)
+    this.assoc.setStreamId(frame, requestId)
     this.assoc.setFrame(requestId, { tabId, frameId })
     this.streams.beginStream(requestId, {
       token,
@@ -671,7 +671,7 @@ export class BackgroundScript {
 
   private doPauseWebMonetization(frame: FrameSpec) {
     this.tabStates.logLastMonetizationCommand(frame, 'pause')
-    const id = this.assoc.getStreamID(frame)
+    const id = this.assoc.getStreamId(frame)
     if (id) {
       this.log('pausing stream', id)
       this.streams.pauseStream(id)
@@ -683,7 +683,7 @@ export class BackgroundScript {
   private doResumeWebMonetization(frame: FrameSpec) {
     this.tabStates.logLastMonetizationCommand(frame, 'resume')
 
-    const id = this.assoc.getStreamID(frame)
+    const id = this.assoc.getStreamId(frame)
     if (id) {
       this.log('resuming stream', id)
       this.sendSetMonetizationStateMessage(frame, 'pending')
@@ -725,7 +725,7 @@ export class BackgroundScript {
     const closed = this._closeStreams(frame.tabId, frame.frameId)
     // May be noop other side if stop monetization was initiated from
     // ContentScript
-    const requestId = this.assoc.getStreamID(frame)
+    const requestId = this.assoc.getStreamId(frame)
     this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
     if (closed) {
       this.tabStates.clearFrame(frame)
@@ -745,7 +745,7 @@ export class BackgroundScript {
       command: 'setMonetizationState',
       data: {
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        requestId: (this.assoc.getStreamID({ tabId, frameId }) ?? requestId)!,
+        requestId: (this.assoc.getStreamId({ tabId, frameId }) ?? requestId)!,
         state
       }
     }
