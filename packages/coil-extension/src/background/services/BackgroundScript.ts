@@ -497,17 +497,6 @@ export class BackgroundScript {
     const { tabId, frameId } = frame
 
     if (frameId !== 0) {
-      // Handle race between monetization tag driven frame checking and
-      // framesService frame info.
-      // TODO: ?
-      let iterations = 5
-      while (!this.framesService.getFrame(frame)) {
-        await timeout(50)
-        if (--iterations === 0) {
-          throw new Error()
-        }
-      }
-
       const parentId = this.framesService.getFrame(frame)?.parentFrameId
       if (typeof parentId === 'undefined') {
         throw new Error(
@@ -608,8 +597,8 @@ export class BackgroundScript {
       emitPending()
     }
 
-    const lastCommand = this.tabStates.get(tabId).frameStates[frameId]
-      .lastMonetization.command
+    const lastCommand = this.tabStates.getFrameState(frame).lastMonetization
+      .command
     if (lastCommand !== 'start') {
       this.log('startWebMonetization cancelled via', lastCommand)
       return false

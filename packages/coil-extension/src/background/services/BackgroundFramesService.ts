@@ -296,6 +296,14 @@ export class BackgroundFramesService extends EventEmitter {
       makeCallback('onReferenceFragmentUpdated')
     )
 
+    // These are required otherwise there's a race between usages of getFrame()
+    // and the initial `useWebNavigationToUpdateFrames()`
+    this.api.webNavigation.onCommitted.addListener(makeCallback('onCommitted'))
+    this.api.webNavigation.onCompleted.addListener(makeCallback('onCompleted'))
+    this.api.webNavigation.onBeforeNavigate.addListener(
+      makeCallback('onBeforeNavigate')
+    )
+
     this.api.tabs.onRemoved.addListener(tabId => {
       this.log('tabs.onTabRemoved %s', tabId)
       delete this.tabs[tabId]
