@@ -759,7 +759,7 @@ export class BackgroundScript {
         closed++
       })
       if (haveFrameId) {
-        this.assoc.clearFrameStream(tabId, frameId as number)
+        this.assoc.clearStream({ tabId, frameId: frameId as number })
       } else {
         this.assoc.clearTabStreams(tabId)
       }
