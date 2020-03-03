@@ -103,7 +103,7 @@ module.exports = function configure(config) {
 ### But it's still slow!?
 
 At the time of writing, Jest 24 was struggling with mysterious
-performance issues, primarily showing up on OSX
+performance issues, primarily showing up on MacOS
 
 Experiment with the jest `-i/--runInBand` option which will just run tests
 serially in a single worker. This can often make things drastically faster.
