@@ -16,8 +16,7 @@ import {
   hasCommonRequestIdAndPaymentPointer,
   isValidPendingEvent,
   isValidProgressEvent,
-  isValidStartEvent,
-  isValidStopEvent
+  isValidStartEvent
 } from './validators'
 import { AWAIT_MONETIZATION_TIMEOUT_MS } from './env'
 
@@ -158,7 +157,11 @@ export async function testMonetization({
   let state: string | null = null
 
   if (success) {
-    state = await page.evaluate(() => (document as any).monetization.state)
+    try {
+      state = await page.evaluate(() => (document as any).monetization.state)
+    } catch (e) {
+      // ignored
+    }
   }
 
   debug('seen states: %s, events: %s', statesSeen, eventsSeen)
