@@ -129,7 +129,7 @@ export async function testMonetization({
           })
         } else {
           // Poll for document.monetization presence
-          setTimeout(setListener, 16)
+          setTimeout(setListener, 0)
         }
       }
       setListener()
