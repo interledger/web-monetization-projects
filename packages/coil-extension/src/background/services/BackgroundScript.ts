@@ -776,7 +776,7 @@ export class BackgroundScript {
     for (const tabId of this.tabStates.tabKeys()) {
       // Make a copy as _closeStreams mutates and we want to actually close
       // the streams before we set the state to stopped.
-      const requestIds = this.assoc.getTabStreams(tabId)
+      const requestIds = { ...this.assoc.getTabStreams(tabId) }
       this._closeStreams(tabId)
       this.tabStates.clear(tabId)
       Object.entries(requestIds).forEach(([frameId, requestId]) => {
