@@ -40,7 +40,7 @@ export class StreamAssociations {
   clearFrameStream(tabId: number, frameId: number) {
     const tabsToFramesToStream = this.tabsToFramesToStreams[tabId]
     if (tabsToFramesToStream) {
-      delete tabsToFramesToStream[frameId as number]
+      delete tabsToFramesToStream[frameId]
     }
   }
 
