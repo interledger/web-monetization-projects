@@ -742,7 +742,8 @@ export class BackgroundScript {
   }
 
   _closeStreams(tabId: number, frameId?: number) {
-    const streamIds = this.assoc.getTabStreams(tabId)
+    // Make a copy
+    const streamIds = { ...this.assoc.getTabStreams(tabId) }
     const haveFrameId = typeof frameId !== 'undefined'
 
     let closed = 0
