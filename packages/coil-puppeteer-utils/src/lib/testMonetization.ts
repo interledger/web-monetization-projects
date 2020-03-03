@@ -136,7 +136,7 @@ export async function testMonetization({
   }
 
   if (env.IS_CI) {
-    await timeout(1e3)
+    await timeout(2e3)
   }
 
   await listenFor('monetizationpending')
