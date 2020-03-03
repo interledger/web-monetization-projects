@@ -197,7 +197,7 @@ export class BackgroundFramesService extends EventEmitter {
         if (frame) {
           resolve(frame)
         } else {
-          const spec = JSON.stringify({ tabId, frame })
+          const spec = JSON.stringify({ tabId, frameId })
           reject(new Error(`invalid_frame_spec: can not get frame for ${spec}`))
         }
       })
