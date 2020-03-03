@@ -85,7 +85,7 @@ export class TabStates {
     return this.tabStates[tab] || { ...defaultValue }
   }
 
-  getFrameState({ tabId, frameId }: FrameSpec) {
+  getFrame({ tabId, frameId }: FrameSpec) {
     return (
       this.tabStates[tabId].frameStates[frameId] ?? this.makeFrameStateDefault()
     )

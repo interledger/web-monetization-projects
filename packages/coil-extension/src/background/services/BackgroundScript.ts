@@ -597,8 +597,7 @@ export class BackgroundScript {
       emitPending()
     }
 
-    const lastCommand = this.tabStates.getFrameState(frame).lastMonetization
-      .command
+    const lastCommand = this.tabStates.getFrame(frame).lastMonetization.command
     if (lastCommand !== 'start') {
       this.log('startWebMonetization cancelled via', lastCommand)
       return false
