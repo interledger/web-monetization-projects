@@ -5,9 +5,12 @@ import { FrameSpec } from '../../types/FrameSpec'
 @injectable()
 export class StreamAssociations {
   private tabsToFramesToStreams: {
-    [tab: number]: {
-      [frameId: number]: string // streamId
-    }
+    [tab: number]: Record<
+      // frameId
+      number,
+      // streamId
+      string
+    >
   } = {}
 
   private streamsToFrames: {
@@ -15,7 +18,7 @@ export class StreamAssociations {
   } = {}
 
   getTabStreams(tabId: number) {
-    return this.tabsToFramesToStreams[tabId]
+    return { ...this.tabsToFramesToStreams[tabId] }
   }
 
   clearTabStreams(tabId: number) {
