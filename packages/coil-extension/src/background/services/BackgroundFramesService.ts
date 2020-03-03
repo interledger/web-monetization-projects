@@ -122,8 +122,7 @@ export class BackgroundFramesService extends EventEmitter {
 
   updateOrAddFrame(
     from: string,
-    tabId: number,
-    frameId: number,
+    { tabId, frameId }: FrameSpec,
     partial: Readonly<Partial<Frame>>
   ) {
     const lastUpdateTimeMS = partial.lastUpdateTimeMS ?? Date.now()
@@ -188,10 +187,10 @@ export class BackgroundFramesService extends EventEmitter {
     }
   }
 
-  private async getWebNavigationFrame(
-    tabId: number,
-    frameId: number
-  ): Promise<GetFrameResultDetails> {
+  private async getWebNavigationFrame({
+    tabId,
+    frameId
+  }: FrameSpec): Promise<GetFrameResultDetails> {
     return new Promise((resolve, reject) => {
       this.api.webNavigation.getFrame({ tabId, frameId }, frame => {
         if (frame) {
@@ -263,12 +262,9 @@ export class BackgroundFramesService extends EventEmitter {
         const frame = this.getFrame(frameSpec)
         this.log('webNavigation.' + event)
         if (this.traceLogging) {
-          this.log(
-            'webNavigation.%s details:%s frame=%s',
-            event,
-            JSON.stringify(details),
-            JSON.stringify({ frame })
-          )
+          this.log('webNavigation.%s details:%o frame=%o', event, details, {
+            frame
+          })
         }
         const partial = {
           href: details.url,
@@ -277,12 +273,7 @@ export class BackgroundFramesService extends EventEmitter {
           state: null,
           top: details.frameId === 0
         }
-        this.updateOrAddFrame(
-          `webNavigation.${event}`,
-          details.tabId,
-          details.frameId,
-          partial
-        )
+        this.updateOrAddFrame(`webNavigation.${event}`, frameSpec, partial)
         if (this.getFrame(frameSpec)?.state == null) {
           this.requestFrameState(frameSpec)
         }
@@ -328,7 +319,7 @@ export class BackgroundFramesService extends EventEmitter {
       return
     }
 
-    const { tabId, frameId } = getFrameSpec(sender)
+    const { tabId, frameId, spec: frameSpec } = getFrameSpec(sender)
 
     if (message.command === 'unloadFrame') {
       this.log('unloadFrame %s', frameId, message.data)
@@ -359,16 +350,16 @@ export class BackgroundFramesService extends EventEmitter {
       }
 
       const { href, state } = message.data
-      const frame = this.getFrame({ tabId, frameId })
+      const frame = this.getFrame(frameSpec)
       if (frame) {
         // top and frameId, parentFrameId don't change
-        this.updateOrAddFrame('frameStateChange', tabId, frameId, {
+        this.updateOrAddFrame('frameStateChange', frameSpec, {
           href,
           state
         })
       } else {
-        const navFrame = await this.getWebNavigationFrame(tabId, frameId)
-        this.updateOrAddFrame('frameStateChange', tabId, frameId, {
+        const navFrame = await this.getWebNavigationFrame(frameSpec)
+        this.updateOrAddFrame('frameStateChange', frameSpec, {
           frameId,
           href: navFrame.url,
           state,
@@ -388,19 +379,14 @@ export class BackgroundFramesService extends EventEmitter {
         ) {
           return
         }
-        this.updateOrAddFrame(
-          'useWebNavigationToUpdateFrames',
-          tabId,
-          frame.frameId,
-          {
-            frameId: frame.frameId,
-            top: frame.frameId === 0,
-            href: frame.url,
-            state: null,
-            parentFrameId: frame.parentFrameId
-          }
-        )
         const frameSpec = { tabId, frameId: frame.frameId }
+        this.updateOrAddFrame('useWebNavigationToUpdateFrames', frameSpec, {
+          frameId: frame.frameId,
+          top: frame.frameId === 0,
+          href: frame.url,
+          state: null,
+          parentFrameId: frame.parentFrameId
+        })
         if (this.getFrame(frameSpec)?.state == null) {
           this.requestFrameState(frameSpec)
         }
