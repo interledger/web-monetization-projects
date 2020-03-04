@@ -616,10 +616,14 @@ export class BackgroundScript {
     return true
   }
 
-  private async sendTip() {
-    const tab = this.activeTab
-    // TODO
-    const stream = this.streams.getStream('')
+  private async sendTip(): Promise<{ success: boolean }> {
+    const tabId = this.activeTab
+    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
+    if (!streamId) {
+      this.log('can not find top frame for tabId=%d', tabId)
+      return { success: false }
+    }
+    const stream = this.streams.getStream(streamId)
     const token = this.auth.getStoredToken()
 
     // TODO: return detailed errors
