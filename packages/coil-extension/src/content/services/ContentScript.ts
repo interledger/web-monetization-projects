@@ -103,7 +103,7 @@ export class ContentScript {
           stopMonetization(stopped)
         }
         if (started) {
-          startMonetization(started)
+          void startMonetization(started)
         }
       }
     )
