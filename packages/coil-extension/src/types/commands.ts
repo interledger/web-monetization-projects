@@ -127,6 +127,7 @@ export type ToBackgroundMessage =
   | IsRateLimited
   | ContentScriptInit
   | FetchYoutubeChannelId
+  | SendTip
 
 export type IconState =
   | 'streaming-paused'
@@ -219,6 +220,22 @@ export interface SetMonetizationState {
      */
     finalized?: undefined
   }
+}
+
+/**
+ * popup -> background
+ * browser.runtime.sendMessage
+ */
+export interface SendTip {
+  command: 'sendTip'
+}
+
+/**
+ * background -> popup
+ * reply to browser.runtime.sendMessage
+ */
+export interface SendTipResult {
+  success: boolean
 }
 
 export type ToContentMessage =

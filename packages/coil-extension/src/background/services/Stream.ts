@@ -284,6 +284,10 @@ export class Stream extends EventEmitter {
     // stop.
     this.emit('abort', this._requestId)
   }
+
+  getPaymentPointer() {
+    return this._paymentPointer
+  }
 }
 
 interface StreamAttemptOptions {

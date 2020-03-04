@@ -314,6 +314,9 @@ export class BackgroundScript {
       case 'fetchYoutubeChannelId':
         sendResponse(await this.youtube.fetchChannelId(request.data.youtubeUrl))
         break
+      case 'sendTip':
+        sendResponse(await this.sendTip())
+        break
       default:
         sendResponse(false)
         break
@@ -505,6 +508,46 @@ export class BackgroundScript {
     return true
   }
 
+  private async sendTip() {
+    const tab = this.activeTab
+    const stream = this.streams.getStream(this.tabsToStreams[tab])
+    const token = this.auth.getStoredToken()
+
+    // TODO: return detailed errors
+    if (!stream || !token) {
+      this.log(
+        'sendTip: no stream | token. !!stream !!token ',
+        !!stream,
+        !!token
+      )
+      return { success: false }
+    }
+
+    const receiver = stream.getPaymentPointer()
+
+    try {
+      this.log(`sendTip: sending tip to ${receiver}`)
+      const result = await this.client.query({
+        query: `
+          mutation sendTip($receiver: String!) {
+            sendTip(receiver: $receiver) {
+              success
+            }
+          }
+        `,
+        token,
+        variables: {
+          receiver
+        }
+      })
+      this.log(`sendTip: sent tip to ${receiver}`, result)
+      return { success: true }
+    } catch (e) {
+      this.log(`sendTip: error. msg=${e.message}`)
+      return { success: false }
+    }
+  }
+
   private doPauseWebMonetization(tab: number) {
     this.tabStates.logLastMonetizationCommand(tab, 'pause')
     const id = this.tabsToStreams[tab]
@@ -604,34 +647,10 @@ export class BackgroundScript {
     return !!streamId
   }
 
+  // This feature is no longer used
   async isRateLimited() {
-    const token = this.auth.getStoredToken()
-
-    interface ResponseData {
-      whoami: {
-        usage: {
-          resetDate: string
-          exceededLimit: boolean
-        }
-      }
-    }
-
-    const response = await this.client.query<ResponseData>({
-      query: `query isRateLimited {
-      whoami {
-        usage {
-          resetDate
-          exceededLimit
-        }
-      }
-    }`,
-      token
-    })
-
-    const usage = response.data.whoami.usage
     return {
-      limitExceeded: usage.exceededLimit,
-      limitRefreshDate: usage.resetDate
+      limitExceeded: false
     }
   }
 
