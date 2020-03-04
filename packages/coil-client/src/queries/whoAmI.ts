@@ -6,7 +6,6 @@ export interface WhoAmIData {
   whoami: CoilUser
 }
 
-// TODO: when in staging amend this with canTip
 export const whoamiQuery = `{
   whoami {
     id

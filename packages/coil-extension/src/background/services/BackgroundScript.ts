@@ -316,7 +316,6 @@ export class BackgroundScript {
         break
       case 'sendTip':
         sendResponse(await this.sendTip())
-        // sendResponse({ success: true })
         break
       default:
         sendResponse(false)
@@ -509,14 +508,18 @@ export class BackgroundScript {
     return true
   }
 
-  private async sendTip () {
+  private async sendTip() {
     const tab = this.activeTab
     const stream = this.streams.getStream(this.tabsToStreams[tab])
     const token = this.auth.getStoredToken()
 
     // TODO: return detailed errors
     if (!stream || !token) {
-      this.log('sendTip: no stream | token. !!stream !!token ', !!stream, !!token)
+      this.log(
+        'sendTip: no stream | token. !!stream !!token ',
+        !!stream,
+        !!token
+      )
       return { success: false }
     }
 
@@ -647,7 +650,7 @@ export class BackgroundScript {
   // This feature is no longer used
   async isRateLimited() {
     return {
-      limitExceeded: false,
+      limitExceeded: false
     }
   }
 

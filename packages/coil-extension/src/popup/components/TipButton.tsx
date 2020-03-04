@@ -16,7 +16,6 @@ export const TipButton = (props: PopupProps) => {
   const onClickTip = async () => {
     setTipState(TipState.LOADING)
 
-    // TODO: get the real payment pointer
     const { success } = await sendTip()
 
     if (success) {
@@ -30,9 +29,6 @@ export const TipButton = (props: PopupProps) => {
     }, 1000)
   }
 
-  /* TODO: use something like this to tip the current page.
-   * TODO: how do we grab the payment pointer from here?
-   * TODO: should we just handle the response inline?*/
   const sendTip = async () => {
     const message: SendTip = { command: 'sendTip' }
 
