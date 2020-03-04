@@ -64,7 +64,7 @@ export class AuthService extends EventEmitter {
     this.log('updateWhoAmi resp', resp.data)
     if (resp.data?.whoami) {
       this.store.user = {
-        ...resp.data.whoami,
+        ...resp.data.whoami
       }
       return token
     } else {

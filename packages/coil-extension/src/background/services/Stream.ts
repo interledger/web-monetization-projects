@@ -285,7 +285,7 @@ export class Stream extends EventEmitter {
     this.emit('abort', this._requestId)
   }
 
-  getPaymentPointer () {
+  getPaymentPointer() {
     return this._paymentPointer
   }
 }
