@@ -4,29 +4,40 @@ import { logger, Logger } from './utils'
 
 @injectable()
 export class YoutubeService {
-  searcher = /"channelId":"(.*?)"|data-channel-external-id="(.*?)"/
-
   constructor(
     @logger('YoutubeService')
     private log: Logger
   ) {}
 
   async fetchChannelId(videoUrl: string) {
-    const resp = await fetch(videoUrl)
+    let resp: Response
+    try {
+      resp = await fetch(videoUrl, {
+        mode: 'same-origin',
+        cache: 'only-if-cached'
+      })
+    } catch (e) {
+      resp = await fetch(videoUrl)
+    }
+
     if (!resp.ok || !resp.body) {
       return null
     } else {
       const chunk = await resp.text()
       this.log('searching chunk of length', chunk.length)
-      const searched = this.searcher.exec(chunk)
-      if (searched) {
-        const found = searched[1] || searched[2]
-        this.log('found', found)
-        return found
-      } else {
-        this.log('not found')
-      }
-      return null
+      const searcher = /"channelId":"(.*?)"|data-channel-external-id="(.*?)"/g
+      let searched: RegExpExecArray | null = null
+      let found: string | null = null
+      do {
+        searched = searcher.exec(chunk)
+        if (searched) {
+          found = searched[1] || searched[2]
+          this.log('found', found)
+        } else {
+          this.log('not found')
+        }
+      } while (searched)
+      return found ?? null
     }
   }
 }
