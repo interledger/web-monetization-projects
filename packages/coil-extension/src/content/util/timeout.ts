@@ -1,3 +1,3 @@
-export async function timeout(everyMs: number) {
-  return new Promise(resolve => setTimeout(resolve, everyMs))
+export async function timeout(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms))
 }
