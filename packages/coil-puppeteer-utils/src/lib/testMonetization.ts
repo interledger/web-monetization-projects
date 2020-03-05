@@ -155,15 +155,11 @@ export async function testMonetization({
 
   const success = await Promise.race([monetizePromise, timeoutPromise])
   let state: string | null = null
-
-  if (success) {
-    try {
-      state = await page.evaluate(() => (document as any).monetization.state)
-    } catch (e) {
-      // ignored
-    }
+  try {
+    state = await page.evaluate(() => (document as any).monetization.state)
+  } catch (e) {
+    // ignored
   }
-
   debug('seen states: %s, events: %s', statesSeen, eventsSeen)
   debug('document.monetization.state', state)
   return { stoppedPromise, page, success: success && state === 'started', url }
