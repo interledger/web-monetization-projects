@@ -1,6 +1,21 @@
-<a name="coil-extension@0.0.45"></a>
+<a name="coil-extension@0.0.47"></a>
 
-# [coil-extension@0.0.45](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.45...coil-extension@0.0.46) (2020-01-31)
+# [coil-extension@0.0.47](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.46...coil-extension@0.0.47) (2020-03-05)
+
+### Features
+
+- Update popup to use membership rather than subscription [#269](https://github.com/coilhq/web-monetization-projects/pull/269) [#386](https://github.com/coilhq/web-monetization-projects/pull/386)
+- Add tipping beta [#438](https://github.com/coilhq/web-monetization-projects/pull/438)
+- Add support for monetization of iframes [#415](https://github.com/coilhq/web-monetization-projects/pull/415)
+- Update dependencies
+
+### Bug Fixes
+
+- Fix youtube adaptation of some videos on Firefox [#443](https://github.com/coilhq/web-monetization-projects/pull/443)
+
+<a name="coil-extension@0.0.46"></a>
+
+# [coil-extension@0.0.46](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.45...coil-extension@0.0.46) (2020-01-31)
 
 ### Features
 
