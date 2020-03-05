@@ -12,8 +12,10 @@ import { MonetizationProgressEvent } from '@web-monetization/types'
 
 import * as tokens from '../../types/tokens'
 import {
+  CheckIFrameIsAllowedFromIFrameContentScript,
   ContentScriptInit,
   PauseWebMonetization,
+  ReportCorrelationIdFromIFrameContentScript,
   ResumeWebMonetization,
   StartWebMonetization,
   StopWebMonetization,
@@ -27,6 +29,17 @@ import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
 import { ContentAuthService } from './ContentAuthService'
 import { MonetizationEventsLogger } from './MonetizationEventsLogger'
+
+function startWebMonetizationMessage(request?: PaymentDetails) {
+  if (!request) {
+    throw new Error(`Expecting request to be set`)
+  }
+  const message: StartWebMonetization = {
+    command: 'startWebMonetization',
+    data: { ...request }
+  }
+  return message
+}
 
 @injectable()
 export class ContentScript {
@@ -44,46 +57,53 @@ export class ContentScript {
   ) {}
 
   handleMonetizationTag() {
-    const { runtime, monetization, window } = this
-
-    function startMonetization(details: PaymentDetails) {
-      const request: StartWebMonetization = {
-        command: 'startWebMonetization',
-        data: { ...details, initiatingUrl: window.location.href }
-      }
-
-      monetization.setMonetizationRequest({
+    const startMonetization = async (details: PaymentDetails) => {
+      this.monetization.setMonetizationRequest({
         paymentPointer: details.paymentPointer,
-        requestId: details.requestId
+        requestId: details.requestId,
+        initiatingUrl: details.initiatingUrl
       })
-      runtime.sendMessage(request)
+      if (this.frames.isIFrame) {
+        const allowed = !this.frames.isDirectChildFrame
+          ? false
+          : await new Promise<boolean>(resolve => {
+              const message: CheckIFrameIsAllowedFromIFrameContentScript = {
+                command: 'checkIFrameIsAllowedFromIFrameContentScript'
+              }
+              this.runtime.sendMessage(message, resolve)
+            })
+        if (!allowed) {
+          console.error(
+            '<iframe> is not authorized to allow web monetization, %s',
+            window.location.href
+          )
+          return
+        }
+      }
+      this.runtime.sendMessage(
+        startWebMonetizationMessage(this.monetization.getMonetizationRequest())
+      )
     }
 
-    function stopMonetization(details: PaymentDetails) {
+    const stopMonetization = (details: PaymentDetails) => {
       const request: StopWebMonetization = {
         command: 'stopWebMonetization',
         data: details
       }
-      monetization.setState({ state: 'stopped', finalized: true })
-      monetization.setMonetizationRequest(undefined)
-      runtime.sendMessage(request)
+      this.monetization.setState({ state: 'stopped', finalized: true })
+      this.monetization.setMonetizationRequest(undefined)
+      this.runtime.sendMessage(request)
     }
 
     const monitor = new MonetizationTagObserver(
+      this.window,
       this.document,
       ({ started, stopped }) => {
-        if (this.frames.isIFrame) {
-          console.error(
-            'This <iframe> is not authorized to use Web Monetization:',
-            this.window.location.href
-          )
-        } else {
-          if (stopped) {
-            stopMonetization(stopped)
-          }
-          if (started) {
-            startMonetization(started)
-          }
+        if (stopped) {
+          stopMonetization(stopped)
+        }
+        if (started) {
+          void startMonetization(started)
         }
       }
     )
@@ -93,9 +113,9 @@ export class ContentScript {
   }
 
   setRuntimeMessageListener() {
-    this.runtime.onMessage.addListener((request: ToContentMessage) => {
-      if (request.command === 'checkAdaptedContent') {
-        if (this.window.location.href === request.data.url) {
+    this.runtime.onMessage.addListener(
+      (request: ToContentMessage, sender, sendResponse) => {
+        if (request.command === 'checkAdaptedContent') {
           if (request.data && request.data.from) {
             debug(
               'checkAdaptedContent with from',
@@ -106,34 +126,37 @@ export class ContentScript {
           } else {
             debug('checkAdaptedContent without from')
           }
-          this.adaptedContent.checkAdaptedContent()
-        } else {
-          debug(
-            'ignoring checkAdaptedContent with different url',
-            this.window.location.href,
-            request.data.url
+          void this.adaptedContent.checkAdaptedContent()
+        } else if (request.command === 'setMonetizationState') {
+          this.monetization.setState(request.data)
+        } else if (request.command === 'monetizationProgress') {
+          const detail: MonetizationProgressEvent['detail'] = {
+            amount: request.data.amount,
+            assetCode: request.data.assetCode,
+            assetScale: request.data.assetScale,
+            paymentPointer: request.data.paymentPointer,
+            requestId: request.data.requestId
+          }
+          this.monetization.postMonetizationProgressWindowMessage(detail)
+        } else if (request.command === 'monetizationStart') {
+          debug('monetizationStart event')
+          this.monetization.postMonetizationStartWindowMessageAndSetMonetizationState(
+            request.data
           )
+        } else if (request.command === 'checkIFrameIsAllowedFromBackground') {
+          this.frames
+            .checkIfIframeIsAllowedFromBackground(request.data.frame)
+            .then(sendResponse)
+          return true
+        } else if (
+          request.command === 'reportCorrelationIdToParentContentScript'
+        ) {
+          this.frames.reportCorrelation(request.data)
         }
-      } else if (request.command === 'setMonetizationState') {
-        this.monetization.setState(request.data)
-      } else if (request.command === 'monetizationProgress') {
-        const detail: MonetizationProgressEvent['detail'] = {
-          amount: request.data.amount,
-          assetCode: request.data.assetCode,
-          assetScale: request.data.assetScale,
-          paymentPointer: request.data.paymentPointer,
-          requestId: request.data.requestId
-        }
-        this.monetization.postMonetizationProgressWindowMessage(detail)
-      } else if (request.command === 'monetizationStart') {
-        debug('monetizationStart event')
-        this.monetization.postMonetizationStartWindowMessageAndSetMonetizationState(
-          request.data
-        )
+        // Don't need to return true here, not using sendResponse
+        // https://developer.chrome.com/apps/runtime#event-onMessage
       }
-      // Don't need to return true here, not using sendResponse
-      // https://developer.chrome.com/apps/runtime#event-onMessage
-    })
+    )
   }
 
   watchPageEvents() {
@@ -156,7 +179,26 @@ export class ContentScript {
   }
 
   init() {
-    if (this.frames.isTopFrame) {
+    if (this.frames.isMonetizableFrame) {
+      this.frames.monitor()
+    }
+
+    if (this.frames.isDirectChildFrame) {
+      this.window.addEventListener('message', event => {
+        const data = event.data
+        if (typeof data.wmIFrameCorrelationId === 'string') {
+          const message: ReportCorrelationIdFromIFrameContentScript = {
+            command: 'reportCorrelationIdFromIFrameContentScript',
+            data: {
+              correlationId: data.wmIFrameCorrelationId
+            }
+          }
+          this.runtime.sendMessage(message)
+        }
+      })
+    }
+
+    if (this.frames.isMonetizableFrame) {
       const message: ContentScriptInit = { command: 'contentScriptInit' }
       this.runtime.sendMessage(message)
       whenDocumentReady(this.document, () => {

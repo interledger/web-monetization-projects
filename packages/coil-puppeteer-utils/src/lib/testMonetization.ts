@@ -16,8 +16,7 @@ import {
   hasCommonRequestIdAndPaymentPointer,
   isValidPendingEvent,
   isValidProgressEvent,
-  isValidStartEvent,
-  isValidStopEvent
+  isValidStartEvent
 } from './validators'
 import { AWAIT_MONETIZATION_TIMEOUT_MS } from './env'
 
@@ -129,7 +128,7 @@ export async function testMonetization({
           })
         } else {
           // Poll for document.monetization presence
-          setTimeout(setListener, 16)
+          setTimeout(setListener, 0)
         }
       }
       setListener()
@@ -137,7 +136,7 @@ export async function testMonetization({
   }
 
   if (env.IS_CI) {
-    await timeout(1e3)
+    await timeout(2e3)
   }
 
   await listenFor('monetizationpending')
@@ -158,7 +157,11 @@ export async function testMonetization({
   let state: string | null = null
 
   if (success) {
-    state = await page.evaluate(() => (document as any).monetization.state)
+    try {
+      state = await page.evaluate(() => (document as any).monetization.state)
+    } catch (e) {
+      // ignored
+    }
   }
 
   debug('seen states: %s, events: %s', statesSeen, eventsSeen)

@@ -80,6 +80,7 @@ export class MonetizationPolyfill {
     const { clearWatch, setWatch } = watchPageEvents()
 
     const monitor = new MonetizationTagObserver(
+      window,
       document,
       async ({ started, stopped }) => {
         debug({ started, stopped })

@@ -1,4 +1,4 @@
-import { injectable } from '@dier-makr/annotations'
+import { injectable } from 'inversify'
 
 import { logger, Logger } from './utils'
 
@@ -20,7 +20,11 @@ export class YoutubeService {
       this.log('searching chunk of length', chunk.length)
       const searched = this.searcher.exec(chunk)
       if (searched) {
-        return searched[1] || searched[2]
+        const found = searched[1] || searched[2]
+        this.log('found', found)
+        return found
+      } else {
+        this.log('not found')
       }
       return null
     }

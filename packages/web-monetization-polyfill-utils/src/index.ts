@@ -17,3 +17,4 @@ export { BackoffWaiter } from './lib/BackoffWaiter'
 export { resolvePaymentEndpoint } from './lib/resolvePaymentEndpoint'
 export { asyncUtils }
 export { getFarFutureExpiry } from './lib/getFarFutureExpiry'
+export { parsePolicyDirectives } from './lib/parsePolicyDirectives'

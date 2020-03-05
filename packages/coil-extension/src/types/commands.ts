@@ -6,6 +6,7 @@ import {
   StickyState,
   ToggleControlsAction
 } from './streamControls'
+import { FrameSpec } from './FrameSpec'
 
 /**
  * browser.runtime.sendMessage
@@ -71,7 +72,7 @@ export interface ResumeWebMonetization extends Command {
  */
 export interface StartWebMonetization extends Command {
   command: 'startWebMonetization'
-  data: PaymentDetails & { initiatingUrl: string }
+  data: PaymentDetails
 }
 
 /**
@@ -81,17 +82,6 @@ export interface StartWebMonetization extends Command {
 export interface StopWebMonetization extends Command {
   command: 'stopWebMonetization'
   data: PaymentDetails
-}
-
-/**
- * content -> backround
- * browser.runtime.sendMessage
- */
-export interface CheckToken extends Command {
-  command: 'checkToken'
-  data: {
-    token: string
-  }
 }
 
 /**
@@ -114,6 +104,50 @@ export interface FetchYoutubeChannelId extends Command {
   }
 }
 
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface FrameStateChange extends Command {
+  command: 'frameStateChange'
+  data: {
+    state: Document['readyState']
+    href: string
+  }
+}
+
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface UnloadFrame extends Command {
+  command: 'unloadFrame'
+  // frameId is retrieved via MessageSender['frameId']
+}
+
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface ReportCorrelationIdFromIFrameContentScript extends Command {
+  command: 'reportCorrelationIdFromIFrameContentScript'
+  data: {
+    correlationId: string
+    // FrameSpec is implied
+  }
+}
+
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface CheckIFrameIsAllowedFromIFrameContentScript extends Command {
+  command: 'checkIFrameIsAllowedFromIFrameContentScript'
+  // data: {
+  // FrameSpec is implied
+  // }
+}
+
 export type ToBackgroundMessage =
   | PauseWebMonetization
   | ResumeWebMonetization
@@ -128,6 +162,10 @@ export type ToBackgroundMessage =
   | ContentScriptInit
   | FetchYoutubeChannelId
   | SendTip
+  | FrameStateChange
+  | UnloadFrame
+  | CheckIFrameIsAllowedFromIFrameContentScript
+  | ReportCorrelationIdFromIFrameContentScript
 
 export type IconState =
   | 'streaming-paused'
@@ -165,7 +203,7 @@ export interface IsRateLimited extends Command {
  */
 export interface CheckAdaptedContent {
   command: 'checkAdaptedContent'
-  data: { from?: string; url?: string }
+  data: { from?: string }
 }
 
 /**
@@ -238,10 +276,35 @@ export interface SendTipResult {
   success: boolean
 }
 
+/**
+ *  background -> content
+ *  browser.tabs.sendMessage
+ */
+export interface CheckIFrameIsAllowedFromBackground {
+  command: 'checkIFrameIsAllowedFromBackground'
+  data: {
+    frame: FrameSpec
+  }
+}
+
+/**
+ *  background -> content
+ *  browser.tabs.sendMessage
+ */
+export interface ReportCorrelationIdToParentContentScript {
+  command: 'reportCorrelationIdToParentContentScript'
+  data: {
+    frame: FrameSpec
+    correlationId: string
+  }
+}
+
 export type ToContentMessage =
   | CheckAdaptedContent
   | MonetizationProgress
   | MonetizationStart
   | SetMonetizationState
+  | CheckIFrameIsAllowedFromBackground
+  | ReportCorrelationIdToParentContentScript
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup
