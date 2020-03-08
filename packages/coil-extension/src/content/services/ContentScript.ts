@@ -14,6 +14,7 @@ import * as tokens from '../../types/tokens'
 import {
   CheckIFrameIsAllowedFromIFrameContentScript,
   ContentScriptInit,
+  OnFrameAllowedChanged,
   PauseWebMonetization,
   ReportCorrelationIdFromIFrameContentScript,
   ResumeWebMonetization,
@@ -43,6 +44,7 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 
 @injectable()
 export class ContentScript {
+  private paused = false
   constructor(
     private storage: Storage,
     private window: Window,
@@ -58,11 +60,7 @@ export class ContentScript {
 
   handleMonetizationTag() {
     const startMonetization = async (details: PaymentDetails) => {
-      this.monetization.setMonetizationRequest({
-        paymentPointer: details.paymentPointer,
-        requestId: details.requestId,
-        initiatingUrl: details.initiatingUrl
-      })
+      this.monetization.setMonetizationRequest({ ...details })
       if (this.frames.isIFrame) {
         const allowed = !this.frames.isDirectChildFrame
           ? false
@@ -152,6 +150,8 @@ export class ContentScript {
           request.command === 'reportCorrelationIdToParentContentScript'
         ) {
           this.frames.reportCorrelation(request.data)
+        } else if (request.command === 'onFrameAllowedChanged') {
+          this.onFrameAllowedChanged(request)
         }
         // Don't need to return true here, not using sendResponse
         // https://developer.chrome.com/apps/runtime#event-onMessage
@@ -236,17 +236,48 @@ export class ContentScript {
     const runtime = this.runtime
     setWatch({
       pause: () => {
+        this.paused = true
         const pause: PauseWebMonetization = {
           command: 'pauseWebMonetization'
         }
         runtime.sendMessage(pause)
       },
       resume: () => {
+        this.paused = false
         const resume: ResumeWebMonetization = {
           command: 'resumeWebMonetization'
         }
         runtime.sendMessage(resume)
       }
     })
+  }
+
+  private onFrameAllowedChanged(request: OnFrameAllowedChanged) {
+    const allowed = request.data.allowed
+    const monetizationRequest = this.monetization.getMonetizationRequest()
+    if (allowed) {
+      if (
+        this.monetization.hasRequest() &&
+        this.monetization.getState() === 'stopped'
+      ) {
+        this.runtime.sendMessage(
+          startWebMonetizationMessage(monetizationRequest)
+        )
+        if (this.paused) {
+          const pause: PauseWebMonetization = {
+            command: 'pauseWebMonetization'
+          }
+          this.runtime.sendMessage(pause)
+        }
+      }
+    } else {
+      if (monetizationRequest) {
+        const message: StopWebMonetization = {
+          command: 'stopWebMonetization',
+          data: monetizationRequest
+        }
+        this.runtime.sendMessage(message)
+      }
+    }
   }
 }

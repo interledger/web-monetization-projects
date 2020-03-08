@@ -15,6 +15,7 @@ import {
   ContentScriptInit,
   MonetizationProgress,
   MonetizationStart,
+  OnFrameAllowedChanged,
   PauseWebMonetization,
   ReportCorrelationIdFromIFrameContentScript,
   ReportCorrelationIdToParentContentScript,
@@ -28,7 +29,6 @@ import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
-import { timeout } from '../../content/util/timeout'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -91,6 +91,7 @@ export class BackgroundScript {
     this.routeStreamsMoneyEventsToContentScript()
     this.handleStreamsAbortEvent()
     this.framesService.monitor()
+    // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
   }
 
@@ -350,6 +351,9 @@ export class BackgroundScript {
           await this.reportCorrelationIdFromIFrameContentScript(request, sender)
         )
         break
+      case 'onFrameAllowedChanged':
+        sendResponse(await this.onFrameAllowedChanged(request, sender))
+        break
       default:
         sendResponse(false)
         break
@@ -583,6 +587,7 @@ export class BackgroundScript {
     const token = await this.auth.getTokenMaybeRefreshAndStoreState()
     if (!token) {
       // not signed in.
+      // eslint-disable-next-line no-console
       console.warn('startWebMonetization cancelled; no token')
       this.sendSetMonetizationStateMessage(frame, 'stopped')
       return false
@@ -597,8 +602,9 @@ export class BackgroundScript {
       emitPending()
     }
 
-    const lastCommand = this.tabStates.getFrame(frame).lastMonetization.command
-    if (lastCommand !== 'start') {
+    const lastCommand = this.tabStates.getFrameOrDefault(frame).lastMonetization
+      .command
+    if (lastCommand !== 'start' && lastCommand !== 'pause') {
       this.log('startWebMonetization cancelled via', lastCommand)
       return false
     }
@@ -613,6 +619,12 @@ export class BackgroundScript {
       initiatingUrl: request.data.initiatingUrl
     })
 
+    if (lastCommand === 'pause') {
+      // TODO: why do we need the timeout here ?
+      setTimeout(() => {
+        this.doPauseWebMonetization(frame)
+      }, 0)
+    }
     return true
   }
 
@@ -827,15 +839,24 @@ export class BackgroundScript {
   }
 
   private contentScriptInit(request: ContentScriptInit, sender: MessageSender) {
-    const tabId = getTab(sender)
-    const frameId = notNullOrUndef(sender.frameId)
+    const { tabId, frameId, spec } = getFrameSpec(sender)
     // Content script used to send a stopWebMonetization message every time
     // it loaded. Noop if no stream for tab.
     this._closeStreams(tabId, frameId)
-    this.tabStates.clearFrame({ tabId: tabId, frameId: frameId })
+    this.tabStates.clearFrame(spec)
     this.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
     return true
+  }
+
+  private async onFrameAllowedChanged(
+    request: OnFrameAllowedChanged,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _: MessageSender
+  ) {
+    this.api.tabs.sendMessage(request.data.frame.tabId, request, {
+      frameId: request.data.frame.frameId
+    })
   }
 }

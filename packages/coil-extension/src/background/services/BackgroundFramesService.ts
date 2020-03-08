@@ -287,7 +287,7 @@ export class BackgroundFramesService extends EventEmitter {
       makeCallback('onReferenceFragmentUpdated')
     )
 
-    // These are required otherwise there's a race between usages of getFrame()
+    // These are required otherwise there's a race between usages of getFrameOrDefault()
     // and the initial `useWebNavigationToUpdateFrames()`
     this.api.webNavigation.onCommitted.addListener(makeCallback('onCommitted'))
     this.api.webNavigation.onCompleted.addListener(makeCallback('onCompleted'))

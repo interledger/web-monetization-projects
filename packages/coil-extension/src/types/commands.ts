@@ -1,5 +1,6 @@
 import { PaymentDetails } from '@web-monetization/polyfill-utils'
 import { MonetizationState } from '@web-monetization/types'
+import { Frame } from 'puppeteer'
 
 import {
   PlayOrPauseState,
@@ -117,6 +118,18 @@ export interface FrameStateChange extends Command {
 }
 
 /**
+ * content -> background, background -> content
+ * browser.runtime.sendMessage, browser.tabs.sendMessage
+ */
+export interface OnFrameAllowedChanged extends Command {
+  command: 'onFrameAllowedChanged'
+  data: {
+    frame: FrameSpec
+    allowed: boolean
+  }
+}
+
+/**
  * content -> background
  * browser.runtime.sendMessage
  */
@@ -166,6 +179,7 @@ export type ToBackgroundMessage =
   | UnloadFrame
   | CheckIFrameIsAllowedFromIFrameContentScript
   | ReportCorrelationIdFromIFrameContentScript
+  | OnFrameAllowedChanged
 
 export type IconState =
   | 'streaming-paused'
@@ -306,5 +320,6 @@ export type ToContentMessage =
   | SetMonetizationState
   | CheckIFrameIsAllowedFromBackground
   | ReportCorrelationIdToParentContentScript
+  | OnFrameAllowedChanged
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup

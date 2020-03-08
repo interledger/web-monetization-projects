@@ -94,7 +94,10 @@ export class DocumentMonetization {
       if (this.request && (state === 'stopped' || state === 'pending')) {
         this.postMonetizationMessage(
           state === 'pending' ? 'monetizationpending' : 'monetizationstop',
-          this.request,
+          {
+            paymentPointer: this.request.paymentPointer,
+            requestId: this.request.requestId
+          },
           finalized
         )
       }
@@ -119,8 +122,9 @@ export class DocumentMonetization {
     detailSource: MonetizationEvent['detail'],
     finalized?: boolean
   ) {
-    // Don't mutate the request
+    // Don't mutate the request (and omit initiating url)
     const detail = { ...detailSource }
+
     if (type === 'monetizationstop') {
       const stop = detail as MonetizationStopEvent['detail']
       stop.finalized = Boolean(finalized)
@@ -165,5 +169,9 @@ export class DocumentMonetization {
 
   hasRequest() {
     return !!this.request
+  }
+
+  getState() {
+    return this.state
   }
 }

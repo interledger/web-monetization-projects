@@ -2,7 +2,11 @@ import { inject, injectable } from 'inversify'
 import * as uuid from 'uuid'
 
 import * as tokens from '../../types/tokens'
-import { FrameStateChange, UnloadFrame } from '../../types/commands'
+import {
+  FrameStateChange,
+  OnFrameAllowedChanged,
+  UnloadFrame
+} from '../../types/commands'
 import { ContentRuntime } from '../types/ContentRunTime'
 import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { isMonetizationAllowed } from '../util/isMonetizationAllowed'
@@ -52,6 +56,7 @@ export class Frames {
     HTMLIFrameElement,
     {
       frame: Promise<FrameSpec>
+      lastAllowed: boolean
     }
   >()
 
@@ -87,13 +92,43 @@ export class Frames {
             '*'
           )
         })
+        const observer = new MutationObserver((records: MutationRecord[]) => {
+          for (const record of records) {
+            if (
+              record.type === 'attributes' &&
+              record.attributeName === 'allow'
+            ) {
+              framePromise.then(frame => {
+                const cached = this.frames.get(frameEl)
+                // Note that allow attribute may have changed, but it could have
+                // been something else
+                if (cached) {
+                  const allowed = isMonetizationAllowed(frameEl)
+                  if (cached.lastAllowed !== allowed) {
+                    cached.lastAllowed = allowed
+                    this.onAllowedChanged(allowed, frame)
+                  }
+                }
+              })
+            }
+          }
+        })
+        framePromise.then(() => {
+          observer.observe(frameEl, {
+            attributes: true,
+            attributeFilter: ['allow']
+          })
+        })
         result = {
-          frame: framePromise
+          frame: framePromise,
+          lastAllowed: false
         }
         this.frames.set(frameEl, result)
       }
       if (sameFrame(await result.frame, frameSpec)) {
-        return isMonetizationAllowed(frameEl)
+        return (notNullOrUndef(
+          this.frames.get(frameEl)
+        ).lastAllowed = isMonetizationAllowed(frameEl))
       }
     }
     return false
@@ -104,6 +139,17 @@ export class Frames {
       command: 'unloadFrame'
     }
     this.runtime.sendMessage(unload)
+  }
+
+  onAllowedChanged(allowed: boolean, frame: FrameSpec) {
+    const changed: OnFrameAllowedChanged = {
+      command: 'onFrameAllowedChanged',
+      data: {
+        allowed,
+        frame
+      }
+    }
+    this.runtime.sendMessage(changed)
   }
 
   private sendStateChange() {
@@ -124,6 +170,7 @@ export class Frames {
       this.frameQueue.delete(key)
       queued.resolve(data.frame)
     } else {
+      // eslint-disable-next-line no-console
       console.warn('unknown correlation id/frame', data)
     }
   }
