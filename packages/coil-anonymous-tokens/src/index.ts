@@ -86,6 +86,8 @@ export interface TokenStore {
   ) => Promise<StorableBlindToken | undefined>
 }
 
+export { StorableBlindToken }
+
 export interface AnonymousTokensOptions {
   // The `protocol://host` of the coil services.
   redeemerUrl: string
@@ -93,6 +95,11 @@ export interface AnonymousTokensOptions {
   store: TokenStore
   debug?: typeof console.log
   batchSize: number
+}
+
+interface Commitment {
+  G: string
+  H: string
 }
 
 export class AnonymousTokens {
@@ -295,14 +302,14 @@ export class AnonymousTokens {
     }
   }
 
-  // TODO: todo
-  private async _getCommitments() {
-    return {
-      G:
-        'BCyENEmEdWz3Wivy7iwXFcLZ0xOW7PCe2BtoMD6sYBqUK+PBZad5euc1tP9ekcdSDxxK3ijgHsQ1PqQim4VqDGo=',
-      H:
-        'BJj8hRLfPSe+GNfbS3Jd2XmYU3XTEJw+TaTxx7M9lxVY9BDI6toWVpmffMR0P28XJcV3W0SGWX2OOrRLaBYGhwM='
+  private async _getCommitments(): Promise<Commitment[]> {
+    const response = await fetch(this.redeemerUrl + '/commitments', {
+      method: 'GET'
+    })
+    if (!response.ok || response.status !== 200) {
+      throw new Error(`_getCommitments failed with code=${response.status}`)
     }
+    return response.json()
   }
 
   // TODO: no any
@@ -313,7 +320,10 @@ export class AnonymousTokens {
     tokens: BlindToken[]
   ) {
     const commitments = await this._getCommitments()
-    if (!verifyProof(proof, tokens, curvePoints, commitments, prng)) {
+    const isValidProof = commitments.some(commitment => {
+      return verifyProof(proof, tokens, curvePoints, commitment, prng)
+    })
+    if (!isValidProof) {
       throw new Error('[privacy pass]: unable to verify dleq proof.')
     }
   }

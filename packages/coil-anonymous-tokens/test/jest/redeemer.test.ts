@@ -33,7 +33,7 @@ describe('Anonymous tokens service', () => {
 
     tokens = new AnonymousTokens({
       redeemerUrl: 'http://localhost:8081/redeemer',
-      signerUrl: 'http://localhost:8080/redeemer',
+      signerUrl: 'http://localhost:8080/issuer',
       store: new MockStore(),
       debug: console.debug,
       batchSize: 10
