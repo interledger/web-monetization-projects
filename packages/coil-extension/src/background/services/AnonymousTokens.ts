@@ -48,8 +48,8 @@ class TokenStore {
       value: string,
       key: string,
       iterationNumber: number
-    ) => anonymousTokens.SignedToken | undefined
-  ): Promise<anonymousTokens.SignedToken | undefined> {
+    ) => anonymousTokens.StorableBlindToken | undefined
+  ): Promise<anonymousTokens.StorableBlindToken | undefined> {
     let i = 0
     let key
     while ((key = this.storage.key(i)) !== null) {
