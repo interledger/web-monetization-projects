@@ -5,6 +5,14 @@
 # debugging.
 set -ex
 
+SKIP_YARN=${SKIP_YARN:-false}
+if [[ ${SKIP_YARN} = 'true' ]]
+then
+  echo 'skipping yarn'
+else
+  yarn
+fi
+
 # This is just a small module, and it's a pain to try and load it dynamically
 # so compile this manually and require via package.json#main === build/
 yarn tsc -b "../webexts-build-utils/tsconfig.build.json"
@@ -50,4 +58,4 @@ else
 fi
 
 echo Running ${BUILD_ENV} build for ${BROWSER_NAME}...
-BROWSER=${BROWSER_NAME} API=${BROWSER_API} npx webpack-cli --reporter basic --config ${WEBPACK} ${EXTRA_ARGS}
+BROWSER=${BROWSER_NAME} API=${BROWSER_API} yarn webpack-cli --reporter basic --config ${WEBPACK} ${EXTRA_ARGS}
