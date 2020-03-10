@@ -30,7 +30,7 @@ export function makeWebpackConfig(rootDir: string) {
     : TSCONFIG_BUILD_JSON
 
   // Possible to override name/version so can publish as different extension
-  const WEXT_MANIFEST_NAME = process.env.WEXT_MANIFEST_NAME
+  const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
   const WEXT_MANIFEST_VERSION = process.env.WEXT_MANIFEST_VERSION
   const WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID =
     process.env.WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
@@ -41,8 +41,8 @@ export function makeWebpackConfig(rootDir: string) {
       to: 'manifest.json',
       transform: (content: Buffer) => {
         const manifest = JSON.parse(content.toString())
-        if (WEXT_MANIFEST_NAME) {
-          manifest.name = WEXT_MANIFEST_NAME
+        if (WEXT_MANIFEST_SUFFIX) {
+          manifest.name += WEXT_MANIFEST_SUFFIX
         }
         if (WEXT_MANIFEST_VERSION) {
           manifest.version = WEXT_MANIFEST_VERSION
