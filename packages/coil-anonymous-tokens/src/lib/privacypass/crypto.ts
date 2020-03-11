@@ -9,6 +9,11 @@ import { ASN1, PEM } from 'asn1-parser'
 
 import { h2Curve } from './hashToCurve'
 
+export interface CurvePoints {
+  points: sjcl.SjclEllipticalPoint[]
+  compressed: boolean
+}
+
 const shake256 = () => {
   return keccak('shake256')
 }
@@ -192,7 +197,7 @@ export function sec1DecodeFromBase64(p) {
  * @param {sjcl.codec.bytes} sec1Bytes bytes of an uncompressed curve point
  * @return {sjcl.ecc.point}
  */
-export function sec1DecodeFromBytes(sec1Bytes) {
+export function sec1DecodeFromBytes(sec1Bytes): sjcl.SjclEllipticalPoint {
   let P
   switch (sec1Bytes[0]) {
     case 0x02:
@@ -217,7 +222,7 @@ export function sec1DecodeFromBytes(sec1Bytes) {
  * @param {sjcl.codec.bytes} bytes bytes of a compressed curve point (SEC1)
  * @return {sjcl.ecc.point} may be null if compressed bytes are not valid
  */
-export function decompressPoint(bytes) {
+export function decompressPoint(bytes): sjcl.SjclEllipticalPoint | null {
   const yTag = bytes[0]
   const expLength = CURVE.r.bitLength() / 8 + 1 // bitLength rounds up
   if (yTag != 2 && yTag != 3) {
@@ -268,7 +273,7 @@ export function decompressPoint(bytes) {
  * @param {Array<string>} signatures An array of base64-encoded signed points
  * @return {Object} object containing array of curve points and compression flag
  */
-export function getCurvePoints(signatures) {
+export function getCurvePoints(signatures): CurvePoints {
   const compression = { on: false, set: false }
   const sigBytes: number[][] = []
   signatures.forEach(function(signature) {
@@ -295,8 +300,7 @@ export function getCurvePoints(signatures) {
     sigBytes.push(buf)
   })
 
-  // TODO: no any
-  const usablePoints: any[] = []
+  const usablePoints: sjcl.SjclEllipticalPoint[] = []
   sigBytes.forEach(function(buf) {
     const usablePoint = sec1DecodeFromBytes(buf)
     if (usablePoint == null) {

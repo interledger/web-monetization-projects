@@ -385,14 +385,10 @@ class StreamAttempt {
         resolve()
       }
 
-      const onConnectionClose = (err?: Error) => {
-        // TODO: this seems to *always* run despite the cleanup() call in
-        //   the onPluginDisconnect() callback.
-        //   This then is essentially a noop ? Is there any case where plugin
-        //    disconnected won't be run first ?
+      const onConnectionError = (err: Error) => {
         this._debug('onConnectionClose(%s)', err)
         cleanUp()
-        reject(err || new Error('connection closed.'))
+        reject(err)
       }
 
       const onUpdateAmountTimeout = async () => {
@@ -413,8 +409,7 @@ class StreamAttempt {
       const cleanUp = () => {
         this._debug('cleanup()')
         this._ilpStream.removeListener('outgoing_money', onMoney)
-        this._connection.removeListener('error', onConnectionClose)
-        this._connection.removeListener('close', onConnectionClose)
+        this._connection.removeListener('error', onConnectionError)
         plugin.removeListener('disconnect', onPluginDisconnect)
         // eslint-disable-next-line @typescript-eslint/no-use-before-define
         clearTimeout(updateAmountTimeout)
@@ -422,8 +417,7 @@ class StreamAttempt {
 
       plugin.once('disconnect', onPluginDisconnect)
       this._ilpStream.on('outgoing_money', onMoney)
-      this._connection.once('error', onConnectionClose)
-      this._connection.once('close', onConnectionClose)
+      this._connection.once('error', onConnectionError)
       let updateAmountTimeout = setTimeout(
         onUpdateAmountTimeout,
         UPDATE_AMOUNT_TIMEOUT

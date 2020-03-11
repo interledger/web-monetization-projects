@@ -15,6 +15,7 @@ import {
   BuildRedeemHeader,
   BlindToken,
   StorableBlindToken,
+  CurvePoints,
   parseIssueResp,
   getCurvePoints,
   verifyProof,
@@ -214,21 +215,6 @@ export class AnonymousTokens {
     return this.store.removeItem(TOKEN_PREFIX + anonUserId)
   }
 
-  private async _getKeyParams(): Promise<PublicFields> {
-    const paramsRes = await fetch(this.signerUrl + '/parameters')
-    if (!paramsRes.ok) {
-      this.debug('error fetching parameters status=%d', paramsRes.status)
-      throw new Error('could not fetch key params from coil')
-    }
-
-    const result = await paramsRes.json()
-    return {
-      n: new BigInteger(result.n, 16),
-      e: result.e,
-      month: result.month
-    }
-  }
-
   private async _signToken(
     coilAuthToken: string,
     request: string
@@ -265,9 +251,6 @@ export class AnonymousTokens {
   }
 
   private async _populateTokensNow(coilAuthToken: string): Promise<void> {
-    // TODO: how do we manage commitments?
-    // const key = await this._getKeyParams()
-
     // Generate all tokens first so the timing in between tokens can't be used
     // to learn anything about the token or blinding factor.
     const tokens = GenerateNewTokens(this.batchSize)
@@ -290,8 +273,10 @@ export class AnonymousTokens {
     await signPromise
   }
 
-  // TODO: no any
-  private _storeNewTokens(tokens: BlindToken[], signedPoints: any) {
+  private _storeNewTokens(
+    tokens: BlindToken[],
+    signedPoints: sjcl.SjclEllipticalPoint[]
+  ) {
     for (let i = 0; i < tokens.length; ++i) {
       const encoded = getTokenEncoding(tokens[i], signedPoints[i])
       this.store.setItem(
@@ -312,11 +297,10 @@ export class AnonymousTokens {
     return response.json()
   }
 
-  // TODO: no any
   private async _verifyProof(
     proof: string,
     prng: string,
-    curvePoints: any,
+    curvePoints: CurvePoints,
     tokens: BlindToken[]
   ) {
     const commitments = await this._getCommitments()

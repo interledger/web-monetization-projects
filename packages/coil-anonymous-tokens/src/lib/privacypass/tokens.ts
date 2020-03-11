@@ -9,7 +9,7 @@ import {
 
 export interface BlindToken {
   data: any
-  point: BigNumber
+  point: SjclEllipticalPoint
   blind: BigNumber
 }
 
