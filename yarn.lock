@@ -16536,10 +16536,10 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yaml@^1.7.2, yaml@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.8.0.tgz#169fbcfa2081302dc9441d02b0b6fe667e4f74c9"
-  integrity sha512-6qI/tTx7OVtA4qNqD0OyutbM6Z9EKu4rxWm/2Y3FDEBQ4/2X2XAnyuRXMzAE2+1BPyqzksJZtrIwblOHg0IEzA==
+yaml@^1.7.2, yaml@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.8.1.tgz#3a8cdb877ec9da2350f22b476a117e28e30069d8"
+  integrity sha512-vIXHJILY3e2Ru5s+hFwmO0fSHo0zm30AJ/eBaIUd/54xVocvjzix4bPOtjIGxKm5VDSOt5psTKW6CEv3WHzWdg==
   dependencies:
     "@babel/runtime" "^7.8.7"
 
