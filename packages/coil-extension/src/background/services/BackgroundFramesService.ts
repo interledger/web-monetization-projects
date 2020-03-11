@@ -3,8 +3,9 @@ import { EventEmitter } from 'events'
 import { inject, injectable } from 'inversify'
 import * as tokens from '@web-monetization/wext/tokens'
 
+import { flatMapSlow } from '../util/flatMapSlow'
 import { getFrameSpec } from '../../util/tabs'
-import { ToBackgroundMessage } from '../../types/commands'
+import { Command, ToBackgroundMessage } from '../../types/commands'
 import { FrameSpec } from '../../types/FrameSpec'
 
 import { logger, Logger } from './utils'
@@ -114,6 +115,18 @@ export class BackgroundFramesService extends EventEmitter {
     return frames.find(f => {
       return f.frameId == frame.frameId
     })
+  }
+
+  getChildren(frame: FrameSpec): Array<Readonly<Frame>> {
+    const frames = this.getFrames(frame.tabId)
+    const directChildren = frames.filter(f => {
+      return f.parentFrameId == frame.frameId
+    })
+    return directChildren.concat(
+      flatMapSlow(directChildren, fs =>
+        this.getChildren({ tabId: frame.tabId, frameId: fs.frameId })
+      )
+    )
   }
 
   getFrames(tabId: number): Array<Readonly<Frame>> {
@@ -308,6 +321,21 @@ export class BackgroundFramesService extends EventEmitter {
         void this.onMessageAsync(sender, message)
       }
     )
+  }
+
+  async sendCommand<C extends Command, R>(
+    { tabId, frameId }: FrameSpec,
+    command: C
+  ): Promise<R> {
+    return new Promise<R>((resolve, reject) => {
+      this.api.tabs.sendMessage(tabId, command, { frameId }, (result: R) => {
+        if (this.api.runtime.lastError) {
+          reject(this.api.runtime.lastError)
+        } else {
+          resolve(result)
+        }
+      })
+    })
   }
 
   private async onMessageAsync(

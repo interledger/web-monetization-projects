@@ -17,7 +17,7 @@ export interface LocalStorageUpdate extends Command {
   key: string
 }
 
-interface Command<T = any> {
+export interface Command<T = any> {
   command: string
   data?: T
 }

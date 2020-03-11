@@ -61,26 +61,7 @@ export class ContentScript {
   handleMonetizationTag() {
     const startMonetization = async (details: PaymentDetails) => {
       this.monetization.setMonetizationRequest({ ...details })
-      if (this.frames.isIFrame) {
-        const allowed = !this.frames.isDirectChildFrame
-          ? false
-          : await new Promise<boolean>(resolve => {
-              const message: CheckIFrameIsAllowedFromIFrameContentScript = {
-                command: 'checkIFrameIsAllowedFromIFrameContentScript'
-              }
-              this.runtime.sendMessage(message, resolve)
-            })
-        if (!allowed) {
-          console.error(
-            '<iframe> is not authorized to allow web monetization, %s',
-            window.location.href
-          )
-          return
-        }
-      }
-      this.runtime.sendMessage(
-        startWebMonetizationMessage(this.monetization.getMonetizationRequest())
-      )
+      await this.doStartMonetization()
     }
 
     const stopMonetization = (details: PaymentDetails) => {
@@ -108,6 +89,29 @@ export class ContentScript {
 
     // // Scan for WM meta tags when page is interactive
     monitor.startWhenDocumentReady()
+  }
+
+  private async doStartMonetization() {
+    if (this.frames.isIFrame) {
+      const allowed = await new Promise<boolean>(resolve => {
+        const message: CheckIFrameIsAllowedFromIFrameContentScript = {
+          command: 'checkIFrameIsAllowedFromIFrameContentScript'
+        }
+        this.runtime.sendMessage(message, resolve)
+      })
+      if (!allowed) {
+        // eslint-disable-next-line no-console
+        console.error(
+          '<iframe> (or one of its ancestors) ' +
+            'is not authorized to allow web monetization, %s',
+          window.location.href
+        )
+        return
+      }
+    }
+    this.runtime.sendMessage(
+      startWebMonetizationMessage(this.monetization.getMonetizationRequest())
+    )
   }
 
   setRuntimeMessageListener() {
@@ -183,7 +187,7 @@ export class ContentScript {
       this.frames.monitor()
     }
 
-    if (this.frames.isDirectChildFrame) {
+    if (this.frames.isIFrame) {
       this.window.addEventListener('message', event => {
         const data = event.data
         if (typeof data.wmIFrameCorrelationId === 'string') {
@@ -256,13 +260,8 @@ export class ContentScript {
     const allowed = request.data.allowed
     const monetizationRequest = this.monetization.getMonetizationRequest()
     if (allowed) {
-      if (
-        this.monetization.hasRequest() &&
-        this.monetization.getState() === 'stopped'
-      ) {
-        this.runtime.sendMessage(
-          startWebMonetizationMessage(monetizationRequest)
-        )
+      if (monetizationRequest && this.monetization.getState() === 'stopped') {
+        void this.doStartMonetization()
         if (this.paused) {
           const pause: PauseWebMonetization = {
             command: 'pauseWebMonetization'

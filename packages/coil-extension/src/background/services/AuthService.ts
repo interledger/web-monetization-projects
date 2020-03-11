@@ -8,6 +8,7 @@ import * as tokens from '../../types/tokens'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
+import { CachedOperations } from './CachedOperations'
 
 @injectable()
 export class AuthService extends EventEmitter {
@@ -19,7 +20,8 @@ export class AuthService extends EventEmitter {
     private domain: string,
     @logger('AuthService')
     private log: Logger,
-    private siteToken: SiteToken
+    private siteToken: SiteToken,
+    private cached: CachedOperations
   ) {
     super()
   }
@@ -44,7 +46,12 @@ export class AuthService extends EventEmitter {
       // Routinely do a whoami query to check for subscription status
       // Query could fail if token is invalid
       this.log('doing updateWhoAmI', token)
-      token = await this.updateWhoAmi(token)
+      const stored = token
+      token = await this.cached.query({
+        key: 'updateWhoAmI',
+        maxAgeMs: 15e3,
+        operationFactory: async () => this.updateWhoAmi(stored)
+      })
       this.log('token after updateWhoAmI', token)
     }
 
