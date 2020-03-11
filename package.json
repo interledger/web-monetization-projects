@@ -89,7 +89,7 @@
     "tsconfig-paths": "^3.9.0",
     "typescript": "3.8.3",
     "webpack": "^4.42",
-    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-bundle-analyzer": "^3.6.1",
     "webpack-cli": "^3.3.11",
     "webpack-command": "^0.5.0",
     "webpack-dev-server": "^3.10.3",
