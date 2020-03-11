@@ -33,7 +33,7 @@ export class Frames {
     this.isIFrame = !this.isTopFrame
     this.isCoilTopFrame = this.isTopFrame && this.isAnyCoilFrame
     this.isDirectChildFrame = this.isIFrame && window.parent === window.top
-    this.isMonetizableFrame = this.isTopFrame || this.isDirectChildFrame
+    this.isMonetizableFrame = true
   }
 
   monitor() {

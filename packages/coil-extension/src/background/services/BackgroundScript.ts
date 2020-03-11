@@ -497,37 +497,37 @@ export class BackgroundScript {
   }
 
   async checkIFrameIsAllowedFromIFrameContentScript(sender: MessageSender) {
-    const frame = getFrameSpec(sender)
+    let frame = getFrameSpec(sender) as FrameSpec
     const { tabId, frameId } = frame
 
     if (frameId !== 0) {
-      const parentId = this.framesService.getFrame(frame)?.parentFrameId
-      if (typeof parentId === 'undefined') {
-        throw new Error(
-          `expecting ${JSON.stringify(frame)} to have parentFrameId`
-        )
-      }
-      const allowed = new Promise<boolean>((resolve, reject) => {
-        const message: CheckIFrameIsAllowedFromBackground = {
-          command: 'checkIFrameIsAllowedFromBackground',
-          data: {
-            frame
-          }
+      let allowed = true
+      while (allowed) {
+        const parentId = this.framesService.getFrame(frame)?.parentFrameId
+        if (typeof parentId === 'undefined') {
+          throw new Error(
+            `expecting ${JSON.stringify(frame)} to have parentFrameId`
+          )
         }
-        this.api.tabs.sendMessage(
-          tabId,
-          message,
-          { frameId: parentId },
-          (result: boolean) => {
-            if (this.api.runtime.lastError) {
-              reject(this.api.runtime.lastError)
-            } else {
-              resolve(result)
+        allowed = await this.framesService.sendCommand<
+          CheckIFrameIsAllowedFromBackground,
+          boolean
+        >(
+          { tabId, frameId: parentId },
+          {
+            command: 'checkIFrameIsAllowedFromBackground',
+            data: {
+              frame
             }
           }
         )
-      })
-      return await allowed
+        if (parentId === 0) {
+          break
+        } else {
+          frame = { tabId: frame.tabId, frameId: parentId }
+        }
+      }
+      return allowed
     } else {
       throw new Error(`sender must be non top frame`)
     }
@@ -855,8 +855,13 @@ export class BackgroundScript {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _: MessageSender
   ) {
-    this.api.tabs.sendMessage(request.data.frame.tabId, request, {
-      frameId: request.data.frame.frameId
+    // Send message to all relevant frames in the tab
+    const frames = [request.data.frame.frameId].concat(
+      this.framesService.getChildren(request.data.frame).map(f => f.frameId)
+    )
+    frames.forEach(frameId => {
+      const tabId = request.data.frame.tabId
+      this.api.tabs.sendMessage(tabId, request, { frameId })
     })
   }
 }
