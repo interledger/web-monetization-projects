@@ -47,7 +47,7 @@ export function GenerateNewTokens(n: number): BlindToken[] {
 }
 
 export interface StorableBlindToken {
-  data: number[]
+  data: string // base64-encoding of BlindToken.data
   point: string
   blind: string
 }
@@ -58,9 +58,12 @@ export function getTokenEncoding(
 ): StorableBlindToken {
   const storablePoint = sec1EncodeToBase64(curvePoint, false)
   const storableBlind = t.blind.toString()
+  const storableData = sjcl.codec.base64.fromBits(
+    sjcl.codec.bytes.toBits(t.data)
+  )
 
   return {
-    data: t.data,
+    data: storableData,
     point: storablePoint,
     blind: storableBlind
   }
@@ -69,14 +72,12 @@ export function getTokenEncoding(
 export function deserializeToken(token: StorableBlindToken): BlindToken {
   const usablePoint = sec1DecodeFromBase64(token.point)
   const usableBlind = new sjcl.bn(token.blind)
+  const usableData = sjcl.codec.bytes.fromBits(
+    sjcl.codec.base64.toBits(token.data)
+  )
   return {
-    data: token.data,
+    data: usableData,
     point: usablePoint,
     blind: usableBlind
   }
-}
-
-// TODO: countStoredTokens
-export function countStoredTokens() {
-  return 1
 }

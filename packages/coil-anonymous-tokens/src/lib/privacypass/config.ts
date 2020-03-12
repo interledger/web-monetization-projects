@@ -1,7 +1,3 @@
-export function dev() {
-  return true
-}
-
 // TODO: manage config like this
 export function sendH2CParams() {
   return false
