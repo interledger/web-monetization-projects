@@ -22,8 +22,12 @@ export function base64url(buf: Buffer): string {
     .replace(/=/g, '')
 }
 
-function tokenName(token: StorableBlindToken | BlindToken): string {
+function tokenName(token: BlindToken): string {
   return Buffer.from(token.data).toString('base64')
+}
+
+function storableTokenName(token: StorableBlindToken): string {
+  return token.data
 }
 
 export const TOKEN_PREFIX = 'anonymous_token:'
@@ -153,7 +157,7 @@ export class AnonymousTokens {
 
     if (response.status === 400) {
       // The stored token was invalid or expired (the server wouldn't verify it).
-      await this._removeSignedToken(tokenName(token))
+      await this._removeSignedToken(storableTokenName(token))
       return
     }
 
@@ -170,7 +174,7 @@ export class AnonymousTokens {
     }
 
     // TODO: make sure the token data is a string and is a good identifier for the token
-    this.tokenMap.set(btpToken, tokenName(token))
+    this.tokenMap.set(btpToken, storableTokenName(token))
     return btpToken
   }
 
