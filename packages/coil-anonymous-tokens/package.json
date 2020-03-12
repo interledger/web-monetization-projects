@@ -34,7 +34,6 @@
   "dependencies": {
     "@types/jsbn": "^1.2.29",
     "asn1-parser": "^1.1.8",
-    "blind-signature": "^0.1.3",
     "jsbn": "^1.1.0",
     "keccak": "^3.0.0",
     "sjcl": "https://github.com/bitwiseshiftleft/sjcl/tarball/master"
