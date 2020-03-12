@@ -8,7 +8,7 @@ import {
 } from './crypto'
 
 export interface BlindToken {
-  data: any
+  data: number[]
   point: SjclEllipticalPoint
   blind: BigNumber
 }
@@ -26,7 +26,7 @@ export function CreateBlindToken(): BlindToken | void {
   }
 }
 
-export function GenerateNewTokens(n: number) {
+export function GenerateNewTokens(n: number): BlindToken[] {
   const tokens: BlindToken[] = []
 
   for (let i = 0; i < n; ++i) {
@@ -47,7 +47,7 @@ export function GenerateNewTokens(n: number) {
 }
 
 export interface StorableBlindToken {
-  data: any
+  data: number[]
   point: string
   blind: string
 }
@@ -65,15 +65,6 @@ export function getTokenEncoding(
     blind: storableBlind
   }
 }
-
-// TODO: storeTokens
-export function storeTokens() {}
-
-// TODO: storeNewTokens
-export function storeNewTokens(_: any, __: any) {}
-
-// TODO: loadTokens
-export function loadTokens() {}
 
 export function deserializeToken(token: StorableBlindToken): BlindToken {
   const usablePoint = sec1DecodeFromBase64(token.point)

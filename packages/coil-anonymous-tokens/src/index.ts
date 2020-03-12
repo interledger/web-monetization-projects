@@ -1,14 +1,3 @@
-import { randomBytes } from 'crypto'
-
-import { BigInteger } from 'jsbn'
-import {
-  hexString,
-  hashAndBlindMessage,
-  unblindSignature,
-  verifySignature,
-  PublicRSAKey
-} from 'blind-signature'
-
 import {
   GenerateNewTokens,
   BuildIssueRequest,
@@ -38,11 +27,6 @@ function tokenName(token: StorableBlindToken | BlindToken): string {
 }
 
 export const TOKEN_PREFIX = 'anonymous_token:'
-export interface SignedToken {
-  message: string
-  month: string
-  signature: hexString
-}
 
 export interface TimestampedSignature {
   signature: string
@@ -66,10 +50,6 @@ export interface Token {
   token: string
   blindedTokenHash: string
   blindingFactor: string
-}
-
-export interface PublicFields extends PublicRSAKey {
-  month: string
 }
 
 // TODO: should these be allowed to be async?
