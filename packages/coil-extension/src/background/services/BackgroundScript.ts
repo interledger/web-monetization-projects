@@ -419,10 +419,8 @@ export class BackgroundScript {
     }
   }
 
-  mayMonetizeSite(sender: MessageSender) {
-    if (!sender.tab) return
-    this.setFrameMonetized(getFrameSpec(sender), notNullOrUndef(sender.tab.url))
-    return true
+  mayMonetizeSite(sender: chrome.runtime.MessageSender, initiatingUrl: string) {
+    this.setFrameMonetized(getFrameSpec(sender), initiatingUrl)
   }
 
   handleMonetizedSite(
@@ -569,7 +567,7 @@ export class BackgroundScript {
 
     this.tabStates.logLastMonetizationCommand(frame, 'start')
     // This used to be sent from content script as a separate message
-    this.mayMonetizeSite(sender)
+    this.mayMonetizeSite(sender, request.data.initiatingUrl)
 
     // This may throw so do after mayMonetizeSite has had a chance to set
     // the page as being monetized (or attempted to be)
