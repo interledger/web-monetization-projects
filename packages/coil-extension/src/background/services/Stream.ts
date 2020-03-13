@@ -386,7 +386,7 @@ class StreamAttempt {
       }
 
       const onConnectionError = (err: Error) => {
-        this._debug('onConnectionClose(%s)', err)
+        this._debug('onConnectionError(%s)', err)
         cleanUp()
         reject(err)
       }
