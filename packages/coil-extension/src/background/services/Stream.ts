@@ -248,7 +248,6 @@ export class Stream extends EventEmitter {
   onMoney(data: OnMoneyEvent) {
     if (data.amount <= 0) return
 
-    this._debug(`emitting money. amount=${data.amount}`)
     const now = Date.now()
     const msSinceLastPacket = now - this._lastOutgoingMs
     this._lastOutgoingMs = now

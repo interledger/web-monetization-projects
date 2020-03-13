@@ -261,13 +261,15 @@ export class ContentScript {
     const monetizationRequest = this.monetization.getMonetizationRequest()
     if (allowed) {
       if (monetizationRequest && this.monetization.getState() === 'stopped') {
-        void this.doStartMonetization()
-        if (this.paused) {
-          const pause: PauseWebMonetization = {
-            command: 'pauseWebMonetization'
+        // The pause needs to be done after the async allow checks and start
+        this.doStartMonetization().then(() => {
+          if (this.paused) {
+            const pause: PauseWebMonetization = {
+              command: 'pauseWebMonetization'
+            }
+            this.runtime.sendMessage(pause)
           }
-          this.runtime.sendMessage(pause)
-        }
+        })
       }
     } else {
       if (monetizationRequest) {
