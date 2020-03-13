@@ -29,6 +29,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
+import { timeout } from '../../content/util/timeout'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -503,10 +504,16 @@ export class BackgroundScript {
     if (frameId !== 0) {
       let allowed = true
       while (allowed) {
-        const parentId = this.framesService.getFrame(frame)?.parentFrameId
+        const frameDetails = await this.framesService.getFrameAsync(frame)
+        const parentId = frameDetails?.parentFrameId
         if (typeof parentId === 'undefined') {
           throw new Error(
-            `expecting ${JSON.stringify(frame)} to have parentFrameId`
+            `expecting ${JSON.stringify(frame)} to have parentFrameId
+            frameDetails=${JSON.stringify(frameDetails)}
+            tabFrames=${JSON.stringify(
+              this.framesService.getFrames(frame.tabId)
+            )}
+            `
           )
         }
         allowed = await this.framesService.sendCommand<
@@ -538,7 +545,8 @@ export class BackgroundScript {
     sender: MessageSender
   ) {
     const frame = getFrameSpec(sender)
-    const parentId = this.framesService.getFrame(frame)?.parentFrameId
+    const parentId = (await this.framesService.getFrameAsync(frame))
+      ?.parentFrameId
     if (typeof parentId === 'undefined') {
       throw new Error(`expecting ${frame} to have parentFrameId`)
     }

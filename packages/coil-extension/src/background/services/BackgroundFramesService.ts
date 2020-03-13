@@ -6,7 +6,8 @@ import * as tokens from '@web-monetization/wext/tokens'
 import { flatMapSlow } from '../util/flatMapSlow'
 import { getFrameSpec } from '../../util/tabs'
 import { Command, ToBackgroundMessage } from '../../types/commands'
-import { FrameSpec } from '../../types/FrameSpec'
+import { FrameSpec, sameFrame } from '../../types/FrameSpec'
+import { timeout } from '../../content/util/timeout'
 
 import { logger, Logger } from './utils'
 
@@ -114,6 +115,29 @@ export class BackgroundFramesService extends EventEmitter {
     const frames = this.getFrames(frame.tabId)
     return frames.find(f => {
       return f.frameId == frame.frameId
+    })
+  }
+
+  async getFrameAsync(
+    frame: FrameSpec,
+    waitMs = 2e3
+  ): Promise<Readonly<Frame> | undefined> {
+    const alreadyHave = this.getFrame(frame)
+    if (alreadyHave) {
+      return alreadyHave
+    }
+    return new Promise<Readonly<Frame> | undefined>(resolve => {
+      const handler = (addedFrame: FrameAddedEvent) => {
+        if (sameFrame(frame, addedFrame)) {
+          this.removeListener('frameAdded', handler)
+          resolve(this.getFrame(frame))
+        }
+      }
+      this.on('frameAdded', handler)
+      timeout(waitMs).then(() => {
+        this.removeListener('frameAdded', handler)
+        resolve(undefined)
+      })
     })
   }
 
