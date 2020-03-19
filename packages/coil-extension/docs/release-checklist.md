@@ -217,6 +217,53 @@ make sense.
   - Add a subscription (can use [testing card](https://stripe.com/docs/testing) 4242 4242 4242 4242 )
   - Go to a monetized page and check that streaming works immediately
 
+### Iframe testing
+
+1. - [ ] Open a terminal and `cd packages/coil-extension/test/fixtures/iframes/`
+2. - [ ] Start a server (via `python -m http.server 4000` or equivalent)
+3. - [ ] Open http://localhost:4000/top-nested-allowed-iframe.html in browser
+4. Open developer tools and look at the structure of the dom
+
+- Use expand recursively feature
+  - ![image](https://user-images.githubusercontent.com/525211/76400168-71098800-63b2-11ea-8069-5ee7b8b0707a.png)
+
+5. - [ ] With the console set `localStorage.WM_DEBUG = true`
+
+#### Test 1: basic monetization
+
+1. Load the page
+2. - [ ] Look for 4 monetizationpending events and 4 corresponding (same requestId) monetizationstart events logged in the console.
+
+![image](https://user-images.githubusercontent.com/525211/76397844-6a791180-63ae-11ea-8f1c-72ef3a6183fb.png)
+
+#### Test 2: refresh page / turn off / turn on
+
+1. - [ ] [re]load the page
+2. - [ ] Open developer tools and turn "off" monetization via editing allow attribute of top level iframes
+   - ![image](https://user-images.githubusercontent.com/525211/76398261-28040480-63af-11ea-85cb-396960ced1bb.png)
+   - Popup icon (and background page logging) should show no monetization:
+     - [ ] ![image](https://user-images.githubusercontent.com/525211/76398281-305c3f80-63af-11ea-857c-6ab6b409daa5.png)
+   - Corresponding monetization events should be logged:
+     - [ ] ![image](https://user-images.githubusercontent.com/525211/76398873-3999dc00-63b0-11ea-8ee6-7ca45d8b44f0.png)
+
+3. turn "on" monetization via editing allow attribute of top level iframes
+   - ![image](https://user-images.githubusercontent.com/525211/76398370-57b30c80-63af-11ea-86a8-133271e46b91.png)
+   - [ ] Popup icon (and background page logging) should show monetization
+     - ![image](https://user-images.githubusercontent.com/525211/76398417-6d283680-63af-11ea-88e6-c4b0ed5c35f7.png)
+   - [ ] Corresponding monetization events should be logged:
+     - ![image](https://user-images.githubusercontent.com/525211/76399026-841b5880-63b0-11ea-8b0b-c0ecbff13bee.png)
+
+#### Test 3: refresh page / turn off / background tab / turn on / foreground tab
+
+- As above but while the tab is backgrounded, after turning on each top level iframe a sequence of pending -> stopped events should be fired:
+  - [ ] ![image](https://user-images.githubusercontent.com/525211/76399956-1a03b300-63b2-11ea-9b77-671e94a1bf16.png)
+
+#### Test 4: nested
+
+- As per test 2
+- Turn off one top level and then turn off the nested frames in top level that is allowed
+- [ ] allow _one_ nested iframe and check for indications of monetization
+
 [i33]: https://github.com/coilhq/web-monetization/issues/33
 [i120]: https://github.com/coilhq/web-monetization/issues/120
 [i144]: https://github.com/coilhq/web-monetization/issues/144
