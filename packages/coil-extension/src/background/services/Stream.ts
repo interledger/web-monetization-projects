@@ -194,7 +194,7 @@ export class Stream extends EventEmitter {
           btpToken &&
           ilpReject &&
           ilpReject.message === 'exhausted capacity.' &&
-          ilpReject.data.toString() === btpToken
+          ilpReject.data.equals(await sha256(Buffer.from(btpToken)))
         ) {
           this._debug('anonymous token exhausted; retrying, err=%s', e.message)
           this._anonTokens.removeToken(btpToken)
@@ -490,4 +490,9 @@ class StreamAttempt {
       }
     }
   }
+}
+
+async function sha256(preimage: Buffer): Promise<Buffer> {
+  const digest = await crypto.subtle.digest({ name: 'SHA-256' }, preimage)
+  return Buffer.from(digest)
 }
