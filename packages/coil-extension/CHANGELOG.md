@@ -1,3 +1,17 @@
+<a name="coil-extension@0.0.48"></a>
+
+# [coil-extension@0.0.48](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.47...coil-extension@0.0.48) (2020-03-16)
+
+### Features
+
+- Support dynamic @allow attribute setting on iframes [#453](https://github.com/coilhq/web-monetization-projects/pull/453)
+- Support monetization of nested iframes [c723d93c](https://github.com/coilhq/web-monetization-projects/commit/c723d93c28bceb184ffab637a5f9a8b09b4888e4)
+- Remove unnecessary permissions [91faeb2e](https://github.com/coilhq/web-monetization-projects/commit/91faeb2e213aeaf50643c9e84b7598c7ff297b88)
+
+### Bug Fixes
+
+- Fix iframe support on Firefox [58675617](https://github.com/coilhq/web-monetization-projects/commit/fe057a44898dc7fbff5a5ad45c5f5ab458675617)
+
 <a name="coil-extension@0.0.47"></a>
 
 # [coil-extension@0.0.47](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.46...coil-extension@0.0.47) (2020-03-05)
