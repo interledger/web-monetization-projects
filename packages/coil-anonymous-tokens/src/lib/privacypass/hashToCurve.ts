@@ -62,7 +62,7 @@ function i2osp(x: number, n: number) {
 function h2Base(
   x: sjcl.BitArray,
   curve: sjcl.SjclEllipticalCurve,
-  hash: any,
+  hash: sjcl.SjclHashStatic,
   label: string
 ) {
   const dataLen = sjcl.codec.bytes.fromBits(x).length
@@ -117,7 +117,7 @@ export function h2Curve(alpha: sjcl.BitArray, ecSettings: any) {
 function simplifiedSWU(
   alpha: sjcl.BitArray,
   activeCurve: sjcl.SjclEllipticalCurve,
-  hash: any,
+  hash: sjcl.SjclHashStatic,
   label: string
 ) {
   const params = getCurveParams(activeCurve)
@@ -203,7 +203,11 @@ function getCurveParams(curve: sjcl.SjclEllipticalCurve) {
  * @param {sjcl.bitArray} label
  * @return {sjcl.ecc.point} returns a curve point on the active curve
  */
-function hashAndInc(seed: sjcl.BitArray, hash: any, label: sjcl.BitArray) {
+function hashAndInc(
+  seed: sjcl.BitArray,
+  hash: sjcl.SjclHashStatic,
+  label: sjcl.BitArray
+) {
   const h = new hash()
 
   // Need to match the Go curve hash, so we decode the exact bytes of the
