@@ -12,7 +12,7 @@ export const CACHED_COMMITMENTS_STRING = 'cached-commitments'
  * optional commitment version
  * @return {Object} Formatted object for inputs
  */
-export function parseIssueResp(issueResp) {
+export function parseIssueResp(issueResp: any) {
   let signatures
   let batchProof
   let version
@@ -42,7 +42,7 @@ export function parseIssueResp(issueResp) {
  * @param {Array<Object>} tokens contains curve points for server signing
  * @return {string} base64-encoded issuance request
  */
-export function BuildIssueRequest(tokens) {
+export function BuildIssueRequest(tokens: Array<any>) {
   const contents: string[] = []
   for (let i = 0; i < tokens.length; i++) {
     const encodedPoint = sec1EncodeToBase64(tokens[i].point, true)

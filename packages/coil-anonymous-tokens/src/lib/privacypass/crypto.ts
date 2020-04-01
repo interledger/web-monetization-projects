@@ -8,6 +8,7 @@ import keccak from 'keccak'
 import { ASN1, PEM } from 'asn1-parser'
 
 import { h2Curve } from './hashToCurve'
+import { H2CParams } from './config'
 
 export interface CurvePoints {
   points: sjcl.SjclEllipticalPoint[]
@@ -26,10 +27,10 @@ const DIGEST_INEQUALITY_ERR =
 const PARSE_ERR = '[privacy-pass]: Error parsing proof'
 
 // Globals for keeping track of EC curve settings
-let CURVE
-let CURVE_H2C_HASH
-let CURVE_H2C_METHOD
-let CURVE_H2C_LABEL
+let CURVE: sjcl.SjclEllipticalCurve & any
+let CURVE_H2C_HASH: sjcl.SjclHashStatic
+let CURVE_H2C_METHOD: string
+let CURVE_H2C_LABEL: sjcl.BitArray | string
 
 // 1.2.840.10045.3.1.7 point generation seed
 const INC_H2C_LABEL = sjcl.codec.hex.toBits(
@@ -42,7 +43,7 @@ const SSWU_H2C_LABEL = 'H2C-P256-SHA256-SSWU-'
  * activeConfig.h2c-params
  * @param {JSON} h2cParams
  */
-export function initECSettings(h2cParams) {
+export function initECSettings(h2cParams: H2CParams) {
   const curveStr = h2cParams.curve
   const hashStr = h2cParams.hash
   const methodStr = h2cParams.method
@@ -93,7 +94,7 @@ export function getActiveECSettings() {
  * @param {sjcl.ecc.point} P curve point
  * @return {sjcl.ecc.point}
  */
-export function _scalarMult(k, P) {
+export function _scalarMult(k: sjcl.BigNumber, P: sjcl.SjclEllipticalPoint) {
   const Q = P.mult(k)
   return Q
 }
@@ -103,7 +104,7 @@ export function _scalarMult(k, P) {
  * @param {sjcl.ecc.point} P curve point
  * @return {sjcl.ecc.point}
  */
-export function blindPoint(P) {
+export function blindPoint(P: sjcl.SjclEllipticalPoint) {
   const bF = sjcl.bn.random(CURVE.r, 10)
   const bP = _scalarMult(bF, P)
   return { point: bP, blind: bF }
@@ -116,7 +117,7 @@ export function blindPoint(P) {
  * @param {sjcl.ecc.point} Q curve point
  * @return {sjcl.ecc.point}
  */
-export function unblindPoint(b, Q) {
+export function unblindPoint(b: sjcl.BigNumber, Q: sjcl.SjclEllipticalPoint) {
   const binv = b.inverseMod(CURVE.r)
   return _scalarMult(binv, Q)
 }
@@ -147,7 +148,10 @@ export function newRandomPoint() {
  * @param {bool} compressed
  * @return {sjcl.codec.bytes}
  */
-export function sec1Encode(P, compressed) {
+export function sec1Encode(
+  P: sjcl.SjclEllipticalPoint & any,
+  compressed: boolean
+) {
   let out: number[] = []
   if (!compressed) {
     const xyBytes = sjcl.codec.bytes.fromBits(P.toBits())
@@ -167,7 +171,10 @@ export function sec1Encode(P, compressed) {
  * @param {bool} compressed flag indicating whether points have been compressed
  * @return {sjcl.bitArray}
  */
-export function sec1EncodeToBits(point, compressed) {
+export function sec1EncodeToBits(
+  point: sjcl.SjclEllipticalPoint,
+  compressed: boolean
+) {
   return sjcl.codec.bytes.toBits(sec1Encode(point, compressed))
 }
 
@@ -177,7 +184,10 @@ export function sec1EncodeToBits(point, compressed) {
  * @param {bool} compressed
  * @return {string}
  */
-export function sec1EncodeToBase64(point, compressed) {
+export function sec1EncodeToBase64(
+  point: sjcl.SjclEllipticalPoint,
+  compressed: boolean
+) {
   return sjcl.codec.base64.fromBits(sec1EncodeToBits(point, compressed))
 }
 
@@ -186,7 +196,7 @@ export function sec1EncodeToBase64(point, compressed) {
  * @param {string} p a base64-encoded, uncompressed curve point
  * @return {sjcl.ecc.point}
  */
-export function sec1DecodeFromBase64(p) {
+export function sec1DecodeFromBase64(p: string) {
   const sec1Bits = sjcl.codec.base64.toBits(p)
   const sec1Bytes = sjcl.codec.bytes.fromBits(sec1Bits)
   return sec1DecodeFromBytes(sec1Bytes)
@@ -197,7 +207,9 @@ export function sec1DecodeFromBase64(p) {
  * @param {sjcl.codec.bytes} sec1Bytes bytes of an uncompressed curve point
  * @return {sjcl.ecc.point}
  */
-export function sec1DecodeFromBytes(sec1Bytes): sjcl.SjclEllipticalPoint {
+export function sec1DecodeFromBytes(
+  sec1Bytes: number[]
+): sjcl.SjclEllipticalPoint {
   let P
   switch (sec1Bytes[0]) {
     case 0x02:
@@ -222,7 +234,9 @@ export function sec1DecodeFromBytes(sec1Bytes): sjcl.SjclEllipticalPoint {
  * @param {sjcl.codec.bytes} bytes bytes of a compressed curve point (SEC1)
  * @return {sjcl.ecc.point} may be null if compressed bytes are not valid
  */
-export function decompressPoint(bytes): sjcl.SjclEllipticalPoint | null {
+export function decompressPoint(
+  bytes: number[]
+): sjcl.SjclEllipticalPoint | null {
   const yTag = bytes[0]
   const expLength = CURVE.r.bitLength() / 8 + 1 // bitLength rounds up
   if (yTag != 2 && yTag != 3) {
@@ -273,7 +287,7 @@ export function decompressPoint(bytes): sjcl.SjclEllipticalPoint | null {
  * @param {Array<string>} signatures An array of base64-encoded signed points
  * @return {Object} object containing array of curve points and compression flag
  */
-export function getCurvePoints(signatures): CurvePoints {
+export function getCurvePoints(signatures: string[]): CurvePoints {
   const compression = { on: false, set: false }
   const sigBytes: number[][] = []
   signatures.forEach(function(signature) {
@@ -318,7 +332,7 @@ export function getCurvePoints(signatures): CurvePoints {
  * @param {bool} setting new setting based on point data
  * @return {bool}
  */
-export function validResponseCompression(compression, setting) {
+export function validResponseCompression(compression: any, setting: boolean) {
   if (!compression.set) {
     compression.on = setting
     compression.set = true
@@ -335,7 +349,7 @@ export function validResponseCompression(compression, setting) {
  * @param {string} pemSignature - A signature in PEM format.
  * @return {sjcl.bitArray} a signature object for sjcl library.
  */
-export function parseSignaturefromPEM(pemSignature) {
+export function parseSignaturefromPEM(pemSignature: string) {
   try {
     const bytes = PEM.parseBlock(pemSignature)
     const json = ASN1.parse(bytes.der)
@@ -354,7 +368,7 @@ export function parseSignaturefromPEM(pemSignature) {
  * @param {string} pemPublicKey - A public key in PEM format.
  * @return {sjcl.ecc.ecdsa.publicKey} a public key for sjcl library.
  */
-export function parsePublicKeyfromPEM(pemPublicKey) {
+export function parsePublicKeyfromPEM(pemPublicKey: string) {
   try {
     const bytes = PEM.parseBlock(pemPublicKey)
     const json = ASN1.parse(bytes.der)
@@ -375,7 +389,7 @@ export function parsePublicKeyfromPEM(pemPublicKey) {
  * @return {boolean} True, if the commitment has valid signature and is not
  *                   expired; otherwise, throws an exception.
  */
-export function verifyCommitments(comms, pemPublicKey) {
+export function verifyCommitments(comms: any, pemPublicKey: string) {
   const sig = parseSignaturefromPEM(comms.sig)
   delete comms.sig
   const msg = JSON.stringify(comms)
@@ -403,11 +417,11 @@ export function verifyCommitments(comms, pemPublicKey) {
  * @return {boolean}
  */
 export function verifyProof(
-  proofObj,
-  tokens,
-  signatures,
-  commitments,
-  prngName
+  proofObj: any,
+  tokens: any,
+  signatures: any,
+  commitments: any,
+  prngName: string
 ) {
   const bp = getMarshaledBatchProof(proofObj)
   const dleq = retrieveProof(bp)
@@ -472,16 +486,16 @@ export function verifyProof(
  * @return {Object} Object containing composite points M and Z
  */
 export function recomputeComposites(
-  tokens,
-  signatures,
-  pointG,
-  pointH,
-  prngName
+  tokens: Array<any>,
+  signatures: any,
+  pointG: sjcl.SjclEllipticalPoint,
+  pointH: sjcl.SjclEllipticalPoint,
+  prngName: string
 ) {
   const seed = computeSeed(tokens, signatures, pointG, pointH)
   let cM = new sjcl.ecc.pointJac(CURVE) // can only add points in jacobian representation
   let cZ = new sjcl.ecc.pointJac(CURVE)
-  const prng = { name: prngName }
+  const prng: any = { name: prngName }
   switch (prng.name) {
     case 'shake':
       prng['func'] = shake256()
@@ -518,7 +532,11 @@ export function recomputeComposites(
  * @param {sjcl.bitArray} salt optional salt for each PRNG eval
  * @return {sjcl.bn} PRNG output as scalar value
  */
-export function computePRNGScalar(prng, seed, salt) {
+export function computePRNGScalar(
+  prng: any,
+  seed: string,
+  salt: sjcl.BitArray
+) {
   const bitLen = CURVE.r.bitLength()
   const mask = MASK[bitLen % 8]
   let out
@@ -559,7 +577,12 @@ export function computePRNGScalar(prng, seed, salt) {
  * @param {sjcl.ecc.point} pointH curve point
  * @return {string} hex-encoded PRNG seed
  */
-export function computeSeed(chkM, chkZ, pointG, pointH) {
+export function computeSeed(
+  chkM: any,
+  chkZ: any,
+  pointG: sjcl.SjclEllipticalPoint,
+  pointH: sjcl.SjclEllipticalPoint
+) {
   const compressed = chkZ.compressed
   const h = new CURVE_H2C_HASH() // we use the h2c hash for convenience
   h.update(sec1EncodeToBits(pointG, compressed))
@@ -586,7 +609,13 @@ export function computeSeed(chkM, chkZ, pointG, pointH) {
  * @param {sjcl.hash} hash hash function
  * @return {bitArray}
  */
-export function evaluateHkdf(ikm, length, info, salt, hash) {
+export function evaluateHkdf(
+  ikm: sjcl.BitArray,
+  length: number,
+  info: sjcl.BitArray,
+  salt: sjcl.BitArray,
+  hash: sjcl.SjclHashStatic
+) {
   const mac = new sjcl.misc.hmac(salt, hash)
   mac.update(ikm)
   const prk = mac.digest()
@@ -619,7 +648,7 @@ export function evaluateHkdf(ikm, length, info, salt, hash) {
  * @param {Object} bp batch proof as encoded JSON
  * @return {Object} DLEQ proof object
  */
-export function retrieveProof(bp) {
+export function retrieveProof(bp: any) {
   let dleqProof
   try {
     dleqProof = parseDleqProof(atob(bp.P))
@@ -635,7 +664,7 @@ export function retrieveProof(bp) {
  * @param {string} proof base64-encoded batched DLEQ proof
  * @return {Object} JSON batched DLEQ proof
  */
-export function getMarshaledBatchProof(proof) {
+export function getMarshaledBatchProof(proof: string) {
   let proofStr = atob(proof)
   if (proofStr.indexOf(BATCH_PROOF_PREFIX) === 0) {
     proofStr = proofStr.substring(BATCH_PROOF_PREFIX.length)
@@ -648,9 +677,9 @@ export function getMarshaledBatchProof(proof) {
  * @param {string} proofStr proof JSON as string
  * @return {Object}
  */
-export function parseDleqProof(proofStr) {
+export function parseDleqProof(proofStr: string) {
   const dleqProofM = JSON.parse(proofStr)
-  const dleqProof = {}
+  const dleqProof: any = {}
   dleqProof['R'] = getBigNumFromB64(dleqProofM.R)
   dleqProof['C'] = getBigNumFromB64(dleqProofM.C)
   return dleqProof
@@ -661,7 +690,7 @@ export function parseDleqProof(proofStr) {
  * @param {string} b64Str
  * @return {sjcl.bn}
  */
-export function getBigNumFromB64(b64Str) {
+export function getBigNumFromB64(b64Str: string) {
   const bits = sjcl.codec.base64.toBits(b64Str)
   return sjcl.bn.fromBits(bits)
 }
@@ -671,7 +700,7 @@ export function getBigNumFromB64(b64Str) {
  * @param {sjcl.codec.bytes} bytes
  * @return {sjcl.bn}
  */
-export function getBigNumFromBytes(bytes) {
+export function getBigNumFromBytes(bytes: number[]) {
   const bits = sjcl.codec.bytes.toBits(bytes)
   return sjcl.bn.fromBits(bits)
 }
@@ -681,6 +710,6 @@ export function getBigNumFromBytes(bytes) {
  * @param {string} hex hex-encoded string
  * @return {sjcl.bn}
  */
-export function getBigNumFromHex(hex) {
+export function getBigNumFromHex(hex: string) {
   return sjcl.bn.fromBits(sjcl.codec.hex.toBits(hex))
 }

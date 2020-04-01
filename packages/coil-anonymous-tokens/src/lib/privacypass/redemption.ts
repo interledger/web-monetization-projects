@@ -17,7 +17,7 @@ import { sendH2CParams, h2cParams } from './config'
  * @param {string} path Path of the requested HTTP request
  * @return {string} base64-encoded redemption requestx
  */
-export function BuildRedeemHeader(token, host, path) {
+export function BuildRedeemHeader(token: any, host: string, path: string) {
   const sharedPoint = unblindPoint(token.blind, token.point)
   const derivedKey = deriveKey(sharedPoint, token.data)
 
@@ -53,7 +53,7 @@ export function BuildRedeemHeader(token, host, path) {
  * @param {sjcl.codec.bytes} data Input HMAC data
  * @return {string} base64-encoded HMAC output
  */
-function createRequestBinding(key, data) {
+function createRequestBinding(key: any, data: any) {
   // the exact bits of the string "hash_request_binding"
   const tagBits = sjcl.codec.utf8String.toBits('hash_request_binding')
   const keyBits = sjcl.codec.bytes.toBits(key)
@@ -77,7 +77,7 @@ function createRequestBinding(key, data) {
  * @param {Object} token client-generated token data
  * @return {sjcl.codec.bytes} bytes of derived key
  */
-function deriveKey(N, token) {
+function deriveKey(N: sjcl.SjclEllipticalPoint, token: any) {
   // the exact bits of the string "hash_derive_key"
   const tagBits = sjcl.codec.hex.toBits('686173685f6465726976655f6b6579')
   const hash = getActiveECSettings().hash

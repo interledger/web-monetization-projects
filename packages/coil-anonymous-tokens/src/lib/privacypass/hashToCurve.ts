@@ -59,7 +59,12 @@ function i2osp(x: number, n: number) {
  * @param {string} label context label for domain separation
  * @return {int} integer in the base field of curve
  */
-function h2Base(x, curve, hash, label) {
+function h2Base(
+  x: sjcl.BitArray,
+  curve: sjcl.SjclEllipticalCurve,
+  hash: any,
+  label: string
+) {
   const dataLen = sjcl.codec.bytes.fromBits(x).length
   const h = new hash()
   h.update('h2b')
@@ -67,7 +72,7 @@ function h2Base(x, curve, hash, label) {
   h.update(sjcl.codec.bytes.toBits(i2osp(dataLen, 4)))
   h.update(x)
   const t = h.finalize()
-  const y = curve.field.fromBits(t).cnormalize()
+  const y = (curve.field as any).fromBits(t).cnormalize()
   return y
 }
 
@@ -77,7 +82,7 @@ function h2Base(x, curve, hash, label) {
  * @param {Object} ecSettings the curve settings being used by the extension
  * @return {sjcl.ecc.point} point on curve
  */
-export function h2Curve(alpha, ecSettings) {
+export function h2Curve(alpha: sjcl.BitArray, ecSettings: any) {
   let point
   switch (ecSettings.method) {
     case 'swu':
@@ -109,7 +114,12 @@ export function h2Curve(alpha, ecSettings) {
  * @param {String} label
  * @return {sjcl.ecc.point} curve point
  */
-function simplifiedSWU(alpha, activeCurve, hash, label) {
+function simplifiedSWU(
+  alpha: sjcl.BitArray,
+  activeCurve: sjcl.SjclEllipticalCurve,
+  hash: any,
+  label: string
+) {
   const params = getCurveParams(activeCurve)
   const u = h2Base(alpha, activeCurve, hash, label)
   const { X, Y } = computeSWUCoordinates(u, params)
@@ -130,7 +140,7 @@ function simplifiedSWU(alpha, activeCurve, hash, label) {
  * @param {Object} params curve parameters
  * @return {Object} curve coordinates
  */
-function computeSWUCoordinates(u, params) {
+function computeSWUCoordinates(u: sjcl.BigNumber & any, params: any) {
   const { A, B, baseField, c1, c2, sqrt } = params
   const p = baseField.modulus
   const t1 = u.square().mul(-1) // steps 2-3
@@ -169,7 +179,7 @@ function computeSWUCoordinates(u, params) {
  * @param {sjcl.ecc.curve} curve elliptic curve
  * @return {p;A;B}
  */
-function getCurveParams(curve) {
+function getCurveParams(curve: sjcl.SjclEllipticalCurve) {
   let curveParams
   switch (sjcl.ecc.curveName(curve)) {
     case 'c256':
@@ -193,7 +203,7 @@ function getCurveParams(curve) {
  * @param {sjcl.bitArray} label
  * @return {sjcl.ecc.point} returns a curve point on the active curve
  */
-function hashAndInc(seed, hash, label) {
+function hashAndInc(seed: sjcl.BitArray, hash: any, label: sjcl.BitArray) {
   const h = new hash()
 
   // Need to match the Go curve hash, so we decode the exact bytes of the
@@ -242,7 +252,12 @@ function hashAndInc(seed, hash, label) {
  * @param {sjcl.bn} field is the prime field used.
  * @return {sjcl.bn} returns x is b=0, otherwise return y.
  */
-function cmov(x, y, b, field) {
+function cmov(
+  x: sjcl.BigNumber & any,
+  y: sjcl.BigNumber & any,
+  b: boolean,
+  field: any
+) {
   const z = new field()
   const m = z.radixMask
   const m0 = m & (m + b)
