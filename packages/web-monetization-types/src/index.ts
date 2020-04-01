@@ -6,7 +6,7 @@ export interface EventDetail {
 }
 
 export interface MonetizationEventDetail extends EventDetail {
-  // Web-Monetization-Id header present in the SPSP request
+  // Web Monetization session Id
   requestId: string
 }
 
@@ -43,6 +43,7 @@ export interface MonetizationProgressEventDetail
   amount: string
   assetCode: string
   assetScale: number
+  receipt?: string
 }
 
 export interface MonetizationProgressEvent

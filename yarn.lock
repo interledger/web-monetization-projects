@@ -8786,6 +8786,19 @@ ilp-protocol-stream@2.5.0, ilp-protocol-stream@^2.5.0:
     oer-utils "^5.0.1"
     uuid "^3.4.0"
 
+ilp-protocol-stream@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.5.0.tgz#4b3e10fd06563db4006d3f5033e6020e20bfd7d0"
+  integrity sha512-q2eSwGGApwjcFdb8I95IQInVhfkh9axcMJDkc8mY7A7B/bm71UiqvbrvkyLc/kMcKZY9Fe+9ZA0fDNPVoGkjKg==
+  dependencies:
+    "@types/node" "^10.14.22"
+    ilp-logger "^1.2.1"
+    ilp-packet "^3.0.9"
+    ilp-protocol-ildcp "^2.1.4"
+    long "^4.0.0"
+    oer-utils "^5.0.1"
+    uuid "^3.4.0"
+
 ilp-store-memory@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ilp-store-memory/-/ilp-store-memory-1.0.0.tgz#53befe9941a776c5357c15d81d97875133141d6c"

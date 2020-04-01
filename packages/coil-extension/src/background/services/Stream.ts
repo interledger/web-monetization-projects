@@ -59,6 +59,8 @@ export interface StreamMoneyEvent {
   sourceAmount: string
   sourceAssetCode: string
   sourceAssetScale: number
+
+  receipt?: string
 }
 
 type OnMoneyEvent = {
@@ -69,6 +71,7 @@ type OnMoneyEvent = {
   sourceAmount: string
   sourceAssetCode: string
   sourceAssetScale: number
+  receipt?: string
 }
 
 @injectable()
@@ -262,7 +265,8 @@ export class Stream extends EventEmitter {
       requestId: this._requestId,
       initiatingUrl: this._initiatingUrl,
       msSinceLastPacket: msSinceLastPacket,
-      amount: data.amount.toString()
+      amount: data.amount.toString(),
+      receipt: data.receipt
     })
     this._assetCode = data.assetCode
     this._assetScale = data.assetScale
@@ -365,7 +369,10 @@ class StreamAttempt {
     return new Promise((resolve, reject) => {
       const onMoney = (sentAmount: string) => {
         // Wait until `setImmediate` so that `connection.totalDelivered` has been updated.
-        setImmediate(this.onMoney.bind(this), sentAmount)
+        const receipt = this._ilpStream.receipt
+          ? this._ilpStream.receipt.toString('base64')
+          : undefined
+        setImmediate(this.onMoney.bind(this), sentAmount, receipt)
       }
 
       const onPluginDisconnect = async () => {
@@ -475,7 +482,7 @@ class StreamAttempt {
     return this._ilpStream ? this._ilpStream.totalSent : '0'
   }
 
-  private onMoney(sentAmount: string): void {
+  private onMoney(sentAmount: string, receipt?: string): void {
     const delivered = Number(this._connection.totalDelivered)
     const amount = delivered - this._lastDelivered
     this._debug('delivered', delivered, 'lastDelivered', this._lastDelivered)
@@ -487,6 +494,7 @@ class StreamAttempt {
       amount,
       assetCode: notNullOrUndef(this._connection.destinationAssetCode),
       assetScale: notNullOrUndef(this._connection.destinationAssetScale),
+      receipt,
       // source=source
       sourceAmount: sentAmount,
       sourceAssetCode: this._connection.sourceAssetCode,
