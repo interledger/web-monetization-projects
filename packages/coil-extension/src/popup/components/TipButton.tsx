@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { styled , Button } from '@material-ui/core'
+import { styled, Button } from '@material-ui/core'
 
+import { formatAmount } from '../../util/currencyFormatting'
 import { Colors } from '../../shared-theme/colors'
 
 const TipStyleButton = styled(Button)(() => ({
@@ -30,13 +31,24 @@ export interface TipButtonProps {
   onClick: () => void
   tipState: TipState
   canTip: boolean
+  tipAmount: number
 }
 
 export const TipButton = (props: TipButtonProps) => {
+  const formattedAmount = formatAmount({
+    amount: String(props.tipAmount),
+    assetCode: 'USD',
+    assetScale: 2
+  })
+
   if (props.canTip) {
     switch (props.tipState) {
       case TipState.READY:
-        return <TipStyleButton onClick={props.onClick}>TIP $1</TipStyleButton>
+        return (
+          <TipStyleButton onClick={props.onClick}>
+            TIP {formattedAmount}
+          </TipStyleButton>
+        )
 
       case TipState.LOADING:
         return <TipStyleButton disabled>[Spinner]</TipStyleButton>

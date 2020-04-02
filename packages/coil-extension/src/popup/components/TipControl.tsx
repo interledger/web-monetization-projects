@@ -14,9 +14,16 @@ const MAX_TIP_AMOUNT = 2000
 export const TipControl = (props: PopupProps) => {
   const [tipState, setTipState] = useState(TipState.READY)
   const [tipAmount, setTipAmount] = useState(100)
+  const increaseTip = () =>
+    setTipAmount(Math.min(tipAmount + 100, MAX_TIP_AMOUNT))
+  const decreaseTip = () =>
+    setTipAmount(Math.max(tipAmount - 100, MIN_TIP_AMOUNT))
 
   const sendTip = async () => {
-    const message: SendTip = { command: 'sendTip' }
+    const message: SendTip = {
+      command: 'sendTip',
+      amount: tipAmount
+    }
 
     return new Promise(resolve => {
       props.context.runtime.sendMessage(message, (result: SendTipResult) => {
@@ -50,8 +57,17 @@ export const TipControl = (props: PopupProps) => {
     <>
       <TipRule />
       <CoilContainer>
-        <TipCounter tipAmount={tipAmount} />
-        <TipButton onClick={onClickTip} canTip={canTip} tipState={tipState} />
+        <TipCounter
+          tipAmount={tipAmount}
+          decrease={decreaseTip}
+          increase={increaseTip}
+        />
+        <TipButton
+          tipAmount={tipAmount}
+          onClick={onClickTip}
+          canTip={canTip}
+          tipState={tipState}
+        />
       </CoilContainer>
     </>
   )

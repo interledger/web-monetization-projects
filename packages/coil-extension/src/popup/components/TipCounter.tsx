@@ -2,12 +2,15 @@ import React from 'react'
 import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
+import { formatAmount } from '../../util/currencyFormatting'
 
 import { TipAddButton } from './TipAddButton'
 import { TipSubButton } from './TipSubButton'
 
 export interface TipCounterProps {
   tipAmount: number
+  increase: () => void
+  decrease: () => void
 }
 
 const BigBalance = styled('p')(() => ({
@@ -23,12 +26,18 @@ const Flex = styled('div')(() => ({
   flexAlign: 'center'
 }))
 
-export const TipCounter = ({ tipAmount }: TipCounterProps) => {
+export const TipCounter = (props: TipCounterProps) => {
+  const formattedAmount = formatAmount({
+    amount: String(props.tipAmount),
+    assetCode: 'USD',
+    assetScale: 2
+  })
+
   return (
     <Flex>
-      <TipAddButton />
-      <BigBalance>{tipAmount}</BigBalance>
-      <TipSubButton />
+      <TipSubButton onClick={props.decrease} />
+      <BigBalance>{formattedAmount}</BigBalance>
+      <TipAddButton onClick={props.increase} />
     </Flex>
   )
 }

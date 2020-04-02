@@ -1,7 +1,12 @@
 import React from 'react'
 
-export const TipSubButton = () => (
+interface TipSubButtonProps {
+  onClick: () => any
+}
+
+export const TipSubButton = ({ onClick }: TipSubButtonProps) => (
   <svg
+    onClick={onClick}
     width='40'
     height='40'
     viewBox='0 0 40 40'
