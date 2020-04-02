@@ -23,7 +23,8 @@ import {
   SetMonetizationState,
   SetStreamControls,
   StartWebMonetization,
-  ToBackgroundMessage
+  ToBackgroundMessage,
+  Tip
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
@@ -672,6 +673,13 @@ export class BackgroundScript {
         }
       })
       this.log(`sendTip: sent tip to ${receiver}`, result)
+      const message: Tip = {
+        command: 'tip',
+        data: {
+          paymentPointer: receiver
+        }
+      }
+      this.api.tabs.sendMessage(tabId, message)
       return { success: true }
     } catch (e) {
       this.log(`sendTip: error. msg=${e.message}`)

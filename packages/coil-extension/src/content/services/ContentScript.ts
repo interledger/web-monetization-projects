@@ -8,7 +8,7 @@ import {
   DocumentMonetization,
   IdleDetection
 } from '@web-monetization/wext/content'
-import { MonetizationProgressEvent } from '@web-monetization/types'
+import { MonetizationProgressEvent, TipEvent } from '@web-monetization/types'
 
 import * as tokens from '../../types/tokens'
 import {
@@ -156,6 +156,15 @@ export class ContentScript {
           this.frames.reportCorrelation(request.data)
         } else if (request.command === 'onFrameAllowedChanged') {
           this.onFrameAllowedChanged(request)
+        } else if (request.command === 'tip') {
+          debug('sendTip event')
+          const detail: TipEvent['detail'] = {
+            amount: '100',
+            assetCode: 'USD',
+            assetScale: 2,
+            paymentPointer: request.data.paymentPointer
+          }
+          this.monetization.postTipWindowMessage(detail)
         }
         // Don't need to return true here, not using sendResponse
         // https://developer.chrome.com/apps/runtime#event-onMessage
