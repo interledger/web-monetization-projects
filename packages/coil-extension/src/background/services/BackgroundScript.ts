@@ -672,8 +672,13 @@ export class BackgroundScript {
           amount: amount || 100
         }
       })
+
+      if (result.errors) {
+        throw new Error(JSON.stringify(result.errors))
+      }
+
       this.log(`sendTip: sent tip to ${receiver}`, result)
-      return { success: true }
+      return { success: result.data.sendTip.success }
     } catch (e) {
       this.log(`sendTip: error. msg=${e.message}`)
       return { success: false }
