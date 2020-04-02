@@ -18,15 +18,8 @@ const precomputedP256 = {
   B: p256Curve.b,
   baseField: p256Curve.field,
   c1: p256Curve.b.mul(-1).mul(p256Curve.a.inverseMod(p256Curve.field.modulus)),
-  c2: p256Curve.field.modulus
-    .sub(1)
-    .cnormalize()
-    .halveM(),
-  sqrt: p256Curve.field.modulus
-    .add(1)
-    .cnormalize()
-    .halveM()
-    .halveM()
+  c2: p256Curve.field.modulus.sub(1).cnormalize().halveM(),
+  sqrt: p256Curve.field.modulus.add(1).cnormalize().halveM().halveM()
 }
 
 /**

@@ -16,7 +16,7 @@ const BTP_SECRET = process.env.BTP_SECRET || 'btp_test'
 
 const TOKENS_SERVICE_TEST = Boolean(process.env.TOKENS_SERVICE_TEST)
 
-  // Integration test against the redeemer service running locally
+// Integration test against the redeemer service running locally
 ;(TOKENS_SERVICE_TEST ? describe : describe.skip)(
   'Anonymous tokens service',
   () => {

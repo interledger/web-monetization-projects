@@ -255,17 +255,10 @@ export function decompressPoint(
   // y^2 = x^3 - 3x + b (mod p)
   let rh = x.power(3)
   const threeTimesX = x.mul(CURVE.a)
-  rh = rh
-    .add(threeTimesX)
-    .add(CURVE.b)
-    .mod(CURVE.field.modulus) // mod() normalizes
+  rh = rh.add(threeTimesX).add(CURVE.b).mod(CURVE.field.modulus) // mod() normalizes
 
   // modsqrt(z) for p = 3 mod 4 is z^(p+1/4)
-  const sqrt = CURVE.field.modulus
-    .add(1)
-    .normalize()
-    .halveM()
-    .halveM()
+  const sqrt = CURVE.field.modulus.add(1).normalize().halveM().halveM()
   let y = new CURVE.field(rh.powermod(sqrt, CURVE.field.modulus))
 
   const parity = y.limbs[0] & 1
@@ -290,7 +283,7 @@ export function decompressPoint(
 export function getCurvePoints(signatures: string[]): CurvePoints {
   const compression = { on: false, set: false }
   const sigBytes: number[][] = []
-  signatures.forEach(function(signature) {
+  signatures.forEach(function (signature) {
     const buf = sjcl.codec.bytes.fromBits(sjcl.codec.base64.toBits(signature))
     let setting = false
     switch (buf[0]) {
@@ -315,7 +308,7 @@ export function getCurvePoints(signatures: string[]): CurvePoints {
   })
 
   const usablePoints: sjcl.SjclEllipticalPoint[] = []
-  sigBytes.forEach(function(buf) {
+  sigBytes.forEach(function (buf) {
     const usablePoint = sec1DecodeFromBytes(buf)
     if (usablePoint == null) {
       throw new Error('[privacy-pass]: unable to decode point: ' + buf)
@@ -438,10 +431,7 @@ export function verifyProof(
   // Recompute A and B for proof verification
   const cH = _scalarMult(dleq.C, pointH)
   const rG = _scalarMult(dleq.R, pointG)
-  const A = cH
-    .toJac()
-    .add(rG)
-    .toAffine()
+  const A = cH.toJac().add(rG).toAffine()
 
   const composites = recomputeComposites(
     tokens,
@@ -452,10 +442,7 @@ export function verifyProof(
   )
   const cZ = _scalarMult(dleq.C, composites.Z)
   const rM = _scalarMult(dleq.R, composites.M)
-  const B = cZ
-    .toJac()
-    .add(rM)
-    .toAffine()
+  const B = cZ.toJac().add(rM).toAffine()
 
   // Recalculate C' and check if C =?= C'
   const h = new CURVE_H2C_HASH() // use the h2c hash for convenience

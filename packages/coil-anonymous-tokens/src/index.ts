@@ -109,7 +109,7 @@ export class AnonymousTokens {
     this.redeemerUrl = redeemerUrl
     this.signerUrl = signerUrl
     this.store = store
-    this.debug = debug || function() {}
+    this.debug = debug || function () {}
     this.batchSize = batchSize
 
     let count = 0
