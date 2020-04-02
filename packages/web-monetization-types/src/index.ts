@@ -1,10 +1,13 @@
 import { TEventListenerOrListenerObject } from './genericEventListeners'
 
-export interface MonetizationEventDetail {
-  // Web-Monetization-Id header present in the SPSP request
-  requestId: string
+export interface EventDetail {
   // The meta[@name="monetization"] @content value
   paymentPointer: string
+}
+
+export interface MonetizationEventDetail extends EventDetail {
+  // Web-Monetization-Id header present in the SPSP request
+  requestId: string
 }
 
 export type MonetizationEventBase = CustomEvent<MonetizationEventDetail>
@@ -45,6 +48,16 @@ export interface MonetizationProgressEventDetail
 export interface MonetizationProgressEvent
   extends CustomEvent<MonetizationProgressEventDetail> {
   type: 'monetizationprogress'
+}
+
+export interface TipEventDetail extends EventDetail {
+  amount: string
+  assetCode: string
+  assetScale: number
+}
+
+export interface TipEvent extends CustomEvent<TipEventDetail> {
+  type: 'tip'
 }
 
 /**

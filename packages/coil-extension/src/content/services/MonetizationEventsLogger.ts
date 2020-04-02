@@ -9,7 +9,8 @@ export class MonetizationEventsLogger {
     const events = [
       'monetizationstart',
       'monetizationstop',
-      'monetizationpending'
+      'monetizationpending',
+      'tip'
       // Don't log these events
       // 'monetizationprogress'
     ]
