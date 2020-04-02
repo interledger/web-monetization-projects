@@ -9,6 +9,10 @@ jobs:
       - checkout
       # Download and cache dependencies
       - &restore_cache
+#        run:
+#         name: Restore Cache Dummy
+#         command: |
+#           echo Restore Cache Dummy!
         restore_cache:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
