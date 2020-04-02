@@ -26,19 +26,13 @@ async function configureContainer(container: Container) {
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
 
-  container
-    .bind(Stream)
-    .toSelf()
-    .inTransientScope()
+  container.bind(Stream).toSelf().inTransientScope()
 
   container
     .bind(tokens.NoContextLoggerName)
     .toConstantValue('tokens.NoContextLoggerName')
 
-  container
-    .bind(tokens.Logger)
-    .toDynamicValue(createLogger)
-    .inTransientScope()
+  container.bind(tokens.Logger).toDynamicValue(createLogger).inTransientScope()
 
   container.bind(tokens.LocalStorageProxy).toDynamicValue(context => {
     return context.container.get(StorageService).makeProxy(['token'])

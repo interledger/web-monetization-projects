@@ -15,7 +15,7 @@ const defaultInjections = (module?: symbol) => {
   }
 }
 export function injectable(module: symbol = GlobalModule) {
-  return function(target: any) {
+  return function (target: any) {
     const injections: Injections = target[InjectionsSymbol]
     if (!injections) {
       target[InjectionsSymbol] = defaultInjections(module)
@@ -35,7 +35,7 @@ injectable.forModule = (module: symbol) => {
 }
 
 export function inject(token: any) {
-  return function(target: any, key?: string, index?: number): void {
+  return function (target: any, key?: string, index?: number): void {
     let injections: Injections = target[InjectionsSymbol]
     if (!injections) {
       injections = target[InjectionsSymbol] = defaultInjections()
