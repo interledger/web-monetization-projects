@@ -1,7 +1,12 @@
 import React from 'react'
 
-export const TipAddButton = () => (
+interface TipAddButtonProps {
+  onClick: () => any
+}
+
+export const TipAddButton = ({ onClick }: TipAddButtonProps) => (
   <svg
+    onClick={onClick}
     width='40'
     height='40'
     viewBox='0 0 40 40'
