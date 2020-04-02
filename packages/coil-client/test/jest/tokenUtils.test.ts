@@ -44,7 +44,7 @@ describe('CoilTokenUtils', () => {
 
     tests.forEach(([args, result]) => {
       const [token, withinHrs, nowSeconds] = args
-      it(`isExpired(${args}) === ${result}`, function() {
+      it(`isExpired(${args}) === ${result}`, function () {
         expect(utils.isExpired({ token, withinHrs, nowSeconds })).toBe(result)
       })
     })

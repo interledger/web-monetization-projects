@@ -9,16 +9,18 @@ jobs:
       - checkout
       # Download and cache dependencies
       - &restore_cache
+#        run:
+#         name: Restore Cache Dummy
+#         command: |
+#           echo Restore Cache Dummy!
         restore_cache:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v2-dependencies-
       - &yarn_install
         run:
           name: Yarn Install
           command: |
-            yarn
+            yarn --frozen-lockfile
       - run:
           name: Lint Project
           command: |
