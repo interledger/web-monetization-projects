@@ -1,0 +1,57 @@
+{
+  "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
+  "$overRideUpKeep": {
+    "scripts": {
+      "postinstall": "cd ../../node_modules/sjcl && ./configure --without-all --with-ecc --with-convenience --with-codecBytes --with-codecHex --compress=none && make sjcl.js"
+    }
+  },
+  "name": "@coil/anonymous-tokens",
+  "version": "0.0.0",
+  "private": false,
+  "keywords": [
+    "ilp",
+    "web-monetization"
+  ],
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/coil-anonymous-tokens",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coilhq/web-monetization-projects.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Coil Team <info@coil.com>",
+  "main": "./build",
+  "types": "./build",
+  "scripts": {
+    "build:ts": "tsc --build tsconfig.build.json",
+    "build:ts:verbose": "yarn build:ts --verbose",
+    "build:ts:watch": "yarn build:ts --watch",
+    "clean:build": "rimraf build",
+    "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
+    "postinstall": "cd ../../node_modules/sjcl && ./configure --without-all --with-ecc --with-convenience --with-codecBytes --with-codecHex --compress=none && make sjcl.js",
+    "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
+    "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "precommit": "echo lint-staged runs from root",
+    "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "yarn test --verbose --coverage",
+    "upkeep": "cd ../.. && yarn upkeep"
+  },
+  "dependencies": {
+    "@types/jsbn": "^1.2.29",
+    "asn1-parser": "^1.1.8",
+    "jsbn": "^1.1.0",
+    "keccak": "^3.0.0",
+    "sjcl": "bitwiseshiftleft/sjcl"
+  },
+  "devDependencies": {
+    "@types/btoa": "^1.2.3",
+    "@types/jsonwebtoken": "^8.3.7",
+    "@types/node-fetch": "^2.5.4",
+    "@types/sjcl": "^1.0.29",
+    "atob": "^2.1.2",
+    "btoa": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "localforage": "^1.7.3",
+    "node-fetch": "^2.6.0"
+  }
+}
