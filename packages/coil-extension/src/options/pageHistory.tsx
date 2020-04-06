@@ -9,42 +9,44 @@ import { PageTotal } from './options'
 
 // styles for responsiveness
 const useStyles = makeStyles(theme => {
-  return {
-    centerElement: {
-      display: 'flex',
-      justifyContent: 'flex-start',
-      alignItems: 'center',
-      flexDirection: 'row'
-    },
-    domainRow: {
-      marginTop: '12px'
-    },
-    domainH4: {
-      display: 'inline-flex',
-      color: Colors.Grey800,
-      marginTop: '5px',
-      fontSize: '20px'
-    },
-    favicon: {
-      margin: '9px 8px 8px 0'
-    },
-    [theme.breakpoints.up('sm')]: {
-      domainH4: {
-        fontSize: '16px',
-        margin: '6px 0'
-      },
+  return (
+    {
       centerElement: {
-        justify: 'center',
-        flexDirection: 'column'
-      },
-      favicon: {
-        margin: '7px 8px 8px 0'
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        flexDirection: 'row'
       },
       domainRow: {
-        marginTop: 0
+        marginTop: '12px'
+      },
+      domainH4: {
+        display: 'inline-flex',
+        color: Colors.Grey800,
+        marginTop: '5px',
+        fontSize: '20px'
+      },
+      favicon: {
+        margin: '9px 8px 8px 0'
+      },
+      [theme.breakpoints.up('sm')]: {
+        domainH4: {
+          fontSize: '16px',
+          margin: '6px 0'
+        },
+        centerElement: {
+          justify: 'center',
+          flexDirection: 'column'
+        },
+        favicon: {
+          margin: '7px 8px 8px 0'
+        },
+        domainRow: {
+          marginTop: 0
+        }
       }
-    }
-  } as const
+    } as const
+  )
 })
 
 const PageHistoryH4 = styled(Typography)(({ theme }) => ({

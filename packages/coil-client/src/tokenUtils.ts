@@ -37,13 +37,11 @@ export class CoilTokenUtils {
     const tokensNullFiltered = entries.filter(([_, token]) => token != null)
 
     const tokens = tokensNullFiltered.map(([name, tok], ix) => {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      return [this.decode(tok!), ix, tok, name] as [
-        DecodedToken,
-        number,
-        string,
-        string
-      ]
+      return (
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        [this.decode(tok!), ix, tok, name] as
+        [DecodedToken, number, string, string]
+      )
     })
 
     const tokensSorted = tokens.sort(

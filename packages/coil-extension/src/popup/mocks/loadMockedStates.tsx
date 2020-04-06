@@ -149,10 +149,11 @@ const argsLogger = (name: string) => {
 }
 
 class MockRuntime extends EventEmitter implements PopupRuntime {
-  tabOpener = ((...args: any) => {
-    console.log('tabOpener', ...args)
-    return argsLogger('openTab: ' + args.join(' '))
-  }) as any
+  tabOpener =
+    ((...args: any) => {
+      console.log('tabOpener', ...args)
+      return argsLogger('openTab: ' + args.join(' '))
+    }) as any
 
   onMessageAddListener = (func: any) => {
     this.addListener('message', func)
@@ -179,59 +180,61 @@ const embossedBorder = {
 const useStyles = makeStyles(theme => {
   console.log('breakpoint: ', [theme.breakpoints.up('md')])
 
-  return {
-    root: {
-      background: '#DDD',
-      padding: '2rem',
-      width: '100%',
-      boxSizing: 'border-box'
-    },
-    inner: {
-      maxWidth: '1132px',
-      margin: '0 auto',
-      boxSizing: 'border-box'
-    },
-    layoutContainer: {
-      flexDirection: 'column-reverse',
-      width: '100%'
-    },
-    paper: {
-      borderRadius: 2,
-      background: '#FFF'
-    },
-    heading: {
-      variant: 'h3',
-      align: 'center',
-      marginTop: '0.75rem',
-      padding: '1rem 0',
-      fontSize: theme.typography.pxToRem(18),
-      fontWeight: theme.typography.fontWeightBold
-    },
-    popup: {
-      margin: '0.5rem 0',
-      paddingBottom: '1.5rem',
-      transition: 'all 0.2s ease-in-out',
-      border: '1px solid transparent',
-      background: 'rgba(255,255,255,0.16)'
-    },
-    statePanel: {
-      ...embossedBorder,
-      marginTop: '1.475rem',
-      background: 'rgba(255, 255, 255, 0.4)'
-    },
-    active: {
-      ...embossedBorder,
-      background: 'rgba(255, 255, 255, 0.4)'
-    },
-    statePanelWrap: {
-      background: '#CCC'
-    },
-    [theme.breakpoints.up('md')]: {
+  return (
+    {
+      root: {
+        background: '#DDD',
+        padding: '2rem',
+        width: '100%',
+        boxSizing: 'border-box'
+      },
+      inner: {
+        maxWidth: '1132px',
+        margin: '0 auto',
+        boxSizing: 'border-box'
+      },
       layoutContainer: {
-        flexDirection: 'row'
+        flexDirection: 'column-reverse',
+        width: '100%'
+      },
+      paper: {
+        borderRadius: 2,
+        background: '#FFF'
+      },
+      heading: {
+        variant: 'h3',
+        align: 'center',
+        marginTop: '0.75rem',
+        padding: '1rem 0',
+        fontSize: theme.typography.pxToRem(18),
+        fontWeight: theme.typography.fontWeightBold
+      },
+      popup: {
+        margin: '0.5rem 0',
+        paddingBottom: '1.5rem',
+        transition: 'all 0.2s ease-in-out',
+        border: '1px solid transparent',
+        background: 'rgba(255,255,255,0.16)'
+      },
+      statePanel: {
+        ...embossedBorder,
+        marginTop: '1.475rem',
+        background: 'rgba(255, 255, 255, 0.4)'
+      },
+      active: {
+        ...embossedBorder,
+        background: 'rgba(255, 255, 255, 0.4)'
+      },
+      statePanelWrap: {
+        background: '#CCC'
+      },
+      [theme.breakpoints.up('md')]: {
+        layoutContainer: {
+          flexDirection: 'row'
+        }
       }
-    }
-  } as const
+    } as const
+  )
 })
 
 const mockRuntime: MockRuntime = new MockRuntime()

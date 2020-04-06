@@ -32,11 +32,13 @@ export const TipButton = (props: PopupProps) => {
   const sendTip = async () => {
     const message: SendTip = { command: 'sendTip' }
 
-    return new Promise(resolve => {
-      props.context.runtime.sendMessage(message, (result: SendTipResult) => {
-        resolve(result)
-      })
-    }) as Promise<SendTipResult>
+    return (
+      new Promise(resolve => {
+        props.context.runtime.sendMessage(message, (result: SendTipResult) => {
+          resolve(result)
+        })
+      }) as Promise<SendTipResult>
+    )
   }
 
   if (props.context.store.user.canTip) {
