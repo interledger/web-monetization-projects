@@ -1,3 +1,11 @@
+<a name="coil-extension@0.0.49"></a>
+
+# [coil-extension@0.0.49](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.48...coil-extension@0.0.49) (2020-04-06)
+
+### Features
+
+- Add anonymous tokens service to authenticate to Coil's Web Monetization infrastructure anonymously. This prevents Web Monetization usage from being tied back to users
+
 <a name="coil-extension@0.0.48"></a>
 
 # [coil-extension@0.0.48](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.47...coil-extension@0.0.48) (2020-03-16)
