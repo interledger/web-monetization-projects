@@ -157,6 +157,12 @@ make sense.
   - Issue: [#127][ni127]
   - Fix PR: [#128][np128]
 
+- [ ] Check tip event fires when clicked on in the popup
+
+  - Open the [event-logger.html](../test/fixtures/event-logger.html) file
+  - Open the extension popup and click on "Tip this creator \$1!"
+  - Check that the tip event occurs
+
 - [ ] Run a local web server (e.g. with `python -m http.server 4000`) serving
       the dist folder, then open [static/popup.html](static/popup.html) in a
       normal tab and check the popup rendering in various states.
