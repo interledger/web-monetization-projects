@@ -31,5 +31,5 @@
       "run_at": "document_start"
     }
   ],
-  "permissions": [ "webNavigation", "<all_urls>" ]
+  "permissions": [ "webNavigation", "tabs", "<all_urls>" ]
 }
