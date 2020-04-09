@@ -18,6 +18,7 @@ export class Frames {
   isAnyCoilFrame: boolean
   isIFrame: boolean
   isCoilTopFrame: boolean
+  isCoilHandlerFrame: boolean
   isDirectChildFrame: boolean
   isMonetizableFrame: boolean
 
@@ -32,8 +33,15 @@ export class Frames {
     this.isAnyCoilFrame = window.origin === coilDomain
     this.isIFrame = !this.isTopFrame
     this.isCoilTopFrame = this.isTopFrame && this.isAnyCoilFrame
+    // injected into background page in an <iframe>
+    this.isCoilHandlerFrame =
+      this.isAnyCoilFrame &&
+      !this.isTopFrame &&
+      window.location.pathname == '/handler.html'
     this.isDirectChildFrame = this.isIFrame && window.parent === window.top
-    this.isMonetizableFrame = true
+    // don't monetize the handler page (or send messages with sender
+    // without `tab`)
+    this.isMonetizableFrame = !this.isCoilHandlerFrame
   }
 
   monitor() {
