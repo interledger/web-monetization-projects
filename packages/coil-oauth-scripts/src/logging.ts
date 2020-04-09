@@ -7,8 +7,11 @@ export const debug: typeof console.log = localStorage.WM_DEBUG
     () => {}
 
 export function logEvents() {
-  const events =
-    ['monetizationstart', 'monetizationstop', 'monetizationpending'] as const
+  const events = [
+    'monetizationstart',
+    'monetizationstop',
+    'monetizationpending'
+  ] as const
 
   events.forEach(e => {
     getDoc(document).monetization.addEventListener(e, ev => {

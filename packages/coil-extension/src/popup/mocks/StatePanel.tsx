@@ -6,39 +6,37 @@ import { Grid } from '@material-ui/core'
 import { PopupStateType } from '../services/PopupState'
 
 const useStyles = makeStyles(theme => {
-  return (
-    {
+  return {
+    root: {
+      paddingLeft: '1rem',
+      position: 'fixed'
+    },
+    heading: {
+      fontSize: theme.typography.pxToRem(24),
+      fontWeight: theme.typography.fontWeightBold,
+      padding: '1.75rem 0',
+      variant: 'h2'
+    },
+    body: {
+      background: '#222',
+      borderRadius: '0.25rem',
+      padding: '0.5rem'
+    },
+    type: {
+      fontSize: '0.75rem',
+      color: '#EEE',
+      wordWrap: 'break-word',
+      wordBreak: 'break-all',
+      overflowWrap: 'break-word',
+      whiteSpace: 'pre-wrap',
+      overflowX: 'auto'
+    },
+    [theme.breakpoints.down('md')]: {
       root: {
-        paddingLeft: '1rem',
-        position: 'fixed'
-      },
-      heading: {
-        fontSize: theme.typography.pxToRem(24),
-        fontWeight: theme.typography.fontWeightBold,
-        padding: '1.75rem 0',
-        variant: 'h2'
-      },
-      body: {
-        background: '#222',
-        borderRadius: '0.25rem',
-        padding: '0.5rem'
-      },
-      type: {
-        fontSize: '0.75rem',
-        color: '#EEE',
-        wordWrap: 'break-word',
-        wordBreak: 'break-all',
-        overflowWrap: 'break-word',
-        whiteSpace: 'pre-wrap',
-        overflowX: 'auto'
-      },
-      [theme.breakpoints.down('md')]: {
-        root: {
-          position: 'relative'
-        }
+        position: 'relative'
       }
-    } as const
-  )
+    }
+  } as const
 })
 
 export const StatePanel = (props: {
