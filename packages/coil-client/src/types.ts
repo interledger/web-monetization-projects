@@ -8,6 +8,8 @@ export interface CoilUser {
   customerId?: string
   subscription?: {
     active: boolean
+    endDate?: string
+    trialEndDate?: string
   }
   currencyPreferences?: {
     code: string

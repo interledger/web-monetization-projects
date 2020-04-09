@@ -39,20 +39,21 @@ export class AuthService extends EventEmitter {
       token = null
     } else if (tokenUtils.isExpired({ token, withinHrs: 12 })) {
       // Update the stored token/user
-      this.log('doing refreshTokenAndUpdateWhoAmi')
+      this.log('before refreshTokenAndUpdateWhoAmi')
       token = await this.refreshTokenAndUpdateWhoAmi(token)
-      this.log('token after refreshTokenAndUpdateWhoAmi', token)
+      this.log('after refreshTokenAndUpdateWhoAmi', token)
     } else {
       // Routinely do a whoami query to check for subscription status
       // Query could fail if token is invalid
-      this.log('doing updateWhoAmI', token)
+      this.log('before updateWhoAmI token=%s user=%s', token, this.store.user)
       const stored = token
-      token = await this.cached.query({
-        key: 'updateWhoAmI',
-        maxAgeMs: 15e3,
-        operationFactory: async () => this.updateWhoAmi(stored)
-      })
-      this.log('token after updateWhoAmI', token)
+      const endDate =
+        this.store.user?.subscription?.endDate ||
+        this.store.user?.subscription?.trialEndDate
+      if (!endDate || new Date(endDate) < new Date()) {
+        token = await this.updateWhoAmi(stored)
+      }
+      this.log('after updateWhoAmI token=%s user=%s', token, this.store.user)
     }
 
     if (token) {

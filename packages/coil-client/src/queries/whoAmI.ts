@@ -1,5 +1,4 @@
 import { CoilUser } from '../types'
-
 import { GraphQlClient } from '..'
 
 export interface WhoAmIData {
@@ -15,6 +14,8 @@ export const whoamiQuery = `{
 
     subscription {
       active
+      endDate
+      trialEndDate
     }
 
     currencyPreferences {
