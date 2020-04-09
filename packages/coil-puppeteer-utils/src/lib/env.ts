@@ -21,8 +21,9 @@ export const HEADLESS = Boolean(process.env.PUPPETEER_HEADLESS)
 export const DEVTOOLS = Boolean(process.env.PUPPETEER_DEVTOOLS)
 
 // TODO: edge ? chrome|edge -> chromium ?
-export const BROWSER_TYPE =
-  (process.env.BROWSER_TYPE || 'chrome') as 'chrome' | 'firefox'
+export const BROWSER_TYPE = (process.env.BROWSER_TYPE || 'chrome') as
+  | 'chrome'
+  | 'firefox'
 
 export const BROWSER_PATH = process.env.BROWSER_PATH || undefined
 export const EXTENSION_PATH =
