@@ -1,5 +1,4 @@
 import { CoilUser } from '../types'
-
 import { GraphQlClient } from '..'
 
 export interface QueryTokenData {
@@ -18,6 +17,8 @@ export const queryTokenQuery = `{
     customerId
     subscription {
       active
+      endDate
+      trialEndDate
     }
 
     currencyPreferences {

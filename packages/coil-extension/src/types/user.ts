@@ -5,6 +5,8 @@ export interface User {
   canTip?: boolean
   subscription?: {
     active: boolean
+    endDate?: string
+    trialEndDate?: string
   }
   invitation?: {
     usedAt: string
