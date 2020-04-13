@@ -124,6 +124,7 @@ export type MonetizationEvent =
 export interface SPSPResponse {
   destination_account: string
   shared_secret: string
+  receipts_enabled?: boolean
 }
 
 export type MonetizationRequest = {
