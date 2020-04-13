@@ -72,7 +72,7 @@
     "@types/jest-environment-puppeteer": "^4.3.1",
     "@types/jsonwebtoken": "^8.3.9",
     "@types/long": "^4.0.1",
-    "@types/node-fetch": "^2.5.5",
+    "@types/node-fetch": "^2.5.6",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "@webexts/build-utils": "^0.0.0",
