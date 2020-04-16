@@ -1,5 +1,3 @@
-const defaultLogger = console.log.bind(console, 'adaptive-bandwidth:')
-
 export interface AdaptiveBandwidthTiers {
   getBandwidth(url: string): Promise<number>
 }
@@ -12,7 +10,7 @@ export class AdaptiveBandwidth {
   constructor(
     private _pageUrl: string,
     private _tiers: AdaptiveBandwidthTiers,
-    private _debug: (...args: any[]) => void = defaultLogger
+    private _debug: (...args: unknown[]) => void = () => undefined
   ) {
     this.reset()
   }
