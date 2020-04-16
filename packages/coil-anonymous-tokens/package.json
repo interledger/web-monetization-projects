@@ -46,7 +46,7 @@
   "devDependencies": {
     "@types/btoa": "^1.2.3",
     "@types/jsonwebtoken": "^8.3.9",
-    "@types/node-fetch": "^2.5.5",
+    "@types/node-fetch": "^2.5.6",
     "@types/sjcl": "^1.0.29",
     "atob": "^2.1.2",
     "btoa": "^1.2.1",

@@ -3,6 +3,7 @@
 const path = require('path')
 const TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
 
+console.log({ TRANSPILE_ONLY })
 module.exports = {
   mode: process.env.BUILD_ENV || 'development',
 
