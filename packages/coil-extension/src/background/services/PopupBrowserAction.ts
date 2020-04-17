@@ -64,7 +64,10 @@ export class PopupBrowserAction {
     // In some strange cases on android these are not set
     const api = this.api
 
-    if (api.browserAction.setIcon) {
+    if (
+      api.browserAction.setIcon &&
+      state?.icon?.path !== this.icons.getInactive()
+    ) {
       api.browserAction.setIcon({
         tabId,
         path: state?.icon?.path ?? this.icons.getInactive()
