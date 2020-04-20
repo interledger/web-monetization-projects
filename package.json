@@ -82,7 +82,7 @@
     "jest": "^25.3.0",
     "jest-puppeteer": "^4.4.0",
     "lerna": "^3.20.2",
-    "lint-staged": "^10.1.3",
+    "lint-staged": "^10.1.6",
     "prettier": "^2.0.4",
     "puppeteer": "^2.1.1",
     "puppeteer-firefox": "^0.5.1",
