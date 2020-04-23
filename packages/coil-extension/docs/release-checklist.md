@@ -86,7 +86,7 @@ make sense.
 - [ ] Check monetization works consistently
 
   - In the same tab, go to http://www.travisvcrist.com/gatehub
-    - refresh and make sure streaming works 10 times in a rowg
+    - refresh and make sure streaming works 10 times in a row
       - should not get 'stuck' in 'setting up payment' state
   - Issue: [coil/coilhq#3038][ci3038]
   - Fix PRs: [#242][np242]
