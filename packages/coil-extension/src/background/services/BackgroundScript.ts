@@ -187,12 +187,14 @@ export class BackgroundScript {
 
       // Always get the url from the tab
       const url = event.frame.href
-      if (status === 'loading') {
+      if (status === 'loading' && event.frame.top) {
         this.setCoilUrlForPopupIfNeeded(tabId, url)
       }
 
       if (becameComplete || (isComplete && changedUrl)) {
-        this.setCoilUrlForPopupIfNeeded(tabId, url)
+        if (event.frame.top) {
+          this.setCoilUrlForPopupIfNeeded(tabId, url)
+        }
         const from = `onFrameChanged directly, event=${JSON.stringify(event)}, `
         const message: CheckAdaptedContent = {
           command: 'checkAdaptedContent',
