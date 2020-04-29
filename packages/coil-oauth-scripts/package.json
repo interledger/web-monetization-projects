@@ -53,6 +53,6 @@
     "@coil/puppeteer-utils": "0.0.0",
     "@types/long": "^4.0.1",
     "@types/node-fetch": "^2.5.7",
-    "@types/uuid": "^7.0.2"
+    "@types/uuid": "^7.0.3"
   }
 }
