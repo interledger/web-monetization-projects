@@ -49,6 +49,6 @@
     "yaml": "^1.9.2"
   },
   "devDependencies": {
-    "@types/yaml": "^1.2.0"
+    "@types/yaml": "^1.9.7"
   }
 }
