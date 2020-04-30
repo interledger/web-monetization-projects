@@ -65,7 +65,7 @@
     "crx-hotreload": "^1.0.4",
     "css-loader": "^3.5.2",
     "file-loader": "^6.0.0",
-    "style-loader": "^1.1.4",
+    "style-loader": "^1.2.1",
     "web-ext": "^4.2.0"
   }
 }
