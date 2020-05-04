@@ -159,9 +159,9 @@ export class ContentScript {
         } else if (request.command === 'tip') {
           debug('sendTip event')
           const detail: TipEvent['detail'] = {
-            amount: '100',
-            assetCode: 'USD',
-            assetScale: 2,
+            amount: request.data.amount,
+            assetCode: request.data.assetCode,
+            assetScale: request.data.assetScale,
             paymentPointer: request.data.paymentPointer
           }
           this.monetization.postTipWindowMessage(detail)

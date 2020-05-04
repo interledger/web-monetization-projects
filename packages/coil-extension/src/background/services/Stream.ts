@@ -90,6 +90,10 @@ export class Stream extends EventEmitter {
   private _coilDomain: string
   private _anonTokens: AnonymousTokens
 
+  private _assetCode: string
+  private _assetScale: number
+  private _exchangeRate: number
+
   constructor(
     @logger('Stream')
     private readonly _debug: Logger,
@@ -116,6 +120,10 @@ export class Stream extends EventEmitter {
     this._tiers = container.get(BandwidthTiers)
     this._coilDomain = container.get(tokens.CoilDomain)
     this._anonTokens = container.get(AnonymousTokens)
+
+    this._assetCode = ''
+    this._assetScale = 0
+    this._exchangeRate = 1
 
     this._active = false
     this._looping = false
@@ -261,6 +269,9 @@ export class Stream extends EventEmitter {
       msSinceLastPacket: msSinceLastPacket,
       amount: data.amount.toString()
     })
+    this._assetCode = data.assetCode
+    this._assetScale = data.assetScale
+    this._exchangeRate = (Number(data.amount) / Number(data.sourceAmount)) * (10**data.assetScale / 10**data.sourceAssetScale)
     this.emit('money', event)
   }
 
@@ -288,6 +299,14 @@ export class Stream extends EventEmitter {
 
   getPaymentPointer() {
     return this._paymentPointer
+  }
+
+  getAssetDetails() {
+    return {
+      assetCode: this._assetCode,
+      assetScale: this._assetScale,
+      exchangeRate: this._exchangeRate
+    }
   }
 }
 

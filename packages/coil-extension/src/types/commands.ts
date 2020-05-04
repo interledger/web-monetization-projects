@@ -298,6 +298,9 @@ export interface Tip {
   command: 'tip'
   data: {
     paymentPointer: string
+    amount: string
+    assetCode: string
+    assetScale: number
   }
 }
 
