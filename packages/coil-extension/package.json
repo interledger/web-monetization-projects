@@ -74,7 +74,7 @@
     "@types/long": "^4.0.1",
     "@types/node-fetch": "^2.5.7",
     "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
+    "@types/react-dom": "^16.9.7",
     "@webexts/build-utils": "^0.0.0",
     "@wext/shipit": "^0.2.1",
     "addons-linter": "^1.24.0",
