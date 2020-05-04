@@ -1,7 +1,7 @@
 import { GraphQlClient } from '..'
 
-export const loginMutation = `mutation Login($email: String!, $password: String!) {
-  auth: login(email: $email, password: $password) {
+export const loginMutation = `mutation Login($input: LoginInput!) {
+  auth: login(input: $input) {
     token
   }
 }`
@@ -13,7 +13,7 @@ export async function login(
 ): Promise<string> {
   const message = await this.query<{ auth: { token: string } }>({
     query: loginMutation,
-    variables: { password, email }
+    variables: { input: { password, email } }
   })
   if (message.data.auth) {
     return message.data.auth.token

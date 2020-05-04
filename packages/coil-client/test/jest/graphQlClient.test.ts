@@ -34,7 +34,7 @@ describe('GraphQlClient#login', () => {
         },
         body:
           `{"query":${JSON.stringify(loginMutation)},` +
-          `"variables":{"password":"${password}","email":"${email}"}}`
+          `"variables":{"input":{"password":"${password}","email":"${email}"}}}`
       }
     ]
     expect(testFetch).toHaveBeenCalledWith(...params)
