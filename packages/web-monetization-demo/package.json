@@ -44,7 +44,7 @@
     "inversify-express-utils": "^6.3.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-hot-loader": "^4.12.20"
+    "react-hot-loader": "^4.12.21"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.13.0",
