@@ -24,7 +24,7 @@ import {
   SetStreamControls,
   StartWebMonetization,
   ToBackgroundMessage,
-  Tip
+  TipSent
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
@@ -659,7 +659,7 @@ export class BackgroundScript {
 
     const receiver = stream.getPaymentPointer()
     const {assetCode, assetScale, exchangeRate} = stream.getAssetDetails()
-    const amount = Math.floor(1000000000 * exchangeRate).toString() // 1 USD, assetScale = 9
+    const amount = Math.floor(1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
 
     try {
       this.log(`sendTip: sending tip to ${receiver}`)
@@ -677,7 +677,7 @@ export class BackgroundScript {
         }
       })
       this.log(`sendTip: sent tip to ${receiver}`, result)
-      const message: Tip = {
+      const message: TipSent = {
         command: 'tip',
         data: {
           paymentPointer: receiver,

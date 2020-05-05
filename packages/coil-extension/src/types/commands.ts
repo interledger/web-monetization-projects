@@ -294,7 +294,7 @@ export interface SendTipResult {
  *  background -> content
  *  browser.tabs.sendMessage
  */
-export interface Tip {
+export interface TipSent {
   command: 'tip'
   data: {
     paymentPointer: string
@@ -335,6 +335,6 @@ export type ToContentMessage =
   | CheckIFrameIsAllowedFromBackground
   | ReportCorrelationIdToParentContentScript
   | OnFrameAllowedChanged
-  | Tip
+  | TipSent
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup
