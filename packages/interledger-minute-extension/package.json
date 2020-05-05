@@ -53,7 +53,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typeface-roboto": "^0.0.75",
-    "uuid": "^7.0.3"
+    "uuid": "^8.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.34",
