@@ -658,7 +658,7 @@ export class BackgroundScript {
     }
 
     const receiver = stream.getPaymentPointer()
-    const {assetCode, assetScale, exchangeRate} = stream.getAssetDetails()
+    const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
     const amount = Math.floor(1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
 
     try {

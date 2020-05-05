@@ -271,7 +271,9 @@ export class Stream extends EventEmitter {
     })
     this._assetCode = data.assetCode
     this._assetScale = data.assetScale
-    this._exchangeRate = (Number(data.amount) / Number(data.sourceAmount)) * (10**data.assetScale / 10**data.sourceAssetScale)
+    this._exchangeRate =
+      (Number(data.amount) / Number(data.sourceAmount)) *
+      (10 ** data.assetScale / 10 ** data.sourceAssetScale)
     this.emit('money', event)
   }
 
