@@ -15,6 +15,7 @@ export class GraphQlClientOptions {
 export interface GraphQlQueryParameters {
   query: string
   token?: string | null
+  autoThrow?: boolean
   variables?: {}
 }
 
@@ -39,6 +40,7 @@ export class GraphQlClient {
   public async query<T = any>({
     query,
     token = null,
+    autoThrow = true,
     variables = {}
   }: GraphQlQueryParameters) {
     const init: RequestInit = {
@@ -59,7 +61,7 @@ export class GraphQlClient {
       )
     }
     const res = await this.fetch(`${this.config.coilDomain}/graphql`, init)
-    if (!res.ok) {
+    if (!res.ok && autoThrow) {
       throw new Error(
         `graphql query failed. status=${res.status} query=\`${query}\``
       )
