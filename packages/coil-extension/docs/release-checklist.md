@@ -133,7 +133,7 @@ make sense.
   - SHOULD NOT initiate a stream or SPSP request
     [#144][i144]
 
-- [ ] Open the [event-logger.html](test/fixtures/event-logger.html) file:
+- [ ] Open the [event-logger.html](../test/fixtures/event-logger.html) file:
 
   - Use a localhost server so WM works (e.g. with `python -m http.server 4000`)
   - Look for unusual timings, check that pending state is emitted nearly
@@ -143,7 +143,7 @@ make sense.
 
 - [ ] Check started event fires when quickly switching between tabs
 
-  - Open the [event-logger.html](test/fixtures/event-logger.html) file
+  - Open the [event-logger.html](../test/fixtures/event-logger.html) file
   - Switch to another (non-monetized) tab. The payments stop. Quickly switch back to the first tab.
   - The payments restart. Make sure there is a monetizationstart event
   - Issue: [#105][ni105]
@@ -151,11 +151,17 @@ make sense.
 
 - [ ] Check stopped event fires with correct requestId
 
-  - Open the [event-logger.html](test/fixtures/event-logger.html) file
+  - Open the [event-logger.html](../test/fixtures/event-logger.html) file
   - Induce a stop/start in same js 'tick'
   - Check that the stopped event has the correct requestId
   - Issue: [#127][ni127]
   - Fix PR: [#128][np128]
+
+- [ ] Check tip event fires when clicked on in the popup
+
+  - Open the [event-logger.html](../test/fixtures/event-logger.html) file
+  - Open the extension popup and click on "Tip this creator \$1!"
+  - Check that the tip event occurs
 
 - [ ] Run a local web server (e.g. with `python -m http.server 4000`) serving
       the dist folder, then open [static/popup.html](static/popup.html) in a

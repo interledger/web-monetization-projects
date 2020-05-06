@@ -2,7 +2,9 @@ import {
   MonetizationEvent,
   MonetizationProgressEvent,
   MonetizationStartEvent,
-  MonetizationStopEvent
+  MonetizationStopEvent,
+  TipEvent,
+  TipEventDetail
 } from '@web-monetization/types'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -44,6 +46,15 @@ export function isValidProgressEvent(
     assetCode: 'string',
     assetScale: 'number',
     requestId: 'string',
+    paymentPointer: 'string'
+  })
+}
+
+export function isValidTipEvent(details: TipEvent['detail']) {
+  return validateObject(details, {
+    amount: 'string',
+    assetCode: 'string',
+    assetScale: 'number',
     paymentPointer: 'string'
   })
 }
