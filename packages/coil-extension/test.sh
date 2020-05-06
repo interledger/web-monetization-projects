@@ -12,10 +12,10 @@ CI=${CI:-}
 # and makes sure the stream has closed so is a good default
 TESTFILE=${1-'test/puppeteer/logout-test.ts'}
 
-# On CI wait 3 seconds for xvfb-run
+# On CI wait 5 seconds for xvfb-run
 if [[ -n ${CI} ]]
 then
-  sleep 3
+  sleep 5
 fi
 
 if [[ ${DEV} = 'false' ]]
