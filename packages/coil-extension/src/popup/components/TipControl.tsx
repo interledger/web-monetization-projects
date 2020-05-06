@@ -22,7 +22,9 @@ export const TipControl = (props: PopupProps) => {
   const sendTip = async () => {
     const message: SendTip = {
       command: 'sendTip',
-      amount: tipAmount
+      data: {
+        amount: tipAmount
+      }
     }
 
     return new Promise(resolve => {
@@ -61,6 +63,8 @@ export const TipControl = (props: PopupProps) => {
           tipAmount={tipAmount}
           decrease={decreaseTip}
           increase={increaseTip}
+          max={MAX_TIP_AMOUNT}
+          min={MIN_TIP_AMOUNT}
         />
         <TipButton
           tipAmount={tipAmount}

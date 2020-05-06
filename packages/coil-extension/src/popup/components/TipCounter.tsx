@@ -11,19 +11,30 @@ export interface TipCounterProps {
   tipAmount: number
   increase: () => void
   decrease: () => void
+  max: number
+  min: number
 }
 
 const BigBalance = styled('p')(() => ({
   fontSize: '56px',
   lineHeight: '64px',
   margin: '0px',
-  color: Colors.Grey800
+  width: '60%',
+  color: Colors.Grey800,
+  userSelect: 'none',
+  cursor: 'default'
 }))
 
 const Flex = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'row',
   flexAlign: 'center'
+}))
+
+const TipSubButtonWrap = styled('div')(() => ({
+  display: 'flex',
+  width: '20%',
+  paddingTop: '14px'
 }))
 
 export const TipCounter = (props: TipCounterProps) => {
@@ -35,9 +46,21 @@ export const TipCounter = (props: TipCounterProps) => {
 
   return (
     <Flex>
-      <TipSubButton onClick={props.decrease} />
+      <TipSubButtonWrap>
+        <TipSubButton
+          onClick={props.decrease}
+          limited={props.tipAmount == props.min}
+          tipAmount={formattedAmount}
+        />
+      </TipSubButtonWrap>
       <BigBalance>{formattedAmount}</BigBalance>
-      <TipAddButton onClick={props.increase} />
+      <TipSubButtonWrap>
+        <TipAddButton
+          onClick={props.increase}
+          limited={props.tipAmount == props.max}
+          tipAmount={formattedAmount}
+        />
+      </TipSubButtonWrap>
     </Flex>
   )
 }

@@ -343,7 +343,7 @@ export class BackgroundScript {
         sendResponse(await this.youtube.fetchChannelId(request.data.youtubeUrl))
         break
       case 'sendTip':
-        sendResponse(await this.sendTip(request.amount))
+        sendResponse(await this.sendTip(request.data.amount))
         break
       case 'checkIFrameIsAllowedFromIFrameContentScript':
         sendResponse(
