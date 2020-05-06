@@ -12,6 +12,12 @@ CI=${CI:-}
 # and makes sure the stream has closed so is a good default
 TESTFILE=${1-'test/puppeteer/logout-test.ts'}
 
+# On CI wait 3 seconds for xvfb-run
+if [[ -n ${CI} ]]
+then
+  sleep 3
+fi
+
 if [[ ${DEV} = 'false' ]]
 then
   COMMAND="ts-node -r tsconfig-paths/register -T -P test/tsconfig.json"
