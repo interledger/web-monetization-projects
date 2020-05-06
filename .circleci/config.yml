@@ -4,7 +4,7 @@ jobs:
   # Run Linting
   lint-all:
     docker:
-        - image: circleci/node:12.16.1-buster-browsers
+        - image: circleci/node:12.16.3-buster-browsers
     steps:
       - checkout
       # Download and cache dependencies
@@ -34,7 +34,7 @@ jobs:
 
   coil-extension-package:
     docker:
-      - image: circleci/node:12.16.1-buster-browsers
+      - image: circleci/node:12.16.3-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -58,7 +58,7 @@ jobs:
 
   coil-extension-puppeteer:
     docker:
-      - image: circleci/node:12.16.1-buster-browsers
+      - image: circleci/node:12.16.3-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -80,7 +80,7 @@ jobs:
 
   coil-extension-puppeteer-transpile-only:
     docker:
-      - image: circleci/node:12.16.1-buster-browsers
+      - image: circleci/node:12.16.3-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -103,7 +103,7 @@ jobs:
 
   build-all-package-references-typescript:
     docker:
-      - image: circleci/node:12.16.1-buster-browsers
+      - image: circleci/node:12.16.3-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -116,7 +116,7 @@ jobs:
 
   jest-all:
     docker:
-      - image: circleci/node:12.16.1-buster-browsers
+      - image: circleci/node:12.16.3-buster-browsers
     resource_class: large
     steps:
       - run:
@@ -143,7 +143,7 @@ jobs:
 
   jest-lerna-all:
     docker:
-      - image: circleci/node:12.16.1-buster-browsers
+      - image: circleci/node:12.16.3-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -164,7 +164,7 @@ jobs:
 
   coil-oauth-scripts-build:
     docker:
-      - image: circleci/node:12.16.1-buster-browsers
+      - image: circleci/node:12.16.3-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -179,7 +179,7 @@ jobs:
 
   yarn-format-and-upkeep-diff-check:
     docker:
-      - image: circleci/node:12.16.1-buster-browsers
+      - image: circleci/node:12.16.3-buster-browsers
     steps:
       - run:
           name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be empty
