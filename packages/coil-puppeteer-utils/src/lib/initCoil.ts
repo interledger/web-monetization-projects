@@ -47,6 +47,7 @@ export async function initCoil({
     const passwordSelector = '[data-cy="login-password"]'
     const nextSelector = '[data-cy="login-next"]'
 
+    await page.waitForSelector(loginSelector)
     await page.click(loginSelector)
     await page.keyboard.type(user)
     await page.click(nextSelector)
