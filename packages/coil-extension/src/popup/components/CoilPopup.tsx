@@ -21,10 +21,10 @@ export const CoilPopup = (props: PopupProps) => {
           Welcome to Coil
         </StatusTypography>
         <StatusTypography variant='subtitle1' align='center'>
-          Check out our Explore page to explore Web-Monetized content.
+          Check out our Discover page to explore Web-Monetized content.
         </StatusTypography>
         <StatusButton
-          text='Go to Explore'
+          text='Go to Discover'
           variant='contained'
           onClick={onClick}
         />

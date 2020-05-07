@@ -104,7 +104,7 @@ export const AccountBar = (props: PopupProps) => {
         getContentAnchorEl={null}
       >
         <MenuItem dense component='a' onClick={onExploreClick} target='_blank'>
-          <Typography variant='caption'>Explore</Typography>
+          <Typography variant='caption'>Discover</Typography>
         </MenuItem>
 
         <MenuItem
