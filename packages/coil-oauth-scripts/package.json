@@ -44,7 +44,7 @@
     "@web-monetization/polyfill-utils": "0.0.0",
     "@web-monetization/types": "0.0.0",
     "ilp-plugin-btp": "1.4.2",
-    "ilp-protocol-stream": "2.4.0",
+    "ilp-protocol-stream": "2.5.0",
     "node-fetch": "^2.6.0",
     "reduct": "^3.3.1",
     "uuid": "^8.0.0"
