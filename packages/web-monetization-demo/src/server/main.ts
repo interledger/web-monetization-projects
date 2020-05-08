@@ -25,7 +25,7 @@ async function main() {
         extended: true
       })
     )
-    app.use(bodyParser.json())
+    app.use(bodyParser.text())
   })
 
   const app = server.build()

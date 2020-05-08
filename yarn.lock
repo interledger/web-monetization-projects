@@ -8786,7 +8786,7 @@ ilp-protocol-stream@2.5.0, ilp-protocol-stream@^2.5.0:
     oer-utils "^5.0.1"
     uuid "^3.4.0"
 
-ilp-protocol-stream@2.5.0:
+ilp-protocol-stream@2.5.0, ilp-protocol-stream@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.5.0.tgz#4b3e10fd06563db4006d3f5033e6020e20bfd7d0"
   integrity sha512-q2eSwGGApwjcFdb8I95IQInVhfkh9axcMJDkc8mY7A7B/bm71UiqvbrvkyLc/kMcKZY9Fe+9ZA0fDNPVoGkjKg==

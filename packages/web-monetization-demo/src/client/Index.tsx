@@ -31,6 +31,24 @@ const Index = hot(() => {
       }, 1e3)
     }
   }, [state.requestId])
+  useEffect(() => {
+    async function submitReceipt(requestId: string, receipt: string) {
+      const resp = await fetch(
+        `http://localhost:4000/balance/${requestId}:creditReceipt`,
+        {
+          method: 'POST',
+          body: receipt
+        }
+      )
+      if (resp.ok) {
+        const body = await resp.json()
+        setServerBalance(body.balance)
+      }
+    }
+    if (counter.requestId && counter.receipt) {
+      submitReceipt(counter.requestId, counter.receipt)
+    }
+  }, [counter.receipt])
   return (
     <div>
       <h1>Web-Monetization Demo</h1>

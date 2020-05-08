@@ -11,19 +11,11 @@ import { SPSPResponse } from '@web-monetization/types'
 
 import * as tokens from './tokens'
 import { dbg } from './logging'
-import { b64urlDecode, b64urlEncode } from './utils/base64'
-
-export interface BalanceRecord {
-  firstPacketMs: number
-  lastPacketMs: number
-  balance: number
-}
 
 @injectable()
 export class StreamServer {
   server!: AbstractBtpPlugin
   streamServer!: Server
-  balances: Record<string, BalanceRecord> = {}
 
   constructor(@inject(tokens.BtpPort) private port: number) {}
 
@@ -42,31 +34,7 @@ export class StreamServer {
     })
     this.streamServer = await createServer({ plugin: this.server })
     this.streamServer.on('connection', (connection: Connection) => {
-      if (!connection.connectionTag) {
-        throw new Error('expecting requestId as connection tag')
-      }
-      const requestId = b64urlDecode(connection.connectionTag).toString()
-      dbg('connection tag', requestId)
       connection.on('stream', async (stream: DataAndMoneyStream) => {
-        stream.on('money', (amount: string) => {
-          dbg(
-            'received money',
-            amount,
-            connection.sourceAssetCode,
-            connection.sourceAssetScale
-          )
-          const now = Date.now()
-          if (typeof this.balances[requestId] !== 'object') {
-            this.balances[requestId] = {
-              balance: Number(amount),
-              lastPacketMs: now,
-              firstPacketMs: now
-            }
-          } else {
-            this.balances[requestId].balance += Number(amount)
-            this.balances[requestId].lastPacketMs = now
-          }
-        })
         let total = 20e3
         while (stream.isOpen()) {
           stream.setReceiveMax(total)
@@ -83,20 +51,28 @@ export class StreamServer {
     })
   }
 
-  async getSPSPResponse(requestId: string): Promise<SPSPResponse> {
+  async getSPSPResponse(opts: {
+    connectionTag?: string
+    receiptNonce?: Buffer
+    receiptSecret?: Buffer
+  }): Promise<SPSPResponse> {
     const {
       destinationAccount,
-      sharedSecret
-    } = this.streamServer.generateAddressAndSecret(
-      b64urlEncode(Buffer.from(requestId))
-    )
+      sharedSecret,
+      receiptsEnabled
+    } = this.streamServer.generateAddressAndSecret({
+      connectionTag: opts.connectionTag,
+      receiptNonce: opts.receiptNonce,
+      receiptSecret: opts.receiptSecret
+    })
     const body: SPSPResponse = {
       // eslint-disable-next-line @typescript-eslint/camelcase
       destination_account: destinationAccount,
       // eslint-disable-next-line @typescript-eslint/camelcase
-      shared_secret: sharedSecret.toString('base64')
+      shared_secret: sharedSecret.toString('base64'),
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      receipts_enabled: receiptsEnabled
     }
-    this.streamServer.generateAddressAndSecret(requestId)
     return body
   }
 }
