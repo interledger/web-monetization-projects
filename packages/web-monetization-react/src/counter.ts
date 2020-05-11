@@ -15,7 +15,7 @@ export function useMonetizationCounter() {
   const monetizationDetailsCopy = { ...monetizationDetails }
 
   useEffect(() => {
-    const onMonetizationStart = () => {
+    const onEvent = () => {
       // this is purposely mutating because sometimes we get multiple state
       // updates before reload
       setMonetizationDetails(
@@ -23,26 +23,14 @@ export function useMonetizationCounter() {
       )
     }
 
-    const onMonetizationProgress = () => {
-      // this is purposely mutating because sometimes we get multiple state
-      // updates before reload
-      setMonetizationDetails(
-        Object.assign(monetizationDetailsCopy, webMonetizationState.getState())
-      )
-    }
-
-    webMonetizationState.on('monetizationstart', onMonetizationStart)
-    webMonetizationState.on('monetizationprogress', onMonetizationProgress)
+    webMonetizationState.on('monetizationstop', onEvent)
+    webMonetizationState.on('monetizationstart', onEvent)
+    webMonetizationState.on('monetizationprogress', onEvent)
 
     return () => {
-      webMonetizationState.removeListener(
-        'monetizationstart',
-        onMonetizationStart
-      )
-      webMonetizationState.removeListener(
-        'monetizationprogress',
-        onMonetizationProgress
-      )
+      webMonetizationState.removeListener('monetizationstart', onEvent)
+      webMonetizationState.removeListener('monetizationstop', onEvent)
+      webMonetizationState.removeListener('monetizationprogress', onEvent)
     }
   })
 
