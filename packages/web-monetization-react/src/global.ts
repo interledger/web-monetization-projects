@@ -39,7 +39,7 @@ export class GlobalWebMonetizationState extends EventEmitter {
     this.onMonetizationStart = this.onMonetizationStart.bind(this)
     this.onMonetizationProgress = this.onMonetizationProgress.bind(this)
     this.onMonetizationPending = this.onMonetizationPending.bind(this)
-    this.onMonetizationStart = this.onMonetizationStart.bind(this)
+    this.onMonetizationStop = this.onMonetizationStop.bind(this)
   }
 
   resetState() {
