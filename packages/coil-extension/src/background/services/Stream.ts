@@ -22,6 +22,7 @@ import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
+import { BTP_ENDPOINT } from '../../webpackDefines'
 
 import { AnonymousTokens } from './AnonymousTokens'
 import { Logger, logger } from './utils'
@@ -135,14 +136,8 @@ export class Stream extends EventEmitter {
     server.pathname = '/btp'
     this._server = server.href.replace(/^http/, 'btp+ws')
 
-    if (this._initiatingUrl.match(/http:\/\/localhost:[34]000/)) {
-      if (paymentPointer.match(/http:\/\/localhost:4000\/spsp/)) {
-        this._server = 'btp+ws://localhost:3000'
-      }
-      // Support local dev SPSP server
-      if (paymentPointer.match(/http:\/\/localhost:8080/)) {
-        this._server = 'btp+ws://localhost:7768'
-      }
+    if (BTP_ENDPOINT) {
+      this._server = BTP_ENDPOINT
     }
   }
 
