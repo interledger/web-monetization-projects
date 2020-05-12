@@ -53,8 +53,8 @@ export class StreamServer {
 
   async getSPSPResponse(opts: {
     connectionTag?: string
-    receiptNonce?: Buffer
-    receiptSecret?: Buffer
+    receiptNonce?: string
+    receiptSecret?: string
   }): Promise<SPSPResponse> {
     const {
       destinationAccount,
@@ -62,8 +62,12 @@ export class StreamServer {
       receiptsEnabled
     } = this.streamServer.generateAddressAndSecret({
       connectionTag: opts.connectionTag,
-      receiptNonce: opts.receiptNonce,
+      receiptNonce: opts.receiptNonce
+        ? Buffer.from(opts.receiptNonce, 'base64')
+        : undefined,
       receiptSecret: opts.receiptSecret
+        ? Buffer.from(opts.receiptSecret, 'base64')
+        : undefined
     })
     const body: SPSPResponse = {
       // eslint-disable-next-line @typescript-eslint/camelcase
