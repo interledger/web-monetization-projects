@@ -3,6 +3,7 @@
  * from https://github.com/privacypass/challenge-bypass-extension/blob/master/src/ext/redemption.js
  */
 import sjcl from 'sjcl'
+import btoa from 'btoa'
 
 import { unblindPoint, getActiveECSettings, sec1Encode } from './crypto'
 import { sendH2CParams, h2cParams } from './config'

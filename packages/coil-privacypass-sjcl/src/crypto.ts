@@ -6,6 +6,7 @@
 import sjcl from 'sjcl'
 import keccak from 'keccak'
 import { ASN1, PEM } from 'asn1-parser'
+import atob from 'atob'
 
 import { h2Curve } from './hashToCurve'
 import { H2CParams } from './config'

@@ -1,3 +1,5 @@
+import btoa from 'btoa'
+
 /**
  * Functions for handling issue requests and server responses
  * from: https://github.com/privacypass/challenge-bypass-extension/blob/master/src/ext/issuance.js
