@@ -12,6 +12,9 @@
       "path": "packages/coil-polyfill-utils/tsconfig.build.json"
     },
     {
+      "path": "packages/coil-privacypass-sjcl/tsconfig.build.json"
+    },
+    {
       "path": "packages/dier-makr-annotations/tsconfig.build.json"
     },
     {

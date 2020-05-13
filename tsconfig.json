@@ -15,6 +15,9 @@
       "@coil/polyfill-utils": [
         "packages/coil-polyfill-utils/src"
       ],
+      "@coil/privacypass-sjcl": [
+        "packages/coil-privacypass-sjcl/src"
+      ],
       "@dier-makr/annotations": [
         "packages/dier-makr-annotations/src"
       ],
