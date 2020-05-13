@@ -1,10 +1,5 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
-  "$overRideUpKeep": {
-    "scripts": {
-      "postinstall": "cd ../../node_modules/sjcl && ./configure --without-all --with-ecc --with-convenience --with-codecBytes --with-codecHex --compress=none && make sjcl.js"
-    }
-  },
   "name": "@coil/anonymous-tokens",
   "version": "0.0.0",
   "private": false,
@@ -27,7 +22,6 @@
     "build:ts:watch": "yarn build:ts --watch",
     "clean:build": "rimraf build",
     "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
-    "postinstall": "cd ../../node_modules/sjcl && ./configure --without-all --with-ecc --with-convenience --with-codecBytes --with-codecHex --compress=none && make sjcl.js",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "precommit": "echo lint-staged runs from root",
@@ -37,11 +31,7 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
-    "@types/jsbn": "^1.2.29",
-    "asn1-parser": "^1.1.8",
-    "jsbn": "^1.1.0",
-    "keccak": "^3.0.0",
-    "sjcl": "bitwiseshiftleft/sjcl"
+    "@coil/privacypass-sjcl": "0.0.0"
   },
   "devDependencies": {
     "@types/btoa": "^1.2.3",

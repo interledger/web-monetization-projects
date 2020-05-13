@@ -6,9 +6,6 @@
     "baseUrl": ".",
     "skipLibCheck": false,
     "paths": {
-      "@coil/anonymous-tokens": [
-        "packages/coil-anonymous-tokens/src"
-      ],
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
       ],
@@ -29,6 +26,9 @@
       ],
       "@webexts/build-utils": [
         "packages/webexts-build-utils/src"
+      ],
+      "@coil/anonymous-tokens": [
+        "packages/coil-anonymous-tokens/src"
       ],
       "@coil/client": [
         "packages/coil-client/src"
