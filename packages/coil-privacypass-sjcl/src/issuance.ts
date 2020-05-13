@@ -1,10 +1,11 @@
-import btoa from 'btoa'
-
 /**
  * Functions for handling issue requests and server responses
  * from: https://github.com/privacypass/challenge-bypass-extension/blob/master/src/ext/issuance.js
  */
 import { sec1EncodeToBase64 } from './crypto'
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const btoa: (s: string) => string = require('btoa')
 
 export const CACHED_COMMITMENTS_STRING = 'cached-commitments'
 
