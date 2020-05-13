@@ -4,12 +4,13 @@
  * https://github.com/privacypass/challenge-bypass-extension/blob/master/src/crypto/local.js
  */
 import sjcl from 'sjcl'
-import keccak from 'keccak'
+import keccak, { Shake } from 'keccak'
 import { ASN1, PEM } from 'asn1-parser'
 
 import { h2Curve } from './hashToCurve'
 import { H2CParams } from './config'
 import { BlindToken } from './tokens'
+import { SjclHashable } from './interfaces'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const atob: (s: string) => string = require('atob')
@@ -34,7 +35,7 @@ const PARSE_ERR = '[privacy-pass]: Error parsing proof'
 let CURVE: sjcl.SjclEllipticalCurve & any
 let CURVE_H2C_HASH: sjcl.SjclHashStatic
 let CURVE_H2C_METHOD: string
-let CURVE_H2C_LABEL: sjcl.BitArray | string
+let CURVE_H2C_LABEL: SjclHashable
 
 // 1.2.840.10045.3.1.7 point generation seed
 const INC_H2C_LABEL: sjcl.BitArray = sjcl.codec.hex.toBits(
@@ -191,7 +192,7 @@ export function sec1EncodeToBits(
 export function sec1EncodeToBase64(
   point: sjcl.SjclEllipticalPoint,
   compressed: boolean
-) {
+): string {
   return sjcl.codec.base64.fromBits(sec1EncodeToBits(point, compressed))
 }
 
@@ -394,7 +395,7 @@ export function parsePublicKeyfromPEM(pemPublicKey: string) {
  * @return {boolean} True, if the commitment has valid signature and is not
  *                   expired; otherwise, throws an exception.
  */
-export function verifyCommitments(comms: any, pemPublicKey: string) {
+export function verifyCommitments(comms: { sig: string, G: string }, pemPublicKey: string) {
   const sig = parseSignaturefromPEM(comms.sig)
   delete comms.sig
   const msg = JSON.stringify(comms)
@@ -523,6 +524,10 @@ export function recomputeComposites(
   return { M: cM.toAffine(), Z: cZ.toAffine() }
 }
 
+type PRNGScalar =
+  { name: 'shake', func: Shake }
+  | { name: 'hkdf', func: typeof evaluateHkdf }
+
 /**
  * Computes an output of a PRNG (using the seed if it is HKDF) as a sjcl bn
  * object
@@ -532,7 +537,7 @@ export function recomputeComposites(
  * @return {sjcl.bn} PRNG output as scalar value
  */
 export function computePRNGScalar(
-  prng: any,
+  prng: PRNGScalar,
   seed: string,
   salt: sjcl.BitArray
 ) {
@@ -555,7 +560,7 @@ export function computePRNGScalar(
       )
       break
     default:
-      throw new Error(`Server specified PRNG is not compatible: ${prng.name}`)
+      throw new Error(`Server specified PRNG is not compatible: ${prng}`)
   }
   // Masking is not strictly necessary for p256 but better to be completely
   // compatible in case that the curve changes
@@ -577,8 +582,8 @@ export function computePRNGScalar(
  * @return {string} hex-encoded PRNG seed
  */
 export function computeSeed(
-  chkM: any,
-  chkZ: any,
+  chkM: Array<BlindToken>,
+  chkZ: CurvePoints,
   pointG: sjcl.SjclEllipticalPoint,
   pointH: sjcl.SjclEllipticalPoint
 ): string {
@@ -602,7 +607,7 @@ export function computeSeed(
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  * @param {bitArray} ikm Initial keying material
- * @param {integer} length Length of the derived key in bytes
+ * @param {number} length Length of the derived key in bytes
  * @param {bitArray} info Key derivation data
  * @param {bitArray} salt Salt
  * @param {sjcl.hash} hash hash function

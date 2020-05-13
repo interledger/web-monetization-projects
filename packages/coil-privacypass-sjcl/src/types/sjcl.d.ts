@@ -1,4 +1,10 @@
-import { BitArray, SjclEllipticalPoint, TypeHelpers } from 'sjcl'
+import {
+  BitArray,
+  PseudoMersennePrime,
+  PseudoMersennePrimeStatic,
+  SjclEllipticalPoint,
+  TypeHelpers
+} from 'sjcl'
 
 declare module 'sjcl' {
   interface BigNumber {
@@ -21,6 +27,7 @@ declare module 'sjcl' {
     sub: TypeHelpers.BigNumberBinaryOperator
     mul: TypeHelpers.BigNumberBinaryOperator
     square(): BigNumber
+    inverse(): BigNumber
     power(n: BigNumber | number[] | number): BigNumber
     mulmod: TypeHelpers.BigNumberTrinaryOperator
     powermod: TypeHelpers.BigNumberTrinaryOperator
@@ -36,7 +43,7 @@ declare module 'sjcl' {
 
   interface SjclEllipticalCurve {
     fromBits(bits: BitArray): SjclEllipticalPoint
-    field: BigNumber
+    field: PseudoMersennePrimeStatic & { modulus: PseudoMersennePrime }
     r: BigNumber
     a: BigNumber
     b: BigNumber

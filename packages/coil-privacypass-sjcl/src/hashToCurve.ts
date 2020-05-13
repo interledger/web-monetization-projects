@@ -9,6 +9,7 @@
 import sjcl from 'sjcl'
 
 import { getActiveECSettings, sec1DecodeFromBytes } from './crypto'
+import { SjclHashable } from './interfaces'
 
 const p256Curve = sjcl.ecc.curves.c256
 const precomputedP256 = {
@@ -56,7 +57,7 @@ function h2Base(
   x: sjcl.BitArray,
   curve: sjcl.SjclEllipticalCurve,
   hash: sjcl.SjclHashStatic,
-  label: string | sjcl.BitArray
+  label: SjclHashable
 ) {
   const dataLen = sjcl.codec.bytes.fromBits(x).length
   const h = new hash()
@@ -65,7 +66,7 @@ function h2Base(
   h.update(sjcl.codec.bytes.toBits(i2osp(dataLen, 4)))
   h.update(x)
   const t = h.finalize()
-  const y = (curve.field as any).fromBits(t).cnormalize()
+  const y = curve.field.fromBits(t).cnormalize()
   return y
 }
 
@@ -114,7 +115,7 @@ function simplifiedSWU(
   alpha: sjcl.BitArray,
   activeCurve: sjcl.SjclEllipticalCurve,
   hash: sjcl.SjclHashStatic,
-  label: string | sjcl.BitArray
+  label: SjclHashable
 ) {
   const params = getCurveParams(activeCurve)
   const u = h2Base(alpha, activeCurve, hash, label)
@@ -136,7 +137,7 @@ function simplifiedSWU(
  * @param {Object} params curve parameters
  * @return {Object} curve coordinates
  */
-function computeSWUCoordinates(u: sjcl.BigNumber & any, params: any) {
+function computeSWUCoordinates(u: sjcl.BigNumber, params: typeof precomputedP256) {
   const { A, B, baseField, c1, c2, sqrt } = params
   const p = baseField.modulus
   const t1 = u.square().mul(-1) // steps 2-3
@@ -202,7 +203,7 @@ function getCurveParams(curve: sjcl.SjclEllipticalCurve) {
 function hashAndInc(
   seed: sjcl.BitArray,
   hash: sjcl.SjclHashStatic,
-  label: string | sjcl.BitArray
+  label: SjclHashable
 ) {
   const h = new hash()
 

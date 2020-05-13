@@ -1,3 +1,5 @@
+import * as sjcl from 'sjcl'
+
 export interface RawIssueResponse {
   sigs: string[]
   proof: string
@@ -16,3 +18,5 @@ export interface IssueResponse {
   prng: string
   version?: string
 }
+
+export type SjclHashable = string | sjcl.BitArray

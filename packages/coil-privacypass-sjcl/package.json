@@ -48,6 +48,7 @@
   "devDependencies": {
     "@types/atob": "^2.1.2",
     "@types/btoa": "^1.2.3",
+    "@types/keccak": "^3.0.1",
     "@types/node-fetch": "^2.5.7",
     "@types/sjcl": "^1.0.29"
   }

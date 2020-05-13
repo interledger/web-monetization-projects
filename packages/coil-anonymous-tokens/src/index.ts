@@ -1,19 +1,19 @@
 import {
-  GenerateNewTokens,
+  BlindToken,
   BuildIssueRequest,
   BuildRedeemHeader,
-  BlindToken,
-  StorableBlindToken,
   CurvePoints,
-  parseIssueResp,
-  getCurvePoints,
-  verifyProof,
-  getTokenEncoding,
-  initECSettings,
   deserializeToken,
+  GenerateNewTokens,
+  getCurvePoints,
+  getTokenEncoding,
   h2cParams,
+  initECSettings,
   IssueResponse,
-  RawIssueResponse
+  parseIssueResp,
+  RawIssueResponse,
+  StorableBlindToken,
+  verifyProof
 } from '@coil/privacypass-sjcl'
 
 import { portableFetch } from './portableFetch'
