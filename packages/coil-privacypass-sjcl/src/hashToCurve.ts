@@ -137,7 +137,10 @@ function simplifiedSWU(
  * @param {Object} params curve parameters
  * @return {Object} curve coordinates
  */
-function computeSWUCoordinates(u: sjcl.BigNumber, params: typeof precomputedP256) {
+function computeSWUCoordinates(
+  u: sjcl.BigNumber,
+  params: typeof precomputedP256
+) {
   const { A, B, baseField, c1, c2, sqrt } = params
   const p = baseField.modulus
   const t1 = u.square().mul(-1) // steps 2-3
@@ -254,15 +257,15 @@ function hashAndInc(
  * @return {sjcl.bn} returns x is b=0, otherwise return y.
  */
 function cmov(
-  x: sjcl.BigNumber & any,
-  y: sjcl.BigNumber & any,
+  x: sjcl.BigNumber,
+  y: sjcl.BigNumber,
   b: boolean,
-  field: any
+  field: sjcl.PseudoMersennePrimeStatic
 ) {
   const z = new field()
   const m = z.radixMask
-  const m0 = m & (m + b)
-  const m1 = m & (m + !b)
+  const m0 = m & (m + Number(b))
+  const m1 = m & (m + Number(!b))
   x.fullReduce()
   y.fullReduce()
   for (let i = Math.max(x.limbs.length, y.limbs.length) - 1; i >= 0; i--) {

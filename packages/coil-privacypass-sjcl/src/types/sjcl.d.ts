@@ -7,9 +7,14 @@ import {
 } from 'sjcl'
 
 declare module 'sjcl' {
+  interface PseudoMersennePrimeStatic {
+    modulus: BigNumber
+  }
   interface BigNumber {
     modulus: BigNumber
     radix: number
+    limbs: number[]
+    radixMask: number
     maxMul: number
     copy(): BigNumber
     initWith: TypeHelpers.BigNumberBinaryOperator
@@ -41,13 +46,19 @@ declare module 'sjcl' {
     bitLength(): number
   }
 
+  interface SjclEllipticalPoint {
+    y: BigNumber
+    x: BigNumber
+  }
+
   interface SjclEllipticalCurve {
     fromBits(bits: BitArray): SjclEllipticalPoint
-    field: PseudoMersennePrimeStatic & { modulus: PseudoMersennePrime }
+    field: PseudoMersennePrimeStatic
     r: BigNumber
     a: BigNumber
     b: BigNumber
     x: BigNumber
     y: BigNumber
+    G: SjclEllipticalPoint
   }
 }

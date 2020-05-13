@@ -32,7 +32,7 @@ const DIGEST_INEQUALITY_ERR =
 const PARSE_ERR = '[privacy-pass]: Error parsing proof'
 
 // Globals for keeping track of EC curve settings
-let CURVE: sjcl.SjclEllipticalCurve & any
+let CURVE: sjcl.SjclEllipticalCurve
 let CURVE_H2C_HASH: sjcl.SjclHashStatic
 let CURVE_H2C_METHOD: string
 let CURVE_H2C_LABEL: SjclHashable
@@ -153,10 +153,7 @@ export function newRandomPoint() {
  * @param {bool} compressed
  * @return {sjcl.codec.bytes}
  */
-export function sec1Encode(
-  P: sjcl.SjclEllipticalPoint & any,
-  compressed: boolean
-) {
+export function sec1Encode(P: sjcl.SjclEllipticalPoint, compressed: boolean) {
   let out: number[] = []
   if (!compressed) {
     const xyBytes = sjcl.codec.bytes.fromBits(P.toBits())
@@ -229,6 +226,9 @@ export function sec1DecodeFromBytes(
         '[privacy-pass]: attempted sec1 point decoding with incorrect tag: ' +
           sec1Bytes[0]
       )
+  }
+  if (P == null) {
+    throw new Error()
   }
   return P
 }
@@ -395,7 +395,10 @@ export function parsePublicKeyfromPEM(pemPublicKey: string) {
  * @return {boolean} True, if the commitment has valid signature and is not
  *                   expired; otherwise, throws an exception.
  */
-export function verifyCommitments(comms: { sig: string, G: string }, pemPublicKey: string) {
+export function verifyCommitments(
+  comms: { sig: string; G: string },
+  pemPublicKey: string
+) {
   const sig = parseSignaturefromPEM(comms.sig)
   delete comms.sig
   const msg = JSON.stringify(comms)
@@ -495,7 +498,7 @@ export function recomputeComposites(
   const seed = computeSeed(tokens, signatures, pointG, pointH)
   let cM = new sjcl.ecc.pointJac(CURVE) // can only add points in jacobian representation
   let cZ = new sjcl.ecc.pointJac(CURVE)
-  const prng: any = { name: prngName }
+  const prng: PRNGImpl = { name: prngName, func: undefined as PRNGImpl['func'] }
   switch (prng.name) {
     case 'shake':
       prng['func'] = shake256()
@@ -524,9 +527,11 @@ export function recomputeComposites(
   return { M: cM.toAffine(), Z: cZ.toAffine() }
 }
 
-type PRNGScalar =
-  { name: 'shake', func: Shake }
-  | { name: 'hkdf', func: typeof evaluateHkdf }
+type PRNGImpl =
+  | { name: 'shake'; func: Shake }
+  | { name: 'hkdf'; func: typeof evaluateHkdf }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  | { name: string; func?: any }
 
 /**
  * Computes an output of a PRNG (using the seed if it is HKDF) as a sjcl bn
@@ -537,7 +542,7 @@ type PRNGScalar =
  * @return {sjcl.bn} PRNG output as scalar value
  */
 export function computePRNGScalar(
-  prng: PRNGScalar,
+  prng: PRNGImpl,
   seed: string,
   salt: sjcl.BitArray
 ) {
@@ -652,7 +657,7 @@ export function evaluateHkdf(
  * @param {Object} bp batch proof as encoded JSON
  * @return {Object} DLEQ proof object
  */
-export function retrieveProof(bp: any) {
+export function retrieveProof(bp: { P: string }) {
   let dleqProof
   try {
     dleqProof = parseDleqProof(atob(bp.P))
@@ -681,12 +686,14 @@ export function getMarshaledBatchProof(proof: string) {
  * @param {string} proofStr proof JSON as string
  * @return {Object}
  */
-export function parseDleqProof(proofStr: string) {
+export function parseDleqProof(
+  proofStr: string
+): { R: sjcl.BigNumber; C: sjcl.BigNumber } {
   const dleqProofM = JSON.parse(proofStr)
-  const dleqProof: any = {}
-  dleqProof['R'] = getBigNumFromB64(dleqProofM.R)
-  dleqProof['C'] = getBigNumFromB64(dleqProofM.C)
-  return dleqProof
+  return {
+    R: getBigNumFromB64(dleqProofM.R),
+    C: getBigNumFromB64(dleqProofM.C)
+  }
 }
 
 /**
