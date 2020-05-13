@@ -1,17 +1,19 @@
 import {
-  GenerateNewTokens,
+  BlindToken,
   BuildIssueRequest,
   BuildRedeemHeader,
-  BlindToken,
-  StorableBlindToken,
   CurvePoints,
-  parseIssueResp,
-  getCurvePoints,
-  verifyProof,
-  getTokenEncoding,
-  initECSettings,
   deserializeToken,
-  h2cParams
+  GenerateNewTokens,
+  getCurvePoints,
+  getTokenEncoding,
+  h2cParams,
+  initECSettings,
+  IssueResponse,
+  parseIssueResp,
+  RawIssueResponse,
+  StorableBlindToken,
+  verifyProof
 } from '@coil/privacypass-sjcl'
 
 import { portableFetch } from './portableFetch'
@@ -37,19 +39,6 @@ export const TOKEN_PREFIX = 'anonymous_token:'
 export interface TimestampedSignature {
   signature: string
   month: string
-}
-
-export interface RawIssueResponse {
-  sigs: string[]
-  proof: string
-  version: string
-}
-
-export interface IssueResponse {
-  signatures: string[]
-  proof: string
-  version: string
-  prng: string
 }
 
 export interface Token {

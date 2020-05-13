@@ -8,7 +8,8 @@
  */
 import sjcl from 'sjcl'
 
-import { sec1DecodeFromBytes } from './crypto'
+import { getActiveECSettings, sec1DecodeFromBytes } from './crypto'
+import { SjclHashable } from './interfaces'
 
 const p256Curve = sjcl.ecc.curves.c256
 const precomputedP256 = {
@@ -56,7 +57,7 @@ function h2Base(
   x: sjcl.BitArray,
   curve: sjcl.SjclEllipticalCurve,
   hash: sjcl.SjclHashStatic,
-  label: string
+  label: SjclHashable
 ) {
   const dataLen = sjcl.codec.bytes.fromBits(x).length
   const h = new hash()
@@ -65,7 +66,7 @@ function h2Base(
   h.update(sjcl.codec.bytes.toBits(i2osp(dataLen, 4)))
   h.update(x)
   const t = h.finalize()
-  const y = (curve.field as any).fromBits(t).cnormalize()
+  const y = curve.field.fromBits(t).cnormalize()
   return y
 }
 
@@ -75,7 +76,10 @@ function h2Base(
  * @param {Object} ecSettings the curve settings being used by the extension
  * @return {sjcl.ecc.point} point on curve
  */
-export function h2Curve(alpha: sjcl.BitArray, ecSettings: any) {
+export function h2Curve(
+  alpha: sjcl.BitArray,
+  ecSettings: ReturnType<typeof getActiveECSettings>
+) {
   let point
   switch (ecSettings.method) {
     case 'swu':
@@ -111,7 +115,7 @@ function simplifiedSWU(
   alpha: sjcl.BitArray,
   activeCurve: sjcl.SjclEllipticalCurve,
   hash: sjcl.SjclHashStatic,
-  label: string
+  label: SjclHashable
 ) {
   const params = getCurveParams(activeCurve)
   const u = h2Base(alpha, activeCurve, hash, label)
@@ -133,7 +137,10 @@ function simplifiedSWU(
  * @param {Object} params curve parameters
  * @return {Object} curve coordinates
  */
-function computeSWUCoordinates(u: sjcl.BigNumber & any, params: any) {
+function computeSWUCoordinates(
+  u: sjcl.BigNumber,
+  params: typeof precomputedP256
+) {
   const { A, B, baseField, c1, c2, sqrt } = params
   const p = baseField.modulus
   const t1 = u.square().mul(-1) // steps 2-3
@@ -199,7 +206,7 @@ function getCurveParams(curve: sjcl.SjclEllipticalCurve) {
 function hashAndInc(
   seed: sjcl.BitArray,
   hash: sjcl.SjclHashStatic,
-  label: sjcl.BitArray
+  label: SjclHashable
 ) {
   const h = new hash()
 
@@ -250,15 +257,15 @@ function hashAndInc(
  * @return {sjcl.bn} returns x is b=0, otherwise return y.
  */
 function cmov(
-  x: sjcl.BigNumber & any,
-  y: sjcl.BigNumber & any,
+  x: sjcl.BigNumber,
+  y: sjcl.BigNumber,
   b: boolean,
-  field: any
+  field: sjcl.PseudoMersennePrimeStatic
 ) {
   const z = new field()
   const m = z.radixMask
-  const m0 = m & (m + b)
-  const m1 = m & (m + !b)
+  const m0 = m & (m + Number(b))
+  const m1 = m & (m + Number(!b))
   x.fullReduce()
   y.fullReduce()
   for (let i = Math.max(x.limbs.length, y.limbs.length) - 1; i >= 0; i--) {

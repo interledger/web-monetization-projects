@@ -3,6 +3,12 @@
  * from: https://github.com/privacypass/challenge-bypass-extension/blob/master/src/ext/issuance.js
  */
 import { sec1EncodeToBase64 } from './crypto'
+import {
+  isRawIssueResponse,
+  IssueResponse,
+  RawIssueResponse
+} from './interfaces'
+// import { isRawIssueResponse, IssueResponse, RawIssueResponse } from './tokens'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const btoa: (s: string) => string = require('btoa')
@@ -15,25 +21,31 @@ export const CACHED_COMMITMENTS_STRING = 'cached-commitments'
  * optional commitment version
  * @return {Object} Formatted object for inputs
  */
-export function parseIssueResp(issueResp: any) {
-  let signatures
-  let batchProof
-  let version
+export function parseIssueResp(
+  issueResp: RawIssueResponse | string[]
+): IssueResponse {
+  let signatures: string[]
+  let batchProof: string
+  let version: string
+  let prng: string
   // If this is not an array then the object is probably JSON.
-  if (!issueResp[0]) {
+  if (isRawIssueResponse(issueResp)) {
     signatures = issueResp.sigs
     batchProof = issueResp.proof
     version = issueResp.version
+    prng = issueResp.prng
   } else {
     batchProof = issueResp[issueResp.length - 1]
     signatures = issueResp.slice(0, issueResp.length - 1)
+    // TODO
+    version = (undefined as unknown) as string
+    prng = (undefined as unknown) as string
   }
-  const prng = issueResp.prng || 'shake'
   return {
     signatures: signatures,
     proof: batchProof,
     version: version,
-    prng: prng
+    prng: prng || 'shake'
   }
 }
 

@@ -6,6 +6,7 @@ import sjcl from 'sjcl'
 
 import { unblindPoint, getActiveECSettings, sec1Encode } from './crypto'
 import { sendH2CParams, h2cParams } from './config'
+import { BlindToken } from './tokens'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const btoa: (s: string) => string = require('btoa')
@@ -20,7 +21,11 @@ const btoa: (s: string) => string = require('btoa')
  * @param {string} path Path of the requested HTTP request
  * @return {string} base64-encoded redemption requestx
  */
-export function BuildRedeemHeader(token: any, host: string, path: string) {
+export function BuildRedeemHeader(
+  token: BlindToken,
+  host: string,
+  path: string
+) {
   const sharedPoint = unblindPoint(token.blind, token.point)
   const derivedKey = deriveKey(sharedPoint, token.data)
 
@@ -56,7 +61,7 @@ export function BuildRedeemHeader(token: any, host: string, path: string) {
  * @param {sjcl.codec.bytes} data Input HMAC data
  * @return {string} base64-encoded HMAC output
  */
-function createRequestBinding(key: any, data: any) {
+function createRequestBinding(key: number[], data: Array<number[]>) {
   // the exact bits of the string "hash_request_binding"
   const tagBits = sjcl.codec.utf8String.toBits('hash_request_binding')
   const keyBits = sjcl.codec.bytes.toBits(key)
@@ -80,7 +85,7 @@ function createRequestBinding(key: any, data: any) {
  * @param {Object} token client-generated token data
  * @return {sjcl.codec.bytes} bytes of derived key
  */
-function deriveKey(N: sjcl.SjclEllipticalPoint, token: any) {
+function deriveKey(N: sjcl.SjclEllipticalPoint, token: number[]): number[] {
   // the exact bits of the string "hash_derive_key"
   const tagBits = sjcl.codec.hex.toBits('686173685f6465726976655f6b6579')
   const hash = getActiveECSettings().hash

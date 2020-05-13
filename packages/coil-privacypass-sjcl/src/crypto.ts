@@ -4,11 +4,13 @@
  * https://github.com/privacypass/challenge-bypass-extension/blob/master/src/crypto/local.js
  */
 import sjcl from 'sjcl'
-import keccak from 'keccak'
+import keccak, { Shake } from 'keccak'
 import { ASN1, PEM } from 'asn1-parser'
 
 import { h2Curve } from './hashToCurve'
 import { H2CParams } from './config'
+import { BlindToken } from './tokens'
+import { SjclHashable } from './interfaces'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const atob: (s: string) => string = require('atob')
@@ -30,13 +32,13 @@ const DIGEST_INEQUALITY_ERR =
 const PARSE_ERR = '[privacy-pass]: Error parsing proof'
 
 // Globals for keeping track of EC curve settings
-let CURVE: sjcl.SjclEllipticalCurve & any
+let CURVE: sjcl.SjclEllipticalCurve
 let CURVE_H2C_HASH: sjcl.SjclHashStatic
 let CURVE_H2C_METHOD: string
-let CURVE_H2C_LABEL: sjcl.BitArray | string
+let CURVE_H2C_LABEL: SjclHashable
 
 // 1.2.840.10045.3.1.7 point generation seed
-const INC_H2C_LABEL = sjcl.codec.hex.toBits(
+const INC_H2C_LABEL: sjcl.BitArray = sjcl.codec.hex.toBits(
   '312e322e3834302e31303034352e332e312e3720706f696e742067656e65726174696f6e2073656564'
 )
 const SSWU_H2C_LABEL = 'H2C-P256-SHA256-SSWU-'
@@ -151,10 +153,7 @@ export function newRandomPoint() {
  * @param {bool} compressed
  * @return {sjcl.codec.bytes}
  */
-export function sec1Encode(
-  P: sjcl.SjclEllipticalPoint & any,
-  compressed: boolean
-) {
+export function sec1Encode(P: sjcl.SjclEllipticalPoint, compressed: boolean) {
   let out: number[] = []
   if (!compressed) {
     const xyBytes = sjcl.codec.bytes.fromBits(P.toBits())
@@ -190,7 +189,7 @@ export function sec1EncodeToBits(
 export function sec1EncodeToBase64(
   point: sjcl.SjclEllipticalPoint,
   compressed: boolean
-) {
+): string {
   return sjcl.codec.base64.fromBits(sec1EncodeToBits(point, compressed))
 }
 
@@ -228,7 +227,8 @@ export function sec1DecodeFromBytes(
           sec1Bytes[0]
       )
   }
-  return P
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return P!
 }
 
 /**
@@ -284,7 +284,7 @@ export function decompressPoint(
  * @return {Object} object containing array of curve points and compression flag
  */
 export function getCurvePoints(signatures: string[]): CurvePoints {
-  const compression = { on: false, set: false }
+  const compression: Compression = { on: false, set: false }
   const sigBytes: number[][] = []
   signatures.forEach(function (signature) {
     const buf = sjcl.codec.bytes.fromBits(sjcl.codec.base64.toBits(signature))
@@ -321,6 +321,11 @@ export function getCurvePoints(signatures: string[]): CurvePoints {
   return { points: usablePoints, compressed: compression.on }
 }
 
+export interface Compression {
+  on: boolean
+  set: boolean
+}
+
 /**
  * Checks that the signed points from the IssueResponse have consistent
  * compression
@@ -328,7 +333,10 @@ export function getCurvePoints(signatures: string[]): CurvePoints {
  * @param {bool} setting new setting based on point data
  * @return {bool}
  */
-export function validResponseCompression(compression: any, setting: boolean) {
+export function validResponseCompression(
+  compression: Compression,
+  setting: boolean
+) {
   if (!compression.set) {
     compression.on = setting
     compression.set = true
@@ -385,7 +393,10 @@ export function parsePublicKeyfromPEM(pemPublicKey: string) {
  * @return {boolean} True, if the commitment has valid signature and is not
  *                   expired; otherwise, throws an exception.
  */
-export function verifyCommitments(comms: any, pemPublicKey: string) {
+export function verifyCommitments(
+  comms: { sig: string; G: string },
+  pemPublicKey: string
+) {
   const sig = parseSignaturefromPEM(comms.sig)
   delete comms.sig
   const msg = JSON.stringify(comms)
@@ -413,10 +424,10 @@ export function verifyCommitments(comms: any, pemPublicKey: string) {
  * @return {boolean}
  */
 export function verifyProof(
-  proofObj: any,
-  tokens: any,
-  signatures: any,
-  commitments: any,
+  proofObj: string,
+  tokens: Array<BlindToken>,
+  signatures: CurvePoints,
+  commitments: { G: string; H: string },
   prngName: string
 ) {
   const bp = getMarshaledBatchProof(proofObj)
@@ -476,8 +487,8 @@ export function verifyProof(
  * @return {Object} Object containing composite points M and Z
  */
 export function recomputeComposites(
-  tokens: Array<any>,
-  signatures: any,
+  tokens: Array<BlindToken>,
+  signatures: CurvePoints,
   pointG: sjcl.SjclEllipticalPoint,
   pointH: sjcl.SjclEllipticalPoint,
   prngName: string
@@ -485,7 +496,7 @@ export function recomputeComposites(
   const seed = computeSeed(tokens, signatures, pointG, pointH)
   let cM = new sjcl.ecc.pointJac(CURVE) // can only add points in jacobian representation
   let cZ = new sjcl.ecc.pointJac(CURVE)
-  const prng: any = { name: prngName }
+  const prng: PRNGImpl = { name: prngName, func: undefined as PRNGImpl['func'] }
   switch (prng.name) {
     case 'shake':
       prng['func'] = shake256()
@@ -514,6 +525,12 @@ export function recomputeComposites(
   return { M: cM.toAffine(), Z: cZ.toAffine() }
 }
 
+type PRNGImpl =
+  | { name: 'shake'; func: Shake }
+  | { name: 'hkdf'; func: typeof evaluateHkdf }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  | { name: string; func?: any }
+
 /**
  * Computes an output of a PRNG (using the seed if it is HKDF) as a sjcl bn
  * object
@@ -523,7 +540,7 @@ export function recomputeComposites(
  * @return {sjcl.bn} PRNG output as scalar value
  */
 export function computePRNGScalar(
-  prng: any,
+  prng: PRNGImpl,
   seed: string,
   salt: sjcl.BitArray
 ) {
@@ -546,7 +563,7 @@ export function computePRNGScalar(
       )
       break
     default:
-      throw new Error(`Server specified PRNG is not compatible: ${prng.name}`)
+      throw new Error(`Server specified PRNG is not compatible: ${prng}`)
   }
   // Masking is not strictly necessary for p256 but better to be completely
   // compatible in case that the curve changes
@@ -568,11 +585,11 @@ export function computePRNGScalar(
  * @return {string} hex-encoded PRNG seed
  */
 export function computeSeed(
-  chkM: any,
-  chkZ: any,
+  chkM: Array<BlindToken>,
+  chkZ: CurvePoints,
   pointG: sjcl.SjclEllipticalPoint,
   pointH: sjcl.SjclEllipticalPoint
-) {
+): string {
   const compressed = chkZ.compressed
   const h = new CURVE_H2C_HASH() // we use the h2c hash for convenience
   h.update(sec1EncodeToBits(pointG, compressed))
@@ -593,7 +610,7 @@ export function computeSeed(
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  * @param {bitArray} ikm Initial keying material
- * @param {integer} length Length of the derived key in bytes
+ * @param {number} length Length of the derived key in bytes
  * @param {bitArray} info Key derivation data
  * @param {bitArray} salt Salt
  * @param {sjcl.hash} hash hash function
@@ -638,7 +655,7 @@ export function evaluateHkdf(
  * @param {Object} bp batch proof as encoded JSON
  * @return {Object} DLEQ proof object
  */
-export function retrieveProof(bp: any) {
+export function retrieveProof(bp: { P: string }) {
   let dleqProof
   try {
     dleqProof = parseDleqProof(atob(bp.P))
@@ -667,12 +684,14 @@ export function getMarshaledBatchProof(proof: string) {
  * @param {string} proofStr proof JSON as string
  * @return {Object}
  */
-export function parseDleqProof(proofStr: string) {
+export function parseDleqProof(
+  proofStr: string
+): { R: sjcl.BigNumber; C: sjcl.BigNumber } {
   const dleqProofM = JSON.parse(proofStr)
-  const dleqProof: any = {}
-  dleqProof['R'] = getBigNumFromB64(dleqProofM.R)
-  dleqProof['C'] = getBigNumFromB64(dleqProofM.C)
-  return dleqProof
+  return {
+    R: getBigNumFromB64(dleqProofM.R),
+    C: getBigNumFromB64(dleqProofM.C)
+  }
 }
 
 /**
