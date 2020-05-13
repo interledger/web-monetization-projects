@@ -227,10 +227,8 @@ export function sec1DecodeFromBytes(
           sec1Bytes[0]
       )
   }
-  if (P == null) {
-    throw new Error()
-  }
-  return P
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return P!
 }
 
 /**
