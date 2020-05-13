@@ -1,3 +1,4 @@
-# Coil Privacypass Sjcl
+# Coil PrivacyPass Sjcl
 
-A work in progress. You probably don't want this.
+This inlines the code from https://github.com/privacypass/challenge-bypass-extension/tree/master/src and converts it to TypeScript.
+A future implementation may abandon sjcl & co in favor of https://github.com/indutny/elliptic/
