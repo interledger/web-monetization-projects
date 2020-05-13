@@ -1,18 +1,24 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
-  "name": "@coil/anonymous-tokens",
+  "$overRideUpKeep": {
+    "license": "BSD-3-Clause",
+    "scripts": {
+      "postinstall": "cd ../../node_modules/sjcl && ./configure --without-all --with-ecc --with-convenience --with-codecBytes --with-codecHex --compress=none && make sjcl.js"
+    }
+  },
+  "name": "@coil/privacypass-sjcl",
   "version": "0.0.0",
   "private": false,
   "keywords": [
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/coil-anonymous-tokens",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/coil-privacypass-sjcl",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
   },
-  "license": "Apache-2.0",
+  "license": "BSD-3-Clause",
   "author": "Coil Team <info@coil.com>",
   "main": "./build",
   "types": "./build",
@@ -22,6 +28,7 @@
     "build:ts:watch": "yarn build:ts --watch",
     "clean:build": "rimraf build",
     "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
+    "postinstall": "cd ../../node_modules/sjcl && ./configure --without-all --with-ecc --with-convenience --with-codecBytes --with-codecHex --compress=none && make sjcl.js",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "precommit": "echo lint-staged runs from root",
@@ -31,17 +38,11 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
-    "@coil/privacypass-sjcl": "0.0.0"
+    "asn1-parser": "^1.1.8",
+    "keccak": "^3.0.0",
+    "sjcl": "bitwiseshiftleft/sjcl"
   },
   "devDependencies": {
-    "@types/btoa": "^1.2.3",
-    "@types/jsonwebtoken": "^8.3.9",
-    "@types/node-fetch": "^2.5.7",
-    "@types/sjcl": "^1.0.29",
-    "atob": "^2.1.2",
-    "btoa": "^1.2.1",
-    "jsonwebtoken": "^8.5.1",
-    "localforage": "^1.7.3",
-    "node-fetch": "^2.6.0"
+    "@types/sjcl": "^1.0.29"
   }
 }

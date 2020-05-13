@@ -3,13 +3,13 @@
   "files": [],
   "references": [
     {
-      "path": "packages/coil-anonymous-tokens/tsconfig.build.json"
-    },
-    {
       "path": "packages/coil-monorepo-upkeep/tsconfig.build.json"
     },
     {
       "path": "packages/coil-polyfill-utils/tsconfig.build.json"
+    },
+    {
+      "path": "packages/coil-privacypass-sjcl/tsconfig.build.json"
     },
     {
       "path": "packages/dier-makr-annotations/tsconfig.build.json"
@@ -22,6 +22,9 @@
     },
     {
       "path": "packages/webexts-build-utils/tsconfig.build.json"
+    },
+    {
+      "path": "packages/coil-anonymous-tokens/tsconfig.build.json"
     },
     {
       "path": "packages/coil-client/tsconfig.build.json"

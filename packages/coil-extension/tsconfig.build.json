@@ -12,10 +12,10 @@
   ],
   "references": [
     {
-      "path": "../coil-anonymous-tokens/tsconfig.build.json"
+      "path": "../coil-polyfill-utils/tsconfig.build.json"
     },
     {
-      "path": "../coil-polyfill-utils/tsconfig.build.json"
+      "path": "../coil-privacypass-sjcl/tsconfig.build.json"
     },
     {
       "path": "../dier-makr-annotations/tsconfig.build.json"
@@ -28,6 +28,9 @@
     },
     {
       "path": "../webexts-build-utils/tsconfig.build.json"
+    },
+    {
+      "path": "../coil-anonymous-tokens/tsconfig.build.json"
     },
     {
       "path": "../coil-client/tsconfig.build.json"

@@ -9,10 +9,5 @@
   },
   "include": [
     "src"
-  ],
-  "references": [
-    {
-      "path": "../coil-privacypass-sjcl/tsconfig.build.json"
-    }
   ]
 }
