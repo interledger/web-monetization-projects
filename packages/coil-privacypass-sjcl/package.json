@@ -1,6 +1,7 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
   "$overRideUpKeep": {
+    "license": "BSD-3-Clause",
     "scripts": {
       "postinstall": "cd ../../node_modules/sjcl && ./configure --without-all --with-ecc --with-convenience --with-codecBytes --with-codecHex --compress=none && make sjcl.js"
     }
@@ -17,7 +18,7 @@
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
   },
-  "license": "Apache-2.0",
+  "license": "BSD-3-Clause",
   "author": "Coil Team <info@coil.com>",
   "main": "./build",
   "types": "./build",
