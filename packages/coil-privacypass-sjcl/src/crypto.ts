@@ -9,6 +9,7 @@ import { ASN1, PEM } from 'asn1-parser'
 
 import { h2Curve } from './hashToCurve'
 import { H2CParams } from './config'
+import { BlindToken } from './tokens'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const atob: (s: string) => string = require('atob')
@@ -36,7 +37,7 @@ let CURVE_H2C_METHOD: string
 let CURVE_H2C_LABEL: sjcl.BitArray | string
 
 // 1.2.840.10045.3.1.7 point generation seed
-const INC_H2C_LABEL = sjcl.codec.hex.toBits(
+const INC_H2C_LABEL: sjcl.BitArray = sjcl.codec.hex.toBits(
   '312e322e3834302e31303034352e332e312e3720706f696e742067656e65726174696f6e2073656564'
 )
 const SSWU_H2C_LABEL = 'H2C-P256-SHA256-SSWU-'
@@ -284,7 +285,7 @@ export function decompressPoint(
  * @return {Object} object containing array of curve points and compression flag
  */
 export function getCurvePoints(signatures: string[]): CurvePoints {
-  const compression = { on: false, set: false }
+  const compression: Compression = { on: false, set: false }
   const sigBytes: number[][] = []
   signatures.forEach(function (signature) {
     const buf = sjcl.codec.bytes.fromBits(sjcl.codec.base64.toBits(signature))
@@ -321,6 +322,11 @@ export function getCurvePoints(signatures: string[]): CurvePoints {
   return { points: usablePoints, compressed: compression.on }
 }
 
+export interface Compression {
+  on: boolean
+  set: boolean
+}
+
 /**
  * Checks that the signed points from the IssueResponse have consistent
  * compression
@@ -328,7 +334,10 @@ export function getCurvePoints(signatures: string[]): CurvePoints {
  * @param {bool} setting new setting based on point data
  * @return {bool}
  */
-export function validResponseCompression(compression: any, setting: boolean) {
+export function validResponseCompression(
+  compression: Compression,
+  setting: boolean
+) {
   if (!compression.set) {
     compression.on = setting
     compression.set = true
@@ -413,10 +422,10 @@ export function verifyCommitments(comms: any, pemPublicKey: string) {
  * @return {boolean}
  */
 export function verifyProof(
-  proofObj: any,
-  tokens: any,
-  signatures: any,
-  commitments: any,
+  proofObj: string,
+  tokens: Array<BlindToken>,
+  signatures: CurvePoints,
+  commitments: { G: string; H: string },
   prngName: string
 ) {
   const bp = getMarshaledBatchProof(proofObj)
@@ -476,8 +485,8 @@ export function verifyProof(
  * @return {Object} Object containing composite points M and Z
  */
 export function recomputeComposites(
-  tokens: Array<any>,
-  signatures: any,
+  tokens: Array<BlindToken>,
+  signatures: CurvePoints,
   pointG: sjcl.SjclEllipticalPoint,
   pointH: sjcl.SjclEllipticalPoint,
   prngName: string
@@ -572,7 +581,7 @@ export function computeSeed(
   chkZ: any,
   pointG: sjcl.SjclEllipticalPoint,
   pointH: sjcl.SjclEllipticalPoint
-) {
+): string {
   const compressed = chkZ.compressed
   const h = new CURVE_H2C_HASH() // we use the h2c hash for convenience
   h.update(sec1EncodeToBits(pointG, compressed))

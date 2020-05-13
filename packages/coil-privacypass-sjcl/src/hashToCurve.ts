@@ -8,7 +8,7 @@
  */
 import sjcl from 'sjcl'
 
-import { sec1DecodeFromBytes } from './crypto'
+import { getActiveECSettings, sec1DecodeFromBytes } from './crypto'
 
 const p256Curve = sjcl.ecc.curves.c256
 const precomputedP256 = {
@@ -56,7 +56,7 @@ function h2Base(
   x: sjcl.BitArray,
   curve: sjcl.SjclEllipticalCurve,
   hash: sjcl.SjclHashStatic,
-  label: string
+  label: string | sjcl.BitArray
 ) {
   const dataLen = sjcl.codec.bytes.fromBits(x).length
   const h = new hash()
@@ -75,7 +75,10 @@ function h2Base(
  * @param {Object} ecSettings the curve settings being used by the extension
  * @return {sjcl.ecc.point} point on curve
  */
-export function h2Curve(alpha: sjcl.BitArray, ecSettings: any) {
+export function h2Curve(
+  alpha: sjcl.BitArray,
+  ecSettings: ReturnType<typeof getActiveECSettings>
+) {
   let point
   switch (ecSettings.method) {
     case 'swu':
@@ -111,7 +114,7 @@ function simplifiedSWU(
   alpha: sjcl.BitArray,
   activeCurve: sjcl.SjclEllipticalCurve,
   hash: sjcl.SjclHashStatic,
-  label: string
+  label: string | sjcl.BitArray
 ) {
   const params = getCurveParams(activeCurve)
   const u = h2Base(alpha, activeCurve, hash, label)
@@ -199,7 +202,7 @@ function getCurveParams(curve: sjcl.SjclEllipticalCurve) {
 function hashAndInc(
   seed: sjcl.BitArray,
   hash: sjcl.SjclHashStatic,
-  label: sjcl.BitArray
+  label: string | sjcl.BitArray
 ) {
   const h = new hash()
 

@@ -11,7 +11,9 @@ import {
   getTokenEncoding,
   initECSettings,
   deserializeToken,
-  h2cParams
+  h2cParams,
+  IssueResponse,
+  RawIssueResponse
 } from '@coil/privacypass-sjcl'
 
 import { portableFetch } from './portableFetch'
@@ -37,19 +39,6 @@ export const TOKEN_PREFIX = 'anonymous_token:'
 export interface TimestampedSignature {
   signature: string
   month: string
-}
-
-export interface RawIssueResponse {
-  sigs: string[]
-  proof: string
-  version: string
-}
-
-export interface IssueResponse {
-  signatures: string[]
-  proof: string
-  version: string
-  prng: string
 }
 
 export interface Token {
