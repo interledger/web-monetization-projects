@@ -1,15 +1,7 @@
-import fetch from 'node-fetch'
-import btoa from 'btoa'
-import atob from 'atob'
 import * as jwt from 'jsonwebtoken'
 
 import { AnonymousTokens } from '../../src/index'
 import { MockStore } from '../mocks/store'
-
-const globalPatch: any = global
-globalPatch.btoa = btoa
-globalPatch.atob = atob
-globalPatch.fetch = fetch
 
 const APP_SECRET = process.env.APP_SECRET || 'test'
 const BTP_SECRET = process.env.BTP_SECRET || 'btp_test'

@@ -7,6 +7,9 @@ import sjcl from 'sjcl'
 import { unblindPoint, getActiveECSettings, sec1Encode } from './crypto'
 import { sendH2CParams, h2cParams } from './config'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const btoa: (s: string) => string = require('btoa')
+
 /**
  * Constructs the header 'challenge-bypass-token' for redeeming a token with the
  * server. Uses the same BlindTokenRequest as in BuildIssueRequest but sets

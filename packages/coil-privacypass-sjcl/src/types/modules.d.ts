@@ -8,5 +8,3 @@ declare module 'asn1-parser' {
   const ASN1: any
   const PEM: any
 }
-
-declare module 'atob' {}

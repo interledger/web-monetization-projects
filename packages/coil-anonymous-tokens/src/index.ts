@@ -14,6 +14,8 @@ import {
   h2cParams
 } from '@coil/privacypass-sjcl'
 
+import { portableFetch } from './portableFetch'
+
 export function base64url(buf: Buffer): string {
   return buf
     .toString('base64')
@@ -147,7 +149,7 @@ export class AnonymousTokens {
   ): Promise<string | undefined> {
     const usableToken = deserializeToken(token)
     const redeemRequest = BuildRedeemHeader(usableToken, '', '')
-    const response = await fetch(this.redeemerUrl + '/redeem', {
+    const response = await portableFetch(this.redeemerUrl + '/redeem', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
@@ -203,7 +205,7 @@ export class AnonymousTokens {
     coilAuthToken: string,
     request: string
   ): Promise<IssueResponse> {
-    const signRes = await fetch(this.signerUrl + '/issue', {
+    const signRes = await portableFetch(this.signerUrl + '/issue', {
       method: 'POST',
       headers: {
         authorization: `Bearer ${coilAuthToken}`,
@@ -272,7 +274,7 @@ export class AnonymousTokens {
   }
 
   private async _getCommitments(): Promise<Commitment[]> {
-    const response = await fetch(this.redeemerUrl + '/commitments', {
+    const response = await portableFetch(this.redeemerUrl + '/commitments', {
       method: 'GET'
     })
     if (!response.ok || response.status !== 200) {

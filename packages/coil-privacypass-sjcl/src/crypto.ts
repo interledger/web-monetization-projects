@@ -10,6 +10,9 @@ import { ASN1, PEM } from 'asn1-parser'
 import { h2Curve } from './hashToCurve'
 import { H2CParams } from './config'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const atob: (s: string) => string = require('atob')
+
 export interface CurvePoints {
   points: sjcl.SjclEllipticalPoint[]
   compressed: boolean

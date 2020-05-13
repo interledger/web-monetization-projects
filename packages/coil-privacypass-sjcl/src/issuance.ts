@@ -4,6 +4,9 @@
  */
 import { sec1EncodeToBase64 } from './crypto'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const btoa: (s: string) => string = require('btoa')
+
 export const CACHED_COMMITMENTS_STRING = 'cached-commitments'
 
 /**
