@@ -1,4 +1,4 @@
-import { StorableBlindToken } from '../../src/lib/privacypass'
+import { StorableBlindToken } from '@coil/privacypass-sjcl'
 
 interface StringMap {
   [key: string]: string

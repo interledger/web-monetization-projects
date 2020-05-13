@@ -12,7 +12,7 @@ import {
   initECSettings,
   deserializeToken,
   h2cParams
-} from './lib/privacypass'
+} from '@coil/privacypass-sjcl'
 
 export function base64url(buf: Buffer): string {
   return buf
