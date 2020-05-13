@@ -27,6 +27,7 @@ async function getPaymentDetails(
   const response = await fetch(paymentPointerUrl, {
     headers: {
       Accept: 'application/spsp4+json',
+      // DEPRECATED: this header is unnecessary with STREAM receipts
       'Web-Monetization-Id': monetizationId
     }
   })

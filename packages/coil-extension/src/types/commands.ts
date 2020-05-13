@@ -229,6 +229,7 @@ export interface MonetizationProgress {
   data: {
     // received
     amount: string
+    receipt?: string
     // source
     sentAmount: string
     assetCode: string

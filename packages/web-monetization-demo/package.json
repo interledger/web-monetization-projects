@@ -30,7 +30,8 @@
     "server:dev": "ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpileOnly src/server/main.ts",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --verbose --coverage",
-    "upkeep": "cd ../.. && yarn upkeep"
+    "upkeep": "cd ../.. && yarn upkeep",
+    "verifier:dev": "ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpileOnly src/verifier/main.ts"
   },
   "dependencies": {
     "@abraham/reflection": "^0.7.0",
@@ -42,8 +43,11 @@
     "ilp-protocol-stream": "^2.5.0",
     "inversify": "^5.0.1",
     "inversify-express-utils": "^6.3.2",
+    "node-fetch": "^2.6.0",
+    "oer-utils": "^5.1.0-alpha.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
     "react-hot-loader": "^4.12.21"
   },
   "devDependencies": {
@@ -52,6 +56,7 @@
     "@types/html-webpack-plugin": "^3.2.2",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^5.0.15",
     "html-webpack-plugin": "^4.3.0"
   }
 }

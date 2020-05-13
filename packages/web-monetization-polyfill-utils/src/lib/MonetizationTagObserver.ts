@@ -6,7 +6,6 @@ import { whenDocumentReady } from './whenDocumentReady'
 const debug = (...args: unknown[]) => {}
 
 export interface PaymentDetails {
-  // Web-Monetization-Id
   requestId: string
   paymentPointer: string
   initiatingUrl: string

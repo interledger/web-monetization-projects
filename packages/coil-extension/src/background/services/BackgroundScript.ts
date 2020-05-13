@@ -239,7 +239,8 @@ export class BackgroundScript {
           assetCode: details.assetCode,
           requestId: details.requestId,
           assetScale: details.assetScale,
-          sentAmount: details.sentAmount
+          sentAmount: details.sentAmount,
+          receipt: details.receipt
         }
       }
       this.handleMonetizedSite(frame, details.initiatingUrl, details)

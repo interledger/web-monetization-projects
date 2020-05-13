@@ -136,6 +136,7 @@ export class ContentScript {
             amount: request.data.amount,
             assetCode: request.data.assetCode,
             assetScale: request.data.assetScale,
+            receipt: request.data.receipt,
             paymentPointer: request.data.paymentPointer,
             requestId: request.data.requestId
           }

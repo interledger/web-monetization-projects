@@ -72,4 +72,4 @@ See [release-checklist](./docs/release-checklist.md)
 ### Zipping Source Code
 
 Some web stores require the submission of source code when uploading a new extension version.
-Guidelines for the submsision can be found in the [release-checklist](./docs/release-checklist.md#zipping-extension-source-files).
+Guidelines for the submission can be found in the [release-checklist](./docs/release-checklist.md#zipping-extension-source-files).
