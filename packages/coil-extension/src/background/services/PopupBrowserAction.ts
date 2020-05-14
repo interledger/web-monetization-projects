@@ -7,6 +7,8 @@ import { Colors } from '../consts/Colors'
 import { TabOpener } from './TabOpener'
 import { PopupIconService } from './PopupIconService'
 
+import TabIconDetails = chrome.browserAction.TabIconDetails
+
 type Action = (tab: chrome.tabs.Tab) => void
 
 @injectable()
@@ -15,6 +17,9 @@ export class PopupBrowserAction {
   private disabled = false
   private ignoreDefaultToggling = false
   private action: Action | null = null
+  // Just cache the last call, including the tab id, rather than a map of
+  // {$tabId: $path} which would require bookkeeping. This does "enough"
+  private lastSetIconCallArgs: TabIconDetails = {}
 
   constructor(
     private tabOpener: TabOpener,
@@ -65,10 +70,19 @@ export class PopupBrowserAction {
     const api = this.api
 
     if (api.browserAction.setIcon) {
-      api.browserAction.setIcon({
+      const args = {
         tabId,
         path: state?.icon?.path ?? this.icons.getInactive()
-      })
+      }
+      if (
+        !(
+          this.lastSetIconCallArgs.path == args.path &&
+          this.lastSetIconCallArgs.tabId == args.tabId
+        )
+      ) {
+        api.browserAction.setIcon(args)
+        this.lastSetIconCallArgs = args
+      }
     }
 
     if (api.browserAction.setBadgeText) {
