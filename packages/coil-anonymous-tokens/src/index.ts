@@ -12,7 +12,6 @@ import {
   initECSettings,
   IssueResponse,
   parseIssueResp,
-  RawIssueResponse,
   StorableBlindToken,
   verifyProof
 } from '@coil/privacypass-sjcl'
@@ -206,7 +205,7 @@ export class AnonymousTokens {
       throw new Error(`failed to get token signature. code=${signRes.status}`)
     }
 
-    const body = (await signRes.json()) as RawIssueResponse
+    const body = await signRes.json()
     return parseIssueResp(body) as IssueResponse
   }
 
