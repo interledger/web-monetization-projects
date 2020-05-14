@@ -1,15 +1,11 @@
 import {
   BitArray,
-  PseudoMersennePrime,
   PseudoMersennePrimeStatic,
   SjclEllipticalPoint,
   TypeHelpers
 } from 'sjcl'
 
 declare module 'sjcl' {
-  interface PseudoMersennePrimeStatic {
-    modulus: BigNumber
-  }
   interface BigNumber {
     modulus: BigNumber
     radix: number
@@ -44,6 +40,10 @@ declare module 'sjcl' {
     cnormalize(): BigNumber
     toBits(len?: number): BitArray
     bitLength(): number
+  }
+
+  interface PseudoMersennePrimeStatic {
+    modulus: BigNumber
   }
 
   interface SjclEllipticalPoint {

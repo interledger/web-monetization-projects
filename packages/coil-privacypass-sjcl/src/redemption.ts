@@ -4,8 +4,8 @@
  */
 import sjcl from 'sjcl'
 
-import { unblindPoint, getActiveECSettings, sec1Encode } from './crypto'
-import { sendH2CParams, h2cParams } from './config'
+import { getActiveECSettings, sec1Encode, unblindPoint } from './crypto'
+import { h2cParams, sendH2CParams } from './config'
 import { BlindToken } from './tokens'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
