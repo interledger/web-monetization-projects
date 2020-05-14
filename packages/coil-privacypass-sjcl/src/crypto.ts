@@ -10,7 +10,7 @@ import { ASN1, PEM } from 'asn1-parser'
 import { h2Curve } from './hashToCurve'
 import { H2CParams } from './config'
 import { BlindToken } from './tokens'
-import { SjclHashable } from './interfaces'
+import { Commitment, SjclHashable } from './interfaces'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const atob: (s: string) => string = require('atob')
@@ -427,7 +427,7 @@ export function verifyProof(
   proofObj: string,
   tokens: Array<BlindToken>,
   signatures: CurvePoints,
-  commitments: { G: string; H: string },
+  commitments: Commitment,
   prngName: string
 ) {
   const bp = getMarshaledBatchProof(proofObj)
@@ -496,7 +496,7 @@ export function recomputeComposites(
   const seed = computeSeed(tokens, signatures, pointG, pointH)
   let cM = new sjcl.ecc.pointJac(CURVE) // can only add points in jacobian representation
   let cZ = new sjcl.ecc.pointJac(CURVE)
-  const prng: PRNGImpl = { name: prngName, func: undefined as PRNGImpl['func'] }
+  const prng: PRNGImpl = { name: prngName }
   switch (prng.name) {
     case 'shake':
       prng['func'] = shake256()
@@ -563,7 +563,7 @@ export function computePRNGScalar(
       )
       break
     default:
-      throw new Error(`Server specified PRNG is not compatible: ${prng}`)
+      throw new Error(`Server specified PRNG is not compatible: ${prng.name}`)
   }
   // Masking is not strictly necessary for p256 but better to be completely
   // compatible in case that the curve changes

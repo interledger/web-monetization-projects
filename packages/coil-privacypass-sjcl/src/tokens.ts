@@ -1,10 +1,10 @@
 import sjcl, { BigNumber, SjclEllipticalPoint } from 'sjcl'
 
 import {
-  newRandomPoint,
   blindPoint,
-  sec1EncodeToBase64,
-  sec1DecodeFromBase64
+  newRandomPoint,
+  sec1DecodeFromBase64,
+  sec1EncodeToBase64
 } from './crypto'
 
 export interface BlindToken {

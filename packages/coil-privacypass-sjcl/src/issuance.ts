@@ -3,12 +3,8 @@
  * from: https://github.com/privacypass/challenge-bypass-extension/blob/master/src/ext/issuance.js
  */
 import { sec1EncodeToBase64 } from './crypto'
-import {
-  isRawIssueResponse,
-  IssueResponse,
-  RawIssueResponse
-} from './interfaces'
-// import { isRawIssueResponse, IssueResponse, RawIssueResponse } from './tokens'
+import { IssueResponse } from './interfaces'
+import { BlindToken } from './tokens'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const btoa: (s: string) => string = require('btoa')
@@ -22,30 +18,18 @@ export const CACHED_COMMITMENTS_STRING = 'cached-commitments'
  * @return {Object} Formatted object for inputs
  */
 export function parseIssueResp(
-  issueResp: RawIssueResponse | string[]
+  issueResp: IssueResponse | string[]
 ): IssueResponse {
-  let signatures: string[]
-  let batchProof: string
-  let version: string
-  let prng: string
-  // If this is not an array then the object is probably JSON.
-  if (isRawIssueResponse(issueResp)) {
-    signatures = issueResp.sigs
-    batchProof = issueResp.proof
-    version = issueResp.version
-    prng = issueResp.prng
+  const defaults = { prng: 'shake' }
+
+  if (!Array.isArray(issueResp)) {
+    return { ...defaults, ...issueResp }
   } else {
-    batchProof = issueResp[issueResp.length - 1]
-    signatures = issueResp.slice(0, issueResp.length - 1)
-    // TODO
-    version = (undefined as unknown) as string
-    prng = (undefined as unknown) as string
-  }
-  return {
-    signatures: signatures,
-    proof: batchProof,
-    version: version,
-    prng: prng || 'shake'
+    return {
+      ...defaults,
+      proof: issueResp[issueResp.length - 1],
+      sigs: issueResp.slice(0, issueResp.length - 1)
+    }
   }
 }
 
@@ -57,7 +41,7 @@ export function parseIssueResp(
  * @param {Array<Object>} tokens contains curve points for server signing
  * @return {string} base64-encoded issuance request
  */
-export function BuildIssueRequest(tokens: Array<any>) {
+export function BuildIssueRequest(tokens: Array<BlindToken>) {
   const contents: string[] = []
   for (let i = 0; i < tokens.length; i++) {
     const encodedPoint = sec1EncodeToBase64(tokens[i].point, true)

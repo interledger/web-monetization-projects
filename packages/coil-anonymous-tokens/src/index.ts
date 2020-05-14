@@ -2,6 +2,7 @@ import {
   BlindToken,
   BuildIssueRequest,
   BuildRedeemHeader,
+  Commitment,
   CurvePoints,
   deserializeToken,
   GenerateNewTokens,
@@ -11,7 +12,6 @@ import {
   initECSettings,
   IssueResponse,
   parseIssueResp,
-  RawIssueResponse,
   StorableBlindToken,
   verifyProof
 } from '@coil/privacypass-sjcl'
@@ -71,11 +71,6 @@ export interface AnonymousTokensOptions {
   store: TokenStore
   debug?: typeof console.log
   batchSize: number
-}
-
-interface Commitment {
-  G: string
-  H: string
 }
 
 export class AnonymousTokens {
@@ -210,7 +205,7 @@ export class AnonymousTokens {
       throw new Error(`failed to get token signature. code=${signRes.status}`)
     }
 
-    const body = (await signRes.json()) as RawIssueResponse
+    const body = await signRes.json()
     return parseIssueResp(body) as IssueResponse
   }
 
@@ -233,7 +228,7 @@ export class AnonymousTokens {
 
     const signPromise = this._signToken(coilAuthToken, issueRequest).then(
       async (issueResp: IssueResponse) => {
-        const curvePoints = getCurvePoints(issueResp.signatures)
+        const curvePoints = getCurvePoints(issueResp.sigs)
 
         await this._verifyProof(
           issueResp.proof,
