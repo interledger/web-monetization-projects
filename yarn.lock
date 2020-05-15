@@ -7853,7 +7853,7 @@ get-port@^4.2.0:
   resolved "https://registry.yarnpkg.com/get-port/-/get-port-4.2.0.tgz#e37368b1e863b7629c43c5a323625f95cf24b119"
   integrity sha512-/b3jarXkH8KJoOMQc3uVGHASwGLPq3gSFJ7tgJm2diza+bydJPTGOibin2steecKeOylE8oY2JERlVWkAJO6yw==
 
-get-stdin@7.0.0, get-stdin@^7.0.0:
+get-stdin@7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-7.0.0.tgz#8d5de98f15171a125c5e516643c7a6d0ea8a96f6"
   integrity sha512-zRKcywvrXlXsA0v0i9Io4KDRaAw7+a1ZpjRwl9Wox8PFlVCCHra7E9c4kqXCoCM9nR5tBkaTTZRBoCm60bFqTQ==
@@ -7867,6 +7867,11 @@ get-stdin@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
   integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
+
+get-stdin@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-8.0.0.tgz#cbad6a73feb75f6eeb22ba9e01f89aa28aa97a53"
+  integrity sha512-sY22aA6xchAzprjyqmSEQv4UbAAzRN0L2dQB0NlN5acTTK9Don6nhoc3eAbUnpZiCANAMfd/+40kVdKfFygohg==
 
 get-stream@^3.0.0:
   version "3.0.0"
@@ -11917,10 +11922,10 @@ npm-bundled@^1.0.1, npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-5.0.0.tgz#e14856ee6029b19e94eca817f836f1fe3c7902a7"
-  integrity sha512-hlLyMMRJHugAZT+xB0LPBnxofolP8F0dwD+XKautKqf/VJQIogt4YBDcITSJNkcop91+f3szhoSyFt2V9bGYRg==
+npm-check-updates@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-6.0.0.tgz#9ea6a4c3b56c9729c7d7b02cad0f721992528438"
+  integrity sha512-nbKfHWXtQ376OeaoLvekheEqg7GMsL+ZMnXWlNdrGGAVcOJ8CNg2IE9g2q6yRMFw2JM5LEa/zF771RPPBTZPPw==
   dependencies:
     chalk "^4.0.0"
     cint "^8.2.1"
@@ -11928,13 +11933,13 @@ npm-check-updates@^5.0.0:
     commander "^5.1.0"
     fast-diff "^1.2.0"
     find-up "4.1.0"
-    get-stdin "^7.0.0"
+    get-stdin "^8.0.0"
     json-parse-helpfulerror "^1.0.3"
     libnpmconfig "^1.2.1"
     lodash "^4.17.15"
     node-alias "^1.0.4"
     p-map "^4.0.0"
-    pacote "^11.1.9"
+    pacote "^11.1.10"
     progress "^2.0.3"
     prompts "^2.3.2"
     rc-config-loader "^3.0.0"
@@ -12547,7 +12552,7 @@ package-json@^6.3.0:
     registry-url "^5.0.0"
     semver "^6.2.0"
 
-pacote@^11.1.9:
+pacote@^11.1.10:
   version "11.1.10"
   resolved "https://registry.yarnpkg.com/pacote/-/pacote-11.1.10.tgz#cbd56a5a60c9cf472bc8ea7ba87112d749655dd4"
   integrity sha512-xJSSSxcHLo1CZJESvIZ2hbC5/5WP2oDHeUeTV2FvVDPOZG7+ixbxnV0n3TkdaUqlbC0RwnwMQ3wkJ/YywYM0Cg==
