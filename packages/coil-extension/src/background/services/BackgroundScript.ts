@@ -687,7 +687,7 @@ export class BackgroundScript {
           assetScale
         }
       }
-      this.api.tabs.sendMessage(tabId, message)
+      this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
       return { success: true }
     } catch (e) {
       this.log(`sendTip: error. msg=${e.message}`)
