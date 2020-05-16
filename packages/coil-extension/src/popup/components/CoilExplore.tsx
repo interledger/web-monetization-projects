@@ -8,7 +8,7 @@ export const CoilExplore = () => {
     <Grid container justify='center' alignItems='center'>
       <div>
         <StatusTypography variant='h6' align='center'>
-          Start Exploring
+          Discover Now
         </StatusTypography>
         <img src='/res/img-explore.svg' />
         <StatusTypography variant='subtitle1' align='center'>
