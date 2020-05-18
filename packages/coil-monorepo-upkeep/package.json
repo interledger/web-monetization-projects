@@ -46,7 +46,7 @@
     "npm-check-updates": "^6.0.0",
     "reduct": "^3.3.1",
     "sort-package-json": "1.41.0",
-    "yaml": "^1.9.2"
+    "yaml": "^1.10.0"
   },
   "devDependencies": {
     "@types/yaml": "^1.9.7"
