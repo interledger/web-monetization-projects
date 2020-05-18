@@ -2530,10 +2530,10 @@
   resolved "https://registry.yarnpkg.com/@types/filewriter/-/filewriter-0.0.28.tgz#c054e8af4d9dd75db4e63abc76f885168714d4b3"
   integrity sha1-wFTor02d11205jq8dviFFocU1LM=
 
-"@types/firefox@^0.0.29":
-  version "0.0.29"
-  resolved "https://registry.yarnpkg.com/@types/firefox/-/firefox-0.0.29.tgz#799b7c935f8ae924b2b25a206c55044e90a768f4"
-  integrity sha512-EVlCS6G+I4qPnlOq2t+NvRly3TyqZIlEJmMx6zRSFAxq2f2M/d+Uitk5nrhGLCinGiGVE0E4a72siqIt+R6ydw==
+"@types/firefox@^0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@types/firefox/-/firefox-0.0.30.tgz#39a23464f029006c0b98070b21617bfea5f79754"
+  integrity sha512-Y6Bs036XutwerwekFx4j+M2h78H/GDlNcWbtT+DBlPX5VcpIctGai6RoSJZp7hqABEbUVI3FmA66gmgV4n+Aew==
 
 "@types/get-port@^4.2.0":
   version "4.2.0"
