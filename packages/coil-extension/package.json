@@ -78,7 +78,7 @@
     "@webexts/build-utils": "^0.0.0",
     "@wext/shipit": "^0.2.1",
     "addons-linter": "^1.24.0",
-    "copy-webpack-plugin": "^5.1.1",
+    "copy-webpack-plugin": "^6.0.0",
     "crx-hotreload": "^1.0.4",
     "web-ext": "^4.2.0"
   }
