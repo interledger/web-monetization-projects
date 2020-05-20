@@ -1,3 +1,5 @@
+import * as crypto from 'crypto'
+
 import {
   hashAndInc,
   newRandomPointEl,
@@ -23,8 +25,15 @@ const divPt = (pt: Point, divisor: BN) => {
   return pt.mul(divisorInverse)
 }
 
+const HMAC = (key: Point, message: Buffer) => {
+  const keyBuffer = Buffer.from(key.encodeCompressed())
+  const mac = crypto.createHmac('sha256', keyBuffer)
+  mac.update(message)
+  return mac.digest()
+}
+
 describe('PrivacyPass Scenarios as code scribbles', () => {
-  it('should describe scenario 1', () => {
+  it('should describe scenario 1 - linkability', () => {
     // ### client issue request
     const T = randomPoint()
     const creds = 'trackMe'
@@ -53,7 +62,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     // Unfortunately we *can* track them
     expect(trackerDB.get(redeemRequest.T)).toEqual('trackMe')
   })
-  it('should describe scenario 2', () => {
+  it('should describe scenario 2 - malleability', () => {
     const creds = 'trackMe'
 
     // ### client issue request
@@ -107,7 +116,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
       expect(aT.mul(s).eq(aST)).toBe(true)
     }
   })
-  it('should describe scenario 3', () => {
+  it('should describe scenario 3 - redemption hijacking', () => {
     const creds = 'trackMe'
     // Instead of picking an arbitrary point T, the client can pick a number t.
     const t = randSecret()
@@ -158,7 +167,45 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     // the HMAC key
   })
 
-  it('should describe scenario 4', () => {})
+  it('should describe scenario 4 - tagging', () => {
+    // Instead of sending t and sT the client can send t and
+    // HMAC(sT, M) for a message M.
+
+    // When the server receives this, it calculates T = Hash(t), then uses
+    // its secret value to compute sT
+
+    /// With t and sT it can generate the HMAC key and check the signature.
+
+    // If the signature matches, that means the client knew sT.
+
+    const creds = 'trackMe'
+    const b = randSecret()
+    const t = randSecret()
+    const T = hashAndInc(t.toBuffer())
+    const bT = T.mul(b)
+
+    // ### Issue Request
+    const issueRequest = { bT, creds }
+
+    // ### Issue Response
+    const s = randSecret()
+    const sbT = issueRequest.bT.mul(s)
+    const issueResponse = { sbT }
+
+    // ### Client Redeem Request
+    const msg = Buffer.from('in a bottle')
+    const sT = divPt(issueResponse.sbT, b)
+    const redeemRequest = { t, M: msg, mac: HMAC(sT, msg) }
+
+    // ### Server Redeem Validation
+    {
+      const T = hashAndInc(redeemRequest.t.toBuffer())
+      const sT = T.mul(s)
+      const mac = HMAC(sT, redeemRequest.M)
+      expect(mac).toEqual(redeemRequest.mac)
+    }
+  })
+
   it('should describe scenario 5', () => {})
   it('should describe scenario 6', () => {})
   it('should describe scenario 7', () => {})
