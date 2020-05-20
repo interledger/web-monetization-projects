@@ -1,5 +1,10 @@
-import { newRandomPointEl, randomBN } from '@coil/privacypass-elliptic'
+import {
+  hashAndInc,
+  newRandomPointEl,
+  randomBN
+} from '@coil/privacypass-elliptic'
 import * as elliptic from 'elliptic'
+import BN from 'bn.js'
 
 const p256 = new elliptic.ec('p256')
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -11,15 +16,22 @@ const randomPoint = () => {
   return random.point
 }
 
+type Point = elliptic.curve.base.BasePoint
+
+const divPt = (pt: Point, divisor: BN) => {
+  const divisorInverse = (divisor as any)._invmp(p256Order)
+  return pt.mul(divisorInverse)
+}
+
 describe('PrivacyPass Scenarios as code scribbles', () => {
   it('should describe scenario 1', () => {
-    // client issue request
+    // ### client issue request
     const T = randomPoint()
     const creds = 'trackMe'
     // The client takes a point on an elliptic curve T and sends it to the server.
     const issueRequest = { T, creds }
 
-    // server issue response
+    // ### server issue response
     const s = randSecret()
     // The server applies a secret transformation
     // (multiplication by a secret number s)
@@ -29,12 +41,12 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     // Cheekily we keep track of theses issues
     const trackerDB = new Map([[issueRequest.T, issueRequest.creds]])
 
-    // client redeem request
+    // ### client redeem request
     const redeemRequest = { sT: issueResponse.sT, T }
 
-    // server redeem response
+    // ### server redeem response
     expect(redeemRequest.T.mul(s).eq(redeemRequest.sT)).toBe(true)
-    // Problem: Linkability
+    // ## Problem: Linkability
     // In this situation, the server knows T because it has seen it already.
     // This lets the server connect the two requests, something we’re trying to avoid.
     // This is where we introduce the blinding factor.
@@ -44,7 +56,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
   it('should describe scenario 2', () => {
     const creds = 'trackMe'
 
-    // client issue request
+    // ### client issue request
     const T = randomPoint()
     // Rather than sending T, the client generates its own secret number b.
     const b = randSecret()
@@ -53,7 +65,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     // before sending it to the server
     const issueRequest = { bT, creds }
 
-    // server issue response
+    // ### server issue response
     const s = randSecret()
     // The server does the same thing as in scenario 1
     // (multiplies the point it receives by s).
@@ -95,7 +107,57 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
       expect(aT.mul(s).eq(aST)).toBe(true)
     }
   })
-  it('should describe scenario 3', () => {})
+  it('should describe scenario 3', () => {
+    const creds = 'trackMe'
+    // Instead of picking an arbitrary point T, the client can pick a number t.
+    const t = randSecret()
+    const b = randSecret()
+    // The point T can be derived by hashing t to a point
+    // on the curve using a one-way hash.
+    const T = hashAndInc(t.toBuffer())
+
+    // ### Client Issue Request
+    const bT = T.mul(b)
+    const issueRequest = { bT, creds }
+
+    // ### Server Issue Response
+    const s = randSecret()
+    const sbT = issueRequest.bT.mul(s)
+    const issueResponse = { sbT }
+
+    // ### Client Redeem Request
+    const sT = divPt(issueResponse.sbT, b)
+    const redeemRequest = { t, sT }
+
+    // ### Server Redeem Response
+    {
+      const recomputedT = hashAndInc(t.toBuffer())
+      expect(recomputedT.mul(s).eq(redeemRequest.sT)).toBe(true)
+    }
+
+    // The hash guarantees that it’s hard to find another
+    // number that hashes to aT for an arbitrary a.
+    {
+      //
+    }
+    // ## Problem: Redemption hijacking
+    // If the values t and sT are sent across an unsecured network,
+    // an adversary could take them and use them for their own redemption.
+
+    // Sending sT is what lets attackers hijack a redemption.
+
+    // Since the server can calculate sT from t on it’s own,
+    // the client doesn’t actually need to send it.
+    // All the client needs to do is prove that it knows sT.
+
+    // A trick for doing this is to use t and sT to derive a HMAC key
+    // and use it to sign a message that relates to the redemption.
+
+    // Without seeing sT, the attacker will not be able to take this redemption
+    // and use it for a different message because it won’t be able to compute
+    // the HMAC key
+  })
+
   it('should describe scenario 4', () => {})
   it('should describe scenario 5', () => {})
   it('should describe scenario 6', () => {})
