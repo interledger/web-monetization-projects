@@ -11,6 +11,7 @@ import BN from 'bn.js'
 const p256 = new elliptic.ec('p256')
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const p256Order = p256.n!
+const p256G = p256.g as Point
 
 const randSecret = () => randomBN(p256Order)
 const randomPoint = () => {
@@ -256,6 +257,40 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     expect(issueResponse.DLEQ).toBeTruthy()
   })
 
-  it('should describe scenario 6', () => {})
+  it('should describe DLEQ ', () => {
+    // https://blog.cloudflare.com/privacy-pass-the-math/
+    // See DLEQ proofs
+
+    // Servers secret
+    const x = randSecret()
+
+    // Servers Commitment
+    const G = randomPoint()
+    const Y = G.mul(x)
+
+    // The blinded token point as submitted by the client
+    const M = randomPoint()
+
+    // The Server signed token point
+    const Z = M.mul(x)
+
+    // random Nonce
+    const k = randSecret()
+
+    const A = G.mul(k) // nonce signed commitment point
+    const B = M.mul(k) // nonce signed blinded token point
+
+    // challenge
+    const c = randSecret() // normally computed via hashing elements
+    const s = k.sub(c.mul(x).umod(p256Order)).umod(p256Order)
+
+    // S sends (c,s) to the user C
+
+    const Ac = G.mul(s).add(Y.mul(c))
+    const Bc = M.mul(s).add(Z.mul(c))
+    expect(Ac.eq(A)).toBe(true)
+    expect(Bc.eq(B)).toBe(true)
+  })
+
   it('should describe scenario 7', () => {})
 })
