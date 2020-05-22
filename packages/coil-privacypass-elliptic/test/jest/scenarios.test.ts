@@ -184,10 +184,10 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     const T = hashAndInc(t.toBuffer())
     const bT = T.mul(b)
 
-    // ### Issue Request
+    // ### Client Issue Request
     const issueRequest = { bT, creds }
 
-    // ### Issue Response
+    // ### Server Issue Response
     const s = randSecret()
     const sbT = issueRequest.bT.mul(s)
     const issueResponse = { sbT }
@@ -204,9 +204,58 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
       const mac = HMAC(sT, redeemRequest.M)
       expect(mac).toEqual(redeemRequest.mac)
     }
+
+    // Problem: Tagging
+    // The server can use a different s for each client, say s1 for client 1
+    // and s2 for client 2. Then the server can identify the client by comparing
+    // s_1(H(t)) and s_2(H(t)) against the sT submitted by the client and seeing
+    // which one matches.
+
+    // This is where we introduce a zero-knowledge proof. We'll go into more
+    // detail about how these work in a later blog post. The specific proof
+    // we're using called a discrete logarithm equivalence proof (DLEQ)
+
+    // Those lucky enough to take the SAT before 2005 may remember the analogy
+    // section. You can think of a DLEQ proof in terms of an SAT analogy.
+    // It proves that two pairs of items are related to each other in in a
+    // similar way
+
+    // For example: puppies are to dogs as kittens are to cats. A kitten is a
+    // young cat and a puppy is a young dog. You can represent this with the
+    // following notation: puppy:dog == kitten:cat
+
+    // A DLEQ proves that two elliptic curve points are related by the same
+    // multiplicative factor without revealing that factor. Say you have a number
+    // s and two points P and Q. Someone with knowledge of s can construct a proof
+    // DLEQ(P:sP === Q:sQ). A third party with access to P, sP, Q, sQ can use
+    // DLEQ(P:sP === Q:sQ) to verify that the same value s was used without knowing
+    // what s is.
   })
 
-  it('should describe scenario 5', () => {})
+  it('should describe scenario 5 - only one redemption per issuance', () => {
+    // The server picks a generator point G and publishes sG somewhere
+    // where every client knows it.
+
+    // Server side
+    const s = randSecret()
+    const G = randomPoint()
+    const sG = G.mul(s)
+
+    // ### Client Issue Request
+    const b = randSecret()
+    const t = crypto.randomBytes(32)
+    const T = hashAndInc(t)
+    const bT = T.mul(b)
+    const issueRequest = { bT }
+
+    /// Server Issue Response
+    const sBT = issueRequest.bT.mul(s)
+    const DLEQ = sBT // TODO: ??
+    const issueResponse = { sBT, DLEQ }
+
+    expect(issueResponse.DLEQ).toBeTruthy()
+  })
+
   it('should describe scenario 6', () => {})
   it('should describe scenario 7', () => {})
 })
