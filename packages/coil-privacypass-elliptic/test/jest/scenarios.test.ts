@@ -19,6 +19,12 @@ const randomPoint = () => {
   return random.point
 }
 
+const hashPoints = (...pts: Point[]) => {
+  const h = crypto.createHash('sha256')
+  pts.forEach(pt => h.update(Buffer.from(pt.encodeCompressed())))
+  return h.digest() //
+}
+
 type Point = elliptic.curve.base.BasePoint
 
 const divPt = (pt: Point, divisor: BN) => {
@@ -238,9 +244,9 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     // where every client knows it.
 
     // Server side
-    const s = randSecret()
-    const G = randomPoint()
-    const sG = G.mul(s)
+    const x = randSecret()
+    const G = randomPoint() // commitment
+    const sG = G.mul(x) // publically signed commitment, referred to as `H`
 
     // ### Client Issue Request
     const b = randSecret()
@@ -250,13 +256,38 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     const issueRequest = { bT }
 
     /// Server Issue Response
-    const sBT = issueRequest.bT.mul(s)
-    const DLEQ = sBT // TODO: ??
+    const sBT = issueRequest.bT.mul(x)
+    const k = randSecret() // nonce
+    const A = G.mul(k)
+    const B = issueRequest.bT.mul(k)
+    const c = hashPoints(G, sG, issueRequest.bT, sBT, A, B)
+    const cn = new BN(c)
+    const s = k.sub(cn.mul(x)).umod(p256Order)
+    const DLEQ = { c, s }
     const issueResponse = { sBT, DLEQ }
 
-    expect(issueResponse.DLEQ).toBeTruthy()
+    // Client verify
+    {
+      const {
+        sBT,
+        DLEQ: { c, s }
+      } = issueResponse
+      const cn = new BN(c)
+      const A2 = G.mul(s).add(sG.mul(cn))
+      const B2 = bT.mul(s).add(sBT.mul(cn))
+      const c2 = hashPoints(G, sG, bT, sBT, A2, B2)
+      expect(A.eq(A2)).toBe(true)
+      expect(B.eq(B2)).toBe(true)
+      expect(c.equals(c2)).toBe(true)
+    }
   })
 
+  it('should describe scenario 6', () => {})
+
+  it('should describe scenario 7', () => {})
+})
+
+describe('DELQ proofs', () => {
   it('should describe DLEQ ', () => {
     // https://blog.cloudflare.com/privacy-pass-the-math/
     // See DLEQ proofs
@@ -285,12 +316,9 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     const s = k.sub(c.mul(x).umod(p256Order)).umod(p256Order)
 
     // S sends (c,s) to the user C
-
     const Ac = G.mul(s).add(Y.mul(c))
     const Bc = M.mul(s).add(Z.mul(c))
     expect(Ac.eq(A)).toBe(true)
     expect(Bc.eq(B)).toBe(true)
   })
-
-  it('should describe scenario 7', () => {})
 })
