@@ -8,12 +8,10 @@ import {
 import * as elliptic from 'elliptic'
 import BN from 'bn.js'
 
-const p256 = new elliptic.ec('p256')
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const p256Order = p256.n!
-const p256G = p256.g as Point
+import { CURVE } from '../../src/curve'
 
-const randSecret = () => randomBN(p256Order)
+const randomNumber = () => randomBN(CURVE.order)
+const randomSecret = () => randomNumber()
 const randomPoint = () => {
   const random = newRandomPointEl()
   return random.point
@@ -28,7 +26,7 @@ const hashPoints = (...pts: Point[]) => {
 type Point = elliptic.curve.base.BasePoint
 
 const divPt = (pt: Point, divisor: BN) => {
-  const divisorInverse = (divisor as any)._invmp(p256Order)
+  const divisorInverse = (divisor as any)._invmp(CURVE.order)
   return pt.mul(divisorInverse)
 }
 
@@ -37,6 +35,32 @@ const HMAC = (key: Point, message: Buffer) => {
   const mac = crypto.createHmac('sha256', keyBuffer)
   mac.update(message)
   return mac.digest()
+}
+
+class DLEQ {
+  static create(p1: Point, xp1: Point, p2: Point, xp2: Point, x: BN) {
+    const nonce = randomSecret()
+    const A = p1.mul(nonce)
+    const B = p2.mul(nonce)
+    const challenge = hashPoints(p1, xp1, p2, xp2, A, B)
+    const c = new BN(challenge)
+    const response = nonce.sub(c.mul(x)).umod(CURVE.order)
+    return { c: challenge, s: response }
+  }
+
+  static prove(
+    p1: Point,
+    xp1: Point,
+    p2: Point,
+    xp2: Point,
+    proof: { c: Buffer; s: BN }
+  ) {
+    const c = new BN(proof.c)
+    const A = p1.mul(proof.s).add(xp1.mul(c))
+    const B = p2.mul(proof.s).add(xp2.mul(c))
+    const rc = hashPoints(p1, xp1, p2, xp2, A, B)
+    return proof.c.equals(rc)
+  }
 }
 
 describe('PrivacyPass Scenarios as code scribbles', () => {
@@ -48,7 +72,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     const issueRequest = { T, creds }
 
     // ### server issue response
-    const s = randSecret()
+    const s = randomSecret()
     // The server applies a secret transformation
     // (multiplication by a secret number s)
     const sT = issueRequest.T.mul(s)
@@ -75,14 +99,14 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     // ### client issue request
     const T = randomPoint()
     // Rather than sending T, the client generates its own secret number b.
-    const b = randSecret()
+    const b = randomSecret()
     // The client multiplies the point T by b
     const bT = T.mul(b)
     // before sending it to the server
     const issueRequest = { bT, creds }
 
     // ### server issue response
-    const s = randSecret()
+    const s = randomSecret()
     // The server does the same thing as in scenario 1
     // (multiplies the point it receives by s).
     // s(bT)
@@ -102,7 +126,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     }
 
     // The client can compute sT from b(sT) by dividing by b.
-    const bInverse = (knownB as any)._invmp(p256Order)
+    const bInverse = (knownB as any)._invmp(CURVE.order)
     // TODO: why does the above work ??
 
     // we can divide by b by multiplying by its inverse
@@ -117,7 +141,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
 
     // Problem: Malleability
     {
-      const a = randSecret()
+      const a = randomSecret()
       const aT = redeemRequest.T.mul(a)
       const aST = redeemRequest.sT.mul(a)
       expect(aT.mul(s).eq(aST)).toBe(true)
@@ -126,8 +150,8 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
   it('should describe scenario 3 - redemption hijacking', () => {
     const creds = 'trackMe'
     // Instead of picking an arbitrary point T, the client can pick a number t.
-    const t = randSecret()
-    const b = randSecret()
+    const t = randomNumber()
+    const b = randomSecret()
     // The point T can be derived by hashing t to a point
     // on the curve using a one-way hash.
     const T = hashAndInc(t.toBuffer())
@@ -137,7 +161,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     const issueRequest = { bT, creds }
 
     // ### Server Issue Response
-    const s = randSecret()
+    const s = randomSecret()
     const sbT = issueRequest.bT.mul(s)
     const issueResponse = { sbT }
 
@@ -186,8 +210,8 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     // If the signature matches, that means the client knew sT.
 
     const creds = 'trackMe'
-    const b = randSecret()
-    const t = randSecret()
+    const b = randomSecret()
+    const t = randomSecret()
     const T = hashAndInc(t.toBuffer())
     const bT = T.mul(b)
 
@@ -195,7 +219,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     const issueRequest = { bT, creds }
 
     // ### Server Issue Response
-    const s = randSecret()
+    const s = randomSecret()
     const sbT = issueRequest.bT.mul(s)
     const issueResponse = { sbT }
 
@@ -244,12 +268,12 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     // where every client knows it.
 
     // Server side
-    const x = randSecret()
+    const x = randomSecret()
     const G = randomPoint() // commitment
     const sG = G.mul(x) // publically signed commitment, referred to as `H`
 
     // ### Client Issue Request
-    const b = randSecret()
+    const b = randomSecret()
     const t = crypto.randomBytes(32)
     const T = hashAndInc(t)
     const bT = T.mul(b)
@@ -257,12 +281,12 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
 
     /// Server Issue Response
     const sBT = issueRequest.bT.mul(x)
-    const k = randSecret() // nonce
+    const k = randomSecret() // nonce
     const A = G.mul(k)
     const B = issueRequest.bT.mul(k)
     const c = hashPoints(G, sG, issueRequest.bT, sBT, A, B)
     const cn = new BN(c)
-    const s = k.sub(cn.mul(x)).umod(p256Order)
+    const s = k.sub(cn.mul(x)).umod(CURVE.order)
     const DLEQ = { c, s }
     const issueResponse = { sBT, DLEQ }
 
@@ -280,45 +304,85 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
       expect(B.eq(B2)).toBe(true)
       expect(c.equals(c2)).toBe(true)
     }
+    // Problem: only one redemption per issuance
+    // This system seems to have all the properties we want,
+    // but it would be nice to be able to get multiple points
   })
 
-  it('should describe scenario 6', () => {})
+  it('should describe scenario 6 - problem bandwidth', () => {
+    // as above but just send more than one point at a time
+  })
 
-  it('should describe scenario 7', () => {})
+  it('should describe scenario 7', () => {
+    const secretKey = randomSecret()
+    const G = randomPoint()
+    const H = G.mul(secretKey)
+
+    const t1 = randomNumber()
+    const t2 = randomNumber()
+    const t3 = randomNumber()
+
+    const b1 = randomSecret()
+    const b2 = randomSecret()
+    const b3 = randomSecret()
+
+    const T1 = hashAndInc(t1.toBuffer())
+    const T2 = hashAndInc(t2.toBuffer())
+    const T3 = hashAndInc(t3.toBuffer())
+
+    const b1T1 = T1.mul(b1)
+    const b2T2 = T2.mul(b2)
+    const b3T3 = T3.mul(b3)
+
+    const addedBlindedPoints = b1T1.add(b2T2).add(b3T3)
+
+    const aS = b1T1.mul(secretKey)
+    const bS = b2T2.mul(secretKey)
+    const cS = b3T3.mul(secretKey)
+
+    const signedIndividually = aS.add(bS).add(cS)
+    const signedAddedBlindPoints = addedBlindedPoints.mul(secretKey)
+    const isEq = signedAddedBlindPoints.eq(signedIndividually)
+    expect(isEq).toBe(true)
+
+    const proof = DLEQ.create(
+      G,
+      H,
+      addedBlindedPoints,
+      signedAddedBlindPoints,
+      secretKey
+    )
+    const proved = DLEQ.prove(
+      G,
+      H,
+      addedBlindedPoints,
+      signedAddedBlindPoints,
+      proof
+    )
+    expect(proved).toBe(true)
+
+    // TODO: Without using the random linear combinations the proof is insecure.
+  })
 })
 
-describe('DELQ proofs', () => {
+describe('DLEQ proofs', () => {
   it('should describe DLEQ ', () => {
     // https://blog.cloudflare.com/privacy-pass-the-math/
     // See DLEQ proofs
-
     // Servers secret
-    const x = randSecret()
+    const x = randomSecret()
 
     // Servers Commitment
     const G = randomPoint()
-    const Y = G.mul(x)
+    const H = G.mul(x)
 
     // The blinded token point as submitted by the client
     const M = randomPoint()
-
     // The Server signed token point
     const Z = M.mul(x)
 
-    // random Nonce
-    const k = randSecret()
-
-    const A = G.mul(k) // nonce signed commitment point
-    const B = M.mul(k) // nonce signed blinded token point
-
-    // challenge
-    const c = randSecret() // normally computed via hashing elements
-    const s = k.sub(c.mul(x).umod(p256Order)).umod(p256Order)
-
-    // S sends (c,s) to the user C
-    const Ac = G.mul(s).add(Y.mul(c))
-    const Bc = M.mul(s).add(Z.mul(c))
-    expect(Ac.eq(A)).toBe(true)
-    expect(Bc.eq(B)).toBe(true)
+    const proof = DLEQ.create(G, H, M, Z, x)
+    const verified = DLEQ.prove(G, H, M, Z, proof)
+    expect(verified).toBe(true)
   })
 })

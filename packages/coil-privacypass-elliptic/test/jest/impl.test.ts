@@ -1,6 +1,5 @@
 import * as crypto from 'crypto'
 
-import * as elliptic from 'elliptic'
 import * as sjcl from 'sjcl'
 import {
   getActiveECSettings,
@@ -10,9 +9,7 @@ import {
 } from '@coil/privacypass-sjcl'
 import { hashAndInc, randomBN } from '@coil/privacypass-elliptic'
 
-const p256 = new elliptic.ec('p256')
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const p256Order = p256.n!
+import { CURVE } from '../../src/curve'
 
 initECSettings({
   curve: 'p256',
@@ -56,12 +53,12 @@ describe('randomBN', () => {
   })
 
   it('should work without too many iterations', () => {
-    console.log(p256Order.muln(2).byteLength())
+    console.log(CURVE.order.muln(2).byteLength())
   })
 
   it('over 1e3 invocations with p256.n as arg will never loop more than once', () => {
     for (let i = 0; i < 1e3; i++) {
-      const random = randomBN(p256Order)
+      const random = randomBN(CURVE.order)
       // console.log(random.toString())
       if (random.__ix > 1) {
         throw new Error()

@@ -2,7 +2,9 @@ import crypto from 'crypto'
 
 import * as elliptic from 'elliptic'
 
-const p256: elliptic.ec = new elliptic.ec('p256')
+import { CURVE } from './curve'
+
+const POSITIVE_Y_TAG = Buffer.from([0x2])
 
 export function hashAndInc(seed: Buffer): elliptic.curve.base.BasePoint {
   let h = crypto.createHash('sha256')
@@ -32,7 +34,7 @@ export function hashAndInc(seed: Buffer): elliptic.curve.base.BasePoint {
     // 0x03 because this is just the negative version)
     // curve choice is implicit based on active curve parameters
     try {
-      return p256.curve.decodePoint([0x2, ...bytes])
+      return CURVE.curve.decodePoint(Buffer.concat([POSITIVE_Y_TAG, bytes]))
     } catch (e) {
       seed = bytes
       h = crypto.createHash('sha256')
