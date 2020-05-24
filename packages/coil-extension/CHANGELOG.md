@@ -1,3 +1,11 @@
+<a name="coil-extension@0.0.50"></a>
+
+# [coil-extension@0.0.50](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.49...coil-extension@0.0.50) (2020-05-22)
+
+### Features
+
+- Add support for STREAM receipts [#533](https://github.com/coilhq/web-monetization-projects/pull/533)
+
 <a name="coil-extension@0.0.49"></a>
 
 # [coil-extension@0.0.49](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.48...coil-extension@0.0.49) (2020-04-06)
