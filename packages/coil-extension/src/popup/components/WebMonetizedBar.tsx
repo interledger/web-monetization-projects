@@ -26,6 +26,8 @@ export const WebMonetizedBar = (props: PopupProps) => {
   if (coilSite && !monetized) {
     return null
   } else {
+    // TODO: adapted here should mean adaptable
+    const contentOrSite = adapted ? 'content' : 'site'
     return (
       <CoilBar>
         <Typography variant='caption'>
@@ -36,7 +38,7 @@ export const WebMonetizedBar = (props: PopupProps) => {
           )}
           {adapted && monetized
             ? ' Coil can donate to this channel'
-            : ' This content is'}
+            : ' This ' + contentOrSite + ' is'}
           {monetized ? '' : ' not'}
           {monetized && adapted ? '' : ' Web-Monetized'}
         </Typography>
