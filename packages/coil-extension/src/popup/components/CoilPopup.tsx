@@ -24,7 +24,7 @@ export const CoilPopup = (props: PopupProps) => {
           Check out our Discover page to explore Web-Monetized content.
         </StatusTypography>
         <StatusButton
-          text='Go to Discover'
+          text='Discover now'
           variant='contained'
           onClick={onClick}
         />

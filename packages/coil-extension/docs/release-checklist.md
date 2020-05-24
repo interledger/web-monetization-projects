@@ -45,7 +45,7 @@ make sense.
     - Load Temporary Add-on...
   - For Chrome or MS Edge, go to `chrome://extensions` (or `edge://extensions`) and `Load Unpacked`
 
-- [ ] Ensure that you are [logged in with a user with valid subscription](https://coil.com/settings/payment)
+- [ ] Ensure that you are [logged in with a user with valid subscription](https://coil.com/settings/membership)
 
   - ![image](https://user-images.githubusercontent.com/525211/71150879-28d04300-2265-11ea-96da-7d720c101575.png)
 
@@ -53,7 +53,7 @@ make sense.
 
   - ![image](https://user-images.githubusercontent.com/525211/66626576-f4b42280-ec22-11e9-9f77-4a95be08643e.png)
 
-- [ ] [xrpcommunity.blog](https://xrpcommunity.blog/) should monetize
+- [ ] [xrptipbot.com](https://www.xrptipbot.com/) should monetize
 
   - ![image](https://user-images.githubusercontent.com/525211/66626655-3c3aae80-ec23-11e9-981a-0e317ab80b42.png)
 
@@ -70,7 +70,7 @@ make sense.
   - [ ] Go to coil.com, the browser action popup should show welcome to coil
     - ![image](https://user-images.githubusercontent.com/525211/66626988-6b9deb00-ec24-11e9-86c3-b55c17e891c2.png)
   - [ ] Should have a link to coil.com/explore page
-  - [ ] Once on explore page should show `Start Exploring` with a rocket-ship graphic
+  - [ ] Once on explore page should show `Discover Now` with a rocket-ship graphic
     - ![image](https://user-images.githubusercontent.com/525211/66627053-a2740100-ec24-11e9-8759-76f40c46d6fa.png)
 
 - [ ] Check the monetization animation works properly

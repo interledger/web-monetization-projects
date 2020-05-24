@@ -8,7 +8,7 @@ import { StatusButton } from './StatusButton'
 import { StatusTypography } from './util/StatusTypography'
 
 const titleString = 'Become a member'
-const subheading1 = 'To use Coil you need an active membership'
+const subheading1 = 'To use Coil you need an active membership.'
 const footerString =
   'You can cancel your membership any time in the account settings page.'
 
@@ -16,6 +16,11 @@ const Muted = styled('p')({
   color: Colors.Grey500,
   fontSize: '12px',
   fontWeight: 600
+})
+
+const Button = styled(StatusButton)({
+  paddingLeft: '29px',
+  paddingRight: '29px'
 })
 
 export const Unsubscribed = (props: PopupProps) => {
@@ -36,7 +41,11 @@ export const Unsubscribed = (props: PopupProps) => {
         <StatusTypography variant='subtitle1' align='center'>
           {subheading1}
         </StatusTypography>
-        <StatusButton text='join' variant='contained' onClick={onClick} />
+        <Button
+          text='Join&nbsp;Coil&nbsp;for&nbsp;$5/mo'
+          variant='contained'
+          onClick={onClick}
+        />
         <Muted>{footerString}</Muted>
       </div>
     </Grid>
