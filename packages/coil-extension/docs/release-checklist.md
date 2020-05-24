@@ -118,7 +118,7 @@ make sense.
   - Issues: [#33][i33]
   - PRs: [#213][np213]
 
-- [ ] Go to [xrpcommunity.blog](https://xrpcommunity.blog/) and as page
+- [ ] Go to [xrptipbot.com](https://www.xrptipbot.com/) and as page
       is loading very quickly open the popup.
       It should show "This page is Web-Monetized" even before streaming
       starts. Should show 'setting up payment' then 'coil is paying creator'
