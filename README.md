@@ -97,6 +97,7 @@ You can create a file `./jest.config.local.js` file which will be read by the
 module.exports = function configure(config) {
   // Don't use the ts-jest preset
   delete config.preset
+  return config
 }
 ```
 
