@@ -31,6 +31,10 @@ async function main() {
     : pathMod.resolve(process.cwd(), fnSpec)
   const fnWd = pathMod.dirname(fnAbsolute)
   log({ fnSpec, fnWd, fnAbsolute, btpToken })
+  const substitutesFromEnv = process.env.SUBSTITUTES
+  const substitutes: Record<string, string> = substitutesFromEnv
+    ? JSON.parse(substitutesFromEnv)
+    : {}
   const fromEnv = process.env.POLYFILL_INIT_ARGS
   const polyFillInitArgs = fromEnv ? JSON.parse(fromEnv) : {}
   const polyfillInitArgsSearch = 'const polyfillInitArgs = {}'
@@ -43,9 +47,12 @@ async function main() {
       const html: string = await promisify(fs.readFile)(fnSpec, {
         encoding: 'utf8'
       })
-      const replaced = html
+      let replaced = html
         .replace(/'\$BTP_TOKEN\$'/g, replaceValue)
         .replace(polyfillInitArgsSearch, polyfillInitArgsReplacement)
+      Object.entries(substitutes).forEach(([k, v]) => {
+        replaced = replaced.replace(k, v)
+      })
       res.end(replaced)
     } else if (req.url) {
       const path = pathMod.resolve(fnWd, './' + req.url)
@@ -72,6 +79,9 @@ async function main() {
       'in',
       fnSpec
     )
+    Object.entries(substitutes).forEach(([k, v]) => {
+      log(`\`${k}\` will be replaced with`, `\`${v}\``, 'in', fnSpec)
+    })
     log('listening on', PORT, 'serving', fnSpec, 'working dir', fnWd)
   })
 }
