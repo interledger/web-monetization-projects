@@ -1,31 +1,26 @@
-import './abrahamReflection'
-import * as bodyParser from 'body-parser'
+import '@abraham/reflection'
 import { InversifyExpressServer } from 'inversify-express-utils'
 import { Container } from 'inversify'
 
 import './SPSP'
-import { StreamServer } from './StreamServer'
-import * as tokens from './tokens'
+import { dbg } from '../utils/logging'
+import * as tokens from '../tokens'
+import { configureMiddleware } from '../utils/middleware'
 
-const dbg = console.log
+import { StreamServer } from './StreamServer'
 
 async function main() {
   const container = new Container({
     autoBindInjectable: true,
     defaultScope: 'Singleton'
   })
-  const serverPort = Number(process.env.SERVER_PORT || 4000)
+  const serverPort = Number(process.env.RECEIVER_PORT || 4000)
   const btpPort = Number(process.env.BTP_PORT || 3000)
   container.bind<number>(tokens.BtpPort).toConstantValue(btpPort)
 
   const server = new InversifyExpressServer(container)
   server.setConfig(app => {
-    app.use(
-      bodyParser.urlencoded({
-        extended: true
-      })
-    )
-    app.use(bodyParser.json())
+    configureMiddleware(app)
   })
 
   const app = server.build()
@@ -36,5 +31,6 @@ async function main() {
 }
 
 if (require.main === module) {
+  // eslint-disable-next-line no-console
   main().catch(console.error)
 }

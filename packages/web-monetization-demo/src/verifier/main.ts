@@ -1,11 +1,10 @@
-import './abrahamReflection'
-import * as bodyParser from 'body-parser'
+import '@abraham/reflection'
 import { InversifyExpressServer } from 'inversify-express-utils'
 import { Container } from 'inversify'
 
-import './SPSP'
-
-const dbg = console.log
+import './Server'
+import { configureMiddleware } from '../utils/middleware'
+import { dbg } from '../utils/logging'
 
 async function main() {
   const container = new Container({
@@ -16,19 +15,8 @@ async function main() {
 
   const server = new InversifyExpressServer(container)
   server.setConfig(app => {
-    app.use(
-      bodyParser.urlencoded({
-        extended: true
-      })
-    )
-    app.use(bodyParser.text())
-    app.use('*', (req, res, next) => {
-      res.set('Access-Control-Allow-Origin', '*')
-      res.set('Access-Control-Allow-Headers', '*')
-      next()
-    })
+    configureMiddleware(app)
   })
-
   const app = server.build()
   app.listen(verifierPort, () => {
     dbg(`listening on ${verifierPort}`)
@@ -36,5 +24,6 @@ async function main() {
 }
 
 if (require.main === module) {
+  // eslint-disable-next-line no-console
   main().catch(console.error)
 }

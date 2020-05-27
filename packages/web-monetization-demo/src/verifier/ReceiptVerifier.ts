@@ -1,22 +1,12 @@
-import { createHmac, randomBytes } from 'crypto'
+import { randomBytes } from 'crypto'
 
 import { injectable } from 'inversify'
-import { Reader } from 'oer-utils'
+import { decodeReceipt, verifyReceipt } from 'ilp-protocol-stream'
 
-import { dbg } from './logging'
-
-const RECEIPT_VERSION = 1
-const HASH_ALGORITHM = 'sha256'
-
-function hmac(key: Buffer, message: Buffer): Buffer {
-  const h = createHmac(HASH_ALGORITHM, key)
-  h.update(message)
-  return h.digest()
-}
+import { dbg } from '../utils/logging'
+import { hmac } from '../utils/hmac'
 
 export interface BalanceRecord {
-  firstPacketMs: number
-  lastPacketMs: number
   balance: number
 }
 
@@ -44,22 +34,12 @@ export class ReceiptVerifier {
   }
 
   creditReceipt(requestId: string, receipt: string) {
-    const reader = Reader.from(Buffer.from(receipt, 'base64'))
-    if (reader.readUInt8Number() !== RECEIPT_VERSION) {
-      throw new Error('invalid receipt version')
-    }
-    const nonce = reader.readOctetString(16)
-    const streamId = reader.readUInt8()
-    const totalReceived = parseInt(reader.readUInt64())
+    const receiptBuffer = Buffer.from(receipt, 'base64')
+    const decoded = decodeReceipt(receiptBuffer)
+    verifyReceipt(receiptBuffer, this.generateReceiptSecret(decoded.nonce))
+    const receiptId = `${decoded.nonce.toString('base64')}:${decoded.streamId}`
+    const totalReceived = decoded.totalReceived.toNumber()
 
-    const receiptHmac = reader.readOctetString(32)
-    const secret = this.generateReceiptSecret(nonce)
-
-    if (!receiptHmac.equals(hmac(secret, reader.buffer.slice(0, 26)))) {
-      throw new Error('invalid receipt')
-    }
-
-    const receiptId = `${nonce.toString('base64')}:${streamId}`
     const amount = this.receipts[receiptId]
       ? totalReceived - this.receipts[receiptId]
       : totalReceived
@@ -68,16 +48,12 @@ export class ReceiptVerifier {
     }
     this.receipts[receiptId] = totalReceived
     dbg('received money', amount)
-    const now = Date.now()
     if (typeof this.balances[requestId] !== 'object') {
       this.balances[requestId] = {
-        balance: amount,
-        lastPacketMs: now,
-        firstPacketMs: now
+        balance: amount
       }
     } else {
       this.balances[requestId].balance += amount
-      this.balances[requestId].lastPacketMs = now
     }
     return this.balances[requestId]
   }

@@ -27,7 +27,8 @@
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "precommit": "echo lint-staged runs from root",
     "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
-    "server:dev": "ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpileOnly src/server/main.ts",
+    "receipt-verifier": "REDIS_URI=mock SPSP_ENDPOINT=http://localhost:4000/spsp/~niq SPSP_PROXY_PORT=4001 VERIFIER_PORT=4002 receipt-verifier",
+    "receiver:dev": "ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpileOnly src/receiver/main.ts",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --verbose --coverage",
     "upkeep": "cd ../.. && yarn upkeep",
@@ -35,6 +36,7 @@
   },
   "dependencies": {
     "@abraham/reflection": "^0.7.0",
+    "@coil/receipt-verifier": "^1.0.3",
     "@web-monetization/react": "0.0.12",
     "@web-monetization/types": "0.0.0",
     "body-parser": "^1.19.0",
