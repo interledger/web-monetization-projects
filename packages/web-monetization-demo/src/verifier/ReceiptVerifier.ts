@@ -3,7 +3,7 @@ import { createHmac, randomBytes } from 'crypto'
 import { injectable } from 'inversify'
 import { Reader } from 'oer-utils'
 
-import { dbg } from './logging'
+import { dbg } from '../utils/logging'
 
 const RECEIPT_VERSION = 1
 const HASH_ALGORITHM = 'sha256'

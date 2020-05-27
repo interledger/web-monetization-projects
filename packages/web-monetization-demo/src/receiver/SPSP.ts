@@ -7,8 +7,9 @@ import {
 } from 'inversify-express-utils'
 import * as express from 'express'
 
+import { dbg } from '../utils/logging'
+
 import { StreamServer } from './StreamServer'
-import { dbg } from './logging'
 
 @controller('/')
 export class SPSP extends BaseHttpController {
@@ -27,7 +28,6 @@ export class SPSP extends BaseHttpController {
       receiptSecret
     })
     resp.status(200)
-    resp.set('Access-Control-Allow-Origin', '*')
     resp.set('content-type', 'application/spsp4+json')
     dbg({ body })
     resp.send(JSON.stringify(body))

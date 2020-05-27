@@ -9,8 +9,8 @@ import {
 import MiniAccountsPlugin from 'ilp-plugin-mini-accounts'
 import { SPSPResponse } from '@web-monetization/types'
 
-import * as tokens from './tokens'
-import { dbg } from './logging'
+import { dbg } from '../utils/logging'
+import * as tokens from '../tokens'
 
 @injectable()
 export class StreamServer {
