@@ -9,12 +9,12 @@ import { LernaListItem, PackageJSON } from '../types'
 import { packageJSONKeysOrder } from './packageJSONKeysOrder'
 import { cmd } from './cmd'
 
-const JSON2016: typeof JSON = require('JSON2016/JSON2016.js')
+const JSON5: typeof JSON = require('json5')
 
 export const pretty = (val: any) => inspect(val, { depth: Infinity })
 
 export function readFileJSON<T = any>(path: string) {
-  return JSON2016.parse(readFileSync(path, { encoding: 'utf8' })) as T
+  return JSON5.parse(readFileSync(path, { encoding: 'utf8' })) as T
 }
 
 export function writeFileJSON(
