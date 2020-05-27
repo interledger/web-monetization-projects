@@ -4,14 +4,15 @@ import { EventEmitter } from 'events'
 
 import PluginBtp from 'ilp-plugin-btp'
 import * as IlpStream from 'ilp-protocol-stream'
+import { Connection } from 'ilp-protocol-stream'
 import { Injector } from 'reduct'
 import {
   AdaptiveBandwidth,
   asyncUtils,
   BackoffWaiter,
+  getFarFutureExpiry,
   getSPSPResponse,
-  SPSPResponse,
-  getFarFutureExpiry
+  SPSPResponse
 } from '@web-monetization/polyfill-utils'
 import {
   MonetizationProgressEvent,
@@ -198,7 +199,15 @@ export class Stream {
 
       const promise = new Promise((resolve, reject) => {
         const boundOutgoingMoney = (sentAmount: string) => {
-          setImmediate(this.onOutgoingMoney.bind(this), connection, sentAmount)
+          const receipt = stream.receipt
+            ? stream.receipt.toString('base64')
+            : undefined
+          setImmediate(
+            this.onOutgoingMoney.bind(this),
+            connection,
+            sentAmount,
+            receipt
+          )
         }
         const onPluginDisconnect = async () => {
           cleanUp()
@@ -259,7 +268,11 @@ export class Stream {
     }
   }
 
-  private onOutgoingMoney(connection: IlpStream.Connection, _: string) {
+  private onOutgoingMoney(
+    connection: IlpStream.Connection,
+    _: string,
+    receipt?: string
+  ) {
     if (this.state === MonetizationStateEnum.STOPPED) {
       this.state = MonetizationStateEnum.STARTED
       this.dispatchMonetizationStart()
@@ -270,7 +283,11 @@ export class Stream {
     const deliveredAmount =
       Number(connection.totalDelivered) - this.lastDelivered
     this.lastDelivered = Number(connection.totalDelivered)
-    this.dispatchMonetizationProgress(connection, deliveredAmount.toString())
+    this.dispatchMonetizationProgress(
+      connection,
+      deliveredAmount.toString(),
+      receipt
+    )
   }
 
   private dispatchMonetizationStart() {
@@ -284,15 +301,17 @@ export class Stream {
   }
 
   private dispatchMonetizationProgress(
-    connection: IlpStream.Connection,
-    amount: string
+    connection: Connection,
+    amount: string,
+    receipt: string | undefined
   ) {
     const detail: MonetizationProgressEvent['detail'] = {
       amount,
       assetCode: connection.destinationAssetCode!,
       assetScale: connection.destinationAssetScale!,
       paymentPointer: this.paymentPointer!,
-      requestId: this.requestId!
+      requestId: this.requestId!,
+      receipt
     }
     this.monetization.dispatchMonetizationProgressEvent(detail)
   }
