@@ -14,6 +14,14 @@ function pretty(val: unknown) {
   return JSON.stringify(val, null, 2)
 }
 
+/**
+ * When using https://github.com/coilhq/receipt-verifier
+ * via `yarn receipt-verifier`
+ * the SPSP Proxy API and Balances API will be on different ports
+ * Set via webpack
+ */
+declare const USE_RECEIPT_VERIFIER: boolean
+
 const Index = hot(() => {
   const state = useMonetizationState()
   const counter = useMonetizationCounter()
@@ -27,11 +35,13 @@ const Index = hot(() => {
   )
   const [serverBalance, setServerBalance] = useState<number | null>(null)
   const [useReceipts, setUseReceipts] = useState<boolean>(true)
+  const balancesPort = USE_RECEIPT_VERIFIER ? 4002 : 4001
+
   const toggleReceipts = () => setUseReceipts(!useReceipts)
   useEffect(() => {
     async function submitReceipt(requestId: string, receipt: string) {
       const resp = await fetch(
-        `http://localhost:4001/balance/${requestId}:creditReceipt`,
+        `http://localhost:${balancesPort}/balances/${requestId}:creditReceipt`,
         {
           method: 'POST',
           body: receipt
@@ -39,7 +49,7 @@ const Index = hot(() => {
       )
       if (resp.ok) {
         const body = await resp.json()
-        setServerBalance(body.balance)
+        setServerBalance(body)
       }
     }
     if (counter.requestId && counter.receipt) {

@@ -7,16 +7,27 @@ expose a BTP endpoint.
 This also shows how a "verifier" can proxy SPSP requests to a "receiver" by
 adding extra headers to support [receipts](https://github.com/interledger/webmonetization.org/pull/51) (proof of payment).
 
-For a production ready Receipt Verifier (using redis/lua), see [here](https://github.com/coilhq/receipt-verifier)
+This package includes a minimal toy verifier for illustrative purposes, but for production use, see:
+[Receipt Verifier](https://github.com/coilhq/receipt-verifier)
 
 ### Running the demo servers and client
 
 In 3 different terminals:
 
+To use the bundled toy verifier:
+
 ```
 yarn client:dev
 yarn receiver:dev
 yarn verifier:dev
+```
+
+For an example of using [Receipt Verifier](https://github.com/coilhq/receipt-verifier):
+
+```
+USE_RECEIPT_VERIFIER=1 yarn client:dev
+yarn receiver:dev
+yarn receipt-verifier
 ```
 
 ### Configuring Extension

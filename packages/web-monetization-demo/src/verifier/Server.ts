@@ -50,22 +50,12 @@ export class Server extends BaseHttpController {
     resp.send(JSON.stringify(body))
   }
 
-  @httpPost('balance/:requestId::creditReceipt')
+  @httpPost('balances/:requestId::creditReceipt')
   async postReceipt(
     @requestParam('requestId') requestId: string,
     @requestBody() receipt: string
   ) {
     const balance = this.receiptVerifier.creditReceipt(requestId, receipt)
-    return this.json(balance)
-  }
-
-  @httpGet('balance/:requestId')
-  async balance(@requestParam('requestId') requestId: string) {
-    const balance = this.receiptVerifier.balances[requestId]
-    if (balance) {
-      return this.json(balance)
-    } else {
-      return this.notFound()
-    }
+    return this.json(balance.balance)
   }
 }

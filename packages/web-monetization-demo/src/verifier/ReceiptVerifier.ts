@@ -1,21 +1,12 @@
-import { createHmac, randomBytes } from 'crypto'
+import { randomBytes } from 'crypto'
 
 import { injectable } from 'inversify'
 import { decodeReceipt, verifyReceipt } from 'ilp-protocol-stream'
 
 import { dbg } from '../utils/logging'
-
-const HASH_ALGORITHM = 'sha256'
-
-function hmac(key: Buffer, message: Buffer): Buffer {
-  const h = createHmac(HASH_ALGORITHM, key)
-  h.update(message)
-  return h.digest()
-}
+import { hmac } from '../utils/hmac'
 
 export interface BalanceRecord {
-  firstPacketMs: number
-  lastPacketMs: number
   balance: number
 }
 
@@ -57,16 +48,12 @@ export class ReceiptVerifier {
     }
     this.receipts[receiptId] = totalReceived
     dbg('received money', amount)
-    const now = Date.now()
     if (typeof this.balances[requestId] !== 'object') {
       this.balances[requestId] = {
-        balance: amount,
-        lastPacketMs: now,
-        firstPacketMs: now
+        balance: amount
       }
     } else {
       this.balances[requestId].balance += amount
-      this.balances[requestId].lastPacketMs = now
     }
     return this.balances[requestId]
   }

@@ -31,12 +31,14 @@
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --verbose --coverage",
     "upkeep": "cd ../.. && yarn upkeep",
-    "verifier:dev": "ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpileOnly src/verifier/main.ts"
+    "verifier:dev": "ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpileOnly src/verifier/main.ts",
+    "receipt-verifier": "REDIS_URI=mock SPSP_ENDPOINT=http://localhost:4000/spsp/~niq SPSP_PROXY_PORT=4001 VERIFIER_PORT=4002 receipt-verifier"
   },
   "dependencies": {
     "@abraham/reflection": "^0.7.0",
     "@web-monetization/react": "0.0.12",
     "@web-monetization/types": "0.0.0",
+    "@coil/receipt-verifier" :"^1.0.3",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "ilp-plugin-mini-accounts": "^4.2.0",

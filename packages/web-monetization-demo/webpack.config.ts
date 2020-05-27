@@ -44,6 +44,11 @@ const config: webpack.Configuration = {
     }
   },
   plugins: [
+    new webpack.DefinePlugin({
+      USE_RECEIPT_VERIFIER: JSON.stringify(
+        Boolean(process.env.USE_RECEIPT_VERIFIER)
+      )
+    }),
     new HtmlWebpackPlugin({
       template: './src/client/templates/index.html',
       filename: './index.html'
