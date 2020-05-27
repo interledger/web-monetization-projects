@@ -7,6 +7,8 @@ expose a BTP endpoint.
 This also shows how a "verifier" can proxy SPSP requests to a "receiver" by
 adding extra headers to support [receipts](https://github.com/interledger/webmonetization.org/pull/51) (proof of payment).
 
+For a production ready Receipt Verifier (using redis/lua), see [here](https://github.com/coilhq/receipt-verifier)
+
 ### Running the demo servers and client
 
 In 3 different terminals:

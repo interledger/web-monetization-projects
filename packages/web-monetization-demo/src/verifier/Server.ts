@@ -45,8 +45,9 @@ export class Server extends BaseHttpController {
     })
     const body = await spspResp.json()
     resp.set('content-type', 'application/spsp4+json')
+    resp.status(200)
     dbg({ body })
-    this.json(body)
+    resp.send(JSON.stringify(body))
   }
 
   @httpPost('balance/:requestId::creditReceipt')
