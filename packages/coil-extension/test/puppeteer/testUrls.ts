@@ -12,7 +12,7 @@ const urls = {
   },
   'https://staging.coil.com': {
     coilArticle:
-      'https://staging.coil.com/p/travis22/This-is-soo-cool/uz3Rbw9uP'
+      'https://staging.coil.com/p/androswong418/Andros-first-post/pD5aXIAvH'
   }
 } as Record<Domain, TestUrls>
 

@@ -1,5 +1,11 @@
 version: 2.1
 
+parameters:
+  coil_domain:
+    type: enum
+    default: "https://coil.com"
+    enum: ["https://coil.com", "https://staging.coil.com"]
+
 jobs:
   # Run Linting
   lint-all:
@@ -59,6 +65,8 @@ jobs:
   coil-extension-puppeteer:
     docker:
       - image: circleci/node:12.16.3-buster-browsers
+    environment:
+      COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
       - checkout
       - *restore_cache
@@ -81,6 +89,8 @@ jobs:
   coil-extension-puppeteer-transpile-only:
     docker:
       - image: circleci/node:12.16.3-buster-browsers
+    environment:
+      COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
       - checkout
       - *restore_cache
