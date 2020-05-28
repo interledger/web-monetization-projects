@@ -76,14 +76,16 @@ jobs:
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
-            yarn build-prod $BROWSER_TYPE
+            [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
+            yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
       - run:
           name: BROWSER_TYPE=firefox test.sh test/puppeteer/basic-test.ts
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=firefox
-            yarn build-prod $BROWSER_TYPE
+            [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
+            yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/basic-test.ts
 
   coil-extension-puppeteer-transpile-only:
@@ -100,7 +102,8 @@ jobs:
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
-            BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn build-prod $BROWSER_TYPE
+            [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
+            BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
 
       - run:
@@ -108,7 +111,8 @@ jobs:
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=firefox
-            BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn build-prod $BROWSER_TYPE
+            [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
+            BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/basic-test.ts
 
   build-all-package-references-typescript:
