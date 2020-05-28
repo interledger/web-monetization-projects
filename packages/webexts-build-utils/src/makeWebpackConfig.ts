@@ -139,7 +139,7 @@ export function makeWebpackConfig(rootDir: string) {
         WEBPACK_DEFINE_API: API,
         WEBPACK_DEFINE_BROWSER: JSON.stringify(BROWSER)
       }),
-      new CopyPlugin(copyToDist)
+      new CopyPlugin({ patterns: copyToDist })
     ],
 
     output: {
