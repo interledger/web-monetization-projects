@@ -8852,10 +8852,10 @@ ilp-protocol-ildcp@^2.0.1, ilp-protocol-ildcp@^2.1.4:
     ilp-packet "^3.1.0-alpha.0"
     oer-utils "^5.1.0-alpha.0"
 
-ilp-protocol-stream@2.6.0, ilp-protocol-stream@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.6.0.tgz#ade306efebd5565af320c6b9c948bbdb0d8089f3"
-  integrity sha512-ikc1/g0jX9VTPdDSxGUi6XGesIqXQpn3z/CgPiwrvT2MneLoRKJRQ9I+YD/OYkMktcrX++HslejviBxjvRR2CQ==
+ilp-protocol-stream@2.6.1, ilp-protocol-stream@^2.6.0, ilp-protocol-stream@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.6.1.tgz#f442be1167ca0534233c2924be9cb29a0cac76e1"
+  integrity sha512-z6ZGGskMjgdWejF/uR7v0/9f/1vD2Du6a5wSVaMTihNHIsQs4FWXv77TIWnG1wSPTOGrXve10A9XqVL3ZiAiig==
   dependencies:
     "@types/node" "^10.14.22"
     ilp-logger "^1.2.1"
