@@ -2540,10 +2540,10 @@
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-0.0.30.tgz#dc1e40f7af3b9c815013a7860e6252f6352a84df"
   integrity sha512-orGL5LXERPYsLov6CWs3Fh6203+dXzJkR7OnddIr2514Hsecwc8xRpzCapshBbKFImCsvS/mk6+FWiN5LyZJAQ==
 
-"@types/debug@^0.0.31":
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/@types/debug/-/debug-0.0.31.tgz#bac8d8aab6a823e91deb7f79083b2a35fa638f33"
-  integrity sha512-LS1MCPaQKqspg7FvexuhmDbWUhE2yIJ+4AgVIyObfc06/UKZ8REgxGNjZc82wPLWmbeOm7S+gSsLgo75TanG4A==
+"@types/debug@^4.1.0":
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.5.tgz#b14efa8852b7768d898906613c23f688713e02cd"
+  integrity sha512-Q1y515GcOdTHgagaVFhHnIFQ38ygs/kmxdNpvpou+raI9UO3YZcHDngBSYKQklcKlvA7iuQlmIKbzvmxcOE9CQ==
 
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
@@ -8809,12 +8809,12 @@ ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.6.tgz#643194ad4bf2712f37852e386b6998eff0db2106"
   integrity sha512-cgXgkypZBcCnOgSihyeqbo6gjIaIyDqPQB7Ra4vhE9m6kigdGoQDMHjviFhRZo3IMlRy6yElosoviMs5YxZXUA==
 
-ilp-logger@^1.1.3, ilp-logger@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/ilp-logger/-/ilp-logger-1.2.1.tgz#d6c50a9f94a43e8f4969da5557798fed915de34a"
-  integrity sha512-Qj3DjoF8ROdVXhk6oFOA3XuwXBoK8gFxUOKD9h5w0jDGokTiUVzHQp8Nsq6WT8CZh6rObmnw5GtFWHYlKhp3yQ==
+ilp-logger@^1.1.3, ilp-logger@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/ilp-logger/-/ilp-logger-1.3.1.tgz#0878cfba8501ebd292e97a056e125f3305911086"
+  integrity sha512-VcLizs+1sfJLqTG8VzS1UVeVnlSprg+rzbGNuFvqsmdlSE6QZ4SPwLQVWYjPFaIApLusFHCOF5MDFxXGGwRxbw==
   dependencies:
-    "@types/debug" "^0.0.31"
+    "@types/debug" "^4.1.0"
     debug "^4.1.0"
     supports-color "^5.5.0"
 
@@ -8874,13 +8874,13 @@ ilp-protocol-ildcp@^2.0.1, ilp-protocol-ildcp@^2.1.4:
     ilp-packet "^3.1.0-alpha.0"
     oer-utils "^5.1.0-alpha.0"
 
-ilp-protocol-stream@2.6.2, ilp-protocol-stream@^2.6.0, ilp-protocol-stream@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.6.2.tgz#c9c736aa2a06aef098a82be7fce19ffe60376cae"
-  integrity sha512-nZmOlm7YuGC1SQ2pViwb5fB1WJF3USh757Mkt92He2Zu0+hXOAmtvJTjDbA60IOiP8y66xLyDVQEUYogVQTseQ==
+ilp-protocol-stream@2.6.3, ilp-protocol-stream@^2.6.0, ilp-protocol-stream@^2.6.3:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/ilp-protocol-stream/-/ilp-protocol-stream-2.6.3.tgz#ad0d5d68358557a379ccdd20735dc08e616b96d0"
+  integrity sha512-k/6df02i4GfiwNApMM+VBepykrbMR7COd8uKxpUkYC06RDBmaMMRHFc6E8mk3WM5XCgxzxkClUQw6fhPf+lkZQ==
   dependencies:
     "@types/node" "^10.14.22"
-    ilp-logger "^1.2.1"
+    ilp-logger "^1.3.1"
     ilp-packet "^3.0.9"
     ilp-protocol-ildcp "^2.1.4"
     long "^4.0.0"
