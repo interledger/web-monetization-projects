@@ -7,7 +7,7 @@
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/coil-polyfill-utils",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/coil-polyfill-utils",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"

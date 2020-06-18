@@ -10,7 +10,7 @@
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/coil-extension",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/coil-extension",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"

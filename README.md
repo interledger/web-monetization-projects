@@ -6,7 +6,7 @@
 
 ## Development Process
 
-Ultimately we want `master` branch to be in a 'good' state at all times, with good test
+Ultimately we want `main` branch to be in a 'good' state at all times, with good test
 coverage so we can practice CD.
 
 However, currently there are known bugs, very little automated tests and the code will
@@ -16,7 +16,7 @@ manual release checklist on each PR/commit.
 
 Till then:
 
-- **do not assume master branch is in a good state** !
+- **do not assume main branch is in a good state** !
   - Go through the release [release checklist](packages/coil-extension/docs/release-checklist.md) carefully!
 
 ## Setting up dev environment
