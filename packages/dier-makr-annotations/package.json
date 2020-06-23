@@ -7,7 +7,7 @@
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/dier-makr-annotations",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/dier-makr-annotations",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"

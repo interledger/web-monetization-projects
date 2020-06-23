@@ -49,7 +49,7 @@ export interface DependabotUpdateConfigsItem {
   package_manager: 'javascript' | string
   directory: string
   update_schedule: 'live' | string
-  target_branch: 'master' | string
+  target_branch: 'main' | string
 }
 
 export interface DependabotConfig {

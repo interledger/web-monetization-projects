@@ -16,7 +16,7 @@
     "monorepo",
     "willy"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/coil-monorepo-upkeep",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/coil-monorepo-upkeep",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"

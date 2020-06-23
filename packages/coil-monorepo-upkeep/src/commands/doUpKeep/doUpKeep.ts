@@ -88,7 +88,7 @@ function setCommonScriptsAndMergeOverrides(
     ...subPackageJSON,
     version: '0.0.0',
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    homepage: `https://github.com/${githubPath}/tree/master/packages/${folderName}`,
+    homepage: `https://github.com/${githubPath}/tree/main/packages/${folderName}`,
     keywords: rootPackageJSON.keywords,
     repository: rootPackageJSON.repository,
     main: './build',

@@ -7,7 +7,7 @@
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/master/packages/webexts-build-utils",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/webexts-build-utils",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
