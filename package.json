@@ -60,7 +60,7 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/copy-webpack-plugin": "^6.0.0",
-    "@types/jest": "^26.0.0",
+    "@types/jest": "^26.0.3",
     "@types/node": "12.x",
     "@types/puppeteer": "^3.0.0",
     "@types/webpack": "^4.41.17",
