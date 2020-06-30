@@ -65,6 +65,6 @@
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
     "style-loader": "^1.2.1",
-    "web-ext": "^4.2.0"
+    "web-ext": "^4.3.0"
   }
 }
