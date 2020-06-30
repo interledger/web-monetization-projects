@@ -911,6 +911,13 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@7.10.2":
+  version "7.10.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
+  integrity sha512-6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@7.6.2":
   version "7.6.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.2.tgz#c3d6e41b304ef10dcf13777a33e7694ec4a9a6dd"
@@ -929,13 +936,6 @@
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
   integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@7.9.6":
-  version "7.9.6"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
-  integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -3480,15 +3480,15 @@ addons-linter@1.23.0:
   optionalDependencies:
     fsevents "2.1.2"
 
-addons-linter@^1.25.0:
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.25.0.tgz#8b08bbcdf085d7e062fb256b6343c99569015c75"
-  integrity sha512-vMsUkzkadtXzaj5hQl4LAM977blRfva9fSDHgbc6+xqoxcmNURcKog80jiDVZj1HxDS78BfoQQNx/W6TruXhMA==
+addons-linter@^1.26.0:
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-1.26.0.tgz#85d2c37edcee2bff7192b45a4fc727656809ca83"
+  integrity sha512-PKytX6qxbZapc076auO0LBhAGuw2z7eyPnYusMgNBPbY72MAXzUCt3AhSbwGhZ43d5Tn/3At5H0xPi31VXG2Mg==
   dependencies:
-    "@babel/runtime" "7.9.6"
+    "@babel/runtime" "7.10.2"
     ajv "6.12.2"
     ajv-merge-patch "4.1.0"
-    chalk "4.0.0"
+    chalk "4.1.0"
     cheerio "1.0.0-rc.3"
     columnify "1.5.4"
     common-tags "1.8.0"
@@ -3496,8 +3496,8 @@ addons-linter@^1.25.0:
     dispensary "0.51.2"
     es6-promisify "6.1.1"
     eslint "5.16.0"
-    eslint-plugin-no-unsanitized "3.1.1"
-    eslint-visitor-keys "1.1.0"
+    eslint-plugin-no-unsanitized "3.1.2"
+    eslint-visitor-keys "1.2.0"
     espree "6.2.1"
     esprima "4.0.1"
     first-chunk-stream "3.0.0"
@@ -3505,10 +3505,10 @@ addons-linter@^1.25.0:
     glob "7.1.6"
     is-mergeable-object "1.1.1"
     jed "1.1.1"
-    mdn-browser-compat-data "1.0.18"
+    mdn-browser-compat-data "1.0.25"
     os-locale "5.0.0"
-    pino "6.2.1"
-    postcss "7.0.31"
+    pino "6.3.2"
+    postcss "7.0.32"
     probe-image-size "5.0.0"
     relaxed-json "1.0.3"
     semver "7.3.2"
@@ -4828,10 +4828,10 @@ chalk@3.0.0, chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.0.0.tgz#6e98081ed2d17faab615eb52ac66ec1fe6209e72"
-  integrity sha512-N9oWFcegS0sFr9oh1oz2d7Npos6vNoWW9HvtCg5N1KRFpUhaAhvTv5Y58g880fZaEYSNm3qDz8SU1UrGvp+n7A==
+chalk@4.1.0, chalk@^4.0.0, chalk@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
+  integrity sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
@@ -4846,14 +4846,6 @@ chalk@^1.0.0, chalk@^1.1.1, chalk@^1.1.3:
     has-ansi "^2.0.0"
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
-
-chalk@^4.0.0, chalk@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
-  integrity sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
-  dependencies:
-    ansi-styles "^4.1.0"
-    supports-color "^7.1.0"
 
 chalk@~0.4.0:
   version "0.4.0"
@@ -6772,10 +6764,10 @@ eslint-plugin-no-unsafe-innerhtml@1.0.16:
   dependencies:
     eslint "^3.7.1"
 
-eslint-plugin-no-unsanitized@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-no-unsanitized/-/eslint-plugin-no-unsanitized-3.1.1.tgz#59b3046e45864a786d97c0cad7b55be3f422772b"
-  integrity sha512-JP8GPvpWUDAv2UVsOpKLeup94orazjtMRDDxDcak3JEQX1iAYnzCtH7quIB4WmDU8fAbvzPKEFVkzxYzWCYLvg==
+eslint-plugin-no-unsanitized@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-no-unsanitized/-/eslint-plugin-no-unsanitized-3.1.2.tgz#a54724e0b81d43279bb1f8f5e1d82c97da78c858"
+  integrity sha512-KPShfliA3Uy9qqwQx35P1fwIOeJjZkb0FbMMUFztRYRposzaynsM8JCEb952fqkidROl1kpqY80uSvn+TcWkQQ==
 
 eslint-plugin-node@^11.1.0:
   version "11.1.0"
@@ -6858,10 +6850,15 @@ eslint-utils@^2.0.0:
   dependencies:
     eslint-visitor-keys "^1.1.0"
 
-eslint-visitor-keys@1.1.0, eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0:
+eslint-visitor-keys@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.1.0.tgz#e2a82cea84ff246ad6fb57f9bde5b46621459ec2"
   integrity sha512-8y9YjtM1JBJU/A9Kc+SbaOV4y29sSWckBwMHa+FGtVj5gN/sbnKDf6xJUl+8g7FAij9LVaP8C24DUiH/f/2Z9A==
+
+eslint-visitor-keys@1.2.0, eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.2.0.tgz#74415ac884874495f78ec2a97349525344c981fa"
+  integrity sha512-WFb4ihckKil6hu3Dp798xdzSfddwKKU3+nGniKF6HfeW6OLd2OUDEPP7TcHtB5+QXOKg2s6B2DaMPE1Nn/kxKQ==
 
 eslint@5.16.0:
   version "5.16.0"
@@ -11266,10 +11263,10 @@ mdn-browser-compat-data@1.0.15:
   dependencies:
     extend "3.0.2"
 
-mdn-browser-compat-data@1.0.18:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-1.0.18.tgz#29e596d0d391788730cb19068cfb16739f0ab7df"
-  integrity sha512-6N7UzsgyXMsJvN/LxfqZqH7A4Sq69erz/o/6Ao10sJ8Dc6g2aWvjkTAjmchXK2Q/2UIC3GzldzzNqujesXak9A==
+mdn-browser-compat-data@1.0.25:
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-1.0.25.tgz#140744490d69c3a1792338173d567f49377fca38"
+  integrity sha512-4klqILpitRnmWRai5Ols/GXP1eGDYMluAcBRoNZnGNkV2OnkDmpA9hUlM+9pTFym5FGDO5TAm3HweVSVc7ziiQ==
   dependencies:
     extend "3.0.2"
 
@@ -13027,10 +13024,10 @@ pino@6.0.0, pino@~6.0.0:
     quick-format-unescaped "^4.0.1"
     sonic-boom "^1.0.0"
 
-pino@6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-6.2.1.tgz#d2b86306b3998e8f6bb33bdf23910d418ed696cf"
-  integrity sha512-5F5A+G25Ex2rMOBEe3XYGyLSF4dikQZsFvPojwsqnDBX+rfg7+kw9s5i7pHuVAJImekjwb+MR9jQyHWPLENlvQ==
+pino@6.3.2:
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-6.3.2.tgz#55f73aa61584774ca5984068ffb78e8d519ce19e"
+  integrity sha512-EiP3L1hoFw19KPocWimjnfXeysld0ne89ZRQ+bf8nAeA2TyuLoggNlibAi+Kla67GvQBopLdIZOsh1z/Lruo5Q==
   dependencies:
     fast-redact "^2.0.0"
     fast-safe-stringify "^2.0.7"
@@ -13197,16 +13194,7 @@ postcss@7.0.27:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@7.0.31:
-  version "7.0.31"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.31.tgz#332af45cb73e26c0ee2614d7c7fb02dfcc2bd6dd"
-  integrity sha512-a937VDHE1ftkjk+8/7nj/mrjtmkn69xxzJgRETXdAUU+IgOYPQNJF17haGWbeDxSyk++HA14UA98FurvPyBJOA==
-  dependencies:
-    chalk "^2.4.2"
-    source-map "^0.6.1"
-    supports-color "^6.1.0"
-
-postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.32, postcss@^7.0.5, postcss@^7.0.6:
+postcss@7.0.32, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.32, postcss@^7.0.5, postcss@^7.0.6:
   version "7.0.32"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.32.tgz#4310d6ee347053da3433db2be492883d62cec59d"
   integrity sha512-03eXong5NLnNCD05xscnGKGDZ98CyzoqPSMjOe6SuoQY7Z2hIj0Ld1g/O/UQRuOle2aRtiIRDg9tDcTGAkLfKw==
