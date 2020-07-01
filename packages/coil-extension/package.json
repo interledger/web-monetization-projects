@@ -77,7 +77,7 @@
     "@types/react-dom": "^16.9.8",
     "@webexts/build-utils": "^0.0.0",
     "@wext/shipit": "^0.2.1",
-    "addons-linter": "^1.26.0",
+    "addons-linter": "^2.0.0",
     "crx-hotreload": "^1.0.4",
     "web-ext": "^4.3.0"
   }
