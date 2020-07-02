@@ -19,6 +19,7 @@
   "background": {
     "page": "static/background.html"
   },
+  "incognito" : "split",
   "web_accessible_resources": [
 
   ],
