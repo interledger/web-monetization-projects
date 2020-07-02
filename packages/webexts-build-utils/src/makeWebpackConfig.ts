@@ -48,6 +48,7 @@ export function makeWebpackConfig(rootDir: string) {
           manifest.version = WEXT_MANIFEST_VERSION
         }
         if (BROWSER === 'firefox') {
+          manifest.incognito = 'not_allowed'
           if (WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID) {
             manifest.browser_specific_settings.gecko.id = WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
           }
