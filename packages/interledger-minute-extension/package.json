@@ -60,7 +60,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/uuid": "^8.0.0",
     "@wext/shipit": "^0.2.1",
-    "addons-linter": "^2.0.0",
+    "addons-linter": "^2.0.1",
     "crx-hotreload": "^1.0.4",
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",

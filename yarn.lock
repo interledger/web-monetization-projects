@@ -3389,10 +3389,10 @@ addons-linter@1.26.0:
   optionalDependencies:
     fsevents "2.1.3"
 
-addons-linter@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-2.0.0.tgz#2457a7337085a807404bc6b597f60b75280d2cc1"
-  integrity sha512-/S6OUujphgSg+4VN9MPBhEiCPkkA6/ELX7sIwbFyy+fokjRECkrKF03l6S0+QmR47fiLsZZCphN8zBLDq9SoRQ==
+addons-linter@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-2.0.1.tgz#15a6260592f8c3793eb25cc06c9c42c63fa47fc6"
+  integrity sha512-sayz+w14XReGxFdy66dH2mN/5u/Ng8qFPXP6l33AIZs27y5wbi0O1nA9Biunasfs+M7w2y4tEvF2kY5AmM/liQ==
   dependencies:
     "@babel/runtime" "7.10.3"
     ajv "6.12.2"
