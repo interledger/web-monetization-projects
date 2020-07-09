@@ -16,12 +16,10 @@ export enum IDGenerationStrategy {
   META_ADDED_CHANGED
 }
 
-export type MetaList = NodeListOf<HTMLMetaElement>
-
 /**
- * On a meta removed stopped will be set
- * On a meta added started will be set
- * On a meta[content] changed, both will be set
+ * On a tag removed stopped will be set
+ * On a tag added started will be set
+ * On a tag[content|href] changed, both will be set
  */
 export interface PaymentDetailsChangeArguments {
   started: PaymentDetails | null
@@ -32,6 +30,15 @@ export type PaymentDetailsChangeCallback = (
   args: PaymentDetailsChangeArguments
 ) => void
 
+export type MonetizationTag = HTMLMetaElement | HTMLLinkElement
+export type MetaList = NodeListOf<MonetizationTag>
+
+export type TagType = 'meta' | 'link'
+
+export function getTagType(tag: MonetizationTag) {
+  return tag instanceof HTMLMetaElement ? 'meta' : 'link'
+}
+
 export class MonetizationTagObserver {
   /**
    * This class as written should be used in such a way that it has a lifetime
@@ -40,10 +47,11 @@ export class MonetizationTagObserver {
    */
   private readonly pageLoadId = uuid()
 
+  private affinity: TagType = 'meta'
   private head: HTMLHeadElement | null = null
   private headObserver: MutationObserver
   private metaTags = new Map<
-    HTMLMetaElement,
+    MonetizationTag,
     {
       details: PaymentDetails
       observer: MutationObserver
@@ -72,9 +80,9 @@ export class MonetizationTagObserver {
   private start() {
     this.head = this.document.head
     const metas: MetaList = this.head.querySelectorAll(
-      'meta[name="monetization"]'
+      'meta[name="monetization"],link[rel="monetization"]'
     )
-    metas.forEach(this.onAddedMeta.bind(this))
+    metas.forEach(this.onAddedTag.bind(this))
     this.headObserver.observe(this.head, { childList: true })
   }
 
@@ -82,11 +90,14 @@ export class MonetizationTagObserver {
     debug('head mutation records.length=', records.length)
     const check = (op: string, node: Node) => {
       debug('head node', op, node)
-      if (node instanceof HTMLMetaElement && node.name === 'monetization') {
+      if (
+        (node instanceof HTMLMetaElement && node.name === 'monetization') ||
+        (node instanceof HTMLLinkElement && node.rel === 'monetization')
+      ) {
         if (op === 'added') {
-          this.onAddedMeta(node)
+          this.onAddedTag(node)
         } else if (op === 'removed') {
-          this.onRemovedMeta(node)
+          this.onRemovedTag(node)
         }
       }
     }
@@ -107,7 +118,7 @@ export class MonetizationTagObserver {
     }
   }
 
-  private onMetaContentChangeObserved(records: MutationRecord[]) {
+  private onPaymentEndpointChangeObserved(records: MutationRecord[]) {
     for (const record of records) {
       if (
         record.type === 'attributes' &&
@@ -116,20 +127,39 @@ export class MonetizationTagObserver {
         record.target['content'] !== record.oldValue
       ) {
         const meta = record.target
-        this.onChangedMetaContent(meta)
+        this.onChangedPaymentEndpoint(meta)
+      } else if (
+        record.type === 'attributes' &&
+        record.attributeName === 'href' &&
+        record.target instanceof HTMLLinkElement &&
+        record.target['href'] !== record.oldValue
+      ) {
+        this.onChangedPaymentEndpoint(record.target)
       }
     }
   }
 
-  private onAddedMeta(meta: HTMLMetaElement) {
+  private onAddedTag(meta: MonetizationTag) {
+    const type = getTagType(meta)
+    if (type != this.affinity) {
+      if (type === 'link') {
+        this.affinity = 'link'
+        for (const tag of this.metaTags.keys()) {
+          this.onRemovedTag(tag)
+        }
+      } else {
+        throw new Error('<link> tag has been seen, ignoring <meta>')
+      }
+    }
+
     const details = this.getPaymentDetails(meta)
     const observer = new MutationObserver(
-      this.onMetaContentChangeObserved.bind(this)
+      this.onPaymentEndpointChangeObserved.bind(this)
     )
     observer.observe(meta, {
       attributeOldValue: true,
       childList: false,
-      attributeFilter: ['content']
+      attributeFilter: [meta instanceof HTMLMetaElement ? 'content' : 'href']
     })
     this.metaTags.set(meta, { observer, details })
     if (this.metaTags.size > this.maxMetas) {
@@ -138,14 +168,14 @@ export class MonetizationTagObserver {
     this.callback({ stopped: null, started: details })
   }
 
-  private onRemovedMeta(meta: HTMLMetaElement) {
+  private onRemovedTag(meta: MonetizationTag) {
     const entry = this.getEntry(meta)
     entry.observer.disconnect()
     this.metaTags.delete(meta)
     this.callback({ started: null, stopped: entry.details })
   }
 
-  private getEntry(meta: HTMLMetaElement) {
+  private getEntry(meta: MonetizationTag) {
     const entry = this.metaTags.get(meta)
     if (!entry) {
       throw new Error('meta not tracked: ' + meta.outerHTML)
@@ -153,7 +183,7 @@ export class MonetizationTagObserver {
     return entry
   }
 
-  private onChangedMetaContent(meta: HTMLMetaElement) {
+  private onChangedPaymentEndpoint(meta: MonetizationTag) {
     const entry = this.getEntry(meta)
     const stopped = entry.details
     const started = this.getPaymentDetails(meta)
@@ -161,10 +191,11 @@ export class MonetizationTagObserver {
     this.callback({ started, stopped })
   }
 
-  private getPaymentDetails(meta: HTMLMetaElement): PaymentDetails {
+  private getPaymentDetails(meta: MonetizationTag): PaymentDetails {
     return {
       requestId: this.getWebMonetizationId(),
-      paymentPointer: meta.content,
+      paymentPointer:
+        meta instanceof HTMLMetaElement ? meta.content : meta.href,
       initiatingUrl: this.window.location.href
     }
   }

@@ -1,5 +1,4 @@
 export function resolvePaymentEndpoint(pointerOrUrl: string) {
-  // We allow non secure endpoints when it is defined via an url
   const httpUrl = pointerOrUrl.replace(/^\$/, 'https://')
 
   let url: URL
