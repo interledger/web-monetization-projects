@@ -166,6 +166,8 @@ export class ContentScript {
             paymentPointer: request.data.paymentPointer
           }
           this.monetization.postTipWindowMessage(detail)
+        } else if (request.command === 'clearToken') {
+          this.storage.removeItem('token')
         }
         // Don't need to return true here, not using sendResponse
         // https://developer.chrome.com/apps/runtime#event-onMessage

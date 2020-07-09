@@ -1,4 +1,5 @@
 import MessageSender = chrome.runtime.MessageSender
+
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { MonetizationState } from '@web-monetization/types'
@@ -828,6 +829,12 @@ export class BackgroundScript {
     }
     // Clear the token and any other state the popup relies upon
     // reloadTabState will reset them below.
+
+    // Clear tokens in incognito windows too
+    this.framesService.sendCommandToFramesMatching(
+      { command: 'clearToken' },
+      frame => frame.href?.startsWith(this.coilDomain)
+    )
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')
     this.reloadTabState()
