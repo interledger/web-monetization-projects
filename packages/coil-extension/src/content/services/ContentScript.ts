@@ -228,7 +228,7 @@ export class ContentScript {
 
     if (this.frames.isAnyCoilFrame) {
       if (this.frames.isIFrame) {
-        this.auth.handleCoilTokenMessages()
+        this.auth.handleCoilTokenMessage()
       } else {
         this.auth.syncViaInjectToken()
       }

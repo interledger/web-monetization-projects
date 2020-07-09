@@ -17,23 +17,19 @@ import * as tokens from '../../types/tokens'
 export class SiteToken {
   constructor(
     @inject(tokens.CoilDomain)
-    private coilDomain: string,
-    private window: Window
+    private coilDomain: string
   ) {}
 
-  async clear() {
-    return this.sendAndReceiveMessage({ command: 'clearToken' })
-  }
-
-  async sendAndReceiveMessage<T>(
-    message: unknown,
-    timeoutMs = 3e3
-  ): Promise<T | null> {
-    const coilFrame = await this.appendCoilIframe()
+  async retrieve(path = '/handler.html'): Promise<string | null> {
     const coilDomain = this.coilDomain
-    notNullOrUndef(coilFrame.contentWindow).postMessage(message, coilDomain)
-    const responsePromise = new Promise<T>((resolve, reject) => {
-      this.window.addEventListener(
+    const coilFrame = document.createElement('iframe')
+    coilFrame.src = coilDomain + path
+    document.body.appendChild(coilFrame)
+    await new Promise(resolve => coilFrame.addEventListener('load', resolve))
+
+    // noinspection ES6MissingAwait
+    const coilPromise = new Promise<string | null>((resolve, reject) => {
+      window.addEventListener(
         'message',
         event => {
           if (event.origin !== coilDomain) {
@@ -44,42 +40,31 @@ export class SiteToken {
             )
             return
           }
-          resolve(event.data)
+          resolve(event.data.token)
         },
         { once: true }
       )
     })
+
     // noinspection ES6MissingAwait
     const timeout = new Promise<never>((resolve, reject) => {
       setTimeout(() => {
-        reject(new Error('no response, timed out.'))
-      }, timeoutMs)
+        reject(new Error('coil token retrieval timed out.'))
+      }, 3000)
     })
 
-    let response: T | null = null
+    notNullOrUndef(coilFrame.contentWindow).postMessage(
+      { command: 'coilToken' },
+      coilDomain
+    )
+    let coilToken: string | null = null
     try {
-      response = await Promise.race([responsePromise, timeout])
+      coilToken = await Promise.race([coilPromise, timeout])
     } catch (e) {
-      console.error('send and receive message error', e)
       //
     }
     document.body.removeChild(coilFrame)
-    return response
-  }
-
-  private async appendCoilIframe(path = '/handler.html') {
-    const coilDomain = this.coilDomain
-    const coilFrame = document.createElement('iframe')
-    coilFrame.src = coilDomain + path
-    document.body.appendChild(coilFrame)
-    await new Promise(resolve => coilFrame.addEventListener('load', resolve))
-    return coilFrame
-  }
-
-  async retrieve(): Promise<string | null> {
-    const response = await this.sendAndReceiveMessage<{ token: string }>({
-      command: 'coilToken'
-    })
-    return response?.token ?? null
+    // normalize empty string (coil-web sometimes sets) to a null
+    return coilToken || null
   }
 }

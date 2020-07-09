@@ -12,7 +12,7 @@ export class ContentAuthService {
     @inject(tokens.ContentRuntime) private contentRuntime: ContentRuntime
   ) {}
 
-  handleCoilTokenMessages() {
+  handleCoilTokenMessage() {
     this.window.addEventListener('message', event => {
       const extUrl = this.contentRuntime.getURL('')
       if (extUrl !== event.origin + '/') {
@@ -23,20 +23,6 @@ export class ContentAuthService {
       if (command === 'coilToken') {
         ;(event.source as Window).postMessage(
           { token: this.storage.getItem('token') },
-          event.origin
-        )
-      } else if (command === 'clearToken') {
-        this.storage.removeItem('token')
-        delete localStorage.token
-        ;(event.source as Window).postMessage(
-          {
-            clearToken: true,
-            log: `clearTokentop window =${
-              this.window.top === this.window
-            } location=${
-              this.window.location.href
-            } localStorage=${JSON.stringify(localStorage)}`
-          },
           event.origin
         )
       }

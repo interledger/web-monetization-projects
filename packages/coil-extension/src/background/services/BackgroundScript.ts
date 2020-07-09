@@ -1,3 +1,4 @@
+import MessageSender = chrome.runtime.MessageSender
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { MonetizationState } from '@web-monetization/types'
@@ -22,13 +23,14 @@ import {
   SetMonetizationState,
   SetStreamControls,
   StartWebMonetization,
-  TipSent,
-  ToBackgroundMessage
+  ToBackgroundMessage,
+  TipSent
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
+import { timeout } from '../../content/util/timeout'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -40,9 +42,6 @@ import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { StreamAssociations } from './StreamAssociations'
-
-import MessageSender = chrome.runtime.MessageSender
-import releaseKeepAwake = chrome.power.releaseKeepAwake
 
 @injectable()
 export class BackgroundScript {
@@ -811,7 +810,7 @@ export class BackgroundScript {
     }
   }
 
-  private async logout(_: MessageSender) {
+  private logout(_: MessageSender) {
     for (const tabId of this.tabStates.tabKeys()) {
       // Make a copy as _closeStreams mutates and we want to actually close
       // the streams before we set the state to stopped.
@@ -829,8 +828,6 @@ export class BackgroundScript {
     }
     // Clear the token and any other state the popup relies upon
     // reloadTabState will reset them below.
-    // Handle the case of FF
-    console.log('clearSiteToken', await this.auth.clearSiteToken())
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')
     this.reloadTabState()

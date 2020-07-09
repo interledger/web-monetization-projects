@@ -102,8 +102,4 @@ export class AuthService extends EventEmitter {
     }
     return newest.token
   }
-
-  clearSiteToken() {
-    return this.siteToken.clear()
-  }
 }
