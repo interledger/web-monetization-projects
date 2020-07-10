@@ -4,7 +4,7 @@ The Coil Extension is an open-source browser extension that enables [Web Monetiz
 
 When you’re signed in to your Coil account and you visit a web monetized page, the extension streams micropayments from Coil to the payment pointer defined in the tag. Micropayments are streamed for as long as you are active on the page.
 
-If you aren’t signed in to your Coil account, the extension still checks each page for the meta tag, but does not inject the Web Monetization API nor stream payments from Coil.
+If you aren’t signed in to your Coil account, the extension still checks each page for the meta tag, but ignores the requests to stream payments.
 
 # Benefits of an open-source extension
 
@@ -54,14 +54,10 @@ The following browser aliases can be used:
 - `chrome`
 - `firefox`
 
-## Development workflow
-
-For quick iterating, see the repo root [readme](../../README.md) section for info on speeding up webpack by skipping type checking.
-
 ### Developing with live reload of extension
 
 ```
-LIVE_RELOAD=true yarn build-prod -- chrome --watch
+yarn dev-chrome-prod
 ```
 
 ### Building for other environments
