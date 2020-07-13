@@ -5,7 +5,11 @@ import * as tokens from '@web-monetization/wext/tokens'
 
 import { flatMapSlow } from '../util/flatMapSlow'
 import { getFrameSpec } from '../../util/tabs'
-import { Command, ToBackgroundMessage } from '../../types/commands'
+import {
+  Command,
+  ToBackgroundMessage,
+  ToContentMessage
+} from '../../types/commands'
 import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { timeout } from '../../content/util/timeout'
 
@@ -345,6 +349,21 @@ export class BackgroundFramesService extends EventEmitter {
         void this.onMessageAsync(sender, message)
       }
     )
+  }
+
+  sendCommandToFramesMatching(
+    cmd: ToContentMessage,
+    matcher: (frame: Frame) => boolean
+  ) {
+    for (const [tabId, framesList] of Object.entries(this.tabs)) {
+      for (const frame of framesList) {
+        if (matcher(frame)) {
+          this.api.tabs.sendMessage(Number(tabId), cmd, {
+            frameId: frame.frameId
+          })
+        }
+      }
+    }
   }
 
   async sendCommand<C extends Command, R>(

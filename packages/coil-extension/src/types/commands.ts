@@ -224,6 +224,14 @@ export interface CheckAdaptedContent {
  *  background -> content
  *  browser.tabs.sendMessage
  */
+export interface ClearToken {
+  command: 'clearToken'
+}
+
+/**
+ *  background -> content
+ *  browser.tabs.sendMessage
+ */
 export interface MonetizationProgress {
   command: 'monetizationProgress'
   data: {
@@ -337,5 +345,6 @@ export type ToContentMessage =
   | ReportCorrelationIdToParentContentScript
   | OnFrameAllowedChanged
   | TipSent
+  | ClearToken
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup
