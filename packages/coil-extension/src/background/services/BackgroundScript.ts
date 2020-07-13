@@ -1,5 +1,3 @@
-import MessageSender = chrome.runtime.MessageSender
-
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { MonetizationState } from '@web-monetization/types'
@@ -24,14 +22,13 @@ import {
   SetMonetizationState,
   SetStreamControls,
   StartWebMonetization,
-  ToBackgroundMessage,
-  TipSent
+  TipSent,
+  ToBackgroundMessage
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
-import { timeout } from '../../content/util/timeout'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -43,6 +40,8 @@ import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { StreamAssociations } from './StreamAssociations'
+
+import MessageSender = chrome.runtime.MessageSender
 
 @injectable()
 export class BackgroundScript {
