@@ -1,0 +1,59 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+    timezone: Asia/Phnom_Penh
+  open-pull-requests-limit: 15
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: addons-linter
+    versions:
+    - ">= 1.18.a"
+    - "< 1.19"
+  - dependency-name: bootstrap
+    versions:
+    - ">= 4.a"
+    - "< 5"
+  - dependency-name: copy-webpack-plugin
+    versions:
+    - ">= 6.0.0.a"
+    - "< 6.0.1"
+  - dependency-name: eslint-plugin-import
+    versions:
+    - ">= 2.21.0.a"
+    - "< 2.21.1"
+  - dependency-name: eslint-plugin-import
+    versions:
+    - ">= 2.21.1.a"
+    - "< 2.21.2"
+  - dependency-name: sort-package-json
+    versions:
+    - ">= 1.38.0.a"
+    - "< 1.38.1"
+  - dependency-name: sort-package-json
+    versions:
+    - ">= 1.42.a"
+    - "< 1.43"
+  - dependency-name: ts-loader
+    versions:
+    - ">= 7.0.a"
+    - "< 7.1"
+  - dependency-name: "@types/node"
+    versions:
+    - ">= 13.a"
+    - "< 14"
+  - dependency-name: "@types/node"
+    versions:
+    - ">= 14.a"
+    - "< 15"
+  - dependency-name: webpack-merge
+    versions:
+    - ">= 5.0.7.a"
+    - "< 5.0.8"
+  - dependency-name: webpack-merge
+    versions:
+    - ">= 5.0.a"
+    - "< 5.1"
