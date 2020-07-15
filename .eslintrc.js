@@ -67,17 +67,25 @@ let config = {
         '@typescript-eslint/no-explicit-any': 'warn',
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/no-use-before-define': 'warn',
-        '@typescript-eslint/camelcase': 'warn',
         '@typescript-eslint/indent': ['off', 2],
         '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/interface-name-prefix': 'error',
         '@typescript-eslint/no-parameter-properties': 'off',
         // There are ways around this so ...
         '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/promise-function-async': 'warn',
         '@typescript-eslint/no-unused-vars': 'warn',
         '@typescript-eslint/restrict-plus-operands': 'warn',
-        '@typescript-eslint/no-empty-function': 'warn'
+        '@typescript-eslint/no-empty-function': 'warn',
+        '@typescript-eslint/ban-types': [
+          'warn',
+          {
+            extendDefaults: true,
+            types: {
+              Function:
+                'its OK to eat functions cause they dont have any feelings'
+            }
+          }
+        ]
       }
     }
   ],

@@ -28,6 +28,7 @@ export async function initBrowser({
     }
 
     // TODO: not sure need to directly require(...) this
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     return require('puppeteer').launch({
       headless: env.IS_CI ? false : env.HEADLESS,
       defaultViewport: {

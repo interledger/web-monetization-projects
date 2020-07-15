@@ -70,11 +70,8 @@ export class StreamServer {
         : undefined
     })
     const body: SPSPResponse = {
-      // eslint-disable-next-line @typescript-eslint/camelcase
       destination_account: destinationAccount,
-      // eslint-disable-next-line @typescript-eslint/camelcase
       shared_secret: sharedSecret.toString('base64'),
-      // eslint-disable-next-line @typescript-eslint/camelcase
       receipts_enabled: receiptsEnabled
     }
     return body

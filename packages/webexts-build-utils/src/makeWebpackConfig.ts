@@ -166,7 +166,8 @@ export function makeWebpackConfig(rootDir: string) {
                     projectReferences: false,
                     transpileOnly: true,
                     compilerOptions: process.env.TSCONFIG_DEBUG
-                      ? require(TSCONFIG_DEBUG_JSON).compilerOptions
+                      ? // eslint-disable-next-line @typescript-eslint/no-var-requires
+                        require(TSCONFIG_DEBUG_JSON).compilerOptions
                       : {}
                   }
                 : {

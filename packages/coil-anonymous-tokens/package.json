@@ -35,7 +35,7 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "@types/jsonwebtoken": "^8.3.9",
+    "@types/jsonwebtoken": "^8.5.0",
     "@types/node-fetch": "^2.5.7",
     "jsonwebtoken": "^8.5.1",
     "localforage": "^1.7.4"
