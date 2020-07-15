@@ -163,7 +163,10 @@ export class Stream extends EventEmitter {
     // Let pause() stream when tab is backgrounded have a chance to
     // to work to avoid wasted refreshBtpToken/SPSP queries
     await timeout(1)
-    if (!this._active) return
+    if (!this._active) {
+      this._looping = false
+      return
+    }
 
     // reset our timer when we start streaming.
     const bandwidth = new AdaptiveBandwidth(

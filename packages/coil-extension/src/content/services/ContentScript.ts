@@ -175,25 +175,6 @@ export class ContentScript {
     )
   }
 
-  watchPageEvents() {
-    const { setWatch } = this.idle.watchPageEvents()
-    const runtime = this.runtime
-    setWatch({
-      pause: () => {
-        const pause: PauseWebMonetization = {
-          command: 'pauseWebMonetization'
-        }
-        runtime.sendMessage(pause)
-      },
-      resume: () => {
-        const resume: ResumeWebMonetization = {
-          command: 'resumeWebMonetization'
-        }
-        runtime.sendMessage(resume)
-      }
-    })
-  }
-
   init() {
     if (this.frames.isMonetizableFrame) {
       this.frames.monitor()
