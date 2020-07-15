@@ -1,3 +1,16 @@
+<a name="coil-extension@0.0.51"></a>
+
+# [coil-extension@0.0.51](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.50...coil-extension@0.0.51) (2020-07-14)
+
+### Features
+
+- Impl link tag [#784](https://github.com/coilhq/web-monetization-projects/pull/533)
+- Propagate logout to all contexts, incl private [#781](https://github.com/coilhq/web-monetization-projects/pull/533)
+
+### Bug Fixes
+
+- Fix dynamically allowed but unfocused iframes getting into bad state which stalled streaming [#819](https://github.com/coilhq/web-monetization-projects/pull/819)
+
 <a name="coil-extension@0.0.50"></a>
 
 # [coil-extension@0.0.50](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.49...coil-extension@0.0.50) (2020-05-22)
