@@ -57,7 +57,7 @@ export async function testMonetization({
   const eventsSeen = new Set<MonetizationEventType>()
 
   let pendingEvent: MonetizationPendingEvent
-  let resolveStopped: Function | null = null
+  let resolveStopped: ((...args: any[]) => void) | null = null
 
   const stoppedPromise = new Promise<OnMonetizationEvent>(resolve => {
     resolveStopped = resolve

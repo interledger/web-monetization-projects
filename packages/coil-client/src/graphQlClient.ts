@@ -15,7 +15,7 @@ export class GraphQlClientOptions {
 export interface GraphQlQueryParameters {
   query: string
   token?: string | null
-  variables?: {}
+  variables?: Record<string, unknown>
 }
 
 @injectable()
