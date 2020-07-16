@@ -8,7 +8,7 @@
 
 ### yarn upkeep
 
-This ensures the pckage configuration follows a convention by scripting the updates
+This ensures the package configuration follows a convention by scripting the updates
 of various files like:
 
 - jest.config.js
