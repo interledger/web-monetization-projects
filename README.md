@@ -6,16 +6,20 @@
 ## Development Process
 
 Ultimately we want `main` branch to be in a 'good' state at all times, with good test
-coverage so we can practice CD.
+coverage, so we can practice CD, pushing the extensions to dev channels.
 
-However, currently there are known bugs, very little automated tests and the code will
-need some restructuring to get to that point. So until that time, **we must do manual
-testing before release**, as it's too much of an impediment to run through the full
-manual release checklist on each PR/commit.
+Currently, we mostly rely on puppeteer tests which don't cover all the test scenarios.  
+Therefore, **we must do manual testing before release**, as it's too much of an impediment
+to run through the full manual release checklist on each PR/commit.
 
-Till then:
+It's a good practice to do manual testing, as often bugs can be found with fresh eyes,
+if one is carefully going through the steps. Also, doing so helps to keep the various
+features freshly in mind, so when adding new features or fixing old ones, mistakes can
+be avoided.
 
-- **do not assume main branch is in a good state** !
+So:
+
+- **do not assume the main branch is in a good state** !
   - Go through the release [release checklist](packages/coil-extension/docs/release-checklist.md) carefully!
 
 ## Setting up dev environment
