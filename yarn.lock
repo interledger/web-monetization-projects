@@ -12135,10 +12135,10 @@ npm-bundled@^1.0.1, npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-7.0.1.tgz#ba85756f4e8c34261d9a0a17b0a951c9c2279b50"
-  integrity sha512-z/i1nhxW1OJ2a8wZtm92PS+4vCZ5Y5d86pLDPJScWf8G3vTYJlxd11UqUymnaZWK2nYPMmgxnneAKnFGODDxjw==
+npm-check-updates@^7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-7.0.2.tgz#b57a1662374dac55610c88677711bdb3ba9aef14"
+  integrity sha512-MyH17fUCFbYShuIyxZj6yqB6YZ47+AjPCgXQiH1oqNe3vElBoJ0toY7nwy88qJbfXnFqjTFigzs9lsoKSK0iUw==
   dependencies:
     chalk "^4.1.0"
     cint "^8.2.1"
@@ -12148,7 +12148,7 @@ npm-check-updates@^7.0.1:
     get-stdin "^8.0.0"
     json-parse-helpfulerror "^1.0.3"
     libnpmconfig "^1.2.1"
-    lodash "^4.17.15"
+    lodash "^4.17.19"
     p-map "^4.0.0"
     pacote "^11.1.10"
     progress "^2.0.3"
