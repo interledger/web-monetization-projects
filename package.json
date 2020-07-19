@@ -85,7 +85,7 @@
     "lerna": "^3.22.1",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
-    "puppeteer": "^5.1.0",
+    "puppeteer": "^5.2.0",
     "puppeteer-firefox": "^0.5.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.1.2",
