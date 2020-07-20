@@ -80,7 +80,7 @@ export class MonetizationTagObserver {
   private start() {
     this.head = this.document.head
     const metas: MetaList = this.head.querySelectorAll(
-      'meta[name="monetization"],link[rel="monetization"]'
+      'meta[name="monetization"],link[rel~="monetization"]'
     )
     metas.forEach(this.onAddedTag.bind(this))
     this.headObserver.observe(this.head, { childList: true })
@@ -92,7 +92,7 @@ export class MonetizationTagObserver {
       debug('head node', op, node)
       if (
         (node instanceof HTMLMetaElement && node.name === 'monetization') ||
-        (node instanceof HTMLLinkElement && node.rel === 'monetization')
+        (node instanceof HTMLLinkElement && node.rel && node.rel.split(' ').includes('monetization')
       ) {
         if (op === 'added') {
           this.onAddedTag(node)
