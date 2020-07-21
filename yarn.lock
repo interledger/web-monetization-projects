@@ -10939,10 +10939,10 @@ loader-utils@^2.0.0:
     emojis-list "^3.0.0"
     json5 "^2.1.2"
 
-localforage@^1.7.4:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.7.4.tgz#88b59cc9b25ae54c76bb2c080b21ec832c22d3f6"
-  integrity sha512-3EmVZatmNVeCo/t6Te7P06h2alGwbq8wXlSkcSXMvDE2/edPmsVqTPlzGnZaqwZZDBs6v+kxWpqjVsqsNJT8jA==
+localforage@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.8.0.tgz#005b9fcca024aa5a36ab6ddfb1521adaf2e9884d"
+  integrity sha512-ofu+4h+f1XlqA/KzbKg0HibSigYiBIvRpi6oYAK2J40WICdscpozEBIcFVAPkwZdmMd0XXJT4/c7rnxlLJD1EQ==
   dependencies:
     lie "3.1.1"
 
