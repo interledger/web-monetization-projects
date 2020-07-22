@@ -42,7 +42,7 @@
     "asn1-parser": "^1.1.8",
     "atob": "^2.1.2",
     "btoa": "^1.2.1",
-    "keccak": "^3.0.0",
+    "keccak": "^3.0.1",
     "node-fetch": "^2.6.0",
     "sjcl": "bitwiseshiftleft/sjcl"
   },
