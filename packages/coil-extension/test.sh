@@ -16,7 +16,7 @@ if [[ ${DEV} = 'false' ]]
 then
   COMMAND="ts-node -r tsconfig-paths/register -T -P test/tsconfig.json"
 else
-  COMMAND="ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpileOnly"
+  COMMAND="ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpile-only"
 fi
 
 export DEBUG='coil*'
