@@ -62,7 +62,7 @@
     "@wext/shipit": "^0.2.1",
     "addons-linter": "^2.0.1",
     "crx-hotreload": "^1.0.4",
-    "css-loader": "^4.1.0",
+    "css-loader": "^4.2.0",
     "file-loader": "^6.0.0",
     "style-loader": "^1.2.1",
     "web-ext": "^5.0.0"
