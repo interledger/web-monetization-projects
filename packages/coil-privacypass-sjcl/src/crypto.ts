@@ -387,30 +387,6 @@ export function parsePublicKeyfromPEM(pemPublicKey: string) {
 }
 
 /**
- * Verify the signature of commitments.
- * @param {json} comms - commitments to verify
- * @param {string} pemPublicKey - A public key in PEM format.
- * @return {boolean} True, if the commitment has valid signature and is not
- *                   expired; otherwise, throws an exception.
- */
-export function verifyCommitments(
-  comms: { sig: string; G: string },
-  pemPublicKey: string
-) {
-  const sig = parseSignaturefromPEM(comms.sig)
-  delete comms.sig
-  const msg = JSON.stringify(comms)
-  const pk = parsePublicKeyfromPEM(pemPublicKey)
-  const hmsg = sjcl.hash.sha256.hash(msg)
-  comms.G = sec1EncodeToBase64(CURVE.G, false)
-  try {
-    return pk.verify(hmsg, sig, false)
-  } catch (error) {
-    throw new Error('[privacy-pass]: Invalid commitment.')
-  }
-}
-
-/**
  * DLEQ proof verification logic
  */
 

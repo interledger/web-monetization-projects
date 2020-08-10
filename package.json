@@ -48,7 +48,7 @@
   "resolutions": {
     "@types/webpack": "4.41.21",
     "@types/express": "4.17.7",
-    "@types/react": "16.9.44"
+    "@types/react": "16.9.45"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -65,8 +65,8 @@
     "@types/puppeteer": "^3.0.1",
     "@types/webpack": "^4.41.21",
     "@types/webpack-merge": "^4.1.5",
-    "@typescript-eslint/parser": "3.8.x",
     "@typescript-eslint/eslint-plugin": "3.8.x",
+    "@typescript-eslint/parser": "3.8.x",
     "JSON2016": "^1.0.0",
     "copy-webpack-plugin": "^6.0.3",
     "eslint": "^7.6.0",
@@ -93,7 +93,7 @@
     "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.56",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "3.9.7",
+    "typescript": "^4.0.1-rc",
     "webpack": "^4.44",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.12",

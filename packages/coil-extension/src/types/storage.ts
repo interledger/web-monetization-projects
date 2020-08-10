@@ -22,12 +22,12 @@ export interface LocalStorageProxy {
    * The refresh token for authenticating to the coil site
    * NOT JSON encoded
    */
-  token: string | null
+  token?: string | null
 
   /**
    * JSON serialized {@link User}
    */
-  user: User | null
+  user?: User | null
   /**
    * Boolean
    */
@@ -37,8 +37,8 @@ export interface LocalStorageProxy {
   monetized: boolean | null
   coilSite: string | null
 
-  stickyState: StickyState | null
-  playState: PlayOrPauseState | null
+  stickyState?: StickyState | null
+  playState?: PlayOrPauseState | null
 
   monetizedTotal: number | null
   monetizedFavicon: string | null

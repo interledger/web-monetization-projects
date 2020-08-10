@@ -79,6 +79,7 @@
     "@wext/shipit": "^0.2.1",
     "addons-linter": "^2.1.0",
     "crx-hotreload": "^1.0.4",
+    "playwright": "^1.3.0",
     "web-ext": "^5.0.0"
   }
 }
