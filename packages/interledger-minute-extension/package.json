@@ -58,7 +58,7 @@
   "devDependencies": {
     "@types/react": "^16.9.45",
     "@types/react-dom": "^16.9.8",
-    "@types/uuid": "^8.0.1",
+    "@types/uuid": "^8.3.0",
     "@wext/shipit": "^0.2.1",
     "addons-linter": "^2.1.0",
     "crx-hotreload": "^1.0.4",
