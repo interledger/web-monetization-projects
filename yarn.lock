@@ -10498,6 +10498,11 @@ jsonify@~0.0.0:
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
   integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
 
+jsonlines@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/jsonlines/-/jsonlines-0.1.1.tgz#4fcd246dc5d0e38691907c44ab002f782d1d94cc"
+  integrity sha1-T80kbcXQ44aRkHxEqwAveC0dlMw=
+
 jsonparse@^1.2.0, jsonparse@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/jsonparse/-/jsonparse-1.3.1.tgz#3f4dae4a91fac315f71062f8521cc239f1366280"
@@ -12164,10 +12169,10 @@ npm-bundled@^1.0.1, npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@^7.0.4:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-7.0.4.tgz#05c79702b17642441364f97e80eeba03462a5d9f"
-  integrity sha512-k3qcNK6hDJzPiRmszGb0NbkrCzVGk90hUQiszTVySilbocMuG+EGwsPFfICjpbce9nOTDDjvHvf6liS5i3UZNw==
+npm-check-updates@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-7.1.0.tgz#7cc4bb85e3712902fe6097168bae6518e69eabae"
+  integrity sha512-xxEObkGnT361LY57GY/+FQUgCARoAeRfIU5M2GxnESoZFMeDv1W7Ck01MBswyTEQgjD4A3HBolcBTYaJsSl03A==
   dependencies:
     chalk "^4.1.0"
     cint "^8.2.1"
@@ -12176,6 +12181,7 @@ npm-check-updates@^7.0.4:
     find-up "4.1.0"
     get-stdin "^8.0.0"
     json-parse-helpfulerror "^1.0.3"
+    jsonlines "^0.1.1"
     libnpmconfig "^1.2.1"
     lodash "^4.17.19"
     p-map "^4.0.0"
