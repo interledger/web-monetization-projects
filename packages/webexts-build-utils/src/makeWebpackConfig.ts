@@ -1,5 +1,6 @@
 import * as path from 'path'
 import * as fs from 'fs'
+import * as cp from 'child_process'
 
 import * as webpack from 'webpack'
 import CopyPlugin from 'copy-webpack-plugin'
@@ -42,7 +43,7 @@ export function makeWebpackConfig(rootDir: string) {
       transform: (content: Buffer) => {
         const manifest = JSON.parse(content.toString())
         if (WEXT_MANIFEST_SUFFIX) {
-          manifest.name += WEXT_MANIFEST_SUFFIX
+          manifest.name += `${WEXT_MANIFEST_SUFFIX}-${Date.now()}`
         }
         if (WEXT_MANIFEST_VERSION) {
           manifest.version = WEXT_MANIFEST_VERSION
@@ -139,7 +140,17 @@ export function makeWebpackConfig(rootDir: string) {
         WEBPACK_DEFINE_API: API,
         WEBPACK_DEFINE_BROWSER: JSON.stringify(BROWSER)
       }),
-      new CopyPlugin({ patterns: copyToDist })
+      new CopyPlugin({ patterns: copyToDist }),
+      {
+        apply(compilation) {
+          compilation.hooks.afterEmit.tap('AFTER_EMIT_SHELL_CMD', () => {
+            const cmd = process.env.AFTER_EMIT_SHELL_CMD
+            if (cmd) {
+              cp.spawn(cmd, { shell: true, stdio: 'inherit' })
+            }
+          })
+        }
+      }
     ],
 
     output: {
