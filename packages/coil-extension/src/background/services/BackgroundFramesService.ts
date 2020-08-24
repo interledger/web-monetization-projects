@@ -67,7 +67,7 @@ const isFullFrame = (partial: Partial<Frame>): partial is Frame => {
   return Boolean(
     // typeof partial.state === 'string' &&
     typeof partial.frameId === 'number' &&
-      typeof partial.parentFrameId === 'number' &&
+      // typeof partial.parentFrameId === 'number' &&
       typeof partial.href === 'string' &&
       typeof partial.top === 'boolean' &&
       typeof partial.lastUpdateTimeMS === 'number'
@@ -103,7 +103,7 @@ export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
   traceLogging = false
   logEvents = false
-  logTabsInterval = 0
+  logTabsInterval = 2000
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
@@ -290,9 +290,17 @@ export class BackgroundFramesService extends EventEmitter {
         frameId: number
         parentFrameId?: number
       }) => {
+        const top = details.frameId === 0
+        if (typeof details.parentFrameId === 'undefined') {
+          details.parentFrameId = top ? -1 : 0
+        }
+
         if (
           !details.url.startsWith('http') ||
-          (details.parentFrameId !== 0 && details.frameId !== 0)
+          // Is child frame
+          (details.frameId !== 0 &&
+            // Is not first level iframe
+            details.parentFrameId !== 0)
         ) {
           return
         }
@@ -312,7 +320,7 @@ export class BackgroundFramesService extends EventEmitter {
           frameId: details.frameId,
           parentFrameId: details.parentFrameId,
           state: null,
-          top: details.frameId === 0
+          top: top
         }
         this.updateOrAddFrame(`webNavigation.${event}`, frameSpec, partial)
         if (this.getFrame(frameSpec)?.state == null) {

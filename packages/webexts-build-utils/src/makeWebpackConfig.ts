@@ -13,7 +13,10 @@ export function makeWebpackConfig(rootDir: string) {
 
   const API = process.env.API || 'chrome'
   const BROWSER = process.env.BROWSER || 'chrome'
-  const LIVE_RELOAD = Boolean(process.env.LIVE_RELOAD)
+  const LIVE_RELOAD =
+    Boolean(process.env.LIVE_RELOAD) && !process.env.NO_LIVE_RELOAD
+
+  console.log({ LIVE_RELOAD })
 
   // Can cut build times down from 30s to 10s on some machines
   const TS_LOADER_TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
@@ -45,6 +48,7 @@ export function makeWebpackConfig(rootDir: string) {
         if (WEXT_MANIFEST_SUFFIX) {
           manifest.name += `${WEXT_MANIFEST_SUFFIX}-${Date.now()}`
         }
+        // manifest.version += `-${Date.now()}`
         if (WEXT_MANIFEST_VERSION) {
           manifest.version = WEXT_MANIFEST_VERSION
         }

@@ -80,6 +80,10 @@ export class BackgroundScript {
    */
   set activeTab(value: number) {
     this.tabStates.activeTab = value
+    const frame = this.framesService.getFrame({ tabId: value, frameId: 0 })
+    if (frame) {
+      this.setCoilUrlForPopupIfNeeded(value, frame.href)
+    }
   }
 
   async run() {
@@ -100,8 +104,26 @@ export class BackgroundScript {
   private setTabsOnActivatedListener() {
     // The active tab has been changed
     this.api.tabs.onActivated.addListener(activeInfo => {
+      this.log('tabs.onActivated %o', activeInfo)
       this.activeTab = activeInfo.tabId
       this.reloadTabState({ from: 'onActivated' })
+    })
+    this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
+      this.log('tabs.onActiveChanged %d %o', tabId, selectInfo)
+      this.activeTab = tabId
+      this.reloadTabState({ from: 'onActiveChanged' })
+    })
+    this.api.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
+      this.log('tabs.onSelectionChanged %d %o', tabId, selectInfo)
+      this.activeTab = tabId
+      this.reloadTabState({ from: 'onSelectionChanged' })
+    })
+    this.api.tabs.onCreated.addListener(activeInfo => {
+      this.log('tabs.onCreated %o', activeInfo)
+      if (activeInfo.id) {
+        this.activeTab = activeInfo.id
+        this.reloadTabState({ from: 'onCreated' })
+      }
     })
   }
 
@@ -163,6 +185,20 @@ export class BackgroundScript {
 
       // clean up the stream of that tab
       this._closeStreams(tabId)
+    })
+
+    this.api.tabs.onReplaced.addListener((added, removed) => {
+      this.log(
+        'TABS: replaced tab with id' + JSON.stringify({ added, removed })
+      )
+    })
+    this.api.tabs.onAttached.addListener((tabId, attachInfo) => {
+      this.log('TABS: onAttached' + JSON.stringify({ tabId, attachInfo }))
+    })
+    this.api.tabs.onDetached.addListener((tabId, detachInfo) => {
+      this.log(
+        'TABS: replaced tab with id' + JSON.stringify({ tabId, detachInfo })
+      )
     })
   }
 
