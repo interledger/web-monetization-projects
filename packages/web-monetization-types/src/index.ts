@@ -193,7 +193,8 @@ export interface Amount extends Asset {
 
 export interface MonetizationStream<
   Request extends MinimumRequest = MonetizationRequest
-> extends StreamControl, StreamEventsEmitter {
+> extends StreamControl,
+    StreamEventsEmitter {
   request: Request
   state: MonetizationState
 }
