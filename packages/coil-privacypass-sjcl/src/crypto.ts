@@ -398,7 +398,8 @@ export function verifyCommitments(
   pemPublicKey: string
 ) {
   const sig = parseSignaturefromPEM(comms.sig)
-  delete comms.sig
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  delete (comms as any).sig
   const msg = JSON.stringify(comms)
   const pk = parsePublicKeyfromPEM(pemPublicKey)
   const hmsg = sjcl.hash.sha256.hash(msg)
