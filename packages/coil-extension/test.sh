@@ -10,7 +10,7 @@ CI=${CI:-}
 
 # Logout test logs in, waits for connecting to 3 sites, then logs out
 # and makes sure the stream has closed so is a good default
-TESTFILE=${1-'test/puppeteer/logout-test.ts'}
+TESTFILE=${1-'test/playwright/logout-test.ts'}
 
 if [[ ${DEV} = 'false' ]]
 then
@@ -19,8 +19,11 @@ else
   COMMAND="ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpile-only"
 fi
 
+# To enable playwright browser logging, see:
+#   https://github.com/microsoft/playwright/issues/1959#issuecomment-619069349
+#   DEBUG=pw:browser* node test.js,
+
 export DEBUG='coil*'
-# This will all get ported to jest, but in the mean time it's useful
 
 # shellcheck disable=SC2086
 yarn $COMMAND \

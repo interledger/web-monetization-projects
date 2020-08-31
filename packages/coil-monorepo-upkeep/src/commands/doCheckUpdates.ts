@@ -38,7 +38,7 @@ export function doCheckUpdates() {
       )}`
     )
     const upgraded = JSON.parse(cmd('npx ncu -u --jsonUpgraded', { cwd: path }))
-    // * coil-extension: @types/puppeteer: ^1.19.0
+    // * coil-extension: @types/x: ^1.19.0
     Object.keys(upgraded).forEach(k => {
       lines.push(`* ${packageFolder}: ${k}: ${upgraded[k]}`)
     })

@@ -4,6 +4,6 @@ import { initBrowser } from './initBrowser'
 import { initCoil, InitCoilReturn } from './initCoil'
 
 export async function initBrowserAndLoginFromEnv(): Promise<InitCoilReturn> {
-  const browser = await initBrowser()
-  return initCoil({ browser, user: COIL_USER, password: COIL_PASSWORD })
+  const context = await initBrowser()
+  return initCoil({ context, user: COIL_USER, password: COIL_PASSWORD })
 }

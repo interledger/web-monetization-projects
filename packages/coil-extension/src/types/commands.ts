@@ -1,6 +1,5 @@
 import { PaymentDetails } from '@web-monetization/polyfill-utils'
 import { MonetizationState } from '@web-monetization/types'
-import { Frame } from 'puppeteer'
 
 import {
   PlayOrPauseState,
