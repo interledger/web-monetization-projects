@@ -20,9 +20,6 @@ declare module 'web-ext' {
       logger: {
         consoleStream: {
           makeVerbose(): void
-          startCapturing(): void
-          stopCapturing(): void
-          capturedMessages: string[]
         }
       }
     }

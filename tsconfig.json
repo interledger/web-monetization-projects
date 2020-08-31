@@ -54,9 +54,6 @@
       "@web-monetization/wext/content": [
         "packages/web-monetization-wext/src/content"
       ],
-      "@coil/playwright-utils": [
-        "packages/coil-playwright-utils/src"
-      ],
       "@coil/puppeteer-utils": [
         "packages/coil-puppeteer-utils/src"
       ],
