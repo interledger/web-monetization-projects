@@ -3,7 +3,7 @@
   closed after logout.
 */
 
-import { Page } from 'puppeteer'
+import { Page } from 'playwright'
 import {
   debug,
   initBrowserAndLoginFromEnv,
@@ -13,7 +13,7 @@ import {
   timeout,
   isValidStopEvent,
   env
-} from '@coil/puppeteer-utils'
+} from '@coil/playwright-utils'
 import { MonetizationExtendedDocument } from '@web-monetization/types'
 
 import { testUrls } from './testUrls'

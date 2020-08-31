@@ -45,6 +45,15 @@
       "pre-commit": "yarn lint:staged"
     }
   },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "jsxSingleQuote": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "arrowParens": "avoid"
+  },
   "resolutions": {
     "@types/webpack": "4.41.21",
     "@types/express": "4.17.7",
