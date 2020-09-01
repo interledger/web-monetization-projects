@@ -39,22 +39,19 @@
       "path": "packages/web-monetization-wext/tsconfig.build.json"
     },
     {
+      "path": "packages/coil-oauth-scripts/tsconfig.build.json"
+    },
+    {
       "path": "packages/coil-playwright-utils/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-puppeteer-utils/tsconfig.build.json"
+      "path": "packages/interledger-minute-extension/tsconfig.build.json"
     },
     {
       "path": "packages/web-monetization-demo/tsconfig.build.json"
     },
     {
       "path": "packages/coil-extension/tsconfig.build.json"
-    },
-    {
-      "path": "packages/coil-oauth-scripts/tsconfig.build.json"
-    },
-    {
-      "path": "packages/interledger-minute-extension/tsconfig.build.json"
     }
   ]
 }

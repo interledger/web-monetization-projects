@@ -43,9 +43,6 @@
     },
     {
       "path": "../coil-playwright-utils/tsconfig.build.json"
-    },
-    {
-      "path": "../coil-puppeteer-utils/tsconfig.build.json"
     }
   ]
 }
