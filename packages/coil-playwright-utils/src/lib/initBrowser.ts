@@ -41,12 +41,12 @@ export async function initBrowser({
         headless: headless1,
         chromiumSandbox: false,
         // TODO:pw
-        // defaultViewport: {
-        //   width: 750,
-        //   height: 1334,
-        //   hasTouch: true,
-        //   isMobile: true
-        // },
+        viewport: {
+          width: 750,
+          height: 1334
+        },
+        hasTouch: true,
+        isMobile: true,
         devtools: env.DEVTOOLS,
         slowMo: 0,
         // TODO:pw
