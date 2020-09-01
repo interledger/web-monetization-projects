@@ -34,9 +34,11 @@
     "@coil/client": "0.0.0",
     "@web-monetization/types": "0.0.0",
     "get-port": "^5.1.1",
+    "tmp": "^0.2.1",
     "web-ext": "^5.0.0"
   },
   "devDependencies": {
-    "@types/get-port": "^4.2.0"
+    "@types/get-port": "^4.2.0",
+    "@types/tmp": "^0.2.0"
   }
 }

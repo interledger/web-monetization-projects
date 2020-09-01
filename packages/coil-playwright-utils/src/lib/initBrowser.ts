@@ -1,6 +1,8 @@
 import getPort from 'get-port'
 import webExt, { RunOptions } from 'web-ext'
 import { BrowserContext, chromium, firefox } from 'playwright'
+import * as tmp from 'tmp'
+import { dir } from 'tmp'
 
 import * as env from './env'
 import { debug } from './debug'
@@ -30,8 +32,11 @@ export async function initBrowser({
 
     // TODO: not sure need to directly require(...) this
     // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const dirResult = tmp.dirSync()
+    process.on('beforeExit', dirResult.removeCallback)
     return chromium.launchPersistentContext(
-      '/Users/nicholasdudfield/projects/web-monetization/packages/coil-extension/tmp',
+      // TODO: clean up on process exit
+      dirResult.name,
       {
         headless: headless1,
         chromiumSandbox: false,
