@@ -2,7 +2,6 @@ import getPort from 'get-port'
 import webExt, { RunOptions } from 'web-ext'
 import { BrowserContext, chromium, firefox } from 'playwright'
 import * as tmp from 'tmp'
-import { dir } from 'tmp'
 
 import * as env from './env'
 import { debug } from './debug'
@@ -30,8 +29,6 @@ export async function initBrowser({
       args.push('--no-sandbox')
     }
 
-    // TODO: not sure need to directly require(...) this
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const dirResult = tmp.dirSync()
     process.on('beforeExit', dirResult.removeCallback)
     return chromium.launchPersistentContext(
@@ -49,8 +46,27 @@ export async function initBrowser({
         isMobile: true,
         devtools: env.DEVTOOLS,
         slowMo: 0,
-        // TODO:pw
-        // dumpio: true,
+        // https://github.com/microsoft/playwright/issues/1959
+        // TODO: convert puppeteer dumpio flag
+        // https://github.com/microsoft/playwright/issues/1959#issuecomment-619069349
+        // DEBUG=pw:browser* node test.js
+        logger: {
+          isEnabled(
+            name: string,
+            severity: 'verbose' | 'info' | 'warning' | 'error'
+          ): boolean {
+            return false
+          },
+          log(
+            name: string,
+            severity: 'verbose' | 'info' | 'warning' | 'error',
+            message: string | Error,
+            args: Array<Object>,
+            hints
+          ) {
+            //
+          }
+        },
         executablePath: env.BROWSER_PATH,
         args
       }
