@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid'
 import { whenDocumentReady } from './whenDocumentReady'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
-const debug = (...args: unknown[]) => {}
+const debug = (..._: unknown[]) => {}
 
 export interface PaymentDetails {
   requestId: string
@@ -35,7 +35,7 @@ export type MetaList = NodeListOf<MonetizationTag>
 
 export type TagType = 'meta' | 'link'
 
-export function getTagType(tag: MonetizationTag) {
+export function getTagType(tag: MonetizationTag): TagType {
   return tag instanceof HTMLMetaElement ? 'meta' : 'link'
 }
 
@@ -73,7 +73,7 @@ export class MonetizationTagObserver {
   /**
    * The head will be null early on so we must wait
    */
-  startWhenDocumentReady() {
+  startWhenDocumentReady(): void {
     whenDocumentReady(this.document, this.start.bind(this))
   }
 
@@ -148,7 +148,12 @@ export class MonetizationTagObserver {
           this.onRemovedTag(tag)
         }
       } else {
-        throw new Error('<link> tag has been seen, ignoring <meta>')
+        throw new Error(
+          'Web-Monetization Error: ' +
+            'A <link rel="monetization"> tag has been seen, ' +
+            'ignoring deprecated <meta name="monetization"> tag, ' +
+            'using only monetization <link rel="monetization"> tags consistently'
+        )
       }
     }
 
@@ -163,7 +168,11 @@ export class MonetizationTagObserver {
     })
     this.metaTags.set(meta, { observer, details })
     if (this.metaTags.size > this.maxMetas) {
-      throw new Error(`Only ${this.maxMetas} monetization tags supported`)
+      throw new Error(
+        'Web-Monetization Error: ' +
+          'Ignoring tag, ' +
+          `only ${this.maxMetas} monetization tags supported at a time. `
+      )
     }
     this.callback({ stopped: null, started: details })
   }
