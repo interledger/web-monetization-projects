@@ -64,7 +64,7 @@ function checkCondition({
 }
 
 async function run() {
-  const { browser, page: coilPage } = await initBrowserAndLoginFromEnv()
+  const { context, page: coilPage } = await initBrowserAndLoginFromEnv()
 
   const results: Record<string, TestPageResults> = {}
   let initSuccess = true
@@ -73,7 +73,7 @@ async function run() {
     debug('opening url to start monetization', site)
     const result = await testMonetization({
       listenStopped: true,
-      browser,
+      context,
       url: urls[site]
     })
     if (!result.success) {
