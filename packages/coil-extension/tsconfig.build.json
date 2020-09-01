@@ -42,6 +42,9 @@
       "path": "../web-monetization-wext/tsconfig.build.json"
     },
     {
+      "path": "../coil-playwright-utils/tsconfig.build.json"
+    },
+    {
       "path": "../coil-puppeteer-utils/tsconfig.build.json"
     }
   ]
