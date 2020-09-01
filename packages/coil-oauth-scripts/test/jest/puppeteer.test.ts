@@ -98,3 +98,9 @@
 //     })
 //   })
 // })
+
+describe('pointlessness', () => {
+  it('should', () => {
+    expect(true).toBe(true)
+  })
+})
