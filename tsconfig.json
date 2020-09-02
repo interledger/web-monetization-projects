@@ -39,6 +39,9 @@
       "@web-monetization/react": [
         "packages/web-monetization-react/src"
       ],
+      "@web-monetization/testing-utils": [
+        "packages/web-monetization-testing-utils/src"
+      ],
       "@web-monetization/wext": [
         "packages/web-monetization-wext/src"
       ],

@@ -36,6 +36,9 @@
       "path": "packages/web-monetization-react/tsconfig.build.json"
     },
     {
+      "path": "packages/web-monetization-testing-utils/tsconfig.build.json"
+    },
+    {
       "path": "packages/web-monetization-wext/tsconfig.build.json"
     },
     {
