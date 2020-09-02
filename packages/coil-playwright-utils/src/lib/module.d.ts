@@ -1,13 +1,3 @@
-declare module 'puppeteer-firefox' {
-  import { Browser } from 'puppeteer'
-
-  const module: {
-    executablePath: () => string
-    connect: (options: { browserWSEndpoint: string }) => Promise<Browser>
-  }
-  export = module
-}
-
 declare module 'web-ext' {
   export type RunOptions = {
     noInput?: boolean

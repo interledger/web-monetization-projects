@@ -3,7 +3,7 @@ import * as path from 'path'
 export const IS_CI = Boolean(process.env.CI)
 export const DEV = Boolean(process.env.DEV)
 
-// If this is set, will inject token and skip puppeteer of login
+// If this is set, will inject token and skip playwright of login
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 export const COIL_TOKEN = process.env.COIL_TOKEN!
 

@@ -9,7 +9,7 @@
 Ultimately we want `main` branch to be in a 'good' state at all times, with good test
 coverage, so we can practice CD, pushing the extensions to dev channels.
 
-Currently, we mostly rely on puppeteer tests which don't cover all the test scenarios.  
+Currently, we mostly rely on playwright tests which don't cover all the test scenarios.  
 Therefore, **we must do manual testing before release**, as it's too much of an impediment
 to run through the full manual release checklist on each PR/commit.
 

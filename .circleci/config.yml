@@ -62,7 +62,7 @@ jobs:
             npx addons-linter coilfirefoxextension@coil.com.xpi
       - *save_cache
 
-  coil-extension-puppeteer:
+  coil-extension-playwright:
     docker:
       - image: circleci/node:12.18.2-buster-browsers
     environment:
@@ -72,23 +72,23 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
+          name: BROWSER_TYPE=chrome ./test.sh test/playwright/logout-test.ts
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
+            xvfb-run -a ./test.sh test/playwright/logout-test.ts
       - run:
-          name: BROWSER_TYPE=firefox test.sh test/puppeteer/basic-test.ts
+          name: BROWSER_TYPE=firefox test.sh test/playwright/logout-test.ts
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=firefox
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/puppeteer/basic-test.ts
+            xvfb-run -a ./test.sh test/playwright/logout-test.ts
 
-  coil-extension-puppeteer-transpile-only:
+  coil-extension-playwright-transpile-only:
     docker:
       - image: circleci/node:12.18.2-buster-browsers
     environment:
@@ -98,22 +98,22 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
+          name: BROWSER_TYPE=chrome ./test.sh test/playwright/logout-test.ts
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
+            xvfb-run -a ./test.sh test/playwright/logout-test.ts
 
       - run:
-          name: BROWSER_TYPE=firefox test.sh test/puppeteer/basic-test.ts
+          name: BROWSER_TYPE=firefox test.sh test/playwright/logout-test.ts
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=firefox
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/puppeteer/basic-test.ts
+            xvfb-run -a ./test.sh test/playwright/logout-test.ts
 
   build-all-package-references-typescript:
     docker:
@@ -233,13 +233,13 @@ workflows:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-      - coil-extension-puppeteer:
+      - coil-extension-playwright:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-      - coil-extension-puppeteer-transpile-only:
+      - coil-extension-playwright-transpile-only:
           context: web-monetization-tests
           filters:
             branches:
