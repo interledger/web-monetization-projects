@@ -3152,6 +3152,11 @@
     mkdirp-promise "^5.0.1"
     mz "^2.5.0"
 
+JSON2016@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/JSON2016/-/JSON2016-1.0.0.tgz#ea518b906cdcdc5048da836c1b525b4cfe5c60f1"
+  integrity sha1-6lGLkGzc3FBI2oNsG1JbTP5cYPE=
+
 JSONSelect@0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/JSONSelect/-/JSONSelect-0.2.1.tgz#415418a526d33fe31d74b4defa3c836d485ec203"
