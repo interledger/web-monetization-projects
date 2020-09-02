@@ -106,10 +106,9 @@ make sense.
   - Go to a monetized page and check that the icon "monetized" black and in 'unavailable' state
     - ![image](https://user-images.githubusercontent.com/525211/70715784-8f150d00-1d1d-11ea-8f82-fe116b2e9a16.png)
 
-- [ ] Run the puppeteer [tests](./test.sh) (look at the [circle jobs](../../../.circleci/config.yml))
+- [ ] Run the playwright [tests](./test.sh) (look at the [circle jobs](../../../.circleci/config.yml))
 
   - export BROWSER_TYPE='chrome' # or 'firefox'
-  - logout test currently fails on Firefox due to puppeteer-firefox limitations
 
 - [ ] Go to a [youtube video](https://www.youtube.com/watch?v=l1btEwwRePs),
       manually skip to near end of video, and when autoplay of a video from

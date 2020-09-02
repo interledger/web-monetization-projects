@@ -54,8 +54,11 @@
       "@web-monetization/wext/content": [
         "packages/web-monetization-wext/src/content"
       ],
-      "@coil/puppeteer-utils": [
-        "packages/coil-puppeteer-utils/src"
+      "@coil/playwright-utils": [
+        "packages/coil-playwright-utils/src"
+      ],
+      "@interledger/minute-extension": [
+        "packages/interledger-minute-extension/src"
       ],
       "@web-monetization/demo": [
         "packages/web-monetization-demo/src"
@@ -65,9 +68,6 @@
       ],
       "@coil/oauth-scripts": [
         "packages/coil-oauth-scripts/src"
-      ],
-      "@interledger/minute-extension": [
-        "packages/interledger-minute-extension/src"
       ]
     }
   },

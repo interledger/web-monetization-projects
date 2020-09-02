@@ -7,7 +7,7 @@ import {
   MonetizationState,
   MonetizationStopEvent
 } from '@web-monetization/types'
-import { Browser, Page } from 'puppeteer'
+import { BrowserContext, Page } from 'playwright'
 
 import { env, timeout } from '../index'
 
@@ -33,22 +33,22 @@ export interface TestPageResults {
 }
 
 export interface TestPageParameters {
-  browser: Browser
+  context: BrowserContext
   url: string
   newPage?: boolean
   listenStopped?: boolean
 }
 
 export async function testMonetization({
-  browser,
+  context,
   url,
   newPage = true,
   listenStopped = false
 }: TestPageParameters): Promise<TestPageResults> {
-  const page = newPage ? await browser.newPage() : (await browser.pages())[0]
+  const page = newPage ? await context.newPage() : (await context.pages())[0]
 
   // Show the extension debugging
-  await page.evaluateOnNewDocument(() => {
+  await page.addInitScript(() => {
     localStorage['debug'] = 'coil-extension:*'
   })
 
@@ -114,7 +114,7 @@ export async function testMonetization({
   })
 
   async function listenFor(type: string) {
-    return page.evaluateOnNewDocument(type => {
+    return page.addInitScript((type: MonetizationEventType) => {
       const setListener = () => {
         const winAny = window as any
         const docAny: MonetizationExtendedDocument = document as any

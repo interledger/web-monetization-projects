@@ -4,15 +4,15 @@ import { exec } from 'child_process'
 import { promisify } from 'util'
 import * as pathMod from 'path'
 
-import { env, initBrowser, testMonetization } from '@coil/puppeteer-utils'
+import { env, initBrowser, testMonetization } from '@coil/playwright-utils'
 import * as coilClient from '@coil/client'
-import { Browser } from 'puppeteer'
+import { BrowserContext } from 'playwright'
 
 const fromHere = (path: string) => pathMod.resolve(__dirname, path)
 const readFileAsync = promisify(readFile)
 
 let httpServer: http.Server
-let browser: Browser
+let context: BrowserContext
 
 const log = console.log
 const SCRIPT_PATH = fromHere('../../build/coil-oauth-wm.js')
@@ -53,7 +53,7 @@ async function setUpHttpServer(btpTokenPromise: Promise<string>) {
       res.end(await js)
     }
   })
-  await new Promise<void>((resolve, reject) => {
+  await new Promise<void>(resolve => {
     server.listen(PORT, () => {
       log('listening on', PORT)
       resolve()
@@ -75,7 +75,7 @@ beforeAll(async () => {
     const serverPromise = setUpHttpServer(btpTokenPromise)
     const browserPromise = initBrowser({ loadExtension: false })
 
-    browser = await browserPromise
+    context = await browserPromise
     httpServer = await serverPromise
   } catch (e) {
     log('error in beforeAll', e)
@@ -86,13 +86,13 @@ beforeAll(async () => {
 afterAll(async () => {
   await promisify(httpServer.close.bind(httpServer))
   httpServer.unref()
-  await browser.close()
+  await context.close()
 })
 
 describe('OAuthScripts', () => {
   it('should get a non zero monetizationprogress event', async () => {
     await testMonetization({
-      browser,
+      context,
       url: `http://localhost:${PORT}`,
       newPage: false
     })

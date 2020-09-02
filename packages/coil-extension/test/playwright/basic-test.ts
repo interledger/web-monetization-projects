@@ -3,16 +3,17 @@ import {
   env,
   initBrowserAndLoginFromEnv,
   testMonetization
-} from '@coil/puppeteer-utils'
+} from '@coil/playwright-utils'
 
 import { testUrls } from './testUrls'
 
 async function run() {
-  const { browser } = await initBrowserAndLoginFromEnv()
+  const { context } = await initBrowserAndLoginFromEnv()
+
   let success = true
   for (const [name, url] of Object.entries(testUrls[env.COIL_DOMAIN])) {
     const { success: siteResult } = await testMonetization({
-      browser,
+      context,
       url: url
     })
     if (!siteResult) {
@@ -22,7 +23,7 @@ async function run() {
   }
 
   // noinspection ES6MissingAwait
-  void browser.close()
+  void context.close()
   process.exit(success ? 0 : 1)
 }
 
