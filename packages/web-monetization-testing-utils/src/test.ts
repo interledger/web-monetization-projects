@@ -19,5 +19,11 @@ function makeLogger(logElSelector: string) {
     log
   )
 
-  await suite.test()
+  try {
+    await suite.test()
+  } catch (e) {
+    log('')
+    log('Last Error:')
+    log(e.message)
+  }
 })()

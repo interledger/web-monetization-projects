@@ -22,7 +22,7 @@
     "esModuleInterop": true,
     "allowJs": false,
     "removeComments": true,
-
+    "resolveJsonModule": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   }

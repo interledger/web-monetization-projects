@@ -30,5 +30,8 @@
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --verbose --coverage",
     "upkeep": "cd ../.. && yarn upkeep"
+  },
+  "devDependencies": {
+    "ts-json-schema-generator": "^0.73.0"
   }
 }

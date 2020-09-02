@@ -2,11 +2,12 @@
 import * as uuid from 'uuid'
 import {
   MonetizationEvent,
-  MonetizationExtendedDocument,
-  MonetizationStopEvent
+  MonetizationExtendedDocument
 } from '@web-monetization/types'
+import Ajv from 'ajv'
 
 import { listenOnce, timeout } from './utils'
+import { MonetizationStopEventSchema } from './schema/MonetizationStopEvent'
 
 const EVENTS = [
   'monetizationpending',
@@ -70,6 +71,12 @@ export class MonetizationImplTest {
     this.assert(
       stop.detail.finalized,
       `got: finalized=${stop.detail.finalized}`
+    )
+    const aj = new Ajv()
+    this.step('stop event should be well formed')
+    this.assert(
+      aj.validate(MonetizationStopEventSchema, stop) as boolean,
+      aj.errorsText(aj.errors)
     )
   }
 
