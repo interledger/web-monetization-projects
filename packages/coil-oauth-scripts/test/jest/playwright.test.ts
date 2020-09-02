@@ -98,9 +98,3 @@ describe('OAuthScripts', () => {
     })
   })
 })
-
-describe('pointlessness', () => {
-  it('should', () => {
-    expect(true).toBe(true)
-  })
-})

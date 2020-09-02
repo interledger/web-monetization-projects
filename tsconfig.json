@@ -54,9 +54,6 @@
       "@web-monetization/wext/content": [
         "packages/web-monetization-wext/src/content"
       ],
-      "@coil/oauth-scripts": [
-        "packages/coil-oauth-scripts/src"
-      ],
       "@coil/playwright-utils": [
         "packages/coil-playwright-utils/src"
       ],
@@ -68,6 +65,9 @@
       ],
       "@coil/extension": [
         "packages/coil-extension/src"
+      ],
+      "@coil/oauth-scripts": [
+        "packages/coil-oauth-scripts/src"
       ]
     }
   },
