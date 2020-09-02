@@ -37,7 +37,7 @@ export class MonetizationImplTest {
     this.step('document.monetization.state should initialize "stopped"')
     this.assert(document.monetization.state === 'stopped')
     const meta = document.head.querySelector('meta[name="monetization"]')
-    this.step(`should have &#x3C;meta id="initial-static"&#x3E; tag`)
+    this.step(`should have <meta id="initial-static" ...> tag`)
     this.assert(meta?.id === 'initial-static')
     this.step('next event should be monetizationpending')
     const pending = await this.nextMonetizationEvent('monetizationpending')
@@ -72,10 +72,10 @@ export class MonetizationImplTest {
       stop.detail.finalized,
       `got: finalized=${stop.detail.finalized}`
     )
-    const aj = new Ajv()
+    const aj = new Ajv({ allErrors: true })
     this.step('stop event should be well formed')
     this.assert(
-      aj.validate(MonetizationStopEventSchema, stop) as boolean,
+      aj.validate(MonetizationStopEventSchema, pending) as boolean,
       aj.errorsText(aj.errors)
     )
   }
