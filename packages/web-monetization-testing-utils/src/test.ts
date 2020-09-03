@@ -8,7 +8,7 @@ function makeLogger(logElSelector: string) {
     throw new Error(`missing #log element in document`)
   }
   return (s: string) => {
-    logEl.textContent += `${s}\n`
+    logEl.innerHTML += `${s}\n`
     console.log('LOG:', s)
   }
 }
