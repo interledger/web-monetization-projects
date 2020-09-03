@@ -39,10 +39,14 @@ export class MonetizationImplTest {
     } = await this.staticMetaInitAndPendingToFirstProgress(staticMeta)
     await this.staticMetaRemoval(staticMeta)
     const { meta, requestId: metaId } = await this.dynamicMetaAddition()
-    this.step('requestId has changed')
+    this.step(
+      "requestId has changed from previous section's monetization request"
+    )
     this.assert(metaId !== staticId)
     const { requestId: changeId } = await this.dynamicContentChange(meta)
-    this.step('requestId has changed')
+    this.step(
+      "requestId has changed from previous section's monetization request"
+    )
     this.assert(changeId !== metaId)
   }
 
@@ -82,6 +86,10 @@ export class MonetizationImplTest {
 
     this.step('next event should be monetizationstop')
     this.assert(stop.type === 'monetizationstop', `got: ${stop.type}`)
+
+    this.step('document.monetization.state should be stopped')
+    this.assert(this.stateAsString() === 'stopped')
+
     this.step('stop event should have final: true')
     this.assert(
       stop.detail.finalized,
@@ -146,6 +154,10 @@ export class MonetizationImplTest {
     this.step('next event should be monetizationstart')
     const start = await this.nextMonetizationEvent('monetizationstart')
     this.assert(start.type === 'monetizationstart', `got ${start.type}`)
+
+    this.step('document.monetization.state should be started')
+    this.assert(this.stateAsString() === 'started')
+
     this.assertEventWellFormed(
       'monetizationstart',
       MonetizationStartEventSchema,
@@ -161,6 +173,10 @@ export class MonetizationImplTest {
     this.step('next event should be progress')
     const progress = await this.nextMonetizationEvent('monetizationprogress')
     this.assert(progress.type === 'monetizationprogress', `got ${start.type}`)
+
+    this.step('document.monetization.state should be started')
+    this.assert(this.stateAsString() === 'started')
+
     this.step(`requestId should be same as monetizationpending event`)
     this.assert(
       progress.detail.requestId === requestId,

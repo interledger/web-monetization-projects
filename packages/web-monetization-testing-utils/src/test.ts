@@ -7,8 +7,12 @@ function makeLogger(logElSelector: string) {
   if (!logEl) {
     throw new Error(`missing #log element in document`)
   }
-  return (s: string) => {
-    logEl.innerHTML += `${s}\n`
+  return (s: string, prefix = false) => {
+    if (prefix) {
+      logEl.innerHTML = `${s}\n${logEl.innerHTML}`
+    } else {
+      logEl.innerHTML += `${s}\n`
+    }
     console.log('LOG:', s)
   }
 }
@@ -24,6 +28,8 @@ function makeLogger(logElSelector: string) {
 
   try {
     await suite.test()
+    log('<strong>all tests passed!</strong>\n', true)
+    log('\n<strong>all tests passed!</strong>', false)
   } catch (e) {
     log('')
     log('Last Error:')
