@@ -63,6 +63,10 @@ export class MonetizationImplTest {
       `got ${start.detail.requestId}`
     )
 
+    this.step('next event should be progress')
+    const progress = await this.nextMonetizationEvent('monetizationprogress')
+    this.assert(progress.type === 'monetizationprogress', `got ${start.type}`)
+
     this.step('removing the meta tag should emit monetizationstop')
     meta?.remove()
     const stop = await this.nextMonetizationEvent('monetizationstop')
@@ -75,7 +79,7 @@ export class MonetizationImplTest {
     const aj = new Ajv({ allErrors: true })
     this.step('stop event should be well formed')
     this.assert(
-      aj.validate(MonetizationStopEventSchema, pending) as boolean,
+      aj.validate(MonetizationStopEventSchema, stop) as boolean,
       aj.errorsText(aj.errors)
     )
   }
