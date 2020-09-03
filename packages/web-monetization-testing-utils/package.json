@@ -1,14 +1,13 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
-  "name": "@web-monetization/types",
+  "name": "@web-monetization/testing-utils",
   "version": "0.0.0",
   "private": false,
-  "description": "",
   "keywords": [
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/web-monetization-types",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/web-monetization-testing-utils",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
@@ -18,10 +17,12 @@
   "main": "./build",
   "types": "./build",
   "scripts": {
+    "build": "webpack-cli",
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",
     "clean:build": "rimraf build",
+    "dev": "webpack-dev-server -c webpack.config.ts",
     "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
@@ -31,7 +32,14 @@
     "test:coverage": "yarn test --verbose --coverage",
     "upkeep": "cd ../.. && yarn upkeep"
   },
+  "dependencies": {
+    "@web-monetization/types": "0.0.0",
+    "ajv": "^6.12.4",
+    "uuid": "^8.3.0"
+  },
   "devDependencies": {
-    "ts-json-schema-generator": "^0.73.0"
+    "@types/ajv": "^1.0.0",
+    "@types/uuid": "^8.3.0",
+    "html-webpack-plugin": "^4.4.1"
   }
 }

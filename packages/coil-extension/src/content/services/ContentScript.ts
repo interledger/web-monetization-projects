@@ -69,7 +69,11 @@ export class ContentScript {
         command: 'stopWebMonetization',
         data: details
       }
-      this.monetization.setState({ state: 'stopped', finalized: true })
+      this.monetization.setState({
+        requestId: details.requestId,
+        state: 'stopped',
+        finalized: true
+      })
       this.monetization.setMonetizationRequest(undefined)
       this.runtime.sendMessage(request)
     }
