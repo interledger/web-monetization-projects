@@ -17,11 +17,11 @@
   "main": "./build",
   "types": "./build",
   "scripts": {
+    "build": "webpack-cli",
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",
     "clean:build": "rimraf build",
-    "build": "webpack-cli",
     "dev": "webpack-dev-server -c webpack.config.ts",
     "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
