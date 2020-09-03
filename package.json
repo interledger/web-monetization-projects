@@ -60,7 +60,7 @@
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
     "@types/copy-webpack-plugin": "^6.0.0",
-    "@types/jest": "^26.0.12",
+    "@types/jest": "^26.0.13",
     "@types/node": "12.x",
     "@types/webpack": "^4.41.21",
     "@types/webpack-merge": "^4.1.5",
