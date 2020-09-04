@@ -51,12 +51,15 @@ export class GraphQlClient {
       body: JSON.stringify({ query, variables })
     }
     if (this.config.log) {
-      this.config.log(
-        'Domain:',
-        this.config.coilDomain,
-        'Url:',
-        JSON.stringify({ ...init, body: { query, variables } }, null, 2)
+      const serialized = JSON.stringify(
+        { ...init, body: { query, variables } },
+        null,
+        2
       )
+      const redacted = token
+        ? serialized.replace(token, '<redacted>')
+        : serialized
+      this.config.log('Domain:', this.config.coilDomain, 'Url:', redacted)
     }
     const res = await this.fetch(`${this.config.coilDomain}/graphql`, init)
     if (!res.ok) {

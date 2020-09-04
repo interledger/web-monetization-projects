@@ -8,7 +8,6 @@ import * as tokens from '../../types/tokens'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
-import { CachedOperations } from './CachedOperations'
 
 @injectable()
 export class AuthService extends EventEmitter {
@@ -20,40 +19,41 @@ export class AuthService extends EventEmitter {
     private domain: string,
     @logger('AuthService')
     private log: Logger,
-    private siteToken: SiteToken,
-    private cached: CachedOperations
+    // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
+    private trace = (..._: unknown[]) => {},
+    private siteToken: SiteToken
   ) {
     super()
   }
 
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
     let token = this.getStoredToken()
-    this.log('storedToken', { domain: this.domain, token })
+    this.trace('storedToken', { domain: this.domain, token })
 
     if (!token) {
       token = await this.siteToken.retrieve()
     }
-    this.log('siteToken', token)
+    this.trace('siteToken', token)
 
     if (!token || tokenUtils.isExpired({ token })) {
       token = null
     } else if (tokenUtils.isExpired({ token, withinHrs: 12 })) {
       // Update the stored token/user
-      this.log('before refreshTokenAndUpdateWhoAmi')
+      this.trace('before refreshTokenAndUpdateWhoAmi')
       token = await this.refreshTokenAndUpdateWhoAmi(token)
-      this.log('after refreshTokenAndUpdateWhoAmi', token)
+      this.trace('after refreshTokenAndUpdateWhoAmi', token)
     } else {
       // Routinely do a whoami query to check for subscription status
       // Query could fail if token is invalid
-      this.log('before updateWhoAmI token=%s user=%s', token, this.store.user)
+      this.trace('before updateWhoAmI token=%s user=%s', token, this.store.user)
       const stored = token
       const endDate =
-        this.store.user?.subscription?.endDate ||
+        this.store.user?.subscription?.endDate ??
         this.store.user?.subscription?.trialEndDate
       if (!endDate || new Date(endDate) < new Date()) {
         token = await this.updateWhoAmi(stored)
       }
-      this.log('after updateWhoAmI token=%s user=%s', token, this.store.user)
+      this.trace('after updateWhoAmI token=%s user=%s', token, this.store.user)
     }
 
     if (token) {
