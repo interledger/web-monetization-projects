@@ -11,6 +11,8 @@ import { Logger, logger } from './utils'
 
 @injectable()
 export class AuthService extends EventEmitter {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
+  private trace = (..._: unknown[]) => {}
   constructor(
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
@@ -20,8 +22,6 @@ export class AuthService extends EventEmitter {
     @logger('AuthService')
     private log: Logger,
     private siteToken: SiteToken,
-    // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
-    private trace = (..._: unknown[]) => {}
   ) {
     super()
   }
