@@ -48,7 +48,7 @@ export class AuthService extends EventEmitter {
       this.trace('before updateWhoAmI token=%s user=%s', token, this.store.user)
       const stored = token
       const endDate =
-        this.store.user?.subscription?.endDate ??
+        this.store.user?.subscription?.endDate ||
         this.store.user?.subscription?.trialEndDate
       if (!endDate || new Date(endDate) < new Date()) {
         token = await this.updateWhoAmi(stored)
