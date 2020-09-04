@@ -21,7 +21,7 @@ export class AuthService extends EventEmitter {
     private domain: string,
     @logger('AuthService')
     private log: Logger,
-    private siteToken: SiteToken,
+    private siteToken: SiteToken
   ) {
     super()
   }
