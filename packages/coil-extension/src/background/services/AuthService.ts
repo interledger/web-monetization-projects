@@ -19,9 +19,9 @@ export class AuthService extends EventEmitter {
     private domain: string,
     @logger('AuthService')
     private log: Logger,
+    private siteToken: SiteToken,
     // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
-    private trace = (..._: unknown[]) => {},
-    private siteToken: SiteToken
+    private trace = (..._: unknown[]) => {}
   ) {
     super()
   }
