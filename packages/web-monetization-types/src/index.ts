@@ -22,8 +22,6 @@ export interface MonetizationPendingEvent extends MonetizationEventBase {
 
 export interface MonetizationStopEventDetail extends MonetizationEventDetail {
   /**
-   * @experimental
-   * Currently undocumented in spec.
    * Will be true when the meta[@content] has changed
    * Will be true if a meta has been removed
    * Will be false if streaming has been stopped for some other reason where
@@ -81,6 +79,7 @@ export type StartedState = 'started'
  *  - may not have started yet
  *  - paused (potentially resumed)
  *  - finished completely (awaiting another request)
+ *    - {@see MonetizationStopEventDetail.finalized}
  *  - payment request denied by user intervention
  */
 export type StoppedState = 'stopped'
