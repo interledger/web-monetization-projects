@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@coil/privacypass-sjcl": "0.0.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^8.5.0",
