@@ -1,6 +1,7 @@
 export const MonetizationProgressEventSchema = {
-  $ref: '#/definitions/MonetizationProgressEvent',
   $schema: 'http://json-schema.org/draft-07/schema#',
+  $id: 'https://webmonetization.org/schemas/monetizationprogress-event.json',
+  $ref: '#/definitions/MonetizationProgressEvent',
   definitions: {
     MonetizationProgressEvent: {
       additionalProperties: true,
@@ -36,9 +37,7 @@ export const MonetizationProgressEventSchema = {
           type: 'string'
         },
         requestId: {
-          type: 'string',
-          pattern:
-            '^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$'
+          $ref: './requestId.json'
         }
       },
       required: [

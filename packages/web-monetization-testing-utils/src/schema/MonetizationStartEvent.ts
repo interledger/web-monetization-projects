@@ -1,6 +1,7 @@
 export const MonetizationStartEventSchema = {
-  $ref: '#/definitions/MonetizationStartEvent',
   $schema: 'http://json-schema.org/draft-07/schema#',
+  $id: 'https://webmonetization.org/schemas/monetizationstart-event.json',
+  $ref: '#/definitions/MonetizationStartEvent',
   definitions: {
     MonetizationEventDetail: {
       additionalProperties: false,
@@ -9,9 +10,7 @@ export const MonetizationStartEventSchema = {
           type: 'string'
         },
         requestId: {
-          type: 'string',
-          pattern:
-            '^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$'
+          $ref: './requestId.json'
         }
       },
       required: ['paymentPointer', 'requestId'],

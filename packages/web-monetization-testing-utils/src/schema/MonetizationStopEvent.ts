@@ -1,12 +1,13 @@
 export const MonetizationStopEventSchema = {
-  $ref: '#/definitions/MonetizationStopEvent',
   $schema: 'http://json-schema.org/draft-07/schema#',
+  $id: 'https://webmonetization.org/schemas/monetizationstop-event.json',
+  $ref: '#/definitions/MonetizationStopEvent',
   definitions: {
     MonetizationStopEvent: {
       additionalProperties: true,
       properties: {
         detail: {
-          $ref: '#/definitions/MonetizationStopEventDetail'
+          $ref: '#stopDetail'
         },
         type: {
           const: 'monetizationstop',
@@ -14,10 +15,11 @@ export const MonetizationStopEventSchema = {
           type: 'string'
         }
       },
-      required: ['type'],
+      required: ['type', 'detail'],
       type: 'object'
     },
     MonetizationStopEventDetail: {
+      $id: '#stopDetail',
       additionalProperties: false,
       properties: {
         finalized: {
@@ -27,9 +29,7 @@ export const MonetizationStopEventSchema = {
           type: 'string'
         },
         requestId: {
-          type: 'string',
-          pattern:
-            '^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$'
+          $ref: './requestId.json'
         }
       },
       required: ['finalized', 'paymentPointer', 'requestId'],
