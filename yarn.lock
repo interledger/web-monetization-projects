@@ -11985,10 +11985,10 @@ npm-bundled@^1.0.1, npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@^8.0.5:
-  version "8.0.5"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-8.0.5.tgz#091646ab63dd722055e7ae122f044d1c37d01350"
-  integrity sha512-EZ3DIFvKFNZzwV9OdEYITTAY6fmuD7evItEmf9XyntG4p29n8JpFaGrf9uCQIR0Hx3G5RFNsdCeURHzF6YXIAw==
+npm-check-updates@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-8.1.0.tgz#76296f563d449b20776758c4629a06b1ce02e59c"
+  integrity sha512-cIB3oUkCEzz5kuOXgly8OygBLKacRBWwQJwt+fmSiSj7+jDHBVbdi1EH9O43tqP8XRUhrKIYt5dQroeSwJ/K8g==
   dependencies:
     chalk "^4.1.0"
     cint "^8.2.1"
