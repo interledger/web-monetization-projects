@@ -1,3 +1,5 @@
+import assert from 'assert'
+
 import { CoilTokenUtils, DecodedToken, decodeToken } from '@coil/client'
 
 import { testToken } from '../fixtures/testToken'
@@ -60,11 +62,10 @@ describe('CoilTokenUtils', () => {
     it('should pick the token with the greatest expiry when iat1 == iat2', () => {
       const nowSeconds = 5
       const newest = utils.newestToken({ extension, site }, nowSeconds)
-      if (newest.token != null) {
-        const parse: DecodedToken = utils.decode(newest.token)
-        expect(parse.exp).toBe(15)
-        expect(newest.which).toBe('site')
-      }
+      assert(newest.token != null)
+      const parse: DecodedToken = utils.decode(newest.token)
+      expect(parse.exp).toBe(15)
+      expect(newest.which).toBe('site')
     })
 
     it('should pick a non null token', () => {
