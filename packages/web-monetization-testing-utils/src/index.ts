@@ -11,6 +11,7 @@ import { MonetizationStopEventSchema } from './schema/MonetizationStopEvent'
 import { MonetizationPendingEventSchema } from './schema/MonetizationPendingEvent'
 import { MonetizationStartEventSchema } from './schema/MonetizationStartEvent'
 import { MonetizationProgressEventSchema } from './schema/MonetizationProgressEvent'
+import { RequestIdSchema } from './schema/RequestId'
 
 const EVENTS = [
   'monetizationpending',
@@ -19,7 +20,16 @@ const EVENTS = [
   'monetizationprogress'
 ]
 
-const ajv = new Ajv({ allErrors: true })
+const ajv = new Ajv({
+  allErrors: true,
+  schemas: [
+    RequestIdSchema,
+    MonetizationStopEventSchema,
+    MonetizationPendingEventSchema,
+    MonetizationStartEventSchema,
+    MonetizationProgressEventSchema
+  ]
+})
 
 export class MonetizationImplTest {
   ix = 0
@@ -38,16 +48,16 @@ export class MonetizationImplTest {
       requestId: staticId
     } = await this.staticMetaInitAndPendingToFirstProgress(staticMeta)
     await this.staticMetaRemoval(staticMeta)
-    const { meta, requestId: metaId } = await this.dynamicMetaAddition()
+    const { meta, requestId: dynamicId } = await this.dynamicMetaAddition()
     this.step(
       "requestId has changed from previous section's monetization request"
     )
-    this.assert(metaId !== staticId)
+    this.assert(dynamicId !== staticId)
     const { requestId: changeId } = await this.dynamicContentChange(meta)
     this.step(
       "requestId has changed from previous section's monetization request"
     )
-    this.assert(changeId !== metaId)
+    this.assert(changeId !== dynamicId)
   }
 
   private async dynamicContentChange(meta: HTMLMetaElement) {
@@ -95,21 +105,16 @@ export class MonetizationImplTest {
       stop.detail.finalized,
       `got: finalized=${stop.detail.finalized}`
     )
-    this.assertEventWellFormed(
-      'monetizationstop',
-      MonetizationStopEventSchema,
-      stop
-    )
+    this.assertEventWellFormed('monetizationstop', stop)
   }
 
-  private assertEventWellFormed(
-    type: string,
-    schema: Record<string, unknown>,
-    event: MonetizationEvent
-  ) {
+  private assertEventWellFormed(type: string, event: MonetizationEvent) {
     this.step(`${type} should be well formed`)
     this.assert(
-      ajv.validate(schema, event) as boolean,
+      ajv.validate(
+        `https://webmonetization.org/schemas/${type}-event.json`,
+        event
+      ) as boolean,
       ajv.errorsText(ajv.errors)
     )
   }
@@ -135,11 +140,7 @@ export class MonetizationImplTest {
     this.step('next event should be monetizationpending')
     const pending = await this.nextMonetizationEvent('monetizationpending')
     this.assert(pending.type === 'monetizationpending', `got ${pending.type}`)
-    this.assertEventWellFormed(
-      'monetizationpending',
-      MonetizationPendingEventSchema,
-      pending
-    )
+    this.assertEventWellFormed('monetizationpending', pending)
     this.step('document.monetization.state should be pending')
     this.assert(this.stateAsString() === 'pending')
 
@@ -158,11 +159,7 @@ export class MonetizationImplTest {
     this.step('document.monetization.state should be started')
     this.assert(this.stateAsString() === 'started')
 
-    this.assertEventWellFormed(
-      'monetizationstart',
-      MonetizationStartEventSchema,
-      start
-    )
+    this.assertEventWellFormed('monetizationstart', start)
 
     this.step(`requestId should be same as monetizationpending event`)
     this.assert(
@@ -182,11 +179,7 @@ export class MonetizationImplTest {
       progress.detail.requestId === requestId,
       `got ${progress.detail.requestId}`
     )
-    this.assertEventWellFormed(
-      'monetizationprogress',
-      MonetizationProgressEventSchema,
-      progress
-    )
+    this.assertEventWellFormed('monetizationprogress', progress)
     return { requestId }
   }
 
