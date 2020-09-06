@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC44E1042504CAE900800081 /* hot-reload.js in Resources */ = {isa = PBXBuildFile; fileRef = BC44E1002504CAE800800081 /* hot-reload.js */; };
+		BC44E1052504CAE900800081 /* res in Resources */ = {isa = PBXBuildFile; fileRef = BC44E1012504CAE800800081 /* res */; };
+		BC44E1062504CAE900800081 /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = BC44E1022504CAE900800081 /* options.js */; };
+		BC44E1072504CAE900800081 /* static in Resources */ = {isa = PBXBuildFile; fileRef = BC44E1032504CAE900800081 /* static */; };
+		BCCC71552504C8E300273033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC71542504C8E300273033 /* AppDelegate.swift */; };
+		BCCC71582504C8E300273033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCC71562504C8E300273033 /* Main.storyboard */; };
+		BCCC715A2504C8E300273033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC71592504C8E300273033 /* ViewController.swift */; };
+		BCCC715C2504C8E300273033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCCC715B2504C8E300273033 /* Assets.xcassets */; };
+		BCCC71632504C8E400273033 /* Coil Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BCCC71622504C8E400273033 /* Coil Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BCCC71682504C8E400273033 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCC71672504C8E400273033 /* Cocoa.framework */; };
+		BCCC716B2504C8E400273033 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC716A2504C8E400273033 /* SafariWebExtensionHandler.swift */; };
+		BCCC71722504C8E400273033 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCC71712504C8E400273033 /* manifest.json */; };
+		BCCC71742504C8E400273033 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = BCCC71732504C8E400273033 /* background.js */; };
+		BCCC71762504C8E400273033 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = BCCC71752504C8E400273033 /* content.js */; };
+		BCCC717C2504C8E400273033 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = BCCC717B2504C8E400273033 /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCCC71642504C8E400273033 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCCC71482504C8E300273033 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCCC71612504C8E400273033;
+			remoteInfo = "Coil Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BCCC71842504C8E400273033 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BCCC71632504C8E400273033 /* Coil Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BC44E1002504CAE800800081 /* hot-reload.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "hot-reload.js"; sourceTree = "<group>"; };
+		BC44E1012504CAE800800081 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		BC44E1022504CAE900800081 /* options.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = options.js; sourceTree = "<group>"; };
+		BC44E1032504CAE900800081 /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; path = static; sourceTree = "<group>"; };
+		BCCC71502504C8E300273033 /* Coil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCC71532504C8E300273033 /* Coil.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coil.entitlements; sourceTree = "<group>"; };
+		BCCC71542504C8E300273033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BCCC71572504C8E300273033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCCC71592504C8E300273033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCCC715B2504C8E300273033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCCC715D2504C8E300273033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCCC71622504C8E400273033 /* Coil Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Coil Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCCC71672504C8E400273033 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BCCC716A2504C8E400273033 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		BCCC71712504C8E400273033 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		BCCC71732504C8E400273033 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		BCCC71752504C8E400273033 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		BCCC717B2504C8E400273033 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		BCCC717D2504C8E400273033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCCC717E2504C8E400273033 /* Coil_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coil_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCCC714D2504C8E300273033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCC715F2504C8E400273033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCCC71682504C8E400273033 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCCC71472504C8E300273033 = {
+			isa = PBXGroup;
+			children = (
+				BCCC71522504C8E300273033 /* Coil */,
+				BCCC71692504C8E400273033 /* Coil Extension */,
+				BCCC71662504C8E400273033 /* Frameworks */,
+				BCCC71512504C8E300273033 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCCC71512504C8E300273033 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCCC71502504C8E300273033 /* Coil.app */,
+				BCCC71622504C8E400273033 /* Coil Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCCC71522504C8E300273033 /* Coil */ = {
+			isa = PBXGroup;
+			children = (
+				BCCC71532504C8E300273033 /* Coil.entitlements */,
+				BCCC71542504C8E300273033 /* AppDelegate.swift */,
+				BCCC71562504C8E300273033 /* Main.storyboard */,
+				BCCC71592504C8E300273033 /* ViewController.swift */,
+				BCCC715B2504C8E300273033 /* Assets.xcassets */,
+				BCCC715D2504C8E300273033 /* Info.plist */,
+			);
+			path = Coil;
+			sourceTree = "<group>";
+		};
+		BCCC71662504C8E400273033 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCCC71672504C8E400273033 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCCC71692504C8E400273033 /* Coil Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BCCC716A2504C8E400273033 /* SafariWebExtensionHandler.swift */,
+				BCCC717D2504C8E400273033 /* Info.plist */,
+				BCCC717E2504C8E400273033 /* Coil_Extension.entitlements */,
+				BCCC716C2504C8E400273033 /* Resources */,
+			);
+			path = "Coil Extension";
+			sourceTree = "<group>";
+		};
+		BCCC716C2504C8E400273033 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC44E1002504CAE800800081 /* hot-reload.js */,
+				BC44E1022504CAE900800081 /* options.js */,
+				BC44E1012504CAE800800081 /* res */,
+				BC44E1032504CAE900800081 /* static */,
+				BCCC71712504C8E400273033 /* manifest.json */,
+				BCCC71732504C8E400273033 /* background.js */,
+				BCCC71752504C8E400273033 /* content.js */,
+				BCCC717B2504C8E400273033 /* popup.js */,
+			);
+			name = Resources;
+			path = ../../dist;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCCC714F2504C8E300273033 /* Coil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCCC71852504C8E400273033 /* Build configuration list for PBXNativeTarget "Coil" */;
+			buildPhases = (
+				BCCC714C2504C8E300273033 /* Sources */,
+				BCCC714D2504C8E300273033 /* Frameworks */,
+				BCCC714E2504C8E300273033 /* Resources */,
+				BCCC71842504C8E400273033 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCCC71652504C8E400273033 /* PBXTargetDependency */,
+			);
+			name = Coil;
+			productName = Coil;
+			productReference = BCCC71502504C8E300273033 /* Coil.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCCC71612504C8E400273033 /* Coil Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCCC71812504C8E400273033 /* Build configuration list for PBXNativeTarget "Coil Extension" */;
+			buildPhases = (
+				BCCC715E2504C8E400273033 /* Sources */,
+				BCCC715F2504C8E400273033 /* Frameworks */,
+				BCCC71602504C8E400273033 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coil Extension";
+			productName = "Coil Extension";
+			productReference = BCCC71622504C8E400273033 /* Coil Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCCC71482504C8E300273033 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					BCCC714F2504C8E300273033 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					BCCC71612504C8E400273033 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = BCCC714B2504C8E300273033 /* Build configuration list for PBXProject "Coil" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCCC71472504C8E300273033;
+			productRefGroup = BCCC71512504C8E300273033 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCCC714F2504C8E300273033 /* Coil */,
+				BCCC71612504C8E400273033 /* Coil Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCCC714E2504C8E300273033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCCC715C2504C8E300273033 /* Assets.xcassets in Resources */,
+				BCCC71582504C8E300273033 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCC71602504C8E400273033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCCC71742504C8E400273033 /* background.js in Resources */,
+				BC44E1062504CAE900800081 /* options.js in Resources */,
+				BC44E1052504CAE900800081 /* res in Resources */,
+				BC44E1042504CAE900800081 /* hot-reload.js in Resources */,
+				BCCC71722504C8E400273033 /* manifest.json in Resources */,
+				BCCC71762504C8E400273033 /* content.js in Resources */,
+				BC44E1072504CAE900800081 /* static in Resources */,
+				BCCC717C2504C8E400273033 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCCC714C2504C8E300273033 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCCC715A2504C8E300273033 /* ViewController.swift in Sources */,
+				BCCC71552504C8E300273033 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCCC715E2504C8E400273033 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCCC716B2504C8E400273033 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCCC71652504C8E400273033 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCCC71612504C8E400273033 /* Coil Extension */;
+			targetProxy = BCCC71642504C8E400273033 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCCC71562504C8E300273033 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCCC71572504C8E300273033 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCCC717F2504C8E400273033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCCC71802504C8E400273033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BCCC71822504C8E400273033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Coil Extension/Coil_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 344JWDH2AE;
+				INFOPLIST_FILE = "Coil Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ndudfield.coil.extension.safari.Coil-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BCCC71832504C8E400273033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Coil Extension/Coil_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 344JWDH2AE;
+				INFOPLIST_FILE = "Coil Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ndudfield.coil.extension.safari.Coil-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BCCC71862504C8E400273033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Coil/Coil.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 344JWDH2AE;
+				INFOPLIST_FILE = Coil/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.extension.safari.Coil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BCCC71872504C8E400273033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Coil/Coil.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 344JWDH2AE;
+				INFOPLIST_FILE = Coil/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.extension.safari.Coil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCCC714B2504C8E300273033 /* Build configuration list for PBXProject "Coil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCC717F2504C8E400273033 /* Debug */,
+				BCCC71802504C8E400273033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCCC71812504C8E400273033 /* Build configuration list for PBXNativeTarget "Coil Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCC71822504C8E400273033 /* Debug */,
+				BCCC71832504C8E400273033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCCC71852504C8E400273033 /* Build configuration list for PBXNativeTarget "Coil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCC71862504C8E400273033 /* Debug */,
+				BCCC71872504C8E400273033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCCC71482504C8E300273033 /* Project object */;
+}
