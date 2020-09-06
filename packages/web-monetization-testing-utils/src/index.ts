@@ -1,4 +1,3 @@
-// FROM UPKEEP TEMPLATE
 import * as uuid from 'uuid'
 import {
   MonetizationEvent,
@@ -58,10 +57,17 @@ export class MonetizationImplTest {
       "requestId has changed from previous section's monetization request"
     )
     this.assert(changeId !== dynamicId)
+    meta.remove()
+    await this.waitStop()
+    const { requestId: linkId } = await this.dynamicLinkAddition()
+    this.step(
+      "requestId has changed from previous section's monetization request"
+    )
+    this.assert(dynamicId !== linkId)
   }
 
   private async dynamicContentChange(meta: HTMLMetaElement) {
-    this.startSection('dynnamic content change: stop previous to new progress')
+    this.startSection('dynnamic content change: stop previous to stop new')
     meta.content = '$twitter.xrptipbot.com/Coil'
     await this.waitStop()
     return this.pendingToProgress()
@@ -75,6 +81,16 @@ export class MonetizationImplTest {
     this.document.head.appendChild(meta)
     const { requestId } = await this.pendingToProgress()
     return { requestId, meta }
+  }
+
+  private async dynamicLinkAddition() {
+    this.startSection('dynamic link addition: pending to progress')
+    const link = this.document.createElement('link')
+    link.rel = 'monetization'
+    link.href = 'https://twitter.xrptipbot.com/sharafian_'
+    this.document.head.appendChild(link)
+    const { requestId } = await this.pendingToProgress()
+    return { requestId, link }
   }
 
   private async staticMetaRemoval(meta: Element | null) {
