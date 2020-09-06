@@ -4,3 +4,6 @@ coilfirefoxextension@coil.com.xpi
 test/fixtures/coil-oauth-wm.js
 coil-six.apk
 six/assets/dist.crx
+safari/Coil/Coil.xcodeproj/project.xcworkspace/
+safari/Coil/build
+safari/Coil/Coil.xcodeproj/xcuserdata/
