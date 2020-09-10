@@ -43,6 +43,8 @@ import { StreamAssociations } from './StreamAssociations'
 
 import MessageSender = chrome.runtime.MessageSender
 
+import { BuildConfig } from '../../types/BuildConfig'
+
 @injectable()
 export class BackgroundScript {
   constructor(
@@ -65,7 +67,9 @@ export class BackgroundScript {
     @inject(tokens.WextApi)
     private api: typeof window.chrome,
     @inject(tokens.CoilDomain)
-    private coilDomain: string
+    private coilDomain: string,
+    @inject(tokens.BuildConfig)
+    private buildConfig: BuildConfig
   ) {}
 
   get activeTab() {
@@ -100,9 +104,23 @@ export class BackgroundScript {
   private setTabsOnActivatedListener() {
     // The active tab has been changed
     this.api.tabs.onActivated.addListener(activeInfo => {
+      if (this.buildConfig.logTabsApiEvents) {
+        this.log('tabs.onActivated %o', activeInfo)
+      }
       this.activeTab = activeInfo.tabId
       this.reloadTabState({ from: 'onActivated' })
     })
+    if (this.buildConfig.logTabsApiEvents) {
+      this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
+        this.log('tabs.onActiveChanged %d %o', tabId, selectInfo)
+      })
+      this.api.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
+        this.log('tabs.onSelectionChanged %d %o', tabId, selectInfo)
+      })
+      this.api.tabs.onCreated.addListener(activeInfo => {
+        this.log('tabs.onCreated %o', activeInfo)
+      })
+    }
   }
 
   private setWindowsOnFocusedListener() {
@@ -164,6 +182,26 @@ export class BackgroundScript {
       // clean up the stream of that tab
       this._closeStreams(tabId)
     })
+
+    if (this.buildConfig.logTabsApiEvents) {
+      this.api.tabs.onReplaced.addListener((added, removed) => {
+        this.log(
+          'tabs.onReplaced.: replaced tab with id' +
+            JSON.stringify({ added, removed })
+        )
+      })
+      this.api.tabs.onAttached.addListener((tabId, attachInfo) => {
+        this.log(
+          'tabs.onAttached: onAttached' + JSON.stringify({ tabId, attachInfo })
+        )
+      })
+      this.api.tabs.onDetached.addListener((tabId, detachInfo) => {
+        this.log(
+          'tabs.onDetached: replaced tab with id' +
+            JSON.stringify({ tabId, detachInfo })
+        )
+      })
+    }
   }
 
   private setFramesOnRemovedListener() {

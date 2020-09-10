@@ -3,6 +3,7 @@
 declare const WEBPACK_DEFINE_API: any
 declare const WEBPACK_DEFINE_COIL_DOMAIN: any
 declare const WEBPACK_DEFINE_BTP_ENDPOINT: any
+declare const WEBPACK_DEFINE_BUILD_CONFIG: any
 
 // This is to support opening the popup.html page in a normal browser tab
 // so that can look at it in various states. An undefined error will be thrown
@@ -18,3 +19,4 @@ try {
 export const API: typeof window.chrome = api!
 export const COIL_DOMAIN: string = WEBPACK_DEFINE_COIL_DOMAIN
 export const BTP_ENDPOINT: string | null = WEBPACK_DEFINE_BTP_ENDPOINT
+export const BUILD_CONFIG: Record<string, unknown> = WEBPACK_DEFINE_BUILD_CONFIG

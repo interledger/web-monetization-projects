@@ -29,19 +29,24 @@ export class PopupBrowserAction {
   ) {
     this.openLogin = this.tabOpener.opener(`${this.coilDomain}/login`)
     // disable popup if on android
-    this.api.runtime.getPlatformInfo(result => {
-      if (result.os === 'android') {
-        this.api.browserAction.setPopup({
-          // See: https://bugzilla.mozilla.org/show_bug.cgi?id=1426484
-          // Setting the popup to empty string which should allow onClicked
-          // handlers to work is buggy on android firefox.
-          // We work around this by setting a particular popup for android
-          // which only uses chrome.tabs.create({url: 'coil.com/settings})
-          popup: this.api.runtime.getURL('static/popupAndroid.html')
-        })
-        this.ignoreDefaultToggling = true
-      }
-    })
+    try {
+      this.api.runtime.getPlatformInfo(result => {
+        if (result?.os === 'android') {
+          this.api.browserAction.setPopup({
+            // See: https://bugzilla.mozilla.org/show_bug.cgi?id=1426484
+            // Setting the popup to empty string which should allow onClicked
+            // handlers to work is buggy on android firefox.
+            // We work around this by setting a particular popup for android
+            // which only uses chrome.tabs.create({url: 'coil.com/settings})
+            popup: this.api.runtime.getURL('static/popupAndroid.html')
+          })
+          this.ignoreDefaultToggling = true
+        }
+      })
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error(e)
+    }
   }
 
   enable() {

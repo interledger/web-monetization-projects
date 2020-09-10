@@ -7,13 +7,14 @@ import CopyPlugin from 'copy-webpack-plugin'
 
 const CHROMIUM_BASED_BROWSER = /chrome|edge/
 
-export function makeWebpackConfig(rootDir: string) {
+export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const prettyJSON = (obj: any) => JSON.stringify(obj, null, 2)
 
   const API = process.env.API || 'chrome'
   const BROWSER = process.env.BROWSER || 'chrome'
-  const LIVE_RELOAD = Boolean(process.env.LIVE_RELOAD)
+  const LIVE_RELOAD =
+    Boolean(process.env.LIVE_RELOAD) && !process.env.NO_LIVE_RELOAD
 
   // Can cut build times down from 30s to 10s on some machines
   const TS_LOADER_TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
@@ -29,6 +30,11 @@ export function makeWebpackConfig(rootDir: string) {
     : process.env.TSCONFIG_DEBUG
     ? TSCONFIG_DEBUG_JSON
     : TSCONFIG_BUILD_JSON
+
+  const WEXT_BUILD_CONFIG: Record<string, unknown> = process.env
+    .WEXT_BUILD_CONFIG
+    ? JSON.parse(process.env.WEXT_BUILD_CONFIG)
+    : {}
 
   // Possible to override name/version so can publish as different extension
   const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
@@ -138,7 +144,8 @@ export function makeWebpackConfig(rootDir: string) {
     plugins: [
       new webpack.DefinePlugin({
         WEBPACK_DEFINE_API: API,
-        WEBPACK_DEFINE_BROWSER: JSON.stringify(BROWSER)
+        WEBPACK_DEFINE_BROWSER: JSON.stringify(BROWSER),
+        WEBPACK_DEFINE_BUILD_CONFIG: JSON.stringify(WEXT_BUILD_CONFIG)
       }),
       new CopyPlugin({ patterns: copyToDist }),
       {
