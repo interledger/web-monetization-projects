@@ -26,10 +26,13 @@ export class AdaptiveBandwidth {
     this._sentAmount += Number(amount) || 0
   }
 
+  getStreamSendMax(): Promise<number> {
+    const elapsed = Date.now() - this._timeStarted
+    return this._getLinearSendMax(elapsed)
+  }
+
   // noinspection DuplicatedCode
-  async getStreamSendMax() {
-    const time = Date.now()
-    const timeElapsed = time - this._timeStarted
+  private async _getLinearSendMax(timeElapsed: number): Promise<number> {
     const secondsElapsed = timeElapsed / 1000
     const bandwidth = await this._tiers.getBandwidth(this._pageUrl)
     const sendAmount = Math.floor(secondsElapsed * bandwidth - this._sentAmount)

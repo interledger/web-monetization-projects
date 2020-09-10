@@ -8,7 +8,6 @@ import {
 } from 'ilp-protocol-stream'
 import IlpPluginBtp from 'ilp-plugin-btp'
 import {
-  AdaptiveBandwidth,
   asyncUtils,
   getSPSPResponse,
   PaymentDetails,
@@ -18,13 +17,13 @@ import {
 } from '@web-monetization/polyfill-utils'
 import { GraphQlClient } from '@coil/client'
 import { Container, inject, injectable } from 'inversify'
-import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 import { BTP_ENDPOINT } from '../../webpackDefines'
 
 import { AnonymousTokens } from './AnonymousTokens'
+import { PaymentScheduler } from './PaymentScheduler'
 import { Logger, logger } from './utils'
 
 const { timeout } = asyncUtils
@@ -82,13 +81,13 @@ export class Stream extends EventEmitter {
   private _authToken: string
 
   private readonly _server: string
-  private readonly _tiers: BandwidthTiers
   private readonly _initiatingUrl: string
 
   private _lastDelivered: number
   private _lastOutgoingMs!: number
   private _packetNumber!: number
   private _active: boolean
+  private _paying = false
   private _looping: boolean
   private _attempt: StreamAttempt | null
   private _coilDomain: string
@@ -121,7 +120,6 @@ export class Stream extends EventEmitter {
     this._requestId = requestId
     this._spspUrl = spspEndpoint
     this._authToken = token
-    this._tiers = container.get(BandwidthTiers)
     this._coilDomain = container.get(tokens.CoilDomain)
     this._anonTokens = container.get(AnonymousTokens)
 
@@ -168,18 +166,29 @@ export class Stream extends EventEmitter {
       return
     }
 
-    // reset our timer when we start streaming.
-    const bandwidth = new AdaptiveBandwidth(
-      this._initiatingUrl,
-      this._tiers,
-      this._debug
-    )
+    const initialSendSeconds = 5
+    const payScheduler = this.container.get(PaymentScheduler)
+    const bandwidth = new MaxBandwidth(0)
+    setTimeout(() => {
+      this._debug('finishing first payment')
+      bandwidth.sendMax = 2 ** 64
+    }, 60_000)
 
     while (this._active) {
       let btpToken: string | undefined
       let plugin, attempt
+
       try {
-        btpToken = await this._anonTokens.getToken(this._authToken)
+        const redeemedToken = await this._anonTokens.getToken(this._authToken)
+        btpToken = redeemedToken.btpToken
+        // On page load, only send a small piece of the first token. After 1 minute, switch to full tokens.
+        if (bandwidth.sendMax === 0) {
+          bandwidth.sendMax = redeemedToken.throughput * initialSendSeconds
+        }
+        this._debug(
+          'redeemed token with throughput=%d',
+          redeemedToken.throughput
+        )
         plugin = await this._makePlugin(btpToken)
         const spspDetails = await this._getSPSPDetails()
         this.container
@@ -198,6 +207,7 @@ export class Stream extends EventEmitter {
           await timeout(1000)
         }
       } catch (e) {
+        if (plugin) await plugin.disconnect()
         const { ilpReject } = e
         if (
           btpToken &&
@@ -205,20 +215,30 @@ export class Stream extends EventEmitter {
           ilpReject.message === 'exhausted capacity.' &&
           ilpReject.data.equals(await sha256(Buffer.from(btpToken)))
         ) {
-          this._debug('anonymous token exhausted; retrying, err=%s', e.message)
+          this._debug(
+            'anonymous token exhausted; retrying soon, err=%s',
+            e.message
+          )
           this._anonTokens.removeToken(btpToken)
+          payScheduler.onSent()
+          await payScheduler.wait()
           continue
+        } else {
+          this._debug('error streaming. retry in 2s. err=', e.message, e.stack)
+          this._paying = false
+          if (this._active) await timeout(2000)
         }
-        this._debug('error streaming. retry in 2s. err=', e.message, e.stack)
-        if (this._active) await timeout(2000)
-      } finally {
-        if (attempt) bandwidth.addSentAmount(attempt.getTotalSent())
-        if (plugin) await plugin.disconnect()
       }
     }
 
+    payScheduler.stop()
     this._looping = false
+    this._paying = false
     this._debug('aborted because stream is no longer active.')
+  }
+
+  isPaying(): boolean {
+    return this._paying
   }
 
   async _makePlugin(btpToken: string) {
@@ -259,6 +279,7 @@ export class Stream extends EventEmitter {
   onMoney(data: OnMoneyEvent) {
     if (data.amount <= 0) return
 
+    this._paying = true
     const now = Date.now()
     const msSinceLastPacket = now - this._lastOutgoingMs
     this._lastOutgoingMs = now
@@ -315,7 +336,7 @@ export class Stream extends EventEmitter {
 }
 
 interface StreamAttemptOptions {
-  bandwidth: AdaptiveBandwidth
+  bandwidth: MaxBandwidth
   onMoney: (event: OnMoneyEvent) => void
   requestId: string
   plugin: IlpPluginBtp
@@ -325,7 +346,7 @@ interface StreamAttemptOptions {
 
 class StreamAttempt {
   private readonly _onMoney: (event: OnMoneyEvent) => void
-  private readonly _bandwidth: AdaptiveBandwidth
+  private readonly _bandwidth: MaxBandwidth
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private readonly _debug: Logger
   private readonly _plugin: IlpPluginBtp
@@ -366,7 +387,7 @@ class StreamAttempt {
 
     // TODO: if we save the tier from earlier we don't need to do this async
     // TODO: does doing this async allow a race condition if we stop right away
-    const initialSendAmount = await this._bandwidth.getStreamSendMax()
+    const initialSendAmount = this._bandwidth.getStreamSendMax()
     this._ilpStream.setSendMax(initialSendAmount)
 
     return new Promise((resolve, reject) => {
@@ -427,8 +448,10 @@ class StreamAttempt {
         )
 
         if (this._ilpStream.isOpen()) {
-          const sendAmount = await this._bandwidth.getStreamSendMax()
-          this._ilpStream.setSendMax(sendAmount)
+          const sendAmount = this._bandwidth.getStreamSendMax()
+          if (sendAmount.toString() !== this._ilpStream.sendMax) {
+            this._ilpStream.setSendMax(sendAmount)
+          }
         }
       }
 
@@ -516,6 +539,13 @@ class StreamAttempt {
         totalMs -= 100
       }
     }
+  }
+}
+
+class MaxBandwidth {
+  constructor(public sendMax: number) {}
+  getStreamSendMax(): number {
+    return this.sendMax
   }
 }
 
