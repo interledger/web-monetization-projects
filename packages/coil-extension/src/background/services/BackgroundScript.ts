@@ -396,11 +396,20 @@ export class BackgroundScript {
   ) {
     const tabState = this.tabStates.get(tabId)
 
+    const streamId = this.assoc.getStreamId({ tabId, frameId })
+    let isPaying = false
+    if (streamId) {
+      isPaying = this.streams.getStream(streamId).isPaying()
+    } else {
+      this.log('can not find top frame for tabId=%d', tabId)
+    }
+
     this.tabStates.setFrame(
       { tabId, frameId },
       {
         monetized: true,
-        total: total || (tabState.frameStates[frameId]?.total ?? 0)
+        total: total || (tabState.frameStates[frameId]?.total ?? 0),
+        isPaying
       }
     )
 
@@ -491,7 +500,12 @@ export class BackgroundScript {
 
     if (state) {
       const total = frameStates.reduce((acc, val) => acc + val.total, 0)
+      //const isPaying = frameStates.reduce((acc, val) => acc || val., false)
       this.storage.set('monetizedTotal', total)
+      this.storage.set(
+        'isPaying',
+        frameStates.reduce((acc, val) => acc || val.isPaying, false)
+      )
     }
     this.storage.set(
       'monetizedFavicon',
