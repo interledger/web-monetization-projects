@@ -183,19 +183,25 @@ export class BackgroundScript {
       this._closeStreams(tabId)
     })
 
-    this.api.tabs.onReplaced.addListener((added, removed) => {
-      this.log(
-        'TABS: replaced tab with id' + JSON.stringify({ added, removed })
-      )
-    })
-    this.api.tabs.onAttached.addListener((tabId, attachInfo) => {
-      this.log('TABS: onAttached' + JSON.stringify({ tabId, attachInfo }))
-    })
-    this.api.tabs.onDetached.addListener((tabId, detachInfo) => {
-      this.log(
-        'TABS: replaced tab with id' + JSON.stringify({ tabId, detachInfo })
-      )
-    })
+    if (this.buildConfig.logTabsApiEvents) {
+      this.api.tabs.onReplaced.addListener((added, removed) => {
+        this.log(
+          'tabs.onReplaced.: replaced tab with id' +
+            JSON.stringify({ added, removed })
+        )
+      })
+      this.api.tabs.onAttached.addListener((tabId, attachInfo) => {
+        this.log(
+          'tabs.onAttached: onAttached' + JSON.stringify({ tabId, attachInfo })
+        )
+      })
+      this.api.tabs.onDetached.addListener((tabId, detachInfo) => {
+        this.log(
+          'tabs.onDetached: replaced tab with id' +
+            JSON.stringify({ tabId, detachInfo })
+        )
+      })
+    }
   }
 
   private setFramesOnRemovedListener() {
