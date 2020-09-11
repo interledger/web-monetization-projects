@@ -9,6 +9,8 @@ import { PopupIconService } from './PopupIconService'
 
 import TabIconDetails = chrome.browserAction.TabIconDetails
 
+import { logLastError } from './utils'
+
 type Action = (tab: chrome.tabs.Tab) => void
 
 @injectable()
@@ -85,23 +87,32 @@ export class PopupBrowserAction {
           this.lastSetIconCallArgs.tabId == args.tabId
         )
       ) {
-        api.browserAction.setIcon(args)
+        api.browserAction.setIcon(
+          args,
+          logLastError('setBrowserAction.setIcon')
+        )
         this.lastSetIconCallArgs = args
       }
     }
 
     if (api.browserAction.setBadgeText) {
-      api.browserAction.setBadgeText({
-        tabId,
-        text: state?.badge?.text ?? ''
-      })
+      api.browserAction.setBadgeText(
+        {
+          tabId,
+          text: state?.badge?.text ?? ''
+        },
+        logLastError('setBrowserAction.setBadgeText')
+      )
     }
 
     if (api.browserAction.setBadgeBackgroundColor) {
-      api.browserAction.setBadgeBackgroundColor({
-        tabId,
-        color: state?.badge?.color ?? Colors.White
-      })
+      api.browserAction.setBadgeBackgroundColor(
+        {
+          tabId,
+          color: state?.badge?.color ?? Colors.White
+        },
+        logLastError('setBrowserAction.setBadgeBackgroundColor')
+      )
     }
   }
 

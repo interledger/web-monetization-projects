@@ -36,7 +36,7 @@ import { TabStates } from './TabStates'
 import { Streams } from './Streams'
 import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
-import { Logger, logger } from './utils'
+import { Logger, logger, logLastError } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { StreamAssociations } from './StreamAssociations'
@@ -245,10 +245,7 @@ export class BackgroundScript {
           tabId,
           message,
           { frameId: event.frameId },
-          () => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            const ignored = this.api.runtime.lastError
-          }
+          logLastError("this.framesService.on('frameChanged', ...")
         )
       }
     })
@@ -267,7 +264,14 @@ export class BackgroundScript {
             requestId: details.requestId
           }
         }
-        this.api.tabs.sendMessage(tabId, message, { frameId })
+        this.api.tabs.sendMessage(
+          tabId,
+          message,
+          { frameId },
+          logLastError(
+            'routeStreamsMoneyEventsToContentScript streams.on money packetNumber=0'
+          )
+        )
       }
 
       const message: MonetizationProgress = {
@@ -283,7 +287,12 @@ export class BackgroundScript {
         }
       }
       this.handleMonetizedSite(frame, details.initiatingUrl, details)
-      this.api.tabs.sendMessage(tabId, message, { frameId })
+      this.api.tabs.sendMessage(
+        tabId,
+        message,
+        { frameId },
+        logLastError('routeStreamsMoneyEventsToContentScript streams.on money')
+      )
       this.savePacketToHistoryDb(details)
     })
   }
@@ -605,7 +614,12 @@ export class BackgroundScript {
         correlationId: request.data.correlationId
       }
     }
-    this.api.tabs.sendMessage(frame.tabId, message, { frameId: parentId })
+    this.api.tabs.sendMessage(
+      frame.tabId,
+      message,
+      { frameId: parentId },
+      logLastError('reportCorrelationIdFromIFrameContentScript')
+    )
   }
 
   async startWebMonetization(
@@ -733,7 +747,12 @@ export class BackgroundScript {
           assetScale
         }
       }
-      this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
+      this.api.tabs.sendMessage(
+        tabId,
+        message,
+        { frameId: 0 },
+        logLastError('sendTip')
+      )
       return { success: true }
     } catch (e) {
       this.log(`sendTip: error. msg=${e.message}`)
@@ -821,7 +840,12 @@ export class BackgroundScript {
         state
       }
     }
-    this.api.tabs.sendMessage(tabId, message, { frameId })
+    this.api.tabs.sendMessage(
+      tabId,
+      message,
+      { frameId },
+      logLastError('sendSetMonetizationStateMessage')
+    )
   }
 
   _closeStreams(tabId: number, frameId?: number) {
@@ -869,7 +893,12 @@ export class BackgroundScript {
           command: 'setMonetizationState',
           data: { state: 'stopped', requestId }
         }
-        this.api.tabs.sendMessage(tabId, message, { frameId: Number(frameId) })
+        this.api.tabs.sendMessage(
+          tabId,
+          message,
+          { frameId: Number(frameId) },
+          logLastError('logout')
+        )
       })
     }
     // Clear the token and any other state the popup relies upon
@@ -935,7 +964,12 @@ export class BackgroundScript {
     )
     frames.forEach(frameId => {
       const tabId = request.data.frame.tabId
-      this.api.tabs.sendMessage(tabId, request, { frameId })
+      this.api.tabs.sendMessage(
+        tabId,
+        request,
+        { frameId },
+        logLastError('onFrameAllowedChanged')
+      )
     })
   }
 }

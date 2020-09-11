@@ -12,7 +12,7 @@ set -ex
 SIX_PKG=${SIX_PKG:-com.sec.android.app.sbrowser}
 
 # Uinstall old extension
-adb uninstall com.coil.android.six
+adb uninstall com.coil.android.six || echo "failed to uninstall, may already have been"
 
 # Force stop Samsung Internet
 adb shell am force-stop $SIX_PKG

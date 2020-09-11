@@ -1,4 +1,4 @@
-const forceRedraw = function(element) {
+const forceRedraw = function (element) {
   const disp = element.style.display
   element.style.display = 'none'
   // This doesn't *seem* to do anything though apparently it does
@@ -33,8 +33,8 @@ const forceRedraws = () => {
 }
 
 try {
-  chrome.runtime.getPlatformInfo(function(result) {
-    if (result.os === 'mac') {
+  chrome.runtime.getPlatformInfo(function (result) {
+    if (result && result.os === 'mac') {
       forceRedraws()
     }
   })

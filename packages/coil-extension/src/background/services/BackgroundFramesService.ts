@@ -13,7 +13,7 @@ import {
 import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { timeout } from '../../content/util/timeout'
 
-import { logger, Logger } from './utils'
+import { logger, Logger, logLastError } from './utils'
 
 import GetFrameResultDetails = chrome.webNavigation.GetFrameResultDetails
 import MessageSender = chrome.runtime.MessageSender
@@ -101,9 +101,9 @@ export interface FrameChangedEvent extends FrameEventWithFrame {
 @injectable()
 export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
-  traceLogging = false
-  logEvents = false
-  logTabsInterval = 0
+  traceLogging = true
+  logEvents = true
+  logTabsInterval = 10e3
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
@@ -358,9 +358,14 @@ export class BackgroundFramesService extends EventEmitter {
     for (const [tabId, framesList] of Object.entries(this.tabs)) {
       for (const frame of framesList) {
         if (matcher(frame)) {
-          this.api.tabs.sendMessage(Number(tabId), cmd, {
-            frameId: frame.frameId
-          })
+          this.api.tabs.sendMessage(
+            Number(tabId),
+            cmd,
+            {
+              frameId: frame.frameId
+            },
+            logLastError('sendCommandToFramesMatching')
+          )
         }
       }
     }

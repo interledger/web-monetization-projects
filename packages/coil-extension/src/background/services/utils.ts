@@ -61,3 +61,19 @@ export function createLogger(context: Context) {
     `color: white;`
   )
 }
+
+export function logLastError(from: string): () => void {
+  return () => {
+    if (
+      chrome.runtime.lastError &&
+      chrome.runtime.lastError.message &&
+      !chrome.runtime.lastError.message.startsWith(
+        'The message port closed before a response was received.'
+      )
+    ) {
+      console.log(
+        `runtime.lastError, from: ${from}, msg: ${chrome.runtime.lastError.message}`
+      )
+    }
+  }
+}
