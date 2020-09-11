@@ -70,6 +70,11 @@ jobs:
     steps:
       - checkout
       - *restore_cache
+      - &install_mpg
+        run:
+          name: 'install ffmpeg'
+          command: |
+            sudo apt install -y ffmpeg
       - *yarn_install
       - run:
           name: BROWSER_TYPE=chrome ./test.sh test/playwright/logout-test.ts
@@ -96,6 +101,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
+      - *install_mpg
       - *yarn_install
       - run:
           name: BROWSER_TYPE=chrome ./test.sh test/playwright/logout-test.ts
@@ -138,6 +144,7 @@ jobs:
           command: echo TESTING_ENV_VAR $TESTING_ENV_VAR
       - checkout
       - *restore_cache
+      - *install_mpg
       - *yarn_install
       - run:
           name: Run jest via dynamic compilation
@@ -161,6 +168,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
+      - *install_mpg
       - *yarn_install
       - run:
           name: Lerna run jest via dynamic compilation
