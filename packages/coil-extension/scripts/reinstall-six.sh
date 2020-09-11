@@ -11,16 +11,16 @@ set -ex
 # So can override with the beta
 SIX_PKG=${SIX_PKG:-com.sec.android.app.sbrowser}
 
-## Uinstall old extension
-#adb uninstall com.coil.android.six
-#
-## Force stop Samsung Internet
-#adb shell am force-stop $SIX_PKG
-## Clear Samsung Internet shared settings
-#adb shell pm clear $SIX_PKG
+# Uinstall old extension
+adb uninstall com.coil.android.six
+
+# Force stop Samsung Internet
+adb shell am force-stop $SIX_PKG
+# Clear Samsung Internet shared settings
+adb shell pm clear $SIX_PKG
 
 # Reinstall SIX apk
 adb install -r ./coil-six.apk
 
 # Restart Samsung Internet
-# adb shell am start $SIX_PKG
+adb shell am start $SIX_PKG
