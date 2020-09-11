@@ -64,7 +64,7 @@ jobs:
 
   coil-extension-playwright:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: mcr.microsoft.com/playwright:bionic
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -90,7 +90,7 @@ jobs:
 
   coil-extension-playwright-transpile-only:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: mcr.microsoft.com/playwright:bionic
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -130,7 +130,7 @@ jobs:
 
   jest-all:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: mcr.microsoft.com/playwright:bionic
     resource_class: large
     steps:
       - run:
@@ -157,7 +157,7 @@ jobs:
 
   jest-lerna-all:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: mcr.microsoft.com/playwright:bionic
     steps:
       - checkout
       - *restore_cache
