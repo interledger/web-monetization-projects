@@ -10,7 +10,7 @@ jobs:
   # Run Linting
   lint-all:
     docker:
-        - image: circleci/node:12.18.2-buster-browsers
+        - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       # Download and cache dependencies
@@ -40,7 +40,7 @@ jobs:
 
   coil-extension-package:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -64,7 +64,7 @@ jobs:
 
   coil-extension-playwright:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: circleci/node:14-buster-browsers
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -90,7 +90,7 @@ jobs:
 
   coil-extension-playwright-transpile-only:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: circleci/node:14-buster-browsers
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -117,7 +117,7 @@ jobs:
 
   build-all-package-references-typescript:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -130,7 +130,7 @@ jobs:
 
   jest-all:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: circleci/node:14-buster-browsers
     resource_class: large
     steps:
       - run:
@@ -157,7 +157,7 @@ jobs:
 
   jest-lerna-all:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -178,7 +178,7 @@ jobs:
 
   coil-oauth-scripts-build:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -193,7 +193,7 @@ jobs:
 
   yarn-format-and-upkeep-diff-check:
     docker:
-      - image: circleci/node:12.18.2-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - run:
           name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be empty
