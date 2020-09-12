@@ -51,9 +51,7 @@ The one main difference is the lack of a space before parentheses in function de
 e.g.
 
 ```
-// There *SHOULD* be a space before the parens here
 function prettierStandard () {}
-// maybe prettier was run on this markdown :)
 ```
 
 vs
