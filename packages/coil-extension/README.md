@@ -26,7 +26,7 @@ Additionally, the Coil Extension is built into [Puma browser](https://www.pumabr
 
 ## Requirements
 
-NodeJS 10 or higher
+NodeJS 14 or higher
 
 ## Basic instructions
 
