@@ -419,7 +419,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Coil Extension/Coil_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				DEVELOPMENT_TEAM = W9X45A2YV5;
 				INFOPLIST_FILE = "Coil Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,7 +439,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Coil Extension/Coil_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				DEVELOPMENT_TEAM = W9X45A2YV5;
 				INFOPLIST_FILE = "Coil Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,7 +463,7 @@
 				CODE_SIGN_ENTITLEMENTS = Coil/Coil.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				DEVELOPMENT_TEAM = W9X45A2YV5;
 				INFOPLIST_FILE = Coil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -485,7 +485,7 @@
 				CODE_SIGN_ENTITLEMENTS = Coil/Coil.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				DEVELOPMENT_TEAM = W9X45A2YV5;
 				INFOPLIST_FILE = Coil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
