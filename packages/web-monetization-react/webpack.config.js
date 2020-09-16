@@ -2,6 +2,7 @@
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
+const PnpPlugin = require('pnp-webpack-plugin')
 
 const TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
 
@@ -29,7 +30,12 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       ...(TRANSPILE_ONLY ? require('../../webpack.tsconfig.aliases') : {})
-    }
+    },
+    plugins: [PnpPlugin]
+  },
+
+  resolveLoader: {
+    plugins: [PnpPlugin.moduleLoader(module)]
   },
 
   module: {

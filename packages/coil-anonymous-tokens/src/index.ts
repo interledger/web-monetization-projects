@@ -16,6 +16,8 @@ import {
   verifyProof
 } from '@coil/privacypass-sjcl'
 
+import { SjclEllipticalPoint } from 'sjcl'
+
 import { portableFetch } from './portableFetch'
 
 export function base64url(buf: Buffer): string {
@@ -245,7 +247,7 @@ export class AnonymousTokens {
 
   private _storeNewTokens(
     tokens: BlindToken[],
-    signedPoints: sjcl.SjclEllipticalPoint[]
+    signedPoints: SjclEllipticalPoint[]
   ) {
     for (let i = 0; i < tokens.length; ++i) {
       const encoded = getTokenEncoding(tokens[i], signedPoints[i])

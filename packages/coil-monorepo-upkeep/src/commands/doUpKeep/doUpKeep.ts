@@ -40,31 +40,52 @@ function checkDependencies(
 ) {
   const packageJSONPath = `${subPackage.location}/package.json`
   const subPackageJSON = readPackageJSON(packageJSONPath)
-  let removed = false
+  let changed = false
 
   for (const depsType of depsTypes) {
-    const subPackageDeps = subPackageJSON[depsType]
-    if (!subPackageDeps) {
-      continue
+    if (!subPackageJSON[depsType]) {
+      subPackageJSON[depsType] = {}
+      changed = true
     }
-    Object.keys(subPackageDeps).forEach(depKey => {
-      const rootPackageDepsForType = rootPackageJSON[depsType]
-      if (rootPackageDepsForType && rootPackageDepsForType[depKey]) {
-        log(
-          'subpackage',
-          subPackageJSON.name,
-          `has redundant ${depsType} from root`,
-          depKey
-        )
-        log('root version', rootPackageDepsForType[depKey])
-        log('subpackage version', subPackageDeps[depKey])
-        log('removing')
-        delete subPackageDeps[depKey]
-        removed = true
+
+    const subPackageDeps = subPackageJSON[depsType]
+    // if (!subPackageDeps) {
+    //   continue
+    // }
+    const rootPackageDepsForType = rootPackageJSON[depsType] ?? {}
+    Object.keys(rootPackageDepsForType).forEach(depKey => {
+      const rootVer = rootPackageDepsForType[depKey]
+      const subPackageVer = subPackageDeps[depKey]
+      if (!subPackageVer) {
+        changed = true
+        log(subPackage.name, 'adding root version', depKey, rootVer)
+        subPackageDeps[depKey] = rootVer
+      } else if (subPackageVer !== rootVer) {
+        changed = true
+        log(subPackage.name, 'list', depKey, 'in root package.json')
+        log(subPackage.name, 'removing', depKey, subPackageVer)
+        log(subPackage.name, 'using root version', depKey, rootVer)
+        subPackageDeps[depKey] = rootVer
       }
     })
+    // Object.keys(subPackageDeps).forEach(depKey => {
+    //   // const rootPackageDepsForType = rootPackageJSON[depsType]
+    //   // if (rootPackageDepsForType && rootPackageDepsForType[depKey]) {
+    //   //   log(
+    //   //     'subpackage',
+    //   //     subPackageJSON.name,
+    //   //     `has redundant ${depsType} from root`,
+    //   //     depKey
+    //   //   )
+    //   //   log('root version', rootPackageDepsForType[depKey])
+    //   //   log('subpackage version', subPackageDeps[depKey])
+    //   //   log('removing')
+    //   //   delete subPackageDeps[depKey]
+    //   //   removed = true
+    //   // }
+    // })
   }
-  if (removed) {
+  if (changed) {
     writePackageJSON(packageJSONPath, subPackageJSON)
   }
 }
@@ -93,7 +114,7 @@ function setCommonScriptsAndMergeOverrides(
     repository: rootPackageJSON.repository,
     main: './build',
     types: './build',
-    private: rootPackageJSON.upkeep?.privatePackages ?? false,
+    private: rootPackageJSON.upkeep?.privatePackages ?? undefined,
     author: rootPackageJSON.author,
     license: rootPackageJSON.license,
     $schema: `../${PACKAGE_FOLDER_NAME}/resources/package-json-schema-nested-overrides.json`,
@@ -104,7 +125,7 @@ function setCommonScriptsAndMergeOverrides(
       precommit: 'echo lint-staged runs from root',
       prettier:
         "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
-      format: 'yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet',
+      format: 'yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet',
       'build:ts': 'tsc --build tsconfig.build.json',
       'build:ts:watch': 'yarn build:ts --watch',
       'build:ts:verbose': 'yarn build:ts --verbose',

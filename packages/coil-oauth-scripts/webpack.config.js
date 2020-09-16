@@ -1,6 +1,8 @@
 'use strict'
 
 const path = require('path')
+const PnpPlugin = require('pnp-webpack-plugin')
+
 const TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
 
 console.log({ TRANSPILE_ONLY })
@@ -18,10 +20,14 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.js'],
     alias: {
       ...(TRANSPILE_ONLY ? require('../../webpack.tsconfig.aliases') : {})
-    }
+    },
+    extensions: ['.ts', '.js'],
+    plugins: [PnpPlugin]
+  },
+  resolveLoader: {
+    plugins: [PnpPlugin.moduleLoader(module)]
   },
 
   module: {
@@ -31,7 +37,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'ts-loader',
+            loader: require.resolve('ts-loader'),
             options: {
               // https://github.com/TypeStrong/ts-loader#transpileonly-boolean-defaultfalse
               transpileOnly: TRANSPILE_ONLY,

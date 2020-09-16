@@ -4,6 +4,9 @@ import * as path from 'path'
 import * as webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const PnpPlugin = require('pnp-webpack-plugin')
+
 const ROOT_DIR = __dirname
 
 // Can cut build times down from 30s to 10s on some machines
@@ -38,7 +41,11 @@ const config: webpack.Configuration = {
       ...(TS_LOADER_TRANSPILE_ONLY
         ? require('../../webpack.tsconfig.aliases')
         : {})
-    }
+    },
+    plugins: [PnpPlugin]
+  },
+  resolveLoader: {
+    plugins: [PnpPlugin.moduleLoader(module)]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -77,4 +84,4 @@ const config: webpack.Configuration = {
   }
 }
 
-module.exports = config
+export = config
