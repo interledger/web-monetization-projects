@@ -500,12 +500,9 @@ export class BackgroundScript {
 
     if (state) {
       const total = frameStates.reduce((acc, val) => acc + val.total, 0)
-      //const isPaying = frameStates.reduce((acc, val) => acc || val., false)
+      const isPaying = frameStates.some(state => state.isPaying)
       this.storage.set('monetizedTotal', total)
-      this.storage.set(
-        'isPaying',
-        frameStates.reduce((acc, val) => acc || val.isPaying, false)
-      )
+      this.storage.set('isPaying', isPaying)
     }
     this.storage.set(
       'monetizedFavicon',

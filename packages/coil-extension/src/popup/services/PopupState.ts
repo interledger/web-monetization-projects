@@ -9,6 +9,7 @@ const STORAGE_KEYS = [
   'monetized',
   'monetizedFavicon',
   'monetizedTotal',
+  'isPaying',
   'stickyState',
   'playState',
   'user',
@@ -25,6 +26,7 @@ export class PopupState implements PopupStateType {
   readonly monetized!: boolean
   readonly monetizedFavicon!: string
   readonly monetizedTotal!: number
+  readonly isPaying!: boolean
   readonly user!: User
   readonly validToken!: boolean
 
