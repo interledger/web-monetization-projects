@@ -20,4 +20,3 @@ packages/*/dist
 jest.config.local.js
 
 packages/coil-extension/test/fixtures/coil-oauth-wm.js
-.yarn
