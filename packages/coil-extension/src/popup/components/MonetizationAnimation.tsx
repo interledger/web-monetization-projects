@@ -7,12 +7,12 @@ import { notNullOrUndef } from '../../util/nullables'
 const ANIMATION_INTERVAL = 1800
 
 export const MonetizeAnimation = (props: PopupProps) => {
-  const isPaying = localStorage.getItem('isPaying') === 'true'
-  const [animated, setAnimated] = useState<boolean>(isPaying)
+  const store = props.context.store
+  const [animated, setAnimated] = useState<boolean>(store.isPaying)
 
   useEffect(() => {
     const loopInterval = setInterval(() => {
-      setAnimated(localStorage.getItem('isPaying') === 'true')
+      setAnimated(store.isPaying)
     }, ANIMATION_INTERVAL)
 
     return () => {
