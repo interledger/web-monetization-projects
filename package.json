@@ -11,7 +11,7 @@
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --coverage --verbose",
     "prettier": "prettier --write 'packages/*/*.{html,js,ts,tsx,jsx,md}' 'packages/*/{src,test}/**/*.{ts,tsx,js,jsx,html,md}'",
-    "format": "yarn prettier && YARN_LINT_FIX=1 yarn lint:all --fix --quiet",
+    "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",
     "upkeep": "ts-node -T packages/coil-monorepo-upkeep/upkeep.ts",
     "upkeep:new-package": "ts-node -T packages/coil-monorepo-upkeep/new-package.ts",
     "upkeep:check-updates": "ts-node -T packages/coil-monorepo-upkeep/check-updates.ts",
@@ -36,7 +36,7 @@
     ],
     "*.ts*": [
       "prettier --write",
-      "YARN_LINT_FIX=1 yarn lint --fix"
+      "LINT_FIX=1 yarn lint --fix"
     ]
   },
   "husky": {
@@ -65,12 +65,13 @@
     "@types/node": "12.x",
     "@types/webpack": "^4.41.22",
     "@types/webpack-merge": "^4.1.5",
-    "@typescript-eslint/parser": "4.1.x",
     "@typescript-eslint/eslint-plugin": "4.1.x",
+    "@typescript-eslint/parser": "4.1.x",
     "JSON2016": "^1.0.0",
     "copy-webpack-plugin": "^6.1.0",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jest": "^24.0.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
@@ -100,6 +101,6 @@
     "webpack-merge": "^4.2.2"
   },
   "engines": {
-    "node" : ">= 14.0.0"
+    "node": ">= 14.0.0"
   }
 }
