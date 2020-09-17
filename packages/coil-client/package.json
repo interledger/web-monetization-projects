@@ -44,7 +44,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@types/copy-webpack-plugin": "^6.0.0",
-    "@types/jest": "^26.0.13",
+    "@types/jest": "^26.0.14",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/node": "12.x",
     "@types/node-fetch": "^2.5.7",
