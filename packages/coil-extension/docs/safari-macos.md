@@ -11,10 +11,10 @@ yarn dev-chrome-prod
 
 - First enable the Develop menu:
   Preferences -> Advanced
-  ![img](safari-preferences-advanced-show-develop-menu.png)
+  ![img](./safari-preferences-advanced-show-develop-menu.png)
 - Then:
   Develop -> Allow Unsigned Extensions
-  ![img](safari-menu-develop-allow-unsigned-extensions.png)
+  ![img](./safari-menu-develop-allow-unsigned-extensions.png)
 - Then toggle the extension:
   Preferences -> Extensions
-  ![img](safari-menu-preferences-extensions.png)
+  ![img](./safari-menu-preferences-extensions.png)
