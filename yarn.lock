@@ -1333,7 +1333,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/jsonwebtoken": ^8.5.0
     "@types/node": 12.x
     "@types/node-fetch": ^2.5.7
@@ -1394,7 +1394,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@dier-makr/annotations": 0.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/jsonwebtoken": ^8.5.0
     "@types/node": 12.x
     "@types/node-fetch": ^2.5.7
@@ -1465,7 +1465,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/debug": ^4.1.5
     "@types/firefox": ^0.0.30
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/jsonwebtoken": ^8.5.0
     "@types/long": ^4.0.1
     "@types/node": 12.x
@@ -1545,7 +1545,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/webpack": ^4.41.22
     "@types/webpack-merge": ^4.1.5
@@ -1609,7 +1609,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/long": ^4.0.1
     "@types/node": 12.x
     "@types/node-fetch": ^2.5.7
@@ -1678,7 +1678,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/debug": ^4.1.5
     "@types/get-port": ^4.2.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/tmp": ^0.2.0
     "@types/webpack": ^4.41.22
@@ -1739,7 +1739,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/webpack": ^4.41.22
     "@types/webpack-merge": ^4.1.5
@@ -1794,7 +1794,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/keccak": ^3.0.1
     "@types/node": 12.x
     "@types/sjcl": ^1.0.29
@@ -2047,7 +2047,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/webpack": ^4.41.22
     "@types/webpack-merge": ^4.1.5
@@ -2102,7 +2102,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@dier-makr/annotations": 0.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/webpack": ^4.41.22
     "@types/webpack-merge": ^4.1.5
@@ -2283,7 +2283,7 @@ __metadata:
     "@material-ui/core": ^4.11.0
     "@material-ui/icons": ^4.9.1
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/react": ^16.9.49
     "@types/react-dom": ^16.9.8
@@ -4064,13 +4064,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:26.x, @types/jest@npm:^26.0.13":
+"@types/jest@npm:26.x":
   version: 26.0.13
   resolution: "@types/jest@npm:26.0.13"
   dependencies:
     jest-diff: ^25.2.1
     pretty-format: ^25.2.1
   checksum: 5476d59a99d1552d3ef99179d9ab8a59b24434c1990fda0836b8e6899a6a5fe898b62c0f0b8c9d3308b5c652cb95fca0b3b404028379b306f123a1e872413498
+  languageName: node
+  linkType: hard
+
+"@types/jest@npm:^26.0.14":
+  version: 26.0.14
+  resolution: "@types/jest@npm:26.0.14"
+  dependencies:
+    jest-diff: ^25.2.1
+    pretty-format: ^25.2.1
+  checksum: bddbe82d12217c5217efabcad09e4fbe2c5eaecf9392da9b0edbe4c3d9fb240b3fab914f88c5f3708f6d5046640a2782458944873eae4ac01abcb17d32d3c78f
   languageName: node
   linkType: hard
 
@@ -4524,7 +4534,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/express": ^4.17.8
     "@types/html-webpack-plugin": ^3.2.3
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/node-fetch": ^2.5.7
     "@types/react": ^16.9.49
@@ -4599,7 +4609,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/node-fetch": ^2.5.7
     "@types/uuid": ^8.3.0
@@ -4658,7 +4668,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/react": 16.9.49
     "@types/webpack": ^4.41.22
@@ -4718,7 +4728,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/ajv": ^1.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.22
@@ -4778,7 +4788,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/webpack": ^4.41.22
     "@types/webpack-merge": ^4.1.5
@@ -4834,7 +4844,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@dier-makr/annotations": 0.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/webpack": ^4.41.22
     "@types/webpack-merge": ^4.1.5
@@ -5071,7 +5081,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/webpack": ^4.41.22
     "@types/webpack-merge": ^4.1.5
@@ -22562,7 +22572,7 @@ sjcl@sublimator/sjcl:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.13
+    "@types/jest": ^26.0.14
     "@types/node": 12.x
     "@types/webpack": ^4.41.22
     "@types/webpack-merge": ^4.1.5
