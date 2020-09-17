@@ -61,7 +61,7 @@
     "@types/copy-webpack-plugin": "^6.0.0",
     "@types/jest": "^26.0.14",
     "@types/long": "^4.0.1",
-    "@types/node": "12.x",
+    "@types/node": "^14.10.3",
     "@types/node-fetch": "^2.5.7",
     "@types/uuid": "^8.3.0",
     "@types/webpack": "^4.41.22",

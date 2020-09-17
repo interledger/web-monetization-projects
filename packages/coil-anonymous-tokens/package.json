@@ -45,7 +45,7 @@
     "@types/copy-webpack-plugin": "^6.0.0",
     "@types/jest": "^26.0.14",
     "@types/jsonwebtoken": "^8.5.0",
-    "@types/node": "12.x",
+    "@types/node": "^14.10.3",
     "@types/node-fetch": "^2.5.7",
     "@types/sjcl": "^1.0.29",
     "@types/webpack": "^4.41.22",
