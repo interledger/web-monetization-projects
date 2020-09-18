@@ -22,7 +22,7 @@ describe('PaymentScheduler', () => {
 
   describe('waitTimeWithJitter', () => {
     it('varies by at most JITTER', () => {
-      ps.onSent()
+      //ps.onSent()
       for (let i = 0; i < 1000; i++) {
         const w = ps.waitTimeWithJitter()
         expect(Math.abs(w - M)).toBeLessThan(5_000)
@@ -43,10 +43,10 @@ describe('PaymentScheduler', () => {
       // correctly-computed delay.
       // prettier-ignore
       expect(waits).toStrictEqual([
-         0*M,  1*M,  2*M,  3*M,  4*M,  5*M,  6*M,  7*M,  8*M,  9*M,  9*M,
-        11*M, 11*M, 13*M, 13*M, 15*M, 15*M, 17*M, 17*M, 19*M, 19*M, 19*M,
-        22*M, 22*M, 22*M, 25*M, 25*M, 25*M, 28*M, 28*M, 28*M, 31*M, 31*M,
-        31*M, 31*M, 35*M, 35*M, 35*M, 35*M, 39*M,
+         1*M,  2*M,  3*M,  4*M,  5*M,  6*M,  7*M,  8*M,  9*M, 10*M, 10*M,
+        12*M, 12*M, 14*M, 14*M, 16*M, 16*M, 18*M, 18*M, 20*M, 20*M, 20*M,
+        23*M, 23*M, 23*M, 26*M, 26*M, 26*M, 29*M, 29*M, 29*M, 32*M, 32*M,
+        32*M, 32*M, 36*M, 36*M, 36*M, 36*M, 40*M,
       ])
     })
 
@@ -60,7 +60,7 @@ describe('PaymentScheduler', () => {
       }
       // prettier-ignore
       expect(waits).toStrictEqual([
-        0*M, 1*M, 1*M, 1*M, 1*M, 1*M, 1*M, 1*M, 1*M, 1*M,
+        1*M, 1*M, 1*M, 1*M, 1*M, 1*M, 1*M, 1*M, 1*M, 1*M,
         0*M, 2*M, 0*M, 2*M, 0*M, 2*M, 0*M, 2*M, 0*M, 2*M,
         0*M, 0*M, 3*M, 0*M, 0*M, 3*M, 0*M, 0*M, 3*M, 0*M,
         0*M, 3*M, 0*M, 0*M, 0*M, 4*M, 0*M, 0*M, 0*M, 4*M,
@@ -68,7 +68,7 @@ describe('PaymentScheduler', () => {
     })
 
     it('adjusts the wait time', () => {
-      ps.onSent()
+      //ps.onSent()
       for (let i = 0; i <= 60; i++) {
         expect(ps.waitTime()).toBe(M - i * 1000)
         tick(1000)

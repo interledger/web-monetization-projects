@@ -18,8 +18,10 @@ const PREPAY = 0.1
 @injectable()
 export class PaymentScheduler {
   private sent = 0 // tokens sent
-  private startT = 0
-  private relT = 0 // time relative to first send
+  private startT = Date.now()
+  private stopT = 0
+  // time relative to start. Initially set in the future since the first (scheduled) token isn't until `startT+1m`.
+  private relT = TOKEN_DURATION
   private batchSize = 1 // tokens per batch
   private batchIndex = 0 // index within batch
   private timer?: NodeJS.Timer
@@ -28,11 +30,6 @@ export class PaymentScheduler {
   constructor(@logger('PaymentScheduler') private readonly debug: Logger) {}
 
   onSent(): void {
-    // The very first payment sent starts the scheduler's timer for the remaining
-    // points (just to simplify `timeOfSend`'s calculation).
-    if (this.sent === 0) {
-      this.startT = Date.now()
-    }
     this.sent++
     if (++this.batchIndex === this.batchSize) {
       this.batchIndex = 0
@@ -42,9 +39,16 @@ export class PaymentScheduler {
   }
 
   async wait(): Promise<void> {
+    // Don't pay when paused.
+    if (this.stopT) {
+      this.startT += Date.now() - this.stopT
+      this.stopT = 0
+    }
+
     const ms = this.waitTimeWithJitter()
     this.debug(
-      'waiting %dms before sending payment number %d',
+      'waiting until %s (%dms) before sending payment number %d',
+      new Date(Date.now() + ms),
       ms,
       this.sent + 1
     )
@@ -56,6 +60,7 @@ export class PaymentScheduler {
   }
 
   stop(): void {
+    this.stopT = Date.now()
     if (this.timer) clearTimeout(this.timer)
     if (this.onClose) this.onClose(new Error('closed'))
   }
