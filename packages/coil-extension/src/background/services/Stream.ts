@@ -28,6 +28,13 @@ import { Logger, logger } from './utils'
 
 const { timeout } = asyncUtils
 
+// This the part of the token that is spent immediately on page load. Spending
+// something immediately is necessary to ensure the page knows that the user agent
+// is monetized. But it isn't too high, so that the user doesn't deplete their
+// balance by browsing quickly from page-to-page.
+const INITIAL_SEND_SECONDS = 5
+// The amount set as the `SendStreamMax` when spending a full token.
+const FULL_TOKEN_AMOUNT = 2 ** 64
 const UPDATE_AMOUNT_TIMEOUT = 2000
 let ATTEMPT = 0
 
@@ -93,6 +100,8 @@ export class Stream extends EventEmitter {
   private _coilDomain: string
   private _anonTokens: AnonymousTokens
 
+  private _schedule: PaymentScheduler
+
   private _assetCode: string
   private _assetScale: number
   private _exchangeRate: number
@@ -122,6 +131,7 @@ export class Stream extends EventEmitter {
     this._authToken = token
     this._coilDomain = container.get(tokens.CoilDomain)
     this._anonTokens = container.get(AnonymousTokens)
+    this._schedule = container.get(PaymentScheduler)
 
     this._assetCode = ''
     this._assetScale = 0
@@ -166,24 +176,26 @@ export class Stream extends EventEmitter {
       return
     }
 
-    const initialSendSeconds = 5
-    const payScheduler = this.container.get(PaymentScheduler)
-    const bandwidth = new MaxBandwidth(0)
-    setTimeout(() => {
-      this._debug('finishing first payment')
-      bandwidth.sendMax = 2 ** 64
-    }, 60_000)
+    const hasSentAny = !!this._lastOutgoingMs
+    const bandwidth = new MaxBandwidth(hasSentAny ? FULL_TOKEN_AMOUNT : 0)
+    if (!hasSentAny) {
+      setTimeout(() => {
+        this._debug('finishing first payment')
+        bandwidth.sendMax = FULL_TOKEN_AMOUNT
+      }, 60_000)
+    }
 
     while (this._active) {
       let btpToken: string | undefined
       let plugin, attempt
 
       try {
+        await this._schedule.wait()
         const redeemedToken = await this._anonTokens.getToken(this._authToken)
         btpToken = redeemedToken.btpToken
         // On page load, only send a small piece of the first token. After 1 minute, switch to full tokens.
         if (bandwidth.sendMax === 0) {
-          bandwidth.sendMax = redeemedToken.throughput * initialSendSeconds
+          bandwidth.sendMax = redeemedToken.throughput * INITIAL_SEND_SECONDS
         }
         this._debug(
           'redeemed token with throughput=%d',
@@ -220,8 +232,7 @@ export class Stream extends EventEmitter {
             e.message
           )
           this._anonTokens.removeToken(btpToken)
-          payScheduler.onSent()
-          await payScheduler.wait()
+          this._schedule.onSent()
           continue
         } else {
           this._debug('error streaming. retry in 2s. err=', e.message, e.stack)
@@ -231,7 +242,7 @@ export class Stream extends EventEmitter {
       }
     }
 
-    payScheduler.stop()
+    this._schedule.stop()
     this._looping = false
     this._paying = false
     this._debug('aborted because stream is no longer active.')
@@ -302,6 +313,7 @@ export class Stream extends EventEmitter {
 
   async stop() {
     this._active = false
+    this._schedule.stop()
     if (this._attempt) {
       await this._attempt.stop()
       this._attempt = null
