@@ -50,7 +50,7 @@
     "@typescript-eslint/eslint-plugin": "4.1.x",
     "@typescript-eslint/parser": "4.1.x",
     "JSON2016": "^1.0.0",
-    "copy-webpack-plugin": "^6.1.0",
+    "copy-webpack-plugin": "^6.1.1",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-node": "^0.3.4",
