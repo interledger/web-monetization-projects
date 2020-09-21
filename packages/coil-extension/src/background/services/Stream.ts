@@ -100,8 +100,6 @@ export class Stream extends EventEmitter {
   private _coilDomain: string
   private _anonTokens: AnonymousTokens
 
-  private _schedule: PaymentScheduler
-
   private _assetCode: string
   private _assetScale: number
   private _exchangeRate: number
@@ -110,6 +108,8 @@ export class Stream extends EventEmitter {
     @logger('Stream')
     private readonly _debug: Logger,
     private container: Container,
+    @inject(PaymentScheduler)
+    private _schedule: PaymentScheduler,
     @inject(tokens.StreamDetails)
     {
       requestId,
@@ -131,7 +131,6 @@ export class Stream extends EventEmitter {
     this._authToken = token
     this._coilDomain = container.get(tokens.CoilDomain)
     this._anonTokens = container.get(AnonymousTokens)
-    this._schedule = container.get(PaymentScheduler)
 
     this._assetCode = ''
     this._assetScale = 0
