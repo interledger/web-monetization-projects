@@ -28,11 +28,6 @@ import { Logger, logger } from './utils'
 
 const { timeout } = asyncUtils
 
-// This the part of the token that is spent immediately on page load. Spending
-// something immediately is necessary to ensure the page knows that the user agent
-// is monetized. But it isn't too high, so that the user doesn't deplete their
-// balance by browsing quickly from page-to-page.
-const INITIAL_SEND_SECONDS = 5
 // The amount set as the `SendStreamMax` when spending a full token.
 const FULL_TOKEN_AMOUNT = 2 ** 64
 const UPDATE_AMOUNT_TIMEOUT = 2000
@@ -175,27 +170,16 @@ export class Stream extends EventEmitter {
       return
     }
 
-    const hasSentAny = !!this._lastOutgoingMs
-    const bandwidth = new MaxBandwidth(hasSentAny ? FULL_TOKEN_AMOUNT : 0)
-    if (!hasSentAny) {
-      setTimeout(() => {
-        this._debug('finishing first payment')
-        bandwidth.sendMax = FULL_TOKEN_AMOUNT
-      }, 60_000)
-    }
-
     while (this._active) {
       let btpToken: string | undefined
       let plugin, attempt
+
+      const hasSentAny = !!this._lastOutgoingMs
 
       try {
         await this._schedule.wait()
         const redeemedToken = await this._anonTokens.getToken(this._authToken)
         btpToken = redeemedToken.btpToken
-        // On page load, only send a small piece of the first token. After 1 minute, switch to full tokens.
-        if (bandwidth.sendMax === 0) {
-          bandwidth.sendMax = redeemedToken.throughput * INITIAL_SEND_SECONDS
-        }
         this._debug(
           'redeemed token with throughput=%d',
           redeemedToken.throughput
@@ -206,7 +190,7 @@ export class Stream extends EventEmitter {
           .rebind(tokens.NoContextLoggerName)
           .toConstantValue(`StreamAttempt:${this._requestId}:${++ATTEMPT}`)
         attempt = this._attempt = new StreamAttempt({
-          bandwidth,
+          bandwidth: hasSentAny ? new MaxBandwidth(FULL_TOKEN_AMOUNT) : new FirstMinuteBandwidth(redeemedToken.throughput),
           onMoney: this.onMoney.bind(this),
           requestId: this._requestId,
           plugin,
@@ -347,7 +331,7 @@ export class Stream extends EventEmitter {
 }
 
 interface StreamAttemptOptions {
-  bandwidth: MaxBandwidth
+  bandwidth: Bandwidth
   onMoney: (event: OnMoneyEvent) => void
   requestId: string
   plugin: IlpPluginBtp
@@ -357,7 +341,7 @@ interface StreamAttemptOptions {
 
 class StreamAttempt {
   private readonly _onMoney: (event: OnMoneyEvent) => void
-  private readonly _bandwidth: MaxBandwidth
+  private readonly _bandwidth: Bandwidth
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private readonly _debug: Logger
   private readonly _plugin: IlpPluginBtp
@@ -553,7 +537,41 @@ class StreamAttempt {
   }
 }
 
-class MaxBandwidth {
+interface Bandwidth {
+  getStreamSendMax(): number
+}
+
+// Send the first token (on page load) piecewise. After 1 minute, switch to full tokens.
+class FirstMinuteBandwidth implements Bandwidth {
+  private delay: number
+  private sendMax: number
+  private payments: number[]
+  constructor(private throughput: number) {
+    // This the part of the token that is spent immediately on page load. Spending
+    // something immediately is necessary to ensure the page knows that the user agent
+    // is monetized. But it isn't too high, so that the user doesn't deplete their
+    // balance by browsing quickly from page-to-page.
+    this.delay = 5
+    this.sendMax = this.delay * throughput
+    this.payments = [10, 20, FULL_TOKEN_AMOUNT]
+    this.tick()
+  }
+
+  getStreamSendMax(): number {
+    return this.sendMax
+  }
+
+  private tick() {
+    if (!this.payments.length) return
+    setTimeout(() => {
+      this.delay = this.payments.shift()!
+      this.sendMax += this.delay * this.throughput
+      this.tick()
+    }, this.delay * 1000)
+  }
+}
+
+class MaxBandwidth implements Bandwidth {
   constructor(public sendMax: number) {}
   getStreamSendMax(): number {
     return this.sendMax
