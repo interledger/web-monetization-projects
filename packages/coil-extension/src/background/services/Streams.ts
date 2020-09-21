@@ -6,6 +6,7 @@ import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import * as tokens from '../../types/tokens'
 
+import { PaymentScheduler } from './PaymentScheduler'
 import { Stream } from './Stream'
 
 @injectable()
@@ -35,6 +36,7 @@ export class Streams extends EventEmitter {
   ) {
     const child = this.container.createChild()
     child.bind(tokens.StreamDetails).toConstantValue({ ...options })
+    child.bind(PaymentScheduler).toSelf().inTransientScope()
     this._streams[id] = child.get(Stream)
     this._streams[id].on('money', details => {
       this.emit('money', { url: options.initiatingUrl, id, ...details })
