@@ -1486,7 +1486,7 @@ __metadata:
     addons-linter: ^2.3.0
     copy-webpack-plugin: ^6.1.1
     crx-hotreload: ^1.0.4
-    debug: ^4.1.1
+    debug: ^4.2.0
     eslint: ^7.9.0
     eslint-config-prettier: ^6.11.0
     eslint-import-resolver-node: ^0.3.4
@@ -1688,7 +1688,7 @@ __metadata:
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
-    debug: ^4.1.1
+    debug: ^4.2.0
     eslint: ^7.9.0
     eslint-config-prettier: ^6.11.0
     eslint-import-resolver-node: ^0.3.4
@@ -2302,7 +2302,7 @@ __metadata:
     copy-webpack-plugin: ^6.1.1
     crx-hotreload: ^1.0.4
     css-loader: ^4.3.0
-    debug: ^4.1.1
+    debug: ^4.2.0
     eslint: ^7.9.0
     eslint-config-prettier: ^6.11.0
     eslint-import-resolver-node: ^0.3.4
@@ -8566,6 +8566,18 @@ __metadata:
   dependencies:
     ms: ^2.1.1
   checksum: 619feb53b115f1a8341365b8aa58a8757e6632738587d4b61b25627b74891211cb20e31fdbea37fec766e575a60cf456f7a02d6f9eddfdcef80caa6a4b0fc042
+  languageName: node
+  linkType: hard
+
+"debug@npm:^4.2.0":
+  version: 4.3.0
+  resolution: "debug@npm:4.3.0"
+  dependencies:
+    ms: 2.1.2
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 847d2760d1493cfaef53fb67d8943c6afaba30472d7527450c19919d230dde04f2275dd8dd5c2874c7103787c190d3b5d3dbc2ee7596a12d853a2ce35c4b8b1b
   languageName: node
   linkType: hard
 
