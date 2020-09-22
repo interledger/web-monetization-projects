@@ -18,3 +18,9 @@ yarn dev-chrome-prod
 - Then toggle the extension:
   Preferences -> Extensions
   ![img](./safari-menu-preferences-extensions.png)
+
+### Debugging
+
+- Enable debugging:
+  Develop -> Web Extension Background Pages 
+  ![image](https://user-images.githubusercontent.com/525211/93846107-54d59480-fccd-11ea-9d81-121ebbc02d3c.png)
