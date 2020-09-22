@@ -5,18 +5,20 @@
 # debugging.
 set -ex
 
-"$CHROME" --pack-extension=$PWD/dist \
-         --pack-extension-key=$COIL_SIX_PACK_KEY
+SIX_DIR=${SIX_DIR:-six}
 
-mv dist.crx six/assets
+"$CHROME" --pack-extension="$PWD"/dist \
+         --pack-extension-key="$COIL_SIX_PACK_KEY"
 
-pushd six
+mv dist.crx "$SIX_DIR"/assets
+
+pushd "$SIX_DIR"
 jar cf ../coil-six.apk .
 popd
 
 jarsigner -verbose -keystore \
-  $COIL_SIX_KEYSTORE_PATH \
-  -storepass $COIL_SIX_KEYSTORE_PASS \
+  "$COIL_SIX_KEYSTORE_PATH" \
+  -storepass "$COIL_SIX_KEYSTORE_PASS" \
   coil-six.apk coilkey
 
 echo 'To uninstall: "adb uninstall com.coil.android.six"'
