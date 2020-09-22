@@ -50,7 +50,7 @@
     "@types/node-fetch": "^2.5.7",
     "@types/webpack": "^4.41.22",
     "@types/webpack-merge": "^4.1.5",
-    "@typescript-eslint/eslint-plugin": "4.1.x",
+    "@typescript-eslint/eslint-plugin": "4.2.x",
     "@typescript-eslint/parser": "4.1.x",
     "JSON2016": "^1.0.0",
     "copy-webpack-plugin": "^6.1.1",
