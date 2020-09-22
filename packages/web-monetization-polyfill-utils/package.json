@@ -17,8 +17,6 @@
   "main": "./build",
   "types": "./build",
   "scripts": {
-    "build": "webpack-command --config webpack.config.js",
-    "build-prod": "webpack-command --config webpack.config.js --mode production",
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",
