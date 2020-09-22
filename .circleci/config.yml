@@ -181,7 +181,7 @@ jobs:
             xvfb-run -a yarn lerna run --stream test:coverage
       - *save_cache
 
-  coil-oauth-scripts-build:
+  packages-build-scripts:
     docker:
       - image: circleci/node:14-buster-browsers
     steps:
@@ -189,11 +189,9 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: Webpack Oauth Script
+          name: Packages Build Scripts
           command: |
-            cd packages/coil-oauth-scripts
-            yarn build:ts:verbose
-            yarn build
+            - yarn lerna run --concurrency=1 --stream build
       - *save_cache
 
   yarn-format-and-upkeep-diff-check:
@@ -225,7 +223,7 @@ workflows:
       - yarn-format-and-upkeep-diff-check
       - build-all-package-references-typescript
       - coil-extension-package
-      - coil-oauth-scripts-build
+      - packages-build-scripts
       - jest-all:
           context: web-monetization-tests
           filters:
