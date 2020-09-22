@@ -8,3 +8,5 @@ six/META-INF
 safari/Coil/Coil.xcodeproj/project.xcworkspace/
 safari/Coil/build
 safari/Coil/Coil.xcodeproj/xcuserdata/
+safari-local
+six-local
