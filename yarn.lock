@@ -4631,7 +4631,7 @@ __metadata:
     react: ^16.13.1
     react-dom: ^16.13.1
     react-helmet: ^6.1.0
-    react-hot-loader: ^4.12.21
+    react-hot-loader: ^4.13.0
     rimraf: ^3.0.2
     ts-jest: ^26.4.0
     ts-loader: ^8.0.4
@@ -18854,9 +18854,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-hot-loader@npm:^4.12.21":
-  version: 4.12.21
-  resolution: "react-hot-loader@npm:4.12.21"
+"react-hot-loader@npm:^4.13.0":
+  version: 4.13.0
+  resolution: "react-hot-loader@npm:4.13.0"
   dependencies:
     fast-levenshtein: ^2.0.6
     global: ^4.3.0
@@ -18867,13 +18867,13 @@ fsevents@^1.2.7:
     shallowequal: ^1.1.0
     source-map: ^0.7.3
   peerDependencies:
-    "@types/react": ^15.0.0 || ^16.0.0
-    react: ^15.0.0 || ^16.0.0
-    react-dom: ^15.0.0 || ^16.0.0
+    "@types/react": "^15.0.0 || ^16.0.0 || ^17.0.0 "
+    react: "^15.0.0 || ^16.0.0 || ^17.0.0 "
+    react-dom: "^15.0.0 || ^16.0.0 || ^17.0.0 "
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 371deabe49c3afd5316fbef0cd42e03bb33bd0ae4da215107a8560260769ab35159c1298921a36d101c3e5a6179bbb5c6cedc55cd6fc0ad9acb8f3683dcdbdff
+  checksum: f1df03e93206b379b605f3da983f700d5c8a16e3ebedf25ca1311067f4dc95cf968206af44d0b734a5505619958f2da5efe9df4bf749ed6a4989e1f6ea5d2915
   languageName: node
   linkType: hard
 
