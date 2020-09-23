@@ -6,13 +6,34 @@ import { Colors } from '../consts/Colors'
 import { FrameSpec } from '../../types/FrameSpec'
 
 import { PopupIconService } from './PopupIconService'
+import { logger, Logger } from './utils'
 
 @injectable()
 export class TabStates {
   activeTab: number | null = null
+  debugFrequency = 10e3
   private tabStates: { [tab: number]: TabState } = {}
 
-  constructor(private icons: PopupIconService) {}
+  constructor(
+    @logger('TabStates')
+    private debug: Logger,
+    private icons: PopupIconService
+  ) {
+    if (this.debugFrequency) {
+      setInterval(() => {
+        this.debug(
+          JSON.stringify(
+            {
+              activeTab: this.activeTab,
+              tabStates: this.tabStates
+            },
+            null,
+            2
+          )
+        )
+      }, this.debugFrequency)
+    }
+  }
 
   set(tab: number, state: Partial<TabState> = {}) {
     const existingState = this.get(tab)
