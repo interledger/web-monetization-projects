@@ -8,7 +8,7 @@ import { getMonthAndDay, isNewYears, isXMASPeriod } from '../../util/seasons'
 export class PopupIconService {
   constructor(
     @inject(tokens.WextApi)
-    private api: typeof window.chrome
+    private api = chrome
   ) {}
 
   getActive() {

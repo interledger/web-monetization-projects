@@ -27,7 +27,7 @@ export class PopupBrowserAction {
     private tabOpener: TabOpener,
     private icons: PopupIconService,
     @inject(tokens.CoilDomain) private coilDomain: string,
-    @inject(tokens.WextApi) private api: typeof window.chrome
+    @inject(tokens.WextApi) private api = chrome
   ) {
     this.openLogin = this.tabOpener.opener(`${this.coilDomain}/login`)
     // disable popup if on android

@@ -110,7 +110,7 @@ export class BackgroundFramesService extends EventEmitter {
     @logger('BackgroundFramesService')
     private log: Logger,
     @inject(tokens.WextApi)
-    private api: typeof window.chrome
+    private api /*: typeof window. */ = chrome
   ) {
     super()
   }

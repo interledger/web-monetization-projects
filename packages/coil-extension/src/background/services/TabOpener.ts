@@ -5,7 +5,7 @@ import { openTab } from '../../util/openTab'
 
 @injectable()
 export class TabOpener {
-  constructor(@inject(tokens.WextApi) private api: typeof window.chrome) {}
+  constructor(@inject(tokens.WextApi) private api = chrome) {}
 
   open(url: string) {
     openTab(this.api, url)

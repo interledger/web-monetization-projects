@@ -44,7 +44,6 @@ import { StreamAssociations } from './StreamAssociations'
 import MessageSender = chrome.runtime.MessageSender
 
 import { BuildConfig } from '../../types/BuildConfig'
-import { debug } from '../../content/util/logging'
 
 @injectable()
 export class BackgroundScript {
@@ -177,7 +176,7 @@ export class BackgroundScript {
   private setTabsOnRemovedListener() {
     // Remove tab state when the tab is closed to prevent memory leak
     this.api.tabs.onRemoved.addListener(tabId => {
-      this.log('removing tab with id', tabId)
+      this.log('tabs.onRemoved removing tab with id', tabId)
       this.tabStates.clear(tabId)
 
       // clean up the stream of that tab
@@ -187,7 +186,7 @@ export class BackgroundScript {
     if (this.buildConfig.logTabsApiEvents) {
       this.api.tabs.onReplaced.addListener((added, removed) => {
         this.log(
-          'tabs.onReplaced.: replaced tab with id' +
+          'tabs.onReplaced: replaced tab with id' +
             JSON.stringify({ added, removed })
         )
       })

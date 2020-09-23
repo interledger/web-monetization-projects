@@ -6,10 +6,7 @@ import { LocalStorageUpdate } from '../../types/commands'
 
 @injectable()
 export class BackgroundStorageService extends StorageService {
-  constructor(
-    storage: Storage,
-    @inject(tokens.WextApi) private api: typeof window.chrome
-  ) {
+  constructor(storage: Storage, @inject(tokens.WextApi) private api = chrome) {
     super(storage, (key: string) => {
       const message: LocalStorageUpdate = {
         command: 'localStorageUpdate',

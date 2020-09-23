@@ -1,4 +1,4 @@
-export function openTab(api: typeof window.chrome, url: string) {
+export function openTab(api: typeof window.chrome, url: string): void {
   api.tabs.query({ currentWindow: true }, tabs => {
     const existingTab = tabs.find(el => {
       return el.url === url
