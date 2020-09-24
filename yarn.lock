@@ -1344,7 +1344,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -1404,7 +1404,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -1487,7 +1487,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -1555,7 +1555,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -1622,7 +1622,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -1689,7 +1689,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     get-port: ^5.1.1
@@ -1747,7 +1747,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -1807,7 +1807,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -2055,7 +2055,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -2110,7 +2110,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -2303,7 +2303,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     file-loader: ^6.1.0
@@ -4601,7 +4601,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     express: ^4.17.1
@@ -4671,7 +4671,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -4730,7 +4730,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -4791,7 +4791,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     html-webpack-plugin: ^4.5.0
@@ -4848,7 +4848,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -4906,7 +4906,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -5142,7 +5142,7 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
@@ -9839,9 +9839,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.20.6":
-  version: 7.20.6
-  resolution: "eslint-plugin-react@npm:7.20.6"
+"eslint-plugin-react@npm:^7.21.1":
+  version: 7.21.1
+  resolution: "eslint-plugin-react@npm:7.21.1"
   dependencies:
     array-includes: ^3.1.1
     array.prototype.flatmap: ^1.2.3
@@ -9856,7 +9856,7 @@ __metadata:
     string.prototype.matchall: ^4.0.2
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7
-  checksum: e962f31c322f9b1a41187ef20c0c59cb0ca4185959d8a5345132512cc041d760d25fc6576e5763b86fcc01cb8918328400b793b184035384650b22e02c6f2c24
+  checksum: b35355d47767e240553cbd217fa7423159b308cea54967ea356f222469fe5e7d57d589bfbea65757688ac9e1760732ccb8d383379b640b37695037b265dd2b18
   languageName: node
   linkType: hard
 
@@ -22513,7 +22513,7 @@ sjcl@sublimator/sjcl:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.20.6
+    eslint-plugin-react: ^7.21.1
     eslint-plugin-react-hooks: ^4.1.2
     eslint-plugin-standard: ^4.0.1
     husky: ^4.3.0
