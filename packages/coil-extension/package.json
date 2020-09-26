@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@abraham/reflection": "^0.7.0",
+    "@cliqz-oss/node-firefox-connect": "^1.2.1",
     "@coil/anonymous-tokens": "^0.0.0",
     "@coil/client": "^0.0.0",
     "@coil/playwright-utils": "^0.0.0",

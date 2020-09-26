@@ -30,6 +30,7 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
+    "@cliqz-oss/node-firefox-connect": "^1.2.1",
     "@coil/client": "0.0.0",
     "@web-monetization/types": "0.0.0",
     "debug": "^4.2.0",

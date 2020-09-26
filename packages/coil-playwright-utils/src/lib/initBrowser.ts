@@ -5,6 +5,8 @@ import * as tmp from 'tmp'
 
 import * as env from './env'
 import { debug } from './debug'
+import { EXTENSION_PATH } from './env'
+import { RemoteFirefox } from './RemoteFirefox'
 
 const JUGGLER_MESSAGE = `Juggler listening on`
 
@@ -72,23 +74,40 @@ export async function initBrowser({
       ...viewOptions
     })
   } else {
+    // firefox -no-remote -wait-for-browser -foreground -profile /var/folders/wq/0t68fgjn491cxqphq1pg7ht00000gn/T/playwright_firefoxdev_profile-IKUofH -juggler 0 -silent
+
     const port = await getPort()
-    const getJugglerEndpoint = jugglerEndpointWatcher()
-    const options: RunOptions = {
-      firefox: firefox.executablePath(),
-      sourceDir: env.EXTENSION_PATH,
-      args: [`-juggler=${port}`]
-    }
-
-    debug('launching firefox, with options: ', options)
-    await webExt.cmd.run(options, {
-      shouldExitProgram: false
+    const ff = await firefox.launch({
+      headless: false,
+      args: [`--start-debugger-server=${port}`]
     })
+    const context = ff.newContext({ viewport: viewOptions.viewport })
 
-    const ff = await firefox.connect({
-      wsEndpoint: getJugglerEndpoint()
-    })
+    console.log(port)
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const client = await require('@cliqz-oss/node-firefox-connect')(port)
+    const remote = new RemoteFirefox(client)
+    console.log(client)
+    debug(await remote.installTemporaryAddon(EXTENSION_PATH))
+    return context
 
-    return ff.newContext({ viewport: viewOptions.viewport })
+    // const port = await getPort()
+    // const getJugglerEndpoint = jugglerEndpointWatcher()
+    // const options: RunOptions = {
+    //   firefox: firefox.executablePath(),
+    //   sourceDir: env.EXTENSION_PATH,
+    //   args: [`-juggler=0`, '-silent', '-no-remote', '-wait-for-browser', '-foreground']
+    // }
+    //
+    // debug('launching firefox, with options: ', options)
+    // await webExt.cmd.run(options, {
+    //   shouldExitProgram: false
+    // })
+    //
+    // const ff = await firefox.connect({
+    //   wsEndpoint: getJugglerEndpoint()
+    // })
+    //
+    // return ff.newContext({ viewport: viewOptions.viewport })
   }
 }

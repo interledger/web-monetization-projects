@@ -1288,7 +1288,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cliqz-oss/node-firefox-connect@npm:1.2.1":
+"@cliqz-oss/node-firefox-connect@npm:1.2.1, @cliqz-oss/node-firefox-connect@npm:^1.2.1":
   version: 1.2.1
   resolution: "@cliqz-oss/node-firefox-connect@npm:1.2.1"
   dependencies:
@@ -1441,6 +1441,7 @@ __metadata:
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.11.5
     "@babel/preset-typescript": ^7.10.4
+    "@cliqz-oss/node-firefox-connect": ^1.2.1
     "@coil/anonymous-tokens": ^0.0.0
     "@coil/client": ^0.0.0
     "@coil/playwright-utils": ^0.0.0
@@ -1663,6 +1664,7 @@ __metadata:
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.11.5
     "@babel/preset-typescript": ^7.10.4
+    "@cliqz-oss/node-firefox-connect": ^1.2.1
     "@coil/client": 0.0.0
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
