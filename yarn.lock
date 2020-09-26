@@ -1336,7 +1336,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -1396,7 +1396,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -1479,7 +1479,7 @@ __metadata:
     crx-hotreload: ^1.0.4
     debug: ^4.2.0
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -1547,7 +1547,7 @@ __metadata:
     copy-webpack-plugin: ^6.1.1
     deepmerge: ^4.2.2
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -1614,7 +1614,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -1681,7 +1681,7 @@ __metadata:
     copy-webpack-plugin: ^6.1.1
     debug: ^4.2.0
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -1739,7 +1739,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -1799,7 +1799,7 @@ __metadata:
     btoa: ^1.2.1
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -2047,7 +2047,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -2102,7 +2102,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -2295,7 +2295,7 @@ __metadata:
     css-loader: ^4.3.0
     debug: ^4.2.0
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -4593,7 +4593,7 @@ __metadata:
     body-parser: ^1.19.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -4663,7 +4663,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -4722,7 +4722,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -4783,7 +4783,7 @@ __metadata:
     ajv: ^6.12.5
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -4840,7 +4840,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -4898,7 +4898,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -5134,7 +5134,7 @@ __metadata:
     copy-webpack-plugin: ^6.1.1
     crx-hotreload: ^1.0.4
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
@@ -9742,16 +9742,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^6.11.0":
-  version: 6.11.0
-  resolution: "eslint-config-prettier@npm:6.11.0"
+"eslint-config-prettier@npm:^6.12.0":
+  version: 6.12.0
+  resolution: "eslint-config-prettier@npm:6.12.0"
   dependencies:
     get-stdin: ^6.0.0
   peerDependencies:
     eslint: ">=3.14.1"
   bin:
     eslint-config-prettier-check: bin/cli.js
-  checksum: 59efd906c78d47753a673c205ef515fdab19cd6ea0fd992c9cb2366804861746238244526ab565ccc7448569f5472ce7646a77d0c9998787192e4ebae95df71d
+  checksum: 9371c0a8d05df36f3698247e703118a8eb95fa887aabc4b1e189c21e248ab9c49c3b8e5621f42826b89bbfd05aa52493ffddf0c41219db9b6e4df20e46e21da0
   languageName: node
   linkType: hard
 
@@ -22570,7 +22570,7 @@ sjcl@sublimator/sjcl:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.1.1
     eslint: ^7.9.0
-    eslint-config-prettier: ^6.11.0
+    eslint-config-prettier: ^6.12.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.0
     eslint-plugin-jest: ^24.0.2
