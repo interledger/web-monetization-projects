@@ -1452,7 +1452,7 @@ __metadata:
     "@material-ui/core": ^4.11.0
     "@material-ui/icons": ^4.9.1
     "@material-ui/styles": ^4.10.0
-    "@types/chrome": 0.0.123
+    "@types/chrome": 0.0.124
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/debug": ^4.1.5
     "@types/firefox": ^0.0.30
@@ -3851,13 +3851,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:0.0.123":
-  version: 0.0.123
-  resolution: "@types/chrome@npm:0.0.123"
+"@types/chrome@npm:0.0.124":
+  version: 0.0.124
+  resolution: "@types/chrome@npm:0.0.124"
   dependencies:
     "@types/filesystem": "*"
     "@types/har-format": "*"
-  checksum: a37f48541e91bf33d2edeb4b8dfc2865b6e6f8d44314c7fe059b5d6ddaffefea9ebadd4d976c2489a01737e9ddd9a017c624286afc81f5111da72aa0acaec529
+  checksum: 6499edca5f608dd48651b20d57d9fb30bbcb02cd695cd94d879a11dba7b9492c618edc6b8b5f718e82b58eceea94fb920c871546c2c3bc867595cb7dd020d527
   languageName: node
   linkType: hard
 
