@@ -31,24 +31,25 @@
       "size" : "128x128"
     },
     {
+      "filename" : "coil-mac.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "CoilLogo (1).png",
+      "filename" : "coil-mac@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "CoilLogo (1)-1.png",
+      "filename" : "coil-appstore.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "CoilLogo (2).png",
+      "filename" : "coil-appstore@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
