@@ -30,7 +30,8 @@ export const MonetizeAnimation = (props: PopupProps) => {
     const listener = (msg: ToPopupMessage) => {
       if (
         msg.command === 'localStorageUpdate' &&
-        msg.key === 'monetizedTotal'
+        msg.key === 'monetizedTotal' &&
+        props.context.store.monetizedTotal > 0
       ) {
         setLastPacket(new Date())
         setAnimated(true)
