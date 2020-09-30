@@ -49,23 +49,24 @@ export const MonetizeAnimation = (props: PopupProps) => {
     }
   }, [])
 
+  const hasMonetized = props.context.store.monetizedTotal > 0
+  // eslint-disable-next-line no-nested-ternary
+  const src = animated
+    ? '/res/stream_loop.svg'
+    : hasMonetized
+    ? '/res/stream_still.svg'
+    : '/res/stream_connect.svg'
+
   return (
     <>
-      {animated ? (
-        <img
-          key={'monetized-animation-svg'}
-          src='/res/stream_loop.svg'
-          width='171'
-          height='22'
-        />
-      ) : (
-        <img
-          key={'monetized-animation-svg'}
-          src='/res/stream_still.svg'
-          width='171'
-          height='22'
-        />
-      )}
+      <span>{JSON.stringify({ src, animated, hasMonetized })}</span>
+      <img
+        alt='animation'
+        key={'monetized-animation-svg'}
+        src={src}
+        width='171'
+        height='22'
+      />
     </>
   )
 }
