@@ -13,6 +13,7 @@ export const MonetizeAnimation = (props: PopupProps) => {
   lastPacketRef.current = lastPacket
 
   useEffect(() => {
+    // We use window.setTimeout later, due to @types/node setTimeout types
     let animateTimeout: number | null
 
     const loopHandler = () => {
@@ -44,7 +45,7 @@ export const MonetizeAnimation = (props: PopupProps) => {
     return () => {
       props.context.runtime.onMessageRemoveListener(listener)
       if (animateTimeout != null) {
-        clearTimeout(animateTimeout)
+        window.clearTimeout(animateTimeout)
       }
     }
   }, [])
@@ -55,18 +56,7 @@ export const MonetizeAnimation = (props: PopupProps) => {
     ? '/res/stream_loop.svg'
     : hasMonetized
     ? '/res/stream_still.svg'
-    : '/res/stream_connect.svg'
+    : '/res/stream_connect_2.svg'
 
-  return (
-    <>
-      <span>{JSON.stringify({ src, animated, hasMonetized })}</span>
-      <img
-        alt='animation'
-        key={'monetized-animation-svg'}
-        src={src}
-        width='171'
-        height='22'
-      />
-    </>
-  )
+  return <img key={src} alt='animation' src={src} width='171' height='22' />
 }
