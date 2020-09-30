@@ -1474,7 +1474,7 @@ __metadata:
     "@webexts/build-utils": ^0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.6.0
+    addons-linter: ^2.7.0
     copy-webpack-plugin: ^6.1.1
     crx-hotreload: ^1.0.4
     debug: ^4.2.0
@@ -2289,7 +2289,7 @@ __metadata:
     "@webexts/build-utils": 0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.6.0
+    addons-linter: ^2.7.0
     copy-webpack-plugin: ^6.1.1
     crx-hotreload: ^1.0.4
     css-loader: ^4.3.0
@@ -5498,9 +5498,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "addons-linter@npm:2.6.0"
+"addons-linter@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "addons-linter@npm:2.7.0"
   dependencies:
     "@babel/runtime": 7.11.2
     ajv: 6.12.5
@@ -5510,7 +5510,7 @@ __metadata:
     columnify: 1.5.4
     common-tags: 1.8.0
     deepmerge: 4.2.2
-    dispensary: 0.56.0
+    dispensary: 0.57.0
     es6-promisify: 6.1.1
     eslint: 7.9.0
     eslint-plugin-no-unsanitized: 3.1.2
@@ -5523,10 +5523,10 @@ __metadata:
     glob: 7.1.6
     is-mergeable-object: 1.1.1
     jed: 1.1.1
-    mdn-browser-compat-data: 1.0.35
+    mdn-browser-compat-data: 1.0.39
     os-locale: 5.0.0
     pino: 6.6.1
-    postcss: 7.0.34
+    postcss: 7.0.35
     probe-image-size: 5.0.0
     relaxed-json: 1.0.3
     semver: 7.3.2
@@ -5542,7 +5542,7 @@ __metadata:
       optional: true
   bin:
     addons-linter: bin/addons-linter
-  checksum: 677c94450b430576692d4100fa8488589e7d1c137958bd419857ff562f8b0ba83c47791236c425945b664ffa96a08bf9736fb3a735344a4cc299a91baff33f9e
+  checksum: ad81a0a0359ffa98ea02befc2e466c004007f6edb30e9fe6dd56a210124fcb514a26f0d3a05fb157c79d2bf2aa5f401c709ba183812d16e18d8226cf5cf7f2cb
   languageName: node
   linkType: hard
 
@@ -9030,9 +9030,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dispensary@npm:0.56.0":
-  version: 0.56.0
-  resolution: "dispensary@npm:0.56.0"
+"dispensary@npm:0.57.0":
+  version: 0.57.0
+  resolution: "dispensary@npm:0.57.0"
   dependencies:
     async: ~3.2.0
     natural-compare-lite: ~1.4.0
@@ -9043,7 +9043,7 @@ __metadata:
     yargs: ~15.4.0
   bin:
     dispensary: bin/dispensary
-  checksum: bd05aafe4986078697e0f130ce8955bdaf74d83124b549c39c5c0d962df9eebbacc3c1cfa76941f8158b296e111ebf3c8da751b160ee10c986211fe79a00dd8a
+  checksum: 29a125fe4c1643e937e9db97c63ec9adb52c30ff63d6c224b38b32bb6104e3dcf87d687d69f0f3d276436f2ea985485288709e797e5c70f046f4cf3be91cb5e5
   languageName: node
   linkType: hard
 
@@ -15636,6 +15636,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"mdn-browser-compat-data@npm:1.0.39":
+  version: 1.0.39
+  resolution: "mdn-browser-compat-data@npm:1.0.39"
+  dependencies:
+    extend: 3.0.2
+  checksum: b5bf291624e71a21bfd44839d21179575c2aa2e406fabe09fe69216c0273343935f5068855ee468eec9648b375c0d09811076fe3db047f05f6c511825b8f82d5
+  languageName: node
+  linkType: hard
+
 "meant@npm:^1.0.1":
   version: 1.0.2
   resolution: "meant@npm:1.0.2"
@@ -18174,7 +18183,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:7.0.34, postcss@npm:^7.0.14, postcss@npm:^7.0.32, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
+"postcss@npm:7.0.35":
+  version: 7.0.35
+  resolution: "postcss@npm:7.0.35"
+  dependencies:
+    chalk: ^2.4.2
+    source-map: ^0.6.1
+    supports-color: ^6.1.0
+  checksum: 8a979ea9799dd48399337708a395ddb8cf0e328515201ed35c99f5ba5eaa7688eae65764c570bf49b5be0b106226e2f222abc210de068b3d3da9a9a3bbb70567
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^7.0.14, postcss@npm:^7.0.32, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
   version: 7.0.34
   resolution: "postcss@npm:7.0.34"
   dependencies:
