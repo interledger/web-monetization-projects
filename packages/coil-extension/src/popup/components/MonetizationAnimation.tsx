@@ -13,6 +13,7 @@ export const MonetizeAnimation = (props: PopupProps) => {
   lastPacketRef.current = lastPacket
 
   useEffect(() => {
+    // We use window.setTimeout later, due to @types/node setTimeout types
     let animateTimeout: number | null
 
     const loopHandler = () => {
@@ -44,28 +45,18 @@ export const MonetizeAnimation = (props: PopupProps) => {
     return () => {
       props.context.runtime.onMessageRemoveListener(listener)
       if (animateTimeout != null) {
-        clearTimeout(animateTimeout)
+        window.clearTimeout(animateTimeout)
       }
     }
   }, [])
 
-  return (
-    <>
-      {animated ? (
-        <img
-          key={'monetized-animation-svg'}
-          src='/res/stream_loop.svg'
-          width='171'
-          height='22'
-        />
-      ) : (
-        <img
-          key={'monetized-animation-svg'}
-          src='/res/stream_still.svg'
-          width='171'
-          height='22'
-        />
-      )}
-    </>
-  )
+  const hasMonetized = props.context.store.monetizedTotal > 0
+  // eslint-disable-next-line no-nested-ternary
+  const src = animated
+    ? '/res/stream_loop.svg'
+    : hasMonetized
+    ? '/res/stream_still.svg'
+    : '/res/stream_connect_2.svg'
+
+  return <img key={src} alt='animation' src={src} width='171' height='22' />
 }
