@@ -205,6 +205,10 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
+          name: Yarn Dedupe Check
+          command: |
+            yarn dedupe --check
+      - run:
           name: Yarn format git diff --exit-code
           command: |
             yarn format
