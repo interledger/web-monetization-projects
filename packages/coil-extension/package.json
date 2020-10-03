@@ -97,7 +97,7 @@
     "@wext/shipit": "^0.2.1",
     "JSON2016": "^1.0.0",
     "addons-linter": "^2.7.0",
-    "copy-webpack-plugin": "^6.1.1",
+    "copy-webpack-plugin": "^6.2.0",
     "crx-hotreload": "^1.0.4",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
