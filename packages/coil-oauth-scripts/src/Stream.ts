@@ -197,7 +197,7 @@ export class Stream {
       const stream = connection.createStream()
       stream.setSendMax(initialSendMaxAmount)
 
-      const promise = new Promise((resolve, reject) => {
+      const promise = new Promise<void>((resolve, reject) => {
         const boundOutgoingMoney = (sentAmount: string) => {
           const receipt = stream.receipt
             ? stream.receipt.toString('base64')
