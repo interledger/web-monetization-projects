@@ -127,7 +127,7 @@ export class HistoryDb {
   private async getSiteEntries(assetCode: string, entries: number) {
     const sites: SitesEntry[] = []
 
-    await new Promise(resolve => {
+    await new Promise<void>(resolve => {
       const idbRequest = this.db
         .transaction(STORE_NAME)
         .objectStore(STORE_NAME)

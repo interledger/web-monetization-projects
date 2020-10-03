@@ -33,7 +33,7 @@ export class DomService {
 
   async documentReadyStateComplete() {
     while (this.document.readyState !== 'complete') {
-      await new Promise(resolve => {
+      await new Promise<void>(resolve => {
         this.document.addEventListener(
           'readystatechange',
           () => {
