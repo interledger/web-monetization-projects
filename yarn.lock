@@ -4796,7 +4796,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.1
-    ts-json-schema-generator: ^0.74.0
+    ts-json-schema-generator: ^0.75.0
     ts-loader: ^8.0.4
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0-pre.63
@@ -21603,9 +21603,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:^0.74.0":
-  version: 0.74.0
-  resolution: "ts-json-schema-generator@npm:0.74.0"
+"ts-json-schema-generator@npm:^0.75.0":
+  version: 0.75.0
+  resolution: "ts-json-schema-generator@npm:0.75.0"
   dependencies:
     "@types/json-schema": ^7.0.6
     commander: ~6.1.0
@@ -21614,7 +21614,7 @@ sjcl@sublimator/sjcl:
     typescript: ~4.0.3
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: d773c7adf9551132b21904eb7cc7b69fb7b11d28157c8ce5bec47d7dbf228f547452a158aefc5136e23d71a0d4a1abfdace75d4f804e06a40c27bdfc25a02724
+  checksum: 316548bb10f4a3eb202f95729a12f3f4c071694eebf78bc47c41fc5aaee68bc800069a4c167429999428c0486f19a9431043b2a4d05b31e20d194aac038faf06
   languageName: node
   linkType: hard
 

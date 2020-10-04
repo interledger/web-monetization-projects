@@ -67,7 +67,7 @@
     "prettier": "^2.1.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.4.1",
-    "ts-json-schema-generator": "^0.74.0",
+    "ts-json-schema-generator": "^0.75.0",
     "ts-loader": "^8.0.4",
     "ts-node": "^9.0.0",
     "ts-node-dev": "^1.0.0-pre.63",
