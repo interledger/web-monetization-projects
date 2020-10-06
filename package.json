@@ -63,7 +63,6 @@
     "@types/copy-webpack-plugin": "^6.0.0",
     "@types/jest": "^26.0.14",
     "@types/node": "^14.10.3",
-    "@types/webpack": "^4.41.22",
     "@types/webpack-merge": "^4.1.5",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
@@ -93,11 +92,10 @@
     "ts-node-dev": "^1.0.0-pre.63",
     "tsconfig-paths": "^3.9.0",
     "typescript": "4.1.0-dev.20201005",
-    "webpack": "^4.44.2",
+    "webpack": "next",
     "webpack-bundle-analyzer": "^3.9.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-command": "^0.5.0",
-    "webpack-dev-server": "^3.11.0",
+    "webpack-cli": "next",
+    "webpack-dev-server": "next",
     "webpack-merge": "^4.2.2"
   },
   "engines": {
