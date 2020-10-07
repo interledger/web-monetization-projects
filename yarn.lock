@@ -2326,7 +2326,7 @@ __metadata:
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0-pre.63
     tsconfig-paths: ^3.9.0
-    typeface-roboto: ^0.0.75
+    typeface-roboto: ^1.1.13
     typescript: 4.1.0-dev.20201006
     uuid: ^8.3.1
     web-ext: ^5.1.0
@@ -21895,10 +21895,10 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typeface-roboto@npm:^0.0.75":
-  version: 0.0.75
-  resolution: "typeface-roboto@npm:0.0.75"
-  checksum: ee56f5cc5720b2c15ee851652f3584a53d56ec2d1448dc757e0097808071f4d7d6843e66e343483a92e94d7b3f3a9436153517818834a367977bea888fc6d429
+"typeface-roboto@npm:^1.1.13":
+  version: 1.1.13
+  resolution: "typeface-roboto@npm:1.1.13"
+  checksum: d8f68902575211262605fb50147084b295d410f376314d1b4d55d08e4dbb74339a1817c82a7df051694b3e3663a9d0c0179b728101e8403d906b89735b0e97e0
   languageName: node
   linkType: hard
 
