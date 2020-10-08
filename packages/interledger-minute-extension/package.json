@@ -74,7 +74,7 @@
     "@typescript-eslint/parser": "^4.4.0",
     "@wext/shipit": "^0.2.1",
     "JSON2016": "^1.0.0",
-    "addons-linter": "^2.7.0",
+    "addons-linter": "^2.8.0",
     "copy-webpack-plugin": "^6.2.0",
     "crx-hotreload": "^1.0.4",
     "css-loader": "^4.3.0",
