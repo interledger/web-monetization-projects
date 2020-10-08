@@ -29,6 +29,7 @@ Then type in "terminal":
 ![spotlight-terminal](./build-for-designers-spotlight-terminal.png)
 
 Give or take, it should look something like this:
+
 ![terminal-looks-like](./build-for-designers-terminal-looks-like.png)
 
 Type in the following:
@@ -145,7 +146,7 @@ It will download various packages from the NPM (Node Package Manager) registry.
 
 ### Building the extension
 
-First `cd` into the extension subpackage folder
+First `cd` into the extension subpackage folder:
 
 ```
 cd ~/web-monetization-projects/packages/coil-extension
