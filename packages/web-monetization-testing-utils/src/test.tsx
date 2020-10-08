@@ -1,3 +1,5 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { MonetizationExtendedDocument } from '@web-monetization/types'
 
 import { MonetizationImplTest } from './index'
@@ -17,7 +19,14 @@ function makeLogger(logElSelector: string) {
   }
 }
 
+const Index = () => {
+  const items = ['a', 'b', 'c', 'd']
+  return <h1>{JSON.stringify(items)}</h1>
+}
+
 ;(async function main() {
+  ReactDOM.render(<Index />, document.querySelector('#react-root'))
+
   const log = makeLogger('#log')
 
   const suite = new MonetizationImplTest(
