@@ -11,26 +11,27 @@ No problem. We'll walk you through it! You can wash your hands after!
 
 - MacOS
 - Chrome Browser
-- NodeJS 14
-- Git
+- Git - Version control system
+- NodeJS 14 - JavaScript Engine
+- Yarn - NodeJS Package Managers
 
 Given you're a designer, let us be a little presumptive and assume you're on a Mac.
 We also trust you can install Chrome without any special instruction.
-If you already have NodeJS/Git already installed, then skip to "Cloning The Repo"
+If you already have NodeJS/Git/Yarn installed, then skip to "Cloning The Repo"
 
 #### Open that Terminal!
 
 We may as well get it out of the way right? Open that terminal!
 
 Hit cmd+space to open Spotlight:
-![spotlight-open](./build-for-designers-spotlight-open.png)
+![spotlight-open](./images/build-for-designers-spotlight-open.png)
 
 Then type in "terminal":
-![spotlight-terminal](./build-for-designers-spotlight-terminal.png)
+![spotlight-terminal](./images/build-for-designers-spotlight-terminal.png)
 
 Give or take, it should look something like this:
 
-![terminal-looks-like](./build-for-designers-terminal-looks-like.png)
+![terminal-looks-like](./images/build-for-designers-terminal-looks-like.png)
 
 Type in the following:
 
@@ -62,7 +63,7 @@ If already installed, skip to the "Install Node JavaScript Engine" section.
 
 > The Missing Package Manager for macOS
 
-![install-homebrew](./build-for-designers-install-homebrew.png)
+![install-homebrew](./images/build-for-designers-install-homebrew.png)
 
 Go to the website and copy the [installation](https://brew.sh/#install) command.
 Then paste it into the terminal and follow the instructions.
@@ -83,7 +84,7 @@ In fact, the build tools are written in JavaScript also, however they are using 
 Cmd+click [>THIS<](https://github.com/nvm-sh/nvm#install--update-script) link to
 open instructions on how to install the Node Version Manager (nvm for short).
 
-![nvm](./build-for-designers-nvm.png)
+![nvm](./images/build-for-designers-nvm.png)
 
 Follow the instructions.
 
@@ -104,6 +105,14 @@ It should echo something like the following:
 ```
 v14.9.0
 ```
+
+### Installing Yarn
+
+Yarn is a package manager for NodeJS.
+Follow the steps [here](https://classic.yarnpkg.com/en/docs/install#mac-stable)
+
+If you aren't sure which option to use to install, choose "Installation Script":
+![yarn-installation-script](./images/build-for-designers-yarn-installation-script.png)
 
 ### Cloning The Extension Repository
 
@@ -161,7 +170,7 @@ yarn dev-chrome-prod
 This command builds the extension.
 
 When the output looks like the following, you will know when the extension has been built:
-![fully-built](./build-for-designers-build-finished.png)
+![fully-built](./images/build-for-designers-build-finished.png)
 
 It never exits, as it watches for changes to the source code, and rebuilds upon modifications.
 To exit: type Ctrl+c, which will kill the build script.
@@ -169,13 +178,13 @@ To exit: type Ctrl+c, which will kill the build script.
 ### Loading the extension in Chrome Browser
 
 Enter `chrome://extensions` into the address bar, then enable "Developer Mode":
-![enable-developer-mode](./build-for-designers-chrome-extensions-developer-mode.png)
+![enable-developer-mode](./images/build-for-designers-chrome-extensions-developer-mode.png)
 
 Next click the "Load Unpacked" button, which will show a Finder dialogue to
 choose the folder to load.
 
 Hit cmd+shift+g keys, which will open up another dialogue to type in the folder name:
-![quick-goto-folder](./build-for-designers-chrome-extensions-load-unpacked-goto.png)
+![quick-goto-folder](./images/build-for-designers-chrome-extensions-load-unpacked-goto.png)
 
 You will want the full path to the built extension:
 
@@ -185,11 +194,11 @@ Substitute `nicholasdudfield` for the output of the `whoami` command in the term
 
 Hit the "Select" button:
 
-![select-button](./build-for-designers-chrome-extensions-load-unpacked-select-2.png)
+![select-button](./images/build-for-designers-chrome-extensions-load-unpacked-select-2.png)
 
 Disable the chrome store version and enable the CoilDev-\$Date version:
 
-![disable-store-brought](./build-for-designers-chrome-extensions-disable-chrome-store.png)
+![disable-store-brought](./images/build-for-designers-chrome-extensions-disable-chrome-store.png)
 
 You should now be using the development version of the extension!
 Check if the latest features are available!
