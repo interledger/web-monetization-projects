@@ -27,7 +27,7 @@ const TSCONFIG = TS_LOADER_TRANSPILE_ONLY
 const config: webpack.Configuration = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: {
-    index: './src/test.ts'
+    index: './src/test.tsx'
   },
   output: {
     filename: '[name].js',
@@ -38,6 +38,7 @@ const config: webpack.Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
+      'react-dom': '@hot-loader/react-dom',
       ...(TS_LOADER_TRANSPILE_ONLY
         ? require('../../webpack.tsconfig.aliases')
         : {})
