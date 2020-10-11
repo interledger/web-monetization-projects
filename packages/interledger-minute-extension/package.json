@@ -90,7 +90,7 @@
     "eslint-plugin-react": "^7.21.3",
     "eslint-plugin-react-hooks": "^4.1.2",
     "eslint-plugin-standard": "^4.0.1",
-    "file-loader": "^6.1.0",
+    "file-loader": "^6.1.1",
     "husky": "^4.3.0",
     "jest": "^26.5.2",
     "lerna": "^3.22.1",
