@@ -67,7 +67,7 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.3.0",
-    "jest": "^26.5.2",
+    "jest": "^26.5.3",
     "jsonwebtoken": "^8.5.1",
     "lerna": "^3.22.1",
     "lint-staged": "^10.4.0",
