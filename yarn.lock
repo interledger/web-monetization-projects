@@ -4754,7 +4754,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.4.0
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
-    ajv: ^6.12.5
+    ajv: ^6.12.6
     copy-webpack-plugin: ^6.2.0
     eslint: ^7.11.0
     eslint-config-prettier: ^6.12.0
@@ -5626,15 +5626,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:*, ajv@npm:6.12.5, ajv@npm:^6.1.0, ajv@npm:^6.10.0, ajv@npm:^6.10.2, ajv@npm:^6.12.3, ajv@npm:^6.12.4, ajv@npm:^6.12.5, ajv@npm:^6.9.1":
-  version: 6.12.5
-  resolution: "ajv@npm:6.12.5"
+"ajv@npm:*, ajv@npm:^6.1.0, ajv@npm:^6.10.0, ajv@npm:^6.10.2, ajv@npm:^6.12.3, ajv@npm:^6.12.4, ajv@npm:^6.12.5, ajv@npm:^6.12.6, ajv@npm:^6.9.1":
+  version: 6.12.6
+  resolution: "ajv@npm:6.12.6"
   dependencies:
     fast-deep-equal: ^3.1.1
     fast-json-stable-stringify: ^2.0.0
     json-schema-traverse: ^0.4.1
     uri-js: ^4.2.2
-  checksum: d9ec559bd71be2479b91d293a5b14c96d60ba89f471d8b3369443830b6c72954bdc38f480194413f45f46fc250c8bd769275584ffde033aeb3c56cc218868d95
+  checksum: 19a8f3b0a06001eb68e6268f4f9f04424b32baadd5df6ba8292cd473e22e5f4019ed9ab17c3e3510394178ed8bef9b42ad0bdb5c675d65f042421a774780ce1a
   languageName: node
   linkType: hard
 
@@ -5647,6 +5647,18 @@ __metadata:
     json-schema-traverse: ^0.4.1
     uri-js: ^4.2.2
   checksum: e6170c10b6448432220ec8979a2e56f85d1e1a4d9c03d8b45a98cdbf6a03e24873e244777637f1af2ad68888323473807343873fa6f69644474ef63f843be556
+  languageName: node
+  linkType: hard
+
+"ajv@npm:6.12.5":
+  version: 6.12.5
+  resolution: "ajv@npm:6.12.5"
+  dependencies:
+    fast-deep-equal: ^3.1.1
+    fast-json-stable-stringify: ^2.0.0
+    json-schema-traverse: ^0.4.1
+    uri-js: ^4.2.2
+  checksum: d9ec559bd71be2479b91d293a5b14c96d60ba89f471d8b3369443830b6c72954bdc38f480194413f45f46fc250c8bd769275584ffde033aeb3c56cc218868d95
   languageName: node
   linkType: hard
 

@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@web-monetization/types": "0.0.0",
-    "ajv": "^6.12.5",
+    "ajv": "^6.12.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.13.0",
