@@ -4835,7 +4835,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.1
-    ts-json-schema-generator: ^0.75.0
+    ts-json-schema-generator: ^0.76.1
     ts-loader: ^8.0.4
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0-pre.63
@@ -7805,7 +7805,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^6.0.0, commander@npm:^6.1.0, commander@npm:~6.1.0":
+"commander@npm:^6.0.0, commander@npm:^6.1.0":
   version: 6.1.0
   resolution: "commander@npm:6.1.0"
   checksum: ef1e310c3f430b84f8818ec9c6e5ce1b84909616eb2c1b1a79f646bc25fbca156eccf2ecf19f07e77a08dc519728d53d1300f94f3b2ad93de65add66044dfce6
@@ -10792,7 +10792,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-json-stable-stringify@npm:2.x, fast-json-stable-stringify@npm:^2.0.0":
+"fast-json-stable-stringify@npm:2.x, fast-json-stable-stringify@npm:^2.0.0, fast-json-stable-stringify@npm:^2.1.0":
   version: 2.1.0
   resolution: "fast-json-stable-stringify@npm:2.1.0"
   checksum: 7df3fabfe445d65953b2d9d9d3958bd895438b215a40fb87dae8b2165c5169a897785eb5d51e6cf0eb03523af756e3d82ea01083f6ac6341fe16db532fee3016
@@ -11812,7 +11812,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"glob@npm:7.1.6, glob@npm:^7.0.0, glob@npm:^7.0.3, glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6, glob@npm:~7.1.6":
+"glob@npm:7.1.6, glob@npm:^7.0.0, glob@npm:^7.0.3, glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6":
   version: 7.1.6
   resolution: "glob@npm:7.1.6"
   dependencies:
@@ -21857,18 +21857,19 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:^0.75.0":
-  version: 0.75.0
-  resolution: "ts-json-schema-generator@npm:0.75.0"
+"ts-json-schema-generator@npm:^0.76.1":
+  version: 0.76.1
+  resolution: "ts-json-schema-generator@npm:0.76.1"
   dependencies:
     "@types/json-schema": ^7.0.6
-    commander: ~6.1.0
-    glob: ~7.1.6
+    commander: ^6.1.0
+    fast-json-stable-stringify: ^2.1.0
+    glob: ^7.1.6
     json-stable-stringify: ^1.0.1
     typescript: ~4.0.3
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: 316548bb10f4a3eb202f95729a12f3f4c071694eebf78bc47c41fc5aaee68bc800069a4c167429999428c0486f19a9431043b2a4d05b31e20d194aac038faf06
+  checksum: 75a21116b4d96185eff06c959613e769a5bec9ea8e3dfa9a178519b241c3061e10fb413e66b0593b14cd0256f527bd608b6d05815586e95de4a5b963f7e4345d
   languageName: node
   linkType: hard
 
