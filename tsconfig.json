@@ -57,6 +57,9 @@
       "@web-monetization/wext/content": [
         "packages/web-monetization-wext/src/content"
       ],
+      "@coil/cli": [
+        "packages/coil-cli/src"
+      ],
       "@coil/playwright-utils": [
         "packages/coil-playwright-utils/src"
       ],
