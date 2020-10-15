@@ -54,6 +54,15 @@ export interface ContentScriptInit extends Command {
  * content -> background
  * browser.runtime.sendMessage
  */
+export interface AdaptedPageDetails extends Command {
+  command: 'adaptedPageDetails'
+  data: { url: string; channelId?: string }
+}
+
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
 export interface PauseWebMonetization extends Command {
   command: 'pauseWebMonetization'
 }
@@ -179,6 +188,7 @@ export type ToBackgroundMessage =
   | CheckIFrameIsAllowedFromIFrameContentScript
   | ReportCorrelationIdFromIFrameContentScript
   | OnFrameAllowedChanged
+  | AdaptedPageDetails
 
 export type IconState =
   | 'streaming-paused'

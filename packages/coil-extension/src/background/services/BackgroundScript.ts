@@ -44,6 +44,7 @@ import { StreamAssociations } from './StreamAssociations'
 import MessageSender = chrome.runtime.MessageSender
 
 import { BuildConfig } from '../../types/BuildConfig'
+import { debug } from '../../content/util/logging'
 
 @injectable()
 export class BackgroundScript {
@@ -64,12 +65,12 @@ export class BackgroundScript {
     private log: Logger,
 
     private client: GraphQlClient,
-    @inject(tokens.WextApi)
-    private api: typeof window.chrome,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
     @inject(tokens.BuildConfig)
-    private buildConfig: BuildConfig
+    private buildConfig: BuildConfig,
+    @inject(tokens.WextApi)
+    private api = chrome
   ) {}
 
   get activeTab() {
@@ -291,6 +292,38 @@ export class BackgroundScript {
     // this.db.incrementSite(details)
   }
 
+  async adaptedPageDetails(variables: { url: string; channelId?: string }) {
+    const query = `query getPage($url: String!, $channelId: String) {
+  adaptedPage(videoUrl: $url, channelId: $channelId) {
+    paymentPointer
+    channelImage
+  }
+}`
+    interface GetPageData {
+      adaptedPage: {
+        paymentPointer: string
+        channelImage: string
+      }
+    }
+
+    const paymentPointerQuery = await this.client.query<GetPageData>({
+      query,
+      token: null,
+      variables
+    })
+
+    debug({ paymentPointerQuery })
+
+    const data = paymentPointerQuery.data
+    const adaptedPage = data?.adaptedPage
+    const paymentPointer = adaptedPage?.paymentPointer
+    const channelImage = adaptedPage?.channelImage
+    return {
+      channelImage,
+      paymentPointer
+    }
+  }
+
   private setBrowserActionStateFromAuthAndTabState() {
     const token = this.auth.getStoredToken()
 
@@ -396,6 +429,9 @@ export class BackgroundScript {
         break
       case 'onFrameAllowedChanged':
         sendResponse(await this.onFrameAllowedChanged(request, sender))
+        break
+      case 'adaptedPageDetails':
+        sendResponse(await this.adaptedPageDetails(request.data))
         break
       default:
         sendResponse(false)
