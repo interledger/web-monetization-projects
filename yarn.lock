@@ -1359,7 +1359,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -1418,7 +1418,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -1509,7 +1509,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     uuid: ^8.3.1
@@ -1571,7 +1571,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -1640,7 +1640,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     uuid: ^8.3.1
@@ -1704,7 +1704,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     web-ext: ^5.2.0
@@ -1760,7 +1760,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -1822,7 +1822,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -2100,7 +2100,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -2156,7 +2156,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -2357,7 +2357,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typeface-roboto: ^1.1.13
     typescript: ^4.0.3
@@ -4598,7 +4598,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -4656,7 +4656,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     uuid: ^8.3.1
@@ -4714,7 +4714,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -4782,7 +4782,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     uuid: ^8.3.1
@@ -4838,7 +4838,7 @@ __metadata:
     ts-json-schema-generator: ^0.76.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -4895,7 +4895,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -5132,7 +5132,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -21898,9 +21898,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:^1.0.0-pre.63":
-  version: 1.0.0-pre.63
-  resolution: "ts-node-dev@npm:1.0.0-pre.63"
+"ts-node-dev@npm:^1.0.0-pre.65":
+  version: 1.0.0-pre.65
+  resolution: "ts-node-dev@npm:1.0.0-pre.65"
   dependencies:
     chokidar: ^3.4.0
     dateformat: ~1.0.4-1.2.3
@@ -21922,7 +21922,7 @@ sjcl@sublimator/sjcl:
   bin:
     ts-node-dev: lib/bin.js
     tsnd: lib/bin.js
-  checksum: 532243e2de5ba0b46de79b1e276602e4abcd42a1f7a245346349fdddb5764faadf8afb848e9d27569822271d43a3820c9de73e5ba7b07a49716d9da110bc9207
+  checksum: 50b175d3a209b5faecaca8c18fafadc0e65abde2cc543170f8eae5e607c8a6e158bd1c4a5af1f05dde76561c3d1e86b5f8a23eb77fd61acf6f7b6a709f9e2789
   languageName: node
   linkType: hard
 
@@ -22838,7 +22838,7 @@ sjcl@sublimator/sjcl:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
