@@ -63,7 +63,7 @@
     "inversify-logger-middleware": "^3.1.0",
     "jsonwebtoken": "^8.5.1",
     "jss": "^10.4.0",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "reduct": "^3.3.1",
     "uuid": "^8.3.1"
