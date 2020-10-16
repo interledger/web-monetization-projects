@@ -28,7 +28,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.1.0, @babel/core@npm:^7.11.6, @babel/core@npm:^7.12.1, @babel/core@npm:^7.7.5":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.12.1, @babel/core@npm:^7.7.5":
   version: 7.12.1
   resolution: "@babel/core@npm:7.12.1"
   dependencies:
@@ -1099,7 +1099,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.11.5, @babel/preset-env@npm:^7.12.1":
+"@babel/preset-env@npm:^7.12.1":
   version: 7.12.1
   resolution: "@babel/preset-env@npm:7.12.1"
   dependencies:
@@ -1190,7 +1190,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.10.4, @babel/preset-typescript@npm:^7.12.1":
+"@babel/preset-typescript@npm:^7.12.1":
   version: 7.12.1
   resolution: "@babel/preset-typescript@npm:7.12.1"
   dependencies:
@@ -1857,12 +1857,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
-    "@babel/core": ^7.11.6
+    "@babel/core": ^7.12.1
     "@babel/plugin-proposal-class-properties": ^7.10.4
     "@babel/plugin-proposal-decorators": ^7.10.5
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
-    "@babel/preset-env": ^7.11.5
-    "@babel/preset-typescript": ^7.10.4
+    "@babel/preset-env": ^7.12.1
+    "@babel/preset-typescript": ^7.12.1
     "@coil/client": 0.0.0
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
@@ -1896,7 +1896,7 @@ __metadata:
     ts-jest: ^26.4.1
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
+    ts-node-dev: ^1.0.0-pre.65
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -21933,7 +21933,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:^1.0.0-pre.63, ts-node-dev@npm:^1.0.0-pre.65":
+"ts-node-dev@npm:^1.0.0-pre.65":
   version: 1.0.0-pre.65
   resolution: "ts-node-dev@npm:1.0.0-pre.65"
   dependencies:
