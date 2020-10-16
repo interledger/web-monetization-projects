@@ -66,30 +66,6 @@ export class AdaptedContentService {
         this.contentRuntime.sendMessage(cmd, resolve)
       }
     )
-
-    //     const query = `query getPage($url: String!, $channelId: String) {
-    //   adaptedPage(videoUrl: $url, channelId: $channelId) {
-    //     paymentPointer
-    //     channelImage
-    //   }
-    // }`
-    //
-    //     const paymentPointerQuery = await this.client.query<GetPageData>({
-    //       query,
-    //       token: null,
-    //       variables
-    //     })
-    //
-    //     debug({ paymentPointerQuery })
-    //
-    //     const data = paymentPointerQuery.data
-    //     const adaptedPage = data?.adaptedPage
-    //     const paymentPointer = adaptedPage?.paymentPointer
-    //     const channelImage = adaptedPage?.channelImage
-    //     return {
-    //       channelImage,
-    //       paymentPointer
-    //     }
   }
 
   async checkAdaptedContent() {
@@ -103,7 +79,7 @@ export class AdaptedContentService {
         currentUrl,
         adaptedSite
       )
-      console.log('ADAPTED', { channelImage, paymentPointer })
+      debug('found adapted site', { channelImage, paymentPointer })
       if (this.runs !== run) {
         debug('stale checkAdaptedContent')
         return

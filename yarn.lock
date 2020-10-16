@@ -28,7 +28,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.1.0, @babel/core@npm:^7.12.1, @babel/core@npm:^7.7.5":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.11.6, @babel/core@npm:^7.12.1, @babel/core@npm:^7.7.5":
   version: 7.12.1
   resolution: "@babel/core@npm:7.12.1"
   dependencies:
@@ -1099,7 +1099,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.12.1":
+"@babel/preset-env@npm:^7.11.5, @babel/preset-env@npm:^7.12.1":
   version: 7.12.1
   resolution: "@babel/preset-env@npm:7.12.1"
   dependencies:
@@ -1190,7 +1190,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.12.1":
+"@babel/preset-typescript@npm:^7.10.4, @babel/preset-typescript@npm:^7.12.1":
   version: 7.12.1
   resolution: "@babel/preset-typescript@npm:7.12.1"
   dependencies:
@@ -1358,61 +1358,6 @@ __metadata:
     ts-loader: ^8.0.5
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0-pre.65
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.0.3
-    webpack: ^4.44.2
-    webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
-    webpack-command: ^0.5.0
-    webpack-dev-server: ^3.11.0
-    webpack-merge: ^4.2.2
-  languageName: unknown
-  linkType: soft
-
-"@coil/cli@workspace:packages/coil-cli":
-  version: 0.0.0-use.local
-  resolution: "@coil/cli@workspace:packages/coil-cli"
-  dependencies:
-    "@babel/core": ^7.11.6
-    "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.11.0
-    "@babel/preset-env": ^7.11.5
-    "@babel/preset-typescript": ^7.10.4
-    "@coil/client": 0.0.0
-    "@commitlint/cli": ^11.0.0
-    "@commitlint/config-conventional": ^11.0.0
-    "@types/copy-webpack-plugin": ^6.0.0
-    "@types/jest": ^26.0.14
-    "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.22
-    "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.4.1
-    "@typescript-eslint/parser": ^4.4.1
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.2.1
-    eslint: ^7.11.0
-    eslint-config-prettier: ^6.12.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.0
-    eslint-plugin-jsx-a11y: ^6.3.1
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.1.4
-    eslint-plugin-promise: ^4.2.1
-    eslint-plugin-react: ^7.21.4
-    eslint-plugin-react-hooks: ^4.1.2
-    eslint-plugin-standard: ^4.0.1
-    husky: ^4.3.0
-    jest: ^26.5.3
-    lerna: ^3.22.1
-    lint-staged: ^10.4.0
-    prettier: ^2.1.1
-    rimraf: ^3.0.2
-    ts-jest: ^26.4.1
-    ts-loader: ^8.0.5
-    ts-node: ^9.0.0
-    ts-node-dev: ^1.0.0-pre.63
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.3
     webpack: ^4.44.2
@@ -1907,6 +1852,61 @@ __metadata:
   checksum: 60cd84e2e0066c76f0ffd7942bc2f6568f8e55d096025d60d24219612f4144c8e6121b6ff90d059392e1a8bf2cf0a198f8ae16c5f7cbc868ab631f95f45e7b0c
   languageName: node
   linkType: hard
+
+"@coil/wm-utils@workspace:packages/coil-wm-utils":
+  version: 0.0.0-use.local
+  resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
+  dependencies:
+    "@babel/core": ^7.11.6
+    "@babel/plugin-proposal-class-properties": ^7.10.4
+    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.11.0
+    "@babel/preset-env": ^7.11.5
+    "@babel/preset-typescript": ^7.10.4
+    "@coil/client": 0.0.0
+    "@commitlint/cli": ^11.0.0
+    "@commitlint/config-conventional": ^11.0.0
+    "@types/copy-webpack-plugin": ^6.0.0
+    "@types/jest": ^26.0.14
+    "@types/node": ^14.10.3
+    "@types/webpack": ^4.41.22
+    "@types/webpack-merge": ^4.1.5
+    "@typescript-eslint/eslint-plugin": ^4.4.1
+    "@typescript-eslint/parser": ^4.4.1
+    JSON2016: ^1.0.0
+    copy-webpack-plugin: ^6.2.1
+    eslint: ^7.11.0
+    eslint-config-prettier: ^6.12.0
+    eslint-import-resolver-node: ^0.3.4
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-jest: ^24.1.0
+    eslint-plugin-jsx-a11y: ^6.3.1
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-prettier: ^3.1.4
+    eslint-plugin-promise: ^4.2.1
+    eslint-plugin-react: ^7.21.4
+    eslint-plugin-react-hooks: ^4.1.2
+    eslint-plugin-standard: ^4.0.1
+    husky: ^4.3.0
+    jest: ^26.5.3
+    lerna: ^3.22.1
+    lint-staged: ^10.4.0
+    prettier: ^2.1.1
+    rimraf: ^3.0.2
+    ts-jest: ^26.4.1
+    ts-loader: ^8.0.5
+    ts-node: ^9.0.0
+    ts-node-dev: ^1.0.0-pre.63
+    tsconfig-paths: ^3.9.0
+    typescript: ^4.0.3
+    webpack: ^4.44.2
+    webpack-bundle-analyzer: ^3.9.0
+    webpack-cli: ^3.3.12
+    webpack-command: ^0.5.0
+    webpack-dev-server: ^3.11.0
+    webpack-merge: ^4.2.2
+  languageName: unknown
+  linkType: soft
 
 "@commitlint/cli@npm:^11.0.0":
   version: 11.0.0
@@ -21933,7 +21933,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:^1.0.0-pre.65":
+"ts-node-dev@npm:^1.0.0-pre.63, ts-node-dev@npm:^1.0.0-pre.65":
   version: 1.0.0-pre.65
   resolution: "ts-node-dev@npm:1.0.0-pre.65"
   dependencies:

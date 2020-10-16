@@ -293,35 +293,7 @@ export class BackgroundScript {
   }
 
   async adaptedPageDetails(variables: { url: string; channelId?: string }) {
-    const query = `query getPage($url: String!, $channelId: String) {
-  adaptedPage(videoUrl: $url, channelId: $channelId) {
-    paymentPointer
-    channelImage
-  }
-}`
-    interface GetPageData {
-      adaptedPage: {
-        paymentPointer: string
-        channelImage: string
-      }
-    }
-
-    const paymentPointerQuery = await this.client.query<GetPageData>({
-      query,
-      token: null,
-      variables
-    })
-
-    debug({ paymentPointerQuery })
-
-    const data = paymentPointerQuery.data
-    const adaptedPage = data?.adaptedPage
-    const paymentPointer = adaptedPage?.paymentPointer
-    const channelImage = adaptedPage?.channelImage
-    return {
-      channelImage,
-      paymentPointer
-    }
+    return this.client.adaptedPage(variables.url, variables.channelId)
   }
 
   private setBrowserActionStateFromAuthAndTabState() {
