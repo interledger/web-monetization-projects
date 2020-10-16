@@ -5,8 +5,8 @@
 # debugging.
 set -ex
 
-SKIP_YARN=${SKIP_YARN:-false}
-if [[ ${SKIP_YARN} = 'true' ]]
+WEXT_SKIP_YARN=${WEXT_SKIP_YARN:-false}
+if [[ ${WEXT_SKIP_YARN} = 'true' ]]
 then
   echo 'skipping yarn'
 else
