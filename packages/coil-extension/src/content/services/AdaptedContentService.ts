@@ -6,7 +6,7 @@ import * as tokens from '../../types/tokens'
 import { getAdaptedSite } from '../util/getAdaptedSite'
 import { debug } from '../util/logging'
 import { ContentRuntime } from '../types/ContentRunTime'
-import { FetchYoutubeChannelId } from '../../types/commands'
+import { AdaptedPageDetails, FetchYoutubeChannelId } from '../../types/commands'
 
 import { Frames } from './Frames'
 
@@ -57,29 +57,15 @@ export class AdaptedContentService {
       }
     }
 
-    const query = `query getPage($url: String!, $channelId: String) {
-  adaptedPage(videoUrl: $url, channelId: $channelId) {
-    paymentPointer
-    channelImage
-  }
-}`
-
-    const paymentPointerQuery = await this.client.query<GetPageData>({
-      query,
-      token: null,
-      variables
-    })
-
-    debug({ paymentPointerQuery })
-
-    const data = paymentPointerQuery.data
-    const adaptedPage = data?.adaptedPage
-    const paymentPointer = adaptedPage?.paymentPointer
-    const channelImage = adaptedPage?.channelImage
-    return {
-      channelImage,
-      paymentPointer
-    }
+    return new Promise<{ channelImage?: string; paymentPointer: string }>(
+      resolve => {
+        const cmd: AdaptedPageDetails = {
+          command: 'adaptedPageDetails',
+          data: variables
+        }
+        this.contentRuntime.sendMessage(cmd, resolve)
+      }
+    )
   }
 
   async checkAdaptedContent() {
@@ -93,6 +79,7 @@ export class AdaptedContentService {
         currentUrl,
         adaptedSite
       )
+      debug('found adapted site', { channelImage, paymentPointer })
       if (this.runs !== run) {
         debug('stale checkAdaptedContent')
         return

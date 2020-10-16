@@ -60,6 +60,9 @@
       "@coil/playwright-utils": [
         "packages/coil-playwright-utils/src"
       ],
+      "@coil/wm-utils": [
+        "packages/coil-wm-utils/src"
+      ],
       "@interledger/minute-extension": [
         "packages/interledger-minute-extension/src"
       ],

@@ -34,7 +34,7 @@ export function doNewPackage(): void {
     })
     writeFileJSON(`${folder}/package.json`, packageJSON)
     doUpKeep()
-    cmd('npx lerna bootstrap')
+    cmd('yarn')
   } else {
     logErr(
       'expecting namespaced package name as first arg, and dependencies as subsequent args'

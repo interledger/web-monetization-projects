@@ -44,6 +44,7 @@ import { StreamAssociations } from './StreamAssociations'
 import MessageSender = chrome.runtime.MessageSender
 
 import { BuildConfig } from '../../types/BuildConfig'
+import { debug } from '../../content/util/logging'
 
 @injectable()
 export class BackgroundScript {
@@ -64,12 +65,12 @@ export class BackgroundScript {
     private log: Logger,
 
     private client: GraphQlClient,
-    @inject(tokens.WextApi)
-    private api: typeof window.chrome,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
     @inject(tokens.BuildConfig)
-    private buildConfig: BuildConfig
+    private buildConfig: BuildConfig,
+    @inject(tokens.WextApi)
+    private api = chrome
   ) {}
 
   get activeTab() {
@@ -291,6 +292,10 @@ export class BackgroundScript {
     // this.db.incrementSite(details)
   }
 
+  async adaptedPageDetails(variables: { url: string; channelId?: string }) {
+    return this.client.adaptedPage(variables.url, variables.channelId)
+  }
+
   private setBrowserActionStateFromAuthAndTabState() {
     const token = this.auth.getStoredToken()
 
@@ -396,6 +401,9 @@ export class BackgroundScript {
         break
       case 'onFrameAllowedChanged':
         sendResponse(await this.onFrameAllowedChanged(request, sender))
+        break
+      case 'adaptedPageDetails':
+        sendResponse(await this.adaptedPageDetails(request.data))
         break
       default:
         sendResponse(false)

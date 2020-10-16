@@ -2,7 +2,13 @@ import { inject, injectable } from '@dier-makr/annotations'
 
 import { portableFetch } from './utils/portableFetch'
 import { GraphQlResponse } from './types'
-import { login, queryToken, refreshBtpToken, whoAmI } from './queries'
+import {
+  adaptedPage,
+  login,
+  queryToken,
+  refreshBtpToken,
+  whoAmI
+} from './queries'
 
 // Reference class for DI/reduct
 @injectable()
@@ -10,6 +16,7 @@ export class GraphQlClientOptions {
   public coilDomain = 'https://coil.com'
   public fetch: typeof fetch = portableFetch
   public log?: typeof console.log
+  public extraHeaders: Record<string, string> = {}
 }
 
 export interface GraphQlQueryParameters {
@@ -27,6 +34,7 @@ export class GraphQlClient {
   public refreshBtpToken = refreshBtpToken
   public queryToken = queryToken
   public whoAmI = whoAmI
+  public adaptedPage = adaptedPage
 
   public constructor(
     @inject(GraphQlClientOptions)
@@ -40,13 +48,14 @@ export class GraphQlClient {
     query,
     token = null,
     variables = {}
-  }: GraphQlQueryParameters) {
+  }: GraphQlQueryParameters): Promise<GraphQlResponse<T>> {
     const init: RequestInit = {
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: token ? `Bearer ${token}` : ''
+        Authorization: token ? `Bearer ${token}` : '',
+        ...this.config.extraHeaders
       },
       body: JSON.stringify({ query, variables })
     }
