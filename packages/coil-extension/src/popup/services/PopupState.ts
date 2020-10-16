@@ -9,6 +9,7 @@ const STORAGE_KEYS = [
   'monetized',
   'monetizedFavicon',
   'monetizedTotal',
+  'disabledOwnPaymentPointer',
   'stickyState',
   'playState',
   'user',
@@ -27,10 +28,11 @@ export class PopupState implements PopupStateType {
   readonly monetizedTotal!: number
   readonly user!: User
   readonly validToken!: boolean
+  readonly disabledOwnPaymentPointer!: boolean
 
   constructor(private storage: Pick<StorageService, 'get'>) {}
 
-  get loggedIn() {
+  get loggedIn(): boolean {
     return Boolean(this.validToken)
   }
 

@@ -28,6 +28,7 @@ const user = {
   id: 'cjmbxifo0leaf0711ilgecwdb',
   fullName: 'Nicholas Dudfield',
   customerId: 'cus_EmQtvoQVyJgZ75',
+  paymentPointer: '$twitter.xrptipbot.com/nfcpasses',
   subscription: { active: true },
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 }
@@ -42,6 +43,7 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
     stickyState: null,
     playState: null,
     monetizedFavicon: null,
+    disabledOwnPaymentPointer: null,
     monetizedTotal: null,
     coilSite: null
   }
@@ -107,6 +109,16 @@ const payingNonCoilSite = mockState({
   adapted: false
 })
 
+const payingOwnPaymentPointer = mockState({
+  monetized: true,
+  monetizedTotal: 0,
+  monetizedFavicon: '/res/icon-page.svg',
+  disabledOwnPaymentPointer: true,
+  user: user,
+  validToken: true,
+  adapted: false
+})
+
 const welcomeToCoil = mockState({
   coilSite: 'https://coil.com/',
   monetizedTotal: 0,
@@ -138,6 +150,7 @@ const MOCK_STATES = [
   { name: 'Not Supported', state: notSupported },
   { name: 'Start Exploring', state: startExploring },
   { name: 'Paying', state: payingNonCoilSite },
+  { name: 'Monetized Own Payment Pointer', state: payingOwnPaymentPointer },
   { name: 'Welcome To Coil', state: welcomeToCoil },
   { name: 'Alice Unsubscribed', state: aliceUnsubscribed },
   { name: 'Paying Youtube', state: payingYouTube },

@@ -46,6 +46,7 @@ export function MonetizedPage(props: PopupProps) {
     )
   }, [])
   const context = props.context
+  const ownPP = Boolean(props.context.store.disabledOwnPaymentPointer)
   return (
     <>
       <Grid container alignItems='center' justify='center'>
@@ -55,10 +56,12 @@ export function MonetizedPage(props: PopupProps) {
               context={context}
               limitRefreshDate={limitRefreshDate}
             />
-          ) : (
+          ) : !ownPP ? (
             <div onClick={onClick}>
               <Donating context={context} />
             </div>
+          ) : (
+            <DisabledOwnPaymentPointer></DisabledOwnPaymentPointer>
           )}
         </div>
       </Grid>
@@ -88,6 +91,27 @@ function Donating(props: PopupProps) {
       </StatusTypography>
       <FlexBox>
         <MonetizeAnimation context={props.context} />
+      </FlexBox>
+    </Fragment>
+  )
+}
+
+function DisabledOwnPaymentPointer() {
+  return (
+    <Fragment>
+      <StatusTypography variant='h6' align='center'>
+        Monetization Disabled
+      </StatusTypography>
+      <StatusTypography variant='subtitle1' align='center'>
+        Own payment pointer
+      </StatusTypography>
+      <FlexBox>
+        <img
+          src={'/res/stream_inactive.svg'}
+          alt='animation'
+          width='171'
+          height='22'
+        />
       </FlexBox>
     </Fragment>
   )

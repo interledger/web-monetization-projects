@@ -63,7 +63,6 @@ export class BackgroundScript {
 
     @logger('BackgroundScript')
     private log: Logger,
-
     private client: GraphQlClient,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
@@ -527,6 +526,10 @@ export class BackgroundScript {
       ? this.storage.set('monetized', true)
       : this.storage.remove('monetized')
 
+    this.store.disabledOwnPaymentPointer = Boolean(
+      frameStates.find(s => s.disabledOwnPaymentPointer)
+    )
+
     if (state && state.playState && state.stickyState) {
       this.store.playState = state.playState
       this.store.stickyState = state.stickyState
@@ -651,6 +654,13 @@ export class BackgroundScript {
     if (!this.store.user?.subscription?.active) {
       this.sendSetMonetizationStateMessage(frame, 'stopped')
       this.log('startWebMonetization cancelled; no active subscription')
+      return false
+    }
+
+    if (this.store.user.paymentPointer === request.data.paymentPointer) {
+      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      this.log('startWebMonetization cancelled; own payment pointer')
+      this.tabStates.setFrame(frame, { disabledOwnPaymentPointer: true })
       return false
     }
 

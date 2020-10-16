@@ -11,6 +11,7 @@ export const whoamiQuery = `{
     fullName
     customerId
     canTip
+    paymentPointer
 
     subscription {
       active

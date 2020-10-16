@@ -7,6 +7,7 @@ export interface FrameState {
   monetized: boolean
   // Tracks the total amount of `source` money sent (not was received)
   total: number
+  disabledOwnPaymentPointer?: boolean
   lastMonetization: {
     command: MonetizationCommand | null
     timeMs: number
