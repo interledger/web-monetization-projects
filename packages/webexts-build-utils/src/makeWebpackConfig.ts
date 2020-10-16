@@ -52,10 +52,8 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       transform: (content: Buffer) => {
         const manifest = JSON.parse(content.toString())
         if (WEXT_MANIFEST_SUFFIX) {
-          const d = new Date()
-          const month = d.getMonth() + 1
-          const day = d.getDate()
-          manifest.name += `${WEXT_MANIFEST_SUFFIX}-${day}/${month}-${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+          const date = new Date().toLocaleString().replace(/(\/|,|\s)+/g, '-')
+          manifest.name += `${WEXT_MANIFEST_SUFFIX}-${date}`
         }
         if (WEXT_MANIFEST_VERSION) {
           manifest.version = WEXT_MANIFEST_VERSION
