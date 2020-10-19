@@ -96,7 +96,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-create-class-features-plugin@npm:^7.10.5, @babel/helper-create-class-features-plugin@npm:^7.12.1":
+"@babel/helper-create-class-features-plugin@npm:^7.12.1":
   version: 7.12.1
   resolution: "@babel/helper-create-class-features-plugin@npm:7.12.1"
   dependencies:
@@ -365,16 +365,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-decorators@npm:^7.10.5":
-  version: 7.10.5
-  resolution: "@babel/plugin-proposal-decorators@npm:7.10.5"
+"@babel/plugin-proposal-decorators@npm:^7.12.1":
+  version: 7.12.1
+  resolution: "@babel/plugin-proposal-decorators@npm:7.12.1"
   dependencies:
-    "@babel/helper-create-class-features-plugin": ^7.10.5
+    "@babel/helper-create-class-features-plugin": ^7.12.1
     "@babel/helper-plugin-utils": ^7.10.4
-    "@babel/plugin-syntax-decorators": ^7.10.4
+    "@babel/plugin-syntax-decorators": ^7.12.1
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 32be038dd283c82af2ccdd50df7ed9f7dd9d001bc7ebc797efe833181584b5e296b41c07e9f2645a64ca96f55edaa61888eca7fe30cdd4e3c26aaefbe1b3a298
+  checksum: 148c01c4ce42efc033c5c307c4de3aa32b3babd0e06b4fab03a116ee370614e1e5b82f0b92ae6e11842cb0a759db25a1daa3214331ffe5055323c7b2fbebb7c0
   languageName: node
   linkType: hard
 
@@ -545,14 +545,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-decorators@npm:^7.10.4":
-  version: 7.10.4
-  resolution: "@babel/plugin-syntax-decorators@npm:7.10.4"
+"@babel/plugin-syntax-decorators@npm:^7.12.1":
+  version: 7.12.1
+  resolution: "@babel/plugin-syntax-decorators@npm:7.12.1"
   dependencies:
     "@babel/helper-plugin-utils": ^7.10.4
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 61a68e950b42ab211b20483692b899daa7fe5622568ebdca427dff5f5bb7fba7c62da15f69219e2b5758429bfa11fa6891c6bb1cab24b242f007da0c461288d3
+  checksum: c64b9eedfd5af1f106a98978e386b51e04bb4849821cb889feef397df13f5fddf4ee7dec3d0d1319a606eeb8368622ca4bc4bf428c1c353920a0a1fddb16d440
   languageName: node
   linkType: hard
 
@@ -1314,7 +1314,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -1375,7 +1375,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -1435,7 +1435,7 @@ __metadata:
     "@abraham/reflection": ^0.7.0
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -1527,7 +1527,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -1588,7 +1588,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -1657,7 +1657,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -1721,7 +1721,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -1776,7 +1776,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -1859,7 +1859,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -2117,7 +2117,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -2171,7 +2171,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -2349,7 +2349,7 @@ __metadata:
     "@abraham/reflection": ^0.7.0
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -4589,7 +4589,7 @@ __metadata:
     "@abraham/reflection": ^0.7.0
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -4669,7 +4669,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -4728,7 +4728,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -4787,7 +4787,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -4854,7 +4854,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -4909,7 +4909,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -5147,7 +5147,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
@@ -22777,7 +22777,7 @@ sjcl@sublimator/sjcl:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/plugin-proposal-class-properties": ^7.10.4
-    "@babel/plugin-proposal-decorators": ^7.10.5
+    "@babel/plugin-proposal-decorators": ^7.12.1
     "@babel/plugin-proposal-object-rest-spread": ^7.11.0
     "@babel/preset-env": ^7.12.1
     "@babel/preset-typescript": ^7.12.1
