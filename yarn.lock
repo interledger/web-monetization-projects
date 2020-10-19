@@ -1459,7 +1459,7 @@ __metadata:
     "@types/long": ^4.0.1
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
-    "@types/react": ^16.9.52
+    "@types/react": ^16.9.53
     "@types/react-dom": ^16.9.8
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.22
@@ -2362,7 +2362,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.14
     "@types/node": ^14.10.3
-    "@types/react": ^16.9.52
+    "@types/react": ^16.9.53
     "@types/react-dom": ^16.9.8
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.22
@@ -4313,13 +4313,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:16.9.52":
-  version: 16.9.52
-  resolution: "@types/react@npm:16.9.52"
+"@types/react@npm:16.9.53":
+  version: 16.9.53
+  resolution: "@types/react@npm:16.9.53"
   dependencies:
     "@types/prop-types": "*"
     csstype: ^3.0.2
-  checksum: 5e352e28b7a5ee6104a1ddddb7585ce50f88c5fca78f2edb73cc6df897ab3efa4404111052b643782d130755b8657494f3f5324b1eba4644b4a36fea34fec6fb
+  checksum: 01c646c8f08306660441a14495e926c0362114da7813c3bc3d4d58b47590ee92274bbbff18f3fafd465a09369daa25982d68ba6628f1080120b62d40ce75ca40
   languageName: node
   linkType: hard
 
@@ -4604,7 +4604,7 @@ __metadata:
     "@types/jest": ^26.0.14
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
-    "@types/react": ^16.9.52
+    "@types/react": ^16.9.53
     "@types/react-dom": ^16.9.8
     "@types/react-helmet": ^6.1.0
     "@types/webpack": ^4.41.22
@@ -4737,7 +4737,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.14
     "@types/node": ^14.10.3
-    "@types/react": 16.9.52
+    "@types/react": 16.9.53
     "@types/webpack": ^4.41.22
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.4.1
@@ -4798,7 +4798,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.14
     "@types/node": ^14.10.3
-    "@types/react": ^16.9.52
+    "@types/react": ^16.9.53
     "@types/react-dom": ^16.9.8
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.22
