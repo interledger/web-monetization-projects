@@ -63,7 +63,7 @@
     "JSON2016": "^1.0.0",
     "copy-webpack-plugin": "^6.2.1",
     "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-prettier": "^6.13.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
