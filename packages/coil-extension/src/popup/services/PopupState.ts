@@ -2,6 +2,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import { User } from '../../types/user'
 import { StorageService } from '../../services/storage'
 import { PlayOrPauseState, StickyState } from '../../types/streamControls'
+import { DisablingControls } from '../../types/disabling'
 
 const STORAGE_KEYS = [
   'adapted',
@@ -14,7 +15,8 @@ const STORAGE_KEYS = [
   'user',
   'validToken',
   'extensionBuildString',
-  'extensionPopupFooterString'
+  'extensionPopupFooterString',
+  'disabling'
 ]
 
 export type PopupStateType = Omit<LocalStorageProxy, 'token'>
@@ -33,6 +35,7 @@ export class PopupState implements PopupStateType {
   readonly validToken!: boolean
   readonly extensionBuildString!: string
   readonly extensionPopupFooterString!: string
+  readonly disabling!: DisablingControls
 
   constructor(private storage: Pick<StorageService, 'get'>) {}
 

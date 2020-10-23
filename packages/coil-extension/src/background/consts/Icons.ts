@@ -15,7 +15,9 @@ const iconsConst = {
   active: '../res/icn-coil-ext-connecting@4x.png',
   'active-streaming': '../res/icn-coil-ext-streaming@4x.png',
   'active-unavailable': '../res/icn-coil-ext-alert@4x.png',
-  'inactive-unavailable': '../res/icn-coil-ext-alert@4x.png'
+  'inactive-unavailable': '../res/icn-coil-ext-alert@4x.png',
+  'active-disabled' : '../res/icn-coil-ext-disabled@4x.png',
+  'inactive-disabled' : '../res/icn-coil-ext-disabled@4x.png'
 } as const
 
 export const Icons: Record<string, string> & typeof iconsConst = iconsConst
