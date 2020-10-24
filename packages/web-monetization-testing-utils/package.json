@@ -35,7 +35,7 @@
     "@web-monetization/types": "0.0.0",
     "ajv": "^6.12.6",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react-dom": "^17.0.0",
     "react-hot-loader": "^4.13.0",
     "uuid": "^8.3.1"
   },
