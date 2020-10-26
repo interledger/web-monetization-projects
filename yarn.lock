@@ -1355,7 +1355,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -1414,7 +1414,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -1505,7 +1505,7 @@ __metadata:
     reduct: ^3.3.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -1567,7 +1567,7 @@ __metadata:
     rimraf: ^3.0.2
     sort-package-json: 1.46.1
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -1636,7 +1636,7 @@ __metadata:
     reduct: ^3.3.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -1700,7 +1700,7 @@ __metadata:
     rimraf: ^3.0.2
     tmp: ^0.2.1
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -1756,7 +1756,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -1818,7 +1818,7 @@ __metadata:
     rimraf: ^3.0.2
     sjcl: sublimator/sjcl
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -1894,7 +1894,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -2151,7 +2151,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -2207,7 +2207,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -2408,7 +2408,7 @@ __metadata:
     rimraf: ^3.0.2
     style-loader: ^2.0.0
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -4634,7 +4634,7 @@ __metadata:
     react-hot-loader: ^4.13.0
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -4692,7 +4692,7 @@ __metadata:
     reduct: ^3.3.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -4750,7 +4750,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -4818,7 +4818,7 @@ __metadata:
     react-hot-loader: ^4.13.0
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -4874,7 +4874,7 @@ __metadata:
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
     ts-json-schema-generator: ^0.77.0
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -4931,7 +4931,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -5168,7 +5168,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
@@ -21714,9 +21714,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "ts-loader@npm:8.0.6"
+"ts-loader@npm:^8.0.7":
+  version: 8.0.7
+  resolution: "ts-loader@npm:8.0.7"
   dependencies:
     chalk: ^2.3.0
     enhanced-resolve: ^4.0.0
@@ -21725,7 +21725,7 @@ sjcl@sublimator/sjcl:
     semver: ^6.0.0
   peerDependencies:
     typescript: "*"
-  checksum: c4721e9857c3d4e8faba811550592e07d702e47bb6116ba57432259dc1aa5792bf069caebd30d39c36e4bba1175b6e46bea75d10bf1d3df3dcbb242df0fc58fd
+  checksum: 062143ef35d5ee064244fb5de934d3db8460737168dbf88d19655498cc39cad8bac742c785ec5ed16600c21d2fa9e6acbba28032cdeae469992444fd8e3fa96c
   languageName: node
   linkType: hard
 
@@ -22654,7 +22654,7 @@ sjcl@sublimator/sjcl:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
-    ts-loader: ^8.0.6
+    ts-loader: ^8.0.7
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
