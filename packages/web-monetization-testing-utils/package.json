@@ -48,7 +48,7 @@
     "@babel/preset-typescript": "^7.12.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@hot-loader/react-dom": "^16.13.0",
+    "@hot-loader/react-dom": "^16.14.0",
     "@types/ajv": "^1.0.0",
     "@types/copy-webpack-plugin": "^6.0.0",
     "@types/jest": "^26.0.15",
