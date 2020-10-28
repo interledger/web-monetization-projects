@@ -1349,7 +1349,7 @@ __metadata:
     jest: ^26.6.1
     jsonwebtoken: ^8.5.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     localforage: ^1.9.0
     node-fetch: ^2.6.1
     prettier: ^2.1.1
@@ -1409,7 +1409,7 @@ __metadata:
     jest: ^26.6.1
     jsonwebtoken: ^8.5.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     node-fetch: ^2.6.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -1497,7 +1497,7 @@ __metadata:
     jsonwebtoken: ^8.5.1
     jss: ^10.4.0
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     playwright: 1.3.x
     prettier: ^2.1.1
     react: ^16.14.0
@@ -1560,7 +1560,7 @@ __metadata:
     jest: ^26.6.1
     json5: ^2.1.3
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     npm-check-updates: ^9.2.3
     prettier: ^2.1.1
     reduct: ^3.3.1
@@ -1628,7 +1628,7 @@ __metadata:
     ilp-protocol-stream: 2.6.4
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     node-fetch: ^2.6.1
     playwright: 1.3.x
     pnp-webpack-plugin: ^1.6.4
@@ -1694,7 +1694,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     playwright: 1.3.x
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -1751,7 +1751,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     node-fetch: ^2.6.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -1812,7 +1812,7 @@ __metadata:
     jest: ^26.6.1
     keccak: ^3.0.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     node-fetch: ^2.6.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -1890,7 +1890,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
@@ -2147,7 +2147,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
@@ -2203,7 +2203,7 @@ __metadata:
     inversify: ^5.0.1
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
@@ -2401,7 +2401,7 @@ __metadata:
     jest: ^26.6.1
     jsonwebtoken: ^8.5.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     prettier: ^2.1.1
     react: ^16.14.0
     react-dom: ^16.14.0
@@ -4669,7 +4669,7 @@ __metadata:
     inversify-express-utils: ^6.3.2
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     node-fetch: ^2.6.1
     oer-utils: ^5.1.2
     pnp-webpack-plugin: ^1.6.4
@@ -4732,7 +4732,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     node-fetch: ^2.6.1
     prettier: ^2.1.1
     reduct: ^3.3.1
@@ -4791,7 +4791,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     pnp-webpack-plugin: ^1.6.4
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -4856,7 +4856,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     pnp-webpack-plugin: ^1.6.4
     prettier: ^2.1.1
     react: ^16.14.0
@@ -4915,7 +4915,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
@@ -4973,7 +4973,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
@@ -5209,7 +5209,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     pnp-webpack-plugin: ^1.6.4
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -15008,9 +15008,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^10.4.2":
-  version: 10.4.2
-  resolution: "lint-staged@npm:10.4.2"
+"lint-staged@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "lint-staged@npm:10.5.0"
   dependencies:
     chalk: ^4.1.0
     cli-truncate: ^2.1.0
@@ -15029,7 +15029,7 @@ fsevents@^1.2.7:
     stringify-object: ^3.3.0
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: bbd94e1dbf3e0eb361c262e7594dd4a4963cec87e8d90d3e2904d11f3b4cd9b14b3e923a97ca17ab76e460540f517d071557091890d4e1d8c54523741e882a28
+  checksum: cb86aaee3be5f68504b9a964c62653b036cab4d4af569272368a9656c6d1c6fd97671036cd26b518acad7c42285a2c248d4b1b1337f12f1f5432ad5bfa0320eb
   languageName: node
   linkType: hard
 
@@ -22686,7 +22686,7 @@ sjcl@sublimator/sjcl:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.4.2
+    lint-staged: ^10.5.0
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.2
