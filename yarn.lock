@@ -1329,7 +1329,7 @@ __metadata:
     "@types/sjcl": ^1.0.29
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
@@ -1389,7 +1389,7 @@ __metadata:
     "@types/node-fetch": ^2.5.7
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
@@ -1464,7 +1464,7 @@ __metadata:
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     "@web-monetization/polyfill-utils": ^0.0.0
     "@web-monetization/types": ^0.0.0
@@ -1538,7 +1538,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-dir: ^1.3.0
@@ -1605,7 +1605,7 @@ __metadata:
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     "@web-monetization/polyfill-utils": 0.0.0
     "@web-monetization/types": 0.0.0
@@ -1672,7 +1672,7 @@ __metadata:
     "@types/tmp": ^0.2.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
@@ -1732,7 +1732,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
@@ -1789,7 +1789,7 @@ __metadata:
     "@types/sjcl": ^1.0.29
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     asn1-parser: ^1.1.8
@@ -1871,7 +1871,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
@@ -2128,7 +2128,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
@@ -2183,7 +2183,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
@@ -2367,7 +2367,7 @@ __metadata:
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     "@web-monetization/polyfill-utils": ^0.0.0
     "@web-monetization/types": ^0.0.0
@@ -4467,12 +4467,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "@typescript-eslint/eslint-plugin@npm:4.5.0"
+"@typescript-eslint/eslint-plugin@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:4.6.0"
   dependencies:
-    "@typescript-eslint/experimental-utils": 4.5.0
-    "@typescript-eslint/scope-manager": 4.5.0
+    "@typescript-eslint/experimental-utils": 4.6.0
+    "@typescript-eslint/scope-manager": 4.6.0
     debug: ^4.1.1
     functional-red-black-tree: ^1.0.1
     regexpp: ^3.0.0
@@ -4484,23 +4484,23 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 81d881700755181be27a6613441ee00a5a7a001efae60ea37d8d26b29ad79e8f9a7811fcc7ceebca979b220e179a8827adc2c07a0e465d358ec9199f76e207bb
+  checksum: 7bf5bb6a0c9103d7eb8a1f8fcf0d48e5cf4a736b0d003fb2e899d37a416c3ba79d697e9a9b43f99b3a0a0ba606d0f7a05312f63aff7fc3c435b9f59a6172f423
   languageName: node
   linkType: hard
 
-"@typescript-eslint/experimental-utils@npm:4.5.0, @typescript-eslint/experimental-utils@npm:^4.0.1":
-  version: 4.5.0
-  resolution: "@typescript-eslint/experimental-utils@npm:4.5.0"
+"@typescript-eslint/experimental-utils@npm:4.6.0, @typescript-eslint/experimental-utils@npm:^4.0.1":
+  version: 4.6.0
+  resolution: "@typescript-eslint/experimental-utils@npm:4.6.0"
   dependencies:
     "@types/json-schema": ^7.0.3
-    "@typescript-eslint/scope-manager": 4.5.0
-    "@typescript-eslint/types": 4.5.0
-    "@typescript-eslint/typescript-estree": 4.5.0
+    "@typescript-eslint/scope-manager": 4.6.0
+    "@typescript-eslint/types": 4.6.0
+    "@typescript-eslint/typescript-estree": 4.6.0
     eslint-scope: ^5.0.0
     eslint-utils: ^2.0.0
   peerDependencies:
     eslint: "*"
-  checksum: e4cc88e0288ecae9eb9737877b5eaf2a149511a571ade3eb46dbebc70295b95f723e078b0b0d73f3f9efc8005221ed6155dc0fef057fd882c37c105857e7df0b
+  checksum: ca0fdd7e51408ed79a7844abf91f9b549a6eabd5923463adfecc08e42ea4ac32d1b770dc41208a1a9f773626f963002015e5fde95fa209001864fd69fd0f2215
   languageName: node
   linkType: hard
 
@@ -4531,10 +4531,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/scope-manager@npm:4.6.0":
+  version: 4.6.0
+  resolution: "@typescript-eslint/scope-manager@npm:4.6.0"
+  dependencies:
+    "@typescript-eslint/types": 4.6.0
+    "@typescript-eslint/visitor-keys": 4.6.0
+  checksum: 8bf4f4646e20e2b824cb799942890cefe56ee78fa50a383162ca4ec945eeb36490f42116c6482ab880c23c5fd3fc22eec02a412894f8b492a6b9b5488da1aad2
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/types@npm:4.5.0":
   version: 4.5.0
   resolution: "@typescript-eslint/types@npm:4.5.0"
   checksum: f4501f11e5e29fcbda055105a2ec946f8bf8298f3ee1073411075e9d0f014fb6419c88b9d1ef882e0f7a205e140bd4d36f405b06ed881977dde207faad03a0a6
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/types@npm:4.6.0":
+  version: 4.6.0
+  resolution: "@typescript-eslint/types@npm:4.6.0"
+  checksum: c136ebe791b82187d2fd9e0d5b76aa1ec3e644fe11465222faa114f3e170fd74929d4b5c4a3184346715a065cf8cf637cf9e599c0dc4162437bf5dca4511cb2a
   languageName: node
   linkType: hard
 
@@ -4557,6 +4574,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/typescript-estree@npm:4.6.0":
+  version: 4.6.0
+  resolution: "@typescript-eslint/typescript-estree@npm:4.6.0"
+  dependencies:
+    "@typescript-eslint/types": 4.6.0
+    "@typescript-eslint/visitor-keys": 4.6.0
+    debug: ^4.1.1
+    globby: ^11.0.1
+    is-glob: ^4.0.1
+    lodash: ^4.17.15
+    semver: ^7.3.2
+    tsutils: ^3.17.1
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 27d35ac3c49f22568d217d6560745a7f263747eeb42cf627fb64e910e90b32a78e3133e2151ea1aa43c04da5a37a6573b1237eca5bb829eb671cbe5e4d6ed6b0
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/visitor-keys@npm:4.5.0":
   version: 4.5.0
   resolution: "@typescript-eslint/visitor-keys@npm:4.5.0"
@@ -4564,6 +4600,16 @@ __metadata:
     "@typescript-eslint/types": 4.5.0
     eslint-visitor-keys: ^2.0.0
   checksum: 7d7f342dac50423249fb71d89b25d2c0117384266e337b36a5d81c9056361967273d8d43a4d1e61cdadae3fe58f8081159048c5e254f11de4ab0343b172da9ec
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/visitor-keys@npm:4.6.0":
+  version: 4.6.0
+  resolution: "@typescript-eslint/visitor-keys@npm:4.6.0"
+  dependencies:
+    "@typescript-eslint/types": 4.6.0
+    eslint-visitor-keys: ^2.0.0
+  checksum: ea1a701501f7e3f5818f026e8040a928b3dd47d6dcbe39aa825690bfb247fbdfdeafa85db204513def8fa0362850b3357256dd89c9c5bebe59943ed805994fca
   languageName: node
   linkType: hard
 
@@ -4594,7 +4640,7 @@ __metadata:
     "@types/react-helmet": ^6.1.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     "@web-monetization/react": 0.0.12
     "@web-monetization/types": 0.0.0
@@ -4667,7 +4713,7 @@ __metadata:
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
@@ -4725,7 +4771,7 @@ __metadata:
     "@types/react": 16.9.53
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
@@ -4788,7 +4834,7 @@ __metadata:
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
@@ -4850,7 +4896,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
@@ -4906,7 +4952,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     "@web-monetization/polyfill-utils": 0.0.0
     "@web-monetization/types": 0.0.0
@@ -5143,7 +5189,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
@@ -22621,7 +22667,7 @@ sjcl@sublimator/sjcl:
     "@types/node": ^14.10.3
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
-    "@typescript-eslint/eslint-plugin": ^4.5.0
+    "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.5.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
