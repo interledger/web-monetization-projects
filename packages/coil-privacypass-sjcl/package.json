@@ -58,7 +58,7 @@
     "@types/sjcl": "^1.0.29",
     "@types/webpack": "^4.41.23",
     "@types/webpack-merge": "^4.1.5",
-    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.5.0",
     "JSON2016": "^1.0.0",
     "copy-webpack-plugin": "^6.2.1",
