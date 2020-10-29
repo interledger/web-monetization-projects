@@ -1460,7 +1460,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/react": ^16.9.53
-    "@types/react-dom": ^16.9.8
+    "@types/react-dom": ^16.9.9
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
@@ -2363,7 +2363,7 @@ __metadata:
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
     "@types/react": ^16.9.53
-    "@types/react-dom": ^16.9.8
+    "@types/react-dom": ^16.9.9
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
@@ -4271,12 +4271,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^16.9.8":
-  version: 16.9.8
-  resolution: "@types/react-dom@npm:16.9.8"
+"@types/react-dom@npm:^16.9.9":
+  version: 16.9.9
+  resolution: "@types/react-dom@npm:16.9.9"
   dependencies:
     "@types/react": "*"
-  checksum: 53a223c0266178bca9161301d18ee6199e8f75f88caed5c4601c5aaedaf4c68f03bd72f6aafa979254beb20759f0b68a542ce04295d704eb67ae179769c50813
+  checksum: d92c166f5bcd483f175311eec9c472893216d486106a5b5402eb293840c0b0d1aafb484a3fe3f0f4622ae1f6dff46c9fe970873d4dac7fdf70a50931d3cab4a0
   languageName: node
   linkType: hard
 
@@ -4590,7 +4590,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/react": ^16.9.53
-    "@types/react-dom": ^16.9.8
+    "@types/react-dom": ^16.9.9
     "@types/react-helmet": ^6.1.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
@@ -4784,7 +4784,7 @@ __metadata:
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
     "@types/react": ^16.9.53
-    "@types/react-dom": ^16.9.8
+    "@types/react-dom": ^16.9.9
     "@types/uuid": ^8.3.0
     "@types/webpack": ^4.41.23
     "@types/webpack-merge": ^4.1.5
