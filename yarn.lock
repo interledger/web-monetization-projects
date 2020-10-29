@@ -1336,7 +1336,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/sjcl": ^1.0.29
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -1396,7 +1396,7 @@ __metadata:
     "@types/jsonwebtoken": ^8.5.0
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -1471,7 +1471,7 @@ __metadata:
     "@types/react": ^16.9.55
     "@types/react-dom": ^16.9.9
     "@types/uuid": ^8.3.0
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -1545,7 +1545,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -1612,7 +1612,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/uuid": ^8.3.0
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -1679,7 +1679,7 @@ __metadata:
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
     "@types/tmp": ^0.2.0
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -1739,7 +1739,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -1796,7 +1796,7 @@ __metadata:
     "@types/keccak": ^3.0.1
     "@types/node": ^14.10.3
     "@types/sjcl": ^1.0.29
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -1878,7 +1878,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -2135,7 +2135,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -2190,7 +2190,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -2374,7 +2374,7 @@ __metadata:
     "@types/react": ^16.9.55
     "@types/react-dom": ^16.9.9
     "@types/uuid": ^8.3.0
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -4437,9 +4437,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webpack@npm:4.41.23":
-  version: 4.41.23
-  resolution: "@types/webpack@npm:4.41.23"
+"@types/webpack@npm:4.41.24":
+  version: 4.41.24
+  resolution: "@types/webpack@npm:4.41.24"
   dependencies:
     "@types/anymatch": "*"
     "@types/node": "*"
@@ -4447,7 +4447,7 @@ __metadata:
     "@types/uglify-js": "*"
     "@types/webpack-sources": "*"
     source-map: ^0.6.0
-  checksum: 6ac67beaa88bc23e86c760958669d2739b643b13d624658820f3cdbcab83a9d34a9949faea75de73edcf4df78f9a8480885848ed7e4c82789d2a5bb94fc9478b
+  checksum: 2237901a976cab34c86aca729244f392af238d2a8ea53ffda8b9c00259f4d8b081b48fdd47bf159f3fda475621bfe7e8eb81076ec2252fa96dced5087be308e9
   languageName: node
   linkType: hard
 
@@ -4610,7 +4610,7 @@ __metadata:
     "@types/react": ^16.9.55
     "@types/react-dom": ^16.9.9
     "@types/react-helmet": ^6.1.0
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -4683,7 +4683,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/uuid": ^8.3.0
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -4741,7 +4741,7 @@ __metadata:
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
     "@types/react": ^16.9.55
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -4804,7 +4804,7 @@ __metadata:
     "@types/react": ^16.9.55
     "@types/react-dom": ^16.9.9
     "@types/uuid": ^8.3.0
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -4866,7 +4866,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -4922,7 +4922,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -5159,7 +5159,7 @@ __metadata:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
@@ -22725,7 +22725,7 @@ sjcl@sublimator/sjcl:
     "@types/copy-webpack-plugin": ^6.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/webpack": ^4.41.23
+    "@types/webpack": ^4.41.24
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
