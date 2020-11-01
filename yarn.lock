@@ -1358,7 +1358,7 @@ __metadata:
     jest: ^26.6.1
     jsonwebtoken: ^8.5.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     localforage: ^1.9.0
     node-fetch: ^2.6.1
     prettier: ^2.1.1
@@ -1418,7 +1418,7 @@ __metadata:
     jest: ^26.6.1
     jsonwebtoken: ^8.5.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     node-fetch: ^2.6.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -1506,7 +1506,7 @@ __metadata:
     jsonwebtoken: ^8.5.1
     jss: ^10.4.0
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     playwright: 1.3.x
     prettier: ^2.1.1
     react: ^16.14.0
@@ -1569,7 +1569,7 @@ __metadata:
     jest: ^26.6.1
     json5: ^2.1.3
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     npm-check-updates: ^9.2.3
     prettier: ^2.1.1
     reduct: ^3.3.1
@@ -1637,7 +1637,7 @@ __metadata:
     ilp-protocol-stream: 2.6.4
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     node-fetch: ^2.6.1
     playwright: 1.3.x
     pnp-webpack-plugin: ^1.6.4
@@ -1703,7 +1703,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     playwright: 1.3.x
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -1760,7 +1760,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     node-fetch: ^2.6.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -1821,7 +1821,7 @@ __metadata:
     jest: ^26.6.1
     keccak: ^3.0.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     node-fetch: ^2.6.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -1899,7 +1899,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.3
@@ -2156,7 +2156,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.3
@@ -2212,7 +2212,7 @@ __metadata:
     inversify: ^5.0.1
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.3
@@ -2428,7 +2428,7 @@ __metadata:
     jest: ^26.6.1
     jsonwebtoken: ^8.5.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     prettier: ^2.1.1
     react: ^16.14.0
     react-dom: ^16.14.0
@@ -4659,7 +4659,7 @@ __metadata:
     inversify-express-utils: ^6.3.2
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     node-fetch: ^2.6.1
     oer-utils: ^5.1.2
     pnp-webpack-plugin: ^1.6.4
@@ -4722,7 +4722,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     node-fetch: ^2.6.1
     prettier: ^2.1.1
     reduct: ^3.3.1
@@ -4781,7 +4781,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     pnp-webpack-plugin: ^1.6.4
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -4846,7 +4846,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     pnp-webpack-plugin: ^1.6.4
     prettier: ^2.1.1
     react: ^16.14.0
@@ -4905,7 +4905,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.3
@@ -4963,7 +4963,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.3
@@ -5199,7 +5199,7 @@ __metadata:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     pnp-webpack-plugin: ^1.6.4
     prettier: ^2.1.1
     rimraf: ^3.0.2
@@ -7892,10 +7892,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^6.0.0, commander@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "commander@npm:6.1.0"
-  checksum: ef1e310c3f430b84f8818ec9c6e5ce1b84909616eb2c1b1a79f646bc25fbca156eccf2ecf19f07e77a08dc519728d53d1300f94f3b2ad93de65add66044dfce6
+"commander@npm:^6.1.0, commander@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "commander@npm:6.2.0"
+  checksum: c78501cd98e6ad66839004adc27940f5fc1a0102b306fbbc177965101d586cf6dd2e01bdffd64f99f2d4862101f24e602e3e4baa641b6f6a11c01ec5c900e412
   languageName: node
   linkType: hard
 
@@ -10509,9 +10509,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^4.0.0, execa@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "execa@npm:4.0.3"
+"execa@npm:^4.0.0, execa@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "execa@npm:4.1.0"
   dependencies:
     cross-spawn: ^7.0.0
     get-stream: ^5.0.0
@@ -10522,7 +10522,7 @@ __metadata:
     onetime: ^5.1.0
     signal-exit: ^3.0.2
     strip-final-newline: ^2.0.0
-  checksum: 65b237d178b468045ee57af6aa4e4124807b28aec9573d9b3b16b02a7e41bd65996236e0c5575d053d3888585ffc795cbed38847c6c9669e9c8481fc44ac05e4
+  checksum: 79bd736acd63aa7c0afb32cc99af21cfd70db696580686c7cd56c177857b93b78bc0b9bb2b4410f377f46c71c566c8e723987e71ef0bc9b23791bfbced02f75c
   languageName: node
   linkType: hard
 
@@ -15121,19 +15121,19 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^10.5.0":
-  version: 10.5.0
-  resolution: "lint-staged@npm:10.5.0"
+"lint-staged@npm:^10.5.1":
+  version: 10.5.1
+  resolution: "lint-staged@npm:10.5.1"
   dependencies:
     chalk: ^4.1.0
     cli-truncate: ^2.1.0
-    commander: ^6.0.0
+    commander: ^6.2.0
     cosmiconfig: ^7.0.0
-    debug: ^4.1.1
+    debug: ^4.2.0
     dedent: ^0.7.0
     enquirer: ^2.3.6
-    execa: ^4.0.3
-    listr2: ^2.6.0
+    execa: ^4.1.0
+    listr2: ^3.2.2
     log-symbols: ^4.0.0
     micromatch: ^4.0.2
     normalize-path: ^3.0.0
@@ -15142,13 +15142,13 @@ fsevents@^1.2.7:
     stringify-object: ^3.3.0
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: cb86aaee3be5f68504b9a964c62653b036cab4d4af569272368a9656c6d1c6fd97671036cd26b518acad7c42285a2c248d4b1b1337f12f1f5432ad5bfa0320eb
+  checksum: d22748dde5117c1d63e6829a73cf5755b4b99b5c93adaf53d1842941bf8b415d18577fe58291c4e44d40446e05400fe7cafe88727bcd61ef2837840406b89496
   languageName: node
   linkType: hard
 
-"listr2@npm:^2.6.0":
-  version: 2.6.2
-  resolution: "listr2@npm:2.6.2"
+"listr2@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "listr2@npm:3.2.2"
   dependencies:
     chalk: ^4.1.0
     cli-truncate: ^2.1.0
@@ -15156,11 +15156,11 @@ fsevents@^1.2.7:
     indent-string: ^4.0.0
     log-update: ^4.0.0
     p-map: ^4.0.0
-    rxjs: ^6.6.2
+    rxjs: ^6.6.3
     through: ^2.3.8
   peerDependencies:
     enquirer: ">= 2.3.0 < 3"
-  checksum: 4d5fd1bc8f5ad63a38950bac0462cb35e7b51c8988bb263e63d181eab1572493d0f3d384fbeab69171efa0746bb8ea07038d11097216519c3117d935ce723b38
+  checksum: e4cccac610bc18cf75f1248f599ce6fb9637e481dc8ebca480c84b6a57802f580a2df2915b54acaa4268dfcc42a87bb6c86bd7ec5cee793e4df8ee1c8f0822ff
   languageName: node
   linkType: hard
 
@@ -19843,7 +19843,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^6.4.0, rxjs@npm:^6.6.2":
+"rxjs@npm:^6.4.0, rxjs@npm:^6.6.3":
   version: 6.6.3
   resolution: "rxjs@npm:6.6.3"
   dependencies:
@@ -22811,7 +22811,7 @@ sjcl@sublimator/sjcl:
     husky: ^4.3.0
     jest: ^26.6.1
     lerna: ^3.22.1
-    lint-staged: ^10.5.0
+    lint-staged: ^10.5.1
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.3
