@@ -29,7 +29,6 @@ import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
 import { ContentAuthService } from './ContentAuthService'
-import { MonetizationEventsLogger } from './MonetizationEventsLogger'
 
 function startWebMonetizationMessage(request?: PaymentDetails) {
   if (!request) {
@@ -54,8 +53,7 @@ export class ContentScript {
     private frames: Frames,
     private idle: IdleDetection,
     private monetization: DocumentMonetization,
-    private auth: ContentAuthService,
-    private eventsLogger: MonetizationEventsLogger
+    private auth: ContentAuthService
   ) {}
 
   handleMonetizationTag() {
@@ -208,9 +206,6 @@ export class ContentScript {
       })
       this.setRuntimeMessageListener()
       this.monetization.injectDocumentMonetization()
-      if (this.storage.getItem('WM_DEBUG')) {
-        this.eventsLogger.bindLoggersToEvents()
-      }
     }
 
     if (this.frames.isAnyCoilFrame) {

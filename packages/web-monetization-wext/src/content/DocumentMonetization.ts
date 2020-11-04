@@ -10,6 +10,7 @@ import { injectable } from '@dier-makr/annotations'
 import { PaymentDetails } from '@web-monetization/polyfill-utils'
 
 import { ScriptInjection } from './ScriptInjection'
+import { includePolyFillMessage, wmPolyfill } from './wmPolyfill'
 
 interface SetStateParams {
   state: MonetizationState
@@ -31,30 +32,12 @@ export class DocumentMonetization {
     private scripts: ScriptInjection
   ) {}
 
-  /**
-   * Adapter from posted messages on window to `CustomEvent`s
-   * TODO: less janky cross-platform way to create a generic EventTarget
-   *  You can create an EventTarget using new on Chrome/Firefox but not Safari
-   *  Will route any messages with webMonetization: true to
-   *  document.monetization dispatchEvent
-   *
-   */
   injectDocumentMonetization() {
-    this.scripts.inject(
-      // language=JavaScript
-      `
-      document.monetization = document.createElement('div')
-      document.monetization.state = 'stopped'
-      window.addEventListener('message', function (event) {
-        if (event.source === window && event.data.webMonetization) {
-          document.monetization.dispatchEvent(
-            new CustomEvent(event.data.type, {
-              detail: event.data.detail
-            }))
-        }
-      })
-    `
-    )
+    try {
+      this.scripts.inject(wmPolyfill)
+    } catch (e) {
+      console.warn(includePolyFillMessage)
+    }
   }
 
   setMonetizationRequest(request?: MonetizationRequest) {
@@ -90,7 +73,16 @@ export class DocumentMonetization {
 
     if (changed) {
       if (changedState) {
-        this.scripts.inject(`document.monetization.state = '${state}'`)
+        this.window.postMessage(
+          {
+            webMonetization: true,
+            type: 'monetizationstatechange',
+            detail: {
+              state
+            }
+          },
+          this.window.location.origin
+        )
       }
       if (this.request && (state === 'stopped' || state === 'pending')) {
         this.postMonetizationMessage(
