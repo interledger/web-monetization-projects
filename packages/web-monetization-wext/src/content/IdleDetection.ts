@@ -1,15 +1,24 @@
-import { injectable } from '@dier-makr/annotations'
+import { inject, injectable } from '@dier-makr/annotations'
 
-const IDLE_TIMEOUT = 30 * 60 * 1000 // 30 minutes
+export const IDLE_TIMEOUT = 30 * 60 * 1000 // 30 minutes
 
 export interface StreamControl {
   pause: Function
   resume: Function
 }
 
+export type IdleDetectionDocument = Pick<
+  Document,
+  'removeEventListener' | 'addEventListener' | 'visibilityState'
+>
+
 @injectable()
 export class IdleDetection {
-  constructor(private document: Document) {}
+  constructor(@inject(Document) private document: IdleDetectionDocument) {}
+
+  getNow() {
+    return Date.now()
+  }
 
   watchVisibility({ pause, resume }: StreamControl) {
     const document = this.document
@@ -34,29 +43,29 @@ export class IdleDetection {
   watchMouseMovement({ pause, resume }: StreamControl) {
     const document = this.document
     let idle = false
-    let lastMovement = Date.now()
-    let handle: any
+    let lastMovement = this.getNow()
+    let handle: number
 
-    handle = setTimeout(idleTimerReached, IDLE_TIMEOUT)
-
-    function idleTimerReached() {
-      const now = Date.now()
+    const idleTimerReached = () => {
+      const now = this.getNow()
       const idleTimeLeft = lastMovement + IDLE_TIMEOUT - now
 
       if (idleTimeLeft > 0) {
-        handle = setTimeout(idleTimerReached, idleTimeLeft)
+        handle = window.setTimeout(idleTimerReached, idleTimeLeft)
       } else {
         idle = true
         pause()
       }
     }
 
+    handle = window.setTimeout(idleTimerReached, IDLE_TIMEOUT)
+
     const listener = () => {
-      lastMovement = Date.now()
+      lastMovement = this.getNow()
 
       if (idle) {
         idle = false
-        handle = setTimeout(idleTimerReached, IDLE_TIMEOUT)
+        handle = window.setTimeout(idleTimerReached, IDLE_TIMEOUT)
         resume()
       }
     }
