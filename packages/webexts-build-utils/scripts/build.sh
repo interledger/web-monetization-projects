@@ -58,4 +58,4 @@ else
 fi
 
 echo Running ${BUILD_ENV} build for ${BROWSER_NAME}...
-BROWSER=${BROWSER_NAME} API=${BROWSER_API} yarn webpack-cli --reporter basic --config ${WEBPACK} ${EXTRA_ARGS}
+BROWSER=${BROWSER_NAME} API=${BROWSER_API} yarn webpack-cli --config ${WEBPACK} ${EXTRA_ARGS}

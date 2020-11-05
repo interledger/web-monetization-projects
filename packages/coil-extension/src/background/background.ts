@@ -1,5 +1,8 @@
-import '@abraham/reflection'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+// const setit = require('setimmediate')
+// console.log('SETIT', Object.keys(setit))
 
+import '@abraham/reflection'
 import { Container } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'

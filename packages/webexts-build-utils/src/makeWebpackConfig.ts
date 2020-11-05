@@ -3,8 +3,9 @@ import * as fs from 'fs'
 import * as cp from 'child_process'
 
 import * as webpack from 'webpack'
-import CopyPlugin from 'copy-webpack-plugin'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const CopyPlugin = require('copy-webpack-plugin')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const PnpPlugin = require('pnp-webpack-plugin')
 
@@ -122,10 +123,25 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
     }
   })
 
+  // const newVar = /.*export .* was not found in(.|\n)*\.ts/
+  //
   const config: webpack.Configuration = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     resolve: {
-      plugins: [PnpPlugin],
+      fallback: {
+        setImmediate: __dirname + '/../polyfills/setImmediate.js',
+        process: require.resolve('process/browser'),
+        string_decoder: require.resolve('string_decoder/'),
+        assert: require.resolve('assert/'),
+        crypto: require.resolve('crypto-browserify/'),
+        events: require.resolve('events/'),
+        util: require.resolve('util/'),
+        buffer: require.resolve('buffer/'),
+        stream: require.resolve('stream-browserify/')
+      },
+      plugins: [
+        /*PnpPlugin*/
+      ],
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
       symlinks: true,
       // Only add these if using the TEST_TSCONFIG which transpile only implies
@@ -133,21 +149,23 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         ...(TS_LOADER_TRANSPILE_ONLY
           ? require('../../../webpack.tsconfig.aliases')
           : {})
+        // events: 'events',
+        // stream: 'stream-browserify'
       }
     },
     resolveLoader: {
-      plugins: [PnpPlugin.moduleLoader(module)]
+      plugins: [
+        /*PnpPlugin.moduleLoader(module)*/
+      ]
     },
+
+    ignoreWarnings: [{
+      message: /export .* was not found in/
+    }],
 
     devtool: 'inline-source-map',
 
     entry: entry,
-
-    stats: {
-      warningsFilter: TS_LOADER_TRANSPILE_ONLY
-        ? [/export .* was not found in(.|\n)*\.ts$/]
-        : []
-    },
 
     plugins: [
       new webpack.DefinePlugin({
@@ -155,6 +173,14 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         WEBPACK_DEFINE_BROWSER: JSON.stringify(BROWSER),
         WEBPACK_DEFINE_BUILD_CONFIG: JSON.stringify(WEXT_BUILD_CONFIG)
       }),
+      new webpack.ProvidePlugin({
+        process: ['process']
+      }),
+      new webpack.ProvidePlugin({
+        setImmediate: ['setImmediate', 'setImmediate'],
+        clearImmediate: ['setImmediate', 'clearImmediate']
+      }),
+      new webpack.ProvidePlugin({ Buffer: ['buffer', 'Buffer'] }),
       new CopyPlugin({ patterns: copyToDist }),
       {
         apply(compilation) {
@@ -207,10 +233,10 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
     },
 
     node: {
-      console: true,
-      fs: 'empty',
-      net: 'empty',
-      tls: 'empty'
+      // console: '',
+      // fs: 'empty',
+      // net: 'empty',
+      // tls: 'empty'
     }
   }
 

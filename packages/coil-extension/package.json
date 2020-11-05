@@ -56,7 +56,9 @@
     "@web-monetization/polyfill-utils": "^0.0.0",
     "@web-monetization/types": "^0.0.0",
     "@web-monetization/wext": "^0.0.0",
+    "buffer": "^6.0.1",
     "debug": "^4.2.0",
+    "events": "^3.2.0",
     "ilp-plugin-btp": "1.4.2",
     "ilp-protocol-stream": "2.6.4",
     "inversify": "^5.0.1",
@@ -66,6 +68,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "reduct": "^3.3.1",
+    "stream-browserify": "^3.0.0",
     "uuid": "^8.3.1"
   },
   "devDependencies": {
@@ -78,7 +81,6 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@types/chrome": "0.0.126",
-    "@types/copy-webpack-plugin": "^6.0.0",
     "@types/debug": "^4.1.5",
     "@types/firefox": "^0.0.30",
     "@types/jest": "^26.0.15",
@@ -89,7 +91,6 @@
     "@types/react": "^16.9.55",
     "@types/react-dom": "^16.9.9",
     "@types/uuid": "^8.3.0",
-    "@types/webpack": "^4.41.24",
     "@types/webpack-merge": "^4.1.5",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
@@ -125,11 +126,10 @@
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.0.5",
     "web-ext": "^5.3.0",
-    "webpack": "^4.44.2",
+    "webpack": "^5.4.0",
     "webpack-bundle-analyzer": "^3.9.0",
     "webpack-cli": "^4.2.0",
-    "webpack-command": "^0.5.0",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^5.3.0"
   }
 }
