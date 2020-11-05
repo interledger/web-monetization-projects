@@ -1371,7 +1371,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -1430,7 +1430,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -1523,7 +1523,7 @@ __metadata:
     web-ext: ^5.3.0
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -1583,7 +1583,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -1653,7 +1653,7 @@ __metadata:
     uuid: ^8.3.1
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -1717,7 +1717,7 @@ __metadata:
     web-ext: ^5.3.0
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -1772,7 +1772,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -1834,7 +1834,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -1910,7 +1910,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -2167,7 +2167,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -2223,7 +2223,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -2445,7 +2445,7 @@ __metadata:
     web-ext: ^5.3.0
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -4713,7 +4713,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -4772,7 +4772,7 @@ __metadata:
     uuid: ^8.3.1
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -4829,7 +4829,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -4898,7 +4898,7 @@ __metadata:
     uuid: ^8.3.1
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -4953,7 +4953,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -5010,7 +5010,7 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -5247,12 +5247,35 @@ __metadata:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
   languageName: unknown
   linkType: soft
+
+"@webpack-cli/info@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@webpack-cli/info@npm:1.1.0"
+  dependencies:
+    envinfo: ^7.7.3
+  peerDependencies:
+    webpack-cli: 4.x.x
+  checksum: 798cbdfd549b4b5c0427e69993555899688ac071624cf9397eaf98a68b3bee5b15c4ae6ad4e3133a214cd991735f080ec2ed6e4b9aa91bd0cfce814b42ee80b7
+  languageName: node
+  linkType: hard
+
+"@webpack-cli/serve@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@webpack-cli/serve@npm:1.1.0"
+  peerDependencies:
+    webpack-cli: 4.x.x
+  peerDependenciesMeta:
+    webpack-dev-server:
+      optional: true
+  checksum: 7684766d7dc46d7855442b3f7f6dc8c533030d0d92c318d887e504d41cb4f5aafe5f65233e74123cbbec04d5479c423d526a55b989c74c811dee1c170d4c79b8
+  languageName: node
+  linkType: hard
 
 "@webpack-contrib/config-loader@npm:^1.2.0":
   version: 1.2.1
@@ -6082,6 +6105,13 @@ __metadata:
   version: 3.1.0
   resolution: "arr-union@npm:3.1.0"
   checksum: 78f0f75c4778283023b723152bf12be65773ab3628e21493e1a1d3c316d472af9053d9b3dec4d814a130ad4f8ba45ae79b0f33d270a4ae0b0ff41eb743461aa8
+  languageName: node
+  linkType: hard
+
+"array-back@npm:^4.0.0, array-back@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "array-back@npm:4.0.1"
+  checksum: 611f95e0398cc9f845ebb2ff6d611eae5d1c8063e8737a29e44033ee3cde6c04ab791f43f90899c001825aede8a9b60e987c3e20e446dccc12c4e4b9b848923b
   languageName: node
   linkType: hard
 
@@ -7947,6 +7977,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"command-line-usage@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "command-line-usage@npm:6.1.0"
+  dependencies:
+    array-back: ^4.0.0
+    chalk: ^2.4.2
+    table-layout: ^1.0.0
+    typical: ^5.2.0
+  checksum: c49e5f4a6780ee42dfeb537a1331715b1f6e52d4529ea8ebad45b2fc882b40a82815df38cf36147a308d2d8698f132374ae7af2c43d03aa7c1e51cffbdfe5206
+  languageName: node
+  linkType: hard
+
 "commander@npm:2.9.0":
   version: 2.9.0
   resolution: "commander@npm:2.9.0"
@@ -8991,7 +9033,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deep-extend@npm:^0.6.0":
+"deep-extend@npm:^0.6.0, deep-extend@npm:~0.6.0":
   version: 0.6.0
   resolution: "deep-extend@npm:0.6.0"
   checksum: 856d7f52db152c19fc5a70439ea938461cfb9338a632496fe370050dc73d3291cd76fc6713f604a5c126612dee9cac0f6da1d4b88ba4b0caa4f7214345879b89
@@ -9176,13 +9218,6 @@ __metadata:
   version: 1.0.4
   resolution: "destroy@npm:1.0.4"
   checksum: 5a516fc5a8a8089eecdac11da2339353542be7a71102dc5a1372ef6161501bf5c1ee59ff9f8a3f5f14cc8c88594d606f855f816d46a228ee5e0e5cb2b543534b
-  languageName: node
-  linkType: hard
-
-"detect-file@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "detect-file@npm:1.0.0"
-  checksum: 69717e5618370f31d3b266240289442d7c50f933834bbcffad187e73a6efaf3adc4ed283d8120a9ad77cbdcef3375c48acb4cdbb2df477695ed78d86c0d08c9c
   languageName: node
   linkType: hard
 
@@ -9707,7 +9742,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^4.0.0, enhanced-resolve@npm:^4.1.1, enhanced-resolve@npm:^4.3.0":
+"enhanced-resolve@npm:^4.0.0, enhanced-resolve@npm:^4.3.0":
   version: 4.3.0
   resolution: "enhanced-resolve@npm:4.3.0"
   dependencies:
@@ -9748,7 +9783,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"envinfo@npm:^7.3.1":
+"envinfo@npm:^7.3.1, envinfo@npm:^7.7.3":
   version: 7.7.3
   resolution: "envinfo@npm:7.7.3"
   bin:
@@ -10715,15 +10750,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expand-tilde@npm:^2.0.0, expand-tilde@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "expand-tilde@npm:2.0.2"
-  dependencies:
-    homedir-polyfill: ^1.0.1
-  checksum: 502e8b04a22094575c68639e68e0a2c19ad23d78441e440e5164ad2f38bef05e4b2c2568acfcf4af37b90bbf49ea587c253753ba6d351229e5858b96cb136125
-  languageName: node
-  linkType: hard
-
 "expect@npm:^26.6.2":
   version: 26.6.2
   resolution: "expect@npm:26.6.2"
@@ -11379,18 +11405,6 @@ __metadata:
   dependencies:
     semver-regex: ^2.0.0
   checksum: 2ddc16b4265184e2b7ab68bfd9d84835178fef4193abd957ebe328e0de98e8ca3b31e2a19201c1c8308e24786faa295aab46c0bc21fa89440e2a1bc8174987f0
-  languageName: node
-  linkType: hard
-
-"findup-sync@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "findup-sync@npm:3.0.0"
-  dependencies:
-    detect-file: ^1.0.0
-    is-glob: ^4.0.0
-    micromatch: ^3.0.4
-    resolve-dir: ^1.0.1
-  checksum: be03bd98fc3f6666933b958e690b3913ac932496d55db13379de93657d86073c18ec53e7438ffe3adf98b606830c3d4645fae985e857645dd8a56983188abade
   languageName: node
   linkType: hard
 
@@ -12140,50 +12154,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"global-modules@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "global-modules@npm:1.0.0"
-  dependencies:
-    global-prefix: ^1.0.1
-    is-windows: ^1.0.1
-    resolve-dir: ^1.0.0
-  checksum: 89fb699eee43823ce94e2dbcb5f7607e1de4f3e37b897a65b59720fa7284424b5f94b67f449a5f259e7a96e2bf851a1582ec31deb7f89b5336c9318ed95fcfe8
-  languageName: node
-  linkType: hard
-
-"global-modules@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "global-modules@npm:2.0.0"
-  dependencies:
-    global-prefix: ^3.0.0
-  checksum: 27e41b03a8d340637806ae30540b934f2fd1f3f3d1d73b86ab8a622c972a69faa0f63473325318af5a5bd9d429d76fb1f1c9445a6e8797ec01de307f3876cd42
-  languageName: node
-  linkType: hard
-
-"global-prefix@npm:^1.0.1":
-  version: 1.0.2
-  resolution: "global-prefix@npm:1.0.2"
-  dependencies:
-    expand-tilde: ^2.0.2
-    homedir-polyfill: ^1.0.1
-    ini: ^1.3.4
-    is-windows: ^1.0.1
-    which: ^1.2.14
-  checksum: 2353fc9bf5c3b688164356c08843b3f9cae6300836071d1250c06c70a0aa13ed643c5711399ec4a2027899977f1423f4d24e81e01a1da4c5239c4e195d80b024
-  languageName: node
-  linkType: hard
-
-"global-prefix@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "global-prefix@npm:3.0.0"
-  dependencies:
-    ini: ^1.3.5
-    kind-of: ^6.0.2
-    which: ^1.3.1
-  checksum: 5043a8455af20dd2185705caac446c8e8176638cbd364dcf288f41f4a07f2ef77cdeb5203916e7bd8b2884995d725a0b422d3483117cac796612ba61ea3d116e
-  languageName: node
-  linkType: hard
-
 "global@npm:^4.3.0":
   version: 4.4.0
   resolution: "global@npm:4.4.0"
@@ -12621,15 +12591,6 @@ fsevents@^1.2.7:
   dependencies:
     react-is: ^16.7.0
   checksum: d3e3791d6e3a2741ce0ba38e878081dec49247ef22982a990c80941ee1f564ef16cd5a511bcc8c5e54f1ce8205535e0414ca5feea722c0690c80040be7ebf9df
-  languageName: node
-  linkType: hard
-
-"homedir-polyfill@npm:^1.0.1":
-  version: 1.0.3
-  resolution: "homedir-polyfill@npm:1.0.3"
-  dependencies:
-    parse-passwd: ^1.0.0
-  checksum: 86a4e544cac858c31bb776d65a6aebbd84efddd98a5b4ebc65846d86b6161083b52fee059b8f809e9593537d10c9aabb381906305a0ee4a52f2625d0339b015f
   languageName: node
   linkType: hard
 
@@ -13392,7 +13353,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"interpret@npm:^1.0.0, interpret@npm:^1.4.0":
+"interpret@npm:^1.0.0":
   version: 1.4.0
   resolution: "interpret@npm:1.4.0"
   checksum: f15725d76206525546f559030ddc967db025c6db904eb8798a70ec3c07e42c5537c5cbc73a15eafd4ae5cdabad35601abf8878261c03dcc8217747e8037575fe
@@ -14078,7 +14039,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"is-windows@npm:^1.0.0, is-windows@npm:^1.0.1, is-windows@npm:^1.0.2":
+"is-windows@npm:^1.0.0, is-windows@npm:^1.0.2":
   version: 1.0.2
   resolution: "is-windows@npm:1.0.2"
   checksum: dd1ed8339a28c68fb52f05931c832488dafc90063e53b97a69ead219a5584d7f3e6e564731c2f983962ff5403afeb05365d88ce9af34c8dae76a14911020d73a
@@ -15548,7 +15509,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^1.0.2, loader-utils@npm:^1.1.0, loader-utils@npm:^1.2.3, loader-utils@npm:^1.4.0":
+"loader-utils@npm:^1.0.2, loader-utils@npm:^1.1.0, loader-utils@npm:^1.2.3":
   version: 1.4.0
   resolution: "loader-utils@npm:1.4.0"
   dependencies:
@@ -16263,7 +16224,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^3.0.4, micromatch@npm:^3.1.10, micromatch@npm:^3.1.4":
+"micromatch@npm:^3.1.10, micromatch@npm:^3.1.4":
   version: 3.1.10
   resolution: "micromatch@npm:3.1.10"
   dependencies:
@@ -18168,13 +18129,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"parse-passwd@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "parse-passwd@npm:1.0.0"
-  checksum: e196edc373f7cdeb07072c346aa22204f9bad6b4d4fde5186d83a770cc22c65388da1da941d6f147372986edab52732365ffe05a1d7f35cbc822a014622d8439
-  languageName: node
-  linkType: hard
-
 "parse-path@npm:^4.0.0":
   version: 4.0.2
   resolution: "parse-path@npm:4.0.2"
@@ -19579,6 +19533,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"rechoir@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "rechoir@npm:0.7.0"
+  dependencies:
+    resolve: ^1.9.0
+  checksum: 1d4cc8db1d4ff51d4c156db7ff6fe0a376e7527b61afafd148f1cfa2c19a6c454f3f77f1cb175e1f1f1476a83dbeba3632de088441dbaa404091a30d39c8749f
+  languageName: node
+  linkType: hard
+
 "recursive-readdir@npm:^2.0.0":
   version: 2.2.2
   resolution: "recursive-readdir@npm:2.2.2"
@@ -19638,6 +19601,13 @@ fsevents@^1.2.7:
   dependencies:
     redis-errors: ^1.0.0
   checksum: 45dbcb05bed2c80a4aac288bbefed2347ecf3508c24d542ab42efa21fd63b5aaca4208b206f05818835a2ac43abe09250c2638c11c3b0b66a5d67e83985e350f
+  languageName: node
+  linkType: hard
+
+"reduce-flatten@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "reduce-flatten@npm:2.0.0"
+  checksum: 216ce860c78081b83f255cad4d032361677e4aea87dacecd387e62505e1e4a50dd947b3ce9166b70d8b9aaa45215c1b512c518b5384e5067ee7d29011da0efb4
   languageName: node
   linkType: hard
 
@@ -19990,16 +19960,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"resolve-dir@npm:^1.0.0, resolve-dir@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "resolve-dir@npm:1.0.1"
-  dependencies:
-    expand-tilde: ^2.0.0
-    global-modules: ^1.0.0
-  checksum: b07a0070083d04f6c3b50fe7b986514978eba5ab957b49cf2637b2e8ce69d81e063523d60360145a7e8b03ea878c68fb491da86fb18601458eaef640ae40fdf5
-  languageName: node
-  linkType: hard
-
 "resolve-from@npm:5.0.0, resolve-from@npm:^5.0.0":
   version: 5.0.0
   resolution: "resolve-from@npm:5.0.0"
@@ -20044,7 +20004,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"resolve@^1.0.0, resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.13.1, resolve@^1.17.0, resolve@^1.18.1, resolve@^1.3.2, resolve@^1.6.0":
+"resolve@^1.0.0, resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.13.1, resolve@^1.17.0, resolve@^1.18.1, resolve@^1.3.2, resolve@^1.6.0, resolve@^1.9.0":
   version: 1.18.1
   resolution: "resolve@npm:1.18.1"
   dependencies:
@@ -20054,7 +20014,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^1.0.0#builtin<compat/resolve>, resolve@patch:resolve@^1.1.6#builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#builtin<compat/resolve>, resolve@patch:resolve@^1.13.1#builtin<compat/resolve>, resolve@patch:resolve@^1.17.0#builtin<compat/resolve>, resolve@patch:resolve@^1.18.1#builtin<compat/resolve>, resolve@patch:resolve@^1.3.2#builtin<compat/resolve>, resolve@patch:resolve@^1.6.0#builtin<compat/resolve>":
+"resolve@patch:resolve@^1.0.0#builtin<compat/resolve>, resolve@patch:resolve@^1.1.6#builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#builtin<compat/resolve>, resolve@patch:resolve@^1.13.1#builtin<compat/resolve>, resolve@patch:resolve@^1.17.0#builtin<compat/resolve>, resolve@patch:resolve@^1.18.1#builtin<compat/resolve>, resolve@patch:resolve@^1.3.2#builtin<compat/resolve>, resolve@patch:resolve@^1.6.0#builtin<compat/resolve>, resolve@patch:resolve@^1.9.0#builtin<compat/resolve>":
   version: 1.18.1
   resolution: "resolve@patch:resolve@npm%3A1.18.1#builtin<compat/resolve>::version=1.18.1&hash=3388aa"
   dependencies:
@@ -21781,6 +21741,18 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+"table-layout@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "table-layout@npm:1.0.1"
+  dependencies:
+    array-back: ^4.0.1
+    deep-extend: ~0.6.0
+    typical: ^5.2.0
+    wordwrapjs: ^4.0.0
+  checksum: b2e899f60f2ad5c161bf31ca5b1d886b3b1eeb1dca69e71d3492cdfd8c4be51251b978f692bcf76364be2a4a37cc3b353539f4006471b202647813bce0179a70
+  languageName: node
+  linkType: hard
+
 "table@npm:^3.7.8":
   version: 3.8.3
   resolution: "table@npm:3.8.3"
@@ -22608,6 +22580,13 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+"typical@npm:^5.0.0, typical@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "typical@npm:5.2.0"
+  checksum: f4af3049786332f535a02344283d8388d18d8335eb7232c99b73a49f4b240798aecc2e6ae30b108f01a82f37e98a17b84e4d9be6724244e1688442dfc2e87bac
+  languageName: node
+  linkType: hard
+
 "uglify-js@npm:^3.1.4":
   version: 3.10.4
   resolution: "uglify-js@npm:3.10.4"
@@ -23022,10 +23001,10 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"v8-compile-cache@npm:^2.0.0, v8-compile-cache@npm:^2.0.3, v8-compile-cache@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "v8-compile-cache@npm:2.1.1"
-  checksum: 1290922fe1501a732155206f2d516f91bdfd7acf318542ffe2813ff06465cf49051fae7e1a40f3e0a56cf78b41f799473f6e389fec0534e4ecc62eb4105cf22f
+"v8-compile-cache@npm:^2.0.0, v8-compile-cache@npm:^2.0.3, v8-compile-cache@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "v8-compile-cache@npm:2.2.0"
+  checksum: 1efc9946401fcad7a67619b520d8d12e31c7138090ffd9f98af9b919461fa23d947ecef0eab89cca4037c01d29d25a389ab6c0fac70ee4ed030443b08cdf6cff
   languageName: node
   linkType: hard
 
@@ -23300,7 +23279,7 @@ sjcl@sublimator/sjcl:
     typescript: ^4.0.5
     webpack: ^4.44.2
     webpack-bundle-analyzer: ^3.9.0
-    webpack-cli: ^3.3.12
+    webpack-cli: ^4.2.0
     webpack-command: ^0.5.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^4.2.2
@@ -23351,26 +23330,41 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:^3.3.12":
-  version: 3.3.12
-  resolution: "webpack-cli@npm:3.3.12"
+"webpack-cli@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "webpack-cli@npm:4.2.0"
   dependencies:
-    chalk: ^2.4.2
-    cross-spawn: ^6.0.5
-    enhanced-resolve: ^4.1.1
-    findup-sync: ^3.0.0
-    global-modules: ^2.0.0
-    import-local: ^2.0.0
-    interpret: ^1.4.0
-    loader-utils: ^1.4.0
-    supports-color: ^6.1.0
-    v8-compile-cache: ^2.1.1
-    yargs: ^13.3.2
+    "@webpack-cli/info": ^1.1.0
+    "@webpack-cli/serve": ^1.1.0
+    colorette: ^1.2.1
+    command-line-usage: ^6.1.0
+    commander: ^6.2.0
+    enquirer: ^2.3.6
+    execa: ^4.1.0
+    import-local: ^3.0.2
+    interpret: ^2.2.0
+    leven: ^3.1.0
+    rechoir: ^0.7.0
+    v8-compile-cache: ^2.2.0
+    webpack-merge: ^4.2.2
   peerDependencies:
-    webpack: 4.x.x
+    webpack: 4.x.x || 5.x.x
+  peerDependenciesMeta:
+    "@webpack-cli/generate-loader":
+      optional: true
+    "@webpack-cli/generate-plugin":
+      optional: true
+    "@webpack-cli/init":
+      optional: true
+    "@webpack-cli/migrate":
+      optional: true
+    webpack-bundle-analyzer:
+      optional: true
+    webpack-dev-server:
+      optional: true
   bin:
     webpack-cli: bin/cli.js
-  checksum: 8a195df0eb7006ce1f7e6e87b74f5b2e533e03faf13c594de99fd7cf239652c2618fa22065556afdb454f45ecfd704ffa3e36bf406fe10ce9691970ed04c2ca7
+  checksum: eb2f12e13a7ca99f65e7b48305b2a28a4df685304b36c742e3358f8a8f3c0d6e5d1631750eaf31deedbeca26460dd8fc7c36f99175f6fd08282e7debf176ef17
   languageName: node
   linkType: hard
 
@@ -23679,7 +23673,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"which@npm:^1.2.14, which@npm:^1.2.9, which@npm:^1.3.1":
+"which@npm:^1.2.9, which@npm:^1.3.1":
   version: 1.3.1
   resolution: "which@npm:1.3.1"
   dependencies:
@@ -23755,6 +23749,16 @@ sjcl@sublimator/sjcl:
   version: 1.0.0
   resolution: "wordwrap@npm:1.0.0"
   checksum: b4f3f8104a727d1b08e77f43f3692977146f13074392747a3d9cfd631d0fc3ff1c0c034d44fcd7a22183c6505d2fc305421e3512671f8a56f903055671ace4ce
+  languageName: node
+  linkType: hard
+
+"wordwrapjs@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "wordwrapjs@npm:4.0.0"
+  dependencies:
+    reduce-flatten: ^2.0.0
+    typical: ^5.0.0
+  checksum: 022dc1d1a3a2b15490288840822f4f5db31d653edc31117e492e402e77ea02509f44ac7fe163b0aa39d1cc8e2df4d7ef2a28ad8bf3795e7f2a8ee1da8b8bef54
   languageName: node
   linkType: hard
 
