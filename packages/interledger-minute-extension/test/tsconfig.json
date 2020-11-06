@@ -1,7 +1,4 @@
 {
   // FROM UPKEEP TEMPLATE
-  "extends": "../../../tsconfig.json",
-  "compilerOptions": {
-    "target": "es2018"
-  }
+  "extends": "../../../tsconfig.json"
 }
