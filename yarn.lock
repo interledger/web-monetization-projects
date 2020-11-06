@@ -4014,15 +4014,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/clean-css@npm:*":
-  version: 4.2.2
-  resolution: "@types/clean-css@npm:4.2.2"
-  dependencies:
-    "@types/node": "*"
-  checksum: cac09d2d1d01d49ecd8a973b635ca37745793ba6dbd62663c28523cae4fdf35c26fc13442316e5d7768b9dab59e092fb20d98427c4307d07cbddfdfc7055f742
-  languageName: node
-  linkType: hard
-
 "@types/color-name@npm:^1.1.1":
   version: 1.1.1
   resolution: "@types/color-name@npm:1.1.1"
@@ -4167,28 +4158,6 @@ __metadata:
   version: 5.1.0
   resolution: "@types/html-minifier-terser@npm:5.1.0"
   checksum: e07f30cf9b3bfc3fcf4854c28b43cbdfb9c25180368a393749c762c4b980985037acddef50d894d722bf6e3d866b4c6d6d466ecb3b4db997429e5f75cc8bc422
-  languageName: node
-  linkType: hard
-
-"@types/html-minifier@npm:*":
-  version: 4.0.0
-  resolution: "@types/html-minifier@npm:4.0.0"
-  dependencies:
-    "@types/clean-css": "*"
-    "@types/relateurl": "*"
-    "@types/uglify-js": "*"
-  checksum: 857211bbb548dfba3e27a333ade0620e8e7b0199eac04523be356d2d328237a505ff90d438315a333c03a176aee3c6344d6ad514f56aeeb739d7e71e7318974b
-  languageName: node
-  linkType: hard
-
-"@types/html-webpack-plugin@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "@types/html-webpack-plugin@npm:3.2.4"
-  dependencies:
-    "@types/html-minifier": "*"
-    "@types/tapable": "*"
-    "@types/webpack": "*"
-  checksum: 353618b9f39b356b2ad29f6eb7fde5c60bed03fed12cfeb8386db127f04dd88db8119ec247f7b671e2d3c5f9a614355ef629803e1e25f75345c8d8bdab7523be
   languageName: node
   linkType: hard
 
@@ -4396,13 +4365,6 @@ __metadata:
     "@types/prop-types": "*"
     csstype: ^3.0.2
   checksum: aadc5636d6b58e33422d0f3d275daf25b5456f715a0426ea08399f577ba0229dead47d41dc2c6e1f1659fb01e42c005045f97ed535b3695e05f209bd0b7076c5
-  languageName: node
-  linkType: hard
-
-"@types/relateurl@npm:*":
-  version: 0.2.28
-  resolution: "@types/relateurl@npm:0.2.28"
-  checksum: 4ef1a209ad6f6b0d2abfb310c0e4bb10dd76cb17c911e763564fe440d4f88d7feb224e9a89df4352175a0159a60f484688f29011dcd9cbc5b423b41ada2d6f21
   languageName: node
   linkType: hard
 
@@ -4676,7 +4638,6 @@ __metadata:
     "@hot-loader/react-dom": ^16.14.0
     "@types/body-parser": ^1.19.0
     "@types/express": ^4.17.8
-    "@types/html-webpack-plugin": ^3.2.4
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
