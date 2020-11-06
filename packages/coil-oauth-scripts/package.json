@@ -17,8 +17,8 @@
   "main": "./build",
   "types": "./build",
   "scripts": {
-    "build": "webpack-cli --config webpack.config.ts",
-    "build-prod": "webpack-cli --config webpack.config.ts --mode production",
+    "build": "TSCONFIG_PATHS_REGISTER=1 webpack-cli --config webpack.config.ts",
+    "build-prod": "TSCONFIG_PATHS_REGISTER=1 webpack-cli --config webpack.config.ts --mode production",
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",

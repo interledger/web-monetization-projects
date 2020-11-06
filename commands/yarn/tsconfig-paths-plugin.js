@@ -6,7 +6,7 @@ module.exports = {
     return {
       hooks: {
         setupScriptEnvironment(project, scriptEnv) {
-          if (!(scriptEnv.TSCONFIG_PATHS_REGISTER === 'false')) {
+          if (scriptEnv.TSCONFIG_PATHS_REGISTER) {
             scriptEnv.NODE_OPTIONS += ' --require tsconfig-paths/register'
           }
         }
