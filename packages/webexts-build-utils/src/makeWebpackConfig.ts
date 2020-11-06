@@ -147,9 +147,11 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       ]
     },
 
-    ignoreWarnings: [{
-      message: /export .* was not found in/
-    }],
+    ignoreWarnings: [
+      {
+        message: /export .* was not found in/
+      }
+    ],
 
     devtool: 'inline-source-map',
 

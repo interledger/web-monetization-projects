@@ -27,10 +27,12 @@ module.exports = {
     fallback: {
       process: require.resolve('process/browser'),
       assert: require.resolve('assert/'),
-      events: require.resolve('events/'),
+      events: require.resolve('events/')
     },
     extensions: ['.ts', '.js'],
-    plugins: [/*PnpPlugin*/]
+    plugins: [
+      /*PnpPlugin*/
+    ]
   },
   resolveLoader: {
     plugins: [

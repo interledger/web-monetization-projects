@@ -25,7 +25,7 @@ export const configureNodePolyfills = (wpConf: webpack.Configuration) => {
       setImmediate: ['setImmediate', 'setImmediate'],
       clearImmediate: ['setImmediate', 'clearImmediate']
     }),
-    new webpack.ProvidePlugin({ Buffer: ['buffer', 'Buffer'] }),
+    new webpack.ProvidePlugin({ Buffer: ['buffer', 'Buffer'] })
   ]
   return wpConf
 }
