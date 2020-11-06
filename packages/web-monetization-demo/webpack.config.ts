@@ -39,8 +39,7 @@ const config: webpack.Configuration = configureNodePolyfills({
       ...(TS_LOADER_TRANSPILE_ONLY
         ? require('../../webpack.tsconfig.aliases')
         : {})
-    },
-    plugins: []
+    }
   },
   plugins: [
     new webpack.DefinePlugin({

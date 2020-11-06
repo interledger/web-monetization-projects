@@ -122,8 +122,6 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
     }
   })
 
-  // const newVar = /.*export .* was not found in(.|\n)*\.ts/
-  //
   const production = process.env.NODE_ENV === 'production'
   const mode = production ? 'production' : 'development'
 
@@ -133,9 +131,6 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       minimize: production
     },
     resolve: {
-      plugins: [
-        /*PnpPlugin*/
-      ],
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
       symlinks: true,
       // Only add these if using the TEST_TSCONFIG which transpile only implies
@@ -143,16 +138,8 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         ...(TS_LOADER_TRANSPILE_ONLY
           ? require('../../../webpack.tsconfig.aliases')
           : {})
-        // events: 'events',
-        // stream: 'stream-browserify'
       }
     },
-    resolveLoader: {
-      plugins: [
-        /*PnpPlugin.moduleLoader(module)*/
-      ]
-    },
-
     ignoreWarnings: [
       {
         message: /export .* was not found in/
@@ -218,13 +205,6 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
           ]
         }
       ]
-    },
-
-    node: {
-      // console: '',
-      // fs: 'empty',
-      // net: 'empty',
-      // tls: 'empty'
     }
   }
 
