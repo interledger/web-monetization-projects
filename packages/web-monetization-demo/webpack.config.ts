@@ -4,9 +4,6 @@ import * as webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { configureNodePolyfills } from '@coil/webpack-utils'
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const PnpPlugin = require('pnp-webpack-plugin')
-
 const ROOT_DIR = __dirname
 
 // Can cut build times down from 30s to 10s on some machines
@@ -24,7 +21,7 @@ const TSCONFIG = TS_LOADER_TRANSPILE_ONLY
   ? TSCONFIG_DEBUG_JSON
   : TSCONFIG_BUILD_JSON
 
-const config: webpack.Configuration = {
+const config: webpack.Configuration = configureNodePolyfills({
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: {
     index: './src/client/Index.tsx'
@@ -46,10 +43,7 @@ const config: webpack.Configuration = {
         ? require('../../webpack.tsconfig.aliases')
         : {})
     },
-    plugins: [PnpPlugin]
-  },
-  resolveLoader: {
-    plugins: [PnpPlugin.moduleLoader(module)]
+    plugins: []
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -92,6 +86,6 @@ const config: webpack.Configuration = {
       }
     ]
   }
-}
+})
 
-export = configureNodePolyfills(config)
+export = config

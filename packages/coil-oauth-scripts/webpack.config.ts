@@ -1,14 +1,13 @@
-'use strict'
+import path from 'path'
 
-const path = require('path')
-const PnpPlugin = require('pnp-webpack-plugin')
-const webpack = require('webpack')
+import webpack from 'webpack'
+import { configureNodePolyfills } from '@coil/webpack-utils'
 
 const TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
 
-console.log({ TRANSPILE_ONLY })
-module.exports = {
-  mode: process.env.BUILD_ENV || 'development',
+module.exports = configureNodePolyfills({
+  mode: (process.env.BUILD_ENV ||
+    'development') as webpack.Configuration['mode'],
 
   entry: {
     'coil-oauth-wm': ['./src/bundle.ts']
@@ -30,17 +29,7 @@ module.exports = {
       events: require.resolve('events/')
     },
     extensions: ['.ts', '.js'],
-    plugins: [
-      /*PnpPlugin*/
-    ]
-  },
-  resolveLoader: {
-    plugins: [
-      // PnpPlugin.moduleLoader(module),
-      // new webpack.ProvidePlugin({
-      //   process: ['process']
-      // }),
-    ]
+    plugins: []
   },
 
   module: {
@@ -63,12 +52,5 @@ module.exports = {
         ]
       }
     ]
-  },
-
-  node: {
-    // console: true,
-    // fs: 'empty',
-    // net: 'empty',
-    // tls: 'empty'
   }
-}
+})

@@ -1,5 +1,10 @@
 import * as webpack from 'webpack'
 
+function log(val: string): string {
+  console.log(val)
+  return val
+}
+
 export const configureNodePolyfills = (wpConf: webpack.Configuration) => {
   if (!wpConf.resolve) {
     throw new Error()
@@ -7,7 +12,7 @@ export const configureNodePolyfills = (wpConf: webpack.Configuration) => {
   wpConf.resolve.fallback = {
     ...wpConf.resolve.fallback,
     setImmediate: `${__dirname}/../polyfills/setImmediate.js`,
-    process: require.resolve('process/browser'),
+    process: log(require.resolve('process/browser')),
     string_decoder: require.resolve('string_decoder/'),
     assert: require.resolve('assert/'),
     events: require.resolve('events/'),
