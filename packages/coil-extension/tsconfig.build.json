@@ -18,6 +18,9 @@
       "path": "../coil-privacypass-sjcl/tsconfig.build.json"
     },
     {
+      "path": "../coil-webpack-utils/tsconfig.build.json"
+    },
+    {
       "path": "../dier-makr-annotations/tsconfig.build.json"
     },
     {
@@ -25,9 +28,6 @@
     },
     {
       "path": "../web-monetization-types/tsconfig.build.json"
-    },
-    {
-      "path": "../webexts-build-utils/tsconfig.build.json"
     },
     {
       "path": "../coil-anonymous-tokens/tsconfig.build.json"
@@ -40,6 +40,9 @@
     },
     {
       "path": "../web-monetization-wext/tsconfig.build.json"
+    },
+    {
+      "path": "../webexts-build-utils/tsconfig.build.json"
     },
     {
       "path": "../coil-playwright-utils/tsconfig.build.json"

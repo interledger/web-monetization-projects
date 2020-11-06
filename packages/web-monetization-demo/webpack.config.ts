@@ -2,9 +2,7 @@ import * as path from 'path'
 
 import * as webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const PnpPlugin = require('pnp-webpack-plugin')
+import { configureNodePolyfills } from '@coil/webpack-utils'
 
 const ROOT_DIR = __dirname
 
@@ -23,7 +21,7 @@ const TSCONFIG = TS_LOADER_TRANSPILE_ONLY
   ? TSCONFIG_DEBUG_JSON
   : TSCONFIG_BUILD_JSON
 
-const config: webpack.Configuration = {
+const config: webpack.Configuration = configureNodePolyfills({
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: {
     index: './src/client/Index.tsx'
@@ -33,9 +31,6 @@ const config: webpack.Configuration = {
     path: path.join(ROOT_DIR, 'dist'),
     libraryTarget: 'umd'
   },
-  optimization: {
-    namedModules: true
-  },
   devtool: 'inline-source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -44,11 +39,7 @@ const config: webpack.Configuration = {
       ...(TS_LOADER_TRANSPILE_ONLY
         ? require('../../webpack.tsconfig.aliases')
         : {})
-    },
-    plugins: [PnpPlugin]
-  },
-  resolveLoader: {
-    plugins: [PnpPlugin.moduleLoader(module)]
+    }
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -91,6 +82,6 @@ const config: webpack.Configuration = {
       }
     ]
   }
-}
+})
 
 export = config

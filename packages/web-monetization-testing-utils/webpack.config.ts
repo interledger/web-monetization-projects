@@ -3,9 +3,7 @@ import * as path from 'path'
 
 import * as webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const PnpPlugin = require('pnp-webpack-plugin')
+import { configureNodePolyfills } from '@coil/webpack-utils'
 
 const ROOT_DIR = __dirname
 
@@ -42,11 +40,7 @@ const config: webpack.Configuration = {
       ...(TS_LOADER_TRANSPILE_ONLY
         ? require('../../webpack.tsconfig.aliases')
         : {})
-    },
-    plugins: [PnpPlugin]
-  },
-  resolveLoader: {
-    plugins: [PnpPlugin.moduleLoader(module)]
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -85,4 +79,4 @@ const config: webpack.Configuration = {
   }
 }
 
-export = config
+export = configureNodePolyfills(config)

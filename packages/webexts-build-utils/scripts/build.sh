@@ -13,10 +13,6 @@ else
   yarn
 fi
 
-# This is just a small module, and it's a pain to try and load it dynamically
-# so compile this manually and require via package.json#main === build/
-yarn tsc -b "../webexts-build-utils/tsconfig.build.json"
-
 BUILD_TS=${BUILD_TS:-true}
 TS_LOADER_TRANSPILE_ONLY=${TS_LOADER_TRANSPILE_ONLY:-false}
 
@@ -58,4 +54,5 @@ else
 fi
 
 echo Running ${BUILD_ENV} build for ${BROWSER_NAME}...
-BROWSER=${BROWSER_NAME} API=${BROWSER_API} yarn webpack-cli --reporter basic --config ${WEBPACK} ${EXTRA_ARGS}
+# See yarn plugin for TSCONFIG_PATHS_REGISTER
+TS_NODE_TRANSPILE_ONLY=${TS_NODE_TRANSPILE_ONLY:-true} BROWSER=${BROWSER_NAME} API=${BROWSER_API} yarn run webpack-cli --config ${WEBPACK} ${EXTRA_ARGS}

@@ -1,5 +1,4 @@
 import '@abraham/reflection'
-
 import { Container } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'

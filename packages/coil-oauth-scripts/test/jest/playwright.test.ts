@@ -27,10 +27,11 @@ async function getBtpTokenFromEnv() {
 }
 
 async function buildOauthScript() {
-  const command = 'yarn build'
-  log('running', command)
+  const command = 'yarn run build'
+  const cwd = fromHere('../..')
+  log('running', command, 'from', cwd)
   await promisify(exec)(command, {
-    cwd: fromHere('../..')
+    cwd: cwd
   })
   log('command finished')
 }

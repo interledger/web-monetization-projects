@@ -9,8 +9,6 @@ BROWSER_NAME=${1:-chrome}
 FIREFOX_PACKAGE_ZIP=${2}
 CHROME_PACKAGE_ZIP=${3}
 EDGE_PACKAGE_ZIP=${4}
-# -p works for webpack-cli, --run-prod for webpack-command
-WEBPACK_OVERRIDES="-p --run-prod --devtool=none"
 
 echo Packaging extension for ${BROWSER_NAME}
 
@@ -25,7 +23,7 @@ rm -rf dist
 
 yarn
 # Build typescript, including dependency project references
-yarn build-prod ${BROWSER_NAME} ${WEBPACK_OVERRIDES}
+NODE_ENV=production yarn build-prod ${BROWSER_NAME}
 
 if [[ ${BROWSER_NAME} = "firefox" ]]
 then

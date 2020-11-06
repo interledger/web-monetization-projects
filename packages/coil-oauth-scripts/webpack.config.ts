@@ -1,24 +1,17 @@
-'use strict'
+import path from 'path'
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require('path')
-const PnpPlugin = require('pnp-webpack-plugin')
+import webpack from 'webpack'
+import { configureNodePolyfills } from '@coil/webpack-utils'
 
 const TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
 
-module.exports = {
-  mode: process.env.BUILD_ENV || 'development',
+module.exports = configureNodePolyfills({
+  mode: (process.env.BUILD_ENV ||
+    'development') as webpack.Configuration['mode'],
 
   entry: {
-    'web-monetization-react': ['./src/index.ts']
+    'coil-oauth-wm': ['./src/bundle.ts']
   },
-
-  externals: [
-    // The original rollup script apparently set events as an external
-    'events',
-    'react',
-    'react-dom'
-  ],
 
   output: {
     filename: '[name].js',
@@ -27,25 +20,21 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
     alias: {
       ...(TRANSPILE_ONLY ? require('../../webpack.tsconfig.aliases') : {})
     },
-    plugins: [PnpPlugin]
-  },
-
-  resolveLoader: {
-    plugins: [PnpPlugin.moduleLoader(module)]
+    extensions: ['.ts', '.js'],
+    plugins: []
   },
 
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts?$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: 'ts-loader',
+            loader: require.resolve('ts-loader'),
             options: {
               // https://github.com/TypeStrong/ts-loader#transpileonly-boolean-defaultfalse
               transpileOnly: TRANSPILE_ONLY,
@@ -58,12 +47,5 @@ module.exports = {
         ]
       }
     ]
-  },
-
-  node: {
-    console: true,
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty'
   }
-}
+})

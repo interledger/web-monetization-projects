@@ -15,6 +15,9 @@
       "@coil/privacypass-sjcl": [
         "packages/coil-privacypass-sjcl/src"
       ],
+      "@coil/webpack-utils": [
+        "packages/coil-webpack-utils/src"
+      ],
       "@dier-makr/annotations": [
         "packages/dier-makr-annotations/src"
       ],
@@ -23,9 +26,6 @@
       ],
       "@web-monetization/types": [
         "packages/web-monetization-types/src"
-      ],
-      "@webexts/build-utils": [
-        "packages/webexts-build-utils/src"
       ],
       "@coil/anonymous-tokens": [
         "packages/coil-anonymous-tokens/src"
@@ -56,6 +56,9 @@
       ],
       "@web-monetization/wext/content": [
         "packages/web-monetization-wext/src/content"
+      ],
+      "@webexts/build-utils": [
+        "packages/webexts-build-utils/src"
       ],
       "@coil/playwright-utils": [
         "packages/coil-playwright-utils/src"

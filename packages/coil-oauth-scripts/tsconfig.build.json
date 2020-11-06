@@ -15,6 +15,9 @@
       "path": "../coil-polyfill-utils/tsconfig.build.json"
     },
     {
+      "path": "../coil-webpack-utils/tsconfig.build.json"
+    },
+    {
       "path": "../dier-makr-annotations/tsconfig.build.json"
     },
     {

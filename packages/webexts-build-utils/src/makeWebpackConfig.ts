@@ -3,10 +3,10 @@ import * as fs from 'fs'
 import * as cp from 'child_process'
 
 import * as webpack from 'webpack'
-import CopyPlugin from 'copy-webpack-plugin'
+import { configureNodePolyfills } from '@coil/webpack-utils'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const PnpPlugin = require('pnp-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const CHROMIUM_BASED_BROWSER = /chrome|edge/
 
@@ -122,10 +122,15 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
     }
   })
 
+  const production = process.env.NODE_ENV === 'production'
+  const mode = production ? 'production' : 'development'
+
   const config: webpack.Configuration = {
-    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+    mode: mode,
+    optimization: {
+      minimize: production
+    },
     resolve: {
-      plugins: [PnpPlugin],
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
       symlinks: true,
       // Only add these if using the TEST_TSCONFIG which transpile only implies
@@ -135,19 +140,15 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
           : {})
       }
     },
-    resolveLoader: {
-      plugins: [PnpPlugin.moduleLoader(module)]
-    },
+    ignoreWarnings: [
+      {
+        message: /export .* was not found in/
+      }
+    ],
 
-    devtool: 'inline-source-map',
+    devtool: production ? undefined : 'inline-source-map',
 
     entry: entry,
-
-    stats: {
-      warningsFilter: TS_LOADER_TRANSPILE_ONLY
-        ? [/export .* was not found in(.|\n)*\.ts$/]
-        : []
-    },
 
     plugins: [
       new webpack.DefinePlugin({
@@ -204,15 +205,8 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
           ]
         }
       ]
-    },
-
-    node: {
-      console: true,
-      fs: 'empty',
-      net: 'empty',
-      tls: 'empty'
     }
   }
 
-  return config
+  return configureNodePolyfills(config)
 }
