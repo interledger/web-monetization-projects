@@ -31,9 +31,6 @@ const config: webpack.Configuration = configureNodePolyfills({
     path: path.join(ROOT_DIR, 'dist'),
     libraryTarget: 'umd'
   },
-  optimization: {
-    // namedModules: true
-  },
   devtool: 'inline-source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
