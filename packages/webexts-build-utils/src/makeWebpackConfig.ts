@@ -124,8 +124,14 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
 
   // const newVar = /.*export .* was not found in(.|\n)*\.ts/
   //
+  const production = process.env.NODE_ENV === 'production'
+  const mode = production ? 'production' : 'development'
+
   const config: webpack.Configuration = {
-    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+    mode: mode,
+    optimization: {
+      minimize: production
+    },
     resolve: {
       plugins: [
         /*PnpPlugin*/
@@ -153,7 +159,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       }
     ],
 
-    devtool: 'inline-source-map',
+    devtool: production ? undefined : 'inline-source-map',
 
     entry: entry,
 
