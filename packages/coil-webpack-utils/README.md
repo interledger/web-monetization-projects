@@ -1,3 +1,3 @@
 # Coil Webpack Utils
 
-A work in progress. You probably don't want this.
+Magically add node polyfills to the webpack configuration

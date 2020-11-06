@@ -23,11 +23,6 @@ module.exports = configureNodePolyfills({
     alias: {
       ...(TRANSPILE_ONLY ? require('../../webpack.tsconfig.aliases') : {})
     },
-    fallback: {
-      process: require.resolve('process/browser'),
-      assert: require.resolve('assert/'),
-      events: require.resolve('events/')
-    },
     extensions: ['.ts', '.js'],
     plugins: []
   },
