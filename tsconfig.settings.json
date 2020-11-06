@@ -5,7 +5,7 @@
       "esnext",
       "dom"
     ],
-    "target": "es5",
+    "target": "es2020",
     "noEmit": false,
 
     "jsx": "react",

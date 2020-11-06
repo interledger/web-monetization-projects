@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "target": "es2018"
+    "target": "es2020"
   }
 }
