@@ -1,7 +1,4 @@
 {
   // FROM UPKEEP TEMPLATE
-  "extends": "../../../tsconfig.json",
-  "compilerOptions": {
-    "target": "es2020"
-  }
+  "extends": "../../../tsconfig.json"
 }
