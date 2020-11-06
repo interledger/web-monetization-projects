@@ -1474,7 +1474,6 @@ __metadata:
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
     addons-linter: ^2.11.0
-    buffer: ^6.0.1
     copy-webpack-plugin: ^6.2.1
     crx-hotreload: ^1.0.4
     debug: ^4.2.0
@@ -1490,7 +1489,6 @@ __metadata:
     eslint-plugin-react: ^7.21.5
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-standard: ^4.0.2
-    events: ^3.2.0
     husky: ^4.3.0
     ilp-plugin-btp: 1.4.2
     ilp-protocol-stream: 2.6.4
@@ -1507,7 +1505,6 @@ __metadata:
     react-dom: ^16.14.0
     reduct: ^3.3.1
     rimraf: ^3.0.2
-    stream-browserify: ^3.0.0
     ts-jest: ^26.4.3
     ts-loader: ^8.0.9
     ts-node: ^9.0.0

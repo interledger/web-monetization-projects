@@ -56,9 +56,7 @@
     "@web-monetization/polyfill-utils": "^0.0.0",
     "@web-monetization/types": "^0.0.0",
     "@web-monetization/wext": "^0.0.0",
-    "buffer": "^6.0.1",
     "debug": "^4.2.0",
-    "events": "^3.2.0",
     "ilp-plugin-btp": "1.4.2",
     "ilp-protocol-stream": "2.6.4",
     "inversify": "^5.0.1",
@@ -68,7 +66,6 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "reduct": "^3.3.1",
-    "stream-browserify": "^3.0.0",
     "uuid": "^8.3.1"
   },
   "devDependencies": {
