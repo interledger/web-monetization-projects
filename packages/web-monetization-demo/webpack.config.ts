@@ -2,6 +2,7 @@ import * as path from 'path'
 
 import * as webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import { configureNodePolyfills } from '@coil/webpack-utils'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const PnpPlugin = require('pnp-webpack-plugin')
@@ -34,7 +35,7 @@ const config: webpack.Configuration = {
     libraryTarget: 'umd'
   },
   optimization: {
-    namedModules: true
+    // namedModules: true
   },
   devtool: 'inline-source-map',
   resolve: {
@@ -93,4 +94,4 @@ const config: webpack.Configuration = {
   }
 }
 
-export = config
+export = configureNodePolyfills(config)

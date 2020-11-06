@@ -2,6 +2,7 @@
 
 const path = require('path')
 const PnpPlugin = require('pnp-webpack-plugin')
+const webpack = require('webpack')
 
 const TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
 
@@ -23,11 +24,21 @@ module.exports = {
     alias: {
       ...(TRANSPILE_ONLY ? require('../../webpack.tsconfig.aliases') : {})
     },
+    fallback: {
+      process: require.resolve('process/browser'),
+      assert: require.resolve('assert/'),
+      events: require.resolve('events/'),
+    },
     extensions: ['.ts', '.js'],
-    plugins: [PnpPlugin]
+    plugins: [/*PnpPlugin*/]
   },
   resolveLoader: {
-    plugins: [PnpPlugin.moduleLoader(module)]
+    plugins: [
+      // PnpPlugin.moduleLoader(module),
+      // new webpack.ProvidePlugin({
+      //   process: ['process']
+      // }),
+    ]
   },
 
   module: {
@@ -53,9 +64,9 @@ module.exports = {
   },
 
   node: {
-    console: true,
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty'
+    // console: true,
+    // fs: 'empty',
+    // net: 'empty',
+    // tls: 'empty'
   }
 }

@@ -3,11 +3,10 @@ import * as fs from 'fs'
 import * as cp from 'child_process'
 
 import * as webpack from 'webpack'
+import { configureNodePolyfills } from '@coil/webpack-utils'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const PnpPlugin = require('pnp-webpack-plugin')
 
 const CHROMIUM_BASED_BROWSER = /chrome|edge/
 
@@ -128,17 +127,6 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   const config: webpack.Configuration = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     resolve: {
-      fallback: {
-        setImmediate: __dirname + '/../polyfills/setImmediate.js',
-        process: require.resolve('process/browser'),
-        string_decoder: require.resolve('string_decoder/'),
-        assert: require.resolve('assert/'),
-        crypto: require.resolve('crypto-browserify/'),
-        events: require.resolve('events/'),
-        util: require.resolve('util/'),
-        buffer: require.resolve('buffer/'),
-        stream: require.resolve('stream-browserify/')
-      },
       plugins: [
         /*PnpPlugin*/
       ],
@@ -173,14 +161,6 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         WEBPACK_DEFINE_BROWSER: JSON.stringify(BROWSER),
         WEBPACK_DEFINE_BUILD_CONFIG: JSON.stringify(WEXT_BUILD_CONFIG)
       }),
-      new webpack.ProvidePlugin({
-        process: ['process']
-      }),
-      new webpack.ProvidePlugin({
-        setImmediate: ['setImmediate', 'setImmediate'],
-        clearImmediate: ['setImmediate', 'clearImmediate']
-      }),
-      new webpack.ProvidePlugin({ Buffer: ['buffer', 'Buffer'] }),
       new CopyPlugin({ patterns: copyToDist }),
       {
         apply(compilation) {
@@ -240,5 +220,5 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
     }
   }
 
-  return config
+  return configureNodePolyfills(config)
 }

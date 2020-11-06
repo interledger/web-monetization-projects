@@ -1,12 +1,12 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
-  "name": "@webexts/build-utils",
+  "name": "@coil/webpack-utils",
   "version": "0.0.0",
   "keywords": [
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/webexts-build-utils",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/coil-webpack-utils",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
@@ -30,13 +30,10 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
-    "@coil/webpack-utils": "^0.0.0",
     "assert": "^2.0.0",
     "buffer": "^6.0.1",
-    "crx-hotreload": "^1.0.4",
     "crypto-browserify": "^3.12.0",
     "events": "^3.2.0",
-    "pnp-webpack-plugin": "^1.6.4",
     "process": "^0.11.10",
     "setimmediate": "^1.0.5",
     "stream-browserify": "^3.0.0",
@@ -78,7 +75,7 @@
     "prettier": "^2.1.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.4.3",
-    "ts-loader": "^8.0.9",
+    "ts-loader": "^8.0.8",
     "ts-node": "^9.0.0",
     "ts-node-dev": "^1.0.0",
     "tsconfig-paths": "^3.9.0",

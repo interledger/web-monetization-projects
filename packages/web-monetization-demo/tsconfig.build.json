@@ -12,6 +12,9 @@
   ],
   "references": [
     {
+      "path": "../coil-webpack-utils/tsconfig.build.json"
+    },
+    {
       "path": "../web-monetization-types/tsconfig.build.json"
     },
     {
