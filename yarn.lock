@@ -1474,6 +1474,7 @@ __metadata:
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
     addons-linter: ^2.11.0
+    buffer: ^6.0.1
     copy-webpack-plugin: ^6.2.1
     crx-hotreload: ^1.0.4
     debug: ^4.2.0
@@ -4061,6 +4062,33 @@ __metadata:
     "@types/got": ^8
     "@types/node": "*"
   checksum: 3927d241c89eecde7fdcb546614bead76dba8a15318d366a5a7dfe3ebe09117ca644be161495c6349452f3639afa4645d1f004f54cf1fe94b22a7ce15db066ba
+  languageName: node
+  linkType: hard
+
+"@types/eslint-scope@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "@types/eslint-scope@npm:3.7.0"
+  dependencies:
+    "@types/eslint": "*"
+    "@types/estree": "*"
+  checksum: 1ee912a956f6fecd26bef9517ef33473498feda4a7fc7f191b705c750dcf8bbbd78a83d8c69e66d98c23cad4dfc8769a464780a3cf395948e3f0f85146729f68
+  languageName: node
+  linkType: hard
+
+"@types/eslint@npm:*":
+  version: 7.2.4
+  resolution: "@types/eslint@npm:7.2.4"
+  dependencies:
+    "@types/estree": "*"
+    "@types/json-schema": "*"
+  checksum: 281fbca931a7a9e4d9512cdb7f7ff92ecbc66362615712bb42f9fa7405b8cfad77e8fef35999c0533954effc0dfd153aa496bef08e3c160e0d89367166d7becb
+  languageName: node
+  linkType: hard
+
+"@types/estree@npm:*, @types/estree@npm:^0.0.45":
+  version: 0.0.45
+  resolution: "@types/estree@npm:0.0.45"
+  checksum: 9d339cbcf29a96a32e9d40efc21009c2342e93c4f653294dd1ef081ae474bca9e54707e5d4a1cff90b9e3566e8bdd71ac31e0c3d24bc2ff1d3d5aa75058b3937
   languageName: node
   linkType: hard
 
@@ -7011,17 +7039,6 @@ __metadata:
   version: 1.0.3
   resolution: "buffer-xor@npm:1.0.3"
   checksum: 58ce260802968a06448f58ba20f83146ef21c7fb55839602ad951aa3b839035f181341375f2692aca46c86c15f6fcf668985ceef2063a2d33eafb5c6a0a4f627
-  languageName: node
-  linkType: hard
-
-"buffer@npm:^4.3.0":
-  version: 4.9.2
-  resolution: "buffer@npm:4.9.2"
-  dependencies:
-    base64-js: ^1.0.2
-    ieee754: ^1.1.4
-    isarray: ^1.0.0
-  checksum: e29ecda22aa854008e26a8df294be1e5339a3bec8cbf537a794fecf63a024da68165743bc9afb1524909c74d8b03392e93a9c8fa5c2b064b1b2a52d4680c204e
   languageName: node
   linkType: hard
 
@@ -13291,6 +13308,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"interpret@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "interpret@npm:2.2.0"
+  checksum: c89b6aa67f6957ab57e3f12c406043ea6a8a00bfd4b36bdb914080a973574bee40e25afc0b162bcab9793e39744c90cc03e23150a79ad6a4b9ea31291a23ced4
+  languageName: node
+  linkType: hard
+
 "into-stream@npm:^3.1.0":
   version: 3.1.0
   resolution: "into-stream@npm:3.1.0"
@@ -13704,6 +13728,15 @@ fsevents@^1.2.7:
     jsonpointer: ^4.0.0
     xtend: ^4.0.0
   checksum: 0e1127555a3247a9f878ca7fd47e40410cfc2eb9415216ebe19b81cc419a77a1bcfbcdc38e5b2904de1bc4d14e7ab995f0c0288d1dea79c2fe556f7bb354b14a
+  languageName: node
+  linkType: hard
+
+"is-nan@npm:^1.2.1":
+  version: 1.3.0
+  resolution: "is-nan@npm:1.3.0"
+  dependencies:
+    define-properties: ^1.1.3
+  checksum: ab2520c43596daaa38185b02736a51d22a9c0fff4a640d67b9a8f083d4ad990adc249a48508fca5373b9471ad5c09f98aa392a54f28f11a5c8ad805eb5d825ae
   languageName: node
   linkType: hard
 
@@ -18801,13 +18834,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"querystring-es3@npm:^0.2.0":
-  version: 0.2.1
-  resolution: "querystring-es3@npm:0.2.1"
-  checksum: 3c388906aa5644e55cdbede78f99a4d05a6e36a45b06929ad8713a2020a5cefeb6ec23adaa27584d968cf658e5d237b5e216f5e48930d040cd6b810679714741
-  languageName: node
-  linkType: hard
-
 "querystring@npm:0.2.0":
   version: 0.2.0
   resolution: "querystring@npm:0.2.0"
@@ -21524,6 +21550,13 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+"tapable@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "tapable@npm:2.0.0"
+  checksum: e6321280f9ace1043b2d2e893b998454227f27da05e5e1f7c92a67752d6a87e2ca529aeb516f31a21c1a92d2532a77518423b7df7aaf7acd3a8df925f02b4c66
+  languageName: node
+  linkType: hard
+
 "tar-stream@npm:^1.5.0, tar-stream@npm:^1.5.2":
   version: 1.6.2
   resolution: "tar-stream@npm:1.6.2"
@@ -22033,7 +22066,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:^8.0.9":
+"ts-loader@npm:^8.0.8, ts-loader@npm:^8.0.9":
   version: 8.0.9
   resolution: "ts-loader@npm:8.0.9"
   dependencies:
