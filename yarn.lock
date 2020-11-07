@@ -1368,7 +1368,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -1424,7 +1424,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -1514,7 +1514,7 @@ __metadata:
     uuid: ^8.3.1
     web-ext: ^5.3.0
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -1571,7 +1571,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -1638,7 +1638,7 @@ __metadata:
     typescript: ^4.0.5
     uuid: ^8.3.1
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -1699,7 +1699,7 @@ __metadata:
     typescript: ^4.0.5
     web-ext: ^5.3.0
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -1751,7 +1751,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -1810,7 +1810,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -1891,7 +1891,7 @@ __metadata:
     typescript: ^4.0.5
     util: ^0.12.3
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -1943,7 +1943,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -2197,7 +2197,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -2250,7 +2250,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -2469,7 +2469,7 @@ __metadata:
     uuid: ^8.3.1
     web-ext: ^5.3.0
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -4712,7 +4712,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -4768,7 +4768,7 @@ __metadata:
     typescript: ^4.0.5
     uuid: ^8.3.1
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -4822,7 +4822,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -4888,7 +4888,7 @@ __metadata:
     typescript: ^4.0.5
     uuid: ^8.3.1
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -4940,7 +4940,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -4994,7 +4994,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -5237,7 +5237,7 @@ __metadata:
     typescript: ^4.0.5
     util: ^0.12.3
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -6639,18 +6639,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bfj@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "bfj@npm:7.0.2"
-  dependencies:
-    bluebird: ^3.5.5
-    check-types: ^11.1.1
-    hoopy: ^0.1.4
-    tryer: ^1.0.1
-  checksum: 0292cbdafc1d0b89fc62d5bae87863837a4b87b262c6b4ac6672108f4e3eb108525886eac31bf338db41f5ee86592a3ac585d4c181e74e0bb0e8dd100beec5e2
-  languageName: node
-  linkType: hard
-
 "big.js@npm:^5.2.2":
   version: 5.2.2
   resolution: "big.js@npm:5.2.2"
@@ -7496,13 +7484,6 @@ __metadata:
   version: 0.7.0
   resolution: "chardet@npm:0.7.0"
   checksum: b71a4ee4648489291af86418b96247824a8c1ee4f4f95d6268967fb40e9fbf70500e72fb737d5186a23cf98c8a02b91d68cb2f426d7428e92883af9d31a037ec
-  languageName: node
-  linkType: hard
-
-"check-types@npm:^11.1.1":
-  version: 11.1.2
-  resolution: "check-types@npm:11.1.2"
-  checksum: e756b5a813d192216caad74f546a62a9b777fdc7b3b73cb0b73135fd4cdd43e8abcfe9793ac4df6ac3470aee9e79810278a1bef40d3fc31dc9cf9cfa6671eb18
   languageName: node
   linkType: hard
 
@@ -12582,13 +12563,6 @@ fsevents@^1.2.7:
   dependencies:
     react-is: ^16.7.0
   checksum: d3e3791d6e3a2741ce0ba38e878081dec49247ef22982a990c80941ee1f564ef16cd5a511bcc8c5e54f1ce8205535e0414ca5feea722c0690c80040be7ebf9df
-  languageName: node
-  linkType: hard
-
-"hoopy@npm:^0.1.4":
-  version: 0.1.4
-  resolution: "hoopy@npm:0.1.4"
-  checksum: 29b8c7e502d159fa4214396a3f90c3b0bd8c614333b6f2dd5510a77587a8aed87abd89ca8df928f31021858adc30586abcd7ab457ec1c1767e99e870e30ab031
   languageName: node
   linkType: hard
 
@@ -22054,13 +22028,6 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"tryer@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "tryer@npm:1.0.1"
-  checksum: 0d0fa95e8a3b518d5dc51442cf9dc185ebbc534173c4bf74c3fd4e118489b6a2f00765040c893d37dcabbe5dd401ddf5729cdba9857a50e2aabc614f42702341
-  languageName: node
-  linkType: hard
-
 "ts-jest@npm:^26.4.3":
   version: 26.4.3
   resolution: "ts-jest@npm:26.4.3"
@@ -23052,7 +23019,7 @@ sjcl@sublimator/sjcl:
     tsconfig-paths: ^3.9.0
     typescript: ^4.0.5
     webpack: ^5.4.0
-    webpack-bundle-analyzer: ^4.0.0
+    webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
     webpack-merge: ^5.3.0
@@ -23080,13 +23047,12 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack-bundle-analyzer@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "webpack-bundle-analyzer@npm:4.0.0"
+"webpack-bundle-analyzer@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "webpack-bundle-analyzer@npm:4.1.0"
   dependencies:
     acorn: ^8.0.4
     acorn-walk: ^8.0.0
-    bfj: ^7.0.2
     chalk: ^4.1.0
     commander: ^6.2.0
     ejs: ^3.1.5
@@ -23099,7 +23065,7 @@ sjcl@sublimator/sjcl:
     ws: ^7.3.1
   bin:
     webpack-bundle-analyzer: lib/bin/analyzer.js
-  checksum: 19878d0b44c5f0c8e9da81c7683e4061c07d071839807c4eee67fe70e4923e4120e3919c64448a40189d8d5d3293f7e5c4ffe00b251fad9ad6ccbef19c4118d6
+  checksum: 2a2c8ff049bb5857cbbe10787a5e735c79f314de1ad3ca48d584c2e771e7984eb0bcb4f2068c648e42e53a98937294c3d82293fe5c764e84f09412edcb116703
   languageName: node
   linkType: hard
 
