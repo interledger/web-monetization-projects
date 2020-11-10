@@ -1340,7 +1340,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.7.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1397,7 +1397,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.7.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1477,7 +1477,7 @@ __metadata:
     copy-webpack-plugin: ^6.2.1
     crx-hotreload: ^1.0.4
     debug: ^4.2.0
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1542,7 +1542,7 @@ __metadata:
     copy-dir: ^1.3.0
     copy-webpack-plugin: ^6.2.1
     deepmerge: ^4.2.2
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1607,7 +1607,7 @@ __metadata:
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1670,7 +1670,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
     debug: ^4.2.0
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1725,7 +1725,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.7.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1782,7 +1782,7 @@ __metadata:
     atob: ^2.1.2
     btoa: ^1.2.1
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1860,7 +1860,7 @@ __metadata:
     buffer: ^6.0.1
     copy-webpack-plugin: ^6.2.1
     crypto-browserify: ^3.12.0
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1918,7 +1918,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.7.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -2172,7 +2172,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.7.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -2224,7 +2224,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.7.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -2432,7 +2432,7 @@ __metadata:
     crx-hotreload: ^1.0.4
     css-loader: ^5.0.1
     debug: ^4.2.0
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4713,7 +4713,7 @@ __metadata:
     JSON2016: ^1.0.0
     body-parser: ^1.19.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4779,7 +4779,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.7.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4836,7 +4836,7 @@ __metadata:
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4897,7 +4897,7 @@ __metadata:
     JSON2016: ^1.0.0
     ajv: ^6.12.6
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4953,7 +4953,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.7.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -5008,7 +5008,7 @@ __metadata:
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -5245,7 +5245,7 @@ __metadata:
     copy-webpack-plugin: ^6.2.1
     crx-hotreload: ^1.0.4
     crypto-browserify: ^3.12.0
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -10410,7 +10410,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.12.1, eslint@npm:^7.12.1":
+"eslint@npm:7.12.1":
   version: 7.12.1
   resolution: "eslint@npm:7.12.1"
   dependencies:
@@ -10499,6 +10499,53 @@ __metadata:
   bin:
     eslint: ./bin/eslint.js
   checksum: 94d05a10ba6b31d4ae6d9a316645b2998e36ab80f7000f15c59ffb38680d4ac0c40458a947d132d3d3f47107a146bcaea3049dd87c3afc1f5fdae23a0b660e4c
+  languageName: node
+  linkType: hard
+
+"eslint@npm:^7.13.0":
+  version: 7.13.0
+  resolution: "eslint@npm:7.13.0"
+  dependencies:
+    "@babel/code-frame": ^7.0.0
+    "@eslint/eslintrc": ^0.2.1
+    ajv: ^6.10.0
+    chalk: ^4.0.0
+    cross-spawn: ^7.0.2
+    debug: ^4.0.1
+    doctrine: ^3.0.0
+    enquirer: ^2.3.5
+    eslint-scope: ^5.1.1
+    eslint-utils: ^2.1.0
+    eslint-visitor-keys: ^2.0.0
+    espree: ^7.3.0
+    esquery: ^1.2.0
+    esutils: ^2.0.2
+    file-entry-cache: ^5.0.1
+    functional-red-black-tree: ^1.0.1
+    glob-parent: ^5.0.0
+    globals: ^12.1.0
+    ignore: ^4.0.6
+    import-fresh: ^3.0.0
+    imurmurhash: ^0.1.4
+    is-glob: ^4.0.0
+    js-yaml: ^3.13.1
+    json-stable-stringify-without-jsonify: ^1.0.1
+    levn: ^0.4.1
+    lodash: ^4.17.19
+    minimatch: ^3.0.4
+    natural-compare: ^1.4.0
+    optionator: ^0.9.1
+    progress: ^2.0.0
+    regexpp: ^3.1.0
+    semver: ^7.2.1
+    strip-ansi: ^6.0.0
+    strip-json-comments: ^3.1.0
+    table: ^5.2.3
+    text-table: ^0.2.0
+    v8-compile-cache: ^2.0.3
+  bin:
+    eslint: bin/eslint.js
+  checksum: 6ea6c763f1b1e484ec5da67e10125cc9b6ccef5c355470cb71a2e29c70b24c0ef325dd45e775800dd78dbcfba2a9c85b9096f438cdb468b32b6680c2ddebb459
   languageName: node
   linkType: hard
 
@@ -23054,7 +23101,7 @@ sjcl@sublimator/sjcl:
     "@typescript-eslint/parser": ^4.7.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^6.2.1
-    eslint: ^7.12.1
+    eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
