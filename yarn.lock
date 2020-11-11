@@ -4972,7 +4972,7 @@ __metadata:
     prettier: ^2.1.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.4
-    ts-json-schema-generator: ^0.77.0
+    ts-json-schema-generator: ^0.78.0
     ts-loader: ^8.0.10
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
@@ -8011,7 +8011,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^6.1.0, commander@npm:^6.2.0":
+"commander@npm:^6.2.0":
   version: 6.2.0
   resolution: "commander@npm:6.2.0"
   checksum: c78501cd98e6ad66839004adc27940f5fc1a0102b306fbbc177965101d586cf6dd2e01bdffd64f99f2d4862101f24e602e3e4baa641b6f6a11c01ec5c900e412
@@ -22138,19 +22138,19 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:^0.77.0":
-  version: 0.77.0
-  resolution: "ts-json-schema-generator@npm:0.77.0"
+"ts-json-schema-generator@npm:^0.78.0":
+  version: 0.78.0
+  resolution: "ts-json-schema-generator@npm:0.78.0"
   dependencies:
     "@types/json-schema": ^7.0.6
-    commander: ^6.1.0
+    commander: ^6.2.0
     fast-json-stable-stringify: ^2.1.0
     glob: ^7.1.6
     json-stable-stringify: ^1.0.1
-    typescript: ~4.0.3
+    typescript: ~4.0.5
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: c52425f22142730999efefdafdbdc1a7865c42fc1491ae8ef5dc9f7d6611de1530d559d288aef55acc712093deb05901e521389c7db65c84287782b022f620a9
+  checksum: 24b35c2208bf3aefbfbcf5c574c98a00d9b52cdeb7581a550a67c95119fe0b2e5e2acd294d8df3151b0bc951d00f7388353daba9de39a14bccda53b5d7c33010
   languageName: node
   linkType: hard
 
@@ -22389,7 +22389,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typescript@^4.0.5, typescript@~4.0.3":
+"typescript@^4.0.5, typescript@~4.0.5":
   version: 4.0.5
   resolution: "typescript@npm:4.0.5"
   bin:
@@ -22399,7 +22399,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.0.5#builtin<compat/typescript>, typescript@patch:typescript@~4.0.3#builtin<compat/typescript>":
+"typescript@patch:typescript@^4.0.5#builtin<compat/typescript>, typescript@patch:typescript@~4.0.5#builtin<compat/typescript>":
   version: 4.0.5
   resolution: "typescript@patch:typescript@npm%3A4.0.5#builtin<compat/typescript>::version=4.0.5&hash=a72311"
   bin:
