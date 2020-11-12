@@ -103,7 +103,6 @@ export class Stream extends EventEmitter {
     @logger('Stream')
     private readonly _debug: Logger,
     private container: Container,
-    @inject(PaymentScheduler)
     private _schedule: PaymentScheduler,
     @inject(tokens.StreamDetails)
     {
@@ -174,7 +173,7 @@ export class Stream extends EventEmitter {
       let btpToken: string | undefined
       let plugin, attempt
 
-      const hasSentAny = !!this._lastOutgoingMs
+      const hasSentAny = this.hasPaidAny()
 
       try {
         await this._schedule.wait()
@@ -233,6 +232,10 @@ export class Stream extends EventEmitter {
 
   isPaying(): boolean {
     return this._paying
+  }
+
+  hasPaidAny(): boolean {
+    return !!this._lastOutgoingMs
   }
 
   async _makePlugin(btpToken: string) {
@@ -564,7 +567,9 @@ class FirstMinuteBandwidth implements Bandwidth {
   private tick() {
     if (!this.payments.length) return
     setTimeout(() => {
-      this.delay = this.payments.shift()!
+      const delay = this.payments.shift()
+      if (!delay) return
+      this.delay = delay
       this.sendMax += this.delay * this.throughput
       this.tick()
     }, this.delay * 1000)

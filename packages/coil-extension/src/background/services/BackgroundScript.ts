@@ -30,7 +30,7 @@ import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 
-import { StreamMoneyEvent } from './Stream'
+import { Stream, StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
 import { TabStates } from './TabStates'
 import { Streams } from './Streams'
@@ -451,14 +451,7 @@ export class BackgroundScript {
   ) {
     const tabState = this.tabStates.get(tabId)
 
-    const streamId = this.assoc.getStreamId({ tabId, frameId })
-    let isPaying = false
-    if (streamId) {
-      isPaying = this.streams.getStream(streamId).isPaying()
-    } else {
-      this.log('can not find top frame for tabId=%d', tabId)
-    }
-
+    const isPaying = this.isStreamPaying({ tabId, frameId })
     this.tabStates.setFrame(
       { tabId, frameId },
       {
@@ -788,7 +781,7 @@ export class BackgroundScript {
     const id = this.assoc.getStreamId(frame)
     if (id) {
       this.log('resuming stream', id)
-      this.sendSetMonetizationStateMessage(frame, 'pending')
+      this.sendSetMonetizationStateMessage(frame, this.hasStreamPaid(frame) ? 'started' : 'pending')
       this.streams.resumeStream(id)
     }
     return true
@@ -980,5 +973,21 @@ export class BackgroundScript {
         }
       })
     }
+  }
+
+  private isStreamPaying(frame: FrameSpec): boolean {
+    return this.getStream(frame)?.isPaying() || false
+  }
+
+  private hasStreamPaid(frame: FrameSpec): boolean {
+    return this.getStream(frame)?.hasPaidAny() || false
+  }
+
+  private getStream(frame: FrameSpec): Stream | null {
+    const streamId = this.assoc.getStreamId(frame)
+    if (!streamId) {
+      this.log('can not find top frame for tabId=%d', frame.tabId)
+    }
+    return streamId ? this.streams.getStream(streamId) : null
   }
 }

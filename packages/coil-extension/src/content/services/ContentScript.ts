@@ -25,6 +25,7 @@ import {
 import { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
+import { debounce } from '../../util/debounce'
 
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
@@ -57,10 +58,10 @@ export class ContentScript {
   ) {}
 
   handleMonetizationTag() {
-    const startMonetization = async (details: PaymentDetails) => {
+    const startMonetization = debounce((details: PaymentDetails) => {
       this.monetization.setMonetizationRequest({ ...details })
-      await this.doStartMonetization()
-    }
+      void this.doStartMonetization()
+    }, 5 * 1e3)
 
     const stopMonetization = (details: PaymentDetails) => {
       const request: StopWebMonetization = {
@@ -84,7 +85,7 @@ export class ContentScript {
           stopMonetization(stopped)
         }
         if (started) {
-          void startMonetization(started)
+          startMonetization(started)
         }
       }
     )
