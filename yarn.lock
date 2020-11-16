@@ -1496,7 +1496,7 @@ __metadata:
     inversify-logger-middleware: ^3.1.0
     jest: ^26.6.3
     jsonwebtoken: ^8.5.1
-    jss: ^10.4.0
+    jss: ^10.5.0
     lerna: ^3.22.1
     lint-staged: ^10.5.1
     playwright: 1.3.x
@@ -13154,6 +13154,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"indefinite-observable@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "indefinite-observable@npm:2.0.1"
+  dependencies:
+    symbol-observable: 1.2.0
+  checksum: 07f6933c97fe781fe514a26353682b39fc86128860c54c210d818cff39901c8eb7dda47efa84c7ce631db97b14da421f3798dbd1898175f7cda73243921d1511
+  languageName: node
+  linkType: hard
+
 "indent-string@npm:^2.1.0":
   version: 2.1.0
   resolution: "indent-string@npm:2.1.0"
@@ -15033,7 +15042,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jss@npm:10.4.0, jss@npm:^10.0.3, jss@npm:^10.4.0":
+"jss@npm:10.4.0":
   version: 10.4.0
   resolution: "jss@npm:10.4.0"
   dependencies:
@@ -15042,6 +15051,19 @@ fsevents@^1.2.7:
     is-in-browser: ^1.1.3
     tiny-warning: ^1.0.2
   checksum: bc3cc9adba558c49e17d990ddefba2132e67b195bd5ddd2204f392238b31a8e43ef23d993cb4a8bdc4da10fb72a743d7171cac7e8b2dd971eddc0638c917dcc5
+  languageName: node
+  linkType: hard
+
+"jss@npm:^10.0.3, jss@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "jss@npm:10.5.0"
+  dependencies:
+    "@babel/runtime": ^7.3.1
+    csstype: ^3.0.2
+    indefinite-observable: ^2.0.1
+    is-in-browser: ^1.1.3
+    tiny-warning: ^1.0.2
+  checksum: 873fc9bbc65a330f94083bff0ff034998a158fd0e026a7de960ad49ba79f02f5b3fa049c9fed5cc66883aa0be77b4007aeef709c5fb457e8e37d122a65edd304
   languageName: node
   linkType: hard
 
@@ -21517,6 +21539,13 @@ sjcl@sublimator/sjcl:
     has-flag: ^4.0.0
     supports-color: ^7.0.0
   checksum: 8b3b6d71ee298d7f9a3ff4bfb928bd037c0b691b01bdfebb77deb3384976cd78c180d564dc3689ce5fe254d323252f7064efa1364bf24ab81efa6b080e51eddb
+  languageName: node
+  linkType: hard
+
+"symbol-observable@npm:1.2.0":
+  version: 1.2.0
+  resolution: "symbol-observable@npm:1.2.0"
+  checksum: 268834a1d4cba19d40f367e5c2755f612969c8418e43a3be17408e392802a667f8bb542893440d58a080a8ea8da05ea98e27e472b9f4ff6fbda78a21a1a41c53
   languageName: node
   linkType: hard
 
