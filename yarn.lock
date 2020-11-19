@@ -1559,7 +1559,7 @@ __metadata:
     json5: ^2.1.3
     lerna: ^3.22.1
     lint-staged: ^10.5.1
-    npm-check-updates: ^10.2.0
+    npm-check-updates: ^10.2.1
     prettier: ^2.1.1
     reduct: ^3.3.1
     rimraf: ^3.0.2
@@ -11581,6 +11581,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fp-and-or@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "fp-and-or@npm:0.1.2"
+  checksum: 8a649efdd2da41a1222bd2f74a8bd263907e45e71335c5903b07aa27f87f2b2e2966b8fadf72f927af3185f3050567d138c59958028b157d1dbbd51d48fa02c7
+  languageName: node
+  linkType: hard
+
 "fragment-cache@npm:^0.2.1":
   version: 0.2.1
   resolution: "fragment-cache@npm:0.2.1"
@@ -17072,15 +17079,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^10.2.0":
-  version: 10.2.0
-  resolution: "npm-check-updates@npm:10.2.0"
+"npm-check-updates@npm:^10.2.1":
+  version: 10.2.1
+  resolution: "npm-check-updates@npm:10.2.1"
   dependencies:
     chalk: ^4.1.0
     cint: ^8.2.1
     cli-table: ^0.3.1
     commander: ^6.2.0
     find-up: 5.0.0
+    fp-and-or: ^0.1.2
     get-stdin: ^8.0.0
     hosted-git-info: ^3.0.7
     json-parse-helpfulerror: ^1.0.3
@@ -17102,7 +17110,7 @@ fsevents@^1.2.7:
   bin:
     ncu: bin/cli.js
     npm-check-updates: bin/cli.js
-  checksum: f1c432e034c0144b0b705311ff7e0c18014dfc3fa52ac2c529c874f518a75caea257d4ff2e7f74b4a6b079544c337720017daa3e4a7002ea250598936408eac4
+  checksum: e3d9f0a103b66cab23234e50790bb3238f8c6bc038ca30ee24073d36b689af24cae7ad205e4411b7608fbbdda5c7c21992fbe89d3a37a255640868a9344c67be
   languageName: node
   linkType: hard
 
