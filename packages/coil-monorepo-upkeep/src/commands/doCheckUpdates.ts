@@ -31,13 +31,17 @@ export function doCheckUpdates() {
   const lines = ['feat: update dependencies', '']
   paths.forEach(path => {
     const packageFolder = pathMod.basename(path)
-    const ncurc = readFileJSON<NcuRcJson>(pathMod.join(path, '.ncurc.json'))
+    const fn = pathMod.join(path, '.ncurc.json')
+    const ncurc = readFileJSON<NcuRcJson>(fn)
     log(
       `Checking for updates for ${packageFolder}, rejecting ${pretty(
         ncurc.reject
       )}`
     )
-    const upgraded = JSON.parse(cmd('npx ncu -u --jsonUpgraded', { cwd: path }))
+    const cmdCWD = pathMod.resolve(__dirname, '..', '..')
+    const upgraded = JSON.parse(
+      cmd(`yarn ncu -u --jsonUpgraded --cwd '${path}'`, { cwd: cmdCWD })
+    )
     // * coil-extension: @types/x: ^1.19.0
     Object.keys(upgraded).forEach(k => {
       lines.push(`* ${packageFolder}: ${k}: ${upgraded[k]}`)
