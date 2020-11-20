@@ -1339,7 +1339,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -1396,7 +1396,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -1474,7 +1474,7 @@ __metadata:
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
     addons-linter: ^2.12.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     crx-hotreload: ^1.0.4
     debug: ^4.2.0
     eslint: ^7.13.0
@@ -1540,7 +1540,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
     copy-dir: ^1.3.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     deepmerge: ^4.2.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
@@ -1606,7 +1606,7 @@ __metadata:
     "@web-monetization/polyfill-utils": 0.0.0
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -1668,7 +1668,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.8.0
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     debug: ^4.2.0
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
@@ -1724,7 +1724,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -1781,7 +1781,7 @@ __metadata:
     asn1-parser: ^1.1.8
     atob: ^2.1.2
     btoa: ^1.2.1
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -1858,7 +1858,7 @@ __metadata:
     JSON2016: ^1.0.0
     assert: ^2.0.0
     buffer: ^6.0.2
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     crypto-browserify: ^3.12.0
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
@@ -1917,7 +1917,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -2171,7 +2171,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -2223,7 +2223,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -2428,7 +2428,7 @@ __metadata:
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
     addons-linter: ^2.12.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     crx-hotreload: ^1.0.4
     css-loader: ^5.0.1
     debug: ^4.2.0
@@ -4712,7 +4712,7 @@ __metadata:
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
     body-parser: ^1.19.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -4778,7 +4778,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -4835,7 +4835,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.8.0
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -4896,7 +4896,7 @@ __metadata:
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
     ajv: ^6.12.6
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -4952,7 +4952,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -5007,7 +5007,7 @@ __metadata:
     "@web-monetization/polyfill-utils": 0.0.0
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
@@ -5242,7 +5242,7 @@ __metadata:
     JSON2016: ^1.0.0
     assert: ^2.0.0
     buffer: ^6.0.2
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     crx-hotreload: ^1.0.4
     crypto-browserify: ^3.12.0
     eslint: ^7.13.0
@@ -8399,9 +8399,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-webpack-plugin@npm:^6.3.1":
-  version: 6.3.1
-  resolution: "copy-webpack-plugin@npm:6.3.1"
+"copy-webpack-plugin@npm:^6.3.2":
+  version: 6.3.2
+  resolution: "copy-webpack-plugin@npm:6.3.2"
   dependencies:
     cacache: ^15.0.5
     fast-glob: ^3.2.4
@@ -8416,7 +8416,7 @@ __metadata:
     webpack-sources: ^1.4.3
   peerDependencies:
     webpack: ^4.37.0 || ^5.0.0
-  checksum: f0b80998e281940678c80f9f87664dc5c832307449c5347f1ea9d339a19a986c1dbd5eca99a0da7e932d4f3dd6b14fe047875e6d9c9cc9f6e2840e125768d4f6
+  checksum: 10d873d3e914fec8394077681b7ec37c0b38e8a8d412a31e71a4fe37ac70d52473603c558400c57b3bdd2bd7ed8eead363201919d59351b20751c2f5ccb971c7
   languageName: node
   linkType: hard
 
@@ -23137,7 +23137,7 @@ typescript@~4.0.5:
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.0
     JSON2016: ^1.0.0
-    copy-webpack-plugin: ^6.3.1
+    copy-webpack-plugin: ^6.3.2
     eslint: ^7.13.0
     eslint-config-prettier: ^6.15.0
     eslint-import-resolver-node: ^0.3.4
