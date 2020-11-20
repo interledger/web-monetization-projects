@@ -1563,7 +1563,7 @@ __metadata:
     prettier: ^2.1.1
     reduct: ^3.3.1
     rimraf: ^3.0.2
-    sort-package-json: 1.47.0
+    sort-package-json: 1.48.0
     ts-jest: ^26.4.4
     ts-loader: ^8.0.11
     ts-node: ^9.0.0
@@ -20847,9 +20847,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"sort-package-json@npm:1.47.0":
-  version: 1.47.0
-  resolution: "sort-package-json@npm:1.47.0"
+"sort-package-json@npm:1.48.0":
+  version: 1.48.0
+  resolution: "sort-package-json@npm:1.48.0"
   dependencies:
     detect-indent: ^6.0.0
     detect-newline: 3.1.0
@@ -20859,7 +20859,7 @@ sjcl@sublimator/sjcl:
     sort-object-keys: ^1.1.3
   bin:
     sort-package-json: cli.js
-  checksum: 7174c762212404f2f530cb18704bdd583d2cb6ff3c57be8dbd999b904f7ac5574fe6a2753ab67eef1decf44cfa0ac413574f12348615ec9baf887173eddeb7d4
+  checksum: 42cba5356ead7ae6c51f4d3d35d3ed730b1416d55d68d713363d62cceebbbd6cba2936c35117897d03d07038cddd53fb8fdafcf7a79539cf500c16bce7a6dc10
   languageName: node
   linkType: hard
 
