@@ -1078,13 +1078,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/polyfill@npm:7.11.5":
-  version: 7.11.5
-  resolution: "@babel/polyfill@npm:7.11.5"
+"@babel/polyfill@npm:7.12.1":
+  version: 7.12.1
+  resolution: "@babel/polyfill@npm:7.12.1"
   dependencies:
     core-js: ^2.6.5
     regenerator-runtime: ^0.13.4
-  checksum: a28837a580dbe6a69f8435dbc16b403bfcec25a1d0a1b6478ceadbba3ea0755a586c2ebf46a6dccd57c65dd99b5afcfcfe8fe1d5e418d58050e57a0838b818c3
+  checksum: 299db4d4260ea0eacd357727418755a791cd152b642494ed15c18d029f55ea625017a6f1c398f7839e30b2d5a48cd6165e0c1f39ac1b81f863e15f056a149d54
   languageName: node
   linkType: hard
 
@@ -1209,15 +1209,6 @@ __metadata:
     core-js-pure: ^3.0.0
     regenerator-runtime: ^0.13.4
   checksum: 151da4e97bb558d5a58e2a94eb89bcd505b7273c00b6ad8fe1988aefbe16aee01aa83dba0e90e56370a3e99d974d4f5fb081a6489161dc414e322d70bf19bc92
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:7.11.2":
-  version: 7.11.2
-  resolution: "@babel/runtime@npm:7.11.2"
-  dependencies:
-    regenerator-runtime: ^0.13.4
-  checksum: 2f127ad60a0f0568faa0044e5b48329d8166c7fd3a0a3ce774070010a1c441ebf5570f526dd6bb26e214fb1a01bb987ab6a4c3f60a00f04d02448939f4c61e1e
   languageName: node
   linkType: hard
 
@@ -1512,7 +1503,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.1.2
     uuid: ^8.3.1
-    web-ext: ^5.3.0
+    web-ext: ^5.4.0
     webpack: ^5.6.0
     webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
@@ -1697,7 +1688,7 @@ __metadata:
     ts-node-dev: ^1.0.0
     tsconfig-paths: ^3.9.0
     typescript: ^4.1.2
-    web-ext: ^5.3.0
+    web-ext: ^5.4.0
     webpack: ^5.6.0
     webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
@@ -2264,24 +2255,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^0.1.3":
-  version: 0.1.3
-  resolution: "@eslint/eslintrc@npm:0.1.3"
-  dependencies:
-    ajv: ^6.12.4
-    debug: ^4.1.1
-    espree: ^7.3.0
-    globals: ^12.1.0
-    ignore: ^4.0.6
-    import-fresh: ^3.2.1
-    js-yaml: ^3.13.1
-    lodash: ^4.17.19
-    minimatch: ^3.0.4
-    strip-json-comments: ^3.1.1
-  checksum: e9c5eaa5e706bcedbba6e7e1a2bc85faa7e3a9edbe71375e07240d1b6540fbb88d907bd5e5841b42c2a7a9683dcf031ea052c447c3c9d81ba4d0b74f0dd67e5f
-  languageName: node
-  linkType: hard
-
 "@eslint/eslintrc@npm:^0.2.1":
   version: 0.2.1
   resolution: "@eslint/eslintrc@npm:0.2.1"
@@ -2467,7 +2440,7 @@ __metadata:
     typeface-roboto: ^1.1.13
     typescript: ^4.1.2
     uuid: ^8.3.1
-    web-ext: ^5.3.0
+    web-ext: ^5.4.0
     webpack: ^5.6.0
     webpack-bundle-analyzer: ^4.1.0
     webpack-cli: ^4.2.0
@@ -5524,55 +5497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:2.9.0":
-  version: 2.9.0
-  resolution: "addons-linter@npm:2.9.0"
-  dependencies:
-    "@babel/runtime": 7.11.2
-    ajv: 6.12.6
-    ajv-merge-patch: 4.1.0
-    chalk: 4.1.0
-    cheerio: 1.0.0-rc.3
-    columnify: 1.5.4
-    common-tags: 1.8.0
-    deepmerge: 4.2.2
-    dispensary: 0.57.0
-    es6-promisify: 6.1.1
-    eslint: 7.11.0
-    eslint-plugin-no-unsanitized: 3.1.4
-    eslint-visitor-keys: 2.0.0
-    espree: 7.3.0
-    esprima: 4.0.1
-    first-chunk-stream: 4.0.0
-    fluent-syntax: 0.13.0
-    fsevents: 2.1.3
-    glob: 7.1.6
-    is-mergeable-object: 1.1.1
-    jed: 1.1.1
-    mdn-browser-compat-data: 1.0.40
-    os-locale: 5.0.0
-    pino: 6.7.0
-    postcss: 8.1.1
-    probe-image-size: 5.0.0
-    relaxed-json: 1.0.3
-    semver: 7.3.2
-    source-map-support: 0.5.19
-    strip-bom-stream: 4.0.0
-    tosource: 1.0.0
-    upath: 2.0.0
-    whatwg-url: 8.4.0
-    yargs: 15.4.1
-    yauzl: 2.10.0
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    addons-linter: bin/addons-linter
-  checksum: a46964b0fba2e544754c005b92178e7768361b4118567ae6b0943c4bb23e0146cc1e048d9d1e08859f32f685c6fa19120a163c6fca691dd5e11f2369c9734b13
-  languageName: node
-  linkType: hard
-
-"addons-linter@npm:^2.12.0":
+"addons-linter@npm:2.12.0, addons-linter@npm:^2.12.0":
   version: 2.12.0
   resolution: "addons-linter@npm:2.12.0"
   dependencies:
@@ -9258,23 +9183,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dispensary@npm:0.57.0":
-  version: 0.57.0
-  resolution: "dispensary@npm:0.57.0"
-  dependencies:
-    async: ~3.2.0
-    natural-compare-lite: ~1.4.0
-    pino: ~6.6.0
-    request: ~2.88.0
-    sha.js: ~2.4.4
-    source-map-support: ~0.5.4
-    yargs: ~15.4.0
-  bin:
-    dispensary: bin/dispensary
-  checksum: 29a125fe4c1643e937e9db97c63ec9adb52c30ff63d6c224b38b32bb6104e3dcf87d687d69f0f3d276436f2ea985485288709e797e5c70f046f4cf3be91cb5e5
-  languageName: node
-  linkType: hard
-
 "dispensary@npm:0.59.0":
   version: 0.59.0
   resolution: "dispensary@npm:0.59.0"
@@ -10314,53 +10222,6 @@ __metadata:
   bin:
     eslint: ./bin/eslint.js
   checksum: 420ee3bc29782f325b44e5ef747525b120836954c94caeb2314ec127508e64105125ad71a7c68f4cac0b6a27573e8cf87b17d3ee292e96fc23feacd3e00ab931
-  languageName: node
-  linkType: hard
-
-"eslint@npm:7.11.0":
-  version: 7.11.0
-  resolution: "eslint@npm:7.11.0"
-  dependencies:
-    "@babel/code-frame": ^7.0.0
-    "@eslint/eslintrc": ^0.1.3
-    ajv: ^6.10.0
-    chalk: ^4.0.0
-    cross-spawn: ^7.0.2
-    debug: ^4.0.1
-    doctrine: ^3.0.0
-    enquirer: ^2.3.5
-    eslint-scope: ^5.1.1
-    eslint-utils: ^2.1.0
-    eslint-visitor-keys: ^2.0.0
-    espree: ^7.3.0
-    esquery: ^1.2.0
-    esutils: ^2.0.2
-    file-entry-cache: ^5.0.1
-    functional-red-black-tree: ^1.0.1
-    glob-parent: ^5.0.0
-    globals: ^12.1.0
-    ignore: ^4.0.6
-    import-fresh: ^3.0.0
-    imurmurhash: ^0.1.4
-    is-glob: ^4.0.0
-    js-yaml: ^3.13.1
-    json-stable-stringify-without-jsonify: ^1.0.1
-    levn: ^0.4.1
-    lodash: ^4.17.19
-    minimatch: ^3.0.4
-    natural-compare: ^1.4.0
-    optionator: ^0.9.1
-    progress: ^2.0.0
-    regexpp: ^3.1.0
-    semver: ^7.2.1
-    strip-ansi: ^6.0.0
-    strip-json-comments: ^3.1.0
-    table: ^5.2.3
-    text-table: ^0.2.0
-    v8-compile-cache: ^2.0.3
-  bin:
-    eslint: bin/eslint.js
-  checksum: 45ef6dc7b31684ca0f383ed9c6224e763197e1d49745542f4440e37286c947973388a6a7ebbf103eeee91ddb4af2652c5d22718f4130bfbbf4bd16a04103f82a
   languageName: node
   linkType: hard
 
@@ -11408,13 +11269,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"first-chunk-stream@npm:4.0.0":
-  version: 4.0.0
-  resolution: "first-chunk-stream@npm:4.0.0"
-  checksum: e0ee6333e0eae255b66dced282a4e4cec78e26b97738e322837de27b9a17e8f01f9e80a371d49709b5cc188cf086bcbc6ccc578337f7e6d69794bf06145bd1ab
-  languageName: node
-  linkType: hard
-
 "flat-cache@npm:^1.2.1":
   version: 1.3.4
   resolution: "flat-cache@npm:1.3.4"
@@ -11664,15 +11518,6 @@ fsevents@2.0.7:
   languageName: node
   linkType: hard
 
-"fsevents@2.1.3, fsevents@~2.1.2":
-  version: 2.1.3
-  resolution: "fsevents@npm:2.1.3"
-  dependencies:
-    node-gyp: latest
-  checksum: 8977781884d06c5bcb97b5f909efdce9683c925f2a0ce7e098d2cdffe2e0a0a50b1868547bb94dca75428c06535a4a70517a7bb3bb5a974d93bf9ffc067291eb
-  languageName: node
-  linkType: hard
-
 "fsevents@2.2.1, fsevents@^2.1.2":
   version: 2.2.1
   resolution: "fsevents@npm:2.2.1"
@@ -11701,15 +11546,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@2.1.3#builtin<compat/fsevents>, fsevents@patch:fsevents@~2.1.2#builtin<compat/fsevents>":
-  version: 2.1.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea"
-  dependencies:
-    node-gyp: latest
-  checksum: e2b8c379340e21a786d32c653854c8876f94eb1202dd5be378fd42c062bc123aab5051c32bf0011865257c85982c41ded203f9fe8c9f9c8f8c84dc4672abc0e0
-  languageName: node
-  linkType: hard
-
 "fsevents@patch:fsevents@2.2.1#builtin<compat/fsevents>, fsevents@patch:fsevents@^2.1.2#builtin<compat/fsevents>":
   version: 2.2.1
   resolution: "fsevents@patch:fsevents@npm%3A2.2.1#builtin<compat/fsevents>::version=2.2.1&hash=11e9ea"
@@ -11726,6 +11562,24 @@ fsevents@^1.2.7:
     bindings: ^1.5.0
     nan: ^2.12.1
   checksum: 7bc048c164eb72f91b18ba7cd2ba30679a0afe57e9cd6352eac4bdbc4ddd4ca2ea98674d0bd3a80e96427469adc433c13532494b36aea40fceab36e198982182
+  languageName: node
+  linkType: hard
+
+"fsevents@patch:fsevents@~2.1.2#builtin<compat/fsevents>":
+  version: 2.1.3
+  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea"
+  dependencies:
+    node-gyp: latest
+  checksum: e2b8c379340e21a786d32c653854c8876f94eb1202dd5be378fd42c062bc123aab5051c32bf0011865257c85982c41ded203f9fe8c9f9c8f8c84dc4672abc0e0
+  languageName: node
+  linkType: hard
+
+fsevents@~2.1.2:
+  version: 2.1.3
+  resolution: "fsevents@npm:2.1.3"
+  dependencies:
+    node-gyp: latest
+  checksum: 8977781884d06c5bcb97b5f909efdce9683c925f2a0ce7e098d2cdffe2e0a0a50b1868547bb94dca75428c06535a4a70517a7bb3bb5a974d93bf9ffc067291eb
   languageName: node
   linkType: hard
 
@@ -16038,15 +15892,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"mdn-browser-compat-data@npm:1.0.40":
-  version: 1.0.40
-  resolution: "mdn-browser-compat-data@npm:1.0.40"
-  dependencies:
-    extend: 3.0.2
-  checksum: 633e6b817d0f52fb655a385f94e509daf34ac19efd7bdc8517dcd45219ab699e2b5e3399e6a3dfea9c7b9e9415ae8581794a99f77b32ba8d176fe99f9b0ba4b3
-  languageName: node
-  linkType: hard
-
 "media-typer@npm:0.3.0":
   version: 0.3.0
   resolution: "media-typer@npm:0.3.0"
@@ -16682,7 +16527,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.12, nanoid@npm:^3.1.16":
+"nanoid@npm:^3.1.16":
   version: 3.1.16
   resolution: "nanoid@npm:3.1.16"
   bin:
@@ -18311,22 +18156,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"pino@npm:~6.6.0":
-  version: 6.6.1
-  resolution: "pino@npm:6.6.1"
-  dependencies:
-    fast-redact: ^2.0.0
-    fast-safe-stringify: ^2.0.7
-    flatstr: ^1.0.12
-    pino-std-serializers: ^2.4.2
-    quick-format-unescaped: ^4.0.1
-    sonic-boom: ^1.0.2
-  bin:
-    pino: bin.js
-  checksum: 8937c8ac50774ff4767beadb293887e14b5d4585feaae7850db9e9ba82913786f155e636d9692f276cc9de48f0f48b736beb588dedab1453a60cf33f0b87e90f
-  languageName: node
-  linkType: hard
-
 "pirates@npm:^4.0.1":
   version: 4.0.1
   resolution: "pirates@npm:4.0.1"
@@ -18512,18 +18341,6 @@ fsevents@^1.2.7:
     source-map: ^0.6.1
     supports-color: ^6.1.0
   checksum: bf624cdc843482dec20a89765ed185d48a3f71267b2d326ffbd470be3d994b29ae6329734bd664dcd578fd9661ab80ba5f7c4ba827d4c6d450152396d82fe8cb
-  languageName: node
-  linkType: hard
-
-"postcss@npm:8.1.1":
-  version: 8.1.1
-  resolution: "postcss@npm:8.1.1"
-  dependencies:
-    colorette: ^1.2.1
-    line-column: ^1.0.2
-    nanoid: ^3.1.12
-    source-map: ^0.6.1
-  checksum: 9bdc9e51369ee35831589f0cfffcb996ed2b50aa23e54e3cf849c74361c17e7f7c1df3e0b993392818ede40f0731c458be134901ce9438bd38223e38781f52f5
   languageName: node
   linkType: hard
 
@@ -23030,16 +22847,16 @@ typescript@~4.0.5:
   languageName: node
   linkType: hard
 
-"web-ext@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "web-ext@npm:5.3.0"
+"web-ext@npm:^5.4.0":
+  version: 5.4.0
+  resolution: "web-ext@npm:5.4.0"
   dependencies:
-    "@babel/polyfill": 7.11.5
-    "@babel/runtime": 7.11.2
+    "@babel/polyfill": 7.12.1
+    "@babel/runtime": 7.12.5
     "@cliqz-oss/firefox-client": 0.3.1
     "@cliqz-oss/node-firefox-connect": 1.2.1
     "@devicefarmer/adbkit": 2.11.3
-    addons-linter: 2.9.0
+    addons-linter: 2.12.0
     bunyan: 1.8.14
     camelcase: 6.0.0
     chrome-launcher: 0.13.4
@@ -23069,7 +22886,7 @@ typescript@~4.0.5:
     zip-dir: 1.0.2
   bin:
     web-ext: bin/web-ext
-  checksum: 97b9e22e056d2a9c983457432ae2b700ea55a3d49a5106cda265241d1b6aedabe9ae7eb6e756036d42970de93967d3a4dbe3593280bd75cc00b61ce144ab9aa9
+  checksum: ce68174e5d2b2273d056bdedf1856f6c52117fd56cc4c1598677bd134a6479026fb80a7c153a40dcbdb036984f9f7b1d33d8e2be30ea2f74139b9643aa2b925e
   languageName: node
   linkType: hard
 
@@ -23891,7 +23708,7 @@ typescript@~4.0.5:
   languageName: node
   linkType: hard
 
-"yargs@npm:15.4.1, yargs@npm:^15.1.0, yargs@npm:^15.4.1, yargs@npm:~15.4.0":
+"yargs@npm:15.4.1, yargs@npm:^15.1.0, yargs@npm:^15.4.1":
   version: 15.4.1
   resolution: "yargs@npm:15.4.1"
   dependencies:
