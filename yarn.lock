@@ -1452,7 +1452,7 @@ __metadata:
     "@types/long": ^4.0.1
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
-    "@types/react": ^16.14.0
+    "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
     "@types/uuid": ^8.3.0
     "@types/webpack-merge": ^4.1.5
@@ -2388,7 +2388,7 @@ __metadata:
     "@material-ui/icons": ^4.9.1
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/react": ^16.14.0
+    "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
     "@types/uuid": ^8.3.0
     "@types/webpack-merge": ^4.1.5
@@ -4629,7 +4629,7 @@ __metadata:
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
-    "@types/react": ^16.14.0
+    "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
     "@types/react-helmet": ^6.1.0
     "@types/webpack-merge": ^4.1.5
@@ -4756,7 +4756,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/react": ^16.14.0
+    "@types/react": ^16.14.2
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.8.1
     "@typescript-eslint/parser": ^4.8.1
@@ -4814,7 +4814,7 @@ __metadata:
     "@types/ajv": ^1.0.0
     "@types/jest": ^26.0.15
     "@types/node": ^14.10.3
-    "@types/react": ^16.14.0
+    "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
     "@types/uuid": ^8.3.0
     "@types/webpack-merge": ^4.1.5
