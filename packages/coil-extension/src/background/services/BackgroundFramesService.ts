@@ -110,7 +110,7 @@ export class BackgroundFramesService extends EventEmitter {
     @logger('BackgroundFramesService')
     private log: Logger,
     @inject(tokens.WextApi)
-    private api: typeof window.chrome
+    private api = chrome
   ) {
     super()
   }
@@ -321,12 +321,40 @@ export class BackgroundFramesService extends EventEmitter {
       }
     }
 
-    this.api.webNavigation.onHistoryStateUpdated.addListener(
-      makeCallback('onHistoryStateUpdated')
-    )
-    this.api.webNavigation.onReferenceFragmentUpdated.addListener(
-      makeCallback('onReferenceFragmentUpdated')
-    )
+    // Not available on Safari, last checked version 14.0.1
+    if (this.api.webNavigation.onHistoryStateUpdated) {
+      this.api.webNavigation.onHistoryStateUpdated.addListener(
+        makeCallback('onHistoryStateUpdated')
+      )
+    } else {
+      this.log(
+        'Using tabs.onUpdated workaround for lack of onHistoryStateUpdated'
+      )
+      this.api.tabs.onUpdated.addListener((tabId, changeInfo) => {
+        if (changeInfo.url) {
+          this.updateOrAddFrame(
+            `tabs.onUpdated.changeInfo.url`,
+            { tabId, frameId: 0 },
+            { href: changeInfo.url }
+          )
+        }
+
+        if (changeInfo.status) {
+          this.updateOrAddFrame(
+            `tabs.onUpdated.changeInfo.url`,
+            { tabId, frameId: 0 },
+            { state: changeInfo.status as 'loading' | 'complete' }
+          )
+        }
+      })
+    }
+
+    // Not available on Safari, last checked version 14.0.1
+    if (this.api.webNavigation.onReferenceFragmentUpdated) {
+      this.api.webNavigation.onReferenceFragmentUpdated.addListener(
+        makeCallback('onReferenceFragmentUpdated')
+      )
+    }
 
     // These are required otherwise there's a race between usages of getFrameOrDefault()
     // and the initial `useWebNavigationToUpdateFrames()`
