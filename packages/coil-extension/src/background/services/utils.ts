@@ -4,6 +4,8 @@ import * as tokens from '../../types/tokens'
 
 import Context = interfaces.Context
 
+import { BUILD_CONFIG } from '../../webpackDefines'
+
 export function logger(name?: string) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return function decorator(
@@ -48,7 +50,7 @@ export function createLogger(context: Context) {
   }
   const namespace = `background${name ? `:${name}` : ''}`
   // eslint-disable-next-line no-console
-  if (localStorage.debug) {
+  if (localStorage.debug || BUILD_CONFIG['DEBUG']) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     return require('debug')(`coil-extension:${namespace}`)
   }

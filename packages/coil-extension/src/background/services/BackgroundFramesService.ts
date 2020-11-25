@@ -337,7 +337,7 @@ export class BackgroundFramesService extends EventEmitter {
     )
 
     this.api.tabs.onRemoved.addListener(tabId => {
-      this.log('tabs.onTabRemoved %s', tabId)
+      this.log('tabs.onRemoved %s', tabId)
       delete this.tabs[tabId]
     })
 

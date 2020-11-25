@@ -176,7 +176,7 @@ export class BackgroundScript {
   private setTabsOnRemovedListener() {
     // Remove tab state when the tab is closed to prevent memory leak
     this.api.tabs.onRemoved.addListener(tabId => {
-      this.log('tabs.onRemoved removing tab with id', tabId)
+      this.log('tabs.onRemoved: removing tab with id', tabId)
       this.tabStates.clear(tabId)
 
       // clean up the stream of that tab
