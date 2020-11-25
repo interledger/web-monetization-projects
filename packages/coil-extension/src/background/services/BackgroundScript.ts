@@ -112,12 +112,16 @@ export class BackgroundScript {
       this.reloadTabState({ from: 'onActivated' })
     })
     if (this.buildConfig.logTabsApiEvents) {
-      this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
-        this.log('tabs.onActiveChanged %d %o', tabId, selectInfo)
-      })
-      this.api.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
-        this.log('tabs.onSelectionChanged %d %o', tabId, selectInfo)
-      })
+      if (this.api.tabs.onActiveChanged) {
+        this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
+          this.log('tabs.onActiveChanged %d %o', tabId, selectInfo)
+        })
+      }
+      if (this.api.tabs.onSelectionChanged) {
+        this.api.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
+          this.log('tabs.onSelectionChanged %d %o', tabId, selectInfo)
+        })
+      }
       this.api.tabs.onCreated.addListener(activeInfo => {
         this.log('tabs.onCreated %o', activeInfo)
       })
