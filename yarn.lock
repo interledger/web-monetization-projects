@@ -3520,7 +3520,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@material-ui/styles@npm:^4.10.0, @material-ui/styles@npm:^4.11.1":
+"@material-ui/styles@npm:^4.11.1":
   version: 4.11.1
   resolution: "@material-ui/styles@npm:4.11.1"
   dependencies:
