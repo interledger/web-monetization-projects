@@ -1443,7 +1443,7 @@ __metadata:
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.0
     "@material-ui/icons": ^4.9.1
-    "@material-ui/styles": ^4.10.0
+    "@material-ui/styles": ^4.11.1
     "@types/chrome": 0.0.126
     "@types/debug": ^4.1.5
     "@types/firefox": ^0.0.30
@@ -3520,9 +3520,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@material-ui/styles@npm:^4.10.0":
-  version: 4.10.0
-  resolution: "@material-ui/styles@npm:4.10.0"
+"@material-ui/styles@npm:^4.10.0, @material-ui/styles@npm:^4.11.1":
+  version: 4.11.1
+  resolution: "@material-ui/styles@npm:4.11.1"
   dependencies:
     "@babel/runtime": ^7.4.4
     "@emotion/hash": ^0.8.0
@@ -3547,7 +3547,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 928821cb46416d494703f57d1c1f4d20137679d5eb23f01695b4a1afaec80dbb0f4011be2936496b1b5092bde4fb69f9cb1e747de927d05a5a05451cd24699a0
+  checksum: 5279637e630da3de20c1f8dc909eed5c63ed3599c2670707ee0c673c490cf6bc68f9e9fa825e93e35b32c3963aee8bff8b6465f922769e033679b55ee522595d
   languageName: node
   linkType: hard
 
