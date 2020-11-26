@@ -28,10 +28,23 @@ export const MonetizeAnimation = (props: PopupProps) => {
       }
     }
 
-    const listener = (msg: ToPopupMessage) => {
+    // const listener = (msg: ToPopupMessage) => {
+    //   if (
+    //     msg.command === 'localStorageUpdate' &&
+    //     msg.key === 'monetizedTotal' &&
+    //     props.context.store.monetizedTotal > 0
+    //   ) {
+    //     setLastPacket(new Date())
+    //     setAnimated(true)
+    //     if (!animateTimeout) {
+    //       window.setTimeout(loopHandler, ANIMATION_INTERVAL)
+    //     }
+    //   }
+    // }
+    // props.context.runtime.onMessageAddListener(listener)
+    const listener = (event: StorageEvent) => {
       if (
-        msg.command === 'localStorageUpdate' &&
-        msg.key === 'monetizedTotal' &&
+        event.key === 'monetizedTotal' &&
         props.context.store.monetizedTotal > 0
       ) {
         setLastPacket(new Date())
@@ -41,9 +54,10 @@ export const MonetizeAnimation = (props: PopupProps) => {
         }
       }
     }
-    props.context.runtime.onMessageAddListener(listener)
+    window.addEventListener('storage', listener)
     return () => {
-      props.context.runtime.onMessageRemoveListener(listener)
+      window.removeEventListener('storage', listener)
+      // props.context.runtime.onMessageRemoveListener(listener)
       if (animateTimeout != null) {
         window.clearTimeout(animateTimeout)
       }
