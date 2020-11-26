@@ -1,3 +1,5 @@
+import { EventEmitter } from 'events'
+
 import ReactDOM from 'react-dom'
 import React from 'react'
 
@@ -19,6 +21,7 @@ export function run() {
   store.sync()
 
   const context: Omit<PopupContext, 'runtime'> = {
+    events: new EventEmitter(),
     isExtension,
     coilDomain: COIL_DOMAIN,
     store
@@ -27,19 +30,26 @@ export function run() {
   const rootEl = document.getElementById('root')
 
   if (isExtension) {
-    // TODO: how can we listen for this ?
-    // We can not get a handle on the bg window (and objects) without any
-    // grief.
-    // Some kind of hacky localStorage abuse ?
-    // const listener = (message: ToPopupMessage) => {
-    //   // console.log('message received on port', message)
-    //   if (message.command === 'closePopup') {
-    //     window.close()
-    //   }
-    // }
-
-    window.addEventListener('closePopup', () => {
-      window.close()
+    window.addEventListener('storage', event => {
+      if (event.key !== 'monetizedTotal') {
+        console.log('storage event:', event.key, event.newValue)
+      }
+      if (event.key === '$$popupCommand' && event.newValue) {
+        const cmd: ToPopupMessage = JSON.parse(event.newValue)
+        if (cmd.command === 'closePopup') {
+          console.log('should be running window.close()!', navigator.userAgent)
+          // window.close() actually causes a Bodgy state itself on safari
+          // window.close()
+        } else {
+          context.events.emit('$$popupCommand', cmd)
+        }
+      } else {
+        context.events.emit('storage', {
+          type: 'storage',
+          key: event.key,
+          newValue: event.newValue
+        })
+      }
     })
 
     ReactDOM.render(

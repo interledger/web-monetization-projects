@@ -133,20 +133,12 @@ export class BackgroundScript {
         // We've focused a special window, e.g. inspector
         if (windowId < 0) return
 
-        // // Close the popup when window has changed
-        // const message: ClosePopup = {
-        //   command: 'closePopup'
-        // }
-        // this.api.runtime.sendMessage(message, () => {
-        //   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        //   const ignored = this.api.runtime.lastError
-        // })
-
-        // const popups = chrome.extension.getViews({type: 'popup'})
-        // popups.forEach(w => {
-        //   console.log('w', w)
-        //   // w.dispatchEvent(new CustomEvent('closePopup'))
-        // })
+        const close: ClosePopup = {
+          id: Date.now(),
+          command: 'closePopup'
+        }
+        localStorage.setItem('$$popupCommand', JSON.stringify(close))
+        console.log('CLOSE_POPUP')
 
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
           if (tabs.length === 0 || tabs[0].id == null) return

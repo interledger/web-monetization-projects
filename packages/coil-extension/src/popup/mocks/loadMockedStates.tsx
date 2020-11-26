@@ -154,19 +154,7 @@ class MockRuntime extends EventEmitter implements PopupRuntime {
     return argsLogger('openTab: ' + args.join(' '))
   }) as any
 
-  onMessageAddListener = (func: any) => {
-    this.addListener('message', func)
-  }
-
-  onMessageRemoveListener = (func: any) => {
-    this.removeListener('message', func)
-  }
-
   sendMessage = argsLogger('sendMessage stub: ')
-
-  triggerOnMessage(message: any) {
-    this.emit('message', message)
-  }
 }
 
 const embossedBorder = {
@@ -257,19 +245,21 @@ export const mockPopupsPage = (
       store.sync()
 
       if (name.search(/paying/i) && !initiated) {
+        let i = 100
         setInterval(() => {
-          console.log('triggering mock message')
-          const message: LocalStorageUpdate = {
-            command: 'localStorageUpdate',
-            key: 'monetizedTotal'
+          const message = {
+            type: 'storage',
+            key: 'monetizedTotal',
+            newValue: String((i += 100))
           }
-          mockRuntime.triggerOnMessage(message)
+          mockRuntime.emit(message.type, message)
         }, 1500)
         setInitiated(true)
       }
 
       const mockContext: PopupContext = {
         ...baseContext,
+        events: mockRuntime,
         store: store,
         runtime: mockRuntime
       }

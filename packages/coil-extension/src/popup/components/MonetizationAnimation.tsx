@@ -39,10 +39,10 @@ export const MonetizeAnimation = (props: PopupProps) => {
         }
       }
     }
-    window.addEventListener('storage', listener)
+    props.context.events.on('storage', listener)
 
     return () => {
-      window.removeEventListener('storage', listener)
+      props.context.events.removeListener('storage', listener)
       if (animateTimeout != null) {
         window.clearTimeout(animateTimeout)
       }

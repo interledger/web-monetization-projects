@@ -273,6 +273,7 @@ export interface MonetizationStart {
  *  browser.tabs.sendMessage
  */
 export interface ClosePopup {
+  id: number
   command: 'closePopup'
 }
 

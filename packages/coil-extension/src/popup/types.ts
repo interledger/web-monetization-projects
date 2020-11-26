@@ -1,3 +1,5 @@
+import { EventEmitter } from 'events'
+
 import { API } from '../webpackDefines'
 
 import { PopupState } from './services/PopupState'
@@ -10,6 +12,7 @@ export interface PopupRuntime {
 export interface PopupContext {
   isExtension: boolean
   runtime: PopupRuntime
+  events: EventEmitter
   store: PopupState
   coilDomain: string
 }

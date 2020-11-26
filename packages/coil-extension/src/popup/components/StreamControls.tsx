@@ -155,10 +155,12 @@ interface SetStreamControlsParams {
 
 export const StreamControls = (props: PopupProps) => {
   const [stickyState, setStickyState] = useStorage<StickyState>(
+    props,
     'stickyState',
     'auto'
   )
   const [playOrPauseState, setPlayOrPauseState] = useStorage<PlayOrPauseState>(
+    props,
     'playState',
     'playing'
   )

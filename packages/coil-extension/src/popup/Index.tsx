@@ -28,20 +28,20 @@ const OuterDiv = styled('div')({
 export function Index(props: PopupProps) {
   const [_, setLastMonetizationProgress] = useState(Date.now())
 
-  function syncStoreAndSetState() {
-    props.context.store.sync()
+  function syncStoreAndSetState(key: string) {
+    props.context.store.sync([key])
     setLastMonetizationProgress(Date.now())
   }
 
   function bindMessageListener() {
     const listener = (event: StorageEvent) => {
-      if (event.storageArea === localStorage) {
-        syncStoreAndSetState()
+      if (event.key) {
+        syncStoreAndSetState(event.key)
       }
     }
-    window.addEventListener('storage', listener)
+    props.context.events.on('storage', listener)
     return () => {
-      window.removeEventListener('storage', listener)
+      props.context.events.removeListener('storage', listener)
     }
   }
 
