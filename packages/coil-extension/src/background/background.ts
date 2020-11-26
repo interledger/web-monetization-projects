@@ -48,7 +48,10 @@ async function main() {
   })
 
   await configureContainer(container)
-  void container.get(BackgroundScript).run()
+  const backgroundScript = container.get(BackgroundScript)
+  // Allow debugging from inside the devtools console
+  ;(window as any)['bg'] = backgroundScript
+  void backgroundScript.run()
 }
 
 main().catch(console.error)
