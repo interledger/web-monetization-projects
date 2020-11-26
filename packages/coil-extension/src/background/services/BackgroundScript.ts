@@ -29,6 +29,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -40,11 +41,9 @@ import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { StreamAssociations } from './StreamAssociations'
+import { PopupPorts } from './PopupPorts'
 
 import MessageSender = chrome.runtime.MessageSender
-
-import { BuildConfig } from '../../types/BuildConfig'
-import { debug } from '../../content/util/logging'
 
 @injectable()
 export class BackgroundScript {
@@ -54,6 +53,7 @@ export class BackgroundScript {
     private assoc: StreamAssociations,
     private streams: Streams,
     private tabStates: TabStates,
+    private ports: PopupPorts,
     private storage: StorageService,
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
@@ -100,6 +100,7 @@ export class BackgroundScript {
     this.framesService.monitor()
     // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
+    this.ports.setup()
   }
 
   private setTabsOnActivatedListener() {

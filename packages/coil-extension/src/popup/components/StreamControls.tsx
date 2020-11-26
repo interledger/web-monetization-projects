@@ -9,6 +9,7 @@ import {
   StickyState,
   ToggleControlsAction
 } from '../../types/streamControls'
+import { useStorage } from '../hooks/useStorage'
 
 const ControlBar = styled('div')({
   display: 'flex',
@@ -153,11 +154,13 @@ interface SetStreamControlsParams {
 }
 
 export const StreamControls = (props: PopupProps) => {
-  const [stickyState, setStickyState] = useState<StickyState>(
-    props.context.store.stickyState || 'auto'
+  const [stickyState, setStickyState] = useStorage<StickyState>(
+    'stickyState',
+    'auto'
   )
-  const [playOrPauseState, setPlayOrPauseState] = useState<PlayOrPauseState>(
-    props.context.store.playState || 'playing'
+  const [playOrPauseState, setPlayOrPauseState] = useStorage<PlayOrPauseState>(
+    'playState',
+    'playing'
   )
 
   const setStreamControls = (data: SetStreamControlsParams) => {
@@ -168,22 +171,22 @@ export const StreamControls = (props: PopupProps) => {
     props.context.runtime.sendMessage(message)
   }
 
-  useEffect(() => {
-    const listener = (message: ToPopupMessage) => {
-      if (message.command === 'localStorageUpdate') {
-        if (message.key === 'stickyState') {
-          const sticky = props.context.store.stickyState
-          // TODO: document why have and why need to ignore null changes
-          sticky != null && setStickyState(sticky)
-        } else if (message.key === 'playState') {
-          const play = props.context.store.playState
-          play != null && setPlayOrPauseState(play)
-        }
-      }
-    }
-    props.context.runtime.onMessageAddListener(listener)
-    return () => props.context.runtime.onMessageRemoveListener(listener)
-  }, [])
+  // useEffect(() => {
+  //   const listener = (message: ToPopupMessage) => {
+  //     if (message.command === 'localStorageUpdate') {
+  //       if (message.key === 'stickyState') {
+  //         const sticky = props.context.store.stickyState
+  //         // TODO: document why have and why need to ignore null changes
+  //         sticky != null && setStickyState(sticky)
+  //       } else if (message.key === 'playState') {
+  //         const play = props.context.store.playState
+  //         play != null && setPlayOrPauseState(play)
+  //       }
+  //     }
+  //   }
+  //   props.context.runtime.onMessageAddListener(listener)
+  //   return () => props.context.runtime.onMessageRemoveListener(listener)
+  // }, [])
 
   const stickyTooltip =
     stickyState === 'sticky'
