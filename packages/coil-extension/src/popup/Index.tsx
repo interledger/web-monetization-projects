@@ -33,20 +33,6 @@ export function Index(props: PopupProps) {
     setLastMonetizationProgress(Date.now())
   }
 
-  // function bindMessageListener() {
-  //   console.log('bindMessageListener')
-  //   const listener = (message: ToPopupMessage) => {
-  //     console.log('Index', 'props.context.runtime.onMessageAddListener')
-  //     if (message.command === 'localStorageUpdate') {
-  //       syncStoreAndSetState()
-  //     }
-  //     return false
-  //   }
-  //   props.context.runtime.onMessageAddListener(listener)
-  //   return () => {
-  //     props.context.runtime.onMessageRemoveListener(listener)
-  //   }
-
   function bindMessageListener() {
     const listener = (event: StorageEvent) => {
       if (event.storageArea === localStorage) {

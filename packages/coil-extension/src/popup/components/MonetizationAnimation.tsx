@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 import { PopupProps } from '../types'
-import { ToPopupMessage } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
 
 const ANIMATION_INTERVAL = 1800
@@ -28,20 +27,6 @@ export const MonetizeAnimation = (props: PopupProps) => {
       }
     }
 
-    // const listener = (msg: ToPopupMessage) => {
-    //   if (
-    //     msg.command === 'localStorageUpdate' &&
-    //     msg.key === 'monetizedTotal' &&
-    //     props.context.store.monetizedTotal > 0
-    //   ) {
-    //     setLastPacket(new Date())
-    //     setAnimated(true)
-    //     if (!animateTimeout) {
-    //       window.setTimeout(loopHandler, ANIMATION_INTERVAL)
-    //     }
-    //   }
-    // }
-    // props.context.runtime.onMessageAddListener(listener)
     const listener = (event: StorageEvent) => {
       if (
         event.key === 'monetizedTotal' &&
@@ -55,9 +40,9 @@ export const MonetizeAnimation = (props: PopupProps) => {
       }
     }
     window.addEventListener('storage', listener)
+
     return () => {
       window.removeEventListener('storage', listener)
-      // props.context.runtime.onMessageRemoveListener(listener)
       if (animateTimeout != null) {
         window.clearTimeout(animateTimeout)
       }

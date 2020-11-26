@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { Tooltip, withStyles, styled } from '@material-ui/core'
+import React, { useState } from 'react'
+import { styled, Tooltip, withStyles } from '@material-ui/core'
 
 import { PopupProps } from '../types'
 import { Colors } from '../../shared-theme/colors'
-import { SetStreamControls, ToPopupMessage } from '../../types/commands'
+import { SetStreamControls } from '../../types/commands'
 import {
   PlayOrPauseState,
   StickyState,
@@ -170,23 +170,6 @@ export const StreamControls = (props: PopupProps) => {
     }
     props.context.runtime.sendMessage(message)
   }
-
-  // useEffect(() => {
-  //   const listener = (message: ToPopupMessage) => {
-  //     if (message.command === 'localStorageUpdate') {
-  //       if (message.key === 'stickyState') {
-  //         const sticky = props.context.store.stickyState
-  //         // TODO: document why have and why need to ignore null changes
-  //         sticky != null && setStickyState(sticky)
-  //       } else if (message.key === 'playState') {
-  //         const play = props.context.store.playState
-  //         play != null && setPlayOrPauseState(play)
-  //       }
-  //     }
-  //   }
-  //   props.context.runtime.onMessageAddListener(listener)
-  //   return () => props.context.runtime.onMessageRemoveListener(listener)
-  // }, [])
 
   const stickyTooltip =
     stickyState === 'sticky'
