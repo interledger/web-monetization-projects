@@ -31,12 +31,16 @@ export function run() {
     // We can not get a handle on the bg window (and objects) without any
     // grief.
     // Some kind of hacky localStorage abuse ?
-    const listener = (message: ToPopupMessage) => {
-      // console.log('message received on port', message)
-      if (message.command === 'closePopup') {
-        window.close()
-      }
-    }
+    // const listener = (message: ToPopupMessage) => {
+    //   // console.log('message received on port', message)
+    //   if (message.command === 'closePopup') {
+    //     window.close()
+    //   }
+    // }
+
+    window.addEventListener('closePopup', () => {
+      window.close()
+    })
 
     ReactDOM.render(
       <IndexWithRoot
