@@ -4899,7 +4899,7 @@ __metadata:
     prettier: ^2.2.0
     rimraf: ^3.0.2
     ts-jest: ^26.4.4
-    ts-json-schema-generator: ^0.78.0
+    ts-json-schema-generator: ^0.79.0
     ts-loader: ^8.0.11
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
@@ -21965,19 +21965,20 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:^0.78.0":
-  version: 0.78.0
-  resolution: "ts-json-schema-generator@npm:0.78.0"
+"ts-json-schema-generator@npm:^0.79.0":
+  version: 0.79.0
+  resolution: "ts-json-schema-generator@npm:0.79.0"
   dependencies:
     "@types/json-schema": ^7.0.6
     commander: ^6.2.0
     fast-json-stable-stringify: ^2.1.0
     glob: ^7.1.6
     json-stable-stringify: ^1.0.1
-    typescript: ~4.0.5
+  peerDependencies:
+    typescript: "*"
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: 24b35c2208bf3aefbfbcf5c574c98a00d9b52cdeb7581a550a67c95119fe0b2e5e2acd294d8df3151b0bc951d00f7388353daba9de39a14bccda53b5d7c33010
+  checksum: db1b74312ed0fb147248dfd577bdc1735f6a4edfe75aa28a3c00067b34d365879eaa403520a6723435ae67dcad4a965d4761dc1ae08151f9dbb67650c638e58c
   languageName: node
   linkType: hard
 
@@ -22234,26 +22235,6 @@ typescript@^4.1.2:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 001ab09bb8f597aab1ec43476aedb91b5d547749219273c232bf34cf5a2209d18fa782e64475755115f0907598bb9b503f5e1c0fed06c3651cac584fc88a8172
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@~4.0.5#builtin<compat/typescript>":
-  version: 4.0.5
-  resolution: "typescript@patch:typescript@npm%3A4.0.5#builtin<compat/typescript>::version=4.0.5&hash=a72311"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: ada6fea7657a51d1b842682d31233e53a3cf509b0edbd6288fda3cfd01643d0190b7ea77837527c4d282c90e61690e19dbfd91be6913e7e7292aa0b588d3506c
-  languageName: node
-  linkType: hard
-
-typescript@~4.0.5:
-  version: 4.0.5
-  resolution: "typescript@npm:4.0.5"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: ce94d4bbb914cc9d6fbd42e1476ab18c3292b262b8ba7ba76cd167a858545207a604e75bf1efbb75b8654c8f85deaa19795c3ef00098d7612855139b4ecc0240
   languageName: node
   linkType: hard
 
