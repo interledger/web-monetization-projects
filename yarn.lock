@@ -4899,7 +4899,7 @@ __metadata:
     prettier: ^2.2.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.4
-    ts-json-schema-generator: ^0.79.0
+    ts-json-schema-generator: ^0.80.0
     ts-loader: ^8.0.11
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0
@@ -21923,20 +21923,19 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:^0.79.0":
-  version: 0.79.0
-  resolution: "ts-json-schema-generator@npm:0.79.0"
+"ts-json-schema-generator@npm:^0.80.0":
+  version: 0.80.0
+  resolution: "ts-json-schema-generator@npm:0.80.0"
   dependencies:
     "@types/json-schema": ^7.0.6
     commander: ^6.2.0
     fast-json-stable-stringify: ^2.1.0
     glob: ^7.1.6
     json-stable-stringify: ^1.0.1
-  peerDependencies:
-    typescript: "*"
+    typescript: ~4.1.2
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: db1b74312ed0fb147248dfd577bdc1735f6a4edfe75aa28a3c00067b34d365879eaa403520a6723435ae67dcad4a965d4761dc1ae08151f9dbb67650c638e58c
+  checksum: 81216806a41311943fca6722ccad68e505bc7143025714d9cc3d7e5cc9527f77fa392ac055258f01492e21fa0e4dc619c053ceefd83d3ad32cf4596ee5d4c671
   languageName: node
   linkType: hard
 
@@ -22176,7 +22175,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-typescript@^4.1.2:
+"typescript@^4.1.2, typescript@~4.1.2":
   version: 4.1.2
   resolution: "typescript@npm:4.1.2"
   bin:
@@ -22186,7 +22185,7 @@ typescript@^4.1.2:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.1.2#builtin<compat/typescript>":
+"typescript@patch:typescript@^4.1.2#builtin<compat/typescript>, typescript@patch:typescript@~4.1.2#builtin<compat/typescript>":
   version: 4.1.2
   resolution: "typescript@patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=a72311"
   bin:

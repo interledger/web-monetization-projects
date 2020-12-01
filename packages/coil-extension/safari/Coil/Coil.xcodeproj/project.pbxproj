@@ -419,7 +419,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Coil Extension/Coil_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W9X45A2YV5;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 344JWDH2AE;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Coil Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -428,7 +429,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.extension.Coil.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.extension.Coil.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -440,7 +441,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Coil Extension/Coil_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W9X45A2YV5;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 344JWDH2AE;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Coil Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,7 +451,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.extension.Coil.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.extension.Coil.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -465,7 +467,8 @@
 				CODE_SIGN_ENTITLEMENTS = Coil/Coil.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = W9X45A2YV5;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 344JWDH2AE;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Coil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,7 +476,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.extension.Coil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.extension.Coil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -488,7 +491,8 @@
 				CODE_SIGN_ENTITLEMENTS = Coil/Coil.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = W9X45A2YV5;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 344JWDH2AE;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Coil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,7 +500,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.extension.Coil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.extension.Coil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
