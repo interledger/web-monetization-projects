@@ -17,7 +17,7 @@ export const configureNodePolyfills = (wpConf: webpack.Configuration) => {
     stream: require.resolve('stream-browserify/')
   }
   wpConf.plugins = [
-    ...(wpConf.plugins ?? []),
+    ...(wpConf.plugins || []),
     new webpack.ProvidePlugin({
       process: ['process']
     }),
