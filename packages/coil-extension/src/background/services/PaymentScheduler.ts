@@ -1,83 +1,92 @@
-import { injectable } from 'inversify'
-import { Logger, logger } from './utils'
-
 // The duration "paid" per token.
 const TOKEN_DURATION = 60_000 // milliseconds
 // For additional privacy, obfuscate token schedules by varying delays by ±jitter (uniform distribution).
-const JITTER = 5_000 // milliseconds
-// Except for the first token, full payment for interval [T₀,T₁] is sent at time T₀.
-// The interval is `tokensPerBatch * TOKEN_DURATION` milliseconds.
-// `tokensPerBatch` is the maximum of:
-// - `TOKEN_DURATION` (1 minute).
-// - `1+floor(sent*PREPAY)`
-//
-// For example, when `PREPAY==0.1`, after 10 minutes it will pay 2 tokens at a time.
-// After 20 minutes, it will pay 3 tokens at a time.
-const PREPAY = 0.1
+const JITTER = 3_000 // milliseconds
+const BATCH_RATIO = 0.1
+const MAX_BATCH_SIZE = 5 // tokens
 
-@injectable()
 export class PaymentScheduler {
-  private sent = 0 // tokens sent
-  private startT = Date.now()
-  private stopT = 0
-  // time relative to start. Initially set in the future since the first (scheduled) token isn't until `startT+1m`.
-  private relT = TOKEN_DURATION
-  private batchSize = 1 // tokens per batch
-  private batchIndex = 0 // index within batch
-  private timer?: NodeJS.Timer
-  private onClose?: (err: Error) => void
+  private sentTokens: number = 0 // tokens
+  private batchedSendMax: number = 1 // tokens
+  private watch: Stopwatch = new Stopwatch() // accumulate pay time
 
-  constructor(@logger('PaymentScheduler') private readonly debug: Logger) {}
-
-  onSent(): void {
-    this.sent++
-    if (++this.batchIndex === this.batchSize) {
-      this.batchIndex = 0
-      this.batchSize = 1 + Math.floor(this.sent * PREPAY)
-      this.relT += TOKEN_DURATION * this.batchSize
+  onSent(tokenPart: number): void { // tokenPart is a fractional token
+    this.sentTokens += tokenPart
+    console.log("onSent", "tokenPart:", tokenPart)
+    while (this.batchedSendMax <= this.sentTokens) {
+      const batchSize = Math.min(MAX_BATCH_SIZE, 1 + Math.floor(this.batchedSendMax * BATCH_RATIO))
+      this.batchedSendMax += batchSize
     }
-  }
-
-  async wait(): Promise<void> {
-    // Don't pay when paused.
-    if (this.stopT) {
-      this.startT += Date.now() - this.stopT
-      this.stopT = 0
-    }
-
-    const ms = this.waitTimeWithJitter()
-    this.debug(
-      'waiting until %s (%dms) before sending payment number %d',
-      new Date(Date.now() + ms),
-      ms,
-      this.sent + 1
-    )
-    if (!ms) return
-    await new Promise((resolve, reject): void => {
-      this.timer = setTimeout(resolve, ms)
-      this.onClose = reject
-    })
   }
 
   stop(): void {
-    this.stopT = Date.now()
-    if (this.timer) clearTimeout(this.timer)
-    if (this.onClose) this.onClose(new Error('closed'))
+    this.watch.stop()
   }
 
-  private waitTimeWithJitter(): number {
-    const w = this.waitTime()
-    const j = randBetween(-JITTER, JITTER)
-    return w === 0 ? w : Math.max(0, w + j)
+  // Wait for the next full token.
+  // Returns false when stopped before a full token is available.
+  async awaitFullToken(): Promise<boolean> {
+    const start = Date.now()
+    this.watch.tick()
+    while (!this.hasAvailableFullToken()) {
+      const waited = await this.watch.wait(5_000 + randBetween(-JITTER, JITTER))
+      if (!waited) return false
+      this.watch.tick()
+    }
+    console.log("WAIT_DONE", "waited:", Date.now()-start, "unpaid:", this.unpaidTokens(), "sent:", this.sentTokens)
+    return true
   }
 
-  private waitTime(): number {
-    const relSendTime = this.relT - TOKEN_DURATION * this.batchSize
-    const absSendTime = this.startT + relSendTime
-    return Math.max(0, absSendTime - Date.now())
+  private hasAvailableFullToken(): boolean {
+    const sendMax = Math.floor(this.sendMax())
+    console.log("hasAvailableFullToken", "batchedSendMax:", this.batchedSendMax, "sendMax:", sendMax, "unrounded:", this.watch.totalTime / TOKEN_DURATION)
+    return 0 < sendMax && this.batchedSendMax <= sendMax
+      && this.sentTokens < this.batchedSendMax
+  }
+
+  private sendMax(): number { // returns fractional tokens
+    return this.watch.totalTime / TOKEN_DURATION
+  }
+
+  hasPaidAny(): boolean {
+    return 1 <= this.sentTokens
+  }
+
+  unpaidTokens(): number { // returns fractional tokens
+    const unpaidTime = this.watch.totalTime - this.sentTokens * TOKEN_DURATION
+    return unpaidTime / TOKEN_DURATION
   }
 }
 
 function randBetween(a: number, b: number): number {
   return Math.random() * (b - a) + a
+}
+
+class Stopwatch {
+  public totalTime: number = 0 // milliseconds duration
+  private lastTick?: number = Date.now() // milliseconds time
+  private timer?: NodeJS.Timer
+  private cancelTimer?: () => void
+
+  wait(delay: number): Promise<boolean> {
+    return new Promise((resolve) => {
+      this.timer = setTimeout(() => resolve(true), delay)
+      this.cancelTimer = () => resolve(false)
+    })
+  }
+
+  stop(): void {
+    this.tick()
+    if (this.timer) clearTimeout(this.timer)
+    if (this.cancelTimer) this.cancelTimer()
+    this.lastTick = this.timer = this.cancelTimer = undefined
+  }
+
+  isStopped(): boolean { return !!this.lastTick }
+
+  tick(): void {
+    const now = Date.now()
+    this.totalTime += now - (this.lastTick || now)
+    this.lastTick = now
+  }
 }

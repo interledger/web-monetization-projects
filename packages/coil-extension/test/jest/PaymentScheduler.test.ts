@@ -2,24 +2,82 @@ import '@abraham/reflection'
 import { PaymentScheduler } from '../../src/background/services/PaymentScheduler'
 
 const M = 60_000
-const log = args => {}
 
 describe('PaymentScheduler', () => {
-  let ps,
-    spy,
-    time = Date.now()
+  let ps, spy
+  let time = Date.now()
   beforeEach(() => {
     jest.useFakeTimers()
     spy = jest.spyOn(Date, 'now').mockImplementation(() => time)
-    ps = new PaymentScheduler(log)
-    // The first minute's payment is not scheduled using PaymentScheduler.
-    ps.onSent()
+    ps = new PaymentScheduler()
   })
+
+  function tick(ms: number): void {
+    time += ms
+    jest.advanceTimersByTime(ms)
+    ps.watch.tick()
+  }
 
   afterEach(() => {
     spy.mockRestore()
   })
 
+  describe('hasAvailableFullToken', () => {
+    it('signals the first token after 1 minute', () => {
+      tick(M - 1)
+      expect(ps.hasAvailableFullToken()).toBe(false)
+      tick(2)
+      expect(ps.hasAvailableFullToken()).toBe(true)
+    })
+
+    it('batches tokens', () => {
+      const expectCounts = [
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0,
+        0, 3, 0, 0, 3, 0, 0, 3, 0, 0, 3,
+        0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0,
+        0, 5,
+      ]
+      const counts = []
+      for (let i = 0; i < expectCounts.length; i++) {
+        let j = 0
+        while (ps.hasAvailableFullToken()) { j++; ps.onSent(1) }
+        counts.push(j)
+        tick(M)
+      }
+      expect(counts).toStrictEqual(expectCounts)
+    })
+
+    it('handles partial onSent tokens', () => {
+      tick(M)
+      ps.onSent(0.9)
+      expect(ps.hasAvailableFullToken()).toBe(true)
+      ps.onSent(0.1)
+      expect(ps.hasAvailableFullToken()).toBe(false)
+    })
+  })
+
+  describe('unpaidTokens', () => {
+    it('returns fractional tokens', () => {
+      expect(ps.unpaidTokens()).toBe(0.0)
+      tick(M / 10)
+      expect(ps.unpaidTokens()).toBe(0.1)
+      tick(M / 10)
+      expect(ps.unpaidTokens()).toBe(0.2)
+      tick(M)
+      expect(ps.unpaidTokens()).toBe(1.2)
+    })
+
+    it('decreases after onSent', () => {
+      tick(M / 10)
+      expect(ps.unpaidTokens()).toBe(0.1)
+      ps.onSent(0.03)
+      expect(ps.unpaidTokens()).toBe(0.07)
+    })
+  })
+})
+
+/*
   describe('waitTimeWithJitter', () => {
     it('varies by at most JITTER', () => {
       //ps.onSent()
@@ -88,4 +146,4 @@ describe('PaymentScheduler', () => {
     time += ms
     jest.advanceTimersByTime(ms)
   }
-})
+*/
