@@ -1442,7 +1442,7 @@ __metadata:
     "@dier-makr/annotations": ^0.0.0
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.2
-    "@material-ui/icons": ^4.9.1
+    "@material-ui/icons": ^4.11.2
     "@material-ui/styles": ^4.11.1
     "@types/chrome": 0.0.126
     "@types/debug": ^4.1.5
@@ -2385,7 +2385,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.2
-    "@material-ui/icons": ^4.9.1
+    "@material-ui/icons": ^4.11.2
     "@types/jest": ^26.0.16
     "@types/node": ^14.10.3
     "@types/react": ^16.14.2
@@ -3503,20 +3503,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@material-ui/icons@npm:^4.9.1":
-  version: 4.9.1
-  resolution: "@material-ui/icons@npm:4.9.1"
+"@material-ui/icons@npm:^4.11.2":
+  version: 4.11.2
+  resolution: "@material-ui/icons@npm:4.11.2"
   dependencies:
     "@babel/runtime": ^7.4.4
   peerDependencies:
     "@material-ui/core": ^4.0.0
-    "@types/react": ^16.8.6
-    react: ^16.8.0
-    react-dom: ^16.8.0
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 110bb77f0758d16ad85b6a91f23fe05bac6790b30b6b1889b0578d7d42050c63c76e2764ec4991bdf342073de43e14ebfc171f1c63296a6dd8d523cc6c07d2bb
+  checksum: 0f5f70d10581e50e96dadf4d7cd5ef2acdc135e460a74eb29fdeecd5fd98fb1caae9692979997438a9606c193b52b6e0186cabf57af1352fa92221b7eb71ea83
   languageName: node
   linkType: hard
 
