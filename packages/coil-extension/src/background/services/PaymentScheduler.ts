@@ -6,16 +6,16 @@ const BATCH_RATIO = 0.1
 const MAX_BATCH_SIZE = 5 // tokens
 
 export class PaymentScheduler {
-  private sentTokens: number = 0 // tokens
-  private batchedSendMax: number = 1 // tokens
+  private sentTokens: number = 0 // tokens sent so far (potentially fractional)
+  private nextBatchInt: number = 1 // tokens; the batched high water-mark (always integer). send while nextBatch≤sendMax
   private watch: Stopwatch = new Stopwatch() // accumulate pay time
 
   onSent(tokenPart: number): void { // tokenPart is a fractional token
     this.sentTokens += tokenPart
     console.log("onSent", "tokenPart:", tokenPart)
-    while (this.batchedSendMax <= this.sentTokens) {
-      const batchSize = Math.min(MAX_BATCH_SIZE, 1 + Math.floor(this.batchedSendMax * BATCH_RATIO))
-      this.batchedSendMax += batchSize
+    while (this.nextBatch() <= this.sentTokens) {
+      const batchSize = Math.min(MAX_BATCH_SIZE, 1 + Math.floor(this.nextBatchInt * BATCH_RATIO))
+      this.nextBatchInt += batchSize
     }
   }
 
@@ -39,17 +39,23 @@ export class PaymentScheduler {
 
   private hasAvailableFullToken(): boolean {
     const sendMax = Math.floor(this.sendMax())
-    console.log("hasAvailableFullToken", "batchedSendMax:", this.batchedSendMax, "sendMax:", sendMax, "unrounded:", this.watch.totalTime / TOKEN_DURATION)
-    return 0 < sendMax && this.batchedSendMax <= sendMax
-      && this.sentTokens < this.batchedSendMax
+    console.log("hasAvailableFullToken", "nextBatch:", this.nextBatch(), "sendMax:", sendMax, "unrounded:", this.watch.totalTime / TOKEN_DURATION, "sentTokens=", this.sentTokens)
+    return 0 < sendMax && this.nextBatch() <= sendMax
+      //&& this.sentTokens < this.nextBatch
+      && 1 <= this.nextBatch() - this.sentTokens
   }
 
   private sendMax(): number { // returns fractional tokens
     return this.watch.totalTime / TOKEN_DURATION
   }
 
+  // Offset nextBatchInt by any fractional tokens, since the nextBatch is used to send whole tokens (a.x-b.x=a-b).
+  private nextBatch(): number { // returns fractional tokens
+    return this.nextBatchInt + (this.sentTokens - Math.trunc(this.sentTokens))
+  }
+
   hasPaidAny(): boolean {
-    return 1 <= this.sentTokens
+    return 0 < this.sentTokens
   }
 
   unpaidTokens(): number { // returns fractional tokens
