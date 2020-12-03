@@ -8,31 +8,38 @@ This also shows how a "verifier" can proxy SPSP requests to a "receiver" by
 adding extra headers to support [receipts](https://github.com/interledger/webmonetization.org/pull/51) (proof of payment).
 
 This package includes a minimal toy verifier for illustrative purposes, but for production use, see:
-[Receipt Verifier](https://github.com/coilhq/receipt-verifier)
+https://webmonetization.org/docs/receipt-verifier/
 
 ### Running the demo servers and client
 
-In 3 different terminals:
-
-To use the bundled toy verifier:
+In 4 different terminals:
 
 ```
 yarn client:dev
 yarn receiver:dev
+yarn server:dev
 yarn verifier:dev
 ```
 
-For an example of using [Receipt Verifier](https://github.com/coilhq/receipt-verifier):
+For an example using the [public receipt verifier](https://webmonetization.org/docs/receipt-verifier/#use-our-publicly-available-receipt-verifier):
 
 ```
-USE_RECEIPT_VERIFIER=1 yarn client:dev
+VERIFIER_URL=https://webmonetization.org/api/receipts yarn client:dev
 yarn receiver:dev
-yarn receipt-verifier
+VERIFIER_URL=https://webmonetization.org/api/receipts/verify yarn server:dev
+```
+
+For an example using a custom receiver:
+
+```
+PAYMENT_POINTER=$ilp.uphold.com/example yarn client:dev
+yarn server:dev
+yarn verifier:dev
 ```
 
 ### Configuring Extension
 
-To connect to the STREAM server you must build the extension
+To connect to the `receiver`'s STREAM server you must build the extension
 to use the local btp endpoint rather than Coil:
 
 ```shell script

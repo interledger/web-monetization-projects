@@ -15,41 +15,45 @@ function pretty(val: unknown) {
 }
 
 /**
- * When using https://github.com/coilhq/receipt-verifier
- * via `yarn receipt-verifier`
- * the SPSP Proxy API and Balances API will be on different ports
  * Set via webpack
  */
-declare const USE_RECEIPT_VERIFIER: boolean
+declare const PAYMENT_POINTER: string
+declare const VERIFIER_URL: string
 
 const Index = hot(() => {
   const state = useMonetizationState()
   const counter = useMonetizationCounter()
 
   const paymentPointers = [
-    'http://localhost:4000/spsp/~niq',
-    'http://localhost:4001/spsp/~niq'
+    PAYMENT_POINTER,
+    `${VERIFIER_URL}/${encodeURIComponent(PAYMENT_POINTER)}`
   ]
   const [paymentPointer, setPaymentPointer] = useState<string>(
     paymentPointers[0]
   )
-  const [serverBalance, setServerBalance] = useState<number | null>(null)
+  const [serverBalance, setServerBalance] = useState<string | null>(null)
   const [useReceipts, setUseReceipts] = useState<boolean>(true)
-  const balancesPort = USE_RECEIPT_VERIFIER ? 4002 : 4001
 
   const toggleReceipts = () => setUseReceipts(!useReceipts)
+
+  async function getBalance(requestId: string) {
+    const resp = await fetch(`http://localhost:4002/balances/${requestId}`)
+    if (resp.ok) {
+      setServerBalance(await resp.json())
+    }
+  }
+
   useEffect(() => {
     async function submitReceipt(requestId: string, receipt: string) {
       const resp = await fetch(
-        `http://localhost:${balancesPort}/balances/${requestId}:creditReceipt`,
+        `http://localhost:4002/balances/${requestId}:creditReceipt`,
         {
           method: 'POST',
           body: receipt
         }
       )
       if (resp.ok) {
-        const body = await resp.json()
-        setServerBalance(body)
+        getBalance(requestId)
       }
     }
     if (counter.requestId && counter.receipt) {
@@ -60,7 +64,9 @@ const Index = hot(() => {
     setPaymentPointer(paymentPointers[+useReceipts])
   }, [useReceipts])
   useEffect(() => {
-    setServerBalance(0)
+    if (counter.requestId) {
+      getBalance(counter.requestId)
+    }
   }, [counter.requestId])
   return (
     <div>
@@ -83,14 +89,13 @@ const Index = hot(() => {
       </form>
       <pre> Payment Pointer: {paymentPointer} </pre>
       {useReceipts && (
-        <pre> Using verifier SPSP endpoint to proxy to receiver </pre>
+        <div>
+          <pre> Using verifier SPSP endpoint to proxy to receiver </pre>
+          <pre> {counter.requestId} Balance: </pre>
+          <pre>{serverBalance} </pre>
+        </div>
       )}
       {!useReceipts && <pre> Sending directly to receiver </pre>}
-      {useReceipts && (
-        <pre>
-          {counter.requestId} Balance: {serverBalance}
-        </pre>
-      )}
       <pre>(React) useMonetizationState: {pretty(state)}</pre>
 
       <pre>(React) useMonetizationCounter: {pretty(counter)}</pre>
