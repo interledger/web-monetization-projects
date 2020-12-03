@@ -1443,7 +1443,7 @@ __metadata:
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.2
     "@material-ui/icons": ^4.11.2
-    "@material-ui/styles": ^4.11.1
+    "@material-ui/styles": ^4.11.2
     "@types/chrome": 0.0.126
     "@types/debug": ^4.1.5
     "@types/firefox": ^0.0.30
@@ -3520,7 +3520,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@material-ui/styles@npm:^4.11.1, @material-ui/styles@npm:^4.11.2":
+"@material-ui/styles@npm:^4.11.2":
   version: 4.11.2
   resolution: "@material-ui/styles@npm:4.11.2"
   dependencies:
