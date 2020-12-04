@@ -4,11 +4,16 @@ const TOKEN_DURATION = 60_000 // milliseconds
 const JITTER = 3_000 // milliseconds
 const BATCH_RATIO = 0.1
 const MAX_BATCH_SIZE = 5 // tokens
+const PREPAY_RATIO = 0.1
+const MAX_PREPAY_SIZE = MAX_BATCH_SIZE // tokens
+
+export enum ScheduleMode { PrePay, PostPay }
 
 export class PaymentScheduler {
   private sentTokens: number = 0 // tokens sent so far (potentially fractional)
   private nextBatchInt: number = 1 // tokens; the batched high water-mark (always integer). send while nextBatch≤sendMax
   private watch: Stopwatch = new Stopwatch() // accumulate pay time
+  constructor(private mode: ScheduleMode) {}
 
   onSent(tokenPart: number): void { // tokenPart is a fractional token
     this.sentTokens += tokenPart
@@ -17,6 +22,10 @@ export class PaymentScheduler {
       const batchSize = Math.min(MAX_BATCH_SIZE, 1 + Math.floor(this.nextBatchInt * BATCH_RATIO))
       this.nextBatchInt += batchSize
     }
+  }
+
+  hasPaidAny(): boolean {
+    return 0 < this.sentTokens
   }
 
   stop(): void {
@@ -39,30 +48,37 @@ export class PaymentScheduler {
 
   private hasAvailableFullToken(): boolean {
     const sendMax = Math.floor(this.sendMax())
-    console.log("hasAvailableFullToken", "nextBatch:", this.nextBatch(), "sendMax:", sendMax, "unrounded:", this.watch.totalTime / TOKEN_DURATION, "sentTokens=", this.sentTokens)
+    console.log("hasAvailableFullToken", "nextBatch:", this.nextBatch(), "sendMax:", sendMax, "unroundedSendMax:", this.watch.totalTime / TOKEN_DURATION, "sentTokens=", this.sentTokens)
     return 0 < sendMax && this.nextBatch() <= sendMax
-      //&& this.sentTokens < this.nextBatch
-      && 1 <= this.nextBatch() - this.sentTokens
+      //&& this.sentTokens < this.nextBatch // XXX
+      //&& 1 <= maybeRound(this.nextBatch() - this.sentTokens)
   }
 
   private sendMax(): number { // returns fractional tokens
-    return this.watch.totalTime / TOKEN_DURATION
+    const trueSendMax = this.watch.totalTime / TOKEN_DURATION
+    switch (this.mode) {
+    case ScheduleMode.PrePay:
+      return trueSendMax + Math.min(1 + trueSendMax * PREPAY_RATIO, MAX_PREPAY_SIZE)
+    case ScheduleMode.PostPay:
+      return trueSendMax
+    }
+  }
+
+  unpaidTokens(): number { // returns fractional tokens
+    return this.sendMax() - this.sentTokens
   }
 
   // Offset nextBatchInt by any fractional tokens, since the nextBatch is used to send whole tokens (a.x-b.x=a-b).
   private nextBatch(): number { // returns fractional tokens
     return this.nextBatchInt + (this.sentTokens - Math.trunc(this.sentTokens))
   }
-
-  hasPaidAny(): boolean {
-    return 0 < this.sentTokens
-  }
-
-  unpaidTokens(): number { // returns fractional tokens
-    const unpaidTime = this.watch.totalTime - this.sentTokens * TOKEN_DURATION
-    return unpaidTime / TOKEN_DURATION
-  }
 }
+
+// Fix errors like 1.9 - 0.9 = 0.999…
+//function maybeRound(v: number): number {
+//  const i = Math.round(v)
+//  return Math.abs(i - v) < 0.001 ? i : v
+//}
 
 function randBetween(a: number, b: number): number {
   return Math.random() * (b - a) + a

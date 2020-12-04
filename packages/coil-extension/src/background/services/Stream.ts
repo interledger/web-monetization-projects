@@ -23,7 +23,7 @@ import * as tokens from '../../types/tokens'
 import { BTP_ENDPOINT } from '../../webpackDefines'
 
 import { AnonymousTokens } from './AnonymousTokens'
-import { PaymentScheduler } from './PaymentScheduler'
+import { PaymentScheduler, ScheduleMode } from './PaymentScheduler'
 import { Logger, logger } from './utils'
 
 const { timeout } = asyncUtils
@@ -85,8 +85,8 @@ export class Stream extends EventEmitter {
   private _assetCode: string = ''
   private _assetScale: number = 0
   private _exchangeRate: number = 1
-  private _schedule: PaymentScheduler = new PaymentScheduler()
-  private loop: StreamLoop// = new StreamLoop()
+  private _schedule: PaymentScheduler = new PaymentScheduler(ScheduleMode.PostPay)
+  private loop: StreamLoop
 
   constructor(
     @logger('Stream')
