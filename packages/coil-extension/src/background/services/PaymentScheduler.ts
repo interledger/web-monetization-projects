@@ -17,7 +17,6 @@ export class PaymentScheduler {
 
   onSent(tokenPart: number): void { // tokenPart is a fractional token
     this.sentTokens += tokenPart
-    console.log("onSent", "tokenPart:", tokenPart)
     while (this.nextBatch() <= this.sentTokens) {
       const batchSize = Math.min(MAX_BATCH_SIZE, 1 + Math.floor(this.nextBatchInt * BATCH_RATIO))
       this.nextBatchInt += batchSize
@@ -42,16 +41,12 @@ export class PaymentScheduler {
       if (!waited) return false
       this.watch.tick()
     }
-    console.log("WAIT_DONE", "waited:", Date.now()-start, "unpaid:", this.unpaidTokens(), "sent:", this.sentTokens)
     return true
   }
 
   private hasAvailableFullToken(): boolean {
     const sendMax = Math.floor(this.sendMax())
-    console.log("hasAvailableFullToken", "nextBatch:", this.nextBatch(), "sendMax:", sendMax, "unroundedSendMax:", this.watch.totalTime / TOKEN_DURATION, "sentTokens=", this.sentTokens)
     return 0 < sendMax && this.nextBatch() <= sendMax
-      //&& this.sentTokens < this.nextBatch // XXX
-      //&& 1 <= maybeRound(this.nextBatch() - this.sentTokens)
   }
 
   private sendMax(): number { // returns fractional tokens
@@ -73,12 +68,6 @@ export class PaymentScheduler {
     return this.nextBatchInt + (this.sentTokens - Math.trunc(this.sentTokens))
   }
 }
-
-// Fix errors like 1.9 - 0.9 = 0.999…
-//function maybeRound(v: number): number {
-//  const i = Math.round(v)
-//  return Math.abs(i - v) < 0.001 ? i : v
-//}
 
 function randBetween(a: number, b: number): number {
   return Math.random() * (b - a) + a

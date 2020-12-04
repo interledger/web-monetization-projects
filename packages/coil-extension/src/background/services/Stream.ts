@@ -128,7 +128,6 @@ export class Stream extends EventEmitter {
     // reset this upon every start *before* early exit while looping
     this._packetNumber = 0
     await this.loop.run(async (tokenFraction: number): Promise<Connection> => {
-      console.log("START ATTEMPT ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────", tokenFraction)
       const spspDetails = await this._getSPSPDetails()
       const redeemedToken = await this._anonTokens.getToken(this._authToken)
       this._debug('redeemed token with throughput=%d', redeemedToken.throughput)
@@ -168,7 +167,7 @@ export class Stream extends EventEmitter {
         // - This works around a bug where sometimes the full amount isn't reported.
         // - When the paid amount actually is a partial token, this helps sync the
         //   scheduling algorithm back up to paying full tokens instead of fragments.
-        connection.on('error', (e) => { if (isExhaustedError(e)) resolve(1.0) }) // XXX repay up to next whole number? or not...
+        connection.on('error', (e) => { if (isExhaustedError(e)) resolve(1.0) })
         connection.on('close', () => resolve(+connection.totalSent / redeemedToken.throughput / 60 as number))
       }) as Promise<number>).then((sentTokens: number) => this._schedule.onSent(sentTokens))
 
@@ -314,17 +313,14 @@ class StreamLoop extends EventEmitter {
       case StreamLoopState.Loop: // keep going; only pay full tokens
         // After the very first token payment, switch to post-payment.
         if (this.schedule.hasPaidAny()) {
-          const START = Date.now() // XXX
           const hasToken = await this.schedule.awaitFullToken()
-          console.log("WAITED ms=", Date.now() - START, "hasToken=", hasToken)
           if (!hasToken) continue // the wait was interrupted, likely because the stream was paused/stopped
         }
         break
       case StreamLoopState.Ending:
         tokenPiece = clamp(this.schedule.unpaidTokens(), 0.0, 1.0)
         tokenPiece = Math.floor(tokenPiece * 20) / 20 // don't pay tiny token pieces
-        console.log("DEBUG drain", tokenPiece)
-        if (tokenPiece === 0) { console.log("DEBUG drain finished"); this.state = StreamLoopState.Done; continue }
+        if (tokenPiece === 0) { this.state = StreamLoopState.Done; continue }
         break
       }
       try {
@@ -357,7 +353,6 @@ class StreamLoop extends EventEmitter {
   }
 
   async stop(): Promise<void> {
-    console.log("STOP schedule.watch.totalTime", this.schedule['watch']['totalTime'])
     this.state = StreamLoopState.Ending
     this.schedule.stop()
     // End the firstMinuteBandwidth payment quickly. Non-first-minute payment
@@ -389,8 +384,6 @@ async function firstMinuteBandwidth(stream: DataAndMoneyStream, throughput: numb
     lastTime = time
     await new Promise((resolve) => timer = setTimeout(cancelTimer = resolve, delay))
     if (stopped) return
-    console.log("FirstMinuteBandwidth:sendMax = ", time, "* throughput", "delay=", delay) // XXX
-    console.log("setSendMax", time === 60 ? FULL_TOKEN_AMOUNT : (time * throughput))
     stream.setSendMax(time === 60 ? FULL_TOKEN_AMOUNT : (time * throughput))
   }
 }
