@@ -1464,7 +1464,7 @@ __metadata:
     "@webexts/build-utils": ^0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.13.0
+    addons-linter: ^2.13.1
     copy-webpack-plugin: ^6.3.2
     crx-hotreload: ^1.0.4
     debug: ^4.3.1
@@ -2400,7 +2400,7 @@ __metadata:
     "@webexts/build-utils": 0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.13.0
+    addons-linter: ^2.13.1
     copy-webpack-plugin: ^6.3.2
     crx-hotreload: ^1.0.4
     css-loader: ^5.0.1
@@ -5552,13 +5552,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:^2.13.0":
-  version: 2.13.0
-  resolution: "addons-linter@npm:2.13.0"
+"addons-linter@npm:^2.13.1":
+  version: 2.13.1
+  resolution: "addons-linter@npm:2.13.1"
   dependencies:
     "@babel/runtime": 7.12.5
     "@mdn/browser-compat-data": 2.0.7
-    addons-scanner-utils: 3.0.0
+    addons-scanner-utils: 4.0.0
     ajv: 6.12.6
     ajv-merge-patch: 4.1.0
     chalk: 4.1.0
@@ -5594,7 +5594,7 @@ __metadata:
       optional: true
   bin:
     addons-linter: bin/addons-linter
-  checksum: 8ce387ae50217fe9fc5b7a549810b9fa9c4a613cf15a30e18f0133245fd19dff3bcb5c7358744fb1a5df2cabfd4afd5355b29330be409de7821a5dcadb768474
+  checksum: 29ab9020063b180e67c71106fdce313eafdf92dfc79e217678046274db87a3b3685ad8d7ba37e1c6bfebb5f69b51e4416d99eeade5c25ff725670ec23ad533c8
   languageName: node
   linkType: hard
 
@@ -5614,6 +5614,26 @@ __metadata:
     upath: 2.0.0
     yauzl: 2.10.0
   checksum: 718107542b1c9fbf1a54e76abe571f827606950d328a65d6aab3a3d1c87eb85279dfb90c436ddb2a9ba2c7571a5ddee5ae3862eaf7588f8755de00f9a3cc2eb8
+  languageName: node
+  linkType: hard
+
+"addons-scanner-utils@npm:4.0.0":
+  version: 4.0.0
+  resolution: "addons-scanner-utils@npm:4.0.0"
+  dependencies:
+    "@types/yauzl": 2.9.1
+    common-tags: 1.8.0
+    first-chunk-stream: 3.0.0
+    strip-bom-stream: 4.0.0
+    upath: 2.0.1
+    yauzl: 2.10.0
+  peerDependencies:
+    "@types/download": 6.2.4
+    body-parser: 1.19.0
+    download: 8.0.0
+    express: 4.17.1
+    safe-compare: 1.1.4
+  checksum: 2ef88a390b87d2d348064b7428d5ed390c90401d1b9b2e920dbc903be1b13ecf5759de01dab6d31278501ee16cce35eebd20dd14984524996643763a0736b367
   languageName: node
   linkType: hard
 
