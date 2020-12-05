@@ -25,7 +25,7 @@ So:
 
 ## Setting up dev environment
 
-The Web-Monetization monorepo uses yarn, so you need to install it using npm or your package manager:
+The Web-Monetization monorepo uses yarn (2), so you need to install it using npm or your package manager:
 
 ```sh
 npm install -g yarn
@@ -39,6 +39,10 @@ Clone and setup the dev env.
 git clone git@github.com:coilhq/web-monetization-projects.git
 yarn
 ```
+
+### Node >= 14
+The TypeScript is compiled into es2020, so the minimum version of node required is v14 (currently the LTS)
+See [nvm](https://github.com/nvm-sh/nvm#install--update-script) for an easy way to manage multiple versions
 
 ## Why Vanilla Prettier ?
 
