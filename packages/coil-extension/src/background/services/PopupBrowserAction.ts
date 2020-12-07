@@ -19,13 +19,13 @@ export class PopupBrowserAction {
   private action: Action | null = null
   // Just cache the last call, including the tab id, rather than a map of
   // {$tabId: $path} which would require bookkeeping. This does "enough"
-  private lastSetIconCallArgs: TabIconDetails = {}
+  private lastSetIconCallArgs: TabIconDetails & { calls: number } = { calls: 0 }
 
   constructor(
     private tabOpener: TabOpener,
     private icons: PopupIconService,
     @inject(tokens.CoilDomain) private coilDomain: string,
-    @inject(tokens.WextApi) private api: typeof window.chrome
+    @inject(tokens.WextApi) private api = chrome
   ) {
     this.openLogin = this.tabOpener.opener(`${this.coilDomain}/login`)
     // disable popup if on android
@@ -79,14 +79,25 @@ export class PopupBrowserAction {
         tabId,
         path: state?.icon?.path ?? this.icons.getInactive()
       }
-      if (
-        !(
-          this.lastSetIconCallArgs.path == args.path &&
-          this.lastSetIconCallArgs.tabId == args.tabId
-        )
-      ) {
+      const changed =
+        this.lastSetIconCallArgs.path !== args.path ||
+        this.lastSetIconCallArgs.tabId !== args.tabId
+      if (changed) {
+        // Reset number of calls
+        this.lastSetIconCallArgs.calls = 0
+      }
+      // It seems in some cases that are hard to determine, setIcon calls are
+      // ignored, so the manifest declared default icon is seen instead.
+      // Stop calling after the 10th call with the same tabId/path so the
+      // network tab of devtools isn't littered with (*unworkable* amounts of)
+      // related entries.
+      if (changed || this.lastSetIconCallArgs.calls <= 10) {
         api.browserAction.setIcon(args)
-        this.lastSetIconCallArgs = args
+        // We must ++prefix increment because we are copying
+        this.lastSetIconCallArgs = {
+          ...args,
+          calls: ++this.lastSetIconCallArgs.calls
+        }
       }
     }
 
