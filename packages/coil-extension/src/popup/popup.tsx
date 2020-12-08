@@ -28,18 +28,27 @@ export function run() {
   }
 
   const rootEl = document.getElementById('root')
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
   if (isExtension) {
     window.addEventListener('storage', event => {
-      if (event.key !== 'monetizedTotal') {
-        console.log('storage event:', event.key, event.newValue)
-      }
       if (event.key === '$$popupCommand' && event.newValue) {
         const cmd: ToPopupMessage = JSON.parse(event.newValue)
         if (cmd.command === 'closePopup') {
-          console.log('should be running window.close()!', navigator.userAgent)
-          // window.close() actually causes a Bodgy state itself on safari
-          // window.close()
+          // window.close() itself actually causes a bad state on safari
+          if (isSafari) {
+            // eslint-disable-next-line no-console
+            console.warn(
+              'Should be running window.close(), ' +
+                'but it is buggy on safari, navigator.userAgent=' +
+                navigator.userAgent +
+                '\n' +
+                'see: ' +
+                'https://github.com/coilhq/web-monetization-projects/issues/1077'
+            )
+          } else {
+            window.close()
+          }
         } else {
           context.events.emit('$$popupCommand', cmd)
         }
@@ -74,5 +83,3 @@ export function run() {
 }
 
 run()
-// eslint-disable-next-line no-console
-console.log('popup run() finished')
