@@ -46,6 +46,8 @@ import MessageSender = chrome.runtime.MessageSender
 import { BuildConfig } from '../../types/BuildConfig'
 import { debug } from '../../content/util/logging'
 
+import { GPCService } from './GPCService'
+
 @injectable()
 export class BackgroundScript {
   constructor(
@@ -59,6 +61,7 @@ export class BackgroundScript {
     private store: LocalStorageProxy,
     private auth: AuthService,
     private youtube: YoutubeService,
+    private gpcService: GPCService,
     private framesService: BackgroundFramesService,
 
     @logger('BackgroundScript')
@@ -98,6 +101,7 @@ export class BackgroundScript {
     this.routeStreamsMoneyEventsToContentScript()
     this.handleStreamsAbortEvent()
     this.framesService.monitor()
+    this.gpcService.enable()
     // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
   }

@@ -6,7 +6,8 @@ import {
 } from '@web-monetization/polyfill-utils'
 import {
   DocumentMonetization,
-  IdleDetection
+  IdleDetection,
+  ScriptInjection
 } from '@web-monetization/wext/content'
 import { MonetizationProgressEvent, TipEvent } from '@web-monetization/types'
 
@@ -52,6 +53,7 @@ export class ContentScript {
     private adaptedContent: AdaptedContentService,
     private frames: Frames,
     private idle: IdleDetection,
+    private scripts: ScriptInjection,
     private monetization: DocumentMonetization,
     private auth: ContentAuthService
   ) {}
@@ -178,6 +180,8 @@ export class ContentScript {
   }
 
   init() {
+    this.injectGPC()
+
     if (this.frames.isMonetizableFrame) {
       this.frames.monitor()
     }
@@ -272,5 +276,9 @@ export class ContentScript {
         this.runtime.sendMessage(message)
       }
     }
+  }
+
+  private injectGPC() {
+    this.scripts.inject('navigator.globalPrivacyControl = true;')
   }
 }
