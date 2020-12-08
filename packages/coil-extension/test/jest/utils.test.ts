@@ -19,7 +19,7 @@ describe('Currency utils', () => {
 
 describe('debounce', () => {
   it('call immediately, then wait until a pause', async () => {
-    let res = []
+    const res = []
     const f = debounce((a: number) => res.push(a), 10)
     for (let i = 0; i < 20; i++) {
       f(i)

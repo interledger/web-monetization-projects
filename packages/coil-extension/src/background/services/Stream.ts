@@ -76,15 +76,15 @@ export class Stream extends EventEmitter {
   private readonly _initiatingUrl: string
 
   private _lastOutgoingMs!: number
-  private _lastDelivered: number = 0
+  private _lastDelivered = 0
   private _packetNumber!: number
   private _paying = false
   private _coilDomain: string
   private _anonTokens: AnonymousTokens
 
-  private _assetCode: string = ''
-  private _assetScale: number = 0
-  private _exchangeRate: number = 1
+  private _assetCode = ''
+  private _assetScale = 0
+  private _exchangeRate = 1
   private _schedule: PaymentScheduler = new PaymentScheduler(ScheduleMode.PostPay)
   private loop: StreamLoop
 
@@ -284,7 +284,7 @@ class StreamLoop extends EventEmitter {
   private state: StreamLoopState = StreamLoopState.Done
   private readonly schedule: PaymentScheduler
   private readonly debug: Logger
-  private running: boolean = false // whether there is an active loop
+  private running = false // whether there is an active loop
   private connection?: Connection
   constructor(opts: {
     schedule: PaymentScheduler

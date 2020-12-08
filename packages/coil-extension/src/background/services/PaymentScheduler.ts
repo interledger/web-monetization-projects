@@ -10,8 +10,8 @@ const MAX_PREPAY_SIZE = MAX_BATCH_SIZE // tokens
 export enum ScheduleMode { PrePay, PostPay }
 
 export class PaymentScheduler {
-  private sentTokens: number = 0 // tokens sent so far (potentially fractional)
-  private nextBatchInt: number = 1 // tokens; the batched high water-mark (always integer). send while nextBatch≤sendMax
+  private sentTokens = 0 // tokens sent so far (potentially fractional)
+  private nextBatchInt = 1 // tokens; the batched high water-mark (always integer). send while nextBatch≤sendMax
   private watch: Stopwatch = new Stopwatch() // accumulate pay time
   constructor(private mode: ScheduleMode) {}
 
@@ -73,7 +73,7 @@ function randBetween(a: number, b: number): number {
 }
 
 class Stopwatch {
-  public totalTime: number = 0 // milliseconds duration
+  public totalTime = 0 // milliseconds duration
   private lastTick?: number = Date.now() // milliseconds time
   private timer?: NodeJS.Timer
   private cancelTimer?: () => void

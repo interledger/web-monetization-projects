@@ -11,12 +11,12 @@ export function debounce(fn: F, wait: number): F {
     args = timer = null
   }
 
-  return function(): void {
+  return function(...rest): void {
     if (timer) {
-      args = arguments
+      args = rest
       clearTimeout(timer)
     } else {
-      fn(...arguments)
+      fn(...rest)
     }
     timer = setTimeout(flush, wait)
   }
