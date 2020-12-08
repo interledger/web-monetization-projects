@@ -45,8 +45,7 @@ export class PaymentScheduler {
   }
 
   private hasAvailableFullToken(): boolean {
-    const sendMax = Math.floor(this.sendMax())
-    return 0 < sendMax && this.nextBatch() <= sendMax
+    return this.nextBatch() <= this.sendMax()
   }
 
   private sendMax(): number { // returns fractional tokens

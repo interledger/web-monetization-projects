@@ -1,4 +1,3 @@
-import '@abraham/reflection'
 import { PaymentScheduler, ScheduleMode } from '../../src/background/services/PaymentScheduler'
 
 const M = 60_000
@@ -67,7 +66,7 @@ describe('PaymentScheduler', () => {
       expect(counts).toStrictEqual(expectCounts)
     })
 
-    it('handles partial onSent tokens', () => {
+    it('handles partial onSent tokens, with minute ticks', () => {
       tick(M)
       ps.onSent(0.9) // Pay a partial token.
       expect(ps.hasAvailableFullToken()).toBe(false) // Only 0.1 tokens available.
@@ -75,6 +74,13 @@ describe('PaymentScheduler', () => {
       expect(ps.hasAvailableFullToken()).toBe(true)
       ps.onSent(1.0) // Back to 0.1 tokens available.
       expect(ps.hasAvailableFullToken()).toBe(false)
+    })
+
+    it('handles partial onSent tokens, with sub-minute ticks', () => {
+      tick(M)
+      ps.onSent(0.9) // pay a partial token
+      tick(M * 0.91) // time=1.91
+      expect(ps.hasAvailableFullToken()).toBe(true)
     })
   })
 

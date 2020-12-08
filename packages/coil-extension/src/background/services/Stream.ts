@@ -114,6 +114,7 @@ export class Stream extends EventEmitter {
     this._anonTokens = container.get(AnonymousTokens)
     this._initiatingUrl = initiatingUrl
     this.loop = new StreamLoop({logger: this._debug, schedule: this._schedule})
+    this.loop.on('run:error', (_err: Error) => this._paying = false)
 
     const server = new URL(this._coilDomain)
     server.pathname = '/btp'
@@ -123,7 +124,6 @@ export class Stream extends EventEmitter {
     }
   }
 
-  // TODO update isPaying/paying flag
   async start(): Promise<void> {
     // reset this upon every start *before* early exit while looping
     this._packetNumber = 0
@@ -148,28 +148,19 @@ export class Stream extends EventEmitter {
         setImmediate(() => this.onMoney(connection, sentAmount, receipt))
       }
       stream.on('outgoing_money', onMoney)
-      connection.once('close', () => stream.removeListener('outgoing_money', onMoney))
 
       connection.on('error', async (e) => {
         // Delete exhausted tokens from localstorage.
         this._debug('stream connection error; err=%s', e.message)
-        if (!isExhaustedError(e) ||
-          !e.ilpReject?.data.equals(await sha256(Buffer.from(redeemedToken.btpToken)))) {
-          this._paying = false
-          return
-        }
+        if (!isExhaustedError(e)) return
+        if (!e.ilpReject?.data.equals(await sha256(Buffer.from(redeemedToken.btpToken)))) return
         this._anonTokens.removeToken(redeemedToken.btpToken)
       })
 
-      void (new Promise((resolve) => {
-        // When a token fails with "exhausted capacity", pretend that a full
-        // token was paid -- even if `connection.totalSent` says it is only partial.
-        // - This works around a bug where sometimes the full amount isn't reported.
-        // - When the paid amount actually is a partial token, this helps sync the
-        //   scheduling algorithm back up to paying full tokens instead of fragments.
-        connection.on('error', (e) => { if (isExhaustedError(e)) resolve(1.0) })
-        connection.on('close', () => resolve(+connection.totalSent / redeemedToken.throughput / 60 as number))
-      }) as Promise<number>).then((sentTokens: number) => this._schedule.onSent(sentTokens))
+      connection.once('close', () => {
+        stream.removeListener('outgoing_money', onMoney)
+        this._schedule.onSent(+connection.totalSent / redeemedToken.throughput / 60)
+      })
 
       void (async () => {
         if (this._schedule.hasPaidAny()) {
@@ -178,14 +169,17 @@ export class Stream extends EventEmitter {
           await firstMinuteBandwidth(stream, redeemedToken.throughput)
         }
 
-        let timer
-        const waitTime = new Promise((_, reject) => timer = setTimeout(() => reject(new Error('timeout')), 5e3))
-        const waitEnd = connection.end()
-        await Promise.race([waitEnd, waitTime]).catch((err) => {
-          this._debug('stream.end failed, destroying connection err=%s', err.message)
-          return connection.destroy(new Error('timeout')) // make sure the connection is closed
-        })
-        clearTimeout(timer)
+        let timer: NodeJS.Timer | undefined
+        const waitTime = new Promise((_, reject) => timer = setTimeout(() => reject(new Error('timeout')), 10e3))
+        // On error, destroy() was called internally by ilp-stream.
+        // Resolving here isn't necessary, but it prevents an extraneous destroy() call.
+        const waitFail = new Promise((resolve) => connection.once('error', resolve))
+        await Promise.race([waitFail, waitTime, connection.end()])
+          .finally(() => { if (timer) clearTimeout(timer) })
+          .catch((err): Promise<void> => {
+            this._debug('stream.end failed, destroying connection err=%s', err.message)
+            return connection.destroy(err) // ensure the connection is closed
+          })
       })()
       return connection
     })
@@ -331,6 +325,7 @@ class StreamLoop extends EventEmitter {
         })
         attempts = 0
       } catch (err) {
+        this.emit('run:error', err)
         switch (+this.state) {
         case StreamLoopState.Done: break
         case StreamLoopState.Ending:
