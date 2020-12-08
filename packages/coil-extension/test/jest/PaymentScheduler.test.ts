@@ -1,4 +1,7 @@
-import { PaymentScheduler, ScheduleMode } from '../../src/background/services/PaymentScheduler'
+import {
+  PaymentScheduler,
+  ScheduleMode
+} from '../../src/background/services/PaymentScheduler'
 
 const M = 60_000
 
@@ -30,6 +33,7 @@ describe('PaymentScheduler', () => {
     })
 
     it('PostPay: batches tokens', () => {
+      // prettier-ignore
       const expectCounts = [
         0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
         0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0,
@@ -40,7 +44,10 @@ describe('PaymentScheduler', () => {
       const counts = []
       for (let i = 0; i < expectCounts.length; i++) {
         let j = 0
-        while (ps.hasAvailableFullToken()) { j++; ps.onSent(1) }
+        while (ps.hasAvailableFullToken()) {
+          j++
+          ps.onSent(1)
+        }
         counts.push(j)
         tick(M)
       }
@@ -49,6 +56,7 @@ describe('PaymentScheduler', () => {
 
     it('PrePay: batches tokens', () => {
       ps = new PaymentScheduler(ScheduleMode.PrePay)
+      // prettier-ignore
       const expectCounts = [
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
         2, 0, 2, 0, 2, 0, 2, 0, 2, 0,
@@ -59,7 +67,10 @@ describe('PaymentScheduler', () => {
       const counts = []
       for (let i = 0; i < expectCounts.length; i++) {
         let j = 0
-        while (ps.hasAvailableFullToken()) { j++; ps.onSent(1) }
+        while (ps.hasAvailableFullToken()) {
+          j++
+          ps.onSent(1)
+        }
         counts.push(j)
         tick(M)
       }

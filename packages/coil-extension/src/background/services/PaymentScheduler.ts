@@ -7,7 +7,10 @@ const MAX_BATCH_SIZE = 5 // tokens
 const PREPAY_RATIO = 0.1
 const MAX_PREPAY_SIZE = MAX_BATCH_SIZE // tokens
 
-export enum ScheduleMode { PrePay, PostPay }
+export enum ScheduleMode {
+  PrePay,
+  PostPay
+}
 
 export class PaymentScheduler {
   private sentTokens = 0 // tokens sent so far (potentially fractional)
@@ -15,10 +18,14 @@ export class PaymentScheduler {
   private watch: Stopwatch = new Stopwatch() // accumulate pay time
   constructor(private mode: ScheduleMode) {}
 
-  onSent(tokenPart: number): void { // tokenPart is a fractional token
+  onSent(tokenPart: number): void {
+    // tokenPart is a fractional token
     this.sentTokens += tokenPart
     while (this.nextBatch() <= this.sentTokens) {
-      const batchSize = Math.min(MAX_BATCH_SIZE, 1 + Math.floor(this.nextBatchInt * BATCH_RATIO))
+      const batchSize = Math.min(
+        MAX_BATCH_SIZE,
+        1 + Math.floor(this.nextBatchInt * BATCH_RATIO)
+      )
       this.nextBatchInt += batchSize
     }
   }
@@ -48,22 +55,28 @@ export class PaymentScheduler {
     return this.nextBatch() <= this.sendMax()
   }
 
-  private sendMax(): number { // returns fractional tokens
+  private sendMax(): number {
+    // returns fractional tokens
     const trueSendMax = this.watch.totalTime / TOKEN_DURATION
     switch (this.mode) {
-    case ScheduleMode.PrePay:
-      return trueSendMax + Math.min(1 + trueSendMax * PREPAY_RATIO, MAX_PREPAY_SIZE)
-    case ScheduleMode.PostPay:
-      return trueSendMax
+      case ScheduleMode.PrePay:
+        return (
+          trueSendMax +
+          Math.min(1 + trueSendMax * PREPAY_RATIO, MAX_PREPAY_SIZE)
+        )
+      case ScheduleMode.PostPay:
+        return trueSendMax
     }
   }
 
-  unpaidTokens(): number { // returns fractional tokens
+  unpaidTokens(): number {
+    // returns fractional tokens
     return this.sendMax() - this.sentTokens
   }
 
   // Offset nextBatchInt by any fractional tokens, since the nextBatch is used to send whole tokens (a.x-b.x=a-b).
-  private nextBatch(): number { // returns fractional tokens
+  private nextBatch(): number {
+    // returns fractional tokens
     return this.nextBatchInt + (this.sentTokens - Math.trunc(this.sentTokens))
   }
 }
@@ -79,7 +92,7 @@ class Stopwatch {
   private cancelTimer?: () => void
 
   wait(delay: number): Promise<boolean> {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       this.timer = setTimeout(() => resolve(true), delay)
       this.cancelTimer = () => resolve(false)
     })
@@ -92,7 +105,9 @@ class Stopwatch {
     this.lastTick = this.timer = this.cancelTimer = undefined
   }
 
-  isStopped(): boolean { return !!this.lastTick }
+  isStopped(): boolean {
+    return !!this.lastTick
+  }
 
   tick(): void {
     const now = Date.now()

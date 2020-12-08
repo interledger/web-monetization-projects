@@ -3,7 +3,7 @@ interface F {
 }
 
 export function debounce(fn: F, wait: number): F {
-  let args: IArguments | null = null
+  let args: any[] | null = null
   let timer: NodeJS.Timer | null = null
 
   function flush(): void {
@@ -11,7 +11,7 @@ export function debounce(fn: F, wait: number): F {
     args = timer = null
   }
 
-  return function(...rest): void {
+  return function (...rest): void {
     if (timer) {
       args = rest
       clearTimeout(timer)
