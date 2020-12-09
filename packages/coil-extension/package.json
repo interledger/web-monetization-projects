@@ -66,7 +66,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "reduct": "^3.3.1",
-    "uuid": "^8.3.1"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

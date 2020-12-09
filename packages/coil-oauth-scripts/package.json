@@ -46,7 +46,7 @@
     "ilp-protocol-stream": "2.6.4",
     "node-fetch": "^2.6.1",
     "reduct": "^3.3.1",
-    "uuid": "^8.3.1"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
