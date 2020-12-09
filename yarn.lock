@@ -1466,7 +1466,7 @@ __metadata:
     JSON2016: ^1.0.0
     addons-linter: ^2.14.0
     copy-webpack-plugin: ^6.4.0
-    crx-hotreload: ^1.0.5
+    crx-hotreload: ^1.0.6
     debug: ^4.3.1
     eslint: ^7.15.0
     eslint-config-prettier: ^7.0.0
@@ -2402,7 +2402,7 @@ __metadata:
     JSON2016: ^1.0.0
     addons-linter: ^2.14.0
     copy-webpack-plugin: ^6.4.0
-    crx-hotreload: ^1.0.5
+    crx-hotreload: ^1.0.6
     css-loader: ^5.0.1
     debug: ^4.3.1
     eslint: ^7.15.0
@@ -5134,7 +5134,7 @@ __metadata:
     assert: ^2.0.0
     buffer: ^6.0.3
     copy-webpack-plugin: ^6.4.0
-    crx-hotreload: ^1.0.5
+    crx-hotreload: ^1.0.6
     crypto-browserify: ^3.12.0
     eslint: ^7.15.0
     eslint-config-prettier: ^7.0.0
@@ -8453,10 +8453,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"crx-hotreload@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "crx-hotreload@npm:1.0.5"
-  checksum: fcd0237aa6762e3fa3d5a98a623b1561c569ee30ca5e7c13dbf4551d2fcda54ec237981e9b34748aa12b7f3ab7b39dad8b7446c8be41e248e61c314b7685775f
+"crx-hotreload@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "crx-hotreload@npm:1.0.6"
+  checksum: 699131af4984b9a2003e9bf6eadec82bbcfbc76177784b469b3334bea8c0e44b1e456f1fda1411af5725d6d17dfa70aeb913994d8357ea0368459b09c15c3e74
   languageName: node
   linkType: hard
 

@@ -74,7 +74,7 @@
     "JSON2016": "^1.0.0",
     "addons-linter": "^2.14.0",
     "copy-webpack-plugin": "^6.4.0",
-    "crx-hotreload": "^1.0.5",
+    "crx-hotreload": "^1.0.6",
     "css-loader": "^5.0.1",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
