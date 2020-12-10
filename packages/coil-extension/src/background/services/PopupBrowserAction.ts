@@ -70,6 +70,14 @@ export class PopupBrowserAction {
     this.disabled = true
   }
 
+  setDefaultInactive() {
+    if (this.api.browserAction) {
+      this.api.browserAction.setIcon({
+        path: this.icons.getInactive()
+      })
+    }
+  }
+
   setBrowserAction(tabId: number, state: TabState) {
     // In some strange cases on android these are not set
     const api = this.api

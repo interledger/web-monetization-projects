@@ -97,6 +97,7 @@ export class BackgroundScript {
     this.setFramesOnRemovedListener()
     this.routeStreamsMoneyEventsToContentScript()
     this.handleStreamsAbortEvent()
+    this.popup.setDefaultInactive()
     this.framesService.monitor()
     // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
