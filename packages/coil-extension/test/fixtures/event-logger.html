@@ -121,17 +121,6 @@
                 ev.detail.receipt
             )
           })
-
-          document.monetization.addEventListener('tip', ev => {
-            log(
-              'event: tip, amount: ' +
-                ev.detail.amount +
-                ' code: ' +
-                ev.detail.assetCode +
-                ' scale: ' +
-                ev.detail.assetScale
-            )
-          })
         }
       })
     </script>

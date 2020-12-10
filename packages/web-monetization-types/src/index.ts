@@ -49,16 +49,6 @@ export interface MonetizationProgressEvent
   type: 'monetizationprogress'
 }
 
-export interface TipEventDetail extends EventDetail {
-  amount: string
-  assetCode: string
-  assetScale: number
-}
-
-export interface TipEvent extends CustomEvent<TipEventDetail> {
-  type: 'tip'
-}
-
 /**
  * Streaming has been initiated, yet first non zero packet is "pending"
  * It will normally transition from this `state` to `started`, yet not

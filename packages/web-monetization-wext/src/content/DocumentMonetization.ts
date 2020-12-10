@@ -3,8 +3,7 @@ import {
   MonetizationProgressEvent,
   MonetizationStartEvent,
   MonetizationState,
-  MonetizationStopEvent,
-  TipEvent
+  MonetizationStopEvent
 } from '@web-monetization/types'
 import { injectable } from '@dier-makr/annotations'
 import { PaymentDetails } from '@web-monetization/polyfill-utils'
@@ -150,15 +149,6 @@ export class DocumentMonetization {
     if (this.request?.requestId === detail.requestId) {
       this.dispatchMonetizationEvent('monetizationprogress', detail)
     }
-  }
-
-  doDispatchTipEvent(type: TipEvent['type'], detailSource: TipEvent['detail']) {
-    const detail = { ...detailSource }
-    this.emitEvent(type, detail)
-  }
-
-  dispatchTipEvent(detail: TipEvent['detail']) {
-    this.doDispatchTipEvent('tip', detail)
   }
 
   setMetaTagContent(paymentPointer?: string) {

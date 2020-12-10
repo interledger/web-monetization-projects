@@ -747,6 +747,7 @@ export class BackgroundScript {
         command: 'tip',
         data: {
           paymentPointer: receiver,
+          requestId: streamId,
           amount,
           assetCode,
           assetScale

@@ -316,6 +316,7 @@ export interface TipSent {
   command: 'tip'
   data: {
     paymentPointer: string
+    requestId: string
     amount: string
     assetCode: string
     assetScale: number

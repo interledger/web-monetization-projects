@@ -160,7 +160,7 @@ make sense.
 
   - Open the [event-logger.html](../test/fixtures/event-logger.html) file
   - Open the extension popup and click on "Tip this creator \$1!"
-  - Check that the tip event occurs
+  - Check that the monetizationprogress event occurs
 
 - [ ] Run a local web server (e.g. with `python -m http.server 4000`) serving
       the dist folder, then open [static/popup.html](static/popup.html) in a

@@ -8,7 +8,7 @@ import {
   DocumentMonetization,
   IdleDetection
 } from '@web-monetization/wext/content'
-import { MonetizationProgressEvent, TipEvent } from '@web-monetization/types'
+import { MonetizationProgressEvent } from '@web-monetization/types'
 
 import * as tokens from '../../types/tokens'
 import {
@@ -161,13 +161,14 @@ export class ContentScript {
           this.onFrameAllowedChanged(request)
         } else if (request.command === 'tip') {
           debug('sendTip event')
-          const detail: TipEvent['detail'] = {
+          const detail: MonetizationProgressEvent['detail'] = {
             amount: request.data.amount,
             assetCode: request.data.assetCode,
             assetScale: request.data.assetScale,
-            paymentPointer: request.data.paymentPointer
+            paymentPointer: request.data.paymentPointer,
+            requestId: request.data.requestId
           }
-          this.monetization.dispatchTipEvent(detail)
+          this.monetization.dispatchMonetizationProgressEvent(detail)
         } else if (request.command === 'clearToken') {
           this.storage.removeItem('token')
         } else if (request.command === 'logInActiveTab') {
