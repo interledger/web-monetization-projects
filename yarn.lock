@@ -1320,7 +1320,7 @@ __metadata:
     "@coil/privacypass-sjcl": 0.0.0
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/jsonwebtoken": ^8.5.0
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
@@ -1378,7 +1378,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@dier-makr/annotations": 0.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/jsonwebtoken": ^8.5.0
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
@@ -1446,7 +1446,7 @@ __metadata:
     "@types/chrome": 0.0.126
     "@types/debug": ^4.1.5
     "@types/firefox": ^0.0.30
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/jsonwebtoken": ^8.5.0
     "@types/long": ^4.0.1
     "@types/node": ^14.10.3
@@ -1523,7 +1523,7 @@ __metadata:
     "@babel/preset-typescript": ^7.12.7
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
@@ -1585,7 +1585,7 @@ __metadata:
     "@coil/webpack-utils": 0.0.0
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/long": ^4.0.1
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
@@ -1650,7 +1650,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/debug": ^4.1.5
     "@types/get-port": ^4.2.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/tmp": ^0.2.0
     "@types/webpack-merge": ^4.1.5
@@ -1708,7 +1708,7 @@ __metadata:
     "@babel/preset-typescript": ^7.12.7
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
@@ -1760,7 +1760,7 @@ __metadata:
     "@babel/preset-typescript": ^7.12.7
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/keccak": ^3.0.1
     "@types/node": ^14.10.3
     "@types/sjcl": ^1.0.29
@@ -1840,7 +1840,7 @@ __metadata:
     "@babel/preset-typescript": ^7.12.7
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
@@ -1901,7 +1901,7 @@ __metadata:
     "@coil/client": 0.0.0
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
@@ -2155,7 +2155,7 @@ __metadata:
     "@babel/preset-typescript": ^7.12.7
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
@@ -2207,7 +2207,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@dier-makr/annotations": 0.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
@@ -2385,7 +2385,7 @@ __metadata:
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.2
     "@material-ui/icons": ^4.11.2
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
@@ -4137,13 +4137,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:26.x, @types/jest@npm:^26.0.18":
-  version: 26.0.18
-  resolution: "@types/jest@npm:26.0.18"
+"@types/jest@npm:26.x, @types/jest@npm:^26.0.19":
+  version: 26.0.19
+  resolution: "@types/jest@npm:26.0.19"
   dependencies:
     jest-diff: ^26.0.0
     pretty-format: ^26.0.0
-  checksum: 942433a3bebfcc88f0d7e9662ef2157826e8018b0c30191f9ca56bc75703652e614c5019d8bc43950abacf304777204e35d968a6e28a35ad98d9f1bdb9442390
+  checksum: 98c8daaf89ca79823461818c1c22d337354e250a135e0314ba1a49e615620c8e2f54c5b900ba8554bf853919c97538f9a38b5af00cea83fd715ee2e6d75e04b8
   languageName: node
   linkType: hard
 
@@ -4589,7 +4589,7 @@ __metadata:
     "@hot-loader/react-dom": ^16.14.0
     "@types/body-parser": ^1.19.0
     "@types/express": ^4.17.9
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/react": ^16.14.2
@@ -4660,7 +4660,7 @@ __metadata:
     "@babel/preset-typescript": ^7.12.7
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/uuid": ^8.3.0
@@ -4717,7 +4717,7 @@ __metadata:
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/react": ^16.14.2
     "@types/webpack-merge": ^4.1.5
@@ -4775,7 +4775,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@hot-loader/react-dom": ^16.14.0
     "@types/ajv": ^1.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
@@ -4836,7 +4836,7 @@ __metadata:
     "@babel/preset-typescript": ^7.12.7
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
@@ -4889,7 +4889,7 @@ __metadata:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@dier-makr/annotations": 0.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
@@ -5124,7 +5124,7 @@ __metadata:
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
@@ -22511,7 +22511,7 @@ sjcl@sublimator/sjcl:
     "@babel/preset-typescript": ^7.12.7
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
-    "@types/jest": ^26.0.18
+    "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.9.1
