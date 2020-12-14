@@ -107,7 +107,8 @@ export class BackgroundScript {
 
   private setTabsOnActivatedListener() {
     // The active tab has been changed
-    this.api.tabs.onActivated.addListener(activeInfo => {
+    // const chrome = this.api
+    chrome.tabs.onActivated.addListener(activeInfo => {
       if (this.buildConfig.logTabsApiEvents) {
         this.log('tabs.onActivated %o', activeInfo)
       }
@@ -115,13 +116,13 @@ export class BackgroundScript {
       this.reloadTabState({ from: 'onActivated' })
     })
     if (this.buildConfig.logTabsApiEvents) {
-      this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
+      chrome.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
         this.log('tabs.onActiveChanged %d %o', tabId, selectInfo)
       })
-      this.api.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
+      chrome.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
         this.log('tabs.onSelectionChanged %d %o', tabId, selectInfo)
       })
-      this.api.tabs.onCreated.addListener(activeInfo => {
+      chrome.tabs.onCreated.addListener(activeInfo => {
         this.log('tabs.onCreated %o', activeInfo)
       })
     }
@@ -187,13 +188,21 @@ export class BackgroundScript {
       this._closeStreams(tabId)
     })
 
-    if (this.buildConfig.logTabsApiEvents) {
-      this.api.tabs.onReplaced.addListener((added, removed) => {
+    this.api.tabs.onReplaced.addListener((added, removed) => {
+      if (this.buildConfig.logTabsApiEvents) {
         this.log(
           'tabs.onReplaced.: replaced tab with id' +
             JSON.stringify({ added, removed })
         )
-      })
+      }
+      this.tabStates.clear(removed)
+      // clean up the stream of that tab
+      this._closeStreams(removed)
+      // what to do with the added ???
+      // is it more that the
+    })
+
+    if (this.buildConfig.logTabsApiEvents) {
       this.api.tabs.onAttached.addListener((tabId, attachInfo) => {
         this.log(
           'tabs.onAttached: onAttached' + JSON.stringify({ tabId, attachInfo })

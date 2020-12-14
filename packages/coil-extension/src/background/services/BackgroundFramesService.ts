@@ -8,7 +8,8 @@ import { getFrameSpec } from '../../util/tabs'
 import {
   Command,
   ToBackgroundMessage,
-  ToContentMessage
+  ToContentMessage,
+  UnloadFrame
 } from '../../types/commands'
 import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { timeout } from '../../content/util/timeout'
@@ -102,8 +103,8 @@ export interface FrameChangedEvent extends FrameEventWithFrame {
 export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
   traceLogging = false
-  logEvents = false
-  logTabsInterval = 0
+  logEvents = true
+  logTabsInterval = 5e3
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
@@ -337,7 +338,10 @@ export class BackgroundFramesService extends EventEmitter {
     )
 
     this.api.tabs.onRemoved.addListener(tabId => {
-      this.log('tabs.onTabRemoved %s', tabId)
+      this.log('tabs.onRemoved %s', tabId)
+      // TODO: should emit a frameRemoved event for each of these ??
+      const frames = this.tabs[tabId]
+      frames.forEach(f => this.unloadFrame(tabId, f.frameId))
       delete this.tabs[tabId]
     })
 
@@ -394,22 +398,7 @@ export class BackgroundFramesService extends EventEmitter {
 
     if (message.command === 'unloadFrame') {
       this.log('unloadFrame %s', frameId, message.data)
-      const frames = (this.tabs[tabId] = this.tabs[tabId] ?? [])
-      const ix = frames.findIndex(f => f.frameId === frameId)
-      if (ix !== -1) {
-        this.log('removing', ix)
-        frames.splice(ix, 1)
-        const removedEvent: FrameRemovedEvent = {
-          from: 'unloadFrame',
-          type: 'frameRemoved',
-          frameId,
-          tabId
-        }
-        this.emit(removedEvent.type, removedEvent)
-      }
-      if (frames.length === 0) {
-        delete this.tabs[tabId]
-      }
+      this.unloadFrame(tabId, frameId)
     } else if (message.command === 'frameStateChange') {
       if (this.traceLogging) {
         this.log(
@@ -438,6 +427,25 @@ export class BackgroundFramesService extends EventEmitter {
           parentFrameId: navFrame.parentFrameId
         })
       }
+    }
+  }
+
+  private unloadFrame(tabId: number, frameId: number) {
+    const frames = (this.tabs[tabId] = this.tabs[tabId] ?? [])
+    const ix = frames.findIndex(f => f.frameId === frameId)
+    if (ix !== -1) {
+      this.log('removing', ix)
+      frames.splice(ix, 1)
+      const removedEvent: FrameRemovedEvent = {
+        from: 'unloadFrame',
+        type: 'frameRemoved',
+        frameId,
+        tabId
+      }
+      this.emit(removedEvent.type, removedEvent)
+    }
+    if (frames.length === 0) {
+      delete this.tabs[tabId]
     }
   }
 
