@@ -10,6 +10,23 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 const CHROMIUM_BASED_BROWSER = /chrome|edge/
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Func = { (...args: any[]): void }
+
+function ignoreInvocations(name: string, ignore: number, func: Func) {
+  let n = 0
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (...args: any[]) => {
+    if (n++ < ignore) {
+      // eslint-disable-next-line no-console
+      console.warn(`IGNORING ${name} FUNCTION INVOCATION ${n}`)
+      return
+    } else {
+      func(...args)
+    }
+  }
+}
+
 export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const prettyJSON = (obj: any) => JSON.stringify(obj, null, 2)
@@ -158,13 +175,22 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       }),
       new CopyPlugin({ patterns: copyToDist }),
       {
-        apply(compilation) {
-          compilation.hooks.afterEmit.tap('AFTER_EMIT_SHELL_CMD', () => {
-            const cmd = process.env.AFTER_EMIT_SHELL_CMD
-            if (cmd) {
-              cp.spawn(cmd, { shell: true, stdio: 'inherit' })
-            }
-          })
+        apply: compilation => {
+          const name = 'AFTER_EMIT_SHELL_CMD'
+          const ignore = Number(
+            process.env.AFTER_EMIT_SHELL_CMD_IGNORE_INVOCATIONS ||
+              (process.argv.includes('--watch') ? 2 : 0)
+          )
+
+          compilation.hooks.afterEmit.tap(
+            name,
+            ignoreInvocations(name, ignore, () => {
+              const cmd = process.env.AFTER_EMIT_SHELL_CMD
+              if (cmd) {
+                cp.spawn(cmd, { shell: true, stdio: 'inherit' })
+              }
+            })
+          )
         }
       }
     ],
