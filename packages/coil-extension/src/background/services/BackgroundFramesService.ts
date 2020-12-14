@@ -1,8 +1,8 @@
 import { EventEmitter } from 'events'
 
 import { inject, injectable } from 'inversify'
-import * as tokens from '@web-monetization/wext/tokens'
 
+import * as tokens from '../../types/tokens'
 import { flatMapSlow } from '../util/flatMapSlow'
 import { getFrameSpec } from '../../util/tabs'
 import {
@@ -13,6 +13,7 @@ import {
 } from '../../types/commands'
 import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { timeout } from '../../content/util/timeout'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { logger, Logger } from './utils'
 
@@ -108,6 +109,8 @@ export class BackgroundFramesService extends EventEmitter {
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
+    @inject(tokens.BuildConfig)
+    private buildConfig: BuildConfig,
     @logger('BackgroundFramesService')
     private log: Logger,
     @inject(tokens.WextApi)
@@ -339,10 +342,22 @@ export class BackgroundFramesService extends EventEmitter {
 
     this.api.tabs.onRemoved.addListener(tabId => {
       this.log('tabs.onRemoved %s', tabId)
-      // TODO: should emit a frameRemoved event for each of these ??
-      const frames = this.tabs[tabId]
-      frames.forEach(f => this.unloadFrame(tabId, f.frameId))
-      delete this.tabs[tabId]
+      this.unload(tabId)
+    })
+
+    this.api.tabs.onReplaced.addListener((added, removed) => {
+      if (this.buildConfig.logTabsApiEvents) {
+        this.log(
+          'tabs.onReplaced: replaced tab with id' +
+            JSON.stringify({ added, removed })
+        )
+      }
+      if (this.tabs[added]) {
+        this.log(`tabs.onReplaced: unloading ${removed}`)
+        this.unload(removed)
+      } else {
+        this.log('tabs.onReplaced: probably actually replaced?')
+      }
     })
 
     this.api.runtime.onMessage.addListener(
@@ -353,6 +368,13 @@ export class BackgroundFramesService extends EventEmitter {
         void this.onMessageAsync(sender, message)
       }
     )
+  }
+
+  private unload(tabId: number) {
+    // TODO: should emit a frameRemoved event for each of these ??
+    const frames = this.tabs[tabId]
+    frames.forEach(f => this.unloadFrame(tabId, f.frameId))
+    delete this.tabs[tabId]
   }
 
   sendCommandToFramesMatching(
