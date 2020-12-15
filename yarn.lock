@@ -4862,7 +4862,7 @@ __metadata:
     prettier: ^2.2.1
     rimraf: ^3.0.2
     ts-jest: ^26.4.4
-    ts-json-schema-generator: ^0.80.0
+    ts-json-schema-generator: ^0.80.1
     ts-loader: ^8.0.12
     ts-node: ^9.1.1
     ts-node-dev: ^1.1.0
@@ -7864,10 +7864,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "commander@npm:6.2.0"
-  checksum: c78501cd98e6ad66839004adc27940f5fc1a0102b306fbbc177965101d586cf6dd2e01bdffd64f99f2d4862101f24e602e3e4baa641b6f6a11c01ec5c900e412
+"commander@npm:^6.2.0, commander@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "commander@npm:6.2.1"
+  checksum: 47856aae6f194404122e359d8463e5e1a18f7cbab26722ce69f1379be8514bd49a160ef81a983d3d2091e3240022643354101d1276c797dcdd0b5bfc3c3f04a3
   languageName: node
   linkType: hard
 
@@ -21566,19 +21566,19 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:^0.80.0":
-  version: 0.80.0
-  resolution: "ts-json-schema-generator@npm:0.80.0"
+"ts-json-schema-generator@npm:^0.80.1":
+  version: 0.80.1
+  resolution: "ts-json-schema-generator@npm:0.80.1"
   dependencies:
     "@types/json-schema": ^7.0.6
-    commander: ^6.2.0
+    commander: ^6.2.1
     fast-json-stable-stringify: ^2.1.0
     glob: ^7.1.6
     json-stable-stringify: ^1.0.1
-    typescript: ~4.1.2
+    typescript: ~4.1.3
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: 81216806a41311943fca6722ccad68e505bc7143025714d9cc3d7e5cc9527f77fa392ac055258f01492e21fa0e4dc619c053ceefd83d3ad32cf4596ee5d4c671
+  checksum: ccae5b444bcdc6a333ab34ace6b4438d7181be971ae91f5e98485812627546eb37fa256a94a8b0d8cf5836448669b9ce89d9b89a1139274c08c901d4ed460145
   languageName: node
   linkType: hard
 
@@ -21819,7 +21819,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typescript@^4.1.3, typescript@~4.1.2":
+"typescript@^4.1.3, typescript@~4.1.3":
   version: 4.1.3
   resolution: "typescript@npm:4.1.3"
   bin:
@@ -21829,7 +21829,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.1.3#builtin<compat/typescript>, typescript@patch:typescript@~4.1.2#builtin<compat/typescript>":
+"typescript@patch:typescript@^4.1.3#builtin<compat/typescript>, typescript@patch:typescript@~4.1.3#builtin<compat/typescript>":
   version: 4.1.3
   resolution: "typescript@patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"
   bin:
