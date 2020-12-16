@@ -32,7 +32,7 @@ VERIFIER_URL=https://webmonetization.org/api/receipts/verify yarn server:dev
 For an example using a custom receiver:
 
 ```
-PAYMENT_POINTER=$ilp.uphold.com/example yarn client:dev
+PAYMENT_POINTER=\$ilp.uphold.com/example yarn client:dev
 yarn server:dev
 yarn verifier:dev
 ```

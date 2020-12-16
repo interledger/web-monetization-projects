@@ -4,7 +4,6 @@ import { Container } from 'inversify'
 
 import './Server'
 import { dbg } from '../utils/logging'
-import * as tokens from '../tokens'
 import { configureMiddleware } from '../utils/middleware'
 
 async function main() {

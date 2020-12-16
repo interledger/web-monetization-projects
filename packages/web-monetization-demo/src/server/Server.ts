@@ -11,8 +11,6 @@ import * as express from 'express'
 import figlet from 'figlet'
 import fetch from 'node-fetch'
 
-import { dbg } from '../utils/logging'
-
 @controller('/')
 export class Server extends BaseHttpController {
   balances: Record<string, number> = {}
