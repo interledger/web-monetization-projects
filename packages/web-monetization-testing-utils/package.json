@@ -21,7 +21,7 @@
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",
     "clean:build": "rimraf build",
-    "dev": "webpack-dev-server -c webpack.config.ts",
+    "dev": "webpack serve -c webpack.config.ts",
     "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@web-monetization/types": "0.0.0",
-    "ajv": "^6.12.6",
+    "ajv": "^7.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-hot-loader": "^4.13.0",
