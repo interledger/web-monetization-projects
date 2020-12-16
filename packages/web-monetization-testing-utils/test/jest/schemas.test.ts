@@ -19,18 +19,18 @@ describe('Ajv Schemas', () => {
         Object {
           "dataPath": "",
           "keyword": "required",
-          "message": "should have required property 'detail'",
+          "message": "should have required property 'type'",
           "params": Object {
-            "missingProperty": "detail",
+            "missingProperty": "type",
           },
           "schemaPath": "#/required",
         },
         Object {
           "dataPath": "",
           "keyword": "required",
-          "message": "should have required property 'type'",
+          "message": "should have required property 'detail'",
           "params": Object {
-            "missingProperty": "type",
+            "missingProperty": "detail",
           },
           "schemaPath": "#/required",
         },
