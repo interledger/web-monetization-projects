@@ -33,7 +33,9 @@ export class AdaptiveBandwidth {
   // noinspection DuplicatedCode
   private async _getLinearSendMax(timeElapsed: number): Promise<number> {
     const secondsElapsed = timeElapsed / 1000
-    const sendAmount = Math.floor(secondsElapsed * this._throughput - this._sentAmount)
+    const sendAmount = Math.floor(
+      secondsElapsed * this._throughput - this._sentAmount
+    )
     this._debug('current send amount is', sendAmount)
     return sendAmount
   }

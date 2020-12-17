@@ -24,8 +24,10 @@ export class PaymentScheduler {
   onSent(tokenPart: number): void {
     // tokenPart is a fractional token
     this.sentTokens += tokenPart
-    if (this.sendMax() < this.sentTokens ||
-      Math.abs(this.batchMax - this.sentTokens) < 1.0) {
+    if (
+      this.sendMax() < this.sentTokens ||
+      Math.abs(this.batchMax - this.sentTokens) < 1.0
+    ) {
       // Adjust the batchMax so that partially-sent tokens don't skew the timing
       // of future batches.
       this.batchMax = this.sentTokens
@@ -74,9 +76,10 @@ export class PaymentScheduler {
   private unbatchedSendMax(): number {
     // returns fractional tokens
     const exactSendMax = this.exactSendMax()
-    const prepay = this.mode === ScheduleMode.PrePay
-      ? Math.min(1 + Math.floor(exactSendMax * PREPAY_RATIO), MAX_PREPAY_SIZE)
-      : 0
+    const prepay =
+      this.mode === ScheduleMode.PrePay
+        ? Math.min(1 + Math.floor(exactSendMax * PREPAY_RATIO), MAX_PREPAY_SIZE)
+        : 0
     return exactSendMax + prepay
   }
 

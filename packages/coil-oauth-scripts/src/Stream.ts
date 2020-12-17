@@ -62,7 +62,9 @@ export class Stream {
 
   //private adaptiveBandwidth!: AdaptiveBandwidth // XXX?
   private readonly monetization: DocumentMonetization
-  private readonly schedule: PaymentScheduler = new PaymentScheduler(ScheduleMode.PrePay)
+  private readonly schedule: PaymentScheduler = new PaymentScheduler(
+    ScheduleMode.PrePay
+  )
   private totalSentWatermark = 0 // tokens
   //private readonly throughput: number
 
@@ -326,7 +328,11 @@ export class Stream {
   // Returns token fraction.
   private currentStreamSendMax(): number {
     const elapsed = this.schedule['watch'].time()
-    return (elapsed < 60_000 ? firstMinuteBandwidth(elapsed) : this.schedule.sendMax()) - this.totalSentWatermark
+    return (
+      (elapsed < 60_000
+        ? firstMinuteBandwidth(elapsed)
+        : this.schedule.sendMax()) - this.totalSentWatermark
+    )
   }
 }
 

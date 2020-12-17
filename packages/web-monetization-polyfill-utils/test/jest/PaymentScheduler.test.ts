@@ -1,7 +1,4 @@
-import {
-  PaymentScheduler,
-  ScheduleMode
-} from '../../src/lib/PaymentScheduler'
+import { PaymentScheduler, ScheduleMode } from '../../src/lib/PaymentScheduler'
 
 const M = 60_000
 
