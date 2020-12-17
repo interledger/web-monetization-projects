@@ -2,21 +2,16 @@ import { EventEmitter } from 'events'
 
 import { PaymentDetails } from '@web-monetization/polyfill-utils'
 import { Container, injectable } from 'inversify'
-import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import * as tokens from '../../types/tokens'
 
-import { PaymentScheduler } from './PaymentScheduler'
 import { Stream } from './Stream'
 
 @injectable()
 export class Streams extends EventEmitter {
   private readonly _streams: { [id: string]: Stream }
 
-  constructor(
-    private container: Container,
-    private readonly _tiers: BandwidthTiers
-  ) {
+  constructor(private container: Container) {
     super()
     this._streams = {}
   }

@@ -7,18 +7,18 @@ import * as IlpStream from 'ilp-protocol-stream'
 import { Connection } from 'ilp-protocol-stream'
 import { Injector } from 'reduct'
 import {
-  AdaptiveBandwidth,
   asyncUtils,
   BackoffWaiter,
   getFarFutureExpiry,
   getSPSPResponse,
-  SPSPResponse
+  SPSPResponse,
+  PaymentScheduler,
+  ScheduleMode
 } from '@web-monetization/polyfill-utils'
 import {
   MonetizationProgressEvent,
   MonetizationStartEvent
 } from '@web-monetization/types'
-import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import { DocumentMonetization } from './DocumentMonetization'
 import { debug } from './logging'
@@ -60,16 +60,17 @@ export class Stream {
   private loop: Promise<void> | null = null
   private existing?: Promise<void>
 
-  private readonly tiers: BandwidthTiers
-  private adaptiveBandwidth!: AdaptiveBandwidth
-  private monetization: DocumentMonetization
+  //private adaptiveBandwidth!: AdaptiveBandwidth // XXX?
+  private readonly monetization: DocumentMonetization
+  private readonly schedule: PaymentScheduler = new PaymentScheduler(ScheduleMode.PrePay)
+  private totalSentWatermark = 0 // tokens
+  //private readonly throughput: number
 
   refreshBtpToken(btpToken: string) {
     this.btpToken = btpToken
   }
 
   constructor(deps: Injector) {
-    this.tiers = deps(BandwidthTiers)
     this.monetization = new DocumentMonetization(document)
   }
 
@@ -82,11 +83,13 @@ export class Stream {
     this.paymentPointer = opts.paymentPointer
     this.spspEndpoint = opts.spspEndpoint
     this.pageUrl = opts.pageUrl
-    this.adaptiveBandwidth = new AdaptiveBandwidth(opts.pageUrl, this.tiers)
+    //this.adaptiveBandwidth = new AdaptiveBandwidth(this.throughput) // XXX
+    //this.schedule = new PaymentScheduler(ScheduleMode.PrePay)
     this.monetization.setMonetizationRequest({
       paymentPointer: opts.paymentPointer,
       requestId: opts.requestId
     })
+    this.schedule.start()
 
     if (!this.loop) {
       this.loop = this.streamRetryLoop()
@@ -107,8 +110,9 @@ export class Stream {
   }
 
   async stop(finalized = true) {
+    this.schedule.stop()
     this.active = false
-    this.monetization.setState({ state: 'stopped', finalized: finalized })
+    this.monetization.setState({ state: 'stopped', finalized })
     if (finalized) {
       this.monetization.setMonetizationRequest(undefined)
     }
@@ -165,6 +169,10 @@ export class Stream {
       return
     }
 
+    const throughput = btpTokenThroughput(this.btpToken)
+    //const schedule = new PaymentScheduler(ScheduleMode.PrePay)
+    //schedule.start()
+
     const plugin = new PluginBtp({
       server: this.btpEndpoint,
       btpToken: this.btpToken
@@ -192,13 +200,14 @@ export class Stream {
         return
       }
 
-      const adaptiveBandwidth = this.adaptiveBandwidth
-      const initialSendMaxAmount = await adaptiveBandwidth.getStreamSendMax()
+      //const adaptiveBandwidth = this.adaptiveBandwidth
+      //const initialSendMaxAmount = await adaptiveBandwidth.getStreamSendMax()
       const stream = connection.createStream()
-      stream.setSendMax(initialSendMaxAmount)
+      stream.setSendMax(throughput * this.currentStreamSendMax())
 
       const promise = new Promise<void>((resolve, reject) => {
         const boundOutgoingMoney = (sentAmount: string) => {
+          this.schedule.onSent(+sentAmount / throughput)
           const receipt = stream.receipt
             ? stream.receipt.toString('base64')
             : undefined
@@ -226,22 +235,15 @@ export class Stream {
         const onStop = onPluginDisconnect
 
         const onUpdateAmountInterval = async () => {
-          const sendMaxAmount = await adaptiveBandwidth.getStreamSendMax()
-          if (stream.isOpen()) {
-            stream.setSendMax(sendMaxAmount)
-          }
+          stream.setSendMax(throughput * this.currentStreamSendMax())
         }
-
-        const addSentAmount = asyncUtils.onlyOnce(() => {
-          adaptiveBandwidth.addSentAmount(stream.totalSent)
-        })
 
         const cleanUp = asyncUtils.onlyOnce(() => {
           debug('cleanUp()')
           plugin.removeListener('disconnect', onPluginDisconnect)
           stream.removeListener('outgoing_money', boundOutgoingMoney)
           connection.removeListener('close', onConnectionClose)
-          addSentAmount()
+          this.totalSentWatermark = this.schedule.totalSent()
           this.activeChanges.removeListener('stop', onStop)
           this.lastDelivered = 0
           this.monetization.setState({ state: 'stopped' })
@@ -257,6 +259,7 @@ export class Stream {
           debug('activeChanges on stop!')
           onStop()
         })
+
         const updateAmountInterval = setInterval(
           onUpdateAmountInterval,
           UPDATE_AMOUNT_INTERVAL
@@ -270,7 +273,7 @@ export class Stream {
 
   private onOutgoingMoney(
     connection: IlpStream.Connection,
-    _: string,
+    _: string, // sentAmount
     receipt?: string
   ) {
     if (this.state === MonetizationStateEnum.STOPPED) {
@@ -319,4 +322,26 @@ export class Stream {
   pause() {
     return this.stop(false)
   }
+
+  // Returns token fraction.
+  private currentStreamSendMax(): number {
+    const elapsed = this.schedule['watch'].time()
+    return (elapsed < 60_000 ? firstMinuteBandwidth(elapsed) : this.schedule.sendMax()) - this.totalSentWatermark
+  }
+}
+
+// Returns token fraction.
+function firstMinuteBandwidth(elapsedMs: number): number {
+  const s = elapsedMs / 1e3 // seconds
+  if (30 < s) return 60 / 60
+  if (10 < s) return 30 / 60
+  if (5 < s) return 10 / 60
+  return 5 / 60 // initially 5 seconds
+}
+
+function btpTokenThroughput(token: string): number {
+  const payload = Buffer.from(token.split('.')[1], 'base64')
+  const { throughput } = JSON.parse(payload.toString())
+  if (throughput === undefined) throw new Error('throughput not found')
+  return throughput
 }

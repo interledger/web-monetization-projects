@@ -12,7 +12,9 @@ import {
   PaymentDetails,
   SPSPError,
   SPSPResponse,
-  getFarFutureExpiry
+  getFarFutureExpiry,
+  PaymentScheduler,
+  ScheduleMode
 } from '@web-monetization/polyfill-utils'
 import { GraphQlClient } from '@coil/client'
 import { Container, inject, injectable } from 'inversify'
@@ -23,7 +25,6 @@ import * as tokens from '../../types/tokens'
 import { BTP_ENDPOINT } from '../../webpackDefines'
 
 import { AnonymousTokens } from './AnonymousTokens'
-import { PaymentScheduler, ScheduleMode } from './PaymentScheduler'
 import { Logger, logger } from './utils'
 
 const { timeout } = asyncUtils
@@ -79,16 +80,15 @@ export class Stream extends EventEmitter {
   private _lastDelivered = 0
   private _packetNumber!: number
   private _paying = false
-  private _coilDomain: string
-  private _anonTokens: AnonymousTokens
+  private readonly _anonTokens: AnonymousTokens
 
   private _assetCode = ''
   private _assetScale = 0
   private _exchangeRate = 1
-  private _schedule: PaymentScheduler = new PaymentScheduler(
+  private readonly _schedule: PaymentScheduler = new PaymentScheduler(
     ScheduleMode.PostPay
   )
-  private loop: StreamLoop
+  private readonly loop: StreamLoop
 
   constructor(
     @logger('Stream')
@@ -112,7 +112,6 @@ export class Stream extends EventEmitter {
     this._requestId = requestId
     this._spspUrl = spspEndpoint
     this._authToken = token
-    this._coilDomain = container.get(tokens.CoilDomain)
     this._anonTokens = container.get(AnonymousTokens)
     this._initiatingUrl = initiatingUrl
     this.loop = new StreamLoop({
@@ -121,7 +120,7 @@ export class Stream extends EventEmitter {
     })
     this.loop.on('run:error', (_err: Error) => (this._paying = false))
 
-    const server = new URL(this._coilDomain)
+    const server = new URL(container.get(tokens.CoilDomain))
     server.pathname = '/btp'
     this._server = server.href.replace(/^http/, 'btp+ws')
     if (BTP_ENDPOINT) {
@@ -179,14 +178,14 @@ export class Stream extends EventEmitter {
         })
 
         void (async () => {
-          if (this._schedule.hasPaidAny()) {
+          if (this._schedule.totalSent() === 0) {
+            await firstMinuteBandwidth(stream, redeemedToken.throughput)
+          } else {
             stream.setSendMax(
               1.0 <= tokenFraction
                 ? FULL_TOKEN_AMOUNT
                 : tokenFraction * 60 * redeemedToken.throughput
             )
-          } else {
-            await firstMinuteBandwidth(stream, redeemedToken.throughput)
           }
 
           let timer: NodeJS.Timer | undefined
@@ -343,6 +342,7 @@ class StreamLoop extends EventEmitter {
     this.state = StreamLoopState.Loop
     if (this.running) return // another 'run' loop is already active
     this.running = true
+    this.schedule.start()
     let attempts = 0 // count of retry attempts when state=Ending
     while (this.state !== StreamLoopState.Done) {
       let tokenPiece = 1.0
@@ -351,13 +351,13 @@ class StreamLoop extends EventEmitter {
           continue // stop looping (unreachable)
         case StreamLoopState.Loop: // keep going; only pay full tokens
           // After the very first token payment, switch to post-payment.
-          if (this.schedule.hasPaidAny()) {
+          if (0 < this.schedule.totalSent()) {
             const hasToken = await this.schedule.awaitFullToken()
             if (!hasToken) continue // the wait was interrupted, likely because the stream was paused/stopped
           }
           break
         case StreamLoopState.Ending:
-          tokenPiece = clamp(this.schedule.unpaidTokens(), 0.0, 1.0)
+          tokenPiece = Math.min(this.schedule.unpaidTokens(), 1.0)
           tokenPiece = Math.floor(tokenPiece * 20) / 20 // don't pay tiny token pieces
           if (tokenPiece === 0) {
             this.state = StreamLoopState.Done
@@ -435,7 +435,6 @@ async function firstMinuteBandwidth(
 
   let lastTime = 0 // seconds
   for (const time of [10, 30, 60]) {
-    // seconds
     const delay = (time - lastTime) * 1e3 // milliseconds
     lastTime = time
     await new Promise(
@@ -453,8 +452,4 @@ function isExhaustedError(err: any): boolean {
 
 async function sha256(preimage: Buffer): Promise<Buffer> {
   return Buffer.from(await crypto.subtle.digest({ name: 'SHA-256' }, preimage))
-}
-
-function clamp(v: number, lo: number, hi: number): number {
-  return Math.max(Math.min(v, hi), lo)
 }
