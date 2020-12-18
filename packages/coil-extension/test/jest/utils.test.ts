@@ -19,13 +19,13 @@ describe('Currency utils', () => {
 
 describe('debounce', () => {
   it('call immediately, then wait until a pause', async () => {
-    const res = []
+    const res: number[] = []
     const f = debounce((a: number) => res.push(a), 10)
     for (let i = 0; i < 20; i++) {
       f(i)
+      expect(res).toStrictEqual([0])
       await wait(5)
     }
-    expect(res).toStrictEqual([0])
     await wait(15)
     expect(res).toStrictEqual([0, 19])
   })

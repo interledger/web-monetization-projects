@@ -18,8 +18,8 @@ import {
 } from '@web-monetization/polyfill-utils'
 import { GraphQlClient } from '@coil/client'
 import { Container, inject, injectable } from 'inversify'
-
 import { RedeemedToken } from '@coil/anonymous-tokens'
+
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 import { BTP_ENDPOINT } from '../../webpackDefines'
@@ -88,6 +88,7 @@ export class Stream extends EventEmitter {
   private readonly _schedule: PaymentScheduler = new PaymentScheduler(
     ScheduleMode.PostPay
   )
+
   private readonly loop: StreamLoop
 
   constructor(
@@ -269,12 +270,12 @@ export class Stream extends EventEmitter {
       msSinceLastPacket: now - this._lastOutgoingMs,
       // dest=received
       amount: amount.toString(),
-      assetCode: this._assetCode = notNullOrUndef(
+      assetCode: (this._assetCode = notNullOrUndef(
         connection.destinationAssetCode
-      ),
-      assetScale: this._assetScale = notNullOrUndef(
+      )),
+      assetScale: (this._assetScale = notNullOrUndef(
         connection.destinationAssetScale
-      ),
+      )),
       receipt,
       // source=source
       sourceAmount: sentAmount,
@@ -423,7 +424,7 @@ async function firstMinuteBandwidth(
   // This is the only monetization that is prepaid, everything else is post-paid.
   stream.setSendMax(INITIAL_SEND_SECONDS * throughput)
 
-  let timer: NodeJS.Timer | undefined
+  let timer: number | undefined
   let stopped = false
   let cancelTimer = () => {}
   stream.on('close', (): void => {
@@ -437,8 +438,8 @@ async function firstMinuteBandwidth(
   for (const time of [10, 30, 60]) {
     const delay = (time - lastTime) * 1e3 // milliseconds
     lastTime = time
-    await new Promise(
-      resolve => (timer = setTimeout((cancelTimer = resolve), delay))
+    await new Promise<void>(
+      resolve => (timer = window.setTimeout((cancelTimer = resolve), delay))
     )
     if (stopped) return
     stream.setSendMax(time === 60 ? FULL_TOKEN_AMOUNT : time * throughput)
