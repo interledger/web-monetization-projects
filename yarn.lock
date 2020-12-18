@@ -1325,7 +1325,6 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/sjcl": ^1.0.29
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -1361,7 +1360,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -1382,7 +1381,6 @@ __metadata:
     "@types/jsonwebtoken": ^8.5.0
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -1417,7 +1415,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -1454,7 +1452,6 @@ __metadata:
     "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
     "@types/uuid": ^8.3.0
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     "@web-monetization/polyfill-utils": ^0.0.0
@@ -1507,7 +1504,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -1525,7 +1522,6 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -1564,7 +1560,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
     yaml: ^1.10.0
   languageName: unknown
   linkType: soft
@@ -1590,7 +1586,6 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/uuid": ^8.3.0
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     "@web-monetization/polyfill-utils": 0.0.0
@@ -1631,7 +1626,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -1653,7 +1648,6 @@ __metadata:
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/tmp": ^0.2.0
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     "@web-monetization/types": 0.0.0
@@ -1692,7 +1686,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -1710,7 +1704,6 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -1744,7 +1737,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -1764,7 +1757,6 @@ __metadata:
     "@types/keccak": ^3.0.1
     "@types/node": ^14.10.3
     "@types/sjcl": ^1.0.29
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -1803,7 +1795,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -1842,7 +1834,6 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -1884,7 +1875,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -1903,7 +1894,6 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -1936,7 +1926,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -2157,7 +2147,6 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -2190,7 +2179,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -2209,7 +2198,6 @@ __metadata:
     "@dier-makr/annotations": 0.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -2243,7 +2231,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -2390,7 +2378,6 @@ __metadata:
     "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
     "@types/uuid": ^8.3.0
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     "@web-monetization/polyfill-utils": ^0.0.0
@@ -2444,7 +2431,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -4410,15 +4397,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webpack-merge@npm:^4.1.5":
-  version: 4.1.5
-  resolution: "@types/webpack-merge@npm:4.1.5"
-  dependencies:
-    "@types/webpack": "*"
-  checksum: 2988bb97d79c48cb490832caf8b7cd94be33189aab247761ca669c3ac08741488cd5a93bef8a6e0164b1271b301999fb52b3623af05c1e6021f2cf470059d419
-  languageName: node
-  linkType: hard
-
 "@types/webpack-sources@npm:*":
   version: 1.4.2
   resolution: "@types/webpack-sources@npm:1.4.2"
@@ -4602,7 +4580,6 @@ __metadata:
     "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
     "@types/react-helmet": ^6.1.0
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     "@web-monetization/react": 0.0.12
@@ -4651,7 +4628,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -4671,7 +4648,6 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.7
     "@types/uuid": ^8.3.0
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -4707,7 +4683,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -4727,7 +4703,6 @@ __metadata:
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
     "@types/react": ^16.14.2
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     "@web-monetization/types": 0.0.0
@@ -4761,7 +4736,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   peerDependencies:
     react: ^16.13.1
   languageName: unknown
@@ -4787,7 +4762,6 @@ __metadata:
     "@types/react": ^16.14.2
     "@types/react-dom": ^16.9.10
     "@types/uuid": ^8.3.0
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     "@web-monetization/types": 0.0.0
@@ -4827,7 +4801,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -4845,7 +4819,6 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -4879,7 +4852,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -4898,7 +4871,6 @@ __metadata:
     "@dier-makr/annotations": 0.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     "@web-monetization/polyfill-utils": 0.0.0
@@ -4933,7 +4905,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -5133,7 +5105,6 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -5176,7 +5147,7 @@ __metadata:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -22553,7 +22524,6 @@ sjcl@sublimator/sjcl:
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.19
     "@types/node": ^14.10.3
-    "@types/webpack-merge": ^4.1.5
     "@typescript-eslint/eslint-plugin": ^4.10.0
     "@typescript-eslint/parser": ^4.10.0
     JSON2016: ^1.0.0
@@ -22586,7 +22556,7 @@ sjcl@sublimator/sjcl:
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.2.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.3.0
+    webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
 
@@ -22750,13 +22720,13 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack-merge@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "webpack-merge@npm:5.3.0"
+"webpack-merge@npm:^5.7.2":
+  version: 5.7.2
+  resolution: "webpack-merge@npm:5.7.2"
   dependencies:
     clone-deep: ^4.0.1
     wildcard: ^2.0.0
-  checksum: 7486c5a45ad48f775bc75b3e80938ec3196960cece7af9239863a87d842b21340ff51f95aeaa9434604b04b1471b6d6197c6447a1efd747456451e884d107008
+  checksum: 7e3b16448c228ccce1df53686fcefac9ac42a5abd94546b8fb9c6523744e22f93fea6b9d65a014ff9281b5194bc7dbe1fe5c738d81b4250f0d36a35fd028d73c
   languageName: node
   linkType: hard
 
