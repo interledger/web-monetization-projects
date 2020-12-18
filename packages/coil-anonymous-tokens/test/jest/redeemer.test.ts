@@ -31,6 +31,7 @@ const TOKENS_SERVICE_TEST = Boolean(process.env.TOKENS_SERVICE_TEST)
         redeemerUrl: 'http://localhost:8081/redeemer',
         signerUrl: 'http://localhost:8080/issuer',
         store: new MockStore(),
+        // eslint-disable-next-line no-console
         debug: console.debug,
         batchSize: 10
       })
@@ -40,7 +41,7 @@ const TOKENS_SERVICE_TEST = Boolean(process.env.TOKENS_SERVICE_TEST)
       await tokens['populateTokens'](coilAuthToken)
 
       const btpToken = await tokens.getToken(coilAuthToken)
-      const decoded = jwt.verify(btpToken, BTP_SECRET) as any
+      const decoded = jwt.verify(btpToken.btpToken, BTP_SECRET) as any
 
       expect(decoded.userId).toMatch(/^anon:/)
       expect(decoded.anon).toBe(true)
@@ -51,8 +52,8 @@ const TOKENS_SERVICE_TEST = Boolean(process.env.TOKENS_SERVICE_TEST)
 
       const btpToken = await tokens.getToken(coilAuthToken)
       const btpToken2 = await tokens.getToken(coilAuthToken)
-      const decoded = jwt.verify(btpToken, BTP_SECRET) as any
-      const decoded2 = jwt.verify(btpToken2, BTP_SECRET) as any
+      const decoded = jwt.verify(btpToken.btpToken, BTP_SECRET) as any
+      const decoded2 = jwt.verify(btpToken2.btpToken, BTP_SECRET) as any
 
       expect(decoded.userId).toEqual(decoded2.userId)
     })

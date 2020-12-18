@@ -3,7 +3,8 @@ import { PaymentScheduler, ScheduleMode } from '../../src/lib/PaymentScheduler'
 const M = 60_000
 
 describe('PaymentScheduler', () => {
-  let ps, spy
+  let ps: PaymentScheduler
+  let spy: jest.SpyInstance
   let time = Date.now()
   beforeEach(() => {
     jest.useFakeTimers()
@@ -15,7 +16,7 @@ describe('PaymentScheduler', () => {
   function tick(ms: number): void {
     time += ms
     jest.advanceTimersByTime(ms)
-    ps.watch.tick()
+    ps['watch']['tick']()
   }
 
   afterEach(() => {
@@ -25,9 +26,9 @@ describe('PaymentScheduler', () => {
   describe('hasAvailableFullToken', () => {
     it('signals the first token after 1 minute', () => {
       tick(M - 1)
-      expect(ps.hasAvailableFullToken()).toBe(false)
+      expect(ps['hasAvailableFullToken']()).toBe(false)
       tick(2)
-      expect(ps.hasAvailableFullToken()).toBe(true)
+      expect(ps['hasAvailableFullToken']()).toBe(true)
     })
 
     it('PostPay: batches tokens', () => {
@@ -43,7 +44,7 @@ describe('PaymentScheduler', () => {
       const counts = []
       for (let i = 0; i < expectCounts.length; i++) {
         let j = 0
-        while (ps.hasAvailableFullToken()) {
+        while (ps['hasAvailableFullToken']()) {
           j++
           ps.onSent(1)
         }
@@ -69,7 +70,7 @@ describe('PaymentScheduler', () => {
       const counts = []
       for (let i = 0; i < expectCounts.length; i++) {
         let j = 0
-        while (ps.hasAvailableFullToken()) {
+        while (ps['hasAvailableFullToken']()) {
           j++
           ps.onSent(1)
         }
@@ -83,18 +84,18 @@ describe('PaymentScheduler', () => {
     it('handles partial onSent tokens, with minute ticks', () => {
       tick(M)
       ps.onSent(0.9) // Pay a partial token.
-      expect(ps.hasAvailableFullToken()).toBe(false) // Only 0.1 tokens available.
+      expect(ps['hasAvailableFullToken']()).toBe(false) // Only 0.1 tokens available.
       tick(M) // Now 1.1 tokens available.
-      expect(ps.hasAvailableFullToken()).toBe(true)
+      expect(ps['hasAvailableFullToken']()).toBe(true)
       ps.onSent(1.0) // Back to 0.1 tokens available.
-      expect(ps.hasAvailableFullToken()).toBe(false)
+      expect(ps['hasAvailableFullToken']()).toBe(false)
     })
 
     it('handles partial onSent tokens, with sub-minute ticks', () => {
       tick(M)
       ps.onSent(0.9) // pay a partial token
       tick(M * 0.91) // time=1.91
-      expect(ps.hasAvailableFullToken()).toBe(true)
+      expect(ps['hasAvailableFullToken']()).toBe(true)
     })
   })
 
@@ -102,18 +103,18 @@ describe('PaymentScheduler', () => {
     it('resets the batch offset', () => {
       tick(12 * M) // Fast forward to sending 2 tokens at a time.
       //for (let i = 0; i < 12; i++) ps.onSent(1.0) // Pay them all.
-      while (ps.hasAvailableFullToken()) ps.onSent(1.0)
+      while (ps['hasAvailableFullToken']()) ps.onSent(1.0)
       tick(1.5 * M) // Fast forward part way through the current batch.
       expect(ps.unpaidTokens()).toBe(1.5)
       // pay the unspent tokens (as if the postpay stream stopped & needed to catch up)
       ps.onSent(1.5)
 
       tick(M) // Another minute is only half way through the next batch.
-      expect(ps.hasAvailableFullToken()).toBe(false)
+      expect(ps['hasAvailableFullToken']()).toBe(false)
       expect(ps.sendMax()).toBe(ps.totalSent())
 
       tick(M) // Now a batch is available.
-      expect(ps.hasAvailableFullToken()).toBe(true)
+      expect(ps['hasAvailableFullToken']()).toBe(true)
       expect(ps.sendMax()).toBe(ps.totalSent() + 2)
     })
   })
