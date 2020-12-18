@@ -127,9 +127,22 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: Build Root TypeScript Project
+          name: Build Root TypeScript Project - tsconfig.build.json
           command: |
             yarn build:ts --verbose
+      - *save_cache
+
+  build-root-tsconfig:
+    docker:
+      - image: circleci/node:14-buster-browsers
+    steps:
+      - checkout
+      - *restore_cache
+      - *yarn_install
+      - run:
+          name: Build Root TypeScript Project - tsconfig.json
+          command: |
+            yarn tsc -b tsconfig.json --verbose
       - *save_cache
 
   jest-all:
@@ -226,6 +239,7 @@ workflows:
       - lint-all
       - yarn-format-and-upkeep-diff-check
       - build-all-package-references-typescript
+      - build-root-tsconfig
       - coil-extension-package
       - packages-build-scripts
       - jest-all:

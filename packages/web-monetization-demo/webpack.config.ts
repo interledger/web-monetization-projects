@@ -1,8 +1,10 @@
 import * as path from 'path'
 
 import * as webpack from 'webpack'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { configureNodePolyfills } from '@coil/webpack-utils'
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const ROOT_DIR = __dirname
 

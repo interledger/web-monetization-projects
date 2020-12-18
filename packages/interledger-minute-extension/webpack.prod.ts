@@ -6,7 +6,7 @@ module.exports = merge(makeWebpackConfig(__dirname), {
     rules: [
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader']
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
