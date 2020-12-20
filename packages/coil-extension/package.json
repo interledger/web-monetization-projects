@@ -96,7 +96,7 @@
     "addons-linter": "^2.14.0",
     "copy-webpack-plugin": "^7.0.0",
     "crx-hotreload": "^1.0.6",
-    "eslint": "^7.15.0",
+    "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-import": "^2.22.1",
