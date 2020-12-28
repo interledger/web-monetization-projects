@@ -1513,15 +1513,15 @@ __metadata:
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
     "@babel/core": ^7.12.10
-    "@babel/plugin-proposal-class-properties": ^7.10.4
+    "@babel/plugin-proposal-class-properties": ^7.12.1
     "@babel/plugin-proposal-decorators": ^7.12.12
-    "@babel/plugin-proposal-object-rest-spread": ^7.11.0
+    "@babel/plugin-proposal-object-rest-spread": ^7.12.1
     "@babel/preset-env": ^7.12.11
     "@babel/preset-typescript": ^7.12.7
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
     "@types/jest": ^26.0.19
-    "@types/node": ^14.10.3
+    "@types/node": ^14.14.16
     "@typescript-eslint/eslint-plugin": ^4.11.0
     "@typescript-eslint/parser": ^4.11.0
     JSON2016: ^1.0.0
@@ -1533,7 +1533,7 @@ __metadata:
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
     eslint-plugin-jest: ^24.1.3
-    eslint-plugin-jsx-a11y: ^6.4.0
+    eslint-plugin-jsx-a11y: ^6.4.1
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.0
     eslint-plugin-promise: ^4.2.1
@@ -1553,14 +1553,14 @@ __metadata:
     ts-jest: ^26.4.4
     ts-loader: ^8.0.12
     ts-node: ^9.1.1
-    ts-node-dev: ^1.1.0
+    ts-node-dev: ^1.1.1
     tsconfig-paths: ^3.9.0
     typescript: ^4.1.3
-    webpack: ^5.10.3
+    webpack: ^5.11.0
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.0
     webpack-dev-server: ^3.11.0
-    webpack-merge: ^5.7.2
+    webpack-merge: ^5.7.3
     yaml: ^1.10.0
   languageName: unknown
   linkType: soft
@@ -4227,10 +4227,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^14.10.3":
-  version: 14.11.1
-  resolution: "@types/node@npm:14.11.1"
-  checksum: f8bad278fcd5bdd3c173343967806a5601838570ee89ef96912909489df6d722ef7f4de08a31d98159293ef0005bd65353199327c65af77505d3aad2a05fd636
+"@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^14.10.3, @types/node@npm:^14.14.16":
+  version: 14.14.16
+  resolution: "@types/node@npm:14.14.16"
+  checksum: 220a7496ec73861ad7fb4ae762618bb46ac9d5d5f92f3a2fcebfd1a81a509ff558eface7bcd1d632598a8a28f856a74b324e7165918e8334a59c221cb06d15e3
   languageName: node
   linkType: hard
 
@@ -9878,7 +9878,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsx-a11y@npm:^6.4.0":
+"eslint-plugin-jsx-a11y@npm:^6.4.0, eslint-plugin-jsx-a11y@npm:^6.4.1":
   version: 6.4.1
   resolution: "eslint-plugin-jsx-a11y@npm:6.4.1"
   dependencies:
@@ -21641,7 +21641,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:^1.1.0":
+"ts-node-dev@npm:^1.1.0, ts-node-dev@npm:^1.1.1":
   version: 1.1.1
   resolution: "ts-node-dev@npm:1.1.1"
   dependencies:
@@ -22748,13 +22748,13 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack-merge@npm:^5.7.2":
-  version: 5.7.2
-  resolution: "webpack-merge@npm:5.7.2"
+"webpack-merge@npm:^5.7.2, webpack-merge@npm:^5.7.3":
+  version: 5.7.3
+  resolution: "webpack-merge@npm:5.7.3"
   dependencies:
     clone-deep: ^4.0.1
     wildcard: ^2.0.0
-  checksum: 7e3b16448c228ccce1df53686fcefac9ac42a5abd94546b8fb9c6523744e22f93fea6b9d65a014ff9281b5194bc7dbe1fe5c738d81b4250f0d36a35fd028d73c
+  checksum: 5e28f66f597cb34ac5f7ca0881cd3f106265091e47d7cda9ae00f4902283efdfdab36a70e34a9cf7b1467aac021178981513393b7dcddbb84caf11920f269379
   languageName: node
   linkType: hard
 
@@ -22768,9 +22768,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.10.3":
-  version: 5.10.3
-  resolution: "webpack@npm:5.10.3"
+"webpack@npm:^5.10.3, webpack@npm:^5.11.0":
+  version: 5.11.0
+  resolution: "webpack@npm:5.11.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.45
@@ -22801,7 +22801,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 1f3ea088013cbc9da1bf8fe664a7ada73f6c53ab515ac7481b9fc6418c600d11d81530f2e88b84bf2f1481b6b9001e050c4022c005d174ec6904bea5c5e6c6d3
+  checksum: 573cdf80bd1cc2ef27a6abbf47b132898a6cd8b1514e7884a4788c521f307dd8c287888a36a40f8402cba5555a553d5a681c7932fed23b654bd922152117691a
   languageName: node
   linkType: hard
 
