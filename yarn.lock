@@ -4607,7 +4607,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-standard: ^5.0.0
     express: ^4.17.1
-    html-webpack-plugin: ^4.5.0
+    html-webpack-plugin: ^4.5.1
     husky: ^4.3.6
     ilp-plugin-btp: ^1.4.2
     ilp-plugin-mini-accounts: ^4.2.0
@@ -4787,7 +4787,7 @@ __metadata:
     eslint-plugin-react: ^7.22.0
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-standard: ^5.0.0
-    html-webpack-plugin: ^4.5.0
+    html-webpack-plugin: ^4.5.1
     husky: ^4.3.6
     jest: ^26.6.3
     lerna: ^3.22.1
@@ -12375,22 +12375,22 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"html-webpack-plugin@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "html-webpack-plugin@npm:4.5.0"
+"html-webpack-plugin@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "html-webpack-plugin@npm:4.5.1"
   dependencies:
     "@types/html-minifier-terser": ^5.0.0
     "@types/tapable": ^1.0.5
     "@types/webpack": ^4.41.8
     html-minifier-terser: ^5.0.1
     loader-utils: ^1.2.3
-    lodash: ^4.17.15
+    lodash: ^4.17.20
     pretty-error: ^2.1.1
     tapable: ^1.1.3
     util.promisify: 1.0.0
   peerDependencies:
     webpack: ^4.0.0 || ^5.0.0
-  checksum: df4dd38bd886aaac4cdcfa40f80fd35eb310810c8cad5bf1f7b8ca91550ad7d9f277c80dd4015fd2b0ef235d0384e9708b92a9c39f33d1b09090ca6fd8fdb53b
+  checksum: 58979a6adb605bb0d0eb489d587eb3b980724dcbe5fb2fdccce7033a13dd46e75d12062bc0ca8943d3598d012717c84df9f250549b728bd07fae244f9d1ecefd
   languageName: node
   linkType: hard
 
