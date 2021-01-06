@@ -45,8 +45,11 @@ const config: webpack.Configuration = configureNodePolyfills({
   },
   plugins: [
     new webpack.DefinePlugin({
-      USE_RECEIPT_VERIFIER: JSON.stringify(
-        Boolean(process.env.USE_RECEIPT_VERIFIER)
+      PAYMENT_POINTER: JSON.stringify(
+        process.env.PAYMENT_POINTER || 'http://localhost:4000/spsp/~niq'
+      ),
+      VERIFIER_URL: JSON.stringify(
+        process.env.VERIFIER_URL || 'http://localhost:4001'
       )
     }),
     new HtmlWebpackPlugin({

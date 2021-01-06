@@ -11,23 +11,20 @@ import * as express from 'express'
 import fetch from 'node-fetch'
 
 import { dbg } from '../utils/logging'
+import { resolvePointer } from '../utils/payment-pointer'
 
 import { ReceiptVerifier } from './ReceiptVerifier'
 
 @controller('/')
 export class Server extends BaseHttpController {
-  receiverEndpoint: string
-
   constructor(private receiptVerifier: ReceiptVerifier) {
     super()
-    this.receiverEndpoint =
-      process.env.RECEIVER_ENDPOINT || 'http://localhost:4000/spsp'
   }
 
   /*
    * Acts as a proxy to an SPSP receiver
    */
-  @httpGet('spsp/:pointer')
+  @httpGet(':pointer')
   async spsp(
     @requestParam('pointer') pointer: string,
     @response() resp: express.Response
@@ -36,9 +33,10 @@ export class Server extends BaseHttpController {
       receiptNonce,
       receiptSecret
     } = this.receiptVerifier.generateReceiptDetails()
-    const spspResp = await fetch(`${this.receiverEndpoint}/${pointer}`, {
+    console.log(resolvePointer(decodeURIComponent(pointer)))
+    const spspResp = await fetch(resolvePointer(decodeURIComponent(pointer)), {
       headers: {
-        'content-type': 'application/spsp4+json',
+        Accept: 'application/spsp4+json',
         'Receipt-Nonce': receiptNonce.toString('base64'),
         'Receipt-Secret': receiptSecret.toString('base64')
       }
@@ -50,12 +48,9 @@ export class Server extends BaseHttpController {
     resp.send(JSON.stringify(body))
   }
 
-  @httpPost('balances/:requestId::creditReceipt')
-  async postReceipt(
-    @requestParam('requestId') requestId: string,
-    @requestBody() receipt: string
-  ) {
-    const balance = this.receiptVerifier.creditReceipt(requestId, receipt)
-    return this.json(balance.balance)
+  @httpPost('verify')
+  async postReceipt(@requestBody() receipt: string) {
+    const amount = this.receiptVerifier.verify(receipt)
+    return this.json({ amount })
   }
 }
