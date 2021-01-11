@@ -84,10 +84,10 @@ const BlockSwitch = withStyles({
   switchBase: {
     color: Colors.Grey89,
     '&$checked': {
-      color: Colors.Green700
+      color: Colors.Red300
     },
     '&$checked + $track': {
-      backgroundColor: Colors.Green800
+      backgroundColor: Colors.Grey100
     }
   },
   checked: {},
@@ -167,11 +167,14 @@ export const WebMonetizedBar = (props: PopupProps) => {
               />
             )}
 
-            {adapted && monetized
+            {disabled
+              ? 'Web Monetization disabled'
+              : adapted && monetized
               ? ' Coil can donate to this channel'
               : ' This ' + contentOrSite + ' is'}
-            {monetized ? '' : ' not'}
-            {monetized && adapted ? '' : ' Web-Monetized'}
+
+            {/*{monetized ? '' : ' not'}*/}
+            {disabled ? '' : monetized && adapted ? '' : ' Web Monetized'}
           </BarWrap>
           <CoilMenu
             anchorOrigin={{
