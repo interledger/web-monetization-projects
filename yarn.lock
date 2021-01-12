@@ -4006,15 +4006,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:4.17.8":
-  version: 4.17.8
-  resolution: "@types/express@npm:4.17.8"
+"@types/express@npm:*, @types/express@npm:^4.17.10":
+  version: 4.17.10
+  resolution: "@types/express@npm:4.17.10"
   dependencies:
     "@types/body-parser": "*"
     "@types/express-serve-static-core": "*"
     "@types/qs": "*"
     "@types/serve-static": "*"
-  checksum: 9220ef3cb010faea3f77f85453b0ef3bd41e70003ac7d0ea2b7611ac9c36184995256cc61a7bb205f80a3bc51006cf7ccb29a0186c0d1fe0c0582946a0e65e7a
+  checksum: 334a238936b52daf1e122e5243db3c60ad6213ec7cc83837871804a1bd2666e70882adab5eef25a0086dc5128b985a71907d8ab062e49d74ce130ce49a39bdbb
   languageName: node
   linkType: hard
 
@@ -4556,7 +4556,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@hot-loader/react-dom": ^16.14.0
     "@types/body-parser": ^1.19.0
-    "@types/express": ^4.17.9
+    "@types/express": ^4.17.10
     "@types/figlet": ^1.2.1
     "@types/jest": ^26.0.20
     "@types/node": ^14.10.3
