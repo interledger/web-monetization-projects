@@ -209,11 +209,11 @@ export class Stream {
       //const adaptiveBandwidth = this.adaptiveBandwidth
       //const initialSendMaxAmount = await adaptiveBandwidth.getStreamSendMax()
       const stream = connection.createStream()
-      stream.setSendMax(throughput * this.currentStreamSendMax())
+      stream.setSendMax(throughput * 60 * this.currentStreamSendMax())
 
       const promise = new Promise<void>((resolve, reject) => {
         const boundOutgoingMoney = (sentAmount: string) => {
-          this.schedule.onSent(+sentAmount / throughput)
+          this.schedule.onSent(+sentAmount / throughput / 60)
           const receipt = stream.receipt
             ? stream.receipt.toString('base64')
             : undefined
@@ -241,7 +241,11 @@ export class Stream {
         const onStop = onPluginDisconnect
 
         const onUpdateAmountInterval = async () => {
-          stream.setSendMax(throughput * this.currentStreamSendMax())
+          // Round to ignore floating point errors.
+          const newSendMax = Math.round(
+            throughput * 60 * this.currentStreamSendMax()
+          )
+          if (+stream.sendMax < newSendMax) stream.setSendMax(newSendMax)
         }
 
         const cleanUp = asyncUtils.onlyOnce(() => {
