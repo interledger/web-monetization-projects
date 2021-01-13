@@ -4557,7 +4557,7 @@ __metadata:
     "@commitlint/config-conventional": ^11.0.0
     "@hot-loader/react-dom": ^16.14.0
     "@types/body-parser": ^1.19.0
-    "@types/express": ^4.17.9
+    "@types/express": ^4.17.11
     "@types/figlet": ^1.2.1
     "@types/jest": ^26.0.20
     "@types/node": ^14.10.3
