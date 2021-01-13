@@ -1359,7 +1359,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -1414,7 +1414,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -1503,7 +1503,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -1559,7 +1559,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
     yaml: ^1.10.0
   languageName: unknown
@@ -1625,7 +1625,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -1685,7 +1685,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -1736,7 +1736,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -1794,7 +1794,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -1853,7 +1853,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -1904,7 +1904,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -2157,7 +2157,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -2209,7 +2209,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -2416,7 +2416,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -4613,7 +4613,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -4668,7 +4668,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -4721,7 +4721,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   peerDependencies:
     react: ^16.13.1
@@ -4786,7 +4786,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -4837,7 +4837,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -4890,7 +4890,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -5132,7 +5132,7 @@ __metadata:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -22456,7 +22456,7 @@ sjcl@sublimator/sjcl:
     webpack: ^5.10.3
     webpack-bundle-analyzer: ^4.3.0
     webpack-cli: ^4.3.1
-    webpack-dev-server: ^3.11.1
+    webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
   languageName: unknown
   linkType: soft
@@ -22552,9 +22552,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:^3.11.1":
-  version: 3.11.1
-  resolution: "webpack-dev-server@npm:3.11.1"
+"webpack-dev-server@npm:^3.11.2":
+  version: 3.11.2
+  resolution: "webpack-dev-server@npm:3.11.2"
   dependencies:
     ansi-html: 0.0.7
     bonjour: ^3.5.0
@@ -22596,7 +22596,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: ddd2212abe1065e13a6d350267e09312a41a59f08ed4ef6e34952907f8323cc35ade868b951c8acd9909406d890d65b6463a910883f89470b7d64606432a0f08
+  checksum: 6bf6803810e70f77c50b08b040aa2e8d8e844572e18ad57c624f0cda36cc316fb700a3f765401097c4088d922b41381a44760bd3ed1f196e84a97ba938513130
   languageName: node
   linkType: hard
 
