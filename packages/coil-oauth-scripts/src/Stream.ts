@@ -24,6 +24,8 @@ import { DocumentMonetization } from './DocumentMonetization'
 import { debug } from './logging'
 
 const UPDATE_AMOUNT_INTERVAL = 2000
+// Use a high enough timeout to allow for large intervals between batches of payments.
+const CONNECTION_IDLE_TIMEOUT = 5 * 60 * 1000
 
 export enum MonetizationStateEnum {
   STOPPED,
@@ -65,6 +67,7 @@ export class Stream {
   private readonly schedule: PaymentScheduler = new PaymentScheduler(
     ScheduleMode.PrePay
   )
+
   private totalSentWatermark = 0 // tokens
   //private readonly throughput: number
 
@@ -193,6 +196,7 @@ export class Stream {
         slippage: 1.0,
         exchangeRate: 1.0,
         maximumPacketAmount: '10000000',
+        idleTimeout: CONNECTION_IDLE_TIMEOUT,
         ...details,
         getExpiry: getFarFutureExpiry
       })
