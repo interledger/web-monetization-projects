@@ -34,7 +34,7 @@
     "@web-monetization/types": "0.0.0",
     "debug": "^4.3.1",
     "get-port": "^5.1.1",
-    "playwright": "1.3.x",
+    "playwright": "1.8.x",
     "tmp": "^0.2.1",
     "web-ext": "^5.5.0"
   },
