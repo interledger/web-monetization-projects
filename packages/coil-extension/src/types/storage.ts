@@ -42,4 +42,6 @@ export interface LocalStorageProxy {
 
   monetizedTotal?: number | null
   monetizedFavicon?: string | null
+
+  extensionBuildString?: string | null
 }
