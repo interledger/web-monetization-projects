@@ -1460,7 +1460,7 @@ __metadata:
     "@webexts/build-utils": ^0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.16.0
+    addons-linter: ^2.17.0
     copy-webpack-plugin: ^7.0.0
     crx-hotreload: ^1.0.6
     debug: ^4.3.1
@@ -2228,7 +2228,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^0.2.1, @eslint/eslintrc@npm:^0.2.2":
+"@eslint/eslintrc@npm:^0.2.1":
   version: 0.2.2
   resolution: "@eslint/eslintrc@npm:0.2.2"
   dependencies:
@@ -2390,7 +2390,7 @@ __metadata:
     "@webexts/build-utils": 0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.16.0
+    addons-linter: ^2.17.0
     copy-webpack-plugin: ^7.0.0
     crx-hotreload: ^1.0.6
     css-loader: ^5.0.1
@@ -5468,9 +5468,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:^2.16.0":
-  version: 2.16.0
-  resolution: "addons-linter@npm:2.16.0"
+"addons-linter@npm:^2.17.0":
+  version: 2.17.0
+  resolution: "addons-linter@npm:2.17.0"
   dependencies:
     "@babel/runtime": 7.12.5
     "@mdn/browser-compat-data": 2.0.7
@@ -5483,7 +5483,7 @@ __metadata:
     common-tags: 1.8.0
     deepmerge: 4.2.2
     dispensary: 0.61.0
-    eslint: 7.17.0
+    eslint: 7.18.0
     eslint-plugin-no-unsanitized: 3.1.4
     eslint-visitor-keys: 2.0.0
     espree: 7.3.1
@@ -5494,15 +5494,14 @@ __metadata:
     is-mergeable-object: 1.1.1
     jed: 1.1.1
     os-locale: 5.0.0
-    pino: 6.10.0
-    postcss: 8.2.2
+    pino: 6.11.0
+    postcss: 8.2.4
     probe-image-size: 6.0.0
     relaxed-json: 1.0.3
     semver: 7.3.4
     source-map-support: 0.5.19
     tosource: 1.0.0
     upath: 2.0.1
-    whatwg-url: 8.4.0
     yargs: 16.2.0
     yauzl: 2.10.0
   dependenciesMeta:
@@ -5510,7 +5509,7 @@ __metadata:
       optional: true
   bin:
     addons-linter: bin/addons-linter
-  checksum: 3e498fac5d5f0dc6501e9e70357befffee8411ed45190ce6515c686f3b1d84b108dccccab5cd3ad09fe356a4b8c90e06bc31c55d2e2bbf6cf9dc38726b2e6d59
+  checksum: f1c3e9f7ad8147eaa521c62caf860aae2a449c7feb6bc35a7e9157fdba84111bd297a48a0fbda9e5d7a237730428c2a7d30023fc55b5c126c83d6e07a1bcc74a
   languageName: node
   linkType: hard
 
@@ -10181,12 +10180,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.17.0":
-  version: 7.17.0
-  resolution: "eslint@npm:7.17.0"
+"eslint@npm:7.18.0, eslint@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "eslint@npm:7.18.0"
   dependencies:
     "@babel/code-frame": ^7.0.0
-    "@eslint/eslintrc": ^0.2.2
+    "@eslint/eslintrc": ^0.3.0
     ajv: ^6.10.0
     chalk: ^4.0.0
     cross-spawn: ^7.0.2
@@ -10210,7 +10209,7 @@ __metadata:
     js-yaml: ^3.13.1
     json-stable-stringify-without-jsonify: ^1.0.1
     levn: ^0.4.1
-    lodash: ^4.17.19
+    lodash: ^4.17.20
     minimatch: ^3.0.4
     natural-compare: ^1.4.0
     optionator: ^0.9.1
@@ -10224,7 +10223,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 12b09a972eb0b81fabf9c1b38b3e9ada0cc051a22ee5022e31852e7babde6fe02a0135be3027451ee02c9ff4a6f738b55205d2953f98eb16a43350ad73070b27
+  checksum: 5c6f6ca0eb6c3738a0d14d3441a23f045ef9e7f73aaba4848aea0877c5fd50ec42937ccdaf53fb9107694f5700a9989bca55334b7b17e5d3be2f6e69a42241fa
   languageName: node
   linkType: hard
 
@@ -10270,53 +10269,6 @@ __metadata:
   bin:
     eslint: ./bin/eslint.js
   checksum: 94d05a10ba6b31d4ae6d9a316645b2998e36ab80f7000f15c59ffb38680d4ac0c40458a947d132d3d3f47107a146bcaea3049dd87c3afc1f5fdae23a0b660e4c
-  languageName: node
-  linkType: hard
-
-"eslint@npm:^7.18.0":
-  version: 7.18.0
-  resolution: "eslint@npm:7.18.0"
-  dependencies:
-    "@babel/code-frame": ^7.0.0
-    "@eslint/eslintrc": ^0.3.0
-    ajv: ^6.10.0
-    chalk: ^4.0.0
-    cross-spawn: ^7.0.2
-    debug: ^4.0.1
-    doctrine: ^3.0.0
-    enquirer: ^2.3.5
-    eslint-scope: ^5.1.1
-    eslint-utils: ^2.1.0
-    eslint-visitor-keys: ^2.0.0
-    espree: ^7.3.1
-    esquery: ^1.2.0
-    esutils: ^2.0.2
-    file-entry-cache: ^6.0.0
-    functional-red-black-tree: ^1.0.1
-    glob-parent: ^5.0.0
-    globals: ^12.1.0
-    ignore: ^4.0.6
-    import-fresh: ^3.0.0
-    imurmurhash: ^0.1.4
-    is-glob: ^4.0.0
-    js-yaml: ^3.13.1
-    json-stable-stringify-without-jsonify: ^1.0.1
-    levn: ^0.4.1
-    lodash: ^4.17.20
-    minimatch: ^3.0.4
-    natural-compare: ^1.4.0
-    optionator: ^0.9.1
-    progress: ^2.0.0
-    regexpp: ^3.1.0
-    semver: ^7.2.1
-    strip-ansi: ^6.0.0
-    strip-json-comments: ^3.1.0
-    table: ^6.0.4
-    text-table: ^0.2.0
-    v8-compile-cache: ^2.0.3
-  bin:
-    eslint: bin/eslint.js
-  checksum: 5c6f6ca0eb6c3738a0d14d3441a23f045ef9e7f73aaba4848aea0877c5fd50ec42937ccdaf53fb9107694f5700a9989bca55334b7b17e5d3be2f6e69a42241fa
   languageName: node
   linkType: hard
 
@@ -17832,9 +17784,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"pino@npm:6.10.0":
-  version: 6.10.0
-  resolution: "pino@npm:6.10.0"
+"pino@npm:6.11.0":
+  version: 6.11.0
+  resolution: "pino@npm:6.11.0"
   dependencies:
     fast-redact: ^3.0.0
     fast-safe-stringify: ^2.0.7
@@ -17844,7 +17796,7 @@ fsevents@~2.1.2:
     sonic-boom: ^1.0.2
   bin:
     pino: bin.js
-  checksum: 178a18b1e26463db61a6bb270631a691cbcc8052585f915de6ee0a62fb8d82261702930a6ce8ce91389ed7e6e624160f20edec45be299f55a98b87adc3b553d8
+  checksum: 73312f020bab2974283e98b4e6bfa71656c654ae815236c172a7d8182d9120d5724e524c9e6d53e6df1152336ae8dd703e65c92bea6ffba1a6492d13dd6ae3da
   languageName: node
   linkType: hard
 
@@ -18105,14 +18057,14 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.2.2, postcss@npm:^8.1.4":
-  version: 8.2.2
-  resolution: "postcss@npm:8.2.2"
+"postcss@npm:8.2.4, postcss@npm:^8.1.4":
+  version: 8.2.4
+  resolution: "postcss@npm:8.2.4"
   dependencies:
     colorette: ^1.2.1
     nanoid: ^3.1.20
     source-map: ^0.6.1
-  checksum: c661b093d245ef8e3b0340958f672e3abeb89627afa7064771dafafa49c80742f0b6e05c55ee5ab14aa1da2095aebfd69325778df8a90d4e41fdf685a76993f2
+  checksum: fb06b52d515c6768f5e372b3cec3d902cc0f37dd5128657739ab524ccc155655a6b2adf2f44cf670ad38cbccddae79d72d21093aecd1a7b023609ef548d71d6d
   languageName: node
   linkType: hard
 
