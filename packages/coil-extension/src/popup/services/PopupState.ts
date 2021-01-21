@@ -12,11 +12,14 @@ const STORAGE_KEYS = [
   'stickyState',
   'playState',
   'user',
-  'validToken'
+  'validToken',
+  'extensionBuildString'
 ]
 
 export type PopupStateType = Omit<LocalStorageProxy, 'token'>
 
+// TODO: replace this stupid thing with a Proxy that doesn't require maintenance
+// of STORAGE_KEYS lists etc
 export class PopupState implements PopupStateType {
   readonly adapted!: boolean
   readonly stickyState!: StickyState
@@ -27,6 +30,7 @@ export class PopupState implements PopupStateType {
   readonly monetizedTotal!: number
   readonly user!: User
   readonly validToken!: boolean
+  readonly extensionBuildString!: string
 
   constructor(private storage: Pick<StorageService, 'get'>) {}
 

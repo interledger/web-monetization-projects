@@ -71,7 +71,9 @@ export class BackgroundScript {
     private buildConfig: BuildConfig,
     @inject(tokens.WextApi)
     private api = chrome
-  ) {}
+  ) {
+    console.log('BuildConfig', this.buildConfig)
+  }
 
   get activeTab() {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -534,6 +536,10 @@ export class BackgroundScript {
     } else if (state) {
       delete this.store.playState
       delete this.store.stickyState
+    }
+
+    if (this.buildConfig.extensionBuildString) {
+      this.store.extensionBuildString = this.buildConfig.extensionBuildString
     }
 
     if (state) {

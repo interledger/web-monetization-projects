@@ -58,6 +58,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
 
   // Possible to override name/version so can publish as different extension
   const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
+  const WEXT_MANIFEST_SUFFIX_NO_DATE = process.env.WEXT_MANIFEST_SUFFIX_NO_DATE
   const WEXT_MANIFEST_VERSION = process.env.WEXT_MANIFEST_VERSION
   const WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID =
     process.env.WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
@@ -69,8 +70,11 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       transform: (content: Buffer) => {
         const manifest = JSON.parse(content.toString())
         if (WEXT_MANIFEST_SUFFIX) {
-          const date = new Date().toLocaleString().replace(/(\/|,|\s)+/g, '-')
-          manifest.name += `${WEXT_MANIFEST_SUFFIX}-${date}`
+          manifest.name += WEXT_MANIFEST_SUFFIX
+          if (!WEXT_MANIFEST_SUFFIX_NO_DATE) {
+            const date = new Date().toLocaleString().replace(/(\/|,|\s)+/g, '-')
+            manifest.name += `-${date}`
+          }
         }
         if (WEXT_MANIFEST_VERSION) {
           manifest.version = WEXT_MANIFEST_VERSION

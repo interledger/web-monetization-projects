@@ -68,13 +68,17 @@ export const AccountBar = (props: PopupProps) => {
   const context = props.context
   const {
     coilDomain,
-    store: { loggedIn, user },
+    store: { loggedIn, user, extensionBuildString },
     runtime: { tabOpener }
   } = context
 
   const onExploreClick = tabOpener(`${coilDomain}/explore`)
   const onAboutClick = tabOpener(`${coilDomain}/about`)
   const onSettingsClick = tabOpener(`${coilDomain}/settings`)
+
+  const onBuildInfoClick = () => {
+    void navigator.clipboard.writeText(extensionBuildString)
+  }
 
   return (
     <CoilToolbar>
@@ -117,9 +121,27 @@ export const AccountBar = (props: PopupProps) => {
           <Typography variant='caption'>About</Typography>
         </MenuItem>
 
-        <MenuItem dense component='a' onClick={onSettingsClick} target='_blank'>
+        <MenuItem
+          divider
+          dense
+          component='a'
+          onClick={onSettingsClick}
+          target='_blank'
+        >
           <Typography variant='caption'>Settings</Typography>
         </MenuItem>
+
+        {extensionBuildString && (
+          <MenuItem
+            divider
+            dense
+            component='a'
+            onClick={onBuildInfoClick}
+            target='_blank'
+          >
+            <Typography variant='caption'>Copy Build Info</Typography>
+          </MenuItem>
+        )}
       </CoilMenu>
     </CoilToolbar>
   )
