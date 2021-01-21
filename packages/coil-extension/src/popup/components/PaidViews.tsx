@@ -8,7 +8,7 @@ import { CoilViews } from './CoilViews'
 
 export const PaidViews = (props: PopupProps) => {
   const context = props.context
-  const { monetized, coilSite } = context.store
+  const { monetized, coilSite } = context.state
 
   if (coilSite && !monetized) {
     return <CoilViews context={context} />

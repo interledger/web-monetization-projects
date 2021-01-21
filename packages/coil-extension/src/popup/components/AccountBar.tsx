@@ -68,16 +68,19 @@ export const AccountBar = (props: PopupProps) => {
   const context = props.context
   const {
     coilDomain,
-    store: { loggedIn, user, extensionBuildString },
+    state: { validToken, user, extensionBuildString },
     runtime: { tabOpener }
   } = context
 
+  const loggedIn = Boolean(validToken)
   const onExploreClick = tabOpener(`${coilDomain}/explore`)
   const onAboutClick = tabOpener(`${coilDomain}/about`)
   const onSettingsClick = tabOpener(`${coilDomain}/settings`)
 
   const onBuildInfoClick = () => {
-    void navigator.clipboard.writeText(extensionBuildString)
+    if (extensionBuildString) {
+      void navigator.clipboard.writeText(extensionBuildString)
+    }
   }
 
   return (

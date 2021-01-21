@@ -29,7 +29,7 @@ export function Index(props: PopupProps) {
   const [_, setLastMonetizationProgress] = useState(Date.now())
 
   function syncStoreAndSetState() {
-    props.context.store.sync()
+    // props.context.state.sync()
     setLastMonetizationProgress(Date.now())
   }
 

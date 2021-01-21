@@ -6,8 +6,8 @@ import { API, COIL_DOMAIN } from '../webpackDefines'
 import { StorageService } from '../services/storage'
 import { ToPopupMessage } from '../types/commands'
 import { withSharedTheme } from '../shared-theme/withSharedTheme'
+import { LocalStorageProxy } from '../types/storage'
 
-import { PopupState } from './services/PopupState'
 import { PopupContext } from './types'
 import { isExtension, mockPopupsPage } from './mocks/loadMockedStates'
 import { Index } from './Index'
@@ -15,14 +15,12 @@ import { Index } from './Index'
 const IndexWithRoot = withSharedTheme(Index)
 
 export function run() {
-  const store = new PopupState(new StorageService())
-
-  store.sync()
+  const store = new StorageService().makeProxy<LocalStorageProxy>()
 
   const context: Omit<PopupContext, 'runtime'> = {
     isExtension,
     coilDomain: COIL_DOMAIN,
-    store
+    state: store
   }
 
   const rootEl = document.getElementById('root')

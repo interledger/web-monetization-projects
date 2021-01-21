@@ -306,7 +306,8 @@ function upKeepIntelliJExcludes(subPackages: LernaListItem[]) {
   const locations = subPackages.map(li => li.location).concat(root)
   if (existsSync(path)) {
     const excludes = flatMapSlow(locations, li => {
-      return ['dist', 'build', 'coverage'].map(folder => {
+      const folders = ['dist', 'build', 'coverage', 'safari']
+      return folders.map(folder => {
         const from = pathModule.join(li, folder)
         const replacement = pathModule.relative(root, from)
         return exclude.replace(/%PATH%/, replacement)

@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import { Typography } from '@material-ui/core'
 
-import { PopupState, PopupStateType } from '../services/PopupState'
+import { PopupStateType } from '../services/PopupState'
 import { PopupContext, PopupProps, PopupRuntime } from '../types'
 import { API } from '../../webpackDefines'
 import { StorageService } from '../../services/storage'
@@ -253,9 +253,6 @@ export const mockPopupsPage = (
     const [initiated, setInitiated] = useState(false)
 
     const popups = MOCK_STATES.map(({ name, state }, i) => {
-      const store = new PopupState(makeStorage(state))
-      store.sync()
-
       if (name.search(/paying/i) && !initiated) {
         setInterval(() => {
           console.log('triggering mock message')
@@ -270,7 +267,7 @@ export const mockPopupsPage = (
 
       const mockContext: PopupContext = {
         ...baseContext,
-        store: store,
+        state,
         runtime: mockRuntime
       }
 

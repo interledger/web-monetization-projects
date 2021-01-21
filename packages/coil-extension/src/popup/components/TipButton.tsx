@@ -39,12 +39,12 @@ export const TipButton = (props: PopupProps) => {
     }) as Promise<SendTipResult>
   }
 
-  if (props.context.store.user.canTip) {
+  if (props.context.state.user?.canTip) {
     switch (tipState) {
       case TipState.READY:
         return (
           <Button
-            disabled={props.context.store.monetizedTotal === 0}
+            disabled={props.context.state.monetizedTotal === 0}
             onClick={onClickTip}
           >
             Tip this creator $1!

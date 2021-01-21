@@ -22,7 +22,7 @@ const BarBadge = styled('img')({
 })
 
 export const WebMonetizedBar = (props: PopupProps) => {
-  const { monetized, adapted, coilSite } = props.context.store
+  const { monetized, adapted, coilSite } = props.context.state
   if (coilSite && !monetized) {
     return null
   } else {

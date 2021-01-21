@@ -154,10 +154,10 @@ interface SetStreamControlsParams {
 
 export const StreamControls = (props: PopupProps) => {
   const [stickyState, setStickyState] = useState<StickyState>(
-    props.context.store.stickyState || 'auto'
+    props.context.state.stickyState || 'auto'
   )
   const [playOrPauseState, setPlayOrPauseState] = useState<PlayOrPauseState>(
-    props.context.store.playState || 'playing'
+    props.context.state.playState || 'playing'
   )
 
   const setStreamControls = (data: SetStreamControlsParams) => {
@@ -172,11 +172,11 @@ export const StreamControls = (props: PopupProps) => {
     const listener = (message: ToPopupMessage) => {
       if (message.command === 'localStorageUpdate') {
         if (message.key === 'stickyState') {
-          const sticky = props.context.store.stickyState
+          const sticky = props.context.state.stickyState
           // TODO: document why have and why need to ignore null changes
           sticky != null && setStickyState(sticky)
         } else if (message.key === 'playState') {
-          const play = props.context.store.playState
+          const play = props.context.state.playState
           play != null && setPlayOrPauseState(play)
         }
       }

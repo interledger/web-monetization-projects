@@ -1,6 +1,6 @@
 import { API } from '../webpackDefines'
 
-import { PopupState } from './services/PopupState'
+import { PopupStateType } from './services/PopupState'
 
 export interface PopupRuntime {
   sendMessage: typeof API.runtime.sendMessage
@@ -12,7 +12,7 @@ export interface PopupRuntime {
 export interface PopupContext {
   isExtension: boolean
   runtime: PopupRuntime
-  store: PopupState
+  state: PopupStateType
   coilDomain: string
 }
 

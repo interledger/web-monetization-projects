@@ -8,7 +8,7 @@ import { PaidViews } from './PaidViews'
 
 export const Status = (props: PopupProps) => {
   const context = props.context
-  const { validToken, user } = props.context.store
+  const { validToken, user } = props.context.state
 
   if (validToken && user) {
     if (

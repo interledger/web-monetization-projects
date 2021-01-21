@@ -32,7 +32,7 @@ export const MonetizeAnimation = (props: PopupProps) => {
       if (
         msg.command === 'localStorageUpdate' &&
         msg.key === 'monetizedTotal' &&
-        props.context.store.monetizedTotal > 0
+        (props.context.state.monetizedTotal || 0) > 0
       ) {
         setLastPacket(new Date())
         setAnimated(true)
@@ -50,7 +50,7 @@ export const MonetizeAnimation = (props: PopupProps) => {
     }
   }, [])
 
-  const hasMonetized = props.context.store.monetizedTotal > 0
+  const hasMonetized = (props.context.state.monetizedTotal || 0) > 0
   // eslint-disable-next-line no-nested-ternary
   const src = animated
     ? '/res/stream_loop.svg'
