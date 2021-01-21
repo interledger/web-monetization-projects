@@ -21,6 +21,10 @@ export class PaymentScheduler {
   private readonly watch: Stopwatch = new Stopwatch() // accumulate pay time
   constructor(private readonly mode: ScheduleMode) {}
 
+  totalTime(): number {
+    return this.watch.time()
+  }
+
   onSent(tokenPart: number): void {
     // tokenPart is a fractional token
     this.sentTokens += tokenPart
@@ -104,7 +108,7 @@ class Stopwatch {
   private timer?: NodeJS.Timer
   private cancelTimer?: () => void
 
-  wait(delay: number): Promise<boolean> {
+  async wait(delay: number): Promise<boolean> {
     return new Promise(resolve => {
       this.timer = setTimeout(() => resolve(true), delay)
       this.cancelTimer = () => resolve(false)

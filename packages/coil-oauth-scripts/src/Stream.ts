@@ -329,13 +329,13 @@ export class Stream {
     this.monetization.dispatchMonetizationProgressEvent(detail)
   }
 
-  pause() {
+  async pause() {
     return this.stop(false)
   }
 
   // Returns token fraction.
   private currentStreamSendMax(): number {
-    const elapsed = this.schedule['watch'].time()
+    const elapsed = this.schedule.totalTime()
     return (
       (elapsed < 60_000
         ? firstMinuteBandwidth(elapsed)
