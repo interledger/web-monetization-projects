@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { styled } from '@material-ui/core'
+import { styled, Typography } from '@material-ui/core'
 
 import { ToPopupMessage } from '../types/commands'
 import { Colors } from '../shared-theme/colors'
@@ -25,6 +25,16 @@ const OuterDiv = styled('div')({
   minHeight: '260px'
 })
 
+const FooterString = styled('code')({
+  display: 'flex',
+  fontSize: '1em',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  height: '40px',
+  borderTop: `0.5px solid ${Colors.Grey89}`,
+  textAlign: 'center'
+})
+
 export function Index(props: PopupProps) {
   const [_, setLastMonetizationProgress] = useState(Date.now())
 
@@ -46,6 +56,7 @@ export function Index(props: PopupProps) {
 
   const context = { ...props.context }
 
+  const footer = context.store.extensionPopupFooterString
   return (
     <OuterDiv>
       <AccountBar context={context} />
@@ -53,6 +64,11 @@ export function Index(props: PopupProps) {
         <Status context={context} />
       </CoilContainer>
       <WebMonetizedBar context={context} />
+      {footer && (
+        <Typography variant='caption'>
+          <FooterString>{footer}</FooterString>
+        </Typography>
+      )}
     </OuterDiv>
   )
 }

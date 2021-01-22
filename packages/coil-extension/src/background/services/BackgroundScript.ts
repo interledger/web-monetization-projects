@@ -541,6 +541,9 @@ export class BackgroundScript {
     if (this.buildConfig.extensionBuildString) {
       this.store.extensionBuildString = this.buildConfig.extensionBuildString
     }
+    if (this.buildConfig.extensionPopupFooterString) {
+      this.store.extensionPopupFooterString = this.buildConfig.extensionPopupFooterString
+    }
 
     if (state) {
       const total = frameStates.reduce((acc, val) => acc + val.total, 0)
