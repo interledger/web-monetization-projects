@@ -74,12 +74,12 @@ export class DocumentMonetization {
       if (changedState) {
         this.doc.dispatchEvent(
           new CustomEvent(COIL_EXTENSION_MONETIZATION, {
-            detail: {
+            detail: JSON.stringify({
               type: 'monetizationstatechange',
               detail: {
                 state
               }
-            }
+            })
           })
         )
       }
@@ -123,10 +123,10 @@ export class DocumentMonetization {
     }
     this.doc.dispatchEvent(
       new CustomEvent(COIL_EXTENSION_MONETIZATION, {
-        detail: {
+        detail: JSON.stringify({
           type,
           detail
-        }
+        })
       })
     )
   }
@@ -146,10 +146,10 @@ export class DocumentMonetization {
     const detail = { ...detailSource }
     this.doc.dispatchEvent(
       new CustomEvent(COIL_EXTENSION_MONETIZATION, {
-        detail: {
+        detail: JSON.stringify({
           type,
           detail
-        }
+        })
       })
     )
   }

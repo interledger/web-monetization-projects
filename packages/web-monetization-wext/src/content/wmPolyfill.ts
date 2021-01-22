@@ -25,7 +25,7 @@ export const wmPolyFillMinimal = `
   document.monetization = document.createElement('div')
   document.monetization.state = 'stopped'
   document.addEventListener('monetization', function(event) {
-    const {type, detail} = event.detail
+    const {type, detail} = JSON.parse(event.detail)
     if (type === 'monetizationstatechange') {
       document.monetization.state = detail.state
     } else {
