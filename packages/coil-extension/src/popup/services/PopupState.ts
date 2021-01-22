@@ -13,7 +13,8 @@ const STORAGE_KEYS = [
   'playState',
   'user',
   'validToken',
-  'extensionBuildString'
+  'extensionBuildString',
+  'extensionPopupFooterString'
 ]
 
 export type PopupStateType = Omit<LocalStorageProxy, 'token'>
@@ -31,6 +32,7 @@ export class PopupState implements PopupStateType {
   readonly user!: User
   readonly validToken!: boolean
   readonly extensionBuildString!: string
+  readonly extensionPopupFooterString!: string
 
   constructor(private storage: Pick<StorageService, 'get'>) {}
 
