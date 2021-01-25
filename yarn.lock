@@ -1440,7 +1440,7 @@ __metadata:
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.2
     "@material-ui/icons": ^4.11.2
-    "@material-ui/styles": ^4.11.2
+    "@material-ui/styles": ^4.11.3
     "@types/chrome": 0.0.128
     "@types/debug": ^4.1.5
     "@types/firefox": ^0.0.30
@@ -3501,9 +3501,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@material-ui/styles@npm:^4.11.2":
-  version: 4.11.2
-  resolution: "@material-ui/styles@npm:4.11.2"
+"@material-ui/styles@npm:^4.11.2, @material-ui/styles@npm:^4.11.3":
+  version: 4.11.3
+  resolution: "@material-ui/styles@npm:4.11.3"
   dependencies:
     "@babel/runtime": ^7.4.4
     "@emotion/hash": ^0.8.0
@@ -3512,14 +3512,14 @@ __metadata:
     clsx: ^1.0.4
     csstype: ^2.5.2
     hoist-non-react-statics: ^3.3.2
-    jss: ^10.0.3
-    jss-plugin-camel-case: ^10.0.3
-    jss-plugin-default-unit: ^10.0.3
-    jss-plugin-global: ^10.0.3
-    jss-plugin-nested: ^10.0.3
-    jss-plugin-props-sort: ^10.0.3
-    jss-plugin-rule-value-function: ^10.0.3
-    jss-plugin-vendor-prefixer: ^10.0.3
+    jss: ^10.5.1
+    jss-plugin-camel-case: ^10.5.1
+    jss-plugin-default-unit: ^10.5.1
+    jss-plugin-global: ^10.5.1
+    jss-plugin-nested: ^10.5.1
+    jss-plugin-props-sort: ^10.5.1
+    jss-plugin-rule-value-function: ^10.5.1
+    jss-plugin-vendor-prefixer: ^10.5.1
     prop-types: ^15.7.2
   peerDependencies:
     "@types/react": ^16.8.6 || ^17.0.0
@@ -3528,7 +3528,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 149b2033600a49236f6278377e2e8085b2b9ae44044df712205754d28a7265e8dee4daf267af6d3a3c8c2ee135b53c262755d74f8753f39c7578a69798f3399b
+  checksum: fed7007d4934181214963ada961aa859b2900179eb30316d9d714405728a397fa81307d25e94c19dffea193ee68f0aa41457db3ec2d3ce351a45747c5ceed426
   languageName: node
   linkType: hard
 
@@ -14627,102 +14627,90 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"jss-plugin-camel-case@npm:^10.0.3":
-  version: 10.4.0
-  resolution: "jss-plugin-camel-case@npm:10.4.0"
+"jss-plugin-camel-case@npm:^10.5.1":
+  version: 10.5.1
+  resolution: "jss-plugin-camel-case@npm:10.5.1"
   dependencies:
     "@babel/runtime": ^7.3.1
     hyphenate-style-name: ^1.0.3
-    jss: 10.4.0
-  checksum: 80101373dbe5a1b8faccb147e66ee0bd921139e88be52b50e7b226329af406185cb89d49b038d91525f3a26800859ccf500f5ebf2877000d059ecd90ede5a973
+    jss: 10.5.1
+  checksum: 5f93c5222782465f302e5a2356168d7d689b64ea05412e75cdf4776047d23348a2839bfe100f17bb9e499021223b3e0118410577bf69e59d4c34bb2e696f6bb9
   languageName: node
   linkType: hard
 
-"jss-plugin-default-unit@npm:^10.0.3":
-  version: 10.4.0
-  resolution: "jss-plugin-default-unit@npm:10.4.0"
+"jss-plugin-default-unit@npm:^10.5.1":
+  version: 10.5.1
+  resolution: "jss-plugin-default-unit@npm:10.5.1"
   dependencies:
     "@babel/runtime": ^7.3.1
-    jss: 10.4.0
-  checksum: a04db0607fa35fb947a09a998991e8d35b2d992381fb2fcdf9bce6b646aee85413bec57ec9f53412fb8d6c0490eb59e5fa1439bd91b270612ff5515345516c77
+    jss: 10.5.1
+  checksum: a3f0c6782b6524e3cb3b0fa51a4872b3821eeb34809a384a041de416c8485773dd4bf1ba665e47ba478d71f0fc063f9d4519d7be654a76ef473d3488fb0a7ffd
   languageName: node
   linkType: hard
 
-"jss-plugin-global@npm:^10.0.3":
-  version: 10.4.0
-  resolution: "jss-plugin-global@npm:10.4.0"
+"jss-plugin-global@npm:^10.5.1":
+  version: 10.5.1
+  resolution: "jss-plugin-global@npm:10.5.1"
   dependencies:
     "@babel/runtime": ^7.3.1
-    jss: 10.4.0
-  checksum: 2a4321673d12fe1fa5e0dcd1a09fac2954e202126015daf199c84e20e4a947736765427f83e8232bc2f75e61bdda0478b86b0b4f935f63889c2b81e9849afe92
+    jss: 10.5.1
+  checksum: 7f2d0cbbd50a3a83f27da7e5eb8008471f494a5b2310d4e89538f5b43cd0a44b5cf3497db35bba7834d2c9333f4c356d916d7bbcd63b0c9407348b28676ecf27
   languageName: node
   linkType: hard
 
-"jss-plugin-nested@npm:^10.0.3":
-  version: 10.4.0
-  resolution: "jss-plugin-nested@npm:10.4.0"
+"jss-plugin-nested@npm:^10.5.1":
+  version: 10.5.1
+  resolution: "jss-plugin-nested@npm:10.5.1"
   dependencies:
     "@babel/runtime": ^7.3.1
-    jss: 10.4.0
+    jss: 10.5.1
     tiny-warning: ^1.0.2
-  checksum: fb19e91821e60cbfafdf102b9c1a9b1b386eaf850bcbd4d50aa9be782e866091ca8a62567ce7adb4804d4fae8ec2d8a31cf528e9167b0ed42eebdf7660fe6e5d
+  checksum: 5a4eb79506d14af4d0e20f07fae39d940d92cab193b6134c4be749d08fcc442175403dd8b89955b42c5af98bd764a15f21124888269aa202ad16b9b3d2dc6247
   languageName: node
   linkType: hard
 
-"jss-plugin-props-sort@npm:^10.0.3":
-  version: 10.4.0
-  resolution: "jss-plugin-props-sort@npm:10.4.0"
+"jss-plugin-props-sort@npm:^10.5.1":
+  version: 10.5.1
+  resolution: "jss-plugin-props-sort@npm:10.5.1"
   dependencies:
     "@babel/runtime": ^7.3.1
-    jss: 10.4.0
-  checksum: 754950797307acb57356f184cb9a4c163960c08e16f6f744a63039f02fc81999e07ef84f3d68332cb8daf0e47eff38ad44af70c4ebcdaee155849bf742930ce2
+    jss: 10.5.1
+  checksum: 7306096c0b218d24ccef329c3e1cfa08131d307da5fa1d9d774613e580568ab8abb5dccb14adbac72ed19fe166c5d7abe2f69c68752c80fcca72577b38eac711
   languageName: node
   linkType: hard
 
-"jss-plugin-rule-value-function@npm:^10.0.3":
-  version: 10.4.0
-  resolution: "jss-plugin-rule-value-function@npm:10.4.0"
+"jss-plugin-rule-value-function@npm:^10.5.1":
+  version: 10.5.1
+  resolution: "jss-plugin-rule-value-function@npm:10.5.1"
   dependencies:
     "@babel/runtime": ^7.3.1
-    jss: 10.4.0
+    jss: 10.5.1
     tiny-warning: ^1.0.2
-  checksum: 4cf567502a5c4992a245dc9074b518b2959a7b5940428dac8cb66ac548e27f5b60c158f58dbbcf3e4f0dc39ed845ca082148f03e9ba42dfb4e7fa91e77119352
+  checksum: 433c9dd80387eaf8f06483841402681c80f02f803d16822b4186c58375086bfa9e24aab2d739177ee955bbc2380d7fc4770c767324cbff643c7d8cca67688ab0
   languageName: node
   linkType: hard
 
-"jss-plugin-vendor-prefixer@npm:^10.0.3":
-  version: 10.4.0
-  resolution: "jss-plugin-vendor-prefixer@npm:10.4.0"
+"jss-plugin-vendor-prefixer@npm:^10.5.1":
+  version: 10.5.1
+  resolution: "jss-plugin-vendor-prefixer@npm:10.5.1"
   dependencies:
     "@babel/runtime": ^7.3.1
     css-vendor: ^2.0.8
-    jss: 10.4.0
-  checksum: 6206fb0a3f7c4c488a5e40995285680bf57a79bcf3c877dc183a8d492b3cc0fd67baf8b247703fd08112a5f0fb76db334f7b79a6060ee9e3646ab6df70fad35c
+    jss: 10.5.1
+  checksum: 4b9e5ba7c1fd0ac0744076e3c93aad491f2128a5dae149d2c4d4d3d43e811740ca226fefdb17d84feb170cd2dd9bcf3fe56503c61a5ccc398228602f8b145ada
   languageName: node
   linkType: hard
 
-"jss@npm:10.4.0":
-  version: 10.4.0
-  resolution: "jss@npm:10.4.0"
-  dependencies:
-    "@babel/runtime": ^7.3.1
-    csstype: ^3.0.2
-    is-in-browser: ^1.1.3
-    tiny-warning: ^1.0.2
-  checksum: bc3cc9adba558c49e17d990ddefba2132e67b195bd5ddd2204f392238b31a8e43ef23d993cb4a8bdc4da10fb72a743d7171cac7e8b2dd971eddc0638c917dcc5
-  languageName: node
-  linkType: hard
-
-"jss@npm:^10.0.3, jss@npm:^10.5.0":
-  version: 10.5.0
-  resolution: "jss@npm:10.5.0"
+"jss@npm:10.5.1, jss@npm:^10.5.0, jss@npm:^10.5.1":
+  version: 10.5.1
+  resolution: "jss@npm:10.5.1"
   dependencies:
     "@babel/runtime": ^7.3.1
     csstype: ^3.0.2
     indefinite-observable: ^2.0.1
     is-in-browser: ^1.1.3
     tiny-warning: ^1.0.2
-  checksum: 873fc9bbc65a330f94083bff0ff034998a158fd0e026a7de960ad49ba79f02f5b3fa049c9fed5cc66883aa0be77b4007aeef709c5fb457e8e37d122a65edd304
+  checksum: 8bc39f90d8b52a1f55e2d063b085bb057db87eed138a96bb15650c9c23cbc82b6e3876b6457dcb111393daa5baf48373ca8a008985a30a55f9b3955d00aebbb8
   languageName: node
   linkType: hard
 
