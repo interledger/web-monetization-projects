@@ -30,16 +30,14 @@ export class StreamLoop extends EventEmitter {
   async run(
     attempt: (tokenFraction: number) => Promise<Connection>
   ): Promise<void> {
-    this.state = StreamLoopState.Loop
+    this.state = StreamLoopState.Loop as StreamLoopState
     if (this.running) return // another 'run' loop is already active
     this.running = true
     this.schedule.start()
     let attempts = 0 // count of retry attempts when state=Ending
     while (this.state !== StreamLoopState.Done) {
       let tokenPiece = 1.0
-      switch (+this.state) {
-        case StreamLoopState.Done:
-          continue // stop looping (unreachable)
+      switch (this.state) {
         case StreamLoopState.Loop: // keep going; only pay full tokens
           // After the very first token payment, switch to post-payment.
           if (0 < this.schedule.totalSent()) {
@@ -67,9 +65,7 @@ export class StreamLoop extends EventEmitter {
         attempts = 0
       } catch (err) {
         this.emit('run:error', err)
-        switch (+this.state) {
-          case StreamLoopState.Done:
-            break
+        switch (this.state) {
           case StreamLoopState.Ending:
             if (++attempts === STOP_RETRIES) {
               this.debug('too many errors; giving up')
