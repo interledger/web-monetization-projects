@@ -21,7 +21,7 @@ interface SetStateParams {
 type MonetizationRequest = PaymentDetails
 
 // Name of event dispatched on document
-const COIL_EXTENSION_MONETIZATION = 'monetization'
+const MONETIZATION_DOCUMENT_EVENT_NAME = 'monetization-v1'
 
 @injectable()
 export class DocumentMonetization {
@@ -72,16 +72,9 @@ export class DocumentMonetization {
 
     if (changed) {
       if (changedState) {
-        this.doc.dispatchEvent(
-          new CustomEvent(COIL_EXTENSION_MONETIZATION, {
-            detail: JSON.stringify({
-              type: 'monetizationstatechange',
-              detail: {
-                state
-              }
-            })
-          })
-        )
+        this.emitEvent('monetizationstatechange', {
+          state
+        })
       }
       if (this.request && (state === 'stopped' || state === 'pending')) {
         this.dispatchMonetizationEvent(
@@ -95,6 +88,18 @@ export class DocumentMonetization {
       }
     }
     return changed
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private emitEvent(type: string, detail: any) {
+    this.doc.dispatchEvent(
+      new CustomEvent(MONETIZATION_DOCUMENT_EVENT_NAME, {
+        detail: JSON.stringify({
+          type,
+          detail
+        })
+      })
+    )
   }
 
   dispatchMonetizationStartEventAndSetMonetizationState(
@@ -121,14 +126,7 @@ export class DocumentMonetization {
       const stop = detail as MonetizationStopEvent['detail']
       stop.finalized = Boolean(finalized)
     }
-    this.doc.dispatchEvent(
-      new CustomEvent(COIL_EXTENSION_MONETIZATION, {
-        detail: JSON.stringify({
-          type,
-          detail
-        })
-      })
-    )
+    this.emitEvent(type, detail)
   }
 
   dispatchMonetizationProgressEvent(
@@ -144,14 +142,7 @@ export class DocumentMonetization {
 
   doDispatchTipEvent(type: TipEvent['type'], detailSource: TipEvent['detail']) {
     const detail = { ...detailSource }
-    this.doc.dispatchEvent(
-      new CustomEvent(COIL_EXTENSION_MONETIZATION, {
-        detail: JSON.stringify({
-          type,
-          detail
-        })
-      })
-    )
+    this.emitEvent(type, detail)
   }
 
   dispatchTipEvent(detail: TipEvent['detail']) {
