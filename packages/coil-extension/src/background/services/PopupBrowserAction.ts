@@ -75,6 +75,14 @@ export class PopupBrowserAction {
       this.api.browserAction.setIcon({
         path: this.icons.getInactive()
       })
+      const now = new Date()
+      const nextMidnight = new Date()
+      nextMidnight.setHours(24, 0, 0, 0)
+      const msToNextMidnight = nextMidnight.getTime() - now.getTime()
+      const andChange = 10
+      setTimeout(() => {
+        this.setDefaultInactive()
+      }, msToNextMidnight + andChange)
     }
   }
 
