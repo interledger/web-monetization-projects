@@ -781,10 +781,11 @@ export class BackgroundScript {
     const id = this.assoc.getStreamId(frame)
     if (id) {
       this.log('resuming stream', id)
-      this.sendSetMonetizationStateMessage(
-        frame,
-        this.hasStreamPaid(frame) ? 'started' : 'pending'
-      )
+      // Always set "pending" transition state and emit event
+      this.sendSetMonetizationStateMessage(frame, 'pending')
+      if (this.hasStreamPaid(frame)) {
+        this.sendSetMonetizationStateMessage(frame, 'started')
+      }
       this.streams.resumeStream(id)
     }
     return true
