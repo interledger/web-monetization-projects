@@ -11,14 +11,11 @@ import {
   BackoffWaiter,
   getFarFutureExpiry,
   getSPSPResponse,
-  SPSPResponse,
   PaymentScheduler,
-  ScheduleMode
+  ScheduleMode,
+  SPSPResponse
 } from '@web-monetization/polyfill-utils'
-import {
-  MonetizationProgressEvent,
-  MonetizationStartEvent
-} from '@web-monetization/types'
+import { MonetizationProgressEvent } from '@web-monetization/types'
 
 import { DocumentMonetization } from './DocumentMonetization'
 import { debug } from './logging'
@@ -288,7 +285,7 @@ export class Stream {
   ) {
     if (this.state === MonetizationStateEnum.STOPPED) {
       this.state = MonetizationStateEnum.STARTED
-      this.dispatchMonetizationStart()
+      this.monetization.setState({ state: 'started' })
     }
 
     // WM api deals in receiver units so we need to calculate how much the
@@ -300,16 +297,6 @@ export class Stream {
       connection,
       deliveredAmount.toString(),
       receipt
-    )
-  }
-
-  private dispatchMonetizationStart() {
-    const detail: MonetizationStartEvent['detail'] = {
-      paymentPointer: this.paymentPointer!,
-      requestId: this.requestId!
-    }
-    this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
-      detail
     )
   }
 
