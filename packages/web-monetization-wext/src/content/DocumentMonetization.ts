@@ -98,11 +98,10 @@ export class DocumentMonetization {
     }
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const anyWin = window as any
+    const clone = anyWin.cloneInto && anyWin.cloneInto(obj, window)
     this.doc.dispatchEvent(
       new CustomEvent(MONETIZATION_DOCUMENT_EVENT_NAME, {
-        detail: anyWin.cloneInto
-          ? anyWin.cloneInto(obj, this.doc.defaultView)
-          : obj
+        detail: clone ? clone : obj
       })
     )
   }
