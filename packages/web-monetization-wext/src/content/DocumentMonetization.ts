@@ -23,6 +23,12 @@ type MonetizationRequest = PaymentDetails
 // Name of event dispatched on document
 const MONETIZATION_DOCUMENT_EVENT_NAME = 'monetization-v1'
 
+type DefaultView = WindowProxy & typeof globalThis
+declare const cloneInto: (
+  obj: unknown,
+  window: DefaultView | null
+) => typeof obj | undefined
+
 @injectable()
 export class DocumentMonetization {
   private finalized = true
@@ -96,12 +102,9 @@ export class DocumentMonetization {
       type,
       detail
     }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const anyWin = window as any
-    const clone = anyWin.cloneInto && anyWin.cloneInto(obj, window)
     this.doc.dispatchEvent(
       new CustomEvent(MONETIZATION_DOCUMENT_EVENT_NAME, {
-        detail: clone ? clone : obj
+        detail: cloneInto ? cloneInto(obj, this.doc.defaultView) : obj
       })
     )
   }
