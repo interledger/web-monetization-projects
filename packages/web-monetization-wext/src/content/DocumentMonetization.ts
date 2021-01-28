@@ -92,12 +92,17 @@ export class DocumentMonetization {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private emitEvent(type: string, detail: any) {
+    const obj = {
+      type,
+      detail
+    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const anyWin = window as any
     this.doc.dispatchEvent(
       new CustomEvent(MONETIZATION_DOCUMENT_EVENT_NAME, {
-        detail: JSON.stringify({
-          type,
-          detail
-        })
+        detail: anyWin.cloneInto
+          ? anyWin.cloneInto(obj, this.doc.defaultView)
+          : obj
       })
     )
   }
