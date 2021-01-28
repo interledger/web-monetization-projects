@@ -27,6 +27,13 @@ type DefaultView = WindowProxy & typeof globalThis
 type CloneInto = (obj: unknown, window: DefaultView | null) => typeof obj
 declare const cloneInto: CloneInto | undefined
 
+let cloneIntoRef: CloneInto | undefined
+try {
+  cloneIntoRef = cloneInto
+} catch (e) {
+  cloneIntoRef = undefined
+}
+
 @injectable()
 export class DocumentMonetization {
   private finalized = true
@@ -102,7 +109,7 @@ export class DocumentMonetization {
     }
     this.doc.dispatchEvent(
       new CustomEvent(MONETIZATION_DOCUMENT_EVENT_NAME, {
-        detail: cloneInto ? cloneInto(obj, this.doc.defaultView) : obj
+        detail: cloneIntoRef ? cloneIntoRef(obj, this.doc.defaultView) : obj
       })
     )
   }
