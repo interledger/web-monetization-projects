@@ -782,7 +782,10 @@ export class BackgroundScript {
     if (id) {
       this.log('resuming stream', id)
       // Always set "pending" transition state and emit event
+      // We do this just for consistency/back-compat sake
       this.sendSetMonetizationStateMessage(frame, 'pending')
+      // Don't wait for a payment if the stream has already paid out as it could
+      // be many minutes
       if (this.hasStreamPaid(frame)) {
         this.sendSetMonetizationStateMessage(frame, 'started')
       }
