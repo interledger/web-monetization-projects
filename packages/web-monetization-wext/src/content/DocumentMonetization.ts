@@ -24,10 +24,8 @@ type MonetizationRequest = PaymentDetails
 const MONETIZATION_DOCUMENT_EVENT_NAME = 'monetization-v1'
 
 type DefaultView = WindowProxy & typeof globalThis
-declare const cloneInto: (
-  obj: unknown,
-  window: DefaultView | null
-) => typeof obj | undefined
+type CloneInto = (obj: unknown, window: DefaultView | null) => typeof obj
+declare const cloneInto: CloneInto | undefined
 
 @injectable()
 export class DocumentMonetization {
