@@ -50,13 +50,16 @@ export class Frames {
       this.sendStateChange()
     })
 
-    /**
-     * Be wary of context invalidation during extension reloading causing
-     * confusion here.
-     */
-    this.window.addEventListener('unload', () => {
-      this.sendUnloadMessage()
-    })
+    for (const event of ['unload', 'beforeunload']) {
+      /**
+       * Be wary of context invalidation during extension reloading causing
+       * confusion here.
+       */
+      this.window.addEventListener(event, () => {
+        console.log('WINDOW UNLOAD EVENT', event)
+        this.sendUnloadMessage(event)
+      })
+    }
   }
 
   // iframe to FrameSpec
@@ -142,9 +145,12 @@ export class Frames {
     return false
   }
 
-  private sendUnloadMessage() {
+  private sendUnloadMessage(event: string) {
     const unload: UnloadFrame = {
-      command: 'unloadFrame'
+      command: 'unloadFrame',
+      data: {
+        event
+      }
     }
     this.runtime.sendMessage(unload)
   }

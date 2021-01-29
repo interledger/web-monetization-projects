@@ -24,6 +24,7 @@ import MessageSender = chrome.runtime.MessageSender
 interface Frame extends Record<string, any> {
   // TODO: this seems useless actually
   lastUpdateTimeMS: number
+  msSinceLastUpdate: number
 
   /**
    *loading
@@ -106,6 +107,7 @@ export class BackgroundFramesService extends EventEmitter {
   traceLogging = false
   logEvents = true
   logTabsInterval = 5e3
+  supportsUnload = false
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
@@ -420,7 +422,26 @@ export class BackgroundFramesService extends EventEmitter {
 
     if (message.command === 'unloadFrame') {
       this.log('unloadFrame %s', frameId, message.data)
-      this.unloadFrame(tabId, frameId)
+      // onbeforeunload, try send a message, if it fails, we can assume the
+      // tab has really unloaded
+      if (!this.supportsUnload && message.data.event === 'beforeunload') {
+        for (const delay of [0, 1, 5, 5]) {
+          await timeout(delay)
+          try {
+            await this.sendCommand({ frameId, tabId }, { command: 'noop' })
+          } catch (e) {
+            this.log(
+              'unloading frame, error sending noop command %s',
+              e.message
+            )
+            this.unloadFrame(tabId, frameId)
+            break
+          }
+        }
+      } else {
+        this.supportsUnload = true
+        this.unloadFrame(tabId, frameId)
+      }
     } else if (message.command === 'frameStateChange') {
       if (this.traceLogging) {
         this.log(
@@ -526,6 +547,13 @@ export class BackgroundFramesService extends EventEmitter {
   }
 
   private logTabs() {
+    const now = Date.now()
+    Object.keys(this.tabs).forEach(key => {
+      const frames = this.tabs[Number(key)]
+      frames.forEach(f => {
+        f.msSinceLastUpdate = now - f.lastUpdateTimeMS
+      })
+    })
     this.log('tabs', JSON.stringify(this.tabs, null, 2))
   }
 }

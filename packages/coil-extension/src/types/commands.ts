@@ -143,7 +143,10 @@ export interface OnFrameAllowedChanged extends Command {
  */
 export interface UnloadFrame extends Command {
   command: 'unloadFrame'
-  // frameId is retrieved via MessageSender['frameId']
+  data: {
+    // frameId is retrieved via MessageSender['frameId']
+    event: string
+  }
 }
 
 /**
