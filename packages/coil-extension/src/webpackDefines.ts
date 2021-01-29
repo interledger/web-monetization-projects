@@ -1,5 +1,3 @@
-/// <reference types="chrome" />
-
 declare const WEBPACK_DEFINE_API: any
 declare const WEBPACK_DEFINE_COIL_DOMAIN: any
 declare const WEBPACK_DEFINE_BTP_ENDPOINT: any
