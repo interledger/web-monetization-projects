@@ -1441,9 +1441,10 @@ __metadata:
     "@material-ui/core": ^4.11.3
     "@material-ui/icons": ^4.11.2
     "@material-ui/styles": ^4.11.3
-    "@types/chrome": 0.0.128
     "@types/debug": ^4.1.5
+    "@types/filesystem": ^0.0.29
     "@types/firefox": ^0.0.30
+    "@types/har-format": ^1.2.5
     "@types/jest": ^26.0.20
     "@types/jsonwebtoken": ^8.5.0
     "@types/long": ^4.0.1
@@ -3946,16 +3947,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:0.0.128":
-  version: 0.0.128
-  resolution: "@types/chrome@npm:0.0.128"
-  dependencies:
-    "@types/filesystem": "*"
-    "@types/har-format": "*"
-  checksum: f2c0e49aadcfe2d72c5fc672e6131c8292a42b2e21a68f1e31454cf5ef02094851a95c1c173594ad490b27cd975addfbeacecf95db50bc7a6ce38cdc447ad734
-  languageName: node
-  linkType: hard
-
 "@types/color-name@npm:^1.1.1":
   version: 1.1.1
   resolution: "@types/color-name@npm:1.1.1"
@@ -4043,7 +4034,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/filesystem@npm:*":
+"@types/filesystem@npm:^0.0.29":
   version: 0.0.29
   resolution: "@types/filesystem@npm:0.0.29"
   dependencies:
@@ -4094,10 +4085,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/har-format@npm:*":
-  version: 1.2.4
-  resolution: "@types/har-format@npm:1.2.4"
-  checksum: 8d0c62f99ea579b6aa23219f9e97c8ef70dc0254a419b4c9a2c602860f7d3d6da7cb867da4b15087d7bf2588f8dd40b6f941350ba2c04168a67892b5f2661fad
+"@types/har-format@npm:^1.2.5":
+  version: 1.2.5
+  resolution: "@types/har-format@npm:1.2.5"
+  checksum: 1dbaa1d7cddb2fa0ddf533e8ae7f20bca2116738274a1a1e9fe2863b6c26e668b59ac4dfdfb45450d5c374de689721647ca891aa342e239049f69d5de3604cd9
   languageName: node
   linkType: hard
 
