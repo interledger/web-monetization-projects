@@ -62,7 +62,7 @@
     "@typescript-eslint/parser": "^4.14.1",
     "JSON2016": "^1.0.0",
     "copy-webpack-plugin": "^7.0.0",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-import": "^2.22.1",
