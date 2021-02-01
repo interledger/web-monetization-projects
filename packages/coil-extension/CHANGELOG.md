@@ -1,3 +1,17 @@
+<a name="coil-extension@0.0.52"></a>
+
+# [coil-extension@0.0.52](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.51...coil-extension@0.0.52) (2021-02-01)
+
+### Bug Fixes
+
+- Trim whitespace in payment pointers [#1349](https://github.com/coilhq/web-monetization-projects/pull/1349)
+
+### Tweaks
+
+- Reduce <script> injected code to just one [#1254](https://github.com/coilhq/web-monetization-projects/pull/1254) [#1503](https://github.com/coilhq/web-monetization-projects/pull/1503)
+- Remove 'unsafe-eval' from CSP in favor of sha256 of singular polyfill [#1542](https://github.com/coilhq/web-monetization-projects/pull/1542)
+- Put all iconography elements into the icon rather than spread across icon/badge [#1529](https://github.com/coilhq/web-monetization-projects/pull/1529)
+
 <a name="coil-extension@0.0.51"></a>
 
 # [coil-extension@0.0.51](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.50...coil-extension@0.0.51) (2020-07-14)
