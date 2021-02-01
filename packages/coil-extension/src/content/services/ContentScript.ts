@@ -142,10 +142,10 @@ export class ContentScript {
             paymentPointer: request.data.paymentPointer,
             requestId: request.data.requestId
           }
-          this.monetization.postMonetizationProgressWindowMessage(detail)
+          this.monetization.dispatchMonetizationProgressEvent(detail)
         } else if (request.command === 'monetizationStart') {
           debug('monetizationStart event')
-          this.monetization.postMonetizationStartWindowMessageAndSetMonetizationState(
+          this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
             request.data
           )
         } else if (request.command === 'checkIFrameIsAllowedFromBackground') {
@@ -167,7 +167,7 @@ export class ContentScript {
             assetScale: request.data.assetScale,
             paymentPointer: request.data.paymentPointer
           }
-          this.monetization.postTipWindowMessage(detail)
+          this.monetization.dispatchTipEvent(detail)
         } else if (request.command === 'clearToken') {
           this.storage.removeItem('token')
         }

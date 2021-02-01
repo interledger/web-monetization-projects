@@ -24,16 +24,15 @@ const eventLoggingCode = events
 export const wmPolyFillMinimal = `
   document.monetization = document.createElement('div')
   document.monetization.state = 'stopped'
-  window.addEventListener('message', function(event) {
-    if (event.source === window && event.data.webMonetization) {
-      if (event.data.type === 'monetizationstatechange') {
-        document.monetization.state = event.data.detail.state
-      } else {
-        document.monetization.dispatchEvent(
-          new CustomEvent(event.data.type, {
-            detail: event.data.detail
-          }))
-      }
+  document.addEventListener('monetization-v1', function(event) {
+    const {type, detail} = event.detail
+    if (type === 'monetizationstatechange') {
+      document.monetization.state = detail.state
+    } else {
+      document.monetization.dispatchEvent(
+        new CustomEvent(type, {
+          detail: detail
+        }))
     }
   })
 `

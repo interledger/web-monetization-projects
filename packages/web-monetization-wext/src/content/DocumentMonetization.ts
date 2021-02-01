@@ -20,17 +20,27 @@ interface SetStateParams {
 
 type MonetizationRequest = PaymentDetails
 
+// Name of event dispatched on document
+const MONETIZATION_DOCUMENT_EVENT_NAME = 'monetization-v1'
+
+type DefaultView = WindowProxy & typeof globalThis
+type CloneInto = (obj: unknown, window: DefaultView | null) => typeof obj
+declare const cloneInto: CloneInto | undefined
+
+let cloneIntoRef: CloneInto | undefined
+try {
+  cloneIntoRef = cloneInto
+} catch (e) {
+  cloneIntoRef = undefined
+}
+
 @injectable()
 export class DocumentMonetization {
   private finalized = true
   private state: MonetizationState = 'stopped'
   private request?: MonetizationRequest
 
-  constructor(
-    private window: Window,
-    private doc: Document,
-    private scripts: ScriptInjection
-  ) {}
+  constructor(private doc: Document, private scripts: ScriptInjection) {}
 
   injectDocumentMonetization() {
     try {
@@ -73,19 +83,12 @@ export class DocumentMonetization {
 
     if (changed) {
       if (changedState) {
-        this.window.postMessage(
-          {
-            webMonetization: true,
-            type: 'monetizationstatechange',
-            detail: {
-              state
-            }
-          },
-          this.window.location.origin
-        )
+        this.emitEvent('monetizationstatechange', {
+          state
+        })
       }
       if (this.request && (state === 'stopped' || state === 'pending')) {
-        this.postMonetizationMessage(
+        this.dispatchMonetizationEvent(
           state === 'pending' ? 'monetizationpending' : 'monetizationstop',
           {
             paymentPointer: this.request.paymentPointer,
@@ -98,7 +101,20 @@ export class DocumentMonetization {
     return changed
   }
 
-  postMonetizationStartWindowMessageAndSetMonetizationState(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private emitEvent(type: string, detail: any) {
+    const obj = {
+      type,
+      detail
+    }
+    this.doc.dispatchEvent(
+      new CustomEvent(MONETIZATION_DOCUMENT_EVENT_NAME, {
+        detail: cloneIntoRef ? cloneIntoRef(obj, this.doc.defaultView) : obj
+      })
+    )
+  }
+
+  dispatchMonetizationStartEventAndSetMonetizationState(
     detail: MonetizationStartEvent['detail']
   ) {
     // Indicate that payment has started.
@@ -107,10 +123,10 @@ export class DocumentMonetization {
       throw new Error(`expecting state transition`)
     }
     // First nonzero packet has been fulfilled
-    this.postMonetizationMessage('monetizationstart', detail)
+    this.dispatchMonetizationEvent('monetizationstart', detail)
   }
 
-  postMonetizationMessage(
+  dispatchMonetizationEvent(
     type: MonetizationEvent['type'],
     detailSource: MonetizationEvent['detail'],
     finalized?: boolean
@@ -122,42 +138,27 @@ export class DocumentMonetization {
       const stop = detail as MonetizationStopEvent['detail']
       stop.finalized = Boolean(finalized)
     }
-    this.window.postMessage(
-      {
-        webMonetization: true,
-        type,
-        detail
-      },
-      this.window.location.origin
-    )
+    this.emitEvent(type, detail)
   }
 
-  postMonetizationProgressWindowMessage(
+  dispatchMonetizationProgressEvent(
     detail: MonetizationProgressEvent['detail']
   ) {
     // Protect against extremely unlikely race condition
     // A progress message coming before a content -> background script
     // stopWebMonetization message handler has had a chance to run.
     if (this.request?.requestId === detail.requestId) {
-      this.postMonetizationMessage('monetizationprogress', detail)
+      this.dispatchMonetizationEvent('monetizationprogress', detail)
     }
   }
 
-  postTipMessage(type: TipEvent['type'], detailSource: TipEvent['detail']) {
+  doDispatchTipEvent(type: TipEvent['type'], detailSource: TipEvent['detail']) {
     const detail = { ...detailSource }
-
-    this.window.postMessage(
-      {
-        webMonetization: true,
-        type,
-        detail
-      },
-      this.window.location.origin
-    )
+    this.emitEvent(type, detail)
   }
 
-  postTipWindowMessage(detail: TipEvent['detail']) {
-    this.postTipMessage('tip', detail)
+  dispatchTipEvent(detail: TipEvent['detail']) {
+    this.doDispatchTipEvent('tip', detail)
   }
 
   setMetaTagContent(paymentPointer?: string) {
