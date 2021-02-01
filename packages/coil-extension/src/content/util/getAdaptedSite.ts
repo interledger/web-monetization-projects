@@ -1,6 +1,6 @@
 export const ADAPTED_REGEX: Record<string, RegExp> = {
-  twitch: /https?:\/\/(www\.)?twitch\.tv(\/.*)?/i,
-  youtube: /https?:\/\/(www\.)?youtube\.com\/(watch|channel)(.*)/i
+  twitch: /https?:\/\/((www|m)\.)?twitch\.tv(\/.*)?/i,
+  youtube: /https?:\/\/((www|m)\.)?youtube\.com\/(watch|channel)(.*)/i
 }
 
 const ADAPTED_SITES = Object.keys(ADAPTED_REGEX)
