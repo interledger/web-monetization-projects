@@ -3,6 +3,7 @@ import { inject, injectable } from 'inversify'
 import { TabState } from '../../types/TabState'
 import * as tokens from '../../types/tokens'
 import { Colors } from '../consts/Colors'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { TabOpener } from './TabOpener'
 import { PopupIconService } from './PopupIconService'
@@ -10,6 +11,11 @@ import { PopupIconService } from './PopupIconService'
 import TabIconDetails = chrome.browserAction.TabIconDetails
 
 type Action = (tab: chrome.tabs.Tab) => void
+
+function extname(p: string) {
+  const m = p.match(/\.\w+$/)
+  return m ? m[0] : ''
+}
 
 @injectable()
 export class PopupBrowserAction {
@@ -24,6 +30,8 @@ export class PopupBrowserAction {
   constructor(
     private tabOpener: TabOpener,
     private icons: PopupIconService,
+    @inject(tokens.BuildConfig)
+    private buildConfig: BuildConfig,
     @inject(tokens.CoilDomain) private coilDomain: string,
     @inject(tokens.WextApi) private api = chrome
   ) {
@@ -73,7 +81,7 @@ export class PopupBrowserAction {
   setDefaultInactive() {
     if (this.api.browserAction) {
       this.api.browserAction.setIcon({
-        path: this.icons.getInactive()
+        path: this.icons.forTabState({ iconPrimary: 'inactive' })
       })
       const now = new Date()
       const nextMidnight = new Date()
@@ -91,10 +99,12 @@ export class PopupBrowserAction {
     const api = this.api
 
     if (api.browserAction.setIcon) {
+      const path = this.icons.forTabState(state)
       const args = {
         tabId,
-        path: state?.icon?.path ?? this.icons.getInactive()
+        path: path
       }
+      console.log('SETICON', path, state.iconPrimary, state.iconSecondary)
       const changed =
         this.lastSetIconCallArgs.path !== args.path ||
         this.lastSetIconCallArgs.tabId !== args.tabId
@@ -115,20 +125,6 @@ export class PopupBrowserAction {
           calls: ++this.lastSetIconCallArgs.calls
         }
       }
-    }
-
-    if (api.browserAction.setBadgeText) {
-      api.browserAction.setBadgeText({
-        tabId,
-        text: state?.badge?.text ?? ''
-      })
-    }
-
-    if (api.browserAction.setBadgeBackgroundColor) {
-      api.browserAction.setBadgeBackgroundColor({
-        tabId,
-        color: state?.badge?.color ?? Colors.White
-      })
     }
   }
 

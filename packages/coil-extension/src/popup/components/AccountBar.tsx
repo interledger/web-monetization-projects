@@ -41,7 +41,9 @@ type ClickEvent = FormEvent<HTMLElement>
 export const CoilLogoImg = () => {
   const [month, day] = getMonthAndDay()
   const isXMAS = isXMASPeriod(month, day)
-  const logo = isXMAS ? '/res/CoilLogoXMAS.svg' : '/res/CoilLogo.svg'
+  const xmasLogo = '/res/CoilLogoXMAS.svg'
+  const normalLogo = '/res/icn-coil-ext-profile.svg'
+  const logo = isXMAS ? normalLogo : normalLogo
   const logoWidth = isXMAS ? 28 : 24
   const style = isXMAS ? { marginTop: '-3px' } : {}
   return (
