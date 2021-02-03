@@ -13,8 +13,7 @@
     "128": "res/icn-coil-on.png"
   },
   "browser_action": {
-    "default_icon": "res/icn-coil-off.png",
-    "default_popup": "static/popup.html"
+    "default_icon": "res/icn-coil-off.png"
   },
   "background": {
     "page": "static/background.html"
