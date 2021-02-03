@@ -27,6 +27,9 @@
       "@web-monetization/types": [
         "packages/web-monetization-types/src"
       ],
+      "@wmsid/extension": [
+        "packages/wmsid-extension/src"
+      ],
       "@coil/anonymous-tokens": [
         "packages/coil-anonymous-tokens/src"
       ],

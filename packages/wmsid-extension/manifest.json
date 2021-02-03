@@ -1,0 +1,36 @@
+{
+  "name": "Coil Sid WM",
+  "description": "Support websites and creators with Web Monetization",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "coilsidfirefoxextension@coil.com"
+    }
+  },
+  "icons": {
+    "128": "res/icn-coil-on.png"
+  },
+  "browser_action": {
+    "default_icon": "res/icn-coil-off.png",
+    "default_popup": "static/popup.html"
+  },
+  "background": {
+    "page": "static/background.html"
+  },
+  "incognito" : "spanning",
+  "web_accessible_resources": [
+
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.coil.com/*","http://*.coil.com/*"],
+      "js": ["content.js"],
+      "match_about_blank": false,
+      "all_frames": false,
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [ "http://*.coil.com/" ]
+}

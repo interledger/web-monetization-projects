@@ -1,0 +1,4 @@
+{
+  // FROM UPKEEP TEMPLATE
+  "extends": "../../../tsconfig.json"
+}

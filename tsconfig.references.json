@@ -24,6 +24,9 @@
       "path": "packages/web-monetization-types/tsconfig.build.json"
     },
     {
+      "path": "packages/wmsid-extension/tsconfig.build.json"
+    },
+    {
       "path": "packages/coil-anonymous-tokens/tsconfig.build.json"
     },
     {
