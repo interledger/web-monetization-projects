@@ -46,6 +46,15 @@ export const wmPolyfill = `
   }
 `
 
+async function sha256(preimage: Buffer): Promise<string> {
+  const digest = await crypto.subtle.digest({ name: 'SHA-256' }, preimage)
+  return `sha256-${Buffer.from(digest).toString('base64')}`
+}
+
+sha256(Buffer.from(wmPolyfill, 'utf8')).then(
+  console.log.bind(console, 'wmPolyfill hash:')
+)
+
 export const includePolyFillMessage = `
 Unable to inject \`document.monetization\` polyfill!
 Include the polyfill in your page:
