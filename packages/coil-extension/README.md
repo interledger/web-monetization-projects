@@ -79,6 +79,14 @@ yarn build-prod -- firefox
 
 The browsers available to build to are the same as those described in the previous section.
 
+### Using the Interledger Testnet
+
+To connect to the [Interledger Testnet](https://interledger.org/setup-wallets.html) you must build the extension to use the testnet's BTP endpoint rather than Coil's:
+
+```shell script
+export BTP_ENDPOINT=btp+wss://us1.rafikilabs.com/btp
+```
+
 ### Tests
 
 Currently very light on tests. See the [tests](test) folder.
