@@ -7,7 +7,7 @@ export async function logoutCoil(coilPage: Page): Promise<Page> {
   await coilPage.bringToFront()
   await coilPage.goto(`${COIL_DOMAIN}/settings`)
 
-  const menuSelector = `[data-cy='hamburger-toggle']`
+  const menuSelector = `svg[data-cy='hamburger-toggle']`
   const logoutSelector = `"Log out"`
 
   try {
