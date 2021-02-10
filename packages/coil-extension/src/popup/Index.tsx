@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { styled, Typography } from '@material-ui/core'
 
+import { Colors } from '../shared-theme/colors'
 import { ToPopupMessage } from '../types/commands'
 
 import { AccountBar } from './components/AccountBar'
