@@ -10,7 +10,6 @@ import {
   whoAmI
 } from './queries'
 
-// Reference class for DI/reduct
 @injectable()
 export class GraphQlClientOptions {
   public coilDomain = 'https://coil.com'
@@ -22,12 +21,13 @@ export class GraphQlClientOptions {
 export interface GraphQlQueryParameters {
   query: string
   token?: string | null
+  autoThrow?: boolean
   variables?: Record<string, unknown>
 }
 
 @injectable()
 export class GraphQlClient {
-  public static Options = GraphQlClientOptions
+  public static readonly Options = GraphQlClientOptions
   protected readonly fetch: typeof fetch
 
   public login = login
@@ -38,7 +38,7 @@ export class GraphQlClient {
 
   public constructor(
     @inject(GraphQlClientOptions)
-    private config: GraphQlClientOptions = new GraphQlClientOptions()
+    protected config: GraphQlClientOptions = new GraphQlClientOptions()
   ) {
     this.fetch = this.config.fetch
   }
@@ -47,6 +47,7 @@ export class GraphQlClient {
   public async query<T = any>({
     query,
     token = null,
+    autoThrow = true,
     variables = {}
   }: GraphQlQueryParameters): Promise<GraphQlResponse<T>> {
     const init: RequestInit = {
@@ -71,9 +72,11 @@ export class GraphQlClient {
       this.config.log('Domain:', this.config.coilDomain, 'Url:', redacted)
     }
     const res = await this.fetch(`${this.config.coilDomain}/graphql`, init)
-    if (!res.ok) {
+
+    if (!res.ok && autoThrow) {
       throw new Error(
-        `graphql query failed. status=${res.status} query=\`${query}\``
+        `graphql query failed. status=${res.status} ` +
+          `query=\`${query}\` text=${JSON.stringify(await res.text())}`
       )
     }
     return (await res.json()) as GraphQlResponse<T>

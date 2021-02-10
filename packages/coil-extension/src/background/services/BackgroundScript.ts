@@ -390,7 +390,7 @@ export class BackgroundScript {
         sendResponse(await this.youtube.fetchChannelId(request.data.youtubeUrl))
         break
       case 'sendTip':
-        sendResponse(await this.sendTip())
+        sendResponse(await this.sendTip(request.data.amount))
         break
       case 'checkIFrameIsAllowedFromIFrameContentScript':
         sendResponse(
@@ -694,7 +694,7 @@ export class BackgroundScript {
     return true
   }
 
-  private async sendTip(): Promise<{ success: boolean }> {
+  private async sendTip(tipAmount = 100): Promise<{ success: boolean }> {
     const tabId = this.activeTab
     const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
     if (!streamId) {
@@ -716,23 +716,26 @@ export class BackgroundScript {
 
     const receiver = stream.getPaymentPointer()
     const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
-    const amount = Math.floor(1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
+    const amount = Math.floor((tipAmount / 1e2) * 1e9 * exchangeRate).toString()
 
     try {
       this.log(`sendTip: sending tip to ${receiver}`)
       const result = await this.client.query({
         query: `
-          mutation sendTip($receiver: String!) {
-            sendTip(receiver: $receiver) {
+          mutation sendTip($receiver: String!, $amount: Int!) {
+            sendTip(receiver: $receiver, amount: $amount) {
               success
             }
           }
         `,
         token,
         variables: {
-          receiver
+          receiver,
+          // amount is USD cents
+          amount: tipAmount
         }
       })
+
       this.log(`sendTip: sent tip to ${receiver}`, result)
       const message: TipSent = {
         command: 'tip',
@@ -744,7 +747,7 @@ export class BackgroundScript {
         }
       }
       this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
-      return { success: true }
+      return { success: result.data.sendTip.success }
     } catch (e) {
       this.log(`sendTip: error. msg=${e.message}`)
       return { success: false }

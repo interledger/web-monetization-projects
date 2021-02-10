@@ -296,8 +296,11 @@ export interface SetMonetizationState {
  * popup -> background
  * browser.runtime.sendMessage
  */
-export interface SendTip {
+export interface SendTip extends Command {
   command: 'sendTip'
+  data: {
+    amount?: number
+  }
 }
 
 /**

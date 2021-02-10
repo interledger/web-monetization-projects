@@ -5,6 +5,7 @@ import { PopupProps } from '../types'
 import { LoggedOut } from './LoggedOut'
 import { Unsubscribed } from './Unsubscribed'
 import { PaidViews } from './PaidViews'
+import { CoilContainer } from './CoilContainer'
 
 export const Status = (props: PopupProps) => {
   const context = props.context
@@ -15,11 +16,19 @@ export const Status = (props: PopupProps) => {
       !user.subscription ||
       (user.subscription && !user.subscription.active)
     ) {
-      return <Unsubscribed context={context} />
+      return (
+        <CoilContainer>
+          <Unsubscribed context={context} />
+        </CoilContainer>
+      )
     } else {
       return <PaidViews context={context} />
     }
   } else {
-    return <LoggedOut context={context} />
+    return (
+      <CoilContainer>
+        <LoggedOut context={context} />
+      </CoilContainer>
+    )
   }
 }
