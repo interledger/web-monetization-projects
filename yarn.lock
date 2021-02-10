@@ -1189,7 +1189,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.12.5, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
+"@babel/runtime@npm:7.12.13, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
+  version: 7.12.13
+  resolution: "@babel/runtime@npm:7.12.13"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: 52e8ac97f5686fc0718592542b5aab4b231e52b89f432d81c5d7a03d43891b187c7cc3cf2ccc7b99a967c9d7c33afe3815dc04db6185017cb3933b6c8b1f535a
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:7.12.5":
   version: 7.12.5
   resolution: "@babel/runtime@npm:7.12.5"
   dependencies:
@@ -1439,7 +1448,7 @@ __metadata:
     "@webexts/build-utils": ^0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.17.0
+    addons-linter: ^2.18.0
     copy-webpack-plugin: ^7.0.0
     crx-hotreload: ^1.0.6
     debug: ^4.3.1
@@ -2369,7 +2378,7 @@ __metadata:
     "@webexts/build-utils": 0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.17.0
+    addons-linter: ^2.18.0
     copy-webpack-plugin: ^7.0.0
     crx-hotreload: ^1.0.6
     css-loader: ^5.0.2
@@ -3562,6 +3571,15 @@ __metadata:
   dependencies:
     extend: 3.0.2
   checksum: ddaa97307aee65e46b6e74db211b91fdc98ca1ae1495e65d1e9657be12cc23373b5274d20289989fa95f1ebde55d2b2715c2a05d674e61f08a6f6f4b4ad1be63
+  languageName: node
+  linkType: hard
+
+"@mdn/browser-compat-data@npm:3.0.6":
+  version: 3.0.6
+  resolution: "@mdn/browser-compat-data@npm:3.0.6"
+  dependencies:
+    extend: 3.0.2
+  checksum: 9c40dfe6b71a378abde362daf28a312d17b423095ade7f86a5c4695c38acd8f83a9d7fe188ccdfea3378bd60165428e31f24c33eebb8e97097a426de2fb0790e
   languageName: node
   linkType: hard
 
@@ -5382,12 +5400,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:^2.17.0":
-  version: 2.17.0
-  resolution: "addons-linter@npm:2.17.0"
+"addons-linter@npm:^2.18.0":
+  version: 2.18.0
+  resolution: "addons-linter@npm:2.18.0"
   dependencies:
-    "@babel/runtime": 7.12.5
-    "@mdn/browser-compat-data": 2.0.7
+    "@babel/runtime": 7.12.13
+    "@mdn/browser-compat-data": 3.0.6
     addons-scanner-utils: 4.0.1
     ajv: 6.12.6
     ajv-merge-patch: 4.1.0
@@ -5397,13 +5415,13 @@ __metadata:
     common-tags: 1.8.0
     deepmerge: 4.2.2
     dispensary: 0.61.0
-    eslint: 7.18.0
+    eslint: 7.19.0
     eslint-plugin-no-unsanitized: 3.1.4
     eslint-visitor-keys: 2.0.0
     espree: 7.3.1
     esprima: 4.0.1
     fluent-syntax: 0.13.0
-    fsevents: 2.3.1
+    fsevents: 2.3.2
     glob: 7.1.6
     is-mergeable-object: 1.1.1
     jed: 1.1.1
@@ -5423,7 +5441,7 @@ __metadata:
       optional: true
   bin:
     addons-linter: bin/addons-linter
-  checksum: f1c3e9f7ad8147eaa521c62caf860aae2a449c7feb6bc35a7e9157fdba84111bd297a48a0fbda9e5d7a237730428c2a7d30023fc55b5c126c83d6e07a1bcc74a
+  checksum: a8f553a13eee06ada4376ef84bdd910d699aafc9fdee3e141530005b0279e82e64b416b7c308a90e901d395f4aaff073eaa92217ebac6f96489a68116d974b04
   languageName: node
   linkType: hard
 
@@ -10101,9 +10119,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.18.0":
-  version: 7.18.0
-  resolution: "eslint@npm:7.18.0"
+"eslint@npm:7.19.0, eslint@npm:^7.19.0":
+  version: 7.19.0
+  resolution: "eslint@npm:7.19.0"
   dependencies:
     "@babel/code-frame": ^7.0.0
     "@eslint/eslintrc": ^0.3.0
@@ -10144,7 +10162,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 5c6f6ca0eb6c3738a0d14d3441a23f045ef9e7f73aaba4848aea0877c5fd50ec42937ccdaf53fb9107694f5700a9989bca55334b7b17e5d3be2f6e69a42241fa
+  checksum: 0461e8b2b53c9097995efe131f659e2df77deda1daf79d7673654e2cbdac90bd2a412758b0ee0db48d29bf58f4b4d99170a70e17df1345782f0c8fa511bb0734
   languageName: node
   linkType: hard
 
@@ -10190,53 +10208,6 @@ __metadata:
   bin:
     eslint: ./bin/eslint.js
   checksum: 94d05a10ba6b31d4ae6d9a316645b2998e36ab80f7000f15c59ffb38680d4ac0c40458a947d132d3d3f47107a146bcaea3049dd87c3afc1f5fdae23a0b660e4c
-  languageName: node
-  linkType: hard
-
-"eslint@npm:^7.19.0":
-  version: 7.19.0
-  resolution: "eslint@npm:7.19.0"
-  dependencies:
-    "@babel/code-frame": ^7.0.0
-    "@eslint/eslintrc": ^0.3.0
-    ajv: ^6.10.0
-    chalk: ^4.0.0
-    cross-spawn: ^7.0.2
-    debug: ^4.0.1
-    doctrine: ^3.0.0
-    enquirer: ^2.3.5
-    eslint-scope: ^5.1.1
-    eslint-utils: ^2.1.0
-    eslint-visitor-keys: ^2.0.0
-    espree: ^7.3.1
-    esquery: ^1.2.0
-    esutils: ^2.0.2
-    file-entry-cache: ^6.0.0
-    functional-red-black-tree: ^1.0.1
-    glob-parent: ^5.0.0
-    globals: ^12.1.0
-    ignore: ^4.0.6
-    import-fresh: ^3.0.0
-    imurmurhash: ^0.1.4
-    is-glob: ^4.0.0
-    js-yaml: ^3.13.1
-    json-stable-stringify-without-jsonify: ^1.0.1
-    levn: ^0.4.1
-    lodash: ^4.17.20
-    minimatch: ^3.0.4
-    natural-compare: ^1.4.0
-    optionator: ^0.9.1
-    progress: ^2.0.0
-    regexpp: ^3.1.0
-    semver: ^7.2.1
-    strip-ansi: ^6.0.0
-    strip-json-comments: ^3.1.0
-    table: ^6.0.4
-    text-table: ^0.2.0
-    v8-compile-cache: ^2.0.3
-  bin:
-    eslint: bin/eslint.js
-  checksum: 0461e8b2b53c9097995efe131f659e2df77deda1daf79d7673654e2cbdac90bd2a412758b0ee0db48d29bf58f4b4d99170a70e17df1345782f0c8fa511bb0734
   languageName: node
   linkType: hard
 
@@ -11390,12 +11361,12 @@ fsevents@2.2.1:
   languageName: node
   linkType: hard
 
-"fsevents@2.3.1, fsevents@^2.1.2":
-  version: 2.3.1
-  resolution: "fsevents@npm:2.3.1"
+"fsevents@2.3.2, fsevents@^2.1.2":
+  version: 2.3.2
+  resolution: "fsevents@npm:2.3.2"
   dependencies:
     node-gyp: latest
-  checksum: 32619a121e7f9ac8a5ce4954f5fdf06be68b7b1c16e4ac8fa6e5e13cbf97d83c86cdcdf872ab7b188ebb07b34d2271b7818aebfc305b4a7d5b35f4bc2117f8be
+  checksum: a1883f4ca12b8b403ec528f1a4cb312b0877eacd24719da535cabea78d6fdd78530e3538bdba590a1c0f6c295128f964a89182621885296353a44dcfa4f9db53
   languageName: node
   linkType: hard
 
@@ -11427,12 +11398,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@2.3.1#builtin<compat/fsevents>, fsevents@patch:fsevents@^2.1.2#builtin<compat/fsevents>":
-  version: 2.3.1
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.1#builtin<compat/fsevents>::version=2.3.1&hash=11e9ea"
+"fsevents@patch:fsevents@2.3.2#builtin<compat/fsevents>, fsevents@patch:fsevents@^2.1.2#builtin<compat/fsevents>":
+  version: 2.3.2
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#builtin<compat/fsevents>::version=2.3.2&hash=11e9ea"
   dependencies:
     node-gyp: latest
-  checksum: 66b24358e15cdd0f705b456346e58b4613f2bf54206b47874decda4152614fb0632d2d662c92b0ea54810109f646e5233e4cdd64dbb2a1949070ee5dc14dab87
+  checksum: 7b25d9251aefe433d508a0eb614217f0495ae05a9e8af15f7dbf9998e08c4e675acd1cf32361e0fcf71d917d9e8c4b76301fdc72a1ec1105a3ea0994f5e15a8d
   languageName: node
   linkType: hard
 
