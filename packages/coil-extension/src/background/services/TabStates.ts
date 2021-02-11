@@ -12,7 +12,7 @@ export class TabStates {
   activeTab: number | null = null
   private tabStates: { [tab: number]: TabState } = {}
 
-  constructor(private icons: PopupIconService) {}
+  constructor() {}
 
   set(tab: number, state: Partial<TabState> = {}) {
     const existingState = this.get(tab)
@@ -99,32 +99,32 @@ export class TabStates {
     switch (state) {
       case 'inactive':
         this.set(tab, {
-          icon: { path: this.icons.getInactive() },
-          badge: { text: '' }
+          iconPrimary: 'inactive',
+          iconSecondary: null
         })
         break
 
       case 'monetized':
         this.set(tab, {
-          icon: { path: this.icons.getActive() }
+          iconPrimary: 'active'
         })
         break
 
       case 'unavailable':
         this.set(tab, {
-          badge: { text: '!', color: Colors.Red }
+          iconSecondary: 'unavailable'
         })
         break
 
       case 'streaming':
         this.set(tab, {
-          badge: { text: '$', color: Colors.Green }
+          iconSecondary: 'streaming'
         })
         break
 
       case 'streaming-paused':
         this.set(tab, {
-          badge: { text: '\u23F8', color: Colors.Green }
+          iconSecondary: 'streaming-paused'
         })
         break
 

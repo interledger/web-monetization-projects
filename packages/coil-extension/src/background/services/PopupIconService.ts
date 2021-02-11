@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify'
 
 import * as tokens from '../../types/tokens'
 import { Icons } from '../consts/Icons'
-import { getMonthAndDay, isNewYears, isXMASPeriod } from '../../util/seasons'
+import { TabState } from '../../types/TabState'
 
 @injectable()
 export class PopupIconService {
@@ -11,25 +11,11 @@ export class PopupIconService {
     private api: typeof window.chrome
   ) {}
 
-  getActive() {
-    const [month, day, date] = getMonthAndDay()
-    if (isXMASPeriod(month, day)) {
-      return Icons.ActiveXMAS
-    } else if (isNewYears(month, day, date)) {
-      return Icons.ActiveNewYears
-    } else {
-      return Icons.Active
+  forTabState(state: Pick<TabState, 'iconPrimary' | 'iconSecondary'>) {
+    let iconKey = state.iconPrimary || 'inactive'
+    if (state.iconSecondary) {
+      iconKey += `-${state.iconSecondary}`
     }
-  }
-
-  getInactive() {
-    const [month, day, date] = getMonthAndDay()
-    if (isXMASPeriod(month, day)) {
-      return Icons.InactiveXMAS
-    } else if (isNewYears(month, day, date)) {
-      return Icons.InactiveNewYears
-    } else {
-      return Icons.Inactive
-    }
+    return Icons[iconKey]
   }
 }

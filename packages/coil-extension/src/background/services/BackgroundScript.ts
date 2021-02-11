@@ -101,6 +101,7 @@ export class BackgroundScript {
     this.handleStreamsAbortEvent()
     this.popup.setDefaultInactive()
     this.framesService.monitor()
+    this.bindOnInstalled()
     // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
   }
@@ -946,6 +947,14 @@ export class BackgroundScript {
     frames.forEach(frameId => {
       const tabId = request.data.frame.tabId
       this.api.tabs.sendMessage(tabId, request, { frameId })
+    })
+  }
+
+  private bindOnInstalled() {
+    this.api.runtime.onInstalled.addListener(details => {
+      if (details.reason === 'install') {
+        this.api.tabs.create({ url: `${this.coilDomain}/signup` })
+      }
     })
   }
 }

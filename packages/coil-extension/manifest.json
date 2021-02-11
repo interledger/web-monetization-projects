@@ -10,10 +10,10 @@
     }
   },
   "icons": {
-    "128": "res/icn-coil-on.png"
+    "128": "res/icn-coil-ext@4x.png"
   },
   "browser_action": {
-    "default_icon": "res/icn-coil-off.png",
+    "default_icon": "res/icn-coil-ext@4x.png",
     "default_popup": "static/popup.html"
   },
   "background": {
