@@ -12,11 +12,6 @@ import TabIconDetails = chrome.browserAction.TabIconDetails
 
 type Action = (tab: chrome.tabs.Tab) => void
 
-function extname(p: string) {
-  const m = p.match(/\.\w+$/)
-  return m ? m[0] : ''
-}
-
 @injectable()
 export class PopupBrowserAction {
   private readonly openLogin: () => void
@@ -104,7 +99,6 @@ export class PopupBrowserAction {
         tabId,
         path: path
       }
-      console.log('SETICON', path, state.iconPrimary, state.iconSecondary)
       const changed =
         this.lastSetIconCallArgs.path !== args.path ||
         this.lastSetIconCallArgs.tabId !== args.tabId

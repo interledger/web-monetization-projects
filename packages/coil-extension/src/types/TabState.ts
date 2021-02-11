@@ -20,10 +20,5 @@ export interface TabState {
   playState: PlayOrPauseState
   iconPrimary?: 'active' | 'inactive'
   iconSecondary?: 'unavailable' | 'streaming' | 'streaming-paused' | null
-  badge?: {
-    text: string
-    name?: string
-    color?: string
-  }
   frameStates: Record<number, FrameState>
 }
