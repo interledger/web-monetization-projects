@@ -3,13 +3,11 @@ export function openTab(api: typeof window.chrome, url: string) {
     const existingTab = tabs.find(el => {
       return el.url === url
     })
-
     if (existingTab == null) {
       api.tabs.create({ url })
     } else if (existingTab.id != null) {
-      api.tabs.get(existingTab.id, tab => {
-        api.tabs.highlight({ tabs: tab.index })
-      })
+      // Active needed on Samsung Internet
+      api.tabs.update(existingTab.id, { highlighted: true, active: true })
     }
   })
 }
