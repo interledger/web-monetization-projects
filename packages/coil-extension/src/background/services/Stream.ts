@@ -168,8 +168,10 @@ export class Stream extends EventEmitter {
 
         connection.once('close', () => {
           stream.removeListener('outgoing_money', onMoney)
+          // Cap paid tokens at 1.0 -- partial payment in flat-stacks may cause
+          // client-apparent overpayment (even though no overpayment occurred).
           this._schedule.onSent(
-            +connection.totalSent / redeemedToken.throughput / 60
+            Math.min(1.0, +connection.totalSent / redeemedToken.throughput / 60)
           )
         })
 
