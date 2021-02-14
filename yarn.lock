@@ -1533,7 +1533,7 @@ __metadata:
     json5: ^2.2.0
     lerna: ^3.22.1
     lint-staged: ^10.5.4
-    npm-check-updates: ^11.1.1
+    npm-check-updates: ^11.1.3
     prettier: ^2.2.1
     reduct: ^3.3.1
     rimraf: ^3.0.2
@@ -6637,6 +6637,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"boxen@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "boxen@npm:5.0.0"
+  dependencies:
+    ansi-align: ^3.0.0
+    camelcase: ^6.2.0
+    chalk: ^4.1.0
+    cli-boxes: ^2.2.1
+    string-width: ^4.2.0
+    type-fest: ^0.20.2
+    widest-line: ^3.1.0
+    wrap-ansi: ^7.0.0
+  checksum: 2e7f20652542dd57badcac6800d919f8eddc220d7ef6e4b5ba59f48f0fbb02f9c03f03146a16963f11f64cefaeb8d698357b358378f425524026888dd030e089
+  languageName: node
+  linkType: hard
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -7520,7 +7536,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cli-boxes@npm:^2.2.0":
+"cli-boxes@npm:^2.2.0, cli-boxes@npm:^2.2.1":
   version: 2.2.1
   resolution: "cli-boxes@npm:2.2.1"
   checksum: 1d39df5628a44779727cc32496fff73933f22723c0ef572c043a3fa5d9b4b88024416ff92db582076b275bdf7d7f460fc7e5fa7eb8e88d3226f08233963083a7
@@ -11840,6 +11856,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"global-dirs@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "global-dirs@npm:3.0.0"
+  dependencies:
+    ini: 2.0.0
+  checksum: 6dc9b39f0730ec7946ba992c0e9a991c8af6d1b7e691915c86edc17af27d369948dedef031fab56d094fc2fdb2ecd92d78a6179212f1fd292c337214483c55b6
+  languageName: node
+  linkType: hard
+
 "global@npm:^4.3.0":
   version: 4.4.0
   resolution: "global@npm:4.4.0"
@@ -12245,12 +12270,12 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"hosted-git-info@npm:^3.0.2, hosted-git-info@npm:^3.0.7":
-  version: 3.0.7
-  resolution: "hosted-git-info@npm:3.0.7"
+"hosted-git-info@npm:^3.0.2, hosted-git-info@npm:^3.0.8":
+  version: 3.0.8
+  resolution: "hosted-git-info@npm:3.0.8"
   dependencies:
     lru-cache: ^6.0.0
-  checksum: 010f06d5a6ac76d9b4b258e3719fc7cd9cc9beea51478afd7db0648f6a6019d8410aef560e09bae6bfc4ba572aa4ed52e62a0a8ae0267c645519e852b9087f42
+  checksum: 686512459ccb7e7eac7833fc4e8e35a0533c0dda5f516025f276ecb620b316010b853c785439ac63702e044ab56b2485cf7e1b088c1f9a46675b9496f7a45683
   languageName: node
   linkType: hard
 
@@ -12885,6 +12910,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"ini@npm:2.0.0":
+  version: 2.0.0
+  resolution: "ini@npm:2.0.0"
+  checksum: 4ad34607409491b6ebe8e7b1e6b06ad1c147851cae5838186e27a906bf33abc1511fb539df7b96bdf8993fc0f81fd3f1e5995812fb616a965d8d4d4ad738bcf5
+  languageName: node
+  linkType: hard
+
 "ini@npm:^1.3.2, ini@npm:^1.3.4, ini@npm:^1.3.5, ini@npm:~1.3.0, ini@npm:~1.3.3":
   version: 1.3.5
   resolution: "ini@npm:1.3.5"
@@ -13311,13 +13343,23 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"is-installed-globally@npm:^0.3.1, is-installed-globally@npm:^0.3.2":
+"is-installed-globally@npm:^0.3.1":
   version: 0.3.2
   resolution: "is-installed-globally@npm:0.3.2"
   dependencies:
     global-dirs: ^2.0.1
     is-path-inside: ^3.0.1
   checksum: 10fc4fb09fe86c0ed5fa21e821607c6e1ca258386787b1aaad3afbe59470d0c3b50b076cbc996173b9b4c0de7d6a8b741aabf9229ab09d6c37ff663e51631529
+  languageName: node
+  linkType: hard
+
+"is-installed-globally@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "is-installed-globally@npm:0.4.0"
+  dependencies:
+    global-dirs: ^3.0.0
+    is-path-inside: ^3.0.2
+  checksum: 65b7adc2ee0c3fcceee14fee9c86341756ccaaaf3cbf42552023d52c62f5d8d49a52e93ffaea2608c9cc6d7ac900cb0b4f6efbd04c9481bb802a96ea4898d0f8
   languageName: node
   linkType: hard
 
@@ -13456,7 +13498,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"is-path-inside@npm:^3.0.1":
+"is-path-inside@npm:^3.0.1, is-path-inside@npm:^3.0.2":
   version: 3.0.2
   resolution: "is-path-inside@npm:3.0.2"
   checksum: 709ba85a713d25fb058a4c2f62e9e7160bcc1a3e48af2f201045cde027fc1efe61a6e1b5c1cf21b8329f764e3649e160976fde14317c1b848caa9c1f31d5beec
@@ -16499,9 +16541,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^11.1.1":
-  version: 11.1.1
-  resolution: "npm-check-updates@npm:11.1.1"
+"npm-check-updates@npm:^11.1.3":
+  version: 11.1.3
+  resolution: "npm-check-updates@npm:11.1.3"
   dependencies:
     chalk: ^4.1.0
     cint: ^8.2.1
@@ -16511,7 +16553,7 @@ fsevents@~2.1.2:
     fp-and-or: ^0.1.3
     get-stdin: ^8.0.0
     globby: ^11.0.2
-    hosted-git-info: ^3.0.7
+    hosted-git-info: ^3.0.8
     json-parse-helpfulerror: ^1.0.3
     jsonlines: ^0.1.1
     libnpmconfig: ^1.2.1
@@ -16528,11 +16570,11 @@ fsevents@~2.1.2:
     semver: ^7.3.4
     semver-utils: ^1.1.4
     spawn-please: ^1.0.0
-    update-notifier: ^5.0.1
+    update-notifier: ^5.1.0
   bin:
     ncu: bin/cli.js
     npm-check-updates: bin/cli.js
-  checksum: a6e06aa24fae55165d2e8d3fa3092b72d15390d727cf94ddc809092a6fe8047796723665ff0b82cabb2e98c222d05f21b85a70021e2551f0ce3cf605ed1d4ec1
+  checksum: 86fdef7c7ee7c755a0b26ca1a1bf4598604928fcaae4cd3e172392abd5c43585d5e950c475b968def92bdb9d164f0ac17fac1a67ce5250f8c228b9fe4328ede7
   languageName: node
   linkType: hard
 
@@ -21652,6 +21694,13 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+"type-fest@npm:^0.20.2":
+  version: 0.20.2
+  resolution: "type-fest@npm:0.20.2"
+  checksum: 1f887bc6150e632fb772fd28e33c22a4ab036c6f484fa9ac2e2115f6cae9d62bba7ca0368e3332b539d85bd2c8391c7bff22ad410abcbc9ab3774d61e250b210
+  languageName: node
+  linkType: hard
+
 "type-fest@npm:^0.3.0":
   version: 0.3.1
   resolution: "type-fest@npm:0.3.1"
@@ -21966,25 +22015,25 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"update-notifier@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "update-notifier@npm:5.0.1"
+"update-notifier@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "update-notifier@npm:5.1.0"
   dependencies:
-    boxen: ^4.2.0
+    boxen: ^5.0.0
     chalk: ^4.1.0
     configstore: ^5.0.1
     has-yarn: ^2.1.0
     import-lazy: ^2.1.0
     is-ci: ^2.0.0
-    is-installed-globally: ^0.3.2
+    is-installed-globally: ^0.4.0
     is-npm: ^5.0.0
     is-yarn-global: ^0.3.0
     latest-version: ^5.1.0
     pupa: ^2.1.1
-    semver: ^7.3.2
+    semver: ^7.3.4
     semver-diff: ^3.1.1
     xdg-basedir: ^4.0.0
-  checksum: 1c1caae030b9c0ac3539baf2a821f3a104f91003afbbb3c3cd79a8c7d76f53055edaeb64773ba79b9433c0c45c0031ce566fb333dbae9038fe49880cd0a78caf
+  checksum: 4011718b76c59fc389f37ae2ece769cd001e9733fbe5c3123453b2b9dea5b31e06319b9f7d72857c1aa16bc817f2434c0adbb22f10e758cb66a098b439136068
   languageName: node
   linkType: hard
 
