@@ -6,12 +6,22 @@ import { DisablingControls } from '../../types/disabling'
 import * as tokens from '../../types/tokens'
 import { LocalStorageProxy } from '../../types/storage'
 import { notNullOrUndef } from '../../util/nullables'
+import { WextApi } from '../../types/wextApi'
 
 import { TabStates } from './TabStates'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { Streams } from './Streams'
 import { StreamAssociations } from './StreamAssociations'
 import { logger, Logger } from './utils'
+
+import StorageChange = chrome.storage.StorageChange
+
+type FrameStates = Array<{
+  frame: FrameSpec
+  disabled: boolean
+  href: string
+  paymentPointer: string | null
+}>
 
 @injectable()
 export class DisablingService {
@@ -21,6 +31,8 @@ export class DisablingService {
   private trace = true
 
   constructor(
+    @inject(tokens.WextApi)
+    private api: WextApi,
     private storageService: StorageService,
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
@@ -36,10 +48,46 @@ export class DisablingService {
         this.applyUrlBlocking(ev, ev.changed.href)
       }
     })
+    this.api.storage.sync.get(stored => {
+      Object.entries(stored).forEach(([key, val]) => {
+        this.disabled[key] = val
+      })
+    })
+    this.api.storage.onChanged.addListener(
+      (
+        changes: { [key: string]: StorageChange },
+        area: 'sync' | 'local' | 'managed'
+      ) => {
+        if (area === 'sync') {
+          const priorState = this.getFrameStates()
+          Object.entries(changes).forEach(([k, v]) => {
+            this.disabled[k] = v.newValue
+          })
+          this.applyNewState(priorState)
+        }
+      }
+    )
+
+    // for (let i = 0; i < 512; i++) {
+    //   this.api.storage.sync.remove('key2=' + i)
+    // }
+    // const keyVals: Record<string, boolean> = {}
+    // for (let i = 0; i < 400; i++) {
+    //   keyVals[`key2=${i}`] = Boolean(Math.random() > 0.5)
+    // }
+    // console.log('SYNC:max items', this.api.storage.sync.MAX_ITEMS)
+    // // this.api.storage.sync.set(keyVals, () => {
+    // //   this.api.storage.sync.get((details)=> {
+    // //     console.log('SYNC:GET', JSON.stringify(details, null, 2), Object.values(details).length)
+    // //   })
+    // // })
   }
 
   setDisabled(key: string, disabled: boolean) {
     this.disabled[key] = disabled
+    if (!this.disabled[key]) {
+      this.api.storage.sync.remove(key)
+    }
   }
 
   getDisabled(key: string): boolean {
@@ -120,7 +168,17 @@ export class DisablingService {
     if (paymentPointer) {
       this.setDisabled(paymentPointer, controls.disablePaymentPointer)
     }
+    this.applyNewState(priorState)
 
+    if (this.trace) {
+      this.log(
+        'handleSetDisabling activeTab after:',
+        JSON.stringify(this.tabStates.get(activeTab), null, 2)
+      )
+    }
+  }
+
+  private applyNewState(priorState: FrameStates) {
     for (const state of priorState) {
       const frame = state.frame
       // Need to reapply
@@ -148,13 +206,6 @@ export class DisablingService {
           }
         }
       }
-    }
-
-    if (this.trace) {
-      this.log(
-        'handleSetDisabling activeTab after:',
-        JSON.stringify(this.tabStates.get(activeTab), null, 2)
-      )
     }
   }
 
