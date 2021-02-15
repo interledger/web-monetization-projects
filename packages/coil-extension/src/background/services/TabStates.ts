@@ -120,7 +120,7 @@ export class TabStates {
 
       case 'disabled':
         this.set(tab, {
-          iconSecondary: 'disabled',
+          iconSecondary: 'disabled'
         })
         break
 

@@ -29,6 +29,11 @@ export interface TabState {
   stickyState: StickyState
   playState: PlayOrPauseState
   iconPrimary?: 'active' | 'inactive'
-  iconSecondary?: 'unavailable' | 'streaming' | 'streaming-paused' | 'disabled' | null
+  iconSecondary?:
+    | 'unavailable'
+    | 'streaming'
+    | 'streaming-paused'
+    | 'disabled'
+    | null
   frameStates: Record<number, FrameState>
 }
