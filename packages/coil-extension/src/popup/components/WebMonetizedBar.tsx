@@ -84,7 +84,10 @@ const BlockSwitch = withStyles({
   switchBase: {
     color: Colors.Grey89,
     '&$checked': {
-      color: Colors.Red200
+      color: Colors.Red200,
+      '& + $track': {
+        opacity: 1
+      }
     },
     '&$checked + $track': {
       backgroundColor: Colors.Red500
