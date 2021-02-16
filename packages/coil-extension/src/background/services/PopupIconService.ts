@@ -12,7 +12,7 @@ export class PopupIconService {
   ) {}
 
   forTabState(state: Pick<TabState, 'iconPrimary' | 'iconSecondary'>) {
-    let iconKey = state.iconPrimary || 'inactive'
+    let iconKey = state.iconPrimary
     if (state.iconSecondary) {
       iconKey += `-${state.iconSecondary}`
     }

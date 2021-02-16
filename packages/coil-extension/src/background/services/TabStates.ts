@@ -58,6 +58,7 @@ export class TabStates {
     const state: TabState = {
       playState: 'playing',
       stickyState: 'auto',
+      iconPrimary: 'inactive',
       disabling: {
         disableDomain: false,
         disablePaymentPointer: false,

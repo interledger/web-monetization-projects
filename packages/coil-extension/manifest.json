@@ -32,5 +32,7 @@
       "run_at": "document_start"
     }
   ],
-  "permissions": [ "webNavigation", "<all_urls>", "contextMenus", "storage" ]
+  "permissions": [ "webNavigation", "<all_urls>", "contextMenus", "storage" ],
+  "key_comment": "The extension must have the same id for chrome.storage.sync to work?",
+  "key_disabled": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA14i/iPZHcqcO2sIMqDeOv42vA9zKlvIWvkn5XxNMRGTA8cG6BWexrWCvZisnBBGUPqGwJJgd96ClwmG/HwtjGpnlXzNZ2cUEBxtjBgD1xR/iYAJ8+gzfmI6ySCejRXB1NPvzjBaPBNdukdGjSPdz/DJ63S1ts+yPk1wyTnMIfb9XSuYk9z2lVKBaNcO31dMifxHRiHuBY5NFmqLQculAwh4BXYyEJoMzVRXJyFu/oN1H9nVGL3Pm2v52Ib8RLf0PJjTgoZNWDqPHj6+FfISrkv5dw0y5WhB8CcY/aVBfS7anKz6EeWq6TZyz84x/OKkVFHIKEaSv4kuvhaoexqOlzQIDAQAB"
 }

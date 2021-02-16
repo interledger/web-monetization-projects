@@ -28,7 +28,7 @@ export interface TabState {
   disabling: DisablingControls
   stickyState: StickyState
   playState: PlayOrPauseState
-  iconPrimary?: 'active' | 'inactive'
+  iconPrimary: 'inactive' | 'active'
   iconSecondary?:
     | 'unavailable'
     | 'streaming'

@@ -50,6 +50,7 @@ export class DisablingService {
     })
     this.api.storage.sync.get(stored => {
       Object.entries(stored).forEach(([key, val]) => {
+        this.log('Setting disabled', key, val)
         this.disabled[key] = val
       })
     })
@@ -61,6 +62,7 @@ export class DisablingService {
         if (area === 'sync') {
           const priorState = this.getFrameStates()
           Object.entries(changes).forEach(([k, v]) => {
+            this.log('storage onChanged', k, JSON.stringify(v))
             this.disabled[k] = v.newValue
           })
           this.applyNewState(priorState)
@@ -220,6 +222,10 @@ export class DisablingService {
       const tabState = this.tabStates.get(tabId)
       for (const frameId of Object.keys(tabState.frameStates).map(Number)) {
         const frame: FrameSpec = { frameId, tabId }
+        if (!this.framesService.getFrame(frame)) {
+          this.log('warning, frame missing', JSON.stringify(frame))
+          continue
+        }
         const state = tabState.frameStates[frameId]
         ret.push({
           frame,
