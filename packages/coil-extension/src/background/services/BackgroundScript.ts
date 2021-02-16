@@ -658,15 +658,26 @@ export class BackgroundScript {
     sender: MessageSender
   ) {
     const frame = getFrameSpec(sender)
+    const monetizationDetails = { ...request.data }
+
+    try {
+      // normalize here in the entry point of payment pointers to the system
+      monetizationDetails.paymentPointer = resolvePaymentEndpoint(
+        monetizationDetails.paymentPointer
+      )
+    } catch (e) {
+      console.warn(e)
+    }
+
     // we can assume that it's interactive at this point (non idle, visible)
     // TODO: just default to true?
     this.tabStates.setFrame(frame, { interactive: true })
     const { tabId, frameId } = frame
     this.disabling.applyPaymentPointerBlocking(
       frame,
-      request.data.paymentPointer
+      monetizationDetails.paymentPointer
     )
-    this.tabStates.setFrame(frame, { monetizationDetails: request.data })
+    this.tabStates.setFrame(frame, { monetizationDetails })
 
     this.tabStates.logLastMonetizationCommand(frame, 'start')
     const disabled = this.disabling.checkIsFrameDisabled(frame)
@@ -677,11 +688,13 @@ export class BackgroundScript {
     }
 
     // This used to be sent from content script as a separate message
-    this.mayMonetizeSite(sender, request.data.initiatingUrl)
+    this.mayMonetizeSite(sender, monetizationDetails.initiatingUrl)
 
     // This may throw so do after mayMonetizeSite has had a chance to set
     // the page as being monetized (or attempted to be)
-    const spspEndpoint = resolvePaymentEndpoint(request.data.paymentPointer)
+    const spspEndpoint = resolvePaymentEndpoint(
+      monetizationDetails.paymentPointer
+    )
 
     const userBeforeReAuth = this.store.user
     let emittedPending = false
@@ -697,7 +710,7 @@ export class BackgroundScript {
     }
 
     this.log('startWebMonetization, request', request)
-    const { requestId } = request.data
+    const { requestId } = monetizationDetails
 
     this.log('loading token for monetization', requestId)
     const token = await this.auth.getTokenMaybeRefreshAndStoreState()
@@ -734,8 +747,8 @@ export class BackgroundScript {
     this.streams.beginStream(requestId, {
       token,
       spspEndpoint,
-      ...request.data,
-      initiatingUrl: request.data.initiatingUrl
+      ...monetizationDetails,
+      initiatingUrl: monetizationDetails.initiatingUrl
     })
 
     if (lastCommand === 'pause') {

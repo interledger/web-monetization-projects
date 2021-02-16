@@ -66,6 +66,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
   const WEXT_MANIFEST_SUFFIX_NO_DATE = process.env.WEXT_MANIFEST_SUFFIX_NO_DATE
   const WEXT_MANIFEST_VERSION = process.env.WEXT_MANIFEST_VERSION
+  const WEXT_MANIFEST_KEY = process.env.WEXT_MANIFEST_KEY
   const WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID =
     process.env.WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
 
@@ -81,6 +82,9 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
             const date = new Date().toLocaleString().replace(/(\/|,|\s)+/g, '-')
             manifest.name += `-${date}`
           }
+        }
+        if (WEXT_MANIFEST_KEY) {
+          manifest.key = WEXT_MANIFEST_KEY
         }
         if (WEXT_MANIFEST_VERSION) {
           manifest.version = WEXT_MANIFEST_VERSION

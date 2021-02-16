@@ -54,6 +54,8 @@ export class DisablingService {
         this.disabled[key] = val
       })
     })
+    // This will be fired even in instances of the extension that actually
+    // directly caused the change.
     this.api.storage.onChanged.addListener(
       (
         changes: { [key: string]: StorageChange },
@@ -87,7 +89,14 @@ export class DisablingService {
 
   setDisabled(key: string, disabled: boolean) {
     this.disabled[key] = disabled
-    if (!this.disabled[key]) {
+    if (disabled) {
+      this.api.storage.sync.set({ [key]: true })
+    } else {
+      // We only have 512 properties that we can store using storage.sync
+      // so we must use them sparingly.
+
+      // Set `false` by omission of `true`
+      // TODO: does this trigger an onChange ?
       this.api.storage.sync.remove(key)
     }
   }
@@ -222,6 +231,7 @@ export class DisablingService {
       const tabState = this.tabStates.get(tabId)
       for (const frameId of Object.keys(tabState.frameStates).map(Number)) {
         const frame: FrameSpec = { frameId, tabId }
+        // TODO: why are the tabStates out of sync with framesService?
         if (!this.framesService.getFrame(frame)) {
           this.log('warning, frame missing', JSON.stringify(frame))
           continue
@@ -261,7 +271,7 @@ export class DisablingService {
       notNullOrUndef(this.framesService.getFrame(frame)?.href)
     )
     const { href, origin } = urlObject
-    // TODO: normalize
+    // normalizing is done in BackgroundScript#startWebMonetization
     if (paymentPointer && this.getDisabled(paymentPointer)) {
       return true
     }

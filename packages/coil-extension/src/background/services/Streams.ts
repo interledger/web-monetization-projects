@@ -68,8 +68,4 @@ export class Streams extends EventEmitter {
   getStream(id: string) {
     return this._streams[id]
   }
-
-  getStreams() {
-    return Object.entries(this._streams)
-  }
 }

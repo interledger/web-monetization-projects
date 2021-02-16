@@ -13,6 +13,9 @@ export interface FrameState {
   // started or resumed, vs paused
   // interactive means the frame hasn't idled or been made invisible
   interactive: boolean
+  // Make sure the payment pointer is normalized to an url
+  // disabling depends upon this
+  // TODO: cleaner way ?
   monetizationDetails: PaymentDetails | null
   // Tracks the total amount of `source` money sent (not was received)
   total: number
