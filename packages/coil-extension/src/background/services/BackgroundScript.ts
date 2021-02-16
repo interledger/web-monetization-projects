@@ -665,6 +665,7 @@ export class BackgroundScript {
       monetizationDetails.paymentPointer = resolvePaymentEndpoint(
         monetizationDetails.paymentPointer
       )
+      // will throw again later
     } catch (e) {
       console.warn(e)
     }
