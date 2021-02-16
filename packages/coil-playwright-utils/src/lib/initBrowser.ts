@@ -1,10 +1,12 @@
 import getPort from 'get-port'
 import webExt, { RunOptions } from 'web-ext'
-import { BrowserContext, chromium, firefox } from 'playwright'
-import * as tmp from 'tmp'
+import { BrowserContext, launch, connect, ProductLauncher } from 'puppeteer'
 
 import * as env from './env'
 import { debug } from './debug'
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const puppeteer: ProductLauncher = require('puppeteer')
 
 const JUGGLER_MESSAGE = `Juggler listening on`
 
@@ -36,6 +38,8 @@ export async function initBrowser({
   loadExtension = true,
   browser = env.BROWSER_TYPE
 }: InitBrowserOptions = {}): Promise<BrowserContext> {
+  process.env.PUPPETEER_PRODUCT = browser
+
   const args = []
   const headless1 = env.IS_CI ? false : env.HEADLESS
 
@@ -59,11 +63,9 @@ export async function initBrowser({
       args.push('--no-sandbox')
     }
 
-    const dirResult = tmp.dirSync()
-    process.on('beforeExit', dirResult.removeCallback)
-    return chromium.launchPersistentContext(dirResult.name, {
+    const launched = await launch({
       headless: headless1,
-      chromiumSandbox: false,
+      // chromiumSandbox: false,
       // Logout tests may fail unless using this viewport size
       devtools: env.DEVTOOLS,
       slowMo: 0,
@@ -71,11 +73,12 @@ export async function initBrowser({
       args,
       ...viewOptions
     })
+    return launched.defaultBrowserContext()
   } else {
     const port = await getPort()
     const getJugglerEndpoint = jugglerEndpointWatcher()
     const options: RunOptions = {
-      firefox: firefox.executablePath(),
+      firefox: puppeteer.executablePath(),
       sourceDir: env.EXTENSION_PATH,
       args: [`-juggler=${port}`]
     }
@@ -85,10 +88,10 @@ export async function initBrowser({
       shouldExitProgram: false
     })
 
-    const ff = await firefox.connect({
-      wsEndpoint: getJugglerEndpoint()
+    const ff = await connect({
+      browserWSEndpoint: getJugglerEndpoint()
     })
 
-    return ff.newContext({ viewport: viewOptions.viewport })
+    return ff.defaultBrowserContext()
   }
 }

@@ -1,4 +1,4 @@
-import { Page } from 'playwright'
+import { Page } from 'puppeteer'
 
 import {
   CF_ACCESS_CLIENT_ID,

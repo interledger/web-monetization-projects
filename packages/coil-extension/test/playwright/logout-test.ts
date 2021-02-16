@@ -3,7 +3,7 @@
   closed after logout.
 */
 
-import { Page } from 'playwright'
+import { Page } from 'puppeteer'
 import {
   debug,
   initBrowserAndLoginFromEnv,

@@ -1504,8 +1504,8 @@ __metadata:
     jss: ^10.5.1
     lerna: ^3.22.1
     lint-staged: ^10.5.4
-    playwright: 1.3.x
     prettier: ^2.2.1
+    puppeteer: ^7.1.0
     react: ^16.14.0
     react-dom: ^16.14.0
     reduct: ^3.3.1
@@ -1629,8 +1629,8 @@ __metadata:
     lerna: ^3.22.1
     lint-staged: ^10.5.4
     node-fetch: ^2.6.1
-    playwright: 1.3.x
     prettier: ^2.2.1
+    puppeteer: ^7.1.0
     reduct: ^3.3.1
     rimraf: ^3.0.2
     ts-jest: ^26.5.1
@@ -1689,8 +1689,8 @@ __metadata:
     jest: ^26.6.3
     lerna: ^3.22.1
     lint-staged: ^10.5.4
-    playwright: 1.3.x
     prettier: ^2.2.1
+    puppeteer: ^7.1.0
     rimraf: ^3.0.2
     tmp: ^0.2.1
     ts-jest: ^26.5.1
@@ -6963,6 +6963,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"buffer@npm:^5.2.1":
+  version: 5.7.1
+  resolution: "buffer@npm:5.7.1"
+  dependencies:
+    base64-js: ^1.3.1
+    ieee754: ^1.1.13
+  checksum: 1750ac396eb36e0157ff5299509723ac0681338ef6cd40b039bc86d59c8b9a9494e99db992836eb6d637de0b270b53ec1a62d4a1c9faeaa51468cc340e553984
+  languageName: node
+  linkType: hard
+
 "buffer@npm:^6.0.3":
   version: 6.0.3
   resolution: "buffer@npm:6.0.3"
@@ -9014,6 +9024,13 @@ __metadata:
   version: 2.0.4
   resolution: "detect-node@npm:2.0.4"
   checksum: e7648a5a91dd5e91838d14f0e9631f2adf0117cc271ea86d8ce394a8fbe8fc7545755c8261faaf4b1e196795a10da99e5d5f1013163ba0f6260a57b0ba29cc60
+  languageName: node
+  linkType: hard
+
+"devtools-protocol@npm:0.0.847576":
+  version: 0.0.847576
+  resolution: "devtools-protocol@npm:0.0.847576"
+  checksum: bbd4d99e8a930b190d46aa930c072ef990c1f1b1caa77b05a3d979b51faa0c7eb0776df69f824e73493f19e0dda01c2530c4e0ef69e9c4933c0d59a01c32307d
   languageName: node
   linkType: hard
 
@@ -12685,7 +12702,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ieee754@npm:^1.1.4, ieee754@npm:^1.2.1":
+"ieee754@npm:^1.1.13, ieee754@npm:^1.1.4, ieee754@npm:^1.2.1":
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
   checksum: 6c1cfab995ecab3b0dbb6cfb7e192686eb02f0f8e788f2d962e1fc02e2d5ab38a85e06d417221f136bd029663a77cdb920d99605d68d3730a05597dd7910426a
@@ -14324,13 +14341,6 @@ fsevents@~2.1.2:
   version: 1.4.0
   resolution: "jju@npm:1.4.0"
   checksum: a58023d40e8e262366e95175dec782c7dc6ad94f2ad1fafe91f675ca6177505b4a8e679cec49c800acb8ceab9391856c7c03e871b30ef0590115d081fad814b9
-  languageName: node
-  linkType: hard
-
-"jpeg-js@npm:^0.4.0":
-  version: 0.4.2
-  resolution: "jpeg-js@npm:0.4.2"
-  checksum: 8a837504942e9f16c5984a1977f0cfd6f78e5beee3f01bc6682462abf5a8605a6e1777c6910bdf54cbbaef73794db831be8d05f138d5793d568b1ae5217e254a
   languageName: node
   linkType: hard
 
@@ -16052,6 +16062,13 @@ fsevents@~2.1.2:
     for-in: ^1.0.2
     is-extendable: ^1.0.1
   checksum: 68da98bc1af57ffccde7abdc86ac49feec263b73b3c483ab7e6e2fab9aa2b06fba075da9e86bcda725133c1d2a59e4c810a17b55865c67c827871c25d5713c33
+  languageName: node
+  linkType: hard
+
+"mkdirp-classic@npm:^0.5.2":
+  version: 0.5.3
+  resolution: "mkdirp-classic@npm:0.5.3"
+  checksum: b3c46c62840bdc82c2a5bee417e4e7518a8109d32a85a6dc67bdcfecbe6aff5cfc73cdb98844a61178ddd8ac75743f977857f0badd6e12d14fd18cf1639e41a1
   languageName: node
   linkType: hard
 
@@ -17956,24 +17973,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"playwright@npm:1.3.x":
-  version: 1.3.0
-  resolution: "playwright@npm:1.3.0"
-  dependencies:
-    debug: ^4.1.1
-    extract-zip: ^2.0.0
-    https-proxy-agent: ^5.0.0
-    jpeg-js: ^0.4.0
-    mime: ^2.4.4
-    pngjs: ^5.0.0
-    progress: ^2.0.3
-    proxy-from-env: ^1.1.0
-    rimraf: ^3.0.2
-    ws: ^6.1.0
-  checksum: 5b056003168b30b8de342aaa26d8bf052dbfba62a14303c8577af1c73c41ed4138bb093f2ce7845086731b8eca02736a92c9baecb2bf6d031a68477c87a25a2b
-  languageName: node
-  linkType: hard
-
 "please-upgrade-node@npm:^3.2.0":
   version: 3.2.0
   resolution: "please-upgrade-node@npm:3.2.0"
@@ -17987,13 +17986,6 @@ fsevents@~2.1.2:
   version: 1.2.1
   resolution: "pluralize@npm:1.2.1"
   checksum: 86cae3decdc23c176aaf82a10bfe5283da5072586e3c136d8d5c260dcd8d551c7437a266854dcbf93074e84b015cdb10177bbd65938d269ca9aaaa7453c16596
-  languageName: node
-  linkType: hard
-
-"pngjs@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "pngjs@npm:5.0.0"
-  checksum: 2b8d7eeafd947449b7dc3908e1a983d366a7c98ea01f44e9b42a9608f60faa6667f55b342739746ead810d6909e8fd0d994f0a59502d43f39d93e85214259652
   languageName: node
   linkType: hard
 
@@ -18447,6 +18439,26 @@ fsevents@~2.1.2:
     rimraf: ^2.6.1
     ws: ^6.1.0
   checksum: 34c6ed5829325a11a9dfbf63c422dec057680bd36b640f610cabbcb105fb3b02510ef844fa99883a461e971b68b3e542e786a3d2dea5414b805ebeea3e8f14fe
+  languageName: node
+  linkType: hard
+
+"puppeteer@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "puppeteer@npm:7.1.0"
+  dependencies:
+    debug: ^4.1.0
+    devtools-protocol: 0.0.847576
+    extract-zip: ^2.0.0
+    https-proxy-agent: ^5.0.0
+    node-fetch: ^2.6.1
+    pkg-dir: ^4.2.0
+    progress: ^2.0.1
+    proxy-from-env: ^1.1.0
+    rimraf: ^3.0.2
+    tar-fs: ^2.0.0
+    unbzip2-stream: ^1.3.3
+    ws: ^7.2.3
+  checksum: b813e682a538ff0a7d29361d95681ef5a0b8fdd06bf86426e259cc42c4df41a03a7af7707e39dbbf293a67d1d91cb0896bb502157dfe2e3a67b271cd9df1b5f9
   languageName: node
   linkType: hard
 
@@ -21096,6 +21108,18 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+"tar-fs@npm:^2.0.0":
+  version: 2.1.1
+  resolution: "tar-fs@npm:2.1.1"
+  dependencies:
+    chownr: ^1.1.1
+    mkdirp-classic: ^0.5.2
+    pump: ^3.0.0
+    tar-stream: ^2.1.4
+  checksum: 4739382487b6ed646670a52cac637c818ecdceb728eb4718847dfdaddd7322d8cce2ea9db160ba8ad2920194034fda7c307b44f4eeb50d244f198bd7e28f2914
+  languageName: node
+  linkType: hard
+
 "tar-stream@npm:^1.5.0":
   version: 1.6.2
   resolution: "tar-stream@npm:1.6.2"
@@ -21872,6 +21896,16 @@ sjcl@sublimator/sjcl:
   version: 1.1.0
   resolution: "umask@npm:1.1.0"
   checksum: d9bb200f64cb1318ed598fee371c15068b22dbf5b573b14fe174bcd832588e589b3368955aed530edbea874ce9dee6a15b16a2a2638a9f9bd3eccff36ce4f9e5
+  languageName: node
+  linkType: hard
+
+"unbzip2-stream@npm:^1.3.3":
+  version: 1.4.3
+  resolution: "unbzip2-stream@npm:1.4.3"
+  dependencies:
+    buffer: ^5.2.1
+    through: ^2.3.8
+  checksum: 779446eed1d66898a9cb5c674826a68ecef4d49861dec438e0720767a4151b463659af570deb70f416a41185be81ce99360ddc002c03ea44baaa42191194ef5a
   languageName: node
   linkType: hard
 
