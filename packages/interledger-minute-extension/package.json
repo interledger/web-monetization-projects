@@ -68,7 +68,7 @@
     "@types/react-dom": "^16.9.11",
     "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
-    "@typescript-eslint/parser": "^4.14.2",
+    "@typescript-eslint/parser": "^4.15.1",
     "@wext/shipit": "^0.2.1",
     "JSON2016": "^1.0.0",
     "addons-linter": "^2.18.0",
