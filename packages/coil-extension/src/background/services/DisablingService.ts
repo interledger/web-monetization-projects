@@ -48,6 +48,8 @@ export class DisablingService {
         this.applyUrlBlocking(ev, ev.changed.href)
       }
     })
+    // TODO: possible races on startup ?
+    // do we need to getFrameStates() -> applyNewState() ?
     this.api.storage.sync.get(stored => {
       Object.entries(stored).forEach(([key, val]) => {
         this.log('Setting disabled', key, val)
@@ -65,7 +67,8 @@ export class DisablingService {
           const priorState = this.getFrameStates()
           Object.entries(changes).forEach(([k, v]) => {
             this.log('storage onChanged', k, JSON.stringify(v))
-            this.disabled[k] = v.newValue
+            // newValue will be undefined in the case of storage.sync.clear(k)
+            this.disabled[k] = Boolean(v.newValue)
           })
           this.applyNewState(priorState)
         }
