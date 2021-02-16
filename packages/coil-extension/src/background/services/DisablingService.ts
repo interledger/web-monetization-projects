@@ -49,6 +49,7 @@ export class DisablingService {
       }
     })
     // TODO: possible races on startup ?
+    // TODO: handle case of >= MAX_ITEMS
     // do we need to getFrameStates() -> applyNewState() ?
     this.api.storage.sync.get(stored => {
       Object.entries(stored).forEach(([key, val]) => {
