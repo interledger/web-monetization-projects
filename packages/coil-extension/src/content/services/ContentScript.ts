@@ -166,7 +166,8 @@ export class ContentScript {
             assetCode: request.data.assetCode,
             assetScale: request.data.assetScale,
             paymentPointer: request.data.paymentPointer,
-            requestId: request.data.requestId
+            requestId: request.data.requestId,
+            receipt: request.data.receipts ? request.data.receipts[0] : ''
           }
           this.monetization.dispatchMonetizationProgressEvent(detail)
         } else if (request.command === 'clearToken') {

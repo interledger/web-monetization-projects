@@ -724,37 +724,46 @@ export class BackgroundScript {
     }
 
     const receiver = stream.getPaymentPointer()
-    const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
-    const amount = Math.floor(1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
 
     try {
       this.log(`sendTip: sending tip to ${receiver}`)
       const result = await this.client.query({
         query: `
           mutation sendTip($receiver: String!) {
-            sendTip(receiver: $receiver) {
+            sendTip(receiver: $receiver, requestId: $streamId) {
               success
+              amount
+              currency
+              scale
+              receipts
             }
           }
         `,
         token,
         variables: {
-          receiver
+          receiver,
+          streamId
         }
       })
-      this.log(`sendTip: sent tip to ${receiver}`, result)
-      const message: TipSent = {
-        command: 'tip',
-        data: {
-          paymentPointer: receiver,
-          requestId: streamId,
-          amount,
-          assetCode,
-          assetScale
+      if (result.data.success) {
+        this.log(`sendTip: sent tip to ${receiver}`, result)
+        const message: TipSent = {
+          command: 'tip',
+          data: {
+            paymentPointer: receiver,
+            requestId: streamId,
+            amount: result.data.amount,
+            assetCode: result.data.currency,
+            assetScale: result.data.scale,
+            receipts: result.data.receipts
+          }
         }
+        this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
+        return { success: true }
+      } else {
+        this.log('sendTip: error. failed at franklin call.')
+        return { success: false }
       }
-      this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
-      return { success: true }
     } catch (e) {
       this.log(`sendTip: error. msg=${e.message}`)
       return { success: false }
