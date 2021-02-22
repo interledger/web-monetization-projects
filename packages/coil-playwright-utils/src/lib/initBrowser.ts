@@ -1,6 +1,6 @@
 import getPort from 'get-port'
 import webExt, { RunOptions } from 'web-ext'
-import { BrowserContext, launch, connect, ProductLauncher } from 'puppeteer'
+import { BrowserContext, ProductLauncher } from 'puppeteer'
 
 import * as env from './env'
 import { debug } from './debug'
@@ -63,7 +63,8 @@ export async function initBrowser({
       args.push('--no-sandbox')
     }
 
-    const launched = await launch({
+    console.log('launching browser')
+    const launched = await puppeteer.launch({
       headless: headless1,
       // chromiumSandbox: false,
       // Logout tests may fail unless using this viewport size
@@ -88,7 +89,7 @@ export async function initBrowser({
       shouldExitProgram: false
     })
 
-    const ff = await connect({
+    const ff = await puppeteer.connect({
       browserWSEndpoint: getJugglerEndpoint()
     })
 
