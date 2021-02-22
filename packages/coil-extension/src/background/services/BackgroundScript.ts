@@ -951,10 +951,12 @@ export class BackgroundScript {
   }
 
   private bindOnInstalled() {
-    this.api.runtime.onInstalled.addListener(details => {
-      if (details.reason === 'install') {
-        this.api.tabs.create({ url: `${this.coilDomain}/signup` })
-      }
-    })
+    if (!this.buildConfig.isCI) {
+      this.api.runtime.onInstalled.addListener(details => {
+        if (details.reason === 'install') {
+          this.api.tabs.create({ url: `${this.coilDomain}/signup` })
+        }
+      })
+    }
   }
 }

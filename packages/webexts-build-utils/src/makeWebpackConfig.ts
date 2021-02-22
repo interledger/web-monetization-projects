@@ -56,6 +56,8 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
     ? JSON.parse(process.env.WEXT_BUILD_CONFIG)
     : {}
 
+  WEXT_BUILD_CONFIG.isCI = Boolean(process.env.CI)
+
   // Possible to override name/version so can publish as different extension
   const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
   const WEXT_MANIFEST_SUFFIX_NO_DATE = process.env.WEXT_MANIFEST_SUFFIX_NO_DATE
