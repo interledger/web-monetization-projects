@@ -1,12 +1,9 @@
 import getPort from 'get-port'
 import webExt, { RunOptions } from 'web-ext'
-import { BrowserContext, ProductLauncher } from 'puppeteer'
+import { BrowserContext, default as puppeteer } from 'puppeteer'
 
 import * as env from './env'
 import { debug } from './debug'
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const puppeteer: ProductLauncher = require('puppeteer')
 
 const JUGGLER_MESSAGE = `Juggler listening on`
 
@@ -63,7 +60,6 @@ export async function initBrowser({
       args.push('--no-sandbox')
     }
 
-    console.log('launching browser')
     const launched = await puppeteer.launch({
       headless: headless1,
       // chromiumSandbox: false,
@@ -78,8 +74,10 @@ export async function initBrowser({
   } else {
     const port = await getPort()
     const getJugglerEndpoint = jugglerEndpointWatcher()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const puppeteerAny = puppeteer as any
     const options: RunOptions = {
-      firefox: puppeteer.executablePath(),
+      firefox: puppeteerAny.executablePath(),
       sourceDir: env.EXTENSION_PATH,
       args: [`-juggler=${port}`]
     }
