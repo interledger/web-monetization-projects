@@ -56,7 +56,7 @@
     "@types/react": "^16.14.4",
     "@types/react-dom": "^16.9.11",
     "@types/uuid": "^8.3.0",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.1",
     "JSON2016": "^1.0.0",
     "copy-webpack-plugin": "^7.0.0",
