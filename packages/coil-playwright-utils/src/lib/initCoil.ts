@@ -57,7 +57,8 @@ export async function initCoil({
     // TODO: chromium no longer allows injection of the iframe into the
     //  background page, so reload coil.com so the content script can get the
     // access token.
-    await page.reload()
+    await page.reload({ waitUntil: 'domcontentloaded' })
+    await timeout(1e3)
   }
 
   return { context, page }
