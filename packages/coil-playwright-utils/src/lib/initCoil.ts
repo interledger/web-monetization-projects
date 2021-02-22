@@ -30,7 +30,7 @@ export async function initCoil({
   password
 }: InitCoilParameters): Promise<InitCoilReturn> {
   const page = await context.newPage() // (await context.pages())[0]
-  await timeout(1e3)
+  await timeout(3e3)
   // After the first request, the `CF_Authorization` cookie is set which
   // seems to work in the extension background page.
   await addCloudFlareAccessHeaders(page)
@@ -60,6 +60,7 @@ export async function initCoil({
     await page.reload({ waitUntil: 'domcontentloaded' })
     await page.reload({ waitUntil: 'domcontentloaded' })
     await timeout(1e3)
+    console.log('LOGGED IN and reloaded 2x')
   }
 
   return { context, page }
