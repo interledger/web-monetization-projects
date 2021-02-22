@@ -29,7 +29,7 @@ export async function initCoil({
   user,
   password
 }: InitCoilParameters): Promise<InitCoilReturn> {
-  const page = await context.newPage() // (await context.pages())[0]
+  const page = (await context.pages())[0]
   await timeout(3e3)
   // After the first request, the `CF_Authorization` cookie is set which
   // seems to work in the extension background page.
