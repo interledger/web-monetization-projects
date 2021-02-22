@@ -58,6 +58,7 @@ export async function initCoil({
     //  background page, so reload coil.com so the content script can get the
     // access token.
     await page.reload({ waitUntil: 'domcontentloaded' })
+    await page.reload({ waitUntil: 'domcontentloaded' })
     await timeout(1e3)
   }
 
