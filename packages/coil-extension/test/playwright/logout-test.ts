@@ -65,6 +65,7 @@ function checkCondition({
 
 async function run() {
   const { context, page: coilPage } = await initBrowserAndLoginFromEnv()
+  await timeout(3e3)
 
   const results: Record<string, TestPageResults> = {}
   let initSuccess = true

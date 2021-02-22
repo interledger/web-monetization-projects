@@ -29,7 +29,7 @@ export async function initCoil({
   user,
   password
 }: InitCoilParameters): Promise<InitCoilReturn> {
-  const page = (await context.pages())[0]
+  const page = await context.newPage() // (await context.pages())[0]
   await timeout(1e3)
   // After the first request, the `CF_Authorization` cookie is set which
   // seems to work in the extension background page.
@@ -54,6 +54,10 @@ export async function initCoil({
     await page.keyboard.type(password)
     await page.click(nextSelector)
     await page.waitForNavigation()
+    // TODO: chromium no longer allows injection of the iframe into the
+    //  background page, so reload coil.com so the content script can get the
+    // access token.
+    await page.reload()
   }
 
   return { context, page }
