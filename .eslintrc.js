@@ -15,9 +15,7 @@ let config = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'prettier/react'
+    'prettier'
   ],
   plugins: ['@typescript-eslint', 'react', 'jest', 'import', 'prettier'],
   rules: {
