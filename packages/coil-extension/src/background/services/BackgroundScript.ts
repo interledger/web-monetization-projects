@@ -104,6 +104,8 @@ export class BackgroundScript {
     this.bindOnInstalled()
     // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
+
+    this.sendLoginStateToContentScriptPeriodically()
   }
 
   private setTabsOnActivatedListener() {
@@ -958,5 +960,13 @@ export class BackgroundScript {
         }
       })
     }
+  }
+
+  private sendLoginStateToContentScriptPeriodically() {
+    setInterval(() => {
+      if (this.activeTab) {
+        this.api.tabs.sendMessage(this.activeTab, () => {})
+      }
+    }, 5e3)
   }
 }

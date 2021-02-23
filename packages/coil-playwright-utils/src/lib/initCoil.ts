@@ -31,10 +31,10 @@ export async function initCoil({
 }: InitCoilParameters): Promise<InitCoilReturn> {
   const page = (await context.pages())[0]
 
-  const page2 = await context.newPage()
-  await page2.goto(
-    'chrome-extension://poahcjebhgbnlgdbigecpljijhjanafi/static/popup.html'
-  )
+  // const page2 = await context.newPage()
+  // await page2.goto(
+  //   'chrome-extension://poahcjebhgbnlgdbigecpljijhjanafi/static/popup.html'
+  // )
   // await timeout(5e3)
 
   page.on('console', (consoleObj: { text(): string }) =>
@@ -72,19 +72,19 @@ export async function initCoil({
     // access token.
     await page.reload({ waitUntil: 'domcontentloaded' })
     await page.reload({ waitUntil: 'domcontentloaded' })
-    const token = await page2.evaluate(function () {
-      return localStorage.token
-    })
-    console.log(
-      'TOKEN',
-      token
-        ? token
-            .split('.')
-            .map((s: string) => Buffer.from(s, 'base64'))[1]
-            .toString()
-        : null
-    )
-    await timeout(1e3)
+    // const token = await page2.evaluate(function () {
+    //   return localStorage.token
+    // })
+    // console.log(
+    //   'TOKEN',
+    //   token
+    //     ? token
+    //         .split('.')
+    //         .map((s: string) => Buffer.from(s, 'base64'))[1]
+    //         .toString()
+    //     : null
+    // )
+    // await timeout(1e3)
     console.log('LOGGED IN and reloaded 2x')
   }
 
