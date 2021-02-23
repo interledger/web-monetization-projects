@@ -978,7 +978,7 @@ export class BackgroundScript {
           haveUser: Boolean(this.store.user)
         })
         this.logInActiveTab(log)
-        while (this.activeTabLogger.logs) {
+        while (this.activeTabLogger.logs.length) {
           const log = this.activeTabLogger.logs.shift()
           this.logInActiveTab(`BufferedLog: ${log}`)
         }
