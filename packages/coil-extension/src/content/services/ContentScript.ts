@@ -80,6 +80,10 @@ export class ContentScript {
       this.window,
       this.document,
       ({ started, stopped }) => {
+        console.log(
+          'MonetizationTagObserver',
+          JSON.stringify({ stopped, started })
+        )
         if (stopped) {
           stopMonetization(stopped)
         }
