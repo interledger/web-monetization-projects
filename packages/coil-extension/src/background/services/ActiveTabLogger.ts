@@ -4,7 +4,7 @@ import * as tokens from '../../types/tokens'
 
 @injectable()
 export class ActiveTabLogger {
-  public logs = []
+  public logs: string[] = []
   constructor(
     @inject(tokens.WextApi)
     private api = chrome
