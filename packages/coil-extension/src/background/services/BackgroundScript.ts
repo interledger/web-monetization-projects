@@ -441,7 +441,7 @@ export class BackgroundScript {
     // When logged out siteToken will be an empty string so normalize it to
     // null
     const newest = this.auth.syncSiteToken(siteToken || null)
-    this.logInActiveTab('injectToken')
+    this.logInActiveTab('injectToken: ' + Date.now())
     void this.auth.getTokenMaybeRefreshAndStoreState()
     return newest
   }
