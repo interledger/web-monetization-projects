@@ -52,6 +52,12 @@ export async function testMonetization({
     localStorage['debug'] = 'coil-extension:*'
   })
 
+  page.on('console', (consoleObj: { text(): string }) =>
+    console.log('CONSOLE', consoleObj.text())
+  )
+
+  await page.bringToFront()
+
   let nthEvent = 0
   const statesSeen = new Set<MonetizationState>()
   const eventsSeen = new Set<MonetizationEventType>()
