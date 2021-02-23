@@ -29,7 +29,22 @@ export class AuthService extends EventEmitter {
     super()
   }
 
+  promise: Promise<string | null> | null = null
+
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
+    if (!this.promise) {
+      this.promise = this.doGetTokenMaybeRefreshAndStoreState()
+      this.promise.catch(() => {
+        this.promise = null
+      })
+      this.promise.then(() => {
+        this.promise = null
+      })
+    }
+    return this.promise
+  }
+
+  async doGetTokenMaybeRefreshAndStoreState(): Promise<string | null> {
     this.activeTabs.log('getTokenMaybeRefreshAndStoreState')
     let token = this.getStoredToken()
     this.trace('storedToken', { domain: this.domain, token })
