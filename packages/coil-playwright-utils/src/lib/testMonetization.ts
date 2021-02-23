@@ -53,10 +53,8 @@ export async function testMonetization({
   })
 
   page.on('console', (consoleObj: { text(): string }) =>
-    console.log('CONSOLE', consoleObj.text())
+    console.log('TEST MONETIZATION CONSOLE:', consoleObj.text())
   )
-
-  await page.bringToFront()
 
   let nthEvent = 0
   const statesSeen = new Set<MonetizationState>()
@@ -153,6 +151,7 @@ export async function testMonetization({
   }
 
   await Promise.all([page.waitForNavigation(), page.goto(url)])
+  await page.bringToFront()
 
   // noinspection ES6MissingAwait
   const timeoutPromise = new Promise<boolean>(resolve => {
