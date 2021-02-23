@@ -38,7 +38,9 @@ export class AuthService extends EventEmitter {
     this.trace('siteToken', token)
 
     if (!token || tokenUtils.isExpired({ token })) {
-      this.activeTabs.log(`token is expired! token=${tokenUtils.decode(token)}`)
+      this.activeTabs.log(
+        `token is expired! token=${token && tokenUtils.decode(token)}`
+      )
       token = null
     } else if (tokenUtils.isExpired({ token, withinHrs: 12 })) {
       // Update the stored token/user
