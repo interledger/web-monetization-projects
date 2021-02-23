@@ -46,6 +46,8 @@ import MessageSender = chrome.runtime.MessageSender
 import { BuildConfig } from '../../types/BuildConfig'
 import { debug } from '../../content/util/logging'
 
+import { ActiveTabLogger } from './ActiveTabLogger'
+
 @injectable()
 export class BackgroundScript {
   constructor(
@@ -59,6 +61,7 @@ export class BackgroundScript {
     private store: LocalStorageProxy,
     private auth: AuthService,
     private youtube: YoutubeService,
+    private activeTabLogger: ActiveTabLogger,
     private framesService: BackgroundFramesService,
 
     @logger('BackgroundScript')
@@ -975,6 +978,10 @@ export class BackgroundScript {
           haveUser: Boolean(this.store.user)
         })
         this.logInActiveTab(log)
+        while (this.activeTabLogger.logs) {
+          const log = this.activeTabLogger.logs.shift()
+          this.logInActiveTab(`BufferedLog: ${log}`)
+        }
       }
     }, 5e3)
   }
