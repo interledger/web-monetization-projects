@@ -658,12 +658,16 @@ export class BackgroundScript {
       // not signed in.
       // eslint-disable-next-line no-console
       console.warn('startWebMonetization cancelled; no token')
+      this.logInActiveTab('startWebMonetization cancelled; no token')
       this.sendSetMonetizationStateMessage(frame, 'stopped')
       return false
     }
     if (!this.store.user?.subscription?.active) {
       this.sendSetMonetizationStateMessage(frame, 'stopped')
       this.log('startWebMonetization cancelled; no active subscription')
+      this.logInActiveTab(
+        'startWebMonetization cancelled; no active subscription'
+      )
       return false
     }
 
@@ -965,18 +969,23 @@ export class BackgroundScript {
   private sendLoginStateToContentScriptPeriodically() {
     setInterval(() => {
       if (this.activeTab) {
-        const message = {
-          command: 'logInActiveTab',
-          data: {
-            log: JSON.stringify({
-              haveValidToken: Boolean(this.store.validToken),
-              user: this.store.user,
-              haveUser: Boolean(this.store.user)
-            })
-          }
-        }
-        this.api.tabs.sendMessage(this.activeTab, message)
+        const log = JSON.stringify({
+          haveValidToken: Boolean(this.store.validToken),
+          user: this.store.user,
+          haveUser: Boolean(this.store.user)
+        })
+        this.logInActiveTab(log)
       }
     }, 5e3)
+  }
+
+  private logInActiveTab(log: string) {
+    const message = {
+      command: 'logInActiveTab',
+      data: {
+        log: log
+      }
+    }
+    this.api.tabs.sendMessage(this.activeTab, message)
   }
 }
