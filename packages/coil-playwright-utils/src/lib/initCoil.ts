@@ -30,6 +30,19 @@ export async function initCoil({
   password
 }: InitCoilParameters): Promise<InitCoilReturn> {
   const page = (await context.pages())[0]
+
+  const page2 = await context.newPage()
+  await page2.goto(
+    'chrome-extension://poahcjebhgbnlgdbigecpljijhjanafi/static/popup.html'
+  )
+  // await timeout(5e3)
+
+  page.on('console', (consoleObj: { text(): string }) =>
+    console.log('CONSOLE', consoleObj.text())
+  )
+
+  await page.bringToFront()
+
   await timeout(3e3)
   // After the first request, the `CF_Authorization` cookie is set which
   // seems to work in the extension background page.
@@ -59,6 +72,18 @@ export async function initCoil({
     // access token.
     await page.reload({ waitUntil: 'domcontentloaded' })
     await page.reload({ waitUntil: 'domcontentloaded' })
+    const token = await page2.evaluate(function () {
+      return localStorage.token
+    })
+    console.log(
+      'TOKEN',
+      token
+        ? token
+            .split('.')
+            .map(s => Buffer.from(s, 'base64'))[1]
+            .toString()
+        : null
+    )
     await timeout(1e3)
     console.log('LOGGED IN and reloaded 2x')
   }

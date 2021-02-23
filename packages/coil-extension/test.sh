@@ -23,7 +23,7 @@ fi
 #   https://github.com/microsoft/playwright/issues/1959#issuecomment-619069349
 #   DEBUG=pw:browser* node test.js,
 
-export DEBUG='coil*,puppeteer:*'
+export DEBUG='coil*'
 
 # shellcheck disable=SC2086
 yarn $COMMAND \
