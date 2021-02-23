@@ -10,7 +10,8 @@ export class ActiveTabLogger {
   ) {}
 
   log(log: string) {
-    this.api.tabs.getCurrent(tab => {
+    this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
+      const tab = tabs[0]
       if (tab?.id != null) {
         const message = {
           command: 'logInActiveTab',
