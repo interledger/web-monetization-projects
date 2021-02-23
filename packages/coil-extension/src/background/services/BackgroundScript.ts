@@ -440,8 +440,10 @@ export class BackgroundScript {
     }
     // When logged out siteToken will be an empty string so normalize it to
     // null
-    this.auth.syncSiteToken(siteToken || null)
-    return this.auth.getTokenMaybeRefreshAndStoreState()
+    const newest = this.auth.syncSiteToken(siteToken || null)
+    this.logInActiveTab('injectToken')
+    void this.auth.getTokenMaybeRefreshAndStoreState()
+    return newest
   }
 
   setFrameMonetized(
