@@ -14,6 +14,7 @@ import { ActiveTabLogger } from './ActiveTabLogger'
 export class AuthService extends EventEmitter {
   // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
   private trace = (..._: unknown[]) => {}
+
   constructor(
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
@@ -29,11 +30,19 @@ export class AuthService extends EventEmitter {
   }
 
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
+    this.activeTabs.log('getTokenMaybeRefreshAndStoreState')
     let token = this.getStoredToken()
     this.trace('storedToken', { domain: this.domain, token })
+    this.activeTabs.log(
+      `getStoredToken ${JSON.stringify({
+        domain: this.domain,
+        token: Boolean(token)
+      })}`
+    )
 
     if (!token) {
       token = await this.siteToken.retrieve()
+      this.activeTabs.log('siteToken: ' + Boolean(token))
     }
     this.trace('siteToken', token)
 
