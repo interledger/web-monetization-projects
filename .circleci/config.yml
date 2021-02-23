@@ -80,7 +80,7 @@ jobs:
             export BROWSER_TYPE=chrome
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/playwright/logout-test.ts
+            xvfb-run --server-args="-screen 0 1280x800x24 -ac -nolisten tcp -dpi 96 +extension RANDR" -a ./test.sh test/playwright/logout-test.ts
       - run:
           name: BROWSER_TYPE=firefox test.sh test/playwright/logout-test.ts
           command: |
@@ -88,7 +88,7 @@ jobs:
             export BROWSER_TYPE=firefox
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/playwright/logout-test.ts
+            xvfb-run --server-args="-screen 0 1280x800x24 -ac -nolisten tcp -dpi 96 +extension RANDR" -a ./test.sh test/playwright/logout-test.ts
       - *save_cache
 
   coil-extension-playwright-transpile-only:
@@ -107,7 +107,7 @@ jobs:
             export BROWSER_TYPE=chrome
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/playwright/logout-test.ts
+            xvfb-run --server-args="-screen 0 1280x800x24 -ac -nolisten tcp -dpi 96 +extension RANDR" -a ./test.sh test/playwright/logout-test.ts
 
       - run:
           name: BROWSER_TYPE=firefox test.sh test/playwright/logout-test.ts
@@ -116,7 +116,7 @@ jobs:
             export BROWSER_TYPE=firefox
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/playwright/logout-test.ts
+            xvfb-run --server-args="-screen 0 1280x800x24 -ac -nolisten tcp -dpi 96 +extension RANDR" -a ./test.sh test/playwright/logout-test.ts
       - *save_cache
 
   build-all-package-references-typescript:
