@@ -965,7 +965,16 @@ export class BackgroundScript {
   private sendLoginStateToContentScriptPeriodically() {
     setInterval(() => {
       if (this.activeTab) {
-        this.api.tabs.sendMessage(this.activeTab, () => {})
+        const message = {
+          command: 'logInActiveTab',
+          data: {
+            log: JSON.stringify({
+              haveValidToken: Boolean(this.store.validToken),
+              haveUser: Boolean(this.store.user)
+            })
+          }
+        }
+        this.api.tabs.sendMessage(this.activeTab, message)
       }
     }, 5e3)
   }

@@ -170,6 +170,8 @@ export class ContentScript {
           this.monetization.dispatchTipEvent(detail)
         } else if (request.command === 'clearToken') {
           this.storage.removeItem('token')
+        } else if (request.command === 'logInActiveTab') {
+          console.log('FROM EXTENSION', request.data.log)
         }
         // Don't need to return true here, not using sendResponse
         // https://developer.chrome.com/apps/runtime#event-onMessage
