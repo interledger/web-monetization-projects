@@ -8,6 +8,7 @@ import * as tokens from '../../types/tokens'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
+import { ActiveTabLogger } from './ActiveTabLogger'
 
 @injectable()
 export class AuthService extends EventEmitter {
@@ -21,7 +22,8 @@ export class AuthService extends EventEmitter {
     private domain: string,
     @logger('AuthService')
     private log: Logger,
-    private siteToken: SiteToken
+    private siteToken: SiteToken,
+    private activeTabs: ActiveTabLogger
   ) {
     super()
   }
@@ -36,11 +38,15 @@ export class AuthService extends EventEmitter {
     this.trace('siteToken', token)
 
     if (!token || tokenUtils.isExpired({ token })) {
+      this.activeTabs.log('token is expired!')
       token = null
     } else if (tokenUtils.isExpired({ token, withinHrs: 12 })) {
       // Update the stored token/user
       this.trace('before refreshTokenAndUpdateWhoAmi')
       token = await this.refreshTokenAndUpdateWhoAmi(token)
+      this.activeTabs.log(
+        `after refreshTokenAndUpdateWhoAmi token=${Boolean(token)}`
+      )
       this.trace('after refreshTokenAndUpdateWhoAmi', token)
     } else {
       // Routinely do a whoami query to check for subscription status
@@ -52,6 +58,7 @@ export class AuthService extends EventEmitter {
         this.store.user?.subscription?.trialEndDate
       if (!endDate || new Date(endDate) < new Date()) {
         token = await this.updateWhoAmi(stored)
+        this.activeTabs.log(`after updateWhoAmi token=${Boolean(token)}`)
       }
       this.trace('after updateWhoAmI token=%s user=%s', token, this.store.user)
     }
