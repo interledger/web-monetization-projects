@@ -80,7 +80,7 @@ export async function initCoil({
       token
         ? token
             .split('.')
-            .map(s => Buffer.from(s, 'base64'))[1]
+            .map((s: string) => Buffer.from(s, 'base64'))[1]
             .toString()
         : null
     )
