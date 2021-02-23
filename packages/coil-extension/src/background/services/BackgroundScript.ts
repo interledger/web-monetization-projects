@@ -970,6 +970,7 @@ export class BackgroundScript {
           data: {
             log: JSON.stringify({
               haveValidToken: Boolean(this.store.validToken),
+              user: this.store.user,
               haveUser: Boolean(this.store.user)
             })
           }
