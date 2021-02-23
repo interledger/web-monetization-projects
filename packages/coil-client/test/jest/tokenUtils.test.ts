@@ -1,6 +1,11 @@
 import assert from 'assert'
 
-import { CoilTokenUtils, DecodedToken, decodeToken } from '@coil/client'
+import {
+  CoilTokenUtils,
+  DecodedToken,
+  decodeToken,
+  tokenUtils
+} from '@coil/client'
 
 import { testToken } from '../fixtures/testToken'
 
