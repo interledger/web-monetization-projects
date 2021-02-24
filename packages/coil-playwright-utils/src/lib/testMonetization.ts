@@ -7,7 +7,7 @@ import {
   MonetizationState,
   MonetizationStopEvent
 } from '@web-monetization/types'
-import { BrowserContext, Page } from 'playwright'
+import { BrowserContext, Page } from 'puppeteer'
 
 import { env, timeout } from '../index'
 
@@ -30,6 +30,7 @@ export interface TestPageResults {
   page: Page
   url: string
   stoppedPromise: Promise<OnMonetizationEvent>
+  details: any
 }
 
 export interface TestPageParameters {
@@ -48,9 +49,13 @@ export async function testMonetization({
   const page = newPage ? await context.newPage() : (await context.pages())[0]
 
   // Show the extension debugging
-  await page.addInitScript(() => {
+  await page.evaluateOnNewDocument(() => {
     localStorage['debug'] = 'coil-extension:*'
   })
+
+  page.on('console', (consoleObj: { text(): string }) =>
+    debug('TEST MONETIZATION CONSOLE:', consoleObj.text())
+  )
 
   let nthEvent = 0
   const statesSeen = new Set<MonetizationState>()
@@ -62,11 +67,12 @@ export async function testMonetization({
   const stoppedPromise = new Promise<OnMonetizationEvent>(resolve => {
     resolveStopped = resolve
   })
-
+  const events: { event: MonetizationEvent; monetizationState: string }[] = []
   const monetizePromise = new Promise<boolean>(resolve => {
     void page.exposeFunction(
       'onCustomEvent',
       (e: MonetizationEvent, monetizationState: MonetizationState) => {
+        events.push({ event: e, monetizationState })
         eventsSeen.add(e.type)
         statesSeen.add(monetizationState)
 
@@ -103,7 +109,7 @@ export async function testMonetization({
           }
         } else if (listenStopped && e.type === 'monetizationstop') {
           if (resolveStopped) {
-            resolveStopped({ event: e, state: monetizationState })
+            resolveStopped({ nthEvent, event: e, state: monetizationState })
           }
         }
         if (nthEvent === 3) {
@@ -114,7 +120,7 @@ export async function testMonetization({
   })
 
   async function listenFor(type: string) {
-    return page.addInitScript((type: MonetizationEventType) => {
+    return page.evaluateOnNewDocument((type: MonetizationEventType) => {
       const setListener = () => {
         const winAny = window as any
         const docAny: MonetizationExtendedDocument = document as any
@@ -147,6 +153,7 @@ export async function testMonetization({
   }
 
   await Promise.all([page.waitForNavigation(), page.goto(url)])
+  await timeout(2e3)
 
   // noinspection ES6MissingAwait
   const timeoutPromise = new Promise<boolean>(resolve => {
@@ -162,5 +169,16 @@ export async function testMonetization({
   }
   debug('seen states: %s, events: %s', statesSeen, eventsSeen)
   debug('document.monetization.state', state)
-  return { stoppedPromise, page, success: success && state === 'started', url }
+  return {
+    stoppedPromise,
+    page,
+    success: success && state === 'started',
+    url,
+    details: {
+      statesSeen: statesSeen.values(),
+      eventsSeen: eventsSeen.values(),
+      state,
+      events
+    }
+  }
 }

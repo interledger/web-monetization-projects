@@ -6,7 +6,7 @@ import * as pathMod from 'path'
 
 import { env, initBrowser, testMonetization } from '@coil/playwright-utils'
 import * as coilClient from '@coil/client'
-import { BrowserContext } from 'playwright'
+import { BrowserContext } from 'puppeteer'
 
 const fromHere = (path: string) => pathMod.resolve(__dirname, path)
 const readFileAsync = promisify(readFile)
@@ -87,7 +87,7 @@ beforeAll(async () => {
 afterAll(async () => {
   await promisify(httpServer.close.bind(httpServer))
   httpServer.unref()
-  await context.close()
+  await context.browser().close()
 })
 
 describe('OAuthScripts', () => {

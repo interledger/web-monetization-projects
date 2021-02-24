@@ -3,7 +3,7 @@
   closed after logout.
 */
 
-import { Page } from 'playwright'
+import { Page } from 'puppeteer'
 import {
   debug,
   initBrowserAndLoginFromEnv,
@@ -21,7 +21,6 @@ import { testUrls } from './testUrls'
 async function checkMonetizationState(
   page: Page
 ): Promise<{ state: string; hasMonetizationMeta: boolean }> {
-  await page.bringToFront()
   // TODO: monetizationstop event ;)
   await timeout(500)
 
@@ -65,6 +64,8 @@ function checkCondition({
 
 async function run() {
   const { context, page: coilPage } = await initBrowserAndLoginFromEnv()
+  // // TODO: need wait here for auth ?
+  await timeout(3e3)
 
   const results: Record<string, TestPageResults> = {}
   let initSuccess = true
@@ -76,6 +77,7 @@ async function run() {
       context,
       url: urls[site]
     })
+    debug('result.details =' + JSON.stringify(result.details))
     if (!result.success) {
       debug('test page failed to open stream. page=', site)
       initSuccess = false
@@ -90,6 +92,7 @@ async function run() {
     failMessage: 'One or more test pages failed to open a payment stream.',
     exitOnSuccess: false
   })
+  await timeout(2000)
   await logoutCoil(coilPage)
   let logoutSuccess = true
   debug('testing pages for logout')

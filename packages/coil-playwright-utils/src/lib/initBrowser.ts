@@ -1,7 +1,9 @@
+import * as fs from 'fs'
+import * as os from 'os'
+
 import getPort from 'get-port'
 import webExt, { RunOptions } from 'web-ext'
-import { BrowserContext, chromium, firefox } from 'playwright'
-import * as tmp from 'tmp'
+import { BrowserContext, default as puppeteer } from 'puppeteer'
 
 import * as env from './env'
 import { debug } from './debug'
@@ -21,11 +23,10 @@ function jugglerEndpointWatcher() {
 
   return () => {
     // Parse firefox logs and extract juggler endpoint.
-    const message = webExt.util.logger.consoleStream.capturedMessages.find(
-      msg => msg.includes(JUGGLER_MESSAGE)
-    )
+    const captured = webExt.util.logger.consoleStream.capturedMessages
+    const message = captured.find(msg => msg.includes(JUGGLER_MESSAGE))
     if (!message) {
-      throw new Error(`Can not find Juggler endpoint`)
+      throw new Error(`Can not find Juggler endpoint:\n ${captured.join('\n')}`)
     }
     webExt.util.logger.consoleStream.stopCapturing()
     return message.split(JUGGLER_MESSAGE)[1].trim()
@@ -36,6 +37,8 @@ export async function initBrowser({
   loadExtension = true,
   browser = env.BROWSER_TYPE
 }: InitBrowserOptions = {}): Promise<BrowserContext> {
+  process.env.PUPPETEER_PRODUCT = browser
+
   const args = []
   const headless1 = env.IS_CI ? false : env.HEADLESS
 
@@ -59,11 +62,9 @@ export async function initBrowser({
       args.push('--no-sandbox')
     }
 
-    const dirResult = tmp.dirSync()
-    process.on('beforeExit', dirResult.removeCallback)
-    return chromium.launchPersistentContext(dirResult.name, {
+    const launched = await puppeteer.launch({
       headless: headless1,
-      chromiumSandbox: false,
+      // chromiumSandbox: false,
       // Logout tests may fail unless using this viewport size
       devtools: env.DEVTOOLS,
       slowMo: 0,
@@ -71,11 +72,23 @@ export async function initBrowser({
       args,
       ...viewOptions
     })
+    return launched.defaultBrowserContext()
   } else {
     const port = await getPort()
     const getJugglerEndpoint = jugglerEndpointWatcher()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const puppeteerAny = puppeteer as any
+    const root: string = puppeteerAny._launcher._projectRoot
+    const localFF = root + '/.local-firefox'
+    const [revision] = fs.readdirSync(localFF)
+
+    const exec =
+      os.platform() === 'linux'
+        ? `${localFF}/${revision}/firefox/firefox`
+        : puppeteerAny.executablePath()
+
     const options: RunOptions = {
-      firefox: firefox.executablePath(),
+      firefox: exec,
       sourceDir: env.EXTENSION_PATH,
       args: [`-juggler=${port}`]
     }
@@ -85,10 +98,10 @@ export async function initBrowser({
       shouldExitProgram: false
     })
 
-    const ff = await firefox.connect({
-      wsEndpoint: getJugglerEndpoint()
+    const ff = await puppeteer.connect({
+      browserWSEndpoint: getJugglerEndpoint()
     })
 
-    return ff.newContext({ viewport: viewOptions.viewport })
+    return ff.defaultBrowserContext()
   }
 }

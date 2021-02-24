@@ -1,7 +1,8 @@
-import { Browser, BrowserContext, Page } from 'playwright'
+import { BrowserContext, Page } from 'puppeteer'
 
 import { COIL_DOMAIN, COIL_TOKEN } from './env'
 import { timeout } from './timeout'
+import { debug } from './debug'
 import { addCloudFlareAccessHeaders } from './addCloudFlareAccessHeaders'
 
 export interface InitCoilParameters {
@@ -29,7 +30,14 @@ export async function initCoil({
   user,
   password
 }: InitCoilParameters): Promise<InitCoilReturn> {
-  const page = await context.newPage()
+  const page = (await context.pages())[0]
+
+  page.on('console', (consoleObj: { text(): string }) =>
+    debug('CONSOLE', consoleObj.text())
+  )
+
+  await timeout(3e3)
+
   // After the first request, the `CF_Authorization` cookie is set which
   // seems to work in the extension background page.
   await addCloudFlareAccessHeaders(page)

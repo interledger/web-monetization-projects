@@ -8,11 +8,13 @@ import * as tokens from '../../types/tokens'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
+import { ActiveTabLogger } from './ActiveTabLogger'
 
 @injectable()
 export class AuthService extends EventEmitter {
   // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
   private trace = (..._: unknown[]) => {}
+
   constructor(
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
@@ -21,26 +23,57 @@ export class AuthService extends EventEmitter {
     private domain: string,
     @logger('AuthService')
     private log: Logger,
-    private siteToken: SiteToken
+    private siteToken: SiteToken,
+    private activeTabs: ActiveTabLogger
   ) {
     super()
   }
 
+  private _op: Promise<string | null> | null = null
+
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
+    this.activeTabs.log(`getTokenMaybeRefreshAndStoreState ${Date.now()}`)
+    if (!this._op) {
+      this._op = this.doGetTokenMaybeRefreshAndStoreState()
+      this._op.catch(() => {
+        this._op = null
+      })
+      this._op.then(() => {
+        this._op = null
+      })
+    }
+    return this._op
+  }
+
+  async doGetTokenMaybeRefreshAndStoreState(): Promise<string | null> {
+    this.activeTabs.log(`doGetTokenMaybeRefreshAndStoreState ${Date.now()}`)
     let token = this.getStoredToken()
     this.trace('storedToken', { domain: this.domain, token })
+    this.activeTabs.log(
+      `getStoredToken ${JSON.stringify({
+        domain: this.domain,
+        token: Boolean(token)
+      })}`
+    )
 
     if (!token) {
       token = await this.siteToken.retrieve()
+      this.activeTabs.log('siteToken: ' + Boolean(token))
     }
     this.trace('siteToken', token)
 
     if (!token || tokenUtils.isExpired({ token })) {
+      this.activeTabs.log(
+        `token is null || expired! token=${token && tokenUtils.decode(token)}`
+      )
       token = null
     } else if (tokenUtils.isExpired({ token, withinHrs: 12 })) {
       // Update the stored token/user
       this.trace('before refreshTokenAndUpdateWhoAmi')
       token = await this.refreshTokenAndUpdateWhoAmi(token)
+      this.activeTabs.log(
+        `after refreshTokenAndUpdateWhoAmi token=${Boolean(token)}`
+      )
       this.trace('after refreshTokenAndUpdateWhoAmi', token)
     } else {
       // Routinely do a whoami query to check for subscription status
@@ -52,6 +85,7 @@ export class AuthService extends EventEmitter {
         this.store.user?.subscription?.trialEndDate
       if (!endDate || new Date(endDate) < new Date()) {
         token = await this.updateWhoAmi(stored)
+        this.activeTabs.log(`after updateWhoAmi token=${Boolean(token)}`)
       }
       this.trace('after updateWhoAmI token=%s user=%s', token, this.store.user)
     }

@@ -345,6 +345,17 @@ export interface ReportCorrelationIdToParentContentScript {
   }
 }
 
+/**
+ *  background -> content
+ *  browser.tabs.sendMessage
+ */
+export interface LogInActiveTab {
+  command: 'logInActiveTab'
+  data: {
+    log: string
+  }
+}
+
 export type ToContentMessage =
   | CheckAdaptedContent
   | MonetizationProgress
@@ -355,5 +366,6 @@ export type ToContentMessage =
   | OnFrameAllowedChanged
   | TipSent
   | ClearToken
+  | LogInActiveTab
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup

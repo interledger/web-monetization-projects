@@ -170,6 +170,8 @@ export class ContentScript {
           this.monetization.dispatchTipEvent(detail)
         } else if (request.command === 'clearToken') {
           this.storage.removeItem('token')
+        } else if (request.command === 'logInActiveTab') {
+          debug('LOG FROM BG', request.data.log)
         }
         // Don't need to return true here, not using sendResponse
         // https://developer.chrome.com/apps/runtime#event-onMessage
@@ -231,14 +233,15 @@ export class ContentScript {
     const { setWatch } = this.idle.watchPageEvents()
     const runtime = this.runtime
     setWatch({
-      pause: () => {
+      pause: (reason: string) => {
         this.paused = true
         const pause: PauseWebMonetization = {
           command: 'pauseWebMonetization'
         }
         runtime.sendMessage(pause)
       },
-      resume: () => {
+      resume: (reason: string) => {
+        debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
         const resume: ResumeWebMonetization = {
           command: 'resumeWebMonetization'
