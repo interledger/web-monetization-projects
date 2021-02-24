@@ -961,6 +961,7 @@ export class BackgroundScript {
   }
 
   private bindOnInstalled() {
+    // This can mess up the puppeteer tests
     if (!this.buildConfig.isCI) {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
@@ -968,15 +969,5 @@ export class BackgroundScript {
         }
       })
     }
-  }
-
-  private logInActiveTab(log: string) {
-    const message = {
-      command: 'logInActiveTab',
-      data: {
-        log: log
-      }
-    }
-    this.api.tabs.sendMessage(this.activeTab, message)
   }
 }

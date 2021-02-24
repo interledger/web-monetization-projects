@@ -21,7 +21,6 @@ import { testUrls } from './testUrls'
 async function checkMonetizationState(
   page: Page
 ): Promise<{ state: string; hasMonetizationMeta: boolean }> {
-  // await page.bringToFront()
   // TODO: monetizationstop event ;)
   await timeout(500)
 
@@ -65,7 +64,8 @@ function checkCondition({
 
 async function run() {
   const { context, page: coilPage } = await initBrowserAndLoginFromEnv()
-  await timeout(3e3)
+  // // TODO: need wait here for auth ?
+  // await timeout(3e3)
 
   const results: Record<string, TestPageResults> = {}
   let initSuccess = true
@@ -92,7 +92,6 @@ async function run() {
     failMessage: 'One or more test pages failed to open a payment stream.',
     exitOnSuccess: false
   })
-  await timeout(2000)
   await logoutCoil(coilPage)
   let logoutSuccess = true
   debug('testing pages for logout')

@@ -54,7 +54,7 @@ export async function testMonetization({
   })
 
   page.on('console', (consoleObj: { text(): string }) =>
-    console.log('TEST MONETIZATION CONSOLE:', consoleObj.text())
+    debug('TEST MONETIZATION CONSOLE:', consoleObj.text())
   )
 
   let nthEvent = 0

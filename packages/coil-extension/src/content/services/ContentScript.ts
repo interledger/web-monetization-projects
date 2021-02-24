@@ -80,10 +80,6 @@ export class ContentScript {
       this.window,
       this.document,
       ({ started, stopped }) => {
-        console.log(
-          'MonetizationTagObserver',
-          JSON.stringify({ stopped, started })
-        )
         if (stopped) {
           stopMonetization(stopped)
         }
@@ -175,7 +171,7 @@ export class ContentScript {
         } else if (request.command === 'clearToken') {
           this.storage.removeItem('token')
         } else if (request.command === 'logInActiveTab') {
-          console.log('FROM EXTENSION', request.data.log)
+          debug('LOG FROM BG', request.data.log)
         }
         // Don't need to return true here, not using sendResponse
         // https://developer.chrome.com/apps/runtime#event-onMessage

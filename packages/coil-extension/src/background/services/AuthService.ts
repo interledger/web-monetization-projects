@@ -29,20 +29,20 @@ export class AuthService extends EventEmitter {
     super()
   }
 
-  promise: Promise<string | null> | null = null
+  private _op: Promise<string | null> | null = null
 
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
     this.activeTabs.log(`getTokenMaybeRefreshAndStoreState ${Date.now()}`)
-    if (!this.promise) {
-      this.promise = this.doGetTokenMaybeRefreshAndStoreState()
-      this.promise.catch(() => {
-        this.promise = null
+    if (!this._op) {
+      this._op = this.doGetTokenMaybeRefreshAndStoreState()
+      this._op.catch(() => {
+        this._op = null
       })
-      this.promise.then(() => {
-        this.promise = null
+      this._op.then(() => {
+        this._op = null
       })
     }
-    return this.promise
+    return this._op
   }
 
   async doGetTokenMaybeRefreshAndStoreState(): Promise<string | null> {
@@ -64,7 +64,7 @@ export class AuthService extends EventEmitter {
 
     if (!token || tokenUtils.isExpired({ token })) {
       this.activeTabs.log(
-        `token is expired! token=${token && tokenUtils.decode(token)}`
+        `token is null || expired! token=${token && tokenUtils.decode(token)}`
       )
       token = null
     } else if (tokenUtils.isExpired({ token, withinHrs: 12 })) {
