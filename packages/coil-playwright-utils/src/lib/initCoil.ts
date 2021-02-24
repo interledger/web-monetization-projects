@@ -36,6 +36,8 @@ export async function initCoil({
     debug('CONSOLE', consoleObj.text())
   )
 
+  await timeout(3e3)
+
   // After the first request, the `CF_Authorization` cookie is set which
   // seems to work in the extension background page.
   await addCloudFlareAccessHeaders(page)
