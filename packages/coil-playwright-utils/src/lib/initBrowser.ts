@@ -26,7 +26,11 @@ function jugglerEndpointWatcher() {
       msg => msg.includes(JUGGLER_MESSAGE)
     )
     if (!message) {
-      throw new Error(`Can not find Juggler endpoint`)
+      throw new Error(
+        `Can not find Juggler endpoint:\n ${webExt.util.logger.consoleStream.capturedMessages.join(
+          '\n'
+        )}`
+      )
     }
     webExt.util.logger.consoleStream.stopCapturing()
     return message.split(JUGGLER_MESSAGE)[1].trim()
