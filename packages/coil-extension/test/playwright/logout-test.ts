@@ -93,6 +93,7 @@ async function run() {
     exitOnSuccess: false
   })
   await logoutCoil(coilPage)
+  await timeout(2000)
   let logoutSuccess = true
   debug('testing pages for logout')
   for (const page of Object.keys(results)) {
