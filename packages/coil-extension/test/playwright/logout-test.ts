@@ -65,7 +65,7 @@ function checkCondition({
 async function run() {
   const { context, page: coilPage } = await initBrowserAndLoginFromEnv()
   // // TODO: need wait here for auth ?
-  // await timeout(3e3)
+  await timeout(3e3)
 
   const results: Record<string, TestPageResults> = {}
   let initSuccess = true
