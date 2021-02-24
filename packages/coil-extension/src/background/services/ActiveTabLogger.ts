@@ -11,7 +11,7 @@ export class ActiveTabLogger {
   ) {}
 
   log(log: string) {
-    this.logs.push(log)
+    // this.logs.push(log)
     this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
       const tab = tabs[0]
       if (tab?.id != null) {

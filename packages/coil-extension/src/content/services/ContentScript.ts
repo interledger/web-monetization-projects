@@ -237,14 +237,15 @@ export class ContentScript {
     const { setWatch } = this.idle.watchPageEvents()
     const runtime = this.runtime
     setWatch({
-      pause: () => {
+      pause: (reason: string) => {
         this.paused = true
         const pause: PauseWebMonetization = {
           command: 'pauseWebMonetization'
         }
         runtime.sendMessage(pause)
       },
-      resume: () => {
+      resume: (reason: string) => {
+        console.log('resumeWebMonetization reason', reason)
         this.paused = false
         const resume: ResumeWebMonetization = {
           command: 'resumeWebMonetization'

@@ -21,7 +21,7 @@ import { testUrls } from './testUrls'
 async function checkMonetizationState(
   page: Page
 ): Promise<{ state: string; hasMonetizationMeta: boolean }> {
-  await page.bringToFront()
+  // await page.bringToFront()
   // TODO: monetizationstop event ;)
   await timeout(500)
 
@@ -77,6 +77,7 @@ async function run() {
       context,
       url: urls[site]
     })
+    debug('result.details =' + JSON.stringify(result.details))
     if (!result.success) {
       debug('test page failed to open stream. page=', site)
       initSuccess = false
@@ -91,6 +92,7 @@ async function run() {
     failMessage: 'One or more test pages failed to open a payment stream.',
     exitOnSuccess: false
   })
+  await timeout(2000)
   await logoutCoil(coilPage)
   let logoutSuccess = true
   debug('testing pages for logout')

@@ -794,6 +794,7 @@ export class BackgroundScript {
   }
 
   resumeWebMonetization(request: ResumeWebMonetization, sender: MessageSender) {
+    this.logInActiveTab('RESUME MONETIZATION SENT!')
     if (this.tabStates.get(getTab(sender)).playState === 'paused') {
       return
     }
@@ -980,10 +981,10 @@ export class BackgroundScript {
           haveUser: Boolean(this.store.user)
         })
         this.logInActiveTab(log)
-        while (this.activeTabLogger.logs.length) {
-          const log = this.activeTabLogger.logs.shift()
-          this.logInActiveTab(`BufferedLog: ${log}`)
-        }
+        // while (this.activeTabLogger.logs.length) {
+        //   const log = this.activeTabLogger.logs.shift()
+        //   this.logInActiveTab(`BufferedLog: ${log}`)
+        // }
       }
     }, 5e3)
   }
