@@ -154,7 +154,6 @@ export async function testMonetization({
 
   await Promise.all([page.waitForNavigation(), page.goto(url)])
   await timeout(2e3)
-  // await page.bringToFront()
 
   // noinspection ES6MissingAwait
   const timeoutPromise = new Promise<boolean>(resolve => {
