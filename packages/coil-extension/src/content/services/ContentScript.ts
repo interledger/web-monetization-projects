@@ -245,7 +245,7 @@ export class ContentScript {
         runtime.sendMessage(pause)
       },
       resume: (reason: string) => {
-        console.log('resumeWebMonetization reason', reason)
+        debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
         const resume: ResumeWebMonetization = {
           command: 'resumeWebMonetization'
