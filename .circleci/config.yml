@@ -21,7 +21,7 @@ jobs:
 #           echo Restore Cache Dummy!
         restore_cache:
           keys:
-            - v4-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+            - v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
       - &yarn_install
         run:
           name: Yarn Install
@@ -40,7 +40,7 @@ jobs:
           - node_modules
           - .yarn
           - pw-browsers
-          key: v4-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+          key: v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
 
   coil-extension-package:
     docker:

@@ -41,7 +41,7 @@ export async function initCoil({
     console.log('CONSOLE', consoleObj.text())
   )
 
-  await page.bringToFront()
+  // await page.bringToFront()
 
   await timeout(3e3)
   // After the first request, the `CF_Authorization` cookie is set which
@@ -67,12 +67,14 @@ export async function initCoil({
     await page.keyboard.type(password)
     await page.click(nextSelector)
     await page.waitForNavigation()
-    // TODO: chromium no longer allows injection of the iframe into the
-    //  background page, so reload coil.com so the content script can get the
-    // access token.
-    await page.reload({ waitUntil: 'domcontentloaded' })
-    await page.reload({ waitUntil: 'domcontentloaded' })
-    // const token = await page2.evaluate(function () {
+    // // TODO: chromium no longer allows injection of the iframe into the
+    // //  background page, so reload coil.com so the content script can get the
+    // // access token.
+    // await timeout(5000)
+    // await page.reload({ waitUntil: 'domcontentloaded' })
+    // await timeout(5000)
+    // await page.reload({ waitUntil: 'domcontentloaded' })
+    // // const token = await page2.evaluate(function () {
     //   return localStorage.token
     // })
     // console.log(
