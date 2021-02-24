@@ -1,3 +1,5 @@
+import * as fs from 'fs'
+
 import getPort from 'get-port'
 import webExt, { RunOptions } from 'web-ext'
 import { BrowserContext, default as puppeteer } from 'puppeteer'
@@ -76,8 +78,13 @@ export async function initBrowser({
     const getJugglerEndpoint = jugglerEndpointWatcher()
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const puppeteerAny = puppeteer as any
+    const root: string = puppeteerAny._launcher._projectRoot
+    const localFF = root + './local-firefox'
+    const [revision] = fs.readdirSync(localFF)
+    const exec = `${localFF}/${revision}/firefox/firefox`
+
     const options: RunOptions = {
-      firefox: puppeteerAny.executablePath(),
+      firefox: exec,
       sourceDir: env.EXTENSION_PATH,
       args: [`-juggler=${port}`]
     }
