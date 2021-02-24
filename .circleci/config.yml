@@ -83,17 +83,17 @@ jobs:
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/playwright/logout-test.ts
-      - run:
-          name: BROWSER_TYPE=firefox test.sh test/playwright/logout-test.ts
-          command: |
-            cd packages/coil-extension
-            export PUPPETEER_PRODUCT='firefox'
-            yarn rebuild puppeteer
-            export BROWSER_TYPE=firefox
-            [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
-            yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/playwright/logout-test.ts
-      - *save_cache
+      # - run:
+      #     name: BROWSER_TYPE=firefox test.sh test/playwright/logout-test.ts
+      #     command: |
+      #       cd packages/coil-extension
+      #       export PUPPETEER_PRODUCT='firefox'
+      #       yarn rebuild puppeteer
+      #       export BROWSER_TYPE=firefox
+      #       [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
+      #       yarn $build_cmd $BROWSER_TYPE
+      #       xvfb-run -a ./test.sh test/playwright/logout-test.ts
+      # - *save_cache
 
   coil-extension-playwright-transpile-only:
     docker:
@@ -113,17 +113,17 @@ jobs:
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/playwright/logout-test.ts
 
-      - run:
-          name: BROWSER_TYPE=firefox test.sh test/playwright/logout-test.ts
-          command: |
-            cd packages/coil-extension
-            export PUPPETEER_PRODUCT='firefox'
-            yarn rebuild puppeteer
-            export BROWSER_TYPE=firefox
-            [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
-            BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/playwright/logout-test.ts
-      - *save_cache
+      # - run:
+      #     name: BROWSER_TYPE=firefox test.sh test/playwright/logout-test.ts
+      #     command: |
+      #       cd packages/coil-extension
+      #       export PUPPETEER_PRODUCT='firefox'
+      #       yarn rebuild puppeteer
+      #       export BROWSER_TYPE=firefox
+      #       [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
+      #       BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
+      #       xvfb-run -a ./test.sh test/playwright/logout-test.ts
+      # - *save_cache
 
   build-all-package-references-typescript:
     docker:

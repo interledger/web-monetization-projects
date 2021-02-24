@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import * as os from 'os'
 
 import getPort from 'get-port'
 import webExt, { RunOptions } from 'web-ext'
@@ -22,15 +23,10 @@ function jugglerEndpointWatcher() {
 
   return () => {
     // Parse firefox logs and extract juggler endpoint.
-    const message = webExt.util.logger.consoleStream.capturedMessages.find(
-      msg => msg.includes(JUGGLER_MESSAGE)
-    )
+    const captured = webExt.util.logger.consoleStream.capturedMessages
+    const message = captured.find(msg => msg.includes(JUGGLER_MESSAGE))
     if (!message) {
-      throw new Error(
-        `Can not find Juggler endpoint:\n ${webExt.util.logger.consoleStream.capturedMessages.join(
-          '\n'
-        )}`
-      )
+      throw new Error(`Can not find Juggler endpoint:\n ${captured.join('\n')}`)
     }
     webExt.util.logger.consoleStream.stopCapturing()
     return message.split(JUGGLER_MESSAGE)[1].trim()
@@ -85,7 +81,11 @@ export async function initBrowser({
     const root: string = puppeteerAny._launcher._projectRoot
     const localFF = root + '/.local-firefox'
     const [revision] = fs.readdirSync(localFF)
-    const exec = `${localFF}/${revision}/firefox/firefox`
+
+    const exec =
+      os.platform() === 'linux'
+        ? `${localFF}/${revision}/firefox/firefox`
+        : puppeteerAny.executablePath()
 
     const options: RunOptions = {
       firefox: exec,
