@@ -794,6 +794,8 @@ export class BackgroundScript {
   }
 
   resumeWebMonetization(request: ResumeWebMonetization, sender: MessageSender) {
+    // Note that this gets sent regardless of whether actually monetized or not
+    // it's more like 'set tab interactive'
     this.logInActiveTab('RESUME MONETIZATION SENT!')
     if (this.tabStates.get(getTab(sender)).playState === 'paused') {
       return
