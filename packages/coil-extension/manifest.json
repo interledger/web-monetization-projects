@@ -23,7 +23,6 @@
   "web_accessible_resources": [
 
   ],
-  "key": "MIIBCgKCAQEA+QsWaTKmz8pcsDdiAmuJvGWqcim90vCQYKXy1nRl1RJsQi2fjMw6q0FajjJq27TY0KSZe8lwHNeB3TWBuOdRe1ESm8qIpvzh9FVhwo3RuTkxQ5X5jhTUFSOy3kvczvclI43GX+3PcdhBR6K7EngdbBxmB8z1wsFlOh523ByJuCUDlOuCgVa4ZuML7P1/Z0SUFuyJxfl/2H4hkD4OVhkney6AErRD2dL4JC/HiYn4A695K1uMb8qTiqcDFbHc3Lk31JTup7Y4LMillBJee7aaKjx48vLUv0k8zwon7DxqDqupK4iMjAYgkwFOHRlLghLY3SFZC61ww/o7vzruFeUdqwIDAQAB",
   "content_scripts": [
     {
       "matches": ["https://*/*","http://*/*"],

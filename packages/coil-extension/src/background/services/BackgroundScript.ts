@@ -107,8 +107,6 @@ export class BackgroundScript {
     this.bindOnInstalled()
     // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
-
-    this.sendLoginStateToContentScriptPeriodically()
   }
 
   private setTabsOnActivatedListener() {
@@ -441,7 +439,7 @@ export class BackgroundScript {
     // When logged out siteToken will be an empty string so normalize it to
     // null
     const newest = this.auth.syncSiteToken(siteToken || null)
-    this.logInActiveTab('injectToken: ' + Date.now())
+    this.activeTabLogger.log(`injectToken: ${Date.now()}`)
     void this.auth.getTokenMaybeRefreshAndStoreState()
     return newest
   }
@@ -663,14 +661,13 @@ export class BackgroundScript {
       // not signed in.
       // eslint-disable-next-line no-console
       console.warn('startWebMonetization cancelled; no token')
-      this.logInActiveTab('startWebMonetization cancelled; no token')
+      this.activeTabLogger.log('startWebMonetization cancelled; no token')
       this.sendSetMonetizationStateMessage(frame, 'stopped')
       return false
     }
     if (!this.store.user?.subscription?.active) {
       this.sendSetMonetizationStateMessage(frame, 'stopped')
-      this.log('startWebMonetization cancelled; no active subscription')
-      this.logInActiveTab(
+      this.activeTabLogger.log(
         'startWebMonetization cancelled; no active subscription'
       )
       return false
@@ -796,7 +793,6 @@ export class BackgroundScript {
   resumeWebMonetization(request: ResumeWebMonetization, sender: MessageSender) {
     // Note that this gets sent regardless of whether actually monetized or not
     // it's more like 'set tab interactive'
-    this.logInActiveTab('RESUME MONETIZATION SENT!')
     if (this.tabStates.get(getTab(sender)).playState === 'paused') {
       return
     }
@@ -972,23 +968,6 @@ export class BackgroundScript {
         }
       })
     }
-  }
-
-  private sendLoginStateToContentScriptPeriodically() {
-    setInterval(() => {
-      if (this.activeTab) {
-        const log = JSON.stringify({
-          haveValidToken: Boolean(this.store.validToken),
-          user: this.store.user,
-          haveUser: Boolean(this.store.user)
-        })
-        this.logInActiveTab(log)
-        // while (this.activeTabLogger.logs.length) {
-        //   const log = this.activeTabLogger.logs.shift()
-        //   this.logInActiveTab(`BufferedLog: ${log}`)
-        // }
-      }
-    }, 5e3)
   }
 
   private logInActiveTab(log: string) {
