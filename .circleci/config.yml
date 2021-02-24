@@ -10,7 +10,7 @@ jobs:
   # Run Linting
   lint-all:
     docker:
-        - image: circleci/node:14.15.5-buster-browsers
+        - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       # Download and cache dependencies
@@ -44,7 +44,7 @@ jobs:
 
   coil-extension-package:
     docker:
-      - image: circleci/node:14.15.5-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -68,7 +68,7 @@ jobs:
 
   coil-extension-playwright:
     docker:
-      - image: circleci/node:14.15.5-buster-browsers
+      - image: circleci/node:14-buster-browsers
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -97,7 +97,7 @@ jobs:
 
   coil-extension-playwright-transpile-only:
     docker:
-      - image: circleci/node:14.15.5-buster-browsers
+      - image: circleci/node:14-buster-browsers
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -127,7 +127,7 @@ jobs:
 
   build-all-package-references-typescript:
     docker:
-      - image: circleci/node:14.15.5-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -140,7 +140,7 @@ jobs:
 
   build-root-tsconfig:
     docker:
-      - image: circleci/node:14.15.5-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -153,7 +153,7 @@ jobs:
 
   jest-all:
     docker:
-      - image: circleci/node:14.15.5-buster-browsers
+      - image: circleci/node:14-buster-browsers
     resource_class: large
     steps:
       - run:
@@ -180,7 +180,7 @@ jobs:
 
   jest-lerna-all:
     docker:
-      - image: circleci/node:14.15.5-buster-browsers
+      - image: circleci/node:14-buster-browsers
     resource_class: xlarge
     steps:
       - checkout
@@ -202,7 +202,7 @@ jobs:
 
   packages-build-scripts:
     docker:
-      - image: circleci/node:14.15.5-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -215,7 +215,7 @@ jobs:
 
   yarn-format-and-upkeep-diff-check:
     docker:
-      - image: circleci/node:14.15.5-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - run:
           name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be empty
