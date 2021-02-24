@@ -27,6 +27,8 @@ jobs:
           name: Yarn Install
           command: |
             yarn --immutable
+            export PUPPETEER_PRODUCT='firefox'
+            yarn rebuild puppeteer
       - run:
           name: Lint Project
           command: |
