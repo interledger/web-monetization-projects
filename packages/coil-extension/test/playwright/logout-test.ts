@@ -92,8 +92,8 @@ async function run() {
     failMessage: 'One or more test pages failed to open a payment stream.',
     exitOnSuccess: false
   })
-  await logoutCoil(coilPage)
   await timeout(2000)
+  await logoutCoil(coilPage)
   let logoutSuccess = true
   debug('testing pages for logout')
   for (const page of Object.keys(results)) {
