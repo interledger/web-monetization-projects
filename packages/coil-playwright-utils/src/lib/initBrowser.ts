@@ -79,7 +79,7 @@ export async function initBrowser({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const puppeteerAny = puppeteer as any
     const root: string = puppeteerAny._launcher._projectRoot
-    const localFF = root + './local-firefox'
+    const localFF = root + '/.local-firefox'
     const [revision] = fs.readdirSync(localFF)
     const exec = `${localFF}/${revision}/firefox/firefox`
 
