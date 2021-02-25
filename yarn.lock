@@ -1563,7 +1563,7 @@ __metadata:
     json5: ^2.2.0
     lerna: ^3.22.1
     lint-staged: ^10.5.4
-    npm-check-updates: ^11.1.4
+    npm-check-updates: ^11.1.9
     prettier: ^2.2.1
     reduct: ^3.3.1
     rimraf: ^3.0.2
@@ -16604,9 +16604,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^11.1.4":
-  version: 11.1.4
-  resolution: "npm-check-updates@npm:11.1.4"
+"npm-check-updates@npm:^11.1.9":
+  version: 11.1.9
+  resolution: "npm-check-updates@npm:11.1.9"
   dependencies:
     chalk: ^4.1.0
     cint: ^8.2.1
@@ -16637,7 +16637,7 @@ fsevents@^1.2.7:
   bin:
     ncu: bin/cli.js
     npm-check-updates: bin/cli.js
-  checksum: 2a4507d1c98e1d3d305c6d0a97510c3c27c3adcee19a7b72c30dcebd9887985baaff1337025a1101f20ccd19816a8ad08a9629e10977a9c19cb3cfab64b459a6
+  checksum: 16f153ba2d38dc9e71630e5d57b3d6b135fc9d4097c5bfbb3f1809511f22827b25277f3dab9c64d87ff97f83e04f5e0c698260955b2f44ca03940781bfaac39b
   languageName: node
   linkType: hard
 
