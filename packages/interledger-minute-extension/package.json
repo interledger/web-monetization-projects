@@ -74,7 +74,7 @@
     "addons-linter": "^2.19.0",
     "copy-webpack-plugin": "^7.0.0",
     "crx-hotreload": "^1.0.6",
-    "css-loader": "^5.0.2",
+    "css-loader": "^5.1.0",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-import-resolver-node": "^0.3.4",
