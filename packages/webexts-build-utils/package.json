@@ -35,7 +35,7 @@
     "buffer": "^6.0.3",
     "crx-hotreload": "^1.0.6",
     "crypto-browserify": "^3.12.0",
-    "events": "^3.2.0",
+    "events": "^3.3.0",
     "process": "^0.11.10",
     "setimmediate": "^1.0.5",
     "stream-browserify": "^3.0.0",
