@@ -1,9 +1,12 @@
 import path from 'path'
 
 import webpack from 'webpack'
-import { configureNodePolyfills } from '@coil/webpack-utils'
+import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 
 const TRANSPILE_ONLY = Boolean(process.env.TS_LOADER_TRANSPILE_ONLY)
+
+const packageJSONPath = path.resolve(__dirname, 'package.json')
+const VERSION = getPackageVersion(packageJSONPath)
 
 module.exports = configureNodePolyfills({
   mode: (process.env.BUILD_ENV ||
@@ -26,6 +29,12 @@ module.exports = configureNodePolyfills({
     extensions: ['.ts', '.js'],
     plugins: []
   },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      OAUTH_SCRIPTS_VERSION: JSON.stringify(VERSION)
+    })
+  ],
 
   module: {
     rules: [

@@ -3,7 +3,7 @@ import { Container } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 
-import { API, BUILD_CONFIG, COIL_DOMAIN } from '../webpackDefines'
+import { API, BUILD_CONFIG, COIL_DOMAIN, VERSION } from '../webpackDefines'
 import { StorageService } from '../services/storage'
 import * as tokens from '../types/tokens'
 import { ClientOptions } from '../services/ClientOptions'
@@ -40,6 +40,7 @@ async function configureContainer(container: Container) {
 }
 
 async function main() {
+  console.log('Loading Coil extension:', JSON.stringify(VERSION))
   decorateThirdPartyClasses()
 
   const container = new Container({

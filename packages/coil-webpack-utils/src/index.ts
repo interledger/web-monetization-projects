@@ -1,3 +1,7 @@
+import * as fs from 'fs'
+import * as pathMod from 'path'
+import * as childProcess from 'child_process'
+
 import * as webpack from 'webpack'
 
 export const configureNodePolyfills = (wpConf: webpack.Configuration) => {
@@ -28,4 +32,28 @@ export const configureNodePolyfills = (wpConf: webpack.Configuration) => {
     new webpack.ProvidePlugin({ Buffer: ['buffer', 'Buffer'] })
   ]
   return wpConf
+}
+
+export interface PackageVersion {
+  dirty: boolean
+  commit: string
+  version: string
+  buildDateISO: string
+}
+
+export function getPackageVersion(packageJSONPath: string): PackageVersion {
+  const json = fs.readFileSync(packageJSONPath)
+  const parsed = JSON.parse(json.toString())
+  const version = parsed.version as string
+  const cwd = pathMod.dirname(packageJSONPath)
+  const hash = childProcess.execSync('git rev-parse --short HEAD', { cwd })
+  const status = childProcess.execSync('git status -s', { cwd })
+  const date = new Date()
+
+  return {
+    version,
+    commit: hash.toString().trim(),
+    dirty: status.toString().trim().length > 0,
+    buildDateISO: date.toISOString()
+  }
 }

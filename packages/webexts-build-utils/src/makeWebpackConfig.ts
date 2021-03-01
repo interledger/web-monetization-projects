@@ -3,7 +3,7 @@ import * as fs from 'fs'
 import * as cp from 'child_process'
 
 import * as webpack from 'webpack'
-import { configureNodePolyfills } from '@coil/webpack-utils'
+import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
@@ -43,6 +43,10 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   const TEST_TSCONFIG = path.join(rootDir, '/test/tsconfig.json')
   const TSCONFIG_DEBUG_JSON = path.join(rootDir, 'tsconfig.debug.json')
   const TSCONFIG_BUILD_JSON = path.join(rootDir, 'tsconfig.build.json')
+
+  const PACKAGE_JSON = path.join(rootDir, 'package.json')
+
+  const VERSION = getPackageVersion(PACKAGE_JSON)
 
   // eslint-disable-next-line no-nested-ternary
   const TSCONFIG = TS_LOADER_TRANSPILE_ONLY
@@ -176,6 +180,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
     plugins: [
       new webpack.DefinePlugin({
         WEBPACK_DEFINE_API: API,
+        WEBPACK_DEFINE_VERSION: JSON.stringify(VERSION),
         WEBPACK_DEFINE_BROWSER: JSON.stringify(BROWSER),
         WEBPACK_DEFINE_BUILD_CONFIG: JSON.stringify(WEXT_BUILD_CONFIG)
       }),
