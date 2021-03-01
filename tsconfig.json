@@ -63,6 +63,9 @@
       "@coil/playwright-utils": [
         "packages/coil-playwright-utils/src"
       ],
+      "@coil/tipping-ui": [
+        "packages/coil-tipping-ui/src"
+      ],
       "@coil/wm-utils": [
         "packages/coil-wm-utils/src"
       ],

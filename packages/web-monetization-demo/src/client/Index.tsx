@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom'
 import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import { hot } from 'react-hot-loader/root'
 import {
   IfNotWebMonetized,
   IfWebMonetizationPending,
@@ -20,7 +19,7 @@ function pretty(val: unknown) {
 declare const PAYMENT_POINTER: string
 declare const VERIFIER_URL: string
 
-const Index = hot(() => {
+const Index = () => {
   const state = useMonetizationState()
   const counter = useMonetizationCounter()
 
@@ -114,6 +113,6 @@ const Index = hot(() => {
       </pre>
     </div>
   )
-})
+}
 
 ReactDOM.render(<Index />, document.querySelector('#root'))

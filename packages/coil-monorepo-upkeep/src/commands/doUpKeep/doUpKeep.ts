@@ -200,7 +200,24 @@ function copyTemplatesDir({
     // TODO: elegant convention
     utimes: true,
     mode: true,
-    cover
+    cover,
+    filter: (
+      stat: 'file' | 'directory',
+      filepath: string,
+      filename: string
+    ) => {
+      if (
+        stat === 'file' &&
+        filepath.endsWith('create-if-dont-exist/src/index.ts')
+      ) {
+        const indexTSX = `${subPackage.location}/src/index.tsx`
+        if (existsSync(indexTSX)) {
+          log('ignoring', filepath, 'exists', filepath)
+          return false
+        }
+      }
+      return true
+    }
   })
 }
 
@@ -245,6 +262,7 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
   tsconfig.compilerOptions.paths = paths
   writeFileJSON(path, tsconfig, UPKEEP_JSON_OPTS)
 }
+
 function upKeepStaticSharedTemplates(subPackage: LernaListItem) {
   copyTemplatesDir({
     subPackage,

@@ -190,14 +190,14 @@ jobs:
           name: Lerna run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            xvfb-run -a yarn lerna run --stream test:coverage
+            xvfb-run -a yarn lerna run --ignore "@coil/tipping-ui" --stream test:coverage
       - run:
           name: Lerna run jest from build
           command: |
             yarn clean:build
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
-            xvfb-run -a yarn lerna run --stream test:coverage
+            xvfb-run -a yarn lerna run --ignore "@coil/tipping-ui" --stream test:coverage
       - *save_cache
 
   packages-build-scripts:
@@ -210,7 +210,9 @@ jobs:
       - run:
           name: Packages Build Scripts
           command: |
-            yarn lerna run --concurrency=1 --stream build
+            # Build TypeScript first ?
+            # yarn lerna run --concurrency=1 --stream build:ts:verbose
+            yarn lerna run --concurrency=1 --ignore "@coil/tipping-ui" --stream build
       - *save_cache
 
   yarn-format-and-upkeep-diff-check:

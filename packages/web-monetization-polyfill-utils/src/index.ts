@@ -1,17 +1,17 @@
 import * as asyncUtils from './lib/asyncUtils'
 
-export {
-  MonetizationTagObserver,
-  PaymentDetails
-} from './lib/MonetizationTagObserver'
+export { MonetizationTagObserver } from './lib/MonetizationTagObserver'
+
+export type { PaymentDetails } from './lib/MonetizationTagObserver'
 
 export { watchMouseMovement, watchVisibility } from './lib/idle'
 export { whenDocumentReady } from './lib/whenDocumentReady'
 
-export { getSPSPResponse, SPSPResponse, SPSPError } from './lib/getSPSPResponse'
+export { getSPSPResponse, SPSPError } from './lib/getSPSPResponse'
+export type { SPSPResponse } from './lib/getSPSPResponse'
 export { portableFetch } from './lib/portableFetch'
 export { AdaptiveBandwidth } from './lib/AdaptiveBandwidth'
-export { StreamControl } from './lib/idle'
+export type { StreamControl } from './lib/idle'
 export { watchPageEvents } from './lib/idle'
 export { BackoffWaiter } from './lib/BackoffWaiter'
 export { resolvePaymentEndpoint } from './lib/resolvePaymentEndpoint'
