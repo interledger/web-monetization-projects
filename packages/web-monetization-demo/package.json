@@ -73,7 +73,7 @@
     "@types/react-dom": "^16.9.11",
     "@types/react-helmet": "^6.1.0",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
-    "@typescript-eslint/parser": "^4.15.2",
+    "@typescript-eslint/parser": "^4.16.0",
     "JSON2016": "^1.0.0",
     "copy-webpack-plugin": "^7.0.0",
     "eslint": "^7.21.0",
