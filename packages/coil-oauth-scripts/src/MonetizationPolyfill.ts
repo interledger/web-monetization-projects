@@ -5,6 +5,7 @@ import {
   StreamControl,
   watchPageEvents
 } from '@web-monetization/polyfill-utils'
+import type { PackageVersion } from '@coil/webpack-utils'
 
 import { Stream } from './Stream'
 import { getDoc } from './documentExtensions'
@@ -20,6 +21,8 @@ export enum InitState {
   STARTED
 }
 
+declare const OAUTH_SCRIPTS_VERSION: PackageVersion
+
 export class MonetizationPolyfill {
   private btpToken!: string
   private btpEndpoint?: string
@@ -29,6 +32,8 @@ export class MonetizationPolyfill {
 
   private state: InitState = InitState.STOPPED
   private stream: Stream
+
+  static VERSION: PackageVersion = OAUTH_SCRIPTS_VERSION
 
   constructor(deps: Injector) {
     debug('MonetizationPolyfill constructor!')
@@ -57,7 +62,7 @@ export class MonetizationPolyfill {
     this.btpEndpoint = opts.btpEndpoint
 
     const streamControl: StreamControl = {
-      pause: () => this.stream.pause(),
+      pause: async () => this.stream.pause(),
       resume: () => {
         const selector = 'meta[name="monetization"]'
         // We don't ever expect this state to occur
