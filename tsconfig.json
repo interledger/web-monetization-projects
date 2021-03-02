@@ -60,8 +60,8 @@
       "@webexts/build-utils": [
         "packages/webexts-build-utils/src"
       ],
-      "@coil/playwright-utils": [
-        "packages/coil-playwright-utils/src"
+      "@coil/puppeteer-utils": [
+        "packages/coil-puppeteer-utils/src"
       ],
       "@coil/wm-utils": [
         "packages/coil-wm-utils/src"

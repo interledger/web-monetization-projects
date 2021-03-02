@@ -3,7 +3,7 @@ import {
   env,
   initBrowserAndLoginFromEnv,
   testMonetization
-} from '@coil/playwright-utils'
+} from '@coil/puppeteer-utils'
 
 import { testUrls } from './testUrls'
 

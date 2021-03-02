@@ -45,7 +45,7 @@
       "path": "packages/webexts-build-utils/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-playwright-utils/tsconfig.build.json"
+      "path": "packages/coil-puppeteer-utils/tsconfig.build.json"
     },
     {
       "path": "packages/coil-wm-utils/tsconfig.build.json"

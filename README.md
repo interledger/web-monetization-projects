@@ -9,7 +9,7 @@
 Ultimately we want `main` branch to be in a 'good' state at all times, with good test
 coverage, so we can practice CD, pushing the extensions to dev channels.
 
-Currently, we mostly rely on playwright tests which don't cover all the test scenarios.  
+Currently, we mostly rely on puppeteer tests which don't cover all the test scenarios.  
 Therefore, **we must do manual testing before release**, as it's too much of an impediment
 to run through the full manual release checklist on each PR/commit.
 
@@ -99,7 +99,7 @@ software into an up-to-date state this requires only scant daily attention,
 reading the release logs while waiting for CI.
 
 Note that we run through the [release-checklist.md](packages/coil-extension/docs/release-checklist.md)
-before every release, and we catch bugs there as well as with CI. 
+before every release, and we catch bugs there as well as with CI.
 
 ## Jest/Babel Usage For Speedier Tests
 
