@@ -4,7 +4,7 @@ import { exec } from 'child_process'
 import { promisify } from 'util'
 import * as pathMod from 'path'
 
-import { env, initBrowser, testMonetization } from '@coil/playwright-utils'
+import { env, initBrowser, testMonetization } from '@coil/puppeteer-utils'
 import * as coilClient from '@coil/client'
 import { BrowserContext } from 'puppeteer'
 

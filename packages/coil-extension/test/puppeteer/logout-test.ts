@@ -13,7 +13,7 @@ import {
   timeout,
   isValidStopEvent,
   env
-} from '@coil/playwright-utils'
+} from '@coil/puppeteer-utils'
 import { MonetizationExtendedDocument } from '@web-monetization/types'
 
 import { testUrls } from './testUrls'
