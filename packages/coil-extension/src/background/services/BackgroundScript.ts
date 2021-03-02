@@ -705,59 +705,78 @@ export class BackgroundScript {
 
   private async sendTip(): Promise<{ success: boolean }> {
     const tabId = this.activeTab
-    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
-    if (!streamId) {
-      this.log('can not find top frame for tabId=%d', tabId)
-      return { success: false }
-    }
-    const stream = this.streams.getStream(streamId)
-    const token = this.auth.getStoredToken()
 
-    // TODO: return detailed errors
-    if (!stream || !token) {
-      this.log(
-        'sendTip: no stream | token. !!stream !!token ',
-        !!stream,
-        !!token
-      )
-      return { success: false }
-    }
+    const streams = Object.entries(this.assoc.getTabStreams(tabId))
+    const numTips = streams.length
+    const success: boolean[] = []
+    const messages: TipSent[] = []
 
-    const receiver = stream.getPaymentPointer()
-    const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
-    const amount = Math.floor(1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
+    for (const [frameIdStr, streamId] of streams) {
+      const frameId = Number(frameIdStr)
 
-    try {
-      this.log(`sendTip: sending tip to ${receiver}`)
-      const result = await this.client.query({
-        query: `
+      if (!streamId) {
+        this.log('can not find top frame for tabId=%d', tabId)
+        success.push(false)
+        continue
+      }
+      const stream = this.streams.getStream(streamId)
+      const token = this.auth.getStoredToken()
+
+      // TODO: return detailed errors
+      if (!stream || !token) {
+        this.log(
+          'sendTip: no stream | token. !!stream !!token ',
+          !!stream,
+          !!token
+        )
+        success.push(false)
+        continue
+      }
+
+      const receiver = stream.getPaymentPointer()
+      const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
+      const amount = Math.floor((1e9 * exchangeRate) / numTips).toString() // 1 USD, assetScale = 9
+
+      try {
+        this.log(`sendTip: sending tip to ${receiver}`)
+        const result = await this.client.query({
+          query: `
           mutation sendTip($receiver: String!) {
             sendTip(receiver: $receiver) {
               success
             }
           }
         `,
-        token,
-        variables: {
-          receiver
+          token,
+          variables: {
+            receiver
+          }
+        })
+        this.log(`sendTip: sent tip to ${receiver}`, result)
+        const message: TipSent = {
+          command: 'tip',
+          data: {
+            paymentPointer: receiver,
+            amount,
+            assetCode,
+            assetScale
+          }
         }
-      })
-      this.log(`sendTip: sent tip to ${receiver}`, result)
-      const message: TipSent = {
-        command: 'tip',
-        data: {
-          paymentPointer: receiver,
-          amount,
-          assetCode,
-          assetScale
-        }
+        messages.push(message)
+        this.api.tabs.sendMessage(tabId, message, { frameId })
+        success.push(true)
+        // return { success: true }
+      } catch (e) {
+        success.push(false)
+        this.log(`sendTip: error. msg=${e.message}`)
+        // return { success: false }
       }
-      this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
-      return { success: true }
-    } catch (e) {
-      this.log(`sendTip: error. msg=${e.message}`)
-      return { success: false }
     }
+    // As long as one tip went through? success
+    // TODO: need to report when tip fails for one frame
+    console.log('TIPS:', JSON.stringify(messages, null, 2))
+    return { success: success.some(result => result) }
+    // const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
   }
 
   private doPauseWebMonetization(frame: FrameSpec) {
