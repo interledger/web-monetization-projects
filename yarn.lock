@@ -1222,12 +1222,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.12.13, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
-  version: 7.12.13
-  resolution: "@babel/runtime@npm:7.12.13"
+"@babel/runtime@npm:7.12.18, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
+  version: 7.12.18
+  resolution: "@babel/runtime@npm:7.12.18"
   dependencies:
     regenerator-runtime: ^0.13.4
-  checksum: 52e8ac97f5686fc0718592542b5aab4b231e52b89f432d81c5d7a03d43891b187c7cc3cf2ccc7b99a967c9d7c33afe3815dc04db6185017cb3933b6c8b1f535a
+  checksum: cb9e0c51b8e6e294ed5f52992d3fac13eb33b346760ef8eb0b3cb7542bb7c88c0297e2d878082255f91677e81e9cfcb00c38b3e55771a1ad9451647c6dd6a974
   languageName: node
   linkType: hard
 
@@ -1481,7 +1481,7 @@ __metadata:
     "@webexts/build-utils": ^0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.19.0
+    addons-linter: ^2.20.0
     copy-webpack-plugin: ^7.0.0
     crx-hotreload: ^1.0.6
     debug: ^4.3.1
@@ -2269,24 +2269,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@eslint/eslintrc@npm:0.3.0"
-  dependencies:
-    ajv: ^6.12.4
-    debug: ^4.1.1
-    espree: ^7.3.0
-    globals: ^12.1.0
-    ignore: ^4.0.6
-    import-fresh: ^3.2.1
-    js-yaml: ^3.13.1
-    lodash: ^4.17.20
-    minimatch: ^3.0.4
-    strip-json-comments: ^3.1.1
-  checksum: 00e87c194672eb85dcea22ba749fb3cabdd9768e952e748b2c727940f06691c873369d75cf3bddb239301eca8c38de6e098b0de4839fa7c16a2062e536e8ff5a
-  languageName: node
-  linkType: hard
-
 "@eslint/eslintrc@npm:^0.4.0":
   version: 0.4.0
   resolution: "@eslint/eslintrc@npm:0.4.0"
@@ -2348,7 +2330,7 @@ __metadata:
     "@webexts/build-utils": 0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.19.0
+    addons-linter: ^2.20.0
     copy-webpack-plugin: ^7.0.0
     crx-hotreload: ^1.0.6
     css-loader: ^5.1.1
@@ -3530,12 +3512,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:3.1.0":
-  version: 3.1.0
-  resolution: "@mdn/browser-compat-data@npm:3.1.0"
+"@mdn/browser-compat-data@npm:3.1.2":
+  version: 3.1.2
+  resolution: "@mdn/browser-compat-data@npm:3.1.2"
   dependencies:
     extend: 3.0.2
-  checksum: 82cb3ba4c084a9e0a7ec95fa265f727c71ef59275cb9c1c18044462c4fc698865ac48dc5b9fdc7df43d6fc2a7f6dbf51a5cd0a2e3d9139c38cf94809bf7f80e1
+  checksum: 46277bb410b1f0af75107ebe39d1be18d8ca29abab20efe9a55a2e2d4fbad0e1a2d27bc37b49e823d64f1f6899f360a76fb931af5a56783744d857cd2884c9ab
   languageName: node
   linkType: hard
 
@@ -5356,13 +5338,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:^2.19.0":
-  version: 2.19.0
-  resolution: "addons-linter@npm:2.19.0"
+"addons-linter@npm:^2.20.0":
+  version: 2.20.0
+  resolution: "addons-linter@npm:2.20.0"
   dependencies:
-    "@babel/runtime": 7.12.13
-    "@mdn/browser-compat-data": 3.1.0
-    addons-scanner-utils: 4.1.0
+    "@babel/runtime": 7.12.18
+    "@mdn/browser-compat-data": 3.1.2
+    addons-scanner-utils: 4.2.0
     ajv: 6.12.6
     ajv-merge-patch: 4.1.0
     chalk: 4.1.0
@@ -5371,7 +5353,7 @@ __metadata:
     common-tags: 1.8.0
     deepmerge: 4.2.2
     dispensary: 0.61.0
-    eslint: 7.20.0
+    eslint: 7.21.0
     eslint-plugin-no-unsanitized: 3.1.4
     eslint-visitor-keys: 2.0.0
     espree: 7.3.1
@@ -5397,7 +5379,7 @@ __metadata:
       optional: true
   bin:
     addons-linter: bin/addons-linter
-  checksum: 38fdc4390361f96f6e9c0dd9e12992c33e260ec8f99873dc1ca2f3492d2c50742eedb2efdba029c329254f29c6f5d20605cb8b4a02259edd492e78439439f915
+  checksum: e60850a2b381481b2dcfb1c6cec65df906db9c11b809b7f1c8b2fad6862379752349311810e476d063d4023408683afa7311addc8f06270f1f5f5bdb7a6bf946
   languageName: node
   linkType: hard
 
@@ -5421,9 +5403,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-scanner-utils@npm:4.1.0":
-  version: 4.1.0
-  resolution: "addons-scanner-utils@npm:4.1.0"
+"addons-scanner-utils@npm:4.2.0":
+  version: 4.2.0
+  resolution: "addons-scanner-utils@npm:4.2.0"
   dependencies:
     "@types/yauzl": 2.9.1
     common-tags: 1.8.0
@@ -5437,7 +5419,7 @@ __metadata:
     download: 8.0.0
     express: 4.17.1
     safe-compare: 1.1.4
-  checksum: 782e5a11f029ed8e8e69bf4f1bdc7eb21f435d68f0166272f5abf89501888a452c306c6eb4b3c1e176f74758aaf8ef70642bd1aa084d49692b45f2ae926787da
+  checksum: 7912ff1e7d7a5e0a1c7ea8d1abdbf4b4d77f31b9e184f00ecfee91862f187df529817a9831469946c22073cf127d51c0a331052aeb70a0cfe641e43b981abcf9
   languageName: node
   linkType: hard
 
@@ -9983,12 +9965,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.20.0":
-  version: 7.20.0
-  resolution: "eslint@npm:7.20.0"
+"eslint@npm:7.21.0, eslint@npm:^7.21.0":
+  version: 7.21.0
+  resolution: "eslint@npm:7.21.0"
   dependencies:
     "@babel/code-frame": 7.12.11
-    "@eslint/eslintrc": ^0.3.0
+    "@eslint/eslintrc": ^0.4.0
     ajv: ^6.10.0
     chalk: ^4.0.0
     cross-spawn: ^7.0.2
@@ -10001,7 +9983,7 @@ __metadata:
     espree: ^7.3.1
     esquery: ^1.4.0
     esutils: ^2.0.2
-    file-entry-cache: ^6.0.0
+    file-entry-cache: ^6.0.1
     functional-red-black-tree: ^1.0.1
     glob-parent: ^5.0.0
     globals: ^12.1.0
@@ -10026,7 +10008,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 1d56cabc7e21f43b8bb6a1934f2488b27d86b018ce2246bc9b89e52931e26b306c5883f5e4ff5c6e0228e0e8673553a460e98eacc4890f9e5984002df0292123
+  checksum: aa8fd50cddc4ab259e2d0ff8f43f0601060543c12e335d76ee074bf25ad02a885bea9d48a367de736d3bdb871de7eb62e6d67930c0173cc46280ddd0f236e740
   languageName: node
   linkType: hard
 
@@ -10072,53 +10054,6 @@ __metadata:
   bin:
     eslint: ./bin/eslint.js
   checksum: 94d05a10ba6b31d4ae6d9a316645b2998e36ab80f7000f15c59ffb38680d4ac0c40458a947d132d3d3f47107a146bcaea3049dd87c3afc1f5fdae23a0b660e4c
-  languageName: node
-  linkType: hard
-
-"eslint@npm:^7.21.0":
-  version: 7.21.0
-  resolution: "eslint@npm:7.21.0"
-  dependencies:
-    "@babel/code-frame": 7.12.11
-    "@eslint/eslintrc": ^0.4.0
-    ajv: ^6.10.0
-    chalk: ^4.0.0
-    cross-spawn: ^7.0.2
-    debug: ^4.0.1
-    doctrine: ^3.0.0
-    enquirer: ^2.3.5
-    eslint-scope: ^5.1.1
-    eslint-utils: ^2.1.0
-    eslint-visitor-keys: ^2.0.0
-    espree: ^7.3.1
-    esquery: ^1.4.0
-    esutils: ^2.0.2
-    file-entry-cache: ^6.0.1
-    functional-red-black-tree: ^1.0.1
-    glob-parent: ^5.0.0
-    globals: ^12.1.0
-    ignore: ^4.0.6
-    import-fresh: ^3.0.0
-    imurmurhash: ^0.1.4
-    is-glob: ^4.0.0
-    js-yaml: ^3.13.1
-    json-stable-stringify-without-jsonify: ^1.0.1
-    levn: ^0.4.1
-    lodash: ^4.17.20
-    minimatch: ^3.0.4
-    natural-compare: ^1.4.0
-    optionator: ^0.9.1
-    progress: ^2.0.0
-    regexpp: ^3.1.0
-    semver: ^7.2.1
-    strip-ansi: ^6.0.0
-    strip-json-comments: ^3.1.0
-    table: ^6.0.4
-    text-table: ^0.2.0
-    v8-compile-cache: ^2.0.3
-  bin:
-    eslint: bin/eslint.js
-  checksum: aa8fd50cddc4ab259e2d0ff8f43f0601060543c12e335d76ee074bf25ad02a885bea9d48a367de736d3bdb871de7eb62e6d67930c0173cc46280ddd0f236e740
   languageName: node
   linkType: hard
 
@@ -10791,7 +10726,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-entry-cache@npm:^6.0.0, file-entry-cache@npm:^6.0.1":
+"file-entry-cache@npm:^6.0.1":
   version: 6.0.1
   resolution: "file-entry-cache@npm:6.0.1"
   dependencies:
