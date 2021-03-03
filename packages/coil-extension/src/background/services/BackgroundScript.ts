@@ -48,6 +48,16 @@ import { debug } from '../../content/util/logging'
 
 import { ActiveTabLogger } from './ActiveTabLogger'
 
+interface SendTipResult {
+  sendTip: {
+    success: boolean
+    amount: string
+    currency: string
+    scale: number
+    receipts: string[]
+  }
+}
+
 @injectable()
 export class BackgroundScript {
   constructor(
@@ -727,10 +737,10 @@ export class BackgroundScript {
 
     try {
       this.log(`sendTip: sending tip to ${receiver}`)
-      const result = await this.client.query({
+      const result = await this.client.query<SendTipResult>({
         query: `
-          mutation sendTip($receiver: String!) {
-            sendTip(receiver: $receiver, requestId: $streamId) {
+          mutation sendTip($receiver: String!, $amount: Int, $requestId: String) {
+            sendTip(receiver: $receiver, amount: $amount, requestId: $requestId) {
               success
               amount
               currency
@@ -742,26 +752,30 @@ export class BackgroundScript {
         token,
         variables: {
           receiver,
-          streamId
+          amount: undefined, // default
+          requestId: streamId
         }
       })
-      if (result.data.success) {
+      const sendTip = result.data.sendTip
+      if (sendTip.success) {
         this.log(`sendTip: sent tip to ${receiver}`, result)
         const message: TipSent = {
           command: 'tip',
           data: {
             paymentPointer: receiver,
             requestId: streamId,
-            amount: result.data.amount,
-            assetCode: result.data.currency,
-            assetScale: result.data.scale,
-            receipts: result.data.receipts
+            amount: sendTip.amount,
+            assetCode: sendTip.currency,
+            assetScale: sendTip.scale,
+            receipts: sendTip.receipts
           }
         }
         this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
         return { success: true }
       } else {
-        this.log('sendTip: error. failed at franklin call.')
+        this.log(
+          'sendTip: error. failed at franklin call:' + JSON.stringify(result)
+        )
         return { success: false }
       }
     } catch (e) {

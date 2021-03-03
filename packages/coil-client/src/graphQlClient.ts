@@ -71,11 +71,15 @@ export class GraphQlClient {
       this.config.log('Domain:', this.config.coilDomain, 'Url:', redacted)
     }
     const res = await this.fetch(`${this.config.coilDomain}/graphql`, init)
-    if (!res.ok) {
+    // TODO: handle case when json fails
+    const gqlResponse = (await res.json()) as GraphQlResponse<T>
+    if (gqlResponse.errors?.length) {
       throw new Error(
-        `graphql query failed. status=${res.status} query=\`${query}\``
+        `graphql query failed. status=${
+          res.status
+        } query=\`${query}\` errors=${JSON.stringify(gqlResponse.errors)}`
       )
     }
-    return (await res.json()) as GraphQlResponse<T>
+    return gqlResponse
   }
 }

@@ -160,14 +160,19 @@ export class ContentScript {
         } else if (request.command === 'onFrameAllowedChanged') {
           this.onFrameAllowedChanged(request)
         } else if (request.command === 'tip') {
-          debug('sendTip event')
+          debug('sendTip event', request.data)
           const detail: MonetizationProgressEvent['detail'] = {
             amount: request.data.amount,
             assetCode: request.data.assetCode,
             assetScale: request.data.assetScale,
             paymentPointer: request.data.paymentPointer,
             requestId: request.data.requestId,
-            receipt: request.data.receipts ? request.data.receipts[0] : ''
+            // TODO: this is wrong VVV, need an event per receipt
+            // And what if we don't get a receipt for some reason ?
+            // just the one?
+            receipt: request.data.receipts.length
+              ? request.data.receipts[0]
+              : ''
           }
           this.monetization.dispatchMonetizationProgressEvent(detail)
         } else if (request.command === 'clearToken') {

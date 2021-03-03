@@ -1,5 +1,6 @@
 export interface GraphQlResponse<T> {
   data: T
+  errors?: string[]
 }
 
 export interface CoilUser {
