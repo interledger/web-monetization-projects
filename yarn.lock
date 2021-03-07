@@ -1470,7 +1470,7 @@ __metadata:
     "@types/long": ^4.0.1
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.8
-    "@types/react": ^16.14.4
+    "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.11
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.16.1
@@ -2319,7 +2319,7 @@ __metadata:
     "@material-ui/icons": ^4.11.2
     "@types/jest": ^26.0.20
     "@types/node": ^14.10.3
-    "@types/react": ^16.14.4
+    "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.11
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.16.1
@@ -4228,13 +4228,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:16.14.4":
-  version: 16.14.4
-  resolution: "@types/react@npm:16.14.4"
+"@types/react@npm:16.14.5":
+  version: 16.14.5
+  resolution: "@types/react@npm:16.14.5"
   dependencies:
     "@types/prop-types": "*"
+    "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: f994d97aa05233e4f62cd42940ea4290ef1f9a8f3eb0ebda1ea39ed7ae20a16fff7ae1948952dce215b580c2a439fbf451556601be97ebe53a22dbce8a4e31a4
+  checksum: 76840cce4dae25a17b1f35950bb232b0bc98beceb45766695f4b0226758aff346cebd3830ffe5f67c3e0030ac24d3ea899750c46e49ee405a2b6d72e87a855ed
   languageName: node
   linkType: hard
 
@@ -4244,6 +4245,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: e6e6613c800aeda63e2331e753e8d21df1a2c9aa7a4bc71ed792a848e4811fc96e609759089355314a2318c76eff1f161499cd242044838ab1e6f56e463ebb9c
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:*":
+  version: 0.16.1
+  resolution: "@types/scheduler@npm:0.16.1"
+  checksum: 0124c2e4dee5e9b8c8524fcd6b1b8ea0b807b132e593925db04cdcc92ca2779a0d27c79414e60454b4458361a4d8319fa2b59d20585054f21617d1e9acf46a6f
   languageName: node
   linkType: hard
 
@@ -4454,7 +4462,7 @@ __metadata:
     "@types/jest": ^26.0.20
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.8
-    "@types/react": ^16.14.4
+    "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.11
     "@types/react-helmet": ^6.1.0
     "@typescript-eslint/eslint-plugin": ^4.16.1
@@ -4580,7 +4588,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.0
     "@types/jest": ^26.0.20
     "@types/node": ^14.10.3
-    "@types/react": ^16.14.4
+    "@types/react": ^16.14.5
     "@typescript-eslint/eslint-plugin": ^4.16.1
     "@typescript-eslint/parser": ^4.16.1
     "@web-monetization/types": 0.0.0
@@ -4637,7 +4645,7 @@ __metadata:
     "@types/ajv": ^1.0.0
     "@types/jest": ^26.0.20
     "@types/node": ^14.10.3
-    "@types/react": ^16.14.4
+    "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.11
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.16.1
