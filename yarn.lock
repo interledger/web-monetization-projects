@@ -1353,7 +1353,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -1409,7 +1409,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -1489,7 +1489,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -1553,7 +1553,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -1617,7 +1617,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -1673,7 +1673,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -1729,7 +1729,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -1788,7 +1788,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -1845,7 +1845,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -1902,7 +1902,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -2157,7 +2157,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -2208,7 +2208,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -2339,7 +2339,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -4476,7 +4476,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -4542,7 +4542,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -4598,7 +4598,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -4658,7 +4658,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -4713,7 +4713,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -4767,7 +4767,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -4973,7 +4973,7 @@ __metadata:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -9693,14 +9693,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^24.1.7":
-  version: 24.1.7
-  resolution: "eslint-plugin-jest@npm:24.1.7"
+"eslint-plugin-jest@npm:^24.1.8":
+  version: 24.1.8
+  resolution: "eslint-plugin-jest@npm:24.1.8"
   dependencies:
     "@typescript-eslint/experimental-utils": ^4.0.1
   peerDependencies:
     eslint: ">=5"
-  checksum: 5b1d3130609e0e20395bb6b55444ed1ac4797be6366646f57e74ab57d16cc18c586f1f04b4fcaaa98bdbf14ef04e48645a64211ae92086cb64135b12d485c85b
+  checksum: d59d7cf49fb13633c7b66603985874224e2e5d43a0815454c3825fc2d43c9397d28e3db5c60c26fe89c3a5294ea0a15cc0989c1962ccdaae4972030ddecf0530
   languageName: node
   linkType: hard
 
@@ -21953,7 +21953,7 @@ typescript@~4.1.5:
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
-    eslint-plugin-jest: ^24.1.7
+    eslint-plugin-jest: ^24.1.8
     eslint-plugin-jsx-a11y: ^6.4.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^3.3.1
