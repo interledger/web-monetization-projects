@@ -1566,7 +1566,7 @@ __metadata:
     json5: ^2.2.0
     lerna: ^4.0.0
     lint-staged: ^10.5.4
-    npm-check-updates: ^11.1.10
+    npm-check-updates: ^11.2.0
     prettier: ^2.2.1
     reduct: ^3.3.1
     rimraf: ^3.0.2
@@ -16137,9 +16137,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^11.1.10":
-  version: 11.1.10
-  resolution: "npm-check-updates@npm:11.1.10"
+"npm-check-updates@npm:^11.2.0":
+  version: 11.2.0
+  resolution: "npm-check-updates@npm:11.2.0"
   dependencies:
     chalk: ^4.1.0
     cint: ^8.2.1
@@ -16155,6 +16155,7 @@ fsevents@^1.2.7:
     libnpmconfig: ^1.2.1
     lodash: ^4.17.21
     mem: ^8.0.0
+    minimatch: ^3.0.4
     p-map: ^4.0.0
     pacote: ^11.2.7
     parse-github-url: ^1.0.2
@@ -16170,7 +16171,7 @@ fsevents@^1.2.7:
   bin:
     ncu: bin/cli.js
     npm-check-updates: bin/cli.js
-  checksum: d8c23d15d235083d61334d603ad400e49e06bd5dc0e9d2275418c2a446f6ed7369dff21da30ba5715af310405631a6f94d32265d2cae248824bb584d474ecbef
+  checksum: c9073e4ea22547ca925d596ad5f597713d8ade2ad4e9d0a1a31013b5202dfa7e441a7a524937413797a8357ae5c9d35a0eb62ec9f565833e655d667af95369c5
   languageName: node
   linkType: hard
 
