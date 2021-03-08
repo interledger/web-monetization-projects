@@ -4,6 +4,8 @@ import { Button } from '@material-ui/core'
 import { PopupProps } from '../types'
 import { SendTip, SendTipResult } from '../../types/commands'
 
+import { TippingButton } from './TippingButton'
+
 export enum TipState {
   READY = 0,
   LOADING,
@@ -43,12 +45,10 @@ export const TipButton = (props: PopupProps) => {
     switch (tipState) {
       case TipState.READY:
         return (
-          <Button
+          <TippingButton
             disabled={props.context.store.monetizedTotal === 0}
             onClick={onClickTip}
-          >
-            Tip this creator $1!
-          </Button>
+          />
         )
       case TipState.LOADING:
         return <Button disabled>Tipping...</Button>
