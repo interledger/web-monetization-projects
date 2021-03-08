@@ -4652,7 +4652,7 @@ __metadata:
     "@typescript-eslint/parser": ^4.16.1
     "@web-monetization/types": 0.0.0
     JSON2016: ^1.0.0
-    ajv: ^7.1.1
+    ajv: ^7.2.1
     copy-webpack-plugin: ^8.0.0
     eslint: ^7.21.0
     eslint-config-prettier: ^8.1.0
@@ -5516,15 +5516,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:*, ajv@npm:^7.1.1":
-  version: 7.1.1
-  resolution: "ajv@npm:7.1.1"
+"ajv@npm:*, ajv@npm:^7.2.1":
+  version: 7.2.1
+  resolution: "ajv@npm:7.2.1"
   dependencies:
     fast-deep-equal: ^3.1.1
     json-schema-traverse: ^1.0.0
     require-from-string: ^2.0.2
     uri-js: ^4.2.2
-  checksum: fe4e138529363bf1c8c429e1f3e88480918b538fe4a44660b989cea863714715af75e874aad129ccd5cbcf6647fa457e20b735bb3279a3bca08f11193bae5d19
+  checksum: 34044f60ca45ef8ec850f5d09e4db340bb870639efc1694d54bec7ff4b06b12b077872949223f703d1507bbf3d553b59752f4c327ffcd25726ee27919d586037
   languageName: node
   linkType: hard
 

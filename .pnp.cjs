@@ -5291,7 +5291,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-ajv-npm-1.0.0-c234c0de42-8fe64ba5d8.zip/node_modules/@types/ajv/",
           "packageDependencies": [
             ["@types/ajv", "npm:1.0.0"],
-            ["ajv", "npm:7.1.1"]
+            ["ajv", "npm:7.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -6341,7 +6341,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.16.1"],
             ["@web-monetization/types", "workspace:packages/web-monetization-types"],
             ["JSON2016", "npm:1.0.0"],
-            ["ajv", "npm:7.1.1"],
+            ["ajv", "npm:7.2.1"],
             ["copy-webpack-plugin", "virtual:284b8c16101cf82dd2bb26383356f70aa8c07049b76fdb2a26800b84fef23098db35974c11326735235fd7e7767d2d81f5ea8e35019dd7680539ff1b484c8233#npm:8.0.0"],
             ["eslint", "npm:7.21.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.1.0"],
@@ -8303,10 +8303,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.1.1", {
-          "packageLocation": "./.yarn/cache/ajv-npm-7.1.1-2207905505-fe4e138529.zip/node_modules/ajv/",
+        ["npm:7.2.1", {
+          "packageLocation": "./.yarn/cache/ajv-npm-7.2.1-e72dc4e752-34044f60ca.zip/node_modules/ajv/",
           "packageDependencies": [
-            ["ajv", "npm:7.1.1"],
+            ["ajv", "npm:7.2.1"],
             ["fast-deep-equal", "npm:3.1.3"],
             ["json-schema-traverse", "npm:1.0.0"],
             ["require-from-string", "npm:2.0.2"],
