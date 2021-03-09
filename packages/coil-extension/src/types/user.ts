@@ -15,4 +15,7 @@ export interface User {
     code: string
     scale: number
   }
+  tipCredit?: {
+    balanceCents: number
+  }
 }

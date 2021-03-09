@@ -18,6 +18,13 @@ export const whoamiQuery = `{
       trialEndDate
     }
 
+    tipCredit {
+      type
+      balanceCents
+      lastRenewed
+      renewTo
+    }
+
     currencyPreferences {
       code
       scale

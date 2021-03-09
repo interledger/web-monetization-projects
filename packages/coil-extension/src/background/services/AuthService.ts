@@ -101,6 +101,13 @@ export class AuthService extends EventEmitter {
     return token
   }
 
+  updateUser() {
+    const token = this.getStoredToken()
+    if (token) {
+      void this.updateWhoAmi(token)
+    }
+  }
+
   private async updateWhoAmi(token: string): Promise<string | null> {
     const resp = await this.client.whoAmI(token)
     this.log('updateWhoAmi resp', resp.data)
