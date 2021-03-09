@@ -166,15 +166,20 @@ export class ContentScript {
             assetCode: request.data.assetCode,
             assetScale: request.data.assetScale,
             paymentPointer: request.data.paymentPointer,
-            requestId: request.data.requestId,
-            // TODO: this is wrong VVV, need an event per receipt
-            // And what if we don't get a receipt for some reason ?
-            // just the one?
-            receipt: request.data.receipts.length
-              ? request.data.receipts[0]
-              : ''
+            requestId: request.data.requestId
           }
-          this.monetization.dispatchMonetizationProgressEvent(detail)
+          if (request.data.receipts.length) {
+            request.data.receipts.forEach(r => {
+              const perReceipt = {
+                ...detail,
+                amount: r.amount,
+                receipt: r.receipt
+              }
+              this.monetization.dispatchMonetizationProgressEvent(perReceipt)
+            })
+          } else {
+            this.monetization.dispatchMonetizationProgressEvent(detail)
+          }
         } else if (request.command === 'clearToken') {
           this.storage.removeItem('token')
         } else if (request.command === 'logInActiveTab') {

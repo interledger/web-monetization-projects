@@ -2,6 +2,7 @@ import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { MonetizationState } from '@web-monetization/types'
 import { resolvePaymentEndpoint } from '@web-monetization/polyfill-utils'
+import { decodeReceipt } from 'ilp-protocol-stream'
 
 import { notNullOrUndef } from '../../util/nullables'
 import { StorageService } from '../../services/storage'
@@ -73,10 +74,8 @@ export class BackgroundScript {
     private youtube: YoutubeService,
     private activeTabLogger: ActiveTabLogger,
     private framesService: BackgroundFramesService,
-
     @logger('BackgroundScript')
     private log: Logger,
-
     private client: GraphQlClient,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
@@ -759,6 +758,14 @@ export class BackgroundScript {
       const sendTip = result.data.sendTip
       if (sendTip.success) {
         this.log(`sendTip: sent tip to ${receiver}`, result)
+
+        const receipts = sendTip.receipts
+          .map(s => [s, decodeReceipt(Buffer.from(s, 'base64'))] as const)
+          .map(([r, decoded]) => ({
+            receipt: r,
+            amount: decoded.totalReceived.toString()
+          }))
+
         const message: TipSent = {
           command: 'tip',
           data: {
@@ -767,7 +774,7 @@ export class BackgroundScript {
             amount: sendTip.amount,
             assetCode: sendTip.currency,
             assetScale: sendTip.scale,
-            receipts: sendTip.receipts
+            receipts: receipts
           }
         }
         this.api.tabs.sendMessage(tabId, message, { frameId: 0 })

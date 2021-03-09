@@ -320,7 +320,7 @@ export interface TipSent {
     amount: string
     assetCode: string
     assetScale: number
-    receipts: string[]
+    receipts: { receipt: string; amount: string }[]
   }
 }
 
