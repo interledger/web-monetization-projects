@@ -2769,7 +2769,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["json5", "npm:2.2.0"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:10.5.4"],
-            ["npm-check-updates", "npm:11.2.0"],
+            ["npm-check-updates", "npm:11.2.1"],
             ["prettier", "npm:2.2.1"],
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
@@ -20576,10 +20576,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["npm-check-updates", [
-        ["npm:11.2.0", {
-          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.2.0-04ea4156ee-c9073e4ea2.zip/node_modules/npm-check-updates/",
+        ["npm:11.2.1", {
+          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.2.1-c52c05ed75-b202ac1985.zip/node_modules/npm-check-updates/",
           "packageDependencies": [
-            ["npm-check-updates", "npm:11.2.0"],
+            ["npm-check-updates", "npm:11.2.1"],
             ["chalk", "npm:4.1.0"],
             ["cint", "npm:8.2.1"],
             ["cli-table", "npm:0.3.5"],
