@@ -4486,7 +4486,7 @@ __metadata:
     eslint-plugin-standard: ^5.0.0
     express: ^4.17.1
     figlet: ^1.5.0
-    html-webpack-plugin: ^5.3.0
+    html-webpack-plugin: ^5.3.1
     husky: ^4.3.8
     ilp-plugin-btp: ^1.5.0
     ilp-plugin-mini-accounts: ^4.2.0
@@ -4666,7 +4666,7 @@ __metadata:
     eslint-plugin-react: ^7.22.0
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-standard: ^5.0.0
-    html-webpack-plugin: ^5.3.0
+    html-webpack-plugin: ^5.3.1
     husky: ^4.3.8
     jest: ^26.6.3
     lerna: ^4.0.0
@@ -12046,9 +12046,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"html-webpack-plugin@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "html-webpack-plugin@npm:5.3.0"
+"html-webpack-plugin@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "html-webpack-plugin@npm:5.3.1"
   dependencies:
     "@types/html-minifier-terser": ^5.0.0
     html-minifier-terser: ^5.0.1
@@ -12057,7 +12057,7 @@ fsevents@^1.2.7:
     tapable: ^2.0.0
   peerDependencies:
     webpack: ^5.20.0
-  checksum: ba43a880dd848893479bbc1b1ee68f2db5d4757c8a567b90cfdf6a4cf16529ad492933ac3a5ed484a27975deef619e66161f3c1048c4cb0b99cac33d99d8e9f3
+  checksum: 2d744cf3144686cc4b786dac8fbbce3733dd1825a99efea2f289b54e47201f8431df56114d72eb87cf4f78aa8dede6ea5ee09904313dbd72209dc3a43a804b51
   languageName: node
   linkType: hard
 
