@@ -4,7 +4,6 @@ import { EventEmitter } from 'events'
 
 import PluginBtp from 'ilp-plugin-btp'
 import * as IlpStream from 'ilp-protocol-stream'
-import { Connection } from 'ilp-protocol-stream'
 import { Injector } from 'reduct'
 import {
   asyncUtils,
@@ -15,19 +14,13 @@ import {
   ScheduleMode,
   SPSPResponse
 } from '@web-monetization/polyfill-utils'
-import { MonetizationProgressEvent } from '@web-monetization/types'
+import {
+  MonetizationProgressEvent,
+  MonetizationState
+} from '@web-monetization/types'
 
 import { DocumentMonetization } from './DocumentMonetization'
 import { debug } from './logging'
-
-const UPDATE_AMOUNT_INTERVAL = 2000
-// Use a high enough timeout to allow for large intervals between batches of payments.
-const CONNECTION_IDLE_TIMEOUT = 5 * 60 * 1000
-
-export enum MonetizationStateEnum {
-  STOPPED,
-  STARTED
-}
 
 export interface StreamStartOpts {
   btpToken: string
@@ -39,6 +32,13 @@ export interface StreamStartOpts {
 }
 
 const BTP_ENDPOINT_DEFAULT = 'btp+wss://coil.com/btp'
+// The number of seconds to pay immediately on page load.
+const INITIAL_SEND_SECONDS = 5
+
+const BTP_AUTH_FLAGS = {
+  client_version: 1, // TODO VERSION,
+  client_type: 'oauth_scripts'
+}
 
 export class Stream {
   // StreamStartOpts ...
@@ -50,7 +50,7 @@ export class Stream {
   private paymentPointer?: string
   private pageUrl?: string
 
-  private state: MonetizationStateEnum = MonetizationStateEnum.STOPPED
+  private state: MonetizationState = 'stopped'
   private active = false
 
   private activeChanges: EventEmitter = new EventEmitter()
@@ -59,14 +59,12 @@ export class Stream {
   private loop: Promise<void> | null = null
   private existing?: Promise<void>
 
-  //private adaptiveBandwidth!: AdaptiveBandwidth // XXX?
   private readonly monetization: DocumentMonetization
   private readonly schedule: PaymentScheduler = new PaymentScheduler(
     ScheduleMode.PrePay
   )
 
   private totalSentWatermark = 0 // tokens
-  //private readonly throughput: number
 
   refreshBtpToken(btpToken: string) {
     this.btpToken = btpToken
@@ -85,8 +83,6 @@ export class Stream {
     this.paymentPointer = opts.paymentPointer
     this.spspEndpoint = opts.spspEndpoint
     this.pageUrl = opts.pageUrl
-    //this.adaptiveBandwidth = new AdaptiveBandwidth(this.throughput) // XXX
-    //this.schedule = new PaymentScheduler(ScheduleMode.PrePay)
     this.monetization.setMonetizationRequest({
       paymentPointer: opts.paymentPointer,
       requestId: opts.requestId
@@ -114,11 +110,10 @@ export class Stream {
   async stop(finalized = true) {
     this.schedule.stop()
     this.active = false
-    this.monetization.setState({ state: 'stopped', finalized })
+    this.setState({ state: 'stopped', finalized })
     if (finalized) {
       this.monetization.setMonetizationRequest(undefined)
     }
-    this.state = MonetizationStateEnum.STOPPED
     this.activeChanges.emit('stop')
   }
 
@@ -135,15 +130,20 @@ export class Stream {
       throw new Error('no streamId; was init called?')
     }
 
+    this.monetization.setState({ state: 'pending' })
     // eslint-disable-next-line no-constant-condition
     while (true) {
       if (!this.isActive()) {
+        this.setState({ state: 'stopped' })
         await new Promise(resolve => this.activeChanges.once('start', resolve))
+        this.setState({ state: 'pending' })
+      }
+      if (0 < this.schedule.totalSent()) {
+        await this.schedule.awaitFullToken()
       }
 
       try {
         // await this.finalizeExisting()
-        this.monetization.setState({ state: 'pending' })
         debug('Start streamPayment()')
         const promise = (this.existing = this.streamPayment(
           await getSPSPResponse(this.spspEndpoint, this.requestId)
@@ -162,130 +162,71 @@ export class Stream {
     if (!this.btpToken) {
       throw new Error('no btpToken; was init called?')
     }
-
-    if (!this.spspEndpoint) {
-      throw new Error('no spspEndpoint; was init called?')
-    }
-
     if (!this.isActive()) {
       return
     }
 
     const throughput = btpTokenThroughput(this.btpToken)
-    //const schedule = new PaymentScheduler(ScheduleMode.PrePay)
-    //schedule.start()
-
     const plugin = new PluginBtp({
       server: this.btpEndpoint,
-      btpToken: this.btpToken
+      btpToken: this.btpToken,
+      btpAuthFlags: BTP_AUTH_FLAGS
     })
 
+    let connection: IlpStream.Connection | undefined
     try {
       await plugin.connect()
       this.backoff.reset()
+      if (!this.isActive()) return
 
-      if (!this.isActive()) {
-        return
-      }
-
-      const connection = await IlpStream.createConnection({
+      connection = await IlpStream.createConnection({
         plugin,
         slippage: 1.0,
         exchangeRate: 1.0,
         maximumPacketAmount: '10000000',
-        idleTimeout: CONNECTION_IDLE_TIMEOUT,
         ...details,
         getExpiry: getFarFutureExpiry
       })
+      if (!this.isActive()) return
 
-      if (!this.isActive()) {
-        await connection.destroy()
-        return
-      }
-
-      //const adaptiveBandwidth = this.adaptiveBandwidth
-      //const initialSendMaxAmount = await adaptiveBandwidth.getStreamSendMax()
       const stream = connection.createStream()
-      stream.setSendMax(throughput * 60 * this.currentStreamSendMax())
-
-      const promise = new Promise<void>((resolve, reject) => {
-        const boundOutgoingMoney = (sentAmount: string) => {
-          this.schedule.onSent(+sentAmount / throughput / 60)
-          const receipt = stream.receipt
-            ? stream.receipt.toString('base64')
-            : undefined
-          setImmediate(
-            this.onOutgoingMoney.bind(this),
-            connection,
-            sentAmount,
-            receipt
-          )
-        }
-        const onPluginDisconnect = async () => {
-          cleanUp()
-          // stream.destroy()
-          // // We need to wait for this else we get nasty errors in the console
-          // // re: messages trying to be written, perhaps by plugin.disconnect()
-          // await connection.destroy()
-          resolve()
-        }
-
-        const onConnectionClose = () => {
-          cleanUp()
-          reject(new Error('connection closed'))
-        }
-
-        const onStop = onPluginDisconnect
-
-        const onUpdateAmountInterval = async () => {
-          // Round to ignore floating point errors.
-          const newSendMax = Math.round(
-            throughput * 60 * this.currentStreamSendMax()
-          )
-          if (+stream.sendMax < newSendMax) stream.setSendMax(newSendMax)
-        }
-
-        const cleanUp = asyncUtils.onlyOnce(() => {
-          debug('cleanUp()')
-          plugin.removeListener('disconnect', onPluginDisconnect)
-          stream.removeListener('outgoing_money', boundOutgoingMoney)
-          connection.removeListener('close', onConnectionClose)
-          this.totalSentWatermark = this.schedule.totalSent()
-          this.activeChanges.removeListener('stop', onStop)
-          this.lastDelivered = 0
-          this.monetization.setState({ state: 'stopped' })
-          this.state = MonetizationStateEnum.STOPPED
-          // eslint-disable-next-line @typescript-eslint/no-use-before-define
-          clearInterval(updateAmountInterval)
-        })
-
-        plugin.on('disconnect', onPluginDisconnect)
-        stream.on('outgoing_money', boundOutgoingMoney)
-        connection.on('close', onConnectionClose)
-        this.activeChanges.once('stop', () => {
-          debug('activeChanges on stop!')
-          onStop()
-        })
-
-        const updateAmountInterval = setInterval(
-          onUpdateAmountInterval,
-          UPDATE_AMOUNT_INTERVAL
+      stream.on('outgoing_money', (_sentAmount: string) => {
+        const receipt = stream.receipt
+          ? stream.receipt.toString('base64')
+          : undefined
+        // Wait for totalDelivered to update.
+        setImmediate(() =>
+          this.onOutgoingMoney(connection as IlpStream.Connection, receipt)
         )
       })
-      await promise
+
+      if (0 < this.schedule.totalSent()) {
+        const sendTokens = this.schedule.sendMax() - this.totalSentWatermark
+        await stream.sendTotal(throughput * 60 * sendTokens)
+        // Wait for totalDelivered to update.
+        await new Promise(resolve => setTimeout(resolve, 10)) // XXX? setImmediate?
+      } else {
+        await firstMinuteBandwidth(stream, throughput)
+      }
+      stream.removeAllListeners('outgoing_money')
     } finally {
-      await plugin.disconnect()
+      if (connection) {
+        this.schedule.onSent(+connection.totalSent / throughput / 60)
+      }
+      this.lastDelivered = 0
+      this.totalSentWatermark = this.schedule.totalSent()
+      try {
+        if (connection) await connection.destroy()
+        await plugin.disconnect()
+      } catch (err) {
+        debug('error destroying connection: err=%s', err)
+      }
     }
   }
 
-  private onOutgoingMoney(
-    connection: IlpStream.Connection,
-    _: string, // sentAmount
-    receipt?: string
-  ) {
-    if (this.state === MonetizationStateEnum.STOPPED) {
-      this.state = MonetizationStateEnum.STARTED
-      this.monetization.setState({ state: 'started' })
+  private onOutgoingMoney(connection: IlpStream.Connection, receipt?: string) {
+    if (this.state === 'pending') {
+      this.setState({ state: 'started' })
     }
 
     // WM api deals in receiver units so we need to calculate how much the
@@ -301,7 +242,7 @@ export class Stream {
   }
 
   private dispatchMonetizationProgress(
-    connection: Connection,
+    connection: IlpStream.Connection,
     amount: string,
     receipt: string | undefined
   ) {
@@ -316,28 +257,20 @@ export class Stream {
     this.monetization.dispatchMonetizationProgressEvent(detail)
   }
 
+  private setState({
+    state,
+    finalized
+  }: {
+    state: MonetizationState
+    finalized?: boolean
+  }) {
+    this.state = state
+    this.monetization.setState({ state, finalized })
+  }
+
   async pause() {
     return this.stop(false)
   }
-
-  // Returns token fraction.
-  private currentStreamSendMax(): number {
-    const elapsed = this.schedule.totalTime()
-    return (
-      (elapsed < 60_000
-        ? firstMinuteBandwidth(elapsed)
-        : this.schedule.sendMax()) - this.totalSentWatermark
-    )
-  }
-}
-
-// Returns token fraction.
-function firstMinuteBandwidth(elapsedMs: number): number {
-  const s = elapsedMs / 1e3 // seconds
-  if (30 < s) return 60 / 60
-  if (10 < s) return 30 / 60
-  if (5 < s) return 10 / 60
-  return 5 / 60 // initially 5 seconds
 }
 
 function btpTokenThroughput(token: string): number {
@@ -345,4 +278,41 @@ function btpTokenThroughput(token: string): number {
   const { throughput } = JSON.parse(payload.toString())
   if (throughput === undefined) throw new Error('throughput not found')
   return throughput
+}
+
+async function firstMinuteBandwidth(
+  stream: IlpStream.DataAndMoneyStream,
+  throughput: number
+): Promise<void> {
+  // Begin paying immediately so the page knows that the user agent is monetized.
+  // The initial amount is low to ensure the user doesn't deplete their balance by
+  // browsing quickly from page-to-page.
+  // This is the only monetization that is prepaid, everything else is post-paid.
+  stream.setSendMax(INITIAL_SEND_SECONDS * throughput)
+
+  let timer: number | undefined
+  let stopped = false
+  let cancelTimer = () => {}
+  stream.on('close', (): void => {
+    // on close, early-exit from the bandwidth loop
+    stopped = true
+    if (timer) clearTimeout(timer)
+    cancelTimer()
+  })
+
+  let lastTime = 0 // seconds
+  for (const time of [10, 30, 60]) {
+    const delay = (time - lastTime) * 1e3 // milliseconds
+    lastTime = time
+    await new Promise<void>(
+      resolve => (timer = window.setTimeout((cancelTimer = resolve), delay))
+    )
+    if (stopped) return
+    stream.setSendMax(time * throughput)
+  }
+  await new Promise(resolve => {
+    stream.on('end', resolve)
+    setTimeout(resolve, 30_000)
+    stream.end()
+  })
 }

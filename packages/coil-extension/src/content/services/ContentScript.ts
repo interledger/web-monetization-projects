@@ -135,6 +135,11 @@ export class ContentScript {
         } else if (request.command === 'setMonetizationState') {
           this.monetization.setState(request.data)
         } else if (request.command === 'monetizationProgress') {
+          if (this.monetization.getState() === 'pending') {
+            // Don't transition from stopped → started. This prevents catch-up
+            // payments from triggering 'start' while a tab is unfocused.
+            this.monetization.setState({ state: 'started' })
+          }
           const detail: MonetizationProgressEvent['detail'] = {
             amount: request.data.amount,
             assetCode: request.data.assetCode,

@@ -31,6 +31,11 @@ const FULL_TOKEN_AMOUNT = 2 ** 64
 // The number of seconds to pay immediately on page load.
 const INITIAL_SEND_SECONDS = 5
 
+const BTP_AUTH_FLAGS = {
+  client_version: 1, // TODO VERSION,
+  client_type: 'extension'
+}
+
 // @sharafian explained to me that the extension popup shows source amounts,
 // while the web-monetization-scripts which use the monetizationprogress
 // event show received amounts.
@@ -187,9 +192,12 @@ export class Stream extends EventEmitter {
           }
 
           let timer: NodeJS.Timer | undefined
+          // This timeout must match (or exceed) the packet timeout, otherwise the
+          // extension may try to reconnect & send packets while old packets are still
+          // in-flight farther upstream.
           const waitTime = new Promise(
             (_, reject) =>
-              (timer = setTimeout(() => reject(new Error('timeout')), 10e3))
+              (timer = setTimeout(() => reject(new Error('timeout')), 30e3))
           )
           // On error, destroy() was called internally by ilp-stream.
           // Resolving here isn't necessary, but it prevents an extraneous destroy() call.
@@ -227,7 +235,8 @@ export class Stream extends EventEmitter {
   private _makePlugin(btpToken: string): IlpPluginBtp {
     return new IlpPluginBtp({
       server: this._server,
-      btpToken
+      btpToken,
+      btpAuthFlags: BTP_AUTH_FLAGS
     })
   }
 
@@ -286,16 +295,16 @@ export class Stream extends EventEmitter {
     this.emit('money', event)
   }
 
-  async stop() {
+  async stop(): Promise<void> {
     return this.loop.stop()
   }
 
-  async pause() {
-    this.stop()
+  async pause(): Promise<void> {
+    return this.stop()
   }
 
-  async resume() {
-    this.start()
+  async resume(): Promise<void> {
+    return this.start()
   }
 
   // Don't call this.stop() directly, let BackgroundScript orchestrate the stop.

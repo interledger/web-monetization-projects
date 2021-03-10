@@ -12373,7 +12373,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"ilp-plugin-btp@npm:1.5.0, ilp-plugin-btp@npm:^1.3.5, ilp-plugin-btp@npm:^1.5.0":
+"ilp-plugin-btp@npm:1.5.0, ilp-plugin-btp@npm:^1.5.0":
   version: 1.5.0
   resolution: "ilp-plugin-btp@npm:1.5.0"
   dependencies:
@@ -12398,7 +12398,7 @@ fsevents@^1.2.7:
     btp-packet: ^2.2.0
     ilp-logger: ^1.1.3
     ilp-packet: ^3.0.8
-    ilp-plugin-btp: ^1.3.5
+    ilp-plugin-btp: ^1.5.0
     ilp-protocol-ildcp: ^2.0.1
     ilp-store-memory: ^1.0.0
     ilp-store-wrapper: ^2.0.0

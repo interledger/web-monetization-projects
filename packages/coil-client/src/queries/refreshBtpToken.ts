@@ -1,8 +1,8 @@
 // noinspection TypeScriptPreferShortImport
 import { GraphQlClient } from '../graphQlClient'
 
-export const refreshBtpTokenQuery = `query Test123($spendMode: SpendMode) {
-  refreshBtpToken(spendMode: $spendMode) {
+export const refreshBtpTokenQuery = `{
+  refreshBtpToken {
     token
   }
 }`
@@ -11,16 +11,10 @@ export interface RefreshBtpTokenData {
   refreshBtpToken: { token: string }
 }
 
-enum SpendMode {
-  DEFAULT = 'DEFAULT',
-  BATCH = 'BATCH'
-}
-
 export async function refreshBtpToken(this: GraphQlClient, token: string) {
   const response = await this.query<RefreshBtpTokenData>({
     query: refreshBtpTokenQuery,
-    token,
-    variables: { spendMode: SpendMode.BATCH }
+    token
   })
   if (response.data.refreshBtpToken && response.data.refreshBtpToken.token) {
     return response.data.refreshBtpToken.token

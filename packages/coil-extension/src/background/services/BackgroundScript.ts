@@ -266,17 +266,6 @@ export class BackgroundScript {
     this.streams.on('money', (details: StreamMoneyEvent) => {
       const frame = this.assoc.getFrame(details.requestId)
       const { tabId, frameId } = frame
-      if (details.packetNumber === 0) {
-        const message: MonetizationStart = {
-          command: 'monetizationStart',
-          data: {
-            paymentPointer: details.paymentPointer,
-            requestId: details.requestId
-          }
-        }
-        this.api.tabs.sendMessage(tabId, message, { frameId })
-      }
-
       const message: MonetizationProgress = {
         command: 'monetizationProgress',
         data: {

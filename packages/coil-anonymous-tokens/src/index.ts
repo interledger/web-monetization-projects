@@ -15,7 +15,6 @@ import {
   StorableBlindToken,
   verifyProof
 } from '@coil/privacypass-sjcl'
-
 import { SjclEllipticalPoint } from 'sjcl'
 
 import { portableFetch } from './portableFetch'
@@ -143,10 +142,7 @@ export class AnonymousTokens {
     const response = await portableFetch(this.redeemerUrl + '/redeem', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({
-        bl_sig_req: redeemRequest,
-        mode: 'fast'
-      })
+      body: JSON.stringify({ bl_sig_req: redeemRequest })
     })
 
     if (response.status === 400) {
@@ -172,7 +168,7 @@ export class AnonymousTokens {
     return { btpToken, throughput: body.throughput }
   }
 
-  private _getSignedToken(): Promise<StorableBlindToken | undefined> {
+  private async _getSignedToken(): Promise<StorableBlindToken | undefined> {
     return this.store.iterate((blob: string, name: string) => {
       if (name.startsWith(TOKEN_PREFIX)) {
         return JSON.parse(blob) as StorableBlindToken
@@ -180,14 +176,14 @@ export class AnonymousTokens {
     })
   }
 
-  removeToken(btpToken: string): Promise<void> {
+  async removeToken(btpToken: string): Promise<void> {
     const anonUserId = this.tokenMap.get(btpToken)
     this.tokenMap.delete(btpToken)
     if (anonUserId) return this._removeSignedToken(anonUserId)
     else return Promise.resolve()
   }
 
-  private _removeSignedToken(anonUserId: string): Promise<void> {
+  private async _removeSignedToken(anonUserId: string): Promise<void> {
     this.storedTokenCount--
     this.debug('removing token anonUserId=%s', anonUserId)
     return this.store.removeItem(TOKEN_PREFIX + anonUserId)
