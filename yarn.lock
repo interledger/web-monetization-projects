@@ -1222,21 +1222,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.12.18, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
-  version: 7.12.18
-  resolution: "@babel/runtime@npm:7.12.18"
-  dependencies:
-    regenerator-runtime: ^0.13.4
-  checksum: cb9e0c51b8e6e294ed5f52992d3fac13eb33b346760ef8eb0b3cb7542bb7c88c0297e2d878082255f91677e81e9cfcb00c38b3e55771a1ad9451647c6dd6a974
-  languageName: node
-  linkType: hard
-
 "@babel/runtime@npm:7.12.5":
   version: 7.12.5
   resolution: "@babel/runtime@npm:7.12.5"
   dependencies:
     regenerator-runtime: ^0.13.4
   checksum: 423fb0079353db2faa0dad0cbdf0a90fbc5b511d1f77e5645d1aa0b144a144e24502bb023c12a31d7dca63b6e16ae36afa59992f0404e92e21de211051c361e3
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:7.13.9, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
+  version: 7.13.9
+  resolution: "@babel/runtime@npm:7.13.9"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: e6f79d20e10c2921520c499f3cf295a9ee5c137e73f77f77eedde9f9073bc3541c1fc7fa6c97b0613f4140303ac00d08506e9f090068d219c58781d2b62c662d
   languageName: node
   linkType: hard
 
@@ -1481,7 +1481,7 @@ __metadata:
     "@webexts/build-utils": ^0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.20.0
+    addons-linter: ^2.21.0
     copy-webpack-plugin: ^8.0.0
     crx-hotreload: ^1.0.6
     debug: ^4.3.1
@@ -2330,7 +2330,7 @@ __metadata:
     "@webexts/build-utils": 0.0.0
     "@wext/shipit": ^0.2.1
     JSON2016: ^1.0.0
-    addons-linter: ^2.20.0
+    addons-linter: ^2.21.0
     copy-webpack-plugin: ^8.0.0
     crx-hotreload: ^1.0.6
     css-loader: ^5.1.1
@@ -3512,12 +3512,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:3.1.2":
-  version: 3.1.2
-  resolution: "@mdn/browser-compat-data@npm:3.1.2"
+"@mdn/browser-compat-data@npm:3.1.3":
+  version: 3.1.3
+  resolution: "@mdn/browser-compat-data@npm:3.1.3"
   dependencies:
     extend: 3.0.2
-  checksum: 46277bb410b1f0af75107ebe39d1be18d8ca29abab20efe9a55a2e2d4fbad0e1a2d27bc37b49e823d64f1f6899f360a76fb931af5a56783744d857cd2884c9ab
+  checksum: 418314289a504f39fef62195f268f09a05d1467861f85ddb685d45783d8351f297140e0d0f9ca588d410463a9070e151bc33a045f77a167a3bf0b555db5976b4
   languageName: node
   linkType: hard
 
@@ -5346,12 +5346,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:^2.20.0":
-  version: 2.20.0
-  resolution: "addons-linter@npm:2.20.0"
+"addons-linter@npm:^2.21.0":
+  version: 2.21.0
+  resolution: "addons-linter@npm:2.21.0"
   dependencies:
-    "@babel/runtime": 7.12.18
-    "@mdn/browser-compat-data": 3.1.2
+    "@babel/runtime": 7.13.9
+    "@mdn/browser-compat-data": 3.1.3
     addons-scanner-utils: 4.2.0
     ajv: 6.12.6
     ajv-merge-patch: 4.1.0
@@ -5373,7 +5373,7 @@ __metadata:
     jed: 1.1.1
     os-locale: 5.0.0
     pino: 6.11.1
-    postcss: 8.2.6
+    postcss: 8.2.7
     probe-image-size: 6.0.0
     relaxed-json: 1.0.3
     semver: 7.3.4
@@ -5387,7 +5387,7 @@ __metadata:
       optional: true
   bin:
     addons-linter: bin/addons-linter
-  checksum: e60850a2b381481b2dcfb1c6cec65df906db9c11b809b7f1c8b2fad6862379752349311810e476d063d4023408683afa7311addc8f06270f1f5f5bdb7a6bf946
+  checksum: b5edc3b2a2acad2ee33d63035250de71ce565da3c26c9ebe97c1bd92d74405f3e63b15c6dffc6d6f0b7b5df9cc953acd95f187093211d3a5ec651e6cbfa925c6
   languageName: node
   linkType: hard
 
@@ -7619,10 +7619,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorette@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "colorette@npm:1.2.1"
-  checksum: 1cc21ad4b84777a424794f78b6bb6a44b614ae17dcea91762199339f8047598e6d981249eeef7ea588c99eaf062be8fcdcd4866c112998922ed854db6dde96f9
+"colorette@npm:^1.2.1, colorette@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "colorette@npm:1.2.2"
+  checksum: e240f0c94b8d9f34b52bd17b50fc13a3b74f9e662edeaa2b0c65e06ec6b1fc6367fb42b834ec5a1d819d68b74a3d850f3bd3e284f9e614d6c4ffa122f83c6ec5
   languageName: node
   linkType: hard
 
@@ -17578,14 +17578,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.2.6, postcss@npm:^8.2.6":
-  version: 8.2.6
-  resolution: "postcss@npm:8.2.6"
+"postcss@npm:8.2.7, postcss@npm:^8.2.6":
+  version: 8.2.7
+  resolution: "postcss@npm:8.2.7"
   dependencies:
-    colorette: ^1.2.1
+    colorette: ^1.2.2
     nanoid: ^3.1.20
     source-map: ^0.6.1
-  checksum: 31dcc6632589e5b0d06ae3854122073a38952f3a25280511fa4bd8c2bc254c05d1d1db0913848ed3171c84d41b233ec3fe5d7349de4700f624a16fa93553ccac
+  checksum: cd2a7a8b9c1950783afd05e906d65a6433b13bcce5a52f3c2802c524479e7ba6893f516338ed1bc755b3a8545eb5a181daf0fcf25af694ad2e33e9d9fe7d4254
   languageName: node
   linkType: hard
 
