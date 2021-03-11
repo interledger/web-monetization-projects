@@ -20,7 +20,7 @@ import { RedeemedToken } from '@coil/anonymous-tokens'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
-import { BTP_ENDPOINT } from '../../webpackDefines'
+import { BTP_ENDPOINT, VERSION } from '../../webpackDefines'
 
 import { AnonymousTokens } from './AnonymousTokens'
 import { StreamLoop, isExhaustedError } from './StreamLoop'
@@ -32,8 +32,9 @@ const FULL_TOKEN_AMOUNT = 2 ** 64
 const INITIAL_SEND_SECONDS = 5
 
 const BTP_AUTH_FLAGS = {
-  client_version: 1, // TODO VERSION,
-  client_type: 'extension'
+  client_type: 'extension',
+  client_version: VERSION.version,
+  client_built: VERSION.buildDateISO
 }
 
 // @sharafian explained to me that the extension popup shows source amounts,

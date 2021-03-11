@@ -18,9 +18,12 @@ import {
   MonetizationProgressEvent,
   MonetizationState
 } from '@web-monetization/types'
+import type { PackageVersion } from '@coil/webpack-utils'
 
 import { DocumentMonetization } from './DocumentMonetization'
 import { debug } from './logging'
+
+declare const OAUTH_SCRIPTS_VERSION: PackageVersion
 
 export interface StreamStartOpts {
   btpToken: string
@@ -36,8 +39,9 @@ const BTP_ENDPOINT_DEFAULT = 'btp+wss://coil.com/btp'
 const INITIAL_SEND_SECONDS = 5
 
 const BTP_AUTH_FLAGS = {
-  client_version: 1, // TODO VERSION,
-  client_type: 'oauth_scripts'
+  client_type: 'oauth_scripts',
+  client_version: OAUTH_SCRIPTS_VERSION.version,
+  client_built: OAUTH_SCRIPTS_VERSION.buildDateISO
 }
 
 export class Stream {
