@@ -2752,7 +2752,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["json5", "npm:2.2.0"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:10.5.4"],
-            ["npm-check-updates", "npm:11.2.1"],
+            ["npm-check-updates", "npm:11.2.2"],
             ["prettier", "npm:2.2.1"],
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
@@ -3841,7 +3841,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dedent", "npm:0.7.0"],
             ["npm-package-arg", "npm:8.1.1"],
             ["p-map", "npm:4.0.0"],
-            ["pacote", "npm:11.2.7"],
+            ["pacote", "npm:11.3.0"],
             ["semver", "npm:7.3.4"]
           ],
           "linkType": "HARD",
@@ -4025,7 +4025,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["init-package-json", "npm:2.0.2"],
             ["npm-package-arg", "npm:8.1.1"],
             ["p-reduce", "npm:2.1.0"],
-            ["pacote", "npm:11.2.7"],
+            ["pacote", "npm:11.3.0"],
             ["pify", "npm:5.0.0"],
             ["semver", "npm:7.3.4"],
             ["slash", "npm:3.0.0"],
@@ -4493,7 +4493,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npmlog", "npm:4.1.2"],
             ["p-map", "npm:4.0.0"],
             ["p-pipe", "npm:3.1.0"],
-            ["pacote", "npm:11.2.7"],
+            ["pacote", "npm:11.3.0"],
             ["semver", "npm:7.3.4"]
           ],
           "linkType": "HARD",
@@ -15778,6 +15778,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lru-cache", "npm:6.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/hosted-git-info-npm-4.0.0-98724ab476-540b4a8bd0.zip/node_modules/hosted-git-info/",
+          "packageDependencies": [
+            ["hosted-git-info", "npm:4.0.0"],
+            ["lru-cache", "npm:6.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["hpack.js", [
@@ -20384,10 +20392,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["npm-check-updates", [
-        ["npm:11.2.1", {
-          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.2.1-c52c05ed75-b202ac1985.zip/node_modules/npm-check-updates/",
+        ["npm:11.2.2", {
+          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.2.2-8bfbbfd2d0-eee85a2c73.zip/node_modules/npm-check-updates/",
           "packageDependencies": [
-            ["npm-check-updates", "npm:11.2.1"],
+            ["npm-check-updates", "npm:11.2.2"],
             ["chalk", "npm:4.1.0"],
             ["cint", "npm:8.2.1"],
             ["cli-table", "npm:0.3.5"],
@@ -20396,7 +20404,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fp-and-or", "npm:0.1.3"],
             ["get-stdin", "npm:8.0.0"],
             ["globby", "npm:11.0.2"],
-            ["hosted-git-info", "npm:3.0.8"],
+            ["hosted-git-info", "npm:4.0.0"],
             ["json-parse-helpfulerror", "npm:1.0.3"],
             ["jsonlines", "npm:0.1.1"],
             ["libnpmconfig", "npm:1.2.1"],
@@ -20404,7 +20412,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mem", "npm:8.0.0"],
             ["minimatch", "npm:3.0.4"],
             ["p-map", "npm:4.0.0"],
-            ["pacote", "npm:11.2.7"],
+            ["pacote", "npm:11.3.0"],
             ["parse-github-url", "npm:1.0.2"],
             ["progress", "npm:2.0.3"],
             ["prompts", "npm:2.4.0"],
@@ -21199,10 +21207,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["pacote", [
-        ["npm:11.2.7", {
-          "packageLocation": "./.yarn/cache/pacote-npm-11.2.7-97313d2285-e4f0947b39.zip/node_modules/pacote/",
+        ["npm:11.3.0", {
+          "packageLocation": "./.yarn/cache/pacote-npm-11.3.0-809eecc67f-98eaa3e1b3.zip/node_modules/pacote/",
           "packageDependencies": [
-            ["pacote", "npm:11.2.7"],
+            ["pacote", "npm:11.3.0"],
             ["@npmcli/git", "npm:2.0.4"],
             ["@npmcli/installed-package-contents", "npm:1.0.7"],
             ["@npmcli/promise-spawn", "npm:1.3.2"],

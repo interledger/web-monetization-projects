@@ -1547,7 +1547,7 @@ __metadata:
     json5: ^2.2.0
     lerna: ^4.0.0
     lint-staged: ^10.5.4
-    npm-check-updates: ^11.2.1
+    npm-check-updates: ^11.2.2
     prettier: ^2.2.1
     reduct: ^3.3.1
     rimraf: ^3.0.2
@@ -11771,12 +11771,21 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"hosted-git-info@npm:^3.0.6, hosted-git-info@npm:^3.0.8":
+"hosted-git-info@npm:^3.0.6":
   version: 3.0.8
   resolution: "hosted-git-info@npm:3.0.8"
   dependencies:
     lru-cache: ^6.0.0
   checksum: 686512459ccb7e7eac7833fc4e8e35a0533c0dda5f516025f276ecb620b316010b853c785439ac63702e044ab56b2485cf7e1b088c1f9a46675b9496f7a45683
+  languageName: node
+  linkType: hard
+
+"hosted-git-info@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "hosted-git-info@npm:4.0.0"
+  dependencies:
+    lru-cache: ^6.0.0
+  checksum: 540b4a8bd08f9ac5713516862f313ce8843a8465e4ac80ba9328956ee09ba887ca9b0d4044be88b10a2091e4a5e463337f3db0f28f7dd33d4a0c9db18218b162
   languageName: node
   linkType: hard
 
@@ -15955,9 +15964,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^11.2.1":
-  version: 11.2.1
-  resolution: "npm-check-updates@npm:11.2.1"
+"npm-check-updates@npm:^11.2.2":
+  version: 11.2.2
+  resolution: "npm-check-updates@npm:11.2.2"
   dependencies:
     chalk: ^4.1.0
     cint: ^8.2.1
@@ -15967,7 +15976,7 @@ fsevents@^1.2.7:
     fp-and-or: ^0.1.3
     get-stdin: ^8.0.0
     globby: ^11.0.2
-    hosted-git-info: ^3.0.8
+    hosted-git-info: ^4.0.0
     json-parse-helpfulerror: ^1.0.3
     jsonlines: ^0.1.1
     libnpmconfig: ^1.2.1
@@ -15975,7 +15984,7 @@ fsevents@^1.2.7:
     mem: ^8.0.0
     minimatch: ^3.0.4
     p-map: ^4.0.0
-    pacote: ^11.2.7
+    pacote: ^11.3.0
     parse-github-url: ^1.0.2
     progress: ^2.0.3
     prompts: ^2.4.0
@@ -15989,7 +15998,7 @@ fsevents@^1.2.7:
   bin:
     ncu: bin/cli.js
     npm-check-updates: bin/cli.js
-  checksum: b202ac1985768a855b200b42ba849d78b384611dc5529e9814ef61e1795202c88a572a22b1a7a8d088a1d15ca9bf920bbb698a56adf27cbae7238974ab4404e5
+  checksum: eee85a2c7394d5177a590dae8f6fef0321f491ffbb80d774365994b64652998f1e92d755f5d9da12b5009c775fe015f3e036c46d8096d5c0f4ce8905e323f1ec
   languageName: node
   linkType: hard
 
@@ -16708,9 +16717,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"pacote@npm:^11.2.6, pacote@npm:^11.2.7":
-  version: 11.2.7
-  resolution: "pacote@npm:11.2.7"
+"pacote@npm:^11.2.6, pacote@npm:^11.3.0":
+  version: 11.3.0
+  resolution: "pacote@npm:11.3.0"
   dependencies:
     "@npmcli/git": ^2.0.1
     "@npmcli/installed-package-contents": ^1.0.6
@@ -16733,7 +16742,7 @@ fsevents@^1.2.7:
     tar: ^6.1.0
   bin:
     pacote: lib/bin.js
-  checksum: e4f0947b394893436fc9eb3c4b2f9a2b0d1e1bff17dc6c326ed445f5d3150580c3a116f15a5f5f56b05ccaa0a64c67de3270a694c2bf762a48e2b931baf488fe
+  checksum: 98eaa3e1b32487b7a968e8fb5307a0ac2ed82fddff794d034071ccdbb3493b3b13d88892e6da0c39a70f7348086e9dc21df2bcddcdee99664b734bcf7fdd190d
   languageName: node
   linkType: hard
 
