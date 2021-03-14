@@ -1563,7 +1563,7 @@ __metadata:
     webpack-cli: ^4.5.0
     webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.2
-    yaml: ^1.10.0
+    yaml: ^1.10.2
   languageName: unknown
   linkType: soft
 
@@ -22328,10 +22328,10 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"yaml@npm:^1.10.0":
-  version: 1.10.0
-  resolution: "yaml@npm:1.10.0"
-  checksum: d4cc9f9724f8d0aebc2cf52e4e6aa7059f12d50deb54b5225d103462fb2af36e5c0bb419101ca4b1f0cd3b4db9e4139cf2c690e863ac6227648d39d6f4e2522c
+"yaml@npm:^1.10.0, yaml@npm:^1.10.2":
+  version: 1.10.2
+  resolution: "yaml@npm:1.10.2"
+  checksum: 8d72062ea3dbfd8fae3d6ddd5b741c2aeb5835a31b0719bf14fac71dd84adde0829763d6fbac46387309da00af1440194c796da5efc349b0baf9de39d82ae69e
   languageName: node
   linkType: hard
 
