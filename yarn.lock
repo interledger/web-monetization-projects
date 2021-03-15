@@ -1485,7 +1485,7 @@ __metadata:
     inversify-logger-middleware: ^3.1.0
     jest: ^26.6.3
     jsonwebtoken: ^8.5.1
-    jss: ^10.5.1
+    jss: ^10.6.0
     lerna: ^4.0.0
     lint-staged: ^10.5.4
     prettier: ^2.2.1
@@ -14141,7 +14141,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jss@npm:10.5.1, jss@npm:^10.5.1":
+"jss@npm:10.5.1":
   version: 10.5.1
   resolution: "jss@npm:10.5.1"
   dependencies:
@@ -14151,6 +14151,19 @@ fsevents@^1.2.7:
     is-in-browser: ^1.1.3
     tiny-warning: ^1.0.2
   checksum: 8bc39f90d8b52a1f55e2d063b085bb057db87eed138a96bb15650c9c23cbc82b6e3876b6457dcb111393daa5baf48373ca8a008985a30a55f9b3955d00aebbb8
+  languageName: node
+  linkType: hard
+
+"jss@npm:^10.5.1, jss@npm:^10.6.0":
+  version: 10.6.0
+  resolution: "jss@npm:10.6.0"
+  dependencies:
+    "@babel/runtime": ^7.3.1
+    csstype: ^3.0.2
+    indefinite-observable: ^2.0.1
+    is-in-browser: ^1.1.3
+    tiny-warning: ^1.0.2
+  checksum: 063877ab763dc3cc808ba1c198aaafa24ceb7b959fdfb524cab2c08b62c918e988f968315053ea86149705e8eaf534afba3a243df381560e3eee389deac6dbec
   languageName: node
   linkType: hard
 
