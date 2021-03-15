@@ -179,17 +179,27 @@ export class Stream extends EventEmitter {
           this._schedule.onSent(
             Math.min(1.0, +connection.totalSent / redeemedToken.throughput / 60)
           )
+          this._debug(
+            'connection closing; totalSent=%d sendMax=%d',
+            +connection.totalSent / redeemedToken.throughput,
+            stream.sendMax
+          )
         })
 
         void (async () => {
           if (this._schedule.totalSent() === 0) {
             await firstMinuteBandwidth(stream, redeemedToken.throughput)
           } else {
-            stream.setSendMax(
+            const sendMax =
               1.0 <= tokenFraction
                 ? FULL_TOKEN_AMOUNT
                 : tokenFraction * 60 * redeemedToken.throughput
+            this._debug(
+              'setSendMax tokenFraction=%d sendMax=%d',
+              tokenFraction,
+              sendMax
             )
+            stream.setSendMax(sendMax)
           }
 
           let timer: NodeJS.Timer | undefined

@@ -36,11 +36,12 @@ export class StreamLoop extends EventEmitter {
     this.schedule.start()
     let attempts = 0 // count of retry attempts when state=Ending
     while (this.state !== StreamLoopState.Done) {
+      const isFirstMinute = this.schedule.totalSent() === 0
       let tokenPiece = 1.0
       switch (this.state) {
         case StreamLoopState.Loop: // keep going; only pay full tokens
           // After the very first token payment, switch to post-payment.
-          if (0 < this.schedule.totalSent()) {
+          if (!isFirstMinute) {
             const hasToken = await this.schedule.awaitFullToken()
             if (!hasToken) continue // the wait was interrupted, likely because the stream was paused/stopped
           }
@@ -61,6 +62,10 @@ export class StreamLoop extends EventEmitter {
           connection.once('error', err => {
             if (!isExhaustedError(err)) reject(err)
           }) // "exhausted capacity" errors count as success
+          // If `stop()` was called during `attempt()` and the first minute, don't wait for firstMinuteBandwidth to finish.
+          if (this.state === StreamLoopState.Ending && isFirstMinute) {
+            connection.destroy(new Error('monetization stopped during connect'))
+          }
         })
         attempts = 0
       } catch (err) {
