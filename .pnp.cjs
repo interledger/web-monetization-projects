@@ -2688,7 +2688,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inversify-logger-middleware", "npm:3.1.0"],
             ["jest", "npm:26.6.3"],
             ["jsonwebtoken", "npm:8.5.1"],
-            ["jss", "npm:10.5.1"],
+            ["jss", "npm:10.6.0"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:10.5.4"],
             ["prettier", "npm:2.2.1"],
@@ -4768,7 +4768,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clsx", "npm:1.1.1"],
             ["csstype", "npm:2.6.13"],
             ["hoist-non-react-statics", "npm:3.3.2"],
-            ["jss", "npm:10.5.1"],
+            ["jss", "npm:10.6.0"],
             ["jss-plugin-camel-case", "npm:10.5.1"],
             ["jss-plugin-default-unit", "npm:10.5.1"],
             ["jss-plugin-global", "npm:10.5.1"],
@@ -18350,6 +18350,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/jss-npm-10.5.1-d0e9f1ca53-8bc39f90d8.zip/node_modules/jss/",
           "packageDependencies": [
             ["jss", "npm:10.5.1"],
+            ["@babel/runtime", "npm:7.13.9"],
+            ["csstype", "npm:3.0.3"],
+            ["indefinite-observable", "npm:2.0.1"],
+            ["is-in-browser", "npm:1.1.3"],
+            ["tiny-warning", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:10.6.0", {
+          "packageLocation": "./.yarn/cache/jss-npm-10.6.0-19620be9df-063877ab76.zip/node_modules/jss/",
+          "packageDependencies": [
+            ["jss", "npm:10.6.0"],
             ["@babel/runtime", "npm:7.13.9"],
             ["csstype", "npm:3.0.3"],
             ["indefinite-observable", "npm:2.0.1"],
