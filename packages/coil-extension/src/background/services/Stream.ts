@@ -91,6 +91,7 @@ export class Stream extends EventEmitter {
   )
 
   private readonly loop: StreamLoop
+  private isPaused = false
 
   constructor(
     @logger('Stream')
@@ -133,6 +134,7 @@ export class Stream extends EventEmitter {
   async start(): Promise<void> {
     // reset this upon every start *before* early exit while looping
     this._packetNumber = 0
+    this.isPaused = false
     await this.loop.run(
       async (tokenFraction: number): Promise<Connection> => {
         const spspDetails = await this._getSPSPDetails()
@@ -307,14 +309,20 @@ export class Stream extends EventEmitter {
   }
 
   async stop(): Promise<void> {
+    if (this.isPaused) {
+      void this.start()
+      this.isPaused = false
+    }
     return this.loop.stop()
   }
 
   async pause(): Promise<void> {
-    return this.stop()
+    this.isPaused = true
+    return this.loop.pause()
   }
 
   async resume(): Promise<void> {
+    this.isPaused = false
     return this.start()
   }
 

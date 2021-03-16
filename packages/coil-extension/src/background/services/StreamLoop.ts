@@ -95,7 +95,15 @@ export class StreamLoop extends EventEmitter {
   }
 
   async stop(): Promise<void> {
-    this.state = StreamLoopState.Ending
+    await this._stop(StreamLoopState.Ending)
+  }
+
+  async pause(): Promise<void> {
+    await this._stop(StreamLoopState.Done)
+  }
+
+  private async _stop(transitionState: StreamLoopState): Promise<void> {
+    this.state = transitionState
     this.schedule.stop()
     // End the firstMinuteBandwidth payment quickly. Non-first-minute payment
     // already has called end(), so this does no harm.
