@@ -1,24 +1,27 @@
-const events = [
-  'monetizationstart',
-  'monetizationstop',
-  'monetizationpending',
-  'tip'
-  // Don't log these events
-  // 'monetizationprogress'
-]
-
-const eventLoggingCode = events
-  .map(
-    e =>
-      `document.monetization.addEventListener('${e}', ` +
-      `(e) => console.log(
+const createBindingCode = (...events: string[]) => {
+  return events
+    .map(
+      e =>
+        `document.monetization.addEventListener('${e}', ` +
+        `(e) => console.log(
            '%c Web-Monetization %s event:  %s',
            'color: aqua; background-color: black',
            e.type,
            JSON.stringify(e.detail)) )
           `
-  )
-  .join(';')
+    )
+    .join(';')
+}
+
+const basicEventsLoggingCode = createBindingCode(
+  'monetizationstart',
+  'monetizationstop',
+  'monetizationpending'
+)
+
+// This can be quite noisy so only enable when localStorage.WM_DEBUG_PROGRESS
+// is set.
+const progressLoggingCode = createBindingCode('monetizationprogress')
 
 // language=JavaScript
 export const wmPolyFillMinimal = `
@@ -42,7 +45,11 @@ export const wmPolyfill = `
   ${wmPolyFillMinimal}
 
   if (localStorage.WM_DEBUG) {
-    ${eventLoggingCode}
+    ${basicEventsLoggingCode}
+  }
+
+  if (localStorage.WM_DEBUG_PROGRESS) {
+    ${progressLoggingCode}
   }
 `
 
