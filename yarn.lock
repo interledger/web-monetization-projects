@@ -1322,7 +1322,7 @@ __metadata:
     "@commitlint/cli": ^12.0.0
     "@commitlint/config-conventional": ^12.0.0
     "@types/jest": ^26.0.20
-    "@types/jsonwebtoken": ^8.5.0
+    "@types/jsonwebtoken": ^8.5.1
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.8
     "@types/sjcl": ^1.0.29
@@ -1379,7 +1379,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.0.0
     "@dier-makr/annotations": 0.0.0
     "@types/jest": ^26.0.20
-    "@types/jsonwebtoken": ^8.5.0
+    "@types/jsonwebtoken": ^8.5.1
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.8
     "@typescript-eslint/eslint-plugin": ^4.18.0
@@ -1447,7 +1447,7 @@ __metadata:
     "@types/firefox": ^0.0.30
     "@types/har-format": ^1.2.5
     "@types/jest": ^26.0.20
-    "@types/jsonwebtoken": ^8.5.0
+    "@types/jsonwebtoken": ^8.5.1
     "@types/long": ^4.0.1
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.8
@@ -4043,12 +4043,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:^8.5.0":
-  version: 8.5.0
-  resolution: "@types/jsonwebtoken@npm:8.5.0"
+"@types/jsonwebtoken@npm:^8.5.1":
+  version: 8.5.1
+  resolution: "@types/jsonwebtoken@npm:8.5.1"
   dependencies:
     "@types/node": "*"
-  checksum: d1a6b28f826898bc4f5596d91705aa864419c4a5ca49215507260644af8ceff9edb6db1901a108207cfb22558d035655b55309f38b75fa081da01be9f5408b21
+  checksum: f66ee4a12584a699a6dba5daa79d0f87ae77950a332f918c7f485b6d33501be84547fcac992d7f5a8960d04f77f206b118d9a558d8dd49f1aea99c64a17182b0
   languageName: node
   linkType: hard
 
