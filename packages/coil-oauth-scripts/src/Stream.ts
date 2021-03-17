@@ -134,13 +134,15 @@ export class Stream {
       throw new Error('no streamId; was init called?')
     }
 
-    this.monetization.setState({ state: 'pending' })
+    this.setState({ state: 'pending' })
     // eslint-disable-next-line no-constant-condition
     while (true) {
       if (!this.isActive()) {
         this.setState({ state: 'stopped' })
         await new Promise(resolve => this.activeChanges.once('start', resolve))
-        this.setState({ state: 'pending' })
+        this.setState({
+          state: this.schedule.totalSent() === 0 ? 'pending' : 'started'
+        })
       }
       if (0 < this.schedule.totalSent()) {
         await this.schedule.awaitFullToken()
