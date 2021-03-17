@@ -228,6 +228,11 @@ jobs:
           command: |
             yarn dedupe --check
       - run:
+          name: Pnpify --sdk changes Check
+          command: |
+            yarn pnpify --sdk vscode
+            git diff --exit-code
+      - run:
           name: Yarn format git diff --exit-code
           command: |
             yarn format
