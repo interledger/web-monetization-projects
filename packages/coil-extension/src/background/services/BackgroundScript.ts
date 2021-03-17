@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
-import { MonetizationState } from '@web-monetization/types'
+import { Amount, MonetizationState } from '@web-monetization/types'
 import { resolvePaymentEndpoint } from '@web-monetization/polyfill-utils'
 import { decodeReceipt } from 'ilp-protocol-stream'
 
@@ -53,6 +53,7 @@ interface SendTipResult {
   sendTip: {
     success: boolean
     amount: string
+    destinationAmount: Amount
     currency: string
     scale: number
     receipts: string[]
@@ -738,13 +739,18 @@ export class BackgroundScript {
       this.log(`sendTip: sending tip to ${receiver}`)
       const result = await this.client.query<SendTipResult>({
         query: `
-          mutation sendTip($receiver: String!, $amount: Int, $requestId: String) {
-            sendTip(receiver: $receiver, amount: $amount, requestId: $requestId) {
+          mutation sendTip($receiver: String!, $amount: Int, $webMonetizationId: String) {
+            sendTip(receiver: $receiver, amount: $amount, webMonetizationId: $webMonetizationId) {
               success
               amount
               currency
               scale
               receipts
+              destinationAmount {
+                amount
+                assetCode
+                assetScale
+              }
             }
           }
         `,
@@ -752,7 +758,7 @@ export class BackgroundScript {
         variables: {
           receiver,
           amount: undefined, // default
-          requestId: streamId
+          webMonetizationId: streamId
         }
       })
       const sendTip = result.data.sendTip
@@ -771,9 +777,9 @@ export class BackgroundScript {
           data: {
             paymentPointer: receiver,
             requestId: streamId,
-            amount: sendTip.amount,
-            assetCode: sendTip.currency,
-            assetScale: sendTip.scale,
+            amount: sendTip.destinationAmount.amount,
+            assetCode: sendTip.destinationAmount.assetCode,
+            assetScale: sendTip.destinationAmount.assetScale,
             receipts: receipts
           }
         }

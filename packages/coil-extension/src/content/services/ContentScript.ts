@@ -175,6 +175,10 @@ export class ContentScript {
                 amount: r.amount,
                 receipt: r.receipt
               }
+              console.log(
+                'EVENT PER RECEIPT',
+                JSON.stringify(perReceipt, null, 2)
+              )
               this.monetization.dispatchMonetizationProgressEvent(perReceipt)
             })
           } else {
