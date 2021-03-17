@@ -2521,7 +2521,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:12.0.1"],
             ["@commitlint/config-conventional", "npm:12.0.1"],
             ["@types/jest", "npm:26.0.20"],
-            ["@types/jsonwebtoken", "npm:8.5.0"],
+            ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/node", "npm:14.11.1"],
             ["@types/node-fetch", "npm:2.5.8"],
             ["@types/sjcl", "npm:1.0.29"],
@@ -2580,7 +2580,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:12.0.1"],
             ["@dier-makr/annotations", "workspace:packages/dier-makr-annotations"],
             ["@types/jest", "npm:26.0.20"],
-            ["@types/jsonwebtoken", "npm:8.5.0"],
+            ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/node", "npm:14.11.1"],
             ["@types/node-fetch", "npm:2.5.8"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.18.0"],
@@ -2650,7 +2650,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/firefox", "npm:0.0.30"],
             ["@types/har-format", "npm:1.2.5"],
             ["@types/jest", "npm:26.0.20"],
-            ["@types/jsonwebtoken", "npm:8.5.0"],
+            ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/long", "npm:4.0.1"],
             ["@types/node", "npm:14.11.1"],
             ["@types/node-fetch", "npm:2.5.8"],
@@ -5554,10 +5554,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/jsonwebtoken", [
-        ["npm:8.5.0", {
-          "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-8.5.0-9d7d29ea0b-d1a6b28f82.zip/node_modules/@types/jsonwebtoken/",
+        ["npm:8.5.1", {
+          "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-8.5.1-c01e6c9a08-f66ee4a125.zip/node_modules/@types/jsonwebtoken/",
           "packageDependencies": [
-            ["@types/jsonwebtoken", "npm:8.5.0"],
+            ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/node", "npm:14.11.1"]
           ],
           "linkType": "HARD",
