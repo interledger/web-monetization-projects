@@ -33,6 +33,16 @@ const user = {
   currencyPreferences: { code: 'USD', scale: 9 }
 }
 
+const tipUser = {
+  id: 'cjmbxifo0leaf0711ilgecwdb',
+  canTip: true,
+  fullName: 'Nicholas Dudfield',
+  customerId: 'cus_EmQtvoQVyJgZ75',
+  subscription: { active: true },
+  invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
+  currencyPreferences: { code: 'USD', scale: 9 }
+}
+
 function mockState(partial: Partial<PopupStateType>): PopupStateType {
   const ret: PopupStateType = {
     validToken: null,
@@ -62,6 +72,16 @@ const payingCoilArticle = mockState({
   monetizedTotal: 10854,
   monetizedFavicon: '/res/icon-page.svg',
   user: user,
+  validToken: true,
+  adapted: false
+})
+
+const userCanTip = mockState({
+  monetized: true,
+  coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
+  monetizedTotal: 10854,
+  monetizedFavicon: '/res/icon-page.svg',
+  user: tipUser,
   validToken: true,
   adapted: false
 })
@@ -135,6 +155,7 @@ const aliceUnsubscribed = mockState({
 
 const MOCK_STATES = [
   { name: 'Paying Coil Article', state: payingCoilArticle },
+  { name: 'Tipping', state: userCanTip },
   { name: 'Not Supported', state: notSupported },
   { name: 'Start Exploring', state: startExploring },
   { name: 'Paying', state: payingNonCoilSite },
