@@ -217,7 +217,11 @@ export class Stream {
       stream.removeAllListeners('outgoing_money')
     } finally {
       if (connection) {
-        this.schedule.onSent(+connection.totalSent / throughput / 60)
+        // Cap paid tokens at 1.0 -- partial payment in flat-stacks may cause
+        // client-apparent overpayment (even though no overpayment occurred).
+        this.schedule.onSent(
+          Math.min(1.0, +connection.totalSent / throughput / 60)
+        )
       }
       this.lastDelivered = 0
       this.totalSentWatermark = this.schedule.totalSent()
