@@ -1,0 +1,7 @@
+{
+  "name": "@coil/extension-popup/redux/models",
+  "private": true,
+  "version": "0.0.0",
+  "main": "../build/redux/models.js",
+  "types": "../build/redux/models.d.ts"
+}

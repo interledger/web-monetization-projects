@@ -45,6 +45,9 @@
       "path": "packages/webexts-build-utils/tsconfig.build.json"
     },
     {
+      "path": "packages/coil-extension-popup/tsconfig.build.json"
+    },
+    {
       "path": "packages/coil-puppeteer-utils/tsconfig.build.json"
     },
     {

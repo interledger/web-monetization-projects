@@ -1,0 +1,7 @@
+{
+  "name": "@coil/extension-popup/redux/actions",
+  "private": true,
+  "version": "0.0.0",
+  "main": "../build/redux/actions.js",
+  "types": "../build/redux/actions.d.ts"
+}

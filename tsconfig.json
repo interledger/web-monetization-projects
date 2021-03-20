@@ -60,6 +60,60 @@
       "@webexts/build-utils": [
         "packages/webexts-build-utils/src"
       ],
+      "@coil/extension-popup": [
+        "packages/coil-extension-popup/src"
+      ],
+      "@coil/extension-popup/assets": [
+        "packages/coil-extension-popup/src/assets"
+      ],
+      "@coil/extension-popup/components": [
+        "packages/coil-extension-popup/src/components"
+      ],
+      "@coil/extension-popup/components/icons": [
+        "packages/coil-extension-popup/src/components/icons"
+      ],
+      "@coil/extension-popup/components/DesignIterations": [
+        "packages/coil-extension-popup/src/components/DesignIterations"
+      ],
+      "@coil/extension-popup/components/DesignIterations/list": [
+        "packages/coil-extension-popup/src/components/DesignIterations/list.ts"
+      ],
+      "@coil/extension-popup/redux": [
+        "packages/coil-extension-popup/src/redux"
+      ],
+      "@coil/extension-popup/redux/actions": [
+        "packages/coil-extension-popup/src/redux/actions.ts"
+      ],
+      "@coil/extension-popup/redux/actions-constants": [
+        "packages/coil-extension-popup/src/redux/actions-constants.ts"
+      ],
+      "@coil/extension-popup/redux/models": [
+        "packages/coil-extension-popup/src/redux/models.ts"
+      ],
+      "@coil/extension-popup/redux/reducer": [
+        "packages/coil-extension-popup/src/redux/reducer.ts"
+      ],
+      "@coil/extension-popup/redux/store": [
+        "packages/coil-extension-popup/src/redux/store.ts"
+      ],
+      "@coil/extension-popup/theme": [
+        "packages/coil-extension-popup/src/theme"
+      ],
+      "@coil/extension-popup/types": [
+        "packages/coil-extension-popup/src/types"
+      ],
+      "@coil/extension-popup/utils": [
+        "packages/coil-extension-popup/src/utils"
+      ],
+      "@coil/extension-popup/utils/get-amount-data.utils": [
+        "packages/coil-extension-popup/src/utils/get-amount-data.utils.ts"
+      ],
+      "@coil/extension-popup/utils/get-page-data.util": [
+        "packages/coil-extension-popup/src/utils/get-page-data.util.ts"
+      ],
+      "@coil/extension-popup/utils/redux-persist-storage.utils": [
+        "packages/coil-extension-popup/src/utils/redux-persist-storage.utils.ts"
+      ],
       "@coil/puppeteer-utils": [
         "packages/coil-puppeteer-utils/src"
       ],

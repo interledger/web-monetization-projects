@@ -1,0 +1,7 @@
+{
+  "name": "@coil/extension-popup/redux/store",
+  "private": true,
+  "version": "0.0.0",
+  "main": "../build/redux/store.js",
+  "types": "../build/redux/store.d.ts"
+}

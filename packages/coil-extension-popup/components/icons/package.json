@@ -1,0 +1,7 @@
+{
+  "name": "@coil/extension-popup/components/icons",
+  "private": true,
+  "version": "0.0.0",
+  "main": "../build/components/icons",
+  "types": "../build/components/icons"
+}

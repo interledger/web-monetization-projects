@@ -37,7 +37,6 @@ const config: webpack.Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
-      'react-dom': '@hot-loader/react-dom',
       ...(TS_LOADER_TRANSPILE_ONLY
         ? require('../../webpack.tsconfig.aliases')
         : {})

@@ -1,0 +1,7 @@
+{
+  "name": "@coil/extension-popup/components",
+  "private": true,
+  "version": "0.0.0",
+  "main": "../build/components",
+  "types": "../build/components"
+}
