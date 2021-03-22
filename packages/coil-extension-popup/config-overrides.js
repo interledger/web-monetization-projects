@@ -12,7 +12,6 @@ module.exports = function (config) {
     removeModuleScopePlugin(),
     disableEsLint()
   )(config)
-  require('fs').writeFileSync('overridden.json', JSON .stringify(overridden, null, 2))
   // process.exit(1)
   overridden.module.rules[1].oneOf.forEach((one, ix) => {
     // so can compile other packages

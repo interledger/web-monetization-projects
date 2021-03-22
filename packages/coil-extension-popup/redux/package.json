@@ -1,7 +1,0 @@
-{
-  "name": "@coil/extension-popup/redux",
-  "private": true,
-  "version": "0.0.0",
-  "main": "../build/redux",
-  "types": "../build/redux"
-}

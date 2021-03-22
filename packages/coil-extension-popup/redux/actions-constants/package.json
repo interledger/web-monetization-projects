@@ -1,7 +1,0 @@
-{
-  "name": "@coil/extension-popup/redux/actions-constants",
-  "private": true,
-  "version": "0.0.0",
-  "main": "../build/redux/actions-constants.js",
-  "types": "../build/redux/actions-constants.d.ts"
-}

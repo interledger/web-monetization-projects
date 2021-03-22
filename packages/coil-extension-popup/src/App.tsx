@@ -16,6 +16,7 @@ import {
   DesignFour
 } from '@coil/extension-popup/components'
 import { ProcessStep } from '@coil/extension-popup/types'
+import { adaptedPageQuery } from '@coil/client'
 
 //
 // Styles
@@ -99,6 +100,7 @@ export const App = (): React.ReactElement => {
       <ExtensionPopUp isOpen={extensionIsOpen}>
         <ExtensionViewWrapper>{getDesign()}</ExtensionViewWrapper>
       </ExtensionPopUp>
+      <pre>{adaptedPageQuery}</pre>
       <SettingsPanel isOpen={settingsIsOpen} />
       <Container>
         <Instructions />

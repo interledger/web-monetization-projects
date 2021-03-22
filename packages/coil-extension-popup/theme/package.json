@@ -1,7 +1,0 @@
-{
-  "name": "@coil/extension-popup/theme",
-  "private": true,
-  "version": "0.0.0",
-  "main": "../build/theme",
-  "types": "../build/theme"
-}

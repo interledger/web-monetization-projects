@@ -1,7 +1,0 @@
-{
-  "name": "@coil/extension-popup/redux/reducer",
-  "private": true,
-  "version": "0.0.0",
-  "main": "../build/redux/reducer.js",
-  "types": "../build/redux/reducer.d.ts"
-}

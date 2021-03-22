@@ -1,7 +1,0 @@
-{
-  "name": "@coil/extension-popup/components/DesignIterations",
-  "private": true,
-  "version": "0.0.0",
-  "main": "../build/components/DesignIterations",
-  "types": "../build/components/DesignIterations"
-}
