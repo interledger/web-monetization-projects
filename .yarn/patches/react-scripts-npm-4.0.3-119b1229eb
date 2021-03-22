@@ -1,0 +1,14 @@
+diff --git a/scripts/utils/verifyTypeScriptSetup.js b/scripts/utils/verifyTypeScriptSetup.js
+index 949f34ab7d259f8a20053074f2cfbd4d0db432c6..8c9c79a112e39258c40b1c1720456194f5da7dcb 100644
+--- a/scripts/utils/verifyTypeScriptSetup.js
++++ b/scripts/utils/verifyTypeScriptSetup.js
+@@ -155,8 +155,7 @@ function verifyTypeScriptSetup() {
+           ? 'react-jsx'
+           : 'react',
+       reason: 'to support the new JSX transform in React 17',
+-    },
+-    paths: { value: undefined, reason: 'aliased imports are not supported' },
++    }
+   };
+ 
+   const formatDiagnosticHost = {

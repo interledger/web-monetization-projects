@@ -7,7 +7,14 @@
     "module": "esnext",
     "jsx": "react-jsx",
     "skipLibCheck": true,
-    "noEmit": true
+    "noEmit": true,
+    "baseUrl": ".",
+    // needed so automatic imports are fully aliased
+    "paths": {
+      "@coil/extension-popup/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
     "src"
