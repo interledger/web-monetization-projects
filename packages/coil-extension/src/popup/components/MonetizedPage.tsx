@@ -81,8 +81,8 @@ function Donating(props: PopupProps) {
       </StatusTypography>
       <StatusTypography variant='subtitle1' align='center'>
         {adapted
-          ? 'Your Coil Membership supports this site while you are enjoying its content.'
-          : 'Your Coil Membership supports this creator while you are enjoying their content.'}
+          ? 'Your Coil Membership supports this creator while you are enjoying their content.'
+          : 'Your Coil Membership supports this site while you are enjoying its content.'}
         {!paymentStarted && 'Setting up payment.'}
       </StatusTypography>
       <FlexBox>
