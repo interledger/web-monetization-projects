@@ -35,13 +35,9 @@ export const WebMonetizedBar = (props: PopupProps) => {
       <CoilBar>
         <Typography variant='caption'>
           {monetized ? (
-            <BarBadge src='/res/wm-icon-monetized.svg' width='19' height='20' />
+            <BarBadge src='/res/wm-icon-active.svg' width='19' height='20' />
           ) : (
-            <BarBadge
-              src='/res/wm-icon-not-monetized.svg'
-              width='19'
-              height='20'
-            />
+            <BarBadge src='/res/wm-icon-inactive.svg' width='19' height='20' />
           )}
           {monetized ? (
             'This site is web monetized'
