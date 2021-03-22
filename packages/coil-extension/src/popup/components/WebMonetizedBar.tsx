@@ -17,30 +17,39 @@ const CoilBar = styled('div')({
 
 const BarBadge = styled('img')({
   position: 'relative',
-  top: '0.13em',
+  top: '0.32em',
   marginRight: '4px'
 })
 
+const NotMonetizedText = styled('span')({
+  color: '#90949F',
+  fontWeight: 'normal'
+})
+
 export const WebMonetizedBar = (props: PopupProps) => {
-  const { monetized, adapted, coilSite } = props.context.store
+  const { monetized, coilSite } = props.context.store
   if (coilSite && !monetized) {
     return null
   } else {
-    // TODO: adapted here should mean adaptable
-    const contentOrSite = adapted ? 'content' : 'site'
     return (
       <CoilBar>
         <Typography variant='caption'>
           {monetized ? (
-            <BarBadge src='/res/dollar.svg' width='13' height='14' />
+            <BarBadge src='/res/wm-icon-monetized.svg' width='19' height='20' />
           ) : (
-            <BarBadge src='/res/nodollar.svg' width='13' height='14' />
+            <BarBadge
+              src='/res/wm-icon-not-monetized.svg'
+              width='19'
+              height='20'
+            />
           )}
-          {adapted && monetized
-            ? ' Coil can donate to this channel'
-            : ' This ' + contentOrSite + ' is'}
-          {monetized ? '' : ' not'}
-          {monetized && adapted ? '' : ' Web-Monetized'}
+          {monetized ? (
+            'This site is web monetized'
+          ) : (
+            <NotMonetizedText>
+              This site is&apos;nt web monetized
+            </NotMonetizedText>
+          )}
         </Typography>
       </CoilBar>
     )

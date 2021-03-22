@@ -17,12 +17,13 @@ export const UnmonetizedPage = (props: PopupProps) => {
     <Grid container justify='center' alignItems='center'>
       <div>
         <StatusTypography variant='h6' align='center'>
-          This website is not supported yet <img src='/res/tfwnowm.svg' />
+          This site isn&apos;t supported&nbsp;yet
         </StatusTypography>
         <StatusTypography variant='subtitle1' align='center'>
+          Is this your site? Learn how to <br />
           <Link onClick={onClick} target='_blank'>
             {/* uses a non-breaking hyphen so it wraps correctly */}
-            Learn how to make sites Web&#8209;Monetized.
+            web monetize it
           </Link>
         </StatusTypography>
       </div>
