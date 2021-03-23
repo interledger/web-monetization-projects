@@ -40,7 +40,7 @@ export const WebMonetizedBar = (props: PopupProps) => {
             <BarBadge src='/res/wm-icon-inactive.svg' width='19' height='20' />
           )}
           {monetized ? (
-            'This site is web monetized'
+            'This site is web monetized '
           ) : (
             <NotMonetizedText>
               This site is&apos;nt web monetized
