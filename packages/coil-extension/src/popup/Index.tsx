@@ -8,6 +8,7 @@ import { Container } from './components/util/Container'
 import { AccountBar } from './components/AccountBar'
 import { WebMonetizedBar } from './components/WebMonetizedBar'
 import { Status } from './components/Status'
+import { TipRouter } from './components/views/TipRouter'
 import { PopupProps } from './types'
 
 const CoilContainer = styled(Container)(({ theme }) => ({
@@ -55,20 +56,28 @@ export function Index(props: PopupProps) {
   useEffect(bindMessageListener, [])
 
   const context = { ...props.context }
-
   const footer = context.store.extensionPopupFooterString
-  return (
-    <OuterDiv>
-      <AccountBar context={context} />
-      <CoilContainer>
-        <Status context={context} />
-      </CoilContainer>
-      <WebMonetizedBar context={context} />
-      {footer && (
-        <Typography variant='caption'>
-          <FooterString>{footer}</FooterString>
-        </Typography>
-      )}
-    </OuterDiv>
-  )
+
+  if(context.store.user.canTip){
+    return( 
+      <OuterDiv>
+        <TipRouter context={context} />
+      </OuterDiv>
+    )
+  } else {
+    return (
+      <OuterDiv>
+        <AccountBar context={context} />
+        <CoilContainer>
+          <Status context={context} /> // logic for rendering views
+        </CoilContainer>
+        <WebMonetizedBar context={context} />
+        {footer && (
+          <Typography variant='caption'>
+            <FooterString>{footer}</FooterString>
+          </Typography>
+        )}
+      </OuterDiv>
+    )
+  }
 }
