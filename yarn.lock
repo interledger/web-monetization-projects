@@ -1477,7 +1477,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.8
     "@types/react": ^16.14.5
-    "@types/react-dom": ^16.9.11
+    "@types/react-dom": ^16.9.12
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.19.0
     "@typescript-eslint/parser": ^4.19.0
@@ -2318,7 +2318,7 @@ __metadata:
     "@types/jest": ^26.0.21
     "@types/node": ^14.10.3
     "@types/react": ^16.14.5
-    "@types/react-dom": ^16.9.11
+    "@types/react-dom": ^16.9.12
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.19.0
     "@typescript-eslint/parser": ^4.19.0
@@ -4249,12 +4249,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^16.9.11":
-  version: 16.9.11
-  resolution: "@types/react-dom@npm:16.9.11"
+"@types/react-dom@npm:^16.9.12":
+  version: 16.9.12
+  resolution: "@types/react-dom@npm:16.9.12"
   dependencies:
     "@types/react": ^16
-  checksum: b22a7ac54aa140a96ad87194df51d3241042e5c68a5c8e17f62f0c97a5857b1cd5d1317902acb65bf7079af3c9baaec356a185b9d97cd257e44f97cc1ca16c46
+  checksum: 49745de25f49e3fff8e8dbc5751b3845ab3e5f732d03d89d5818148aa2dda1b002d8ddc7dc8976684c5dd9671cdbff8c270ea9f5c05c1349f65d233aaf135f25
   languageName: node
   linkType: hard
 
@@ -4525,7 +4525,7 @@ __metadata:
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.8
     "@types/react": ^16.14.5
-    "@types/react-dom": ^16.9.11
+    "@types/react-dom": ^16.9.12
     "@types/react-helmet": ^6.1.0
     "@typescript-eslint/eslint-plugin": ^4.19.0
     "@typescript-eslint/parser": ^4.19.0
@@ -4711,7 +4711,7 @@ __metadata:
     "@types/jest": ^26.0.21
     "@types/node": ^14.10.3
     "@types/react": ^16.14.5
-    "@types/react-dom": ^16.9.11
+    "@types/react-dom": ^16.9.12
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.19.0
     "@typescript-eslint/parser": ^4.19.0
