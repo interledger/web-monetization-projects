@@ -1,40 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import { styled, Typography } from '@material-ui/core'
 
 import { ToPopupMessage } from '../types/commands'
-import { Colors } from '../shared-theme/colors'
 
-import { Container } from './components/util/Container'
-import { AccountBar } from './components/AccountBar'
-import { WebMonetizedBar } from './components/WebMonetizedBar'
 import { Status } from './components/Status'
-import { TipRouter } from './components/views/TipRouter'
 import { PopupProps } from './types'
 
-const CoilContainer = styled(Container)(({ theme }) => ({
-  paddingRight: `${theme.spacing(4)}px`,
-  paddingLeft: `${theme.spacing(4)}px`,
-  paddingTop: `${theme.spacing(2)}px`,
-  paddingBottom: `${theme.spacing(2)}px`,
-  backgroundColor: Colors.Grey99
-}))
+import { LoggedOutView } from './components/views/LoggedOutView'
+import { UnsubscribedView } from './components/views/UnsubscribedView'
+import { CoilExploreView } from './components/views/CoilExploreView'
+import { CoilPopupView } from './components/views/CoilPopupView'
+import { TipRouter } from './components/views/TipRouter'
+import { MonetizedRouter } from './components/views/MonetizedRouter'
+import { UnmonetizedPageView } from './components/views/UnmonetizedPageView'
 
-const OuterDiv = styled('div')({
-  minWidth: '308px',
-  maxWidth: '308px',
-  height: 'auto',
-  minHeight: '260px'
-})
-
-const FooterString = styled('code')({
-  display: 'flex',
-  fontSize: '1em',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  height: '40px',
-  borderTop: `0.5px solid ${Colors.Grey89}`,
-  textAlign: 'center'
-})
 
 export function Index(props: PopupProps) {
   const [_, setLastMonetizationProgress] = useState(Date.now())
@@ -56,28 +34,46 @@ export function Index(props: PopupProps) {
   useEffect(bindMessageListener, [])
 
   const context = { ...props.context }
-  const footer = context.store.extensionPopupFooterString
+  const { validToken, user, monetized, coilSite } = props.context.store
 
-  if(context.store.user.canTip){
-    return( 
-      <OuterDiv>
-        <TipRouter context={context} />
-      </OuterDiv>
-    )
-  } else {
-    return (
-      <OuterDiv>
-        <AccountBar context={context} />
-        <CoilContainer>
-          <Status context={context} /> // logic for rendering views
-        </CoilContainer>
-        <WebMonetizedBar context={context} />
-        {footer && (
-          <Typography variant='caption'>
-            <FooterString>{footer}</FooterString>
-          </Typography>
-        )}
-      </OuterDiv>
-    )
+  //
+  // Invalid user views
+  //
+  if(!validToken && !user){    
+      return <LoggedOutView context={context}/>
   }
+  if(!user.subscription || (user.subscription && !user.subscription.active)){ 
+      return <UnsubscribedView context={context}/>
+  }
+
+  //
+  // Paid views 
+  //
+
+  // Coil views
+  if(coilSite && !monetized){ 
+      // CoilViews
+      const { pathname } = new URL(coilSite)
+
+      if(pathname === '/explore'){
+        return <CoilExploreView context={context}/>
+      } else {
+        return <CoilPopupView context={context}/>
+      }
+  }
+
+  // Monetized views
+  if(monetized){
+      if(user.canTip){
+        <TipRouter context={context}/> // handles the tip views based on local state
+      } else {
+        <MonetizedRouter context={context}/> // handles the monetized views based on local state
+      }
+  }
+
+  //
+  // Non Monetized Page
+  //
+  return <UnmonetizedPageView context={context}/>
+
 }

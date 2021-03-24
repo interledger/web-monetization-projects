@@ -13,6 +13,13 @@ import { TipPaymentDebits } from '../TipPaymentDebits'
 //
 // Styles
 //
+const OuterDiv = styled('div')({
+  minWidth: '308px',
+  maxWidth: '308px',
+  height: 'auto',
+  minHeight: '260px'
+})
+
 const ExtensionBodyWrapper = styled('div')(({ random }: { random: number }) => ({
   display: 'flex',
   flexDirection: 'column',
@@ -75,7 +82,7 @@ const useStyles = makeStyles({
 // Component
 //
 export const TipCompleteView = (props: Omit<ITipView, 'context' | 'setCurrentTipAmount'>): React.ReactElement => {
-    const { currentTipAmount } = props
+    const { currentTipAmount, setTipProcessStep } = props
     const classes = useStyles()
 
     const tipCreditBalance = 10 //! needs to be replaced with data from an api call to users settings
@@ -103,27 +110,27 @@ export const TipCompleteView = (props: Omit<ITipView, 'context' | 'setCurrentTip
     }
 
     return (
-        <>
-        <ExtensionBodyWrapper random={Math.random()}>
-            <Box fontSize='18px'>
-                Thanks for the donation!
-            </Box>
-            <Box my='30px'>
-                <Amount>${currentTipAmount}</Amount>
-            </Box>
-            <Box>
-                <TipPaymentDebits />
-            </Box>
-            
-            <Box mx='-24px' flex='1' display='flex' flexDirection='column' justifyContent='flex-end'>
-                <Box mb='5px'>
-                    <Button onClick={handleUndo}>Undo</Button>
-                </Box>
-                <ProgressBar>
-                    <Fill className={classes.fill}/>
-                </ProgressBar>
-            </Box>
-        </ExtensionBodyWrapper>
-        </>
+        <OuterDiv>
+          <ExtensionBodyWrapper random={Math.random()}>
+              <Box fontSize='18px'>
+                  Thanks for the donation!
+              </Box>
+              <Box my='30px'>
+                  <Amount>${currentTipAmount}</Amount>
+              </Box>
+              <Box>
+                  <TipPaymentDebits currentTipAmount={currentTipAmount}/>
+              </Box>
+              
+              <Box mx='-24px' flex='1' display='flex' flexDirection='column' justifyContent='flex-end'>
+                  <Box mb='5px'>
+                      <Button onClick={handleUndo}>Undo</Button>
+                  </Box>
+                  <ProgressBar>
+                      <Fill className={classes.fill}/>
+                  </ProgressBar>
+              </Box>
+          </ExtensionBodyWrapper>
+        </OuterDiv>
     )
 }

@@ -19,6 +19,13 @@ import { Colors } from '../../../shared-theme/colors'
 //
 // Styles
 //
+const OuterDiv = styled('div')({
+    minWidth: '308px',
+    maxWidth: '308px',
+    height: 'auto',
+    minHeight: '260px'
+  })
+
 const ExtensionBodyWrapper = styled('div')({
   padding: '24px 24px 16px 24px',
   minHeight: '352px', // based on the first views body height to keep consistent
@@ -68,22 +75,22 @@ export const TipView = (props: ITipView): React.ReactElement => {
     }
 
     return (
-        <>
-        <AccountBar context={context} />
-        <ExtensionBodyWrapper>
-            <Box mb='24px'textAlign='center' color={Colors.Grey800} fontWeight='normal' fontSize='18px' pt='5px' >
-                Donate to this site
-            </Box>
-            <AmountInput currentTipAmount={currentTipAmount} setCurrentTipAmount={setCurrentTipAmount}/>
-            <Box m='12px 0px 34px 0px'>
-                <HotkeyAmountButtons setCurrentTipAmount={setCurrentTipAmount}/>
-            </Box>
-            <Box mb='5px'>
-                <TipPaymentMethod currentTipAmount={currentTipAmount} />
-            </Box>
-            <Button onClick={handleTip} disabled={currentTipAmount > getRemainingDailyAmountAllowed()}>Donate ${currentTipAmount}</Button>
-        </ExtensionBodyWrapper>
-        <WebMonetizedBar context={context} />
-        </>
+        <OuterDiv>
+            <AccountBar context={context} />
+            <ExtensionBodyWrapper>
+                <Box mb='24px'textAlign='center' color={Colors.Grey800} fontWeight='normal' fontSize='18px' pt='5px' >
+                    Donate to this site
+                </Box>
+                <AmountInput currentTipAmount={currentTipAmount} setCurrentTipAmount={setCurrentTipAmount}/>
+                <Box m='12px 0px 34px 0px'>
+                    <HotkeyAmountButtons setCurrentTipAmount={setCurrentTipAmount}/>
+                </Box>
+                <Box mb='5px'>
+                    <TipPaymentMethod currentTipAmount={currentTipAmount} />
+                </Box>
+                <Button onClick={handleTip} disabled={currentTipAmount > getRemainingDailyAmountAllowed()}>Donate ${currentTipAmount}</Button>
+            </ExtensionBodyWrapper>
+            <WebMonetizedBar context={context} />
+        </OuterDiv>
     )
 }
