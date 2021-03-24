@@ -5,6 +5,8 @@ export const Colors = {
   Grey99: '#FCFCFC',
   Grey100: '#DDE0E5',
   Grey500: '#A4A8B1',
+  // https://www.figma.com/file/QBDNeSLdmN52wreAJlgdiKOC/Extension?node-id=538%3A59
+  Grey500New: '#8F949F',
   Grey550: '#848993',
   Grey700: '#636975',
   Grey800: '#2D333A',
