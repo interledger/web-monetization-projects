@@ -180,6 +180,7 @@ export class Stream {
     })
 
     let connection: IlpStream.Connection | undefined
+    let sendTokens = 0
     try {
       await plugin.connect()
       this.backoff.reset()
@@ -207,21 +208,21 @@ export class Stream {
       })
 
       if (0 < this.schedule.totalSent()) {
-        const sendTokens = this.schedule.sendMax() - this.totalSentWatermark
+        sendTokens = this.schedule.sendMax() - this.totalSentWatermark
         await stream.sendTotal(throughput * 60 * sendTokens)
         // Wait for totalDelivered to update.
-        await new Promise(resolve => setTimeout(resolve, 10)) // XXX? setImmediate?
+        await new Promise(resolve => setImmediate(resolve))
       } else {
+        sendTokens = 1
         await firstMinuteBandwidth(stream, throughput)
       }
       stream.removeAllListeners('outgoing_money')
     } finally {
       if (connection) {
-        // Cap paid tokens at 1.0 -- partial payment in flat-stacks may cause
-        // client-apparent overpayment (even though no overpayment occurred).
-        this.schedule.onSent(
-          Math.min(1.0, +connection.totalSent / throughput / 60)
-        )
+        const sentTokens = +connection.totalSent / throughput / 60
+        // Cap paid tokens -- partial payment in flat-stacks may cause
+        // client-visible overpayment (even though no overpayment occurred).
+        this.schedule.onSent(Math.min(sendTokens, sentTokens))
       }
       this.lastDelivered = 0
       this.totalSentWatermark = this.schedule.totalSent()
