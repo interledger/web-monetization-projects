@@ -27,6 +27,7 @@ const CoilImg = styled('img')({
 const CoilToolbar = styled(Toolbar)({
   backgroundColor: Colors.White,
   borderBottom: `0.5px solid ${Colors.Grey89}`,
+  // See also theme re: MuiToolbar/regular minHeight
   height: '56px'
 })
 
@@ -124,7 +125,7 @@ export const AccountBar = (props: PopupProps) => {
         </MenuItem>
 
         <MenuItem
-          divider
+          divider={Boolean(extensionBuildString)}
           dense
           component='a'
           onClick={onSettingsClick}

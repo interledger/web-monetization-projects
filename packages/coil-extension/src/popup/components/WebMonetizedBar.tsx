@@ -20,33 +20,29 @@ const BarBadge = styled('img')({
   marginRight: '4px'
 })
 
-const NotMonetizedText = styled('span')(({ theme }) => ({
+const NotMonetizedTypography = styled(Typography)({
   color: Colors.Grey500New,
   fontWeight: 400
-}))
+})
 
 export const WebMonetizedBar = (props: PopupProps) => {
   const { monetized, coilSite } = props.context.store
+  const icon = monetized
+    ? '/res/wm-icon-active.svg'
+    : '/res/wm-icon-inactive.svg'
+
   if (coilSite && !monetized) {
     return null
   } else {
     return (
       <CoilBar>
+        <BarBadge src={icon} width='16' height='16' />
         {monetized ? (
-          <BarBadge src='/res/wm-icon-active.svg' width='16' height='16' />
-        ) : (
-          <BarBadge src='/res/wm-icon-inactive.svg' width='16' height='16' />
-        )}
-        {monetized && (
           <Typography variant='caption'>This site is web monetized</Typography>
-        )}
-        {!monetized && (
-          <Typography
-            variant='caption'
-            style={{ fontWeight: 400, color: Colors.Grey500New }}
-          >
+        ) : (
+          <NotMonetizedTypography variant='caption'>
             This site is&apos;nt web monetized
-          </Typography>
+          </NotMonetizedTypography>
         )}
       </CoilBar>
     )
