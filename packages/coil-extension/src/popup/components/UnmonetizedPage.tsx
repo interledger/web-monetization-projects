@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core'
 
 import { PopupProps } from '../types'
 
-import { Link } from './util/Link'
+import { LinkUnderlined } from './util/Link'
 import { StatusTypography } from './util/StatusTypography'
 
 export const UnmonetizedPage = (props: PopupProps) => {
@@ -21,10 +21,9 @@ export const UnmonetizedPage = (props: PopupProps) => {
         </StatusTypography>
         <StatusTypography variant='subtitle1' align='center'>
           Is this your site? Learn how to <br />
-          <Link onClick={onClick} target='_blank'>
-            {/* uses a non-breaking hyphen so it wraps correctly */}
+          <LinkUnderlined onClick={onClick} target='_blank'>
             web monetize it
-          </Link>
+          </LinkUnderlined>
         </StatusTypography>
       </div>
     </Grid>
