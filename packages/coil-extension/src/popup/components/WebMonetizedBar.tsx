@@ -16,9 +16,9 @@ const CoilBar = styled('div')({
 })
 
 const BarBadge = styled('img')({
+  marginRight: '4px',
   position: 'relative',
-  top: '0.25em',
-  marginRight: '4px'
+  top: '3px'
 })
 
 const NotMonetizedText = styled('span')(({ theme }) => ({
