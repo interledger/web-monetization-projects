@@ -41,7 +41,7 @@ export const WebMonetizedBar = (props: PopupProps) => {
           <Typography variant='caption'>This site is web monetized</Typography>
         ) : (
           <NotMonetizedTypography variant='caption'>
-            This site is&apos;nt web monetized
+            This site isn&apos;t web monetized
           </NotMonetizedTypography>
         )}
       </CoilBar>
