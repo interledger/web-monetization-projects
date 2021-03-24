@@ -58,6 +58,11 @@ export const CoilLogoImg = () => {
   )
 }
 
+const MoreButton = styled(IconButton)({
+  width: 20,
+  height: 20
+})
+
 export const AccountBar = (props: PopupProps) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
@@ -92,10 +97,9 @@ export const AccountBar = (props: PopupProps) => {
         <Muted>Not Logged in</Muted>
       )}
       <Flex />
-      <IconButton aria-label='Menu' onClick={handleMenuClick}>
+      <MoreButton aria-label='Menu' onClick={handleMenuClick}>
         <More />
-      </IconButton>
-
+      </MoreButton>
       <CoilMenu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
