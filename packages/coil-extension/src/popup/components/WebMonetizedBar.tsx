@@ -7,8 +7,9 @@ import { PopupProps } from '../types'
 
 const CoilBar = styled('div')({
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   justifyContent: 'center',
+  alignItems: 'center',
   borderTop: `0.5px solid ${Colors.Grey89}`,
   backgroundColor: Colors.White,
   height: '40px',
@@ -16,9 +17,7 @@ const CoilBar = styled('div')({
 })
 
 const BarBadge = styled('img')({
-  marginRight: '4px',
-  position: 'relative',
-  top: '3px'
+  marginRight: '4px'
 })
 
 const NotMonetizedText = styled('span')(({ theme }) => ({
@@ -33,20 +32,22 @@ export const WebMonetizedBar = (props: PopupProps) => {
   } else {
     return (
       <CoilBar>
-        <Typography variant='caption'>
-          {monetized ? (
-            <BarBadge src='/res/wm-icon-active.svg' width='16' height='16' />
-          ) : (
-            <BarBadge src='/res/wm-icon-inactive.svg' width='16' height='16' />
-          )}
-          {monetized ? (
-            'This site is web monetized '
-          ) : (
-            <NotMonetizedText>
-              This site is&apos;nt web monetized
-            </NotMonetizedText>
-          )}
-        </Typography>
+        {monetized ? (
+          <BarBadge src='/res/wm-icon-active.svg' width='16' height='16' />
+        ) : (
+          <BarBadge src='/res/wm-icon-inactive.svg' width='16' height='16' />
+        )}
+        {monetized && (
+          <Typography variant='caption'>This site is web monetized</Typography>
+        )}
+        {!monetized && (
+          <Typography
+            variant='caption'
+            style={{ fontWeight: 400, color: Colors.Grey500New }}
+          >
+            This site is&apos;nt web monetized
+          </Typography>
+        )}
       </CoilBar>
     )
   }
