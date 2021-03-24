@@ -34,6 +34,9 @@ export function Index(props: PopupProps) {
   const context = { ...props.context }
   const { validToken, user, monetized, coilSite } = props.context.store
 
+  //* Moved all the render logic from Status, PaidViews, CoilViews, and MonetizedPage here to Index
+  //* Not sure how I feel about the readability vs the original method.
+
   //
   // Invalid user views
   //
@@ -71,4 +74,6 @@ export function Index(props: PopupProps) {
     // Non Monetized Page
     return <UnmonetizedPageView context={context} />
   }
+
+  return null
 }
