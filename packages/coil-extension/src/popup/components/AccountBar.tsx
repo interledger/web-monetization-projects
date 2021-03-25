@@ -59,8 +59,8 @@ export const CoilLogoImg = () => {
 }
 
 const MoreButton = styled(IconButton)({
-  width: 20,
-  height: 20
+  width: 32,
+  height: 32
 })
 
 export const AccountBar = (props: PopupProps) => {

@@ -53,7 +53,9 @@ export const theme = createMuiTheme({
       regular: {
         minHeight: '56px',
         [`@media (min-width: ${breakpoints.values.sm}px)`]: {
-          minHeight: '56px'
+          minHeight: '56px',
+          paddingLeft: '16px',
+          paddingRight: '8px'
         }
       }
     },
