@@ -1488,7 +1488,7 @@ __metadata:
     "@wext/shipit": ^0.2.1
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
-    addons-linter: ^3.0.0
+    addons-linter: ^3.1.0
     copy-webpack-plugin: ^8.1.0
     crx-hotreload: ^1.0.6
     debug: ^4.3.1
@@ -2329,7 +2329,7 @@ __metadata:
     "@wext/shipit": ^0.2.1
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
-    addons-linter: ^3.0.0
+    addons-linter: ^3.1.0
     copy-webpack-plugin: ^8.1.0
     crx-hotreload: ^1.0.6
     css-loader: ^5.2.0
@@ -3511,12 +3511,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:3.2.0":
-  version: 3.2.0
-  resolution: "@mdn/browser-compat-data@npm:3.2.0"
+"@mdn/browser-compat-data@npm:3.2.1":
+  version: 3.2.1
+  resolution: "@mdn/browser-compat-data@npm:3.2.1"
   dependencies:
     extend: 3.0.2
-  checksum: 159611c8167f8b4f41dd929c70201ab89405312bad9ef1ea77c465ee547ad0d9585ec15fc9353d5a5e56486b1b5087d147cedfdc9f3633d5232582622e4958a7
+  checksum: 1b763a0bfaaa44e6cd5b2dd8e98a396fd0daf046186d66278aa9af5e5eecd7695e19c1d6ea2e2fb60127dbd7ed28828fa7ba6cacb2d2a09a4245e2edecc45141
   languageName: node
   linkType: hard
 
@@ -5548,12 +5548,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "addons-linter@npm:3.0.0"
+"addons-linter@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "addons-linter@npm:3.1.0"
   dependencies:
-    "@mdn/browser-compat-data": 3.2.0
-    addons-scanner-utils: 4.3.0
+    "@mdn/browser-compat-data": 3.2.1
+    addons-scanner-utils: 4.3.1
     ajv: 6.12.6
     ajv-merge-patch: 4.1.0
     chalk: 4.1.0
@@ -5584,7 +5584,7 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: 49fd45a7c55b19f64ac7d0bf29fcb02159790523e3d6571c83744f0c192174a7445916b4cccf035041177ae979b0fafe82160a1d9905b515acc9b34f6cfd537b
+  checksum: eb5386600566b33a3ec6779b76eb29ff5861445320f13e00014fdbce32a533ca1138ead5e4a25706d80b4ef298b5bf541afe751aba50e13edbe7d33777b220ab
   languageName: node
   linkType: hard
 
@@ -5608,9 +5608,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-scanner-utils@npm:4.3.0":
-  version: 4.3.0
-  resolution: "addons-scanner-utils@npm:4.3.0"
+"addons-scanner-utils@npm:4.3.1":
+  version: 4.3.1
+  resolution: "addons-scanner-utils@npm:4.3.1"
   dependencies:
     "@types/yauzl": 2.9.1
     common-tags: 1.8.0
@@ -5624,7 +5624,7 @@ __metadata:
     download: 8.0.0
     express: 4.17.1
     safe-compare: 1.1.4
-  checksum: 8f4968490d21be16384dda7a5fe870a2abd81c4d05001c1d438c13962e70e52fd1c5276bc9bfaa3224508a25c25416abf0c36af4587cfcb52d8473cc306544d2
+  checksum: 6955d61dd05250418ad88bb5bb674290db2b448af8992d6e8d1097b3f06121cf7af153e8dd4579de0c45c37a1cbd8a840242e19338d21ffb8d34f63f550a4c74
   languageName: node
   linkType: hard
 
