@@ -24,12 +24,16 @@ const CoilImg = styled('img')({
   marginRight: '8px'
 })
 
-const CoilToolbar = styled(Toolbar)({
+const CoilToolbar = styled(Toolbar)(({ theme }) => ({
   backgroundColor: Colors.White,
   borderBottom: `0.5px solid ${Colors.Grey89}`,
-  // See also theme re: MuiToolbar/regular minHeight
-  height: '56px'
-})
+  height: '56px',
+  [`@media (min-width: ${theme.breakpoints.values.sm}px)`]: {
+    minHeight: '56px',
+    paddingLeft: '16px',
+    paddingRight: '8px'
+  }
+}))
 
 const CoilMenu = withStyles({
   paper: {

@@ -49,16 +49,6 @@ export const theme = createMuiTheme({
         display: 'block'
       }
     },
-    MuiToolbar: {
-      regular: {
-        minHeight: '56px',
-        [`@media (min-width: ${breakpoints.values.sm}px)`]: {
-          minHeight: '56px',
-          paddingLeft: '16px',
-          paddingRight: '8px'
-        }
-      }
-    },
     MuiButton: {
       root: {
         borderRadius: '64px'
