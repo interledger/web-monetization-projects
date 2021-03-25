@@ -47,7 +47,7 @@ export const CoilLogoImg = () => {
   const [month, day] = getMonthAndDay()
   const isXMAS = isXMASPeriod(month, day)
   const xmasLogo = '/res/CoilLogoXMAS.svg'
-  const normalLogo = '/res/icn-coil-ext-profile.svg'
+  const normalLogo = '/res/icn-coil-ext@4x.png'
   const logo = isXMAS ? normalLogo : normalLogo
   const logoWidth = isXMAS ? 28 : 24
   const style = isXMAS ? { marginTop: '-3px' } : {}
