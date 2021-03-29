@@ -35,14 +35,21 @@ export class StreamServer {
     this.streamServer = await createServer({ plugin: this.server })
     this.streamServer.on('connection', (connection: Connection) => {
       connection.on('stream', async (stream: DataAndMoneyStream) => {
-        let total = 20e3
-        while (stream.isOpen()) {
-          stream.setReceiveMax(total)
-          const timeout = 250 + Math.floor(Math.random() * 250)
-          await new Promise(resolve => setTimeout(resolve, timeout))
-          const extra = 10e3 + Math.floor(Math.random() * 20e3)
-          total += extra
-          dbg({ total })
+        stream.on('money', amount => {
+          dbg('incoming_money', amount)
+        })
+        if (process.env.QUICK_STREAM) {
+          stream.setReceiveMax(Infinity)
+        } else {
+          let total = 20e3
+          while (stream.isOpen()) {
+            stream.setReceiveMax(total)
+            const timeout = 250 + Math.floor(Math.random() * 250)
+            await new Promise(resolve => setTimeout(resolve, timeout))
+            const extra = 10e3 + Math.floor(Math.random() * 20e3)
+            total += extra
+            dbg({ total })
+          }
         }
       })
     })
