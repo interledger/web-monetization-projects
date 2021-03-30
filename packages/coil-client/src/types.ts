@@ -1,6 +1,10 @@
+export interface GraphQlError {
+  message: string
+}
+
 export interface GraphQlResponse<T> {
   data: T
-  errors?: string[]
+  errors?: GraphQlError[]
 }
 
 export interface CoilUser {
