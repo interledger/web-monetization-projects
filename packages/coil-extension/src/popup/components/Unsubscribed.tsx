@@ -15,7 +15,7 @@ const footerString =
 const Muted = styled('p')({
   color: Colors.Grey500,
   fontSize: '12px',
-  fontWeight: 600
+  fontWeight: 400
 })
 
 const Button = styled(StatusButton)({
