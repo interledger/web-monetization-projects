@@ -7,8 +7,9 @@ import { PopupProps } from '../types'
 
 const CoilBar = styled('div')({
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   justifyContent: 'center',
+  alignItems: 'center',
   borderTop: `0.5px solid ${Colors.Grey89}`,
   backgroundColor: Colors.White,
   height: '40px',
@@ -16,32 +17,33 @@ const CoilBar = styled('div')({
 })
 
 const BarBadge = styled('img')({
-  position: 'relative',
-  top: '0.13em',
   marginRight: '4px'
 })
 
+const NotMonetizedTypography = styled(Typography)({
+  color: Colors.Grey500New,
+  fontWeight: 400
+})
+
 export const WebMonetizedBar = (props: PopupProps) => {
-  const { monetized, adapted, coilSite } = props.context.store
+  const { monetized, coilSite } = props.context.store
+  const icon = monetized
+    ? '/res/wm-icon-active.svg'
+    : '/res/wm-icon-inactive.svg'
+
   if (coilSite && !monetized) {
     return null
   } else {
-    // TODO: adapted here should mean adaptable
-    const contentOrSite = adapted ? 'content' : 'site'
     return (
       <CoilBar>
-        <Typography variant='caption'>
-          {monetized ? (
-            <BarBadge src='/res/dollar.svg' width='13' height='14' />
-          ) : (
-            <BarBadge src='/res/nodollar.svg' width='13' height='14' />
-          )}
-          {adapted && monetized
-            ? ' Coil can donate to this channel'
-            : ' This ' + contentOrSite + ' is'}
-          {monetized ? '' : ' not'}
-          {monetized && adapted ? '' : ' Web-Monetized'}
-        </Typography>
+        <BarBadge src={icon} width='16' height='16' />
+        {monetized ? (
+          <Typography variant='caption'>This site is web monetized</Typography>
+        ) : (
+          <NotMonetizedTypography variant='caption'>
+            This site isn&apos;t web monetized
+          </NotMonetizedTypography>
+        )}
       </CoilBar>
     )
   }

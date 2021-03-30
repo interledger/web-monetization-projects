@@ -155,8 +155,8 @@ const aliceUnsubscribed = mockState({
 
 const MOCK_STATES = [
   { name: 'Paying Coil Article', state: payingCoilArticle },
-  { name: 'Tipping', state: userCanTip },
   { name: 'Not Supported', state: notSupported },
+  { name: 'Tipping', state: userCanTip },
   { name: 'Start Exploring', state: startExploring },
   { name: 'Paying', state: payingNonCoilSite },
   { name: 'Welcome To Coil', state: welcomeToCoil },

@@ -109,7 +109,7 @@ export const theme = createMuiTheme({
       fontFamily: 'CircularStd',
       lineHeight: 'normal',
       fontSize: '14px',
-      color: '#000',
+      color: Colors.Grey800,
       fontWeight: 500
     }
   }

@@ -73,18 +73,17 @@ export function MonetizedPage(props: PopupProps) {
 function Donating(props: PopupProps) {
   const { monetizedTotal, adapted } = props.context.store
   const paymentStarted = monetizedTotal !== 0
-  const emptyWhenNotAdapted = adapted ? 'Coil is paying the creator.' : ''
-  const payingOrSettingUpPayment = paymentStarted
-    ? emptyWhenNotAdapted
-    : 'Setting up payment.'
 
   return (
     <Fragment>
       <StatusTypography variant='h6' align='center'>
-        Coil is paying
+        Thanks for your support
       </StatusTypography>
       <StatusTypography variant='subtitle1' align='center'>
-        This content is included in your membership. {payingOrSettingUpPayment}
+        {adapted
+          ? 'Your Coil Membership supports this creator while you are enjoying their content.'
+          : 'Your Coil Membership supports this site while you are enjoying its content.'}
+        {!paymentStarted && 'Setting up payment.'}
       </StatusTypography>
       <FlexBox>
         <MonetizeAnimation context={props.context} />
