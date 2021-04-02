@@ -1340,7 +1340,7 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@coil/privacypass-sjcl": 0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/jsonwebtoken": ^8.5.1
     "@types/node": ^14.10.3
@@ -1397,7 +1397,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@dier-makr/annotations": 0.0.0
     "@types/jest": ^26.0.22
     "@types/jsonwebtoken": ^8.5.1
@@ -1458,7 +1458,7 @@ __metadata:
     "@coil/polyfill-utils": ^0.0.0
     "@coil/puppeteer-utils": ^0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@dier-makr/annotations": ^0.0.0
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.3
@@ -1544,7 +1544,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@typescript-eslint/eslint-plugin": ^4.20.0
@@ -1606,7 +1606,7 @@ __metadata:
     "@coil/puppeteer-utils": ^0.0.0
     "@coil/webpack-utils": 0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/long": ^4.0.1
     "@types/node": ^14.10.3
@@ -1668,7 +1668,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@typescript-eslint/eslint-plugin": ^4.20.0
@@ -1720,7 +1720,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/keccak": ^3.0.1
     "@types/node": ^14.10.3
@@ -1780,7 +1780,7 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@coil/client": 0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/debug": ^4.1.5
     "@types/get-port": ^4.2.0
     "@types/jest": ^26.0.22
@@ -1840,7 +1840,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@typescript-eslint/eslint-plugin": ^4.20.0
@@ -1901,7 +1901,7 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@coil/client": 0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@typescript-eslint/eslint-plugin": ^4.20.0
@@ -1961,12 +1961,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^12.0.0":
-  version: 12.0.1
-  resolution: "@commitlint/config-conventional@npm:12.0.1"
+"@commitlint/config-conventional@npm:^12.1.1":
+  version: 12.1.1
+  resolution: "@commitlint/config-conventional@npm:12.1.1"
   dependencies:
     conventional-changelog-conventionalcommits: ^4.3.1
-  checksum: 1999dea7f267362471a186e60c00a61793543647e7f468e06c21e87b8663f636ea7785ceec9a1b1299ce4d8813c252b6bb2bbf4798fb150439ae4c8e465c707a
+  checksum: 3474a7b70abb485e3cb1c25f7e8d11340712b724ba852b18128f87c5524b50c6cc47ee3c189025037bc336fb38014031bfa8247d5a352b83f3bdcbe91eb38ccb
   languageName: node
   linkType: hard
 
@@ -2157,7 +2157,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@typescript-eslint/eslint-plugin": ^4.20.0
@@ -2208,7 +2208,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@dier-makr/annotations": 0.0.0
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
@@ -2308,7 +2308,7 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@coil/polyfill-utils": ^0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.3
     "@material-ui/icons": ^4.11.2
@@ -4513,7 +4513,7 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@hot-loader/react-dom": ^16.14.0
     "@types/body-parser": ^1.19.0
     "@types/express": ^4.17.9
@@ -4589,7 +4589,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@types/node-fetch": ^2.5.8
@@ -4646,7 +4646,7 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@types/react": ^16.14.5
@@ -4702,7 +4702,7 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@hot-loader/react-dom": ^16.14.0
     "@types/ajv": ^1.0.0
     "@types/jest": ^26.0.22
@@ -4765,7 +4765,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@typescript-eslint/eslint-plugin": ^4.20.0
@@ -4817,7 +4817,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@dier-makr/annotations": 0.0.0
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
@@ -5023,7 +5023,7 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@typescript-eslint/eslint-plugin": ^4.20.0
@@ -22473,7 +22473,7 @@ sjcl@sublimator/sjcl:
     "@babel/preset-env": ^7.13.12
     "@babel/preset-typescript": ^7.13.0
     "@commitlint/cli": ^12.1.1
-    "@commitlint/config-conventional": ^12.0.0
+    "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
     "@typescript-eslint/eslint-plugin": ^4.20.0
