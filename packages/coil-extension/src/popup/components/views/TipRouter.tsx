@@ -5,53 +5,66 @@
 */
 
 import React, { useState } from 'react'
-import { PopupProps } from '../../types'
-import { TipView } from './TipView'
-import { TipCompleteView } from './TipCompleteView'
 
+import { PopupProps } from '../../types'
+
+import { TipView } from './TipView'
+import { TipConfirmView } from './TipConfirmView'
+import { TipCompleteView } from './TipCompleteView'
 
 //
 // Models
 //
 export enum TipProcessStep {
-    TIP = 'TIP',
-    TIP_COMPLETE = 'TIP_COMPLETE'
+  TIP = 'TIP',
+  TIP_CONFIRM = 'TIP_CONFIRM',
+  TIP_COMPLETE = 'TIP_COMPLETE'
 }
 
 export interface ITipView {
-    context: PopupProps;
-    currentTipAmount: number;
-    setCurrentTipAmount: (amount: number) => void;
-    setTipProcessStep: (step: TipProcessStep) => void;
+  context: PopupProps
+  currentTipAmount: number
+  setCurrentTipAmount: (amount: number) => void
+  setTipProcessStep: (step: TipProcessStep) => void
 }
-
 
 //
 // Component
 //
 export const TipRouter = (props: PopupProps) => {
-    const [tipProccessStep, setTipProcessStep] = useState<TipProcessStep>(TipProcessStep.TIP)
-    const [currentTipAmount, setCurrentTipAmount] = useState<number>(1)
-    const context = props.context;
+  const [tipProccessStep, setTipProcessStep] = useState<TipProcessStep>(
+    TipProcessStep.TIP
+  )
+  const [currentTipAmount, setCurrentTipAmount] = useState<number>(1)
+  const context = props.context
 
-    switch(tipProccessStep){
-        case TipProcessStep.TIP_COMPLETE: {
-            return( 
-                <TipCompleteView 
-                    currentTipAmount={currentTipAmount}
-                    setTipProcessStep={setTipProcessStep}
-                />
-            )
-        }
-        case TipProcessStep.TIP:
-        default: {
-            return (
-                <TipView 
-                    context={context} 
-                    currentTipAmount={currentTipAmount}
-                    setCurrentTipAmount={setCurrentTipAmount}
-                    setTipProcessStep={setTipProcessStep}
-                />)   
-        }
+  switch (tipProccessStep) {
+    case TipProcessStep.TIP_COMPLETE: {
+      return (
+        <TipCompleteView
+          currentTipAmount={currentTipAmount}
+          setTipProcessStep={setTipProcessStep}
+        />
+      )
     }
+    case TipProcessStep.TIP_CONFIRM: {
+      return (
+        <TipConfirmView
+          currentTipAmount={currentTipAmount}
+          setTipProcessStep={setTipProcessStep}
+        />
+      )
+    }
+    case TipProcessStep.TIP:
+    default: {
+      return (
+        <TipView
+          context={context}
+          currentTipAmount={currentTipAmount}
+          setCurrentTipAmount={setCurrentTipAmount}
+          setTipProcessStep={setTipProcessStep}
+        />
+      )
+    }
+  }
 }

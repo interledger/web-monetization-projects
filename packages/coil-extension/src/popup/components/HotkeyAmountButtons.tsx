@@ -1,14 +1,16 @@
 import React from 'react'
 import { styled } from '@material-ui/core'
+
 import { Colors } from '../../shared-theme/colors'
 
+import { TipProcessStep } from './views/TipRouter'
 //
 // Styles
 //
 const HotkeyButtonsWrapper = styled('div')({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'space-between'
 })
 
 const HotkeyButton = styled('button')({
@@ -24,6 +26,7 @@ const HotkeyButton = styled('button')({
   textAlign: 'center',
   padding: '10px 0px',
   width: '54px',
+  flex: '1',
   '&:hover': {
     backgroundColor: Colors.Grey800,
     color: '#FFFFFF'
@@ -31,36 +34,45 @@ const HotkeyButton = styled('button')({
   '&:disabled': {
     cursor: 'not-allowed',
     backgroundColor: Colors.Grey50,
-    color: Colors.Grey100,
+    color: Colors.Grey100
+  },
+  '&:nth-child(2)': {
+    margin: '0px 15px'
   }
 })
 
 //
 // Component
 //
-export const HotkeyAmountButtons = (props: {setCurrentTipAmount: (amount: number) => void}): React.ReactElement => {
-  const { setCurrentTipAmount } = props;
-  
+export const HotkeyAmountButtons = (props: {
+  setCurrentTipAmount: (amount: number) => void
+  setTipProcessStep: (step: TipProcessStep) => void
+}): React.ReactElement => {
+  const { setCurrentTipAmount, setTipProcessStep } = props
+
   const maximumTipLimit = 100 //! needs to be replaced with data from an api call to users settings
-  const getRemainingDailyAmountAllowed = () => (100)  //! needs to be replaced with data from an api call to users settings
+  const getRemainingDailyAmountAllowed = () => 100 //! needs to be replaced with data from an api call to users settings
 
   const handleSelectAmount = (amount: number) => {
     setCurrentTipAmount(amount)
+    setTipProcessStep(TipProcessStep.TIP_CONFIRM)
   }
   return (
     <HotkeyButtonsWrapper>
-      {
-        [2,5,10,50].map((amount: number, index: number) => {   
-          return(
-            <HotkeyButton 
-              key={`pdt-${index}`} 
-              disabled={(amount > getRemainingDailyAmountAllowed() || amount > maximumTipLimit) ? true : false}
-              onClick={() => handleSelectAmount(amount)}>
-              ${amount}
-            </HotkeyButton>
-          )
-        }) 
-      }
+      {[5, 10, 50].map((amount: number, index: number) => {
+        return (
+          <HotkeyButton
+            key={`pdt-${index}`}
+            disabled={
+              !!(amount > getRemainingDailyAmountAllowed() ||
+              amount > maximumTipLimit)
+            }
+            onClick={() => handleSelectAmount(amount)}
+          >
+            ${Number.isInteger(amount) ? amount : amount.toFixed(2)}
+          </HotkeyButton>
+        )
+      })}
     </HotkeyButtonsWrapper>
   )
 }

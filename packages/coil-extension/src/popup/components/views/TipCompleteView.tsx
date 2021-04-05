@@ -4,11 +4,15 @@
     responsible for rendering the final tip view for users to see how much they just tipped as well as be presented with the 'undo' option.
 */
 
-import React, { useEffect } from 'react'
-import { styled, Box, Button, makeStyles } from '@material-ui/core'
+import React from 'react'
+import { styled, Box } from '@material-ui/core'
+import CloseIcon from '@material-ui/icons/Close'
+
 import { Colors } from '../../../shared-theme/colors'
+import { FitTextWrapper } from '../FitTextWrapper'
+import { RandomThankYouMessage } from '../RandomThankYouMessage'
+
 import { TipProcessStep, ITipView } from './TipRouter'
-import { TipPaymentDebits } from '../TipPaymentDebits'
 
 //
 // Styles
@@ -20,14 +24,16 @@ const OuterDiv = styled('div')({
   minHeight: '260px'
 })
 
-const ExtensionBodyWrapper = styled('div')(({ random }: { random: number }) => ({
+const ExtensionBodyWrapper = styled('div')(({ url }: { url: string }) => ({
   display: 'flex',
   flexDirection: 'column',
-  padding: '40px 24px 0px 24px',
-  minHeight: '455px', // based on the first views body height to keep consistent
-  backgroundImage: `url("/res/MoneyRain.gif?${random}")`, //* the 'random' prop is needed so the gif animation replays every load
-  backgroundSize: '110% 110%',
+  padding: '14px 24px 0px 24px',
+  minHeight: '457px', // based on the first views body height to keep consistent
+  maxHeight: '457px', // based on the first views body height to keep consistent
+  backgroundImage: `url("${url}")`, //* the 'random' prop is needed so the gif animation replays every load
+  backgroundSize: '105% 105%',
   backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'bottom',
   textAlign: 'center',
   color: Colors.Grey800,
   fontWeight: 'normal',
@@ -37,100 +43,64 @@ const ExtensionBodyWrapper = styled('div')(({ random }: { random: number }) => (
   }
 }))
 
-const Amount = styled('div')({
-  height: '80px',
-  color: Colors.Grey800,
-  textAlign: 'center',
-  fontSize: '80px',
-  fontVariantNumeric: 'tabular-nums',
-  fontWeight: 'bold',
-  letterSpacing: '0px',
-  lineHeight: '80px'
-})
-
-
-const ProgressBar = styled('div')({
-  position: 'relative',
-  width: '100%',
-  height: '4px',
-  backgroundColor: Colors.Grey800,
-})
-
-const Fill = styled('div')({
-  position: 'absolute',
-  zIndex: 8,
-  width: '100%',
-  top: 0,
-  bottom: 0,
-  right: 0,
-  backgroundColor: Colors.Grey100,
-})
-
-//* cannot get the keyframes to work with 'styled' syntax
-const useStyles = makeStyles({
-  fill: {
-    animation: `$fill 5s linear`
-  },
-  '@keyframes fill': {
-    from: { width: '0%' },
-    to: { width: '100%' }
+const IconButton = styled('button')({
+  cursor: 'pointer',
+  background: 'transparent',
+  border: 'none',
+  lineHeight: '0px',
+  padding: '0px',
+  marginRight: '-10px',
+  color: Colors.Grey500,
+  '&:hover': {
+    color: Colors.Grey800
   }
 })
-
 
 //
 // Component
 //
-export const TipCompleteView = (props: Omit<ITipView, 'context' | 'setCurrentTipAmount'>): React.ReactElement => {
-    const { currentTipAmount, setTipProcessStep } = props
-    const classes = useStyles()
+export const TipCompleteView = (
+  props: Omit<ITipView, 'context' | 'setCurrentTipAmount'>
+): React.ReactElement => {
+  const { currentTipAmount, setTipProcessStep } = props
 
-    const tipCreditBalance = 10 //! needs to be replaced with data from an api call to users settings
+  const handleClose = () => {
+    window.close()
+  }
 
-    let closeTimeout: NodeJS.Timeout
-    useEffect(() => {
-        closeTimeout = setTimeout(handleClose, 5000)
-        return () => {
-        clearTimeout(closeTimeout)
-        }
-    }, [])
-
-    const handleClose = () => {
-        window.close()
+  const getBackgroundImageUrl = () => {
+    let ImgUrl = '/res/Level1.gif'
+    if (currentTipAmount >= 5 && currentTipAmount <= 20) {
+      ImgUrl = '/res/Level2.gif'
     }
-
-    const handleUndo = () => {
-        // clear timeout
-        clearTimeout(closeTimeout)
-        
-        // undo last tip
-
-        // reset to tip view
-        setTipProcessStep(TipProcessStep.TIP)
+    if (currentTipAmount > 20) {
+      ImgUrl = '/res/Level3.gif'
     }
+    // adding a random number to the url allows it re-render the animation on the same page
+    // but it is re-rendering the animation every time there is a stream transaction
 
-    return (
-        <OuterDiv>
-          <ExtensionBodyWrapper random={Math.random()}>
-              <Box fontSize='18px'>
-                  Thanks for the donation!
-              </Box>
-              <Box my='30px'>
-                  <Amount>${currentTipAmount}</Amount>
-              </Box>
-              <Box>
-                  <TipPaymentDebits currentTipAmount={currentTipAmount}/>
-              </Box>
-              
-              <Box mx='-24px' flex='1' display='flex' flexDirection='column' justifyContent='flex-end'>
-                  <Box mb='5px'>
-                      <Button onClick={handleUndo}>Undo</Button>
-                  </Box>
-                  <ProgressBar>
-                      <Fill className={classes.fill}/>
-                  </ProgressBar>
-              </Box>
-          </ExtensionBodyWrapper>
-        </OuterDiv>
-    )
+    // return `${ImgUrl}?${Math.random()}`
+    return `${ImgUrl}`
+  }
+
+  return (
+    <OuterDiv>
+      <ExtensionBodyWrapper url={getBackgroundImageUrl()}>
+        <Box textAlign='right' mb='25px'>
+          <IconButton onClick={handleClose}>
+            <CloseIcon />
+          </IconButton>
+        </Box>
+        <RandomThankYouMessage />
+        <Box my='30px'>
+          <FitTextWrapper defaultFontSize={80}>
+            $
+            {Number.isInteger(currentTipAmount)
+              ? currentTipAmount
+              : currentTipAmount.toFixed(2)}
+          </FitTextWrapper>
+        </Box>
+      </ExtensionBodyWrapper>
+    </OuterDiv>
+  )
 }
