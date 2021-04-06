@@ -6,3 +6,10 @@ export const Link = styled('a')({
   textDecoration: 'none',
   color: Colors.Blue400
 })
+
+export const LinkUnderlined = styled('a')({
+  textDecoration: 'underline',
+  cursor: 'pointer',
+  color: Colors.Blue400,
+  fontWeight: 500
+})

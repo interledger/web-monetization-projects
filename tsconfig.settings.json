@@ -13,6 +13,8 @@
     "downlevelIteration": true,
     "moduleResolution": "node",
 
+    "isolatedModules": true,
+
     "declarationMap": false,
     "sourceMap": false,
     "declaration": false,

@@ -24,11 +24,16 @@ const CoilImg = styled('img')({
   marginRight: '8px'
 })
 
-const CoilToolbar = styled(Toolbar)({
+const CoilToolbar = styled(Toolbar)(({ theme }) => ({
   backgroundColor: Colors.White,
   borderBottom: `0.5px solid ${Colors.Grey89}`,
-  height: '56px'
-})
+  height: '56px',
+  [`@media (min-width: ${theme.breakpoints.values.sm}px)`]: {
+    minHeight: '56px',
+    paddingLeft: '16px',
+    paddingRight: '8px'
+  }
+}))
 
 const CoilMenu = withStyles({
   paper: {
@@ -42,7 +47,7 @@ export const CoilLogoImg = () => {
   const [month, day] = getMonthAndDay()
   const isXMAS = isXMASPeriod(month, day)
   const xmasLogo = '/res/CoilLogoXMAS.svg'
-  const normalLogo = '/res/icn-coil-ext-profile.svg'
+  const normalLogo = '/res/icn-coil-ext@4x.png'
   const logo = isXMAS ? normalLogo : normalLogo
   const logoWidth = isXMAS ? 28 : 24
   const style = isXMAS ? { marginTop: '-3px' } : {}
@@ -56,6 +61,11 @@ export const CoilLogoImg = () => {
     />
   )
 }
+
+const MoreButton = styled(IconButton)({
+  width: 32,
+  height: 32
+})
 
 export const AccountBar = (props: PopupProps) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
@@ -91,10 +101,9 @@ export const AccountBar = (props: PopupProps) => {
         <Muted>Not Logged in</Muted>
       )}
       <Flex />
-      <IconButton aria-label='Menu' onClick={handleMenuClick}>
+      <MoreButton aria-label='Menu' onClick={handleMenuClick}>
         <More />
-      </IconButton>
-
+      </MoreButton>
       <CoilMenu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
@@ -124,7 +133,7 @@ export const AccountBar = (props: PopupProps) => {
         </MenuItem>
 
         <MenuItem
-          divider
+          divider={Boolean(extensionBuildString)}
           dense
           component='a'
           onClick={onSettingsClick}

@@ -9,7 +9,7 @@
 Ultimately we want `main` branch to be in a 'good' state at all times, with good test
 coverage, so we can practice CD, pushing the extensions to dev channels.
 
-Currently, we mostly rely on puppeteer tests which don't cover all the test scenarios.  
+Currently, we mostly rely on puppeteer tests which don't cover all the test scenarios.
 Therefore, **we must do manual testing before release**, as it's too much of an impediment
 to run through the full manual release checklist on each PR/commit.
 
@@ -44,6 +44,12 @@ yarn
 
 The TypeScript is compiled into es2020, so the minimum version of node required is v14 (currently the LTS)
 See [nvm](https://github.com/nvm-sh/nvm#install--update-script) for an easy way to manage multiple versions
+
+### Visual Studio Code
+
+This repository is using yarn 2 pnp, so VSCode needs
+[zipfs support](https://marketplace.visualstudio.com/items?itemName=arcanis.vscode-zipfs) to
+be able to navigate to 3rd party dependencies.
 
 ## Why Vanilla Prettier ?
 

@@ -63,7 +63,7 @@ export interface TokenStore {
   ) => Promise<StorableBlindToken | undefined>
 }
 
-export { StorableBlindToken }
+export type { StorableBlindToken }
 
 export interface AnonymousTokensOptions {
   // The `protocol://host` of the coil services.
