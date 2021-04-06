@@ -2655,6 +2655,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@coil/client", "workspace:packages/coil-client"],
             ["@coil/polyfill-utils", "workspace:packages/coil-polyfill-utils"],
             ["@coil/puppeteer-utils", "workspace:packages/coil-puppeteer-utils"],
+            ["@coil/webpack-utils", "workspace:packages/coil-webpack-utils"],
             ["@commitlint/cli", "npm:12.0.1"],
             ["@commitlint/config-conventional", "npm:12.0.1"],
             ["@dier-makr/annotations", "workspace:packages/dier-makr-annotations"],
