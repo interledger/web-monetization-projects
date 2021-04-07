@@ -75,6 +75,4 @@ export function Index(props: PopupProps): React.ReactElement {
     // Non Monetized Page
     return <UnmonetizedPageView context={context} />
   }
-
-  return null
 }
