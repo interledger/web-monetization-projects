@@ -49,6 +49,7 @@ export const TipRouter: React.FC<PopupProps> = props => {
     case TipProcessStep.TIP_CONFIRM: {
       return (
         <TipConfirmView
+          context={context}
           currentTipAmount={currentTipAmount}
           setTipProcessStep={setTipProcessStep}
         />

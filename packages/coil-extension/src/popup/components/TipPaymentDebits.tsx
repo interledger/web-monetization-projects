@@ -7,8 +7,7 @@ import { Colors } from '../../shared-theme/colors'
 // Styles
 //
 const PaymentDebitsWrapper = styled('div')({
-  // flex: '1',
-  // paddingTop: '10px'
+  width: '100%'
 })
 
 const PaymentDebit = styled('div')({

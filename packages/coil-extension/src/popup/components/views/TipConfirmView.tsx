@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled, Box } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close'
 
 import { FitTextWrapper } from '../FitTextWrapper'
 import { Colors } from '../../../shared-theme/colors'
 import { TipPaymentDebits } from '../TipPaymentDebits'
+import { SendTip, SendTipResult } from '../../../types/commands'
 
 import { TipProcessStep, ITipView } from './TipRouter'
 
@@ -67,6 +68,10 @@ const CancelButton = styled('button')({
   letterSpacing: '.5px',
   '&:hover': {
     color: Colors.Grey800
+  },
+  '&:disabled': {
+    cursor: 'not-allowed',
+    color: Colors.Grey100
   }
 })
 
@@ -87,15 +92,27 @@ const IconButton = styled('button')({
 // Component
 //
 export const TipConfirmView = (
-  props: Omit<ITipView, 'context' | 'setCurrentTipAmount'>
+  props: Omit<ITipView, 'setCurrentTipAmount'>
 ): React.ReactElement => {
-  const { currentTipAmount, setTipProcessStep } = props
+  const { context, currentTipAmount, setTipProcessStep } = props
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
+  const [hasSubmitError, setHasSubmitError] = useState<boolean>(false)
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    setHasSubmitError(false)
+    setIsSubmitting(true)
+
     // process payments
+    const { success } = await sendTip(currentTipAmount)
 
-    // change slide
-    setTipProcessStep(TipProcessStep.TIP_COMPLETE)
+    if (success) {
+      // change slide
+      setTipProcessStep(TipProcessStep.TIP_COMPLETE)
+    } else {
+      // set error state
+      setHasSubmitError(true)
+      setIsSubmitting(false)
+    }
   }
 
   const handleUndo = () => {
@@ -105,6 +122,16 @@ export const TipConfirmView = (
 
   const handleClose = () => {
     window.close()
+  }
+
+  const sendTip = async (tipAmount: number) => {
+    const message: SendTip = { command: 'sendTip', data: { amount: tipAmount } }
+
+    return new Promise(resolve => {
+      context.runtime.sendMessage(message, (result: SendTipResult) => {
+        resolve(result)
+      })
+    }) as Promise<SendTipResult>
   }
 
   return (
@@ -141,11 +168,26 @@ export const TipConfirmView = (
         >
           Pay with
         </Box>
-        <Box mt='10px' flex='1'>
-          <TipPaymentDebits currentTipAmount={currentTipAmount} />
+        <Box mt='10px' flex='1' display='flex'>
+          {hasSubmitError ? (
+            <Box
+              width='100%'
+              textAlign='center'
+              color={Colors.Red400}
+              alignSelf='center'
+            >
+              Something went wrong.
+            </Box>
+          ) : (
+            <TipPaymentDebits currentTipAmount={currentTipAmount} />
+          )}
         </Box>
-        <Button onClick={handleSubmit}>Confirm</Button>
-        <CancelButton onClick={handleUndo}>Cancel</CancelButton>
+        <Button onClick={handleSubmit} disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : hasSubmitError ? 'Retry' : 'Confirm'}
+        </Button>
+        <CancelButton onClick={handleUndo} disabled={isSubmitting}>
+          Cancel
+        </CancelButton>
       </ExtensionBodyWrapper>
     </OuterDiv>
   )
