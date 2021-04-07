@@ -21,8 +21,7 @@ export enum TipProcessStep {
   TIP_COMPLETE = 'TIP_COMPLETE'
 }
 
-export interface ITipView {
-  context: PopupProps
+export interface ITipView extends PopupProps {
   currentTipAmount: number
   setCurrentTipAmount: (amount: number) => void
   setTipProcessStep: (step: TipProcessStep) => void
@@ -31,7 +30,7 @@ export interface ITipView {
 //
 // Component
 //
-export const TipRouter = (props: PopupProps) => {
+export const TipRouter: React.FC<PopupProps> = props => {
   const [tipProccessStep, setTipProcessStep] = useState<TipProcessStep>(
     TipProcessStep.TIP
   )

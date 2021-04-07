@@ -46,7 +46,9 @@ const FooterString = styled('code')({
 //
 // Component
 //
-export const HeaderFooterLayout = (props: React.FC<PopupProps>) => {
+export const HeaderFooterLayout: React.FC<PopupProps> = (
+  props: React.PropsWithChildren<PopupProps>
+) => {
   const { context, children } = props
   const footer = context.store.extensionPopupFooterString
 

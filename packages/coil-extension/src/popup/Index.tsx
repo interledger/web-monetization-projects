@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 import { ToPopupMessage } from '../types/commands'
 
-import { Status } from './components/Status'
 import { PopupProps } from './types'
 import { LoggedOutView } from './components/views/LoggedOutView'
 import { UnsubscribedView } from './components/views/UnsubscribedView'
@@ -12,7 +11,7 @@ import { TipRouter } from './components/views/TipRouter'
 import { MonetizedRouter } from './components/views/MonetizedRouter'
 import { UnmonetizedPageView } from './components/views/UnmonetizedPageView'
 
-export function Index(props: PopupProps) {
+export function Index(props: PopupProps): React.ReactElement {
   const [_, setLastMonetizationProgress] = useState(Date.now())
 
   function syncStoreAndSetState() {
@@ -65,7 +64,9 @@ export function Index(props: PopupProps) {
 
   // Monetized views
   if (monetized) {
-    if (user.canTip) {
+    const showNewTipUi = user.canTip
+    // const showNewTipUi = false
+    if (showNewTipUi) {
       return <TipRouter context={context} /> // handles the tip views based on local state
     } else {
       return <MonetizedRouter context={context} /> // handles the monetized views based on local state

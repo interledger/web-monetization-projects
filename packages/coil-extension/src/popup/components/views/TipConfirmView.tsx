@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, Box, IconButton } from '@material-ui/core'
+import { styled, Box } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close'
 
 import { FitTextWrapper } from '../FitTextWrapper'

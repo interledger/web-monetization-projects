@@ -61,7 +61,9 @@ const Button = styled('button')({
 //
 // Component
 //
-export const TipView = (props: ITipView): React.ReactElement => {
+export const TipView: React.FC<ITipView> = (
+  props: React.PropsWithChildren<ITipView>
+) => {
   const {
     context,
     currentTipAmount,
