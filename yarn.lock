@@ -1344,7 +1344,7 @@ __metadata:
     "@types/jest": ^26.0.22
     "@types/jsonwebtoken": ^8.5.1
     "@types/node": ^14.10.3
-    "@types/node-fetch": ^2.5.9
+    "@types/node-fetch": ^2.5.10
     "@types/sjcl": ^1.0.29
     "@typescript-eslint/eslint-plugin": ^4.21.0
     "@typescript-eslint/parser": ^4.21.0
@@ -1402,7 +1402,7 @@ __metadata:
     "@types/jest": ^26.0.22
     "@types/jsonwebtoken": ^8.5.1
     "@types/node": ^14.10.3
-    "@types/node-fetch": ^2.5.9
+    "@types/node-fetch": ^2.5.10
     "@typescript-eslint/eslint-plugin": ^4.21.0
     "@typescript-eslint/parser": ^4.21.0
     "@yarnpkg/pnpify": ^2.4.0
@@ -1472,7 +1472,7 @@ __metadata:
     "@types/jsonwebtoken": ^8.5.1
     "@types/long": ^4.0.1
     "@types/node": ^14.10.3
-    "@types/node-fetch": ^2.5.9
+    "@types/node-fetch": ^2.5.10
     "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.12
     "@types/uuid": ^8.3.0
@@ -1610,7 +1610,7 @@ __metadata:
     "@types/jest": ^26.0.22
     "@types/long": ^4.0.1
     "@types/node": ^14.10.3
-    "@types/node-fetch": ^2.5.9
+    "@types/node-fetch": ^2.5.10
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.21.0
     "@typescript-eslint/parser": ^4.21.0
@@ -4173,13 +4173,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:^2.5.9":
-  version: 2.5.9
-  resolution: "@types/node-fetch@npm:2.5.9"
+"@types/node-fetch@npm:^2.5.10":
+  version: 2.5.10
+  resolution: "@types/node-fetch@npm:2.5.10"
   dependencies:
     "@types/node": "*"
     form-data: ^3.0.0
-  checksum: 0c25139d135382dfe6c63bcbfc059d29350a3d950a258d4611f13180e207926d68b07bd3d1937e6eb4a98213a6da1aa285cc94167b9cf67e41d4634d3d2f5b3b
+  checksum: 7687038f73cf0f2e4bac8ced3abdfbb77f8b2719de2f180d0064238d7460c8b4dc0b39c08da35a76d7db9f86528599ea0f7cee7c468ad7cfecfe2db1c5863641
   languageName: node
   linkType: hard
 
@@ -4520,7 +4520,7 @@ __metadata:
     "@types/figlet": ^1.5.0
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
-    "@types/node-fetch": ^2.5.9
+    "@types/node-fetch": ^2.5.10
     "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.12
     "@types/react-helmet": ^6.1.0
@@ -4592,7 +4592,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.1.1
     "@types/jest": ^26.0.22
     "@types/node": ^14.10.3
-    "@types/node-fetch": ^2.5.9
+    "@types/node-fetch": ^2.5.10
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.21.0
     "@typescript-eslint/parser": ^4.21.0
