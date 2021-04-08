@@ -97,6 +97,14 @@ export enum IncDec {
   Dec
 }
 
+interface IIncDecButton {
+  type: IncDec
+  currentTipAmount: number
+  setCurrentTipAmount: (amount: number) => void
+  minimumTipLimit: number
+  remainingDailyAmount: number
+}
+
 //
 // Utility
 //
@@ -131,27 +139,23 @@ function useInterval(callback: () => void, delay: number | null) {
 //
 // Component
 //
-export const IncDecButton = (props: {
-  type: IncDec
-  currentTipAmount: number
-  setCurrentTipAmount: (amount: number) => void
-}): React.ReactElement => {
-  const { type } = props
+export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
+  const {
+    type,
+    minimumTipLimit,
+    remainingDailyAmount,
+    currentTipAmount,
+    setCurrentTipAmount
+  } = props
   const initialVelocity = 150
   const [velocity, setVelocity] = useState<number>(initialVelocity)
   const [isRunning, setIsRunning] = useState<boolean>(false)
-
-  const minimumTipLimit = 1 //! needs to be replaced with data from an api call to users settings
-  const maximumTipLimit = 100 //! needs to be replaced with data from an api call to users settings
-  const getRemainingDailyAmountAllowed = () => 100 //! needs to be replaced with data from an api call to users settings
-
-  const { currentTipAmount, setCurrentTipAmount } = props
 
   // Click logic
   const handleIncDecClick = () => {
     let amount = currentTipAmount
     if (type === IncDec.Inc) {
-      if (amount == maximumTipLimit) return
+      if (amount == remainingDailyAmount) return
       amount = amount + 1
     } else if (type == IncDec.Dec) {
       amount = amount - 1
@@ -172,7 +176,7 @@ export const IncDecButton = (props: {
 
       // handle increment/decrement
       if (type === IncDec.Inc) {
-        if (amount == maximumTipLimit) return
+        if (amount == remainingDailyAmount) return
         amount = amount + 1
       } else if (type == IncDec.Dec) {
         amount = amount - 1
@@ -183,8 +187,8 @@ export const IncDecButton = (props: {
         amount = minimumTipLimit
         stop()
       }
-      if (amount > getRemainingDailyAmountAllowed()) {
-        amount = getRemainingDailyAmountAllowed()
+      if (amount > remainingDailyAmount) {
+        amount = remainingDailyAmount
         stop()
       }
 
@@ -221,8 +225,7 @@ export const IncDecButton = (props: {
 
   const getDisabledState = () => {
     if (type == IncDec.Inc) {
-      return !!(currentTipAmount >= getRemainingDailyAmountAllowed() ||
-        currentTipAmount == maximumTipLimit)
+      return currentTipAmount >= remainingDailyAmount
     } else {
       return currentTipAmount <= minimumTipLimit
     }

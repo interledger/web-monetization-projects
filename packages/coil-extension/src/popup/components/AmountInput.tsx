@@ -59,11 +59,17 @@ const Input = styled('input')({
 })
 
 //
+// Models
+//
+interface IAmountInput extends Omit<ITipView, 'context' | 'setTipProcessStep'> {
+  minimumTipLimit: number
+  remainingDailyAmount: number
+}
+
+//
 // Component
 //
-export const AmountInput = (
-  props: Omit<ITipView, 'context' | 'setTipProcessStep'>
-): React.ReactElement => {
+export const AmountInput = (props: IAmountInput): React.ReactElement => {
   const defaultFontSize = 64
   const characterSpacing = 0.6
   const maxAmountWidth = 160
@@ -73,11 +79,12 @@ export const AmountInput = (
   const [isUserInput, setIsUserInput] = useState<boolean>(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const minimumTipLimit = 1 //! needs to be replaced with data from an api call to users settings
-  const maximumTipLimit = 100 //! needs to be replaced with data from an api call to users settings
-  const getRemainingDailyAmountAllowed = () => 100 //! needs to be replaced with data from an api call to users settings
-
-  const { currentTipAmount, setCurrentTipAmount } = props
+  const {
+    currentTipAmount,
+    setCurrentTipAmount,
+    minimumTipLimit,
+    remainingDailyAmount
+  } = props
 
   // set focus to the input field when it loads. Cannot use 'autoFocus' because eslint-plugin-jsx-a11y
   useEffect(() => {
@@ -119,17 +126,9 @@ export const AmountInput = (
       value = minimumTipLimit
     }
 
-    // handle if the input is higher than the maximum tip
-    if (value > maximumTipLimit) {
-      value = maximumTipLimit
-      if (isUserInput && inputRef.current) {
-        inputRef.current.value = value.toString()
-      }
-    }
-
     // handle if the input is higher than the remaining daily limit
-    if (value > getRemainingDailyAmountAllowed()) {
-      value = getRemainingDailyAmountAllowed()
+    if (value > remainingDailyAmount) {
+      value = remainingDailyAmount
       if (isUserInput && inputRef.current) {
         inputRef.current.value = value.toString()
       }
@@ -181,6 +180,8 @@ export const AmountInput = (
         type={IncDec.Dec}
         currentTipAmount={currentTipAmount}
         setCurrentTipAmount={setCurrentTipAmount}
+        minimumTipLimit={minimumTipLimit}
+        remainingDailyAmount={remainingDailyAmount}
       />
       {isUserInput ? (
         // render tip manual input
@@ -211,6 +212,8 @@ export const AmountInput = (
         type={IncDec.Inc}
         currentTipAmount={currentTipAmount}
         setCurrentTipAmount={setCurrentTipAmount}
+        minimumTipLimit={minimumTipLimit}
+        remainingDailyAmount={remainingDailyAmount}
       />
     </CurrentAmountWrapper>
   )

@@ -18,27 +18,28 @@ const WarningWrapper = styled('div')({
 })
 
 //
+// Models
+//
+interface ITipWarning {
+  currentTipAmount: number
+  remainingDailyAmount: number
+}
+
+//
 // Component
 //
-export const TipWarning = (props: {
-  currentTipAmount: number
-}): React.ReactElement => {
-  const { currentTipAmount } = props
-
-  const maximumTipLimit = 100 //! needs to be replaced with data from an api call to users settings
-  const getRemainingDailyAmountAllowed = () => 100 //! needs to be replaced with data from an api call to users settings
+export const TipWarning = (props: ITipWarning): React.ReactElement => {
+  const { currentTipAmount, remainingDailyAmount } = props
 
   //todo - update link once billing infrastructure is complete and we have a view for changing the limit
   return (
     <WarningWrapper>
-      {currentTipAmount >= getRemainingDailyAmountAllowed() ? (
+      {currentTipAmount >= remainingDailyAmount ? (
         <span>
           <a href='https://coil.com/settings/account'>
             Increase daily tipping limit
           </a>
         </span>
-      ) : currentTipAmount == maximumTipLimit ? (
-        <span>Maximum amount for tip</span>
       ) : null}
     </WarningWrapper>
   )

@@ -97,6 +97,7 @@ export const TipConfirmView = (
   const { context, currentTipAmount, setTipProcessStep } = props
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const [hasSubmitError, setHasSubmitError] = useState<boolean>(false)
+  const tipCreditBalance = context.store.user.tipSettings?.tipCreditBalance
 
   const handleSubmit = async () => {
     setHasSubmitError(false)
@@ -179,7 +180,10 @@ export const TipConfirmView = (
               Something went wrong.
             </Box>
           ) : (
-            <TipPaymentDebits currentTipAmount={currentTipAmount} />
+            <TipPaymentDebits
+              currentTipAmount={currentTipAmount}
+              tipCreditBalance={tipCreditBalance || 0}
+            />
           )}
         </Box>
         <Button onClick={handleSubmit} disabled={isSubmitting}>

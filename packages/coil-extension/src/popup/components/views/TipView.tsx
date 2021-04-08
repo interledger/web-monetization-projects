@@ -71,7 +71,10 @@ export const TipView: React.FC<ITipView> = (
     setTipProcessStep
   } = props
 
-  const getRemainingDailyAmountAllowed = () => 100 //! needs to be replaced with data from an api call to users settings
+  const hotkeyTipAmounts = context.store.user.tipSettings?.hotkeyTipAmounts
+  const remainingDailyAmount =
+    context.store.user.tipSettings?.remainingDailyAmount
+  const minimumTipLimit = context.store.user.tipSettings?.minimumTipLimit
 
   const handleTip = () => {
     setTipProcessStep(TipProcessStep.TIP_CONFIRM)
@@ -94,19 +97,26 @@ export const TipView: React.FC<ITipView> = (
         <AmountInput
           currentTipAmount={currentTipAmount}
           setCurrentTipAmount={setCurrentTipAmount}
+          remainingDailyAmount={remainingDailyAmount || 0}
+          minimumTipLimit={minimumTipLimit || 1}
         />
         <Box m='20px 0px 35px 0px'>
           <HotkeyAmountButtons
+            hotkeyTipAmounts={hotkeyTipAmounts || []}
+            remainingDailyAmount={remainingDailyAmount || 0}
             setCurrentTipAmount={setCurrentTipAmount}
             setTipProcessStep={setTipProcessStep}
           />
         </Box>
         <Box mb='35px'>
-          <TipWarning currentTipAmount={currentTipAmount} />
+          <TipWarning
+            currentTipAmount={currentTipAmount}
+            remainingDailyAmount={remainingDailyAmount || 0}
+          />
         </Box>
         <Button
           onClick={handleTip}
-          disabled={currentTipAmount > getRemainingDailyAmountAllowed()}
+          disabled={currentTipAmount > (remainingDailyAmount || 0)}
         >
           Send $
           {Number.isInteger(currentTipAmount)

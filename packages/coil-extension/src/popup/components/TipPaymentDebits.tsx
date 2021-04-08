@@ -41,14 +41,20 @@ const Dot = styled('div')({
 })
 
 //
+// Models
+//
+interface ITipPaymentDebits {
+  tipCreditBalance: number
+  currentTipAmount: number
+}
+
+//
 // Component
 //
-export const TipPaymentDebits = (props: {
-  currentTipAmount: number
-}): React.ReactElement => {
-  const { currentTipAmount } = props
-
-  const tipCreditBalance = 10 //! needs to be replaced with data from an api call to users settings
+export const TipPaymentDebits = (
+  props: ITipPaymentDebits
+): React.ReactElement => {
+  const { currentTipAmount, tipCreditBalance } = props
 
   const getTipCreditCharge = (): number => {
     if (tipCreditBalance >= currentTipAmount) {
@@ -67,6 +73,7 @@ export const TipPaymentDebits = (props: {
     }
   }
 
+  //todo: need to add logos for all credit cards and logic for determining which logo to display
   return (
     <PaymentDebitsWrapper>
       {getTipCreditCharge() > 0 && ( // show the tip credits only if they have been charged

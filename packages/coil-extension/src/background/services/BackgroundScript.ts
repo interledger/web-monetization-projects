@@ -107,6 +107,19 @@ export class BackgroundScript {
     this.bindOnInstalled()
     // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
+    this.setTipSettings()
+  }
+
+  private setTipSettings() {
+    if (this.store.user) {
+      const defaultTipSettings = {
+        tipCreditBalance: 0,
+        minimumTipLimit: 1,
+        remainingDailyAmount: 400,
+        hotkeyTipAmounts: [5, 10, 50]
+      }
+      this.store.user.tipSettings = { ...defaultTipSettings }
+    }
   }
 
   private setTabsOnActivatedListener() {

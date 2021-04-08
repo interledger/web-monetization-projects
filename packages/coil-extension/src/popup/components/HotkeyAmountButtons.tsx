@@ -42,16 +42,27 @@ const HotkeyButton = styled('button')({
 })
 
 //
-// Component
+// Models
 //
-export const HotkeyAmountButtons = (props: {
+interface IHotkeyAmountButtons {
+  hotkeyTipAmounts: Array<number>
+  remainingDailyAmount: number
   setCurrentTipAmount: (amount: number) => void
   setTipProcessStep: (step: TipProcessStep) => void
-}): React.ReactElement => {
-  const { setCurrentTipAmount, setTipProcessStep } = props
+}
 
-  const maximumTipLimit = 100 //! needs to be replaced with data from an api call to users settings
-  const getRemainingDailyAmountAllowed = () => 100 //! needs to be replaced with data from an api call to users settings
+//
+// Component
+//
+export const HotkeyAmountButtons = (
+  props: IHotkeyAmountButtons
+): React.ReactElement => {
+  const {
+    setCurrentTipAmount,
+    setTipProcessStep,
+    hotkeyTipAmounts,
+    remainingDailyAmount
+  } = props
 
   const handleSelectAmount = (amount: number) => {
     setCurrentTipAmount(amount)
@@ -59,14 +70,11 @@ export const HotkeyAmountButtons = (props: {
   }
   return (
     <HotkeyButtonsWrapper>
-      {[5, 10, 50].map((amount: number, index: number) => {
+      {hotkeyTipAmounts.map((amount: number, index: number) => {
         return (
           <HotkeyButton
             key={`pdt-${index}`}
-            disabled={
-              !!(amount > getRemainingDailyAmountAllowed() ||
-              amount > maximumTipLimit)
-            }
+            disabled={amount > remainingDailyAmount}
             onClick={() => handleSelectAmount(amount)}
           >
             ${Number.isInteger(amount) ? amount : amount.toFixed(2)}
