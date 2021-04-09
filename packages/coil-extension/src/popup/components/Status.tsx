@@ -1,25 +1,21 @@
 import React from 'react'
 
-import { PopupProps } from '../types'
+import { useStore } from '../context/storeContext'
 
-import { LoggedOut } from './LoggedOut'
 import { Unsubscribed } from './Unsubscribed'
 import { PaidViews } from './PaidViews'
+import { LoggedOut } from './LoggedOut'
 
-export const Status = (props: PopupProps) => {
-  const context = props.context
-  const { validToken, user } = props.context.store
+export const Status = () => {
+  const { validToken, user } = useStore()
 
   if (validToken && user) {
-    if (
-      !user.subscription ||
-      (user.subscription && !user.subscription.active)
-    ) {
-      return <Unsubscribed context={context} />
+    if (user.subscription?.active) {
+      return <PaidViews />
     } else {
-      return <PaidViews context={context} />
+      return <Unsubscribed />
     }
   } else {
-    return <LoggedOut context={context} />
+    return <LoggedOut />
   }
 }

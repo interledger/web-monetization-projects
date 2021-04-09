@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, styled } from '@material-ui/core'
 
-import { PopupProps } from '../types'
+import { useHost } from '../context/popupHostContext'
 
 import { StatusTypography } from './util/StatusTypography'
 import { StatusButton } from './StatusButton'
@@ -25,13 +25,11 @@ const titleString = 'Verify your account'
 const subheading1 =
   'To validate your account and reserve a spot on our waitlist please enter your credit card information.'
 
-export const Unverified = (props: PopupProps) => {
+export const Unverified = () => {
   const {
-    context: {
-      coilDomain,
-      runtime: { tabOpener }
-    }
-  } = props
+    coilDomain,
+    runtime: { tabOpener }
+  } = useHost()
   const onClick = tabOpener(coilDomain + '/card-validation')
 
   return (
