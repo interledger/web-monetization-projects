@@ -1,20 +1,19 @@
 import React from 'react'
 
-import { PopupProps } from '../types'
+import { useStore } from '../context/storeContext'
 
 import { UnmonetizedPage } from './UnmonetizedPage'
 import { MonetizedPage } from './MonetizedPage'
 import { CoilViews } from './CoilViews'
 
-export const PaidViews = (props: PopupProps) => {
-  const context = props.context
-  const { monetized, coilSite } = context.store
+export const PaidViews = () => {
+  const { monetized, coilSite } = useStore()
 
   if (coilSite && !monetized) {
-    return <CoilViews context={context} />
+    return <CoilViews />
   } else if (monetized) {
-    return <MonetizedPage context={context} />
+    return <MonetizedPage />
   } else {
-    return <UnmonetizedPage context={context} />
+    return <UnmonetizedPage />
   }
 }

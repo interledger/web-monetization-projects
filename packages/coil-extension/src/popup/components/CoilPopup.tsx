@@ -1,18 +1,16 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 
-import { PopupProps } from '../types'
+import { useHost } from '../context/popupHostContext'
 
 import { StatusTypography } from './util/StatusTypography'
 import { StatusButton } from './StatusButton'
 
-export const CoilPopup = (props: PopupProps) => {
+export const CoilPopup = () => {
   const {
-    context: {
-      runtime: { tabOpener },
-      coilDomain
-    }
-  } = props
+    runtime: { tabOpener },
+    coilDomain
+  } = useHost()
   const onClick = tabOpener(coilDomain + '/explore')
   return (
     <Grid container justify='center' alignItems='center'>

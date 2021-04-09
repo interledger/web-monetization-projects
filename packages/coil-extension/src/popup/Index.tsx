@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { styled, Typography } from '@material-ui/core'
+import { StorageService } from '@web-monetization/wext/services'
 
-import { ToPopupMessage } from '../types/commands'
 import { Colors } from '../shared-theme/colors'
+import { withSharedTheme } from '../shared-theme/withSharedTheme'
 
 import { Container } from './components/util/Container'
 import { AccountBar } from './components/AccountBar'
 import { WebMonetizedBar } from './components/WebMonetizedBar'
 import { Status } from './components/Status'
-import { PopupProps } from './types'
+import { PopupHost } from './types'
+import { PopupHostContext } from './context/popupHostContext'
+import { StoreContext, useStoreState } from './context/storeContext'
 
 const CoilContainer = styled(Container)(({ theme }) => ({
   paddingRight: `${theme.spacing(4)}px`,
@@ -35,40 +38,31 @@ const FooterString = styled('code')({
   textAlign: 'center'
 })
 
-export function Index(props: PopupProps) {
-  const [_, setLastMonetizationProgress] = useState(Date.now())
+export function Index(props: {
+  storage: Pick<StorageService, 'get'>
+  host: PopupHost
+}) {
+  const store = useStoreState(props.storage, props.host)
+  const footer = store.extensionPopupFooterString
 
-  function syncStoreAndSetState() {
-    props.context.store.sync()
-    setLastMonetizationProgress(Date.now())
-  }
-
-  function bindMessageListener(): void {
-    props.context.runtime.onMessageAddListener((message: ToPopupMessage) => {
-      if (message.command === 'localStorageUpdate') {
-        syncStoreAndSetState()
-      }
-      return false
-    })
-  }
-
-  useEffect(bindMessageListener, [])
-
-  const context = { ...props.context }
-
-  const footer = context.store.extensionPopupFooterString
   return (
-    <OuterDiv>
-      <AccountBar context={context} />
-      <CoilContainer>
-        <Status context={context} />
-      </CoilContainer>
-      <WebMonetizedBar context={context} />
-      {footer && (
-        <Typography variant='caption'>
-          <FooterString>{footer}</FooterString>
-        </Typography>
-      )}
-    </OuterDiv>
+    <PopupHostContext.Provider value={props.host}>
+      <StoreContext.Provider value={store}>
+        <OuterDiv>
+          <AccountBar />
+          <CoilContainer>
+            <Status />
+          </CoilContainer>
+          <WebMonetizedBar />
+          {footer && (
+            <Typography variant='caption'>
+              <FooterString>{footer}</FooterString>
+            </Typography>
+          )}
+        </OuterDiv>
+      </StoreContext.Provider>
+    </PopupHostContext.Provider>
   )
 }
+
+export const IndexWithRoot = withSharedTheme(Index)

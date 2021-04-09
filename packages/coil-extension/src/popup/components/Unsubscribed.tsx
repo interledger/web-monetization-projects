@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
-import { PopupProps } from '../types'
+import { useHost } from '../context/popupHostContext'
 
 import { StatusButton } from './StatusButton'
 import { StatusTypography } from './util/StatusTypography'
@@ -23,13 +23,11 @@ const Button = styled(StatusButton)({
   paddingRight: '29px'
 })
 
-export const Unsubscribed = (props: PopupProps) => {
+export const Unsubscribed = () => {
   const {
-    context: {
-      coilDomain,
-      runtime: { tabOpener }
-    }
-  } = props
+    coilDomain,
+    runtime: { tabOpener }
+  } = useHost()
   const onClick = tabOpener(coilDomain + '/settings/payment')
 
   return (

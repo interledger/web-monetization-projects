@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-import { PopupProps } from '../types'
-import { ToPopupMessage } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
+import { StorageEventPartial, useStore } from '../context/storeContext'
+import { useHost } from '../context/popupHostContext'
 
 const ANIMATION_INTERVAL = 1800
 
-export const MonetizeAnimation = (props: PopupProps) => {
+export const MonetizeAnimation = () => {
+  const store = useStore()
+  const host = useHost()
+
   const [lastPacket, setLastPacket] = useState<Date | null>(null)
   const [animated, setAnimated] = useState<boolean | null>(false)
   const lastPacketRef = useRef(lastPacket)
@@ -28,11 +31,12 @@ export const MonetizeAnimation = (props: PopupProps) => {
       }
     }
 
-    const listener = (msg: ToPopupMessage) => {
+    const listener = (msg: StorageEventPartial) => {
       if (
-        msg.command === 'localStorageUpdate' &&
+        msg.key &&
+        msg.newValue &&
         msg.key === 'monetizedTotal' &&
-        props.context.store.monetizedTotal > 0
+        JSON.parse(msg.newValue) > 0
       ) {
         setLastPacket(new Date())
         setAnimated(true)
@@ -41,16 +45,16 @@ export const MonetizeAnimation = (props: PopupProps) => {
         }
       }
     }
-    props.context.runtime.onMessageAddListener(listener)
+    host.events.on('storage', listener)
     return () => {
-      props.context.runtime.onMessageRemoveListener(listener)
+      host.events.removeListener('storage', listener)
       if (animateTimeout != null) {
         window.clearTimeout(animateTimeout)
       }
     }
   }, [])
 
-  const hasMonetized = props.context.store.monetizedTotal > 0
+  const hasMonetized = Number(store.monetizedTotal) > 0
   // eslint-disable-next-line no-nested-ternary
   const src = animated
     ? '/res/stream_loop.svg'

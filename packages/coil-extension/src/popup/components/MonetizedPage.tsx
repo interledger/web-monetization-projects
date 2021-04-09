@@ -1,7 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { Grid, styled } from '@material-ui/core'
 
-import { PopupProps } from '../types'
+import { useHost } from '../context/popupHostContext'
+import { useStore } from '../context/storeContext'
 
 import { Link } from './util/Link'
 import { StatusTypography } from './util/StatusTypography'
@@ -19,7 +20,8 @@ const FlexBox = styled('div')(({ theme }) => ({
   width: '100%'
 }))
 
-export function MonetizedPage(props: PopupProps) {
+export function MonetizedPage() {
+  const popupHost = useHost()
   const [limitRefreshDate, setLimitRefreshDate] = useState<string | null>(null)
   const [showControls, onClick] = useShowIfClicked({
     clicksRequired: 9,
@@ -28,7 +30,7 @@ export function MonetizedPage(props: PopupProps) {
   })
 
   useEffect(() => {
-    props.context.runtime.sendMessage(
+    popupHost.runtime.sendMessage(
       {
         command: 'isRateLimited'
       },
@@ -45,33 +47,29 @@ export function MonetizedPage(props: PopupProps) {
       }
     )
   }, [])
-  const context = props.context
   return (
     <>
       <Grid container alignItems='center' justify='center'>
         <div>
           {limitRefreshDate != null ? (
-            <RateLimited
-              context={context}
-              limitRefreshDate={limitRefreshDate}
-            />
+            <RateLimited limitRefreshDate={limitRefreshDate} />
           ) : (
             <div onClick={onClick}>
-              <Donating context={context} />
+              <Donating />
             </div>
           )}
         </div>
       </Grid>
-      {showControls && <StreamControls context={context} />}
+      {showControls && <StreamControls />}
 
       {/* this will only show if user is enabled */}
-      <TipButton context={context} />
+      <TipButton />
     </>
   )
 }
 
-function Donating(props: PopupProps) {
-  const { monetizedTotal, adapted } = props.context.store
+function Donating() {
+  const { monetizedTotal, adapted } = useStore()
   const paymentStarted = monetizedTotal !== 0
 
   return (
@@ -83,23 +81,22 @@ function Donating(props: PopupProps) {
         {adapted
           ? 'Your Coil Membership supports this creator while you are enjoying their content.'
           : 'Your Coil Membership supports this site while you are enjoying its content.'}
-        {!paymentStarted && 'Setting up payment.'}
+        {!paymentStarted && ' Setting up payment.'}
       </StatusTypography>
       <FlexBox>
-        <MonetizeAnimation context={props.context} />
+        <MonetizeAnimation />
       </FlexBox>
     </Fragment>
   )
 }
 
-function RateLimited(props: PopupProps & { limitRefreshDate: string }) {
+function RateLimited(props: { limitRefreshDate: string }) {
   const {
-    context: {
-      coilDomain,
-      runtime: { tabOpener }
-    },
-    limitRefreshDate
-  } = props
+    coilDomain,
+    runtime: { tabOpener }
+  } = useHost()
+
+  const { limitRefreshDate } = props
   const mailOpener = tabOpener('mailto:accountreview@coil.com')
   const termsOpener = tabOpener(`${coilDomain}/terms`)
 

@@ -1,17 +1,17 @@
 import React from 'react'
 
-import { PopupProps } from '../types'
+import { useStore } from '../context/storeContext'
 
 import { CoilPopup } from './CoilPopup'
 import { CoilExplore } from './CoilExplore'
 
-export const CoilViews = (props: PopupProps) => {
-  const { coilSite } = props.context.store
-  const { pathname } = new URL(coilSite)
-  console.log('coil url=', coilSite)
-  if (pathname === '/explore') {
-    return <CoilExplore />
-  } else {
-    return <CoilPopup {...props} />
+export const CoilViews = () => {
+  const { coilSite } = useStore()
+  if (coilSite) {
+    const { pathname } = new URL(coilSite)
+    if (pathname === '/explore') {
+      return <CoilExplore />
+    }
   }
+  return <CoilPopup />
 }

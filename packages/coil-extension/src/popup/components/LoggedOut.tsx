@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 
-import { PopupProps } from '../types'
+import { useHost } from '../context/popupHostContext'
 
 import { Link } from './util/Link'
 import { StatusTypography } from './util/StatusTypography'
@@ -13,11 +13,10 @@ const footerString = "Don't have an account yet?"
 
 // This isn't actually used anymore as the browser action just opens
 // the coil site login page
-// TODO: remove
-export const LoggedOut = (props: PopupProps) => {
-  const {
-    context: { coilDomain }
-  } = props
+// TODO: remove (but check it's not needed in rare case when popup
+//  is left open, and you log out)
+export const LoggedOut = () => {
+  const { coilDomain } = useHost()
 
   return (
     <Grid container justify='center' alignItems='center'>

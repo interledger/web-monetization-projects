@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography'
 import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
-import { PopupProps } from '../types'
+import { useStore } from '../context/storeContext'
 
 const CoilBar = styled('div')({
   display: 'flex',
@@ -25,8 +25,8 @@ const NotMonetizedTypography = styled(Typography)({
   fontWeight: 400
 })
 
-export const WebMonetizedBar = (props: PopupProps) => {
-  const { monetized, coilSite } = props.context.store
+export const WebMonetizedBar = () => {
+  const { monetized, coilSite } = useStore()
   const icon = monetized
     ? '/res/wm-icon-active.svg'
     : '/res/wm-icon-inactive.svg'

@@ -1,21 +1,16 @@
-import { API } from '../webpackDefines'
+import { EventEmitter } from 'events'
 
-import { PopupState } from './services/PopupState'
+import { API } from '../webpackDefines'
 
 export interface PopupRuntime {
   sendMessage: typeof API.runtime.sendMessage
-  onMessageAddListener: typeof API.runtime.onMessage.addListener
-  onMessageRemoveListener: typeof API.runtime.onMessage.removeListener
   tabOpener: (url: string) => () => void
 }
 
-export interface PopupContext {
+export interface PopupHost {
+  key: string
   isExtension: boolean
-  runtime: PopupRuntime
-  store: PopupState
   coilDomain: string
-}
-
-export interface PopupProps {
-  context: PopupContext
+  events: EventEmitter
+  runtime: PopupRuntime
 }
