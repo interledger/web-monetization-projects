@@ -39,6 +39,22 @@ async function configureContainer(container: Container) {
   })
 }
 
+declare global {
+  interface Window {
+    clearTokens: () => void
+  }
+}
+
+window.clearTokens = function clearTokens() {
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i)
+    if (key?.startsWith('anonymous_token:')) {
+      console.log('deleting', key)
+      localStorage.removeItem(key)
+    }
+  }
+}
+
 async function main() {
   console.log('Loading Coil extension:', JSON.stringify(VERSION))
   decorateThirdPartyClasses()

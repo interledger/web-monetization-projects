@@ -4,7 +4,7 @@
     <meta
       id="money"
       name="monetization"
-      content="$twitter.xrptipbot.com/Coil"
+      content="$ilp-sandbox.uphold.com/WrykYKRn8dUr"
     />
     <script>
       if (document.monetization) {
@@ -17,13 +17,16 @@
     <script src="/coil-oauth-wm.js"></script>
     <script>
       let lastTimestamp = Date.now()
+      const start = lastTimestamp
       function log(msg) {
         const log = document.getElementById('log')
         if (log) {
           const newTimestamp = Date.now()
           const diff = newTimestamp - lastTimestamp
+          const diffFromStart = ((newTimestamp - start) / 1e3).toFixed(3)
           lastTimestamp = newTimestamp
-          log.innerText += msg + ' +' + diff + '\n'
+          log.innerText += `(+${diffFromStart}) ${msg} +${diff}
+`
         }
       }
 

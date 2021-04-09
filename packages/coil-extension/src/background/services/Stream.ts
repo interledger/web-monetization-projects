@@ -188,6 +188,7 @@ export class Stream extends EventEmitter {
           )
         })
 
+        // noinspection ES6MissingAwait
         void (async () => {
           if (this._schedule.totalSent() === 0) {
             await firstMinuteBandwidth(stream, redeemedToken.throughput)
