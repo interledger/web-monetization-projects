@@ -6,6 +6,8 @@ import { FitTextWrapper } from '../FitTextWrapper'
 import { Colors } from '../../../shared-theme/colors'
 import { TipPaymentDebits } from '../TipPaymentDebits'
 import { SendTip, SendTipResult } from '../../../types/commands'
+import { useStore } from '../../context/storeContext'
+import { useHost } from '../../context/popupHostContext'
 
 import { TipProcessStep, ITipView } from './TipRouter'
 
@@ -94,10 +96,13 @@ const IconButton = styled('button')({
 export const TipConfirmView = (
   props: Omit<ITipView, 'setCurrentTipAmount'>
 ): React.ReactElement => {
-  const { context, currentTipAmount, setTipProcessStep } = props
+  const { runtime } = useHost()
+  const { user } = useStore()
+  const { tipCreditBalance } = user?.tipSettings || {}
+  const { currentTipAmount, setTipProcessStep } = props
+
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const [hasSubmitError, setHasSubmitError] = useState<boolean>(false)
-  const tipCreditBalance = context.store.user.tipSettings?.tipCreditBalance
 
   const handleSubmit = async () => {
     setHasSubmitError(false)
@@ -129,7 +134,7 @@ export const TipConfirmView = (
     const message: SendTip = { command: 'sendTip', data: { amount: tipAmount } }
 
     return new Promise(resolve => {
-      context.runtime.sendMessage(message, (result: SendTipResult) => {
+      runtime.sendMessage(message, (result: SendTipResult) => {
         resolve(result)
       })
     }) as Promise<SendTipResult>

@@ -12,8 +12,6 @@ import { Colors } from '../../../shared-theme/colors'
 import { FitTextWrapper } from '../FitTextWrapper'
 import { RandomThankYouMessage } from '../RandomThankYouMessage'
 
-import { TipProcessStep, ITipView } from './TipRouter'
-
 //
 // Styles
 //
@@ -59,10 +57,10 @@ const IconButton = styled('button')({
 //
 // Component
 //
-export const TipCompleteView = (
-  props: Omit<ITipView, 'context' | 'setCurrentTipAmount'>
-): React.ReactElement => {
-  const { currentTipAmount, setTipProcessStep } = props
+export const TipCompleteView = (props: {
+  currentTipAmount: number
+}): React.ReactElement => {
+  const { currentTipAmount } = props
 
   const handleClose = () => {
     window.close()

@@ -5,12 +5,14 @@ import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import { Typography } from '@material-ui/core'
 
-import { PopupState, PopupStateType } from '../services/PopupState'
-import { PopupContext, PopupProps, PopupRuntime } from '../types'
+import { PopupStateType } from '../services/PopupState'
+import { PopupHost, PopupRuntime } from '../types'
 import { API } from '../../webpackDefines'
 import { StorageService } from '../../services/storage'
 import { User } from '../../types/user'
-import { LocalStorageUpdate } from '../../types/commands'
+import { defaultPopupHost } from '../context/popupHostContext'
+import { StorageEventPartial } from '../context/storeContext'
+import { Index } from '../Index'
 
 import { StatePanel } from './StatePanel'
 
@@ -161,8 +163,8 @@ const aliceUnsubscribed = mockState({
 
 const MOCK_STATES = [
   { name: 'Paying Coil Article', state: payingCoilArticle },
-  { name: 'Tipping', state: userCanTip },
   { name: 'Not Supported', state: notSupported },
+  { name: 'Tipping', state: userCanTip },
   { name: 'Start Exploring', state: startExploring },
   { name: 'Paying', state: payingNonCoilSite },
   { name: 'Welcome To Coil', state: welcomeToCoil },
@@ -262,11 +264,19 @@ const useStyles = makeStyles(theme => {
 })
 
 const mockRuntime: MockRuntime = new MockRuntime()
+const mockHosts = MOCK_STATES.map((mock, i) => {
+  const key = `${i}-${mock.name}`
+  const mockHost: PopupHost = {
+    ...defaultPopupHost,
+    key,
+    // Each popup needs its own set of events
+    events: new EventEmitter(),
+    runtime: mockRuntime
+  }
+  return mockHost
+})
 
-export const mockPopupsPage = (
-  PopupComponent: React.ComponentType<PopupProps>,
-  baseContext: Omit<PopupContext, 'runtime'>
-) => {
+export const mockPopupsPage = () => {
   return function MockPopupsPage() {
     const classes = useStyles()
 
@@ -280,32 +290,24 @@ export const mockPopupsPage = (
     const [initiated, setInitiated] = useState(false)
 
     const popups = MOCK_STATES.map(({ name, state }, i) => {
-      const store = new PopupState(makeStorage(state))
-      store.sync()
-
-      if (name.search(/paying/i) && !initiated) {
+      const storage = makeStorage(state)
+      const key = `${i}-${name}`
+      const mockHost = mockHosts[i]
+      if (name.search(/paying/i) != -1 && !initiated) {
+        let value = 10
         setInterval(() => {
-          console.log('triggering mock message')
-          const message: LocalStorageUpdate = {
-            command: 'localStorageUpdate',
-            key: 'monetizedTotal'
+          const newValue = (value += 10)
+          state.monetizedTotal = newValue
+
+          const message: StorageEventPartial = {
+            key: 'monetizedTotal',
+            newValue: JSON.stringify(newValue)
           }
-          mockRuntime.triggerOnMessage(message)
+          mockHost.events.emit('storage', message)
         }, 1500)
         setInitiated(true)
       }
 
-      const mockContext: PopupContext = {
-        ...baseContext,
-        store: store,
-        runtime: mockRuntime
-      }
-
-      const props: PopupProps = {
-        context: mockContext
-      }
-      const propsAny = props as any
-      const key = `${name}${i}`
       return (
         <Grid
           onClick={() => {
@@ -323,7 +325,7 @@ export const mockPopupsPage = (
           key={key}
         >
           <Typography className={classes.heading}>{name}</Typography>
-          <PopupComponent {...propsAny} />
+          <Index storage={storage} host={mockHost} />
         </Grid>
       )
     })

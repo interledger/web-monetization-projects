@@ -15,6 +15,7 @@ import { AccountBar } from '../AccountBar'
 import { WebMonetizedBar } from '../WebMonetizedBar'
 import { TipWarning } from '../TipWarning'
 import { Colors } from '../../../shared-theme/colors'
+import { useStore } from '../../context/storeContext'
 
 import { TipProcessStep, ITipView } from './TipRouter'
 
@@ -64,17 +65,10 @@ const Button = styled('button')({
 export const TipView: React.FC<ITipView> = (
   props: React.PropsWithChildren<ITipView>
 ) => {
-  const {
-    context,
-    currentTipAmount,
-    setCurrentTipAmount,
-    setTipProcessStep
-  } = props
-
-  const hotkeyTipAmounts = context.store.user.tipSettings?.hotkeyTipAmounts
-  const remainingDailyAmount =
-    context.store.user.tipSettings?.remainingDailyAmount
-  const minimumTipLimit = context.store.user.tipSettings?.minimumTipLimit
+  const { user } = useStore()
+  const { hotkeyTipAmounts, remainingDailyAmount, minimumTipLimit } =
+    user?.tipSettings || {}
+  const { currentTipAmount, setCurrentTipAmount, setTipProcessStep } = props
 
   const handleTip = () => {
     setTipProcessStep(TipProcessStep.TIP_CONFIRM)
@@ -82,7 +76,7 @@ export const TipView: React.FC<ITipView> = (
 
   return (
     <OuterDiv>
-      <AccountBar context={context} />
+      <AccountBar />
       <ExtensionBodyWrapper>
         <Box
           mb='24px'
@@ -124,7 +118,7 @@ export const TipView: React.FC<ITipView> = (
             : currentTipAmount.toFixed(2)}
         </Button>
       </ExtensionBodyWrapper>
-      <WebMonetizedBar context={context} />
+      <WebMonetizedBar />
     </OuterDiv>
   )
 }

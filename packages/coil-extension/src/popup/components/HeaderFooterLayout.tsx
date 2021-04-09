@@ -8,8 +8,8 @@
 import React from 'react'
 import { styled, Typography } from '@material-ui/core'
 
-import { PopupProps } from '../types'
 import { Colors } from '../../shared-theme/colors'
+import { useStore } from '../context/storeContext'
 
 import { AccountBar } from './AccountBar'
 import { WebMonetizedBar } from './WebMonetizedBar'
@@ -46,20 +46,20 @@ const FooterString = styled('code')({
 //
 // Component
 //
-export const HeaderFooterLayout: React.FC<PopupProps> = (
-  props: React.PropsWithChildren<PopupProps>
+export const HeaderFooterLayout: React.FC = (
+  props: React.PropsWithChildren<any>
 ) => {
-  const { context, children } = props
-  const footer = context.store.extensionPopupFooterString
+  const { extensionPopupFooterString } = useStore()
+  const { children } = props
 
   return (
     <OuterDiv>
-      <AccountBar context={context} />
+      <AccountBar />
       <CoilContainer>{children}</CoilContainer>
-      <WebMonetizedBar context={context} />
-      {footer && (
+      <WebMonetizedBar />
+      {extensionPopupFooterString && (
         <Typography variant='caption'>
-          <FooterString>{footer}</FooterString>
+          <FooterString>{extensionPopupFooterString}</FooterString>
         </Typography>
       )}
     </OuterDiv>

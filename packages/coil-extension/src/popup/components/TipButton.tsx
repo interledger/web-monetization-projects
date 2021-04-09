@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Button } from '@material-ui/core'
 
-import { PopupProps } from '../types'
 import { SendTip, SendTipResult } from '../../types/commands'
+import { useHost } from '../context/popupHostContext'
+import { useStore } from '../context/storeContext'
 
 export enum TipState {
   READY = 0,
@@ -11,8 +12,11 @@ export enum TipState {
   ERROR
 }
 
-export const TipButton = (props: PopupProps) => {
+export const TipButton = () => {
   const [tipState, setTipState] = useState(TipState.READY)
+  const store = useStore()
+  const popupHost = useHost()
+
   const onClickTip = async () => {
     setTipState(TipState.LOADING)
 
@@ -33,20 +37,17 @@ export const TipButton = (props: PopupProps) => {
     const message: SendTip = { command: 'sendTip', data: { amount: 1 } }
 
     return new Promise(resolve => {
-      props.context.runtime.sendMessage(message, (result: SendTipResult) => {
+      popupHost.runtime.sendMessage(message, (result: SendTipResult) => {
         resolve(result)
       })
     }) as Promise<SendTipResult>
   }
 
-  if (props.context.store.user.canTip) {
+  if (store.user?.canTip) {
     switch (tipState) {
       case TipState.READY:
         return (
-          <Button
-            disabled={props.context.store.monetizedTotal === 0}
-            onClick={onClickTip}
-          >
+          <Button disabled={store.monetizedTotal === 0} onClick={onClickTip}>
             Tip this creator $1!
           </Button>
         )

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { Tooltip, withStyles, styled } from '@material-ui/core'
+import { styled, Tooltip, withStyles } from '@material-ui/core'
 
-import { PopupProps } from '../types'
 import { Colors } from '../../shared-theme/colors'
-import { SetStreamControls, ToPopupMessage } from '../../types/commands'
+import { SetStreamControls } from '../../types/commands'
 import {
   PlayOrPauseState,
   StickyState,
   ToggleControlsAction
 } from '../../types/streamControls'
+import { useHost } from '../context/popupHostContext'
+import { StorageEventPartial, useStore } from '../context/storeContext'
 
 const ControlBar = styled('div')({
   display: 'flex',
@@ -152,12 +153,15 @@ interface SetStreamControlsParams {
   action: ToggleControlsAction
 }
 
-export const StreamControls = (props: PopupProps) => {
+export const StreamControls = () => {
+  const store = useStore()
+  const host = useHost()
+
   const [stickyState, setStickyState] = useState<StickyState>(
-    props.context.store.stickyState || 'auto'
+    store.stickyState || 'auto'
   )
   const [playOrPauseState, setPlayOrPauseState] = useState<PlayOrPauseState>(
-    props.context.store.playState || 'playing'
+    store.playState || 'playing'
   )
 
   const setStreamControls = (data: SetStreamControlsParams) => {
@@ -165,24 +169,24 @@ export const StreamControls = (props: PopupProps) => {
       command: 'setStreamControls',
       data
     }
-    props.context.runtime.sendMessage(message)
+    host.runtime.sendMessage(message)
   }
 
   useEffect(() => {
-    const listener = (message: ToPopupMessage) => {
-      if (message.command === 'localStorageUpdate') {
-        if (message.key === 'stickyState') {
-          const sticky = props.context.store.stickyState
-          // TODO: document why have and why need to ignore null changes
-          sticky != null && setStickyState(sticky)
-        } else if (message.key === 'playState') {
-          const play = props.context.store.playState
-          play != null && setPlayOrPauseState(play)
-        }
+    const listener = (message: StorageEventPartial) => {
+      if (message.key && message.newValue && message.key === 'stickyState') {
+        const sticky = store.stickyState
+        // TODO: document why have and why need to ignore null changes
+        sticky != null && setStickyState(sticky)
+      } else if (message.key === 'playState') {
+        const play = store.playState
+        play != null && setPlayOrPauseState(play)
       }
     }
-    props.context.runtime.onMessageAddListener(listener)
-    return () => props.context.runtime.onMessageRemoveListener(listener)
+    host.events.addListener('storage', listener)
+    return () => {
+      host.events.removeListener('storage', listener)
+    }
   }, [])
 
   const stickyTooltip =

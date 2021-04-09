@@ -6,8 +6,6 @@
 
 import React, { useState } from 'react'
 
-import { PopupProps } from '../../types'
-
 import { TipView } from './TipView'
 import { TipConfirmView } from './TipConfirmView'
 import { TipCompleteView } from './TipCompleteView'
@@ -21,7 +19,7 @@ export enum TipProcessStep {
   TIP_COMPLETE = 'TIP_COMPLETE'
 }
 
-export interface ITipView extends PopupProps {
+export interface ITipView {
   currentTipAmount: number
   setCurrentTipAmount: (amount: number) => void
   setTipProcessStep: (step: TipProcessStep) => void
@@ -30,26 +28,19 @@ export interface ITipView extends PopupProps {
 //
 // Component
 //
-export const TipRouter: React.FC<PopupProps> = props => {
+export const TipRouter = () => {
   const [tipProccessStep, setTipProcessStep] = useState<TipProcessStep>(
     TipProcessStep.TIP
   )
   const [currentTipAmount, setCurrentTipAmount] = useState<number>(1)
-  const context = props.context
 
   switch (tipProccessStep) {
     case TipProcessStep.TIP_COMPLETE: {
-      return (
-        <TipCompleteView
-          currentTipAmount={currentTipAmount}
-          setTipProcessStep={setTipProcessStep}
-        />
-      )
+      return <TipCompleteView currentTipAmount={currentTipAmount} />
     }
     case TipProcessStep.TIP_CONFIRM: {
       return (
         <TipConfirmView
-          context={context}
           currentTipAmount={currentTipAmount}
           setTipProcessStep={setTipProcessStep}
         />
@@ -59,7 +50,6 @@ export const TipRouter: React.FC<PopupProps> = props => {
     default: {
       return (
         <TipView
-          context={context}
           currentTipAmount={currentTipAmount}
           setCurrentTipAmount={setCurrentTipAmount}
           setTipProcessStep={setTipProcessStep}
