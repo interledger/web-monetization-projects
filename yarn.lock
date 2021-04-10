@@ -1378,7 +1378,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -1434,7 +1434,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -1525,7 +1525,7 @@ __metadata:
     typescript: ^4.2.4
     uuid: ^8.3.2
     web-ext: ^6.0.0
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -1582,7 +1582,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -1649,7 +1649,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
     uuid: ^8.3.2
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -1701,7 +1701,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -1760,7 +1760,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -1821,7 +1821,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
     web-ext: ^6.0.0
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -1881,7 +1881,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
     util: ^0.12.3
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -1933,7 +1933,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -2189,7 +2189,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -2242,7 +2242,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -2367,7 +2367,7 @@ __metadata:
     typescript: ^4.2.4
     uuid: ^8.3.2
     web-ext: ^6.0.0
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -4570,7 +4570,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -4626,7 +4626,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
     uuid: ^8.3.2
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -4680,7 +4680,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -4746,7 +4746,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
     uuid: ^8.3.2
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -4798,7 +4798,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -4852,7 +4852,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -5065,7 +5065,7 @@ __metadata:
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
     util: ^0.12.3
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -22505,7 +22505,7 @@ sjcl@sublimator/sjcl:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    webpack: ^5.31.0
+    webpack: ^5.31.2
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
@@ -22681,9 +22681,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.31.0":
-  version: 5.31.0
-  resolution: "webpack@npm:5.31.0"
+"webpack@npm:^5.31.2":
+  version: 5.31.2
+  resolution: "webpack@npm:5.31.2"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.46
@@ -22713,7 +22713,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: a419dff80c83969a28f0c130f003487a570870b3bde44a3bcca543f5d052b8c6dd5edd0e330251a632c1eb3bc85944fa42fc7159d18abf210c47189f9da56fd9
+  checksum: 954c4b4fad1b5f910100916935881f72fad126c86bfbe7338914e2f34d4b10d1eb03771603a7e84c104f13a21c0b0f670aade7a3053f67a8c3e6d58a3d102845
   languageName: node
   linkType: hard
 
