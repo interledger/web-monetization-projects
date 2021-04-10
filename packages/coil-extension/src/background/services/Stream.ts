@@ -143,6 +143,7 @@ export class Stream extends EventEmitter {
           'redeemed token with throughput=%d',
           redeemedToken.throughput
         )
+        this._lastDelivered = 0
         const plugin = this._makePlugin(redeemedToken.btpToken)
         const connection = await createConnection({
           ...spspDetails,
