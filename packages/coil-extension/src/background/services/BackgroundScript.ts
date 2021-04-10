@@ -13,7 +13,6 @@ import {
   ClosePopup,
   ContentScriptInit,
   MonetizationProgress,
-  MonetizationStart,
   OnFrameAllowedChanged,
   PauseWebMonetization,
   ReportCorrelationIdFromIFrameContentScript,
@@ -29,6 +28,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { Stream, StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -40,13 +40,9 @@ import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { StreamAssociations } from './StreamAssociations'
+import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
-
-import { BuildConfig } from '../../types/BuildConfig'
-import { debug } from '../../content/util/logging'
-
-import { ActiveTabLogger } from './ActiveTabLogger'
 
 @injectable()
 export class BackgroundScript {

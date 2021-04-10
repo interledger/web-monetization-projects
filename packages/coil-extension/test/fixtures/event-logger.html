@@ -31,6 +31,9 @@
       }
 
       const initialState = document.monetization && document.monetization.state
+      document.addEventListener('coil_log', evt => {
+        log('coil_log: ' + evt.detail.message)
+      })
       window.addEventListener('load', () => {
         log('event: window.load, initial state: ' + initialState)
         log(

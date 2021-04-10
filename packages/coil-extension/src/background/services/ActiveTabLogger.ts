@@ -2,11 +2,14 @@ import { inject, injectable } from 'inversify'
 
 import * as tokens from '../../types/tokens'
 
+import { TabStates } from './TabStates'
+
 @injectable()
 export class ActiveTabLogger {
   sendLogs = false
 
   constructor(
+    private tabStates: TabStates,
     @inject(tokens.WextApi)
     private api = chrome
   ) {}
@@ -27,5 +30,19 @@ export class ActiveTabLogger {
         this.api.tabs.sendMessage(tab.id, message)
       }
     })
+  }
+
+  sendLogEvent(message: string) {
+    const active = this.tabStates.activeTab
+    if (active) {
+      // language=JavaScript
+      const code = `
+        document.dispatchEvent(new CustomEvent('coil_log',
+          { detail: { message: ${JSON.stringify(message)} } }))
+      `
+      this.api.tabs.executeScript(active, { frameId: 0, code: code }, () => {
+        console.log('ERROR', this.api.runtime.lastError)
+      })
+    }
   }
 }

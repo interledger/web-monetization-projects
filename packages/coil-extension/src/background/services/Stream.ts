@@ -25,6 +25,7 @@ import { BTP_ENDPOINT, VERSION } from '../../webpackDefines'
 import { AnonymousTokens } from './AnonymousTokens'
 import { StreamLoop, isExhaustedError } from './StreamLoop'
 import { Logger, logger } from './utils'
+import { ActiveTabLogger } from './ActiveTabLogger'
 
 // The amount set as the `SendStreamMax` when spending a full token.
 const FULL_TOKEN_AMOUNT = 2 ** 64
@@ -96,6 +97,7 @@ export class Stream extends EventEmitter {
   constructor(
     @logger('Stream')
     private readonly _debug: Logger,
+    private tabLogger: ActiveTabLogger,
     private container: Container,
     @inject(tokens.StreamDetails)
     {
@@ -118,6 +120,7 @@ export class Stream extends EventEmitter {
     this._anonTokens = container.get(AnonymousTokens)
     this._initiatingUrl = initiatingUrl
     this.loop = new StreamLoop({
+      tabLogger: this.tabLogger,
       logger: this._debug,
       schedule: this._schedule
     })
@@ -137,14 +140,20 @@ export class Stream extends EventEmitter {
     this.isPaused = false
     await this.loop.run(
       async (tokenFraction: number): Promise<Connection> => {
+        this.tabLogger.sendLogEvent('getting spsp details')
         const spspDetails = await this._getSPSPDetails()
         const redeemedToken = await this._anonTokens.getToken(this._authToken)
         this._debug(
           'redeemed token with throughput=%d',
           redeemedToken.throughput
         )
+        this.tabLogger.sendLogEvent(
+          `redeemed token with ${redeemedToken.throughput}`
+        )
         this._lastDelivered = 0
+        this.tabLogger.sendLogEvent(`making plugin`)
         const plugin = this._makePlugin(redeemedToken.btpToken)
+        this.tabLogger.sendLogEvent(`creating connection`)
         const connection = await createConnection({
           ...spspDetails,
           plugin,
@@ -153,6 +162,7 @@ export class Stream extends EventEmitter {
           maximumPacketAmount: '10000000',
           getExpiry: getFarFutureExpiry
         })
+        this.tabLogger.sendLogEvent(`connected`)
         const stream = connection.createStream()
 
         const onMoney = (sentAmount: string) => {
@@ -192,10 +202,14 @@ export class Stream extends EventEmitter {
         // noinspection ES6MissingAwait
         void (async () => {
           if (this._schedule.totalSent() === 0) {
-            await firstMinuteBandwidth(stream, redeemedToken.throughput)
+            await firstMinuteBandwidth(
+              this.tabLogger,
+              stream,
+              redeemedToken.throughput
+            )
           } else {
             const sendMax =
-              1.0 <= tokenFraction
+              tokenFraction >= 1.0
                 ? FULL_TOKEN_AMOUNT
                 : tokenFraction * 60 * redeemedToken.throughput
             this._debug(
@@ -346,7 +360,12 @@ export class Stream extends EventEmitter {
   }
 }
 
+/**
+ * TODO: what happens if this is commenced with a token that won't last
+ *       1 minute ?
+ */
 async function firstMinuteBandwidth(
+  logger: ActiveTabLogger,
   stream: DataAndMoneyStream,
   throughput: number
 ): Promise<void> {
@@ -366,14 +385,31 @@ async function firstMinuteBandwidth(
     cancelTimer()
   })
 
+  // NOTE: in practice these times are offset from the CONNECTION time, NOT
+  // the time on the page.
+  // At least in testing it takes around 3.5-7 seconds to connect and send
+  // the first 10 second below, wont happen until 13 seconds.
+  // It will pay another 5 seconds worth
+  // Should these times actually be counted from when on the page?
+  // where when on the page == from when the monetization tag was found ?
+
   let lastTime = 0 // seconds
-  for (const time of [10, 30, 60]) {
+  for (const time of [
+    // another 5 seconds worth
+    10,
+    // another 20 seconds worth
+    30,
+    // another 30 seconds worth
+    60
+  ]) {
     const delay = (time - lastTime) * 1e3 // milliseconds
     lastTime = time
     await new Promise<void>(
       resolve => (timer = window.setTimeout((cancelTimer = resolve), delay))
     )
     if (stopped) return
+    // FULL_TOKEN_AMOUNT essentially means burn whatever is left ...
+    // but what if it's less than time * throughput ?
     stream.setSendMax(time === 60 ? FULL_TOKEN_AMOUNT : time * throughput)
   }
 }

@@ -4,6 +4,7 @@ import { asyncUtils, PaymentScheduler } from '@web-monetization/polyfill-utils'
 import { Connection } from 'ilp-protocol-stream'
 
 import { Logger, logger } from './utils'
+import { ActiveTabLogger } from './ActiveTabLogger'
 
 const { timeout } = asyncUtils
 // The number of retries before giving up when stopping.
@@ -21,7 +22,12 @@ export class StreamLoop extends EventEmitter {
   private readonly debug: Logger
   private running = false // whether there is an active loop
   private connection?: Connection
-  constructor(opts: { schedule: PaymentScheduler; logger: Logger }) {
+
+  constructor(opts: {
+    schedule: PaymentScheduler
+    logger: Logger
+    tabLogger: ActiveTabLogger
+  }) {
     super()
     this.schedule = opts.schedule
     this.debug = opts.logger
