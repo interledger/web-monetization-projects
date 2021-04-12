@@ -37,9 +37,9 @@ export class StreamLoop extends EventEmitter {
     attempt: (tokenFraction: number) => Promise<Connection>
   ): Promise<void> {
     this.state = StreamLoopState.Loop as StreamLoopState
+    this.schedule.start()
     if (this.running) return // another 'run' loop is already active
     this.running = true
-    this.schedule.start()
     let attempts = 0 // count of retry attempts when state=Ending
     while (this.state !== StreamLoopState.Done) {
       const isFirstMinute = this.schedule.totalSent() === 0
