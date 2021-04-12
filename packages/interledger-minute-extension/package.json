@@ -76,7 +76,7 @@
     "copy-webpack-plugin": "^8.1.1",
     "crx-hotreload": "^1.0.6",
     "css-loader": "^5.2.1",
-    "eslint": "^7.23.0",
+    "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-import": "^2.22.1",

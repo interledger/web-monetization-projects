@@ -1351,7 +1351,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1408,7 +1408,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1489,7 +1489,7 @@ __metadata:
     copy-webpack-plugin: ^8.1.1
     crx-hotreload: ^1.0.6
     debug: ^4.3.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1554,7 +1554,7 @@ __metadata:
     copy-dir: ^1.3.0
     copy-webpack-plugin: ^8.1.1
     deepmerge: ^4.2.2
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1619,7 +1619,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1676,7 +1676,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1733,7 +1733,7 @@ __metadata:
     atob: ^2.1.2
     btoa: ^1.2.1
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1793,7 +1793,7 @@ __metadata:
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
     debug: ^4.3.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1851,7 +1851,7 @@ __metadata:
     buffer: ^6.0.3
     copy-webpack-plugin: ^8.1.1
     crypto-browserify: ^3.12.0
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -1909,7 +1909,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -2165,7 +2165,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -2217,7 +2217,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -2331,7 +2331,7 @@ __metadata:
     crx-hotreload: ^1.0.6
     css-loader: ^5.2.1
     debug: ^4.3.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4532,7 +4532,7 @@ __metadata:
     JSON2016: ^1.0.0
     body-parser: ^1.19.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4599,7 +4599,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4656,7 +4656,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4717,7 +4717,7 @@ __metadata:
     JSON2016: ^1.0.0
     ajv: ^8.0.5
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4773,7 +4773,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -4828,7 +4828,7 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -5035,7 +5035,7 @@ __metadata:
     copy-webpack-plugin: ^8.1.1
     crx-hotreload: ^1.0.6
     crypto-browserify: ^3.12.0
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -10323,9 +10323,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.23.0":
-  version: 7.23.0
-  resolution: "eslint@npm:7.23.0"
+"eslint@npm:^7.24.0":
+  version: 7.24.0
+  resolution: "eslint@npm:7.24.0"
   dependencies:
     "@babel/code-frame": 7.12.11
     "@eslint/eslintrc": ^0.4.0
@@ -10366,7 +10366,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: f444869506eb0b53fdc6f6f6508b9f5daed51034af0289e6b201f996e7f2d06134f765ef598568269d2a0575dc9da5d3308bd2716f795b789d92e7febb654aab
+  checksum: 8130aacc3698a730ba8fa10ac9e1436151181c34cad265c21c97708e62dba714b6f3cc4cb7a1d343918da3d35a5913505ccf53cfbdc1fa8d62d326b7e35b7aae
   languageName: node
   linkType: hard
 
@@ -22483,7 +22483,7 @@ sjcl@sublimator/sjcl:
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
     copy-webpack-plugin: ^8.1.1
-    eslint: ^7.23.0
+    eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
