@@ -65,7 +65,7 @@
     "@types/node-fetch": "^2.5.10",
     "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
-    "@typescript-eslint/parser": "^4.21.0",
+    "@typescript-eslint/parser": "^4.22.0",
     "@yarnpkg/pnpify": "^2.4.0",
     "JSON2016": "^1.0.0",
     "copy-webpack-plugin": "^8.1.1",
