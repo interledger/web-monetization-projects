@@ -29,12 +29,12 @@ export interface ITipView {
 // Component
 //
 export const TipRouter = () => {
-  const [tipProccessStep, setTipProcessStep] = useState<TipProcessStep>(
+  const [tipProcessStep, setTipProcessStep] = useState<TipProcessStep>(
     TipProcessStep.TIP
   )
   const [currentTipAmount, setCurrentTipAmount] = useState<number>(1)
 
-  switch (tipProccessStep) {
+  switch (tipProcessStep) {
     case TipProcessStep.TIP_COMPLETE: {
       return <TipCompleteView currentTipAmount={currentTipAmount} />
     }
