@@ -11,6 +11,12 @@ export const whoamiSelection = `
     customerId
     canTip
 
+    tipSettings {
+      id
+      dailyLimit
+      formattedDailyLimit
+    }
+
     subscription {
       active
       endDate
