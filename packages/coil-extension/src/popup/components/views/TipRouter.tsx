@@ -5,10 +5,25 @@
 */
 
 import React, { useState } from 'react'
+import { styled } from '@material-ui/core'
+import { AnimatePresence } from 'framer-motion'
 
 import { TipView } from './TipView'
 import { TipConfirmView } from './TipConfirmView'
 import { TipCompleteView } from './TipCompleteView'
+
+//
+// Styles
+//
+const OuterDiv = styled('div')({
+  width: '308px',
+  maxWidth: '308px',
+  height: '455px',
+  maxHeight: '455px',
+  position: 'relative',
+  overflow: 'hidden',
+  background: 'linear-gradient(180deg, #FCFCFC 86.53%, #FFFFFF 97.24%)'
+})
 
 //
 // Models
@@ -34,27 +49,28 @@ export const TipRouter = () => {
   )
   const [currentTipAmount, setCurrentTipAmount] = useState<number>(1)
 
-  switch (tipProcessStep) {
-    case TipProcessStep.TIP_COMPLETE: {
-      return <TipCompleteView currentTipAmount={currentTipAmount} />
-    }
-    case TipProcessStep.TIP_CONFIRM: {
-      return (
-        <TipConfirmView
-          currentTipAmount={currentTipAmount}
-          setTipProcessStep={setTipProcessStep}
-        />
-      )
-    }
-    case TipProcessStep.TIP:
-    default: {
-      return (
-        <TipView
-          currentTipAmount={currentTipAmount}
-          setCurrentTipAmount={setCurrentTipAmount}
-          setTipProcessStep={setTipProcessStep}
-        />
-      )
-    }
-  }
+  return (
+    <OuterDiv>
+      <AnimatePresence initial={false}>
+        {tipProcessStep === TipProcessStep.TIP && (
+          <TipView
+            key='tip'
+            currentTipAmount={currentTipAmount}
+            setCurrentTipAmount={setCurrentTipAmount}
+            setTipProcessStep={setTipProcessStep}
+          />
+        )}
+        {tipProcessStep === TipProcessStep.TIP_CONFIRM && (
+          <TipConfirmView
+            key='confirm'
+            currentTipAmount={currentTipAmount}
+            setTipProcessStep={setTipProcessStep}
+          />
+        )}
+        {tipProcessStep === TipProcessStep.TIP_COMPLETE && (
+          <TipCompleteView key='complete' currentTipAmount={currentTipAmount} />
+        )}
+      </AnimatePresence>
+    </OuterDiv>
+  )
 }

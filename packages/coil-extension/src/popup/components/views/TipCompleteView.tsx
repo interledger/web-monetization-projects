@@ -15,12 +15,6 @@ import { RandomThankYouMessage } from '../RandomThankYouMessage'
 //
 // Styles
 //
-const OuterDiv = styled('div')({
-  minWidth: '308px',
-  maxWidth: '308px',
-  height: 'auto',
-  minHeight: '260px'
-})
 
 const ExtensionBodyWrapper = styled('div')(({ url }: { url: string }) => ({
   display: 'flex',
@@ -82,7 +76,7 @@ export const TipCompleteView = (props: {
   }
 
   return (
-    <OuterDiv>
+    <div>
       <ExtensionBodyWrapper url={getBackgroundImageUrl()}>
         <Box textAlign='right' mb='25px'>
           <IconButton onClick={handleClose}>
@@ -99,6 +93,6 @@ export const TipCompleteView = (props: {
           </FitTextWrapper>
         </Box>
       </ExtensionBodyWrapper>
-    </OuterDiv>
+    </div>
   )
 }

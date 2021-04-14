@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { styled, Box } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close'
+import { motion } from 'framer-motion'
 
 import { FitTextWrapper } from '../FitTextWrapper'
 import { Colors } from '../../../shared-theme/colors'
@@ -14,15 +15,8 @@ import { TipProcessStep, ITipView } from './TipRouter'
 //
 // Style
 //
-const OuterDiv = styled('div')({
-  minWidth: '308px',
-  maxWidth: '308px',
-  height: 'auto',
-  minHeight: '260px'
-})
-
 const ExtensionBodyWrapper = styled('div')({
-  padding: '14px 24px 8px 24px',
+  padding: '14px 24px 16px 24px',
   minHeight: '457px', // based on the first views body height to keep consistent
   maxHeight: '457px', // based on the first views body height to keep consistent
   background: 'linear-gradient(180deg, #FCFCFC 86.53%, #FFFFFF 97.24%)',
@@ -101,6 +95,7 @@ export const TipConfirmView = (
   const { tipCreditBalance } = user?.tipSettings || {}
   const { currentTipAmount, setTipProcessStep } = props
 
+  const [animateForward, setAnimateForward] = useState<boolean>(true)
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const [hasSubmitError, setHasSubmitError] = useState<boolean>(false)
 
@@ -123,6 +118,7 @@ export const TipConfirmView = (
 
   const handleUndo = () => {
     // reset to tip view
+    setAnimateForward(false)
     setTipProcessStep(TipProcessStep.TIP)
   }
 
@@ -140,64 +136,107 @@ export const TipConfirmView = (
     }) as Promise<SendTipResult>
   }
 
+  // Animation Settings
+  const progressExitAnimation = {
+    opacity: 0,
+    transition: {
+      type: 'tween',
+      duration: 0.2
+    }
+  }
+
+  const regressExitAnimation = {
+    translateX: '308px',
+    transition: {
+      type: 'tween',
+      duration: 0.5
+    }
+  }
+
+  const bodyVariants = {
+    hidden: {
+      translateX: '308px'
+    },
+    visible: {
+      translateX: '0px',
+      opacity: 1,
+      transition: {
+        type: 'tween',
+        duration: 0.5
+      }
+    },
+    exit: (custom: boolean) =>
+      custom ? progressExitAnimation : regressExitAnimation
+  }
+
+  // Render
   return (
-    <OuterDiv>
-      <ExtensionBodyWrapper>
-        <Box textAlign='right' mb='49px'>
-          <IconButton aria-label='Close' onClick={handleClose}>
-            <CloseIcon />
-          </IconButton>
-        </Box>
-        <Box
-          mb='24px'
-          textAlign='center'
-          color={Colors.Grey800}
-          fontWeight='normal'
-          fontSize='18px'
-          pt='5px'
-        >
-          You will send
-        </Box>
-        <FitTextWrapper defaultFontSize={64}>
-          $
-          {Number.isInteger(currentTipAmount)
-            ? currentTipAmount
-            : currentTipAmount.toFixed(2)}
-        </FitTextWrapper>
-        <Box
-          mt='24px'
-          textAlign='center'
-          color={Colors.Grey800}
-          fontWeight='normal'
-          fontSize='18px'
-          pt='5px'
-        >
-          Pay with
-        </Box>
-        <Box mt='10px' flex='1' display='flex'>
-          {hasSubmitError ? (
-            <Box
-              width='100%'
-              textAlign='center'
-              color={Colors.Red400}
-              alignSelf='center'
-            >
-              Something went wrong.
-            </Box>
-          ) : (
-            <TipPaymentDebits
-              currentTipAmount={currentTipAmount}
-              tipCreditBalance={tipCreditBalance || 0}
-            />
-          )}
-        </Box>
-        <Button onClick={handleSubmit} disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : hasSubmitError ? 'Retry' : 'Confirm'}
-        </Button>
-        <CancelButton onClick={handleUndo} disabled={isSubmitting}>
-          Cancel
-        </CancelButton>
-      </ExtensionBodyWrapper>
-    </OuterDiv>
+    <Box style={{ position: 'absolute', width: '100%' }}>
+      <motion.div
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+        custom={animateForward}
+        variants={bodyVariants}
+        key='pending'
+      >
+        <ExtensionBodyWrapper>
+          <Box textAlign='right' mb='42px'>
+            <IconButton aria-label='Close' onClick={handleClose}>
+              <CloseIcon />
+            </IconButton>
+          </Box>
+          <Box
+            mb='24px'
+            textAlign='center'
+            color={Colors.Grey800}
+            fontWeight='normal'
+            fontSize='18px'
+            pt='5px'
+          >
+            You will send
+          </Box>
+          <FitTextWrapper defaultFontSize={64}>
+            $
+            {Number.isInteger(currentTipAmount)
+              ? currentTipAmount
+              : currentTipAmount.toFixed(2)}
+          </FitTextWrapper>
+          <Box
+            mt='24px'
+            textAlign='center'
+            color={Colors.Grey800}
+            fontWeight='normal'
+            fontSize='18px'
+            pt='5px'
+          >
+            Pay with
+          </Box>
+          <Box mt='10px' flex='1' display='flex'>
+            {hasSubmitError ? (
+              <Box
+                width='100%'
+                textAlign='center'
+                color={Colors.Red400}
+                alignSelf='center'
+              >
+                Something went wrong.
+              </Box>
+            ) : (
+              <TipPaymentDebits
+                currentTipAmount={currentTipAmount}
+                tipCreditBalance={tipCreditBalance || 0}
+              />
+            )}
+          </Box>
+          <Button onClick={handleSubmit} disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : hasSubmitError ? 'Retry' : 'Confirm'}
+          </Button>
+          <CancelButton onClick={handleUndo} disabled={isSubmitting}>
+            Cancel
+          </CancelButton>
+        </ExtensionBodyWrapper>
+      </motion.div>
+    </Box>
   )
 }
