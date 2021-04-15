@@ -304,6 +304,9 @@ export interface SetMonetizationState {
  */
 export interface SendTip {
   command: 'sendTip'
+  data: {
+    amount: number
+  }
 }
 
 /**
