@@ -1,3 +1,5 @@
+//! mike - replace status with viewrouter
+
 import React from 'react'
 import { styled, Typography } from '@material-ui/core'
 import { StorageService } from '@web-monetization/wext/services'
@@ -12,7 +14,10 @@ import { Status } from './components/Status'
 import { PopupHost } from './types'
 import { PopupHostContext } from './context/popupHostContext'
 import { StoreContext, useStoreState } from './context/storeContext'
+import { ViewRouter } from './components/views/ViewRouter'
 
+// temporary move it
+// done
 const CoilContainer = styled(Container)(({ theme }) => ({
   paddingRight: `${theme.spacing(4)}px`,
   paddingLeft: `${theme.spacing(4)}px`,
@@ -21,6 +26,7 @@ const CoilContainer = styled(Container)(({ theme }) => ({
   backgroundColor: Colors.Grey99
 }))
 
+// done
 const OuterDiv = styled('div')({
   minWidth: '308px',
   maxWidth: '308px',
@@ -28,6 +34,7 @@ const OuterDiv = styled('div')({
   minHeight: '260px'
 })
 
+// done
 const FooterString = styled('code')({
   display: 'flex',
   fontSize: '1em',
@@ -37,6 +44,7 @@ const FooterString = styled('code')({
   borderTop: `0.5px solid ${Colors.Grey89}`,
   textAlign: 'center'
 })
+// temporary move it
 
 export function Index(props: {
   storage: Pick<StorageService, 'get'>
@@ -48,7 +56,7 @@ export function Index(props: {
   return (
     <PopupHostContext.Provider value={props.host}>
       <StoreContext.Provider value={store}>
-        <OuterDiv>
+        {/* <OuterDiv>
           <AccountBar />
           <CoilContainer>
             <Status />
@@ -59,7 +67,8 @@ export function Index(props: {
               <FooterString>{footer}</FooterString>
             </Typography>
           )}
-        </OuterDiv>
+        </OuterDiv> */}
+        <ViewRouter />
       </StoreContext.Provider>
     </PopupHostContext.Provider>
   )
