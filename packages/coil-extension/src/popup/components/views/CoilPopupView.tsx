@@ -22,7 +22,7 @@ export const CoilPopupView = () => {
             Welcome to Coil
           </StatusTypography>
           <StatusTypography variant='subtitle1' align='center'>
-            Check out our Discover page to explore Web-Monetized content.
+            Check out our Discover page to explore web monetized content.
           </StatusTypography>
           <StatusButton
             text='Discover now'
