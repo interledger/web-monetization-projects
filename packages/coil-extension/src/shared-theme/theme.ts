@@ -55,7 +55,7 @@ export const theme = createMuiTheme({
       },
       containedPrimary: {
         '&:hover': {
-          backgroundColor: '#0080FF !important',
+          backgroundColor: '#0080FF',
           boxShadow: 'none'
         }
       },
