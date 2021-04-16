@@ -8,9 +8,7 @@ import { useHost } from '../../context/popupHostContext'
 import { useStore } from '../../context/storeContext'
 
 export const CoilPopupView = () => {
-  const {
-    user: { fullName }
-  } = useStore()
+  const { user } = useStore()
   const {
     coilDomain,
     runtime: { tabOpener }
@@ -23,8 +21,8 @@ export const CoilPopupView = () => {
       <Grid container justify='center' alignItems='center'>
         <div>
           <StatusTypography variant='h6' align='center'>
-            {fullName
-              ? `Welcome, ${fullName.split(' ')[0]}`
+            {user?.fullName
+              ? `Welcome, ${user.fullName.split(' ')[0]}`
               : 'Welcome to Coil'}
           </StatusTypography>
           <StatusTypography variant='subtitle1' align='center'>
