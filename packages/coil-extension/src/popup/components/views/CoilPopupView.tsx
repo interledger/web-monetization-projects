@@ -5,8 +5,10 @@ import { HeaderFooterLayout } from '../HeaderFooterLayout'
 import { StatusTypography } from '../util/StatusTypography'
 import { StatusButton } from '../StatusButton'
 import { useHost } from '../../context/popupHostContext'
+import { useStore } from '../../context/storeContext'
 
 export const CoilPopupView = () => {
+  const { user } = useStore()
   const {
     coilDomain,
     runtime: { tabOpener }
@@ -19,10 +21,12 @@ export const CoilPopupView = () => {
       <Grid container justify='center' alignItems='center'>
         <div>
           <StatusTypography variant='h6' align='center'>
-            Welcome to Coil
+            {user?.fullName
+              ? `Welcome, ${user.fullName.split(' ')[0]}`
+              : 'Welcome to Coil'}
           </StatusTypography>
           <StatusTypography variant='subtitle1' align='center'>
-            Check out our Discover page to explore web monetized content.
+            Explore the world of web monetized content on our Discover page.
           </StatusTypography>
           <StatusButton
             text='Discover now'
