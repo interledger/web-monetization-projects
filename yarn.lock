@@ -2329,7 +2329,7 @@ __metadata:
     addons-linter: ^3.2.0
     copy-webpack-plugin: ^8.1.1
     crx-hotreload: ^1.0.6
-    css-loader: ^5.2.3
+    css-loader: ^5.2.4
     debug: ^4.3.1
     eslint: ^7.24.0
     eslint-config-prettier: ^8.2.0
@@ -8551,9 +8551,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:^5.2.3":
-  version: 5.2.3
-  resolution: "css-loader@npm:5.2.3"
+"css-loader@npm:^5.2.4":
+  version: 5.2.4
+  resolution: "css-loader@npm:5.2.4"
   dependencies:
     camelcase: ^6.2.0
     icss-utils: ^5.1.0
@@ -8568,7 +8568,7 @@ __metadata:
     semver: ^7.3.5
   peerDependencies:
     webpack: ^4.27.0 || ^5.0.0
-  checksum: c05b0329214d6bd982c26aa1535687296096ec655ed53a56eb902b341fbc2855b54d9b278447c9b51118ccb331c2a739a049e510c76521936d1826bcf55d0822
+  checksum: 369839955849fdcae913b59797aa1cb419b4795d20ca52dd48531d66348701d48cdb6f1017b6feff037f1c05af93b80360e8e1fd115dab54eb896c5fd28fadfd
   languageName: node
   linkType: hard
 
