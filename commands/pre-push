@@ -5,8 +5,10 @@ echo -e "Pre-push Hook: Checking branch name"
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 PROTECTED_BRANCHES="^(main|develop)"
+# Get refs list from STDIN
+REFS=$(cat)
 
-if [[ $1 != *"$BRANCH"* ]]
+if [[ $REFS != *"$BRANCH"* ]]
 then
   echo -e "\n🚫 You must use (git push origin $BRANCH)\n" && exit 1
 fi
