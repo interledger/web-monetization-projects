@@ -1503,7 +1503,7 @@ __metadata:
     husky: ^6.0.0
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
-    inversify: ^5.0.5
+    inversify: ^5.1.1
     inversify-logger-middleware: ^3.1.0
     jest: ^26.6.3
     jsonwebtoken: ^8.5.1
@@ -2229,7 +2229,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-standard: ^5.0.0
     husky: ^6.0.0
-    inversify: ^5.0.5
+    inversify: ^5.1.1
     jest: ^26.6.3
     lerna: ^4.0.0
     lint-staged: ^10.5.4
@@ -2346,7 +2346,7 @@ __metadata:
     husky: ^6.0.0
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
-    inversify: ^5.0.5
+    inversify: ^5.1.1
     inversify-logger-middleware: ^3.1.0
     jest: ^26.6.3
     jsonwebtoken: ^8.5.1
@@ -4541,7 +4541,7 @@ __metadata:
     ilp-plugin-btp: ^1.5.0
     ilp-plugin-mini-accounts: ^4.2.0
     ilp-protocol-stream: ^2.7.0
-    inversify: ^5.0.5
+    inversify: ^5.1.1
     inversify-express-utils: ^6.3.2
     jest: ^26.6.3
     lerna: ^4.0.0
@@ -12805,10 +12805,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"inversify@npm:*, inversify@npm:^5.0.5":
-  version: 5.0.5
-  resolution: "inversify@npm:5.0.5"
-  checksum: 4610c86e0f79baacbcd80817c59dad374e6ba98d3e3cc8ccc132f87cfaae21b90fd6e86559a00de54888c3c27d8907815243d48f4c31f5ec6b3a60fe02412ceb
+"inversify@npm:*, inversify@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "inversify@npm:5.1.1"
+  checksum: d7408be98812314cdca719827dac76b5ea58d786e58dd2753fa5adf5b6c90ef62b742791fbaa3020cc655237077a3d5e4a1f9e92761064107c5ce60df85ceabf
   languageName: node
   linkType: hard
 
