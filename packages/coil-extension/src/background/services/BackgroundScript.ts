@@ -731,10 +731,8 @@ export class BackgroundScript {
     try {
       this.log(`sendTip: sending tip to ${receiver}`)
       const result = await this.client.initiateTip({
-        variables: {
-          amount,
-          destination: receiver
-        }
+        amount,
+        destination: receiver
       })
       this.log(`sendTip: sent tip to ${receiver}`, result)
       const message: TipSent = {
