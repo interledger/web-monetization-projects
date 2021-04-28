@@ -81,7 +81,7 @@
     "@types/filesystem": "^0.0.30",
     "@types/firefox": "^0.0.30",
     "@types/har-format": "^1.2.5",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^26.0.23",
     "@types/jsonwebtoken": "^8.5.1",
     "@types/long": "^4.0.1",
     "@types/node": "^14.10.3",
