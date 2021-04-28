@@ -17,7 +17,6 @@ export const initiateTipQuery = `query initiateTip($input: InitiateTipInput!) {
   }
 }`
 
-
 interface TipData {
   id: string
   userId: string
@@ -38,8 +37,8 @@ export interface InitiateTipData {
 }
 
 export interface InitiateTipInput {
-  amount: string,
-  destination: string,
+  amount: string
+  destination: string
   origin?: string
 }
 
