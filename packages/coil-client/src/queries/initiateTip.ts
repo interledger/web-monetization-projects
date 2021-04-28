@@ -51,5 +51,14 @@ export async function initiateTip(
     variables: { input }
   })
 
-  return message.data?.initiateTip
+  const initiateTip = message.data?.initiateTip
+  const success = initiateTip?.success
+  const code = initiateTip?.code
+  if (!success) {
+    throw new Error(
+      `graphql query failed. status=${code} query=\`${initiateTipQuery}\``
+    )
+  }
+
+  return initiateTip
 }
