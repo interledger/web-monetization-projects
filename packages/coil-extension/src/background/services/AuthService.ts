@@ -103,15 +103,20 @@ export class AuthService extends EventEmitter {
 
   private async updateWhoAmi(token: string): Promise<string | null> {
     const resp = await this.client.whoAmI(token)
+    
     this.log('updateWhoAmi resp', resp.data)
     if (resp.data?.whoami) {
       this.store.user = {
         ...resp.data.whoami
       }
-      // const featureFlagResp = await this.client.featureEnabled(token, 'tipping-beta');
-      //todo: should probably return the users feature flag in whoami
-      this.store.user = { ...this.store.user, inTippingBeta: true }
-      this.setTipSettings()
+
+      // Data needed for tipping
+      // tipping-beta: featureEnabled: boolean
+      // minimum tip limit: minTipLimit > minTipLimit
+      // tip credit balance: whoami > tipCredit > balanceCents
+      // remaining daily amount: whoami > tipping > limitRemaining
+      
+      this.formatTipSettings(token)
       return token
     } else {
       return null
@@ -121,31 +126,40 @@ export class AuthService extends EventEmitter {
   private async refreshTokenAndUpdateWhoAmi(token: string) {
     const resp = await this.client.queryToken(token)
     if (resp.data?.refreshToken?.token && resp.data?.whoami) {
-      this.store.user = resp.data.whoami
-      // const featureFlagResp = await this.client.featureEnabled(token, 'tipping-beta');
-      //todo: should probably return the users feature flag in whoami
-      this.store.user = { ...this.store.user, inTippingBeta: true }
-      this.setTipSettings()
+      this.store.user = resp.data.whoami 
+      
+      // Data needed for tipping
+      // tipping-beta: featureEnabled: boolean
+      // minimum tip limit: minTipLimit > minTipLimit
+      // tip credit balance: whoami > tipCredit > balanceCents
+      // remaining daily amount: whoami > tipping > limitRemaining
+      this.formatTipSettings(resp.data.refreshToken.token) // adds the tip settings info to the user object and formats it
       return resp.data.refreshToken.token
     } else {
       return null
     }
   }
 
-  private setTipSettings() {
-    if (this.store.user) {
-      // todo: need to query api for users tip settings
-      // todo: cairin added it to the whoami response. Keeping this for now for placeholder values
-      //* placeholder values */
-      const placeholderTipSettings = {
-        tipCreditBalance: 0,
+  private async formatTipSettings(token: string){
+    // convert all tip settings from cents to dollars
+    // set default hotkey tip amounts since we don't yet get them from the user
+    // add feature flag and minTipLimit
+    if(this.store.user){
+      // const featureFlagResp = await this.client.featureEnabled(token, 'tipping-beta');
+      // const minTipLimitResp = await this.client.minTipLimit(token);
+      const formattedTipSettings = {
+        // inTippingBeta: featureFlagResp.data.featureEnabled,
+        inTippingBeta: true,
+        // minimumTipLimit: minTipLimitResp?.data?.minTipLimit ? Number(minTipLimitResp?.data?.minTipLimit) : 1,
         minimumTipLimit: 1,
-        remainingDailyAmount: 400,
-        hotkeyTipAmounts: [5, 10, 50]
+        tipCreditBalance: this.store.user?.tipCredit?.balanceCents ? this.store.user?.tipCredit?.balanceCents / 100 : 100, // convert from cents to dollars
+        remainingDailyAmount: this.store.user?.tipping?.limitRemaining ? Number(this.store.user?.tipping?.limitRemaining) / 100 : 100, // convert from cents to dollars
+        hotkeyTipAmounts: [5, 10, 50] // dollar amounts - not yet set by user
       }
+
       this.store.user = {
         ...this.store.user,
-        tipSettings: placeholderTipSettings
+        tipSettings: formattedTipSettings
       }
     }
   }
