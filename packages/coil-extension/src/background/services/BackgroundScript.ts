@@ -736,7 +736,9 @@ export class BackgroundScript {
         chrome.tabs.query({ active: true, currentWindow: true }, res)
       })
     }
-    const activeTabUrl = await tabQueryPromise().then((tabs: any) => tabs[0].url)
+    const activeTabUrl = await tabQueryPromise().then(
+      (tabs: any) => tabs[0].url
+    )
 
     try {
       this.log(`sendTip: sending tip to ${receiver}`)

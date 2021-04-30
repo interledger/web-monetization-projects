@@ -103,7 +103,7 @@ export class AuthService extends EventEmitter {
 
   private async updateWhoAmi(token: string): Promise<string | null> {
     const resp = await this.client.whoAmI(token)
-    
+
     this.log('updateWhoAmi resp', resp.data)
     if (resp.data?.whoami) {
       this.store.user = {
@@ -115,7 +115,7 @@ export class AuthService extends EventEmitter {
       // minimum tip limit: minTipLimit > minTipLimit
       // tip credit balance: whoami > tipCredit > balanceCents
       // remaining daily amount: whoami > tipping > limitRemaining
-      
+
       this.formatTipSettings(token)
       return token
     } else {
@@ -126,8 +126,8 @@ export class AuthService extends EventEmitter {
   private async refreshTokenAndUpdateWhoAmi(token: string) {
     const resp = await this.client.queryToken(token)
     if (resp.data?.refreshToken?.token && resp.data?.whoami) {
-      this.store.user = resp.data.whoami 
-      
+      this.store.user = resp.data.whoami
+
       // Data needed for tipping
       // tipping-beta: featureEnabled: boolean
       // minimum tip limit: minTipLimit > minTipLimit
@@ -140,18 +140,27 @@ export class AuthService extends EventEmitter {
     }
   }
 
-  private async formatTipSettings(token: string){
+  private async formatTipSettings(token: string) {
     // convert all tip settings from cents to dollars
     // set default hotkey tip amounts since we don't yet get them from the user
     // add feature flag and minTipLimit
-    if(this.store.user){
-      const featureFlagResp = await this.client.featureEnabled(token, 'tipping-beta');
-      const minTipLimitResp = await this.client.minTipLimit(token);
+    if (this.store.user) {
+      const featureFlagResp = await this.client.featureEnabled(
+        token,
+        'tipping-beta'
+      )
+      const minTipLimitResp = await this.client.minTipLimit(token)
       const formattedTipSettings = {
         inTippingBeta: featureFlagResp.data.featureEnabled,
-        minimumTipLimit: minTipLimitResp.data.minTipLimit.minTipLimit ? Number(minTipLimitResp.data.minTipLimit.minTipLimit ) / 100 : 1,
-        tipCreditBalance: this.store.user?.tipCredit?.balanceCents ? this.store.user?.tipCredit?.balanceCents / 100 : 0, // convert from cents to dollars
-        remainingDailyAmount: this.store.user?.tipping?.limitRemaining ? Number(this.store.user?.tipping?.limitRemaining) / 100 : 0, // convert from cents to dollars
+        minimumTipLimit: minTipLimitResp.data.minTipLimit.minTipLimit
+          ? Number(minTipLimitResp.data.minTipLimit.minTipLimit) / 100
+          : 1,
+        tipCreditBalance: this.store.user?.tipCredit?.balanceCents
+          ? this.store.user?.tipCredit?.balanceCents / 100
+          : 0, // convert from cents to dollars
+        remainingDailyAmount: this.store.user?.tipping?.limitRemaining
+          ? Number(this.store.user?.tipping?.limitRemaining) / 100
+          : 0, // convert from cents to dollars
         hotkeyTipAmounts: [5, 10, 50] // dollar amounts - not yet set by user
       }
       this.store.user = {

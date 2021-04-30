@@ -16,11 +16,11 @@ export interface User {
     scale: number
   }
   tipCredit?: {
-    balanceCents: number 
+    balanceCents: number
   }
   tipping?: {
     limitRemaining: string
-  } 
+  }
   minimumTipLimit?: number
   tipSettings?: {
     inTippingBeta?: boolean
