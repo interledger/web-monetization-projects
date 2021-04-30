@@ -725,14 +725,25 @@ export class BackgroundScript {
 
     const receiver = stream.getPaymentPointer()
     const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
+
+    // Set tip amount
     const tipAmount = tip < 1 ? 1 : tip
     const amount = Math.floor(tipAmount * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
+
+    // Set tip origin url
+    async function tabQueryPromise() {
+      return new Promise(function (res, rej) {
+        chrome.tabs.query({ active: true, currentWindow: true }, res)
+      })
+    }
+    const activeTabUrl = await tabQueryPromise().then((tabs: any) => tabs[0].url)
 
     try {
       this.log(`sendTip: sending tip to ${receiver}`)
       const result = await this.client.initiateTip({
         amount,
-        destination: receiver
+        destination: receiver,
+        origin: activeTabUrl
       })
       this.log(`sendTip: sent tip to ${receiver}`, result)
       const message: TipSent = {
