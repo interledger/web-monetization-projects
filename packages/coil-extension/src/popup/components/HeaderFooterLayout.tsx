@@ -26,8 +26,8 @@ const OuterDiv = styled('div')({
 })
 
 const CoilContainer = styled(Container)(({ theme }) => ({
-  paddingRight: `${theme.spacing(4)}px`,
-  paddingLeft: `${theme.spacing(4)}px`,
+  paddingRight: `${theme.spacing(3)}px`,
+  paddingLeft: `${theme.spacing(3)}px`,
   paddingTop: `${theme.spacing(2)}px`,
   paddingBottom: `${theme.spacing(2)}px`,
   backgroundColor: Colors.Grey99

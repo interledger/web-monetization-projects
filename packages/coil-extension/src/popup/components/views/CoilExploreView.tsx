@@ -14,8 +14,8 @@ export const CoilExploreView = () => {
           </StatusTypography>
           <img src='/res/img-explore.svg' />
           <StatusTypography variant='subtitle1' align='center'>
-            On this page you can find all Web-Monetized sites that you can
-            support with your Coil membership.
+            Your journey to the world of web monetized sites you can access and
+            support starts here.
           </StatusTypography>
         </div>
       </Grid>
