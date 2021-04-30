@@ -145,18 +145,15 @@ export class AuthService extends EventEmitter {
     // set default hotkey tip amounts since we don't yet get them from the user
     // add feature flag and minTipLimit
     if(this.store.user){
-      // const featureFlagResp = await this.client.featureEnabled(token, 'tipping-beta');
-      // const minTipLimitResp = await this.client.minTipLimit(token);
+      const featureFlagResp = await this.client.featureEnabled(token, 'tipping-beta');
+      const minTipLimitResp = await this.client.minTipLimit(token);
       const formattedTipSettings = {
-        // inTippingBeta: featureFlagResp.data.featureEnabled,
-        inTippingBeta: true,
-        // minimumTipLimit: minTipLimitResp?.data?.minTipLimit ? Number(minTipLimitResp?.data?.minTipLimit) : 1,
-        minimumTipLimit: 1,
-        tipCreditBalance: this.store.user?.tipCredit?.balanceCents ? this.store.user?.tipCredit?.balanceCents / 100 : 100, // convert from cents to dollars
-        remainingDailyAmount: this.store.user?.tipping?.limitRemaining ? Number(this.store.user?.tipping?.limitRemaining) / 100 : 100, // convert from cents to dollars
+        inTippingBeta: featureFlagResp.data.featureEnabled,
+        minimumTipLimit: minTipLimitResp.data.minTipLimit.minTipLimit ? Number(minTipLimitResp.data.minTipLimit.minTipLimit ) / 100 : 1,
+        tipCreditBalance: this.store.user?.tipCredit?.balanceCents ? this.store.user?.tipCredit?.balanceCents / 100 : 0, // convert from cents to dollars
+        remainingDailyAmount: this.store.user?.tipping?.limitRemaining ? Number(this.store.user?.tipping?.limitRemaining) / 100 : 0, // convert from cents to dollars
         hotkeyTipAmounts: [5, 10, 50] // dollar amounts - not yet set by user
       }
-
       this.store.user = {
         ...this.store.user,
         tipSettings: formattedTipSettings

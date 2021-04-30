@@ -1,10 +1,12 @@
 import { GraphQlClient } from '..'
 
 export interface MinTipLimitResponse {
-  code: string
-  message: string
-  success: boolean
-  minTipLimit: string
+    minTipLimit: {
+        code: string
+        message: string
+        success: boolean
+        minTipLimit: string
+    }
 }
 
 export const minTipLimitQuery = `{

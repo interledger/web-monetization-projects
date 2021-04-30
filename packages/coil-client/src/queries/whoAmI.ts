@@ -27,13 +27,13 @@ export const whoamiQuery = `{
     tipCredit {
       balanceCents
     }
+
+    tipping {
+      limitRemaining
+    }
   }
 }`
 
 export async function whoAmI(this: GraphQlClient, token: string) {
   return this.query<WhoAmIData>({ query: whoamiQuery, token })
 }
-
-// tipping {
-//   limitRemaining
-// }
