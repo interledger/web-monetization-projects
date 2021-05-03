@@ -742,7 +742,8 @@ export class BackgroundScript {
 
     try {
       this.log(`sendTip: sending tip to ${receiver}`)
-      const result = await this.client.initiateTip({
+
+      const result = await this.client.initiateTip(token, {
         amount,
         destination: receiver,
         origin: activeTabUrl
