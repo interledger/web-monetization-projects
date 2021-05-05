@@ -732,7 +732,9 @@ export class BackgroundScript {
 
     // Set active tab url
     const frameId = 0
-    const frame = notNullOrUndef(this.framesService.getFrame({frameId, tabId}))
+    const frame = notNullOrUndef(
+      this.framesService.getFrame({ frameId, tabId })
+    )
     const activeTabUrl = frame.href
 
     try {
