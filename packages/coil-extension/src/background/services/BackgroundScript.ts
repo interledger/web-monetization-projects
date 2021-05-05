@@ -730,15 +730,10 @@ export class BackgroundScript {
     const tipAmount = tip < 1 ? 1 : tip
     const amount = Math.floor(tipAmount * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
 
-    // Set tip origin url
-    async function tabQueryPromise() {
-      return new Promise(function (res, rej) {
-        chrome.tabs.query({ active: true, currentWindow: true }, res)
-      })
-    }
-    const activeTabUrl = await tabQueryPromise().then(
-      (tabs: any) => tabs[0].url
-    )
+    // Set active tab url
+    const frameId = 0
+    const frame = notNullOrUndef(this.framesService.getFrame({frameId, tabId}))
+    const activeTabUrl = frame.href
 
     try {
       this.log(`sendTip: sending tip to ${receiver}`)

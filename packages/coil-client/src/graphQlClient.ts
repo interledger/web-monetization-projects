@@ -76,7 +76,6 @@ export class GraphQlClient {
         : serialized
       this.config.log('Domain:', this.config.coilDomain, 'Url:', redacted)
     }
-    // const res = await this.fetch(`${this.config.coilDomain}/graphql`, init) //? why is this hitting graphql instead of gateway?
     const res = await this.fetch(`${this.config.coilDomain}/gateway`, init)
     if (!res.ok) {
       throw new Error(
