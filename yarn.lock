@@ -1564,7 +1564,7 @@ __metadata:
     lerna: ^4.0.0
     lint-staged: ^10.5.4
     prettier: ^2.2.1
-    puppeteer: ^9.1.0
+    puppeteer: ^9.1.1
     react: ^16.14.0
     react-dom: ^16.14.0
     reduct: ^3.3.1
@@ -1691,7 +1691,7 @@ __metadata:
     lint-staged: ^10.5.4
     node-fetch: ^2.6.1
     prettier: ^2.2.1
-    puppeteer: ^9.1.0
+    puppeteer: ^9.1.1
     reduct: ^3.3.1
     rimraf: ^3.0.2
     ts-jest: ^26.5.6
@@ -1863,7 +1863,7 @@ __metadata:
     lerna: ^4.0.0
     lint-staged: ^10.5.4
     prettier: ^2.2.1
-    puppeteer: ^9.1.0
+    puppeteer: ^9.1.1
     rimraf: ^3.0.2
     tmp: ^0.2.1
     ts-jest: ^26.5.6
@@ -18221,9 +18221,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^9.1.0":
-  version: 9.1.0
-  resolution: "puppeteer@npm:9.1.0"
+"puppeteer@npm:^9.1.1":
+  version: 9.1.1
+  resolution: "puppeteer@npm:9.1.1"
   dependencies:
     debug: ^4.1.0
     devtools-protocol: 0.0.869402
@@ -18237,7 +18237,7 @@ fsevents@^1.2.7:
     tar-fs: ^2.0.0
     unbzip2-stream: ^1.3.3
     ws: ^7.2.3
-  checksum: b081fd0ebd8fb0bf070bb572e722e9865f31bd335b19ca2f382f818bde6fde03ead7150c3a6716e84719d3f3f44416acda833a2312df7b36202274d503c32116
+  checksum: d680e469c2ac724bae1bb7087748b903a7a965fe00f622e17fd40aafd9589351bfa0c472fc200a717706d04f846788e63ab9d07e2d418f994612cb2c0cb68943
   languageName: node
   linkType: hard
 
