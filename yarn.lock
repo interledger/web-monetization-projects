@@ -1419,7 +1419,7 @@ __metadata:
     jest: ^26.6.3
     jsonwebtoken: ^8.5.1
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     localforage: ^1.9.0
     node-fetch: ^2.6.1
     prettier: ^2.2.1
@@ -1476,7 +1476,7 @@ __metadata:
     jest: ^26.6.3
     jsonwebtoken: ^8.5.1
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     node-fetch: ^2.6.1
     prettier: ^2.2.1
     rimraf: ^3.0.2
@@ -1562,7 +1562,7 @@ __metadata:
     jsonwebtoken: ^8.5.1
     jss: ^10.6.0
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     puppeteer: ^9.1.1
     react: ^16.14.0
@@ -1622,7 +1622,7 @@ __metadata:
     jest: ^26.6.3
     json5: ^2.2.0
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     npm-check-updates: ^11.5.10
     prettier: ^2.2.1
     reduct: ^3.3.1
@@ -1688,7 +1688,7 @@ __metadata:
     ilp-protocol-stream: 2.7.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     node-fetch: ^2.6.1
     prettier: ^2.2.1
     puppeteer: ^9.1.1
@@ -1743,7 +1743,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     node-fetch: ^2.6.1
     prettier: ^2.2.1
     rimraf: ^3.0.2
@@ -1801,7 +1801,7 @@ __metadata:
     jest: ^26.6.3
     keccak: ^3.0.1
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     node-fetch: ^2.6.1
     prettier: ^2.2.1
     rimraf: ^3.0.2
@@ -1861,7 +1861,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     puppeteer: ^9.1.1
     rimraf: ^3.0.2
@@ -1919,7 +1919,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     process: ^0.11.10
     rimraf: ^3.0.2
@@ -1976,7 +1976,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     rimraf: ^3.0.2
     ts-jest: ^26.5.6
@@ -2232,7 +2232,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     rimraf: ^3.0.2
     ts-jest: ^26.5.6
@@ -2285,7 +2285,7 @@ __metadata:
     inversify: ^5.1.1
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     rimraf: ^3.0.2
     ts-jest: ^26.5.6
@@ -2404,7 +2404,7 @@ __metadata:
     jest: ^26.6.3
     jsonwebtoken: ^8.5.1
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     react: ^16.14.0
     react-dom: ^16.14.0
@@ -4605,7 +4605,7 @@ __metadata:
     inversify-express-utils: ^6.3.2
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     node-fetch: ^2.6.1
     oer-utils: ^5.1.2
     prettier: ^2.2.1
@@ -4664,7 +4664,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     node-fetch: ^2.6.1
     prettier: ^2.2.1
     reduct: ^3.3.1
@@ -4721,7 +4721,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     rimraf: ^3.0.2
     ts-jest: ^26.5.6
@@ -4783,7 +4783,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     react: ^16.14.0
     react-dom: ^16.14.0
@@ -4838,7 +4838,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     rimraf: ^3.0.2
     ts-jest: ^26.5.6
@@ -4893,7 +4893,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     rimraf: ^3.0.2
     ts-jest: ^26.5.6
@@ -5101,7 +5101,7 @@ __metadata:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     process: ^0.11.10
     rimraf: ^3.0.2
@@ -8708,7 +8708,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.2.0, debug@npm:^4.3.1":
+"debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1":
   version: 4.3.1
   resolution: "debug@npm:4.3.1"
   dependencies:
@@ -10477,7 +10477,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^4.0.0, execa@npm:^4.1.0":
+"execa@npm:^4.0.0":
   version: 4.1.0
   resolution: "execa@npm:4.1.0"
   dependencies:
@@ -13616,6 +13616,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"is-unicode-supported@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "is-unicode-supported@npm:0.1.0"
+  checksum: 00ca6f5581b81d55c567d259175cb1af08c60ae95f6aad69adadfdfbe098c60ef5617ad440770d821f1710773987c0b13ed6dd375cd9ab1bd7b7dd8f9a42625c
+  languageName: node
+  linkType: hard
+
 "is-utf8@npm:^0.2.0, is-utf8@npm:^0.2.1":
   version: 0.2.1
   resolution: "is-utf8@npm:0.2.1"
@@ -14977,46 +14984,47 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^10.5.4":
-  version: 10.5.4
-  resolution: "lint-staged@npm:10.5.4"
+"lint-staged@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "lint-staged@npm:11.0.0"
   dependencies:
-    chalk: ^4.1.0
+    chalk: ^4.1.1
     cli-truncate: ^2.1.0
-    commander: ^6.2.0
+    commander: ^7.2.0
     cosmiconfig: ^7.0.0
-    debug: ^4.2.0
+    debug: ^4.3.1
     dedent: ^0.7.0
     enquirer: ^2.3.6
-    execa: ^4.1.0
-    listr2: ^3.2.2
-    log-symbols: ^4.0.0
-    micromatch: ^4.0.2
+    execa: ^5.0.0
+    listr2: ^3.8.2
+    log-symbols: ^4.1.0
+    micromatch: ^4.0.4
     normalize-path: ^3.0.0
     please-upgrade-node: ^3.2.0
     string-argv: 0.3.1
     stringify-object: ^3.3.0
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: dbcafe3679668379fc03f3aef481c3f710794ec03dd5c3915f26a0de110977fbcb44b55ab6dfcff9e8e5789c568ea5629e92f55944fc43f6f6fa1890ee5b07ba
+  checksum: e5d9c38f468fae090939d150f8a1676ca208e50c714f20c9957a16833eeae20ca9676c8679883d0a005fda58375581c26352e18a2227d6449a29adaca650f957
   languageName: node
   linkType: hard
 
-"listr2@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "listr2@npm:3.2.2"
+"listr2@npm:^3.8.2":
+  version: 3.8.2
+  resolution: "listr2@npm:3.8.2"
   dependencies:
-    chalk: ^4.1.0
+    chalk: ^4.1.1
     cli-truncate: ^2.1.0
     figures: ^3.2.0
     indent-string: ^4.0.0
     log-update: ^4.0.0
     p-map: ^4.0.0
-    rxjs: ^6.6.3
+    rxjs: ^6.6.7
     through: ^2.3.8
+    wrap-ansi: ^7.0.0
   peerDependencies:
     enquirer: ">= 2.3.0 < 3"
-  checksum: e4cccac610bc18cf75f1248f599ce6fb9637e481dc8ebca480c84b6a57802f580a2df2915b54acaa4268dfcc42a87bb6c86bd7ec5cee793e4df8ee1c8f0822ff
+  checksum: ecc039103c8d1065782d327b87045431b609105bcdada16cd209daf1b2f971605ba5c083fbe74e4d17a0002d7f8ab038c94c4feaaf48a0601dba628cd6f0b6e3
   languageName: node
   linkType: hard
 
@@ -15257,12 +15265,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"log-symbols@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "log-symbols@npm:4.0.0"
+"log-symbols@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "log-symbols@npm:4.1.0"
   dependencies:
-    chalk: ^4.0.0
-  checksum: 2cbdb0427d1853f2bd36645bff42aaca200902284f28aadacb3c0fa4c8c43fe6bfb71b5d61ab08b67063d066d7c55b8bf5fbb43b03e4a150dbcdd643e9cd1dbf
+    chalk: ^4.1.0
+    is-unicode-supported: ^0.1.0
+  checksum: 57be4aeb6a6ecb81d8267600836f81928da1d846ad13384a9a22d179e27590fdb680946edbd15642a31735183adaa3dc6aae2d20e619a19fa0d54e1aee945915
   languageName: node
   linkType: hard
 
@@ -15612,13 +15621,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.0, micromatch@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "micromatch@npm:4.0.2"
+"micromatch@npm:^4.0.0, micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "micromatch@npm:4.0.4"
   dependencies:
     braces: ^3.0.1
-    picomatch: ^2.0.5
-  checksum: 0cb0e11d647cbb65e398a0a8a1340a7fb751ae2722346219c435704cfac8b3275a94a6464236fe867f52ad46a24046d3bc4ac11b3d21ddb73bc44e27cf1e4904
+    picomatch: ^2.2.3
+  checksum: bc522ad93c086aa176f50fea2dc8060a8f7d7a621c811cf9ba02a1912577cc100190508166d721231465f10a575a40ec8a1bffc23bbc2c0108fcbf02e4be04ed
   languageName: node
   linkType: hard
 
@@ -17570,10 +17579,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^2.0.4, picomatch@npm:^2.0.5, picomatch@npm:^2.2.1":
-  version: 2.2.2
-  resolution: "picomatch@npm:2.2.2"
-  checksum: 20fa75e0a58b39d83425b3db68744d5f6f361fd4fd66ec7745d884036d502abba0d553a637703af79939b844164b13e60eea339ccb043d7fbd74c3da2592b864
+"picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.2.3":
+  version: 2.2.3
+  resolution: "picomatch@npm:2.2.3"
+  checksum: f8c9323bc3b21ff448e81dd32277135d781abae5d53a1415d69a4ce6317a2c11404d449c550110b8fa402c07d5e80ff0e2657f263a312517cc809e9010d25791
   languageName: node
   linkType: hard
 
@@ -19397,12 +19406,12 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^6.4.0, rxjs@npm:^6.6.0, rxjs@npm:^6.6.3":
-  version: 6.6.6
-  resolution: "rxjs@npm:6.6.6"
+"rxjs@npm:^6.4.0, rxjs@npm:^6.6.0, rxjs@npm:^6.6.7":
+  version: 6.6.7
+  resolution: "rxjs@npm:6.6.7"
   dependencies:
     tslib: ^1.9.0
-  checksum: c97b410e791b3259439be48cd37119b63eedc3809a5895d884a7ac27a6934ae4ec246be3d76f1b2f3b47c72a96500ad30977545dc8b0f4a0f98c52f5f773a8ea
+  checksum: 1146975cbd5388ee5e61450235dc5670931e43cce71813f567977d334acc4d75c6e8d9d293df67e1fb31510b99fc8957943d4a9b550d109e4dc69967a8471543
   languageName: node
   linkType: hard
 
@@ -22273,7 +22282,7 @@ sjcl@sublimator/sjcl:
     husky: ^6.0.0
     jest: ^26.6.3
     lerna: ^4.0.0
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     prettier: ^2.2.1
     rimraf: ^3.0.2
     ts-jest: ^26.5.6
