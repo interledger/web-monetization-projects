@@ -11,7 +11,7 @@ import {
 } from '@web-monetization/types'
 
 export function getDocument() {
-  return (document as unknown) as MonetizationExtendedDocument
+  return document as unknown as MonetizationExtendedDocument
 }
 
 const doc = getDocument()

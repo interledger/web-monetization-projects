@@ -8,12 +8,8 @@ export function useMonetizationState() {
 
   webMonetizationState.init()
 
-  const {
-    state,
-    requestId,
-    paymentPointer,
-    hasPaid
-  } = webMonetizationState.getState()
+  const { state, requestId, paymentPointer, hasPaid } =
+    webMonetizationState.getState()
 
   const [monetizationState, setMonetizationState] = useState({
     state,
@@ -26,12 +22,8 @@ export function useMonetizationState() {
     if (!getDocument().monetization) return
 
     const stateChange = () => {
-      const {
-        state,
-        requestId,
-        paymentPointer,
-        hasPaid
-      } = webMonetizationState.getState()
+      const { state, requestId, paymentPointer, hasPaid } =
+        webMonetizationState.getState()
 
       setMonetizationState({
         state,

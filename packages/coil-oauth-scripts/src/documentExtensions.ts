@@ -11,5 +11,5 @@ interface DocumentExtensions {
 // Unfortunately one ill effect of a global tsconfig is that globals are, well,
 // global :)
 export function getDoc(doc = document) {
-  return (doc as unknown) as Document & DocumentExtensions
+  return doc as unknown as Document & DocumentExtensions
 }

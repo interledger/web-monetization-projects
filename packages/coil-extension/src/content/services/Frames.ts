@@ -134,9 +134,8 @@ export class Frames {
         this.frames.set(frameEl, result)
       }
       if (sameFrame(await result.frame, frameSpec)) {
-        return (notNullOrUndef(
-          this.frames.get(frameEl)
-        ).lastAllowed = isMonetizationAllowed(frameEl))
+        return (notNullOrUndef(this.frames.get(frameEl)).lastAllowed =
+          isMonetizationAllowed(frameEl))
       }
     }
     return false

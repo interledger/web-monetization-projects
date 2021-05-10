@@ -316,7 +316,7 @@ export class Stream {
     this.monetization.dispatchMonetizationProgressEvent(detail)
   }
 
-  pause() {
+  async pause() {
     return this.stop(false)
   }
 }

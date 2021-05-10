@@ -685,9 +685,10 @@ export function getMarshaledBatchProof(proof: string) {
  * @param {string} proofStr proof JSON as string
  * @return {Object}
  */
-export function parseDleqProof(
-  proofStr: string
-): { R: sjcl.BigNumber; C: sjcl.BigNumber } {
+export function parseDleqProof(proofStr: string): {
+  R: sjcl.BigNumber
+  C: sjcl.BigNumber
+} {
   const dleqProofM = JSON.parse(proofStr)
   return {
     R: getBigNumFromB64(dleqProofM.R),

@@ -27,8 +27,8 @@ async function checkMonetizationState(
   return page.evaluate(() => {
     const meta = document.head.querySelector('meta[name="monetization"]')
     return {
-      state: ((document as unknown) as MonetizationExtendedDocument)
-        .monetization.state,
+      state: (document as unknown as MonetizationExtendedDocument).monetization
+        .state,
       hasMonetizationMeta: Boolean(meta)
     }
   })
