@@ -37,7 +37,7 @@
     ],
     "*.ts*": [
       "prettier --write",
-      "LINT_FIX=1 yarn lint --fix"
+      "yarn lint --fix"
     ]
   },
   "resolutions": {

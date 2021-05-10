@@ -63,19 +63,16 @@ export class StreamServer {
     receiptNonce?: string
     receiptSecret?: string
   }): Promise<SPSPResponse> {
-    const {
-      destinationAccount,
-      sharedSecret,
-      receiptsEnabled
-    } = this.streamServer.generateAddressAndSecret({
-      connectionTag: opts.connectionTag,
-      receiptNonce: opts.receiptNonce
-        ? Buffer.from(opts.receiptNonce, 'base64')
-        : undefined,
-      receiptSecret: opts.receiptSecret
-        ? Buffer.from(opts.receiptSecret, 'base64')
-        : undefined
-    })
+    const { destinationAccount, sharedSecret, receiptsEnabled } =
+      this.streamServer.generateAddressAndSecret({
+        connectionTag: opts.connectionTag,
+        receiptNonce: opts.receiptNonce
+          ? Buffer.from(opts.receiptNonce, 'base64')
+          : undefined,
+        receiptSecret: opts.receiptSecret
+          ? Buffer.from(opts.receiptSecret, 'base64')
+          : undefined
+      })
     const body: SPSPResponse = {
       destination_account: destinationAccount,
       shared_secret: sharedSecret.toString('base64'),

@@ -548,7 +548,8 @@ export class BackgroundScript {
       this.store.extensionBuildString = this.buildConfig.extensionBuildString
     }
     if (this.buildConfig.extensionPopupFooterString) {
-      this.store.extensionPopupFooterString = this.buildConfig.extensionPopupFooterString
+      this.store.extensionPopupFooterString =
+        this.buildConfig.extensionPopupFooterString
     }
 
     if (state) {
@@ -677,8 +678,8 @@ export class BackgroundScript {
       emitPending()
     }
 
-    const lastCommand = this.tabStates.getFrameOrDefault(frame).lastMonetization
-      .command
+    const lastCommand =
+      this.tabStates.getFrameOrDefault(frame).lastMonetization.command
     if (lastCommand !== 'start' && lastCommand !== 'pause') {
       this.log('startWebMonetization cancelled via', lastCommand)
       return false

@@ -1,4 +1,5 @@
 import MessageSender = chrome.runtime.MessageSender
+
 import { notNullOrUndef } from './nullables'
 
 export function getTab(sender: { tab?: { id?: number } }): number {

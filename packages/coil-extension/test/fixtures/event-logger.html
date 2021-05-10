@@ -58,12 +58,13 @@
         }
 
         // For testing checklist
-        const removeThenAddQuicklyToCheckStoppedEventHasCorrectRequestId = () => {
-          setTimeout(() => {
-            remove()
-            add()
-          }, 5000)
-        }
+        const removeThenAddQuicklyToCheckStoppedEventHasCorrectRequestId =
+          () => {
+            setTimeout(() => {
+              remove()
+              add()
+            }, 5000)
+          }
         // removeThenAddQuicklyToCheckStoppedEventHasCorrectRequestId()
 
         document.getElementById('remove').addEventListener('click', remove)

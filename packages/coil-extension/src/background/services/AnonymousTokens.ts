@@ -32,17 +32,17 @@ class TokenStore {
     this.storage = localStorage
   }
 
-  setItem(key: string, value: string): Promise<string> {
+  async setItem(key: string, value: string): Promise<string> {
     this.storage.setItem(key, value)
     return Promise.resolve(value)
   }
 
-  removeItem(key: string): Promise<void> {
+  async removeItem(key: string): Promise<void> {
     this.storage.removeItem(key)
     return Promise.resolve()
   }
 
-  iterate(
+  async iterate(
     fn: (
       value: string,
       key: string,

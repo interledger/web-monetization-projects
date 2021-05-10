@@ -29,10 +29,8 @@ export class Server extends BaseHttpController {
     @requestParam('pointer') pointer: string,
     @response() resp: express.Response
   ) {
-    const {
-      receiptNonce,
-      receiptSecret
-    } = this.receiptVerifier.generateReceiptDetails()
+    const { receiptNonce, receiptSecret } =
+      this.receiptVerifier.generateReceiptDetails()
     console.log(resolvePointer(decodeURIComponent(pointer)))
     const spspResp = await fetch(resolvePointer(decodeURIComponent(pointer)), {
       headers: {
