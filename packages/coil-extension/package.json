@@ -43,7 +43,7 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
-    "@abraham/reflection": "^0.7.0",
+    "@abraham/reflection": "^0.8.0",
     "@coil/anonymous-tokens": "^0.0.0",
     "@coil/client": "^0.0.0",
     "@coil/polyfill-utils": "^0.0.0",
