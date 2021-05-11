@@ -24,7 +24,7 @@ describe('GraphQlClient#login', () => {
 
     const token = await client.login(email, password)
     const params: Parameters<typeof fetch> = [
-      'https://coil.com/graphql',
+      'https://coil.com/gateway',
       {
         method: 'POST',
         headers: {
