@@ -13,7 +13,7 @@ SIX_DIR=${SIX_DIR:-six-apktool-decoded}
 mv dist.crx "$SIX_DIR"/assets
 
 
-apktool b "$SIX_DIR" -o coil-six.apk
+apktool b -f "$SIX_DIR" -o coil-six.apk
 
 jarsigner -verbose -keystore \
   "$COIL_SIX_KEYSTORE_PATH" \
