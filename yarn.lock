@@ -1537,7 +1537,7 @@ __metadata:
     "@wext/shipit": ^0.2.1
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
-    addons-linter: ^3.4.0
+    addons-linter: ^3.5.0
     copy-webpack-plugin: ^8.1.1
     crx-hotreload: ^1.0.6
     debug: ^4.3.1
@@ -2378,7 +2378,7 @@ __metadata:
     "@wext/shipit": ^0.2.1
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
-    addons-linter: ^3.4.0
+    addons-linter: ^3.5.0
     copy-webpack-plugin: ^8.1.1
     crx-hotreload: ^1.0.6
     css-loader: ^5.2.4
@@ -5590,9 +5590,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "addons-linter@npm:3.4.0"
+"addons-linter@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "addons-linter@npm:3.5.0"
   dependencies:
     "@mdn/browser-compat-data": 3.3.3
     addons-scanner-utils: 4.5.0
@@ -5604,7 +5604,7 @@ __metadata:
     common-tags: 1.8.0
     deepmerge: 4.2.2
     dispensary: 0.62.0
-    eslint: 7.25.0
+    eslint: 7.26.0
     eslint-plugin-no-unsanitized: 3.1.5
     eslint-visitor-keys: 2.1.0
     espree: 7.3.1
@@ -5626,7 +5626,7 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: 5fc758efdedcebc90235127ea52ebe8ae91818989bad64e4ce93183fb3d74c6feeb165d911f38316faa9324098e55b36e7d1a86fe4b5abd566106158f15bca31
+  checksum: ee4b10c83489918475de58582e971a84fe8afb84b58923c7dfc4f9e6cae4dc2c6c5a1a60be3a0f49e0a7d467eea8632dffa02f76f12df2396836a1859aecd95e
   languageName: node
   linkType: hard
 
@@ -10213,12 +10213,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.25.0":
-  version: 7.25.0
-  resolution: "eslint@npm:7.25.0"
+"eslint@npm:7.26.0, eslint@npm:^7.26.0":
+  version: 7.26.0
+  resolution: "eslint@npm:7.26.0"
   dependencies:
     "@babel/code-frame": 7.12.11
-    "@eslint/eslintrc": ^0.4.0
+    "@eslint/eslintrc": ^0.4.1
     ajv: ^6.10.0
     chalk: ^4.0.0
     cross-spawn: ^7.0.2
@@ -10256,7 +10256,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 6e1782e2264ebf987504746ee82e996bf0ef2c29a2eaea869b54cb8aa1eaf10945b1d563618515e65ac934ca626f3609282127773f45868ad4a98744458a3c62
+  checksum: 08f99befd764fbd6ea811e9eec27d5c6b9dc9d1bbfe5ffa1016e4f1fe526a4f45ea127c4e30c554c423ee55eb290ce9af4fb7fedf9b7af3f84076a444c2bbdf6
   languageName: node
   linkType: hard
 
@@ -10302,53 +10302,6 @@ __metadata:
   bin:
     eslint: ./bin/eslint.js
   checksum: 94d05a10ba6b31d4ae6d9a316645b2998e36ab80f7000f15c59ffb38680d4ac0c40458a947d132d3d3f47107a146bcaea3049dd87c3afc1f5fdae23a0b660e4c
-  languageName: node
-  linkType: hard
-
-"eslint@npm:^7.26.0":
-  version: 7.26.0
-  resolution: "eslint@npm:7.26.0"
-  dependencies:
-    "@babel/code-frame": 7.12.11
-    "@eslint/eslintrc": ^0.4.1
-    ajv: ^6.10.0
-    chalk: ^4.0.0
-    cross-spawn: ^7.0.2
-    debug: ^4.0.1
-    doctrine: ^3.0.0
-    enquirer: ^2.3.5
-    eslint-scope: ^5.1.1
-    eslint-utils: ^2.1.0
-    eslint-visitor-keys: ^2.0.0
-    espree: ^7.3.1
-    esquery: ^1.4.0
-    esutils: ^2.0.2
-    file-entry-cache: ^6.0.1
-    functional-red-black-tree: ^1.0.1
-    glob-parent: ^5.0.0
-    globals: ^13.6.0
-    ignore: ^4.0.6
-    import-fresh: ^3.0.0
-    imurmurhash: ^0.1.4
-    is-glob: ^4.0.0
-    js-yaml: ^3.13.1
-    json-stable-stringify-without-jsonify: ^1.0.1
-    levn: ^0.4.1
-    lodash: ^4.17.21
-    minimatch: ^3.0.4
-    natural-compare: ^1.4.0
-    optionator: ^0.9.1
-    progress: ^2.0.0
-    regexpp: ^3.1.0
-    semver: ^7.2.1
-    strip-ansi: ^6.0.0
-    strip-json-comments: ^3.1.0
-    table: ^6.0.4
-    text-table: ^0.2.0
-    v8-compile-cache: ^2.0.3
-  bin:
-    eslint: bin/eslint.js
-  checksum: 08f99befd764fbd6ea811e9eec27d5c6b9dc9d1bbfe5ffa1016e4f1fe526a4f45ea127c4e30c554c423ee55eb290ce9af4fb7fedf9b7af3f84076a444c2bbdf6
   languageName: node
   linkType: hard
 
