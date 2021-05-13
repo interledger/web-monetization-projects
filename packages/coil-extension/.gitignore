@@ -3,10 +3,10 @@ coil_extension_edge.zip
 coilfirefoxextension@coil.com.xpi
 test/fixtures/coil-oauth-wm.js
 *.apk
-six/assets/dist.crx
-six/META-INF
+six-apktool-decoded/assets/dist.crx
+six-apktool-decoded/META-INF
 safari/Coil/Coil.xcodeproj/project.xcworkspace/
 safari/Coil/build
 safari/Coil/Coil.xcodeproj/xcuserdata/
 safari-local
-six-local
+six-apktool-decoded-local
