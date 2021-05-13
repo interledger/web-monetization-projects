@@ -8,6 +8,7 @@ import { StorageService } from '../services/storage'
 import * as tokens from '../types/tokens'
 import { ClientOptions } from '../services/ClientOptions'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
+import { loggingEnabled } from '../util/isLoggingEnabled'
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { BackgroundStorageService } from './services/BackgroundStorageService'
@@ -15,12 +16,15 @@ import { Stream } from './services/Stream'
 import { createLogger } from './services/utils'
 
 async function configureContainer(container: Container) {
-  const logger = makeLoggerMiddleware()
-  container.applyMiddleware(logger)
+  if (loggingEnabled) {
+    const logger = makeLoggerMiddleware()
+    container.applyMiddleware(logger)
+  }
 
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
   container.bind(tokens.WextApi).toConstantValue(API)
   container.bind(tokens.BuildConfig).toConstantValue(BUILD_CONFIG)
+  container.bind(tokens.LoggingEnabled).toConstantValue(loggingEnabled)
   container.bind(GraphQlClient.Options).to(ClientOptions)
   container.bind(Storage).toConstantValue(localStorage)
   container.bind(StorageService).to(BackgroundStorageService)
@@ -40,7 +44,9 @@ async function configureContainer(container: Container) {
 }
 
 async function main() {
-  console.log('Loading Coil extension:', JSON.stringify(VERSION))
+  if (loggingEnabled) {
+    console.log('Loading Coil extension:', JSON.stringify(VERSION))
+  }
   decorateThirdPartyClasses()
 
   const container = new Container({

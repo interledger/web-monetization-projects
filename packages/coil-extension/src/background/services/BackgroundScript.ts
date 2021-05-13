@@ -63,7 +63,8 @@ export class BackgroundScript {
     private youtube: YoutubeService,
     private activeTabLogger: ActiveTabLogger,
     private framesService: BackgroundFramesService,
-
+    @inject(tokens.LoggingEnabled)
+    private loggingEnabled: boolean,
     @logger('BackgroundScript')
     private log: Logger,
 
@@ -75,7 +76,9 @@ export class BackgroundScript {
     @inject(tokens.WextApi)
     private api = chrome
   ) {
-    console.log('BuildConfig', this.buildConfig)
+    if (this.loggingEnabled) {
+      console.log('BuildConfig', this.buildConfig)
+    }
   }
 
   get activeTab() {

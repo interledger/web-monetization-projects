@@ -37,6 +37,11 @@ const getColor = (() => {
 })()
 
 export function createLogger(context: Context) {
+  const enabled = context.container.get<boolean>(tokens.LoggingEnabled)
+  if (!enabled) {
+    return () => undefined
+  }
+
   const tag = context.currentRequest.target.getNamedTag()
   let name = tag?.value
   const identifier = context.currentRequest.parentRequest?.serviceIdentifier
