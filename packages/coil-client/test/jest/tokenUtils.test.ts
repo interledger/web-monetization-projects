@@ -68,6 +68,20 @@ describe('CoilTokenUtils', () => {
       expect(newest.which).toBe('site')
     })
 
+    it('should pick the token with the greatest expiry', () => {
+      const extensionToken: DecodedToken = { exp: 16, userId: 'custA', iat: 1 }
+      const siteToken: DecodedToken = { exp: 15, userId: 'custA', iat: 10 }
+      const extension = utils.encode(extensionToken)
+      const site = utils.encode(siteToken)
+
+      const nowSeconds = 5
+      const newest = utils.newestToken({ extension, site }, nowSeconds)
+      assert(newest.token != null)
+      const parse: DecodedToken = utils.decode(newest.token)
+      expect(parse.exp).toBe(16)
+      expect(newest.which).toBe('extension')
+    })
+
     it('should pick a non null token', () => {
       const nowSeconds = 5
       const newest = utils.newestToken({ extension: null, site }, nowSeconds)
@@ -86,6 +100,12 @@ describe('CoilTokenUtils', () => {
       const newest = utils.newestToken({ extension, site }, nowSeconds)
       expect(newest.token).toBeNull()
       expect(newest.which).toBeNull()
+    })
+    it('should filter out expired tokens', () => {
+      const nowSeconds = 12
+      const newest = utils.newestToken({ extension, site }, nowSeconds)
+      expect(newest.token != null).toBe(true)
+      expect(newest.which).toBe('site')
     })
   })
 })

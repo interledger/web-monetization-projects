@@ -50,8 +50,10 @@ export class CoilTokenUtils {
 
     const tokensSorted = tokens.sort(
       ([{ exp, iat }], [{ exp: exp2, iat: iat2 }]) => {
-        // eslint-disable-next-line no-nested-ternary
         return iat > iat2 ? 1 : exp > exp2 ? 1 : -1
+        // eslint-disable-next-line no-nested-ternary
+        // const delta = exp - exp2
+        // return delta === 0 ? iat - iat2 : delta
       }
     )
     const tokensFiltered = tokensSorted.filter(([{ exp }]) => {
