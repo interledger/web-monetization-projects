@@ -2,7 +2,7 @@ coil_extension.zip
 coil_extension_edge.zip
 coilfirefoxextension@coil.com.xpi
 test/fixtures/coil-oauth-wm.js
-coil-six.apk
+*.apk
 six/assets/dist.crx
 six/META-INF
 safari/Coil/Coil.xcodeproj/project.xcworkspace/
