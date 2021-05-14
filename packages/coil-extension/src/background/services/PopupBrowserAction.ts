@@ -36,6 +36,12 @@ export class PopupBrowserAction {
     // disable popup if on android
     try {
       this.api.runtime.getPlatformInfo(result => {
+        if (this.api.runtime.lastError) {
+          if (this.loggingEnabled) {
+            console.error(this.api.runtime.lastError)
+          }
+        }
+
         if (result?.os === 'android') {
           this.api.browserAction.setPopup({
             // See: https://bugzilla.mozilla.org/show_bug.cgi?id=1426484
