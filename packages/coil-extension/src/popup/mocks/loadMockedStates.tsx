@@ -159,7 +159,7 @@ const MOCK_STATES = [
   { name: 'Paying Coil Article', state: payingCoilArticle },
   { name: 'Not Supported', state: notSupported },
   { name: 'Tipping', state: userCanTip },
-  { name: 'Start Exploring', state: startDiscovering },
+  { name: 'Start Discovering', state: startDiscovering },
   { name: 'Paying', state: payingNonCoilSite },
   { name: 'Welcome To Coil', state: welcomeToCoil },
   { name: 'Alice Unsubscribed', state: aliceUnsubscribed },
