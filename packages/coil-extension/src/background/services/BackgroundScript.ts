@@ -107,6 +107,7 @@ export class BackgroundScript {
     this.handleStreamsAbortEvent()
     this.popup.setDefaultInactive()
     this.framesService.monitor()
+    this.setPaymentHeaderListener()
     this.bindOnInstalled()
     // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
@@ -173,6 +174,53 @@ export class BackgroundScript {
       // see: https://developer.chrome.com/apps/runtime#event-onMessage
       return true
     })
+  }
+
+  private modifyPaymentHeader(details: any) {
+    // Check if the header has been defined already
+
+    let found = false
+    const paymentHeader = 'accept-payment'
+    const paymentPreference = 'webmon/*;q=.8'
+
+    // it's possible that another extension will be adding this header
+    // maybe an adblocker wants to add ads/*;q=0,ads/acceptable;q=.5
+    for (const header of details.requestHeaders) {
+      if (header.name.toLowerCase() === paymentHeader) {
+        found = true
+        if (
+          header.value &&
+          header.value.toLowerCase().indexOf('webmon') === -1
+        ) {
+          // already exists, add webmon if it's not already there
+          header.value = `${header.value},${paymentPreference}`
+        }
+      }
+    }
+
+    if (!found) {
+      details.requestHeaders.push({
+        name: paymentHeader,
+        value: paymentPreference // no ads, fairpass, webmon/coil, etc. q=preference
+      })
+    } else {
+      // already set, won't mess with it
+    }
+
+    return {
+      requestHeaders: details.requestHeaders
+    }
+  }
+
+  private setPaymentHeaderListener() {
+    // add listener to add payment header
+    // if (this.buildConfig.setPaymentHeaders) { // TODO(mankins): should this be a config option? If so is this how?
+    this.api.webRequest.onBeforeSendHeaders.addListener(
+      this.modifyPaymentHeader,
+      { urls: ['<all_urls>'] },
+      ['blocking', 'requestHeaders', 'extraHeaders']
+    )
+    // }
   }
 
   private initializeActiveTab() {
