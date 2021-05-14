@@ -476,7 +476,9 @@ export class BackgroundScript {
           this.tabStates.set(tabId, { favicon })
         })
         .catch(e => {
-          console.error(`failed to fetch favicon. e=${e.stack}`)
+          if (this.loggingEnabled) {
+            console.error(`failed to fetch favicon. e=${e.stack}`)
+          }
         })
     }
   }
@@ -664,7 +666,9 @@ export class BackgroundScript {
     if (!token) {
       // not signed in.
       // eslint-disable-next-line no-console
-      console.warn('startWebMonetization cancelled; no token')
+      if (this.loggingEnabled) {
+        console.warn('startWebMonetization cancelled; no token')
+      }
       this.activeTabLogger.log('startWebMonetization cancelled; no token')
       this.sendSetMonetizationStateMessage(frame, 'stopped')
       return false

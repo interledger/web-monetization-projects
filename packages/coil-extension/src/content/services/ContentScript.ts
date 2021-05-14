@@ -102,6 +102,8 @@ export class ContentScript {
         this.runtime.sendMessage(message, resolve)
       })
       if (!allowed) {
+        // Always log this regardless of loggingEnabled setting as it's
+        // reporting an error, rather than logging per se
         // eslint-disable-next-line no-console
         console.error(
           '<iframe> (or one of its ancestors) ' +

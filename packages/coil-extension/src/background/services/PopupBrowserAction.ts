@@ -24,6 +24,8 @@ export class PopupBrowserAction {
 
   constructor(
     private tabOpener: TabOpener,
+    @inject(tokens.LoggingEnabled)
+    private loggingEnabled: boolean,
     private icons: PopupIconService,
     @inject(tokens.BuildConfig)
     private buildConfig: BuildConfig,
@@ -47,8 +49,10 @@ export class PopupBrowserAction {
         }
       })
     } catch (e) {
-      // eslint-disable-next-line no-console
-      console.error(e)
+      if (this.loggingEnabled) {
+        // eslint-disable-next-line no-console
+        console.error(e)
+      }
     }
   }
 

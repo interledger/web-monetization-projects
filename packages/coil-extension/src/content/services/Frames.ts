@@ -11,6 +11,7 @@ import { ContentRuntime } from '../types/ContentRunTime'
 import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { isMonetizationAllowed } from '../util/isMonetizationAllowed'
 import { notNullOrUndef } from '../../util/nullables'
+import { loggingEnabled } from '../../util/isLoggingEnabled'
 
 @injectable()
 export class Frames {
@@ -178,7 +179,9 @@ export class Frames {
       queued.resolve(data.frame)
     } else {
       // eslint-disable-next-line no-console
-      console.warn('unknown correlation id/frame', data)
+      if (loggingEnabled) {
+        console.warn('unknown correlation id/frame', data)
+      }
     }
   }
 }
