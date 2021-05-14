@@ -4,7 +4,7 @@ import { useStore } from '../../context/storeContext'
 
 import { LoggedOutView } from './LoggedOutView'
 import { UnsubscribedView } from './UnsubscribedView'
-import { CoilExploreView } from './CoilExploreView'
+import { CoilDiscoverView } from './CoilDiscoverView'
 import { CoilPopupView } from './CoilPopupView'
 import { MonetizedRouter } from './MonetizedRouter'
 import { UnmonetizedPageView } from './UnmonetizedPageView'
@@ -34,8 +34,8 @@ export function ViewRouter(): React.ReactElement {
     // CoilViews
     const { pathname } = new URL(coilSite)
 
-    if (pathname === '/explore') {
-      return <CoilExploreView />
+    if (pathname === '/discover') {
+      return <CoilDiscoverView />
     } else {
       return <CoilPopupView />
     }

@@ -88,8 +88,8 @@ const userCanTip = mockState({
   adapted: false
 })
 
-const startExploring = mockState({
-  coilSite: 'https://coil.com/explore',
+const startDiscovering = mockState({
+  coilSite: 'https://coil.com/discover',
   monetizedTotal: 0,
   monetizedFavicon: '/res/icon-page.svg',
   user: user,
@@ -159,7 +159,7 @@ const MOCK_STATES = [
   { name: 'Paying Coil Article', state: payingCoilArticle },
   { name: 'Not Supported', state: notSupported },
   { name: 'Tipping', state: userCanTip },
-  { name: 'Start Exploring', state: startExploring },
+  { name: 'Start Discovering', state: startDiscovering },
   { name: 'Paying', state: payingNonCoilSite },
   { name: 'Welcome To Coil', state: welcomeToCoil },
   { name: 'Alice Unsubscribed', state: aliceUnsubscribed },

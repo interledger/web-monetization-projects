@@ -14,7 +14,7 @@ export const CoilPopupView = () => {
     runtime: { tabOpener }
   } = useHost()
 
-  const onClick = tabOpener(coilDomain + '/explore')
+  const onClick = tabOpener(coilDomain + '/discover')
 
   return (
     <HeaderFooterLayout>
