@@ -84,7 +84,7 @@ export const AccountBar = () => {
     runtime: { tabOpener }
   } = useHost()
 
-  const onExploreClick = tabOpener(`${coilDomain}/explore`)
+  const onDiscoverClick = tabOpener(`${coilDomain}/discover`)
   const onAboutClick = tabOpener(`${coilDomain}/about`)
   const onSettingsClick = tabOpener(`${coilDomain}/settings`)
 
@@ -120,7 +120,7 @@ export const AccountBar = () => {
         }}
         getContentAnchorEl={null}
       >
-        <MenuItem dense component='a' onClick={onExploreClick} target='_blank'>
+        <MenuItem dense component='a' onClick={onDiscoverClick} target='_blank'>
           <Typography variant='caption'>Discover</Typography>
         </MenuItem>
 
