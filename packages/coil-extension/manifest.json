@@ -27,7 +27,7 @@
     "rule_resources": [{
       "id": "ruleset_1_accept_payment",
       "enabled": true,
-      "path": "static/rules.json"
+      "path": "static/acceptPaymentRules.json"
     }]
   },
   "content_scripts": [
