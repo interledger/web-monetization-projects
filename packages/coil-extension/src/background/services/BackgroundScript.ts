@@ -361,7 +361,7 @@ export class BackgroundScript {
         sendResponse(true)
         break
       case 'logout':
-        sendResponse(this.logout(sender))
+        sendResponse(this.logout())
         break
       case 'adaptedSite':
         this.adaptedSite(request.data, sender)
@@ -369,7 +369,11 @@ export class BackgroundScript {
         break
       case 'injectToken':
         sendResponse(
-          await this.injectToken(request.data.token, notNullOrUndef(sender.url))
+          await this.injectToken(
+            request.data.token,
+            notNullOrUndef(sender.url),
+            notNullOrUndef(sender.tab)
+          )
         )
         break
       case 'startWebMonetization':
@@ -435,11 +439,28 @@ export class BackgroundScript {
     }
   }
 
-  async injectToken(siteToken: string | null, url: string) {
+  async injectToken(
+    siteToken: string | null,
+    url: string,
+    tab: chrome.tabs.Tab
+  ) {
     const { origin } = new URL(url)
     if (origin !== this.coilDomain) {
       return null
     }
+    // We are using incognito: spanning mode, which means the extension will
+    // automatically log into the site in incognito windows using the
+    // extension's token. (To support this, when you log out from one context,
+    // you'll also logout from one all contexts)
+    // This does also mean that if the extension was not enabled when you
+    // logged out, that upon re-enabling it could log you back in.
+    // So we must detect an empty token in a normal tab and then in this case
+    // logout in the extension.
+    if (!tab.incognito && !siteToken) {
+      this.logout()
+      return null
+    }
+
     // When logged out siteToken will be an empty string so normalize it to
     // null
     const newest = this.auth.syncSiteToken(siteToken || null)
@@ -886,7 +907,7 @@ export class BackgroundScript {
     }
   }
 
-  private logout(_: MessageSender) {
+  private logout() {
     for (const tabId of this.tabStates.tabKeys()) {
       // Make a copy as _closeStreams mutates and we want to actually close
       // the streams before we set the state to stopped.
@@ -902,9 +923,9 @@ export class BackgroundScript {
         this.api.tabs.sendMessage(tabId, message, { frameId: Number(frameId) })
       })
     }
+
     // Clear the token and any other state the popup relies upon
     // reloadTabState will reset them below.
-
     // Clear tokens in incognito windows too
     this.framesService.sendCommandToFramesMatching(
       { command: 'clearToken' },
