@@ -31,6 +31,21 @@ export class AuthService extends EventEmitter {
 
   private _op: Promise<string | null> | null = null
 
+  /*
+  TODO: manifest version 3 and background workers ?
+  If the token is issued more than one day ago, refresh it, such that the
+  token is always valid for at least 26-28 days.
+   */
+  startTokenRefreshInterval() {
+    const twelveHours = 12 * 60 * 60 * 1e3
+    // Add some randomness to the interval so we
+    // can't correlate when a user is active/inactive quite as easily
+    const randomness = Math.random() * twelveHours
+    setInterval(() => {
+      void this.getTokenMaybeRefreshAndStoreState()
+    }, twelveHours + randomness)
+  }
+
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
     this.activeTabs.log(`getTokenMaybeRefreshAndStoreState ${Date.now()}`)
     if (!this._op) {
@@ -58,7 +73,7 @@ export class AuthService extends EventEmitter {
 
     if (!token) {
       token = await this.siteToken.retrieve()
-      this.activeTabs.log('siteToken: ' + Boolean(token))
+      this.activeTabs.log(`siteToken: ${Boolean(token)}`)
     }
     this.trace('siteToken', token)
 
@@ -67,7 +82,12 @@ export class AuthService extends EventEmitter {
         `token is null || expired! token=${token && tokenUtils.decode(token)}`
       )
       token = null
-    } else if (tokenUtils.isExpired({ token, withinHrs: 12 })) {
+    } else if (tokenUtils.isStale({ token, staleHrsAfterIat: 24 })) {
+      // We must keep the token fresh as possible, as we can't assume early on
+      // in WM adoption that a user will a) visit coil.com or
+      // b) visit a WM site often enough that we can refresh a token only when
+      // it has nearly expired.
+
       // Update the stored token/user
       this.trace('before refreshTokenAndUpdateWhoAmi')
       token = await this.refreshTokenAndUpdateWhoAmi(token)

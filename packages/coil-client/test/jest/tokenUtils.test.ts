@@ -52,6 +52,37 @@ describe('CoilTokenUtils', () => {
     })
   })
 
+  describe('CoilTokenUtils#isStale', () => {
+    const utils = new TestTokenUtils()
+    const token = utils.encode({ exp: 50, iat: 20, userId: 'custA' })
+    it(
+      'should return false if the token was issued ' +
+        'lt staleHrsAfterIat ago',
+      () => {
+        const nowSeconds = 19 + 60 * 60 * 2
+        const stale = utils.isStale({
+          token,
+          staleHrsAfterIat: 2,
+          nowSeconds
+        })
+        expect(stale).toBe(false)
+      }
+    )
+    it(
+      'should return true if the token was issued ' +
+        'gte staleHrsAfterIat ago',
+      () => {
+        const nowSeconds = 20 + 60 * 60 * 2
+        const stale = utils.isStale({
+          token,
+          staleHrsAfterIat: 2,
+          nowSeconds
+        })
+        expect(stale).toBe(true)
+      }
+    )
+  })
+
   describe('CoilTokenUtils#newestToken', () => {
     const utils = new TestTokenUtils()
     const extensionToken: DecodedToken = { exp: 10, userId: 'custA', iat: 1 }
