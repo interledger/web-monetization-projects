@@ -75,14 +75,14 @@ export class AuthService extends EventEmitter {
   If the token is issued more than one day ago, refresh it, such that the
   token is always valid for at least 26-28 days.
    */
-  queueTokenRefresh() {
+  queueTokenRefreshCheck() {
     const twelveHours = 12 * 60 * 60 * 1e3
     // Add some randomness to the interval so we
     // can't correlate when a user is active/inactive quite as easily
     const randomness = Math.random() * twelveHours
     setTimeout(() => {
       void this.getTokenMaybeRefreshAndStoreState()
-      this.queueTokenRefresh()
+      this.queueTokenRefreshCheck()
     }, twelveHours + randomness)
   }
 
