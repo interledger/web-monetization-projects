@@ -110,7 +110,7 @@ export class BackgroundScript {
     this.bindOnInstalled()
     // noinspection ES6MissingAwait
     void this.auth.getTokenMaybeRefreshAndStoreState()
-    this.auth.startTokenRefreshInterval()
+    this.auth.queueTokenRefresh()
   }
 
   private setTabsOnActivatedListener() {
