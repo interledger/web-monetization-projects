@@ -10,6 +10,45 @@ import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 
+/**
+ ## Extension Authentication
+
+ The extension will look in its own localStorage for a token, and if it's unable
+ to find one there will it inject coil.com/handler.html (which has a liberal
+ frame-ancestors CSP) as an iframe into the background page. It then uses
+ iframe.contentWindow.postMessage to send a message to the content script running
+ in the newly injected iframe. The content script will event.source.postMessage
+ the token in response.
+
+ ### Incognito Notes
+ The manifest declares "incognito":"spanning" with ONE background page instance
+ shared between contexts. If you log in in one context, you'll be logged in
+ everywhere. If you logout from one context, you'll be logged out everywhere.
+
+ ### Site <-> Extension token synchronization
+ - Every time you land on a coil.com frame the content script will send the
+ coil.com token to the background page, which it will compare against its
+ token, sending back the newest one to store on the site.
+
+ - The extension will listen to coil_writeToken events which can be emitted
+ with an empty string in the token field when logged out. In this case the
+ extension will clear its token too.
+
+ - If the extension sees an empty or null token on coil.com and the extension
+ has a token (because of logging out while the extension was disabled
+ and missing the logout event) it will inject the extensions token into the
+ site. This supports convenient use of incognito contexts.
+
+ We could do this only for incognito contexts and instead logout in normal
+ contexts, but it's possible you could login via an incognito context first,
+ then see no token in a normal context, infer that the user had logged out, then
+ very confusingly propagate this logged out state to the incognito context.
+
+ ### coil.com/handler.html
+ This could be any path with a liberal CSP. The content of the page is not
+ important, only that the content script can access localStorage for the domain.
+
+ */
 @injectable()
 export class AuthService extends EventEmitter {
   // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars

@@ -448,18 +448,6 @@ export class BackgroundScript {
     if (origin !== this.coilDomain) {
       return null
     }
-    // We are using incognito: spanning mode, which means the extension will
-    // automatically log into the site in incognito windows using the
-    // extension's token. (To support this, when you log out from one context,
-    // you'll also logout from one all contexts)
-    // This does also mean that if the extension was not enabled when you
-    // logged out, that upon re-enabling it could log you back in.
-    // So we must detect an empty token in a normal tab and then in this case
-    // logout in the extension.
-    if (!tab.incognito && !siteToken) {
-      this.logout()
-      return null
-    }
 
     // When logged out siteToken will be an empty string so normalize it to
     // null
