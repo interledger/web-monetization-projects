@@ -272,8 +272,11 @@ export interface MonetizationStart {
  *  background -> popup
  *  browser.tabs.sendMessage
  */
-export interface ClosePopup {
+export interface ClosePopup extends Command {
   command: 'closePopup'
+  data: {
+    now: number
+  }
 }
 
 /**

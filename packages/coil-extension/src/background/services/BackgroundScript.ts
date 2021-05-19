@@ -153,13 +153,14 @@ export class BackgroundScript {
         if (windowId < 0) return
 
         // Close the popup when window has changed
-        const message: ClosePopup = {
-          command: 'closePopup'
+        const close: ClosePopup = {
+          command: 'closePopup',
+          data: {
+            // This will create a storage event with a newValue
+            now: Date.now()
+          }
         }
-        this.api.runtime.sendMessage(message, () => {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          const ignored = this.api.runtime.lastError
-        })
+        this.storage.set('$$popupCommand', close)
 
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
           if (tabs.length === 0 || tabs[0].id == null) return
