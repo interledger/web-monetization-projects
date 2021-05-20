@@ -154,13 +154,15 @@ export class BackgroundScript {
 
         // Close the popup when window has changed
         const close: ClosePopup = {
-          command: 'closePopup',
-          data: {
-            // This will create a storage event with a newValue
-            now: Date.now()
-          }
+          command: 'closePopup'
         }
-        this.storage.set('$$popupCommand', close)
+        // Storage events are only fired if the value actually changes, not
+        // on every localStorage `setItem` call. So we set the first 16
+        // characters of the stored value to the current time.
+        this.storage.setRaw(
+          '$$popupCommand',
+          Date.now().toString().padStart(16, '0') + JSON.stringify(close)
+        )
 
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
           if (tabs.length === 0 || tabs[0].id == null) return

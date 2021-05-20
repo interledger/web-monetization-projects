@@ -274,9 +274,6 @@ export interface MonetizationStart {
  */
 export interface ClosePopup extends Command {
   command: 'closePopup'
-  data: {
-    now: number
-  }
 }
 
 /**

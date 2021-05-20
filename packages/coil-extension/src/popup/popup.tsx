@@ -33,7 +33,10 @@ export function run() {
     }
     window.addEventListener('storage', e => {
       if (e.key === '$$popupCommand' && e.newValue) {
-        const cmd: ToPopupMessage = JSON.parse(e.newValue)
+        // Remove the timestamp which will cause a unique string used to trigger
+        // a `storage` event.
+        const command = e.newValue.substring(16)
+        const cmd: ToPopupMessage = JSON.parse(command)
         if (cmd.command === 'closePopup') {
           // window.close() itself actually causes a bad state on safari
           if (isSafari) {
