@@ -25,9 +25,9 @@
   ],
   "declarative_net_request": {
     "rule_resources": [{
-      "id": "ruleset_1_accept_payment",
+      "id": "ruleset_1_accept_monetization",
       "enabled": true,
-      "path": "static/acceptPaymentRules.json"
+      "path": "static/acceptMonetizationRules.json"
     }]
   },
   "content_scripts": [
