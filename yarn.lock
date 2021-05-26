@@ -1525,7 +1525,7 @@ __metadata:
     "@types/long": ^4.0.1
     "@types/node": ^14.17.0
     "@types/node-fetch": ^2.5.10
-    "@types/react": ^16.14.6
+    "@types/react": ^16.14.8
     "@types/react-dom": ^16.9.12
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.24.0
@@ -2365,7 +2365,7 @@ __metadata:
     "@material-ui/icons": ^4.11.2
     "@types/jest": ^26.0.23
     "@types/node": ^14.17.0
-    "@types/react": ^16.14.6
+    "@types/react": ^16.14.8
     "@types/react-dom": ^16.9.12
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.24.0
@@ -4570,7 +4570,7 @@ __metadata:
     "@types/jest": ^26.0.23
     "@types/node": ^14.17.0
     "@types/node-fetch": ^2.5.10
-    "@types/react": ^16.14.6
+    "@types/react": ^16.14.8
     "@types/react-dom": ^16.9.12
     "@types/react-helmet": ^6.1.1
     "@typescript-eslint/eslint-plugin": ^4.24.0
@@ -4698,7 +4698,7 @@ __metadata:
     "@commitlint/config-conventional": ^12.1.4
     "@types/jest": ^26.0.23
     "@types/node": ^14.17.0
-    "@types/react": ^16.14.6
+    "@types/react": ^16.14.8
     "@typescript-eslint/eslint-plugin": ^4.24.0
     "@typescript-eslint/parser": ^4.24.0
     "@web-monetization/types": 0.0.0
@@ -4756,7 +4756,7 @@ __metadata:
     "@types/ajv": ^1.0.0
     "@types/jest": ^26.0.23
     "@types/node": ^14.17.0
-    "@types/react": ^16.14.6
+    "@types/react": ^16.14.8
     "@types/react-dom": ^16.9.12
     "@types/uuid": ^8.3.0
     "@typescript-eslint/eslint-plugin": ^4.24.0
