@@ -1932,7 +1932,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    util: ^0.12.3
+    util: ^0.12.4
     webpack: ^5.38.1
     webpack-bundle-analyzer: ^4.4.2
     webpack-cli: ^4.7.0
@@ -5141,7 +5141,7 @@ __metadata:
     ts-node-dev: ^1.1.6
     tsconfig-paths: ^3.9.0
     typescript: ^4.2.4
-    util: ^0.12.3
+    util: ^0.12.4
     webpack: ^5.38.1
     webpack-bundle-analyzer: ^4.4.2
     webpack-cli: ^4.7.0
@@ -22152,9 +22152,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"util@npm:^0.12.0, util@npm:^0.12.3":
-  version: 0.12.3
-  resolution: "util@npm:0.12.3"
+"util@npm:^0.12.0, util@npm:^0.12.4":
+  version: 0.12.4
+  resolution: "util@npm:0.12.4"
   dependencies:
     inherits: ^2.0.3
     is-arguments: ^1.0.4
@@ -22162,7 +22162,7 @@ sjcl@sublimator/sjcl:
     is-typed-array: ^1.1.3
     safe-buffer: ^5.1.2
     which-typed-array: ^1.1.2
-  checksum: 684f2f586db12c86b2c2800e5d4963fe2e95a85ece1e52f25344e54c29d62e985c716ec53b817970121e0ea47f99a971299998848e35a5d1c5953e182852d6fe
+  checksum: 6e3cbc15468436de8aa7bbc50ea1354b738ece2330ef4da417d08893d1105985ac1cc0dd1ea86ef855494e01dd000d7f866c802537afe8751f0c319d16ceccd0
   languageName: node
   linkType: hard
 
