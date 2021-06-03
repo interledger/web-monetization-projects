@@ -108,8 +108,23 @@ export class BackgroundScript {
     this.popup.setDefaultInactive()
     this.framesService.monitor()
     this.bindOnInstalled()
-    // noinspection ES6MissingAwait
-    void this.auth.getTokenMaybeRefreshAndStoreState()
+    void this.initAuth()
+  }
+
+  private async initAuth() {
+    // API only available on FF
+    // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const isFF = Boolean((this.api.runtime as any)['getBrowserInfo'])
+    this.auth.checkForSiteLogoutAssumeFalseOnTimeout().then(loggedOut => {
+      // Firefox currently has some issues with loading the handler page in the
+      // background as an iframe so don't try this on FF
+      if (loggedOut && !isFF) {
+        this.logout()
+      } else {
+        void this.auth.getTokenMaybeRefreshAndStoreState()
+      }
+    })
     this.auth.queueTokenRefreshCheck()
   }
 
@@ -917,7 +932,7 @@ export class BackgroundScript {
     // Clear tokens in incognito windows too
     this.framesService.sendCommandToFramesMatching(
       { command: 'clearToken' },
-      frame => frame.href?.startsWith(this.coilDomain)
+      frame => Boolean(frame.href?.startsWith(this.coilDomain))
     )
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')

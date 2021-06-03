@@ -5,6 +5,7 @@ import { inject, injectable } from 'inversify'
 
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
+import { TimeoutError, timeoutRejecting } from '../../util/timeout'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
@@ -84,6 +85,19 @@ export class AuthService extends EventEmitter {
       void this.getTokenMaybeRefreshAndStoreState()
       this.queueTokenRefreshCheck()
     }, twelveHours + randomness)
+  }
+
+  async checkForSiteLogoutAssumeFalseOnTimeout(): Promise<boolean> {
+    try {
+      const token = await this.siteToken.retrieve()
+      return !token
+    } catch (e) {
+      if (e instanceof TimeoutError) {
+        return false
+      } else {
+        throw e
+      }
+    }
   }
 
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {

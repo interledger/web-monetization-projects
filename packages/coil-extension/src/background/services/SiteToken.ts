@@ -2,6 +2,7 @@ import { inject, injectable } from 'inversify'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
+import { timeoutRejecting } from '../../util/timeout'
 
 /**
  * See {@link handleCoilTokenMessage}
@@ -25,7 +26,11 @@ export class SiteToken {
     const coilFrame = document.createElement('iframe')
     coilFrame.src = coilDomain + path
     document.body.appendChild(coilFrame)
-    await new Promise(resolve => coilFrame.addEventListener('load', resolve))
+
+    await Promise.race([
+      timeoutRejecting(3000),
+      new Promise(resolve => coilFrame.addEventListener('load', resolve))
+    ])
 
     // noinspection ES6MissingAwait
     const coilPromise = new Promise<string | null>((resolve, reject) => {
