@@ -45,6 +45,9 @@ import { ActiveTabLogger } from './ActiveTabLogger'
  then see no token in a normal context, infer that the user had logged out, then
  very confusingly propagate this logged out state to the incognito context.
 
+ We therefore check the site login state once on startup and logout from the
+ extension if the user is logged out from the site.
+
  ### coil.com/handler.html
  This could be any path with a liberal CSP. The content of the page is not
  important, only that the content script can access localStorage for the domain.

@@ -28,7 +28,7 @@ export class SiteToken {
     document.body.appendChild(coilFrame)
 
     await Promise.race([
-      timeoutRejecting(3000),
+      timeoutRejecting(10e3),
       new Promise(resolve => coilFrame.addEventListener('load', resolve))
     ])
 
