@@ -18,10 +18,34 @@ import { timeoutRejecting } from '../../util/timeout'
 export class SiteToken {
   constructor(
     @inject(tokens.CoilDomain)
-    private coilDomain: string
+    private coilDomain: string,
+    @inject(tokens.WextApi)
+    private api = chrome
   ) {}
 
   async retrieve(path = '/handler.html'): Promise<string | null> {
+    return new Promise(resolve => {
+      this.api.tabs.create(
+        {
+          active: false,
+          url: this.coilDomain
+        },
+        tab => {
+          const code = `localStorage.token`
+          this.api.tabs.executeScript(
+            notNullOrUndef(tab.id),
+            { code, frameId: 0 },
+            ([result]) => {
+              this.api.tabs.remove(notNullOrUndef(tab.id))
+              resolve(result)
+            }
+          )
+        }
+      )
+    })
+  }
+
+  async retrieveOld(path = '/handler.html'): Promise<string | null> {
     const coilDomain = this.coilDomain
     const coilFrame = document.createElement('iframe')
     coilFrame.src = coilDomain + path
