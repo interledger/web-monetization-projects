@@ -77,7 +77,6 @@ export class DocumentMonetization {
     const changedFinalized = this.finalized !== finalized
     const changedState = this.state != state
     const changed = changedState || changedFinalized
-
     this.finalized = finalized
     this.state = state
 

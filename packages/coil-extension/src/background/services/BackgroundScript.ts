@@ -647,14 +647,32 @@ export class BackgroundScript {
 
     const userBeforeReAuth = this.store.user
     let emittedPending = false
-    const emitPending = () =>
+    const emitPending = () => {
       this.sendSetMonetizationStateMessage(frame, 'pending')
+      emittedPending = true
+    }
+
+    /**
+     * {@link DocumentMonetization#setState}
+     * Avoid emitting a stopped event when logged out which will transition
+     * from stopped, finalized:true to stopped, finalized: false and thus cause
+     * an event to be emitted.
+     *
+     * At the least, logging out (which will cause a stopped, finalized: false
+     * state) and then removal of the meta tag is a valid case of this
+     * transition so better so it's easier to track started -> pending here.
+     *
+     */
+    const emitStoppedIfEmittedPending = () => {
+      if (emittedPending) {
+        this.sendSetMonetizationStateMessage(frame, 'stopped')
+      }
+    }
 
     // If we are optimistic we have an active subscription (things could have
     // changed since our last cached whoami query), emit pending immediately,
     // otherwise wait until recheck auth/whoami, potentially not even emitting.
     if (userBeforeReAuth?.subscription?.active) {
-      emittedPending = true
       emitPending()
     }
 
@@ -670,11 +688,11 @@ export class BackgroundScript {
         console.warn('startWebMonetization cancelled; no token')
       }
       this.activeTabLogger.log('startWebMonetization cancelled; no token')
-      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      emitStoppedIfEmittedPending()
       return false
     }
     if (!this.store.user?.subscription?.active) {
-      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      emitStoppedIfEmittedPending()
       this.activeTabLogger.log(
         'startWebMonetization cancelled; no active subscription'
       )
