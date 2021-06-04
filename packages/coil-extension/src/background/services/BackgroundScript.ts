@@ -654,7 +654,7 @@ export class BackgroundScript {
 
     /**
      * {@link DocumentMonetization#setState}
-     * Avoid emitting a stopped event when logged out which will transition
+     * Avoid sending a "stopped" message when logged out which will transition
      * from stopped, finalized:true to stopped, finalized: false and thus cause
      * an event to be emitted.
      *
