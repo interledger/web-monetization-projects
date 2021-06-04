@@ -23,7 +23,10 @@ export class SiteToken {
     private api = chrome
   ) {}
 
-  async retrieveTabs(path = '/handler.html'): Promise<string | null> {
+  /**
+   * Note: this requires the "tabs" permission listed in the manifest
+   */
+  async retrieveTabs(): Promise<string | null> {
     return new Promise(resolve => {
       this.api.tabs.create(
         {
@@ -45,7 +48,8 @@ export class SiteToken {
     })
   }
 
-  async retrieve(path = '/handler.html'): Promise<string | null> {
+  async retrieve(): Promise<string | null> {
+    const path = '/handler.html'
     const coilDomain = this.coilDomain
     const coilFrame = document.createElement('iframe')
     coilFrame.src = coilDomain + path
