@@ -23,7 +23,7 @@ export class SiteToken {
     private api = chrome
   ) {}
 
-  async retrieve(path = '/handler.html'): Promise<string | null> {
+  async retrieveTabs(path = '/handler.html'): Promise<string | null> {
     return new Promise(resolve => {
       this.api.tabs.create(
         {
@@ -45,7 +45,7 @@ export class SiteToken {
     })
   }
 
-  async retrieveOld(path = '/handler.html'): Promise<string | null> {
+  async retrieve(path = '/handler.html'): Promise<string | null> {
     const coilDomain = this.coilDomain
     const coilFrame = document.createElement('iframe')
     coilFrame.src = coilDomain + path
