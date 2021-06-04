@@ -29,6 +29,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -40,13 +41,9 @@ import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { StreamAssociations } from './StreamAssociations'
+import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
-
-import { BuildConfig } from '../../types/BuildConfig'
-import { debug } from '../../content/util/logging'
-
-import { ActiveTabLogger } from './ActiveTabLogger'
 
 @injectable()
 export class BackgroundScript {
@@ -652,24 +649,6 @@ export class BackgroundScript {
       emittedPending = true
     }
 
-    /**
-     * {@link DocumentMonetization#setState}
-     * Avoid sending a "stopped" message to the content script when logged out
-     * which will cause a transition from stopped, finalized:true to
-     * stopped, finalized: false and thus cause a "monetizationstop" event
-     * to be emitted.
-     *
-     * At the least, logging out (which will cause a stopped, finalized: false
-     * state) and then removal of the meta tag is one valid case of this
-     * transition so it's easier to simply track started -> pending here.
-     *
-     */
-    const emitStoppedIfEmittedPending = () => {
-      if (emittedPending) {
-        this.sendSetMonetizationStateMessage(frame, 'stopped')
-      }
-    }
-
     // If we are optimistic we have an active subscription (things could have
     // changed since our last cached whoami query), emit pending immediately,
     // otherwise wait until recheck auth/whoami, potentially not even emitting.
@@ -689,11 +668,11 @@ export class BackgroundScript {
         console.warn('startWebMonetization cancelled; no token')
       }
       this.activeTabLogger.log('startWebMonetization cancelled; no token')
-      emitStoppedIfEmittedPending()
+      this.sendSetMonetizationStateMessage(frame, 'stopped')
       return false
     }
     if (!this.store.user?.subscription?.active) {
-      emitStoppedIfEmittedPending()
+      this.sendSetMonetizationStateMessage(frame, 'stopped')
       this.activeTabLogger.log(
         'startWebMonetization cancelled; no active subscription'
       )
