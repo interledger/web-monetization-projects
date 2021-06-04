@@ -660,7 +660,7 @@ export class BackgroundScript {
      *
      * At the least, logging out (which will cause a stopped, finalized: false
      * state) and then removal of the meta tag is a valid case of this
-     * transition so better so it's easier to track started -> pending here.
+     * transition so it's easier to simply track started -> pending here.
      *
      */
     const emitStoppedIfEmittedPending = () => {
