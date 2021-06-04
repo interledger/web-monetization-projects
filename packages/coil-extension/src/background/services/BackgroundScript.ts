@@ -112,14 +112,8 @@ export class BackgroundScript {
   }
 
   private async initAuth() {
-    // API only available on FF
-    // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const isFF = Boolean((this.api.runtime as any)['getBrowserInfo'])
     this.auth.checkForSiteLogoutAssumeFalseOnTimeout().then(loggedOut => {
-      // Firefox currently has some issues with loading the handler page in the
-      // background as an iframe so don't try this on FF
-      if (loggedOut && !isFF) {
+      if (loggedOut) {
         this.logout()
       } else {
         void this.auth.getTokenMaybeRefreshAndStoreState()
