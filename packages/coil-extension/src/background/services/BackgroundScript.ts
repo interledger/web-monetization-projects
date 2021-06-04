@@ -654,9 +654,10 @@ export class BackgroundScript {
 
     /**
      * {@link DocumentMonetization#setState}
-     * Avoid sending a "stopped" message when logged out which will transition
-     * from stopped, finalized:true to stopped, finalized: false and thus cause
-     * an event to be emitted.
+     * Avoid sending a "stopped" message to the content script when logged out
+     * which will cause a transition from stopped, finalized:true to
+     * stopped, finalized: false and thus cause a "monetizationstop" event
+     * to be emitted.
      *
      * At the least, logging out (which will cause a stopped, finalized: false
      * state) and then removal of the meta tag is a valid case of this
