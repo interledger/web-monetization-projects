@@ -77,6 +77,9 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       to: 'manifest.json',
       transform: (content: Buffer) => {
         const manifest = JSON.parse(content.toString())
+        // TODO: expand based on build target
+        delete manifest['$targets']
+
         if (WEXT_MANIFEST_SUFFIX) {
           manifest.name += WEXT_MANIFEST_SUFFIX
           if (!WEXT_MANIFEST_SUFFIX_NO_DATE) {
