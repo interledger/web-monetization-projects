@@ -1,24 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import { useStore } from '../context/storeContext'
 
-const ANIMATION_INTERVAL = 1800
-
 export const MonetizeAnimation = () => {
   const store = useStore()
-  const [animated, setAnimated] = useState<boolean | null>(
-    Boolean(store.isPaying)
-  )
-
-  useEffect(() => {
-    const loopInterval = setInterval(() => {
-      setAnimated(Boolean(store.isPaying))
-    }, ANIMATION_INTERVAL)
-
-    return () => {
-      clearInterval(loopInterval)
-    }
-  }, [])
+  const animated = Boolean(store.isPaying)
 
   const hasMonetized = Number(store.monetizedTotal) > 0
   // eslint-disable-next-line no-nested-ternary
