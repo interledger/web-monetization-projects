@@ -6,6 +6,7 @@ import { Container, injectable } from 'inversify'
 import * as tokens from '../../types/tokens'
 
 import { Stream } from './Stream'
+import { ActiveTabLogger } from './ActiveTabLogger'
 
 @injectable()
 export class Streams extends EventEmitter {
@@ -55,7 +56,9 @@ export class Streams extends EventEmitter {
 
   closeStream(id: string) {
     if (this._streams[id]) {
-      void this._streams[id].stop()
+      this._streams[id].stop().then(() => {
+        this.container.get(ActiveTabLogger).sendLogEvent(`stopped ${id}`)
+      })
       this._streams[id].removeAllListeners()
       delete this._streams[id]
     }

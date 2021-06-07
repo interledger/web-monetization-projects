@@ -22,15 +22,20 @@ export class StreamLoop extends EventEmitter {
   private readonly debug: Logger
   private running = false // whether there is an active loop
   private connection?: Connection
+  private tabLogger: ActiveTabLogger
+  private requestId: string
 
   constructor(opts: {
     schedule: PaymentScheduler
     logger: Logger
     tabLogger: ActiveTabLogger
+    requestId: string
   }) {
     super()
     this.schedule = opts.schedule
     this.debug = opts.logger
+    this.tabLogger = opts.tabLogger
+    this.requestId = opts.requestId
   }
 
   async run(
@@ -55,6 +60,9 @@ export class StreamLoop extends EventEmitter {
         case StreamLoopState.Ending:
           tokenPiece = Math.min(this.schedule.unpaidTokens(), 1.0)
           tokenPiece = Math.floor(tokenPiece * 20) / 20 // don't pay tiny token pieces
+          this.tabLogger.sendLogEvent(
+            `ending, tokenPiece=${tokenPiece}, requestId=${this.requestId}`
+          )
           if (tokenPiece === 0) {
             this.state = StreamLoopState.Done
             continue
@@ -66,19 +74,31 @@ export class StreamLoop extends EventEmitter {
         await new Promise((resolve, reject) => {
           connection.once('close', resolve)
           connection.once('error', err => {
-            if (!isExhaustedError(err)) reject(err)
+            if (!isExhaustedError(err)) {
+              reject(err)
+            } else {
+              this.tabLogger.sendLogEvent(
+                `connection exhausted error requestId=${this.requestId}`
+              )
+            }
           }) // "exhausted capacity" errors count as success
           // If `stop()` was called during `attempt()` and the first minute, don't wait for firstMinuteBandwidth to finish.
           if (this.state === StreamLoopState.Ending && isFirstMinute) {
             connection.destroy(new Error('monetization stopped during connect'))
           }
         })
+        this.tabLogger.sendLogEvent(
+          `connection error|close requestId=${this.requestId}`
+        )
         attempts = 0
       } catch (err) {
         this.emit('run:error', err)
         switch (this.state) {
           case StreamLoopState.Ending:
             if (++attempts === STOP_RETRIES) {
+              this.tabLogger.sendLogEvent(
+                `too many errors, attempts=${attempt}`
+              )
               this.debug('too many errors; giving up')
               this.state = StreamLoopState.Done
               break

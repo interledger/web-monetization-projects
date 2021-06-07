@@ -122,7 +122,8 @@ export class Stream extends EventEmitter {
     this.loop = new StreamLoop({
       tabLogger: this.tabLogger,
       logger: this._debug,
-      schedule: this._schedule
+      schedule: this._schedule,
+      requestId: this._requestId
     })
     this.loop.on('run:error', (_err: Error) => (this._paying = false))
 
@@ -134,13 +135,20 @@ export class Stream extends EventEmitter {
     }
   }
 
+  loops = 0
   async start(): Promise<void> {
     // reset this upon every start *before* early exit while looping
     this._packetNumber = 0
     this.isPaused = false
     await this.loop.run(async (tokenFraction: number): Promise<Connection> => {
-      this.tabLogger.sendLogEvent('getting spsp details')
+      this.loops++
+      this.tabLogger.sendLogEvent(
+        `getting spsp details, loops=${this.loops} requestId=${this._requestId}`
+      )
       const spspDetails = await this._getSPSPDetails()
+      this.tabLogger.sendLogEvent(
+        `spsp details, details=${JSON.stringify(spspDetails)}`
+      )
       const redeemedToken = await this._anonTokens.getToken(this._authToken)
       this._debug('redeemed token with throughput=%d', redeemedToken.throughput)
       this.tabLogger.sendLogEvent(
@@ -149,7 +157,7 @@ export class Stream extends EventEmitter {
       this._lastDelivered = 0
       this.tabLogger.sendLogEvent(`making plugin`)
       const plugin = this._makePlugin(redeemedToken.btpToken)
-      this.tabLogger.sendLogEvent(`creating connection`)
+      this.tabLogger.sendLogEvent(`creating connection loops=${this.loops}`)
       const connection = await createConnection({
         ...spspDetails,
         plugin,
@@ -158,12 +166,15 @@ export class Stream extends EventEmitter {
         maximumPacketAmount: '10000000',
         getExpiry: getFarFutureExpiry
       })
-      this.tabLogger.sendLogEvent(`connected`)
+      this.tabLogger.sendLogEvent(`connected loops=${this.loops}`)
       const stream = connection.createStream()
 
       const onMoney = (sentAmount: string) => {
         // Wait until `setImmediate` so that `connection.totalDelivered` has been updated.
         const receipt = stream.receipt?.toString('base64')
+        this.tabLogger.sendLogEvent(
+          `sent money=${sentAmount}, requestId=${this._requestId}`
+        )
         setImmediate(() => this.onMoney(connection, sentAmount, receipt))
       }
       stream.on('outgoing_money', onMoney)
