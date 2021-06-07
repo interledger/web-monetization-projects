@@ -70,6 +70,16 @@ export class DocumentMonetization {
       return
     }
 
+    // Nonsensical transition from non started to stopped
+    if (
+      state === 'stopped' &&
+      !finalized &&
+      this.state === 'stopped' &&
+      this.finalized
+    ) {
+      return
+    }
+
     finalized = Boolean(finalized)
     // We may need to emit a stop event more than once in the case of the user
     // pausing (monetizationstop event with finalized: false) then the tag
@@ -77,7 +87,6 @@ export class DocumentMonetization {
     const changedFinalized = this.finalized !== finalized
     const changedState = this.state != state
     const changed = changedState || changedFinalized
-
     this.finalized = finalized
     this.state = state
 

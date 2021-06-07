@@ -29,6 +29,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -40,13 +41,9 @@ import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { StreamAssociations } from './StreamAssociations'
+import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
-
-import { BuildConfig } from '../../types/BuildConfig'
-import { debug } from '../../content/util/logging'
-
-import { ActiveTabLogger } from './ActiveTabLogger'
 
 @injectable()
 export class BackgroundScript {
@@ -647,14 +644,15 @@ export class BackgroundScript {
 
     const userBeforeReAuth = this.store.user
     let emittedPending = false
-    const emitPending = () =>
+    const emitPending = () => {
       this.sendSetMonetizationStateMessage(frame, 'pending')
+      emittedPending = true
+    }
 
     // If we are optimistic we have an active subscription (things could have
     // changed since our last cached whoami query), emit pending immediately,
     // otherwise wait until recheck auth/whoami, potentially not even emitting.
     if (userBeforeReAuth?.subscription?.active) {
-      emittedPending = true
       emitPending()
     }
 

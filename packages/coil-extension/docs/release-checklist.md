@@ -217,10 +217,20 @@ make sense.
   - Fix PR: [#222][p222]
 
 - [ ] Check can stream immediately after subscribing
+
   - Likely best to test this with staging where can use a test card
   - Log in with coil user that doesn't have active subscription
   - Add a subscription (can use [testing card](https://stripe.com/docs/testing) 4242 4242 4242 4242 )
   - Go to a monetized page and check that streaming works immediately
+
+- [ ] Check no stop event is fired when logged out
+
+  - Open and console and set `localStorage.WM_DEBUG = true`
+  - Go to a web monetized page when logged out
+  - Check that no events are logged
+
+  - Issue: [#1947][ni1947]
+  - Fix PR: [#1964][np1964]
 
 ### Iframe testing
 
@@ -296,3 +306,5 @@ make sense.
 [np185]: https://github.com/coilhq/web-monetization-projects/pull/185
 [np213]: https://github.com/coilhq/web-monetization-projects/pull/213
 [np242]: https://github.com/coilhq/web-monetization-projects/pull/242
+[np1964]: https://github.com/coilhq/web-monetization-projects/pull/1964
+[ni1947]: https://github.com/coilhq/web-monetization-projects/issue/1947
