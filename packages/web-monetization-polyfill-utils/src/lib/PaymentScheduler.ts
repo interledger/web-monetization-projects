@@ -104,7 +104,7 @@ function randBetween(a: number, b: number): number {
 
 class Stopwatch {
   private totalTime = 0 // milliseconds duration
-  private lastTick?: number = 0 // milliseconds time
+  private lastTick?: number // milliseconds time
   private timer?: NodeJS.Timer
   private cancelTimer?: () => void
 
@@ -116,7 +116,7 @@ class Stopwatch {
   }
 
   start() {
-    this.lastTick = Date.now()
+    if (!this.lastTick) this.lastTick = Date.now()
   }
 
   stop(): void {
