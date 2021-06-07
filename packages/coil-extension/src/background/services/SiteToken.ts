@@ -2,6 +2,7 @@ import { inject, injectable } from 'inversify'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
+import { timeoutRejecting } from '../../util/timeout'
 
 /**
  * See {@link handleCoilTokenMessage}
@@ -17,15 +18,47 @@ import * as tokens from '../../types/tokens'
 export class SiteToken {
   constructor(
     @inject(tokens.CoilDomain)
-    private coilDomain: string
+    private coilDomain: string,
+    @inject(tokens.WextApi)
+    private api = chrome
   ) {}
 
-  async retrieve(path = '/handler.html'): Promise<string | null> {
+  /**
+   * Note: this requires the "tabs" permission listed in the manifest
+   */
+  async retrieveTabs(): Promise<string | null> {
+    return new Promise(resolve => {
+      this.api.tabs.create(
+        {
+          active: false,
+          url: this.coilDomain
+        },
+        tab => {
+          const code = `localStorage.token`
+          this.api.tabs.executeScript(
+            notNullOrUndef(tab.id),
+            { code, frameId: 0 },
+            ([result]) => {
+              this.api.tabs.remove(notNullOrUndef(tab.id))
+              resolve(result)
+            }
+          )
+        }
+      )
+    })
+  }
+
+  async retrieve(): Promise<string | null> {
+    const path = '/handler.html'
     const coilDomain = this.coilDomain
     const coilFrame = document.createElement('iframe')
     coilFrame.src = coilDomain + path
     document.body.appendChild(coilFrame)
-    await new Promise(resolve => coilFrame.addEventListener('load', resolve))
+
+    await Promise.race([
+      timeoutRejecting(10e3),
+      new Promise(resolve => coilFrame.addEventListener('load', resolve))
+    ])
 
     // noinspection ES6MissingAwait
     const coilPromise = new Promise<string | null>((resolve, reject) => {

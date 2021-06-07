@@ -105,8 +105,18 @@ export class BackgroundScript {
     this.popup.setDefaultInactive()
     this.framesService.monitor()
     this.bindOnInstalled()
-    // noinspection ES6MissingAwait
-    void this.auth.getTokenMaybeRefreshAndStoreState()
+    void this.initAuth()
+  }
+
+  private async initAuth() {
+    this.auth.checkForSiteLogoutAssumeFalseOnTimeout().then(loggedOut => {
+      if (loggedOut) {
+        this.logout()
+      } else {
+        void this.auth.getTokenMaybeRefreshAndStoreState()
+      }
+    })
+    this.auth.queueTokenRefreshCheck()
   }
 
   private setTabsOnActivatedListener() {
@@ -357,7 +367,7 @@ export class BackgroundScript {
         sendResponse(true)
         break
       case 'logout':
-        sendResponse(this.logout(sender))
+        sendResponse(this.logout())
         break
       case 'adaptedSite':
         this.adaptedSite(request.data, sender)
@@ -365,7 +375,11 @@ export class BackgroundScript {
         break
       case 'injectToken':
         sendResponse(
-          await this.injectToken(request.data.token, notNullOrUndef(sender.url))
+          await this.injectToken(
+            request.data.token,
+            notNullOrUndef(sender.url),
+            notNullOrUndef(sender.tab)
+          )
         )
         break
       case 'startWebMonetization':
@@ -431,11 +445,16 @@ export class BackgroundScript {
     }
   }
 
-  async injectToken(siteToken: string | null, url: string) {
+  async injectToken(
+    siteToken: string | null,
+    url: string,
+    tab: chrome.tabs.Tab
+  ) {
     const { origin } = new URL(url)
     if (origin !== this.coilDomain) {
       return null
     }
+
     // When logged out siteToken will be an empty string so normalize it to
     // null
     const newest = this.auth.syncSiteToken(siteToken || null)
@@ -883,7 +902,7 @@ export class BackgroundScript {
     }
   }
 
-  private logout(_: MessageSender) {
+  private logout() {
     for (const tabId of this.tabStates.tabKeys()) {
       // Make a copy as _closeStreams mutates and we want to actually close
       // the streams before we set the state to stopped.
@@ -899,13 +918,13 @@ export class BackgroundScript {
         this.api.tabs.sendMessage(tabId, message, { frameId: Number(frameId) })
       })
     }
+
     // Clear the token and any other state the popup relies upon
     // reloadTabState will reset them below.
-
     // Clear tokens in incognito windows too
     this.framesService.sendCommandToFramesMatching(
       { command: 'clearToken' },
-      frame => frame.href?.startsWith(this.coilDomain)
+      frame => Boolean(frame.href?.startsWith(this.coilDomain))
     )
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')

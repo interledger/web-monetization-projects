@@ -16,6 +16,12 @@ export interface IsExpiredParams {
   nowSeconds?: number
 }
 
+export interface IsStaleParams {
+  token: string
+  staleHrsAfterIat?: number
+  nowSeconds?: number
+}
+
 export class CoilTokenUtils {
   public decode(token: string) {
     return decodeToken(token)
@@ -76,5 +82,17 @@ export class CoilTokenUtils {
     now.setHours(now.getHours() + withinHrs)
     const expiredBy = now.getTime() / 1000
     return expiredBy >= decoded.exp
+  }
+
+  isStale({
+    token,
+    staleHrsAfterIat = 24,
+    nowSeconds = Date.now() / 1e3
+  }: IsStaleParams) {
+    const now = new Date(nowSeconds * 1e3)
+    const decoded = this.decode(token)
+    const refreshAt = new Date(decoded.iat * 1e3)
+    refreshAt.setHours(refreshAt.getHours() + staleHrsAfterIat)
+    return now >= refreshAt
   }
 }
