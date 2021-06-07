@@ -8,8 +8,11 @@ PROTECTED_BRANCHES="^(main|develop)"
 # Get refs list from STDIN
 REFS=$(cat)
 
-if [[ $REFS != *"$BRANCH"* ]]
+# TODO: handle the case of empty refs
+if [[ $REFS != *"$BRANCH"* && -z $SKIP_HUSKY_PRE_PUSH ]]
 then
+  echo "\$BRANCH = $BRANCH"
+  echo "\$REFS = $REFS"
   echo -e "\n🚫 You must use (git push origin $BRANCH)\n" && exit 1
 fi
 
