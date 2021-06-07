@@ -8,9 +8,18 @@ PROTECTED_BRANCHES="^(main|develop)"
 # Get refs list from STDIN
 REFS=$(cat)
 
-# TODO: handle the case of empty refs
-if [[ $REFS != *"$BRANCH"* && -z $SKIP_HUSKY_PRE_PUSH ]]
+parent_pid=$PPID
+push_command=''
+
+until [[ "$push_command" == git* ]]; do
+  push_command=$(ps -ocommand= -p $parent_pid)
+  parent_pid=$(ps -o ppid= $parent_pid)
+  # echo "command = $push_command"
+done
+
+if [[ -n $REFS && $REFS != *"$BRANCH"* && -z $SKIP_HUSKY_PRE_PUSH ]]
 then
+  echo "\$push_command = $push_command"
   echo "\$BRANCH = $BRANCH"
   echo "\$REFS = $REFS"
   echo -e "\n🚫 You must use (git push origin $BRANCH)\n" && exit 1
