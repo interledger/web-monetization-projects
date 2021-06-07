@@ -138,118 +138,111 @@ export class Stream extends EventEmitter {
     // reset this upon every start *before* early exit while looping
     this._packetNumber = 0
     this.isPaused = false
-    await this.loop.run(
-      async (tokenFraction: number): Promise<Connection> => {
-        this.tabLogger.sendLogEvent('getting spsp details')
-        const spspDetails = await this._getSPSPDetails()
-        const redeemedToken = await this._anonTokens.getToken(this._authToken)
-        this._debug(
-          'redeemed token with throughput=%d',
-          redeemedToken.throughput
-        )
-        this.tabLogger.sendLogEvent(
-          `redeemed token with ${redeemedToken.throughput}`
-        )
-        this._lastDelivered = 0
-        this.tabLogger.sendLogEvent(`making plugin`)
-        const plugin = this._makePlugin(redeemedToken.btpToken)
-        this.tabLogger.sendLogEvent(`creating connection`)
-        const connection = await createConnection({
-          ...spspDetails,
-          plugin,
-          slippage: 1.0,
-          exchangeRate: 1.0,
-          maximumPacketAmount: '10000000',
-          getExpiry: getFarFutureExpiry
-        })
-        this.tabLogger.sendLogEvent(`connected`)
-        const stream = connection.createStream()
+    await this.loop.run(async (tokenFraction: number): Promise<Connection> => {
+      this.tabLogger.sendLogEvent('getting spsp details')
+      const spspDetails = await this._getSPSPDetails()
+      const redeemedToken = await this._anonTokens.getToken(this._authToken)
+      this._debug('redeemed token with throughput=%d', redeemedToken.throughput)
+      this.tabLogger.sendLogEvent(
+        `redeemed token with ${redeemedToken.throughput}`
+      )
+      this._lastDelivered = 0
+      this.tabLogger.sendLogEvent(`making plugin`)
+      const plugin = this._makePlugin(redeemedToken.btpToken)
+      this.tabLogger.sendLogEvent(`creating connection`)
+      const connection = await createConnection({
+        ...spspDetails,
+        plugin,
+        slippage: 1.0,
+        exchangeRate: 1.0,
+        maximumPacketAmount: '10000000',
+        getExpiry: getFarFutureExpiry
+      })
+      this.tabLogger.sendLogEvent(`connected`)
+      const stream = connection.createStream()
 
-        const onMoney = (sentAmount: string) => {
-          // Wait until `setImmediate` so that `connection.totalDelivered` has been updated.
-          const receipt = stream.receipt?.toString('base64')
-          setImmediate(() => this.onMoney(connection, sentAmount, receipt))
-        }
-        stream.on('outgoing_money', onMoney)
-
-        connection.on('error', async e => {
-          // Delete exhausted tokens from localstorage.
-          this._debug('stream connection error; err=%s', e.message)
-          if (!isExhaustedError(e)) return
-          if (
-            !e.ilpReject?.data.equals(
-              await sha256(Buffer.from(redeemedToken.btpToken))
-            )
-          )
-            return
-          this._anonTokens.removeToken(redeemedToken.btpToken)
-        })
-
-        connection.once('close', () => {
-          stream.removeListener('outgoing_money', onMoney)
-          // Cap paid tokens at 1.0 -- partial payment in flat-stacks may cause
-          // client-apparent overpayment (even though no overpayment occurred).
-          this._schedule.onSent(
-            Math.min(1.0, +connection.totalSent / redeemedToken.throughput / 60)
-          )
-          this._debug(
-            'connection closing; totalSent=%d sendMax=%d',
-            +connection.totalSent / redeemedToken.throughput,
-            stream.sendMax
-          )
-        })
-
-        // noinspection ES6MissingAwait
-        void (async () => {
-          if (this._schedule.totalSent() === 0) {
-            await firstMinuteBandwidth(
-              this.tabLogger,
-              stream,
-              redeemedToken.throughput
-            )
-          } else {
-            const sendMax =
-              tokenFraction >= 1.0
-                ? FULL_TOKEN_AMOUNT
-                : tokenFraction * 60 * redeemedToken.throughput
-            this._debug(
-              'setSendMax tokenFraction=%d sendMax=%d',
-              tokenFraction,
-              sendMax
-            )
-            stream.setSendMax(sendMax)
-          }
-
-          let timer: NodeJS.Timer | undefined
-          // This timeout must match (or exceed) the packet timeout, otherwise the
-          // extension may try to reconnect & send packets while old packets are still
-          // in-flight farther upstream.
-          const waitTime = new Promise(
-            (_, reject) =>
-              (timer = setTimeout(() => reject(new Error('timeout')), 30e3))
-          )
-          // On error, destroy() was called internally by ilp-stream.
-          // Resolving here isn't necessary, but it prevents an extraneous destroy() call.
-          const waitFail = new Promise(resolve =>
-            connection.once('error', resolve)
-          )
-          await Promise.race([waitFail, waitTime, connection.end()])
-            .finally(() => {
-              if (timer) clearTimeout(timer)
-            })
-            .catch(
-              async (err): Promise<void> => {
-                this._debug(
-                  'stream.end failed, destroying connection err=%s',
-                  err.message
-                )
-                return connection.destroy(err) // ensure the connection is closed
-              }
-            )
-        })()
-        return connection
+      const onMoney = (sentAmount: string) => {
+        // Wait until `setImmediate` so that `connection.totalDelivered` has been updated.
+        const receipt = stream.receipt?.toString('base64')
+        setImmediate(() => this.onMoney(connection, sentAmount, receipt))
       }
-    )
+      stream.on('outgoing_money', onMoney)
+
+      connection.on('error', async e => {
+        // Delete exhausted tokens from localstorage.
+        this._debug('stream connection error; err=%s', e.message)
+        if (!isExhaustedError(e)) return
+        if (
+          !e.ilpReject?.data.equals(
+            await sha256(Buffer.from(redeemedToken.btpToken))
+          )
+        )
+          return
+        this._anonTokens.removeToken(redeemedToken.btpToken)
+      })
+
+      connection.once('close', () => {
+        stream.removeListener('outgoing_money', onMoney)
+        // Cap paid tokens at 1.0 -- partial payment in flat-stacks may cause
+        // client-apparent overpayment (even though no overpayment occurred).
+        this._schedule.onSent(
+          Math.min(1.0, +connection.totalSent / redeemedToken.throughput / 60)
+        )
+        this._debug(
+          'connection closing; totalSent=%d sendMax=%d',
+          +connection.totalSent / redeemedToken.throughput,
+          stream.sendMax
+        )
+      })
+
+      // noinspection ES6MissingAwait
+      void (async () => {
+        if (this._schedule.totalSent() === 0) {
+          await firstMinuteBandwidth(
+            this.tabLogger,
+            stream,
+            redeemedToken.throughput
+          )
+        } else {
+          const sendMax =
+            tokenFraction >= 1.0
+              ? FULL_TOKEN_AMOUNT
+              : tokenFraction * 60 * redeemedToken.throughput
+          this._debug(
+            'setSendMax tokenFraction=%d sendMax=%d',
+            tokenFraction,
+            sendMax
+          )
+          stream.setSendMax(sendMax)
+        }
+
+        let timer: NodeJS.Timer | undefined
+        // This timeout must match (or exceed) the packet timeout, otherwise the
+        // extension may try to reconnect & send packets while old packets are still
+        // in-flight farther upstream.
+        const waitTime = new Promise(
+          (_, reject) =>
+            (timer = setTimeout(() => reject(new Error('timeout')), 30e3))
+        )
+        // On error, destroy() was called internally by ilp-stream.
+        // Resolving here isn't necessary, but it prevents an extraneous destroy() call.
+        const waitFail = new Promise(resolve =>
+          connection.once('error', resolve)
+        )
+        await Promise.race([waitFail, waitTime, connection.end()])
+          .finally(() => {
+            if (timer) clearTimeout(timer)
+          })
+          .catch(async (err): Promise<void> => {
+            this._debug(
+              'stream.end failed, destroying connection err=%s',
+              err.message
+            )
+            return connection.destroy(err) // ensure the connection is closed
+          })
+      })()
+      return connection
+    })
     this._paying = false
   }
 
