@@ -4792,7 +4792,7 @@ __metadata:
     "@web-monetization/types": 0.0.0
     "@yarnpkg/pnpify": ^2.4.0
     JSON2016: ^1.0.0
-    ajv: ^8.5.0
+    ajv: ^8.6.0
     copy-webpack-plugin: ^9.0.0
     eslint: ^7.27.0
     eslint-config-prettier: ^8.3.0
@@ -5789,15 +5789,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:*, ajv@npm:^8.0.1, ajv@npm:^8.5.0":
-  version: 8.5.0
-  resolution: "ajv@npm:8.5.0"
+"ajv@npm:*, ajv@npm:^8.0.1, ajv@npm:^8.6.0":
+  version: 8.6.0
+  resolution: "ajv@npm:8.6.0"
   dependencies:
     fast-deep-equal: ^3.1.1
     json-schema-traverse: ^1.0.0
     require-from-string: ^2.0.2
     uri-js: ^4.2.2
-  checksum: 91274ac6627004c68467e8a05643b448d5581e77218c0331527d080c494cd24b5713c662ad8632fb2e46cbe5c9475aa73c8385ed59fa44b5813ff1c5e7b066c8
+  checksum: 4eed9ee72e752d34a99541d04a608030db17735672ec334563b7cbc5936cb879a394e8f75789174690c7cd58ec2610c8363cb7480c23c15a9ca4424911cd683d
   languageName: node
   linkType: hard
 
