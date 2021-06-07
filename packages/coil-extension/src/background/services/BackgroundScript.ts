@@ -129,12 +129,16 @@ export class BackgroundScript {
       this.reloadTabState({ from: 'onActivated' })
     })
     if (this.buildConfig.logTabsApiEvents) {
-      this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
-        this.log('tabs.onActiveChanged %d %o', tabId, selectInfo)
-      })
-      this.api.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
-        this.log('tabs.onSelectionChanged %d %o', tabId, selectInfo)
-      })
+      if (this.api.tabs.onActiveChanged) {
+        this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
+          this.log('tabs.onActiveChanged %d %o', tabId, selectInfo)
+        })
+      }
+      if (this.api.tabs.onSelectionChanged) {
+        this.api.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
+          this.log('tabs.onSelectionChanged %d %o', tabId, selectInfo)
+        })
+      }
       this.api.tabs.onCreated.addListener(activeInfo => {
         this.log('tabs.onCreated %o', activeInfo)
       })
@@ -149,13 +153,16 @@ export class BackgroundScript {
         if (windowId < 0) return
 
         // Close the popup when window has changed
-        const message: ClosePopup = {
+        const close: ClosePopup = {
           command: 'closePopup'
         }
-        this.api.runtime.sendMessage(message, () => {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          const ignored = this.api.runtime.lastError
-        })
+        // Storage events are only fired if the value actually changes, not
+        // on every localStorage `setItem` call. So we set the first 16
+        // characters of the stored value to the current time.
+        this.storage.setRaw(
+          '$$popupCommand',
+          Date.now().toString().padStart(16, '0') + JSON.stringify(close)
+        )
 
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
           if (tabs.length === 0 || tabs[0].id == null) return
