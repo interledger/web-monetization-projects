@@ -4,9 +4,8 @@ import * as cp from 'child_process'
 
 import * as webpack from 'webpack'
 import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
-import exports from 'webpack'
 
-import processArguments = exports.cli.processArguments
+import { applyManifestPermissions } from './manifestPermissions'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
@@ -96,6 +95,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         } else {
           delete manifest['browser_specific_settings']
         }
+        applyManifestPermissions(manifest)
         return prettyJSON(manifest)
       }
     },
