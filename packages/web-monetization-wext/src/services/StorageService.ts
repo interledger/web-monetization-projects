@@ -86,6 +86,6 @@ export class StorageService {
         return true
       }
     }
-    return (new Proxy(this, handler) as unknown) as T
+    return new Proxy(this, handler) as unknown as T
   }
 }

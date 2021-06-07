@@ -5,16 +5,15 @@
 # debugging.
 set -ex
 
-SIX_DIR=${SIX_DIR:-six}
+SIX_DIR=${SIX_DIR:-six-apktool-decoded}
 
 "$CHROME" --pack-extension="$PWD"/dist \
          --pack-extension-key="$COIL_SIX_PACK_KEY"
 
 mv dist.crx "$SIX_DIR"/assets
 
-pushd "$SIX_DIR"
-jar cf ../coil-six.apk .
-popd
+
+apktool b -f "$SIX_DIR" -o coil-six.apk
 
 jarsigner -verbose -keystore \
   "$COIL_SIX_KEYSTORE_PATH" \

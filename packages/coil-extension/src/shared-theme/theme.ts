@@ -53,6 +53,12 @@ export const theme = createMuiTheme({
       root: {
         borderRadius: '64px'
       },
+      containedPrimary: {
+        '&:hover': {
+          backgroundColor: '#0080FF',
+          boxShadow: 'none'
+        }
+      },
       outlined: {
         borderColor: Colors.Red400
       }

@@ -1,18 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { PopupProps } from '../types'
-import { ToPopupMessage } from '../../types/commands'
-import { notNullOrUndef } from '../../util/nullables'
+import { useStore } from '../context/storeContext'
 
 const ANIMATION_INTERVAL = 1800
 
-export const MonetizeAnimation = (props: PopupProps) => {
-  const store = props.context.store
-  const [animated, setAnimated] = useState<boolean>(store.isPaying)
+export const MonetizeAnimation = () => {
+  const store = useStore()
+  const [animated, setAnimated] = useState<boolean | null>(
+    Boolean(store.isPaying)
+  )
 
   useEffect(() => {
     const loopInterval = setInterval(() => {
-      setAnimated(store.isPaying)
+      setAnimated(Boolean(store.isPaying))
     }, ANIMATION_INTERVAL)
 
     return () => {
@@ -20,7 +20,7 @@ export const MonetizeAnimation = (props: PopupProps) => {
     }
   }, [])
 
-  const hasMonetized = props.context.store.monetizedTotal > 0
+  const hasMonetized = Number(store.monetizedTotal) > 0
   // eslint-disable-next-line no-nested-ternary
   const src = animated
     ? '/res/stream_loop.svg'

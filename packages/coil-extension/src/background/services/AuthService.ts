@@ -5,11 +5,54 @@ import { inject, injectable } from 'inversify'
 
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
+import { TimeoutError, timeoutRejecting } from '../../util/timeout'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 
+/**
+ ## Extension Authentication
+
+ The extension will look in its own localStorage for a token, and if it's unable
+ to find one there will it inject coil.com/handler.html (which has a liberal
+ frame-ancestors CSP) as an iframe into the background page. It then uses
+ iframe.contentWindow.postMessage to send a message to the content script running
+ in the newly injected iframe. The content script will event.source.postMessage
+ the token in response.
+
+ ### Incognito Notes
+ The manifest declares "incognito":"spanning" with ONE background page instance
+ shared between contexts. If you log in in one context, you'll be logged in
+ everywhere. If you logout from one context, you'll be logged out everywhere.
+
+ ### Site <-> Extension token synchronization
+ - Every time you land on a coil.com frame the content script will send the
+ coil.com token to the background page, which it will compare against its
+ token, sending back the newest one to store on the site.
+
+ - The extension will listen to coil_writeToken events which can be emitted
+ with an empty string in the token field when logged out. In this case the
+ extension will clear its token too.
+
+ - If the extension sees an empty or null token on coil.com and the extension
+ has a token (because of logging out while the extension was disabled
+ and missing the logout event) it will inject the extensions token into the
+ site. This supports convenient use of incognito contexts.
+
+ We could do this only for incognito contexts and instead logout in normal
+ contexts, but it's possible you could login via an incognito context first,
+ then see no token in a normal context, infer that the user had logged out, then
+ very confusingly propagate this logged out state to the incognito context.
+
+ We therefore check the site login state once on startup and logout from the
+ extension if the user is logged out from the site.
+
+ ### coil.com/handler.html
+ This could be any path with a liberal CSP. The content of the page is not
+ important, only that the content script can access localStorage for the domain.
+
+ */
 @injectable()
 export class AuthService extends EventEmitter {
   // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
@@ -30,6 +73,35 @@ export class AuthService extends EventEmitter {
   }
 
   private _op: Promise<string | null> | null = null
+
+  /*
+  TODO: manifest version 3 and background workers ?
+  If the token is issued more than one day ago, refresh it, such that the
+  token is always valid for at least 26-28 days.
+   */
+  queueTokenRefreshCheck() {
+    const twelveHours = 12 * 60 * 60 * 1e3
+    // Add some randomness to the interval so we
+    // can't correlate when a user is active/inactive quite as easily
+    const randomness = Math.random() * twelveHours
+    setTimeout(() => {
+      void this.getTokenMaybeRefreshAndStoreState()
+      this.queueTokenRefreshCheck()
+    }, twelveHours + randomness)
+  }
+
+  async checkForSiteLogoutAssumeFalseOnTimeout(): Promise<boolean> {
+    try {
+      const token = await this.siteToken.retrieve()
+      return !token
+    } catch (e) {
+      if (e instanceof TimeoutError) {
+        return false
+      } else {
+        throw e
+      }
+    }
+  }
 
   async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
     this.activeTabs.log(`getTokenMaybeRefreshAndStoreState ${Date.now()}`)
@@ -58,7 +130,7 @@ export class AuthService extends EventEmitter {
 
     if (!token) {
       token = await this.siteToken.retrieve()
-      this.activeTabs.log('siteToken: ' + Boolean(token))
+      this.activeTabs.log(`siteToken: ${Boolean(token)}`)
     }
     this.trace('siteToken', token)
 
@@ -67,7 +139,12 @@ export class AuthService extends EventEmitter {
         `token is null || expired! token=${token && tokenUtils.decode(token)}`
       )
       token = null
-    } else if (tokenUtils.isExpired({ token, withinHrs: 12 })) {
+    } else if (tokenUtils.isStale({ token, staleHrsAfterIat: 24 })) {
+      // We must keep the token fresh as possible, as we can't assume early on
+      // in WM adoption that a user will a) visit coil.com or
+      // b) visit a WM site often enough that we can refresh a token only when
+      // it has nearly expired.
+
       // Update the stored token/user
       this.trace('before refreshTokenAndUpdateWhoAmi')
       token = await this.refreshTokenAndUpdateWhoAmi(token)

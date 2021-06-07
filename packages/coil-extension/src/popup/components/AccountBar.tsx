@@ -8,8 +8,9 @@ import MenuItem from '@material-ui/core/MenuItem'
 import { styled, withStyles } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
-import { PopupProps } from '../types'
 import { getMonthAndDay, isXMASPeriod } from '../../util/seasons'
+import { useStore } from '../context/storeContext'
+import { useHost } from '../context/popupHostContext'
 
 const Flex = styled('div')({
   flex: 1
@@ -67,35 +68,36 @@ const MoreButton = styled(IconButton)({
   height: 32
 })
 
-export const AccountBar = (props: PopupProps) => {
+export const AccountBar = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
   const handleMenuClick = (event: ClickEvent) => {
     setAnchorEl(event.currentTarget)
   }
 
-  const handleMenuClose = (event: ClickEvent) => {
+  const handleMenuClose = () => {
     setAnchorEl(null)
   }
-  const context = props.context
+  const { validToken, user, extensionBuildString } = useStore()
   const {
     coilDomain,
-    store: { loggedIn, user, extensionBuildString },
     runtime: { tabOpener }
-  } = context
+  } = useHost()
 
-  const onExploreClick = tabOpener(`${coilDomain}/explore`)
+  const onDiscoverClick = tabOpener(`${coilDomain}/discover`)
   const onAboutClick = tabOpener(`${coilDomain}/about`)
   const onSettingsClick = tabOpener(`${coilDomain}/settings`)
 
   const onBuildInfoClick = () => {
-    void navigator.clipboard.writeText(extensionBuildString)
+    if (extensionBuildString) {
+      void navigator.clipboard.writeText(extensionBuildString)
+    }
   }
 
   return (
     <CoilToolbar>
       <CoilLogoImg />
-      {loggedIn && user ? (
+      {validToken && user ? (
         <Typography variant='body1'>{user.fullName}</Typography>
       ) : (
         <Muted>Not Logged in</Muted>
@@ -118,7 +120,7 @@ export const AccountBar = (props: PopupProps) => {
         }}
         getContentAnchorEl={null}
       >
-        <MenuItem dense component='a' onClick={onExploreClick} target='_blank'>
+        <MenuItem dense component='a' onClick={onDiscoverClick} target='_blank'>
           <Typography variant='caption'>Discover</Typography>
         </MenuItem>
 

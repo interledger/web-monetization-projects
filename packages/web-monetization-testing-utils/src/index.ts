@@ -43,9 +43,8 @@ export class MonetizationImplTest {
     const staticMeta = this.document.head.querySelector(
       'meta[name="monetization"]'
     )
-    const {
-      requestId: staticId
-    } = await this.staticMetaInitAndPendingToFirstProgress(staticMeta)
+    const { requestId: staticId } =
+      await this.staticMetaInitAndPendingToFirstProgress(staticMeta)
     await this.staticMetaRemoval(staticMeta)
     const { meta, requestId: dynamicId } = await this.dynamicMetaAddition()
     this.step(

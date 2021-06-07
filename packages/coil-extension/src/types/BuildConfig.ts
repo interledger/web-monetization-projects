@@ -3,4 +3,5 @@ export interface BuildConfig {
   extensionBuildString?: string
   extensionPopupFooterString?: string
   isCI?: boolean
+  isLoggingEnabled?: boolean
 }

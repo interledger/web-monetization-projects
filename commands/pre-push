@@ -5,9 +5,23 @@ echo -e "Pre-push Hook: Checking branch name"
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 PROTECTED_BRANCHES="^(main|develop)"
+# Get refs list from STDIN
+REFS=$(cat)
 
-if [[ $1 != *"$BRANCH"* ]]
+parent_pid=$PPID
+push_command=''
+
+until [[ "$push_command" == git* ]]; do
+  push_command=$(ps -ocommand= -p $parent_pid)
+  parent_pid=$(ps -o ppid= $parent_pid)
+  # echo "command = $push_command"
+done
+
+if [[ -n $REFS && $REFS != *"$BRANCH"* && -z $SKIP_HUSKY_PRE_PUSH ]]
 then
+  echo "\$push_command = $push_command"
+  echo "\$BRANCH = $BRANCH"
+  echo "\$REFS = $REFS"
   echo -e "\n🚫 You must use (git push origin $BRANCH)\n" && exit 1
 fi
 

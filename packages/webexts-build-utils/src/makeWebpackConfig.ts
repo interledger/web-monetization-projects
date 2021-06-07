@@ -5,6 +5,8 @@ import * as cp from 'child_process'
 import * as webpack from 'webpack'
 import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 
+import { applyManifestPermissions } from './manifestPermissions'
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
 
@@ -75,6 +77,9 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       to: 'manifest.json',
       transform: (content: Buffer) => {
         const manifest = JSON.parse(content.toString())
+        // TODO: expand based on build target
+        delete manifest['$targets']
+
         if (WEXT_MANIFEST_SUFFIX) {
           manifest.name += WEXT_MANIFEST_SUFFIX
           if (!WEXT_MANIFEST_SUFFIX_NO_DATE) {
@@ -87,11 +92,13 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         }
         if (BROWSER === 'firefox') {
           if (WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID) {
-            manifest.browser_specific_settings.gecko.id = WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
+            manifest.browser_specific_settings.gecko.id =
+              WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
           }
         } else {
           delete manifest['browser_specific_settings']
         }
+        applyManifestPermissions(manifest)
         return prettyJSON(manifest)
       }
     },

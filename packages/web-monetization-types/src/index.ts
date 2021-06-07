@@ -215,9 +215,7 @@ export interface StreamConfigurator<
   Request extends MinimumRequest = MonetizationRequest
 > {
   // TODO: just keep this simple/clean and only support returning a Plugin ?
-  getSTREAMConfig(
-    request: Request
-  ): Promise<
+  getSTREAMConfig(request: Request): Promise<
     // A promise will provide flexibility to get a btpToken asynchronously
     // specific to the request
     | {

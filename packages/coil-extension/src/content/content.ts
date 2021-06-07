@@ -8,10 +8,12 @@ import { GlobalModule } from '@dier-makr/annotations'
 import * as tokens from '../types/tokens'
 import { API, COIL_DOMAIN } from '../webpackDefines'
 import { ClientOptions } from '../services/ClientOptions'
+import { loggingEnabled } from '../util/isLoggingEnabled'
 
 import { ContentScript } from './services/ContentScript'
 
 function configureContainer(container: Container) {
+  container.bind(tokens.LoggingEnabled).toConstantValue(loggingEnabled)
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

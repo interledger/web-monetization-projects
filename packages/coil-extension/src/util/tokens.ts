@@ -13,5 +13,5 @@ export interface DecodedToken {
 }
 
 export function decodeToken(token: string): DecodedToken {
-  return (jwt.decode(token) as unknown) as DecodedToken
+  return jwt.decode(token) as unknown as DecodedToken
 }

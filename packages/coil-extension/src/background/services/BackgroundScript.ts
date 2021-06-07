@@ -59,7 +59,8 @@ export class BackgroundScript {
     private youtube: YoutubeService,
     private activeTabLogger: ActiveTabLogger,
     private framesService: BackgroundFramesService,
-
+    @inject(tokens.LoggingEnabled)
+    private loggingEnabled: boolean,
     @logger('BackgroundScript')
     private log: Logger,
 
@@ -71,7 +72,9 @@ export class BackgroundScript {
     @inject(tokens.WextApi)
     private api = chrome
   ) {
-    console.log('BuildConfig', this.buildConfig)
+    if (this.loggingEnabled) {
+      console.log('BuildConfig', this.buildConfig)
+    }
   }
 
   get activeTab() {
@@ -101,8 +104,18 @@ export class BackgroundScript {
     this.popup.setDefaultInactive()
     this.framesService.monitor()
     this.bindOnInstalled()
-    // noinspection ES6MissingAwait
-    void this.auth.getTokenMaybeRefreshAndStoreState()
+    void this.initAuth()
+  }
+
+  private async initAuth() {
+    this.auth.checkForSiteLogoutAssumeFalseOnTimeout().then(loggedOut => {
+      if (loggedOut) {
+        this.logout()
+      } else {
+        void this.auth.getTokenMaybeRefreshAndStoreState()
+      }
+    })
+    this.auth.queueTokenRefreshCheck()
   }
 
   private setTabsOnActivatedListener() {
@@ -115,12 +128,16 @@ export class BackgroundScript {
       this.reloadTabState({ from: 'onActivated' })
     })
     if (this.buildConfig.logTabsApiEvents) {
-      this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
-        this.log('tabs.onActiveChanged %d %o', tabId, selectInfo)
-      })
-      this.api.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
-        this.log('tabs.onSelectionChanged %d %o', tabId, selectInfo)
-      })
+      if (this.api.tabs.onActiveChanged) {
+        this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
+          this.log('tabs.onActiveChanged %d %o', tabId, selectInfo)
+        })
+      }
+      if (this.api.tabs.onSelectionChanged) {
+        this.api.tabs.onSelectionChanged.addListener((tabId, selectInfo) => {
+          this.log('tabs.onSelectionChanged %d %o', tabId, selectInfo)
+        })
+      }
       this.api.tabs.onCreated.addListener(activeInfo => {
         this.log('tabs.onCreated %o', activeInfo)
       })
@@ -135,13 +152,16 @@ export class BackgroundScript {
         if (windowId < 0) return
 
         // Close the popup when window has changed
-        const message: ClosePopup = {
+        const close: ClosePopup = {
           command: 'closePopup'
         }
-        this.api.runtime.sendMessage(message, () => {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          const ignored = this.api.runtime.lastError
-        })
+        // Storage events are only fired if the value actually changes, not
+        // on every localStorage `setItem` call. So we set the first 16
+        // characters of the stored value to the current time.
+        this.storage.setRaw(
+          '$$popupCommand',
+          Date.now().toString().padStart(16, '0') + JSON.stringify(close)
+        )
 
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
           if (tabs.length === 0 || tabs[0].id == null) return
@@ -342,7 +362,7 @@ export class BackgroundScript {
         sendResponse(true)
         break
       case 'logout':
-        sendResponse(this.logout(sender))
+        sendResponse(this.logout())
         break
       case 'adaptedSite':
         this.adaptedSite(request.data, sender)
@@ -350,7 +370,11 @@ export class BackgroundScript {
         break
       case 'injectToken':
         sendResponse(
-          await this.injectToken(request.data.token, notNullOrUndef(sender.url))
+          await this.injectToken(
+            request.data.token,
+            notNullOrUndef(sender.url),
+            notNullOrUndef(sender.tab)
+          )
         )
         break
       case 'startWebMonetization':
@@ -416,11 +440,16 @@ export class BackgroundScript {
     }
   }
 
-  async injectToken(siteToken: string | null, url: string) {
+  async injectToken(
+    siteToken: string | null,
+    url: string,
+    tab: chrome.tabs.Tab
+  ) {
     const { origin } = new URL(url)
     if (origin !== this.coilDomain) {
       return null
     }
+
     // When logged out siteToken will be an empty string so normalize it to
     // null
     const newest = this.auth.syncSiteToken(siteToken || null)
@@ -460,7 +489,9 @@ export class BackgroundScript {
           this.tabStates.set(tabId, { favicon })
         })
         .catch(e => {
-          console.error(`failed to fetch favicon. e=${e.stack}`)
+          if (this.loggingEnabled) {
+            console.error(`failed to fetch favicon. e=${e.stack}`)
+          }
         })
     }
   }
@@ -535,7 +566,8 @@ export class BackgroundScript {
       this.store.extensionBuildString = this.buildConfig.extensionBuildString
     }
     if (this.buildConfig.extensionPopupFooterString) {
-      this.store.extensionPopupFooterString = this.buildConfig.extensionPopupFooterString
+      this.store.extensionPopupFooterString =
+        this.buildConfig.extensionPopupFooterString
     }
 
     if (state) {
@@ -630,14 +662,15 @@ export class BackgroundScript {
 
     const userBeforeReAuth = this.store.user
     let emittedPending = false
-    const emitPending = () =>
+    const emitPending = () => {
       this.sendSetMonetizationStateMessage(frame, 'pending')
+      emittedPending = true
+    }
 
     // If we are optimistic we have an active subscription (things could have
     // changed since our last cached whoami query), emit pending immediately,
     // otherwise wait until recheck auth/whoami, potentially not even emitting.
     if (userBeforeReAuth?.subscription?.active) {
-      emittedPending = true
       emitPending()
     }
 
@@ -649,7 +682,9 @@ export class BackgroundScript {
     if (!token) {
       // not signed in.
       // eslint-disable-next-line no-console
-      console.warn('startWebMonetization cancelled; no token')
+      if (this.loggingEnabled) {
+        console.warn('startWebMonetization cancelled; no token')
+      }
       this.activeTabLogger.log('startWebMonetization cancelled; no token')
       this.sendSetMonetizationStateMessage(frame, 'stopped')
       return false
@@ -666,8 +701,8 @@ export class BackgroundScript {
       emitPending()
     }
 
-    const lastCommand = this.tabStates.getFrameOrDefault(frame).lastMonetization
-      .command
+    const lastCommand =
+      this.tabStates.getFrameOrDefault(frame).lastMonetization.command
     if (lastCommand !== 'start' && lastCommand !== 'pause') {
       this.log('startWebMonetization cancelled via', lastCommand)
       return false
@@ -873,7 +908,7 @@ export class BackgroundScript {
     }
   }
 
-  private logout(_: MessageSender) {
+  private logout() {
     for (const tabId of this.tabStates.tabKeys()) {
       // Make a copy as _closeStreams mutates and we want to actually close
       // the streams before we set the state to stopped.
@@ -889,13 +924,13 @@ export class BackgroundScript {
         this.api.tabs.sendMessage(tabId, message, { frameId: Number(frameId) })
       })
     }
+
     // Clear the token and any other state the popup relies upon
     // reloadTabState will reset them below.
-
     // Clear tokens in incognito windows too
     this.framesService.sendCommandToFramesMatching(
       { command: 'clearToken' },
-      frame => frame.href?.startsWith(this.coilDomain)
+      frame => Boolean(frame.href?.startsWith(this.coilDomain))
     )
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')

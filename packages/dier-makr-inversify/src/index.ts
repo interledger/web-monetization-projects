@@ -20,13 +20,13 @@ export function inversifyAnnotated(target: any) {
       injections.params.forEach(p => {
         if (p.token === UnmanagedSymbol) {
           decorate(
-            (unmanaged() as unknown) as ParameterDecorator,
+            unmanaged() as unknown as ParameterDecorator,
             target,
             p.index
           )
         } else {
           decorate(
-            (inject(p.token) as unknown) as ParameterDecorator,
+            inject(p.token) as unknown as ParameterDecorator,
             target,
             p.index
           )
