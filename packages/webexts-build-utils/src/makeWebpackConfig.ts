@@ -4,6 +4,9 @@ import * as cp from 'child_process'
 
 import * as webpack from 'webpack'
 import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
+import exports from 'webpack'
+
+import processArguments = exports.cli.processArguments
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
