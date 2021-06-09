@@ -7,6 +7,7 @@ import { TabStates } from './TabStates'
 @injectable()
 export class ActiveTabLogger {
   sendLogs = false
+  sendLogEvents = true
 
   constructor(
     private tabStates: TabStates,
@@ -34,7 +35,7 @@ export class ActiveTabLogger {
 
   sendLogEvent(message: string) {
     const active = this.tabStates.activeTab
-    if (active) {
+    if (active && this.sendLogEvents) {
       // language=JavaScript
       const code = `
         document.dispatchEvent(new CustomEvent('coil_log',

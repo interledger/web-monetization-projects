@@ -3,7 +3,7 @@ import { EventEmitter } from 'events'
 import { asyncUtils, PaymentScheduler } from '@web-monetization/polyfill-utils'
 import { Connection } from 'ilp-protocol-stream'
 
-import { Logger, logger } from './utils'
+import { Logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 
 const { timeout } = asyncUtils
