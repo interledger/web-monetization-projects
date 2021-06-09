@@ -2,10 +2,7 @@ import { injectable } from 'inversify'
 
 import { FrameState, MonetizationCommand, TabState } from '../../types/TabState'
 import { IconState } from '../../types/commands'
-import { Colors } from '../consts/Colors'
 import { FrameSpec } from '../../types/FrameSpec'
-
-import { PopupIconService } from './PopupIconService'
 
 @injectable()
 export class TabStates {

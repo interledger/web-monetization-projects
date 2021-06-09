@@ -1,4 +1,4 @@
-import { Container, decorate, inject, injectable } from 'inversify'
+import { decorate, inject, injectable } from 'inversify'
 import * as anonymousTokens from '@coil/anonymous-tokens'
 
 import * as tokens from '../../types/tokens'

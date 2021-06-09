@@ -11,7 +11,6 @@ import { API } from '../../webpackDefines'
 import { StorageService } from '../../services/storage'
 import { User } from '../../types/user'
 import { defaultPopupHost } from '../context/popupHostContext'
-import { StorageEventPartial } from '../context/storeContext'
 import { Index } from '../Index'
 
 import { StatePanel } from './StatePanel'

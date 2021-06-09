@@ -888,7 +888,7 @@ export class BackgroundScript {
         }
 
         this.log('closing stream with id', streamId)
-        this.activeTabLogger.sendLogEvent(`closing stream: ${streamId}`)
+        this.activeTabLogger.sendLogEvent(() => `closing stream: ${streamId}`)
         this.streams.closeStream(streamId)
         this.assoc.clearFrame(streamId)
         closed++

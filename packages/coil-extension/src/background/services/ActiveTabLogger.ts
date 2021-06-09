@@ -33,9 +33,12 @@ export class ActiveTabLogger {
     })
   }
 
-  sendLogEvent(message: string) {
+  sendLogEvent(message: string | (() => string)) {
     const active = this.tabStates.activeTab
     if (active && this.sendLogEvents) {
+      if (typeof message !== 'string') {
+        message = message()
+      }
       // language=JavaScript
       const code = `
         document.dispatchEvent(new CustomEvent('coil_log',

@@ -7,23 +7,22 @@ import {
 } from 'ilp-protocol-stream'
 import IlpPluginBtp from 'ilp-plugin-btp'
 import {
+  getFarFutureExpiry,
   getSPSPResponse,
   PaymentDetails,
-  SPSPError,
-  SPSPResponse,
-  getFarFutureExpiry,
   PaymentScheduler,
-  ScheduleMode
+  ScheduleMode,
+  SPSPError,
+  SPSPResponse
 } from '@web-monetization/polyfill-utils'
 import { Container, inject, injectable } from 'inversify'
-import { RedeemedToken } from '@coil/anonymous-tokens'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 import { BTP_ENDPOINT, VERSION } from '../../webpackDefines'
 
 import { AnonymousTokens } from './AnonymousTokens'
-import { StreamLoop, isExhaustedError } from './StreamLoop'
+import { isExhaustedError, StreamLoop } from './StreamLoop'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 
@@ -136,28 +135,37 @@ export class Stream extends EventEmitter {
   }
 
   loops = 0
+
   async start(): Promise<void> {
     // reset this upon every start *before* early exit while looping
     this._packetNumber = 0
     this.isPaused = false
+    const id = this._requestId.slice(0, 6)
+
     await this.loop.run(async (tokenFraction: number): Promise<Connection> => {
       this.loops++
       this.tabLogger.sendLogEvent(
-        `getting spsp details, loops=${this.loops} requestId=${this._requestId}`
+        () => `Stream:${id}:start:get-spsp-details, loops=${this.loops}`
       )
       const spspDetails = await this._getSPSPDetails()
       this.tabLogger.sendLogEvent(
-        `spsp details, details=${JSON.stringify(spspDetails)}`
+        () =>
+          `Stream:${id}:start:spsp-details-response, details=${JSON.stringify(
+            spspDetails
+          )}`
       )
       const redeemedToken = await this._anonTokens.getToken(this._authToken)
       this._debug('redeemed token with throughput=%d', redeemedToken.throughput)
       this.tabLogger.sendLogEvent(
-        `redeemed token with ${redeemedToken.throughput}`
+        () =>
+          `Stream:${id}:start: redeemed token with throughput=${redeemedToken.throughput}`
       )
       this._lastDelivered = 0
-      this.tabLogger.sendLogEvent(`making plugin`)
+      this.tabLogger.sendLogEvent(() => `Stream:${id}:start: making plugin`)
       const plugin = this._makePlugin(redeemedToken.btpToken)
-      this.tabLogger.sendLogEvent(`creating connection loops=${this.loops}`)
+      this.tabLogger.sendLogEvent(
+        () => `Stream:${id}:start creating connection loops=${this.loops}`
+      )
       const connection = await createConnection({
         ...spspDetails,
         plugin,
@@ -166,14 +174,16 @@ export class Stream extends EventEmitter {
         maximumPacketAmount: '10000000',
         getExpiry: getFarFutureExpiry
       })
-      this.tabLogger.sendLogEvent(`connected loops=${this.loops}`)
+      this.tabLogger.sendLogEvent(
+        () => `Stream:${id}:start connected loops=${this.loops}`
+      )
       const stream = connection.createStream()
 
       const onMoney = (sentAmount: string) => {
         // Wait until `setImmediate` so that `connection.totalDelivered` has been updated.
         const receipt = stream.receipt?.toString('base64')
         this.tabLogger.sendLogEvent(
-          `sent money=${sentAmount}, requestId=${this._requestId}`
+          () => `Stream:${id}:start sent money=${sentAmount}`
         )
         setImmediate(() => this.onMoney(connection, sentAmount, receipt))
       }
@@ -210,6 +220,7 @@ export class Stream extends EventEmitter {
       void (async () => {
         if (this._schedule.totalSent() === 0) {
           await firstMinuteBandwidth(
+            id,
             this.tabLogger,
             stream,
             redeemedToken.throughput
@@ -369,6 +380,7 @@ export class Stream extends EventEmitter {
  *       1 minute ?
  */
 async function firstMinuteBandwidth(
+  requestId: string,
   logger: ActiveTabLogger,
   stream: DataAndMoneyStream,
   throughput: number
@@ -377,7 +389,12 @@ async function firstMinuteBandwidth(
   // The initial amount is low to ensure the user doesn't deplete their balance by
   // browsing quickly from page-to-page.
   // This is the only monetization that is prepaid, everything else is post-paid.
-  stream.setSendMax(INITIAL_SEND_SECONDS * throughput)
+  const sendMax = INITIAL_SEND_SECONDS * throughput
+  stream.setSendMax(sendMax)
+  const id = requestId.slice(0, 6)
+  logger.sendLogEvent(
+    () => `firstMinuteBandwidth:${id}: set sendMax ${sendMax}`
+  )
 
   let timer: number | undefined
   let stopped = false
@@ -386,6 +403,7 @@ async function firstMinuteBandwidth(
     // on close, early-exit from the bandwidth loop
     stopped = true
     if (timer) clearTimeout(timer)
+    logger.sendLogEvent(() => `firstMinuteBandwidth:${id}: cancelTimer`)
     cancelTimer()
   })
 
@@ -408,9 +426,11 @@ async function firstMinuteBandwidth(
   ]) {
     const delay = (time - lastTime) * 1e3 // milliseconds
     lastTime = time
+    logger.sendLogEvent(() => `firstMinuteBandwidth:${id}: waiting ${delay}`)
     await new Promise<void>(
       resolve => (timer = window.setTimeout((cancelTimer = resolve), delay))
     )
+    logger.sendLogEvent(() => `firstMinuteBandwidth:${id}: waited ${delay}`)
     if (stopped) return
     // FULL_TOKEN_AMOUNT essentially means burn whatever is left ...
     // but what if it's less than time * throughput ?

@@ -17,6 +17,8 @@
     <script src="/coil-oauth-wm.js"></script>
     <script>
       let lastTimestamp = Date.now()
+      let total = 0n
+      let pendingTime = null
       const start = lastTimestamp
       function log(msg) {
         const log = document.getElementById('log')
@@ -25,8 +27,11 @@
           const diff = newTimestamp - lastTimestamp
           const diffFromStart = ((newTimestamp - start) / 1e3).toFixed(3)
           lastTimestamp = newTimestamp
-          log.innerText += `(+${diffFromStart}) ${msg} +${diff}
-`
+
+          const span = document.createElement('span')
+          span.innerText = `(+${diffFromStart}) ${msg} +${diff}`
+          log.appendChild(span)
+          log.appendChild(document.createElement('br'))
         }
       }
 
@@ -78,10 +83,18 @@
 
         if (document.monetization) {
           setInterval(() => {
-            log('state: ' + document.monetization.state)
+            const throughput = 186
+            const expected = ((Date.now() - pendingTime) / 1000) * throughput
+            log(
+              `state: ${document.monetization.state} paid=${
+                total >= expected
+              } total=${total} expected=${expected}`
+            )
           }, 1e3)
 
           document.monetization.addEventListener('monetizationpending', ev => {
+            pendingTime = Date.now()
+            total = 0n
             log(
               'event: pending, state: ' +
                 document.monetization.state +
@@ -115,6 +128,7 @@
           })
 
           document.monetization.addEventListener('monetizationprogress', ev => {
+            total += BigInt(ev.detail.amount)
             log(
               'event: progress, state: ' +
                 document.monetization.state +

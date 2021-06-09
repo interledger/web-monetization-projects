@@ -57,7 +57,9 @@ export class Streams extends EventEmitter {
   closeStream(id: string) {
     if (this._streams[id]) {
       this._streams[id].stop().then(() => {
-        this.container.get(ActiveTabLogger).sendLogEvent(`stopped ${id}`)
+        this.container
+          .get(ActiveTabLogger)
+          .sendLogEvent(() => `Streams:closeStream:${id.slice(0, 6)}`)
       })
       this._streams[id].removeAllListeners()
       delete this._streams[id]

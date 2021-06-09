@@ -5,7 +5,7 @@ import { inject, injectable } from 'inversify'
 
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
-import { TimeoutError, timeoutRejecting } from '../../util/timeout'
+import { TimeoutError } from '../../util/timeout'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'

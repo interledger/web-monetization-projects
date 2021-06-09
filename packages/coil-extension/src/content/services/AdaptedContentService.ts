@@ -8,8 +8,6 @@ import { debug } from '../util/logging'
 import { ContentRuntime } from '../types/ContentRunTime'
 import { AdaptedPageDetails, FetchYoutubeChannelId } from '../../types/commands'
 
-import { Frames } from './Frames'
-
 interface GetPageData {
   adaptedPage: {
     paymentPointer: string

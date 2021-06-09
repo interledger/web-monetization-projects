@@ -49,11 +49,18 @@ export class StreamLoop extends EventEmitter {
     while (this.state !== StreamLoopState.Done) {
       const isFirstMinute = this.schedule.totalSent() === 0
       let tokenPiece = 1.0
+      const id = this.requestId.slice(0, 6)
       switch (this.state) {
         case StreamLoopState.Loop: // keep going; only pay full tokens
           // After the very first token payment, switch to post-payment.
           if (!isFirstMinute) {
+            this.tabLogger.sendLogEvent(
+              () => `StreamLoop:${id}:run:await-full-token waiting`
+            )
             const hasToken = await this.schedule.awaitFullToken()
+            this.tabLogger.sendLogEvent(
+              () => `StreamLoop:${id}:run:await-full-token hasToken=${hasToken}`
+            )
             if (!hasToken) continue // the wait was interrupted, likely because the stream was paused/stopped
           }
           break
@@ -61,7 +68,7 @@ export class StreamLoop extends EventEmitter {
           tokenPiece = Math.min(this.schedule.unpaidTokens(), 1.0)
           tokenPiece = Math.floor(tokenPiece * 20) / 20 // don't pay tiny token pieces
           this.tabLogger.sendLogEvent(
-            `ending, tokenPiece=${tokenPiece}, requestId=${this.requestId}`
+            () => `StreamLoop:${id}:run:ending-state tokenPiece=${tokenPiece}`
           )
           if (tokenPiece === 0) {
             this.state = StreamLoopState.Done
@@ -78,7 +85,8 @@ export class StreamLoop extends EventEmitter {
               reject(err)
             } else {
               this.tabLogger.sendLogEvent(
-                `connection exhausted error requestId=${this.requestId}`
+                () =>
+                  `StreamLoop:${id}:run:connection-error connection exhausted error`
               )
             }
           }) // "exhausted capacity" errors count as success
@@ -88,7 +96,7 @@ export class StreamLoop extends EventEmitter {
           }
         })
         this.tabLogger.sendLogEvent(
-          `connection error|close requestId=${this.requestId}`
+          () => `StreamLoop:${id}:run:connection-finished error|close`
         )
         attempts = 0
       } catch (err) {
@@ -97,7 +105,8 @@ export class StreamLoop extends EventEmitter {
           case StreamLoopState.Ending:
             if (++attempts === STOP_RETRIES) {
               this.tabLogger.sendLogEvent(
-                `too many errors, attempts=${attempt}`
+                () =>
+                  `StreamLoop:${id}:run:catch too many errors, attempts=${attempt}`
               )
               this.debug('too many errors; giving up')
               this.state = StreamLoopState.Done
