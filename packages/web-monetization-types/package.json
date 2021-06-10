@@ -7,6 +7,9 @@
     "ilp",
     "web-monetization"
   ],
+  "files": [
+    "build/*"
+  ],
   "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/web-monetization-types",
   "repository": {
     "type": "git",
