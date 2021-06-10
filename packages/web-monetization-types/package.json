@@ -7,9 +7,6 @@
     "ilp",
     "web-monetization"
   ],
-  "files": [
-    "build/*"
-  ],
   "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/web-monetization-types",
   "repository": {
     "type": "git",
@@ -19,6 +16,9 @@
   "author": "Coil Team <info@coil.com>",
   "main": "./build",
   "types": "./build",
+  "files": [
+    "build/*"
+  ],
   "scripts": {
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
