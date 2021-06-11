@@ -4,7 +4,7 @@ import {
   resolvePaymentEndpoint,
   StreamControl,
   watchPageEvents
-} from '@web-monetization/polyfill-utils'
+} from '@webmonetization/polyfill-utils'
 import type { PackageVersion } from '@coil/webpack-utils'
 
 import { Stream } from './Stream'

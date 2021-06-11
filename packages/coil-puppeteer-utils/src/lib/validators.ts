@@ -5,7 +5,7 @@ import {
   MonetizationStopEvent,
   TipEvent,
   TipEventDetail
-} from '@web-monetization/types'
+} from '@webmonetization/types'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function validateObject(obj: any, types: Record<string, string>) {

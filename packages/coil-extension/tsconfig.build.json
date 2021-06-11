@@ -24,10 +24,10 @@
       "path": "../dier-makr-annotations/tsconfig.build.json"
     },
     {
-      "path": "../web-monetization-polyfill-utils/tsconfig.build.json"
+      "path": "../webmonetization-polyfill-utils/tsconfig.build.json"
     },
     {
-      "path": "../web-monetization-types/tsconfig.build.json"
+      "path": "../webmonetization-types/tsconfig.build.json"
     },
     {
       "path": "../coil-anonymous-tokens/tsconfig.build.json"
@@ -39,10 +39,10 @@
       "path": "../dier-makr-inversify/tsconfig.build.json"
     },
     {
-      "path": "../web-monetization-wext/tsconfig.build.json"
+      "path": "../webexts-build-utils/tsconfig.build.json"
     },
     {
-      "path": "../webexts-build-utils/tsconfig.build.json"
+      "path": "../webmonetization-wext/tsconfig.build.json"
     },
     {
       "path": "../coil-puppeteer-utils/tsconfig.build.json"

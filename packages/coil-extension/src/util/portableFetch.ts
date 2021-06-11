@@ -1,1 +1,1 @@
-export { portableFetch } from '@web-monetization/polyfill-utils'
+export { portableFetch } from '@webmonetization/polyfill-utils'

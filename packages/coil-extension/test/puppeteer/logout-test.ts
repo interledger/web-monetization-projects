@@ -14,7 +14,7 @@ import {
   isValidStopEvent,
   env
 } from '@coil/puppeteer-utils'
-import { MonetizationExtendedDocument } from '@web-monetization/types'
+import { MonetizationExtendedDocument } from '@webmonetization/types'
 
 import { testUrls } from './testUrls'
 

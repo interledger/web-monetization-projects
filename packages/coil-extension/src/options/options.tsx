@@ -2,7 +2,7 @@ import '@abraham/reflection'
 
 import ReactDOM from 'react-dom'
 import React, { useState } from 'react'
-import { Amount } from '@web-monetization/types'
+import { Amount } from '@webmonetization/types'
 import {
   Divider,
   FormControlLabel,

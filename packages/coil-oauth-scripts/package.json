@@ -40,8 +40,8 @@
   "dependencies": {
     "@coil/client": "0.0.0",
     "@coil/polyfill-utils": "^0.0.0",
-    "@web-monetization/polyfill-utils": "0.0.0",
-    "@web-monetization/types": "0.0.0",
+    "@webmonetization/polyfill-utils": "0.0.0",
+    "@webmonetization/types": "0.0.0",
     "ilp-plugin-btp": "1.5.0",
     "ilp-protocol-stream": "2.7.0",
     "node-fetch": "^2.6.1",

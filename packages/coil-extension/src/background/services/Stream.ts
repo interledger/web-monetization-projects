@@ -15,7 +15,7 @@ import {
   SPSPError,
   SPSPResponse,
   getFarFutureExpiry
-} from '@web-monetization/polyfill-utils'
+} from '@webmonetization/polyfill-utils'
 import { GraphQlClient } from '@coil/client'
 import { Container, inject, injectable } from 'inversify'
 import { BandwidthTiers } from '@coil/polyfill-utils'
