@@ -16,6 +16,9 @@
   "author": "Coil Team <info@coil.com>",
   "main": "./build",
   "types": "./build",
+  "files": [
+    "build/*"
+  ],
   "scripts": {
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
