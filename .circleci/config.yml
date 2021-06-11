@@ -278,9 +278,17 @@ workflows:
       - packages-build-scripts
       - hold-publish-packages:
           type: approval
+          filters:
+            branches:
+              only:
+                - main
       - publish-packages:
           requires:
             - hold-publish-packages
+          filters:
+            branches:
+              only:
+                - main
       - jest-all:
           context: web-monetization-tests
           filters:
