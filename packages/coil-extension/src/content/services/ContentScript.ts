@@ -3,12 +3,12 @@ import {
   MonetizationTagObserver,
   PaymentDetails,
   whenDocumentReady
-} from '@web-monetization/polyfill-utils'
+} from '@webmonetization/polyfill-utils'
 import {
   DocumentMonetization,
   IdleDetection
-} from '@web-monetization/wext/content'
-import { MonetizationProgressEvent, TipEvent } from '@web-monetization/types'
+} from '@webmonetization/wext/content'
+import { MonetizationProgressEvent, TipEvent } from '@webmonetization/types'
 
 import * as tokens from '../../types/tokens'
 import {

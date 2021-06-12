@@ -1,4 +1,4 @@
-import { parsePolicyDirectives } from '@web-monetization/polyfill-utils'
+import { parsePolicyDirectives } from '@webmonetization/polyfill-utils'
 
 export function isMonetizationAllowed(frame: HTMLIFrameElement) {
   const allowValue = frame.attributes.getNamedItem('allow')?.value

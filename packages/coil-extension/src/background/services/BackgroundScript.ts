@@ -1,7 +1,7 @@
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
-import { MonetizationState } from '@web-monetization/types'
-import { resolvePaymentEndpoint } from '@web-monetization/polyfill-utils'
+import { MonetizationState } from '@webmonetization/types'
+import { resolvePaymentEndpoint } from '@webmonetization/polyfill-utils'
 
 import { notNullOrUndef } from '../../util/nullables'
 import { StorageService } from '../../services/storage'

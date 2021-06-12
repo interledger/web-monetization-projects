@@ -1,4 +1,4 @@
-import { Amount } from '@web-monetization/types'
+import { Amount } from '@webmonetization/types'
 
 export interface FormatOptions {
   precision?: number

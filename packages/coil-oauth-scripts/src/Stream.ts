@@ -13,11 +13,11 @@ import {
   getFarFutureExpiry,
   getSPSPResponse,
   SPSPResponse
-} from '@web-monetization/polyfill-utils'
+} from '@webmonetization/polyfill-utils'
 import {
   MonetizationProgressEvent,
   MonetizationStartEvent
-} from '@web-monetization/types'
+} from '@webmonetization/types'
 import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import { DocumentMonetization } from './DocumentMonetization'

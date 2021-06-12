@@ -21,11 +21,11 @@
       "@dier-makr/annotations": [
         "packages/dier-makr-annotations/src"
       ],
-      "@web-monetization/polyfill-utils": [
-        "packages/web-monetization-polyfill-utils/src"
+      "@webmonetization/polyfill-utils": [
+        "packages/webmonetization-polyfill-utils/src"
       ],
-      "@web-monetization/types": [
-        "packages/web-monetization-types/src"
+      "@webmonetization/types": [
+        "packages/webmonetization-types/src"
       ],
       "@coil/anonymous-tokens": [
         "packages/coil-anonymous-tokens/src"
@@ -36,29 +36,29 @@
       "@dier-makr/inversify": [
         "packages/dier-makr-inversify/src"
       ],
-      "@web-monetization/react": [
-        "packages/web-monetization-react/src"
-      ],
-      "@web-monetization/testing-utils": [
-        "packages/web-monetization-testing-utils/src"
-      ],
-      "@web-monetization/wext": [
-        "packages/web-monetization-wext/src"
-      ],
-      "@web-monetization/wext/tokens": [
-        "packages/web-monetization-wext/src/tokens.ts"
-      ],
-      "@web-monetization/wext/undecorated": [
-        "packages/web-monetization-wext/src/undecorated"
-      ],
-      "@web-monetization/wext/services": [
-        "packages/web-monetization-wext/src/services"
-      ],
-      "@web-monetization/wext/content": [
-        "packages/web-monetization-wext/src/content"
-      ],
       "@webexts/build-utils": [
         "packages/webexts-build-utils/src"
+      ],
+      "@webmonetization/react": [
+        "packages/webmonetization-react/src"
+      ],
+      "@webmonetization/testing-utils": [
+        "packages/webmonetization-testing-utils/src"
+      ],
+      "@webmonetization/wext": [
+        "packages/webmonetization-wext/src"
+      ],
+      "@webmonetization/wext/tokens": [
+        "packages/webmonetization-wext/src/tokens.ts"
+      ],
+      "@webmonetization/wext/undecorated": [
+        "packages/webmonetization-wext/src/undecorated"
+      ],
+      "@webmonetization/wext/services": [
+        "packages/webmonetization-wext/src/services"
+      ],
+      "@webmonetization/wext/content": [
+        "packages/webmonetization-wext/src/content"
       ],
       "@coil/puppeteer-utils": [
         "packages/coil-puppeteer-utils/src"
@@ -69,8 +69,8 @@
       "@interledger/minute-extension": [
         "packages/interledger-minute-extension/src"
       ],
-      "@web-monetization/demo": [
-        "packages/web-monetization-demo/src"
+      "@webmonetization/demo": [
+        "packages/webmonetization-demo/src"
       ],
       "@coil/extension": [
         "packages/coil-extension/src"

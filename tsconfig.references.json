@@ -18,10 +18,10 @@
       "path": "packages/dier-makr-annotations/tsconfig.build.json"
     },
     {
-      "path": "packages/web-monetization-polyfill-utils/tsconfig.build.json"
+      "path": "packages/webmonetization-polyfill-utils/tsconfig.build.json"
     },
     {
-      "path": "packages/web-monetization-types/tsconfig.build.json"
+      "path": "packages/webmonetization-types/tsconfig.build.json"
     },
     {
       "path": "packages/coil-anonymous-tokens/tsconfig.build.json"
@@ -33,16 +33,16 @@
       "path": "packages/dier-makr-inversify/tsconfig.build.json"
     },
     {
-      "path": "packages/web-monetization-react/tsconfig.build.json"
-    },
-    {
-      "path": "packages/web-monetization-testing-utils/tsconfig.build.json"
-    },
-    {
-      "path": "packages/web-monetization-wext/tsconfig.build.json"
-    },
-    {
       "path": "packages/webexts-build-utils/tsconfig.build.json"
+    },
+    {
+      "path": "packages/webmonetization-react/tsconfig.build.json"
+    },
+    {
+      "path": "packages/webmonetization-testing-utils/tsconfig.build.json"
+    },
+    {
+      "path": "packages/webmonetization-wext/tsconfig.build.json"
     },
     {
       "path": "packages/coil-puppeteer-utils/tsconfig.build.json"
@@ -54,7 +54,7 @@
       "path": "packages/interledger-minute-extension/tsconfig.build.json"
     },
     {
-      "path": "packages/web-monetization-demo/tsconfig.build.json"
+      "path": "packages/webmonetization-demo/tsconfig.build.json"
     },
     {
       "path": "packages/coil-extension/tsconfig.build.json"
