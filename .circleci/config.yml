@@ -78,14 +78,14 @@ jobs:
           command: |
             yarn config set "npmRegistries['https://registry.yarnpkg.com'].npmAuthToken" "$NPM_AUTH_TOKEN" -H
       - run:
-          name: Build the web-monetization-types package
+          name: Build the webmonetization-types package
           command: |
-            cd packages/web-monetization-types
+            cd packages/webmonetization-types
             yarn build:ts:verbose
       - run:
-          name: Publish the web-monetization-types package
+          name: Publish the webmonetization-types package
           command: |
-            cd packages/web-monetization-types
+            cd packages/webmonetization-types
             yarn npm publish --access public
       - *save_cache
 
