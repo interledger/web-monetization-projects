@@ -18,6 +18,9 @@ const log = console.log
 const SCRIPT_PATH = fromHere('../../build/coil-oauth-wm.js')
 const PORT = 5444
 
+// Effects all hooks and tests in the file
+jest.setTimeout(120e3)
+
 async function getBtpTokenFromEnv() {
   const user = env.COIL_USER
   const password = env.COIL_PASSWORD
@@ -66,7 +69,6 @@ async function setUpHttpServer(btpTokenPromise: Promise<string>) {
 beforeAll(async () => {
   try {
     // Can run potentially for a long time if need to build the oauth script
-    jest.setTimeout(120e3)
 
     if (!existsSync(SCRIPT_PATH)) {
       await buildOauthScript()
