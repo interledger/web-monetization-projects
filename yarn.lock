@@ -46,7 +46,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.14.6, @babel/core@npm:^7.1.0, @babel/core@npm:^7.14.6, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
+"@babel/core@npm:7.14.6, @babel/core@npm:^7.1.0, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
   version: 7.14.6
   resolution: "@babel/core@npm:7.14.6"
   dependencies:
@@ -380,7 +380,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-class-properties@npm:^7.14.5":
+"@babel/plugin-proposal-class-properties@npm:7.14.5, @babel/plugin-proposal-class-properties@npm:^7.14.5":
   version: 7.14.5
   resolution: "@babel/plugin-proposal-class-properties@npm:7.14.5"
   dependencies:
@@ -405,7 +405,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-decorators@npm:^7.14.5":
+"@babel/plugin-proposal-decorators@npm:7.14.5":
   version: 7.14.5
   resolution: "@babel/plugin-proposal-decorators@npm:7.14.5"
   dependencies:
@@ -490,7 +490,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-object-rest-spread@npm:^7.14.5":
+"@babel/plugin-proposal-object-rest-spread@npm:7.14.5, @babel/plugin-proposal-object-rest-spread@npm:^7.14.5":
   version: 7.14.5
   resolution: "@babel/plugin-proposal-object-rest-spread@npm:7.14.5"
   dependencies:
@@ -1165,7 +1165,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.14.5":
+"@babel/preset-env@npm:7.14.5":
   version: 7.14.5
   resolution: "@babel/preset-env@npm:7.14.5"
   dependencies:
@@ -1263,7 +1263,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.14.5":
+"@babel/preset-typescript@npm:7.14.5":
   version: 7.14.5
   resolution: "@babel/preset-typescript@npm:7.14.5"
   dependencies:
@@ -1373,57 +1373,57 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/privacypass-sjcl": 0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/jsonwebtoken": ^8.5.1
-    "@types/node": ^14.17.3
-    "@types/node-fetch": ^2.5.10
-    "@types/sjcl": ^1.0.29
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    jsonwebtoken: ^8.5.1
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    localforage: ^1.9.0
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/jsonwebtoken": 8.5.1
+    "@types/node": 14.17.3
+    "@types/node-fetch": 2.5.10
+    "@types/sjcl": 1.0.29
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
+    jsonwebtoken: 8.5.1
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    localforage: 1.9.0
     node-fetch: ^2.6.1
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -1431,55 +1431,55 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
     "@dier-makr/annotations": 0.0.0
-    "@types/jest": ^26.0.23
-    "@types/jsonwebtoken": ^8.5.1
-    "@types/node": ^14.17.3
-    "@types/node-fetch": ^2.5.10
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
+    "@types/jest": 26.0.23
+    "@types/jsonwebtoken": 8.5.1
+    "@types/node": 14.17.3
+    "@types/node-fetch": 2.5.10
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
     jsonwebtoken: ^8.5.1
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
+    lerna: 4.0.0
+    lint-staged: 11.0.0
     node-fetch: ^2.6.1
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -1488,89 +1488,89 @@ __metadata:
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
     "@abraham/reflection": ^0.8.0
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/anonymous-tokens": ^0.0.0
     "@coil/client": ^0.0.0
     "@coil/polyfill-utils": ^0.0.0
     "@coil/puppeteer-utils": ^0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
     "@dier-makr/annotations": ^0.0.0
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
     "@material-ui/styles": ^4.11.4
-    "@types/debug": ^4.1.5
-    "@types/filesystem": ^0.0.30
-    "@types/firefox": ^0.0.30
-    "@types/har-format": ^1.2.6
-    "@types/jest": ^26.0.23
-    "@types/jsonwebtoken": ^8.5.1
-    "@types/long": ^4.0.1
-    "@types/node": ^14.17.3
-    "@types/node-fetch": ^2.5.10
-    "@types/react": ^16.14.8
-    "@types/react-dom": ^16.9.12
-    "@types/uuid": ^8.3.0
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
+    "@types/debug": 4.1.5
+    "@types/filesystem": 0.0.30
+    "@types/firefox": 0.0.30
+    "@types/har-format": 1.2.6
+    "@types/jest": 26.0.23
+    "@types/jsonwebtoken": 8.5.1
+    "@types/long": 4.0.1
+    "@types/node": 14.17.3
+    "@types/node-fetch": 2.5.10
+    "@types/react": 16.14.8
+    "@types/react-dom": 16.9.12
+    "@types/uuid": 8.3.0
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
     "@webexts/build-utils": ^0.0.0
     "@webmonetization/polyfill-utils": ^0.0.0
     "@webmonetization/types": ^0.0.0
     "@webmonetization/wext": ^0.0.0
-    "@wext/shipit": ^0.2.1
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    addons-linter: ^3.7.0
-    copy-webpack-plugin: ^9.0.0
-    crx-hotreload: ^1.0.6
+    "@wext/shipit": 0.2.1
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    addons-linter: 3.7.0
+    copy-webpack-plugin: 9.0.0
+    crx-hotreload: 1.0.6
     debug: ^4.3.1
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
     inversify: ^5.1.1
     inversify-logger-middleware: ^3.1.0
-    jest: ^27.0.4
+    jest: 27.0.4
     jsonwebtoken: ^8.5.1
     jss: ^10.6.0
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
-    puppeteer: ^10.0.0
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
+    puppeteer: 10.0.0
     react: ^16.14.0
     react-dom: ^16.14.0
     reduct: ^3.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
     uuid: ^8.3.2
-    web-ext: ^6.1.0
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    web-ext: 6.1.0
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -1578,56 +1578,56 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
     copy-dir: ^1.3.0
-    copy-webpack-plugin: ^9.0.0
+    copy-webpack-plugin: 9.0.0
     deepmerge: ^4.2.2
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
     json5: ^2.2.0
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
+    lerna: 4.0.0
+    lint-staged: 11.0.0
     npm-check-updates: ^11.6.0
-    prettier: ^2.3.1
+    prettier: 2.3.1
     reduct: ^3.3.1
-    rimraf: ^3.0.2
+    rimraf: 3.0.2
     sort-package-json: 1.50.0
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
     yaml: ^1.10.2
   languageName: unknown
   linkType: soft
@@ -1636,65 +1636,65 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/client": 0.0.0
     "@coil/polyfill-utils": ^0.0.0
     "@coil/puppeteer-utils": ^0.0.0
     "@coil/webpack-utils": 0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/long": ^4.0.1
-    "@types/node": ^14.17.3
-    "@types/node-fetch": ^2.5.10
-    "@types/uuid": ^8.3.0
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/long": 4.0.1
+    "@types/node": 14.17.3
+    "@types/node-fetch": 2.5.10
+    "@types/uuid": 8.3.0
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
     "@webmonetization/polyfill-utils": 0.0.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
     node-fetch: ^2.6.1
-    prettier: ^2.3.1
-    puppeteer: ^10.0.0
+    prettier: 2.3.1
+    puppeteer: 10.0.0
     reduct: ^3.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
     uuid: ^8.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -1702,51 +1702,51 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
     node-fetch: ^2.6.1
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -1754,58 +1754,58 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/keccak": ^3.0.1
-    "@types/node": ^14.17.3
-    "@types/sjcl": ^1.0.29
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/keccak": 3.0.1
+    "@types/node": 14.17.3
+    "@types/sjcl": 1.0.29
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
     asn1-parser: ^1.1.8
     atob: ^2.1.2
     btoa: ^1.2.1
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
     keccak: ^3.0.1
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
+    lerna: 4.0.0
+    lint-staged: 11.0.0
     node-fetch: ^2.6.1
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
+    prettier: 2.3.1
+    rimraf: 3.0.2
     sjcl: sublimator/sjcl
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -1813,60 +1813,60 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/client": 0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/debug": ^4.1.5
-    "@types/get-port": ^4.2.0
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@types/tmp": ^0.2.0
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/debug": 4.1.5
+    "@types/get-port": 4.2.0
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@types/tmp": 0.2.0
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
     debug: ^4.3.1
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
     get-port: ^5.1.1
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
     puppeteer: ^10.0.0
-    rimraf: ^3.0.2
+    rimraf: 3.0.2
     tmp: ^0.2.1
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
     web-ext: ^6.1.0
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -1874,59 +1874,59 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
     assert: ^2.0.0
     buffer: ^6.0.3
-    copy-webpack-plugin: ^9.0.0
+    copy-webpack-plugin: 9.0.0
     crypto-browserify: ^3.12.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
     events: ^3.3.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
     process: ^0.11.10
-    rimraf: ^3.0.2
+    rimraf: 3.0.2
     setimmediate: ^1.0.5
     stream-browserify: ^3.0.0
     string_decoder: ^1.3.0
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
     util: ^0.12.4
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -1934,55 +1934,55 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/client": 0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
-"@commitlint/cli@npm:^12.1.4":
+"@commitlint/cli@npm:12.1.4":
   version: 12.1.4
   resolution: "@commitlint/cli@npm:12.1.4"
   dependencies:
@@ -2001,7 +2001,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^12.1.4":
+"@commitlint/config-conventional@npm:12.1.4":
   version: 12.1.4
   resolution: "@commitlint/config-conventional@npm:12.1.4"
   dependencies:
@@ -2190,50 +2190,50 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -2241,52 +2241,52 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
     "@dier-makr/annotations": 0.0.0
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
     inversify: ^5.1.1
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -2321,7 +2321,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hot-loader/react-dom@npm:*, @hot-loader/react-dom@npm:^16.14.0":
+"@hot-loader/react-dom@npm:*, @hot-loader/react-dom@npm:16.14.0":
   version: 16.14.0
   resolution: "@hot-loader/react-dom@npm:16.14.0"
   dependencies:
@@ -2340,78 +2340,78 @@ __metadata:
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
     "@abraham/reflection": ^0.8.0
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/polyfill-utils": ^0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@types/react": ^16.14.8
-    "@types/react-dom": ^16.9.12
-    "@types/uuid": ^8.3.0
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@types/react": 16.14.8
+    "@types/react-dom": 16.9.12
+    "@types/uuid": 8.3.0
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
     "@webexts/build-utils": 0.0.0
     "@webmonetization/polyfill-utils": ^0.0.0
     "@webmonetization/types": ^0.0.0
     "@webmonetization/wext": ^0.0.0
-    "@wext/shipit": ^0.2.1
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    addons-linter: ^3.7.0
-    copy-webpack-plugin: ^9.0.0
-    crx-hotreload: ^1.0.6
-    css-loader: ^5.2.6
+    "@wext/shipit": 0.2.1
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    addons-linter: 3.7.0
+    copy-webpack-plugin: 9.0.0
+    crx-hotreload: 1.0.6
+    css-loader: 5.2.6
     debug: ^4.3.1
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    file-loader: ^6.2.0
-    husky: ^6.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    file-loader: 6.2.0
+    husky: 6.0.0
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
     inversify: ^5.1.1
     inversify-logger-middleware: ^3.1.0
-    jest: ^27.0.4
+    jest: 27.0.4
     jsonwebtoken: ^8.5.1
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
     react: ^16.14.0
     react-dom: ^16.14.0
-    rimraf: ^3.0.2
-    style-loader: ^2.0.0
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
+    rimraf: 3.0.2
+    style-loader: 2.0.0
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
     typeface-roboto: ^1.1.13
-    typescript: ^4.3.2
+    typescript: 4.3.2
     uuid: ^8.3.2
-    web-ext: ^6.1.0
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    web-ext: 6.1.0
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -3916,7 +3916,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/ajv@npm:^1.0.0":
+"@types/ajv@npm:1.0.0":
   version: 1.0.0
   resolution: "@types/ajv@npm:1.0.0"
   dependencies:
@@ -3966,7 +3966,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/body-parser@npm:*, @types/body-parser@npm:^1.19.0":
+"@types/body-parser@npm:*, @types/body-parser@npm:1.19.0":
   version: 1.19.0
   resolution: "@types/body-parser@npm:1.19.0"
   dependencies:
@@ -4011,7 +4011,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/debug@npm:^4.1.0, @types/debug@npm:^4.1.5":
+"@types/debug@npm:4.1.5, @types/debug@npm:^4.1.0":
   version: 4.1.5
   resolution: "@types/debug@npm:4.1.5"
   checksum: 416ad24bc589be0fb8c78bea972aa7d4ffdf6b136239701b1792674463b2dbf8c6707f6055ec484f79ec1f2b528ffef90c87e55df7e4a0f458184cad5bf0cfc8
@@ -4075,14 +4075,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/figlet@npm:^1.5.1":
+"@types/figlet@npm:1.5.1":
   version: 1.5.1
   resolution: "@types/figlet@npm:1.5.1"
   checksum: 8d6d8dbeebaa2d9bcdc09a72f47e4428b3a6d116d5c052a54722bc5d15e89cab88f499f07ae2b5c2979008ce3a2a8a1b4b3fa2ba57cddb4ccc8634343669a5fa
   languageName: node
   linkType: hard
 
-"@types/filesystem@npm:^0.0.30":
+"@types/filesystem@npm:0.0.30":
   version: 0.0.30
   resolution: "@types/filesystem@npm:0.0.30"
   dependencies:
@@ -4098,14 +4098,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/firefox@npm:^0.0.30":
+"@types/firefox@npm:0.0.30":
   version: 0.0.30
   resolution: "@types/firefox@npm:0.0.30"
   checksum: 6b898ce61695493faf9b2d2aa00d31ce0f5d2c2432bb55ef39ecae286352dab4c5fc4e649790ebbbdd906d27b109903c9a6c386cf26f2837977b609e04f70ae4
   languageName: node
   linkType: hard
 
-"@types/get-port@npm:^4.2.0":
+"@types/get-port@npm:4.2.0":
   version: 4.2.0
   resolution: "@types/get-port@npm:4.2.0"
   dependencies:
@@ -4133,7 +4133,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/har-format@npm:^1.2.6":
+"@types/har-format@npm:1.2.6":
   version: 1.2.6
   resolution: "@types/har-format@npm:1.2.6"
   checksum: d48ea89e91254f2531983cab39bdd8ed06768befec88eb0b66dc4e253328b8f00af18488535d3cc3966016ad3283649bd885b7310eb86800a6a8c45695b69151
@@ -4179,7 +4179,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^26.0.23":
+"@types/jest@npm:26.0.23":
   version: 26.0.23
   resolution: "@types/jest@npm:26.0.23"
   dependencies:
@@ -4203,7 +4203,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:^8.5.1":
+"@types/jsonwebtoken@npm:8.5.1":
   version: 8.5.1
   resolution: "@types/jsonwebtoken@npm:8.5.1"
   dependencies:
@@ -4212,7 +4212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/keccak@npm:^3.0.1":
+"@types/keccak@npm:3.0.1":
   version: 3.0.1
   resolution: "@types/keccak@npm:3.0.1"
   dependencies:
@@ -4230,7 +4230,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/long@npm:*, @types/long@npm:4.0.1, @types/long@npm:^4.0.1":
+"@types/long@npm:*, @types/long@npm:4.0.1":
   version: 4.0.1
   resolution: "@types/long@npm:4.0.1"
   checksum: ed2a125330dbf2b425b2e58b1e1151a37106ceeec973f9f191fba0bda83ed00fae6d858254022e8b6e7165fec5f0c3872b7cb5f425c753383fed54699fb63b38
@@ -4258,7 +4258,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:^2.5.10":
+"@types/node-fetch@npm:2.5.10":
   version: 2.5.10
   resolution: "@types/node-fetch@npm:2.5.10"
   dependencies:
@@ -4268,7 +4268,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^14.17.3":
+"@types/node@npm:*, @types/node@npm:14.17.3, @types/node@npm:>= 8":
   version: 14.17.3
   resolution: "@types/node@npm:14.17.3"
   checksum: 0d3e3c3dbb8250166d7c8c7c6221bde20a366d2c34b27c0072c3962a32c8a74c4ae4a168bfe53d6193e7b0bba8d8bc87608a6fd2af7918cd444a9aa699b4ce18
@@ -4331,7 +4331,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^16.9.12":
+"@types/react-dom@npm:16.9.12":
   version: 16.9.12
   resolution: "@types/react-dom@npm:16.9.12"
   dependencies:
@@ -4340,7 +4340,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-helmet@npm:^6.1.1":
+"@types/react-helmet@npm:6.1.1":
   version: 6.1.1
   resolution: "@types/react-helmet@npm:6.1.1"
   dependencies:
@@ -4402,7 +4402,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/sjcl@npm:^1.0.29":
+"@types/sjcl@npm:1.0.29":
   version: 1.0.29
   resolution: "@types/sjcl@npm:1.0.29"
   checksum: 609c6308333096c3ecca7d2039cf8794e9e3b9361515e18ccf58fea330f40f61acf014cbf4e2a953d4ed75bfd3a591498991ad9b9dddddf31d71e48b2d19d83e
@@ -4430,7 +4430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/tmp@npm:^0.2.0":
+"@types/tmp@npm:0.2.0":
   version: 0.2.0
   resolution: "@types/tmp@npm:0.2.0"
   checksum: 8b3d8ce993db6129112690d2fc4a8615c8073bd47a3dbcb3384563077f6081c560912aa6c53bb46ec4b45fca1e26c2f811273534acdafdcc224fc49a8bd85467
@@ -4444,7 +4444,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/uuid@npm:^8.3.0":
+"@types/uuid@npm:8.3.0":
   version: 8.3.0
   resolution: "@types/uuid@npm:8.3.0"
   checksum: 620985aed8fdb4aed153daca5235f4303457a67a4d181efac0021712eabd9edd7e88895f79730c0e651effde7633b1b61e49a81519ac8d4e75019d2ac9b6412f
@@ -4494,7 +4494,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^4.27.0":
+"@typescript-eslint/eslint-plugin@npm:4.27.0":
   version: 4.27.0
   resolution: "@typescript-eslint/eslint-plugin@npm:4.27.0"
   dependencies:
@@ -4532,7 +4532,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^4.27.0":
+"@typescript-eslint/parser@npm:4.27.0":
   version: 4.27.0
   resolution: "@typescript-eslint/parser@npm:4.27.0"
   dependencies:
@@ -4749,61 +4749,61 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/webpack-utils": ^0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
     assert: ^2.0.0
     buffer: ^6.0.3
-    copy-webpack-plugin: ^9.0.0
+    copy-webpack-plugin: 9.0.0
     crx-hotreload: ^1.0.6
     crypto-browserify: ^3.12.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
     events: ^3.3.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
     process: ^0.11.10
-    rimraf: ^3.0.2
+    rimraf: 3.0.2
     setimmediate: ^1.0.5
     stream-browserify: ^3.0.0
     string_decoder: ^1.3.0
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
     util: ^0.12.4
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -4812,76 +4812,76 @@ __metadata:
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
     "@abraham/reflection": ^0.8.0
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/webpack-utils": ^0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@hot-loader/react-dom": ^16.14.0
-    "@types/body-parser": ^1.19.0
-    "@types/express": ^4.17.12
-    "@types/figlet": ^1.5.1
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@types/node-fetch": ^2.5.10
-    "@types/react": ^16.14.8
-    "@types/react-dom": ^16.9.12
-    "@types/react-helmet": ^6.1.1
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@hot-loader/react-dom": 16.14.0
+    "@types/body-parser": 1.19.0
+    "@types/express": 4.17.12
+    "@types/figlet": 1.5.1
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@types/node-fetch": 2.5.10
+    "@types/react": 16.14.8
+    "@types/react-dom": 16.9.12
+    "@types/react-helmet": 6.1.1
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
     "@webmonetization/react": 0.0.12
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
     body-parser: ^1.19.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
     express: ^4.17.1
     figlet: ^1.5.0
-    html-webpack-plugin: ^5.3.1
-    husky: ^6.0.0
+    html-webpack-plugin: 5.3.1
+    husky: 6.0.0
     ilp-plugin-btp: ^1.5.0
     ilp-plugin-mini-accounts: ^4.2.0
     ilp-protocol-stream: ^2.7.0
     inversify: ^5.1.1
     inversify-express-utils: ^6.3.2
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
     node-fetch: ^2.6.1
     oer-utils: ^5.1.2
-    prettier: ^2.3.1
+    prettier: 2.3.1
     react: ^16.14.0
     react-dom: ^16.14.0
     react-helmet: ^6.1.0
     react-hot-loader: ^4.13.0
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -4889,55 +4889,55 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@types/node-fetch": ^2.5.10
-    "@types/uuid": ^8.3.0
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@types/node-fetch": 2.5.10
+    "@types/uuid": 8.3.0
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
     node-fetch: ^2.6.1
-    prettier: ^2.3.1
+    prettier: 2.3.1
     reduct: ^3.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
     uuid: ^8.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -4945,53 +4945,53 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/webpack-utils": ^0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@types/react": ^16.14.8
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@types/react": 16.14.8
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   peerDependencies:
     react: ^16.13.1
   languageName: unknown
@@ -5001,63 +5001,63 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
     "@coil/webpack-utils": ^0.0.0
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@hot-loader/react-dom": ^16.14.0
-    "@types/ajv": ^1.0.0
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@types/react": ^16.14.8
-    "@types/react-dom": ^16.9.12
-    "@types/uuid": ^8.3.0
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@hot-loader/react-dom": 16.14.0
+    "@types/ajv": 1.0.0
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@types/react": 16.14.8
+    "@types/react-dom": 16.9.12
+    "@types/uuid": 8.3.0
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
     ajv: ^8.6.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    html-webpack-plugin: ^5.3.1
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    html-webpack-plugin: 5.3.1
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
     react: ^16.14.0
     react-dom: ^16.14.0
     react-hot-loader: ^4.13.0
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
     uuid: ^8.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -5065,51 +5065,51 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-json-schema-generator: ^0.92.0
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-json-schema-generator: 0.92.0
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -5117,53 +5117,53 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
     "@dier-makr/annotations": 0.0.0
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
     "@webmonetization/polyfill-utils": 0.0.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -5200,7 +5200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wext/shipit@npm:^0.2.1":
+"@wext/shipit@npm:0.2.1":
   version: 0.2.1
   resolution: "@wext/shipit@npm:0.2.1"
   dependencies:
@@ -5324,7 +5324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnpify@npm:^2.4.0":
+"@yarnpkg/pnpify@npm:2.4.0":
   version: 2.4.0
   resolution: "@yarnpkg/pnpify@npm:2.4.0"
   dependencies:
@@ -5368,7 +5368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"JSON2016@npm:^1.0.0":
+"JSON2016@npm:1.0.0":
   version: 1.0.0
   resolution: "JSON2016@npm:1.0.0"
   checksum: b0153ef4df9d3eb80c6bf6e7bb47aa4973f9061acb8d6a6705d1e6ff07612ac2eb562ae985797820ddae6e35be9fcf37044e15ef42263e5e30409b2f0010b2c3
@@ -5634,7 +5634,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:^3.7.0":
+"addons-linter@npm:3.7.0":
   version: 3.7.0
   resolution: "addons-linter@npm:3.7.0"
   dependencies:
@@ -8336,7 +8336,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-webpack-plugin@npm:^9.0.0":
+"copy-webpack-plugin@npm:9.0.0":
   version: 9.0.0
   resolution: "copy-webpack-plugin@npm:9.0.0"
   dependencies:
@@ -8511,7 +8511,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"crx-hotreload@npm:^1.0.6":
+"crx-hotreload@npm:1.0.6, crx-hotreload@npm:^1.0.6":
   version: 1.0.6
   resolution: "crx-hotreload@npm:1.0.6"
   checksum: 699131af4984b9a2003e9bf6eadec82bbcfbc76177784b469b3334bea8c0e44b1e456f1fda1411af5725d6d17dfa70aeb913994d8357ea0368459b09c15c3e74
@@ -8551,7 +8551,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:^5.2.6":
+"css-loader@npm:5.2.6":
   version: 5.2.6
   resolution: "css-loader@npm:5.2.6"
   dependencies:
@@ -9880,7 +9880,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.3.0":
+"eslint-config-prettier@npm:8.3.0":
   version: 8.3.0
   resolution: "eslint-config-prettier@npm:8.3.0"
   peerDependencies:
@@ -9891,7 +9891,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-node@npm:^0.3.4":
+"eslint-import-resolver-node@npm:0.3.4, eslint-import-resolver-node@npm:^0.3.4":
   version: 0.3.4
   resolution: "eslint-import-resolver-node@npm:0.3.4"
   dependencies:
@@ -9923,7 +9923,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.23.4":
+"eslint-plugin-import@npm:2.23.4":
   version: 2.23.4
   resolution: "eslint-plugin-import@npm:2.23.4"
   dependencies:
@@ -9948,7 +9948,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^24.3.6":
+"eslint-plugin-jest@npm:24.3.6":
   version: 24.3.6
   resolution: "eslint-plugin-jest@npm:24.3.6"
   dependencies:
@@ -9963,7 +9963,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsx-a11y@npm:^6.4.0":
+"eslint-plugin-jsx-a11y@npm:6.4.1":
   version: 6.4.1
   resolution: "eslint-plugin-jsx-a11y@npm:6.4.1"
   dependencies:
@@ -10011,7 +10011,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-node@npm:^11.1.0":
+"eslint-plugin-node@npm:11.1.0":
   version: 11.1.0
   resolution: "eslint-plugin-node@npm:11.1.0"
   dependencies:
@@ -10027,7 +10027,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^3.4.0":
+"eslint-plugin-prettier@npm:3.4.0":
   version: 3.4.0
   resolution: "eslint-plugin-prettier@npm:3.4.0"
   dependencies:
@@ -10042,7 +10042,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-promise@npm:^5.1.0":
+"eslint-plugin-promise@npm:5.1.0":
   version: 5.1.0
   resolution: "eslint-plugin-promise@npm:5.1.0"
   peerDependencies:
@@ -10051,7 +10051,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:^4.2.0":
+"eslint-plugin-react-hooks@npm:4.2.0":
   version: 4.2.0
   resolution: "eslint-plugin-react-hooks@npm:4.2.0"
   peerDependencies:
@@ -10060,7 +10060,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.24.0":
+"eslint-plugin-react@npm:7.24.0":
   version: 7.24.0
   resolution: "eslint-plugin-react@npm:7.24.0"
   dependencies:
@@ -10082,7 +10082,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-standard@npm:^5.0.0":
+"eslint-plugin-standard@npm:5.0.0":
   version: 5.0.0
   resolution: "eslint-plugin-standard@npm:5.0.0"
   peerDependencies:
@@ -10261,7 +10261,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.28.0, eslint@npm:^7.28.0":
+"eslint@npm:7.28.0":
   version: 7.28.0
   resolution: "eslint@npm:7.28.0"
   dependencies:
@@ -11015,7 +11015,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-loader@npm:^6.2.0":
+"file-loader@npm:6.2.0":
   version: 6.2.0
   resolution: "file-loader@npm:6.2.0"
   dependencies:
@@ -12360,7 +12360,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"html-webpack-plugin@npm:^5.3.1":
+"html-webpack-plugin@npm:5.3.1":
   version: 5.3.1
   resolution: "html-webpack-plugin@npm:5.3.1"
   dependencies:
@@ -12577,7 +12577,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"husky@npm:^6.0.0":
+"husky@npm:6.0.0":
   version: 6.0.0
   resolution: "husky@npm:6.0.0"
   bin:
@@ -14364,7 +14364,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jest@npm:^27.0.4":
+"jest@npm:27.0.4":
   version: 27.0.4
   resolution: "jest@npm:27.0.4"
   dependencies:
@@ -15025,7 +15025,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lerna@npm:^4.0.0":
+"lerna@npm:4.0.0":
   version: 4.0.0
   resolution: "lerna@npm:4.0.0"
   dependencies:
@@ -15151,7 +15151,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^11.0.0":
+"lint-staged@npm:11.0.0":
   version: 11.0.0
   resolution: "lint-staged@npm:11.0.0"
   dependencies:
@@ -15261,7 +15261,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"localforage@npm:^1.9.0":
+"localforage@npm:1.9.0":
   version: 1.9.0
   resolution: "localforage@npm:1.9.0"
   dependencies:
@@ -18083,7 +18083,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.1":
+"prettier@npm:2.3.1":
   version: 2.3.1
   resolution: "prettier@npm:2.3.1"
   bin:
@@ -18379,23 +18379,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^1.15.0":
-  version: 1.20.0
-  resolution: "puppeteer@npm:1.20.0"
-  dependencies:
-    debug: ^4.1.0
-    extract-zip: ^1.6.6
-    https-proxy-agent: ^2.2.1
-    mime: ^2.0.3
-    progress: ^2.0.1
-    proxy-from-env: ^1.0.0
-    rimraf: ^2.6.1
-    ws: ^6.1.0
-  checksum: 34c6ed5829325a11a9dfbf63c422dec057680bd36b640f610cabbcb105fb3b02510ef844fa99883a461e971b68b3e542e786a3d2dea5414b805ebeea3e8f14fe
-  languageName: node
-  linkType: hard
-
-"puppeteer@npm:^10.0.0":
+"puppeteer@npm:10.0.0, puppeteer@npm:^10.0.0":
   version: 10.0.0
   resolution: "puppeteer@npm:10.0.0"
   dependencies:
@@ -18412,6 +18396,22 @@ fsevents@^1.2.7:
     unbzip2-stream: 1.3.3
     ws: 7.4.6
   checksum: 409ac732a33a152d47aa1b07f92532fcc18a321b31b91027854efb119212f96c6336e62764a5ecd097f0d04b3612961964433199a4a9667d6d9299b3bc00edba
+  languageName: node
+  linkType: hard
+
+"puppeteer@npm:^1.15.0":
+  version: 1.20.0
+  resolution: "puppeteer@npm:1.20.0"
+  dependencies:
+    debug: ^4.1.0
+    extract-zip: ^1.6.6
+    https-proxy-agent: ^2.2.1
+    mime: ^2.0.3
+    progress: ^2.0.1
+    proxy-from-env: ^1.0.0
+    rimraf: ^2.6.1
+    ws: ^6.1.0
+  checksum: 34c6ed5829325a11a9dfbf63c422dec057680bd36b640f610cabbcb105fb3b02510ef844fa99883a461e971b68b3e542e786a3d2dea5414b805ebeea3e8f14fe
   languageName: node
   linkType: hard
 
@@ -20856,7 +20856,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"style-loader@npm:^2.0.0":
+"style-loader@npm:2.0.0":
   version: 2.0.0
   resolution: "style-loader@npm:2.0.0"
   dependencies:
@@ -21453,7 +21453,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^27.0.3":
+"ts-jest@npm:27.0.3":
   version: 27.0.3
   resolution: "ts-jest@npm:27.0.3"
   dependencies:
@@ -21476,7 +21476,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:^0.92.0":
+"ts-json-schema-generator@npm:0.92.0":
   version: 0.92.0
   resolution: "ts-json-schema-generator@npm:0.92.0"
   dependencies:
@@ -21492,7 +21492,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:^9.2.3":
+"ts-loader@npm:9.2.3":
   version: 9.2.3
   resolution: "ts-loader@npm:9.2.3"
   dependencies:
@@ -21507,7 +21507,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:^1.1.6":
+"ts-node-dev@npm:1.1.6":
   version: 1.1.6
   resolution: "ts-node-dev@npm:1.1.6"
   dependencies:
@@ -21535,7 +21535,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.0.0":
+"ts-node@npm:10.0.0":
   version: 10.0.0
   resolution: "ts-node@npm:10.0.0"
   dependencies:
@@ -21590,7 +21590,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"tsconfig-paths@npm:^3.9.0":
+"tsconfig-paths@npm:3.9.0, tsconfig-paths@npm:^3.9.0":
   version: 3.9.0
   resolution: "tsconfig-paths@npm:3.9.0"
   dependencies:
@@ -21783,7 +21783,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-typescript@^4.3.2:
+typescript@4.3.2:
   version: 4.3.2
   resolution: "typescript@npm:4.3.2"
   bin:
@@ -21793,7 +21793,7 @@ typescript@^4.3.2:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.3.2#builtin<compat/typescript>":
+"typescript@patch:typescript@4.3.2#builtin<compat/typescript>":
   version: 4.3.2
   resolution: "typescript@patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"
   bin:
@@ -22341,6 +22341,46 @@ typescript@~4.2.4:
   languageName: node
   linkType: hard
 
+"web-ext@npm:6.1.0, web-ext@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "web-ext@npm:6.1.0"
+  dependencies:
+    "@babel/runtime": 7.13.9
+    "@devicefarmer/adbkit": 2.11.3
+    addons-linter: 3.2.0
+    bunyan: 1.8.15
+    camelcase: 6.2.0
+    chrome-launcher: 0.13.4
+    debounce: 1.2.0
+    decamelize: 5.0.0
+    es6-error: 4.1.1
+    event-to-promise: 0.8.0
+    firefox-profile: 4.2.0
+    fs-extra: 9.1.0
+    fx-runner: 1.1.0
+    import-fresh: 3.3.0
+    mkdirp: 1.0.4
+    multimatch: 5.0.0
+    mz: 2.7.0
+    node-notifier: 9.0.0
+    open: 7.4.2
+    parse-json: 5.2.0
+    sign-addon: 3.3.0
+    source-map-support: 0.5.19
+    strip-bom: 4.0.0
+    strip-json-comments: 3.1.1
+    tmp: 0.2.1
+    update-notifier: 5.1.0
+    watchpack: 2.1.1
+    ws: 7.4.3
+    yargs: 16.2.0
+    zip-dir: 2.0.0
+  bin:
+    web-ext: bin/web-ext
+  checksum: bfe9cde6bdc1b7a160002bdbc1d75d7458430c3c1b9d6c7383128010785352d50c7d90b2984acb97df2fb5410ec7e93b2676b91ad52c8830e247c54604636cff
+  languageName: node
+  linkType: hard
+
 "web-ext@npm:^3.2.0":
   version: 3.2.1
   resolution: "web-ext@npm:3.2.1"
@@ -22385,94 +22425,54 @@ typescript@~4.2.4:
   languageName: node
   linkType: hard
 
-"web-ext@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "web-ext@npm:6.1.0"
-  dependencies:
-    "@babel/runtime": 7.13.9
-    "@devicefarmer/adbkit": 2.11.3
-    addons-linter: 3.2.0
-    bunyan: 1.8.15
-    camelcase: 6.2.0
-    chrome-launcher: 0.13.4
-    debounce: 1.2.0
-    decamelize: 5.0.0
-    es6-error: 4.1.1
-    event-to-promise: 0.8.0
-    firefox-profile: 4.2.0
-    fs-extra: 9.1.0
-    fx-runner: 1.1.0
-    import-fresh: 3.3.0
-    mkdirp: 1.0.4
-    multimatch: 5.0.0
-    mz: 2.7.0
-    node-notifier: 9.0.0
-    open: 7.4.2
-    parse-json: 5.2.0
-    sign-addon: 3.3.0
-    source-map-support: 0.5.19
-    strip-bom: 4.0.0
-    strip-json-comments: 3.1.1
-    tmp: 0.2.1
-    update-notifier: 5.1.0
-    watchpack: 2.1.1
-    ws: 7.4.3
-    yargs: 16.2.0
-    zip-dir: 2.0.0
-  bin:
-    web-ext: bin/web-ext
-  checksum: bfe9cde6bdc1b7a160002bdbc1d75d7458430c3c1b9d6c7383128010785352d50c7d90b2984acb97df2fb5410ec7e93b2676b91ad52c8830e247c54604636cff
-  languageName: node
-  linkType: hard
-
 "web-monetization@workspace:.":
   version: 0.0.0-use.local
   resolution: "web-monetization@workspace:."
   dependencies:
-    "@babel/core": ^7.14.6
-    "@babel/plugin-proposal-class-properties": ^7.14.5
-    "@babel/plugin-proposal-decorators": ^7.14.5
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.5
-    "@babel/preset-env": ^7.14.5
-    "@babel/preset-typescript": ^7.14.5
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    "@types/node": ^14.17.3
-    "@typescript-eslint/eslint-plugin": ^4.27.0
-    "@typescript-eslint/parser": ^4.27.0
-    "@yarnpkg/pnpify": ^2.4.0
-    JSON2016: ^1.0.0
-    copy-webpack-plugin: ^9.0.0
-    eslint: ^7.28.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-jest: ^24.3.6
-    eslint-plugin-jsx-a11y: ^6.4.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-react: ^7.24.0
-    eslint-plugin-react-hooks: ^4.2.0
-    eslint-plugin-standard: ^5.0.0
-    husky: ^6.0.0
-    jest: ^27.0.4
-    lerna: ^4.0.0
-    lint-staged: ^11.0.0
-    prettier: ^2.3.1
-    rimraf: ^3.0.2
-    ts-jest: ^27.0.3
-    ts-loader: ^9.2.3
-    ts-node: ^10.0.0
-    ts-node-dev: ^1.1.6
-    tsconfig-paths: ^3.9.0
-    typescript: ^4.3.2
-    webpack: ^5.39.0
-    webpack-bundle-analyzer: ^4.4.2
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.8.0
+    "@babel/core": 7.14.6
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
+    "@babel/plugin-proposal-object-rest-spread": 7.14.5
+    "@babel/preset-env": 7.14.5
+    "@babel/preset-typescript": 7.14.5
+    "@commitlint/cli": 12.1.4
+    "@commitlint/config-conventional": 12.1.4
+    "@types/jest": 26.0.23
+    "@types/node": 14.17.3
+    "@typescript-eslint/eslint-plugin": 4.27.0
+    "@typescript-eslint/parser": 4.27.0
+    "@yarnpkg/pnpify": 2.4.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.0.0
+    eslint: 7.28.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.4
+    eslint-plugin-import: 2.23.4
+    eslint-plugin-jest: 24.3.6
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-promise: 5.1.0
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+    eslint-plugin-standard: 5.0.0
+    husky: 6.0.0
+    jest: 27.0.4
+    lerna: 4.0.0
+    lint-staged: 11.0.0
+    prettier: 2.3.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.3
+    ts-loader: 9.2.3
+    ts-node: 10.0.0
+    ts-node-dev: 1.1.6
+    tsconfig-paths: 3.9.0
+    typescript: 4.3.2
+    webpack: 5.39.0
+    webpack-bundle-analyzer: 4.4.2
+    webpack-cli: 4.7.2
+    webpack-dev-server: 3.11.2
+    webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
 
@@ -22497,7 +22497,7 @@ typescript@~4.2.4:
   languageName: node
   linkType: hard
 
-"webpack-bundle-analyzer@npm:^4.4.2":
+"webpack-bundle-analyzer@npm:4.4.2":
   version: 4.4.2
   resolution: "webpack-bundle-analyzer@npm:4.4.2"
   dependencies:
@@ -22516,7 +22516,7 @@ typescript@~4.2.4:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:^4.7.2":
+"webpack-cli@npm:4.7.2":
   version: 4.7.2
   resolution: "webpack-cli@npm:4.7.2"
   dependencies:
@@ -22565,7 +22565,7 @@ typescript@~4.2.4:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:^3.11.2":
+"webpack-dev-server@npm:3.11.2":
   version: 3.11.2
   resolution: "webpack-dev-server@npm:3.11.2"
   dependencies:
@@ -22623,7 +22623,7 @@ typescript@~4.2.4:
   languageName: node
   linkType: hard
 
-"webpack-merge@npm:^5.7.3, webpack-merge@npm:^5.8.0":
+"webpack-merge@npm:5.8.0, webpack-merge@npm:^5.7.3":
   version: 5.8.0
   resolution: "webpack-merge@npm:5.8.0"
   dependencies:
@@ -22643,7 +22643,7 @@ typescript@~4.2.4:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.39.0":
+"webpack@npm:5.39.0":
   version: 5.39.0
   resolution: "webpack@npm:5.39.0"
   dependencies:
