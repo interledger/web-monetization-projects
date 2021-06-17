@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events'
 
-import { asyncUtils, PaymentScheduler } from '@web-monetization/polyfill-utils'
+import { asyncUtils, PaymentScheduler } from '@webmonetization/polyfill-utils'
 import { Connection } from 'ilp-protocol-stream'
 
 import { Logger } from './utils'
