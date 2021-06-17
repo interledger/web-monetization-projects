@@ -169,7 +169,7 @@ export class MonetizationTagObserver {
       throw new Error(
         `Web-Monetization Error: Ignoring tag with ` +
           `paymentPointer=${details.paymentPointer}, only ${this.maxMetas} ` +
-          `monetization tags supported at a time. `
+          `monetization tag[s] supported at a time. `
       )
     }
 
