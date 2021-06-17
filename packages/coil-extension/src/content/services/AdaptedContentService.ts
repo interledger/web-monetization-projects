@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
-import { DocumentMonetization } from '@web-monetization/wext/content'
+import { DocumentMonetization } from '@webmonetization/wext/content'
 
 import * as tokens from '../../types/tokens'
 import { getAdaptedSite } from '../util/getAdaptedSite'

@@ -1,4 +1,4 @@
-import { MonetizationObject } from '@web-monetization/types'
+import { MonetizationObject } from '@webmonetization/types'
 
 import { MonetizationPolyfill } from './MonetizationPolyfill'
 

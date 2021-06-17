@@ -14,7 +14,7 @@ import {
   ScheduleMode,
   SPSPError,
   SPSPResponse
-} from '@web-monetization/polyfill-utils'
+} from '@webmonetization/polyfill-utils'
 import { Container, inject, injectable } from 'inversify'
 
 import { notNullOrUndef } from '../../util/nullables'

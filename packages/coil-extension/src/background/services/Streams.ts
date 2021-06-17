@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events'
 
-import { PaymentDetails } from '@web-monetization/polyfill-utils'
+import { PaymentDetails } from '@webmonetization/polyfill-utils'
 import { Container, injectable } from 'inversify'
 
 import * as tokens from '../../types/tokens'

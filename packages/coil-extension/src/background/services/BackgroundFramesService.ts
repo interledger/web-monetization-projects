@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events'
 
 import { inject, injectable } from 'inversify'
-import * as tokens from '@web-monetization/wext/tokens'
+import * as tokens from '@webmonetization/wext/tokens'
 
 import { flatMapSlow } from '../util/flatMapSlow'
 import { getFrameSpec } from '../../util/tabs'

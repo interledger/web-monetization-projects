@@ -4,7 +4,7 @@ import {
   MonetizationStartEvent,
   MonetizationState,
   MonetizationStopEventDetail
-} from '@web-monetization/types'
+} from '@webmonetization/types'
 
 import { getDoc } from './documentExtensions'
 import { debug } from './logging'

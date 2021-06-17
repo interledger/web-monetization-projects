@@ -6,7 +6,7 @@ import {
   MonetizationPendingEvent,
   MonetizationState,
   MonetizationStopEvent
-} from '@web-monetization/types'
+} from '@webmonetization/types'
 import { BrowserContext, Page } from 'puppeteer'
 
 import { env, timeout } from '../index'

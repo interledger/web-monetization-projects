@@ -1,4 +1,4 @@
-import { portableFetch } from '@web-monetization/polyfill-utils'
+import { portableFetch } from '@webmonetization/polyfill-utils'
 import { injectable } from 'inversify'
 
 @injectable()

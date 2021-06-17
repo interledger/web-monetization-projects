@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
-import { StorageService } from '@web-monetization/wext/services'
+import { StorageService } from '@webmonetization/wext/services'
 
 import { PopupStateType, STORAGE_KEYS } from '../services/PopupState'
 import { PopupHost } from '../types'

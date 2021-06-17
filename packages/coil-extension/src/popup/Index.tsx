@@ -1,5 +1,5 @@
 import React from 'react'
-import { StorageService } from '@web-monetization/wext/services'
+import { StorageService } from '@webmonetization/wext/services'
 
 import { withSharedTheme } from '../shared-theme/withSharedTheme'
 

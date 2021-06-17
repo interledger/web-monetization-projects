@@ -6,18 +6,17 @@ import PluginBtp from 'ilp-plugin-btp'
 import * as IlpStream from 'ilp-protocol-stream'
 import { Injector } from 'reduct'
 import {
-  asyncUtils,
   BackoffWaiter,
   getFarFutureExpiry,
   getSPSPResponse,
   PaymentScheduler,
   ScheduleMode,
   SPSPResponse
-} from '@web-monetization/polyfill-utils'
+} from '@webmonetization/polyfill-utils'
 import {
   MonetizationProgressEvent,
   MonetizationState
-} from '@web-monetization/types'
+} from '@webmonetization/types'
 import type { PackageVersion } from '@coil/webpack-utils'
 
 import { DocumentMonetization } from './DocumentMonetization'
