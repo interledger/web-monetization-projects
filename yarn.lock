@@ -2321,17 +2321,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hot-loader/react-dom@npm:*, @hot-loader/react-dom@npm:16.14.0":
-  version: 16.14.0
-  resolution: "@hot-loader/react-dom@npm:16.14.0"
+"@hot-loader/react-dom@npm:*, @hot-loader/react-dom@npm:17.0.1":
+  version: 17.0.1
+  resolution: "@hot-loader/react-dom@npm:17.0.1"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-    prop-types: ^15.6.2
-    scheduler: ^0.19.1
+    scheduler: ^0.20.1
   peerDependencies:
-    react: ^16.14.0
-  checksum: 9daa45e45f89021c6be0e87b644e6764dcb4584513d3155fe1fcfed55558b260ee892c374c929d83bc6e1045bf17a45493508ca05c9e0439c3c07ef7e05f53d8
+    react: 17.0.1
+  checksum: f852a8296e61a728dfa7365c04efd88ae90e37e2bd4e64d504f58a35444721afec0f9f33b3546f06d33eeed9066971e346135c1ac9f91f56832dc1e227f66697
   languageName: node
   linkType: hard
 
@@ -4821,7 +4820,7 @@ __metadata:
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 12.1.4
     "@commitlint/config-conventional": 12.1.4
-    "@hot-loader/react-dom": 16.14.0
+    "@hot-loader/react-dom": 17.0.1
     "@types/body-parser": 1.19.0
     "@types/express": 4.17.12
     "@types/figlet": 1.5.1
@@ -5010,7 +5009,7 @@ __metadata:
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 12.1.4
     "@commitlint/config-conventional": 12.1.4
-    "@hot-loader/react-dom": 16.14.0
+    "@hot-loader/react-dom": 17.0.1
     "@types/ajv": 1.0.0
     "@types/jest": 26.0.23
     "@types/node": 14.17.3
@@ -19586,17 +19585,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.19.1":
-  version: 0.19.1
-  resolution: "scheduler@npm:0.19.1"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: 804f990b9f370cca6d42b65f3cba2cc2bfed4973ee5623bed1ea36a6627842db8c891e2e5ac003f06f9ee892d1d3396921e27fa077346caf0213af05776e8dee
-  languageName: node
-  linkType: hard
-
-"scheduler@npm:^0.20.2":
+"scheduler@npm:^0.20.1, scheduler@npm:^0.20.2":
   version: 0.20.2
   resolution: "scheduler@npm:0.20.2"
   dependencies:
