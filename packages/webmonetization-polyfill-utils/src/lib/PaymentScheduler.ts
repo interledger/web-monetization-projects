@@ -4,7 +4,7 @@ const TOKEN_DURATION = 60_000 // milliseconds
 const JITTER = 3_000 // milliseconds
 // Determines batch size, relative to how much has been sent.
 const BATCH_RATIO = 0.1
-const MAX_BATCH_SIZE = 5 // tokens
+const MAX_BATCH_SIZE = 1 // tokens
 // Determines how much to prepay, relative to the actual sendMax.
 const PREPAY_RATIO = 0.1
 // Maximum number of tokens to prepay.
