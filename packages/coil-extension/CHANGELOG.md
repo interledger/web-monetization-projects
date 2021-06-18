@@ -1,3 +1,24 @@
+<a name="coil-extension@0.0.53"></a>
+
+# [coil-extension@0.0.53](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.52...coil-extension@0.0.53) (2021-06-18)
+
+### Features
+
+- Log progress events when localStorage.WM_DEBUG_PROGRESS is set [#1709](https://github.com/coilhq/web-monetization-projects/pull/1709)
+- Do not log in background page unless localStorage.COIL_LOGGING_ENABLED set [#1900](https://github.com/coilhq/web-monetization-projects/pull/1900), [#1908](https://github.com/coilhq/web-monetization-projects/pull/1908)
+- Support Safari via workarounds [#1927](https://github.com/coilhq/web-monetization-projects/pull/1927)
+
+### Bug Fixes
+
+- Use coil.com/gateway instead of coil.com/graphql [#1886](https://github.com/coilhq/web-monetization-projects/pull/1886)
+- Don't emit bogus stopped event when logged out [#1964](https://github.com/coilhq/web-monetization-projects/pull/1964)
+- Aggressively refresh auth tokens [#1918](https://github.com/coilhq/web-monetization-projects/pull/1918)
+- Fix multiple tags upon content script init causing background payments [#2025](https://github.com/coilhq/web-monetization-projects/pull/2025)
+
+### Tweaks
+
+- Update popup copy/styling [#1786](https://github.com/coilhq/web-monetization-projects/pull/1786), [#1731](https://github.com/coilhq/web-monetization-projects/pull/1731), [#1816](https://github.com/coilhq/web-monetization-projects/pull/1816), [#1731](https://github.com/coilhq/web-monetization-projects/pull/1731), [#1818](https://github.com/coilhq/web-monetization-projects/pull/1818), [#1907](https://github.com/coilhq/web-monetization-projects/pull/1907)
+
 <a name="coil-extension@0.0.52"></a>
 
 # [coil-extension@0.0.52](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.51...coil-extension@0.0.52) (2021-02-01)
