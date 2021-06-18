@@ -1,7 +1,7 @@
-/* 
-    HeaderFooterLayout 
+/*
+    HeaderFooterLayout
 
-    A layout is a wrapper component that should be used in the view component you wish to have this layout. 
+    A layout is a wrapper component that should be used in the view component you wish to have this layout.
     This layout is the original layout of the extension which wraps the view with the AccountBar and the WebMonetizedBar
 */
 
@@ -21,8 +21,7 @@ import { Container } from './util/Container'
 const OuterDiv = styled('div')({
   minWidth: '308px',
   maxWidth: '308px',
-  height: 'auto',
-  minHeight: '260px'
+  height: 'auto'
 })
 
 const CoilContainer = styled(Container)(({ theme }) => ({
