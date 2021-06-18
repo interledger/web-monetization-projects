@@ -43,6 +43,12 @@ async function configureContainer(container: Container) {
   })
 }
 
+declare global {
+  interface Window {
+    bg: BackgroundScript
+  }
+}
+
 async function main() {
   if (loggingEnabled) {
     console.log('Loading Coil extension:', JSON.stringify(VERSION))
@@ -55,7 +61,8 @@ async function main() {
   })
 
   await configureContainer(container)
-  void container.get(BackgroundScript).run()
+  window.bg = container.get(BackgroundScript)
+  void window.bg.run()
 }
 
 main().catch(console.error)
