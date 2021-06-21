@@ -42,7 +42,10 @@ export class Frames {
     this.isDirectChildFrame = this.isIFrame && window.parent === window.top
     // don't monetize the handler page (or send messages with sender
     // without `tab`)
-    this.isMonetizableFrame = !this.isCoilHandlerFrame
+    this.isMonetizableFrame =
+      !this.isCoilHandlerFrame &&
+      // See #1640 and #1642
+      this.doc.documentElement.tagName === 'HTML'
   }
 
   monitor() {
