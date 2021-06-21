@@ -67,7 +67,7 @@ The following `localStorage` entries control logging.
 
 | Key                               | Component\[s]                   | Notes                                                                    |
 | --------------------------------- | ------------------------------- | ------------------------------------------------------------------------ |
-| localStorage.debug                | Background Page, Content Script | see [debug](https://github.com/visionmedia/debug#browser-support)        |
+| localStorage.debug                | Background Page, Content Script | See [debug](https://github.com/visionmedia/debug#browser-support)        |
 | localStorage.WM_DEBUG             | Content Script                  | Set truthy to logs all monetization events except `monetizationprogress` |
 | localStorage.WM_DEBUG_PROGRESS    | Content Script                  | Set truthy to log `monetizationprogress` events                          |
 | localStorage.COIL_LOGGING_ENABLED | Background Page                 | Set truthy to enable logging                                             |
