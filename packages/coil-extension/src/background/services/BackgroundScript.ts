@@ -675,11 +675,18 @@ export class BackgroundScript {
       emittedPending = true
     }
 
+    const setUnavailable = (fromNo: 'token' | 'subscription') => {
+      this.tabStates.setIcon(tabId, 'unavailable')
+      this.reloadTabState({ from: `no ${fromNo}` })
+    }
+
     // If we are optimistic we have an active subscription (things could have
     // changed since our last cached whoami query), emit pending immediately,
     // otherwise wait until recheck auth/whoami, potentially not even emitting.
     if (userBeforeReAuth?.subscription?.active) {
       emitPending()
+    } else {
+      setUnavailable('subscription')
     }
 
     this.log('startWebMonetization, request', request)
@@ -695,13 +702,18 @@ export class BackgroundScript {
       }
       this.activeTabLogger.log('startWebMonetization cancelled; no token')
       this.sendSetMonetizationStateMessage(frame, 'stopped')
+      setUnavailable('token')
       return false
     }
     if (!this.store.user?.subscription?.active) {
-      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      if (this.loggingEnabled) {
+        console.warn('startWebMonetization cancelled; no active subscription')
+      }
       this.activeTabLogger.log(
         'startWebMonetization cancelled; no active subscription'
       )
+      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      setUnavailable('subscription')
       return false
     }
 
