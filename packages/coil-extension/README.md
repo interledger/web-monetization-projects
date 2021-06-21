@@ -60,6 +60,18 @@ The following browser aliases can be used:
 yarn dev-chrome-prod
 ```
 
+### Logging
+
+Much of the logging is disabled by default for performance reasons.
+The following `localStorage` entries control logging.
+
+| Key                               | Component\[s]                   | Notes                                                                    |
+| --------------------------------- | ------------------------------- | ------------------------------------------------------------------------ |
+| localStorage.debug                | Background Page, Content Script | See [debug](https://github.com/visionmedia/debug#browser-support)        |
+| localStorage.WM_DEBUG             | Content Script                  | Set truthy to logs all monetization events except `monetizationprogress` |
+| localStorage.WM_DEBUG_PROGRESS    | Content Script                  | Set truthy to log `monetizationprogress` events                          |
+| localStorage.COIL_LOGGING_ENABLED | Background Page                 | Set truthy to enable logging                                             |
+
 ### Building for other environments
 
 During development, the extension can be built for various environments using yarn scripts. To do this, use the following commands:
