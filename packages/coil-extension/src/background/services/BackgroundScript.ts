@@ -64,7 +64,6 @@ export class BackgroundScript {
     private loggingEnabled: boolean,
     @logger('BackgroundScript')
     private log: Logger,
-
     private client: GraphQlClient,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
@@ -163,9 +162,17 @@ export class BackgroundScript {
           '$$popupCommand',
           Date.now().toString().padStart(16, '0') + JSON.stringify(close)
         )
-
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
-          if (tabs.length === 0 || tabs[0].id == null) return
+          if (this.api.runtime.lastError) {
+            // In this case we clicked on a non-active tab as the focusing
+            // action, and the tabs.onActivated event will fire, taking care of
+            // setting the active tab and reloading the tab state.
+            // See #2001
+            return
+          }
+          if (tabs.length === 0 || tabs[0].id == null) {
+            return
+          }
           this.activeTab = tabs[0].id
           this.reloadTabState({ from: 'onFocusChanged' })
         })
