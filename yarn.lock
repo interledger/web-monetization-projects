@@ -1526,7 +1526,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 2.4.0
     JSON2016: 1.0.0
-    addons-linter: 3.8.0
+    addons-linter: 3.9.0
     copy-webpack-plugin: 9.0.0
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -2365,7 +2365,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 2.4.0
     JSON2016: 1.0.0
-    addons-linter: 3.8.0
+    addons-linter: 3.9.0
     copy-webpack-plugin: 9.0.0
     crx-hotreload: 1.0.6
     css-loader: 5.2.6
@@ -3566,10 +3566,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:3.3.7":
-  version: 3.3.7
-  resolution: "@mdn/browser-compat-data@npm:3.3.7"
-  checksum: 402ad8bb621fdf45435feae61fc3401595f15aafd9b3045ca8ce46b4efea7c24b2cff451a3b1881569fe5ffbe769864ea73c5c44ef4e499d91f9809d48f813e8
+"@mdn/browser-compat-data@npm:3.3.8":
+  version: 3.3.8
+  resolution: "@mdn/browser-compat-data@npm:3.3.8"
+  checksum: 466448666da884775a2cfa63cac1a7c9f9949b9f4e2d20e10c981583d1141842e6a61117dcacf3db7cd60ee1e7dedb4b438867bd7b878c13f4583a8cb8e7dbb7
   languageName: node
   linkType: hard
 
@@ -5632,11 +5632,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:3.8.0":
-  version: 3.8.0
-  resolution: "addons-linter@npm:3.8.0"
+"addons-linter@npm:3.9.0":
+  version: 3.9.0
+  resolution: "addons-linter@npm:3.9.0"
   dependencies:
-    "@mdn/browser-compat-data": 3.3.7
+    "@mdn/browser-compat-data": 3.3.8
     addons-scanner-utils: 4.8.0
     ajv: 6.12.6
     ajv-merge-patch: 4.1.0
@@ -5646,7 +5646,7 @@ __metadata:
     common-tags: 1.8.0
     deepmerge: 4.2.2
     dispensary: 0.62.0
-    eslint: 7.28.0
+    eslint: 7.29.0
     eslint-plugin-no-unsanitized: 3.1.5
     eslint-visitor-keys: 2.1.0
     espree: 7.3.1
@@ -5658,7 +5658,7 @@ __metadata:
     jed: 1.1.1
     os-locale: 5.0.0
     pino: 6.11.3
-    postcss: 8.3.4
+    postcss: 8.3.5
     relaxed-json: 1.0.3
     semver: 7.3.5
     source-map-support: 0.5.19
@@ -5668,7 +5668,7 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: cccf967dfe3265ee234a3050eccc298142557513339b6f3d5bbe4ef2ab3470a6a8b5624b8e12e02a9d73f4c5e6741d36bd90f99fd42ca22efbec1a8de471b759
+  checksum: e45c3f9d69aefcdb9e3710471ade3ebd376a4be815a878c537cc82c1088d0721b7cebd4a012f646205a83998fd4a25796f442411d39132f5e5767683bb781b76
   languageName: node
   linkType: hard
 
@@ -10256,55 +10256,6 @@ __metadata:
   bin:
     eslint: bin/eslint.js
   checksum: 8130aacc3698a730ba8fa10ac9e1436151181c34cad265c21c97708e62dba714b6f3cc4cb7a1d343918da3d35a5913505ccf53cfbdc1fa8d62d326b7e35b7aae
-  languageName: node
-  linkType: hard
-
-"eslint@npm:7.28.0":
-  version: 7.28.0
-  resolution: "eslint@npm:7.28.0"
-  dependencies:
-    "@babel/code-frame": 7.12.11
-    "@eslint/eslintrc": ^0.4.2
-    ajv: ^6.10.0
-    chalk: ^4.0.0
-    cross-spawn: ^7.0.2
-    debug: ^4.0.1
-    doctrine: ^3.0.0
-    enquirer: ^2.3.5
-    escape-string-regexp: ^4.0.0
-    eslint-scope: ^5.1.1
-    eslint-utils: ^2.1.0
-    eslint-visitor-keys: ^2.0.0
-    espree: ^7.3.1
-    esquery: ^1.4.0
-    esutils: ^2.0.2
-    fast-deep-equal: ^3.1.3
-    file-entry-cache: ^6.0.1
-    functional-red-black-tree: ^1.0.1
-    glob-parent: ^5.1.2
-    globals: ^13.6.0
-    ignore: ^4.0.6
-    import-fresh: ^3.0.0
-    imurmurhash: ^0.1.4
-    is-glob: ^4.0.0
-    js-yaml: ^3.13.1
-    json-stable-stringify-without-jsonify: ^1.0.1
-    levn: ^0.4.1
-    lodash.merge: ^4.6.2
-    minimatch: ^3.0.4
-    natural-compare: ^1.4.0
-    optionator: ^0.9.1
-    progress: ^2.0.0
-    regexpp: ^3.1.0
-    semver: ^7.2.1
-    strip-ansi: ^6.0.0
-    strip-json-comments: ^3.1.0
-    table: ^6.0.9
-    text-table: ^0.2.0
-    v8-compile-cache: ^2.0.3
-  bin:
-    eslint: bin/eslint.js
-  checksum: 9d49d53ed56a1f1ccba9c71482722a91f2423432df70a3694d36ea478f0e3bb058034f170219f34f3d6b5cd5d47510b269b75e2b4117f88a3241b1db9cb95828
   languageName: node
   linkType: hard
 
@@ -18071,14 +18022,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.3.4, postcss@npm:^8.2.15":
-  version: 8.3.4
-  resolution: "postcss@npm:8.3.4"
+"postcss@npm:8.3.5, postcss@npm:^8.2.15":
+  version: 8.3.5
+  resolution: "postcss@npm:8.3.5"
   dependencies:
     colorette: ^1.2.2
     nanoid: ^3.1.23
     source-map-js: ^0.6.2
-  checksum: 9b02ccb85c27f43cba22a43b5b6f9babacfe3a0591037ffa17c302efce95332f22ec7ff5f8db99c569df58d8c2b597a813872f29953646d14f12f625be6215f7
+  checksum: 87dc16efcf40286fad4ded0a433497ddbc55dfad3d7ddb200ba9c0761ec376280fa2c06a522628583c9284def85894c52bc361cffedf0679f4936370c084a145
   languageName: node
   linkType: hard
 
