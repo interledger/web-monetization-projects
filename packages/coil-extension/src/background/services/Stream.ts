@@ -182,10 +182,17 @@ export class Stream extends EventEmitter {
       const onMoney = (sentAmount: string) => {
         // Wait until `setImmediate` so that `connection.totalDelivered` has been updated.
         const receipt = stream.receipt?.toString('base64')
-        this.tabLogger.sendLogEvent(
-          () => `Stream:${id}:start sent money=${sentAmount}`
-        )
-        setImmediate(() => this.onMoney(connection, sentAmount, receipt))
+        setImmediate(() => {
+          this.onMoney(connection, sentAmount, receipt)
+          const rate =
+            Number(connection.totalSent) / Number(connection.totalDelivered)
+          this.tabLogger.sendLogEvent(
+            () => {
+              return `Stream:${id}:onMoney sentAmount=${sentAmount}, rate=${rate}`
+            },
+            { rate }
+          )
+        })
       }
       stream.on('outgoing_money', onMoney)
 
@@ -218,6 +225,9 @@ export class Stream extends EventEmitter {
 
       // noinspection ES6MissingAwait
       void (async () => {
+        this.tabLogger.sendLogEvent(
+          `schedule.totalSent() = ${this._schedule.totalSent()}`
+        )
         if (this._schedule.totalSent() === 0) {
           await firstMinuteBandwidth(
             id,

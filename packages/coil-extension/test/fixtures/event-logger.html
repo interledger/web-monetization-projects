@@ -20,6 +20,8 @@
       let lastTimestamp = Date.now()
       let total = 0n
       let pendingTime = null
+      let rate = 1
+
       const start = lastTimestamp
       function log(msg) {
         const log = document.getElementById('log')
@@ -39,6 +41,9 @@
       const initialState = document.monetization && document.monetization.state
       document.addEventListener('coil_log', evt => {
         log('coil_log: ' + evt.detail.message)
+        if (evt.detail.extra.rate) {
+          rate = Number(evt.detail.extra.rate)
+        }
       })
       window.addEventListener('load', () => {
         log('event: window.load, initial state: ' + initialState)
@@ -85,11 +90,12 @@
         if (document.monetization) {
           setInterval(() => {
             const throughput = 186
-            const expected = ((Date.now() - pendingTime) / 1000) * throughput
+            const expected =
+              ((Date.now() - pendingTime) / 1000) * throughput * rate
             log(
               `state: ${document.monetization.state} paid=${
                 total >= expected
-              } total=${total} expected=${expected}`
+              } total=${total} expected=${expected} rate=${rate}`
             )
           }, 1e3)
 

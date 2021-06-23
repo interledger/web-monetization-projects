@@ -33,7 +33,7 @@ export class ActiveTabLogger {
     })
   }
 
-  sendLogEvent(message: string | (() => string)) {
+  sendLogEvent(message: string | (() => string), extra: any = {}) {
     const active = this.tabStates.activeTab
     if (active && this.sendLogEvents) {
       if (typeof message !== 'string') {
@@ -42,7 +42,9 @@ export class ActiveTabLogger {
       // language=JavaScript
       const code = `
         document.dispatchEvent(new CustomEvent('coil_log',
-          { detail: { message: ${JSON.stringify(message)} } }))
+          { detail: { message: ${JSON.stringify(
+            message
+          )}, extra: ${JSON.stringify(extra)} } }))
       `
       this.api.tabs.executeScript(active, { frameId: 0, code: code }, () => {
         console.log('ERROR', this.api.runtime.lastError)
