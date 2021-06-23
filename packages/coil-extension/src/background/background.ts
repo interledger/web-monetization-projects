@@ -45,6 +45,7 @@ async function configureContainer(container: Container) {
 
 declare global {
   interface Window {
+    bg: BackgroundScript
     clearTokens: () => void
   }
 }
@@ -71,7 +72,8 @@ async function main() {
   })
 
   await configureContainer(container)
-  void container.get(BackgroundScript).run()
+  window.bg = container.get(BackgroundScript)
+  void window.bg.run()
 }
 
 main().catch(console.error)

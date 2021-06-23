@@ -2,6 +2,7 @@
 
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io/)
 [![CircleCI](https://circleci.com/gh/coilhq/web-monetization-projects.svg?style=svg)](https://circleci.com/gh/coilhq/web-monetization-projects)
+[![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
 
 ## Development Process
 

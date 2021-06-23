@@ -63,7 +63,6 @@ export class BackgroundScript {
     private loggingEnabled: boolean,
     @logger('BackgroundScript')
     private log: Logger,
-
     private client: GraphQlClient,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
@@ -162,9 +161,17 @@ export class BackgroundScript {
           '$$popupCommand',
           Date.now().toString().padStart(16, '0') + JSON.stringify(close)
         )
-
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
-          if (tabs.length === 0 || tabs[0].id == null) return
+          if (this.api.runtime.lastError) {
+            // In this case we clicked on a non-active tab as the focusing
+            // action, and the tabs.onActivated event will fire, taking care of
+            // setting the active tab and reloading the tab state.
+            // See #2001
+            return
+          }
+          if (tabs.length === 0 || tabs[0].id == null) {
+            return
+          }
           this.activeTab = tabs[0].id
           this.reloadTabState({ from: 'onFocusChanged' })
         })
@@ -667,11 +674,18 @@ export class BackgroundScript {
       emittedPending = true
     }
 
+    const setUnavailable = (fromNo: 'token' | 'subscription') => {
+      this.tabStates.setIcon(tabId, 'unavailable')
+      this.reloadTabState({ from: `no ${fromNo}` })
+    }
+
     // If we are optimistic we have an active subscription (things could have
     // changed since our last cached whoami query), emit pending immediately,
     // otherwise wait until recheck auth/whoami, potentially not even emitting.
     if (userBeforeReAuth?.subscription?.active) {
       emitPending()
+    } else {
+      setUnavailable('subscription')
     }
 
     this.log('startWebMonetization, request', request)
@@ -687,13 +701,18 @@ export class BackgroundScript {
       }
       this.activeTabLogger.log('startWebMonetization cancelled; no token')
       this.sendSetMonetizationStateMessage(frame, 'stopped')
+      setUnavailable('token')
       return false
     }
     if (!this.store.user?.subscription?.active) {
-      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      if (this.loggingEnabled) {
+        console.warn('startWebMonetization cancelled; no active subscription')
+      }
       this.activeTabLogger.log(
         'startWebMonetization cancelled; no active subscription'
       )
+      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      setUnavailable('subscription')
       return false
     }
 
