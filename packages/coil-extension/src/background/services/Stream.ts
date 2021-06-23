@@ -26,8 +26,6 @@ import { isExhaustedError, StreamLoop } from './StreamLoop'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 
-// The amount set as the `SendStreamMax` when spending a full token.
-const FULL_TOKEN_AMOUNT = 2 ** 64
 // The number of seconds to pay immediately on page load.
 const INITIAL_SEND_SECONDS = 5
 
@@ -238,10 +236,7 @@ export class Stream extends EventEmitter {
             redeemedToken.throughput
           )
         } else {
-          const sendMax =
-            tokenFraction >= 1.0
-              ? FULL_TOKEN_AMOUNT
-              : tokenFraction * 60 * redeemedToken.throughput
+          const sendMax = tokenFraction * 60 * redeemedToken.throughput
           this._debug(
             'setSendMax tokenFraction=%d sendMax=%d',
             tokenFraction,
@@ -444,9 +439,7 @@ async function firstMinuteBandwidth(
     )
     logger.sendLogEvent(() => `firstMinuteBandwidth:${id}: waited ${delay}`)
     if (stopped) return
-    // FULL_TOKEN_AMOUNT essentially means burn whatever is left ...
-    // but what if it's less than time * throughput ?
-    stream.setSendMax(time === 60 ? FULL_TOKEN_AMOUNT : time * throughput)
+    stream.setSendMax(time * throughput)
   }
 }
 
