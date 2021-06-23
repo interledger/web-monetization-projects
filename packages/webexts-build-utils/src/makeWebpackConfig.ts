@@ -68,6 +68,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
   const WEXT_MANIFEST_SUFFIX_NO_DATE = process.env.WEXT_MANIFEST_SUFFIX_NO_DATE
   const WEXT_MANIFEST_VERSION = process.env.WEXT_MANIFEST_VERSION
+  const WEXT_MANIFEST_VERSION_NAME = process.env.WEXT_MANIFEST_VERSION_NAME
   const WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID =
     process.env.WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
 
@@ -90,6 +91,10 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         if (WEXT_MANIFEST_VERSION) {
           manifest.version = WEXT_MANIFEST_VERSION
         }
+        if (WEXT_MANIFEST_VERSION_NAME) {
+          manifest.version_name = WEXT_MANIFEST_VERSION_NAME
+        }
+
         if (BROWSER === 'firefox') {
           if (WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID) {
             manifest.browser_specific_settings.gecko.id =
