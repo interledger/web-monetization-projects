@@ -20,9 +20,11 @@
       let lastTimestamp = Date.now()
       let total = 0n
       let pendingTime = null
-      let rate = 1
+      let rate = 1 // delivered per sent
+      let throughput = 1
 
       const start = lastTimestamp
+
       function log(msg) {
         const log = document.getElementById('log')
         if (log) {
@@ -43,6 +45,11 @@
         log('coil_log: ' + evt.detail.message)
         if (evt.detail.extra.rate) {
           rate = Number(evt.detail.extra.rate)
+          log(`coil_log: setting rate=${rate}`)
+        }
+        if (evt.detail.extra.throughput) {
+          throughput = Number(evt.detail.extra.throughput)
+          log(`coil_log: setting throughput=${throughput}`)
         }
       })
       window.addEventListener('load', () => {
@@ -89,13 +96,17 @@
 
         if (document.monetization) {
           setInterval(() => {
-            const throughput = 186
-            const expected =
-              ((Date.now() - pendingTime) / 1000) * throughput * rate
+            // source units per second
+            const secondsSincePending = (Date.now() - pendingTime) / 1000
+            const expectedDelivered = secondsSincePending * (throughput * rate)
             log(
-              `state: ${document.monetization.state} paid=${
-                total >= expected
-              } total=${total} expected=${expected} rate=${rate}`
+              `state: ${
+                document.monetization.state
+              } monetizedFor=${secondsSincePending} paid=${
+                total >= expectedDelivered
+              } actualDelivered=${total} expectedDelivered=${expectedDelivered} rate=${rate} invRate=${
+                1 / rate
+              }`
             )
           }, 1e3)
 

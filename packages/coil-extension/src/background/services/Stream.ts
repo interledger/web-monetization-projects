@@ -158,7 +158,8 @@ export class Stream extends EventEmitter {
       this._debug('redeemed token with throughput=%d', redeemedToken.throughput)
       this.tabLogger.sendLogEvent(
         () =>
-          `Stream:${id}:start: redeemed token with throughput=${redeemedToken.throughput}`
+          `Stream:${id}:start: redeemed token with throughput=${redeemedToken.throughput}`,
+        { throughput: redeemedToken.throughput }
       )
       this._lastDelivered = 0
       this.tabLogger.sendLogEvent(() => `Stream:${id}:start: making plugin`)
@@ -184,11 +185,12 @@ export class Stream extends EventEmitter {
         const receipt = stream.receipt?.toString('base64')
         setImmediate(() => {
           this.onMoney(connection, sentAmount, receipt)
+          const secsThroughput = Number(sentAmount) / redeemedToken.throughput
           const rate =
-            Number(connection.totalSent) / Number(connection.totalDelivered)
+            Number(connection.totalDelivered) / Number(connection.totalSent)
           this.tabLogger.sendLogEvent(
             () => {
-              return `Stream:${id}:onMoney sentAmount=${sentAmount}, rate=${rate}`
+              return `Stream:${id}:onMoney secsThroughput=${secsThroughput} sentAmount=${sentAmount}, rate=${rate}`
             },
             { rate }
           )
