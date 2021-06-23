@@ -6,6 +6,7 @@
 set -ex
 
 export WEXT_MANIFEST_VERSION="$COIL_DEV_VERSION"
+export WEXT_MANIFEST_VERSION_NAME="$COIL_DEV_VERSION - $(git branch --show) - $(git show -s --pretty='%h - %ad' --date=short)"
 export WEXT_MANIFEST_SUFFIX='Dev'
 export WEXT_MANIFEST_SUFFIX_NO_DATE='true'
 export WEXT_BUILD_CONFIG="{\"extensionBuildString\":\"$(git show --no-patch --no-notes --pretty='== %h == %cd == %s ==' )\"}"
