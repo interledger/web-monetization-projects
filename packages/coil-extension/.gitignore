@@ -5,6 +5,7 @@ test/fixtures/coil-oauth-wm.js
 *.apk
 six-apktool-decoded/assets/dist.crx
 six-apktool-decoded/META-INF
+six-apktool-decoded/build
 safari/Coil/Coil.xcodeproj/project.xcworkspace/
 safari/Coil/build
 safari/Coil/Coil.xcodeproj/xcuserdata/
