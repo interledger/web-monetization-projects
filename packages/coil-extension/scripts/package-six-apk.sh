@@ -9,5 +9,5 @@ set -ex
 unset WEXT_MANIFEST_SUFFIX
 # Enable production web-packing
 NODE_ENV=production yarn build-prod chrome
-# Create an apk
+# Create an apk (set SIX_APK_NAME env var to set file output)
 scripts/sixpacker.sh
