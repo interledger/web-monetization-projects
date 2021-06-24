@@ -14,7 +14,7 @@ SIX_APK_NAME=${SIX_APK_NAME:-coil-six.apk}
 mv dist.crx "$SIX_DIR"/assets
 
 
-apktool b -f "$SIX_DIR" -o coil-six.apk
+apktool b -f "$SIX_DIR" -o "$SIX_APK_NAME"
 
 jarsigner -verbose -keystore \
   "$COIL_SIX_KEYSTORE_PATH" \
@@ -22,4 +22,4 @@ jarsigner -verbose -keystore \
   "$SIX_APK_NAME" coilkey
 
 echo 'To uninstall: "adb uninstall com.coil.android.six"'
-echo 'To install:   "adb install -r ./coil-six.apk"'
+echo "To install:   \"adb install -r ./${SIX_APK_NAME}\""
