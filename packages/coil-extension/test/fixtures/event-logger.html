@@ -5,7 +5,7 @@
     <meta
       id="money"
       name="monetization"
-      content="$twitter.xrptipbot.com/Coil"
+      content="$ilp.uphold.com/USD/4k6g3nNYR4qh"
     />
     <script>
       if (document.monetization) {
@@ -50,6 +50,10 @@
         if (evt.detail.extra.throughput) {
           throughput = Number(evt.detail.extra.throughput)
           log(`coil_log: setting throughput=${throughput}`)
+        }
+        if (evt.detail.extra.firstMinuteStarted) {
+          pendingTime = Number(evt.detail.extra.firstMinuteStarted)
+          log(`coil_log: setting pendingTime=${pendingTime}`)
         }
       })
       window.addEventListener('load', () => {

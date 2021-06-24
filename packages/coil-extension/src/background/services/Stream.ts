@@ -400,7 +400,8 @@ async function firstMinuteBandwidth(
   stream.setSendMax(sendMax)
   const id = requestId.slice(0, 6)
   logger.sendLogEvent(
-    () => `firstMinuteBandwidth:${id}: set sendMax ${sendMax}`
+    () => `firstMinuteBandwidth:${id}: set sendMax ${sendMax}`,
+    { firstMinuteStarted: Date.now() }
   )
 
   let timer: number | undefined
