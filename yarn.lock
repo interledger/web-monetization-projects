@@ -1507,7 +1507,7 @@ __metadata:
     "@material-ui/styles": ^4.11.4
     "@types/debug": 4.1.5
     "@types/filesystem": 0.0.30
-    "@types/firefox": 0.0.30
+    "@types/firefox": 0.0.31
     "@types/har-format": 1.2.6
     "@types/jest": 26.0.23
     "@types/jsonwebtoken": 8.5.2
@@ -4095,10 +4095,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/firefox@npm:0.0.30":
-  version: 0.0.30
-  resolution: "@types/firefox@npm:0.0.30"
-  checksum: 6b898ce61695493faf9b2d2aa00d31ce0f5d2c2432bb55ef39ecae286352dab4c5fc4e649790ebbbdd906d27b109903c9a6c386cf26f2837977b609e04f70ae4
+"@types/firefox@npm:0.0.31":
+  version: 0.0.31
+  resolution: "@types/firefox@npm:0.0.31"
+  checksum: bc1b9cbddd1f9dcd1c3ab63fcafd221f6d8afd6ae4a88d42cc1e5c62ae984df4b1139400185553208863ee04506f7016d5787d478f5b07be563ddd76c8870be9
   languageName: node
   linkType: hard
 
