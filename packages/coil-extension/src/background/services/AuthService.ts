@@ -138,7 +138,7 @@ export class AuthService extends EventEmitter {
     }
     this.trace('siteToken', token)
 
-    if (this.tokenInvalid(token)) {
+    if (this.tokenInvalid(token) || !token /* Satisfy TypeScript */) {
       this.activeTabs.log(
         `token is null || expired! token=${token && tokenUtils.decode(token)}`
       )
