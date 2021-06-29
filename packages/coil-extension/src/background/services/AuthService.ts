@@ -5,7 +5,7 @@ import { inject, injectable } from 'inversify'
 
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
-import { TimeoutError, timeoutRejecting } from '../../util/timeout'
+import { TimeoutError } from '../../util/timeout'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
@@ -153,17 +153,12 @@ export class AuthService extends EventEmitter {
       )
       this.trace('after refreshTokenAndUpdateWhoAmi', token)
     } else {
-      // Routinely do a whoami query to check for subscription status
+      // Routinely do a whoami query to check for subscription status or
+      // changes to other fields (e.g. canTip)
       // Query could fail if token is invalid
       this.trace('before updateWhoAmI token=%s user=%s', token, this.store.user)
-      const stored = token
-      const endDate =
-        this.store.user?.subscription?.endDate ||
-        this.store.user?.subscription?.trialEndDate
-      if (!endDate || new Date(endDate) < new Date()) {
-        token = await this.updateWhoAmi(stored)
-        this.activeTabs.log(`after updateWhoAmi token=${Boolean(token)}`)
-      }
+      token = await this.updateWhoAmi(token)
+      this.activeTabs.log(`after updateWhoAmi token=${Boolean(token)}`)
       this.trace('after updateWhoAmI token=%s user=%s', token, this.store.user)
     }
 
