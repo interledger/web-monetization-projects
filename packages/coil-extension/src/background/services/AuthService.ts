@@ -117,6 +117,10 @@ export class AuthService extends EventEmitter {
     return this._op
   }
 
+  tokenInvalid(token: string | null) {
+    return !token || tokenUtils.isExpired({ token })
+  }
+
   async doGetTokenMaybeRefreshAndStoreState(): Promise<string | null> {
     this.activeTabs.log(`doGetTokenMaybeRefreshAndStoreState ${Date.now()}`)
     let token = this.getStoredToken()
@@ -128,13 +132,13 @@ export class AuthService extends EventEmitter {
       })}`
     )
 
-    if (!token) {
+    if (this.tokenInvalid(token)) {
       token = await this.siteToken.retrieve()
       this.activeTabs.log(`siteToken: ${Boolean(token)}`)
     }
     this.trace('siteToken', token)
 
-    if (!token || tokenUtils.isExpired({ token })) {
+    if (this.tokenInvalid(token)) {
       this.activeTabs.log(
         `token is null || expired! token=${token && tokenUtils.decode(token)}`
       )
