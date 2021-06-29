@@ -1,5 +1,5 @@
 import { CoilUser } from '../types'
-import { GraphQlClient } from '..'
+import { GraphQlClient, whoamiSelection } from '..'
 
 export interface QueryTokenData {
   refreshToken: { token: string }
@@ -12,19 +12,7 @@ export const queryTokenQuery = `{
   }
 
   whoami {
-    id
-    fullName
-    customerId
-    subscription {
-      active
-      endDate
-      trialEndDate
-    }
-
-    currencyPreferences {
-      code
-      scale
-    }
+    ${whoamiSelection}
   }
 }`
 
