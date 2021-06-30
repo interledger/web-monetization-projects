@@ -1,4 +1,7 @@
 {
   // FROM UPKEEP TEMPLATE
-  "extends": "../../../tsconfig.json"
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true
+  }
 }
