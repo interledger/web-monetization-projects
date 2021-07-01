@@ -1514,7 +1514,7 @@ __metadata:
     "@types/long": 4.0.1
     "@types/node": 14.17.4
     "@types/node-fetch": 2.5.10
-    "@types/react": 17.0.12
+    "@types/react": 17.0.13
     "@types/react-dom": 17.0.8
     "@types/uuid": 8.3.0
     "@typescript-eslint/eslint-plugin": 4.28.1
@@ -2353,7 +2353,7 @@ __metadata:
     "@material-ui/icons": ^4.11.2
     "@types/jest": 26.0.23
     "@types/node": 14.17.4
-    "@types/react": 17.0.12
+    "@types/react": 17.0.13
     "@types/react-dom": 17.0.8
     "@types/uuid": 8.3.0
     "@typescript-eslint/eslint-plugin": 4.28.1
@@ -4355,14 +4355,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.12":
-  version: 17.0.12
-  resolution: "@types/react@npm:17.0.12"
+"@types/react@npm:17.0.13":
+  version: 17.0.13
+  resolution: "@types/react@npm:17.0.13"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 3cfa54700ec5a15ecfbe6e3f44864983768d3db1c1e88bf67fb0af689f8a14190b11ae2dfccebf36b8ad96b028909ea95c31dff36f4f582f4519f62e18d1164b
+  checksum: baa5a699b72ec9ce85e56755078b375ebefd9557b4d2b506c7f39e8aa50a769aa7f3d33684667ed67c436344b5c4c6272285fd3330b14296f0f25328972bc26a
   languageName: node
   linkType: hard
 
@@ -4824,7 +4824,7 @@ __metadata:
     "@types/jest": 26.0.23
     "@types/node": 14.17.4
     "@types/node-fetch": 2.5.10
-    "@types/react": 17.0.12
+    "@types/react": 17.0.13
     "@types/react-dom": 17.0.8
     "@types/react-helmet": 6.1.1
     "@typescript-eslint/eslint-plugin": 4.28.1
@@ -4952,7 +4952,7 @@ __metadata:
     "@commitlint/config-conventional": 12.1.4
     "@types/jest": 26.0.23
     "@types/node": 14.17.4
-    "@types/react": 17.0.12
+    "@types/react": 17.0.13
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
     "@webmonetization/types": 0.0.0
@@ -5010,7 +5010,7 @@ __metadata:
     "@types/ajv": 1.0.0
     "@types/jest": 26.0.23
     "@types/node": 14.17.4
-    "@types/react": 17.0.12
+    "@types/react": 17.0.13
     "@types/react-dom": 17.0.8
     "@types/uuid": 8.3.0
     "@typescript-eslint/eslint-plugin": 4.28.1
