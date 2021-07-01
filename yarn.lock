@@ -1505,7 +1505,7 @@ __metadata:
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
     "@material-ui/styles": ^4.11.4
-    "@types/debug": 4.1.5
+    "@types/debug": 4.1.6
     "@types/filesystem": 0.0.31
     "@types/firefox": 0.0.31
     "@types/har-format": 1.2.6
@@ -1822,7 +1822,7 @@ __metadata:
     "@coil/client": 0.0.0
     "@commitlint/cli": 12.1.4
     "@commitlint/config-conventional": 12.1.4
-    "@types/debug": 4.1.5
+    "@types/debug": 4.1.6
     "@types/get-port": 4.2.0
     "@types/jest": 26.0.23
     "@types/node": 14.17.4
@@ -4008,10 +4008,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/debug@npm:4.1.5, @types/debug@npm:^4.1.0":
-  version: 4.1.5
-  resolution: "@types/debug@npm:4.1.5"
-  checksum: 416ad24bc589be0fb8c78bea972aa7d4ffdf6b136239701b1792674463b2dbf8c6707f6055ec484f79ec1f2b528ffef90c87e55df7e4a0f458184cad5bf0cfc8
+"@types/debug@npm:4.1.6, @types/debug@npm:^4.1.0":
+  version: 4.1.6
+  resolution: "@types/debug@npm:4.1.6"
+  checksum: f2816703a81f2cecb9fe575ed73f69378f190f92e49aab01b5b1832166cd89b19d4e85999c955f8993d3dba36e78ffd1ac5f697449eff13a6a13de309dc6e0f5
   languageName: node
   linkType: hard
 
