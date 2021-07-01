@@ -1404,7 +1404,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     jsonwebtoken: 8.5.1
     lerna: 4.0.0
@@ -1461,7 +1461,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
@@ -1542,7 +1542,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
     inversify: ^5.1.1
@@ -1607,7 +1607,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     json5: ^2.2.0
     lerna: 4.0.0
@@ -1672,7 +1672,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
     jest: 27.0.6
@@ -1729,7 +1729,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -1786,7 +1786,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     keccak: ^3.0.1
     lerna: 4.0.0
@@ -1847,7 +1847,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
     get-port: ^5.1.1
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -1905,7 +1905,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
     events: ^3.3.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -1962,7 +1962,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -2217,7 +2217,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -2269,7 +2269,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     inversify: ^5.1.1
     jest: 27.0.6
     lerna: 4.0.0
@@ -2383,7 +2383,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
     file-loader: 6.2.0
-    husky: 6.0.0
+    husky: 7.0.0
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
     inversify: ^5.1.1
@@ -4778,7 +4778,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
     events: ^3.3.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -4850,7 +4850,7 @@ __metadata:
     express: ^4.17.1
     figlet: ^1.5.0
     html-webpack-plugin: 5.3.2
-    husky: 6.0.0
+    husky: 7.0.0
     ilp-plugin-btp: ^1.5.0
     ilp-plugin-mini-accounts: ^4.2.0
     ilp-protocol-stream: ^2.7.0
@@ -4914,7 +4914,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -4971,7 +4971,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -5033,7 +5033,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
     html-webpack-plugin: 5.3.2
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -5088,7 +5088,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -5143,7 +5143,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
@@ -12487,12 +12487,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"husky@npm:6.0.0":
-  version: 6.0.0
-  resolution: "husky@npm:6.0.0"
+"husky@npm:7.0.0":
+  version: 7.0.0
+  resolution: "husky@npm:7.0.0"
   bin:
     husky: lib/bin.js
-  checksum: 61e1f7f53f3c969d361c2a1d4ed8018b9447406ea6cd644a2526d18b76877d135001d8cbd48a1d201fc1614d96995e691ecd2b82a8d8513a6b4a313da1188ccd
+  checksum: 56252eeb452612a183731a3302db07de2f283ca8c869a884edb30dffe9908beab32365792dec9145c7f6df4e41f763d74212ca7bc05c0171fa6dff2bac17c8c1
   languageName: node
   linkType: hard
 
@@ -22304,7 +22304,7 @@ sjcl@sublimator/sjcl:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    husky: 6.0.0
+    husky: 7.0.0
     jest: 27.0.6
     lerna: 4.0.0
     lint-staged: 11.0.0
