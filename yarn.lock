@@ -1516,7 +1516,7 @@ __metadata:
     "@types/node-fetch": 2.5.10
     "@types/react": 17.0.13
     "@types/react-dom": 17.0.8
-    "@types/uuid": 8.3.0
+    "@types/uuid": 8.3.1
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
     "@webexts/build-utils": ^0.0.0
@@ -1652,7 +1652,7 @@ __metadata:
     "@types/long": 4.0.1
     "@types/node": 14.17.4
     "@types/node-fetch": 2.5.10
-    "@types/uuid": 8.3.0
+    "@types/uuid": 8.3.1
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
     "@webmonetization/polyfill-utils": 0.0.0
@@ -2355,7 +2355,7 @@ __metadata:
     "@types/node": 14.17.4
     "@types/react": 17.0.13
     "@types/react-dom": 17.0.8
-    "@types/uuid": 8.3.0
+    "@types/uuid": 8.3.1
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
     "@webexts/build-utils": 0.0.0
@@ -4441,10 +4441,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/uuid@npm:8.3.0":
-  version: 8.3.0
-  resolution: "@types/uuid@npm:8.3.0"
-  checksum: 620985aed8fdb4aed153daca5235f4303457a67a4d181efac0021712eabd9edd7e88895f79730c0e651effde7633b1b61e49a81519ac8d4e75019d2ac9b6412f
+"@types/uuid@npm:8.3.1":
+  version: 8.3.1
+  resolution: "@types/uuid@npm:8.3.1"
+  checksum: 5864be83031f5836be985187ecebb2769936bf223bad896dac381f1a0fdd2ae239f448263196f752d62a4ecc8563817d6d94e329eb2099a28e743ab206e7bfea
   languageName: node
   linkType: hard
 
@@ -4896,7 +4896,7 @@ __metadata:
     "@types/jest": 26.0.23
     "@types/node": 14.17.4
     "@types/node-fetch": 2.5.10
-    "@types/uuid": 8.3.0
+    "@types/uuid": 8.3.1
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
     "@yarnpkg/pnpify": 2.4.0
@@ -5012,7 +5012,7 @@ __metadata:
     "@types/node": 14.17.4
     "@types/react": 17.0.13
     "@types/react-dom": 17.0.8
-    "@types/uuid": 8.3.0
+    "@types/uuid": 8.3.1
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
     "@webmonetization/types": 0.0.0
