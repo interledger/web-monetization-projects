@@ -1386,7 +1386,7 @@ __metadata:
     "@types/jsonwebtoken": 8.5.3
     "@types/node": 14.17.4
     "@types/node-fetch": 2.5.10
-    "@types/sjcl": 1.0.29
+    "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 4.28.2
     "@typescript-eslint/parser": 4.28.2
     "@yarnpkg/pnpify": 2.4.0
@@ -1765,7 +1765,7 @@ __metadata:
     "@types/jest": 26.0.23
     "@types/keccak": 3.0.1
     "@types/node": 14.17.4
-    "@types/sjcl": 1.0.29
+    "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 4.28.2
     "@typescript-eslint/parser": 4.28.2
     "@yarnpkg/pnpify": 2.4.0
@@ -4417,10 +4417,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/sjcl@npm:1.0.29":
-  version: 1.0.29
-  resolution: "@types/sjcl@npm:1.0.29"
-  checksum: 609c6308333096c3ecca7d2039cf8794e9e3b9361515e18ccf58fea330f40f61acf014cbf4e2a953d4ed75bfd3a591498991ad9b9dddddf31d71e48b2d19d83e
+"@types/sjcl@npm:1.0.30":
+  version: 1.0.30
+  resolution: "@types/sjcl@npm:1.0.30"
+  checksum: 68d24d0a51e2e73544bb8ad913f499769dc8a4bcc7eaef6b194261b3e309e5e58eb2862bf95e46cd33ca53726a08129145971e91cad426ceebeb83621ea39592
   languageName: node
   linkType: hard
 
