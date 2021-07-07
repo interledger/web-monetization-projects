@@ -71,7 +71,7 @@
     "ts-loader": "9.2.3",
     "ts-node": "10.0.0",
     "ts-node-dev": "1.1.8",
-    "tsconfig-paths": "3.9.0",
+    "tsconfig-paths": "3.10.1",
     "typescript": "4.3.5",
     "webpack": "5.42.1",
     "webpack-bundle-analyzer": "4.4.2",
