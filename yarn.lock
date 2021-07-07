@@ -1506,7 +1506,7 @@ __metadata:
     "@material-ui/icons": ^4.11.2
     "@material-ui/styles": ^4.11.4
     "@types/debug": 4.1.6
-    "@types/filesystem": 0.0.31
+    "@types/filesystem": 0.0.32
     "@types/firefox": 0.0.31
     "@types/har-format": 1.2.6
     "@types/jest": 26.0.24
@@ -4097,12 +4097,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/filesystem@npm:0.0.31":
-  version: 0.0.31
-  resolution: "@types/filesystem@npm:0.0.31"
+"@types/filesystem@npm:0.0.32":
+  version: 0.0.32
+  resolution: "@types/filesystem@npm:0.0.32"
   dependencies:
     "@types/filewriter": "*"
-  checksum: d1cdb0b002c646ebc7685466ce239a1da3c337fcee31b061126268692eb53b21f51f48a74edc132a868344c8610aae6d45b7042644cf0c51d3abafca61ece51a
+  checksum: 1b7eac8247c0ca965b67e90fba0213a78acef689428649bb8ad08e215a5f48adca80b929a7f1eefe20a195bb03af395eec3a2e5549bcef0b2d8c363f60a45108
   languageName: node
   linkType: hard
 
