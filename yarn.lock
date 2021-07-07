@@ -4090,10 +4090,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/figlet@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@types/figlet@npm:1.5.1"
-  checksum: 8d6d8dbeebaa2d9bcdc09a72f47e4428b3a6d116d5c052a54722bc5d15e89cab88f499f07ae2b5c2979008ce3a2a8a1b4b3fa2ba57cddb4ccc8634343669a5fa
+"@types/figlet@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@types/figlet@npm:1.5.2"
+  checksum: 3c0005fbcb3232b62bc0ec9e0df17935234834298f699fbfbc1b942b95ba7a8d4bd959df0e714bbb6f2f835047aa7a620e18def4a6055f9be9c60245b0c1211b
   languageName: node
   linkType: hard
 
@@ -4831,7 +4831,7 @@ __metadata:
     "@hot-loader/react-dom": 17.0.1
     "@types/body-parser": 1.19.1
     "@types/express": 4.17.12
-    "@types/figlet": 1.5.1
+    "@types/figlet": 1.5.2
     "@types/jest": 26.0.24
     "@types/node": 14.17.4
     "@types/node-fetch": 2.5.10
