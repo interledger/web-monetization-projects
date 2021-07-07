@@ -79,7 +79,7 @@
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
     "@types/debug": "4.1.6",
-    "@types/filesystem": "0.0.31",
+    "@types/filesystem": "0.0.32",
     "@types/firefox": "0.0.31",
     "@types/har-format": "1.2.6",
     "@types/jest": "26.0.24",
