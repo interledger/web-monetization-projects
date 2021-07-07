@@ -82,7 +82,7 @@
     "@types/filesystem": "0.0.31",
     "@types/firefox": "0.0.31",
     "@types/har-format": "1.2.6",
-    "@types/jest": "26.0.23",
+    "@types/jest": "26.0.24",
     "@types/jsonwebtoken": "8.5.3",
     "@types/long": "4.0.1",
     "@types/node": "14.17.4",
