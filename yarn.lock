@@ -1385,7 +1385,7 @@ __metadata:
     "@types/jest": 26.0.24
     "@types/jsonwebtoken": 8.5.3
     "@types/node": 14.17.4
-    "@types/node-fetch": 2.5.10
+    "@types/node-fetch": 2.5.11
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 4.28.2
     "@typescript-eslint/parser": 4.28.2
@@ -1443,7 +1443,7 @@ __metadata:
     "@types/jest": 26.0.24
     "@types/jsonwebtoken": 8.5.3
     "@types/node": 14.17.4
-    "@types/node-fetch": 2.5.10
+    "@types/node-fetch": 2.5.11
     "@typescript-eslint/eslint-plugin": 4.28.2
     "@typescript-eslint/parser": 4.28.2
     "@yarnpkg/pnpify": 2.4.0
@@ -1513,7 +1513,7 @@ __metadata:
     "@types/jsonwebtoken": 8.5.3
     "@types/long": 4.0.1
     "@types/node": 14.17.4
-    "@types/node-fetch": 2.5.10
+    "@types/node-fetch": 2.5.11
     "@types/react": 17.0.13
     "@types/react-dom": 17.0.8
     "@types/uuid": 8.3.1
@@ -1651,7 +1651,7 @@ __metadata:
     "@types/jest": 26.0.24
     "@types/long": 4.0.1
     "@types/node": 14.17.4
-    "@types/node-fetch": 2.5.10
+    "@types/node-fetch": 2.5.11
     "@types/uuid": 8.3.1
     "@typescript-eslint/eslint-plugin": 4.28.2
     "@typescript-eslint/parser": 4.28.2
@@ -4266,13 +4266,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:2.5.10":
-  version: 2.5.10
-  resolution: "@types/node-fetch@npm:2.5.10"
+"@types/node-fetch@npm:2.5.11":
+  version: 2.5.11
+  resolution: "@types/node-fetch@npm:2.5.11"
   dependencies:
     "@types/node": "*"
     form-data: ^3.0.0
-  checksum: 7687038f73cf0f2e4bac8ced3abdfbb77f8b2719de2f180d0064238d7460c8b4dc0b39c08da35a76d7db9f86528599ea0f7cee7c468ad7cfecfe2db1c5863641
+  checksum: 944b0c6bed70afe330db022b90fb0c99f51b70a3fe38e2cc197207985cb6e1903eac5c0a87bb642c4b3683db9dafe3bee5ba020f9f9868b7c3eb70beae379b1a
   languageName: node
   linkType: hard
 
@@ -4834,7 +4834,7 @@ __metadata:
     "@types/figlet": 1.5.2
     "@types/jest": 26.0.24
     "@types/node": 14.17.4
-    "@types/node-fetch": 2.5.10
+    "@types/node-fetch": 2.5.11
     "@types/react": 17.0.13
     "@types/react-dom": 17.0.8
     "@types/react-helmet": 6.1.1
@@ -4906,7 +4906,7 @@ __metadata:
     "@commitlint/config-conventional": 12.1.4
     "@types/jest": 26.0.24
     "@types/node": 14.17.4
-    "@types/node-fetch": 2.5.10
+    "@types/node-fetch": 2.5.11
     "@types/uuid": 8.3.1
     "@typescript-eslint/eslint-plugin": 4.28.2
     "@typescript-eslint/parser": 4.28.2
