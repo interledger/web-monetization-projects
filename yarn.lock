@@ -1508,7 +1508,7 @@ __metadata:
     "@types/debug": 4.1.6
     "@types/filesystem": 0.0.32
     "@types/firefox": 0.0.31
-    "@types/har-format": 1.2.6
+    "@types/har-format": 1.2.7
     "@types/jest": 26.0.24
     "@types/jsonwebtoken": 8.5.3
     "@types/long": 4.0.1
@@ -4148,10 +4148,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/har-format@npm:1.2.6":
-  version: 1.2.6
-  resolution: "@types/har-format@npm:1.2.6"
-  checksum: d48ea89e91254f2531983cab39bdd8ed06768befec88eb0b66dc4e253328b8f00af18488535d3cc3966016ad3283649bd885b7310eb86800a6a8c45695b69151
+"@types/har-format@npm:1.2.7":
+  version: 1.2.7
+  resolution: "@types/har-format@npm:1.2.7"
+  checksum: e2a218a385cc620de2580616ad2c9b3c89574470114f36f422f05975c9f371e9f044a1a992ded54c886b52f0c2709f7ad03c3b19281d7770bfa405448eee267a
   languageName: node
   linkType: hard
 
