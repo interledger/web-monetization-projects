@@ -39,6 +39,8 @@
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "precommit": "echo lint-staged runs from root",
     "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
+    "publish:preview": "WEXT_SHIPIT_CHROME_EXTENSION_ID=iehmfkldnblennopinmmagfidpflefkp WEXT_MANIFEST_SUFFIX=Preview ./scripts/publish-coildev-chrome-store.sh",
+    "publish:dev": "./scripts/publish-coildev-chrome-store.sh",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --verbose --coverage",
     "upkeep": "cd ../.. && yarn upkeep"
@@ -93,7 +95,7 @@
     "@typescript-eslint/eslint-plugin": "4.28.2",
     "@typescript-eslint/parser": "4.28.2",
     "@webexts/build-utils": "^0.0.0",
-    "@wext/shipit": "0.2.1",
+    "@wext/shipit": "^0.2.1",
     "@yarnpkg/pnpify": "2.4.0",
     "JSON2016": "1.0.0",
     "addons-linter": "3.9.0",

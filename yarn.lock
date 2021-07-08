@@ -1523,7 +1523,7 @@ __metadata:
     "@webmonetization/polyfill-utils": ^0.0.0
     "@webmonetization/types": ^0.0.0
     "@webmonetization/wext": ^0.0.0
-    "@wext/shipit": 0.2.1
+    "@wext/shipit": ^0.2.1
     "@yarnpkg/pnpify": 2.4.0
     JSON2016: 1.0.0
     addons-linter: 3.9.0
@@ -2380,7 +2380,7 @@ __metadata:
     "@webmonetization/polyfill-utils": ^0.0.0
     "@webmonetization/types": ^0.0.0
     "@webmonetization/wext": ^0.0.0
-    "@wext/shipit": 0.2.1
+    "@wext/shipit": ^0.2.1
     "@yarnpkg/pnpify": 2.4.0
     JSON2016: 1.0.0
     addons-linter: 3.9.0
@@ -5207,7 +5207,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wext/shipit@npm:0.2.1":
+"@wext/shipit@npm:*, @wext/shipit@npm:^0.2.1":
   version: 0.2.1
   resolution: "@wext/shipit@npm:0.2.1"
   dependencies:
