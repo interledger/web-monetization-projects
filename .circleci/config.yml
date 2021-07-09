@@ -307,7 +307,7 @@ workflows:
   build:
     jobs:
       - lint-all:
-          *matrix
+          <<: *matrix
       - yarn-format-and-upkeep-diff-check:
           matrix:
             parameters:
