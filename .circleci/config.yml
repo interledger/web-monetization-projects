@@ -46,6 +46,9 @@ jobs:
           key: v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
 
   coil-extension-package:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
@@ -70,6 +73,9 @@ jobs:
       - *save_cache
 
   publish-packages:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:14-buster-browsers
     steps:
@@ -93,6 +99,9 @@ jobs:
       - *save_cache
 
   coil-extension-puppeteer:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:<< parameters.node-version >>-buster-browsers
     environment:
@@ -122,6 +131,9 @@ jobs:
       # - *save_cache
 
   coil-extension-puppeteer-transpile-only:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:<< parameters.node-version >>-buster-browsers
     environment:
@@ -152,6 +164,9 @@ jobs:
       # - *save_cache
 
   build-all-package-references-typescript:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
@@ -165,6 +180,9 @@ jobs:
       - *save_cache
 
   build-root-tsconfig:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
@@ -178,6 +196,9 @@ jobs:
       - *save_cache
 
   jest-all:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:<< parameters.node-version >>-buster-browsers
     resource_class: large
@@ -205,6 +226,9 @@ jobs:
       - *save_cache
 
   jest-lerna-all:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:<< parameters.node-version >>-buster-browsers
     resource_class: xlarge
@@ -227,6 +251,9 @@ jobs:
       - *save_cache
 
   packages-build-scripts:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
@@ -240,6 +267,9 @@ jobs:
       - *save_cache
 
   yarn-format-and-upkeep-diff-check:
+    parameters:
+      node-version:
+        type: string
     docker:
       - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
@@ -285,22 +315,18 @@ workflows:
           matrix:
             parameters:
               node-version: ["14", "16"]
-
       - build-root-tsconfig:
           matrix:
             parameters:
               node-version: ["14", "16"]
-
       - coil-extension-package:
           matrix:
             parameters:
               node-version: ["14", "16"]
-
       - packages-build-scripts:
           matrix:
             parameters:
               node-version: ["14", "16"]
-
       - hold-publish-packages:
           type: approval
           filters:
