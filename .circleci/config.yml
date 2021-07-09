@@ -9,8 +9,11 @@ parameters:
 jobs:
   # Run Linting
   lint-all:
+    parameters:
+      node-version:
+        type: string
     docker:
-        - image: circleci/node:16-buster-browsers
+        - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
       - checkout
       # Download and cache dependencies
@@ -270,7 +273,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - lint-all
+      - lint-all:
+          matrix:
+            parameters:
+              node-version: ["14", "16"]
       - yarn-format-and-upkeep-diff-check
       - build-all-package-references-typescript
       - build-root-tsconfig
