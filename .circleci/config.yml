@@ -296,14 +296,18 @@ jobs:
             git diff --exit-code -- . ':!yarn.lock'
       - *save_cache
 
+references:
+  &matrix:
+    matrix:
+      parameters:
+        node-version: [ "14", "16" ]
+
 workflows:
   version: 2
   build:
     jobs:
       - lint-all:
-          matrix:
-            parameters:
-              node-version: ["14", "16"]
+          *matrix
       - yarn-format-and-upkeep-diff-check:
           matrix:
             parameters:
