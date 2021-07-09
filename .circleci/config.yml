@@ -309,25 +309,15 @@ workflows:
       - lint-all:
           <<: *matrix
       - yarn-format-and-upkeep-diff-check:
-          matrix:
-            parameters:
-              node-version: ["14", "16"]
+          <<: *matrix
       - build-all-package-references-typescript:
-          matrix:
-            parameters:
-              node-version: ["14", "16"]
+          <<: *matrix
       - build-root-tsconfig:
-          matrix:
-            parameters:
-              node-version: ["14", "16"]
+          <<: *matrix
       - coil-extension-package:
-          matrix:
-            parameters:
-              node-version: ["14", "16"]
+          <<: *matrix
       - packages-build-scripts:
-          matrix:
-            parameters:
-              node-version: ["14", "16"]
+          <<: *matrix
       - hold-publish-packages:
           type: approval
           filters:
@@ -347,33 +337,25 @@ workflows:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          matrix:
-            parameters:
-              node-version: [ "14", "16" ]
+          <<: *matrix
       - jest-lerna-all:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          matrix:
-            parameters:
-              node-version: [ "14", "16" ]
+          <<: *matrix
       - coil-extension-puppeteer:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          matrix:
-            parameters:
-              node-version: [ "14", "16" ]
+          <<: *matrix
       - coil-extension-puppeteer-transpile-only:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          matrix:
-            parameters:
-              node-version: [ "14", "16" ]
+          <<: *matrix
