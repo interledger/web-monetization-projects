@@ -47,7 +47,7 @@ jobs:
 
   coil-extension-package:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -71,7 +71,7 @@ jobs:
 
   publish-packages:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -94,7 +94,7 @@ jobs:
 
   coil-extension-puppeteer:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -123,7 +123,7 @@ jobs:
 
   coil-extension-puppeteer-transpile-only:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -153,7 +153,7 @@ jobs:
 
   build-all-package-references-typescript:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -166,7 +166,7 @@ jobs:
 
   build-root-tsconfig:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -179,7 +179,7 @@ jobs:
 
   jest-all:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     resource_class: large
     steps:
       - run:
@@ -206,7 +206,7 @@ jobs:
 
   jest-lerna-all:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     resource_class: xlarge
     steps:
       - checkout
@@ -228,7 +228,7 @@ jobs:
 
   packages-build-scripts:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -241,7 +241,7 @@ jobs:
 
   yarn-format-and-upkeep-diff-check:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     steps:
       - run:
           name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be empty
@@ -277,11 +277,30 @@ workflows:
           matrix:
             parameters:
               node-version: ["14", "16"]
-      - yarn-format-and-upkeep-diff-check
-      - build-all-package-references-typescript
-      - build-root-tsconfig
-      - coil-extension-package
-      - packages-build-scripts
+      - yarn-format-and-upkeep-diff-check:
+          matrix:
+            parameters:
+              node-version: ["14", "16"]
+      - build-all-package-references-typescript:
+          matrix:
+            parameters:
+              node-version: ["14", "16"]
+
+      - build-root-tsconfig:
+          matrix:
+            parameters:
+              node-version: ["14", "16"]
+
+      - coil-extension-package:
+          matrix:
+            parameters:
+              node-version: ["14", "16"]
+
+      - packages-build-scripts:
+          matrix:
+            parameters:
+              node-version: ["14", "16"]
+
       - hold-publish-packages:
           type: approval
           filters:
@@ -295,27 +314,42 @@ workflows:
             branches:
               only:
                 - main
+          matrix:
+            parameters:
+              node-version: [ "14" ]
       - jest-all:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
+          matrix:
+            parameters:
+              node-version: [ "14", "16" ]
       - jest-lerna-all:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
+          matrix:
+            parameters:
+              node-version: [ "14", "16" ]
       - coil-extension-puppeteer:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
+          matrix:
+            parameters:
+              node-version: [ "14", "16" ]
       - coil-extension-puppeteer-transpile-only:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
+          matrix:
+            parameters:
+              node-version: [ "14", "16" ]
