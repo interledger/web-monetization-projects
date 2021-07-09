@@ -71,7 +71,7 @@ jobs:
 
   publish-packages:
     docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+      - image: circleci/node:14-buster-browsers
     steps:
       - checkout
       - *restore_cache
@@ -314,9 +314,6 @@ workflows:
             branches:
               only:
                 - main
-          matrix:
-            parameters:
-              node-version: [ "14" ]
       - jest-all:
           context: web-monetization-tests
           filters:
