@@ -5700,10 +5700,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/figlet", [
-        ["npm:1.5.3", {
-          "packageLocation": "./.yarn/cache/@types-figlet-npm-1.5.3-6fd866249b-4e07bf4003.zip/node_modules/@types/figlet/",
+        ["npm:1.5.4", {
+          "packageLocation": "./.yarn/cache/@types-figlet-npm-1.5.4-7cce97728b-25390eaa1a.zip/node_modules/@types/figlet/",
           "packageDependencies": [
-            ["@types/figlet", "npm:1.5.3"]
+            ["@types/figlet", "npm:1.5.4"]
           ],
           "linkType": "HARD",
         }]
@@ -6608,7 +6608,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hot-loader/react-dom", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:17.0.1"],
             ["@types/body-parser", "npm:1.19.1"],
             ["@types/express", "npm:4.17.8"],
-            ["@types/figlet", "npm:1.5.3"],
+            ["@types/figlet", "npm:1.5.4"],
             ["@types/jest", "npm:26.0.24"],
             ["@types/node", "npm:14.17.5"],
             ["@types/node-fetch", "npm:2.5.11"],
