@@ -6,14 +6,22 @@ parameters:
     default: "https://coil.com"
     enum: ["https://coil.com", "https://staging.coil.com"]
 
-jobs:
-  # Run Linting
-  lint-all:
+references:
+  parameterized-node-version: &parameterized-node-version
     parameters:
       node-version:
         type: string
     docker:
-        - image: circleci/node:<< parameters.node-version >>-buster-browsers
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+  node-version-matrix: &node-version-matrix
+    matrix:
+      parameters:
+        node-version: [ "14", "16" ]
+
+jobs:
+  # Run Linting
+  lint-all:
+    <<: *parameterized-node-version
     steps:
       - checkout
       # Download and cache dependencies
@@ -46,11 +54,7 @@ jobs:
           key: v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
 
   coil-extension-package:
-    parameters:
-      node-version:
-        type: string
-    docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+    <<: *parameterized-node-version
     steps:
       - checkout
       - *restore_cache
@@ -96,11 +100,7 @@ jobs:
       - *save_cache
 
   coil-extension-puppeteer:
-    parameters:
-      node-version:
-        type: string
-    docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+    <<: *parameterized-node-version
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -128,11 +128,7 @@ jobs:
       # - *save_cache
 
   coil-extension-puppeteer-transpile-only:
-    parameters:
-      node-version:
-        type: string
-    docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+    <<: *parameterized-node-version
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
     steps:
@@ -161,11 +157,7 @@ jobs:
       # - *save_cache
 
   build-all-package-references-typescript:
-    parameters:
-      node-version:
-        type: string
-    docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+    <<: *parameterized-node-version
     steps:
       - checkout
       - *restore_cache
@@ -177,11 +169,7 @@ jobs:
       - *save_cache
 
   build-root-tsconfig:
-    parameters:
-      node-version:
-        type: string
-    docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+    <<: *parameterized-node-version
     steps:
       - checkout
       - *restore_cache
@@ -193,11 +181,7 @@ jobs:
       - *save_cache
 
   jest-all:
-    parameters:
-      node-version:
-        type: string
-    docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+    <<: *parameterized-node-version
     resource_class: large
     steps:
       - run:
@@ -223,11 +207,7 @@ jobs:
       - *save_cache
 
   jest-lerna-all:
-    parameters:
-      node-version:
-        type: string
-    docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+    <<: *parameterized-node-version
     resource_class: xlarge
     steps:
       - checkout
@@ -248,11 +228,7 @@ jobs:
       - *save_cache
 
   packages-build-scripts:
-    parameters:
-      node-version:
-        type: string
-    docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+    <<: *parameterized-node-version
     steps:
       - checkout
       - *restore_cache
@@ -264,11 +240,7 @@ jobs:
       - *save_cache
 
   yarn-format-and-upkeep-diff-check:
-    parameters:
-      node-version:
-        type: string
-    docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+    <<: *parameterized-node-version
     steps:
       - run:
           name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be empty
@@ -296,28 +268,22 @@ jobs:
             git diff --exit-code -- . ':!yarn.lock'
       - *save_cache
 
-references:
-    matrixSettings: &matrix
-      matrix:
-        parameters:
-          node-version: [ "14", "16" ]
-
 workflows:
   version: 2
   build:
     jobs:
       - lint-all:
-          <<: *matrix
+          <<: *node-version-matrix
       - yarn-format-and-upkeep-diff-check:
-          <<: *matrix
+          <<: *node-version-matrix
       - build-all-package-references-typescript:
-          <<: *matrix
+          <<: *node-version-matrix
       - build-root-tsconfig:
-          <<: *matrix
+          <<: *node-version-matrix
       - coil-extension-package:
-          <<: *matrix
+          <<: *node-version-matrix
       - packages-build-scripts:
-          <<: *matrix
+          <<: *node-version-matrix
       - hold-publish-packages:
           type: approval
           filters:
@@ -337,25 +303,25 @@ workflows:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          <<: *matrix
+          <<: *node-version-matrix
       - jest-lerna-all:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          <<: *matrix
+          <<: *node-version-matrix
       - coil-extension-puppeteer:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          <<: *matrix
+          <<: *node-version-matrix
       - coil-extension-puppeteer-transpile-only:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          <<: *matrix
+          <<: *node-version-matrix
