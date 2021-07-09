@@ -1,4 +1,4 @@
-import { GraphQlClient } from '../graphQlClient'
+import type { GraphQlClient } from '../graphQlClient'
 
 export const adaptedPageQuery = `query getPage($url: String!, $channelId: String) {
   adaptedPage(videoUrl: $url, channelId: $channelId) {

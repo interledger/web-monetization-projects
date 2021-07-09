@@ -1,4 +1,9 @@
-import { decodeToken, GraphQlClient, loginMutation } from '@coil/client'
+import {
+  decodeToken,
+  GraphQlClient,
+  loginMutation,
+  queryTokenQuery
+} from '@coil/client'
 import fetch from 'node-fetch'
 
 import { testToken } from '../fixtures/testToken'
@@ -44,5 +49,37 @@ describe('GraphQlClient#login', () => {
       iat: 1564619868,
       userId: 'cjyf1on2b8bs40706kfgy5wq2'
     })
+  })
+
+  it('should compose the queries correctly', () => {
+    // This test seems pointless, but we had issues with auto generated
+    // circular imports causing the whoami selection here to be `undefined`
+    expect(queryTokenQuery).toMatchInlineSnapshot(`
+"{
+  refreshToken {
+    token
+  }
+
+  whoami {
+    
+    id
+    fullName
+    customerId
+    canTip
+
+    subscription {
+      active
+      endDate
+      trialEndDate
+    }
+
+    currencyPreferences {
+      code
+      scale
+    }
+
+  }
+}"
+`)
   })
 })

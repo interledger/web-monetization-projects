@@ -1,5 +1,5 @@
 import { CoilUser } from '../types'
-import { GraphQlClient } from '..'
+import type { GraphQlClient } from '../graphQlClient'
 
 export interface WhoAmIData {
   whoami: CoilUser
