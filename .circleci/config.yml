@@ -297,10 +297,10 @@ jobs:
       - *save_cache
 
 references:
-  &matrix:
-    matrix:
-      parameters:
-        node-version: [ "14", "16" ]
+    matrixSettings: &matrix
+      matrix:
+        parameters:
+          node-version: [ "14", "16" ]
 
 workflows:
   version: 2
