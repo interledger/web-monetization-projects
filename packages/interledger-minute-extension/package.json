@@ -69,7 +69,6 @@
     "@types/uuid": "8.3.1",
     "@typescript-eslint/eslint-plugin": "4.28.2",
     "@typescript-eslint/parser": "4.28.2",
-    "@wext/shipit": "0.2.1",
     "@yarnpkg/pnpify": "2.4.0",
     "JSON2016": "1.0.0",
     "addons-linter": "3.9.0",
