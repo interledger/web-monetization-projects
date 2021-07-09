@@ -1,5 +1,7 @@
 import { CoilUser } from '../types'
-import { GraphQlClient, whoamiSelection } from '..'
+import type { GraphQlClient } from '../graphQlClient'
+
+import { whoamiSelection } from './whoAmI'
 
 export interface QueryTokenData {
   refreshToken: { token: string }

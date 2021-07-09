@@ -1,4 +1,4 @@
-import { GraphQlClient } from '..'
+import type { GraphQlClient } from '../graphQlClient'
 
 export const loginMutation = `mutation Login($input: LoginInput!) {
   auth: login(input: $input) {
