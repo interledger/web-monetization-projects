@@ -73,9 +73,6 @@ jobs:
       - *save_cache
 
   publish-packages:
-    parameters:
-      node-version:
-        type: string
     docker:
       - image: circleci/node:14-buster-browsers
     steps:
