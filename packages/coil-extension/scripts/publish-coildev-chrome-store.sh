@@ -18,4 +18,5 @@ export WEXT_MANIFEST_SUFFIX_NO_DATE='true'
 export WEXT_BUILD_CONFIG="{\"extensionBuildString\":\"$(git show --no-patch --no-notes --pretty='== %h == %cd == %s ==' )\"}"
 ./build.sh prod chrome
 echo "using $(which shipit)"
+# https://github.com/LinusU/wext-shipit
 shipit chrome dist
