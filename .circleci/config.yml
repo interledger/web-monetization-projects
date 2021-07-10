@@ -265,6 +265,8 @@ jobs:
             # yarn.lock sometimes (rarely) changes for unknown reasons
             # perhaps different versions of yarn ??
             # we don't *really* care so exclude it from the diff check
+            git checkout .pnp.cjs
+            git checkout yarn.lock
             git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
       - *save_cache
 
