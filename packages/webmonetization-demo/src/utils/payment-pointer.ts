@@ -1,5 +1,3 @@
-import * as url from 'url'
-
 export function resolvePointer(pointer: string): string {
   if (!pointer.startsWith('$')) {
     return pointer

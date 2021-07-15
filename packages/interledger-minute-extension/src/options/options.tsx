@@ -1,13 +1,6 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import {
-  Grid,
-  makeStyles,
-  Typography,
-  ThemeProvider,
-  createMuiTheme
-} from '@material-ui/core'
-import Tooltip from '@material-ui/core/Tooltip'
+import { Grid, makeStyles, ThemeProvider, Typography } from '@material-ui/core'
 
 import { Colors, Settings } from '../variables'
 import { Logo } from '../logo'

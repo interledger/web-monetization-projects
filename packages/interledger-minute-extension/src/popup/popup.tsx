@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import 'typeface-roboto'
-import { makeStyles, Grid } from '@material-ui/core'
+import { Grid, makeStyles } from '@material-ui/core'
 
 import { PopupHeader } from './popupHeader'
 import { StreamRate } from './streamRate'
