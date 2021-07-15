@@ -265,22 +265,24 @@ export class BackgroundScript {
       if (becameComplete || (isComplete && changedUrl)) {
         if (event.frame.top) {
           this.setCoilUrlForPopupIfNeeded(tabId, url)
-        }
-        const from = `onFrameChanged directly, event=${JSON.stringify(event)}, `
-        const message: CheckAdaptedContent = {
-          command: 'checkAdaptedContent',
-          data: { from }
-        }
-        this.log('sending checkAdaptedContent message', message)
-        this.api.tabs.sendMessage(
-          tabId,
-          message,
-          { frameId: event.frameId },
-          () => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            const ignored = this.api.runtime.lastError
+          const from = `onFrameChanged directly, event=${JSON.stringify(
+            event
+          )}, `
+          const message: CheckAdaptedContent = {
+            command: 'checkAdaptedContent',
+            data: { from }
           }
-        )
+          this.log('sending checkAdaptedContent message', message)
+          this.api.tabs.sendMessage(
+            tabId,
+            message,
+            { frameId: event.frameId },
+            () => {
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars
+              const ignored = this.api.runtime.lastError
+            }
+          )
+        }
       }
     })
   }
