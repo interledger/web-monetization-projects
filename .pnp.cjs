@@ -12039,14 +12039,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:2.6.12", {
-          "packageLocation": "./.yarn/cache/core-js-npm-2.6.12-0b93d77d31-44fa9934a8.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-2.6.12-0b93d77d31/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:2.6.12"]
           ],
           "linkType": "HARD",
         }],
         ["npm:3.12.0", {
-          "packageLocation": "./.yarn/cache/core-js-npm-3.12.0-86ddce2306-d66e368bd7.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.12.0-86ddce2306/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.12.0"]
           ],
@@ -12066,7 +12066,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.15.2", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.15.2-2b9d54bed0-b3f33de3d3.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.15.2-2b9d54bed0/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.15.2"]
           ],
@@ -23144,7 +23144,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["puppeteer", [
         ["npm:1.20.0", {
-          "packageLocation": "./.yarn/cache/puppeteer-npm-1.20.0-92b1d57042-4b470869a0.zip/node_modules/puppeteer/",
+          "packageLocation": "./.yarn/unplugged/puppeteer-npm-1.20.0-92b1d57042/node_modules/puppeteer/",
           "packageDependencies": [
             ["puppeteer", "npm:1.20.0"],
             ["debug", "virtual:3d930726ec418037f1f00b911737166c266a3768203ac9fd2a9278bf28ca443c3f63d5bda39062d70c32bec0e8effdfd0fb13f5d9868b5607fd37c56b107a0d1#npm:4.3.1"],
@@ -23159,7 +23159,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }],
         ["npm:10.1.0", {
-          "packageLocation": "./.yarn/cache/puppeteer-npm-10.1.0-b6903cb0aa-83df3a1bee.zip/node_modules/puppeteer/",
+          "packageLocation": "./.yarn/unplugged/puppeteer-npm-10.1.0-b6903cb0aa/node_modules/puppeteer/",
           "packageDependencies": [
             ["puppeteer", "npm:10.1.0"],
             ["debug", "virtual:3d930726ec418037f1f00b911737166c266a3768203ac9fd2a9278bf28ca443c3f63d5bda39062d70c32bec0e8effdfd0fb13f5d9868b5607fd37c56b107a0d1#npm:4.3.1"],
@@ -25279,7 +25279,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["spawn-sync", [
         ["npm:1.0.15", {
-          "packageLocation": "./.yarn/cache/spawn-sync-npm-1.0.15-ae144228c0-a280ff895b.zip/node_modules/spawn-sync/",
+          "packageLocation": "./.yarn/unplugged/spawn-sync-npm-1.0.15-ae144228c0/node_modules/spawn-sync/",
           "packageDependencies": [
             ["spawn-sync", "npm:1.0.15"],
             ["concat-stream", "npm:1.6.2"],

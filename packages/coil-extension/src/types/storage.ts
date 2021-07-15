@@ -9,8 +9,7 @@ export const STORAGE_KEY = {
   adapted: 'adapted',
   monetized: 'monetized',
   coilSite: 'coilSite',
-  monetizedTotal: 'monetizedTotal',
-  monetizedFavicon: 'monetizedFavicon'
+  monetizedTotal: 'monetizedTotal'
 }
 
 /**
@@ -41,7 +40,6 @@ export interface LocalStorageProxy {
   playState?: PlayOrPauseState | null
 
   monetizedTotal?: number | null
-  monetizedFavicon?: string | null
 
   extensionBuildString?: string | null
   extensionPopupFooterString?: string | null

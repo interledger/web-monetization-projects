@@ -35,7 +35,6 @@ import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
 import { TabStates } from './TabStates'
 import { Streams } from './Streams'
-import { Favicons } from './Favicons'
 import { PopupBrowserAction } from './PopupBrowserAction'
 import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
@@ -49,7 +48,6 @@ import MessageSender = chrome.runtime.MessageSender
 export class BackgroundScript {
   constructor(
     private popup: PopupBrowserAction,
-    private favIcons: Favicons,
     private assoc: StreamAssociations,
     private streams: Streams,
     private tabStates: TabStates,
@@ -495,22 +493,6 @@ export class BackgroundScript {
     if (this.activeTab === tabId) {
       this.reloadTabState()
     }
-
-    // TODO: this doesn't actually seem to be used anywhere
-    // Channel image is provided if top frame is adapted
-    if (tabState.frameStates[0].adapted) {
-      const { host } = new URL(senderUrl)
-      this.favIcons
-        .getFavicon(host)
-        .then(favicon => {
-          this.tabStates.set(tabId, { favicon })
-        })
-        .catch(e => {
-          if (this.loggingEnabled) {
-            console.error(`failed to fetch favicon. e=${e.stack}`)
-          }
-        })
-    }
   }
 
   mayMonetizeSite(sender: chrome.runtime.MessageSender, initiatingUrl: string) {
@@ -529,12 +511,7 @@ export class BackgroundScript {
   }
 
   adaptedSite(data: AdaptedSite['data'], sender: MessageSender) {
-    const { frameId, spec } = getFrameSpec(sender)
-    if (frameId === 0 && data.channelImage) {
-      this.tabStates.set(this.activeTab, {
-        favicon: data.channelImage
-      })
-    }
+    const { spec } = getFrameSpec(sender)
     this.tabStates.setFrame(spec, {
       adapted: data.state
     })
@@ -591,10 +568,6 @@ export class BackgroundScript {
       const total = frameStates.reduce((acc, val) => acc + val.total, 0)
       this.storage.set('monetizedTotal', total)
     }
-    this.storage.set(
-      'monetizedFavicon',
-      (state && state.favicon) || '/res/icon-page.svg'
-    )
   }
 
   async checkIFrameIsAllowedFromIFrameContentScript(sender: MessageSender) {

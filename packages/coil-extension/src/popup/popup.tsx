@@ -31,6 +31,7 @@ export function run() {
         sendMessage: API.runtime.sendMessage.bind(API.runtime)
       }
     }
+    // TODO: this is fixed in Safari 15
     window.addEventListener('storage', e => {
       if (e.key === '$$popupCommand' && e.newValue) {
         // Remove the timestamp which will cause a unique string used to trigger
