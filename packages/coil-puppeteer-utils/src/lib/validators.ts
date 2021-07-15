@@ -3,8 +3,7 @@ import {
   MonetizationProgressEvent,
   MonetizationStartEvent,
   MonetizationStopEvent,
-  TipEvent,
-  TipEventDetail
+  TipEvent
 } from '@webmonetization/types'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

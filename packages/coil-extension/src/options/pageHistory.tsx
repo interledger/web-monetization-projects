@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Hidden, Typography, styled, makeStyles } from '@material-ui/core'
+import { Grid, Hidden, makeStyles, styled, Typography } from '@material-ui/core'
 
 import { formatAmount } from '../util/currencyFormatting'
 import { Colors } from '../shared-theme/colors'

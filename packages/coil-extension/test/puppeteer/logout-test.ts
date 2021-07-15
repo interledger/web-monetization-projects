@@ -6,13 +6,13 @@
 import { Page } from 'puppeteer'
 import {
   debug,
+  env,
   initBrowserAndLoginFromEnv,
+  isValidStopEvent,
   logoutCoil,
   testMonetization,
   TestPageResults,
-  timeout,
-  isValidStopEvent,
-  env
+  timeout
 } from '@coil/puppeteer-utils'
 import { MonetizationExtendedDocument } from '@webmonetization/types'
 

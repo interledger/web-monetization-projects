@@ -2,7 +2,6 @@ import { inject, injectable } from 'inversify'
 
 import { TabState } from '../../types/TabState'
 import * as tokens from '../../types/tokens'
-import { Colors } from '../consts/Colors'
 import { BuildConfig } from '../../types/BuildConfig'
 
 import { TabOpener } from './TabOpener'

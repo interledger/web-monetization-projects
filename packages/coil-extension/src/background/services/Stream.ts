@@ -10,13 +10,12 @@ import IlpPluginBtp from 'ilp-plugin-btp'
 import {
   AdaptiveBandwidth,
   asyncUtils,
+  getFarFutureExpiry,
   getSPSPResponse,
   PaymentDetails,
   SPSPError,
-  SPSPResponse,
-  getFarFutureExpiry
+  SPSPResponse
 } from '@webmonetization/polyfill-utils'
-import { GraphQlClient } from '@coil/client'
 import { Container, inject, injectable } from 'inversify'
 import { BandwidthTiers } from '@coil/polyfill-utils'
 

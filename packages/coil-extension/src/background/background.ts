@@ -1,6 +1,6 @@
 import '@abraham/reflection'
 import { Container } from 'inversify'
-import { GraphQlClient, queryTokenQuery } from '@coil/client'
+import { GraphQlClient } from '@coil/client'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 
 import { API, BUILD_CONFIG, COIL_DOMAIN, VERSION } from '../webpackDefines'
