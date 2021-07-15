@@ -3,45 +3,86 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC44E1042504CAE900800081 /* hot-reload.js in Resources */ = {isa = PBXBuildFile; fileRef = BC44E1002504CAE800800081 /* hot-reload.js */; };
-		BC44E1052504CAE900800081 /* res in Resources */ = {isa = PBXBuildFile; fileRef = BC44E1012504CAE800800081 /* res */; };
-		BC44E1062504CAE900800081 /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = BC44E1022504CAE900800081 /* options.js */; };
-		BC44E1072504CAE900800081 /* static in Resources */ = {isa = PBXBuildFile; fileRef = BC44E1032504CAE900800081 /* static */; };
-		BCCC71552504C8E300273033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC71542504C8E300273033 /* AppDelegate.swift */; };
-		BCCC71582504C8E300273033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCC71562504C8E300273033 /* Main.storyboard */; };
-		BCCC715A2504C8E300273033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC71592504C8E300273033 /* ViewController.swift */; };
-		BCCC715C2504C8E300273033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCCC715B2504C8E300273033 /* Assets.xcassets */; };
-		BCCC71632504C8E400273033 /* Coil Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BCCC71622504C8E400273033 /* Coil Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		BCCC71682504C8E400273033 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCCC71672504C8E400273033 /* Cocoa.framework */; };
-		BCCC716B2504C8E400273033 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC716A2504C8E400273033 /* SafariWebExtensionHandler.swift */; };
-		BCCC71722504C8E400273033 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCC71712504C8E400273033 /* manifest.json */; };
-		BCCC71742504C8E400273033 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = BCCC71732504C8E400273033 /* background.js */; };
-		BCCC71762504C8E400273033 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = BCCC71752504C8E400273033 /* content.js */; };
-		BCCC717C2504C8E400273033 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = BCCC717B2504C8E400273033 /* popup.js */; };
+		A688EC72268EF55100128FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A688EC71268EF55100128FDF /* AppDelegate.swift */; };
+		A688EC74268EF55100128FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A688EC73268EF55100128FDF /* SceneDelegate.swift */; };
+		A688EC77268EF55100128FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A688EC75268EF55100128FDF /* LaunchScreen.storyboard */; };
+		A688EC7A268EF55100128FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A688EC78268EF55100128FDF /* Main.storyboard */; };
+		A688EC83268EF55100128FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A688EC82268EF55100128FDF /* AppDelegate.swift */; };
+		A688EC86268EF55100128FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A688EC84268EF55100128FDF /* Main.storyboard */; };
+		A688EC8E268EF55100128FDF /* Coil Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A688EC8D268EF55100128FDF /* Coil Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A688EC98268EF55100128FDF /* Coil Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A688EC97268EF55100128FDF /* Coil Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A688EC9D268EF55100128FDF /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = A688EC61268EF55000128FDF /* Main.html */; };
+		A688EC9E268EF55100128FDF /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = A688EC61268EF55000128FDF /* Main.html */; };
+		A688EC9F268EF55100128FDF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A688EC63268EF55000128FDF /* Icon.png */; };
+		A688ECA0268EF55100128FDF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A688EC63268EF55000128FDF /* Icon.png */; };
+		A688ECA1268EF55100128FDF /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = A688EC64268EF55000128FDF /* Style.css */; };
+		A688ECA2268EF55100128FDF /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = A688EC64268EF55000128FDF /* Style.css */; };
+		A688ECA3268EF55100128FDF /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = A688EC65268EF55000128FDF /* Script.js */; };
+		A688ECA4268EF55100128FDF /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = A688EC65268EF55000128FDF /* Script.js */; };
+		A688ECA5268EF55100128FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A688EC66268EF55000128FDF /* ViewController.swift */; };
+		A688ECA6268EF55100128FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A688EC66268EF55000128FDF /* ViewController.swift */; };
+		A688ECA7268EF55100128FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A688EC67268EF55100128FDF /* Assets.xcassets */; };
+		A688ECA8268EF55100128FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A688EC67268EF55100128FDF /* Assets.xcassets */; };
+		A688ECA9268EF55100128FDF /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A688EC69268EF55100128FDF /* SafariWebExtensionHandler.swift */; };
+		A688ECAA268EF55100128FDF /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A688EC69268EF55100128FDF /* SafariWebExtensionHandler.swift */; };
+		A688ECC4268EF55100128FDF /* res in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBC268EF55100128FDF /* res */; };
+		A688ECC5268EF55100128FDF /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBD268EF55100128FDF /* popup.js */; };
+		A688ECC6268EF55100128FDF /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBE268EF55100128FDF /* background.js */; };
+		A688ECC7268EF55100128FDF /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBF268EF55100128FDF /* options.js */; };
+		A688ECC8268EF55100128FDF /* hot-reload.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC0268EF55100128FDF /* hot-reload.js */; };
+		A688ECC9268EF55100128FDF /* static in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC1268EF55100128FDF /* static */; };
+		A688ECCA268EF55100128FDF /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC2268EF55100128FDF /* manifest.json */; };
+		A688ECCB268EF55100128FDF /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC3268EF55100128FDF /* content.js */; };
+		A688ECCC268EF55100128FDF /* res in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBC268EF55100128FDF /* res */; };
+		A688ECCD268EF55100128FDF /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBD268EF55100128FDF /* popup.js */; };
+		A688ECCE268EF55100128FDF /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBE268EF55100128FDF /* background.js */; };
+		A688ECCF268EF55100128FDF /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBF268EF55100128FDF /* options.js */; };
+		A688ECD0268EF55100128FDF /* hot-reload.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC0268EF55100128FDF /* hot-reload.js */; };
+		A688ECD1268EF55100128FDF /* static in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC1268EF55100128FDF /* static */; };
+		A688ECD2268EF55100128FDF /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC2268EF55100128FDF /* manifest.json */; };
+		A688ECD3268EF55100128FDF /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC3268EF55100128FDF /* content.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BCCC71642504C8E400273033 /* PBXContainerItemProxy */ = {
+		A688EC8F268EF55100128FDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BCCC71482504C8E300273033 /* Project object */;
+			containerPortal = A688EC5B268EF55000128FDF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BCCC71612504C8E400273033;
-			remoteInfo = "Coil Extension";
+			remoteGlobalIDString = A688EC8C268EF55100128FDF;
+			remoteInfo = "Coil Extension (iOS)";
+		};
+		A688EC99268EF55100128FDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A688EC5B268EF55000128FDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A688EC96268EF55100128FDF;
+			remoteInfo = "Coil Extension (macOS)";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BCCC71842504C8E400273033 /* Embed App Extensions */ = {
+		A688ECB0268EF55100128FDF /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BCCC71632504C8E400273033 /* Coil Extension.appex in Embed App Extensions */,
+				A688EC8E268EF55100128FDF /* Coil Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A688ECB7268EF55100128FDF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A688EC98268EF55100128FDF /* Coil Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,249 +90,439 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BC44E1002504CAE800800081 /* hot-reload.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "hot-reload.js"; sourceTree = "<group>"; };
-		BC44E1012504CAE800800081 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
-		BC44E1022504CAE900800081 /* options.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = options.js; sourceTree = "<group>"; };
-		BC44E1032504CAE900800081 /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; path = static; sourceTree = "<group>"; };
-		BCCC71502504C8E300273033 /* Coil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coil.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCCC71532504C8E300273033 /* Coil.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coil.entitlements; sourceTree = "<group>"; };
-		BCCC71542504C8E300273033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCCC71572504C8E300273033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BCCC71592504C8E300273033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BCCC715B2504C8E300273033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BCCC715D2504C8E300273033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCCC71622504C8E400273033 /* Coil Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Coil Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCCC71672504C8E400273033 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		BCCC716A2504C8E400273033 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
-		BCCC71712504C8E400273033 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
-		BCCC71732504C8E400273033 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
-		BCCC71752504C8E400273033 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
-		BCCC717B2504C8E400273033 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
-		BCCC717D2504C8E400273033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCCC717E2504C8E400273033 /* Coil_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coil_Extension.entitlements; sourceTree = "<group>"; };
+		A688EC62268EF55000128FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		A688EC63268EF55000128FDF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		A688EC64268EF55000128FDF /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		A688EC65268EF55000128FDF /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		A688EC66268EF55000128FDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A688EC67268EF55100128FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A688EC69268EF55100128FDF /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		A688EC6E268EF55100128FDF /* Coil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A688EC71268EF55100128FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A688EC73268EF55100128FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A688EC76268EF55100128FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A688EC79268EF55100128FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A688EC7B268EF55100128FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A688EC80268EF55100128FDF /* Coil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A688EC82268EF55100128FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A688EC85268EF55100128FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A688EC87268EF55100128FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A688EC88268EF55100128FDF /* Coil.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coil.entitlements; sourceTree = "<group>"; };
+		A688EC8D268EF55100128FDF /* Coil Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Coil Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A688EC92268EF55100128FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A688EC97268EF55100128FDF /* Coil Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Coil Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A688EC9C268EF55100128FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A688ECBC268EF55100128FDF /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; name = res; path = ../../../dist/res; sourceTree = "<group>"; };
+		A688ECBD268EF55100128FDF /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = ../../../dist/popup.js; sourceTree = "<group>"; };
+		A688ECBE268EF55100128FDF /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = ../../../dist/background.js; sourceTree = "<group>"; };
+		A688ECBF268EF55100128FDF /* options.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = options.js; path = ../../../dist/options.js; sourceTree = "<group>"; };
+		A688ECC0268EF55100128FDF /* hot-reload.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "hot-reload.js"; path = "../../../dist/hot-reload.js"; sourceTree = "<group>"; };
+		A688ECC1268EF55100128FDF /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; name = static; path = ../../../dist/static; sourceTree = "<group>"; };
+		A688ECC2268EF55100128FDF /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../dist/manifest.json; sourceTree = "<group>"; };
+		A688ECC3268EF55100128FDF /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../dist/content.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BCCC714D2504C8E300273033 /* Frameworks */ = {
+		A688EC6B268EF55100128FDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BCCC715F2504C8E400273033 /* Frameworks */ = {
+		A688EC7D268EF55100128FDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCCC71682504C8E400273033 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A688EC8A268EF55100128FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A688EC94268EF55100128FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BCCC71472504C8E300273033 = {
+		A688EC5A268EF55000128FDF = {
 			isa = PBXGroup;
 			children = (
-				BCCC71522504C8E300273033 /* Coil */,
-				BCCC71692504C8E400273033 /* Coil Extension */,
-				BCCC71662504C8E400273033 /* Frameworks */,
-				BCCC71512504C8E300273033 /* Products */,
+				A688EC5F268EF55000128FDF /* Shared (App) */,
+				A688EC68268EF55100128FDF /* Shared (Extension) */,
+				A688EC70268EF55100128FDF /* iOS (App) */,
+				A688EC81268EF55100128FDF /* macOS (App) */,
+				A688EC91268EF55100128FDF /* iOS (Extension) */,
+				A688EC9B268EF55100128FDF /* macOS (Extension) */,
+				A688EC6F268EF55100128FDF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BCCC71512504C8E300273033 /* Products */ = {
+		A688EC5F268EF55000128FDF /* Shared (App) */ = {
 			isa = PBXGroup;
 			children = (
-				BCCC71502504C8E300273033 /* Coil.app */,
-				BCCC71622504C8E400273033 /* Coil Extension.appex */,
+				A688EC66268EF55000128FDF /* ViewController.swift */,
+				A688EC67268EF55100128FDF /* Assets.xcassets */,
+				A688EC60268EF55000128FDF /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		A688EC60268EF55000128FDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A688EC61268EF55000128FDF /* Main.html */,
+				A688EC63268EF55000128FDF /* Icon.png */,
+				A688EC64268EF55000128FDF /* Style.css */,
+				A688EC65268EF55000128FDF /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A688EC68268EF55100128FDF /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				A688ECBB268EF55100128FDF /* Resources */,
+				A688EC69268EF55100128FDF /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		A688EC6F268EF55100128FDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A688EC6E268EF55100128FDF /* Coil.app */,
+				A688EC80268EF55100128FDF /* Coil.app */,
+				A688EC8D268EF55100128FDF /* Coil Extension.appex */,
+				A688EC97268EF55100128FDF /* Coil Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BCCC71522504C8E300273033 /* Coil */ = {
+		A688EC70268EF55100128FDF /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
-				BCCC71532504C8E300273033 /* Coil.entitlements */,
-				BCCC71542504C8E300273033 /* AppDelegate.swift */,
-				BCCC71562504C8E300273033 /* Main.storyboard */,
-				BCCC71592504C8E300273033 /* ViewController.swift */,
-				BCCC715B2504C8E300273033 /* Assets.xcassets */,
-				BCCC715D2504C8E300273033 /* Info.plist */,
+				A688EC71268EF55100128FDF /* AppDelegate.swift */,
+				A688EC73268EF55100128FDF /* SceneDelegate.swift */,
+				A688EC75268EF55100128FDF /* LaunchScreen.storyboard */,
+				A688EC78268EF55100128FDF /* Main.storyboard */,
+				A688EC7B268EF55100128FDF /* Info.plist */,
 			);
-			path = Coil;
+			path = "iOS (App)";
 			sourceTree = "<group>";
 		};
-		BCCC71662504C8E400273033 /* Frameworks */ = {
+		A688EC81268EF55100128FDF /* macOS (App) */ = {
 			isa = PBXGroup;
 			children = (
-				BCCC71672504C8E400273033 /* Cocoa.framework */,
+				A688EC82268EF55100128FDF /* AppDelegate.swift */,
+				A688EC84268EF55100128FDF /* Main.storyboard */,
+				A688EC87268EF55100128FDF /* Info.plist */,
+				A688EC88268EF55100128FDF /* Coil.entitlements */,
 			);
-			name = Frameworks;
+			path = "macOS (App)";
 			sourceTree = "<group>";
 		};
-		BCCC71692504C8E400273033 /* Coil Extension */ = {
+		A688EC91268EF55100128FDF /* iOS (Extension) */ = {
 			isa = PBXGroup;
 			children = (
-				BCCC716A2504C8E400273033 /* SafariWebExtensionHandler.swift */,
-				BCCC717D2504C8E400273033 /* Info.plist */,
-				BCCC717E2504C8E400273033 /* Coil_Extension.entitlements */,
-				BCCC716C2504C8E400273033 /* Resources */,
+				A688EC92268EF55100128FDF /* Info.plist */,
 			);
-			path = "Coil Extension";
+			path = "iOS (Extension)";
 			sourceTree = "<group>";
 		};
-		BCCC716C2504C8E400273033 /* Resources */ = {
+		A688EC9B268EF55100128FDF /* macOS (Extension) */ = {
 			isa = PBXGroup;
 			children = (
-				BC44E1002504CAE800800081 /* hot-reload.js */,
-				BC44E1022504CAE900800081 /* options.js */,
-				BC44E1012504CAE800800081 /* res */,
-				BC44E1032504CAE900800081 /* static */,
-				BCCC71712504C8E400273033 /* manifest.json */,
-				BCCC71732504C8E400273033 /* background.js */,
-				BCCC71752504C8E400273033 /* content.js */,
-				BCCC717B2504C8E400273033 /* popup.js */,
+				A688EC9C268EF55100128FDF /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		A688ECBB268EF55100128FDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A688ECBC268EF55100128FDF /* res */,
+				A688ECBD268EF55100128FDF /* popup.js */,
+				A688ECBE268EF55100128FDF /* background.js */,
+				A688ECBF268EF55100128FDF /* options.js */,
+				A688ECC0268EF55100128FDF /* hot-reload.js */,
+				A688ECC1268EF55100128FDF /* static */,
+				A688ECC2268EF55100128FDF /* manifest.json */,
+				A688ECC3268EF55100128FDF /* content.js */,
 			);
 			name = Resources;
-			path = ../../dist;
+			path = "Shared (Extension)";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BCCC714F2504C8E300273033 /* Coil */ = {
+		A688EC6D268EF55100128FDF /* Coil (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BCCC71852504C8E400273033 /* Build configuration list for PBXNativeTarget "Coil" */;
+			buildConfigurationList = A688ECB1268EF55100128FDF /* Build configuration list for PBXNativeTarget "Coil (iOS)" */;
 			buildPhases = (
-				BCCC714C2504C8E300273033 /* Sources */,
-				BCCC714D2504C8E300273033 /* Frameworks */,
-				BCCC714E2504C8E300273033 /* Resources */,
-				BCCC71842504C8E400273033 /* Embed App Extensions */,
+				A688EC6A268EF55100128FDF /* Sources */,
+				A688EC6B268EF55100128FDF /* Frameworks */,
+				A688EC6C268EF55100128FDF /* Resources */,
+				A688ECB0268EF55100128FDF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BCCC71652504C8E400273033 /* PBXTargetDependency */,
+				A688EC90268EF55100128FDF /* PBXTargetDependency */,
 			);
-			name = Coil;
-			productName = Coil;
-			productReference = BCCC71502504C8E300273033 /* Coil.app */;
+			name = "Coil (iOS)";
+			productName = "Coil (iOS)";
+			productReference = A688EC6E268EF55100128FDF /* Coil.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BCCC71612504C8E400273033 /* Coil Extension */ = {
+		A688EC7F268EF55100128FDF /* Coil (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BCCC71812504C8E400273033 /* Build configuration list for PBXNativeTarget "Coil Extension" */;
+			buildConfigurationList = A688ECB8268EF55100128FDF /* Build configuration list for PBXNativeTarget "Coil (macOS)" */;
 			buildPhases = (
-				BCCC715E2504C8E400273033 /* Sources */,
-				BCCC715F2504C8E400273033 /* Frameworks */,
-				BCCC71602504C8E400273033 /* Resources */,
+				A688EC7C268EF55100128FDF /* Sources */,
+				A688EC7D268EF55100128FDF /* Frameworks */,
+				A688EC7E268EF55100128FDF /* Resources */,
+				A688ECB7268EF55100128FDF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A688EC9A268EF55100128FDF /* PBXTargetDependency */,
+			);
+			name = "Coil (macOS)";
+			productName = "Coil (macOS)";
+			productReference = A688EC80268EF55100128FDF /* Coil.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A688EC8C268EF55100128FDF /* Coil Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A688ECAD268EF55100128FDF /* Build configuration list for PBXNativeTarget "Coil Extension (iOS)" */;
+			buildPhases = (
+				A688EC89268EF55100128FDF /* Sources */,
+				A688EC8A268EF55100128FDF /* Frameworks */,
+				A688EC8B268EF55100128FDF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Coil Extension";
-			productName = "Coil Extension";
-			productReference = BCCC71622504C8E400273033 /* Coil Extension.appex */;
+			name = "Coil Extension (iOS)";
+			productName = "Coil Extension (iOS)";
+			productReference = A688EC8D268EF55100128FDF /* Coil Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A688EC96268EF55100128FDF /* Coil Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A688ECB4268EF55100128FDF /* Build configuration list for PBXNativeTarget "Coil Extension (macOS)" */;
+			buildPhases = (
+				A688EC93268EF55100128FDF /* Sources */,
+				A688EC94268EF55100128FDF /* Frameworks */,
+				A688EC95268EF55100128FDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coil Extension (macOS)";
+			productName = "Coil Extension (macOS)";
+			productReference = A688EC97268EF55100128FDF /* Coil Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BCCC71482504C8E300273033 /* Project object */ = {
+		A688EC5B268EF55000128FDF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					BCCC714F2504C8E300273033 = {
-						CreatedOnToolsVersion = 12.0;
+					A688EC6D268EF55100128FDF = {
+						CreatedOnToolsVersion = 13.0;
 					};
-					BCCC71612504C8E400273033 = {
-						CreatedOnToolsVersion = 12.0;
+					A688EC7F268EF55100128FDF = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					A688EC8C268EF55100128FDF = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					A688EC96268EF55100128FDF = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = BCCC714B2504C8E300273033 /* Build configuration list for PBXProject "Coil" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = A688EC5E268EF55000128FDF /* Build configuration list for PBXProject "Coil" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = BCCC71472504C8E300273033;
-			productRefGroup = BCCC71512504C8E300273033 /* Products */;
+			mainGroup = A688EC5A268EF55000128FDF;
+			productRefGroup = A688EC6F268EF55100128FDF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BCCC714F2504C8E300273033 /* Coil */,
-				BCCC71612504C8E400273033 /* Coil Extension */,
+				A688EC6D268EF55100128FDF /* Coil (iOS) */,
+				A688EC7F268EF55100128FDF /* Coil (macOS) */,
+				A688EC8C268EF55100128FDF /* Coil Extension (iOS) */,
+				A688EC96268EF55100128FDF /* Coil Extension (macOS) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BCCC714E2504C8E300273033 /* Resources */ = {
+		A688EC6C268EF55100128FDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCCC715C2504C8E300273033 /* Assets.xcassets in Resources */,
-				BCCC71582504C8E300273033 /* Main.storyboard in Resources */,
+				A688EC9F268EF55100128FDF /* Icon.png in Resources */,
+				A688EC77268EF55100128FDF /* LaunchScreen.storyboard in Resources */,
+				A688EC9D268EF55100128FDF /* Main.html in Resources */,
+				A688ECA3268EF55100128FDF /* Script.js in Resources */,
+				A688ECA7268EF55100128FDF /* Assets.xcassets in Resources */,
+				A688EC7A268EF55100128FDF /* Main.storyboard in Resources */,
+				A688ECA1268EF55100128FDF /* Style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BCCC71602504C8E400273033 /* Resources */ = {
+		A688EC7E268EF55100128FDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCCC71742504C8E400273033 /* background.js in Resources */,
-				BC44E1062504CAE900800081 /* options.js in Resources */,
-				BC44E1052504CAE900800081 /* res in Resources */,
-				BC44E1042504CAE900800081 /* hot-reload.js in Resources */,
-				BCCC71722504C8E400273033 /* manifest.json in Resources */,
-				BCCC71762504C8E400273033 /* content.js in Resources */,
-				BC44E1072504CAE900800081 /* static in Resources */,
-				BCCC717C2504C8E400273033 /* popup.js in Resources */,
+				A688ECA0268EF55100128FDF /* Icon.png in Resources */,
+				A688ECA2268EF55100128FDF /* Style.css in Resources */,
+				A688EC86268EF55100128FDF /* Main.storyboard in Resources */,
+				A688ECA4268EF55100128FDF /* Script.js in Resources */,
+				A688ECA8268EF55100128FDF /* Assets.xcassets in Resources */,
+				A688EC9E268EF55100128FDF /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A688EC8B268EF55100128FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A688ECD3268EF55100128FDF /* content.js in Resources */,
+				A688ECCC268EF55100128FDF /* res in Resources */,
+				A688ECD2268EF55100128FDF /* manifest.json in Resources */,
+				A688ECCF268EF55100128FDF /* options.js in Resources */,
+				A688ECD0268EF55100128FDF /* hot-reload.js in Resources */,
+				A688ECCE268EF55100128FDF /* background.js in Resources */,
+				A688ECD1268EF55100128FDF /* static in Resources */,
+				A688ECCD268EF55100128FDF /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A688EC95268EF55100128FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A688ECCB268EF55100128FDF /* content.js in Resources */,
+				A688ECC4268EF55100128FDF /* res in Resources */,
+				A688ECCA268EF55100128FDF /* manifest.json in Resources */,
+				A688ECC7268EF55100128FDF /* options.js in Resources */,
+				A688ECC8268EF55100128FDF /* hot-reload.js in Resources */,
+				A688ECC6268EF55100128FDF /* background.js in Resources */,
+				A688ECC9268EF55100128FDF /* static in Resources */,
+				A688ECC5268EF55100128FDF /* popup.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BCCC714C2504C8E300273033 /* Sources */ = {
+		A688EC6A268EF55100128FDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCCC715A2504C8E300273033 /* ViewController.swift in Sources */,
-				BCCC71552504C8E300273033 /* AppDelegate.swift in Sources */,
+				A688ECA5268EF55100128FDF /* ViewController.swift in Sources */,
+				A688EC72268EF55100128FDF /* AppDelegate.swift in Sources */,
+				A688EC74268EF55100128FDF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BCCC715E2504C8E400273033 /* Sources */ = {
+		A688EC7C268EF55100128FDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCCC716B2504C8E400273033 /* SafariWebExtensionHandler.swift in Sources */,
+				A688ECA6268EF55100128FDF /* ViewController.swift in Sources */,
+				A688EC83268EF55100128FDF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A688EC89268EF55100128FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A688ECA9268EF55100128FDF /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A688EC93268EF55100128FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A688ECAA268EF55100128FDF /* SafariWebExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BCCC71652504C8E400273033 /* PBXTargetDependency */ = {
+		A688EC90268EF55100128FDF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BCCC71612504C8E400273033 /* Coil Extension */;
-			targetProxy = BCCC71642504C8E400273033 /* PBXContainerItemProxy */;
+			target = A688EC8C268EF55100128FDF /* Coil Extension (iOS) */;
+			targetProxy = A688EC8F268EF55100128FDF /* PBXContainerItemProxy */;
+		};
+		A688EC9A268EF55100128FDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A688EC96268EF55100128FDF /* Coil Extension (macOS) */;
+			targetProxy = A688EC99268EF55100128FDF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BCCC71562504C8E300273033 /* Main.storyboard */ = {
+		A688EC61268EF55000128FDF /* Main.html */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BCCC71572504C8E300273033 /* Base */,
+				A688EC62268EF55000128FDF /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		A688EC75268EF55100128FDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A688EC76268EF55100128FDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A688EC78268EF55100128FDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A688EC79268EF55100128FDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A688EC84268EF55100128FDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A688EC85268EF55100128FDF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -299,7 +530,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BCCC717F2504C8E400273033 /* Debug */ = {
+		A688ECAB268EF55100128FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -350,17 +581,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		BCCC71802504C8E400273033 /* Release */ = {
+		A688ECAC268EF55100128FDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -405,103 +634,263 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		BCCC71822504C8E400273033 /* Debug */ = {
+		A688ECAE268EF55100128FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Coil Extension/Coil_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LGK2XW2SF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil.Extension;
+				PRODUCT_NAME = "Coil Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A688ECAF268EF55100128FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LGK2XW2SF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil.Extension;
+				PRODUCT_NAME = "Coil Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A688ECB2268EF55100128FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LGK2XW2SF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Coil;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil;
+				PRODUCT_NAME = Coil;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A688ECB3268EF55100128FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W9X45A2YV5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Coil;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil;
+				PRODUCT_NAME = Coil;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A688ECB5268EF55100128FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Coil Extension/Info.plist";
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.extension.Coil.Extension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.Coil.Extension;
+				PRODUCT_NAME = "Coil Extension";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		BCCC71832504C8E400273033 /* Release */ = {
+		A688ECB6268EF55100128FDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Coil Extension/Coil_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Coil Extension/Info.plist";
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.extension.Coil.Extension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.Coil.Extension;
+				PRODUCT_NAME = "Coil Extension";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		BCCC71862504C8E400273033 /* Debug */ = {
+		A688ECB9268EF55100128FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Coil/Coil.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Coil.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Coil/Info.plist;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Coil;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.extension.Coil;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.Coil;
+				PRODUCT_NAME = Coil;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		BCCC71872504C8E400273033 /* Release */ = {
+		A688ECBA268EF55100128FDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Coil/Coil.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Coil.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Coil/Info.plist;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Coil;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.extension.Coil;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.Coil;
+				PRODUCT_NAME = Coil;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -509,34 +898,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BCCC714B2504C8E300273033 /* Build configuration list for PBXProject "Coil" */ = {
+		A688EC5E268EF55000128FDF /* Build configuration list for PBXProject "Coil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BCCC717F2504C8E400273033 /* Debug */,
-				BCCC71802504C8E400273033 /* Release */,
+				A688ECAB268EF55100128FDF /* Debug */,
+				A688ECAC268EF55100128FDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BCCC71812504C8E400273033 /* Build configuration list for PBXNativeTarget "Coil Extension" */ = {
+		A688ECAD268EF55100128FDF /* Build configuration list for PBXNativeTarget "Coil Extension (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BCCC71822504C8E400273033 /* Debug */,
-				BCCC71832504C8E400273033 /* Release */,
+				A688ECAE268EF55100128FDF /* Debug */,
+				A688ECAF268EF55100128FDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BCCC71852504C8E400273033 /* Build configuration list for PBXNativeTarget "Coil" */ = {
+		A688ECB1268EF55100128FDF /* Build configuration list for PBXNativeTarget "Coil (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BCCC71862504C8E400273033 /* Debug */,
-				BCCC71872504C8E400273033 /* Release */,
+				A688ECB2268EF55100128FDF /* Debug */,
+				A688ECB3268EF55100128FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A688ECB4268EF55100128FDF /* Build configuration list for PBXNativeTarget "Coil Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A688ECB5268EF55100128FDF /* Debug */,
+				A688ECB6268EF55100128FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A688ECB8268EF55100128FDF /* Build configuration list for PBXNativeTarget "Coil (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A688ECB9268EF55100128FDF /* Debug */,
+				A688ECBA268EF55100128FDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BCCC71482504C8E300273033 /* Project object */;
+	rootObject = A688EC5B268EF55000128FDF /* Project object */;
 }

@@ -1,3 +1,19 @@
+<a name="coil-extension@0.0.55"></a>
+
+# [coil-extension@0.0.55](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.54...coil-extension@0.0.55) (2021-07-09)
+
+### Bug Fixes
+
+- Fix undefined whoami selection in token refresh query [#2118](https://github.com/coilhq/web-monetization-projects/pull/2118)
+
+- <a name="coil-extension@0.0.54"></a>
+
+# [coil-extension@0.0.54](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.53...coil-extension@0.0.54) (2021-07-01)
+
+### Bug Fixes
+
+- Add missing canTip field to combined whoami/refreshToken query [#2070](https://github.com/coilhq/web-monetization-projects/pull/2070)
+
 <a name="coil-extension@0.0.53"></a>
 
 # [coil-extension@0.0.53](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.52...coil-extension@0.0.53) (2021-06-18)

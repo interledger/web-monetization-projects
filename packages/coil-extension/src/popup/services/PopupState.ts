@@ -4,7 +4,6 @@ export const STORAGE_KEYS = [
   'adapted',
   'coilSite',
   'monetized',
-  'monetizedFavicon',
   'monetizedTotal',
   'isPaying',
   'stickyState',

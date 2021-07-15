@@ -1,0 +1,66 @@
+diff --git a/lib/chrome.js b/lib/chrome.js
+index 8261ac83aea9c793c6a54d0c01d2808c14f3064b..e4f333d24aed5e3d3b13dec6c4425e84426b802c 100644
+--- a/lib/chrome.js
++++ b/lib/chrome.js
+@@ -2,9 +2,11 @@ const execa = require('execa')
+ 
+ const UserError = require('./user-error')
+ 
+-const webstoreBinPath = require.resolve('.bin/webstore')
++
+ 
+ module.exports = async function (source) {
++  const webstoreBinPath = require.resolve('chrome-webstore-upload-cli/index.js')
++  
+   let errors = []
+ 
+   if (!process.env.WEXT_SHIPIT_CHROME_EXTENSION_ID) errors.push(`WEXT_SHIPIT_CHROME_EXTENSION_ID`)
+@@ -17,6 +19,7 @@ module.exports = async function (source) {
+   }
+ 
+   const args = [
++    webstoreBinPath,
+     'upload',
+     '--source', source,
+     '--extension-id', process.env.WEXT_SHIPIT_CHROME_EXTENSION_ID,
+@@ -26,5 +29,5 @@ module.exports = async function (source) {
+     '--auto-publish'
+   ]
+ 
+-  await execa(webstoreBinPath, args, { stdio: 'inherit' })
++  await execa('node', args, { stdio: 'inherit' })
+ }
+diff --git a/lib/firefox.js b/lib/firefox.js
+index 9f20d32f59fd421f06b1b759804fabbb0ac26e7c..094ef1ee8460e69b1be2f144a3328dfcb53a3ed0 100644
+--- a/lib/firefox.js
++++ b/lib/firefox.js
+@@ -3,11 +3,12 @@ const ora = require('ora')
+ 
+ const UserError = require('./user-error')
+ 
+-const webextBinPath = require.resolve('.bin/web-ext')
+ 
+ const { TextStreamSearch } = require('text-stream-search')
+ 
+ module.exports = async function (source) {
++  const webextBinPath = require.resolve('.bin/web-ext')
++
+   let errors = []
+ 
+   if (!process.env.WEXT_SHIPIT_FIREFOX_JWT_ISSUER) errors.push(`WEXT_SHIPIT_FIREFOX_JWT_ISSUER`)
+diff --git a/lib/opera.js b/lib/opera.js
+index 8a8571357696ac841712124597a7ff05ebcfd57b..09b75fe884f1c133a2ac9d718077e3f0d548c141 100644
+--- a/lib/opera.js
++++ b/lib/opera.js
+@@ -7,9 +7,10 @@ const uploadOperaExtension = require('upload-opera-extension')
+ 
+ const UserError = require('./user-error')
+ 
+-const webextBinPath = require.resolve('.bin/web-ext')
+ 
+ module.exports = async function (source) {
++  const webextBinPath = require.resolve('.bin/web-ext')
++
+   let errors = []
+ 
+   if (!process.env.WEXT_SHIPIT_OPERA_EMAIL) errors.push(`WEXT_SHIPIT_OPERA_EMAIL`)

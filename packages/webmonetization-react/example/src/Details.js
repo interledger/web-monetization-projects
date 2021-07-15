@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
-  useMonetizationState,
-  useMonetizationCounter
+  useMonetizationCounter,
+  useMonetizationState
 } from 'react-web-monetization'
 
 const ObjectTable = ({ obj }) => (

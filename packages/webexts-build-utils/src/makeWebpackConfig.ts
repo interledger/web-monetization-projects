@@ -48,6 +48,9 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
 
   const PACKAGE_JSON = path.join(rootDir, 'package.json')
 
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const DEBUG_COMPILER_OPTIONS = require(TSCONFIG_DEBUG_JSON).compilerOptions
+
   const VERSION = getPackageVersion(PACKAGE_JSON)
 
   // eslint-disable-next-line no-nested-ternary
@@ -242,9 +245,8 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
                     projectReferences: false,
                     transpileOnly: true,
                     compilerOptions: process.env.TSCONFIG_DEBUG
-                      ? // eslint-disable-next-line @typescript-eslint/no-var-requires
-                        require(TSCONFIG_DEBUG_JSON).compilerOptions
-                      : {}
+                      ? { sourceMap: true, ...DEBUG_COMPILER_OPTIONS }
+                      : { sourceMap: true }
                   }
                 : {
                     configFile: TSCONFIG,

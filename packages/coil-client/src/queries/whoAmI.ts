@@ -1,12 +1,11 @@
 import { CoilUser } from '../types'
-import { GraphQlClient } from '..'
+import type { GraphQlClient } from '../graphQlClient'
 
 export interface WhoAmIData {
   whoami: CoilUser
 }
 
-export const whoamiQuery = `{
-  whoami {
+export const whoamiSelection = `
     id
     fullName
     customerId
@@ -22,6 +21,11 @@ export const whoamiQuery = `{
       code
       scale
     }
+`
+
+export const whoamiQuery = `{
+  whoami {
+    ${whoamiSelection}
   }
 }`
 

@@ -1,5 +1,5 @@
 // noinspection TypeScriptPreferShortImport
-import { GraphQlClient } from '../graphQlClient'
+import type { GraphQlClient } from '../graphQlClient'
 
 export const refreshBtpTokenQuery = `{
   refreshBtpToken {

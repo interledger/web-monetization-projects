@@ -117,6 +117,10 @@ export class AuthService extends EventEmitter {
     return this._op
   }
 
+  tokenInvalid(token: string | null) {
+    return !token || tokenUtils.isExpired({ token })
+  }
+
   async doGetTokenMaybeRefreshAndStoreState(): Promise<string | null> {
     this.activeTabs.log(`doGetTokenMaybeRefreshAndStoreState ${Date.now()}`)
     let token = this.getStoredToken()
@@ -128,13 +132,13 @@ export class AuthService extends EventEmitter {
       })}`
     )
 
-    if (!token) {
+    if (this.tokenInvalid(token)) {
       token = await this.siteToken.retrieve()
       this.activeTabs.log(`siteToken: ${Boolean(token)}`)
     }
     this.trace('siteToken', token)
 
-    if (!token || tokenUtils.isExpired({ token })) {
+    if (this.tokenInvalid(token) || !token /* Satisfy TypeScript */) {
       this.activeTabs.log(
         `token is null || expired! token=${token && tokenUtils.decode(token)}`
       )
@@ -153,17 +157,12 @@ export class AuthService extends EventEmitter {
       )
       this.trace('after refreshTokenAndUpdateWhoAmi', token)
     } else {
-      // Routinely do a whoami query to check for subscription status
+      // Routinely do a whoami query to check for subscription status or
+      // changes to other fields (e.g. canTip)
       // Query could fail if token is invalid
       this.trace('before updateWhoAmI token=%s user=%s', token, this.store.user)
-      const stored = token
-      const endDate =
-        this.store.user?.subscription?.endDate ||
-        this.store.user?.subscription?.trialEndDate
-      if (!endDate || new Date(endDate) < new Date()) {
-        token = await this.updateWhoAmi(stored)
-        this.activeTabs.log(`after updateWhoAmi token=${Boolean(token)}`)
-      }
+      token = await this.updateWhoAmi(token)
+      this.activeTabs.log(`after updateWhoAmi token=${Boolean(token)}`)
       this.trace('after updateWhoAmI token=%s user=%s', token, this.store.user)
     }
 

@@ -6,6 +6,7 @@
 set -ex
 
 SIX_DIR=${SIX_DIR:-six-apktool-decoded}
+SIX_APK_NAME=${SIX_APK_NAME:-coil-six.apk}
 
 "$CHROME" --pack-extension="$PWD"/dist \
          --pack-extension-key="$COIL_SIX_PACK_KEY"
@@ -13,12 +14,12 @@ SIX_DIR=${SIX_DIR:-six-apktool-decoded}
 mv dist.crx "$SIX_DIR"/assets
 
 
-apktool b -f "$SIX_DIR" -o coil-six.apk
+apktool b -f "$SIX_DIR" -o "$SIX_APK_NAME"
 
 jarsigner -verbose -keystore \
   "$COIL_SIX_KEYSTORE_PATH" \
   -storepass "$COIL_SIX_KEYSTORE_PASS" \
-  coil-six.apk coilkey
+  "$SIX_APK_NAME" coilkey
 
 echo 'To uninstall: "adb uninstall com.coil.android.six"'
-echo 'To install:   "adb install -r ./coil-six.apk"'
+echo "To install:   \"adb install -r ./${SIX_APK_NAME}\""

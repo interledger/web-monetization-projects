@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
-  IfWebMonetized,
   IfNotWebMonetized,
-  IfWebMonetizationPending
+  IfWebMonetizationPending,
+  IfWebMonetized
 } from 'react-web-monetization'
 
 const Conditional = () => (

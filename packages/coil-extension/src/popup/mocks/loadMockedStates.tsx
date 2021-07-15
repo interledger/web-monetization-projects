@@ -52,7 +52,6 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
     monetized: null,
     stickyState: null,
     playState: null,
-    monetizedFavicon: null,
     monetizedTotal: null,
     coilSite: null,
     isPaying: null
@@ -62,7 +61,6 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
 
 const notSupported = mockState({
   monetizedTotal: 0,
-  monetizedFavicon: '/res/icon-page.svg',
   user: user,
   validToken: true,
   adapted: false
@@ -73,7 +71,6 @@ const payingCoilArticle = mockState({
   isPaying: true,
   coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
   monetizedTotal: 10854,
-  monetizedFavicon: '/res/icon-page.svg',
   user: user,
   validToken: true,
   adapted: false
@@ -83,7 +80,6 @@ const userCanTip = mockState({
   monetized: true,
   coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
   monetizedTotal: 10854,
-  monetizedFavicon: '/res/icon-page.svg',
   user: tipUser,
   validToken: true,
   adapted: false
@@ -92,7 +88,6 @@ const userCanTip = mockState({
 const startDiscovering = mockState({
   coilSite: 'https://coil.com/discover',
   monetizedTotal: 0,
-  monetizedFavicon: '/res/icon-page.svg',
   user: user,
   validToken: true,
   adapted: false
@@ -103,7 +98,6 @@ const payingYouTube = mockState({
   monetized: true,
   monetizedTotal: 2326667,
   playState: 'playing',
-  monetizedFavicon: 'https://s.ytimg.com/yts/img/favicon_32-vflOogEID.png',
   stickyState: 'auto',
   user: user,
   validToken: true,
@@ -115,8 +109,6 @@ const payingTwitch = mockState({
   monetized: true,
   monetizedTotal: 5910000,
   playState: 'playing',
-  monetizedFavicon:
-    'https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png',
   stickyState: 'auto',
   user: user,
   validToken: true,
@@ -127,7 +119,6 @@ const payingNonCoilSite = mockState({
   isPaying: true,
   monetized: true,
   monetizedTotal: 22817800,
-  monetizedFavicon: '/res/icon-page.svg',
   user: user,
   validToken: true,
   adapted: false
@@ -136,7 +127,6 @@ const payingNonCoilSite = mockState({
 const welcomeToCoil = mockState({
   coilSite: 'https://coil.com/',
   monetizedTotal: 0,
-  monetizedFavicon: '/res/icon-page.svg',
   user: user,
   validToken: true,
   adapted: false
@@ -155,7 +145,6 @@ const aliceUnsubscribed = mockState({
   monetizedTotal: 0,
   user: aliceUser,
   validToken: true,
-  monetizedFavicon: '/res/icon-page.svg',
   adapted: false
 })
 

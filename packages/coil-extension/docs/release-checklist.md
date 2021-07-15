@@ -13,6 +13,9 @@ When releasing, we can copy this markdown into the PR for a release.
 
 - [ ] Make sure the manifest version was bumped but doesn't skip versions
 
+- [ ] Update the [apktool.yml](../six-apktool-decoded/apktool.yml) versionCode/versionName
+      and commit it to the repository.
+
 - [ ] Update the [CHANGELOG.md](../CHANGELOG.md)
 
   - You can compare with latest commit before tagging via something like:
@@ -44,6 +47,9 @@ make sense.
     - Enable add-on debugging
     - Load Temporary Add-on...
   - For Chrome or MS Edge, go to `chrome://extensions` (or `edge://extensions`) and `Load Unpacked`
+  - Use `adb` to install Samsung Internet Extensions
+    - be sure to kill the browser and delete shared settings to be sure correct addon is tested
+    - see code in `scripts/reinstall-six.sh`
 
 - [ ] Ensure that you are [logged in with a user with valid subscription](https://coil.com/settings/membership)
 

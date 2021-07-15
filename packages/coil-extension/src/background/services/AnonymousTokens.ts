@@ -9,23 +9,6 @@ decorate(injectable(), anonymousTokens.AnonymousTokens)
 
 const ANON_TOKEN_BATCH_SIZE = 10
 
-@injectable()
-export class AnonymousTokens extends anonymousTokens.AnonymousTokens {
-  constructor(
-    @inject(tokens.CoilDomain) coilHost: string,
-    @inject(Storage) storage: Storage,
-    @logger('AnonymousTokens') debug: Logger
-  ) {
-    super({
-      redeemerUrl: coilHost + '/redeemer',
-      signerUrl: coilHost + '/issuer',
-      store: new TokenStore(storage),
-      debug,
-      batchSize: ANON_TOKEN_BATCH_SIZE
-    })
-  }
-}
-
 class TokenStore {
   private storage: Storage
   constructor(localStorage: Storage) {
@@ -59,5 +42,22 @@ class TokenStore {
       i++
     }
     return Promise.resolve(undefined)
+  }
+}
+
+@injectable()
+export class AnonymousTokens extends anonymousTokens.AnonymousTokens {
+  constructor(
+    @inject(tokens.CoilDomain) coilHost: string,
+    @inject(Storage) storage: Storage,
+    @logger('AnonymousTokens') debug: Logger
+  ) {
+    super({
+      redeemerUrl: coilHost + '/redeemer',
+      signerUrl: coilHost + '/issuer',
+      store: new TokenStore(storage),
+      debug,
+      batchSize: ANON_TOKEN_BATCH_SIZE
+    })
   }
 }
