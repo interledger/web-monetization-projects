@@ -3905,6 +3905,7 @@ __metadata:
     "@yarnpkg/pnpify": 2.4.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.0.1
+    error-stack-parser: ^2.0.6
     eslint: 7.30.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.4
@@ -3923,6 +3924,9 @@ __metadata:
     lint-staged: 11.0.1
     prettier: 2.3.2
     rimraf: 3.0.2
+    stack-generator: ^2.0.5
+    stackframe: ^1.2.0
+    stacktrace-gps: ^3.0.4
     ts-jest: 27.0.3
     ts-loader: 9.2.3
     ts-node: 10.1.0
@@ -20502,7 +20506,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"stackframe@npm:^1.1.1":
+"stackframe@npm:^1.1.1, stackframe@npm:^1.2.0":
   version: 1.2.0
   resolution: "stackframe@npm:1.2.0"
   checksum: 37d659bdd574e118a48c445a9a054a2b8dee6d6ad54eb16c51c7dae622c0f4994b9ff4e47d744aa6cfd14c00b477e145f34db3df78771f3e783ce8f357616d00
