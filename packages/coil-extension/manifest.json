@@ -17,7 +17,8 @@
     "default_popup": "static/popup.html"
   },
   "background": {
-    "page": "static/background.html"
+    "page": "static/background.html",
+    "persistent" : false
   },
   "incognito" : "spanning",
   "web_accessible_resources": [
