@@ -79,9 +79,17 @@ export class MonetizationTagObserver {
 
   private start() {
     this.head = this.document.head
-    const metas: MetaList = this.head.querySelectorAll(
-      'meta[name="monetization"],link[rel="monetization"]'
+    let metas = Array.from<MonetizationTag>(
+      this.head.querySelectorAll(
+        'meta[name="monetization"],link[rel="monetization"]'
+      )
     )
+    // If we have a link, just use that as there are currently some issues
+    // with the handling of multiple tags.
+    const predicate = (a: MonetizationTag) => getTagType(a) === 'link'
+    if (metas.find(predicate)) {
+      metas = metas.filter(predicate)
+    }
     metas.forEach(m => {
       try {
         this.onAddedTag(m)
@@ -145,13 +153,16 @@ export class MonetizationTagObserver {
     }
   }
 
-  private onAddedTag(meta: MonetizationTag) {
+  private async onAddedTag(meta: MonetizationTag) {
     const type = getTagType(meta)
     if (type != this.affinity) {
       if (type === 'link') {
         this.affinity = 'link'
         for (const tag of this.metaTags.keys()) {
           this.onRemovedTag(tag)
+          // This shouldn't happen very often, but in this case we need to let
+          // some async operations complete else everything goes haywire.
+          await new Promise(resolve => setTimeout(resolve, 1e3))
         }
       } else {
         throw new Error(
