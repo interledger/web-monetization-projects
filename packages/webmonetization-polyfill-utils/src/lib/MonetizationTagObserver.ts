@@ -82,13 +82,7 @@ export class MonetizationTagObserver {
     const metas: MetaList = this.head.querySelectorAll(
       'meta[name="monetization"],link[rel="monetization"]'
     )
-    metas.forEach(m => {
-      try {
-        this.onAddedTag(m)
-      } catch (e) {
-        console.error(e)
-      }
-    })
+    metas.forEach(this.onAddedTag.bind(this))
     this.headObserver.observe(this.head, { childList: true })
   }
 
@@ -164,15 +158,6 @@ export class MonetizationTagObserver {
     }
 
     const details = this.getPaymentDetails(meta)
-
-    if (this.metaTags.size + 1 > this.maxMetas) {
-      throw new Error(
-        `Web-Monetization Error: Ignoring tag with ` +
-          `paymentPointer=${details.paymentPointer}, only ${this.maxMetas} ` +
-          `monetization tag[s] supported at a time. `
-      )
-    }
-
     const observer = new MutationObserver(
       this.onPaymentEndpointChangeObserved.bind(this)
     )
@@ -182,6 +167,13 @@ export class MonetizationTagObserver {
       attributeFilter: [meta instanceof HTMLMetaElement ? 'content' : 'href']
     })
     this.metaTags.set(meta, { observer, details })
+    if (this.metaTags.size > this.maxMetas) {
+      throw new Error(
+        'Web-Monetization Error: ' +
+          'Ignoring tag, ' +
+          `only ${this.maxMetas} monetization tags supported at a time. `
+      )
+    }
     this.callback({ stopped: null, started: details })
   }
 
