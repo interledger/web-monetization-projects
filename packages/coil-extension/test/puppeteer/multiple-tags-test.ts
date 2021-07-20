@@ -65,6 +65,9 @@ async function run() {
 
     success =
       success &&
+      results.details.events[0].event.detail.paymentPointer.endsWith(
+        'twitter.xrptipbot.com/sharafian_'
+      ) &&
       initialEvents ===
         'monetizationpending, monetizationstart, monetizationprogress' &&
       (trailingEventsSet === 'monetizationprogress' ||
