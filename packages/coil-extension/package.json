@@ -41,7 +41,7 @@
     "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
     "publish:preview": "WEXT_SHIPIT_CHROME_EXTENSION_ID=iehmfkldnblennopinmmagfidpflefkp WEXT_MANIFEST_SUFFIX=Preview ./scripts/publish-coildev-chrome-store.sh",
     "publish:dev": "./scripts/publish-coildev-chrome-store.sh",
-    "serve:fixtures": "python -m http.server 4000 --directory test/fixtures",
+    "serve:fixtures": "http-server -p 4000 test/fixtures",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --verbose --coverage",
     "upkeep": "cd ../.. && yarn upkeep"
