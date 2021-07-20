@@ -641,10 +641,9 @@ export class BackgroundScript {
   ) {
     const frame = getFrameSpec(sender)
     const { tabId, frameId } = frame
+    const { requestId } = request.data
 
-    this.tabStates.logLastMonetizationCommand(frame, 'start')
-    const commandIndex =
-      this.tabStates.getFrameOrDefault(frame).lastMonetization.index
+    this.tabStates.logLastMonetizationCommand(frame, 'start', requestId)
 
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender, request.data.initiatingUrl)
@@ -681,7 +680,6 @@ export class BackgroundScript {
     }
 
     this.log('startWebMonetization, request', request)
-    const { requestId } = request.data
 
     this.log('loading token for monetization', requestId)
     const token = await this.auth.getTokenMaybeRefreshAndStoreState()
@@ -692,7 +690,11 @@ export class BackgroundScript {
         console.warn('startWebMonetization cancelled; no token')
       }
       this.activeTabLogger.log('startWebMonetization cancelled; no token')
-      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      this.sendSetMonetizationStateMessage(
+        frame,
+        'stopped',
+        request.data.requestId
+      )
       setUnavailable('token')
       return false
     }
@@ -703,19 +705,27 @@ export class BackgroundScript {
       this.activeTabLogger.log(
         'startWebMonetization cancelled; no active subscription'
       )
-      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      this.sendSetMonetizationStateMessage(
+        frame,
+        'stopped',
+        request.data.requestId
+      )
       setUnavailable('subscription')
       return false
     }
 
     // Check that this operation is still valid before we go ahead.
     // Any operation that we `await`d on could have potentially masked state
-    // changes. e.g. `getTokenMaybeRefreshAndStoreState` which will update who
-    // ami
+    // changes. e.g. `getTokenMaybeRefreshAndStoreState` which will update
+    // whoami.
     if (
-      this.tabStates.getFrameOrDefault(frame).lastMonetization.index !==
-      commandIndex
+      this.tabStates.getFrameOrDefault(frame).lastMonetization.requestId !==
+      requestId
     ) {
+      // The pending message will have been ignored on the content script side
+      // in this case too, so there's no need to send a stop, as will already
+      // be stopped (for that id). If we sent a stopped message, it would need
+      // to be tagged with requestId, and would only ever be ignored.
       return false
     }
 
@@ -807,8 +817,8 @@ export class BackgroundScript {
   }
 
   private doPauseWebMonetization(frame: FrameSpec) {
-    this.tabStates.logLastMonetizationCommand(frame, 'pause')
     const id = this.assoc.getStreamId(frame)
+    this.tabStates.logLastMonetizationCommand(frame, 'pause', id)
     if (id) {
       this.log('pausing stream', id)
       this.streams.pauseStream(id)
@@ -818,9 +828,8 @@ export class BackgroundScript {
   }
 
   private doResumeWebMonetization(frame: FrameSpec) {
-    this.tabStates.logLastMonetizationCommand(frame, 'resume')
-
     const id = this.assoc.getStreamId(frame)
+    this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
     if (id) {
       this.log('resuming stream', id)
       this.sendSetMonetizationStateMessage(frame, 'pending')
@@ -860,8 +869,8 @@ export class BackgroundScript {
   }
 
   private doStopWebMonetization(frame: FrameSpec) {
-    this.tabStates.logLastMonetizationCommand(frame, 'stop')
     const requestId = this.assoc.getStreamId(frame)
+    this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
     const closed = this._closeStreams(frame.tabId, frame.frameId)
     // May be noop other side if stop monetization was initiated from
     // ContentScript

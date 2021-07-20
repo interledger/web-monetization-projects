@@ -68,9 +68,8 @@ export class TabStates {
       adapted: false,
       total: 0,
       lastMonetization: {
-        index: 0,
-        command: null,
-        timeMs: Date.now()
+        requestId: null,
+        command: null
       }
     }
   }
@@ -131,12 +130,15 @@ export class TabStates {
     }
   }
 
-  logLastMonetizationCommand(frame: FrameSpec, command: MonetizationCommand) {
+  logLastMonetizationCommand(
+    frame: FrameSpec,
+    command: MonetizationCommand,
+    requestId?: string
+  ) {
     this.setFrame(frame, {
       lastMonetization: {
-        index: this.getFrameOrDefault(frame).lastMonetization.index + 1,
-        command,
-        timeMs: Date.now()
+        requestId: requestId ?? null,
+        command
       }
     })
   }
