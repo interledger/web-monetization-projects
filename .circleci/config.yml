@@ -108,7 +108,7 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
+          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
@@ -137,7 +137,7 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
+          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=chrome

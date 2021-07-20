@@ -51,10 +51,20 @@ async function run() {
         2
       )}`
     )
+    const initialEvents = results.details.events
+      .slice(0, 3)
+      .map(o => o.event.type)
+      .join(', ')
+
+    const trailingEventsSet = Array.from(
+      new Set(results.details.events.slice(3).map(o => o.event.type))
+    ).join(', ')
+
     success =
       success &&
-      results.details.events.map(o => o.event.type).join(', ') ===
+      initialEvents ===
         'monetizationpending, monetizationstart, monetizationprogress' &&
+      trailingEventsSet === 'monetizationprogress' &&
       results.details.statesSeen.size === 2 &&
       results.details.statesSeen.has('pending') &&
       results.details.statesSeen.has('started')
