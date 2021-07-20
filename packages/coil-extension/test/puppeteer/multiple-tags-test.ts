@@ -37,7 +37,9 @@ async function run() {
     'http://localhost:4000/multiple-tags-link-first.html'
   ]
   for (const url of testUrls) {
+    debug(`testing url ${url}`)
     const results = await testMonetization({ context, url })
+    debug(`results = ${JSON.stringify(results)}`)
     success =
       success &&
       results.details.events.map(o => o.event.type).join(', ') ===
