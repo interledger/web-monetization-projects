@@ -41,6 +41,7 @@
     "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
     "publish:preview": "WEXT_SHIPIT_CHROME_EXTENSION_ID=iehmfkldnblennopinmmagfidpflefkp WEXT_MANIFEST_SUFFIX=Preview ./scripts/publish-coildev-chrome-store.sh",
     "publish:dev": "./scripts/publish-coildev-chrome-store.sh",
+    "serve:fixtures": "http-server -p 4000 test/fixtures",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --verbose --coverage",
     "upkeep": "cd ../.. && yarn upkeep"
@@ -113,6 +114,7 @@
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-standard": "5.0.0",
+    "http-server": "^0.12.3",
     "husky": "7.0.1",
     "jest": "27.0.6",
     "lerna": "4.0.0",

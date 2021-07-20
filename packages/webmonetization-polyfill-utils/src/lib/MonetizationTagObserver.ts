@@ -1,6 +1,7 @@
 import { v4 as uuid } from 'uuid'
 
 import { whenDocumentReady } from './whenDocumentReady'
+import { CustomError } from './CustomError'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
 const debug = (..._: unknown[]) => {}
@@ -38,6 +39,8 @@ export type TagType = 'meta' | 'link'
 export function getTagType(tag: MonetizationTag): TagType {
   return tag instanceof HTMLMetaElement ? 'meta' : 'link'
 }
+
+export class DeprecatedMetaTagIgnoredError extends CustomError {}
 
 export class MonetizationTagObserver {
   /**
@@ -154,11 +157,12 @@ export class MonetizationTagObserver {
           this.onRemovedTag(tag)
         }
       } else {
-        throw new Error(
+        // TODO: just console.warn and return early ?
+        throw new DeprecatedMetaTagIgnoredError(
           'Web-Monetization Error: ' +
-            'A <link rel="monetization"> tag has been seen, ' +
-            'ignoring deprecated <meta name="monetization"> tag, ' +
-            'using only monetization <link rel="monetization"> tags consistently'
+            'A `<link rel="monetization">` tag has been seen so ' +
+            'ignoring deprecated `<meta name="monetization">` tag and ' +
+            'using only `<link rel="monetization">` tags consistently'
         )
       }
     }

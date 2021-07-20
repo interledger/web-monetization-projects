@@ -641,8 +641,11 @@ export class BackgroundScript {
   ) {
     const frame = getFrameSpec(sender)
     const { tabId, frameId } = frame
+    const { requestId } = request.data
 
-    this.tabStates.logLastMonetizationCommand(frame, 'start')
+    this.activeTabLogger.log(`startWM called with ${requestId}`)
+    this.tabStates.logLastMonetizationCommand(frame, 'start', requestId)
+
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender, request.data.initiatingUrl)
 
@@ -653,7 +656,13 @@ export class BackgroundScript {
     const userBeforeReAuth = this.store.user
     let emittedPending = false
     const emitPending = () => {
-      this.sendSetMonetizationStateMessage(frame, 'pending')
+      // Set the requestId so that DocumentMonetization#setState will ignore
+      // this message if tags are added and removed extremely fast.
+      this.sendSetMonetizationStateMessage(
+        frame,
+        'pending',
+        request.data.requestId
+      )
       emittedPending = true
     }
 
@@ -672,7 +681,6 @@ export class BackgroundScript {
     }
 
     this.log('startWebMonetization, request', request)
-    const { requestId } = request.data
 
     this.log('loading token for monetization', requestId)
     const token = await this.auth.getTokenMaybeRefreshAndStoreState()
@@ -683,7 +691,11 @@ export class BackgroundScript {
         console.warn('startWebMonetization cancelled; no token')
       }
       this.activeTabLogger.log('startWebMonetization cancelled; no token')
-      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      this.sendSetMonetizationStateMessage(
+        frame,
+        'stopped',
+        request.data.requestId
+      )
       setUnavailable('token')
       return false
     }
@@ -694,8 +706,33 @@ export class BackgroundScript {
       this.activeTabLogger.log(
         'startWebMonetization cancelled; no active subscription'
       )
-      this.sendSetMonetizationStateMessage(frame, 'stopped')
+      this.sendSetMonetizationStateMessage(
+        frame,
+        'stopped',
+        request.data.requestId
+      )
       setUnavailable('subscription')
+      return false
+    }
+
+    // Check that this startWebMonetization invocation is still valid before
+    // we go ahead. Any operation that we `await`d on could have potentially
+    // masked state changes. e.g. `getTokenMaybeRefreshAndStoreState`
+    // (which will update `whoami`) which takes longer than it does to switch
+    // out a monetization tag.
+    if (
+      this.tabStates.getFrameOrDefault(frame).lastMonetization.requestId !==
+      requestId
+    ) {
+      // The pending message (if sent) will have been ignored on the content
+      // script side in this case too, so there's no need to send a stop, as
+      // will already have been stopped (for that id).
+      // If we sent a stopped message, it would need to be tagged with
+      // requestId, and would only ever be ignored (
+      // due to the new monetization request implied in the if condition)
+      this.activeTabLogger.log(
+        `startWebMonetization aborted; stale requestId: ${requestId}`
+      )
       return false
     }
 
@@ -711,6 +748,8 @@ export class BackgroundScript {
     }
 
     this.log('starting stream', requestId)
+    // We need to start this stream, even if we've already received a pause.
+    // That way we can "resume" it later.
     this.assoc.setStreamId(frame, requestId)
     this.assoc.setFrame(requestId, { tabId, frameId })
     this.streams.beginStream(requestId, {
@@ -787,9 +826,9 @@ export class BackgroundScript {
   }
 
   private doPauseWebMonetization(frame: FrameSpec) {
-    this.tabStates.logLastMonetizationCommand(frame, 'pause')
     const id = this.assoc.getStreamId(frame)
     if (id) {
+      this.tabStates.logLastMonetizationCommand(frame, 'pause', id)
       this.log('pausing stream', id)
       this.streams.pauseStream(id)
       this.sendSetMonetizationStateMessage(frame, 'stopped')
@@ -798,10 +837,9 @@ export class BackgroundScript {
   }
 
   private doResumeWebMonetization(frame: FrameSpec) {
-    this.tabStates.logLastMonetizationCommand(frame, 'resume')
-
     const id = this.assoc.getStreamId(frame)
     if (id) {
+      this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
       this.log('resuming stream', id)
       this.sendSetMonetizationStateMessage(frame, 'pending')
       this.streams.resumeStream(id)
@@ -840,8 +878,10 @@ export class BackgroundScript {
   }
 
   private doStopWebMonetization(frame: FrameSpec) {
-    this.tabStates.logLastMonetizationCommand(frame, 'stop')
     const requestId = this.assoc.getStreamId(frame)
+    if (requestId) {
+      this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
+    }
     const closed = this._closeStreams(frame.tabId, frame.frameId)
     // May be noop other side if stop monetization was initiated from
     // ContentScript
