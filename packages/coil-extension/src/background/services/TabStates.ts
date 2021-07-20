@@ -133,11 +133,11 @@ export class TabStates {
   logLastMonetizationCommand(
     frame: FrameSpec,
     command: MonetizationCommand,
-    requestId?: string
+    requestId: string
   ) {
     this.setFrame(frame, {
       lastMonetization: {
-        requestId: requestId ?? null,
+        requestId: requestId,
         command
       }
     })

@@ -824,8 +824,8 @@ export class BackgroundScript {
 
   private doPauseWebMonetization(frame: FrameSpec) {
     const id = this.assoc.getStreamId(frame)
-    this.tabStates.logLastMonetizationCommand(frame, 'pause', id)
     if (id) {
+      this.tabStates.logLastMonetizationCommand(frame, 'pause', id)
       this.log('pausing stream', id)
       this.streams.pauseStream(id)
       this.sendSetMonetizationStateMessage(frame, 'stopped')
@@ -835,8 +835,8 @@ export class BackgroundScript {
 
   private doResumeWebMonetization(frame: FrameSpec) {
     const id = this.assoc.getStreamId(frame)
-    this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
     if (id) {
+      this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
       this.log('resuming stream', id)
       this.sendSetMonetizationStateMessage(frame, 'pending')
       this.streams.resumeStream(id)
