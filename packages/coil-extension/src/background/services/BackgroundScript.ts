@@ -723,10 +723,11 @@ export class BackgroundScript {
       this.tabStates.getFrameOrDefault(frame).lastMonetization.requestId !==
       requestId
     ) {
-      // The pending message will have been ignored on the content script side
-      // in this case too, so there's no need to send a stop, as will already
-      // be stopped (for that id). If we sent a stopped message, it would need
-      // to be tagged with requestId, and would only ever be ignored.
+      // The pending message (if sent)  will have been ignored on the content
+      // script side in this case too, so there's no need to send a stop, as
+      // will already be stopped (for that id). If we sent a stopped message,
+      // it would need to be tagged with requestId, and would only ever be
+      // ignored.
       this.activeTabLogger.log(
         `startWebMonetization aborted; stale requestId: ${requestId}`
       )
