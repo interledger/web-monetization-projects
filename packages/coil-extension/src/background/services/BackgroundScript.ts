@@ -715,19 +715,21 @@ export class BackgroundScript {
       return false
     }
 
-    // Check that this operation is still valid before we go ahead.
-    // Any operation that we `await`d on could have potentially masked state
-    // changes. e.g. `getTokenMaybeRefreshAndStoreState` )which will update
-    // whoami) taking longer than it takes to switch out the monetization tag.
+    // Check that this startWebMonetization invocation is still valid before
+    // we go ahead. Any operation that we `await`d on could have potentially
+    // masked state changes. e.g. `getTokenMaybeRefreshAndStoreState`
+    // (which will update `whoami`) which takes longer than it does to switch
+    // out a monetization tag.
     if (
       this.tabStates.getFrameOrDefault(frame).lastMonetization.requestId !==
       requestId
     ) {
-      // The pending message (if sent)  will have been ignored on the content
+      // The pending message (if sent) will have been ignored on the content
       // script side in this case too, so there's no need to send a stop, as
-      // will already be stopped (for that id). If we sent a stopped message,
-      // it would need to be tagged with requestId, and would only ever be
-      // ignored.
+      // will already have been stopped (for that id).
+      // If we sent a stopped message, it would need to be tagged with
+      // requestId, and would only ever be ignored (
+      // due to the new monetization request implied in the if condition)
       this.activeTabLogger.log(
         `startWebMonetization aborted; stale requestId: ${requestId}`
       )
