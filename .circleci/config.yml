@@ -115,6 +115,7 @@ jobs:
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
+            xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
       # - run:
       #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
       #     command: |
@@ -143,6 +144,7 @@ jobs:
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
+            xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
 
       # - run:
       #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
