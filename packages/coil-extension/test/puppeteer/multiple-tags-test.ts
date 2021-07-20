@@ -60,6 +60,9 @@ async function run() {
       new Set(results.details.events.slice(3).map(o => o.event.type))
     ).join(', ')
 
+    debug('initialEvents', initialEvents)
+    debug('trailingEventsSet', trailingEventsSet)
+
     success =
       success &&
       initialEvents ===
