@@ -643,6 +643,9 @@ export class BackgroundScript {
     const { tabId, frameId } = frame
 
     this.tabStates.logLastMonetizationCommand(frame, 'start')
+    const commandIndex =
+      this.tabStates.getFrameOrDefault(frame).lastMonetization.index
+
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender, request.data.initiatingUrl)
 
@@ -653,7 +656,13 @@ export class BackgroundScript {
     const userBeforeReAuth = this.store.user
     let emittedPending = false
     const emitPending = () => {
-      this.sendSetMonetizationStateMessage(frame, 'pending')
+      // Set the requestId so that DocumentMonetization#setState will ignore
+      // this message if tags are added and removed extremely fast.
+      this.sendSetMonetizationStateMessage(
+        frame,
+        'pending',
+        request.data.requestId
+      )
       emittedPending = true
     }
 
@@ -696,6 +705,17 @@ export class BackgroundScript {
       )
       this.sendSetMonetizationStateMessage(frame, 'stopped')
       setUnavailable('subscription')
+      return false
+    }
+
+    // Check that this operation is still valid before we go ahead.
+    // Any operation that we `await`d on could have potentially masked state
+    // changes. e.g. `getTokenMaybeRefreshAndStoreState` which will update who
+    // ami
+    if (
+      this.tabStates.getFrameOrDefault(frame).lastMonetization.index !==
+      commandIndex
+    ) {
       return false
     }
 

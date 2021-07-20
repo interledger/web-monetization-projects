@@ -8,6 +8,7 @@ export interface FrameState {
   // Tracks the total amount of `source` money sent (not was received)
   total: number
   lastMonetization: {
+    index: number
     command: MonetizationCommand | null
     timeMs: number
   }
