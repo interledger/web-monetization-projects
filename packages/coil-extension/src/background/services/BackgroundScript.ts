@@ -876,7 +876,9 @@ export class BackgroundScript {
 
   private doStopWebMonetization(frame: FrameSpec) {
     const requestId = this.assoc.getStreamId(frame)
-    this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
+    if (requestId) {
+      this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
+    }
     const closed = this._closeStreams(frame.tabId, frame.frameId)
     // May be noop other side if stop monetization was initiated from
     // ContentScript
