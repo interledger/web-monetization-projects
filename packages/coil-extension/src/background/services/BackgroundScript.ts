@@ -643,6 +643,7 @@ export class BackgroundScript {
     const { tabId, frameId } = frame
     const { requestId } = request.data
 
+    this.activeTabLogger.log(`startWM called with ${requestId}`)
     this.tabStates.logLastMonetizationCommand(frame, 'start', requestId)
 
     // This used to be sent from content script as a separate message
@@ -717,7 +718,7 @@ export class BackgroundScript {
     // Check that this operation is still valid before we go ahead.
     // Any operation that we `await`d on could have potentially masked state
     // changes. e.g. `getTokenMaybeRefreshAndStoreState` which will update
-    // whoami.
+    // whoami taking longer than it takes to switch out the monetization tag.
     if (
       this.tabStates.getFrameOrDefault(frame).lastMonetization.requestId !==
       requestId
@@ -726,6 +727,9 @@ export class BackgroundScript {
       // in this case too, so there's no need to send a stop, as will already
       // be stopped (for that id). If we sent a stopped message, it would need
       // to be tagged with requestId, and would only ever be ignored.
+      this.activeTabLogger.log(
+        `startWebMonetization aborted; stale requestId: ${requestId}`
+      )
       return false
     }
 
@@ -741,6 +745,8 @@ export class BackgroundScript {
     }
 
     this.log('starting stream', requestId)
+    // We need to start this stream, even if we've already received a pause.
+    // That way we can "resume" it later.
     this.assoc.setStreamId(frame, requestId)
     this.assoc.setFrame(requestId, { tabId, frameId })
     this.streams.beginStream(requestId, {

@@ -4,7 +4,7 @@ import * as tokens from '../../types/tokens'
 
 @injectable()
 export class ActiveTabLogger {
-  sendLogs = false
+  sendLogs = Boolean(localStorage.ACTIVE_TAB_LOGGING)
 
   constructor(
     @inject(tokens.WextApi)
