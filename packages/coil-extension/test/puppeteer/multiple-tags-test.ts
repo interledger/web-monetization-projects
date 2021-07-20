@@ -67,7 +67,8 @@ async function run() {
       success &&
       initialEvents ===
         'monetizationpending, monetizationstart, monetizationprogress' &&
-      trailingEventsSet === 'monetizationprogress' &&
+      (trailingEventsSet === 'monetizationprogress' ||
+        trailingEventsSet === '') &&
       results.details.statesSeen.size === 2 &&
       results.details.statesSeen.has('pending') &&
       results.details.statesSeen.has('started')
