@@ -39,7 +39,7 @@ async function run() {
   for (const url of testUrls) {
     debug(`testing url ${url}`)
     const results = await testMonetization({ context, url })
-    debug(`results = ${JSON.stringify(results)}`)
+    debug(`results = ${JSON.stringify(results.details)}`)
     success =
       success &&
       results.details.events.map(o => o.event.type).join(', ') ===
