@@ -65,6 +65,9 @@ export interface AdaptedPageDetails extends Command {
  */
 export interface PauseWebMonetization extends Command {
   command: 'pauseWebMonetization'
+  data: {
+    requestId?: string
+  }
 }
 
 /**
@@ -73,6 +76,9 @@ export interface PauseWebMonetization extends Command {
  */
 export interface ResumeWebMonetization extends Command {
   command: 'resumeWebMonetization'
+  data: {
+    requestId?: string
+  }
 }
 
 /**

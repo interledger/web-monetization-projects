@@ -238,7 +238,10 @@ export class ContentScript {
       pause: (reason: string) => {
         this.paused = true
         const pause: PauseWebMonetization = {
-          command: 'pauseWebMonetization'
+          command: 'pauseWebMonetization',
+          data: {
+            requestId: this.monetization.getMonetizationRequest()?.requestId
+          }
         }
         runtime.sendMessage(pause)
       },
@@ -246,7 +249,10 @@ export class ContentScript {
         debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
         const resume: ResumeWebMonetization = {
-          command: 'resumeWebMonetization'
+          command: 'resumeWebMonetization',
+          data: {
+            requestId: this.monetization.getMonetizationRequest()?.requestId
+          }
         }
         runtime.sendMessage(resume)
       }
@@ -262,7 +268,10 @@ export class ContentScript {
         this.doStartMonetization().then(() => {
           if (this.paused) {
             const pause: PauseWebMonetization = {
-              command: 'pauseWebMonetization'
+              command: 'pauseWebMonetization',
+              data: {
+                requestId: monetizationRequest.requestId
+              }
             }
             this.runtime.sendMessage(pause)
           }
