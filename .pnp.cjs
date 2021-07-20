@@ -12056,14 +12056,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:2.6.12", {
-          "packageLocation": "./.yarn/cache/core-js-npm-2.6.12-0b93d77d31-44fa9934a8.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-2.6.12-0b93d77d31/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:2.6.12"]
           ],
           "linkType": "HARD",
         }],
         ["npm:3.12.0", {
-          "packageLocation": "./.yarn/cache/core-js-npm-3.12.0-86ddce2306-d66e368bd7.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.12.0-86ddce2306/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.12.0"]
           ],
@@ -12083,7 +12083,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.15.2", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.15.2-2b9d54bed0-b3f33de3d3.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.15.2-2b9d54bed0/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.15.2"]
           ],
@@ -23202,7 +23202,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["puppeteer", [
         ["npm:1.20.0", {
-          "packageLocation": "./.yarn/cache/puppeteer-npm-1.20.0-92b1d57042-4b470869a0.zip/node_modules/puppeteer/",
+          "packageLocation": "./.yarn/unplugged/puppeteer-npm-1.20.0-92b1d57042/node_modules/puppeteer/",
           "packageDependencies": [
             ["puppeteer", "npm:1.20.0"],
             ["debug", "virtual:3d930726ec418037f1f00b911737166c266a3768203ac9fd2a9278bf28ca443c3f63d5bda39062d70c32bec0e8effdfd0fb13f5d9868b5607fd37c56b107a0d1#npm:4.3.1"],
@@ -23217,7 +23217,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }],
         ["npm:10.1.0", {
-          "packageLocation": "./.yarn/cache/puppeteer-npm-10.1.0-b6903cb0aa-83df3a1bee.zip/node_modules/puppeteer/",
+          "packageLocation": "./.yarn/unplugged/puppeteer-npm-10.1.0-b6903cb0aa/node_modules/puppeteer/",
           "packageDependencies": [
             ["puppeteer", "npm:10.1.0"],
             ["debug", "virtual:3d930726ec418037f1f00b911737166c266a3768203ac9fd2a9278bf28ca443c3f63d5bda39062d70c32bec0e8effdfd0fb13f5d9868b5607fd37c56b107a0d1#npm:4.3.1"],
@@ -25354,7 +25354,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["spawn-sync", [
         ["npm:1.0.15", {
-          "packageLocation": "./.yarn/cache/spawn-sync-npm-1.0.15-ae144228c0-a280ff895b.zip/node_modules/spawn-sync/",
+          "packageLocation": "./.yarn/unplugged/spawn-sync-npm-1.0.15-ae144228c0/node_modules/spawn-sync/",
           "packageDependencies": [
             ["spawn-sync", "npm:1.0.15"],
             ["concat-stream", "npm:1.6.2"],
@@ -36697,7 +36697,6 @@ var external_fs_ = __webpack_require__(747);
 var external_fs_default = /*#__PURE__*/__webpack_require__.n(external_fs_);
 ;// CONCATENATED MODULE: external "os"
 const external_os_namespaceObject = require("os");;
-var external_os_default = /*#__PURE__*/__webpack_require__.n(external_os_namespaceObject);
 // EXTERNAL MODULE: external "path"
 var external_path_ = __webpack_require__(622);
 var external_path_default = /*#__PURE__*/__webpack_require__.n(external_path_);
@@ -40110,11 +40109,18 @@ const DOT_ZIP = `.zip`;
  */
 
 const getArchivePart = path => {
-  const idx = path.indexOf(DOT_ZIP);
-  if (idx <= 0) return null; // Disallow files named ".zip"
+  let idx = path.indexOf(DOT_ZIP);
+  if (idx <= 0) return null;
+  let nextCharIdx = idx;
 
-  if (path[idx - 1] === ppath.sep) return null;
-  const nextCharIdx = idx + DOT_ZIP.length; // The path either has to end in ".zip" or contain an archive subpath (".zip/...")
+  while (idx >= 0) {
+    nextCharIdx = idx + DOT_ZIP.length;
+    if (path[nextCharIdx] === ppath.sep) break; // Disallow files named ".zip"
+
+    if (path[idx - 1] === ppath.sep) return null;
+    idx = path.indexOf(DOT_ZIP, nextCharIdx);
+  } // The path either has to end in ".zip" or contain an archive subpath (".zip/...")
+
 
   if (path.length > nextCharIdx && path[nextCharIdx] !== ppath.sep) return null;
   return path.slice(0, nextCharIdx);
@@ -42852,6 +42858,21 @@ function makeApi(runtimeState, opts) {
       return ppath.normalize(qualifiedPath);
     } else {
       const unqualifiedPathForDisplay = getPathForDisplay(unqualifiedPath);
+      const containingPackage = findPackageLocator(unqualifiedPath);
+
+      if (containingPackage) {
+        const {
+          packageLocation
+        } = getPackageInformationSafe(containingPackage);
+
+        if (!opts.fakeFs.existsSync(packageLocation)) {
+          const errorMessage = packageLocation.includes(`/unplugged/`) ? `Required unplugged package missing from disk. This may happen when switching branches without running installs (unplugged packages must be fully materialized on disk to work).` : `Required package missing from disk. If you keep your packages inside your repository then restarting the Node process may be enough. Otherwise, try to run an install first.`;
+          throw internalTools_makeError(ErrorCode.QUALIFIED_PATH_RESOLUTION_FAILED, `${errorMessage}\n\nMissing package: ${containingPackage.name}@${containingPackage.reference}\nExpected package location: ${getPathForDisplay(packageLocation)}\n`, {
+            unqualifiedPath: unqualifiedPathForDisplay
+          });
+        }
+      }
+
       throw internalTools_makeError(ErrorCode.QUALIFIED_PATH_RESOLUTION_FAILED, `Qualified path resolution failed - none of those files can be found on the disk.\n\nSource path: ${unqualifiedPathForDisplay}\n${candidates.map(candidate => `Not found: ${getPathForDisplay(candidate)}\n`).join(``)}`, {
         unqualifiedPath: unqualifiedPathForDisplay
       });
@@ -42967,132 +42988,6 @@ function makeApi(runtimeState, opts) {
     })
   };
 }
-;// CONCATENATED MODULE: ../yarnpkg-fslib/sources/xfs.ts
-
-
-
-
-function getTempName(prefix) {
-  const tmpdir = npath.toPortablePath(external_os_default().tmpdir());
-  const hash = Math.ceil(Math.random() * 0x100000000).toString(16).padStart(8, `0`);
-  return ppath.join(tmpdir, `${prefix}${hash}`);
-}
-
-const tmpdirs = new Set();
-let cleanExitRegistered = false;
-
-function registerCleanExit() {
-  if (cleanExitRegistered) return;
-  cleanExitRegistered = true;
-  process.once(`exit`, () => {
-    xfs.rmtempSync();
-  });
-}
-
-const xfs = Object.assign(new NodeFS(), {
-  detachTemp(p) {
-    tmpdirs.delete(p);
-  },
-
-  mktempSync(cb) {
-    registerCleanExit();
-
-    while (true) {
-      const p = getTempName(`xfs-`);
-
-      try {
-        this.mkdirSync(p);
-      } catch (error) {
-        if (error.code === `EEXIST`) {
-          continue;
-        } else {
-          throw error;
-        }
-      }
-
-      const realP = this.realpathSync(p);
-      tmpdirs.add(realP);
-
-      if (typeof cb !== `undefined`) {
-        try {
-          return cb(realP);
-        } finally {
-          if (tmpdirs.has(realP)) {
-            tmpdirs.delete(realP);
-
-            try {
-              this.removeSync(realP);
-            } catch (_a) {// Too bad if there's an error
-            }
-          }
-        }
-      } else {
-        return realP;
-      }
-    }
-  },
-
-  async mktempPromise(cb) {
-    registerCleanExit();
-
-    while (true) {
-      const p = getTempName(`xfs-`);
-
-      try {
-        await this.mkdirPromise(p);
-      } catch (error) {
-        if (error.code === `EEXIST`) {
-          continue;
-        } else {
-          throw error;
-        }
-      }
-
-      const realP = await this.realpathPromise(p);
-      tmpdirs.add(realP);
-
-      if (typeof cb !== `undefined`) {
-        try {
-          return await cb(realP);
-        } finally {
-          if (tmpdirs.has(realP)) {
-            tmpdirs.delete(realP);
-
-            try {
-              await this.removePromise(realP);
-            } catch (_a) {// Too bad if there's an error
-            }
-          }
-        }
-      } else {
-        return realP;
-      }
-    }
-  },
-
-  async rmtempPromise() {
-    await Promise.all(Array.from(tmpdirs.values()).map(async p => {
-      try {
-        await xfs.removePromise(p, {
-          maxRetries: 0
-        });
-        tmpdirs.delete(p);
-      } catch (_a) {// Too bad if there's an error
-      }
-    }));
-  },
-
-  rmtempSync() {
-    for (const p of tmpdirs) {
-      try {
-        xfs.removeSync(p);
-        tmpdirs.delete(p);
-      } catch (_a) {// Too bad if there's an error
-      }
-    }
-  }
-
-});
 ;// CONCATENATED MODULE: ./sources/loader/makeManager.ts
 
 
@@ -43164,23 +43059,34 @@ function makeManager(pnpapi, opts) {
   }
 
   function findApiPathFor(modulePath) {
-    const controlledBy = [];
+    let bestCandidate = null;
 
     for (const [apiPath, apiEntry] of apiMetadata) {
       const locator = apiEntry.instance.findPackageLocator(modulePath);
+      if (!locator) continue; // No need to go the slow way when there's a single API
 
-      if (locator) {
-        if (apiMetadata.size === 1) {
-          return apiPath;
-        } else {
-          controlledBy.push(apiPath);
-        }
+      if (apiMetadata.size === 1) return apiPath;
+      const packageInformation = apiEntry.instance.getPackageInformation(locator);
+      if (!packageInformation) throw new Error(`Assertion failed: Couldn't get package information for '${modulePath}'`);
+      if (!bestCandidate) bestCandidate = {
+        packageLocation: packageInformation.packageLocation,
+        apiPaths: []
+      };
+
+      if (packageInformation.packageLocation === bestCandidate.packageLocation) {
+        bestCandidate.apiPaths.push(apiPath);
+      } else if (packageInformation.packageLocation.length > bestCandidate.packageLocation.length) {
+        bestCandidate = {
+          packageLocation: packageInformation.packageLocation,
+          apiPaths: [apiPath]
+        };
       }
     }
 
-    if (controlledBy.length !== 0) {
-      if (controlledBy.length === 1) return controlledBy[0];
-      throw new Error(`Unable to locate pnpapi, the module '${modulePath}' is controlled by multiple pnpapi instances.\nThis is usually caused by using the global cache (enableGlobalCache: true)\n\nControlled by:\n${controlledBy.map(pnpPath => `  ${npath.fromPortablePath(pnpPath)}`).join(`\n`)}`);
+    if (bestCandidate) {
+      if (bestCandidate.apiPaths.length === 1) return bestCandidate.apiPaths[0];
+      const controlSegment = bestCandidate.apiPaths.map(apiPath => `  ${npath.fromPortablePath(apiPath)}`).join(`\n`);
+      throw new Error(`Unable to locate pnpapi, the module '${modulePath}' is controlled by multiple pnpapi instances.\nThis is usually caused by using the global cache (enableGlobalCache: true)\n\nControlled by:\n${controlSegment}\n`);
     }
 
     const start = ppath.resolve(npath.toPortablePath(modulePath));
@@ -43192,11 +43098,11 @@ function makeManager(pnpapi, opts) {
       const cached = findApiPathCache.get(curr);
       if (cached !== undefined) return addToCacheAndReturn(start, curr, cached);
       const cjsCandidate = ppath.join(curr, Filename.pnpCjs);
-      if (xfs.existsSync(cjsCandidate) && xfs.statSync(cjsCandidate).isFile()) return addToCacheAndReturn(start, curr, cjsCandidate); // We still support .pnp.js files to improve multi-project compatibility.
+      if (opts.fakeFs.existsSync(cjsCandidate) && opts.fakeFs.statSync(cjsCandidate).isFile()) return addToCacheAndReturn(start, curr, cjsCandidate); // We still support .pnp.js files to improve multi-project compatibility.
       // TODO: Remove support for .pnp.js files after they stop being used.
 
       const legacyCjsCandidate = ppath.join(curr, Filename.pnpJs);
-      if (xfs.existsSync(legacyCjsCandidate) && xfs.statSync(legacyCjsCandidate).isFile()) return addToCacheAndReturn(start, curr, legacyCjsCandidate);
+      if (opts.fakeFs.existsSync(legacyCjsCandidate) && opts.fakeFs.statSync(legacyCjsCandidate).isFile()) return addToCacheAndReturn(start, curr, legacyCjsCandidate);
       next = ppath.dirname(curr);
     } while (curr !== PortablePath.root);
 
