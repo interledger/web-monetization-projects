@@ -643,7 +643,7 @@ export class BackgroundScript {
     const { tabId, frameId } = frame
     const { requestId } = request.data
 
-    this.activeTabLogger.log(`startWM called with ${requestId}`)
+    this.activeTabLogger.log(`startWM called with ${requestId}`, frame)
     this.tabStates.logLastMonetizationCommand(frame, 'start', requestId)
 
     // This used to be sent from content script as a separate message
@@ -704,7 +704,8 @@ export class BackgroundScript {
         console.warn('startWebMonetization cancelled; no active subscription')
       }
       this.activeTabLogger.log(
-        'startWebMonetization cancelled; no active subscription'
+        'startWebMonetization cancelled; no active subscription',
+        frame
       )
       this.sendSetMonetizationStateMessage(
         frame,
@@ -731,7 +732,8 @@ export class BackgroundScript {
       // requestId, and would only ever be ignored (
       // due to the new monetization request implied in the if condition)
       this.activeTabLogger.log(
-        `startWebMonetization aborted; stale requestId: ${requestId}`
+        `startWebMonetization aborted; stale requestId: ${requestId}`,
+        frame
       )
       return false
     }
@@ -744,6 +746,10 @@ export class BackgroundScript {
       this.tabStates.getFrameOrDefault(frame).lastMonetization.command
     if (lastCommand !== 'start' && lastCommand !== 'pause') {
       this.log('startWebMonetization cancelled via', lastCommand)
+      this.activeTabLogger.log(
+        `startWebMonetization cancelled via ${lastCommand}`,
+        frame
+      )
       return false
     }
 
@@ -762,7 +768,7 @@ export class BackgroundScript {
     if (lastCommand === 'pause') {
       // TODO: why do we need the timeout here ?
       setTimeout(() => {
-        this.doPauseWebMonetization(frame)
+        this.doPauseWebMonetization(frame, requestId)
       }, 0)
     }
     return true
@@ -825,8 +831,8 @@ export class BackgroundScript {
     }
   }
 
-  private doPauseWebMonetization(frame: FrameSpec) {
-    const id = this.assoc.getStreamId(frame)
+  private doPauseWebMonetization(frame: FrameSpec, requestId?: string) {
+    const id = requestId ?? this.assoc.getStreamId(frame)
     if (id) {
       this.tabStates.logLastMonetizationCommand(frame, 'pause', id)
       this.log('pausing stream', id)
@@ -836,8 +842,8 @@ export class BackgroundScript {
     return true
   }
 
-  private doResumeWebMonetization(frame: FrameSpec) {
-    const id = this.assoc.getStreamId(frame)
+  private doResumeWebMonetization(frame: FrameSpec, requestId?: string) {
+    const id = requestId ?? this.assoc.getStreamId(frame)
     if (id) {
       this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
       this.log('resuming stream', id)
@@ -851,7 +857,10 @@ export class BackgroundScript {
     if (this.tabStates.get(getTab(sender)).stickyState === 'sticky') {
       return
     }
-    return this.doPauseWebMonetization(getFrameSpec(sender))
+    return this.doPauseWebMonetization(
+      getFrameSpec(sender),
+      request.data.requestId
+    )
   }
 
   resumeWebMonetization(request: ResumeWebMonetization, sender: MessageSender) {
@@ -860,7 +869,10 @@ export class BackgroundScript {
     if (this.tabStates.get(getTab(sender)).playState === 'paused') {
       return
     }
-    return this.doResumeWebMonetization(getFrameSpec(sender))
+    return this.doResumeWebMonetization(
+      getFrameSpec(sender),
+      request.data.requestId
+    )
   }
 
   private handleStreamsAbortEvent() {

@@ -55,33 +55,34 @@ make sense.
 
   - ![image](https://user-images.githubusercontent.com/525211/71150879-28d04300-2265-11ea-96da-7d720c101575.png)
 
-- [ ] [example.com](http://example.com/) should say "This website is not supported"
+- [ ] [example.com](http://example.com/) should say "This site isn't supported yet"
 
-  - ![image](https://user-images.githubusercontent.com/525211/66626576-f4b42280-ec22-11e9-9f77-4a95be08643e.png)
+  - ![image](https://user-images.githubusercontent.com/525211/126276057-30b8285f-84a5-4e01-ae0e-85b7592883e6.png)
 
 - [ ] [xrptipbot.com](https://www.xrptipbot.com/) should monetize
 
-  - ![image](https://user-images.githubusercontent.com/525211/66626655-3c3aae80-ec23-11e9-981a-0e317ab80b42.png)
+  - ![image](https://user-images.githubusercontent.com/525211/126276225-62af2025-3f43-4a36-a3bc-e141c9a569de.png)
 
+-
 - [ ] [twitch.tv](https://twitch.tv/vinesauce) works
 
-  - ![image](https://user-images.githubusercontent.com/525211/66626721-815ee080-ec23-11e9-8139-59a563822eb0.png)
+  - ![image](https://user-images.githubusercontent.com/525211/126276355-63815894-47e6-4f69-8308-8ceeb43cb73b.png)
 
 - [ ] [monetized youtube video](https://www.youtube.com/watch?v=-QMbZx_w2_Y)
 
-  - ![image](https://user-images.githubusercontent.com/525211/66626878-0a761780-ec24-11e9-8015-19bf8348807b.png)
+  - ![image](https://user-images.githubusercontent.com/525211/126276573-a27425ab-884a-4612-99cb-ef12d452e75e.png)
 
 - Coil welcome and welcome to explore pages
 
   - [ ] Go to coil.com, the browser action popup should show welcome to coil
-    - ![image](https://user-images.githubusercontent.com/525211/66626988-6b9deb00-ec24-11e9-86c3-b55c17e891c2.png)
-  - [ ] Should have a link to coil.com/explore page
+    - ![image](https://user-images.githubusercontent.com/525211/126276719-692355e3-f571-4b08-8816-9b0715688d71.png)
+  - [ ] Should have a link to coil.com/discover page
   - [ ] Once on explore page should show `Discover Now` with a rocket-ship graphic
-    - ![image](https://user-images.githubusercontent.com/525211/66627053-a2740100-ec24-11e9-8759-76f40c46d6fa.png)
+    - ![image](https://user-images.githubusercontent.com/525211/126276807-f39ac03f-6c2b-419c-8a79-e2f2859b44a9.png)
 
 - [ ] Check the monetization animation works properly
 
-  - ![image](https://user-images.githubusercontent.com/525211/66627467-04813600-ec26-11e9-855a-517700af4e26.png)
+  - ![image](https://user-images.githubusercontent.com/525211/126277022-48e139b6-871a-4ed4-8d45-58e194855ff8.png)
   - Only required on desktop browsers
   - Should animate when monetized and packets received
   - Should stop animation when network disconnected
@@ -101,16 +102,16 @@ make sense.
 
   - Log out from \$coildomain.com
   - Check that icon is in 'unavailable' state
-    - ![image](https://user-images.githubusercontent.com/525211/66627206-2a5a0b00-ec25-11e9-9c0c-74dc34370e13.png)
+    - ![image](https://user-images.githubusercontent.com/525211/126277431-a7ae73a2-14a6-41b4-90f4-69f2b9be6df5.png)
   - Click on browser action
   - Check that routed to login page
-    - ![image](https://user-images.githubusercontent.com/525211/66627301-6beab600-ec25-11e9-8045-a4e35686dc34.png)
+    - ![image](https://user-images.githubusercontent.com/525211/126277570-77da3644-9950-465d-bac0-4afbd33a70e4.png)
 
 - [ ] Popup icon should show if page is monetized even when logged out
 
   - Log out from extension
   - Go to a monetized page and check that the icon "monetized" black and in 'unavailable' state
-    - ![image](https://user-images.githubusercontent.com/525211/70715784-8f150d00-1d1d-11ea-8f82-fe116b2e9a16.png)
+    - ![image](https://user-images.githubusercontent.com/525211/126277839-d482fea3-63bc-42d8-9dae-6eca318cdc63.png)
 
 - [ ] Run the puppeteer [tests](./test.sh) (look at the [circle jobs](../../../.circleci/config.yml))
 
@@ -125,13 +126,13 @@ make sense.
 
 - [ ] Go to [xrptipbot.com](https://www.xrptipbot.com/) and as page
       is loading very quickly open the popup.
-      It should show "This page is Web-Monetized" even before streaming
+      It should show "Thanks for your support" even before streaming
       starts. Should show 'setting up payment' then 'coil is paying creator'
       [#120][i120]
 
 - [ ] Open the [reloading-every-15s.html](../test/fixtures/reloading-every-15s.html) file:
 
-  - Use a localhost server so WM works (e.g. with `python -m http.server 4000`)
+  - Use a localhost server so WM works (e.g. with `yarn serve:fixtures`)
   - Open the developer tools console undocked so can view while **PAGE IS BACKGROUNDED**
     - Note the `Reloading page` logging
   - Open the extension background page developer tools and look at the stream logging
