@@ -717,8 +717,8 @@ export class BackgroundScript {
 
     // Check that this operation is still valid before we go ahead.
     // Any operation that we `await`d on could have potentially masked state
-    // changes. e.g. `getTokenMaybeRefreshAndStoreState` which will update
-    // whoami taking longer than it takes to switch out the monetization tag.
+    // changes. e.g. `getTokenMaybeRefreshAndStoreState` )which will update
+    // whoami) taking longer than it takes to switch out the monetization tag.
     if (
       this.tabStates.getFrameOrDefault(frame).lastMonetization.requestId !==
       requestId
