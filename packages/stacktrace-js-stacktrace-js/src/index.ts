@@ -2,9 +2,7 @@
 import { ErrorStackParser } from './error-stack-parser'
 import { StackFrame } from './stackframe'
 import { StackGenerator } from './stack-generator'
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const StackTraceGPS = require('stacktrace-gps')
+import { StackTraceGPS } from './stacktrace-gps'
 
 type InstrumentedFunction = Function & {
   __stacktraceOriginalFn?: Function
@@ -19,9 +17,10 @@ export interface StackTraceOptions extends Record<string, unknown> {
   sourceCache?: SourceCache
   offline?: boolean
   maxStackSize?: number
+  gps?: StackTraceGPS
 }
 
-const _options = {
+const _options: StackTraceOptions = {
   filter: function (stackframe: StackFrame) {
     // Filter out stackframes for this library by default
     return (
@@ -67,6 +66,8 @@ function _merge(
     return target
   })
 
+  console.log({ first, second, target })
+
   return target
 }
 
@@ -85,7 +86,8 @@ function _filtered(
   }
   return stackframes
 }
-const StackTrace = {
+
+export const StackTrace = {
   /**
    * Get a backtrace from invocation point.
    *
@@ -119,15 +121,17 @@ const StackTrace = {
    * Given an error object, parse it.
    *
    * @param {Error} error object
-   * @param {Object} opts
+   * @param {Object} _opts
    * @returns {Promise} for Array[StackFrame}
    */
   fromError: async function StackTrace$$fromError(
     error: Error,
-    opts?: StackTraceOptions
+    _opts?: StackTraceOptions
   ) {
-    opts = _merge(_options, opts)
-    const gps = new StackTraceGPS(opts)
+    const opts: StackTraceOptions = _merge(_options, _opts)
+    console.log('StackTrace$$fromError opts', opts)
+    const gps = opts.gps ?? new StackTraceGPS(opts)
+
     return new Promise<StackFrame[]>(resolve => {
       const stackframes = _filtered(ErrorStackParser.parse(error), opts?.filter)
       resolve(
@@ -137,10 +141,23 @@ const StackTrace = {
               function resolveOriginal() {
                 resolve(sf)
               }
+
               gps
-                .pinpoint(sf)
-                .then(resolve, resolveOriginal)
-                ['catch'](resolveOriginal)
+                .StackTraceGPS$$pinpoint(sf)
+                .then(
+                  val => {
+                    console.log('pinpoint resolved', val)
+                    resolve(val)
+                  },
+                  error => {
+                    console.log('pinpoint rejected', error)
+                    resolveOriginal()
+                  }
+                )
+                ['catch'](error => {
+                  console.error(error)
+                  resolveOriginal()
+                })
             })
           })
         )

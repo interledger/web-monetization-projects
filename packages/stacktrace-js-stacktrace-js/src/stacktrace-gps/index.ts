@@ -1,8 +1,13 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import * as SourceMap from 'source-map'
-import { SourceMapConsumer } from 'source-map'
-
 import { StackFrame } from '../stackframe'
+
+// TODO: update to latest version of source-map
+// uses wasm??
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const SourceMap = require('source-map')
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type SourceMapConsumer = any
 
 /**
  * Make a X-Domain request to url and callback.
@@ -314,10 +319,7 @@ export class StackTraceGPS {
 
           this.StackTraceGPS$$findFunctionName(mappedStackFrame)
             .then(resolve, resolveMappedStackFrame)
-            [
-              // eslint-disable-next-line no-unexpected-multiline
-              'catch'
-            ](resolveMappedStackFrame)
+            .catch(resolveMappedStackFrame)
         },
         reject
       )
@@ -357,7 +359,7 @@ export class StackTraceGPS {
             resolve(stackframe)
           }
         }, reject)
-        ['catch'](reject)
+        .catch(reject)
     })
   }
 

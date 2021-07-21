@@ -18,7 +18,9 @@ export const configureNodePolyfills = (wpConf: webpack.Configuration) => {
     crypto: require.resolve('crypto-browserify/'),
     util: require.resolve('util/'),
     buffer: require.resolve('buffer/'),
-    stream: require.resolve('stream-browserify/')
+    stream: require.resolve('stream-browserify/'),
+    path: require.resolve('path-browserify/'),
+    fs: false
   }
   wpConf.plugins = [
     ...(wpConf.plugins ?? []),

@@ -2802,6 +2802,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
             ["@material-ui/icons", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.2"],
             ["@material-ui/styles", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
+            ["@stacktrace-js/stacktrace-js", "workspace:packages/stacktrace-js-stacktrace-js"],
             ["@types/debug", "npm:4.1.6"],
             ["@types/filesystem", "npm:0.0.32"],
             ["@types/firefox", "npm:0.0.31"],
@@ -2856,8 +2857,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
-            ["stacktrace-gps", "npm:3.0.4"],
-            ["stacktrace-js", "npm:2.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.3"],
             ["ts-loader", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.2.3"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.1.0"],
@@ -3221,6 +3220,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.6"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:11.0.1"],
+            ["path-browserify", "npm:1.0.1"],
             ["prettier", "npm:2.3.2"],
             ["process", "npm:0.11.10"],
             ["rimraf", "npm:3.0.2"],
@@ -5509,7 +5509,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:11.0.1"],
             ["prettier", "npm:2.3.2"],
             ["rimraf", "npm:3.0.2"],
-            ["source-map", "npm:0.7.3"],
+            ["source-map", "npm:0.5.6"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.3"],
             ["ts-loader", "virtual:2db798c5d9128f719ffcad12921d7362bd5c2e301a772671722ccb5b06061e70b21404d3031357ab2f08a684f4c83652aba626f58ab8b1da1ca66bcedda814fc#npm:9.2.3"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.1.0"],
@@ -13679,16 +13679,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["error-ex", "npm:1.3.2"],
             ["is-arrayish", "npm:0.2.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["error-stack-parser", [
-        ["npm:2.0.6", {
-          "packageLocation": "./.yarn/cache/error-stack-parser-npm-2.0.6-1c5bf07f6c-bd8e048fcb.zip/node_modules/error-stack-parser/",
-          "packageDependencies": [
-            ["error-stack-parser", "npm:2.0.6"],
-            ["stackframe", "npm:1.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -22430,6 +22420,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["path-browserify", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/path-browserify-npm-1.0.1-f975d99a99-c6d7fa3764.zip/node_modules/path-browserify/",
+          "packageDependencies": [
+            ["path-browserify", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["path-dirname", [
         ["npm:1.0.2", {
           "packageLocation": "./.yarn/cache/path-dirname-npm-1.0.2-d158cba006-0d2f6604ae.zip/node_modules/path-dirname/",
@@ -25656,54 +25655,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["stack-generator", [
-        ["npm:2.0.5", {
-          "packageLocation": "./.yarn/cache/stack-generator-npm-2.0.5-61f6fcda09-a85c45a6f1.zip/node_modules/stack-generator/",
-          "packageDependencies": [
-            ["stack-generator", "npm:2.0.5"],
-            ["stackframe", "npm:1.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["stack-utils", [
         ["npm:2.0.3", {
           "packageLocation": "./.yarn/cache/stack-utils-npm-2.0.3-e255395afd-c86ac08f58.zip/node_modules/stack-utils/",
           "packageDependencies": [
             ["stack-utils", "npm:2.0.3"],
             ["escape-string-regexp", "npm:2.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["stackframe", [
-        ["npm:1.2.0", {
-          "packageLocation": "./.yarn/cache/stackframe-npm-1.2.0-89ca050ce4-37d659bdd5.zip/node_modules/stackframe/",
-          "packageDependencies": [
-            ["stackframe", "npm:1.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["stacktrace-gps", [
-        ["npm:3.0.4", {
-          "packageLocation": "./.yarn/unplugged/stacktrace-gps-npm-3.0.4-073ec5f443/node_modules/stacktrace-gps/",
-          "packageDependencies": [
-            ["stacktrace-gps", "npm:3.0.4"],
-            ["source-map", "npm:0.5.6"],
-            ["stackframe", "npm:1.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["stacktrace-js", [
-        ["npm:2.0.2", {
-          "packageLocation": "./.yarn/unplugged/stacktrace-js-npm-2.0.2-f022fac9f9/node_modules/stacktrace-js/",
-          "packageDependencies": [
-            ["stacktrace-js", "npm:2.0.2"],
-            ["error-stack-parser", "npm:2.0.6"],
-            ["stack-generator", "npm:2.0.5"],
-            ["stacktrace-gps", "npm:3.0.4"]
           ],
           "linkType": "HARD",
         }]
