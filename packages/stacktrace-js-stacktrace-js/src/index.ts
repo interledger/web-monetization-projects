@@ -1,45 +1,10 @@
 /* eslint-disable @typescript-eslint/ban-types,prefer-rest-params */
 import { ErrorStackParser } from './error-stack-parser'
 import { StackFrame } from './stackframe'
+import { StackGenerator } from './stack-generator'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const StackTraceGPS = require('stacktrace-gps')
-
-const StackGenerator = {
-  backtrace: function StackGenerator$$backtrace(opts: {
-    maxStackSize?: number
-  }) {
-    const stack = []
-    let maxStackSize = 10
-
-    if (typeof opts === 'object' && typeof opts.maxStackSize === 'number') {
-      maxStackSize = opts.maxStackSize
-    }
-
-    let curr = arguments.callee
-    while (curr && stack.length < maxStackSize && curr['arguments']) {
-      // Allow V8 optimizations
-      const args = new Array(curr['arguments'].length)
-      for (let i = 0; i < args.length; ++i) {
-        args[i] = curr['arguments'][i]
-      }
-      if (/function(?:\s+([\w$]+))+\s*\(/.test(curr.toString())) {
-        stack.push(
-          new StackFrame({ functionName: RegExp.$1 || undefined, args: args })
-        )
-      } else {
-        stack.push(new StackFrame({ args: args }))
-      }
-
-      try {
-        curr = curr.caller
-      } catch (e) {
-        break
-      }
-    }
-    return stack
-  }
-}
 
 type InstrumentedFunction = Function & {
   __stacktraceOriginalFn?: Function
@@ -102,7 +67,7 @@ function _merge(
     return target
   })
 
-  return target as T
+  return target
 }
 
 function _isShapedLikeParsableError(
@@ -142,7 +107,7 @@ const StackTrace = {
    * @returns {Array} of StackFrame
    */
   getSync: function StackTrace$$getSync(opts: StackTraceOptions) {
-    opts = _merge<StackTraceOptions>(_options, opts)
+    opts = _merge(_options, opts)
     const err = _generateError()
     const stack = _isShapedLikeParsableError(err)
       ? ErrorStackParser.parse(err)
@@ -161,7 +126,7 @@ const StackTrace = {
     error: Error,
     opts?: StackTraceOptions
   ) {
-    opts = _merge<StackTraceOptions>(_options, opts)
+    opts = _merge(_options, opts)
     const gps = new StackTraceGPS(opts)
     return new Promise<StackFrame[]>(resolve => {
       const stackframes = _filtered(ErrorStackParser.parse(error), opts?.filter)
@@ -194,7 +159,7 @@ const StackTrace = {
   ) {
     opts = _merge(_options, opts)
     let stackFrames = StackGenerator.backtrace(opts)
-    if (typeof opts.filter === 'function') {
+    if (typeof opts?.filter === 'function') {
       stackFrames = stackFrames.filter(opts.filter)
     }
     return Promise.resolve(stackFrames)
