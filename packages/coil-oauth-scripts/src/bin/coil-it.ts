@@ -36,7 +36,8 @@ async function getPaymentDetails(
 
 function startStream(
   id: number | string,
-  connection: IlpStream.Connection
+  connection: IlpStream.Connection,
+  dbg: typeof console.log
 ): IlpStream.DataAndMoneyStream {
   const startedAt = Date.now()
   let last = startedAt
@@ -93,6 +94,14 @@ async function main(): Promise<void> {
     throw new Error('Must set COIL_USER and COIL_PASSWORD env vars')
   }
 
+  const startedAt = Date.now()
+  let latest = startedAt
+  const dbg = (...args: any[]) => {
+    const now = Date.now()
+    console.log(`(t=${now - startedAt}ms, d=${now - latest}ms)`, ...args)
+    latest = now
+  }
+
   const argv = process.argv.slice(2)
   const paymentPointer = argv[0] || '$twitter.xrptipbot.com/nfcpasses'
   const { token, btpToken } = await login()
@@ -108,6 +117,7 @@ async function main(): Promise<void> {
     btpToken
   })
   const monetizationId = uuid.v4()
+  dbg('Getting payment details')
   const details = await getPaymentDetails(spspUrl, monetizationId)
   dbg({ details })
 
@@ -131,7 +141,7 @@ async function main(): Promise<void> {
   dbg('Creating connection')
   await connection.connect()
   dbg('Connected')
-  startStream(`main`, connection)
+  startStream(`main`, connection, dbg)
 }
 
 if (require.main === module) {

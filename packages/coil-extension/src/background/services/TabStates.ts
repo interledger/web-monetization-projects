@@ -62,14 +62,14 @@ export class TabStates {
     return state
   }
 
-  private makeFrameStateDefault() {
+  private makeFrameStateDefault(): FrameState {
     return {
       monetized: false,
       adapted: false,
       total: 0,
       lastMonetization: {
-        command: null,
-        timeMs: Date.now()
+        requestId: null,
+        command: null
       }
     }
   }
@@ -130,11 +130,15 @@ export class TabStates {
     }
   }
 
-  logLastMonetizationCommand(frame: FrameSpec, command: MonetizationCommand) {
+  logLastMonetizationCommand(
+    frame: FrameSpec,
+    command: MonetizationCommand,
+    requestId?: string
+  ) {
     this.setFrame(frame, {
       lastMonetization: {
-        command,
-        timeMs: Date.now()
+        requestId: requestId || null,
+        command
       }
     })
   }
