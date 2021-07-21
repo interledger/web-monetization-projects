@@ -12,9 +12,15 @@ export interface SourceCache {
   [key: string]: string | Promise<string>
 }
 
+type SourceMapConsumer = any
+
 export interface StackTraceOptions extends Record<string, unknown> {
   filter?: (stackFrame: StackFrame) => boolean
   sourceCache?: SourceCache
+  sourceMapConsumerCache?: Record<
+    string,
+    SourceMapConsumer | PromiseLike<SourceMapConsumer>
+  >
   offline?: boolean
   maxStackSize?: number
   gps?: StackTraceGPS
