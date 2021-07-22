@@ -74,36 +74,27 @@ export class BackgroundScript {
     if (this.loggingEnabled) {
       console.log('BuildConfig', this.buildConfig)
     }
-    const sourceCache: Record<string, any> = {}
-    const sourceMapConsumerCache: Record<string, any> = {}
-    const resultsCache: Record<string, any> = {}
-    // const gps = new StackTraceGPS({ sourceCache, sourceMapConsumerCache })
-    const opts = { sourceCache, sourceMapConsumerCache, resultsCache }
 
-    setInterval(this.periodical, 2e3, opts)
-  }
+    setTimeout(() => {
+      // eslint-disable-next-line no-useless-catch
+      try {
+        throw new Error('checking window.onerror handling')
+      } catch (e) {
+        throw e
+        // console.log('error was caught')
+      }
+    }, 0.5e4)
 
-  private async periodical(opts: StackTraceOptions) {
-    // This goes MUCH faster if you hack the unplugged stackframe-js code to
-    // Still, it's about 3ms per invocation, so would need to optimize it more
-    // somehow ... cached pinpoints ??? Perhaps even offload it to a worker
-    // thread ??
-    // TODO: fork stackframe-js to inside this repo
-
-    const start = Date.now()
-    console.log('b4 STACK TRACE', start)
-    const t = await StackTrace.get(opts)
-    //.then(t => {
-    console.log('STACK TRACE', t, Date.now() - start)
-    //})
-    console.log('after STACK TRACE')
-    const start2 = Date.now()
-    console.log('b4 STACK TRACE', start2)
-    const t2 = await StackTrace.get(opts)
-    //.then(t => {
-    console.log('STACK TRACE', t2, Date.now() - start2)
-    //})
-    console.log('after STACK TRACE')
+    window.onerror = (error, file, line, col, err) => {
+      // console.log('window.onerror', args)
+      if (err) {
+        StackTrace.fromError(err).then(stack => {
+          stack.forEach(sf => {
+            console.log('sf %o', sf.toString())
+          })
+        })
+      }
+    }
   }
 
   get activeTab() {
