@@ -78,6 +78,25 @@ describe('GraphQlClient#login', () => {
       scale
     }
 
+    tipCredit {
+      balanceCents
+    }
+
+    tipping {
+      limitRemaining
+    }
+
+    paymentMethods {
+      id
+      type
+      details {
+        ... on StripeCardDetails {
+          last4
+          brandCode
+        }
+      }
+    }
+
   }
 }"
 `)

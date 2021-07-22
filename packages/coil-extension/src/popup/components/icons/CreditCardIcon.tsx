@@ -13,7 +13,7 @@ import { CreditCardPlaceholder } from './CreditCardPlaceholder'
 // Models
 //
 interface ICreditCardIcon extends SvgIconProps {
-  provider: string
+  provider: string | undefined
 }
 
 //

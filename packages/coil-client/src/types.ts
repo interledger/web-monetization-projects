@@ -21,4 +21,14 @@ export interface CoilUser {
   tipping?: {
     limitRemaining: string
   }
+  paymentMethods?: Array<ICoilUserPaymentMethod>
+}
+
+interface ICoilUserPaymentMethod {
+  id: string
+  type: string
+  details: {
+    last4: string
+    brandCode: string
+  } | null
 }
