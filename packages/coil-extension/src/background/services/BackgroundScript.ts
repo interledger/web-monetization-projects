@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { MonetizationState } from '@webmonetization/types'
 import { resolvePaymentEndpoint } from '@webmonetization/polyfill-utils'
-import { StackTrace, StackTraceOptions } from '@stacktrace-js/stacktrace-js'
+import { StackTrace, StackTraceOptions } from '@stacktracejs/stacktrace-js'
 
 import { notNullOrUndef } from '../../util/nullables'
 import { StorageService } from '../../services/storage'

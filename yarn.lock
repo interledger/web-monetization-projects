@@ -1505,7 +1505,7 @@ __metadata:
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
     "@material-ui/styles": ^4.11.4
-    "@stacktrace-js/stacktrace-js": 0.0.0
+    "@stacktracejs/stacktrace-js": 0.0.0
     "@types/debug": 4.1.6
     "@types/filesystem": 0.0.32
     "@types/firefox": 0.0.31
@@ -3888,9 +3888,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stacktrace-js/stacktrace-js@0.0.0, @stacktrace-js/stacktrace-js@workspace:packages/stacktrace-js-stacktrace-js":
+"@stacktracejs/stacktrace-js@0.0.0, @stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js":
   version: 0.0.0-use.local
-  resolution: "@stacktrace-js/stacktrace-js@workspace:packages/stacktrace-js-stacktrace-js"
+  resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
     "@babel/core": 7.14.8
     "@babel/plugin-proposal-class-properties": 7.14.5

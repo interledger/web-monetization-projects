@@ -1,12 +1,12 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
-  "name": "@stacktrace-js/stacktrace-js",
+  "name": "@stacktracejs/stacktrace-js",
   "version": "0.0.0",
   "keywords": [
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/stacktrace-js-stacktrace-js",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/stacktracejs-stacktrace-js",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
