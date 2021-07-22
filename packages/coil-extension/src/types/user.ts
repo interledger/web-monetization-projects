@@ -29,4 +29,14 @@ export interface User {
     remainingDailyAmount: number
     hotkeyTipAmounts: Array<number>
   }
+  paymentMethods?: Array<IUserPaymentMethod>
+}
+
+interface IUserPaymentMethod {
+  id: string
+  type: string
+  details: {
+    last4: string
+    brandCode: string
+  } | null
 }

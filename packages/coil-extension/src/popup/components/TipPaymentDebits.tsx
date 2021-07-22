@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { styled, Box } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
+import { useStore } from '../context/storeContext'
 
 import { CreditCardIcon } from './icons/CreditCardIcon'
 
@@ -60,6 +61,7 @@ export const TipPaymentDebits = (
   props: ITipPaymentDebits
 ): React.ReactElement => {
   const { currentTipAmount, tipCreditBalance } = props
+  const { user } = useStore()
 
   const getTipCreditCharge = (): number => {
     if (tipCreditBalance >= currentTipAmount) {
@@ -78,7 +80,22 @@ export const TipPaymentDebits = (
     }
   }
 
-  //todo: need to add logos for all credit cards and logic for determining which logo to display
+  const creditCard = useMemo(() => {
+    return user?.paymentMethods?.find(method => {
+      if (method?.type === 'stripe') {
+        return method
+      }
+    })
+  }, [user])
+
+  const tipCreditDetails = useMemo(() => {
+    return user?.paymentMethods?.find(method => {
+      if (method.type === 'tipCredit') {
+        return method
+      }
+    })
+  }, [user])
+
   return (
     <PaymentDebitsWrapper>
       {getTipCreditCharge() > 0 && ( // show the tip credits only if they have been charged
@@ -92,12 +109,12 @@ export const TipPaymentDebits = (
       {getCreditCardCharge() > 0 && ( // show the credit card only if it has been charged
         <PaymentDebit>
           <PaymentMethod>
-            <CreditCardIcon provider='Visa' />
+            <CreditCardIcon provider={creditCard?.details?.brandCode} />
             <Dot />
             <Dot />
             <Dot />
             <Dot />
-            3455
+            {creditCard?.details?.last4}
           </PaymentMethod>
           <div>-${getCreditCardCharge().toFixed(2)}</div>
         </PaymentDebit>
