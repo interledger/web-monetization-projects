@@ -49,7 +49,22 @@ const tipUser = {
     minimumTipLimit: 1,
     remainingDailyAmount: 100,
     hotkeyTipAmounts: [5, 10, 50]
-  }
+  },
+  paymentMethods: [
+    {
+      id: 'test-id-stripe',
+      type: 'stripe',
+      details: {
+        last4: '5678',
+        brandCode: 'MasterCard'
+      }
+    },
+    {
+      id: 'test-id-tip',
+      type: 'tipCredit',
+      details: null
+    }
+  ]
 }
 
 function mockState(partial: Partial<PopupStateType>): PopupStateType {
