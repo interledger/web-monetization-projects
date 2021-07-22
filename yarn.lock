@@ -1543,6 +1543,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
 <<<<<<< HEAD
+<<<<<<< HEAD
     http-server: 13.0.1
     husky: 7.0.2
 =======
@@ -1550,6 +1551,11 @@ __metadata:
     husky: 7.0.1
     framer-motion: ^4.1.4
 >>>>>>> baacfaf9... feat: added new tipping ui
+=======
+    framer-motion: ^4.1.4
+    http-server: 0.12.3
+    husky: 7.0.1
+>>>>>>> 786772ec... fix: build issues after rebase
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
     inversify: ^5.1.1
@@ -21724,10 +21730,24 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "tslib@npm:^2, tslib@npm:^2.2.0":
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+=======
+"tslib@npm:^2.1.0":
+  version: 2.3.0
+  resolution: "tslib@npm:2.3.0"
+  checksum: 8869694c26e4a7b56d449662fd54a4f9ba872c889d991202c74462bd99f10e61d5bd63199566c4284c0f742277736292a969642cc7b590f98727a7cae9529122
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "tslib@npm:2.2.0"
+  checksum: a48c9639f7496fa701ea8ffe0561070fcb44c104a59632f7f845c0af00825c99b6373575ec59b2b5cdbfd7505875086dbe5dc83312304d8979f22ce571218ca3
+>>>>>>> 786772ec... fix: build issues after rebase
   languageName: node
   linkType: hard
 
