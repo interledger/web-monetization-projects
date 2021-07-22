@@ -45,8 +45,6 @@ import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
 
-import { StackTraceGPS } from '../../../../stacktrace-js-stacktrace-js/src/stacktrace-gps'
-
 @injectable()
 export class BackgroundScript {
   constructor(
