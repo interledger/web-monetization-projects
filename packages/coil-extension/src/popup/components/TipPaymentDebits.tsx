@@ -1,7 +1,9 @@
 import React from 'react'
-import { styled } from '@material-ui/core'
+import { styled, Box } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
+
+import { CreditCardIcon } from './icons/CreditCardIcon'
 
 //
 // Styles
@@ -35,6 +37,9 @@ const Dot = styled('div')({
   height: '5px',
   borderRadius: '5px',
   marginRight: '2px',
+  '&:first-of-type': {
+    marginLeft: '8px'
+  },
   '&:last-of-type': {
     marginRight: '4px'
   }
@@ -87,7 +92,7 @@ export const TipPaymentDebits = (
       {getCreditCardCharge() > 0 && ( // show the credit card only if it has been charged
         <PaymentDebit>
           <PaymentMethod>
-            <img src='/res/creditcard-visa.svg' alt='credit card icon' />{' '}
+            <CreditCardIcon provider='Visa' />
             <Dot />
             <Dot />
             <Dot />
