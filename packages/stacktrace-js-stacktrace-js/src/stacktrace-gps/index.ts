@@ -209,9 +209,11 @@ export class StackTraceGPS {
   private ajax: (url: string) => Promise<string>
   private _atob: (a: string) => string
   private _offline: boolean
+  private resultsCache: Record<string, StackFrame>
 
   constructor(opts?: {
     sourceCache?: Record<string, string | PromiseLike<string>>
+    resultsCache?: Record<string, StackFrame>
     sourceMapConsumerCache?: Record<
       string,
       SourceMapConsumer | PromiseLike<SourceMapConsumer>
@@ -221,6 +223,7 @@ export class StackTraceGPS {
     atob?: (a: string) => string
   }) {
     this.sourceCache = opts?.sourceCache ?? {}
+    this.resultsCache = opts?.resultsCache ?? {}
     this.sourceMapConsumerCache = opts?.sourceMapConsumerCache ?? {}
     this.ajax = opts?.ajax ?? _xdr
     this._atob = opts?.atob ?? _atob
@@ -310,7 +313,17 @@ export class StackTraceGPS {
    * @returns {Promise} that resolves with with source-mapped StackFrame
    */
   async StackTraceGPS$$pinpoint(stackframe: StackFrame) {
-    return new Promise<StackFrame>((resolve, reject) => {
+    const key = this.resultsCacheKey('StackTraceGPS$$pinpoint', stackframe)
+    if (this.resultsCache[key]) {
+      return this.resultsCache[key] as unknown as StackFrame
+    }
+
+    return new Promise<StackFrame>((_resolve, reject) => {
+      const resolve = (sf: StackFrame) => {
+        this.resultsCache[key] = sf
+        _resolve(sf)
+      }
+
       this.StackTraceGPS$$getMappedLocation(stackframe).then(
         mappedStackFrame => {
           function resolveMappedStackFrame() {
@@ -333,6 +346,13 @@ export class StackTraceGPS {
    * @returns {Promise} that resolves with enhanced StackFrame.
    */
   async StackTraceGPS$$findFunctionName(stackframe: StackFrame) {
+    const key = this.resultsCacheKey(
+      'StackTraceGPS$$findFunctionName',
+      stackframe
+    )
+    if (this.resultsCache[key]) {
+      return this.resultsCache[key]
+    }
     return new Promise<StackFrame>((resolve, reject) => {
       _ensureStackFrameIsLegit(stackframe)
       this._get(stackframe.fileName!)
@@ -346,21 +366,31 @@ export class StackTraceGPS {
           )
           // Only replace functionName if we found something
           if (guessedFunctionName) {
-            resolve(
-              new StackFrame({
-                functionName: guessedFunctionName,
-                args: stackframe.args,
-                fileName: stackframe.fileName,
-                lineNumber: lineNumber,
-                columnNumber: columnNumber
-              })
-            )
+            const stackFrame = new StackFrame({
+              functionName: guessedFunctionName,
+              args: stackframe.args,
+              fileName: stackframe.fileName,
+              lineNumber: lineNumber,
+              columnNumber: columnNumber
+            })
+            this.resultsCache[key] = stackFrame
+            resolve(stackFrame)
           } else {
+            this.resultsCache[key] = stackframe
             resolve(stackframe)
           }
         }, reject)
         .catch(reject)
     })
+  }
+
+  resultsCacheKey(operation: string, stackFrame: StackFrame) {
+    return [
+      operation,
+      stackFrame.fileName,
+      stackFrame.lineNumber,
+      stackFrame.columnNumber
+    ].join(':')
   }
 
   /**
@@ -369,7 +399,16 @@ export class StackTraceGPS {
    * @param {StackFrame} stackframe
    * @returns {Promise} that resolves with enhanced StackFrame.
    */
+
   async StackTraceGPS$$getMappedLocation(stackframe: StackFrame) {
+    const key = this.resultsCacheKey(
+      'StackTraceGPS$$getMappedLocation',
+      stackframe
+    )
+    if (this.resultsCache[key]) {
+      return this.resultsCache[key]
+    }
+
     return new Promise<StackFrame>((resolve, reject) => {
       _ensureSupportedEnvironment()
       _ensureStackFrameIsLegit(stackframe)
@@ -396,19 +435,22 @@ export class StackTraceGPS {
           return this._getSourceMapConsumer(
             sourceMappingURL,
             defaultSourceRoot
-          ).then(async function (sourceMapConsumer) {
+          ).then(async sourceMapConsumer => {
             return _extractLocationInfoFromSourceMapSource(
               stackframe,
               sourceMapConsumer,
               sourceCache
             )
-              .then(resolve)
-              ['catch'](function () {
+              .then(sf => {
+                this.resultsCache[key] = sf
+                resolve(sf)
+              })
+              .catch(function () {
                 resolve(stackframe)
               })
           })
         }, reject)
-        ['catch'](reject)
+        .catch(reject)
     })
   }
 }

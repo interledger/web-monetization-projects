@@ -17,6 +17,7 @@ type SourceMapConsumer = any
 export interface StackTraceOptions extends Record<string, unknown> {
   filter?: (stackFrame: StackFrame) => boolean
   sourceCache?: SourceCache
+  resultsCache?: Record<string, StackFrame>
   sourceMapConsumerCache?: Record<
     string,
     SourceMapConsumer | PromiseLike<SourceMapConsumer>

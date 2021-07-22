@@ -78,8 +78,9 @@ export class BackgroundScript {
     }
     const sourceCache: Record<string, any> = {}
     const sourceMapConsumerCache: Record<string, any> = {}
-    const gps = new StackTraceGPS({ sourceCache, sourceMapConsumerCache })
-    const opts = { sourceCache, gps }
+    const resultsCache: Record<string, any> = {}
+    // const gps = new StackTraceGPS({ sourceCache, sourceMapConsumerCache })
+    const opts = { sourceCache, sourceMapConsumerCache, resultsCache }
 
     setInterval(this.periodical, 2e3, opts)
   }
