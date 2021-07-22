@@ -188,7 +188,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       }
     ],
 
-    devtool: production ? undefined : 'source-map',
+    devtool: production ? undefined : 'inline-source-map',
 
     entry: entry,
 
