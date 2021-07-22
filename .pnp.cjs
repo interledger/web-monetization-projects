@@ -6955,7 +6955,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.3.2"],
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.4"],
-            ["ts-json-schema-generator", "npm:0.94.1"],
+            ["ts-json-schema-generator", "npm:0.95.0"],
             ["ts-loader", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:9.2.3"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.1.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
@@ -27007,15 +27007,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ts-json-schema-generator", [
-        ["npm:0.94.1", {
-          "packageLocation": "./.yarn/cache/ts-json-schema-generator-npm-0.94.1-b09b74ac1c-aef3e1d7e6.zip/node_modules/ts-json-schema-generator/",
+        ["npm:0.95.0", {
+          "packageLocation": "./.yarn/cache/ts-json-schema-generator-npm-0.95.0-03b57ad843-ce2de1fd0b.zip/node_modules/ts-json-schema-generator/",
           "packageDependencies": [
-            ["ts-json-schema-generator", "npm:0.94.1"],
+            ["ts-json-schema-generator", "npm:0.95.0"],
             ["@types/json-schema", "npm:7.0.7"],
             ["commander", "npm:8.0.0"],
             ["fast-json-stable-stringify", "npm:2.1.0"],
             ["glob", "npm:7.1.7"],
             ["json-stable-stringify", "npm:1.0.1"],
+            ["json5", "npm:2.2.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "HARD",
