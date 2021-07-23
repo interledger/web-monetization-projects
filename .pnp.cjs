@@ -331,6 +331,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-optimise-call-expression", "npm:7.16.0"],
             ["@babel/helper-replace-supers", "npm:7.16.0"],
             ["@babel/helper-split-export-declaration", "npm:7.16.0"],
+        ["virtual:36c1035a6170fb5f7c1c45806518498c5b5a84fa117fddfa7235360ebf89a91ff9c52a815fb99982d419285a7edf91044c8a958876db88a28877c806d5b88cb5#npm:7.15.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-helper-create-class-features-plugin-virtual-911a76d538/0/cache/@babel-helper-create-class-features-plugin-npm-7.15.4-808375cf79-42fa855012.zip/node_modules/@babel/helper-create-class-features-plugin/",
+          "packageDependencies": [
+            ["@babel/helper-create-class-features-plugin", "virtual:36c1035a6170fb5f7c1c45806518498c5b5a84fa117fddfa7235360ebf89a91ff9c52a815fb99982d419285a7edf91044c8a958876db88a28877c806d5b88cb5#npm:7.15.4"],
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/helper-annotate-as-pure", "npm:7.15.4"],
+            ["@babel/helper-function-name", "npm:7.15.4"],
+            ["@babel/helper-member-expression-to-functions", "npm:7.15.4"],
+            ["@babel/helper-optimise-call-expression", "npm:7.15.4"],
+            ["@babel/helper-replace-supers", "npm:7.15.4"],
+            ["@babel/helper-split-export-declaration", "npm:7.15.4"],
+        ["npm:7.14.8", {
+          "packageLocation": "./.yarn/cache/@babel-helper-create-class-features-plugin-npm-7.14.8-48049edea2-4c0293cb6e.zip/node_modules/@babel/helper-create-class-features-plugin/",
+          "packageDependencies": [
+            ["@babel/helper-create-class-features-plugin", "npm:7.14.8"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:36c1035a6170fb5f7c1c45806518498c5b5a84fa117fddfa7235360ebf89a91ff9c52a815fb99982d419285a7edf91044c8a958876db88a28877c806d5b88cb5#npm:7.14.8", {
+          "packageLocation": "./.yarn/__virtual__/@babel-helper-create-class-features-plugin-virtual-f0c36e198a/0/cache/@babel-helper-create-class-features-plugin-npm-7.14.8-48049edea2-4c0293cb6e.zip/node_modules/@babel/helper-create-class-features-plugin/",
+          "packageDependencies": [
+            ["@babel/helper-create-class-features-plugin", "virtual:36c1035a6170fb5f7c1c45806518498c5b5a84fa117fddfa7235360ebf89a91ff9c52a815fb99982d419285a7edf91044c8a958876db88a28877c806d5b88cb5#npm:7.14.8"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-annotate-as-pure", "npm:7.14.5"],
+            ["@babel/helper-function-name", "npm:7.14.5"],
+            ["@babel/helper-member-expression-to-functions", "npm:7.14.7"],
+            ["@babel/helper-optimise-call-expression", "npm:7.14.5"],
+            ["@babel/helper-replace-supers", "npm:7.14.5"],
+            ["@babel/helper-split-export-declaration", "npm:7.14.5"],
             ["@types/babel__core", null]
           ],
           "packagePeers": [
@@ -1061,13 +1090,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-async-generators-virtual-da23b66054/0/cache/@babel-plugin-syntax-async-generators-npm-7.8.4-d10cf993c9-7ed1c1d9b9.zip/node_modules/@babel/plugin-syntax-async-generators/",
+=======
+<<<<<<< HEAD
+        ["virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-async-generators-virtual-4664ab3c94/0/cache/@babel-plugin-syntax-async-generators-npm-7.8.4-d10cf993c9-7ed1c1d9b9.zip/node_modules/@babel/plugin-syntax-async-generators/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-syntax-async-generators", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.4"],
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"]
+=======
+            ["@types/babel__core", null]
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-async-generators-virtual-a16ec03906/0/cache/@babel-plugin-syntax-async-generators-npm-7.8.4-d10cf993c9-7ed1c1d9b9.zip/node_modules/@babel/plugin-syntax-async-generators/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-async-generators", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.4"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1098,6 +1146,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-7fe4d27fcc/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
           "packageDependencies": [
@@ -1105,6 +1154,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
             ["@types/babel__core", null]
+=======
+<<<<<<< HEAD
+        ["virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-2c37325aa5/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-bigint", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3"],
+            ["@babel/core", "npm:7.15.8"],
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-8469e1a7c8/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-bigint", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/core", "npm:7.14.8"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1112,11 +1178,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-3056034cb5/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
           "packageDependencies": [
             ["@babel/plugin-syntax-bigint", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.16.0"],
+=======
+<<<<<<< HEAD
+        ["virtual:fdedb51f13b4744644d701a4a7482c649bbc6c2d046e4e81db4ec8ebdc543c702db01dac6719a6fa84074351a1292431859fd98d7b2c974bbe54a9b042ee5e96#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-5959e2969c/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-bigint", "virtual:fdedb51f13b4744644d701a4a7482c649bbc6c2d046e4e81db4ec8ebdc543c702db01dac6719a6fa84074351a1292431859fd98d7b2c974bbe54a9b042ee5e96#npm:7.8.3"],
+            ["@babel/core", "npm:7.15.8"],
+=======
+        ["virtual:b7ac7cc5d0fa64a56d0def359840ee3c8fdd447dcc775a255dbc69042501be1cb6eed3d34637f0292778265fcd6d7ce56ccfd17f06e1218a7af4e03c38c10b4a#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-c83625fc20/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-bigint", "virtual:b7ac7cc5d0fa64a56d0def359840ee3c8fdd447dcc775a255dbc69042501be1cb6eed3d34637f0292778265fcd6d7ce56ccfd17f06e1218a7af4e03c38c10b4a#npm:7.8.3"],
+            ["@babel/core", "npm:7.14.8"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
             ["@types/babel__core", "npm:7.1.14"]
           ],
@@ -1135,13 +1217,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.12.13", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-class-properties-virtual-1d50f9a04f/0/cache/@babel-plugin-syntax-class-properties-npm-7.12.13-002ee9d930-24f34b196d.zip/node_modules/@babel/plugin-syntax-class-properties/",
+=======
+<<<<<<< HEAD
+        ["virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.12.13", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-class-properties-virtual-b19bf5ac02/0/cache/@babel-plugin-syntax-class-properties-npm-7.12.13-002ee9d930-24f34b196d.zip/node_modules/@babel/plugin-syntax-class-properties/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-syntax-class-properties", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.12.13"],
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"]
+=======
+            ["@types/babel__core", null]
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.12.13", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-class-properties-virtual-fdb64f1c85/0/cache/@babel-plugin-syntax-class-properties-npm-7.12.13-002ee9d930-24f34b196d.zip/node_modules/@babel/plugin-syntax-class-properties/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-class-properties", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.12.13"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1264,6 +1365,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-992bd45eaf/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
           "packageDependencies": [
@@ -1271,6 +1373,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
             ["@types/babel__core", null]
+=======
+<<<<<<< HEAD
+        ["virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-c6966d19ed/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-import-meta", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.10.4"],
+            ["@babel/core", "npm:7.15.8"],
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-fe9c55b425/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-import-meta", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4"],
+            ["@babel/core", "npm:7.14.8"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1278,11 +1397,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-07f2e27f73/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
           "packageDependencies": [
             ["@babel/plugin-syntax-import-meta", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4"],
             ["@babel/core", "npm:7.16.0"],
+=======
+<<<<<<< HEAD
+        ["virtual:fdedb51f13b4744644d701a4a7482c649bbc6c2d046e4e81db4ec8ebdc543c702db01dac6719a6fa84074351a1292431859fd98d7b2c974bbe54a9b042ee5e96#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-6d9e58baa1/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-import-meta", "virtual:fdedb51f13b4744644d701a4a7482c649bbc6c2d046e4e81db4ec8ebdc543c702db01dac6719a6fa84074351a1292431859fd98d7b2c974bbe54a9b042ee5e96#npm:7.10.4"],
+            ["@babel/core", "npm:7.15.8"],
+=======
+        ["virtual:b7ac7cc5d0fa64a56d0def359840ee3c8fdd447dcc775a255dbc69042501be1cb6eed3d34637f0292778265fcd6d7ce56ccfd17f06e1218a7af4e03c38c10b4a#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-9fd4c74249/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-import-meta", "virtual:b7ac7cc5d0fa64a56d0def359840ee3c8fdd447dcc775a255dbc69042501be1cb6eed3d34637f0292778265fcd6d7ce56ccfd17f06e1218a7af4e03c38c10b4a#npm:7.10.4"],
+            ["@babel/core", "npm:7.14.8"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
             ["@types/babel__core", "npm:7.1.14"]
           ],
@@ -1301,13 +1436,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-json-strings-virtual-f5be0e47b8/0/cache/@babel-plugin-syntax-json-strings-npm-7.8.3-6dc7848179-bf5aea1f31.zip/node_modules/@babel/plugin-syntax-json-strings/",
+=======
+<<<<<<< HEAD
+        ["virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-json-strings-virtual-3da9737a96/0/cache/@babel-plugin-syntax-json-strings-npm-7.8.3-6dc7848179-bf5aea1f31.zip/node_modules/@babel/plugin-syntax-json-strings/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-syntax-json-strings", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"]
+=======
+            ["@types/babel__core", null]
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-json-strings-virtual-6c3c90741c/0/cache/@babel-plugin-syntax-json-strings-npm-7.8.3-6dc7848179-bf5aea1f31.zip/node_modules/@babel/plugin-syntax-json-strings/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-json-strings", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1338,13 +1492,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-logical-assignment-operators-virtual-dbe34286bb/0/cache/@babel-plugin-syntax-logical-assignment-operators-npm-7.10.4-72ae00fdf6-aff3357703.zip/node_modules/@babel/plugin-syntax-logical-assignment-operators/",
+=======
+<<<<<<< HEAD
+        ["virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-logical-assignment-operators-virtual-5987d1ecff/0/cache/@babel-plugin-syntax-logical-assignment-operators-npm-7.10.4-72ae00fdf6-aff3357703.zip/node_modules/@babel/plugin-syntax-logical-assignment-operators/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-syntax-logical-assignment-operators", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4"],
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"]
+=======
+            ["@types/babel__core", null]
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-logical-assignment-operators-virtual-2656b5f6f2/0/cache/@babel-plugin-syntax-logical-assignment-operators-npm-7.10.4-72ae00fdf6-aff3357703.zip/node_modules/@babel/plugin-syntax-logical-assignment-operators/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-logical-assignment-operators", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1375,13 +1548,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-nullish-coalescing-operator-virtual-bee9d7567f/0/cache/@babel-plugin-syntax-nullish-coalescing-operator-npm-7.8.3-8a723173b5-87aca49189.zip/node_modules/@babel/plugin-syntax-nullish-coalescing-operator/",
+=======
+<<<<<<< HEAD
+        ["virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-nullish-coalescing-operator-virtual-81d78bd29a/0/cache/@babel-plugin-syntax-nullish-coalescing-operator-npm-7.8.3-8a723173b5-87aca49189.zip/node_modules/@babel/plugin-syntax-nullish-coalescing-operator/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"]
+=======
+            ["@types/babel__core", null]
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-nullish-coalescing-operator-virtual-b020b6c4f5/0/cache/@babel-plugin-syntax-nullish-coalescing-operator-npm-7.8.3-8a723173b5-87aca49189.zip/node_modules/@babel/plugin-syntax-nullish-coalescing-operator/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1412,13 +1604,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-numeric-separator-virtual-125ab2b03f/0/cache/@babel-plugin-syntax-numeric-separator-npm-7.10.4-81444be605-01ec5547bd.zip/node_modules/@babel/plugin-syntax-numeric-separator/",
+=======
+<<<<<<< HEAD
+        ["virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-numeric-separator-virtual-e37efafc38/0/cache/@babel-plugin-syntax-numeric-separator-npm-7.10.4-81444be605-01ec5547bd.zip/node_modules/@babel/plugin-syntax-numeric-separator/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-syntax-numeric-separator", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4"],
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"]
+=======
+            ["@types/babel__core", null]
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-numeric-separator-virtual-8a6f2c7469/0/cache/@babel-plugin-syntax-numeric-separator-npm-7.10.4-81444be605-01ec5547bd.zip/node_modules/@babel/plugin-syntax-numeric-separator/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-numeric-separator", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1449,13 +1660,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-object-rest-spread-virtual-0afd0c8996/0/cache/@babel-plugin-syntax-object-rest-spread-npm-7.8.3-60bd05b6ae-fddcf581a5.zip/node_modules/@babel/plugin-syntax-object-rest-spread/",
           "packageDependencies": [
             ["@babel/plugin-syntax-object-rest-spread", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.16.0"],
+=======
+<<<<<<< HEAD
+        ["virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-object-rest-spread-virtual-0177f21f30/0/cache/@babel-plugin-syntax-object-rest-spread-npm-7.8.3-60bd05b6ae-fddcf581a5.zip/node_modules/@babel/plugin-syntax-object-rest-spread/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3"],
+            ["@babel/core", "npm:7.15.8"],
+=======
+        ["virtual:3511bb9af3b4bcafdd1f6dd780751ced1df4c9d39b42742d26f6f2a65801fef6c7cd1bbde6b4fffb39ef8ef3fbc6c3abab288085c07b3d16ae58ccb38d9e13a8#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-object-rest-spread-virtual-5878f93fd2/0/cache/@babel-plugin-syntax-object-rest-spread-npm-7.8.3-60bd05b6ae-fddcf581a5.zip/node_modules/@babel/plugin-syntax-object-rest-spread/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:3511bb9af3b4bcafdd1f6dd780751ced1df4c9d39b42742d26f6f2a65801fef6c7cd1bbde6b4fffb39ef8ef3fbc6c3abab288085c07b3d16ae58ccb38d9e13a8#npm:7.8.3"],
+            ["@babel/core", "npm:7.14.8"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
-            ["@types/babel__core", "npm:7.1.14"]
+            ["@types/babel__core", null]
           ],
           "packagePeers": [
             "@babel/core",
@@ -1463,13 +1690,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:637a2a1c5013bbae0ee78b82538e7a60f826b7a069b0fdac3ce8278650681081daa39ac6959d8cdf673d77473f0bb99a23034daa6ef4822bc4290456a7ec2419#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-object-rest-spread-virtual-79f82bb754/0/cache/@babel-plugin-syntax-object-rest-spread-npm-7.8.3-60bd05b6ae-fddcf581a5.zip/node_modules/@babel/plugin-syntax-object-rest-spread/",
           "packageDependencies": [
             ["@babel/plugin-syntax-object-rest-spread", "virtual:637a2a1c5013bbae0ee78b82538e7a60f826b7a069b0fdac3ce8278650681081daa39ac6959d8cdf673d77473f0bb99a23034daa6ef4822bc4290456a7ec2419#npm:7.8.3"],
             ["@babel/core", "npm:7.16.0"],
+=======
+<<<<<<< HEAD
+        ["virtual:8c425d09a950197e3726f575a10d516f48a6cfec21d2af043bf5d7e785778a1276b8a92e168b299de33c3078589508544e4d4078237fdc5639d393f94fb1176c#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-object-rest-spread-virtual-23a5bbe36d/0/cache/@babel-plugin-syntax-object-rest-spread-npm-7.8.3-60bd05b6ae-fddcf581a5.zip/node_modules/@babel/plugin-syntax-object-rest-spread/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:8c425d09a950197e3726f575a10d516f48a6cfec21d2af043bf5d7e785778a1276b8a92e168b299de33c3078589508544e4d4078237fdc5639d393f94fb1176c#npm:7.8.3"],
+            ["@babel/core", "npm:7.15.8"],
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-object-rest-spread-virtual-4df7b47df1/0/cache/@babel-plugin-syntax-object-rest-spread-npm-7.8.3-60bd05b6ae-fddcf581a5.zip/node_modules/@babel/plugin-syntax-object-rest-spread/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/core", "npm:7.14.8"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
-            ["@types/babel__core", null]
+            ["@types/babel__core", "npm:7.1.15"]
           ],
           "packagePeers": [
             "@babel/core",
@@ -1486,13 +1729,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-catch-binding-virtual-f26f055782/0/cache/@babel-plugin-syntax-optional-catch-binding-npm-7.8.3-ce337427d8-910d90e72b.zip/node_modules/@babel/plugin-syntax-optional-catch-binding/",
+=======
+<<<<<<< HEAD
+        ["virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-catch-binding-virtual-db745ffc77/0/cache/@babel-plugin-syntax-optional-catch-binding-npm-7.8.3-ce337427d8-910d90e72b.zip/node_modules/@babel/plugin-syntax-optional-catch-binding/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-syntax-optional-catch-binding", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"]
+=======
+            ["@types/babel__core", null]
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-catch-binding-virtual-e7c9bc23be/0/cache/@babel-plugin-syntax-optional-catch-binding-npm-7.8.3-ce337427d8-910d90e72b.zip/node_modules/@babel/plugin-syntax-optional-catch-binding/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-optional-catch-binding", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1523,13 +1785,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-chaining-virtual-b3a79a9c33/0/cache/@babel-plugin-syntax-optional-chaining-npm-7.8.3-f3f3c79579-eef94d53a1.zip/node_modules/@babel/plugin-syntax-optional-chaining/",
+=======
+<<<<<<< HEAD
+        ["virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-chaining-virtual-3cc93fea55/0/cache/@babel-plugin-syntax-optional-chaining-npm-7.8.3-f3f3c79579-eef94d53a1.zip/node_modules/@babel/plugin-syntax-optional-chaining/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-syntax-optional-chaining", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"]
+=======
+            ["@types/babel__core", null]
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-chaining-virtual-89dbf0b742/0/cache/@babel-plugin-syntax-optional-chaining-npm-7.8.3-f3f3c79579-eef94d53a1.zip/node_modules/@babel/plugin-syntax-optional-chaining/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-optional-chaining", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1583,13 +1864,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.14.5", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-top-level-await-virtual-5efce3eb63/0/cache/@babel-plugin-syntax-top-level-await-npm-7.14.5-60a0a2e83b-bbd1a56b09.zip/node_modules/@babel/plugin-syntax-top-level-await/",
+=======
+<<<<<<< HEAD
+        ["virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.14.5", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-top-level-await-virtual-e7cf37c87b/0/cache/@babel-plugin-syntax-top-level-await-npm-7.14.5-60a0a2e83b-bbd1a56b09.zip/node_modules/@babel/plugin-syntax-top-level-await/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-syntax-top-level-await", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.14.5"],
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"]
+=======
+            ["@types/babel__core", null]
+=======
+        ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.14.5", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-top-level-await-virtual-42e38378de/0/cache/@babel-plugin-syntax-top-level-await-npm-7.14.5-60a0a2e83b-bbd1a56b09.zip/node_modules/@babel/plugin-syntax-top-level-await/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-top-level-await", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.14.5"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1620,11 +1920,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:58ec6d4b9f08336f6d09328bbebb889d305959ad9fabd2f3343463184eefca3642352d11d01d74628eaa6118b2e94db9b08f6551ca15aea65b0e990ea0e2aa7b#npm:7.16.0", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-typescript-virtual-c2959ecfa3/0/cache/@babel-plugin-syntax-typescript-npm-7.16.0-570d1aeb42-2da3bdd031.zip/node_modules/@babel/plugin-syntax-typescript/",
           "packageDependencies": [
             ["@babel/plugin-syntax-typescript", "virtual:58ec6d4b9f08336f6d09328bbebb889d305959ad9fabd2f3343463184eefca3642352d11d01d74628eaa6118b2e94db9b08f6551ca15aea65b0e990ea0e2aa7b#npm:7.16.0"],
             ["@babel/core", "npm:7.16.0"],
+=======
+<<<<<<< HEAD
+        ["virtual:e5fce2fa5f241f08b9c0fadc812070e860ceaba0cc6696e7dc4f2c502548b97d57aefd4b64f52168d7e0967f3d8ae53c107bead3c59df51c4b7553d5f0ff793e#npm:7.14.5", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-typescript-virtual-3b7792eedc/0/cache/@babel-plugin-syntax-typescript-npm-7.14.5-78c2a6af3a-5447d13b31.zip/node_modules/@babel/plugin-syntax-typescript/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-typescript", "virtual:e5fce2fa5f241f08b9c0fadc812070e860ceaba0cc6696e7dc4f2c502548b97d57aefd4b64f52168d7e0967f3d8ae53c107bead3c59df51c4b7553d5f0ff793e#npm:7.14.5"],
+            ["@babel/core", "npm:7.15.8"],
+=======
+        ["virtual:98601b7aee61a0b3eebc5be29e9c7f56c35e6e7658e9b5570fea9a9cdef4abee5efe8d5f40c583f7863290af0466f9576941e2619a94e142d15bf8be5d298b8a#npm:7.14.5", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-typescript-virtual-7839993f99/0/cache/@babel-plugin-syntax-typescript-npm-7.14.5-78c2a6af3a-5447d13b31.zip/node_modules/@babel/plugin-syntax-typescript/",
+          "packageDependencies": [
+            ["@babel/plugin-syntax-typescript", "virtual:98601b7aee61a0b3eebc5be29e9c7f56c35e6e7658e9b5570fea9a9cdef4abee5efe8d5f40c583f7863290af0466f9576941e2619a94e142d15bf8be5d298b8a#npm:7.14.5"],
+            ["@babel/core", "npm:7.14.8"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
             ["@types/babel__core", null]
           ],
@@ -2349,8 +2665,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@babel/plugin-transform-typescript", [
+<<<<<<< HEAD
         ["npm:7.16.0", {
           "packageLocation": "./.yarn/cache/@babel-plugin-transform-typescript-npm-7.16.0-1a1498a91b-3975d87951.zip/node_modules/@babel/plugin-transform-typescript/",
+=======
+<<<<<<< HEAD
+        ["npm:7.15.0", {
+          "packageLocation": "./.yarn/cache/@babel-plugin-transform-typescript-npm-7.15.0-de336258d9-ec94df8917.zip/node_modules/@babel/plugin-transform-typescript/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@babel/plugin-transform-typescript", "npm:7.16.0"]
           ],
@@ -2363,7 +2685,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-create-class-features-plugin", "virtual:fd9ef7902a360a9aee4d5185069c29323c3b8907778962df945ab80e9c17c03464a9ebbebe87d63d0d4349233006d6f8dc4986816961d924a8e1dcfe7a271d89#npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@babel/plugin-syntax-typescript", "virtual:58ec6d4b9f08336f6d09328bbebb889d305959ad9fabd2f3343463184eefca3642352d11d01d74628eaa6118b2e94db9b08f6551ca15aea65b0e990ea0e2aa7b#npm:7.16.0"],
+=======
+            ["@babel/plugin-syntax-typescript", "virtual:e5fce2fa5f241f08b9c0fadc812070e860ceaba0cc6696e7dc4f2c502548b97d57aefd4b64f52168d7e0967f3d8ae53c107bead3c59df51c4b7553d5f0ff793e#npm:7.14.5"],
+=======
+        ["npm:7.14.6", {
+          "packageLocation": "./.yarn/cache/@babel-plugin-transform-typescript-npm-7.14.6-5e433fea21-cb3117cfc9.zip/node_modules/@babel/plugin-transform-typescript/",
+          "packageDependencies": [
+            ["@babel/plugin-transform-typescript", "npm:7.14.6"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:5ab32d8d92ca8507ac3c627e0e54465542a920ad1eec134c332631a9fcd3aa55a20e2fbf4a9ddcd245dcf5dbe86a5526ce38c54b074574d1a86b9aa2fae44c43#npm:7.14.6", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-transform-typescript-virtual-98601b7aee/0/cache/@babel-plugin-transform-typescript-npm-7.14.6-5e433fea21-cb3117cfc9.zip/node_modules/@babel/plugin-transform-typescript/",
+          "packageDependencies": [
+            ["@babel/plugin-transform-typescript", "virtual:5ab32d8d92ca8507ac3c627e0e54465542a920ad1eec134c332631a9fcd3aa55a20e2fbf4a9ddcd245dcf5dbe86a5526ce38c54b074574d1a86b9aa2fae44c43#npm:7.14.6"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-create-class-features-plugin", "virtual:36c1035a6170fb5f7c1c45806518498c5b5a84fa117fddfa7235360ebf89a91ff9c52a815fb99982d419285a7edf91044c8a958876db88a28877c806d5b88cb5#npm:7.14.8"],
+            ["@babel/helper-plugin-utils", "npm:7.14.5"],
+            ["@babel/plugin-syntax-typescript", "virtual:98601b7aee61a0b3eebc5be29e9c7f56c35e6e7658e9b5570fea9a9cdef4abee5efe8d5f40c583f7863290af0466f9576941e2619a94e142d15bf8be5d298b8a#npm:7.14.5"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/babel__core", null]
           ],
           "packagePeers": [
@@ -2426,7 +2769,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@babel/polyfill", "npm:7.6.0"],
             ["core-js", "npm:2.6.12"],
-            ["regenerator-runtime", "npm:0.13.8"]
+            ["regenerator-runtime", "npm:0.13.9"]
           ],
           "linkType": "HARD",
         }]
@@ -2514,10 +2857,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-modules", "virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:0.1.5"],
             ["@babel/types", "npm:7.16.0"],
             ["@types/babel__core", null],
+<<<<<<< HEAD
             ["babel-plugin-polyfill-corejs2", "virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:0.3.0"],
             ["babel-plugin-polyfill-corejs3", "virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:0.4.0"],
             ["babel-plugin-polyfill-regenerator", "virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:0.3.0"],
             ["core-js-compat", "npm:3.19.1"],
+=======
+<<<<<<< HEAD
+            ["babel-plugin-polyfill-corejs2", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:0.2.2"],
+            ["babel-plugin-polyfill-corejs3", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:0.2.5"],
+            ["babel-plugin-polyfill-regenerator", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:0.2.2"],
+            ["core-js-compat", "npm:3.18.2"],
+=======
+            ["babel-plugin-polyfill-corejs2", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:0.2.2"],
+            ["babel-plugin-polyfill-corejs3", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:0.2.3"],
+            ["babel-plugin-polyfill-regenerator", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:0.2.2"],
+            ["core-js-compat", "npm:3.15.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["semver", "npm:6.3.0"]
           ],
           "packagePeers": [
@@ -2569,7 +2926,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
             ["@babel/helper-validator-option", "npm:7.14.5"],
+<<<<<<< HEAD
             ["@babel/plugin-transform-typescript", "virtual:1999e824086677210b97b9df8f9939ea3a82d7699e9671822c1793c1555315429b84f5422342d7ac113e72cf1608451cea7670330b10ec72b7612800dfcf7932#npm:7.16.0"],
+=======
+<<<<<<< HEAD
+            ["@babel/plugin-transform-typescript", "virtual:d4b386476decb4b61af814b8d056d0786fae90c8a218e6322d068e14007373562f1c658fd2fd4474f316696511d99e7e5c80c9b206cf946f4bf8844347ad7d8d#npm:7.15.0"],
+=======
+            ["@babel/plugin-transform-typescript", "virtual:5ab32d8d92ca8507ac3c627e0e54465542a920ad1eec134c332631a9fcd3aa55a20e2fbf4a9ddcd245dcf5dbe86a5526ce38c54b074574d1a86b9aa2fae44c43#npm:7.14.6"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/babel__core", null]
           ],
           "packagePeers": [
@@ -2584,7 +2949,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.13.9-f5cea06d51-3ac9450e53.zip/node_modules/@babel/runtime/",
           "packageDependencies": [
             ["@babel/runtime", "npm:7.13.9"],
-            ["regenerator-runtime", "npm:0.13.8"]
+            ["regenerator-runtime", "npm:0.13.9"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:7.14.8", {
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.14.8-177f7f6866-d2dd0ce51d.zip/node_modules/@babel/runtime/",
+          "packageDependencies": [
+            ["@babel/runtime", "npm:7.14.8"],
+            ["regenerator-runtime", "npm:0.13.9"]
           ],
           "linkType": "HARD",
         }],
@@ -2600,18 +2973,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.6.2-704040a113-ec4974948f.zip/node_modules/@babel/runtime/",
           "packageDependencies": [
             ["@babel/runtime", "npm:7.6.2"],
-            ["regenerator-runtime", "npm:0.13.8"]
+            ["regenerator-runtime", "npm:0.13.9"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@babel/runtime-corejs3", [
-        ["npm:7.14.7", {
-          "packageLocation": "./.yarn/cache/@babel-runtime-corejs3-npm-7.14.7-e37a4fee49-9e49fc27e4.zip/node_modules/@babel/runtime-corejs3/",
+        ["npm:7.14.8", {
+          "packageLocation": "./.yarn/cache/@babel-runtime-corejs3-npm-7.14.8-d32e516dcf-057a76ab6d.zip/node_modules/@babel/runtime-corejs3/",
           "packageDependencies": [
-            ["@babel/runtime-corejs3", "npm:7.14.7"],
+            ["@babel/runtime-corejs3", "npm:7.14.8"],
             ["core-js-pure", "npm:3.15.2"],
-            ["regenerator-runtime", "npm:0.13.8"]
+            ["regenerator-runtime", "npm:0.13.9"]
           ],
           "linkType": "HARD",
         }]
@@ -2629,6 +3002,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@babel/traverse", [
+<<<<<<< HEAD
         ["npm:7.16.0", {
           "packageLocation": "./.yarn/cache/@babel-traverse-npm-7.16.0-24c0670a0d-83f634019a.zip/node_modules/@babel/traverse/",
           "packageDependencies": [
@@ -2641,6 +3015,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/parser", "npm:7.16.0"],
             ["@babel/types", "npm:7.16.0"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+        ["npm:7.15.4", {
+          "packageLocation": "./.yarn/cache/@babel-traverse-npm-7.15.4-904b3fada4-831506a92c.zip/node_modules/@babel/traverse/",
+          "packageDependencies": [
+            ["@babel/traverse", "npm:7.15.4"],
+            ["@babel/code-frame", "npm:7.15.8"],
+            ["@babel/generator", "npm:7.15.8"],
+            ["@babel/helper-function-name", "npm:7.15.4"],
+            ["@babel/helper-hoist-variables", "npm:7.15.4"],
+            ["@babel/helper-split-export-declaration", "npm:7.15.4"],
+            ["@babel/parser", "npm:7.15.8"],
+            ["@babel/types", "npm:7.15.6"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+        ["npm:7.14.8", {
+          "packageLocation": "./.yarn/cache/@babel-traverse-npm-7.14.8-e0eb37cc68-f635f99b1b.zip/node_modules/@babel/traverse/",
+          "packageDependencies": [
+            ["@babel/traverse", "npm:7.14.8"],
+            ["@babel/code-frame", "npm:7.14.5"],
+            ["@babel/generator", "npm:7.14.8"],
+            ["@babel/helper-function-name", "npm:7.14.5"],
+            ["@babel/helper-hoist-variables", "npm:7.14.5"],
+            ["@babel/helper-split-export-declaration", "npm:7.14.5"],
+            ["@babel/parser", "npm:7.14.8"],
+            ["@babel/types", "npm:7.14.8"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["globals", "npm:11.12.0"]
           ],
           "linkType": "HARD",
@@ -2844,7 +3247,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@dier-makr/annotations", "workspace:packages/dier-makr-annotations"],
             ["@dier-makr/inversify", "workspace:packages/dier-makr-inversify"],
-            ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
+            ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.12.2"],
             ["@material-ui/icons", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.2"],
             ["@material-ui/styles", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
             ["@types/debug", "npm:4.1.7"],
@@ -2871,8 +3274,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["addons-linter", "npm:4.4.0"],
             ["copy-webpack-plugin", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.1.0"],
             ["crx-hotreload", "npm:1.0.6"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["eslint", "npm:7.32.0"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["eslint", "npm:7.31.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
@@ -2884,16 +3296,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
+<<<<<<< HEAD
             ["http-server", "npm:14.0.0"],
             ["husky", "npm:7.0.4"],
             ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.1.4"],
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            ["http-server", "npm:13.0.1"],
+            ["husky", "npm:7.0.2"],
+=======
+            ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.1.4"],
+=======
+            ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.1.17"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["http-server", "npm:0.12.3"],
+            ["husky", "npm:7.0.1"],
+>>>>>>> 786772ec... fix: build issues after rebase
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
             ["inversify", "npm:6.0.1"],
             ["inversify-logger-middleware", "npm:3.1.0"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["jsonwebtoken", "npm:8.5.1"],
-            ["jss", "npm:10.6.0"],
+            ["jss", "npm:10.7.1"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
@@ -3186,9 +3613,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
+<<<<<<< HEAD
             ["copy-webpack-plugin", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:9.1.0"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+            ["copy-webpack-plugin", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:9.0.1"],
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["eslint", "npm:7.32.0"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["eslint", "npm:7.31.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
@@ -3363,8 +3800,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:15.0.0", {
           "packageLocation": "./.yarn/cache/@commitlint-config-conventional-npm-15.0.0-62906d71ac-d3602c1f04.zip/node_modules/@commitlint/config-conventional/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@commitlint/config-conventional", "npm:15.0.0"],
+=======
+<<<<<<< HEAD
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["conventional-changelog-conventionalcommits", "npm:4.4.0"]
+=======
+            ["@commitlint/config-conventional", "npm:12.1.4"],
+            ["conventional-changelog-conventionalcommits", "npm:4.6.0"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -3695,10 +4141,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@discoveryjs/json-ext", [
-        ["npm:0.5.1", {
-          "packageLocation": "./.yarn/cache/@discoveryjs-json-ext-npm-0.5.1-7633635320-125c4de019.zip/node_modules/@discoveryjs/json-ext/",
+        ["npm:0.5.3", {
+          "packageLocation": "./.yarn/cache/@discoveryjs-json-ext-npm-0.5.3-d076e2bd24-fea319569f.zip/node_modules/@discoveryjs/json-ext/",
           "packageDependencies": [
-            ["@discoveryjs/json-ext", "npm:0.5.1"]
+            ["@discoveryjs/json-ext", "npm:0.5.3"]
           ],
           "linkType": "HARD",
         }]
@@ -3739,7 +4185,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
       ["@emotion/is-prop-valid", [
         ["npm:0.8.8", {
-          "packageLocation": "./.yarn/cache/@emotion-is-prop-valid-npm-0.8.8-261a0f2426-4a6993c4e6.zip/node_modules/@emotion/is-prop-valid/",
+          "packageLocation": "./.yarn/cache/@emotion-is-prop-valid-npm-0.8.8-261a0f2426-bb7ec6d48c.zip/node_modules/@emotion/is-prop-valid/",
           "packageDependencies": [
             ["@emotion/is-prop-valid", "npm:0.8.8"],
             ["@emotion/memoize", "npm:0.7.4"]
@@ -3749,6 +4195,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["@emotion/memoize", [
         ["npm:0.7.4", {
+<<<<<<< HEAD
+=======
+          "packageLocation": "./.yarn/cache/@emotion-memoize-npm-0.7.4-5648cf11b8-4e3920d4ec.zip/node_modules/@emotion/memoize/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@emotion/memoize", "npm:0.7.4"]
 >>>>>>> 786772ec... fix: build issues after rebase
@@ -3762,9 +4212,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@eslint/eslintrc", "npm:0.4.3"],
             ["ajv", "npm:6.12.6"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["espree", "npm:7.3.1"],
-            ["globals", "npm:13.9.0"],
+            ["globals", "npm:13.10.0"],
             ["ignore", "npm:4.0.6"],
             ["import-fresh", "npm:3.3.0"],
             ["js-yaml", "npm:3.14.1"],
@@ -3830,6 +4288,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@humanwhocodes/config-array", "npm:0.5.0"],
             ["@humanwhocodes/object-schema", "npm:1.2.0"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
             ["minimatch", "npm:3.0.4"]
           ],
@@ -3841,6 +4300,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@humanwhocodes/config-array", "npm:0.6.0"],
             ["@humanwhocodes/object-schema", "npm:1.2.0"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["minimatch", "npm:3.0.4"]
           ],
           "linkType": "HARD",
@@ -3851,6 +4317,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@humanwhocodes-object-schema-npm-1.2.0-6bc0ff9fda-40b7548037.zip/node_modules/@humanwhocodes/object-schema/",
           "packageDependencies": [
             ["@humanwhocodes/object-schema", "npm:1.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@hutson/parse-repository-url", [
+        ["npm:3.0.2", {
+          "packageLocation": "./.yarn/cache/@hutson-parse-repository-url-npm-3.0.2-ae5ef1b671-39992c5f18.zip/node_modules/@hutson/parse-repository-url/",
+          "packageDependencies": [
+            ["@hutson/parse-repository-url", "npm:3.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -3871,7 +4346,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@dier-makr/inversify", "workspace:packages/dier-makr-inversify"],
-            ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
+            ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.12.2"],
             ["@material-ui/icons", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.2"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.17.34"],
@@ -3889,9 +4364,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["addons-linter", "npm:4.4.0"],
             ["copy-webpack-plugin", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:9.1.0"],
             ["crx-hotreload", "npm:1.0.6"],
+<<<<<<< HEAD
             ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.5.1"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.4.0"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["eslint", "npm:7.32.0"],
+=======
+            ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.2.0"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["eslint", "npm:7.31.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
@@ -3951,24 +4437,46 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@istanbuljs/schema", [
-        ["npm:0.1.2", {
-          "packageLocation": "./.yarn/cache/@istanbuljs-schema-npm-0.1.2-cec4e49c8d-5ce9facf2f.zip/node_modules/@istanbuljs/schema/",
+        ["npm:0.1.3", {
+          "packageLocation": "./.yarn/cache/@istanbuljs-schema-npm-0.1.3-466bd3eaaa-5282759d96.zip/node_modules/@istanbuljs/schema/",
           "packageDependencies": [
-            ["@istanbuljs/schema", "npm:0.1.2"]
+            ["@istanbuljs/schema", "npm:0.1.3"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@jest/console", [
+<<<<<<< HEAD
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/@jest-console-npm-27.3.1-1ce6f0cf3c-80e3d9d3cc.zip/node_modules/@jest/console/",
+=======
+<<<<<<< HEAD
+        ["npm:27.2.5", {
+          "packageLocation": "./.yarn/cache/@jest-console-npm-27.2.5-b4da6e9330-67f99214a1.zip/node_modules/@jest/console/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["@jest/console", "npm:27.3.1"],
             ["@jest/types", "npm:27.2.5"],
             ["@types/node", "npm:14.17.34"],
             ["chalk", "npm:4.1.2"],
+<<<<<<< HEAD
             ["jest-message-util", "npm:27.3.1"],
             ["jest-util", "npm:27.3.1"],
+=======
+            ["jest-message-util", "npm:27.2.5"],
+            ["jest-util", "npm:27.2.5"],
+=======
+        ["npm:27.0.6", {
+          "packageLocation": "./.yarn/cache/@jest-console-npm-27.0.6-e1b2867b15-7f46a0d0fc.zip/node_modules/@jest/console/",
+          "packageDependencies": [
+            ["@jest/console", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["chalk", "npm:4.1.1"],
+            ["jest-message-util", "npm:27.0.6"],
+            ["jest-util", "npm:27.0.6"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["slash", "npm:3.0.0"]
           ],
           "linkType": "HARD",
@@ -3985,16 +4493,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/@jest-core-virtual-4de5e1380c/0/cache/@jest-core-npm-27.3.1-897b06c732-f21d0d1fe9.zip/node_modules/@jest/core/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@jest/core", "virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1"],
             ["@jest/console", "npm:27.3.1"],
             ["@jest/reporters", "virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1"],
             ["@jest/test-result", "npm:27.3.1"],
             ["@jest/transform", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+            ["@jest/core", "virtual:ae2dcb2f33a0683d9a2614127fcf5fc29c3b0141d93ded0cb100449ca191b4448c711f301f8dddfbf03bb5f25e0385d40af1f1151623ab5b406fd5caabb54d69#npm:27.2.5"],
+            ["@jest/console", "npm:27.2.5"],
+            ["@jest/reporters", "virtual:b2a4fed46fcfc620db73d34233e0da23f684f45da5243e7688da943ab4a0e09972309d180f3f52a710acfd3b7777e58d2901c7564c5af864abdc4d802ad50443#npm:27.2.5"],
+            ["@jest/test-result", "npm:27.2.5"],
+            ["@jest/transform", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/node", "npm:14.17.34"],
             ["@types/node-notifier", null],
             ["ansi-escapes", "npm:4.3.1"],
             ["chalk", "npm:4.1.2"],
+=======
+            ["@jest/core", "virtual:fcca7144ecbce81e29f0c9aced9493aad98f4d38083f2856938a8372d0737b5e4adb2966b5d04847ba7ee26de5fa05b14211ff8ed51afe7aa39a2c3337b5bc93#npm:27.0.6"],
+            ["@jest/console", "npm:27.0.6"],
+            ["@jest/reporters", "virtual:74ce0e960b55d73e2a3877886cec667240932da24cbb8b65e035a7caa4ebf7fac2e3d649f316c0c85a9356d2a49d4d0f228c111aca8f21dff916f1238353a5fa#npm:27.0.6"],
+            ["@jest/test-result", "npm:27.0.6"],
+            ["@jest/transform", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["@types/node-notifier", null],
+            ["ansi-escapes", "npm:4.3.2"],
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["emittery", "npm:0.8.1"],
             ["exit", "npm:0.1.2"],
             ["graceful-fs", "npm:4.2.6"],
@@ -4013,6 +4542,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-watcher", "npm:27.3.1"],
             ["micromatch", "npm:4.0.4"],
             ["node-notifier", null],
+<<<<<<< HEAD
+=======
+            ["p-each-series", "npm:2.2.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["rimraf", "npm:3.0.2"],
             ["slash", "npm:3.0.0"],
             ["strip-ansi", "npm:6.0.1"]
@@ -4028,11 +4561,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/@jest-environment-npm-27.3.1-7ba3f61bc3-8eb31d7565.zip/node_modules/@jest/environment/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@jest/environment", "npm:27.3.1"],
             ["@jest/fake-timers", "npm:27.3.1"],
             ["@jest/types", "npm:27.2.5"],
             ["@types/node", "npm:14.17.34"],
             ["jest-mock", "npm:27.3.0"]
+=======
+<<<<<<< HEAD
+            ["@jest/environment", "npm:27.2.5"],
+            ["@jest/fake-timers", "npm:27.2.5"],
+            ["@jest/types", "npm:27.2.5"],
+            ["@types/node", "npm:14.17.21"],
+            ["jest-mock", "npm:27.2.5"]
+=======
+            ["@jest/environment", "npm:27.0.6"],
+            ["@jest/fake-timers", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["jest-mock", "npm:27.0.6"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -4041,6 +4590,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/@jest-fake-timers-npm-27.3.1-5c180108b5-6ebf8c91c4.zip/node_modules/@jest/fake-timers/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@jest/fake-timers", "npm:27.3.1"],
             ["@jest/types", "npm:27.2.5"],
             ["@sinonjs/fake-timers", "npm:8.0.1"],
@@ -4048,6 +4598,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-message-util", "npm:27.3.1"],
             ["jest-mock", "npm:27.3.0"],
             ["jest-util", "npm:27.3.1"]
+=======
+<<<<<<< HEAD
+            ["@jest/fake-timers", "npm:27.2.5"],
+            ["@jest/types", "npm:27.2.5"],
+            ["@sinonjs/fake-timers", "npm:8.0.1"],
+            ["@types/node", "npm:14.17.21"],
+            ["jest-message-util", "npm:27.2.5"],
+            ["jest-mock", "npm:27.2.5"],
+            ["jest-util", "npm:27.2.5"]
+=======
+            ["@jest/fake-timers", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@sinonjs/fake-timers", "npm:7.1.2"],
+            ["@types/node", "npm:16.4.1"],
+            ["jest-message-util", "npm:27.0.6"],
+            ["jest-mock", "npm:27.0.6"],
+            ["jest-util", "npm:27.0.6"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -4100,7 +4669,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-notifier", null],
             ["slash", "npm:3.0.0"],
             ["source-map", "npm:0.6.1"],
-            ["string-length", "npm:4.0.1"],
+            ["string-length", "npm:4.0.2"],
             ["terminal-link", "npm:2.1.1"],
             ["v8-to-istanbul", "npm:8.1.0"]
           ],
@@ -4157,8 +4726,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.16.0"],
             ["@jest/types", "npm:27.2.5"],
             ["babel-plugin-istanbul", "npm:6.0.0"],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["convert-source-map", "npm:1.7.0"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["convert-source-map", "npm:1.8.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["fast-json-stable-stringify", "npm:2.1.0"],
             ["graceful-fs", "npm:4.2.6"],
             ["jest-haste-map", "npm:27.3.1"],
@@ -4179,10 +4753,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@jest/types", "npm:27.2.5"],
             ["@types/istanbul-lib-coverage", "npm:2.0.3"],
+<<<<<<< HEAD
             ["@types/istanbul-reports", "npm:3.0.0"],
             ["@types/node", "npm:14.17.34"],
             ["@types/yargs", "npm:16.0.3"],
             ["chalk", "npm:4.1.2"]
+=======
+            ["@types/istanbul-reports", "npm:3.0.1"],
+            ["@types/node", "npm:16.4.1"],
+            ["@types/yargs", "npm:15.0.14"],
+            ["chalk", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:27.0.6", {
+          "packageLocation": "./.yarn/cache/@jest-types-npm-27.0.6-507453b10b-abe367b073.zip/node_modules/@jest/types/",
+          "packageDependencies": [
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/istanbul-lib-coverage", "npm:2.0.3"],
+            ["@types/istanbul-reports", "npm:3.0.1"],
+            ["@types/node", "npm:16.4.1"],
+            ["@types/yargs", "npm:16.0.4"],
+            ["chalk", "npm:4.1.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -4267,7 +4860,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@lerna-child-process-npm-4.0.0-d273cf4bcc-184ea5520b.zip/node_modules/@lerna/child-process/",
           "packageDependencies": [
             ["@lerna/child-process", "npm:4.0.0"],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
+=======
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["execa", "npm:5.1.1"],
             ["strong-log-transformer", "npm:2.1.0"]
           ],
@@ -4356,10 +4953,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lerna/conventional-commits", "npm:4.0.0"],
             ["@lerna/validation-error", "npm:4.0.0"],
             ["conventional-changelog-angular", "npm:5.0.12"],
-            ["conventional-changelog-core", "npm:4.2.2"],
+            ["conventional-changelog-core", "npm:4.2.3"],
             ["conventional-recommended-bump", "npm:6.1.0"],
             ["fs-extra", "npm:9.1.0"],
-            ["get-stream", "npm:6.0.0"],
+            ["get-stream", "npm:6.0.1"],
             ["lodash.template", "npm:4.5.0"],
             ["npm-package-arg", "npm:8.1.5"],
             ["npmlog", "npm:4.1.2"],
@@ -4381,7 +4978,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dedent", "npm:0.7.0"],
             ["fs-extra", "npm:9.1.0"],
             ["globby", "npm:11.0.4"],
+<<<<<<< HEAD
             ["init-package-json", "npm:2.0.2"],
+=======
+            ["init-package-json", "npm:2.0.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["npm-package-arg", "npm:8.1.5"],
             ["p-reduce", "npm:2.1.0"],
             ["pacote", "npm:11.3.5"],
@@ -4390,7 +4991,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["slash", "npm:3.0.0"],
             ["validate-npm-package-license", "npm:3.0.4"],
             ["validate-npm-package-name", "npm:3.0.0"],
-            ["whatwg-url", "npm:8.6.0"],
+            ["whatwg-url", "npm:8.7.0"],
             ["yargs-parser", "npm:20.2.4"]
           ],
           "linkType": "HARD",
@@ -4502,8 +5103,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lerna/github-client", "npm:4.0.0"],
             ["@lerna/child-process", "npm:4.0.0"],
             ["@octokit/plugin-enterprise-rest", "npm:6.0.1"],
-            ["@octokit/rest", "npm:18.3.1"],
-            ["git-url-parse", "npm:11.4.4"],
+            ["@octokit/rest", "npm:18.7.0"],
+            ["git-url-parse", "npm:11.5.0"],
             ["npmlog", "npm:4.1.2"]
           ],
           "linkType": "HARD",
@@ -4516,7 +5117,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lerna/gitlab-client", "npm:4.0.0"],
             ["node-fetch", "npm:2.6.5"],
             ["npmlog", "npm:4.1.2"],
-            ["whatwg-url", "npm:8.6.0"]
+            ["whatwg-url", "npm:8.7.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4565,7 +5166,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lerna/info", "npm:4.0.0"],
             ["@lerna/command", "npm:4.0.0"],
             ["@lerna/output", "npm:4.0.0"],
-            ["envinfo", "npm:7.7.4"]
+            ["envinfo", "npm:7.8.1"]
           ],
           "linkType": "HARD",
         }]
@@ -4628,7 +5229,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@lerna-log-packed-npm-4.0.0-dfd0493fa7-ed046736f4.zip/node_modules/@lerna/log-packed/",
           "packageDependencies": [
             ["@lerna/log-packed", "npm:4.0.0"],
-            ["byte-size", "npm:7.0.0"],
+            ["byte-size", "npm:7.0.1"],
             ["columnify", "npm:1.5.4"],
             ["has-unicode", "npm:2.0.1"],
             ["npmlog", "npm:4.1.2"]
@@ -4641,7 +5242,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@lerna-npm-conf-npm-4.0.0-48dd0428e5-0dfa3632a3.zip/node_modules/@lerna/npm-conf/",
           "packageDependencies": [
             ["@lerna/npm-conf", "npm:4.0.0"],
-            ["config-chain", "npm:1.1.12"],
+            ["config-chain", "npm:1.1.13"],
             ["pify", "npm:5.0.0"]
           ],
           "linkType": "HARD",
@@ -4684,7 +5285,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lerna/otplease", "npm:4.0.0"],
             ["@lerna/run-lifecycle", "npm:4.0.0"],
             ["fs-extra", "npm:9.1.0"],
+<<<<<<< HEAD
             ["libnpmpublish", "npm:4.0.0"],
+=======
+            ["libnpmpublish", "npm:4.0.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["npm-package-arg", "npm:8.1.5"],
             ["npmlog", "npm:4.1.2"],
             ["pify", "npm:5.0.0"],
@@ -4733,7 +5338,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lerna/get-packed", "npm:4.0.0"],
             ["@lerna/package", "npm:4.0.0"],
             ["@lerna/run-lifecycle", "npm:4.0.0"],
-            ["npm-packlist", "npm:2.1.4"],
+            ["npm-packlist", "npm:2.2.2"],
             ["npmlog", "npm:4.1.2"],
             ["tar", "npm:6.1.8"],
             ["temp-write", "npm:4.0.0"]
@@ -4846,7 +5451,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lerna/validation-error", "npm:4.0.0"],
             ["@lerna/version", "npm:4.0.0"],
             ["fs-extra", "npm:9.1.0"],
+<<<<<<< HEAD
             ["libnpmaccess", "npm:4.0.1"],
+=======
+            ["libnpmaccess", "npm:4.0.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["npm-package-arg", "npm:8.1.5"],
             ["npm-registry-fetch", "npm:9.0.0"],
             ["npmlog", "npm:4.1.2"],
@@ -5038,33 +5647,51 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@material-ui/core", [
-        ["npm:4.11.4", {
-          "packageLocation": "./.yarn/cache/@material-ui-core-npm-4.11.4-d024c4b650-fccfb867bc.zip/node_modules/@material-ui/core/",
+        ["npm:4.12.2", {
+          "packageLocation": "./.yarn/cache/@material-ui-core-npm-4.12.2-f5d47905ee-daecbf8126.zip/node_modules/@material-ui/core/",
           "packageDependencies": [
-            ["@material-ui/core", "npm:4.11.4"]
+            ["@material-ui/core", "npm:4.12.2"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4", {
-          "packageLocation": "./.yarn/__virtual__/@material-ui-core-virtual-2cb336cfbd/0/cache/@material-ui-core-npm-4.11.4-d024c4b650-fccfb867bc.zip/node_modules/@material-ui/core/",
+        ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.12.2", {
+          "packageLocation": "./.yarn/__virtual__/@material-ui-core-virtual-8928d698e6/0/cache/@material-ui-core-npm-4.12.2-f5d47905ee-daecbf8126.zip/node_modules/@material-ui/core/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
             ["@babel/runtime", "npm:7.16.3"],
+=======
+            ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.12.2"],
+            ["@babel/runtime", "npm:7.14.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@material-ui/styles", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
+<<<<<<< HEAD
             ["@material-ui/system", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.3"],
             ["@material-ui/types", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:5.1.0"],
             ["@material-ui/utils", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.2"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
             ["@types/react-transition-group", "npm:4.4.0"],
+=======
+            ["@types/react", "npm:17.0.19"],
+=======
+            ["@material-ui/system", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.12.1"],
+            ["@material-ui/types", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:5.1.0"],
+            ["@material-ui/utils", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.11.2"],
+            ["@types/react", "npm:17.0.14"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react-transition-group", "npm:4.4.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["clsx", "npm:1.1.1"],
             ["hoist-non-react-statics", "npm:3.3.2"],
             ["popper.js", "npm:1.16.1-lts"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
-            ["react-is", "npm:17.0.1"],
-            ["react-transition-group", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.4.1"]
+            ["react-is", "npm:17.0.2"],
+            ["react-transition-group", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.4.2"]
           ],
           "packagePeers": [
             "@types/react-dom",
@@ -5087,8 +5714,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@material-ui-icons-virtual-44c5ef6547/0/cache/@material-ui-icons-npm-4.11.2-3bb694b7ad-0cd1d54b25.zip/node_modules/@material-ui/icons/",
           "packageDependencies": [
             ["@material-ui/icons", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.2"],
+<<<<<<< HEAD
             ["@babel/runtime", "npm:7.16.3"],
             ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
+=======
+            ["@babel/runtime", "npm:7.14.8"],
+            ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.12.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/material-ui__core", null],
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
@@ -5118,23 +5750,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@material-ui-styles-virtual-83d7d945b2/0/cache/@material-ui-styles-npm-4.11.4-24950251c4-ef9abc486c.zip/node_modules/@material-ui/styles/",
           "packageDependencies": [
             ["@material-ui/styles", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
+<<<<<<< HEAD
             ["@babel/runtime", "npm:7.16.3"],
+=======
+            ["@babel/runtime", "npm:7.14.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@emotion/hash", "npm:0.8.0"],
+<<<<<<< HEAD
             ["@material-ui/types", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:5.1.0"],
             ["@material-ui/utils", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.2"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
+=======
+            ["@types/react", "npm:17.0.19"],
+=======
+            ["@material-ui/types", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:5.1.0"],
+            ["@material-ui/utils", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.11.2"],
+            ["@types/react", "npm:17.0.14"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["@types/react-dom", "npm:17.0.9"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["clsx", "npm:1.1.1"],
-            ["csstype", "npm:2.6.13"],
+            ["csstype", "npm:2.6.17"],
             ["hoist-non-react-statics", "npm:3.3.2"],
-            ["jss", "npm:10.6.0"],
-            ["jss-plugin-camel-case", "npm:10.5.1"],
-            ["jss-plugin-default-unit", "npm:10.5.1"],
-            ["jss-plugin-global", "npm:10.5.1"],
-            ["jss-plugin-nested", "npm:10.5.1"],
-            ["jss-plugin-props-sort", "npm:10.5.1"],
-            ["jss-plugin-rule-value-function", "npm:10.5.1"],
-            ["jss-plugin-vendor-prefixer", "npm:10.5.1"],
+            ["jss", "npm:10.7.1"],
+            ["jss-plugin-camel-case", "npm:10.7.1"],
+            ["jss-plugin-default-unit", "npm:10.7.1"],
+            ["jss-plugin-global", "npm:10.7.1"],
+            ["jss-plugin-nested", "npm:10.7.1"],
+            ["jss-plugin-props-sort", "npm:10.7.1"],
+            ["jss-plugin-rule-value-function", "npm:10.7.1"],
+            ["jss-plugin-vendor-prefixer", "npm:10.7.1"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"]
@@ -5149,22 +5796,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@material-ui/system", [
-        ["npm:4.11.3", {
-          "packageLocation": "./.yarn/cache/@material-ui-system-npm-4.11.3-31c29e3a74-928f8fc1cd.zip/node_modules/@material-ui/system/",
+        ["npm:4.12.1", {
+          "packageLocation": "./.yarn/cache/@material-ui-system-npm-4.12.1-d9fe61b73a-2acf20b430.zip/node_modules/@material-ui/system/",
           "packageDependencies": [
-            ["@material-ui/system", "npm:4.11.3"]
+            ["@material-ui/system", "npm:4.12.1"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.3", {
-          "packageLocation": "./.yarn/__virtual__/@material-ui-system-virtual-e047791340/0/cache/@material-ui-system-npm-4.11.3-31c29e3a74-928f8fc1cd.zip/node_modules/@material-ui/system/",
+        ["virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.12.1", {
+          "packageLocation": "./.yarn/__virtual__/@material-ui-system-virtual-b4a9c6cc12/0/cache/@material-ui-system-npm-4.12.1-d9fe61b73a-2acf20b430.zip/node_modules/@material-ui/system/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@material-ui/system", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.3"],
             ["@babel/runtime", "npm:7.16.3"],
             ["@material-ui/utils", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.2"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
             ["csstype", "npm:2.6.13"],
+=======
+            ["@types/react", "npm:17.0.19"],
+=======
+            ["@material-ui/system", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.12.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["@material-ui/utils", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.11.2"],
+            ["@types/react", "npm:17.0.14"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["@types/react-dom", "npm:17.0.9"],
+            ["csstype", "npm:2.6.17"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"]
@@ -5186,11 +5846,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:5.1.0", {
-          "packageLocation": "./.yarn/__virtual__/@material-ui-types-virtual-b5012b9b3b/0/cache/@material-ui-types-npm-5.1.0-19cb52ee2a-64ac0938ee.zip/node_modules/@material-ui/types/",
+        ["virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:5.1.0", {
+          "packageLocation": "./.yarn/__virtual__/@material-ui-types-virtual-f18e93f665/0/cache/@material-ui-types-npm-5.1.0-19cb52ee2a-64ac0938ee.zip/node_modules/@material-ui/types/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@material-ui/types", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:5.1.0"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"]
+=======
+            ["@types/react", "npm:17.0.19"]
+=======
+            ["@material-ui/types", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:5.1.0"],
+            ["@types/react", "npm:17.0.14"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/react"
@@ -5206,17 +5875,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.2", {
-          "packageLocation": "./.yarn/__virtual__/@material-ui-utils-virtual-df3d02bf41/0/cache/@material-ui-utils-npm-4.11.2-cb079a0929-30e15b197c.zip/node_modules/@material-ui/utils/",
+        ["virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.11.2", {
+          "packageLocation": "./.yarn/__virtual__/@material-ui-utils-virtual-bd3e0156d8/0/cache/@material-ui-utils-npm-4.11.2-cb079a0929-30e15b197c.zip/node_modules/@material-ui/utils/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@material-ui/utils", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.2"],
+<<<<<<< HEAD
             ["@babel/runtime", "npm:7.16.3"],
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
+=======
+            ["@babel/runtime", "npm:7.13.9"],
+            ["@types/react", "npm:17.0.19"],
+=======
+            ["@material-ui/utils", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.11.2"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["@types/react", "npm:17.0.14"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["@types/react-dom", "npm:17.0.9"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
-            ["react-is", "npm:17.0.1"]
+            ["react-is", "npm:17.0.2"]
           ],
           "packagePeers": [
             "@types/react-dom",
@@ -5237,32 +5918,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@nodelib/fs.scandir", [
-        ["npm:2.1.3", {
-          "packageLocation": "./.yarn/cache/@nodelib-fs.scandir-npm-2.1.3-92e0b8f0d5-0054efbba1.zip/node_modules/@nodelib/fs.scandir/",
+        ["npm:2.1.5", {
+          "packageLocation": "./.yarn/cache/@nodelib-fs.scandir-npm-2.1.5-89c67370dd-a970d595bd.zip/node_modules/@nodelib/fs.scandir/",
           "packageDependencies": [
-            ["@nodelib/fs.scandir", "npm:2.1.3"],
-            ["@nodelib/fs.stat", "npm:2.0.3"],
-            ["run-parallel", "npm:1.1.9"]
+            ["@nodelib/fs.scandir", "npm:2.1.5"],
+            ["@nodelib/fs.stat", "npm:2.0.5"],
+            ["run-parallel", "npm:1.2.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@nodelib/fs.stat", [
-        ["npm:2.0.3", {
-          "packageLocation": "./.yarn/cache/@nodelib-fs.stat-npm-2.0.3-be9eaa5ef7-d3612efcee.zip/node_modules/@nodelib/fs.stat/",
+        ["npm:2.0.5", {
+          "packageLocation": "./.yarn/cache/@nodelib-fs.stat-npm-2.0.5-01f4dd3030-012480b5ca.zip/node_modules/@nodelib/fs.stat/",
           "packageDependencies": [
-            ["@nodelib/fs.stat", "npm:2.0.3"]
+            ["@nodelib/fs.stat", "npm:2.0.5"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@nodelib/fs.walk", [
-        ["npm:1.2.4", {
-          "packageLocation": "./.yarn/cache/@nodelib-fs.walk-npm-1.2.4-1ae6c97d00-a971d1dcc1.zip/node_modules/@nodelib/fs.walk/",
+        ["npm:1.2.8", {
+          "packageLocation": "./.yarn/cache/@nodelib-fs.walk-npm-1.2.8-b4a89da548-190c643f15.zip/node_modules/@nodelib/fs.walk/",
           "packageDependencies": [
-            ["@nodelib/fs.walk", "npm:1.2.4"],
-            ["@nodelib/fs.scandir", "npm:2.1.3"],
-            ["fastq", "npm:1.8.0"]
+            ["@nodelib/fs.walk", "npm:1.2.8"],
+            ["@nodelib/fs.scandir", "npm:2.1.5"],
+            ["fastq", "npm:1.11.1"]
           ],
           "linkType": "HARD",
         }]
@@ -5309,18 +5990,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@npmcli-installed-package-contents-npm-1.0.7-b15a13ab4f-a4a29b99d4.zip/node_modules/@npmcli/installed-package-contents/",
           "packageDependencies": [
             ["@npmcli/installed-package-contents", "npm:1.0.7"],
-            ["npm-bundled", "npm:1.1.1"],
+            ["npm-bundled", "npm:1.1.2"],
             ["npm-normalize-package-bin", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@npmcli/move-file", [
-        ["npm:1.0.1", {
-          "packageLocation": "./.yarn/cache/@npmcli-move-file-npm-1.0.1-90209166f0-878b39fc1f.zip/node_modules/@npmcli/move-file/",
+        ["npm:1.1.2", {
+          "packageLocation": "./.yarn/cache/@npmcli-move-file-npm-1.1.2-4f6c7b3354-c96381d4a3.zip/node_modules/@npmcli/move-file/",
           "packageDependencies": [
-            ["@npmcli/move-file", "npm:1.0.1"],
-            ["mkdirp", "npm:1.0.4"]
+            ["@npmcli/move-file", "npm:1.1.2"],
+            ["mkdirp", "npm:1.0.4"],
+            ["rimraf", "npm:3.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -5345,16 +6027,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@npmcli/run-script", [
-        ["npm:1.8.3", {
-          "packageLocation": "./.yarn/cache/@npmcli-run-script-npm-1.8.3-603c5e98be-9c37fbe74d.zip/node_modules/@npmcli/run-script/",
+        ["npm:1.8.5", {
+          "packageLocation": "./.yarn/cache/@npmcli-run-script-npm-1.8.5-63c0b50478-734f7d4bec.zip/node_modules/@npmcli/run-script/",
           "packageDependencies": [
-            ["@npmcli/run-script", "npm:1.8.3"],
+            ["@npmcli/run-script", "npm:1.8.5"],
             ["@npmcli/node-gyp", "npm:1.0.2"],
             ["@npmcli/promise-spawn", "npm:1.3.2"],
             ["infer-owner", "npm:1.0.4"],
             ["node-gyp", "npm:7.1.2"],
-            ["puka", "npm:1.0.1"],
-            ["read-package-json-fast", "npm:2.0.2"]
+            ["read-package-json-fast", "npm:2.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -5364,32 +6045,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@octokit-auth-token-npm-2.4.5-91cd7149bb-4962011994.zip/node_modules/@octokit/auth-token/",
           "packageDependencies": [
             ["@octokit/auth-token", "npm:2.4.5"],
-            ["@octokit/types", "npm:6.11.2"]
+            ["@octokit/types", "npm:6.21.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@octokit/core", [
-        ["npm:3.2.5", {
-          "packageLocation": "./.yarn/cache/@octokit-core-npm-3.2.5-327441cac7-ca4ece0198.zip/node_modules/@octokit/core/",
+        ["npm:3.5.1", {
+          "packageLocation": "./.yarn/cache/@octokit-core-npm-3.5.1-a933dedcf7-67179739fc.zip/node_modules/@octokit/core/",
           "packageDependencies": [
-            ["@octokit/core", "npm:3.2.5"],
+            ["@octokit/core", "npm:3.5.1"],
             ["@octokit/auth-token", "npm:2.4.5"],
-            ["@octokit/graphql", "npm:4.6.0"],
-            ["@octokit/request", "npm:5.4.14"],
-            ["@octokit/types", "npm:6.11.2"],
-            ["before-after-hook", "npm:2.1.1"],
+            ["@octokit/graphql", "npm:4.6.4"],
+            ["@octokit/request", "npm:5.6.0"],
+            ["@octokit/request-error", "npm:2.1.0"],
+            ["@octokit/types", "npm:6.21.0"],
+            ["before-after-hook", "npm:2.2.2"],
             ["universal-user-agent", "npm:6.0.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@octokit/endpoint", [
-        ["npm:6.0.6", {
-          "packageLocation": "./.yarn/cache/@octokit-endpoint-npm-6.0.6-d8e95b8690-01213eec88.zip/node_modules/@octokit/endpoint/",
+        ["npm:6.0.12", {
+          "packageLocation": "./.yarn/cache/@octokit-endpoint-npm-6.0.12-d467db27fd-b48b29940a.zip/node_modules/@octokit/endpoint/",
           "packageDependencies": [
-            ["@octokit/endpoint", "npm:6.0.6"],
-            ["@octokit/types", "npm:5.5.0"],
+            ["@octokit/endpoint", "npm:6.0.12"],
+            ["@octokit/types", "npm:6.21.0"],
             ["is-plain-object", "npm:5.0.0"],
             ["universal-user-agent", "npm:6.0.0"]
           ],
@@ -5397,22 +6079,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@octokit/graphql", [
-        ["npm:4.6.0", {
-          "packageLocation": "./.yarn/cache/@octokit-graphql-npm-4.6.0-dc38b04abf-ecec805dfc.zip/node_modules/@octokit/graphql/",
+        ["npm:4.6.4", {
+          "packageLocation": "./.yarn/cache/@octokit-graphql-npm-4.6.4-6d6d41e43c-5841e13e78.zip/node_modules/@octokit/graphql/",
           "packageDependencies": [
-            ["@octokit/graphql", "npm:4.6.0"],
-            ["@octokit/request", "npm:5.4.14"],
-            ["@octokit/types", "npm:6.11.2"],
+            ["@octokit/graphql", "npm:4.6.4"],
+            ["@octokit/request", "npm:5.6.0"],
+            ["@octokit/types", "npm:6.21.0"],
             ["universal-user-agent", "npm:6.0.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@octokit/openapi-types", [
-        ["npm:5.2.2", {
-          "packageLocation": "./.yarn/cache/@octokit-openapi-types-npm-5.2.2-52f0975561-ab905f8dfc.zip/node_modules/@octokit/openapi-types/",
+        ["npm:9.1.0", {
+          "packageLocation": "./.yarn/cache/@octokit-openapi-types-npm-9.1.0-55fb0c9152-98d81d43b2.zip/node_modules/@octokit/openapi-types/",
           "packageDependencies": [
-            ["@octokit/openapi-types", "npm:5.2.2"]
+            ["@octokit/openapi-types", "npm:9.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -5427,19 +6109,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@octokit/plugin-paginate-rest", [
-        ["npm:2.11.0", {
-          "packageLocation": "./.yarn/cache/@octokit-plugin-paginate-rest-npm-2.11.0-31d47a422a-60597d913c.zip/node_modules/@octokit/plugin-paginate-rest/",
+        ["npm:2.14.0", {
+          "packageLocation": "./.yarn/cache/@octokit-plugin-paginate-rest-npm-2.14.0-1a3841fd59-28a0397b5c.zip/node_modules/@octokit/plugin-paginate-rest/",
           "packageDependencies": [
-            ["@octokit/plugin-paginate-rest", "npm:2.11.0"]
+            ["@octokit/plugin-paginate-rest", "npm:2.14.0"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:dd2b80cc70602256371774791d1c31e4b932b3fbe8065f91190e91bbfabc4710d9cfd120765ee6520bc95dfb6a09bbd69b779c392fc70a9f3fd87b69b26081ce#npm:2.11.0", {
-          "packageLocation": "./.yarn/__virtual__/@octokit-plugin-paginate-rest-virtual-fd595b8def/0/cache/@octokit-plugin-paginate-rest-npm-2.11.0-31d47a422a-60597d913c.zip/node_modules/@octokit/plugin-paginate-rest/",
+        ["virtual:c5af972e83ae728dad5ac85d90c98af9598ff0746413ad6fb9b752f7fa07f75fbec2c78dfcc8731666440019e4da8cbe224ddab887cb62a5a880a0db25d83494#npm:2.14.0", {
+          "packageLocation": "./.yarn/__virtual__/@octokit-plugin-paginate-rest-virtual-2c03314452/0/cache/@octokit-plugin-paginate-rest-npm-2.14.0-1a3841fd59-28a0397b5c.zip/node_modules/@octokit/plugin-paginate-rest/",
           "packageDependencies": [
-            ["@octokit/plugin-paginate-rest", "virtual:dd2b80cc70602256371774791d1c31e4b932b3fbe8065f91190e91bbfabc4710d9cfd120765ee6520bc95dfb6a09bbd69b779c392fc70a9f3fd87b69b26081ce#npm:2.11.0"],
-            ["@octokit/core", "npm:3.2.5"],
-            ["@octokit/types", "npm:6.11.2"],
+            ["@octokit/plugin-paginate-rest", "virtual:c5af972e83ae728dad5ac85d90c98af9598ff0746413ad6fb9b752f7fa07f75fbec2c78dfcc8731666440019e4da8cbe224ddab887cb62a5a880a0db25d83494#npm:2.14.0"],
+            ["@octokit/core", "npm:3.5.1"],
+            ["@octokit/types", "npm:6.21.0"],
             ["@types/octokit__core", null]
           ],
           "packagePeers": [
@@ -5450,18 +6132,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@octokit/plugin-request-log", [
-        ["npm:1.0.3", {
-          "packageLocation": "./.yarn/cache/@octokit-plugin-request-log-npm-1.0.3-f2ac3e7009-48ec556c17.zip/node_modules/@octokit/plugin-request-log/",
+        ["npm:1.0.4", {
+          "packageLocation": "./.yarn/cache/@octokit-plugin-request-log-npm-1.0.4-9ab5a2f888-2086db0005.zip/node_modules/@octokit/plugin-request-log/",
           "packageDependencies": [
-            ["@octokit/plugin-request-log", "npm:1.0.3"]
+            ["@octokit/plugin-request-log", "npm:1.0.4"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:dd2b80cc70602256371774791d1c31e4b932b3fbe8065f91190e91bbfabc4710d9cfd120765ee6520bc95dfb6a09bbd69b779c392fc70a9f3fd87b69b26081ce#npm:1.0.3", {
-          "packageLocation": "./.yarn/__virtual__/@octokit-plugin-request-log-virtual-6761c5e8e1/0/cache/@octokit-plugin-request-log-npm-1.0.3-f2ac3e7009-48ec556c17.zip/node_modules/@octokit/plugin-request-log/",
+        ["virtual:c5af972e83ae728dad5ac85d90c98af9598ff0746413ad6fb9b752f7fa07f75fbec2c78dfcc8731666440019e4da8cbe224ddab887cb62a5a880a0db25d83494#npm:1.0.4", {
+          "packageLocation": "./.yarn/__virtual__/@octokit-plugin-request-log-virtual-b997d0ec3b/0/cache/@octokit-plugin-request-log-npm-1.0.4-9ab5a2f888-2086db0005.zip/node_modules/@octokit/plugin-request-log/",
           "packageDependencies": [
-            ["@octokit/plugin-request-log", "virtual:dd2b80cc70602256371774791d1c31e4b932b3fbe8065f91190e91bbfabc4710d9cfd120765ee6520bc95dfb6a09bbd69b779c392fc70a9f3fd87b69b26081ce#npm:1.0.3"],
-            ["@octokit/core", "npm:3.2.5"],
+            ["@octokit/plugin-request-log", "virtual:c5af972e83ae728dad5ac85d90c98af9598ff0746413ad6fb9b752f7fa07f75fbec2c78dfcc8731666440019e4da8cbe224ddab887cb62a5a880a0db25d83494#npm:1.0.4"],
+            ["@octokit/core", "npm:3.5.1"],
             ["@types/octokit__core", null]
           ],
           "packagePeers": [
@@ -5472,19 +6154,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@octokit/plugin-rest-endpoint-methods", [
-        ["npm:4.13.1", {
-          "packageLocation": "./.yarn/cache/@octokit-plugin-rest-endpoint-methods-npm-4.13.1-1f62dcae37-024ae18db1.zip/node_modules/@octokit/plugin-rest-endpoint-methods/",
+        ["npm:5.5.0", {
+          "packageLocation": "./.yarn/cache/@octokit-plugin-rest-endpoint-methods-npm-5.5.0-4a2cd2ce6b-d6fe78da05.zip/node_modules/@octokit/plugin-rest-endpoint-methods/",
           "packageDependencies": [
-            ["@octokit/plugin-rest-endpoint-methods", "npm:4.13.1"]
+            ["@octokit/plugin-rest-endpoint-methods", "npm:5.5.0"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:dd2b80cc70602256371774791d1c31e4b932b3fbe8065f91190e91bbfabc4710d9cfd120765ee6520bc95dfb6a09bbd69b779c392fc70a9f3fd87b69b26081ce#npm:4.13.1", {
-          "packageLocation": "./.yarn/__virtual__/@octokit-plugin-rest-endpoint-methods-virtual-a6afc4f3f8/0/cache/@octokit-plugin-rest-endpoint-methods-npm-4.13.1-1f62dcae37-024ae18db1.zip/node_modules/@octokit/plugin-rest-endpoint-methods/",
+        ["virtual:c5af972e83ae728dad5ac85d90c98af9598ff0746413ad6fb9b752f7fa07f75fbec2c78dfcc8731666440019e4da8cbe224ddab887cb62a5a880a0db25d83494#npm:5.5.0", {
+          "packageLocation": "./.yarn/__virtual__/@octokit-plugin-rest-endpoint-methods-virtual-dd1a8766fd/0/cache/@octokit-plugin-rest-endpoint-methods-npm-5.5.0-4a2cd2ce6b-d6fe78da05.zip/node_modules/@octokit/plugin-rest-endpoint-methods/",
           "packageDependencies": [
-            ["@octokit/plugin-rest-endpoint-methods", "virtual:dd2b80cc70602256371774791d1c31e4b932b3fbe8065f91190e91bbfabc4710d9cfd120765ee6520bc95dfb6a09bbd69b779c392fc70a9f3fd87b69b26081ce#npm:4.13.1"],
-            ["@octokit/core", "npm:3.2.5"],
-            ["@octokit/types", "npm:6.11.2"],
+            ["@octokit/plugin-rest-endpoint-methods", "virtual:c5af972e83ae728dad5ac85d90c98af9598ff0746413ad6fb9b752f7fa07f75fbec2c78dfcc8731666440019e4da8cbe224ddab887cb62a5a880a0db25d83494#npm:5.5.0"],
+            ["@octokit/core", "npm:3.5.1"],
+            ["@octokit/types", "npm:6.21.0"],
             ["@types/octokit__core", null],
             ["deprecation", "npm:2.3.1"]
           ],
@@ -5496,28 +6178,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@octokit/request", [
-        ["npm:5.4.14", {
-          "packageLocation": "./.yarn/cache/@octokit-request-npm-5.4.14-47e6e4e873-b2ba5a6a64.zip/node_modules/@octokit/request/",
+        ["npm:5.6.0", {
+          "packageLocation": "./.yarn/cache/@octokit-request-npm-5.6.0-89c7cc8cb6-194b1c2343.zip/node_modules/@octokit/request/",
           "packageDependencies": [
-            ["@octokit/request", "npm:5.4.14"],
-            ["@octokit/endpoint", "npm:6.0.6"],
-            ["@octokit/request-error", "npm:2.0.2"],
-            ["@octokit/types", "npm:6.11.2"],
-            ["deprecation", "npm:2.3.1"],
+            ["@octokit/request", "npm:5.6.0"],
+            ["@octokit/endpoint", "npm:6.0.12"],
+            ["@octokit/request-error", "npm:2.1.0"],
+            ["@octokit/types", "npm:6.21.0"],
             ["is-plain-object", "npm:5.0.0"],
+<<<<<<< HEAD
             ["node-fetch", "npm:2.6.5"],
             ["once", "npm:1.4.0"],
+=======
+            ["node-fetch", "npm:2.6.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["universal-user-agent", "npm:6.0.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@octokit/request-error", [
-        ["npm:2.0.2", {
-          "packageLocation": "./.yarn/cache/@octokit-request-error-npm-2.0.2-d8f7f2bfcf-de3b4fdf2c.zip/node_modules/@octokit/request-error/",
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/@octokit-request-error-npm-2.1.0-51ac624306-baec2b5700.zip/node_modules/@octokit/request-error/",
           "packageDependencies": [
-            ["@octokit/request-error", "npm:2.0.2"],
-            ["@octokit/types", "npm:5.5.0"],
+            ["@octokit/request-error", "npm:2.1.0"],
+            ["@octokit/types", "npm:6.21.0"],
             ["deprecation", "npm:2.3.1"],
             ["once", "npm:1.4.0"]
           ],
@@ -5525,19 +6210,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@octokit/rest", [
-        ["npm:18.3.1", {
-          "packageLocation": "./.yarn/cache/@octokit-rest-npm-18.3.1-dd2b80cc70-48d03dbf2c.zip/node_modules/@octokit/rest/",
+        ["npm:18.7.0", {
+          "packageLocation": "./.yarn/cache/@octokit-rest-npm-18.7.0-c5af972e83-217819ca69.zip/node_modules/@octokit/rest/",
           "packageDependencies": [
-            ["@octokit/rest", "npm:18.3.1"],
-            ["@octokit/core", "npm:3.2.5"],
-            ["@octokit/plugin-paginate-rest", "virtual:dd2b80cc70602256371774791d1c31e4b932b3fbe8065f91190e91bbfabc4710d9cfd120765ee6520bc95dfb6a09bbd69b779c392fc70a9f3fd87b69b26081ce#npm:2.11.0"],
-            ["@octokit/plugin-request-log", "virtual:dd2b80cc70602256371774791d1c31e4b932b3fbe8065f91190e91bbfabc4710d9cfd120765ee6520bc95dfb6a09bbd69b779c392fc70a9f3fd87b69b26081ce#npm:1.0.3"],
-            ["@octokit/plugin-rest-endpoint-methods", "virtual:dd2b80cc70602256371774791d1c31e4b932b3fbe8065f91190e91bbfabc4710d9cfd120765ee6520bc95dfb6a09bbd69b779c392fc70a9f3fd87b69b26081ce#npm:4.13.1"]
+            ["@octokit/rest", "npm:18.7.0"],
+            ["@octokit/core", "npm:3.5.1"],
+            ["@octokit/plugin-paginate-rest", "virtual:c5af972e83ae728dad5ac85d90c98af9598ff0746413ad6fb9b752f7fa07f75fbec2c78dfcc8731666440019e4da8cbe224ddab887cb62a5a880a0db25d83494#npm:2.14.0"],
+            ["@octokit/plugin-request-log", "virtual:c5af972e83ae728dad5ac85d90c98af9598ff0746413ad6fb9b752f7fa07f75fbec2c78dfcc8731666440019e4da8cbe224ddab887cb62a5a880a0db25d83494#npm:1.0.4"],
+            ["@octokit/plugin-rest-endpoint-methods", "virtual:c5af972e83ae728dad5ac85d90c98af9598ff0746413ad6fb9b752f7fa07f75fbec2c78dfcc8731666440019e4da8cbe224ddab887cb62a5a880a0db25d83494#npm:5.5.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@octokit/types", [
+<<<<<<< HEAD
         ["npm:5.5.0", {
           "packageLocation": "./.yarn/cache/@octokit-types-npm-5.5.0-9fc65c7f63-f17f37c2b5.zip/node_modules/@octokit/types/",
           "packageDependencies": [
@@ -5548,18 +6234,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }],
         ["npm:6.11.2", {
           "packageLocation": "./.yarn/cache/@octokit-types-npm-6.11.2-f8f0779bbb-c8aa0e5920.zip/node_modules/@octokit/types/",
+=======
+        ["npm:6.21.0", {
+          "packageLocation": "./.yarn/cache/@octokit-types-npm-6.21.0-7a471ac6ad-4802034b71.zip/node_modules/@octokit/types/",
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           "packageDependencies": [
-            ["@octokit/types", "npm:6.11.2"],
-            ["@octokit/openapi-types", "npm:5.2.2"]
+            ["@octokit/types", "npm:6.21.0"],
+            ["@octokit/openapi-types", "npm:9.1.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@polka/url", [
-        ["npm:1.0.0-next.11", {
-          "packageLocation": "./.yarn/cache/@polka-url-npm-1.0.0-next.11-a7fd32eeae-db1626fb6d.zip/node_modules/@polka/url/",
+        ["npm:1.0.0-next.15", {
+          "packageLocation": "./.yarn/cache/@polka-url-npm-1.0.0-next.15-529329dfce-10f5ebf60b.zip/node_modules/@polka/url/",
           "packageDependencies": [
-            ["@polka/url", "npm:1.0.0-next.11"]
+            ["@polka/url", "npm:1.0.0-next.15"]
           ],
           "linkType": "HARD",
         }]
@@ -5579,19 +6269,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.0.0", {
-          "packageLocation": "./.yarn/cache/@sindresorhus-is-npm-4.0.0-5aa71e5397-0e010f7982.zip/node_modules/@sindresorhus/is/",
+        ["npm:4.0.1", {
+          "packageLocation": "./.yarn/cache/@sindresorhus-is-npm-4.0.1-30716423e5-92ae3f3d76.zip/node_modules/@sindresorhus/is/",
           "packageDependencies": [
-            ["@sindresorhus/is", "npm:4.0.0"]
+            ["@sindresorhus/is", "npm:4.0.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@sinonjs/commons", [
-        ["npm:1.8.1", {
-          "packageLocation": "./.yarn/cache/@sinonjs-commons-npm-1.8.1-5b909def60-8f258c0392.zip/node_modules/@sinonjs/commons/",
+        ["npm:1.8.3", {
+          "packageLocation": "./.yarn/cache/@sinonjs-commons-npm-1.8.3-30cf78d93f-6159726db5.zip/node_modules/@sinonjs/commons/",
           "packageDependencies": [
-            ["@sinonjs/commons", "npm:1.8.1"],
+            ["@sinonjs/commons", "npm:1.8.3"],
             ["type-detect", "npm:4.0.8"]
           ],
           "linkType": "HARD",
@@ -5601,8 +6291,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:8.0.1", {
           "packageLocation": "./.yarn/cache/@sinonjs-fake-timers-npm-8.0.1-df05d407cd-97a78e6f83.zip/node_modules/@sinonjs/fake-timers/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@sinonjs/fake-timers", "npm:8.0.1"],
             ["@sinonjs/commons", "npm:1.8.1"]
+=======
+            ["@sinonjs/fake-timers", "npm:7.1.2"],
+            ["@sinonjs/commons", "npm:1.8.3"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -5616,10 +6311,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.0.5", {
-          "packageLocation": "./.yarn/cache/@szmarczak-http-timer-npm-4.0.5-03463d10ab-27b713859b.zip/node_modules/@szmarczak/http-timer/",
+        ["npm:4.0.6", {
+          "packageLocation": "./.yarn/cache/@szmarczak-http-timer-npm-4.0.6-6ace00d82d-c29df3bcec.zip/node_modules/@szmarczak/http-timer/",
           "packageDependencies": [
-            ["@szmarczak/http-timer", "npm:4.0.5"],
+            ["@szmarczak/http-timer", "npm:4.0.6"],
             ["defer-to-connect", "npm:2.0.1"]
           ],
           "linkType": "HARD",
@@ -5635,28 +6330,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@tsconfig/node10", [
-        ["npm:1.0.7", {
-          "packageLocation": "./.yarn/cache/@tsconfig-node10-npm-1.0.7-06be8de131-54c3d90a93.zip/node_modules/@tsconfig/node10/",
+        ["npm:1.0.8", {
+          "packageLocation": "./.yarn/cache/@tsconfig-node10-npm-1.0.8-90a8cce25d-b8d5fffbc6.zip/node_modules/@tsconfig/node10/",
           "packageDependencies": [
-            ["@tsconfig/node10", "npm:1.0.7"]
+            ["@tsconfig/node10", "npm:1.0.8"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@tsconfig/node12", [
-        ["npm:1.0.7", {
-          "packageLocation": "./.yarn/cache/@tsconfig-node12-npm-1.0.7-3bbdd844d7-e58704bf51.zip/node_modules/@tsconfig/node12/",
+        ["npm:1.0.9", {
+          "packageLocation": "./.yarn/cache/@tsconfig-node12-npm-1.0.9-780563856d-a01b2400ab.zip/node_modules/@tsconfig/node12/",
           "packageDependencies": [
-            ["@tsconfig/node12", "npm:1.0.7"]
+            ["@tsconfig/node12", "npm:1.0.9"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@tsconfig/node14", [
-        ["npm:1.0.0", {
-          "packageLocation": "./.yarn/cache/@tsconfig-node14-npm-1.0.0-cf320499dc-a6e564b91e.zip/node_modules/@tsconfig/node14/",
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/@tsconfig-node14-npm-1.0.1-3ecac58e68-976345e896.zip/node_modules/@tsconfig/node14/",
           "packageDependencies": [
-            ["@tsconfig/node14", "npm:1.0.0"]
+            ["@tsconfig/node14", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -5675,52 +6370,90 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-ajv-npm-1.0.0-c234c0de42-29d4fe80e1.zip/node_modules/@types/ajv/",
           "packageDependencies": [
             ["@types/ajv", "npm:1.0.0"],
-            ["ajv", "npm:8.6.0"]
+            ["ajv", "npm:8.6.2"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/babel__core", [
-        ["npm:7.1.14", {
-          "packageLocation": "./.yarn/cache/@types-babel__core-npm-7.1.14-a93ee22530-de4a1a4905.zip/node_modules/@types/babel__core/",
+        ["npm:7.1.15", {
+          "packageLocation": "./.yarn/cache/@types-babel__core-npm-7.1.15-317a2aada0-3ea0163696.zip/node_modules/@types/babel__core/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.14"],
             ["@babel/parser", "npm:7.16.0"],
             ["@babel/types", "npm:7.16.0"],
             ["@types/babel__generator", "npm:7.6.1"],
             ["@types/babel__template", "npm:7.0.2"],
             ["@types/babel__traverse", "npm:7.0.15"]
+=======
+            ["@types/babel__core", "npm:7.1.15"],
+            ["@babel/parser", "npm:7.14.8"],
+            ["@babel/types", "npm:7.14.8"],
+            ["@types/babel__generator", "npm:7.6.3"],
+            ["@types/babel__template", "npm:7.4.1"],
+            ["@types/babel__traverse", "npm:7.14.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/babel__generator", [
-        ["npm:7.6.1", {
-          "packageLocation": "./.yarn/cache/@types-babel__generator-npm-7.6.1-1afd3e1fa9-d4b1f967fd.zip/node_modules/@types/babel__generator/",
+        ["npm:7.6.3", {
+          "packageLocation": "./.yarn/cache/@types-babel__generator-npm-7.6.3-3863dacb5e-0aa1881c47.zip/node_modules/@types/babel__generator/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/babel__generator", "npm:7.6.1"],
+<<<<<<< HEAD
             ["@babel/types", "npm:7.16.0"]
+=======
+            ["@babel/types", "npm:7.15.6"]
+=======
+            ["@types/babel__generator", "npm:7.6.3"],
+            ["@babel/types", "npm:7.14.8"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/babel__template", [
-        ["npm:7.0.2", {
-          "packageLocation": "./.yarn/cache/@types-babel__template-npm-7.0.2-32d369837a-ce04f0ab70.zip/node_modules/@types/babel__template/",
+        ["npm:7.4.1", {
+          "packageLocation": "./.yarn/cache/@types-babel__template-npm-7.4.1-fe1db49e53-649fe8b42c.zip/node_modules/@types/babel__template/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/babel__template", "npm:7.0.2"],
+<<<<<<< HEAD
             ["@babel/parser", "npm:7.16.0"],
             ["@babel/types", "npm:7.16.0"]
+=======
+            ["@babel/parser", "npm:7.15.8"],
+            ["@babel/types", "npm:7.15.6"]
+=======
+            ["@types/babel__template", "npm:7.4.1"],
+            ["@babel/parser", "npm:7.14.8"],
+            ["@babel/types", "npm:7.14.8"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/babel__traverse", [
-        ["npm:7.0.15", {
-          "packageLocation": "./.yarn/cache/@types-babel__traverse-npm-7.0.15-9c15ba934c-6a45519ebf.zip/node_modules/@types/babel__traverse/",
+        ["npm:7.14.2", {
+          "packageLocation": "./.yarn/cache/@types-babel__traverse-npm-7.14.2-fd6679839e-a797ea09c7.zip/node_modules/@types/babel__traverse/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/babel__traverse", "npm:7.0.15"],
+<<<<<<< HEAD
             ["@babel/types", "npm:7.16.0"]
+=======
+            ["@babel/types", "npm:7.15.6"]
+=======
+            ["@types/babel__traverse", "npm:7.14.2"],
+            ["@babel/types", "npm:7.14.8"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -5729,41 +6462,63 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:1.19.2", {
           "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.2-f845b7b538-e17840c7d7.zip/node_modules/@types/body-parser/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/body-parser", "npm:1.19.2"],
             ["@types/connect", "npm:3.4.33"],
             ["@types/node", "npm:14.17.34"]
+=======
+            ["@types/body-parser", "npm:1.19.1"],
+<<<<<<< HEAD
+            ["@types/connect", "npm:3.4.33"],
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/connect", "npm:3.4.35"],
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/cacheable-request", [
-        ["npm:6.0.1", {
-          "packageLocation": "./.yarn/cache/@types-cacheable-request-npm-6.0.1-067bf7714d-c25b1bfa2f.zip/node_modules/@types/cacheable-request/",
+        ["npm:6.0.2", {
+          "packageLocation": "./.yarn/cache/@types-cacheable-request-npm-6.0.2-894b6992d5-667d25808d.zip/node_modules/@types/cacheable-request/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/cacheable-request", "npm:6.0.1"],
             ["@types/http-cache-semantics", "npm:4.0.0"],
             ["@types/keyv", "npm:3.1.1"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"],
+=======
+            ["@types/node", "npm:14.17.21"],
+=======
+            ["@types/cacheable-request", "npm:6.0.2"],
+            ["@types/http-cache-semantics", "npm:4.0.1"],
+            ["@types/keyv", "npm:3.1.2"],
+            ["@types/node", "npm:16.4.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/responselike", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
-      ["@types/color-name", [
-        ["npm:1.1.1", {
-          "packageLocation": "./.yarn/cache/@types-color-name-npm-1.1.1-00b0925070-b71fcad728.zip/node_modules/@types/color-name/",
-          "packageDependencies": [
-            ["@types/color-name", "npm:1.1.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["@types/connect", [
-        ["npm:3.4.33", {
-          "packageLocation": "./.yarn/cache/@types-connect-npm-3.4.33-959638d9c6-1220403e0c.zip/node_modules/@types/connect/",
+        ["npm:3.4.35", {
+          "packageLocation": "./.yarn/cache/@types-connect-npm-3.4.35-7337eee0a3-fe81351470.zip/node_modules/@types/connect/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/connect", "npm:3.4.33"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"]
+=======
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/connect", "npm:3.4.35"],
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -5786,31 +6541,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/emscripten", [
-        ["npm:1.39.4", {
-          "packageLocation": "./.yarn/cache/@types-emscripten-npm-1.39.4-4d03380faa-7a51e08b22.zip/node_modules/@types/emscripten/",
+        ["npm:1.39.5", {
+          "packageLocation": "./.yarn/cache/@types-emscripten-npm-1.39.5-ef4c55ba8e-cb92a99148.zip/node_modules/@types/emscripten/",
           "packageDependencies": [
-            ["@types/emscripten", "npm:1.39.4"]
+            ["@types/emscripten", "npm:1.39.5"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/eslint", [
-        ["npm:7.2.4", {
-          "packageLocation": "./.yarn/cache/@types-eslint-npm-7.2.4-6b24a0c08f-fe8e9e13cb.zip/node_modules/@types/eslint/",
+        ["npm:7.28.0", {
+          "packageLocation": "./.yarn/cache/@types-eslint-npm-7.28.0-4c8323745b-75ac2577d2.zip/node_modules/@types/eslint/",
           "packageDependencies": [
-            ["@types/eslint", "npm:7.2.4"],
+            ["@types/eslint", "npm:7.28.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"]
+=======
+            ["@types/json-schema", "npm:7.0.8"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/eslint-scope", [
-        ["npm:3.7.0", {
-          "packageLocation": "./.yarn/cache/@types-eslint-scope-npm-3.7.0-7c68026d97-86b54f3752.zip/node_modules/@types/eslint-scope/",
+        ["npm:3.7.1", {
+          "packageLocation": "./.yarn/cache/@types-eslint-scope-npm-3.7.1-8d60f27ad9-4271c9adad.zip/node_modules/@types/eslint-scope/",
           "packageDependencies": [
-            ["@types/eslint-scope", "npm:3.7.0"],
-            ["@types/eslint", "npm:7.2.4"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+            ["@types/eslint", "npm:7.28.0"],
             ["@types/estree", "npm:0.0.50"]
           ],
           "linkType": "HARD",
@@ -5830,22 +6589,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-express-npm-4.17.8-c21b94ed16-ca265de4f9.zip/node_modules/@types/express/",
           "packageDependencies": [
             ["@types/express", "npm:4.17.8"],
+<<<<<<< HEAD
             ["@types/body-parser", "npm:1.19.2"],
             ["@types/express-serve-static-core", "npm:4.17.12"],
             ["@types/qs", "npm:6.9.5"],
             ["@types/serve-static", "npm:1.13.5"]
+=======
+            ["@types/body-parser", "npm:1.19.1"],
+            ["@types/express-serve-static-core", "npm:4.17.24"],
+            ["@types/qs", "npm:6.9.7"],
+            ["@types/serve-static", "npm:1.13.10"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/express-serve-static-core", [
-        ["npm:4.17.12", {
-          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.12-160295195b-50812d557a.zip/node_modules/@types/express-serve-static-core/",
+        ["npm:4.17.24", {
+          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.24-cd6b9fd3ba-2f0b471126.zip/node_modules/@types/express-serve-static-core/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/express-serve-static-core", "npm:4.17.12"],
             ["@types/node", "npm:14.17.34"],
             ["@types/qs", "npm:6.9.5"],
             ["@types/range-parser", "npm:1.2.3"]
+=======
+            ["@types/express-serve-static-core", "npm:4.17.24"],
+            ["@types/node", "npm:16.4.1"],
+            ["@types/qs", "npm:6.9.7"],
+            ["@types/range-parser", "npm:1.2.4"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -5864,16 +6637,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-filesystem-npm-0.0.32-f9e6035fd6-4b9079d200.zip/node_modules/@types/filesystem/",
           "packageDependencies": [
             ["@types/filesystem", "npm:0.0.32"],
-            ["@types/filewriter", "npm:0.0.28"]
+            ["@types/filewriter", "npm:0.0.29"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/filewriter", [
-        ["npm:0.0.28", {
-          "packageLocation": "./.yarn/cache/@types-filewriter-npm-0.0.28-aaa1ace54a-e558fd6aed.zip/node_modules/@types/filewriter/",
+        ["npm:0.0.29", {
+          "packageLocation": "./.yarn/cache/@types-filewriter-npm-0.0.29-08151cd903-0c58aa875c.zip/node_modules/@types/filewriter/",
           "packageDependencies": [
-            ["@types/filewriter", "npm:0.0.28"]
+            ["@types/filewriter", "npm:0.0.29"]
           ],
           "linkType": "HARD",
         }]
@@ -5898,22 +6671,41 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/glob", [
-        ["npm:7.1.3", {
-          "packageLocation": "./.yarn/cache/@types-glob-npm-7.1.3-44516e2aab-e0eef12285.zip/node_modules/@types/glob/",
+        ["npm:7.1.4", {
+          "packageLocation": "./.yarn/cache/@types-glob-npm-7.1.4-d45247eaa2-6911a95644.zip/node_modules/@types/glob/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/glob", "npm:7.1.3"],
             ["@types/minimatch", "npm:3.0.3"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"]
+=======
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/glob", "npm:7.1.4"],
+            ["@types/minimatch", "npm:3.0.5"],
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/graceful-fs", [
-        ["npm:4.1.3", {
-          "packageLocation": "./.yarn/cache/@types-graceful-fs-npm-4.1.3-fa91c32dd0-f13a1b177e.zip/node_modules/@types/graceful-fs/",
+        ["npm:4.1.5", {
+          "packageLocation": "./.yarn/cache/@types-graceful-fs-npm-4.1.5-91d62e1050-d076bb61f4.zip/node_modules/@types/graceful-fs/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/graceful-fs", "npm:4.1.3"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"]
+=======
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/graceful-fs", "npm:4.1.5"],
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -5928,19 +6720,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/html-minifier-terser", [
+<<<<<<< HEAD
         ["npm:6.0.0", {
           "packageLocation": "./.yarn/cache/@types-html-minifier-terser-npm-6.0.0-3667095d04-8f602498d7.zip/node_modules/@types/html-minifier-terser/",
           "packageDependencies": [
             ["@types/html-minifier-terser", "npm:6.0.0"]
+=======
+        ["npm:5.1.2", {
+          "packageLocation": "./.yarn/cache/@types-html-minifier-terser-npm-5.1.2-6321512467-4bca779c44.zip/node_modules/@types/html-minifier-terser/",
+          "packageDependencies": [
+            ["@types/html-minifier-terser", "npm:5.1.2"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/http-cache-semantics", [
-        ["npm:4.0.0", {
-          "packageLocation": "./.yarn/cache/@types-http-cache-semantics-npm-4.0.0-000c9dc8e0-c820774eb1.zip/node_modules/@types/http-cache-semantics/",
+        ["npm:4.0.1", {
+          "packageLocation": "./.yarn/cache/@types-http-cache-semantics-npm-4.0.1-90863c7a3e-1048aacf62.zip/node_modules/@types/http-cache-semantics/",
           "packageDependencies": [
-            ["@types/http-cache-semantics", "npm:4.0.0"]
+            ["@types/http-cache-semantics", "npm:4.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -5965,10 +6764,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/istanbul-reports", [
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/@types-istanbul-reports-npm-3.0.0-e6fb7a309c-286a18cff1.zip/node_modules/@types/istanbul-reports/",
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/@types-istanbul-reports-npm-3.0.1-770e825002-f1ad54bc68.zip/node_modules/@types/istanbul-reports/",
           "packageDependencies": [
-            ["@types/istanbul-reports", "npm:3.0.0"],
+            ["@types/istanbul-reports", "npm:3.0.1"],
             ["@types/istanbul-lib-report", "npm:3.0.0"]
           ],
           "linkType": "HARD",
@@ -5986,6 +6785,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/json-schema", [
+<<<<<<< HEAD
         ["npm:7.0.9", {
           "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.9-361918cff3-259d0e25f1.zip/node_modules/@types/json-schema/",
           "packageDependencies": [
@@ -5999,6 +6799,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-e60b153664.zip/node_modules/@types/json5/",
           "packageDependencies": [
             ["@types/json5", "npm:0.0.29"]
+=======
+        ["npm:7.0.8", {
+          "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.8-39e64e8908-f1d0fe76ab.zip/node_modules/@types/json-schema/",
+          "packageDependencies": [
+            ["@types/json-schema", "npm:7.0.8"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -6007,8 +6813,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:8.5.6", {
           "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-8.5.6-a2debacc40-c1c0e40cb1.zip/node_modules/@types/jsonwebtoken/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/jsonwebtoken", "npm:8.5.6"],
             ["@types/node", "npm:14.17.34"]
+=======
+<<<<<<< HEAD
+            ["@types/jsonwebtoken", "npm:8.5.5"],
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/jsonwebtoken", "npm:8.5.4"],
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -6018,17 +6834,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-keccak-npm-3.0.1-5763a04e62-55551902b3.zip/node_modules/@types/keccak/",
           "packageDependencies": [
             ["@types/keccak", "npm:3.0.1"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"]
+=======
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/keyv", [
-        ["npm:3.1.1", {
-          "packageLocation": "./.yarn/cache/@types-keyv-npm-3.1.1-779a80f2c7-ee0d098693.zip/node_modules/@types/keyv/",
+        ["npm:3.1.2", {
+          "packageLocation": "./.yarn/cache/@types-keyv-npm-3.1.2-f562027480-769e462ae9.zip/node_modules/@types/keyv/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/keyv", "npm:3.1.1"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"]
+=======
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/keyv", "npm:3.1.2"],
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -6043,28 +6876,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/mime", [
-        ["npm:2.0.3", {
-          "packageLocation": "./.yarn/cache/@types-mime-npm-2.0.3-809d6f0e0f-1f4f144423.zip/node_modules/@types/mime/",
+        ["npm:1.3.2", {
+          "packageLocation": "./.yarn/cache/@types-mime-npm-1.3.2-ea71878ab3-0493368244.zip/node_modules/@types/mime/",
           "packageDependencies": [
-            ["@types/mime", "npm:2.0.3"]
+            ["@types/mime", "npm:1.3.2"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/minimatch", [
-        ["npm:3.0.3", {
-          "packageLocation": "./.yarn/cache/@types-minimatch-npm-3.0.3-c8b0625f84-b80259d55b.zip/node_modules/@types/minimatch/",
+        ["npm:3.0.5", {
+          "packageLocation": "./.yarn/cache/@types-minimatch-npm-3.0.5-802bb0797f-c41d136f67.zip/node_modules/@types/minimatch/",
           "packageDependencies": [
-            ["@types/minimatch", "npm:3.0.3"]
+            ["@types/minimatch", "npm:3.0.5"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/minimist", [
-        ["npm:1.2.0", {
-          "packageLocation": "./.yarn/cache/@types-minimist-npm-1.2.0-cce0ca92ef-30cbd9acd7.zip/node_modules/@types/minimist/",
+        ["npm:1.2.2", {
+          "packageLocation": "./.yarn/cache/@types-minimist-npm-1.2.2-a445de65da-b8da83c66e.zip/node_modules/@types/minimist/",
           "packageDependencies": [
-            ["@types/minimist", "npm:1.2.0"]
+            ["@types/minimist", "npm:1.2.2"]
           ],
           "linkType": "HARD",
         }]
@@ -6079,17 +6912,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/node", [
-        ["npm:10.17.35", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-10.17.35-8def0a39fa-1ed9b22991.zip/node_modules/@types/node/",
+        ["npm:10.17.60", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-10.17.60-63ac1f669f-2cdb3a77d0.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:10.17.35"]
+            ["@types/node", "npm:10.17.60"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:13.13.47", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-13.13.47-7e4cbd9a7e-ab027e2cc9.zip/node_modules/@types/node/",
+        ["npm:13.13.52", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-13.13.52-95159539bb-8f1afff497.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:13.13.47"]
+            ["@types/node", "npm:13.13.52"]
           ],
           "linkType": "HARD",
         }],
@@ -6097,6 +6930,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.17.34-1d7f20f643-803a7532b6.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:14.17.34"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:16.4.1", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.4.1-50f3184b8b-6cff78c802.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:16.4.1"]
           ],
           "linkType": "HARD",
         }]
@@ -6113,10 +6953,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/normalize-package-data", [
-        ["npm:2.4.0", {
-          "packageLocation": "./.yarn/cache/@types-normalize-package-data-npm-2.4.0-ed928aaaa8-fd22ba86a1.zip/node_modules/@types/normalize-package-data/",
+        ["npm:2.4.1", {
+          "packageLocation": "./.yarn/cache/@types-normalize-package-data-npm-2.4.1-c31c56ae6a-e87bccbf11.zip/node_modules/@types/normalize-package-data/",
           "packageDependencies": [
-            ["@types/normalize-package-data", "npm:2.4.0"]
+            ["@types/normalize-package-data", "npm:2.4.1"]
           ],
           "linkType": "HARD",
         }]
@@ -6131,37 +6971,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/prettier", [
-        ["npm:2.3.0", {
-          "packageLocation": "./.yarn/cache/@types-prettier-npm-2.3.0-b1be4bd841-8dd9b5263f.zip/node_modules/@types/prettier/",
+        ["npm:2.3.2", {
+          "packageLocation": "./.yarn/cache/@types-prettier-npm-2.3.2-377cc404e1-c4313e1665.zip/node_modules/@types/prettier/",
           "packageDependencies": [
-            ["@types/prettier", "npm:2.3.0"]
+            ["@types/prettier", "npm:2.3.2"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/prop-types", [
-        ["npm:15.7.3", {
-          "packageLocation": "./.yarn/cache/@types-prop-types-npm-15.7.3-084e0015c6-41831d53c4.zip/node_modules/@types/prop-types/",
+        ["npm:15.7.4", {
+          "packageLocation": "./.yarn/cache/@types-prop-types-npm-15.7.4-592896a9fe-ef6e1899e5.zip/node_modules/@types/prop-types/",
           "packageDependencies": [
-            ["@types/prop-types", "npm:15.7.3"]
+            ["@types/prop-types", "npm:15.7.4"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/qs", [
-        ["npm:6.9.5", {
-          "packageLocation": "./.yarn/cache/@types-qs-npm-6.9.5-98e83ee762-eeb4597a9c.zip/node_modules/@types/qs/",
+        ["npm:6.9.7", {
+          "packageLocation": "./.yarn/cache/@types-qs-npm-6.9.7-4a3e6ca0d0-7fd6f9c250.zip/node_modules/@types/qs/",
           "packageDependencies": [
-            ["@types/qs", "npm:6.9.5"]
+            ["@types/qs", "npm:6.9.7"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/range-parser", [
-        ["npm:1.2.3", {
-          "packageLocation": "./.yarn/cache/@types-range-parser-npm-1.2.3-c06253b351-a0a4218214.zip/node_modules/@types/range-parser/",
+        ["npm:1.2.4", {
+          "packageLocation": "./.yarn/cache/@types-range-parser-npm-1.2.4-23d797fbde-b7c0dfd508.zip/node_modules/@types/range-parser/",
           "packageDependencies": [
-            ["@types/range-parser", "npm:1.2.3"]
+            ["@types/range-parser", "npm:1.2.4"]
           ],
           "linkType": "HARD",
         }]
@@ -6170,10 +7010,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:17.0.37", {
           "packageLocation": "./.yarn/cache/@types-react-npm-17.0.37-76d6f581ea-e68b0d59aa.zip/node_modules/@types/react/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
+=======
+<<<<<<< HEAD
+            ["@types/react", "npm:17.0.19"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/prop-types", "npm:15.7.3"],
             ["@types/scheduler", "npm:0.16.1"],
             ["csstype", "npm:3.0.3"]
+=======
+            ["@types/react", "npm:17.0.14"],
+            ["@types/prop-types", "npm:15.7.4"],
+            ["@types/scheduler", "npm:0.16.2"],
+            ["csstype", "npm:3.0.8"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -6199,11 +7050,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react-transition-group", [
-        ["npm:4.4.0", {
-          "packageLocation": "./.yarn/cache/@types-react-transition-group-npm-4.4.0-dc81edfd45-ba44361d7b.zip/node_modules/@types/react-transition-group/",
+        ["npm:4.4.2", {
+          "packageLocation": "./.yarn/cache/@types-react-transition-group-npm-4.4.2-489435214b-35523ef25a.zip/node_modules/@types/react-transition-group/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@types/react-transition-group", "npm:4.4.0"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"]
+=======
+            ["@types/react", "npm:17.0.19"]
+=======
+            ["@types/react-transition-group", "npm:4.4.2"],
+            ["@types/react", "npm:17.0.14"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -6213,36 +7073,44 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-responselike-npm-1.0.0-85dd08af42-e99fc7cc62.zip/node_modules/@types/responselike/",
           "packageDependencies": [
             ["@types/responselike", "npm:1.0.0"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"]
+=======
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/scheduler", [
-        ["npm:0.16.1", {
-          "packageLocation": "./.yarn/cache/@types-scheduler-npm-0.16.1-9a58541608-2ff8034df0.zip/node_modules/@types/scheduler/",
+        ["npm:0.16.2", {
+          "packageLocation": "./.yarn/cache/@types-scheduler-npm-0.16.2-ba3a7d8c68-b6b4dcfeae.zip/node_modules/@types/scheduler/",
           "packageDependencies": [
-            ["@types/scheduler", "npm:0.16.1"]
+            ["@types/scheduler", "npm:0.16.2"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/semver", [
-        ["npm:7.3.4", {
-          "packageLocation": "./.yarn/cache/@types-semver-npm-7.3.4-96fde085ea-577dc7f607.zip/node_modules/@types/semver/",
+        ["npm:7.3.7", {
+          "packageLocation": "./.yarn/cache/@types-semver-npm-7.3.7-fcdcc23189-2e4f968f8c.zip/node_modules/@types/semver/",
           "packageDependencies": [
-            ["@types/semver", "npm:7.3.4"]
+            ["@types/semver", "npm:7.3.7"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/serve-static", [
-        ["npm:1.13.5", {
-          "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.13.5-9e6c8c7261-82d93129d0.zip/node_modules/@types/serve-static/",
+        ["npm:1.13.10", {
+          "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.13.10-5434e2c519-eaca858739.zip/node_modules/@types/serve-static/",
           "packageDependencies": [
-            ["@types/serve-static", "npm:1.13.5"],
-            ["@types/express-serve-static-core", "npm:4.17.12"],
-            ["@types/mime", "npm:2.0.3"]
+            ["@types/serve-static", "npm:1.13.10"],
+            ["@types/mime", "npm:1.3.2"],
+            ["@types/node", "npm:16.4.1"]
           ],
           "linkType": "HARD",
         }]
@@ -6257,10 +7125,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/stack-utils", [
-        ["npm:2.0.0", {
-          "packageLocation": "./.yarn/cache/@types-stack-utils-npm-2.0.0-8ded8461bc-b3fbae25b0.zip/node_modules/@types/stack-utils/",
+        ["npm:2.0.1", {
+          "packageLocation": "./.yarn/cache/@types-stack-utils-npm-2.0.1-867718ab70-205fdbe332.zip/node_modules/@types/stack-utils/",
           "packageDependencies": [
-            ["@types/stack-utils", "npm:2.0.0"]
+            ["@types/stack-utils", "npm:2.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -6315,36 +7183,80 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-ws-npm-6.0.4-4b7cc6a57b-b2656a76bf.zip/node_modules/@types/ws/",
           "packageDependencies": [
             ["@types/ws", "npm:6.0.4"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"]
+=======
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/yargs", [
+<<<<<<< HEAD
         ["npm:16.0.3", {
           "packageLocation": "./.yarn/cache/@types-yargs-npm-16.0.3-b6f52df1c2-0968b06d2f.zip/node_modules/@types/yargs/",
+=======
+        ["npm:15.0.14", {
+          "packageLocation": "./.yarn/cache/@types-yargs-npm-15.0.14-07ba249dbb-8e358aeb8f.zip/node_modules/@types/yargs/",
           "packageDependencies": [
-            ["@types/yargs", "npm:16.0.3"],
-            ["@types/yargs-parser", "npm:15.0.0"]
+            ["@types/yargs", "npm:15.0.14"],
+            ["@types/yargs-parser", "npm:20.2.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:16.0.4", {
+          "packageLocation": "./.yarn/cache/@types-yargs-npm-16.0.4-7aaef7d6c8-caa21d2c95.zip/node_modules/@types/yargs/",
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+          "packageDependencies": [
+            ["@types/yargs", "npm:16.0.4"],
+            ["@types/yargs-parser", "npm:20.2.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/yargs-parser", [
-        ["npm:15.0.0", {
-          "packageLocation": "./.yarn/cache/@types-yargs-parser-npm-15.0.0-db1d59832c-333ab73a1f.zip/node_modules/@types/yargs-parser/",
+        ["npm:20.2.1", {
+          "packageLocation": "./.yarn/cache/@types-yargs-parser-npm-20.2.1-2eed5b5c1c-1d039e6449.zip/node_modules/@types/yargs-parser/",
           "packageDependencies": [
-            ["@types/yargs-parser", "npm:15.0.0"]
+            ["@types/yargs-parser", "npm:20.2.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/yauzl", [
+<<<<<<< HEAD
+=======
+        ["npm:2.9.1", {
+          "packageLocation": "./.yarn/cache/@types-yauzl-npm-2.9.1-fc63c94ba6-9035415c65.zip/node_modules/@types/yauzl/",
+          "packageDependencies": [
+            ["@types/yauzl", "npm:2.9.1"],
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+          ],
+          "linkType": "HARD",
+        }],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
         ["npm:2.9.2", {
           "packageLocation": "./.yarn/cache/@types-yauzl-npm-2.9.2-30ac4b7918-dfb49abe82.zip/node_modules/@types/yauzl/",
           "packageDependencies": [
             ["@types/yauzl", "npm:2.9.2"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"]
+=======
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -6364,6 +7276,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/eslint", null],
             ["@types/typescript", null],
             ["@types/typescript-eslint__parser", null],
+<<<<<<< HEAD
             ["@typescript-eslint/experimental-utils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/scope-manager", "npm:5.4.0"],
@@ -6372,6 +7285,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["functional-red-black-tree", "npm:1.0.1"],
             ["ignore", "npm:5.1.8"],
             ["regexpp", "npm:3.2.0"],
+=======
+<<<<<<< HEAD
+            ["@typescript-eslint/experimental-utils", "virtual:74d95f8b99c12bca5d7ab45379a96fe775264e4782f6d2e0da0093d4a57e0d84e05d27f5461fb2f1ba3e8631ed579522eacea9d94b46fbfa3c80c724d720bce0#npm:5.0.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
+            ["@typescript-eslint/scope-manager", "npm:5.0.0"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+            ["eslint", "npm:7.32.0"],
+            ["functional-red-black-tree", "npm:1.0.1"],
+            ["ignore", "npm:5.1.8"],
+            ["regexpp", "npm:3.1.0"],
+=======
+            ["@typescript-eslint/experimental-utils", "virtual:e4ed5a421fbf2b4ff4f0f45679a88687086187c65865af596d91662da9cad0bffcd782152a635154997b1f3c2e9480fe6c5614acf3bad7a089a943d8ae024842#npm:4.28.4"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.28.4"],
+            ["@typescript-eslint/scope-manager", "npm:4.28.4"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["eslint", "npm:7.31.0"],
+            ["functional-red-black-tree", "npm:1.0.1"],
+            ["regexpp", "npm:3.2.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["semver", "npm:7.3.5"],
             ["tsutils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:3.21.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
@@ -6400,11 +7333,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@typescript-eslint/experimental-utils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:5.4.0"],
             ["@types/eslint", null],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@typescript-eslint/scope-manager", "npm:5.4.0"],
             ["@typescript-eslint/types", "npm:5.4.0"],
             ["@typescript-eslint/typescript-estree", "virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:5.4.0"],
             ["eslint", "npm:7.32.0"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@typescript-eslint/scope-manager", "npm:4.28.4"],
+            ["@typescript-eslint/types", "npm:4.28.4"],
+            ["@typescript-eslint/typescript-estree", "virtual:ed32b1d5cd85433c3f638d3b0a1660f25f851787230aab01aafaf097e9f10e4deab1aac370d2bcf419a6b58520976ccaa3f6f18b385c45d0f70da84a3d55b77e#npm:4.28.4"],
+            ["eslint", "npm:7.31.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["eslint-utils", "virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:3.0.0"]
           ],
@@ -6428,6 +7369,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@types/eslint", null],
+<<<<<<< HEAD
             ["@types/typescript", null],
             ["@typescript-eslint/scope-manager", "npm:5.4.0"],
             ["@typescript-eslint/types", "npm:5.4.0"],
@@ -6435,6 +7377,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
             ["eslint", "npm:7.32.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
+=======
+<<<<<<< HEAD
+            ["@typescript-eslint/scope-manager", "npm:5.0.0"],
+            ["@typescript-eslint/types", "npm:5.0.0"],
+            ["@typescript-eslint/typescript-estree", "virtual:a02e39e66eb9582e2fce010c9530cd4f6cfd41ed88984de8b3bd585a2d38e6d21203c37373c41dce8d182607a22b9d68a0876447fe3175cc092f9a28823ede57#npm:5.0.0"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+            ["eslint", "npm:7.32.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"]
+=======
+            ["@typescript-eslint/scope-manager", "npm:4.28.4"],
+            ["@typescript-eslint/types", "npm:4.28.4"],
+            ["@typescript-eslint/typescript-estree", "virtual:895bbe422a6e4a87a6e69e6d1e7183fee7621b2f5152a4fce630b2a3022e9e1d6383e976a88530841c67d66275133adb77c9896e23a718d9039e9d62fc2d6cb7#npm:4.28.4"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["eslint", "npm:7.31.0"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/eslint",
@@ -6476,6 +7435,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:5.4.0", {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-f4b6afdfe6/0/cache/@typescript-eslint-typescript-estree-npm-5.4.0-2418777f04-2f818c629c.zip/node_modules/@typescript-eslint/typescript-estree/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@typescript-eslint/typescript-estree", "virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:5.4.0"],
             ["@types/typescript", null],
             ["@typescript-eslint/types", "npm:5.4.0"],
@@ -6483,6 +7443,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
             ["globby", "npm:11.0.4"],
             ["is-glob", "npm:4.0.3"],
+=======
+<<<<<<< HEAD
+            ["@typescript-eslint/typescript-estree", "virtual:0cb572adee674e7a3edf7d3f4f660556ad8b02f53966a492d3ad461152808f405e964f8e4c3ad012f8cf8ad811c0f17501aa6a7a896574f9ad17678d6b1ca618#npm:5.0.0"],
+            ["@typescript-eslint/types", "npm:5.0.0"],
+            ["@typescript-eslint/visitor-keys", "npm:5.0.0"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+            ["globby", "npm:11.0.3"],
+=======
+            ["@typescript-eslint/typescript-estree", "virtual:895bbe422a6e4a87a6e69e6d1e7183fee7621b2f5152a4fce630b2a3022e9e1d6383e976a88530841c67d66275133adb77c9896e23a718d9039e9d62fc2d6cb7#npm:4.28.4"],
+            ["@typescript-eslint/types", "npm:4.28.4"],
+            ["@typescript-eslint/visitor-keys", "npm:4.28.4"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["globby", "npm:11.0.4"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["is-glob", "npm:4.0.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["semver", "npm:7.3.5"],
             ["tsutils", "virtual:f4b6afdfe656ae6f8259fce98a7cb78f36ca447428422cf054e1f6003253b5d86bdc1a08d9d345a23cd23fd0311779ecb68e35a5904bcdcab4d909290dc95944#npm:3.21.0"],
             ["typescript", null]
@@ -6496,6 +7472,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:ac21ca5eb0053f0850b4beddf4f7de4cab45d5e441450a17d1840dc05fbad3d4227273bcc775a52c3fda862ef02b40e1bf469445840ed364668b2cb357d536b2#npm:5.4.0", {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-2b37e52da2/0/cache/@typescript-eslint-typescript-estree-npm-5.4.0-2418777f04-2f818c629c.zip/node_modules/@typescript-eslint/typescript-estree/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@typescript-eslint/typescript-estree", "virtual:ac21ca5eb0053f0850b4beddf4f7de4cab45d5e441450a17d1840dc05fbad3d4227273bcc775a52c3fda862ef02b40e1bf469445840ed364668b2cb357d536b2#npm:5.4.0"],
             ["@types/typescript", null],
             ["@typescript-eslint/types", "npm:5.4.0"],
@@ -6503,6 +7480,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
             ["globby", "npm:11.0.4"],
             ["is-glob", "npm:4.0.3"],
+=======
+<<<<<<< HEAD
+            ["@typescript-eslint/typescript-estree", "virtual:a02e39e66eb9582e2fce010c9530cd4f6cfd41ed88984de8b3bd585a2d38e6d21203c37373c41dce8d182607a22b9d68a0876447fe3175cc092f9a28823ede57#npm:5.0.0"],
+            ["@typescript-eslint/types", "npm:5.0.0"],
+            ["@typescript-eslint/visitor-keys", "npm:5.0.0"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+            ["globby", "npm:11.0.3"],
+=======
+            ["@typescript-eslint/typescript-estree", "virtual:ed32b1d5cd85433c3f638d3b0a1660f25f851787230aab01aafaf097e9f10e4deab1aac370d2bcf419a6b58520976ccaa3f6f18b385c45d0f70da84a3d55b77e#npm:4.28.4"],
+            ["@typescript-eslint/types", "npm:4.28.4"],
+            ["@typescript-eslint/visitor-keys", "npm:4.28.4"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["globby", "npm:11.0.4"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["is-glob", "npm:4.0.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["semver", "npm:7.3.5"],
             ["tsutils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:3.21.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
@@ -7039,8 +8032,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
+<<<<<<< HEAD
             ["ajv", "npm:8.6.0"],
             ["copy-webpack-plugin", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:9.1.0"],
+=======
+            ["ajv", "npm:8.6.2"],
+            ["copy-webpack-plugin", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:9.0.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
@@ -7585,8 +8583,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:08968bd349f03f7395fbfd20260f6cb7e1ac0f090373c7daf6a2cc18d4989f4611c12e6925ccf56d94567d4ada37d3c5cac0c2408148e283388c7b8de0f81bd0#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7599,8 +8606,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:0ad164306119c2de4d522f7cb8b1b879c5bc469891f9d0d56266943d5562791fd8e6481539dda14b5301256f329454db684f0fb2603055608ae60c8f1690291a#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7613,8 +8629,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:0c697ada3e54830c5b9e9e886f8481ac1a1b0daaf033f9152a40f38f2a1741dbe23f3db6c431d6aa1a9932f9dd60a4c0bf64f59330840d9fd642baee17084364#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7627,8 +8652,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:19c4143a5cdd524e85edf95c13a7e77d90e49f7cef3145201ce5a1a05ff63f19fa4f7695b4995c196cb82db8120539fc13e7de6ab12950641f7fd149a31a9f79#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7641,8 +8675,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:1c32a0765b9ac2e1852301903665dbfaa4dab622cd5c0a5aa32db1bd4d025a80b8f9a4445e39d0bfd07d8a38a48bd564b21b9e4afa328373c34534593e6128ed#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7655,8 +8698,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:2481e2197b0e11cc37dd319732d7f76e9ce8800e2a56fb0593a23e3835408384623b6d265796d3c9134ad886fa451ed9a7f1a11d56951f31709b14ca5693ea2e#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7669,8 +8721,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:33ddbba0626582da11ceec471c54337971a2a48eab64b10f7476df0b6f3d9d6403a206f0be6992aa6393b126f632bcf2bd9117d8269aa4dad2988ea853320052#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7683,8 +8744,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:3a277ce78b88e39c64a75569c6528db754af9a28a655881d13106ea1eb7f24e39dc9153ab253b4a1ee11239bf690811a526911451b434766a2818b4507d89a6f#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7697,8 +8767,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:3f32e0c8ded0fb59da0b407f32439e5e0a1e61135bcc6c94178cd441b6df76492605f09f48d9f1bb1412e1516160c10afcb70aad75e497742afc712f29e469fd#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7711,8 +8790,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:459545f386d2f04abfbe45343982ec8fbd539dc2533943df2c88486044d11956632b57e97f5f57d1fbff568e877da60c871ff9ee558e95bb4ef22c99a8ff1ef3#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7725,8 +8813,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:48b99590381b694505b40165da445b0cdb2fcd9bdf114829c7187907d5ed48900b67ff37123773379ee70eb7b0fe6d604d34f26317e28fff8bef5a61e641e92f#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7739,8 +8836,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:60d638e7fe0de38bded787c3a9f42701ad0d5e5b242433afcb514b4e61a2cbaf1f98019d9e2551f06f663199fdd0e370d2a804893edf11d4b08dac6eb6060c85#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7753,8 +8859,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:660ecdf0c3516705dcae07f7ccb7fcb1c319ccb70413b872ec972a5ed41b6617f905035aed61a074d7f6eb3155c5d28ca7723b1b021eddcd92a9feef287273e5#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7767,8 +8882,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:6828d9149db6542b6b07c7d2cf360c8bb7e6068caff8ba9f12e9ac5b4b7c2ce52e54745fa8f666d9c6b1888acd67832a06bdef2f0c14f475515f752d1cb4e22a#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7781,8 +8905,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:6e378f619077fa7962c988b7af9c99a32de1999d5afd75919c5b12dc00db2b77d45c04ff2c61269b7c4ce2f42797dc227aeab6d120cad5fc5bf4ba597f921629#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7795,8 +8928,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:85310a47271775ea6141f62d26902696129af5961fbd0df53ecbb1e8d70a6ee98d615b97f8d52f728ec4f761b536fb5ceaaa48c9bc00da623666c9271081727a#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7809,8 +8951,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:8de940084c5d1c7a278356a35076d4fd49ab6615274d1fd6fb68f52689a249eb6d37172b902184756b5ce3aaf4957e3864675cfc65a5b0bf6e6bc859c75d8527#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7823,8 +8974,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:926a29145483fbc5710638bee0b188a52cb0bea5791a957724f90960bfdd7d31c2be499415f82472d2fffb705353ff04d4b30f40b7a3d0b92b0a10a37e80ac77#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7837,8 +8997,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:96ce65e5a823a2687d48f9b22db707edab5c4c9657582cdb7061cc024605d44c5b5b00f649e060214d6ff9ea66cd899a407e6022071207f7ad0fc46a8b2cb621#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7851,8 +9020,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:98241eaba08c94fb42d08f02a865e50ad26434bf72d645279dbe7bddf769174a6151bb4e887d883b3c2e6113ced5666865714b6f9701781a60a7cd2c78c322a3#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7865,8 +9043,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:db3adb9c4abb520060abd032114acb03a1bca7e834cda2f601b4ecb0c68e43c3481bc82b3137ad2a1db63840c9e0be1b0fb95d982d6469799206f98ea572e3c9#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -7879,8 +9066,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/info", "virtual:f402b79693c355263206f9f76285eeb9d61fcb492038c962876810a0203971fbe10e97764e404ad4b0e53d002f487c7ec810538b0c41831e31b754f0285a475e#npm:1.4.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"]
+=======
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.0"]
+=======
+            ["envinfo", "npm:7.8.1"],
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.7.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -8315,7 +9511,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@yarnpkg/core", "npm:3.1.0"],
             ["@arcanis/slice-ansi", "npm:1.0.2"],
-            ["@types/semver", "npm:7.3.4"],
+            ["@types/semver", "npm:7.3.7"],
             ["@types/treeify", "npm:1.0.0"],
             ["@yarnpkg/fslib", "npm:2.6.0"],
             ["@yarnpkg/json-proxy", "npm:2.1.1"],
@@ -8377,8 +9573,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:2.2.2", {
           "packageLocation": "./.yarn/cache/@yarnpkg-libzip-npm-2.2.2-3fa1ab5536-7c09b13fde.zip/node_modules/@yarnpkg/libzip/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@yarnpkg/libzip", "npm:2.2.2"],
             ["@types/emscripten", "npm:1.39.4"],
+=======
+            ["@yarnpkg/libzip", "npm:2.2.1"],
+            ["@types/emscripten", "npm:1.39.5"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["tslib", "npm:1.14.1"]
           ],
           "linkType": "HARD",
@@ -8410,10 +9611,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:3.1.0", {
           "packageLocation": "./.yarn/cache/@yarnpkg-pnp-npm-3.1.0-4abdff0b6f-8f0099db01.zip/node_modules/@yarnpkg/pnp/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@yarnpkg/pnp", "npm:3.1.0"],
             ["@types/node", "npm:13.13.47"],
             ["@yarnpkg/fslib", "npm:2.6.0"],
             ["resolve.exports", "npm:1.1.0"],
+=======
+<<<<<<< HEAD
+            ["@yarnpkg/pnp", "npm:3.0.1"],
+            ["@types/node", "npm:13.13.47"],
+            ["@yarnpkg/fslib", "npm:2.5.1"],
+            ["resolve.exports", "npm:1.0.2"],
+=======
+            ["@yarnpkg/pnp", "npm:2.3.2"],
+            ["@types/node", "npm:13.13.52"],
+            ["@yarnpkg/fslib", "npm:2.4.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["tslib", "npm:1.14.1"]
           ],
           "linkType": "HARD",
@@ -8504,7 +9718,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/accepts-npm-1.3.7-0dc9de65aa-27fc8060ff.zip/node_modules/accepts/",
           "packageDependencies": [
             ["accepts", "npm:1.3.7"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["negotiator", "npm:0.6.2"]
           ],
           "linkType": "HARD",
@@ -8836,10 +10050,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:0.5.4", {
-          "packageLocation": "./.yarn/cache/adm-zip-npm-0.5.4-91521f413d-5ec2141b44.zip/node_modules/adm-zip/",
+        ["npm:0.5.5", {
+          "packageLocation": "./.yarn/cache/adm-zip-npm-0.5.5-7de05f6e90-b4edd91e10.zip/node_modules/adm-zip/",
           "packageDependencies": [
-            ["adm-zip", "npm:0.5.4"]
+            ["adm-zip", "npm:0.5.5"]
           ],
           "linkType": "HARD",
         }]
@@ -8856,8 +10070,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:6.0.2", {
           "packageLocation": "./.yarn/cache/agent-base-npm-6.0.2-428f325a93-f52b6872cc.zip/node_modules/agent-base/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["agent-base", "npm:6.0.2"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"]
+=======
+<<<<<<< HEAD
+            ["agent-base", "npm:6.0.1"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"]
+=======
+            ["agent-base", "npm:6.0.2"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -8866,8 +10090,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:4.1.4", {
           "packageLocation": "./.yarn/cache/agentkeepalive-npm-4.1.4-4d5b41b4c1-d49c24d4b3.zip/node_modules/agentkeepalive/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["agentkeepalive", "npm:4.1.4"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["agentkeepalive", "npm:4.1.3"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["agentkeepalive", "npm:4.1.4"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["depd", "npm:1.1.2"],
             ["humanize-ms", "npm:1.2.1"]
           ],
@@ -8913,7 +10147,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-deep-equal", "npm:2.0.1"],
             ["fast-json-stable-stringify", "npm:2.1.0"],
             ["json-schema-traverse", "npm:0.4.1"],
-            ["uri-js", "npm:4.4.0"]
+            ["uri-js", "npm:4.4.1"]
           ],
           "linkType": "HARD",
         }],
@@ -8924,18 +10158,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-deep-equal", "npm:3.1.3"],
             ["fast-json-stable-stringify", "npm:2.1.0"],
             ["json-schema-traverse", "npm:0.4.1"],
-            ["uri-js", "npm:4.4.0"]
+            ["uri-js", "npm:4.4.1"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.6.0", {
-          "packageLocation": "./.yarn/cache/ajv-npm-8.6.0-74c534c16b-4cc0ca6c60.zip/node_modules/ajv/",
+        ["npm:8.6.2", {
+          "packageLocation": "./.yarn/cache/ajv-npm-8.6.2-712407c2bc-b86d6cb86c.zip/node_modules/ajv/",
           "packageDependencies": [
-            ["ajv", "npm:8.6.0"],
+            ["ajv", "npm:8.6.2"],
             ["fast-deep-equal", "npm:3.1.3"],
             ["json-schema-traverse", "npm:1.0.0"],
             ["require-from-string", "npm:2.0.2"],
-            ["uri-js", "npm:4.4.0"]
+            ["uri-js", "npm:4.4.1"]
           ],
           "linkType": "HARD",
         }]
@@ -9084,11 +10318,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.3.1", {
-          "packageLocation": "./.yarn/cache/ansi-escapes-npm-4.3.1-f4aad61b5b-c4962c1791.zip/node_modules/ansi-escapes/",
+        ["npm:4.3.2", {
+          "packageLocation": "./.yarn/cache/ansi-escapes-npm-4.3.2-3ad173702f-93111c4218.zip/node_modules/ansi-escapes/",
           "packageDependencies": [
-            ["ansi-escapes", "npm:4.3.1"],
-            ["type-fest", "npm:0.11.0"]
+            ["ansi-escapes", "npm:4.3.2"],
+            ["type-fest", "npm:0.21.3"]
           ],
           "linkType": "HARD",
         }]
@@ -9162,11 +10396,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.2.1", {
-          "packageLocation": "./.yarn/cache/ansi-styles-npm-4.2.1-de50ec308d-7c74dbc7ec.zip/node_modules/ansi-styles/",
+        ["npm:4.3.0", {
+          "packageLocation": "./.yarn/cache/ansi-styles-npm-4.3.0-245c7d42c7-513b44c3b2.zip/node_modules/ansi-styles/",
           "packageDependencies": [
-            ["ansi-styles", "npm:4.2.1"],
-            ["@types/color-name", "npm:1.1.1"],
+            ["ansi-styles", "npm:4.3.0"],
             ["color-convert", "npm:2.0.1"]
           ],
           "linkType": "HARD",
@@ -9205,12 +10438,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.1.1", {
-          "packageLocation": "./.yarn/cache/anymatch-npm-3.1.1-7dcfa6178a-c951385862.zip/node_modules/anymatch/",
+        ["npm:3.1.2", {
+          "packageLocation": "./.yarn/cache/anymatch-npm-3.1.2-1d5471acfa-985163db22.zip/node_modules/anymatch/",
           "packageDependencies": [
-            ["anymatch", "npm:3.1.1"],
+            ["anymatch", "npm:3.1.2"],
             ["normalize-path", "npm:3.0.0"],
-            ["picomatch", "npm:2.2.3"]
+            ["picomatch", "npm:2.3.0"]
           ],
           "linkType": "HARD",
         }]
@@ -9305,8 +10538,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/aria-query-npm-4.2.2-e0c4f1a309-38401a9a40.zip/node_modules/aria-query/",
           "packageDependencies": [
             ["aria-query", "npm:4.2.2"],
+<<<<<<< HEAD
             ["@babel/runtime", "npm:7.16.3"],
             ["@babel/runtime-corejs3", "npm:7.14.7"]
+=======
+            ["@babel/runtime", "npm:7.14.8"],
+            ["@babel/runtime-corejs3", "npm:7.14.8"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -9352,13 +10590,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/array-filter-npm-0.0.1-37dfbb574c-0e9afdf5e2.zip/node_modules/array-filter/",
           "packageDependencies": [
             ["array-filter", "npm:0.0.1"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:1.0.0", {
-          "packageLocation": "./.yarn/cache/array-filter-npm-1.0.0-2d57caf5c8-467054291f.zip/node_modules/array-filter/",
-          "packageDependencies": [
-            ["array-filter", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -9537,7 +10768,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/asn1.js-npm-5.4.1-37c7edbcb0-3786a101ac.zip/node_modules/asn1.js/",
           "packageDependencies": [
             ["asn1.js", "npm:5.4.1"],
-            ["bn.js", "npm:4.11.9"],
+            ["bn.js", "npm:4.12.0"],
             ["inherits", "npm:2.0.4"],
             ["minimalistic-assert", "npm:1.0.1"],
             ["safer-buffer", "npm:2.1.2"]
@@ -9551,8 +10782,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["assert", "npm:2.0.0"],
             ["es6-object-assign", "npm:1.1.0"],
-            ["is-nan", "npm:1.3.0"],
-            ["object-is", "npm:1.1.2"],
+            ["is-nan", "npm:1.3.2"],
+            ["object-is", "npm:1.1.5"],
             ["util", "npm:0.12.4"]
           ],
           "linkType": "HARD",
@@ -9702,11 +10933,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["available-typed-arrays", [
-        ["npm:1.0.2", {
-          "packageLocation": "./.yarn/cache/available-typed-arrays-npm-1.0.2-9105d4790d-915a89f31b.zip/node_modules/available-typed-arrays/",
+        ["npm:1.0.4", {
+          "packageLocation": "./.yarn/cache/available-typed-arrays-npm-1.0.4-7e210e86ea-28135bb29f.zip/node_modules/available-typed-arrays/",
           "packageDependencies": [
-            ["available-typed-arrays", "npm:1.0.2"],
-            ["array-filter", "npm:1.0.0"]
+            ["available-typed-arrays", "npm:1.0.4"]
           ],
           "linkType": "HARD",
         }]
@@ -9730,10 +10960,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["axe-core", [
+<<<<<<< HEAD
         ["npm:4.3.5", {
           "packageLocation": "./.yarn/cache/axe-core-npm-4.3.5-ce6cf74293-973c6a80f0.zip/node_modules/axe-core/",
           "packageDependencies": [
             ["axe-core", "npm:4.3.5"]
+=======
+        ["npm:4.3.1", {
+          "packageLocation": "./.yarn/cache/axe-core-npm-4.3.1-376a049489-270a6353d8.zip/node_modules/axe-core/",
+          "packageDependencies": [
+            ["axe-core", "npm:4.3.1"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -9770,11 +11007,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:c61008a0e486d11c5d12f93844b2cd75ec5736236f87621ed10e104c633bf4481b9925efd82711424ba548cbafab120612f2a7a8136f66b66d6ec9e4b66e2804#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/babel-jest-virtual-b304174277/0/cache/babel-jest-npm-27.3.1-7be86a2396-b0edc7ee34.zip/node_modules/babel-jest/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["babel-jest", "virtual:c61008a0e486d11c5d12f93844b2cd75ec5736236f87621ed10e104c633bf4481b9925efd82711424ba548cbafab120612f2a7a8136f66b66d6ec9e4b66e2804#npm:27.3.1"],
             ["@babel/core", "npm:7.16.0"],
             ["@jest/transform", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+            ["babel-jest", "virtual:8eba3957c5949a59a7c20e3afc3eb8931b7f9a85c4a7f02198a1589511510bbb6e13925e441f7cc1ced33246baa50e1f9409ef5f413eda932606ee197c13175f#npm:27.2.5"],
+            ["@babel/core", "npm:7.15.8"],
+            ["@jest/transform", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/babel__core", "npm:7.1.14"],
+=======
+            ["babel-jest", "virtual:783b21707613fff10f88a23104b8693b939c64eca91c4cd4fb9535d6cc561b9565791739ce9df0a5817f3484e11b89dbdda3d0040dd3f84143b7c757d0bd623f#npm:27.0.6"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@jest/transform", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/babel__core", "npm:7.1.15"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["babel-plugin-istanbul", "npm:6.0.0"],
             ["babel-preset-jest", "virtual:b304174277a54192866f4ebb3714d96b3f35f96ab0201b35955f706c8db22e0774c15ad8666db7c4bb49966d307ec9e71b387322ee2bfeb4e3450ffc82a98c3c#npm:27.2.0"],
             ["chalk", "npm:4.1.2"],
@@ -9804,7 +11055,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-plugin-istanbul", "npm:6.0.0"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
             ["@istanbuljs/load-nyc-config", "npm:1.1.0"],
-            ["@istanbuljs/schema", "npm:0.1.2"],
+            ["@istanbuljs/schema", "npm:0.1.3"],
             ["istanbul-lib-instrument", "npm:4.0.3"],
             ["test-exclude", "npm:6.0.0"]
           ],
@@ -9815,11 +11066,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.2.0", {
           "packageLocation": "./.yarn/cache/babel-plugin-jest-hoist-npm-27.2.0-7c283fc87b-de6c19b546.zip/node_modules/babel-plugin-jest-hoist/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["babel-plugin-jest-hoist", "npm:27.2.0"],
             ["@babel/template", "npm:7.16.0"],
             ["@babel/types", "npm:7.16.0"],
             ["@types/babel__core", "npm:7.1.14"],
             ["@types/babel__traverse", "npm:7.0.15"]
+=======
+            ["babel-plugin-jest-hoist", "npm:27.0.6"],
+            ["@babel/template", "npm:7.14.5"],
+            ["@babel/types", "npm:7.14.8"],
+            ["@types/babel__core", "npm:7.1.15"],
+            ["@types/babel__traverse", "npm:7.14.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -9850,8 +11109,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["babel-plugin-polyfill-corejs3", [
+<<<<<<< HEAD
         ["npm:0.4.0", {
           "packageLocation": "./.yarn/cache/babel-plugin-polyfill-corejs3-npm-0.4.0-0b821f8a09-18dce9a09a.zip/node_modules/babel-plugin-polyfill-corejs3/",
+=======
+<<<<<<< HEAD
+        ["npm:0.2.5", {
+          "packageLocation": "./.yarn/cache/babel-plugin-polyfill-corejs3-npm-0.2.5-eb1d14dee5-7d464001f6.zip/node_modules/babel-plugin-polyfill-corejs3/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["babel-plugin-polyfill-corejs3", "npm:0.4.0"]
           ],
@@ -9864,7 +11129,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.16.0"],
             ["@babel/helper-define-polyfill-provider", "virtual:17ba2de210035d9709544448cdba33a46e37bcfafe63c1633fb86a1d317a8290428b3e1813db7be78fae24a24a317294046d458fd17f7a524f720684e32dfef7#npm:0.3.0"],
             ["@types/babel__core", null],
+<<<<<<< HEAD
             ["core-js-compat", "npm:3.19.1"]
+=======
+            ["core-js-compat", "npm:3.18.2"]
+=======
+        ["npm:0.2.3", {
+          "packageLocation": "./.yarn/cache/babel-plugin-polyfill-corejs3-npm-0.2.3-4c2ae9d671-e390c5317b.zip/node_modules/babel-plugin-polyfill-corejs3/",
+          "packageDependencies": [
+            ["babel-plugin-polyfill-corejs3", "npm:0.2.3"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:0.2.3", {
+          "packageLocation": "./.yarn/__virtual__/babel-plugin-polyfill-corejs3-virtual-ecd2839b40/0/cache/babel-plugin-polyfill-corejs3-npm-0.2.3-4c2ae9d671-e390c5317b.zip/node_modules/babel-plugin-polyfill-corejs3/",
+          "packageDependencies": [
+            ["babel-plugin-polyfill-corejs3", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:0.2.3"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/helper-define-polyfill-provider", "virtual:c6280b393c9900290421e50fc1b0cee6915a0a73caaf3bfef0713d9dffdb85f2ee3e9ea8d0819785437f990778555af57f16494a1fa3190003b23810c15b96b6#npm:0.2.3"],
+            ["@types/babel__core", null],
+            ["core-js-compat", "npm:3.15.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -9909,13 +11195,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["babel-preset-current-node-syntax", [
-        ["npm:1.0.0", {
-          "packageLocation": "./.yarn/cache/babel-preset-current-node-syntax-npm-1.0.0-1b2199003e-05c193dcf1.zip/node_modules/babel-preset-current-node-syntax/",
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/babel-preset-current-node-syntax-npm-1.0.1-849ec71e32-d118c27424.zip/node_modules/babel-preset-current-node-syntax/",
           "packageDependencies": [
-            ["babel-preset-current-node-syntax", "npm:1.0.0"]
+            ["babel-preset-current-node-syntax", "npm:1.0.1"]
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:ea17f6e33ea7c5d16cb96dfef8386a0c994890507369d43752379aa3f0f2753390904bed905c5078b366a821ea8461ada99205d46da6ad05fa5e1fc24e033dc5#npm:1.0.0", {
           "packageLocation": "./.yarn/__virtual__/babel-preset-current-node-syntax-virtual-20afa38a06/0/cache/babel-preset-current-node-syntax-npm-1.0.0-1b2199003e-05c193dcf1.zip/node_modules/babel-preset-current-node-syntax/",
           "packageDependencies": [
@@ -9933,7 +11220,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-syntax-optional-catch-binding", "virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.8.3"],
             ["@babel/plugin-syntax-optional-chaining", "virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.8.3"],
             ["@babel/plugin-syntax-top-level-await", "virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.14.5"],
+=======
+<<<<<<< HEAD
+        ["virtual:dcfdbb5c13ffd0140060fe5cece75553d34bb52f292980ee6de4006bd400aaab2843b756666b63ecb13e6e3de501f5202215e632766d8a31600baee72785706c#npm:1.0.0", {
+          "packageLocation": "./.yarn/__virtual__/babel-preset-current-node-syntax-virtual-fdedb51f13/0/cache/babel-preset-current-node-syntax-npm-1.0.0-1b2199003e-05c193dcf1.zip/node_modules/babel-preset-current-node-syntax/",
+          "packageDependencies": [
+            ["babel-preset-current-node-syntax", "virtual:dcfdbb5c13ffd0140060fe5cece75553d34bb52f292980ee6de4006bd400aaab2843b756666b63ecb13e6e3de501f5202215e632766d8a31600baee72785706c#npm:1.0.0"],
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-syntax-async-generators", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.4"],
+            ["@babel/plugin-syntax-bigint", "virtual:fdedb51f13b4744644d701a4a7482c649bbc6c2d046e4e81db4ec8ebdc543c702db01dac6719a6fa84074351a1292431859fd98d7b2c974bbe54a9b042ee5e96#npm:7.8.3"],
+            ["@babel/plugin-syntax-class-properties", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.12.13"],
+            ["@babel/plugin-syntax-import-meta", "virtual:fdedb51f13b4744644d701a4a7482c649bbc6c2d046e4e81db4ec8ebdc543c702db01dac6719a6fa84074351a1292431859fd98d7b2c974bbe54a9b042ee5e96#npm:7.10.4"],
+            ["@babel/plugin-syntax-json-strings", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.3"],
+            ["@babel/plugin-syntax-logical-assignment-operators", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.10.4"],
+            ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.3"],
+            ["@babel/plugin-syntax-numeric-separator", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.10.4"],
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:8c425d09a950197e3726f575a10d516f48a6cfec21d2af043bf5d7e785778a1276b8a92e168b299de33c3078589508544e4d4078237fdc5639d393f94fb1176c#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-catch-binding", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-chaining", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.8.3"],
+            ["@babel/plugin-syntax-top-level-await", "virtual:0cbeec0f57755e80547f00402c1eb117cfb1f4ba9537bc4486c4bb7ce63ecb3cadc94d58ae94a881dad22dd3c388bfe9c63e820bddaf16877853882f2e3614e6#npm:7.14.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/babel__core", null]
+=======
+        ["virtual:bacb9175e5f5809b88e17564ca5366686c2f2d1f6fb07033c60cda1c81c23e6dc804976a0dd6e74a7ee7516a0d663b4cbebc56ab12466a083297800b99555de5#npm:1.0.1", {
+          "packageLocation": "./.yarn/__virtual__/babel-preset-current-node-syntax-virtual-85d0849a57/0/cache/babel-preset-current-node-syntax-npm-1.0.1-849ec71e32-d118c27424.zip/node_modules/babel-preset-current-node-syntax/",
+          "packageDependencies": [
+            ["babel-preset-current-node-syntax", "virtual:bacb9175e5f5809b88e17564ca5366686c2f2d1f6fb07033c60cda1c81c23e6dc804976a0dd6e74a7ee7516a0d663b4cbebc56ab12466a083297800b99555de5#npm:1.0.1"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/plugin-syntax-async-generators", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.4"],
+            ["@babel/plugin-syntax-bigint", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/plugin-syntax-class-properties", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.12.13"],
+            ["@babel/plugin-syntax-import-meta", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4"],
+            ["@babel/plugin-syntax-json-strings", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/plugin-syntax-logical-assignment-operators", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4"],
+            ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/plugin-syntax-numeric-separator", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4"],
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-catch-binding", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-chaining", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.8.3"],
+            ["@babel/plugin-syntax-top-level-await", "virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.14.5"],
+            ["@types/babel__core", "npm:7.1.15"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "packagePeers": [
             "@babel/core",
@@ -9941,6 +11268,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:edbaee482097e03d0cdbf9ab13137b980c69b75e5f9cd978d2d70fdab82585a3790839888132deb4a0655e76709f73877aa652c74a41b9dc70ab9d3c93d69784#npm:1.0.0", {
           "packageLocation": "./.yarn/__virtual__/babel-preset-current-node-syntax-virtual-508b54a52c/0/cache/babel-preset-current-node-syntax-npm-1.0.0-1b2199003e-05c193dcf1.zip/node_modules/babel-preset-current-node-syntax/",
           "packageDependencies": [
@@ -9958,7 +11286,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-syntax-optional-catch-binding", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/plugin-syntax-optional-chaining", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/plugin-syntax-top-level-await", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.14.5"],
+=======
+<<<<<<< HEAD
+        ["virtual:f62910974c283b95097c5e1535345616c0b25f96c6ddeefdbfdcc7509e910e8eeaed29a733c70c6b312322701b9be97033c858ea9926faf419d55e334c32155d#npm:1.0.0", {
+          "packageLocation": "./.yarn/__virtual__/babel-preset-current-node-syntax-virtual-833b14633f/0/cache/babel-preset-current-node-syntax-npm-1.0.0-1b2199003e-05c193dcf1.zip/node_modules/babel-preset-current-node-syntax/",
+          "packageDependencies": [
+            ["babel-preset-current-node-syntax", "virtual:f62910974c283b95097c5e1535345616c0b25f96c6ddeefdbfdcc7509e910e8eeaed29a733c70c6b312322701b9be97033c858ea9926faf419d55e334c32155d#npm:1.0.0"],
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-syntax-async-generators", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.4"],
+            ["@babel/plugin-syntax-bigint", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3"],
+            ["@babel/plugin-syntax-class-properties", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.12.13"],
+            ["@babel/plugin-syntax-import-meta", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.10.4"],
+            ["@babel/plugin-syntax-json-strings", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3"],
+            ["@babel/plugin-syntax-logical-assignment-operators", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.10.4"],
+            ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3"],
+            ["@babel/plugin-syntax-numeric-separator", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.10.4"],
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-catch-binding", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-chaining", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.8.3"],
+            ["@babel/plugin-syntax-top-level-await", "virtual:833b14633f69bb9d1cf542cdca69334581d2163da790419f3de31507964f7826bfaac7a5543ce6c4b622f7196f4e2b20bac3f38aa392fb4eeb9ee746d12e4922#npm:7.14.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/babel__core", "npm:7.1.14"]
+=======
+        ["virtual:ced411c6c6bf0cc9a3c98add1431b7d32e6c4128a7e0155d953c2ac3eb7b85ff8f844deee8403cbc9705b8bc860120b0b25a65ce498e8b9045d49ec45b2ac812#npm:1.0.1", {
+          "packageLocation": "./.yarn/__virtual__/babel-preset-current-node-syntax-virtual-b7ac7cc5d0/0/cache/babel-preset-current-node-syntax-npm-1.0.1-849ec71e32-d118c27424.zip/node_modules/babel-preset-current-node-syntax/",
+          "packageDependencies": [
+            ["babel-preset-current-node-syntax", "virtual:ced411c6c6bf0cc9a3c98add1431b7d32e6c4128a7e0155d953c2ac3eb7b85ff8f844deee8403cbc9705b8bc860120b0b25a65ce498e8b9045d49ec45b2ac812#npm:1.0.1"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/plugin-syntax-async-generators", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:7.8.4"],
+            ["@babel/plugin-syntax-bigint", "virtual:b7ac7cc5d0fa64a56d0def359840ee3c8fdd447dcc775a255dbc69042501be1cb6eed3d34637f0292778265fcd6d7ce56ccfd17f06e1218a7af4e03c38c10b4a#npm:7.8.3"],
+            ["@babel/plugin-syntax-class-properties", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:7.12.13"],
+            ["@babel/plugin-syntax-import-meta", "virtual:b7ac7cc5d0fa64a56d0def359840ee3c8fdd447dcc775a255dbc69042501be1cb6eed3d34637f0292778265fcd6d7ce56ccfd17f06e1218a7af4e03c38c10b4a#npm:7.10.4"],
+            ["@babel/plugin-syntax-json-strings", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:7.8.3"],
+            ["@babel/plugin-syntax-logical-assignment-operators", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:7.10.4"],
+            ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:7.8.3"],
+            ["@babel/plugin-syntax-numeric-separator", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:7.10.4"],
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:3511bb9af3b4bcafdd1f6dd780751ced1df4c9d39b42742d26f6f2a65801fef6c7cd1bbde6b4fffb39ef8ef3fbc6c3abab288085c07b3d16ae58ccb38d9e13a8#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-catch-binding", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-chaining", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:7.8.3"],
+            ["@babel/plugin-syntax-top-level-await", "virtual:bc7b45347ddd9a33a9f8cf0dbc9ecee58cd4116779305e4acbd537c9d82199344d8272e45193ee76320dd1c36669c8d303d56b9485c08af81032e10df4bdd9aa#npm:7.14.5"],
+            ["@types/babel__core", null]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "packagePeers": [
             "@babel/core",
@@ -9978,11 +11346,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:b304174277a54192866f4ebb3714d96b3f35f96ab0201b35955f706c8db22e0774c15ad8666db7c4bb49966d307ec9e71b387322ee2bfeb4e3450ffc82a98c3c#npm:27.2.0", {
           "packageLocation": "./.yarn/__virtual__/babel-preset-jest-virtual-edbaee4820/0/cache/babel-preset-jest-npm-27.2.0-c41a40dfbe-c484e6e7c6.zip/node_modules/babel-preset-jest/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["babel-preset-jest", "virtual:b304174277a54192866f4ebb3714d96b3f35f96ab0201b35955f706c8db22e0774c15ad8666db7c4bb49966d307ec9e71b387322ee2bfeb4e3450ffc82a98c3c#npm:27.2.0"],
             ["@babel/core", "npm:7.16.0"],
             ["@types/babel__core", "npm:7.1.14"],
             ["babel-plugin-jest-hoist", "npm:27.2.0"],
             ["babel-preset-current-node-syntax", "virtual:edbaee482097e03d0cdbf9ab13137b980c69b75e5f9cd978d2d70fdab82585a3790839888132deb4a0655e76709f73877aa652c74a41b9dc70ab9d3c93d69784#npm:1.0.0"]
+=======
+<<<<<<< HEAD
+            ["babel-preset-jest", "virtual:b4cf62e922c2deb67e4b504921b997eb2b6d8bb12d0848a85d877dfae93645debb0a2f2ba992ae6e49d91041d83d84f92efbb9ef4f0a7271e3659373c44e9fe9#npm:27.2.0"],
+            ["@babel/core", "npm:7.15.8"],
+            ["@types/babel__core", "npm:7.1.14"],
+            ["babel-plugin-jest-hoist", "npm:27.2.0"],
+            ["babel-preset-current-node-syntax", "virtual:f62910974c283b95097c5e1535345616c0b25f96c6ddeefdbfdcc7509e910e8eeaed29a733c70c6b312322701b9be97033c858ea9926faf419d55e334c32155d#npm:1.0.0"]
+=======
+            ["babel-preset-jest", "virtual:5d14faeecef2f07f1314407933eac04f6c548556ea8b33b57fadacb0cb2172209860e30a9c24d35e8bbe90cf2504cb40594840557ce3713b80e9362d2221375a#npm:27.0.6"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@types/babel__core", "npm:7.1.15"],
+            ["babel-plugin-jest-hoist", "npm:27.0.6"],
+            ["babel-preset-current-node-syntax", "virtual:bacb9175e5f5809b88e17564ca5366686c2f2d1f6fb07033c60cda1c81c23e6dc804976a0dd6e74a7ee7516a0d663b4cbebc56ab12466a083297800b99555de5#npm:1.0.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@babel/core",
@@ -10003,10 +11387,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["balanced-match", [
-        ["npm:1.0.0", {
-          "packageLocation": "./.yarn/cache/balanced-match-npm-1.0.0-951a2ad706-9b67bfe558.zip/node_modules/balanced-match/",
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/balanced-match-npm-1.0.2-a53c126459-9706c088a2.zip/node_modules/balanced-match/",
           "packageDependencies": [
-            ["balanced-match", "npm:1.0.0"]
+            ["balanced-match", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -10038,10 +11422,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["base64-js", [
-        ["npm:1.3.1", {
-          "packageLocation": "./.yarn/cache/base64-js-npm-1.3.1-8625be908e-957b9ced0e.zip/node_modules/base64-js/",
+        ["npm:1.5.1", {
+          "packageLocation": "./.yarn/cache/base64-js-npm-1.5.1-b2f7275641-669632eb37.zip/node_modules/base64-js/",
           "packageDependencies": [
-            ["base64-js", "npm:1.3.1"]
+            ["base64-js", "npm:1.5.1"]
           ],
           "linkType": "HARD",
         }]
@@ -10076,10 +11460,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["before-after-hook", [
-        ["npm:2.1.1", {
-          "packageLocation": "./.yarn/cache/before-after-hook-npm-2.1.1-677f955eb9-f19d154a71.zip/node_modules/before-after-hook/",
+        ["npm:2.2.2", {
+          "packageLocation": "./.yarn/cache/before-after-hook-npm-2.2.2-b463f0552f-dc2e1ffe38.zip/node_modules/before-after-hook/",
           "packageDependencies": [
-            ["before-after-hook", "npm:2.1.1"]
+            ["before-after-hook", "npm:2.2.2"]
           ],
           "linkType": "HARD",
         }]
@@ -10101,10 +11485,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:2.1.0", {
-          "packageLocation": "./.yarn/cache/binary-extensions-npm-2.1.0-0681d7e2ce-16ef0ca9b8.zip/node_modules/binary-extensions/",
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/binary-extensions-npm-2.2.0-180c33fec7-ccd267956c.zip/node_modules/binary-extensions/",
           "packageDependencies": [
-            ["binary-extensions", "npm:2.1.0"]
+            ["binary-extensions", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -10129,10 +11513,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.0.3", {
-          "packageLocation": "./.yarn/cache/bl-npm-4.0.3-4670d76538-4e011e5985.zip/node_modules/bl/",
+        ["npm:4.1.0", {
+          "packageLocation": "./.yarn/cache/bl-npm-4.1.0-7f94cdcf3f-9e8521fa7e.zip/node_modules/bl/",
           "packageDependencies": [
-            ["bl", "npm:4.0.3"],
+            ["bl", "npm:4.1.0"],
             ["buffer", "npm:5.7.1"],
             ["inherits", "npm:2.0.4"],
             ["readable-stream", "npm:3.6.0"]
@@ -10150,17 +11534,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["bn.js", [
-        ["npm:4.11.9", {
-          "packageLocation": "./.yarn/cache/bn.js-npm-4.11.9-c739f92b89-59b6762358.zip/node_modules/bn.js/",
+        ["npm:4.12.0", {
+          "packageLocation": "./.yarn/cache/bn.js-npm-4.12.0-3ec6c884f6-39afb4f15f.zip/node_modules/bn.js/",
           "packageDependencies": [
-            ["bn.js", "npm:4.11.9"]
+            ["bn.js", "npm:4.12.0"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:5.1.3", {
-          "packageLocation": "./.yarn/cache/bn.js-npm-5.1.3-f8c9aed796-6a51cf4869.zip/node_modules/bn.js/",
+        ["npm:5.2.0", {
+          "packageLocation": "./.yarn/cache/bn.js-npm-5.2.0-11748c0b07-6117170393.zip/node_modules/bn.js/",
           "packageDependencies": [
-            ["bn.js", "npm:5.1.3"]
+            ["bn.js", "npm:5.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -10241,15 +11625,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:5.0.0", {
-          "packageLocation": "./.yarn/cache/boxen-npm-5.0.0-32fcd8f7ad-54be8c299d.zip/node_modules/boxen/",
+        ["npm:5.0.1", {
+          "packageLocation": "./.yarn/cache/boxen-npm-5.0.1-e69c4085ea-a5fd6e48ec.zip/node_modules/boxen/",
           "packageDependencies": [
-            ["boxen", "npm:5.0.0"],
+            ["boxen", "npm:5.0.1"],
             ["ansi-align", "npm:3.0.0"],
             ["camelcase", "npm:6.2.0"],
             ["chalk", "npm:4.1.2"],
             ["cli-boxes", "npm:2.2.1"],
-            ["string-width", "npm:4.2.0"],
+            ["string-width", "npm:4.2.2"],
             ["type-fest", "npm:0.20.2"],
             ["widest-line", "npm:3.1.0"],
             ["wrap-ansi", "npm:7.0.0"]
@@ -10262,7 +11646,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/brace-expansion-npm-1.1.11-fb95eb05ad-faf34a7bb0.zip/node_modules/brace-expansion/",
           "packageDependencies": [
             ["brace-expansion", "npm:1.1.11"],
-            ["balanced-match", "npm:1.0.0"],
+            ["balanced-match", "npm:1.0.2"],
             ["concat-map", "npm:0.0.1"]
           ],
           "linkType": "HARD",
@@ -10278,7 +11662,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["extend-shallow", "npm:2.0.1"],
             ["fill-range", "npm:4.0.0"],
             ["isobject", "npm:3.0.1"],
-            ["repeat-element", "npm:1.1.3"],
+            ["repeat-element", "npm:1.1.4"],
             ["snapdragon", "npm:0.8.2"],
             ["snapdragon-node", "npm:2.1.1"],
             ["split-string", "npm:3.1.0"],
@@ -10354,11 +11738,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["browserify-rsa", [
-        ["npm:4.0.1", {
-          "packageLocation": "./.yarn/cache/browserify-rsa-npm-4.0.1-faeab97656-e5d8406e65.zip/node_modules/browserify-rsa/",
+        ["npm:4.1.0", {
+          "packageLocation": "./.yarn/cache/browserify-rsa-npm-4.1.0-2a224a51bc-155f0c1358.zip/node_modules/browserify-rsa/",
           "packageDependencies": [
-            ["browserify-rsa", "npm:4.0.1"],
-            ["bn.js", "npm:4.11.9"],
+            ["browserify-rsa", "npm:4.1.0"],
+            ["bn.js", "npm:5.2.0"],
             ["randombytes", "npm:2.1.0"]
           ],
           "linkType": "HARD",
@@ -10369,11 +11753,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserify-sign-npm-4.2.1-9a8530ca87-0221f190e3.zip/node_modules/browserify-sign/",
           "packageDependencies": [
             ["browserify-sign", "npm:4.2.1"],
-            ["bn.js", "npm:5.1.3"],
-            ["browserify-rsa", "npm:4.0.1"],
+            ["bn.js", "npm:5.2.0"],
+            ["browserify-rsa", "npm:4.1.0"],
             ["create-hash", "npm:1.2.0"],
             ["create-hmac", "npm:1.1.7"],
-            ["elliptic", "npm:6.5.3"],
+            ["elliptic", "npm:6.5.4"],
             ["inherits", "npm:2.0.4"],
             ["parse-asn1", "npm:5.1.6"],
             ["readable-stream", "npm:3.6.0"],
@@ -10386,9 +11770,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:4.18.1", {
           "packageLocation": "./.yarn/cache/browserslist-npm-4.18.1-38eb8a64b9-ae58322dee.zip/node_modules/browserslist/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["browserslist", "npm:4.18.1"],
             ["caniuse-lite", "npm:1.0.30001280"],
             ["electron-to-chromium", "npm:1.3.899"],
+=======
+<<<<<<< HEAD
+            ["browserslist", "npm:4.17.3"],
+            ["caniuse-lite", "npm:1.0.30001265"],
+            ["electron-to-chromium", "npm:1.3.860"],
+=======
+            ["browserslist", "npm:4.16.6"],
+            ["caniuse-lite", "npm:1.0.30001246"],
+            ["colorette", "npm:1.2.2"],
+            ["electron-to-chromium", "npm:1.3.785"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["escalade", "npm:3.1.1"],
             ["node-releases", "npm:2.0.1"],
             ["picocolors", "npm:1.0.0"]
@@ -10441,7 +11838,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/buffer-npm-5.7.1-513ef8259e-e2cf8429e1.zip/node_modules/buffer/",
           "packageDependencies": [
             ["buffer", "npm:5.7.1"],
-            ["base64-js", "npm:1.3.1"],
+            ["base64-js", "npm:1.5.1"],
             ["ieee754", "npm:1.2.1"]
           ],
           "linkType": "HARD",
@@ -10450,7 +11847,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/buffer-npm-6.0.3-cd90dfedfe-5ad23293d9.zip/node_modules/buffer/",
           "packageDependencies": [
             ["buffer", "npm:6.0.3"],
-            ["base64-js", "npm:1.3.1"],
+            ["base64-js", "npm:1.5.1"],
             ["ieee754", "npm:1.2.1"]
           ],
           "linkType": "HARD",
@@ -10573,10 +11970,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["byte-size", [
-        ["npm:7.0.0", {
-          "packageLocation": "./.yarn/cache/byte-size-npm-7.0.0-da662c1062-6cdd45fb64.zip/node_modules/byte-size/",
+        ["npm:7.0.1", {
+          "packageLocation": "./.yarn/cache/byte-size-npm-7.0.1-cda9f76d28-6791663a6d.zip/node_modules/byte-size/",
           "packageDependencies": [
-            ["byte-size", "npm:7.0.0"]
+            ["byte-size", "npm:7.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -10598,12 +11995,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["cacache", [
+<<<<<<< HEAD
         ["npm:15.3.0", {
           "packageLocation": "./.yarn/cache/cacache-npm-15.3.0-a7e5239c6a-a07327c27a.zip/node_modules/cacache/",
           "packageDependencies": [
             ["cacache", "npm:15.3.0"],
             ["@npmcli/fs", "npm:1.0.0"],
             ["@npmcli/move-file", "npm:1.0.1"],
+=======
+        ["npm:15.2.0", {
+          "packageLocation": "./.yarn/cache/cacache-npm-15.2.0-7b4a3a5b83-34d0fba603.zip/node_modules/cacache/",
+          "packageDependencies": [
+            ["cacache", "npm:15.2.0"],
+            ["@npmcli/move-file", "npm:1.1.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["chownr", "npm:2.0.0"],
             ["fs-minipass", "npm:2.1.0"],
             ["glob", "npm:7.2.0"],
@@ -10661,21 +12066,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["http-cache-semantics", "npm:4.1.0"],
             ["keyv", "npm:3.1.0"],
             ["lowercase-keys", "npm:2.0.0"],
-            ["normalize-url", "npm:4.5.0"],
+            ["normalize-url", "npm:4.5.1"],
             ["responselike", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.0.1", {
-          "packageLocation": "./.yarn/cache/cacheable-request-npm-7.0.1-d870be2496-558cbc4785.zip/node_modules/cacheable-request/",
+        ["npm:7.0.2", {
+          "packageLocation": "./.yarn/cache/cacheable-request-npm-7.0.2-e64cc641fc-6152813982.zip/node_modules/cacheable-request/",
           "packageDependencies": [
-            ["cacheable-request", "npm:7.0.1"],
+            ["cacheable-request", "npm:7.0.2"],
             ["clone-response", "npm:1.0.2"],
             ["get-stream", "npm:5.2.0"],
             ["http-cache-semantics", "npm:4.1.0"],
             ["keyv", "npm:4.0.3"],
             ["lowercase-keys", "npm:2.0.0"],
-            ["normalize-url", "npm:4.5.0"],
+            ["normalize-url", "npm:6.1.0"],
             ["responselike", "npm:2.0.0"]
           ],
           "linkType": "HARD",
@@ -10724,7 +12129,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["camel-case", "npm:4.1.2"],
             ["pascal-case", "npm:3.1.2"],
+<<<<<<< HEAD
             ["tslib", "npm:2.3.1"]
+=======
+            ["tslib", "npm:2.3.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -10767,17 +12176,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["camelcase-keys", "npm:6.2.2"],
             ["camelcase", "npm:5.3.1"],
-            ["map-obj", "npm:4.1.0"],
+            ["map-obj", "npm:4.2.1"],
             ["quick-lru", "npm:4.0.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["caniuse-lite", [
+<<<<<<< HEAD
         ["npm:1.0.30001280", {
           "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001280-fe5561c275-5794b22f42.zip/node_modules/caniuse-lite/",
           "packageDependencies": [
             ["caniuse-lite", "npm:1.0.30001280"]
+=======
+<<<<<<< HEAD
+        ["npm:1.0.30001265", {
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001265-f69ce0ecac-19f1943045.zip/node_modules/caniuse-lite/",
+          "packageDependencies": [
+            ["caniuse-lite", "npm:1.0.30001265"]
+=======
+        ["npm:1.0.30001246", {
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001246-07703ecf09-e811aa80e8.zip/node_modules/caniuse-lite/",
+          "packageDependencies": [
+            ["caniuse-lite", "npm:1.0.30001246"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -10838,7 +12261,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/chalk-npm-3.0.0-e813208025-8e3ddf3981.zip/node_modules/chalk/",
           "packageDependencies": [
             ["chalk", "npm:3.0.0"],
-            ["ansi-styles", "npm:4.2.1"],
+            ["ansi-styles", "npm:4.3.0"],
             ["supports-color", "npm:7.2.0"]
           ],
           "linkType": "HARD",
@@ -10846,8 +12269,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:4.1.2", {
           "packageLocation": "./.yarn/cache/chalk-npm-4.1.2-ba8b67ab80-fe75c9d5c7.zip/node_modules/chalk/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["ansi-styles", "npm:4.2.1"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["ansi-styles", "npm:4.3.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["supports-color", "npm:7.2.0"]
           ],
           "linkType": "HARD",
@@ -10882,7 +12310,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["htmlparser2", "npm:6.1.0"],
             ["parse5", "npm:6.0.1"],
             ["parse5-htmlparser2-tree-adapter", "npm:6.0.1"],
+<<<<<<< HEAD
             ["tslib", "npm:2.3.1"]
+=======
+            ["tslib", "npm:2.3.0"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }],
@@ -10946,18 +12378,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.5.1", {
-          "packageLocation": "./.yarn/cache/chokidar-npm-3.5.1-205217279e-b7774e6e3a.zip/node_modules/chokidar/",
+        ["npm:3.5.2", {
+          "packageLocation": "./.yarn/cache/chokidar-npm-3.5.2-6752340fec-d1fda32fcd.zip/node_modules/chokidar/",
           "packageDependencies": [
-            ["chokidar", "npm:3.5.1"],
-            ["anymatch", "npm:3.1.1"],
+            ["chokidar", "npm:3.5.2"],
+            ["anymatch", "npm:3.1.2"],
             ["braces", "npm:3.0.2"],
             ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"],
             ["glob-parent", "npm:5.1.2"],
             ["is-binary-path", "npm:2.1.0"],
             ["is-glob", "npm:4.0.3"],
             ["normalize-path", "npm:3.0.0"],
-            ["readdirp", "npm:3.5.0"]
+            ["readdirp", "npm:3.6.0"]
           ],
           "linkType": "HARD",
         }]
@@ -10983,9 +12415,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/chrome-launcher-npm-0.11.2-ed2689440e-55662b963c.zip/node_modules/chrome-launcher/",
           "packageDependencies": [
             ["chrome-launcher", "npm:0.11.2"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"],
+=======
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"],
+=======
+            ["@types/node", "npm:16.4.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["is-wsl", "npm:2.2.0"],
-            ["lighthouse-logger", "npm:1.2.0"],
+            ["lighthouse-logger", "npm:1.3.0"],
             ["mkdirp", "npm:0.5.1"],
             ["rimraf", "npm:2.7.1"]
           ],
@@ -10994,21 +12434,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:0.15.0", {
           "packageLocation": "./.yarn/cache/chrome-launcher-npm-0.15.0-1eb84bc3bb-a86e2b3873.zip/node_modules/chrome-launcher/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["chrome-launcher", "npm:0.15.0"],
             ["@types/node", "npm:14.17.34"],
+=======
+            ["chrome-launcher", "npm:0.14.0"],
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"],
+=======
+            ["@types/node", "npm:16.4.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["escape-string-regexp", "npm:4.0.0"],
             ["is-wsl", "npm:2.2.0"],
-            ["lighthouse-logger", "npm:1.2.0"]
+            ["lighthouse-logger", "npm:1.3.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["chrome-trace-event", [
-        ["npm:1.0.2", {
-          "packageLocation": "./.yarn/cache/chrome-trace-event-npm-1.0.2-c73a69cbd7-a104606fd0.zip/node_modules/chrome-trace-event/",
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/chrome-trace-event-npm-1.0.3-e0ae3dcd60-cb8b1fc7e8.zip/node_modules/chrome-trace-event/",
           "packageDependencies": [
-            ["chrome-trace-event", "npm:1.0.2"],
-            ["tslib", "npm:1.14.1"]
+            ["chrome-trace-event", "npm:1.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -11086,10 +12534,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["cjs-module-lexer", [
-        ["npm:1.2.1", {
-          "packageLocation": "./.yarn/cache/cjs-module-lexer-npm-1.2.1-11eb01eaf4-9e9905e3f5.zip/node_modules/cjs-module-lexer/",
+        ["npm:1.2.2", {
+          "packageLocation": "./.yarn/cache/cjs-module-lexer-npm-1.2.2-473ce063ea-977f3f042b.zip/node_modules/cjs-module-lexer/",
           "packageDependencies": [
-            ["cjs-module-lexer", "npm:1.2.1"]
+            ["cjs-module-lexer", "npm:1.2.2"]
           ],
           "linkType": "HARD",
         }]
@@ -11193,7 +12641,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["cli-truncate", "npm:2.1.0"],
             ["slice-ansi", "npm:3.0.0"],
-            ["string-width", "npm:4.2.0"]
+            ["string-width", "npm:4.2.2"]
           ],
           "linkType": "HARD",
         }],
@@ -11255,12 +12703,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.0.3", {
-          "packageLocation": "./.yarn/cache/cliui-npm-7.0.3-315c6f7146-7f54094244.zip/node_modules/cliui/",
+        ["npm:7.0.4", {
+          "packageLocation": "./.yarn/cache/cliui-npm-7.0.4-d6b8a9edb6-ce2e8f578a.zip/node_modules/cliui/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["cliui", "npm:7.0.3"],
             ["string-width", "npm:4.2.0"],
             ["strip-ansi", "npm:6.0.1"],
+=======
+            ["cliui", "npm:7.0.4"],
+            ["string-width", "npm:4.2.2"],
+            ["strip-ansi", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["wrap-ansi", "npm:7.0.0"]
           ],
           "linkType": "HARD",
@@ -11540,7 +12994,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/compressible-npm-2.0.18-ee5ab04d88-58321a85b3.zip/node_modules/compressible/",
           "packageDependencies": [
             ["compressible", "npm:2.0.18"],
-            ["mime-db", "npm:1.44.0"]
+            ["mime-db", "npm:1.48.0"]
           ],
           "linkType": "HARD",
         }]
@@ -11595,10 +13049,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["config-chain", [
-        ["npm:1.1.12", {
-          "packageLocation": "./.yarn/cache/config-chain-npm-1.1.12-9791350b34-a16332f872.zip/node_modules/config-chain/",
+        ["npm:1.1.13", {
+          "packageLocation": "./.yarn/cache/config-chain-npm-1.1.13-82e06afbc4-828137a28e.zip/node_modules/config-chain/",
           "packageDependencies": [
-            ["config-chain", "npm:1.1.12"],
+            ["config-chain", "npm:1.1.13"],
             ["ini", "npm:1.3.8"],
             ["proto-list", "npm:1.2.4"]
           ],
@@ -11689,10 +13143,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["conventional-changelog-conventionalcommits", [
-        ["npm:4.4.0", {
-          "packageLocation": "./.yarn/cache/conventional-changelog-conventionalcommits-npm-4.4.0-a63ee04618-24ba21260e.zip/node_modules/conventional-changelog-conventionalcommits/",
+        ["npm:4.6.0", {
+          "packageLocation": "./.yarn/cache/conventional-changelog-conventionalcommits-npm-4.6.0-d399b251bd-b7dccba3e9.zip/node_modules/conventional-changelog-conventionalcommits/",
           "packageDependencies": [
-            ["conventional-changelog-conventionalcommits", "npm:4.4.0"],
+            ["conventional-changelog-conventionalcommits", "npm:4.6.0"],
             ["compare-func", "npm:2.0.0"],
             ["lodash", "npm:4.17.21"],
             ["q", "npm:1.5.1"]
@@ -11701,24 +13155,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["conventional-changelog-core", [
-        ["npm:4.2.2", {
-          "packageLocation": "./.yarn/cache/conventional-changelog-core-npm-4.2.2-2e3e4e3239-0c09de83b1.zip/node_modules/conventional-changelog-core/",
+        ["npm:4.2.3", {
+          "packageLocation": "./.yarn/cache/conventional-changelog-core-npm-4.2.3-3347f58b12-0e174d17c6.zip/node_modules/conventional-changelog-core/",
           "packageDependencies": [
-            ["conventional-changelog-core", "npm:4.2.2"],
+            ["conventional-changelog-core", "npm:4.2.3"],
             ["add-stream", "npm:1.0.0"],
+<<<<<<< HEAD
             ["conventional-changelog-writer", "npm:4.1.0"],
             ["conventional-commits-parser", "npm:3.2.2"],
+=======
+            ["conventional-changelog-writer", "npm:5.0.0"],
+            ["conventional-commits-parser", "npm:3.2.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["dateformat", "npm:3.0.3"],
-            ["get-pkg-repo", "npm:1.4.0"],
+            ["get-pkg-repo", "npm:4.1.2"],
             ["git-raw-commits", "npm:2.0.10"],
             ["git-remote-origin-url", "npm:2.0.0"],
             ["git-semver-tags", "npm:4.1.1"],
             ["lodash", "npm:4.17.21"],
-            ["normalize-package-data", "npm:3.0.0"],
+            ["normalize-package-data", "npm:3.0.2"],
             ["q", "npm:1.5.1"],
             ["read-pkg", "npm:3.0.0"],
             ["read-pkg-up", "npm:3.0.0"],
-            ["shelljs", "npm:0.8.4"],
             ["through2", "npm:4.0.2"]
           ],
           "linkType": "HARD",
@@ -11734,14 +13192,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["conventional-changelog-writer", [
-        ["npm:4.1.0", {
-          "packageLocation": "./.yarn/cache/conventional-changelog-writer-npm-4.1.0-a660c822b9-6fce8f64f5.zip/node_modules/conventional-changelog-writer/",
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/conventional-changelog-writer-npm-5.0.0-acebc38f2a-c310b949d3.zip/node_modules/conventional-changelog-writer/",
           "packageDependencies": [
-            ["conventional-changelog-writer", "npm:4.1.0"],
-            ["compare-func", "npm:2.0.0"],
+            ["conventional-changelog-writer", "npm:5.0.0"],
             ["conventional-commits-filter", "npm:2.0.7"],
             ["dateformat", "npm:3.0.3"],
-            ["handlebars", "npm:4.7.6"],
+            ["handlebars", "npm:4.7.7"],
             ["json-stringify-safe", "npm:5.0.1"],
             ["lodash", "npm:4.17.21"],
             ["meow", "npm:8.1.2"],
@@ -11796,10 +13253,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["convert-source-map", [
-        ["npm:1.7.0", {
-          "packageLocation": "./.yarn/cache/convert-source-map-npm-1.7.0-f9727424f7-bcd2e3ea7d.zip/node_modules/convert-source-map/",
+        ["npm:1.8.0", {
+          "packageLocation": "./.yarn/cache/convert-source-map-npm-1.8.0-037f671dde-985d974a2d.zip/node_modules/convert-source-map/",
           "packageDependencies": [
-            ["convert-source-map", "npm:1.7.0"],
+            ["convert-source-map", "npm:1.8.0"],
             ["safe-buffer", "npm:5.1.2"]
           ],
           "linkType": "HARD",
@@ -11862,9 +13319,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"]
@@ -11881,9 +13345,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"]
@@ -11900,9 +13371,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"]
@@ -11919,9 +13397,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"]
@@ -11938,9 +13423,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"]
@@ -11957,9 +13449,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"]
@@ -11976,9 +13475,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"]
@@ -11995,9 +13501,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"]
@@ -12014,9 +13527,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"]
@@ -12033,9 +13553,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"]
@@ -12052,9 +13579,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"]
@@ -12071,9 +13605,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"]
@@ -12090,9 +13631,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"]
@@ -12109,9 +13657,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"]
@@ -12128,9 +13683,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"]
@@ -12147,9 +13709,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"]
@@ -12166,9 +13735,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"]
@@ -12185,9 +13761,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"]
@@ -12204,9 +13787,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"]
@@ -12223,9 +13813,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"]
@@ -12242,9 +13839,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"]
@@ -12261,9 +13865,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["copy-webpack-plugin", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:9.1.0"],
             ["@types/webpack", null],
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["glob-parent", "npm:6.0.2"],
             ["globby", "npm:11.0.4"],
             ["normalize-path", "npm:3.0.0"],
+=======
+            ["glob-parent", "npm:6.0.1"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["schema-utils", "npm:3.1.1"],
             ["serialize-javascript", "npm:6.0.0"],
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"]
@@ -12285,11 +13896,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["core-js-compat", [
+<<<<<<< HEAD
         ["npm:3.19.1", {
           "packageLocation": "./.yarn/cache/core-js-compat-npm-3.19.1-fbc4223527-ed302c9981.zip/node_modules/core-js-compat/",
           "packageDependencies": [
             ["core-js-compat", "npm:3.19.1"],
             ["browserslist", "npm:4.18.1"],
+=======
+<<<<<<< HEAD
+        ["npm:3.18.2", {
+          "packageLocation": "./.yarn/cache/core-js-compat-npm-3.18.2-0aac8eebb7-8358d4a147.zip/node_modules/core-js-compat/",
+          "packageDependencies": [
+            ["core-js-compat", "npm:3.18.2"],
+            ["browserslist", "npm:4.17.3"],
+=======
+        ["npm:3.15.2", {
+          "packageLocation": "./.yarn/cache/core-js-compat-npm-3.15.2-71a17685b1-ca68b51b4a.zip/node_modules/core-js-compat/",
+          "packageDependencies": [
+            ["core-js-compat", "npm:3.15.2"],
+            ["browserslist", "npm:4.16.6"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["semver", "npm:7.0.0"]
           ],
           "linkType": "HARD",
@@ -12362,8 +13989,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/create-ecdh-npm-4.0.4-1048ce2035-0dd7fca971.zip/node_modules/create-ecdh/",
           "packageDependencies": [
             ["create-ecdh", "npm:4.0.4"],
-            ["bn.js", "npm:4.11.9"],
-            ["elliptic", "npm:6.5.3"]
+            ["bn.js", "npm:4.12.0"],
+            ["elliptic", "npm:6.5.4"]
           ],
           "linkType": "HARD",
         }]
@@ -12461,7 +14088,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["create-hmac", "npm:1.1.7"],
             ["diffie-hellman", "npm:5.0.3"],
             ["inherits", "npm:2.0.4"],
-            ["pbkdf2", "npm:3.1.1"],
+            ["pbkdf2", "npm:3.1.2"],
             ["public-encrypt", "npm:4.0.3"],
             ["randombytes", "npm:2.1.0"],
             ["randomfill", "npm:1.0.4"]
@@ -12498,12 +14125,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.5.1"],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["icss-utils", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:5.1.0"],
             ["postcss", "npm:8.3.11"],
             ["postcss-modules-extract-imports", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:3.0.0"],
             ["postcss-modules-local-by-default", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:4.0.0"],
             ["postcss-modules-scope", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:3.0.0"],
             ["postcss-modules-values", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:4.0.0"],
+=======
+<<<<<<< HEAD
+            ["icss-utils", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:5.1.0"],
+            ["postcss", "npm:8.3.9"],
+            ["postcss-modules-extract-imports", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:3.0.0"],
+            ["postcss-modules-local-by-default", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:4.0.0"],
+            ["postcss-modules-scope", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:3.0.0"],
+            ["postcss-modules-values", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:4.0.0"],
+=======
+            ["icss-utils", "virtual:25c55dfa2153dbd05f87a5b55c79993e3826a75f415a1b9f60604d6a30a2d65a144c7816c1af965eaf5c482d36a37e0974616b6c29eaaff8669b9a006ec1f4f2#npm:5.1.0"],
+            ["postcss", "npm:8.3.6"],
+            ["postcss-modules-extract-imports", "virtual:25c55dfa2153dbd05f87a5b55c79993e3826a75f415a1b9f60604d6a30a2d65a144c7816c1af965eaf5c482d36a37e0974616b6c29eaaff8669b9a006ec1f4f2#npm:3.0.0"],
+            ["postcss-modules-local-by-default", "virtual:25c55dfa2153dbd05f87a5b55c79993e3826a75f415a1b9f60604d6a30a2d65a144c7816c1af965eaf5c482d36a37e0974616b6c29eaaff8669b9a006ec1f4f2#npm:4.0.0"],
+            ["postcss-modules-scope", "virtual:25c55dfa2153dbd05f87a5b55c79993e3826a75f415a1b9f60604d6a30a2d65a144c7816c1af965eaf5c482d36a37e0974616b6c29eaaff8669b9a006ec1f4f2#npm:3.0.0"],
+            ["postcss-modules-values", "virtual:25c55dfa2153dbd05f87a5b55c79993e3826a75f415a1b9f60604d6a30a2d65a144c7816c1af965eaf5c482d36a37e0974616b6c29eaaff8669b9a006ec1f4f2#npm:4.0.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["postcss-value-parser", "npm:4.1.0"],
             ["semver", "npm:7.3.5"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"]
@@ -12545,7 +14190,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/css-vendor-npm-2.0.8-3fef9dd826-647cd4ea5e.zip/node_modules/css-vendor/",
           "packageDependencies": [
             ["css-vendor", "npm:2.0.8"],
+<<<<<<< HEAD
             ["@babel/runtime", "npm:7.16.3"],
+=======
+            ["@babel/runtime", "npm:7.14.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["is-in-browser", "npm:1.1.3"]
           ],
           "linkType": "HARD",
@@ -12603,17 +14252,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["csstype", [
-        ["npm:2.6.13", {
-          "packageLocation": "./.yarn/cache/csstype-npm-2.6.13-2f54b26722-fe2cf86bc0.zip/node_modules/csstype/",
+        ["npm:2.6.17", {
+          "packageLocation": "./.yarn/cache/csstype-npm-2.6.17-d5c7acd5f7-6eee5cf81a.zip/node_modules/csstype/",
           "packageDependencies": [
-            ["csstype", "npm:2.6.13"]
+            ["csstype", "npm:2.6.17"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.0.3", {
-          "packageLocation": "./.yarn/cache/csstype-npm-3.0.3-1361b4cdeb-ae9b4fcd9b.zip/node_modules/csstype/",
+        ["npm:3.0.8", {
+          "packageLocation": "./.yarn/cache/csstype-npm-3.0.8-99cf1f37ff-5939a00385.zip/node_modules/csstype/",
           "packageDependencies": [
-            ["csstype", "npm:3.0.3"]
+            ["csstype", "npm:3.0.8"]
           ],
           "linkType": "HARD",
         }]
@@ -12674,7 +14323,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["data-urls", "npm:2.0.0"],
             ["abab", "npm:2.0.5"],
             ["whatwg-mimetype", "npm:2.3.0"],
-            ["whatwg-url", "npm:8.6.0"]
+            ["whatwg-url", "npm:8.7.0"]
           ],
           "linkType": "HARD",
         }]
@@ -12714,16 +14363,56 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }],
         ["npm:4.3.2", {
           "packageLocation": "./.yarn/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
+<<<<<<< HEAD
           "packageDependencies": [
             ["debug", "npm:4.3.2"]
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-f9f45dc0f1/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
           "packageDependencies": [
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
             ["@types/supports-color", null],
+=======
+        ["virtual:241056ec2b406cd11fca5bfa059173682edbdc62c7d4cd09c6772ef5ecfacfc5ce5be3b424a0b8f772fecc58765b5ee3a6ecb3ab004f5152e094a7ad7e68bef1#npm:4.3.2", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-3ae7c82e7a/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:241056ec2b406cd11fca5bfa059173682edbdc62c7d4cd09c6772ef5ecfacfc5ce5be3b424a0b8f772fecc58765b5ee3a6ecb3ab004f5152e094a7ad7e68bef1#npm:4.3.2"],
+            ["ms", "npm:2.1.2"],
+            ["supports-color", "npm:8.1.1"]
+=======
+          "packageDependencies": [
+            ["debug", "npm:4.3.2"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:4.3.2", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-2eb9972e4d/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:4.3.2"],
+            ["ms", "npm:2.1.2"],
+            ["supports-color", "npm:6.1.0"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+          ],
+          "packagePeers": [
+            "supports-color"
+          ],
+          "linkType": "HARD",
+        }],
+<<<<<<< HEAD
+        ["virtual:2cff9d6bb67f60b405aa687457fee964fc556364e10becbb20a42adcab5bed428e93aa7104b6729be8f088e085a36221271d9a65f3974a1915c60950102d83cb#npm:4.3.1", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-ede17f736f/0/cache/debug-npm-4.3.1-22e08d605e-2c3352e37d.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:2cff9d6bb67f60b405aa687457fee964fc556364e10becbb20a42adcab5bed428e93aa7104b6729be8f088e085a36221271d9a65f3974a1915c60950102d83cb#npm:4.3.1"],
+=======
+        ["virtual:5c6565ae444b792dcde6c509e447568014350d8fa19988fc85aa860ede8ffd57b097041179fd8651382ed2ed8ad02bda02f2c42952d39dd2a9cf26c2f5631496#npm:4.3.2", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-fc856ff746/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:5c6565ae444b792dcde6c509e447568014350d8fa19988fc85aa860ede8ffd57b097041179fd8651382ed2ed8ad02bda02f2c42952d39dd2a9cf26c2f5631496#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["ms", "npm:2.1.2"],
             ["supports-color", null]
           ],
@@ -12733,6 +14422,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:5c6565ae444b792dcde6c509e447568014350d8fa19988fc85aa860ede8ffd57b097041179fd8651382ed2ed8ad02bda02f2c42952d39dd2a9cf26c2f5631496#npm:4.3.2", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-fc856ff746/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
           "packageDependencies": [
@@ -12740,6 +14430,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supports-color", null],
             ["ms", "npm:2.1.2"],
             ["supports-color", "npm:7.2.0"]
+=======
+<<<<<<< HEAD
+        ["virtual:520b8137c106fd11866473e4e5f9893c9784c7d2d628bc453197b884d88d0e1601a6a0af06b047c31a788467cca6a7f25f8fef5306b50ee3635ad4295b474ae2#npm:2.6.9", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-677931e188/0/cache/debug-npm-2.6.9-7d4cb597dc-d2f51589ca.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:520b8137c106fd11866473e4e5f9893c9784c7d2d628bc453197b884d88d0e1601a6a0af06b047c31a788467cca6a7f25f8fef5306b50ee3635ad4295b474ae2#npm:2.6.9"],
+            ["ms", "npm:2.0.0"],
+=======
+        ["virtual:b6903cb0aaad9906148dfa505a0e5b88399e26dc9fd5f803943a849595d5c20ea7ebf5a1e9a758a58020d02214870ac72546b61ed9296c91b93f1f92936cf426#npm:4.3.1", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-3d4b46b3d3/0/cache/debug-npm-4.3.1-22e08d605e-2c3352e37d.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:b6903cb0aaad9906148dfa505a0e5b88399e26dc9fd5f803943a849595d5c20ea7ebf5a1e9a758a58020d02214870ac72546b61ed9296c91b93f1f92936cf426#npm:4.3.1"],
+            ["ms", "npm:2.1.2"],
+            ["supports-color", null]
+          ],
+          "packagePeers": [
+            "supports-color"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:bfddc3ec159414e62ee26e5675bb85890033abd44d8111133b5ca52cc5758ef2642aea66b160acaae1ebfaf62681252c445fb393565767e3d62f6ef4fd6d3c96#npm:3.2.7", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-f627138953/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:bfddc3ec159414e62ee26e5675bb85890033abd44d8111133b5ca52cc5758ef2642aea66b160acaae1ebfaf62681252c445fb393565767e3d62f6ef4fd6d3c96#npm:3.2.7"],
+            ["ms", "npm:2.1.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["supports-color", null]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/supports-color",
@@ -12747,8 +14465,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-a808b4c4d1/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
+=======
+<<<<<<< HEAD
+        ["virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:4.3.2", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-2eb9972e4d/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["@types/supports-color", null],
@@ -12778,9 +14502,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-9aced2495e/0/cache/debug-npm-2.6.9-7d4cb597dc-d2f51589ca.zip/node_modules/debug/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
             ["@types/supports-color", null],
             ["ms", "npm:2.0.0"],
+=======
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+        ["virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-bf0fe70a53/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["ms", "npm:2.1.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["supports-color", null]
           ],
           "packagePeers": [
@@ -12849,10 +14584,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["decimal.js", [
-        ["npm:10.2.1", {
-          "packageLocation": "./.yarn/cache/decimal.js-npm-10.2.1-6eff4c0574-d2421adf20.zip/node_modules/decimal.js/",
+        ["npm:10.3.1", {
+          "packageLocation": "./.yarn/cache/decimal.js-npm-10.3.1-797c736b6c-0351ac9f05.zip/node_modules/decimal.js/",
           "packageDependencies": [
-            ["decimal.js", "npm:10.2.1"]
+            ["decimal.js", "npm:10.3.1"]
           ],
           "linkType": "HARD",
         }]
@@ -12898,10 +14633,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/deep-equal-npm-1.1.1-67ff9c29b9-f92686f2c5.zip/node_modules/deep-equal/",
           "packageDependencies": [
             ["deep-equal", "npm:1.1.1"],
+<<<<<<< HEAD
             ["is-arguments", "npm:1.0.4"],
             ["is-date-object", "npm:1.0.2"],
             ["is-regex", "npm:1.1.4"],
             ["object-is", "npm:1.1.2"],
+=======
+            ["is-arguments", "npm:1.1.0"],
+            ["is-date-object", "npm:1.0.4"],
+            ["is-regex", "npm:1.1.3"],
+            ["object-is", "npm:1.1.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["object-keys", "npm:1.1.1"],
             ["regexp.prototype.flags", "npm:1.3.1"]
           ],
@@ -13038,7 +14780,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/del-npm-4.1.1-8bc04567c6-521f7da44b.zip/node_modules/del/",
           "packageDependencies": [
             ["del", "npm:4.1.1"],
-            ["@types/glob", "npm:7.1.3"],
+            ["@types/glob", "npm:7.1.4"],
             ["globby", "npm:6.1.0"],
             ["is-path-cwd", "npm:2.2.0"],
             ["is-path-in-cwd", "npm:2.1.0"],
@@ -13120,10 +14862,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:6.0.0", {
-          "packageLocation": "./.yarn/cache/detect-indent-npm-6.0.0-9f7d77378e-0c38f36201.zip/node_modules/detect-indent/",
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/detect-indent-npm-6.1.0-d8c441ff7a-ab953a73c7.zip/node_modules/detect-indent/",
           "packageDependencies": [
-            ["detect-indent", "npm:6.0.0"]
+            ["detect-indent", "npm:6.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -13138,10 +14880,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["detect-node", [
-        ["npm:2.0.4", {
-          "packageLocation": "./.yarn/cache/detect-node-npm-2.0.4-1d5a93916d-c06ae40fef.zip/node_modules/detect-node/",
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/detect-node-npm-2.1.0-e8de0e94f7-832184ec45.zip/node_modules/detect-node/",
           "packageDependencies": [
-            ["detect-node", "npm:2.0.4"]
+            ["detect-node", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -13189,7 +14931,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/diffie-hellman-npm-5.0.3-cbef8f3171-0e620f3221.zip/node_modules/diffie-hellman/",
           "packageDependencies": [
             ["diffie-hellman", "npm:5.0.3"],
-            ["bn.js", "npm:4.11.9"],
+            ["bn.js", "npm:4.12.0"],
             ["miller-rabin", "npm:4.0.1"],
             ["randombytes", "npm:2.1.0"]
           ],
@@ -13232,10 +14974,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dns-packet", [
-        ["npm:1.3.1", {
-          "packageLocation": "./.yarn/cache/dns-packet-npm-1.3.1-63140ca895-6575edeea6.zip/node_modules/dns-packet/",
+        ["npm:1.3.4", {
+          "packageLocation": "./.yarn/cache/dns-packet-npm-1.3.4-abf04641ce-7dd87f85cb.zip/node_modules/dns-packet/",
           "packageDependencies": [
-            ["dns-packet", "npm:1.3.1"],
+            ["dns-packet", "npm:1.3.4"],
             ["ip", "npm:1.1.5"],
             ["safe-buffer", "npm:5.2.1"]
           ],
@@ -13281,12 +15023,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dom-helpers", [
-        ["npm:5.2.0", {
-          "packageLocation": "./.yarn/cache/dom-helpers-npm-5.2.0-4c13ee1a2c-bea3e7217c.zip/node_modules/dom-helpers/",
+        ["npm:5.2.1", {
+          "packageLocation": "./.yarn/cache/dom-helpers-npm-5.2.1-b38bb4470b-863ba9e086.zip/node_modules/dom-helpers/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["dom-helpers", "npm:5.2.0"],
             ["@babel/runtime", "npm:7.16.3"],
             ["csstype", "npm:3.0.3"]
+=======
+            ["dom-helpers", "npm:5.2.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["csstype", "npm:3.0.8"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -13306,7 +15054,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["dom-serializer", "npm:0.2.2"],
             ["domelementtype", "npm:2.2.0"],
-            ["entities", "npm:2.1.0"]
+            ["entities", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }],
@@ -13316,7 +15064,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dom-serializer", "npm:1.3.2"],
             ["domelementtype", "npm:2.2.0"],
             ["domhandler", "npm:4.2.0"],
-            ["entities", "npm:2.1.0"]
+            ["entities", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -13410,7 +15158,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["dot-case", "npm:3.0.4"],
             ["no-case", "npm:3.0.4"],
+<<<<<<< HEAD
             ["tslib", "npm:2.3.1"]
+=======
+            ["tslib", "npm:2.3.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -13455,8 +15207,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/dtrace-provider-npm-0.8.8-c06c6b4a53/node_modules/dtrace-provider/",
           "packageDependencies": [
             ["dtrace-provider", "npm:0.8.8"],
-            ["nan", "npm:2.14.1"],
-            ["node-gyp", "npm:7.1.0"]
+            ["nan", "npm:2.14.2"],
+            ["node-gyp", "npm:8.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -13533,20 +15285,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["electron-to-chromium", [
+<<<<<<< HEAD
         ["npm:1.3.899", {
           "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.899-6dae4495bf-1c6e59fb61.zip/node_modules/electron-to-chromium/",
           "packageDependencies": [
             ["electron-to-chromium", "npm:1.3.899"]
+=======
+<<<<<<< HEAD
+        ["npm:1.3.860", {
+          "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.860-74eff12216-0446f14a1b.zip/node_modules/electron-to-chromium/",
+          "packageDependencies": [
+            ["electron-to-chromium", "npm:1.3.860"]
+=======
+        ["npm:1.3.785", {
+          "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.785-e210cb62e4-0ede1fccdf.zip/node_modules/electron-to-chromium/",
+          "packageDependencies": [
+            ["electron-to-chromium", "npm:1.3.785"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["elliptic", [
-        ["npm:6.5.3", {
-          "packageLocation": "./.yarn/cache/elliptic-npm-6.5.3-783c509c01-fe1e546ed3.zip/node_modules/elliptic/",
+        ["npm:6.5.4", {
+          "packageLocation": "./.yarn/cache/elliptic-npm-6.5.4-0ca8204a86-d56d21fd04.zip/node_modules/elliptic/",
           "packageDependencies": [
-            ["elliptic", "npm:6.5.3"],
-            ["bn.js", "npm:4.11.9"],
+            ["elliptic", "npm:6.5.4"],
+            ["bn.js", "npm:4.12.0"],
             ["brorand", "npm:1.1.0"],
             ["hash.js", "npm:1.1.7"],
             ["hmac-drbg", "npm:1.0.1"],
@@ -13645,10 +15411,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["enhanced-resolve", [
+<<<<<<< HEAD
         ["npm:5.8.3", {
           "packageLocation": "./.yarn/cache/enhanced-resolve-npm-5.8.3-24a728966e-d79fbe5311.zip/node_modules/enhanced-resolve/",
           "packageDependencies": [
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+        ["npm:5.8.2", {
+          "packageLocation": "./.yarn/cache/enhanced-resolve-npm-5.8.2-b25228f39b-6e871ec5b1.zip/node_modules/enhanced-resolve/",
+          "packageDependencies": [
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["graceful-fs", "npm:4.2.6"],
             ["tapable", "npm:2.2.0"]
           ],
@@ -13673,40 +15446,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:2.1.0", {
-          "packageLocation": "./.yarn/cache/entities-npm-2.1.0-b27b8aebc6-a10a877e48.zip/node_modules/entities/",
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/entities-npm-2.2.0-0fc8d5b2f7-19010dacaf.zip/node_modules/entities/",
           "packageDependencies": [
-            ["entities", "npm:2.1.0"]
+            ["entities", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["env-paths", [
-        ["npm:2.2.0", {
-          "packageLocation": "./.yarn/cache/env-paths-npm-2.2.0-ac4ed99068-ba2aea3830.zip/node_modules/env-paths/",
+        ["npm:2.2.1", {
+          "packageLocation": "./.yarn/cache/env-paths-npm-2.2.1-7c7577428c-65b5df55a8.zip/node_modules/env-paths/",
           "packageDependencies": [
-            ["env-paths", "npm:2.2.0"]
+            ["env-paths", "npm:2.2.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["envinfo", [
-        ["npm:7.7.4", {
-          "packageLocation": "./.yarn/cache/envinfo-npm-7.7.4-abe54874d9-73fb993dd9.zip/node_modules/envinfo/",
+        ["npm:7.8.1", {
+          "packageLocation": "./.yarn/cache/envinfo-npm-7.8.1-f320033691-de736c98d6.zip/node_modules/envinfo/",
           "packageDependencies": [
-            ["envinfo", "npm:7.7.4"]
+            ["envinfo", "npm:7.8.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["err-code", [
-        ["npm:1.1.2", {
-          "packageLocation": "./.yarn/cache/err-code-npm-1.1.2-76c4ec5eff-a1c6a194d2.zip/node_modules/err-code/",
-          "packageDependencies": [
-            ["err-code", "npm:1.1.2"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:2.0.3", {
           "packageLocation": "./.yarn/cache/err-code-npm-2.0.3-082e0ff9a7-8b7b1be20d.zip/node_modules/err-code/",
           "packageDependencies": [
@@ -13716,10 +15482,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["errno", [
-        ["npm:0.1.7", {
-          "packageLocation": "./.yarn/cache/errno-npm-0.1.7-b0a31dcb3a-a9e414c24a.zip/node_modules/errno/",
+        ["npm:0.1.8", {
+          "packageLocation": "./.yarn/cache/errno-npm-0.1.8-10ebc185bf-1271f7b9fb.zip/node_modules/errno/",
           "packageDependencies": [
-            ["errno", "npm:0.1.7"],
+            ["errno", "npm:0.1.8"],
             ["prr", "npm:1.0.1"]
           ],
           "linkType": "HARD",
@@ -13750,10 +15516,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["internal-slot", "npm:1.0.3"],
             ["is-callable", "npm:1.2.4"],
             ["is-negative-zero", "npm:2.0.1"],
+<<<<<<< HEAD
             ["is-regex", "npm:1.1.4"],
             ["is-shared-array-buffer", "npm:1.0.1"],
             ["is-string", "npm:1.0.7"],
             ["is-weakref", "npm:1.0.1"],
+=======
+            ["is-regex", "npm:1.1.3"],
+            ["is-string", "npm:1.0.6"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["object-inspect", "npm:1.11.0"],
             ["object-keys", "npm:1.1.1"],
             ["object.assign", "npm:4.1.2"],
@@ -13778,9 +15549,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/es-to-primitive-npm-1.2.1-b7a7eac6c5-4ead6671a2.zip/node_modules/es-to-primitive/",
           "packageDependencies": [
             ["es-to-primitive", "npm:1.2.1"],
+<<<<<<< HEAD
             ["is-callable", "npm:1.2.4"],
             ["is-date-object", "npm:1.0.2"],
             ["is-symbol", "npm:1.0.3"]
+=======
+            ["is-callable", "npm:1.2.3"],
+            ["is-date-object", "npm:1.0.4"],
+            ["is-symbol", "npm:1.0.4"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -14064,7 +15841,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ajv", "npm:6.12.6"],
             ["chalk", "npm:2.4.2"],
             ["cross-spawn", "npm:6.0.5"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["doctrine", "npm:3.0.0"],
             ["eslint-scope", "npm:4.0.3"],
             ["eslint-utils", "npm:1.4.3"],
@@ -14099,17 +15884,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["npm:7.32.0", {
           "packageLocation": "./.yarn/cache/eslint-npm-7.32.0-e15cc6682f-cc85af9985.zip/node_modules/eslint/",
+=======
+        ["npm:7.28.0", {
+          "packageLocation": "./.yarn/cache/eslint-npm-7.28.0-8900a2b146-624ed594c9.zip/node_modules/eslint/",
           "packageDependencies": [
-            ["eslint", "npm:7.32.0"],
+            ["eslint", "npm:7.28.0"],
             ["@babel/code-frame", "npm:7.12.11"],
             ["@eslint/eslintrc", "npm:0.4.3"],
-            ["@humanwhocodes/config-array", "npm:0.5.0"],
             ["ajv", "npm:6.12.6"],
-            ["chalk", "npm:4.1.2"],
+            ["chalk", "npm:4.1.1"],
             ["cross-spawn", "npm:7.0.3"],
-            ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
             ["doctrine", "npm:3.0.0"],
             ["enquirer", "npm:2.3.6"],
             ["escape-string-regexp", "npm:4.0.0"],
@@ -14123,7 +15911,63 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["file-entry-cache", "npm:6.0.1"],
             ["functional-red-black-tree", "npm:1.0.1"],
             ["glob-parent", "npm:5.1.2"],
-            ["globals", "npm:13.9.0"],
+            ["globals", "npm:13.10.0"],
+            ["ignore", "npm:4.0.6"],
+            ["import-fresh", "npm:3.3.0"],
+            ["imurmurhash", "npm:0.1.4"],
+            ["is-glob", "npm:4.0.1"],
+            ["js-yaml", "npm:3.14.1"],
+            ["json-stable-stringify-without-jsonify", "npm:1.0.1"],
+            ["levn", "npm:0.4.1"],
+            ["lodash.merge", "npm:4.6.2"],
+            ["minimatch", "npm:3.0.4"],
+            ["natural-compare", "npm:1.4.0"],
+            ["optionator", "npm:0.9.1"],
+            ["progress", "npm:2.0.3"],
+            ["regexpp", "npm:3.2.0"],
+            ["semver", "npm:7.3.5"],
+            ["strip-ansi", "npm:6.0.0"],
+            ["strip-json-comments", "npm:3.1.1"],
+            ["table", "npm:6.7.1"],
+            ["text-table", "npm:0.2.0"],
+            ["v8-compile-cache", "npm:2.3.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:7.31.0", {
+          "packageLocation": "./.yarn/cache/eslint-npm-7.31.0-3e3814d85e-fd73d07ce0.zip/node_modules/eslint/",
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+          "packageDependencies": [
+            ["eslint", "npm:7.32.0"],
+            ["@babel/code-frame", "npm:7.12.11"],
+            ["@eslint/eslintrc", "npm:0.4.3"],
+            ["@humanwhocodes/config-array", "npm:0.5.0"],
+            ["ajv", "npm:6.12.6"],
+            ["chalk", "npm:4.1.2"],
+            ["cross-spawn", "npm:7.0.3"],
+<<<<<<< HEAD
+            ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+            ["doctrine", "npm:3.0.0"],
+            ["enquirer", "npm:2.3.6"],
+            ["escape-string-regexp", "npm:4.0.0"],
+            ["eslint-scope", "npm:5.1.1"],
+            ["eslint-utils", "npm:2.1.0"],
+            ["eslint-visitor-keys", "npm:2.1.0"],
+            ["espree", "npm:7.3.1"],
+            ["esquery", "npm:1.4.0"],
+            ["esutils", "npm:2.0.3"],
+            ["fast-deep-equal", "npm:3.1.3"],
+            ["file-entry-cache", "npm:6.0.1"],
+            ["functional-red-black-tree", "npm:1.0.1"],
+            ["glob-parent", "npm:5.1.2"],
+            ["globals", "npm:13.10.0"],
             ["ignore", "npm:4.0.6"],
             ["import-fresh", "npm:3.3.0"],
             ["imurmurhash", "npm:0.1.4"],
@@ -14142,7 +15986,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-json-comments", "npm:3.1.1"],
             ["table", "npm:6.7.1"],
             ["text-table", "npm:0.2.0"],
-            ["v8-compile-cache", "npm:2.2.0"]
+            ["v8-compile-cache", "npm:2.3.0"]
           ],
           "linkType": "HARD",
         }],
@@ -14282,8 +16126,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-import-resolver-node", "npm:0.3.6"],
             ["eslint-module-utils", "npm:2.7.1"],
             ["has", "npm:1.0.3"],
+<<<<<<< HEAD
             ["is-core-module", "npm:2.8.0"],
             ["is-glob", "npm:4.0.3"],
+=======
+<<<<<<< HEAD
+            ["is-core-module", "npm:2.6.0"],
+=======
+            ["is-core-module", "npm:2.5.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["minimatch", "npm:3.0.4"],
             ["object.values", "npm:1.1.5"],
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
@@ -14338,21 +16190,44 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1", {
           "packageLocation": "./.yarn/__virtual__/eslint-plugin-jsx-a11y-virtual-0657ab91bd/0/cache/eslint-plugin-jsx-a11y-npm-6.5.1-ea493bf2f2-311ab993ed.zip/node_modules/eslint-plugin-jsx-a11y/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
             ["@babel/runtime", "npm:7.16.3"],
+=======
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/eslint", null],
             ["aria-query", "npm:4.2.2"],
             ["array-includes", "npm:3.1.4"],
             ["ast-types-flow", "npm:0.0.7"],
+<<<<<<< HEAD
             ["axe-core", "npm:4.3.5"],
             ["axobject-query", "npm:2.2.0"],
             ["damerau-levenshtein", "npm:1.0.7"],
             ["emoji-regex", "npm:9.2.2"],
+=======
+            ["axe-core", "npm:4.3.1"],
+            ["axobject-query", "npm:2.2.0"],
+<<<<<<< HEAD
+            ["damerau-levenshtein", "npm:1.0.6"],
+            ["emoji-regex", "npm:9.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["eslint", "npm:7.32.0"],
+=======
+            ["damerau-levenshtein", "npm:1.0.7"],
+            ["emoji-regex", "npm:9.2.2"],
+            ["eslint", "npm:7.31.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["has", "npm:1.0.3"],
+<<<<<<< HEAD
             ["jsx-ast-utils", "npm:3.2.1"],
             ["language-tags", "npm:1.0.5"],
             ["minimatch", "npm:3.0.4"]
+=======
+            ["jsx-ast-utils", "npm:3.2.0"],
+            ["language-tags", "npm:1.0.5"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/eslint",
@@ -14491,8 +16366,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["array.prototype.flatmap", "npm:1.2.5"],
             ["doctrine", "npm:2.1.0"],
             ["eslint", "npm:7.32.0"],
+<<<<<<< HEAD
             ["estraverse", "npm:5.3.0"],
             ["jsx-ast-utils", "npm:3.2.1"],
+=======
+            ["has", "npm:1.0.3"],
+            ["jsx-ast-utils", "npm:3.2.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["minimatch", "npm:3.0.4"],
             ["object.entries", "npm:1.1.5"],
             ["object.fromentries", "npm:2.0.5"],
@@ -14828,10 +16708,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["eventsource", [
-        ["npm:1.0.7", {
-          "packageLocation": "./.yarn/cache/eventsource-npm-1.0.7-0d25273d38-26d6d9103e.zip/node_modules/eventsource/",
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/eventsource-npm-1.1.0-6a04120a6b-78338b7e75.zip/node_modules/eventsource/",
           "packageDependencies": [
-            ["eventsource", "npm:1.0.7"],
+            ["eventsource", "npm:1.1.0"],
             ["original", "npm:1.0.2"]
           ],
           "linkType": "HARD",
@@ -14843,7 +16723,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["evp_bytestokey", "npm:1.0.3"],
             ["md5.js", "npm:1.3.5"],
-            ["node-gyp", "npm:7.1.0"],
+            ["node-gyp", "npm:8.1.0"],
             ["safe-buffer", "npm:5.2.1"]
           ],
           "linkType": "HARD",
@@ -14899,7 +16779,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["execa", "npm:5.1.1"],
             ["cross-spawn", "npm:7.0.3"],
-            ["get-stream", "npm:6.0.0"],
+            ["get-stream", "npm:6.0.1"],
             ["human-signals", "npm:2.1.0"],
             ["is-stream", "npm:2.0.0"],
             ["merge-stream", "npm:2.0.0"],
@@ -14984,7 +16864,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["on-finished", "npm:2.3.0"],
             ["parseurl", "npm:1.3.3"],
             ["path-to-regexp", "npm:0.1.7"],
-            ["proxy-addr", "npm:2.0.6"],
+            ["proxy-addr", "npm:2.0.7"],
             ["qs", "npm:6.5.1"],
             ["range-parser", "npm:1.2.1"],
             ["safe-buffer", "npm:5.1.1"],
@@ -15021,7 +16901,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["on-finished", "npm:2.3.0"],
             ["parseurl", "npm:1.3.3"],
             ["path-to-regexp", "npm:0.1.7"],
-            ["proxy-addr", "npm:2.0.6"],
+            ["proxy-addr", "npm:2.0.7"],
             ["qs", "npm:6.7.0"],
             ["range-parser", "npm:1.2.1"],
             ["safe-buffer", "npm:5.1.2"],
@@ -15129,7 +17009,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["extract-zip", "npm:2.0.1"],
             ["@types/yauzl", "npm:2.9.2"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["get-stream", "npm:5.2.0"],
             ["yauzl", "npm:2.10.0"]
           ],
@@ -15189,8 +17077,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/fast-glob-npm-3.2.7-a2f0a45f5b-2f4708ff11.zip/node_modules/fast-glob/",
           "packageDependencies": [
             ["fast-glob", "npm:3.2.7"],
+<<<<<<< HEAD
             ["@nodelib/fs.stat", "npm:2.0.3"],
             ["@nodelib/fs.walk", "npm:1.2.4"],
+=======
+            ["@nodelib/fs.stat", "npm:2.0.5"],
+            ["@nodelib/fs.walk", "npm:1.2.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["glob-parent", "npm:5.1.2"],
             ["merge2", "npm:1.4.1"],
             ["micromatch", "npm:4.0.4"]
@@ -15250,10 +17143,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/fast-redact-npm-3.0.0-cdc3023768-8fbc5aadb0.zip/node_modules/fast-redact/",
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/fast-redact-npm-3.0.1-bd84a09cb8-89de97ea5c.zip/node_modules/fast-redact/",
           "packageDependencies": [
-            ["fast-redact", "npm:3.0.0"]
+            ["fast-redact", "npm:3.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -15286,20 +17179,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["fastq", [
-        ["npm:1.8.0", {
-          "packageLocation": "./.yarn/cache/fastq-npm-1.8.0-4c0923de4a-f9ece30617.zip/node_modules/fastq/",
+        ["npm:1.11.1", {
+          "packageLocation": "./.yarn/cache/fastq-npm-1.11.1-ed420613b5-3877a63bee.zip/node_modules/fastq/",
           "packageDependencies": [
-            ["fastq", "npm:1.8.0"],
+            ["fastq", "npm:1.11.1"],
             ["reusify", "npm:1.0.4"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["faye-websocket", [
-        ["npm:0.11.3", {
-          "packageLocation": "./.yarn/cache/faye-websocket-npm-0.11.3-314c7cf07f-d7b2d68546.zip/node_modules/faye-websocket/",
+        ["npm:0.11.4", {
+          "packageLocation": "./.yarn/cache/faye-websocket-npm-0.11.4-1f0de76de9-d49a62caf0.zip/node_modules/faye-websocket/",
           "packageDependencies": [
-            ["faye-websocket", "npm:0.11.3"],
+            ["faye-websocket", "npm:0.11.4"],
             ["websocket-driver", "npm:0.7.4"]
           ],
           "linkType": "HARD",
@@ -15451,6 +17344,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["filter-obj", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/filter-obj-npm-1.1.0-84128fc26d-cf2104a7c4.zip/node_modules/filter-obj/",
+          "packageDependencies": [
+            ["filter-obj", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["finalhandler", [
         ["npm:1.1.0", {
           "packageLocation": "./.yarn/cache/finalhandler-npm-1.1.0-49da7761f1-fb22b42031.zip/node_modules/finalhandler/",
@@ -15548,8 +17450,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:4.2.2", {
           "packageLocation": "./.yarn/cache/firefox-profile-npm-4.2.2-41ba0ada9c-21f338accb.zip/node_modules/firefox-profile/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["firefox-profile", "npm:4.2.2"],
             ["adm-zip", "npm:0.5.4"],
+=======
+            ["firefox-profile", "npm:4.2.0"],
+            ["adm-zip", "npm:0.5.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["fs-extra", "npm:9.0.1"],
             ["ini", "npm:2.0.0"],
             ["minimist", "npm:1.2.5"],
@@ -15593,7 +17500,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/flat-cache-npm-3.0.4-ee77e5911e-4fdd10ecbc.zip/node_modules/flat-cache/",
           "packageDependencies": [
             ["flat-cache", "npm:3.0.4"],
-            ["flatted", "npm:3.1.0"],
+            ["flatted", "npm:3.2.1"],
             ["rimraf", "npm:3.0.2"]
           ],
           "linkType": "HARD",
@@ -15616,10 +17523,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.1.0", {
-          "packageLocation": "./.yarn/cache/flatted-npm-3.1.0-3356df83fe-3e4699377e.zip/node_modules/flatted/",
+        ["npm:3.2.1", {
+          "packageLocation": "./.yarn/cache/flatted-npm-3.2.1-6f773b4b8e-569f3af4ba.zip/node_modules/flatted/",
           "packageDependencies": [
-            ["flatted", "npm:3.1.0"]
+            ["flatted", "npm:3.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -15644,10 +17551,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["follow-redirects", [
-        ["npm:1.13.0", {
-          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.13.0-ae26ae301a-684165a783.zip/node_modules/follow-redirects/",
+        ["npm:1.14.1", {
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.14.1-e6bdc0f8e5-7381a55bdc.zip/node_modules/follow-redirects/",
           "packageDependencies": [
-            ["follow-redirects", "npm:1.13.0"]
+            ["follow-redirects", "npm:1.14.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.14.1", {
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-813c27ce66/0/cache/follow-redirects-npm-1.14.1-e6bdc0f8e5-7381a55bdc.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.14.1"],
+            ["debug", null]
+          ],
+          "packagePeers": [
+            "debug"
           ],
           "linkType": "HARD",
         }]
@@ -15686,26 +17604,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["form-data", "npm:2.3.3"],
             ["asynckit", "npm:0.4.0"],
             ["combined-stream", "npm:1.0.8"],
-            ["mime-types", "npm:2.1.27"]
+            ["mime-types", "npm:2.1.31"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/form-data-npm-3.0.0-b01f488350-60ec3fe7e2.zip/node_modules/form-data/",
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/form-data-npm-3.0.1-d080d436e0-b019e8d35c.zip/node_modules/form-data/",
           "packageDependencies": [
-            ["form-data", "npm:3.0.0"],
+            ["form-data", "npm:3.0.1"],
             ["asynckit", "npm:0.4.0"],
             ["combined-stream", "npm:1.0.8"],
-            ["mime-types", "npm:2.1.27"]
+            ["mime-types", "npm:2.1.31"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["forwarded", [
-        ["npm:0.1.2", {
-          "packageLocation": "./.yarn/cache/forwarded-npm-0.1.2-6143c1ba42-54695c5742.zip/node_modules/forwarded/",
+        ["npm:0.2.0", {
+          "packageLocation": "./.yarn/cache/forwarded-npm-0.2.0-6473dabe35-fd27e2394d.zip/node_modules/forwarded/",
           "packageDependencies": [
-            ["forwarded", "npm:0.1.2"]
+            ["forwarded", "npm:0.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -15730,23 +17648,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["framer-motion", [
-        ["npm:4.1.4", {
-          "packageLocation": "./.yarn/cache/framer-motion-npm-4.1.4-66ecccd1fb-35e0b890a9.zip/node_modules/framer-motion/",
+        ["npm:4.1.17", {
+          "packageLocation": "./.yarn/cache/framer-motion-npm-4.1.17-00d2b9950f-f6b5fc8f18.zip/node_modules/framer-motion/",
           "packageDependencies": [
-            ["framer-motion", "npm:4.1.4"]
+            ["framer-motion", "npm:4.1.17"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.1.4", {
-          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-04a77dcb4a/0/cache/framer-motion-npm-4.1.4-66ecccd1fb-35e0b890a9.zip/node_modules/framer-motion/",
+        ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.1.17", {
+          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-51f50f3a0c/0/cache/framer-motion-npm-4.1.17-00d2b9950f-f6b5fc8f18.zip/node_modules/framer-motion/",
           "packageDependencies": [
-            ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.1.4"],
+            ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.1.17"],
             ["@emotion/is-prop-valid", "npm:0.8.8"],
             ["@types/react", "npm:17.0.14"],
             ["@types/react-dom", "npm:17.0.9"],
             ["framesync", "npm:5.3.0"],
             ["hey-listen", "npm:1.0.8"],
-            ["popmotion", "npm:9.3.5"],
+            ["popmotion", "npm:9.3.6"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["style-value-types", "npm:4.1.4"],
@@ -15763,7 +17681,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["framesync", [
         ["npm:5.3.0", {
-          "packageLocation": "./.yarn/cache/framesync-npm-5.3.0-6dde4726f5-14a6ed7d2a.zip/node_modules/framesync/",
+          "packageLocation": "./.yarn/cache/framesync-npm-5.3.0-6dde4726f5-9ebbb2863e.zip/node_modules/framesync/",
           "packageDependencies": [
             ["framesync", "npm:5.3.0"],
             ["tslib", "npm:2.3.0"]
@@ -15816,7 +17734,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fs-extra", "npm:9.0.1"],
             ["at-least-node", "npm:1.0.0"],
             ["graceful-fs", "npm:4.2.6"],
-            ["jsonfile", "npm:6.0.1"],
+            ["jsonfile", "npm:6.1.0"],
             ["universalify", "npm:1.0.0"]
           ],
           "linkType": "HARD",
@@ -15827,7 +17745,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fs-extra", "npm:9.1.0"],
             ["at-least-node", "npm:1.0.0"],
             ["graceful-fs", "npm:4.2.6"],
-            ["jsonfile", "npm:6.0.1"],
+            ["jsonfile", "npm:6.1.0"],
             ["universalify", "npm:2.0.0"]
           ],
           "linkType": "HARD",
@@ -15876,23 +17794,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["fsevents", "patch:fsevents@npm%3A1.2.13#~builtin<compat/fsevents>::version=1.2.13&hash=18f3a7"],
             ["bindings", "npm:1.5.0"],
-            ["nan", "npm:2.14.1"]
+            ["nan", "npm:2.14.2"]
           ],
           "linkType": "HARD",
         }],
         ["patch:fsevents@npm%3A2.0.7#~builtin<compat/fsevents>::version=2.0.7&hash=18f3a7", {
           "packageLocation": "./.yarn/unplugged/fsevents-patch-5a414db030/node_modules/fsevents/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["fsevents", "patch:fsevents@npm%3A2.0.7#~builtin<compat/fsevents>::version=2.0.7&hash=18f3a7"],
             ["node-gyp", "npm:7.1.0"]
+=======
+            ["fsevents", "patch:fsevents@npm%3A2.0.7#~builtin<compat/fsevents>::version=2.0.7&hash=1cc4b2"],
+            ["node-gyp", "npm:8.1.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }],
         ["patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7", {
           "packageLocation": "./.yarn/unplugged/fsevents-patch-3340e2eb10/node_modules/fsevents/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"],
             ["node-gyp", "npm:7.1.0"]
+=======
+            ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=1cc4b2"],
+            ["node-gyp", "npm:8.1.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -16020,14 +17948,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["get-pkg-repo", [
-        ["npm:1.4.0", {
-          "packageLocation": "./.yarn/cache/get-pkg-repo-npm-1.4.0-2e8b78f4cf-c81dd33b33.zip/node_modules/get-pkg-repo/",
+        ["npm:4.1.2", {
+          "packageLocation": "./.yarn/cache/get-pkg-repo-npm-4.1.2-24def331f9-c756ed1991.zip/node_modules/get-pkg-repo/",
           "packageDependencies": [
-            ["get-pkg-repo", "npm:1.4.0"],
-            ["hosted-git-info", "npm:2.8.8"],
-            ["meow", "npm:3.7.0"],
-            ["normalize-package-data", "npm:2.5.0"],
-            ["parse-github-repo-url", "npm:1.4.1"],
+            ["get-pkg-repo", "npm:4.1.2"],
+            ["@hutson/parse-repository-url", "npm:3.0.2"],
+            ["hosted-git-info", "npm:4.0.2"],
+            ["meow", "npm:7.1.1"],
             ["through2", "npm:2.0.5"]
           ],
           "linkType": "HARD",
@@ -16082,10 +18009,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:6.0.0", {
-          "packageLocation": "./.yarn/cache/get-stream-npm-6.0.0-ca30041dff-587e6a9312.zip/node_modules/get-stream/",
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/get-stream-npm-6.0.1-83e51a4642-e04ecece32.zip/node_modules/get-stream/",
           "packageDependencies": [
-            ["get-stream", "npm:6.0.0"]
+            ["get-stream", "npm:6.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -16188,22 +18115,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["git-up", [
-        ["npm:4.0.2", {
-          "packageLocation": "./.yarn/cache/git-up-npm-4.0.2-3cd4003c69-852603d6fc.zip/node_modules/git-up/",
+        ["npm:4.0.5", {
+          "packageLocation": "./.yarn/cache/git-up-npm-4.0.5-ee94e6e390-dd8f39a115.zip/node_modules/git-up/",
           "packageDependencies": [
-            ["git-up", "npm:4.0.2"],
-            ["is-ssh", "npm:1.3.2"],
-            ["parse-url", "npm:5.0.2"]
+            ["git-up", "npm:4.0.5"],
+            ["is-ssh", "npm:1.3.3"],
+            ["parse-url", "npm:6.0.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["git-url-parse", [
-        ["npm:11.4.4", {
-          "packageLocation": "./.yarn/cache/git-url-parse-npm-11.4.4-4fb31e3403-e70c9b170b.zip/node_modules/git-url-parse/",
+        ["npm:11.5.0", {
+          "packageLocation": "./.yarn/cache/git-url-parse-npm-11.5.0-69cd20e4ea-ba6a4578b1.zip/node_modules/git-url-parse/",
           "packageDependencies": [
-            ["git-url-parse", "npm:11.4.4"],
-            ["git-up", "npm:4.0.2"]
+            ["git-url-parse", "npm:11.5.0"],
+            ["git-up", "npm:4.0.5"]
           ],
           "linkType": "HARD",
         }]
@@ -16276,11 +18203,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["npm:6.0.2", {
           "packageLocation": "./.yarn/cache/glob-parent-npm-6.0.2-2cbef12738-c13ee97978.zip/node_modules/glob-parent/",
           "packageDependencies": [
             ["glob-parent", "npm:6.0.2"],
             ["is-glob", "npm:4.0.3"]
+=======
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/glob-parent-npm-6.0.1-f522c2d082-0468cf300b.zip/node_modules/glob-parent/",
+          "packageDependencies": [
+            ["glob-parent", "npm:6.0.1"],
+            ["is-glob", "npm:4.0.1"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -16331,10 +18266,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:13.9.0", {
-          "packageLocation": "./.yarn/cache/globals-npm-13.9.0-364a8ebd6b-566b29b475.zip/node_modules/globals/",
+        ["npm:13.10.0", {
+          "packageLocation": "./.yarn/cache/globals-npm-13.10.0-48742e93b3-64e45d96d6.zip/node_modules/globals/",
           "packageDependencies": [
-            ["globals", "npm:13.9.0"],
+            ["globals", "npm:13.10.0"],
             ["type-fest", "npm:0.20.2"]
           ],
           "linkType": "HARD",
@@ -16352,11 +18287,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/globby-npm-10.0.0-cb35d8adf9-fbff58d2fc.zip/node_modules/globby/",
           "packageDependencies": [
             ["globby", "npm:10.0.0"],
-            ["@types/glob", "npm:7.1.3"],
+            ["@types/glob", "npm:7.1.4"],
             ["array-union", "npm:2.1.0"],
             ["dir-glob", "npm:3.0.1"],
+<<<<<<< HEAD
             ["fast-glob", "npm:3.2.7"],
+=======
+<<<<<<< HEAD
+            ["fast-glob", "npm:3.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["glob", "npm:7.2.0"],
+=======
+            ["fast-glob", "npm:3.2.7"],
+            ["glob", "npm:7.1.7"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["ignore", "npm:5.1.8"],
             ["merge2", "npm:1.4.1"],
             ["slash", "npm:3.0.0"]
@@ -16367,11 +18311,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/globby-npm-10.0.2-9b274c88d3-167cd067f2.zip/node_modules/globby/",
           "packageDependencies": [
             ["globby", "npm:10.0.2"],
-            ["@types/glob", "npm:7.1.3"],
+            ["@types/glob", "npm:7.1.4"],
             ["array-union", "npm:2.1.0"],
             ["dir-glob", "npm:3.0.1"],
+<<<<<<< HEAD
             ["fast-glob", "npm:3.2.7"],
+=======
+<<<<<<< HEAD
+            ["fast-glob", "npm:3.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["glob", "npm:7.2.0"],
+=======
+            ["fast-glob", "npm:3.2.7"],
+            ["glob", "npm:7.1.7"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["ignore", "npm:5.1.8"],
             ["merge2", "npm:1.4.1"],
             ["slash", "npm:3.0.0"]
@@ -16410,15 +18363,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["got", "npm:11.5.2"],
             ["@sindresorhus/is", "npm:3.1.2"],
-            ["@szmarczak/http-timer", "npm:4.0.5"],
-            ["@types/cacheable-request", "npm:6.0.1"],
+            ["@szmarczak/http-timer", "npm:4.0.6"],
+            ["@types/cacheable-request", "npm:6.0.2"],
             ["@types/responselike", "npm:1.0.0"],
             ["cacheable-lookup", "npm:5.0.4"],
-            ["cacheable-request", "npm:7.0.1"],
+            ["cacheable-request", "npm:7.0.2"],
             ["decompress-response", "npm:6.0.0"],
             ["http2-wrapper", "npm:1.0.3"],
             ["lowercase-keys", "npm:2.0.0"],
-            ["p-cancelable", "npm:2.1.0"],
+            ["p-cancelable", "npm:2.1.1"],
             ["responselike", "npm:2.0.0"]
           ],
           "linkType": "HARD",
@@ -16427,16 +18380,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/got-npm-11.8.2-c1eb105458-41ad7bf74f.zip/node_modules/got/",
           "packageDependencies": [
             ["got", "npm:11.8.2"],
-            ["@sindresorhus/is", "npm:4.0.0"],
-            ["@szmarczak/http-timer", "npm:4.0.5"],
-            ["@types/cacheable-request", "npm:6.0.1"],
+            ["@sindresorhus/is", "npm:4.0.1"],
+            ["@szmarczak/http-timer", "npm:4.0.6"],
+            ["@types/cacheable-request", "npm:6.0.2"],
             ["@types/responselike", "npm:1.0.0"],
             ["cacheable-lookup", "npm:5.0.4"],
-            ["cacheable-request", "npm:7.0.1"],
+            ["cacheable-request", "npm:7.0.2"],
             ["decompress-response", "npm:6.0.0"],
             ["http2-wrapper", "npm:1.0.3"],
             ["lowercase-keys", "npm:2.0.0"],
-            ["p-cancelable", "npm:2.1.0"],
+            ["p-cancelable", "npm:2.1.1"],
             ["responselike", "npm:2.0.0"]
           ],
           "linkType": "HARD",
@@ -16447,7 +18400,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["got", "npm:9.6.0"],
             ["@sindresorhus/is", "npm:0.14.0"],
             ["@szmarczak/http-timer", "npm:1.1.2"],
-            ["@types/keyv", "npm:3.1.1"],
+            ["@types/keyv", "npm:3.1.2"],
             ["@types/responselike", "npm:1.0.0"],
             ["cacheable-request", "npm:6.1.0"],
             ["decompress-response", "npm:3.3.0"],
@@ -16525,14 +18478,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["handlebars", [
-        ["npm:4.7.6", {
-          "packageLocation": "./.yarn/cache/handlebars-npm-4.7.6-f64e7514e4-6fb9ba14c7.zip/node_modules/handlebars/",
+        ["npm:4.7.7", {
+          "packageLocation": "./.yarn/cache/handlebars-npm-4.7.7-a9ccfabf80-1e79a43f5e.zip/node_modules/handlebars/",
           "packageDependencies": [
-            ["handlebars", "npm:4.7.6"],
+            ["handlebars", "npm:4.7.7"],
             ["minimist", "npm:1.2.5"],
             ["neo-async", "npm:2.6.2"],
             ["source-map", "npm:0.6.1"],
-            ["uglify-js", "npm:3.10.4"],
+            ["uglify-js", "npm:3.14.0"],
             ["wordwrap", "npm:1.0.0"]
           ],
           "linkType": "HARD",
@@ -16748,7 +18701,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["hey-listen", [
         ["npm:1.0.8", {
-          "packageLocation": "./.yarn/cache/hey-listen-npm-1.0.8-adb7dae9da-b9a3ed8d48.zip/node_modules/hey-listen/",
+          "packageLocation": "./.yarn/cache/hey-listen-npm-1.0.8-adb7dae9da-6bad60b367.zip/node_modules/hey-listen/",
           "packageDependencies": [
             ["hey-listen", "npm:1.0.8"]
           ],
@@ -16778,18 +18731,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["hosted-git-info", [
-        ["npm:2.8.8", {
-          "packageLocation": "./.yarn/cache/hosted-git-info-npm-2.8.8-94a3928c03-fc5bdbd1ce.zip/node_modules/hosted-git-info/",
+        ["npm:2.8.9", {
+          "packageLocation": "./.yarn/cache/hosted-git-info-npm-2.8.9-62c44fa93f-c955394bda.zip/node_modules/hosted-git-info/",
           "packageDependencies": [
-            ["hosted-git-info", "npm:2.8.8"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:3.0.8", {
-          "packageLocation": "./.yarn/cache/hosted-git-info-npm-3.0.8-e1d95672ef-5af7a69581.zip/node_modules/hosted-git-info/",
-          "packageDependencies": [
-            ["hosted-git-info", "npm:3.0.8"],
-            ["lru-cache", "npm:6.0.0"]
+            ["hosted-git-info", "npm:2.8.9"]
           ],
           "linkType": "HARD",
         }],
@@ -16834,10 +18779,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["html-entities", [
-        ["npm:1.3.1", {
-          "packageLocation": "./.yarn/cache/html-entities-npm-1.3.1-5f280346c8-423e313882.zip/node_modules/html-entities/",
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/html-entities-npm-1.4.0-39a1121015-4b73ffb9ee.zip/node_modules/html-entities/",
           "packageDependencies": [
-            ["html-entities", "npm:1.3.1"]
+            ["html-entities", "npm:1.4.0"]
           ],
           "linkType": "HARD",
         }]
@@ -16855,10 +18800,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:6.0.2", {
           "packageLocation": "./.yarn/cache/html-minifier-terser-npm-6.0.2-3a759c4206-9c8775ea03.zip/node_modules/html-minifier-terser/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["html-minifier-terser", "npm:6.0.2"],
             ["camel-case", "npm:4.1.2"],
             ["clean-css", "npm:5.2.1"],
             ["commander", "npm:8.3.0"],
+=======
+            ["html-minifier-terser", "npm:5.1.1"],
+            ["camel-case", "npm:4.1.2"],
+            ["clean-css", "npm:4.2.3"],
+            ["commander", "npm:4.1.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["he", "npm:1.2.0"],
             ["param-case", "npm:3.0.4"],
             ["relateurl", "npm:0.2.7"],
@@ -16878,8 +18830,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.5.0", {
           "packageLocation": "./.yarn/__virtual__/html-webpack-plugin-virtual-b11e8e582f/0/cache/html-webpack-plugin-npm-5.5.0-75c5a14e55-f3d84d0df7.zip/node_modules/html-webpack-plugin/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["html-webpack-plugin", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.5.0"],
             ["@types/html-minifier-terser", "npm:6.0.0"],
+=======
+            ["html-webpack-plugin", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.3.2"],
+            ["@types/html-minifier-terser", "npm:5.1.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["html-minifier-terser", "npm:6.0.2"],
             ["loader-utils", "npm:2.0.0"],
@@ -16897,8 +18854,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.5.0", {
           "packageLocation": "./.yarn/__virtual__/html-webpack-plugin-virtual-13ba917235/0/cache/html-webpack-plugin-npm-5.5.0-75c5a14e55-f3d84d0df7.zip/node_modules/html-webpack-plugin/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["html-webpack-plugin", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.5.0"],
             ["@types/html-minifier-terser", "npm:6.0.0"],
+=======
+            ["html-webpack-plugin", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.3.2"],
+            ["@types/html-minifier-terser", "npm:5.1.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["html-minifier-terser", "npm:6.0.2"],
             ["loader-utils", "npm:2.0.0"],
@@ -16935,7 +18897,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["domelementtype", "npm:2.2.0"],
             ["domhandler", "npm:4.2.0"],
             ["domutils", "npm:2.7.0"],
-            ["entities", "npm:2.1.0"]
+            ["entities", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -17007,10 +18969,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["http-parser-js", [
-        ["npm:0.5.2", {
-          "packageLocation": "./.yarn/cache/http-parser-js-npm-0.5.2-1f33e1aae9-f5e1459797.zip/node_modules/http-parser-js/",
+        ["npm:0.5.3", {
+          "packageLocation": "./.yarn/cache/http-parser-js-npm-0.5.3-1974f4efad-6f3142c5f6.zip/node_modules/http-parser-js/",
           "packageDependencies": [
-            ["http-parser-js", "npm:0.5.2"]
+            ["http-parser-js", "npm:0.5.3"]
           ],
           "linkType": "HARD",
         }]
@@ -17021,7 +18983,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["http-proxy", "npm:1.18.1"],
             ["eventemitter3", "npm:4.0.7"],
-            ["follow-redirects", "npm:1.13.0"],
+            ["follow-redirects", "virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.14.1"],
             ["requires-port", "npm:1.0.0"]
           ],
           "linkType": "HARD",
@@ -17033,8 +18995,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["http-proxy-agent", "npm:4.0.1"],
             ["@tootallnate/once", "npm:1.1.2"],
+<<<<<<< HEAD
             ["agent-base", "npm:6.0.2"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"]
+=======
+<<<<<<< HEAD
+            ["agent-base", "npm:6.0.1"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"]
+=======
+            ["agent-base", "npm:6.0.2"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -17101,7 +19073,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["http2-wrapper", "npm:1.0.3"],
             ["quick-lru", "npm:5.1.1"],
-            ["resolve-alpn", "npm:1.0.0"]
+            ["resolve-alpn", "npm:1.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -17120,8 +19092,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/https-proxy-agent-npm-5.0.0-bb777903c3-165bfb090b.zip/node_modules/https-proxy-agent/",
           "packageDependencies": [
             ["https-proxy-agent", "npm:5.0.0"],
+<<<<<<< HEAD
             ["agent-base", "npm:6.0.2"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"]
+=======
+<<<<<<< HEAD
+            ["agent-base", "npm:6.0.1"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"]
+=======
+            ["agent-base", "npm:6.0.2"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -17147,7 +19129,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/humanize-ms-npm-1.2.1-e942bd7329-9c7a74a282.zip/node_modules/humanize-ms/",
           "packageDependencies": [
             ["humanize-ms", "npm:1.2.1"],
-            ["ms", "npm:2.1.2"]
+            ["ms", "npm:2.1.3"]
           ],
           "linkType": "HARD",
         }]
@@ -17208,7 +19190,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["icss-utils", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:5.1.0"],
             ["@types/postcss", null],
+<<<<<<< HEAD
             ["postcss", "npm:8.3.11"]
+=======
+<<<<<<< HEAD
+            ["postcss", "npm:8.3.9"]
+=======
+            ["postcss", "npm:8.3.6"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/postcss",
@@ -17250,10 +19240,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ignore-walk", [
-        ["npm:3.0.3", {
-          "packageLocation": "./.yarn/cache/ignore-walk-npm-3.0.3-7d7a6bd656-34bc6f0497.zip/node_modules/ignore-walk/",
+        ["npm:3.0.4", {
+          "packageLocation": "./.yarn/cache/ignore-walk-npm-3.0.4-dc5095baa0-9e9c5ef6c3.zip/node_modules/ignore-walk/",
           "packageDependencies": [
-            ["ignore-walk", "npm:3.0.3"],
+            ["ignore-walk", "npm:3.0.4"],
             ["minimatch", "npm:3.0.4"]
           ],
           "linkType": "HARD",
@@ -17264,7 +19254,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ilp-logger-npm-1.4.2-5c6565ae44-32d5e1d9c3.zip/node_modules/ilp-logger/",
           "packageDependencies": [
             ["ilp-logger", "npm:1.4.2"],
+<<<<<<< HEAD
             ["@types/debug", "npm:4.1.7"],
+=======
+            ["@types/debug", "npm:4.1.6"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["debug", "virtual:5c6565ae444b792dcde6c509e447568014350d8fa19988fc85aa860ede8ffd57b097041179fd8651382ed2ed8ad02bda02f2c42952d39dd2a9cf26c2f5631496#npm:4.3.2"],
             ["supports-color", "npm:7.2.0"]
           ],
@@ -17289,7 +19283,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["@types/debug", "npm:0.0.30"],
-            ["@types/node", "npm:10.17.35"],
+            ["@types/node", "npm:10.17.60"],
             ["@types/ws", "npm:6.0.4"],
             ["btp-packet", "npm:2.2.1"],
             ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
@@ -17305,7 +19299,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ilp-plugin-mini-accounts-npm-4.2.0-81d2272a5a-14348c8da2.zip/node_modules/ilp-plugin-mini-accounts/",
           "packageDependencies": [
             ["ilp-plugin-mini-accounts", "npm:4.2.0"],
-            ["@types/node", "npm:10.17.35"],
+            ["@types/node", "npm:10.17.60"],
             ["@types/ws", "npm:6.0.4"],
             ["btp-packet", "npm:2.2.1"],
             ["ilp-logger", "npm:1.4.2"],
@@ -17325,7 +19319,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ilp-protocol-ildcp-npm-2.2.2-a9bbacc74e-a02add3074.zip/node_modules/ilp-protocol-ildcp/",
           "packageDependencies": [
             ["ilp-protocol-ildcp", "npm:2.2.2"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["ilp-packet", "npm:3.1.2"],
             ["oer-utils", "npm:5.1.2"]
           ],
@@ -17338,7 +19340,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["ilp-protocol-stream", "npm:2.7.0"],
             ["@types/long", "npm:4.0.1"],
-            ["@types/node", "npm:10.17.35"],
+            ["@types/node", "npm:10.17.60"],
             ["ilp-logger", "npm:1.4.2"],
             ["ilp-packet", "npm:3.1.2"],
             ["ilp-protocol-ildcp", "npm:2.2.2"],
@@ -17453,16 +19455,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["indefinite-observable", [
-        ["npm:2.0.1", {
-          "packageLocation": "./.yarn/cache/indefinite-observable-npm-2.0.1-b748e70baa-b4305c999b.zip/node_modules/indefinite-observable/",
-          "packageDependencies": [
-            ["indefinite-observable", "npm:2.0.1"],
-            ["symbol-observable", "npm:1.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["indent-string", [
         ["npm:2.1.0", {
           "packageLocation": "./.yarn/cache/indent-string-npm-2.1.0-fe23253c76-2fe7124311.zip/node_modules/indent-string/",
@@ -17476,15 +19468,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/indent-string-npm-4.0.0-7b717435b2-824cfb9929.zip/node_modules/indent-string/",
           "packageDependencies": [
             ["indent-string", "npm:4.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["indexes-of", [
-        ["npm:1.0.1", {
-          "packageLocation": "./.yarn/cache/indexes-of-npm-1.0.1-5ce8500941-4f9799b173.zip/node_modules/indexes-of/",
-          "packageDependencies": [
-            ["indexes-of", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -17542,12 +19525,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["init-package-json", [
-        ["npm:2.0.2", {
-          "packageLocation": "./.yarn/cache/init-package-json-npm-2.0.2-64aa7b946d-d8bfd3bd0d.zip/node_modules/init-package-json/",
+        ["npm:2.0.3", {
+          "packageLocation": "./.yarn/cache/init-package-json-npm-2.0.3-62e95e395e-1787ed78e2.zip/node_modules/init-package-json/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["init-package-json", "npm:2.0.2"],
             ["glob", "npm:7.2.0"],
+<<<<<<< HEAD
             ["npm-package-arg", "npm:8.1.5"],
+=======
+            ["npm-package-arg", "npm:8.1.1"],
+=======
+            ["init-package-json", "npm:2.0.3"],
+            ["glob", "npm:7.1.7"],
+            ["npm-package-arg", "npm:8.1.5"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["promzard", "npm:0.3.0"],
             ["read", "npm:1.0.7"],
             ["read-package-json", "npm:3.0.1"],
@@ -17603,8 +19596,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/inquirer-npm-7.3.3-9e86782610-4d387fc1eb.zip/node_modules/inquirer/",
           "packageDependencies": [
             ["inquirer", "npm:7.3.3"],
+<<<<<<< HEAD
             ["ansi-escapes", "npm:4.3.1"],
             ["chalk", "npm:4.1.2"],
+=======
+            ["ansi-escapes", "npm:4.3.2"],
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["cli-cursor", "npm:3.1.0"],
             ["cli-width", "npm:3.0.0"],
             ["external-editor", "npm:3.1.0"],
@@ -17613,8 +19611,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mute-stream", "npm:0.0.8"],
             ["run-async", "npm:2.4.1"],
             ["rxjs", "npm:6.6.7"],
+<<<<<<< HEAD
             ["string-width", "npm:4.2.0"],
             ["strip-ansi", "npm:6.0.1"],
+=======
+            ["string-width", "npm:4.2.2"],
+            ["strip-ansi", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["through", "npm:2.3.8"]
           ],
           "linkType": "HARD",
@@ -17784,10 +19787,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-arguments", [
-        ["npm:1.0.4", {
-          "packageLocation": "./.yarn/cache/is-arguments-npm-1.0.4-c0da5c85ee-a40ce1580c.zip/node_modules/is-arguments/",
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/is-arguments-npm-1.1.0-cbdb8dc8b6-c32f8b5052.zip/node_modules/is-arguments/",
           "packageDependencies": [
-            ["is-arguments", "npm:1.0.4"]
+            ["is-arguments", "npm:1.1.0"],
+            ["call-bind", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -17802,10 +19806,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-bigint", [
-        ["npm:1.0.1", {
-          "packageLocation": "./.yarn/cache/is-bigint-npm-1.0.1-6228cdc523-04aa6fde59.zip/node_modules/is-bigint/",
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/is-bigint-npm-1.0.2-db0dde4bd4-5268edbde8.zip/node_modules/is-bigint/",
           "packageDependencies": [
-            ["is-bigint", "npm:1.0.1"]
+            ["is-bigint", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -17823,16 +19827,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/is-binary-path-npm-2.1.0-e61d46f557-84192eb88c.zip/node_modules/is-binary-path/",
           "packageDependencies": [
             ["is-binary-path", "npm:2.1.0"],
-            ["binary-extensions", "npm:2.1.0"]
+            ["binary-extensions", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["is-boolean-object", [
-        ["npm:1.1.0", {
-          "packageLocation": "./.yarn/cache/is-boolean-object-npm-1.1.0-650a6dfdad-3ead044617.zip/node_modules/is-boolean-object/",
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/is-boolean-object-npm-1.1.1-4a132c53e4-95b8322426.zip/node_modules/is-boolean-object/",
           "packageDependencies": [
-            ["is-boolean-object", "npm:1.1.0"],
+            ["is-boolean-object", "npm:1.1.1"],
             ["call-bind", "npm:1.0.2"]
           ],
           "linkType": "HARD",
@@ -17867,10 +19871,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-core-module", [
+<<<<<<< HEAD
         ["npm:2.8.0", {
           "packageLocation": "./.yarn/cache/is-core-module-npm-2.8.0-acc8c42f1b-f8b5271489.zip/node_modules/is-core-module/",
           "packageDependencies": [
             ["is-core-module", "npm:2.8.0"],
+=======
+<<<<<<< HEAD
+        ["npm:2.6.0", {
+          "packageLocation": "./.yarn/cache/is-core-module-npm-2.6.0-3684fdf55a-183b3b96fe.zip/node_modules/is-core-module/",
+          "packageDependencies": [
+            ["is-core-module", "npm:2.6.0"],
+=======
+        ["npm:2.5.0", {
+          "packageLocation": "./.yarn/cache/is-core-module-npm-2.5.0-5f48eb2995-e007de6ca5.zip/node_modules/is-core-module/",
+          "packageDependencies": [
+            ["is-core-module", "npm:2.5.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["has", "npm:1.0.3"]
           ],
           "linkType": "HARD",
@@ -17895,10 +19913,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-date-object", [
-        ["npm:1.0.2", {
-          "packageLocation": "./.yarn/cache/is-date-object-npm-1.0.2-461fbe93c0-ac859426e5.zip/node_modules/is-date-object/",
+        ["npm:1.0.4", {
+          "packageLocation": "./.yarn/cache/is-date-object-npm-1.0.4-bc85407e70-20ce7b73fd.zip/node_modules/is-date-object/",
           "packageDependencies": [
-            ["is-date-object", "npm:1.0.2"]
+            ["is-date-object", "npm:1.0.4"]
           ],
           "linkType": "HARD",
         }]
@@ -17926,10 +19944,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-docker", [
-        ["npm:2.1.1", {
-          "packageLocation": "./.yarn/cache/is-docker-npm-2.1.1-f58143f915-dfa7338b44.zip/node_modules/is-docker/",
+        ["npm:2.2.1", {
+          "packageLocation": "./.yarn/cache/is-docker-npm-2.2.1-3f18a53aff-3fef7ddbf0.zip/node_modules/is-docker/",
           "packageDependencies": [
-            ["is-docker", "npm:2.1.1"]
+            ["is-docker", "npm:2.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -18010,10 +20028,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-generator-function", [
-        ["npm:1.0.7", {
-          "packageLocation": "./.yarn/cache/is-generator-function-npm-1.0.7-f264e5a57d-05fa270375.zip/node_modules/is-generator-function/",
+        ["npm:1.0.9", {
+          "packageLocation": "./.yarn/cache/is-generator-function-npm-1.0.9-5c5a02a5d9-78e68709a0.zip/node_modules/is-generator-function/",
           "packageDependencies": [
-            ["is-generator-function", "npm:1.0.7"]
+            ["is-generator-function", "npm:1.0.9"]
           ],
           "linkType": "HARD",
         }]
@@ -18060,7 +20078,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["is-installed-globally", "npm:0.4.0"],
             ["global-dirs", "npm:3.0.0"],
-            ["is-path-inside", "npm:3.0.2"]
+            ["is-path-inside", "npm:3.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -18116,10 +20134,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-nan", [
-        ["npm:1.3.0", {
-          "packageLocation": "./.yarn/cache/is-nan-npm-1.3.0-073a9df7a7-8a5e620969.zip/node_modules/is-nan/",
+        ["npm:1.3.2", {
+          "packageLocation": "./.yarn/cache/is-nan-npm-1.3.2-a087d31a28-5dfadcef6a.zip/node_modules/is-nan/",
           "packageDependencies": [
-            ["is-nan", "npm:1.3.0"],
+            ["is-nan", "npm:1.3.2"],
+            ["call-bind", "npm:1.0.2"],
             ["define-properties", "npm:1.1.3"]
           ],
           "linkType": "HARD",
@@ -18168,10 +20187,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-number-object", [
-        ["npm:1.0.4", {
-          "packageLocation": "./.yarn/cache/is-number-object-npm-1.0.4-c8e38aaa89-d8e4525b5c.zip/node_modules/is-number-object/",
+        ["npm:1.0.5", {
+          "packageLocation": "./.yarn/cache/is-number-object-npm-1.0.5-fb5fdccdde-8c217b4a16.zip/node_modules/is-number-object/",
           "packageDependencies": [
-            ["is-number-object", "npm:1.0.4"]
+            ["is-number-object", "npm:1.0.5"]
           ],
           "linkType": "HARD",
         }]
@@ -18228,10 +20247,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.0.2", {
-          "packageLocation": "./.yarn/cache/is-path-inside-npm-3.0.2-e675e113cb-108fc2a60c.zip/node_modules/is-path-inside/",
+        ["npm:3.0.3", {
+          "packageLocation": "./.yarn/cache/is-path-inside-npm-3.0.3-2ea0ef44fd-abd50f0618.zip/node_modules/is-path-inside/",
           "packageDependencies": [
-            ["is-path-inside", "npm:3.0.2"]
+            ["is-path-inside", "npm:3.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -18326,10 +20345,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-ssh", [
-        ["npm:1.3.2", {
-          "packageLocation": "./.yarn/cache/is-ssh-npm-1.3.2-8a8772fc8a-75ffe1675a.zip/node_modules/is-ssh/",
+        ["npm:1.3.3", {
+          "packageLocation": "./.yarn/cache/is-ssh-npm-1.3.3-dae2e96b9a-7a751facad.zip/node_modules/is-ssh/",
           "packageDependencies": [
-            ["is-ssh", "npm:1.3.2"],
+            ["is-ssh", "npm:1.3.3"],
             ["protocols", "npm:1.4.8"]
           ],
           "linkType": "HARD",
@@ -18362,10 +20381,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-symbol", [
-        ["npm:1.0.3", {
-          "packageLocation": "./.yarn/cache/is-symbol-npm-1.0.3-6bebca15dc-c6d54bd012.zip/node_modules/is-symbol/",
+        ["npm:1.0.4", {
+          "packageLocation": "./.yarn/cache/is-symbol-npm-1.0.4-eb9baac703-92805812ef.zip/node_modules/is-symbol/",
           "packageDependencies": [
-            ["is-symbol", "npm:1.0.3"],
+            ["is-symbol", "npm:1.0.4"],
             ["has-symbols", "npm:1.0.2"]
           ],
           "linkType": "HARD",
@@ -18382,12 +20401,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-typed-array", [
-        ["npm:1.1.3", {
-          "packageLocation": "./.yarn/cache/is-typed-array-npm-1.1.3-ed48350c78-caa98bd8ef.zip/node_modules/is-typed-array/",
+        ["npm:1.1.5", {
+          "packageLocation": "./.yarn/cache/is-typed-array-npm-1.1.5-d4eff6b7a8-ba435c83dc.zip/node_modules/is-typed-array/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["is-typed-array", "npm:1.1.3"],
             ["available-typed-arrays", "npm:1.0.2"],
             ["es-abstract", "npm:1.19.1"],
+=======
+            ["is-typed-array", "npm:1.1.5"],
+            ["available-typed-arrays", "npm:1.0.4"],
+            ["call-bind", "npm:1.0.2"],
+            ["es-abstract", "npm:1.18.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["foreach", "npm:2.0.5"],
             ["has-symbols", "npm:1.0.2"]
           ],
@@ -18443,7 +20469,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/is-wsl-npm-2.2.0-2ba10d6393-20849846ae.zip/node_modules/is-wsl/",
           "packageDependencies": [
             ["is-wsl", "npm:2.2.0"],
-            ["is-docker", "npm:2.1.1"]
+            ["is-docker", "npm:2.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -18522,8 +20548,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/istanbul-lib-instrument-npm-4.0.3-4d4c2263f8-fa1171d302.zip/node_modules/istanbul-lib-instrument/",
           "packageDependencies": [
             ["istanbul-lib-instrument", "npm:4.0.3"],
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
+=======
+<<<<<<< HEAD
+            ["@babel/core", "npm:7.15.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@istanbuljs/schema", "npm:0.1.2"],
+=======
+            ["@babel/core", "npm:7.14.8"],
+            ["@istanbuljs/schema", "npm:0.1.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["istanbul-lib-coverage", "npm:3.0.0"],
             ["semver", "npm:6.3.0"]
           ],
@@ -18547,7 +20582,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/istanbul-lib-source-maps-npm-4.0.0-def3895674-292bfb4083.zip/node_modules/istanbul-lib-source-maps/",
           "packageDependencies": [
             ["istanbul-lib-source-maps", "npm:4.0.0"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["istanbul-lib-coverage", "npm:3.0.0"],
             ["source-map", "npm:0.6.1"]
           ],
@@ -18603,8 +20646,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.0", {
           "packageLocation": "./.yarn/cache/jest-changed-files-npm-27.3.0-97edea84fa-add4a688ad.zip/node_modules/jest-changed-files/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jest-changed-files", "npm:27.3.0"],
+=======
+<<<<<<< HEAD
+            ["jest-changed-files", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
+=======
+            ["jest-changed-files", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["execa", "npm:5.1.1"],
             ["throat", "npm:6.0.1"]
           ],
@@ -18612,8 +20664,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["jest-circus", [
+<<<<<<< HEAD
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-circus-npm-27.3.1-5f4c79344a-f3fc8ba6ae.zip/node_modules/jest-circus/",
+=======
+<<<<<<< HEAD
+        ["npm:27.2.5", {
+          "packageLocation": "./.yarn/cache/jest-circus-npm-27.2.5-f729640db6-35a43f48d6.zip/node_modules/jest-circus/",
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           "packageDependencies": [
             ["jest-circus", "npm:27.3.1"],
             ["@jest/environment", "npm:27.3.1"],
@@ -18621,6 +20679,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jest/types", "npm:27.2.5"],
             ["@types/node", "npm:14.17.34"],
             ["chalk", "npm:4.1.2"],
+=======
+        ["npm:27.0.6", {
+          "packageLocation": "./.yarn/cache/jest-circus-npm-27.0.6-3d6117b6f2-baaebcdd93.zip/node_modules/jest-circus/",
+          "packageDependencies": [
+            ["jest-circus", "npm:27.0.6"],
+            ["@jest/environment", "npm:27.0.6"],
+            ["@jest/test-result", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["co", "npm:4.6.0"],
             ["dedent", "npm:0.7.0"],
             ["expect", "npm:27.3.1"],
@@ -18757,6 +20826,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-environment-jsdom-npm-27.3.1-2fb8134cca-669c4f417a.zip/node_modules/jest-environment-jsdom/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jest-environment-jsdom", "npm:27.3.1"],
             ["@jest/environment", "npm:27.3.1"],
             ["@jest/fake-timers", "npm:27.3.1"],
@@ -18765,6 +20835,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-mock", "npm:27.3.0"],
             ["jest-util", "npm:27.3.1"],
             ["jsdom", "virtual:2fb8134cca879c352f6b6204cc6e303f31dc3b62f860619e421de0844463c9d4171042de8d7da05cb84c0b0d6b319c887761eb78ea5bce5779afd8d677792b73#npm:16.6.0"]
+=======
+<<<<<<< HEAD
+            ["jest-environment-jsdom", "npm:27.2.5"],
+            ["@jest/environment", "npm:27.2.5"],
+            ["@jest/fake-timers", "npm:27.2.5"],
+            ["@jest/types", "npm:27.2.5"],
+            ["@types/node", "npm:14.17.21"],
+            ["jest-mock", "npm:27.2.5"],
+            ["jest-util", "npm:27.2.5"],
+            ["jsdom", "virtual:f20ab11b5e7ea9c32a42cb1d76d9653c8e5589a950efe5eb62627ce9c4b7146e1fb4ff9501ed3db4853b3e6c5a27d5b2b9a04d91c8a458adace6b452ac7fa0e8#npm:16.6.0"]
+=======
+            ["jest-environment-jsdom", "npm:27.0.6"],
+            ["@jest/environment", "npm:27.0.6"],
+            ["@jest/fake-timers", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["jest-mock", "npm:27.0.6"],
+            ["jest-util", "npm:27.0.6"],
+            ["jsdom", "virtual:0d46ccd4e20dc7f7f718eebeaddd8b4044d4ff6f4b25afcc70ee6e77cac95625396b6f17f16661b6cd7930f52d89153ad19b1061d7d40fb0ba2d9dfcebfb933a#npm:16.6.0"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -18773,6 +20864,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-environment-node-npm-27.3.1-14338e172c-40bab41957.zip/node_modules/jest-environment-node/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jest-environment-node", "npm:27.3.1"],
             ["@jest/environment", "npm:27.3.1"],
             ["@jest/fake-timers", "npm:27.3.1"],
@@ -18780,6 +20872,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.34"],
             ["jest-mock", "npm:27.3.0"],
             ["jest-util", "npm:27.3.1"]
+=======
+<<<<<<< HEAD
+            ["jest-environment-node", "npm:27.2.5"],
+            ["@jest/environment", "npm:27.2.5"],
+            ["@jest/fake-timers", "npm:27.2.5"],
+            ["@jest/types", "npm:27.2.5"],
+            ["@types/node", "npm:14.17.21"],
+            ["jest-mock", "npm:27.2.5"],
+            ["jest-util", "npm:27.2.5"]
+=======
+            ["jest-environment-node", "npm:27.0.6"],
+            ["@jest/environment", "npm:27.0.6"],
+            ["@jest/fake-timers", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["jest-mock", "npm:27.0.6"],
+            ["jest-util", "npm:27.0.6"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -18797,11 +20908,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-haste-map-npm-27.3.1-131c474221-43e1afa266.zip/node_modules/jest-haste-map/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jest-haste-map", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+            ["jest-haste-map", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/graceful-fs", "npm:4.1.3"],
             ["@types/node", "npm:14.17.34"],
             ["anymatch", "npm:3.1.1"],
+=======
+            ["jest-haste-map", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/graceful-fs", "npm:4.1.5"],
+            ["@types/node", "npm:16.4.1"],
+            ["anymatch", "npm:3.1.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["fb-watchman", "npm:2.0.1"],
             ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"],
             ["graceful-fs", "npm:4.2.6"],
@@ -18823,10 +20946,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/traverse", "npm:7.16.0"],
             ["@jest/environment", "npm:27.3.1"],
             ["@jest/source-map", "npm:27.0.6"],
+<<<<<<< HEAD
             ["@jest/test-result", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+            ["@jest/test-result", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/node", "npm:14.17.34"],
             ["chalk", "npm:4.1.2"],
+=======
+            ["@jest/test-result", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["co", "npm:4.6.0"],
             ["expect", "npm:27.3.1"],
             ["is-generator-fn", "npm:2.1.0"],
@@ -18870,11 +21004,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-message-util-npm-27.3.1-0d163b84de-2d10734765.zip/node_modules/jest-message-util/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jest-message-util", "npm:27.3.1"],
             ["@babel/code-frame", "npm:7.16.0"],
+=======
+<<<<<<< HEAD
+            ["jest-message-util", "npm:27.2.5"],
+            ["@babel/code-frame", "npm:7.15.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/stack-utils", "npm:2.0.0"],
             ["chalk", "npm:4.1.2"],
+=======
+            ["jest-message-util", "npm:27.0.6"],
+            ["@babel/code-frame", "npm:7.14.5"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/stack-utils", "npm:2.0.1"],
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["graceful-fs", "npm:4.2.6"],
             ["micromatch", "npm:4.0.4"],
             ["pretty-format", "npm:27.3.1"],
@@ -18888,9 +21035,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.0", {
           "packageLocation": "./.yarn/cache/jest-mock-npm-27.3.0-97fac89a86-904b9116e0.zip/node_modules/jest-mock/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jest-mock", "npm:27.3.0"],
             ["@jest/types", "npm:27.2.5"],
             ["@types/node", "npm:14.17.34"]
+=======
+<<<<<<< HEAD
+            ["jest-mock", "npm:27.2.5"],
+            ["@jest/types", "npm:27.2.5"],
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["jest-mock", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -18958,6 +21117,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["jest-runner", [
+<<<<<<< HEAD
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-runner-npm-27.3.1-8695c20bb6-6fe50206fd.zip/node_modules/jest-runner/",
           "packageDependencies": [
@@ -18966,9 +21126,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jest/environment", "npm:27.3.1"],
             ["@jest/test-result", "npm:27.3.1"],
             ["@jest/transform", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+        ["npm:27.2.5", {
+          "packageLocation": "./.yarn/cache/jest-runner-npm-27.2.5-cb3234bfd1-12daf87276.zip/node_modules/jest-runner/",
+          "packageDependencies": [
+            ["jest-runner", "npm:27.2.5"],
+            ["@jest/console", "npm:27.2.5"],
+            ["@jest/environment", "npm:27.2.5"],
+            ["@jest/test-result", "npm:27.2.5"],
+            ["@jest/transform", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/node", "npm:14.17.34"],
             ["chalk", "npm:4.1.2"],
+=======
+        ["npm:27.0.6", {
+          "packageLocation": "./.yarn/cache/jest-runner-npm-27.0.6-cdb11a4528-d97363932b.zip/node_modules/jest-runner/",
+          "packageDependencies": [
+            ["jest-runner", "npm:27.0.6"],
+            ["@jest/console", "npm:27.0.6"],
+            ["@jest/environment", "npm:27.0.6"],
+            ["@jest/test-result", "npm:27.0.6"],
+            ["@jest/transform", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["emittery", "npm:0.8.1"],
             ["exit", "npm:0.1.2"],
             ["graceful-fs", "npm:4.2.6"],
@@ -18997,12 +21181,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jest/environment", "npm:27.3.1"],
             ["@jest/globals", "npm:27.3.1"],
             ["@jest/source-map", "npm:27.0.6"],
+<<<<<<< HEAD
             ["@jest/test-result", "npm:27.3.1"],
             ["@jest/transform", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+            ["@jest/test-result", "npm:27.2.5"],
+            ["@jest/transform", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/yargs", "npm:16.0.3"],
             ["chalk", "npm:4.1.2"],
             ["cjs-module-lexer", "npm:1.2.1"],
+=======
+            ["@jest/test-result", "npm:27.0.6"],
+            ["@jest/transform", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/yargs", "npm:16.0.4"],
+            ["chalk", "npm:4.1.1"],
+            ["cjs-module-lexer", "npm:1.2.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["collect-v8-coverage", "npm:1.0.1"],
             ["execa", "npm:5.1.1"],
             ["exit", "npm:0.1.2"],
@@ -19028,13 +21226,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/jest-serializer-npm-27.0.6-c9c9a90be0-b0b8d97cb1.zip/node_modules/jest-serializer/",
           "packageDependencies": [
             ["jest-serializer", "npm:27.0.6"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"],
+=======
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"],
+=======
+            ["@types/node", "npm:16.4.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["graceful-fs", "npm:4.2.6"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["jest-snapshot", [
+<<<<<<< HEAD
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-snapshot-npm-27.3.1-ea17f6e33e-e5607f1521.zip/node_modules/jest-snapshot/",
           "packageDependencies": [
@@ -19046,12 +21253,49 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/traverse", "npm:7.16.0"],
             ["@babel/types", "npm:7.16.0"],
             ["@jest/transform", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+        ["npm:27.2.5", {
+          "packageLocation": "./.yarn/cache/jest-snapshot-npm-27.2.5-dcfdbb5c13-058561ef34.zip/node_modules/jest-snapshot/",
+          "packageDependencies": [
+            ["jest-snapshot", "npm:27.2.5"],
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/generator", "npm:7.15.8"],
+            ["@babel/parser", "npm:7.15.8"],
+            ["@babel/plugin-syntax-typescript", "virtual:e5fce2fa5f241f08b9c0fadc812070e860ceaba0cc6696e7dc4f2c502548b97d57aefd4b64f52168d7e0967f3d8ae53c107bead3c59df51c4b7553d5f0ff793e#npm:7.14.5"],
+            ["@babel/traverse", "npm:7.15.4"],
+            ["@babel/types", "npm:7.15.6"],
+            ["@jest/transform", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/babel__traverse", "npm:7.0.15"],
             ["@types/prettier", "npm:2.3.0"],
             ["babel-preset-current-node-syntax", "virtual:ea17f6e33ea7c5d16cb96dfef8386a0c994890507369d43752379aa3f0f2753390904bed905c5078b366a821ea8461ada99205d46da6ad05fa5e1fc24e033dc5#npm:1.0.0"],
             ["chalk", "npm:4.1.2"],
+<<<<<<< HEAD
             ["expect", "npm:27.3.1"],
+=======
+            ["expect", "npm:27.2.5"],
+=======
+        ["npm:27.0.6", {
+          "packageLocation": "./.yarn/cache/jest-snapshot-npm-27.0.6-ced411c6c6-3e5ef5c5bb.zip/node_modules/jest-snapshot/",
+          "packageDependencies": [
+            ["jest-snapshot", "npm:27.0.6"],
+            ["@babel/core", "npm:7.14.8"],
+            ["@babel/generator", "npm:7.14.8"],
+            ["@babel/parser", "npm:7.14.8"],
+            ["@babel/plugin-syntax-typescript", "virtual:98601b7aee61a0b3eebc5be29e9c7f56c35e6e7658e9b5570fea9a9cdef4abee5efe8d5f40c583f7863290af0466f9576941e2619a94e142d15bf8be5d298b8a#npm:7.14.5"],
+            ["@babel/traverse", "npm:7.14.8"],
+            ["@babel/types", "npm:7.14.8"],
+            ["@jest/transform", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/babel__traverse", "npm:7.14.2"],
+            ["@types/prettier", "npm:2.3.2"],
+            ["babel-preset-current-node-syntax", "virtual:ced411c6c6bf0cc9a3c98add1431b7d32e6c4128a7e0155d953c2ac3eb7b85ff8f844deee8403cbc9705b8bc860120b0b25a65ce498e8b9045d49ec45b2ac812#npm:1.0.1"],
+            ["chalk", "npm:4.1.1"],
+            ["expect", "npm:27.0.6"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["graceful-fs", "npm:4.2.6"],
             ["jest-diff", "npm:27.3.1"],
             ["jest-get-type", "npm:27.3.1"],
@@ -19071,13 +21315,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-util-npm-27.3.1-df89ea3a21-6958d418a8.zip/node_modules/jest-util/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jest-util", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+            ["jest-util", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/node", "npm:14.17.34"],
             ["chalk", "npm:4.1.2"],
+<<<<<<< HEAD
             ["ci-info", "npm:3.2.0"],
             ["graceful-fs", "npm:4.2.6"],
             ["picomatch", "npm:2.2.3"]
+=======
+=======
+            ["jest-util", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["graceful-fs", "npm:4.2.6"],
+            ["is-ci", "npm:3.0.0"],
+            ["picomatch", "npm:2.3.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -19101,14 +21362,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-watcher-npm-27.3.1-3fae622386-c150bb81be.zip/node_modules/jest-watcher/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jest-watcher", "npm:27.3.1"],
             ["@jest/test-result", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+            ["jest-watcher", "npm:27.2.5"],
+            ["@jest/test-result", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["@types/node", "npm:14.17.34"],
             ["ansi-escapes", "npm:4.3.1"],
             ["chalk", "npm:4.1.2"],
             ["jest-util", "npm:27.3.1"],
             ["string-length", "npm:4.0.1"]
+=======
+            ["jest-watcher", "npm:27.0.6"],
+            ["@jest/test-result", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+            ["ansi-escapes", "npm:4.3.2"],
+            ["chalk", "npm:4.1.1"],
+            ["jest-util", "npm:27.0.6"],
+            ["string-length", "npm:4.0.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -19117,8 +21394,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/jest-worker-npm-27.3.1-21ad1addc5-125d46939d.zip/node_modules/jest-worker/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jest-worker", "npm:27.3.1"],
             ["@types/node", "npm:14.17.34"],
+=======
+<<<<<<< HEAD
+            ["jest-worker", "npm:27.2.5"],
+            ["@types/node", "npm:14.17.21"],
+=======
+            ["jest-worker", "npm:27.0.6"],
+            ["@types/node", "npm:16.4.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["merge-stream", "npm:2.0.0"],
             ["supports-color", "npm:8.1.1"]
           ],
@@ -19218,10 +21505,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cssom", "npm:0.4.4"],
             ["cssstyle", "npm:2.3.0"],
             ["data-urls", "npm:2.0.0"],
-            ["decimal.js", "npm:10.2.1"],
+            ["decimal.js", "npm:10.3.1"],
             ["domexception", "npm:2.0.1"],
             ["escodegen", "npm:2.0.0"],
-            ["form-data", "npm:3.0.0"],
+            ["form-data", "npm:3.0.1"],
             ["html-encoding-sniffer", "npm:2.0.1"],
             ["http-proxy-agent", "npm:4.0.1"],
             ["https-proxy-agent", "npm:5.0.0"],
@@ -19236,8 +21523,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webidl-conversions", "npm:6.1.0"],
             ["whatwg-encoding", "npm:1.0.5"],
             ["whatwg-mimetype", "npm:2.3.0"],
+<<<<<<< HEAD
             ["whatwg-url", "npm:8.6.0"],
             ["ws", "virtual:82010cf435bfdd815e56aa96b8d62d16ac586c3b4b7aacb920726db97fe019609213df6e9de787883e55fe3575d876d7238194a097c8f36ba631311b0fe374ce#npm:7.4.6"],
+=======
+            ["whatwg-url", "npm:8.7.0"],
+            ["ws", "virtual:c21273b24765e094660999d0881168950b843a2dcbda969e689c75a08888b9dabeed73a8e89bf2c16063d59477f0ebaa1d0e1bfd06f12780b5a1c2a0e96b9830#npm:7.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["xml-name-validator", "npm:3.0.0"]
           ],
           "packagePeers": [
@@ -19427,12 +21719,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:6.0.1", {
-          "packageLocation": "./.yarn/cache/jsonfile-npm-6.0.1-989c3a9870-d37b3732c6.zip/node_modules/jsonfile/",
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/jsonfile-npm-6.1.0-20a4796cee-7af3b8e1ac.zip/node_modules/jsonfile/",
           "packageDependencies": [
-            ["jsonfile", "npm:6.0.1"],
+            ["jsonfile", "npm:6.1.0"],
             ["graceful-fs", "npm:4.2.6"],
-            ["universalify", "npm:1.0.0"]
+            ["universalify", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -19486,7 +21778,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.isplainobject", "npm:4.0.6"],
             ["lodash.isstring", "npm:4.0.1"],
             ["lodash.once", "npm:4.1.1"],
-            ["ms", "npm:2.1.2"],
+            ["ms", "npm:2.1.3"],
             ["xtend", "npm:4.0.2"]
           ],
           "linkType": "HARD",
@@ -19503,7 +21795,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.isplainobject", "npm:4.0.6"],
             ["lodash.isstring", "npm:4.0.1"],
             ["lodash.once", "npm:4.1.1"],
-            ["ms", "npm:2.1.2"],
+            ["ms", "npm:2.1.3"],
             ["semver", "npm:5.7.1"]
           ],
           "linkType": "HARD",
@@ -19523,6 +21815,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["jss", [
+<<<<<<< HEAD
         ["npm:10.5.1", {
           "packageLocation": "./.yarn/cache/jss-npm-10.5.1-d0e9f1ca53-e549c26ab0.zip/node_modules/jss/",
           "packageDependencies": [
@@ -19542,6 +21835,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/runtime", "npm:7.16.3"],
             ["csstype", "npm:3.0.3"],
             ["indefinite-observable", "npm:2.0.1"],
+=======
+        ["npm:10.7.1", {
+          "packageLocation": "./.yarn/cache/jss-npm-10.7.1-d269b91ff9-f4603192b8.zip/node_modules/jss/",
+          "packageDependencies": [
+            ["jss", "npm:10.7.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["csstype", "npm:3.0.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["is-in-browser", "npm:1.1.3"],
             ["tiny-warning", "npm:1.0.3"]
           ],
@@ -19549,92 +21850,140 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["jss-plugin-camel-case", [
-        ["npm:10.5.1", {
-          "packageLocation": "./.yarn/cache/jss-plugin-camel-case-npm-10.5.1-ced9534bb3-72c9702f10.zip/node_modules/jss-plugin-camel-case/",
+        ["npm:10.7.1", {
+          "packageLocation": "./.yarn/cache/jss-plugin-camel-case-npm-10.7.1-4a5a9ce091-80982ea222.zip/node_modules/jss-plugin-camel-case/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jss-plugin-camel-case", "npm:10.5.1"],
             ["@babel/runtime", "npm:7.16.3"],
+=======
+            ["jss-plugin-camel-case", "npm:10.7.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["hyphenate-style-name", "npm:1.0.4"],
-            ["jss", "npm:10.5.1"]
+            ["jss", "npm:10.7.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["jss-plugin-default-unit", [
-        ["npm:10.5.1", {
-          "packageLocation": "./.yarn/cache/jss-plugin-default-unit-npm-10.5.1-a9a434fa51-dc652b8054.zip/node_modules/jss-plugin-default-unit/",
+        ["npm:10.7.1", {
+          "packageLocation": "./.yarn/cache/jss-plugin-default-unit-npm-10.7.1-6308445d8f-3021fb27ad.zip/node_modules/jss-plugin-default-unit/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jss-plugin-default-unit", "npm:10.5.1"],
             ["@babel/runtime", "npm:7.16.3"],
             ["jss", "npm:10.5.1"]
+=======
+            ["jss-plugin-default-unit", "npm:10.7.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["jss", "npm:10.7.1"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["jss-plugin-global", [
-        ["npm:10.5.1", {
-          "packageLocation": "./.yarn/cache/jss-plugin-global-npm-10.5.1-8aad246eb2-8c224ba80d.zip/node_modules/jss-plugin-global/",
+        ["npm:10.7.1", {
+          "packageLocation": "./.yarn/cache/jss-plugin-global-npm-10.7.1-67f38c9dd0-a997be1348.zip/node_modules/jss-plugin-global/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jss-plugin-global", "npm:10.5.1"],
             ["@babel/runtime", "npm:7.16.3"],
             ["jss", "npm:10.5.1"]
+=======
+            ["jss-plugin-global", "npm:10.7.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["jss", "npm:10.7.1"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["jss-plugin-nested", [
-        ["npm:10.5.1", {
-          "packageLocation": "./.yarn/cache/jss-plugin-nested-npm-10.5.1-b1ecc3950a-626cb5ee5c.zip/node_modules/jss-plugin-nested/",
+        ["npm:10.7.1", {
+          "packageLocation": "./.yarn/cache/jss-plugin-nested-npm-10.7.1-f270ed2a0b-b58e89875f.zip/node_modules/jss-plugin-nested/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jss-plugin-nested", "npm:10.5.1"],
             ["@babel/runtime", "npm:7.16.3"],
             ["jss", "npm:10.5.1"],
+=======
+            ["jss-plugin-nested", "npm:10.7.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["jss", "npm:10.7.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["tiny-warning", "npm:1.0.3"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["jss-plugin-props-sort", [
-        ["npm:10.5.1", {
-          "packageLocation": "./.yarn/cache/jss-plugin-props-sort-npm-10.5.1-e991659a36-2e4390d771.zip/node_modules/jss-plugin-props-sort/",
+        ["npm:10.7.1", {
+          "packageLocation": "./.yarn/cache/jss-plugin-props-sort-npm-10.7.1-20593e5d7e-87a3fbfe03.zip/node_modules/jss-plugin-props-sort/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jss-plugin-props-sort", "npm:10.5.1"],
             ["@babel/runtime", "npm:7.16.3"],
             ["jss", "npm:10.5.1"]
+=======
+            ["jss-plugin-props-sort", "npm:10.7.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["jss", "npm:10.7.1"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
       ]],
       ["jss-plugin-rule-value-function", [
-        ["npm:10.5.1", {
-          "packageLocation": "./.yarn/cache/jss-plugin-rule-value-function-npm-10.5.1-431380a82c-d3721896bb.zip/node_modules/jss-plugin-rule-value-function/",
+        ["npm:10.7.1", {
+          "packageLocation": "./.yarn/cache/jss-plugin-rule-value-function-npm-10.7.1-b50eadf6c2-e08524bf46.zip/node_modules/jss-plugin-rule-value-function/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jss-plugin-rule-value-function", "npm:10.5.1"],
             ["@babel/runtime", "npm:7.16.3"],
             ["jss", "npm:10.5.1"],
+=======
+            ["jss-plugin-rule-value-function", "npm:10.7.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["jss", "npm:10.7.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["tiny-warning", "npm:1.0.3"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["jss-plugin-vendor-prefixer", [
-        ["npm:10.5.1", {
-          "packageLocation": "./.yarn/cache/jss-plugin-vendor-prefixer-npm-10.5.1-d10d60e752-ac82eab445.zip/node_modules/jss-plugin-vendor-prefixer/",
+        ["npm:10.7.1", {
+          "packageLocation": "./.yarn/cache/jss-plugin-vendor-prefixer-npm-10.7.1-cdee1f9953-3ff3670349.zip/node_modules/jss-plugin-vendor-prefixer/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["jss-plugin-vendor-prefixer", "npm:10.5.1"],
             ["@babel/runtime", "npm:7.16.3"],
+=======
+            ["jss-plugin-vendor-prefixer", "npm:10.7.1"],
+            ["@babel/runtime", "npm:7.14.8"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["css-vendor", "npm:2.0.8"],
-            ["jss", "npm:10.5.1"]
+            ["jss", "npm:10.7.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["jsx-ast-utils", [
+<<<<<<< HEAD
         ["npm:3.2.1", {
           "packageLocation": "./.yarn/cache/jsx-ast-utils-npm-3.2.1-addc1eb80c-dcee22e638.zip/node_modules/jsx-ast-utils/",
           "packageDependencies": [
             ["jsx-ast-utils", "npm:3.2.1"],
             ["array-includes", "npm:3.1.4"],
+=======
+        ["npm:3.2.0", {
+          "packageLocation": "./.yarn/cache/jsx-ast-utils-npm-3.2.0-c3558dbd96-9f695c4802.zip/node_modules/jsx-ast-utils/",
+          "packageDependencies": [
+            ["jsx-ast-utils", "npm:3.2.0"],
+            ["array-includes", "npm:3.1.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["object.assign", "npm:4.1.2"]
           ],
           "linkType": "HARD",
@@ -19699,7 +22048,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["keccak", "npm:3.0.1"],
             ["node-addon-api", "npm:2.0.2"],
-            ["node-gyp", "npm:7.1.0"],
+            ["node-gyp", "npm:8.1.0"],
             ["node-gyp-build", "npm:4.2.3"]
           ],
           "linkType": "HARD",
@@ -19774,10 +22123,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["language-subtag-registry", [
-        ["npm:0.3.20", {
-          "packageLocation": "./.yarn/cache/language-subtag-registry-npm-0.3.20-37031e1c3c-f3da1c7ffc.zip/node_modules/language-subtag-registry/",
+        ["npm:0.3.21", {
+          "packageLocation": "./.yarn/cache/language-subtag-registry-npm-0.3.21-b2d9abe624-5f794525a5.zip/node_modules/language-subtag-registry/",
           "packageDependencies": [
-            ["language-subtag-registry", "npm:0.3.20"]
+            ["language-subtag-registry", "npm:0.3.21"]
           ],
           "linkType": "HARD",
         }]
@@ -19787,7 +22136,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/language-tags-npm-1.0.5-3a50e75c96-c81b5d8b9f.zip/node_modules/language-tags/",
           "packageDependencies": [
             ["language-tags", "npm:1.0.5"],
-            ["language-subtag-registry", "npm:0.3.20"]
+            ["language-subtag-registry", "npm:0.3.21"]
           ],
           "linkType": "HARD",
         }]
@@ -19879,14 +22228,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["libnpmaccess", [
-        ["npm:4.0.1", {
-          "packageLocation": "./.yarn/cache/libnpmaccess-npm-4.0.1-ec66452330-ca89f57931.zip/node_modules/libnpmaccess/",
+        ["npm:4.0.3", {
+          "packageLocation": "./.yarn/cache/libnpmaccess-npm-4.0.3-712e974776-cc6b9fa0ab.zip/node_modules/libnpmaccess/",
           "packageDependencies": [
-            ["libnpmaccess", "npm:4.0.1"],
+            ["libnpmaccess", "npm:4.0.3"],
             ["aproba", "npm:2.0.0"],
             ["minipass", "npm:3.1.3"],
             ["npm-package-arg", "npm:8.1.5"],
+<<<<<<< HEAD
             ["npm-registry-fetch", "npm:9.0.0"]
+=======
+            ["npm-registry-fetch", "npm:11.0.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -19904,13 +22257,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["libnpmpublish", [
-        ["npm:4.0.0", {
-          "packageLocation": "./.yarn/cache/libnpmpublish-npm-4.0.0-28dc58530f-382cb15b19.zip/node_modules/libnpmpublish/",
+        ["npm:4.0.2", {
+          "packageLocation": "./.yarn/cache/libnpmpublish-npm-4.0.2-8118e7577a-5aa83352bb.zip/node_modules/libnpmpublish/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["libnpmpublish", "npm:4.0.0"],
             ["normalize-package-data", "npm:3.0.0"],
             ["npm-package-arg", "npm:8.1.5"],
             ["npm-registry-fetch", "npm:9.0.0"],
+=======
+            ["libnpmpublish", "npm:4.0.2"],
+            ["normalize-package-data", "npm:3.0.2"],
+            ["npm-package-arg", "npm:8.1.5"],
+            ["npm-registry-fetch", "npm:11.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["semver", "npm:7.3.5"],
             ["ssri", "npm:8.0.1"]
           ],
@@ -19936,12 +22296,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["lighthouse-logger", [
-        ["npm:1.2.0", {
-          "packageLocation": "./.yarn/cache/lighthouse-logger-npm-1.2.0-d493886450-97375953e0.zip/node_modules/lighthouse-logger/",
+        ["npm:1.3.0", {
+          "packageLocation": "./.yarn/cache/lighthouse-logger-npm-1.3.0-3f60201e4a-82655f1862.zip/node_modules/lighthouse-logger/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["lighthouse-logger", "npm:1.2.0"],
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
             ["marky", "npm:1.2.1"]
+=======
+            ["lighthouse-logger", "npm:1.3.0"],
+            ["debug", "virtual:fa0173d26738ef894de6f639abae81ef8c1dc3fb742f450a622367c86186d9f4d23dbd3bcc38bbe27382c39f87e11cad6137dd70480a36e752eee25974706e2c#npm:2.6.9"],
+            ["marky", "npm:1.2.2"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -19965,6 +22331,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["lint-staged", [
+<<<<<<< HEAD
         ["npm:12.1.2", {
           "packageLocation": "./.yarn/cache/lint-staged-npm-12.1.2-9bba118e9e-ec84ce4f74.zip/node_modules/lint-staged/",
           "packageDependencies": [
@@ -19973,6 +22340,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorette", "npm:2.0.16"],
             ["commander", "npm:8.3.0"],
             ["debug", "virtual:9bba118e9e86d5b7a263878d5d7ca7d28ac5d563b0e84efa11a4c80b7c40995ff14ae1b8ef34dfb76a0ae0140df0e7183e88ca6788d8e881f901efe04991dedd#npm:4.3.2"],
+=======
+        ["npm:11.2.3", {
+          "packageLocation": "./.yarn/cache/lint-staged-npm-11.2.3-241056ec2b-cf3a1612a8.zip/node_modules/lint-staged/",
+          "packageDependencies": [
+            ["lint-staged", "npm:11.2.3"],
+            ["cli-truncate", "npm:2.1.0"],
+<<<<<<< HEAD
+            ["colorette", "npm:1.4.0"],
+            ["commander", "npm:8.2.0"],
+            ["cosmiconfig", "npm:7.0.1"],
+            ["debug", "virtual:241056ec2b406cd11fca5bfa059173682edbdc62c7d4cd09c6772ef5ecfacfc5ce5be3b424a0b8f772fecc58765b5ee3a6ecb3ab004f5152e094a7ad7e68bef1#npm:4.3.2"],
+=======
+            ["commander", "npm:7.2.0"],
+            ["cosmiconfig", "npm:7.0.0"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["dedent", "npm:0.7.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["enquirer", "npm:2.3.6"],
             ["execa", "npm:5.1.1"],
             ["lilconfig", "npm:2.0.4"],
@@ -19988,10 +22373,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["listr2", [
+<<<<<<< HEAD
         ["npm:3.13.3", {
           "packageLocation": "./.yarn/cache/listr2-npm-3.13.3-521a6ceab5-3ece0f132c.zip/node_modules/listr2/",
           "packageDependencies": [
             ["listr2", "npm:3.13.3"]
+=======
+<<<<<<< HEAD
+        ["npm:3.12.2", {
+          "packageLocation": "./.yarn/cache/listr2-npm-3.12.2-934edf8469-92d72b9b6a.zip/node_modules/listr2/",
+          "packageDependencies": [
+            ["listr2", "npm:3.12.2"]
+=======
+        ["npm:3.11.0", {
+          "packageLocation": "./.yarn/cache/listr2-npm-3.11.0-a2fe7d17b1-6533edd430.zip/node_modules/listr2/",
+          "packageDependencies": [
+            ["listr2", "npm:3.11.0"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "SOFT",
         }],
@@ -20001,8 +22400,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["listr2", "virtual:9bba118e9e86d5b7a263878d5d7ca7d28ac5d563b0e84efa11a4c80b7c40995ff14ae1b8ef34dfb76a0ae0140df0e7183e88ca6788d8e881f901efe04991dedd#npm:3.13.3"],
             ["@types/enquirer", null],
             ["cli-truncate", "npm:2.1.0"],
+<<<<<<< HEAD
             ["clone", "npm:2.1.2"],
             ["colorette", "npm:2.0.16"],
+=======
+<<<<<<< HEAD
+            ["colorette", "npm:1.4.0"],
+=======
+            ["colorette", "npm:1.2.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["enquirer", "npm:2.3.6"],
             ["log-update", "npm:4.0.0"],
             ["p-map", "npm:4.0.0"],
@@ -20319,7 +22726,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/log-update-npm-4.0.0-9d0554261c-ae2f85bbab.zip/node_modules/log-update/",
           "packageDependencies": [
             ["log-update", "npm:4.0.0"],
-            ["ansi-escapes", "npm:4.3.1"],
+            ["ansi-escapes", "npm:4.3.2"],
             ["cli-cursor", "npm:3.1.0"],
             ["slice-ansi", "npm:4.0.0"],
             ["wrap-ansi", "npm:6.2.0"]
@@ -20328,10 +22735,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["loglevel", [
-        ["npm:1.7.0", {
-          "packageLocation": "./.yarn/cache/loglevel-npm-1.7.0-9564513107-f6bb16fa52.zip/node_modules/loglevel/",
+        ["npm:1.7.1", {
+          "packageLocation": "./.yarn/cache/loglevel-npm-1.7.1-46e39bd115-715a4ae69a.zip/node_modules/loglevel/",
           "packageDependencies": [
-            ["loglevel", "npm:1.7.0"]
+            ["loglevel", "npm:1.7.1"]
           ],
           "linkType": "HARD",
         }]
@@ -20371,7 +22778,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lower-case-npm-2.0.2-151055f1c2-83a0a5f159.zip/node_modules/lower-case/",
           "packageDependencies": [
             ["lower-case", "npm:2.0.2"],
+<<<<<<< HEAD
             ["tslib", "npm:2.3.1"]
+=======
+            ["tslib", "npm:2.3.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -20448,12 +22859,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["make-fetch-happen", [
-        ["npm:8.0.9", {
-          "packageLocation": "./.yarn/cache/make-fetch-happen-npm-8.0.9-6028964e2d-10ef36a4ca.zip/node_modules/make-fetch-happen/",
+        ["npm:8.0.14", {
+          "packageLocation": "./.yarn/cache/make-fetch-happen-npm-8.0.14-fa5d78adad-326fefde1a.zip/node_modules/make-fetch-happen/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["make-fetch-happen", "npm:8.0.9"],
             ["agentkeepalive", "npm:4.1.4"],
             ["cacache", "npm:15.3.0"],
+=======
+            ["make-fetch-happen", "npm:8.0.14"],
+            ["agentkeepalive", "npm:4.1.4"],
+            ["cacache", "npm:15.2.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["http-cache-semantics", "npm:4.1.0"],
             ["http-proxy-agent", "npm:4.0.1"],
             ["https-proxy-agent", "npm:5.0.0"],
@@ -20461,11 +22878,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lru-cache", "npm:6.0.0"],
             ["minipass", "npm:3.1.3"],
             ["minipass-collect", "npm:1.0.2"],
+<<<<<<< HEAD
             ["minipass-fetch", "npm:1.4.1"],
+=======
+            ["minipass-fetch", "npm:1.3.4"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["minipass-flush", "npm:1.0.5"],
             ["minipass-pipeline", "npm:1.2.4"],
-            ["promise-retry", "npm:1.1.1"],
-            ["socks-proxy-agent", "npm:5.0.0"],
+            ["promise-retry", "npm:2.0.1"],
+            ["socks-proxy-agent", "npm:5.0.1"],
+            ["ssri", "npm:8.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:9.0.4", {
+          "packageLocation": "./.yarn/cache/make-fetch-happen-npm-9.0.4-455aa63ad1-864e776e58.zip/node_modules/make-fetch-happen/",
+          "packageDependencies": [
+            ["make-fetch-happen", "npm:9.0.4"],
+            ["agentkeepalive", "npm:4.1.4"],
+            ["cacache", "npm:15.2.0"],
+            ["http-cache-semantics", "npm:4.1.0"],
+            ["http-proxy-agent", "npm:4.0.1"],
+            ["https-proxy-agent", "npm:5.0.0"],
+            ["is-lambda", "npm:1.0.1"],
+            ["lru-cache", "npm:6.0.0"],
+            ["minipass", "npm:3.1.3"],
+            ["minipass-collect", "npm:1.0.2"],
+            ["minipass-fetch", "npm:1.3.4"],
+            ["minipass-flush", "npm:1.0.5"],
+            ["minipass-pipeline", "npm:1.2.4"],
+            ["negotiator", "npm:0.6.2"],
+            ["promise-retry", "npm:2.0.1"],
+            ["socks-proxy-agent", "npm:5.0.1"],
             ["ssri", "npm:8.0.1"]
           ],
           "linkType": "HARD",
@@ -20531,10 +22975,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.1.0", {
-          "packageLocation": "./.yarn/cache/map-obj-npm-4.1.0-6460603295-c62b22f23e.zip/node_modules/map-obj/",
+        ["npm:4.2.1", {
+          "packageLocation": "./.yarn/cache/map-obj-npm-4.2.1-754eda8456-2745227b11.zip/node_modules/map-obj/",
           "packageDependencies": [
-            ["map-obj", "npm:4.1.0"]
+            ["map-obj", "npm:4.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -20550,10 +22994,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["marky", [
-        ["npm:1.2.1", {
-          "packageLocation": "./.yarn/cache/marky-npm-1.2.1-386354fb42-f518e5f3a8.zip/node_modules/marky/",
+        ["npm:1.2.2", {
+          "packageLocation": "./.yarn/cache/marky-npm-1.2.2-b610fc1072-0b33da7963.zip/node_modules/marky/",
           "packageDependencies": [
-            ["marky", "npm:1.2.1"]
+            ["marky", "npm:1.2.2"]
           ],
           "linkType": "HARD",
         }]
@@ -20606,7 +23050,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/memory-fs-npm-0.4.1-0a5f9b8954-6db6c8682e.zip/node_modules/memory-fs/",
           "packageDependencies": [
             ["memory-fs", "npm:0.4.1"],
-            ["errno", "npm:0.1.7"],
+            ["errno", "npm:0.1.8"],
             ["readable-stream", "npm:2.3.7"]
           ],
           "linkType": "HARD",
@@ -20630,21 +23074,39 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.1.2", {
-          "packageLocation": "./.yarn/cache/meow-npm-8.1.2-bcfe48d4f3-bc23bf1b44.zip/node_modules/meow/",
+        ["npm:7.1.1", {
+          "packageLocation": "./.yarn/cache/meow-npm-7.1.1-8aa72d593e-87bba177ab.zip/node_modules/meow/",
           "packageDependencies": [
-            ["meow", "npm:8.1.2"],
-            ["@types/minimist", "npm:1.2.0"],
+            ["meow", "npm:7.1.1"],
+            ["@types/minimist", "npm:1.2.2"],
             ["camelcase-keys", "npm:6.2.2"],
             ["decamelize-keys", "npm:1.1.0"],
             ["hard-rejection", "npm:2.1.0"],
             ["minimist-options", "npm:4.1.0"],
-            ["normalize-package-data", "npm:3.0.0"],
+            ["normalize-package-data", "npm:2.5.0"],
             ["read-pkg-up", "npm:7.0.1"],
             ["redent", "npm:3.0.0"],
-            ["trim-newlines", "npm:3.0.0"],
+            ["trim-newlines", "npm:3.0.1"],
+            ["type-fest", "npm:0.13.1"],
+            ["yargs-parser", "npm:18.1.3"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:8.1.2", {
+          "packageLocation": "./.yarn/cache/meow-npm-8.1.2-bcfe48d4f3-bc23bf1b44.zip/node_modules/meow/",
+          "packageDependencies": [
+            ["meow", "npm:8.1.2"],
+            ["@types/minimist", "npm:1.2.2"],
+            ["camelcase-keys", "npm:6.2.2"],
+            ["decamelize-keys", "npm:1.1.0"],
+            ["hard-rejection", "npm:2.1.0"],
+            ["minimist-options", "npm:4.1.0"],
+            ["normalize-package-data", "npm:3.0.2"],
+            ["read-pkg-up", "npm:7.0.1"],
+            ["redent", "npm:3.0.0"],
+            ["trim-newlines", "npm:3.0.1"],
             ["type-fest", "npm:0.18.1"],
-            ["yargs-parser", "npm:20.2.6"]
+            ["yargs-parser", "npm:20.2.9"]
           ],
           "linkType": "HARD",
         }]
@@ -20711,7 +23173,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["micromatch", "npm:4.0.4"],
             ["braces", "npm:3.0.2"],
-            ["picomatch", "npm:2.2.3"]
+            ["picomatch", "npm:2.3.0"]
           ],
           "linkType": "HARD",
         }]
@@ -20721,7 +23183,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/miller-rabin-npm-4.0.1-3426ac0bf7-00cd1ab838.zip/node_modules/miller-rabin/",
           "packageDependencies": [
             ["miller-rabin", "npm:4.0.1"],
-            ["bn.js", "npm:4.11.9"],
+            ["bn.js", "npm:4.12.0"],
             ["brorand", "npm:1.1.0"]
           ],
           "linkType": "HARD",
@@ -20751,20 +23213,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mime-db", [
-        ["npm:1.44.0", {
-          "packageLocation": "./.yarn/cache/mime-db-npm-1.44.0-d6ab7b4e20-b261399680.zip/node_modules/mime-db/",
+        ["npm:1.48.0", {
+          "packageLocation": "./.yarn/cache/mime-db-npm-1.48.0-d896dd3151-d778392e47.zip/node_modules/mime-db/",
           "packageDependencies": [
-            ["mime-db", "npm:1.44.0"]
+            ["mime-db", "npm:1.48.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["mime-types", [
-        ["npm:2.1.27", {
-          "packageLocation": "./.yarn/cache/mime-types-npm-2.1.27-bbebca8e17-4c1f596c6d.zip/node_modules/mime-types/",
+        ["npm:2.1.31", {
+          "packageLocation": "./.yarn/cache/mime-types-npm-2.1.31-fbe9a57bbf-eb1612aa96.zip/node_modules/mime-types/",
           "packageDependencies": [
-            ["mime-types", "npm:2.1.27"],
-            ["mime-db", "npm:1.44.0"]
+            ["mime-types", "npm:2.1.31"],
+            ["mime-db", "npm:1.48.0"]
           ],
           "linkType": "HARD",
         }]
@@ -20906,10 +23368,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["minipass-fetch", [
+<<<<<<< HEAD
         ["npm:1.4.1", {
           "packageLocation": "./.yarn/cache/minipass-fetch-npm-1.4.1-2d67357feb-ec93697bdb.zip/node_modules/minipass-fetch/",
           "packageDependencies": [
             ["minipass-fetch", "npm:1.4.1"],
+=======
+        ["npm:1.3.4", {
+          "packageLocation": "./.yarn/cache/minipass-fetch-npm-1.3.4-4a0df8dd09-67cb59d30b.zip/node_modules/minipass-fetch/",
+          "packageDependencies": [
+            ["minipass-fetch", "npm:1.3.4"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["encoding", "npm:0.1.13"],
             ["minipass", "npm:3.1.3"],
             ["minipass-sized", "npm:1.0.3"],
@@ -21074,6 +23543,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:2.1.3", {
+          "packageLocation": "./.yarn/cache/ms-npm-2.1.3-81ff3cfac1-aa92de6080.zip/node_modules/ms/",
+          "packageDependencies": [
+            ["ms", "npm:2.1.3"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["multicast-dns", [
@@ -21081,7 +23557,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/multicast-dns-npm-6.2.3-e5ffad56a4-f515b49ca9.zip/node_modules/multicast-dns/",
           "packageDependencies": [
             ["multicast-dns", "npm:6.2.3"],
-            ["dns-packet", "npm:1.3.1"],
+            ["dns-packet", "npm:1.3.4"],
             ["thunky", "npm:1.1.0"]
           ],
           "linkType": "HARD",
@@ -21101,7 +23577,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/multimatch-npm-4.0.0-8c467f035e-bdb6a98dad.zip/node_modules/multimatch/",
           "packageDependencies": [
             ["multimatch", "npm:4.0.0"],
-            ["@types/minimatch", "npm:3.0.3"],
+            ["@types/minimatch", "npm:3.0.5"],
             ["array-differ", "npm:3.0.0"],
             ["array-union", "npm:2.1.0"],
             ["arrify", "npm:2.0.1"],
@@ -21113,7 +23589,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/multimatch-npm-5.0.0-9938abf6fa-82c8030a53.zip/node_modules/multimatch/",
           "packageDependencies": [
             ["multimatch", "npm:5.0.0"],
-            ["@types/minimatch", "npm:3.0.3"],
+            ["@types/minimatch", "npm:3.0.5"],
             ["array-differ", "npm:3.0.0"],
             ["array-union", "npm:2.1.0"],
             ["arrify", "npm:2.0.1"],
@@ -21192,11 +23668,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["nan", [
-        ["npm:2.14.1", {
-          "packageLocation": "./.yarn/unplugged/nan-npm-2.14.1-16097a6487/node_modules/nan/",
+        ["npm:2.14.2", {
+          "packageLocation": "./.yarn/unplugged/nan-npm-2.14.2-e3ede8ce5d/node_modules/nan/",
           "packageDependencies": [
-            ["nan", "npm:2.14.1"],
-            ["node-gyp", "npm:7.1.0"]
+            ["nan", "npm:2.14.2"],
+            ["node-gyp", "npm:8.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -21316,7 +23792,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["no-case", "npm:3.0.4"],
             ["lower-case", "npm:2.0.2"],
+<<<<<<< HEAD
             ["tslib", "npm:2.3.1"]
+=======
+            ["tslib", "npm:2.3.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -21326,7 +23806,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/node-addon-api-npm-2.0.2-8c2c1e9782/node_modules/node-addon-api/",
           "packageDependencies": [
             ["node-addon-api", "npm:2.0.2"],
-            ["node-gyp", "npm:7.1.0"]
+            ["node-gyp", "npm:8.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -21362,8 +23842,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/node-gyp-npm-5.1.1-9e002933ea/node_modules/node-gyp/",
           "packageDependencies": [
             ["node-gyp", "npm:5.1.1"],
+<<<<<<< HEAD
             ["env-paths", "npm:2.2.0"],
             ["glob", "npm:7.2.0"],
+=======
+            ["env-paths", "npm:2.2.1"],
+            ["glob", "npm:7.1.7"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["graceful-fs", "npm:4.2.6"],
             ["mkdirp", "npm:0.5.5"],
             ["nopt", "npm:4.0.3"],
@@ -21376,33 +23861,45 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.1.0", {
-          "packageLocation": "./.yarn/unplugged/node-gyp-npm-7.1.0-713c6fffcd/node_modules/node-gyp/",
+        ["npm:7.1.2", {
+          "packageLocation": "./.yarn/unplugged/node-gyp-npm-7.1.2-002c5798eb/node_modules/node-gyp/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["node-gyp", "npm:7.1.0"],
             ["env-paths", "npm:2.2.0"],
             ["glob", "npm:7.2.0"],
+=======
+            ["node-gyp", "npm:7.1.2"],
+            ["env-paths", "npm:2.2.1"],
+            ["glob", "npm:7.1.7"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["graceful-fs", "npm:4.2.6"],
-            ["nopt", "npm:4.0.3"],
+            ["nopt", "npm:5.0.0"],
             ["npmlog", "npm:4.1.2"],
             ["request", "npm:2.88.2"],
-            ["rimraf", "npm:2.7.1"],
+            ["rimraf", "npm:3.0.2"],
             ["semver", "npm:7.3.5"],
             ["tar", "npm:6.1.8"],
             ["which", "npm:2.0.2"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.1.2", {
-          "packageLocation": "./.yarn/unplugged/node-gyp-npm-7.1.2-002c5798eb/node_modules/node-gyp/",
+        ["npm:8.1.0", {
+          "packageLocation": "./.yarn/unplugged/node-gyp-npm-8.1.0-30cf500e19/node_modules/node-gyp/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["node-gyp", "npm:7.1.2"],
             ["env-paths", "npm:2.2.0"],
             ["glob", "npm:7.2.0"],
+=======
+            ["node-gyp", "npm:8.1.0"],
+            ["env-paths", "npm:2.2.1"],
+            ["glob", "npm:7.1.7"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["graceful-fs", "npm:4.2.6"],
+            ["make-fetch-happen", "npm:8.0.14"],
             ["nopt", "npm:5.0.0"],
             ["npmlog", "npm:4.1.2"],
-            ["request", "npm:2.88.2"],
             ["rimraf", "npm:3.0.2"],
             ["semver", "npm:7.3.5"],
             ["tar", "npm:6.1.8"],
@@ -21520,19 +24017,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/normalize-package-data-npm-2.5.0-af0345deed-7999112efc.zip/node_modules/normalize-package-data/",
           "packageDependencies": [
             ["normalize-package-data", "npm:2.5.0"],
+<<<<<<< HEAD
             ["hosted-git-info", "npm:2.8.8"],
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
+=======
+            ["hosted-git-info", "npm:2.8.9"],
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["semver", "npm:5.7.1"],
             ["validate-npm-package-license", "npm:3.0.4"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/normalize-package-data-npm-3.0.0-ac75fb58ce-665ad6e3d0.zip/node_modules/normalize-package-data/",
+        ["npm:3.0.2", {
+          "packageLocation": "./.yarn/cache/normalize-package-data-npm-3.0.2-4ca0cf04d6-b50e26f2c8.zip/node_modules/normalize-package-data/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["normalize-package-data", "npm:3.0.0"],
             ["hosted-git-info", "npm:3.0.8"],
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
+=======
+            ["normalize-package-data", "npm:3.0.2"],
+            ["hosted-git-info", "npm:4.0.2"],
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["semver", "npm:7.3.5"],
             ["validate-npm-package-license", "npm:3.0.4"]
           ],
@@ -21557,37 +24065,49 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["normalize-url", [
-        ["npm:3.3.0", {
-          "packageLocation": "./.yarn/cache/normalize-url-npm-3.3.0-f91cbdff7c-f6aa4a1a94.zip/node_modules/normalize-url/",
+        ["npm:4.5.1", {
+          "packageLocation": "./.yarn/cache/normalize-url-npm-4.5.1-603d40bc18-9a9dee01df.zip/node_modules/normalize-url/",
           "packageDependencies": [
-            ["normalize-url", "npm:3.3.0"]
+            ["normalize-url", "npm:4.5.1"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.5.0", {
-          "packageLocation": "./.yarn/cache/normalize-url-npm-4.5.0-14a0c5430f-34e9d01095.zip/node_modules/normalize-url/",
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/normalize-url-npm-6.1.0-b95bc12ece-4a49446311.zip/node_modules/normalize-url/",
           "packageDependencies": [
-            ["normalize-url", "npm:4.5.0"]
+            ["normalize-url", "npm:6.1.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["npm-bundled", [
-        ["npm:1.1.1", {
-          "packageLocation": "./.yarn/cache/npm-bundled-npm-1.1.1-4e8c147002-da5c227ff6.zip/node_modules/npm-bundled/",
+        ["npm:1.1.2", {
+          "packageLocation": "./.yarn/cache/npm-bundled-npm-1.1.2-e299e533ef-6e599155ef.zip/node_modules/npm-bundled/",
           "packageDependencies": [
-            ["npm-bundled", "npm:1.1.1"],
+            ["npm-bundled", "npm:1.1.2"],
             ["npm-normalize-package-bin", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["npm-check-updates", [
+<<<<<<< HEAD
         ["npm:12.0.0", {
           "packageLocation": "./.yarn/cache/npm-check-updates-npm-12.0.0-a5e1dae961-6108fe7d33.zip/node_modules/npm-check-updates/",
           "packageDependencies": [
             ["npm-check-updates", "npm:12.0.0"],
+=======
+        ["npm:11.8.3", {
+          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.8.3-1fea052a7b-8b9c2434e3.zip/node_modules/npm-check-updates/",
+          "packageDependencies": [
+<<<<<<< HEAD
+            ["npm-check-updates", "npm:11.6.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["chalk", "npm:4.1.2"],
+=======
+            ["npm-check-updates", "npm:11.8.3"],
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["cint", "npm:8.2.1"],
             ["cli-table", "npm:0.3.6"],
             ["commander", "npm:6.2.1"],
@@ -21668,13 +24188,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["npm-packlist", [
-        ["npm:2.1.4", {
-          "packageLocation": "./.yarn/cache/npm-packlist-npm-2.1.4-5faefca617-916eb67d81.zip/node_modules/npm-packlist/",
+        ["npm:2.2.2", {
+          "packageLocation": "./.yarn/cache/npm-packlist-npm-2.2.2-41e202d14a-799ce94b07.zip/node_modules/npm-packlist/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["npm-packlist", "npm:2.1.4"],
             ["glob", "npm:7.2.0"],
             ["ignore-walk", "npm:3.0.3"],
             ["npm-bundled", "npm:1.1.1"],
+=======
+            ["npm-packlist", "npm:2.2.2"],
+            ["glob", "npm:7.1.7"],
+            ["ignore-walk", "npm:3.0.4"],
+            ["npm-bundled", "npm:1.1.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["npm-normalize-package-bin", "npm:1.0.1"]
           ],
           "linkType": "HARD",
@@ -21698,9 +24225,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/npm-registry-fetch-npm-11.0.0-290af9aa18-dda149cd86.zip/node_modules/npm-registry-fetch/",
           "packageDependencies": [
             ["npm-registry-fetch", "npm:11.0.0"],
+<<<<<<< HEAD
             ["make-fetch-happen", "npm:9.1.0"],
             ["minipass", "npm:3.1.3"],
             ["minipass-fetch", "npm:1.4.1"],
+=======
+            ["make-fetch-happen", "npm:9.0.4"],
+            ["minipass", "npm:3.1.3"],
+            ["minipass-fetch", "npm:1.3.4"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["minipass-json-stream", "npm:1.0.1"],
             ["minizlib", "npm:2.1.2"],
             ["npm-package-arg", "npm:8.1.5"]
@@ -21713,9 +24246,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npm-registry-fetch", "npm:9.0.0"],
             ["@npmcli/ci-detect", "npm:1.3.0"],
             ["lru-cache", "npm:6.0.0"],
-            ["make-fetch-happen", "npm:8.0.9"],
+            ["make-fetch-happen", "npm:8.0.14"],
             ["minipass", "npm:3.1.3"],
+<<<<<<< HEAD
             ["minipass-fetch", "npm:1.4.1"],
+=======
+            ["minipass-fetch", "npm:1.3.4"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["minipass-json-stream", "npm:1.0.1"],
             ["minizlib", "npm:2.1.2"],
             ["npm-package-arg", "npm:8.1.5"]
@@ -21837,12 +24374,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["object-is", [
-        ["npm:1.1.2", {
-          "packageLocation": "./.yarn/cache/object-is-npm-1.1.2-30243a0e36-5ce29151b7.zip/node_modules/object-is/",
+        ["npm:1.1.5", {
+          "packageLocation": "./.yarn/cache/object-is-npm-1.1.5-48a862602b-989b18c4cb.zip/node_modules/object-is/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["object-is", "npm:1.1.2"],
             ["define-properties", "npm:1.1.3"],
             ["es-abstract", "npm:1.19.1"]
+=======
+            ["object-is", "npm:1.1.5"],
+            ["call-bind", "npm:1.0.2"],
+            ["define-properties", "npm:1.1.3"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -21904,10 +24447,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["object.getownpropertydescriptors", [
-        ["npm:2.1.0", {
-          "packageLocation": "./.yarn/cache/object.getownpropertydescriptors-npm-2.1.0-a6ef3a16c2-a3763085ce.zip/node_modules/object.getownpropertydescriptors/",
+        ["npm:2.1.2", {
+          "packageLocation": "./.yarn/cache/object.getownpropertydescriptors-npm-2.1.2-ecd267563b-6c1c0162a2.zip/node_modules/object.getownpropertydescriptors/",
           "packageDependencies": [
-            ["object.getownpropertydescriptors", "npm:2.1.0"],
+            ["object.getownpropertydescriptors", "npm:2.1.2"],
+            ["call-bind", "npm:1.0.2"],
             ["define-properties", "npm:1.1.3"],
             ["es-abstract", "npm:1.19.1"]
           ],
@@ -22051,7 +24595,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/open-npm-7.4.2-a378c23959-3333900ec0.zip/node_modules/open/",
           "packageDependencies": [
             ["open", "npm:7.4.2"],
-            ["is-docker", "npm:2.1.1"],
+            ["is-docker", "npm:2.2.1"],
             ["is-wsl", "npm:2.2.0"]
           ],
           "linkType": "HARD",
@@ -22137,7 +24681,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/original-npm-1.0.2-2250635ba0-8dca9311da.zip/node_modules/original/",
           "packageDependencies": [
             ["original", "npm:1.0.2"],
-            ["url-parse", "npm:1.4.7"]
+            ["url-parse", "npm:1.5.1"]
           ],
           "linkType": "HARD",
         }]
@@ -22210,10 +24754,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:2.1.0", {
-          "packageLocation": "./.yarn/cache/p-cancelable-npm-2.1.0-5eadfd9ace-109e324077.zip/node_modules/p-cancelable/",
+        ["npm:2.1.1", {
+          "packageLocation": "./.yarn/cache/p-cancelable-npm-2.1.1-9388305f02-3dba12b4fb.zip/node_modules/p-cancelable/",
           "packageDependencies": [
-            ["p-cancelable", "npm:2.1.0"]
+            ["p-cancelable", "npm:2.1.1"]
           ],
           "linkType": "HARD",
         }]
@@ -22227,6 +24771,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+<<<<<<< HEAD
+=======
+      ["p-each-series", [
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/p-each-series-npm-2.2.0-b9907a1ae6-5fbe2f1f19.zip/node_modules/p-each-series/",
+          "packageDependencies": [
+            ["p-each-series", "npm:2.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
       ["p-finally", [
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/p-finally-npm-1.0.0-35fbaa57c6-93a654c53d.zip/node_modules/p-finally/",
@@ -22412,7 +24968,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["package-json", "npm:6.5.0"],
             ["got", "npm:9.6.0"],
-            ["registry-auth-token", "npm:4.2.0"],
+            ["registry-auth-token", "npm:4.2.1"],
             ["registry-url", "npm:5.1.0"],
             ["semver", "npm:6.3.0"]
           ],
@@ -22427,19 +24983,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@npmcli/git", "npm:2.1.0"],
             ["@npmcli/installed-package-contents", "npm:1.0.7"],
             ["@npmcli/promise-spawn", "npm:1.3.2"],
+<<<<<<< HEAD
             ["@npmcli/run-script", "npm:1.8.3"],
             ["cacache", "npm:15.3.0"],
+=======
+            ["@npmcli/run-script", "npm:1.8.5"],
+            ["cacache", "npm:15.2.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["chownr", "npm:2.0.0"],
             ["fs-minipass", "npm:2.1.0"],
             ["infer-owner", "npm:1.0.4"],
             ["minipass", "npm:3.1.3"],
             ["mkdirp", "npm:1.0.4"],
             ["npm-package-arg", "npm:8.1.5"],
+<<<<<<< HEAD
             ["npm-packlist", "npm:2.1.4"],
+=======
+            ["npm-packlist", "npm:2.2.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["npm-pick-manifest", "npm:6.1.1"],
             ["npm-registry-fetch", "npm:11.0.0"],
             ["promise-retry", "npm:2.0.1"],
-            ["read-package-json-fast", "npm:2.0.2"],
+            ["read-package-json-fast", "npm:2.0.3"],
             ["rimraf", "npm:3.0.2"],
             ["ssri", "npm:8.0.1"],
             ["tar", "npm:6.1.8"]
@@ -22462,7 +25027,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["param-case", "npm:3.0.4"],
             ["dot-case", "npm:3.0.4"],
+<<<<<<< HEAD
             ["tslib", "npm:2.3.1"]
+=======
+            ["tslib", "npm:2.3.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -22485,17 +25054,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["asn1.js", "npm:5.4.1"],
             ["browserify-aes", "npm:1.2.0"],
             ["evp_bytestokey", "npm:1.0.3"],
-            ["pbkdf2", "npm:3.1.1"],
+            ["pbkdf2", "npm:3.1.2"],
             ["safe-buffer", "npm:5.2.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["parse-github-repo-url", [
-        ["npm:1.4.1", {
-          "packageLocation": "./.yarn/cache/parse-github-repo-url-npm-1.4.1-a6f5f1254e-58d9facd65.zip/node_modules/parse-github-repo-url/",
-          "packageDependencies": [
-            ["parse-github-repo-url", "npm:1.4.1"]
           ],
           "linkType": "HARD",
         }]
@@ -22551,24 +25111,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["parse-path", [
-        ["npm:4.0.2", {
-          "packageLocation": "./.yarn/cache/parse-path-npm-4.0.2-a45ebf63f5-30396fd703.zip/node_modules/parse-path/",
+        ["npm:4.0.3", {
+          "packageLocation": "./.yarn/cache/parse-path-npm-4.0.3-6d729a9baf-d1704c0027.zip/node_modules/parse-path/",
           "packageDependencies": [
-            ["parse-path", "npm:4.0.2"],
-            ["is-ssh", "npm:1.3.2"],
-            ["protocols", "npm:1.4.8"]
+            ["parse-path", "npm:4.0.3"],
+            ["is-ssh", "npm:1.3.3"],
+            ["protocols", "npm:1.4.8"],
+            ["qs", "npm:6.10.1"],
+            ["query-string", "npm:6.14.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["parse-url", [
-        ["npm:5.0.2", {
-          "packageLocation": "./.yarn/cache/parse-url-npm-5.0.2-ebef68506c-3792e2ae61.zip/node_modules/parse-url/",
+        ["npm:6.0.0", {
+          "packageLocation": "./.yarn/cache/parse-url-npm-6.0.0-046c3c4219-6b680d1fdf.zip/node_modules/parse-url/",
           "packageDependencies": [
-            ["parse-url", "npm:5.0.2"],
-            ["is-ssh", "npm:1.3.2"],
-            ["normalize-url", "npm:3.3.0"],
-            ["parse-path", "npm:4.0.2"],
+            ["parse-url", "npm:6.0.0"],
+            ["is-ssh", "npm:1.3.3"],
+            ["normalize-url", "npm:6.1.0"],
+            ["parse-path", "npm:4.0.3"],
             ["protocols", "npm:1.4.8"]
           ],
           "linkType": "HARD",
@@ -22579,7 +25141,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/parse5-npm-3.0.3-fb7c9e4969-6a82d59d60.zip/node_modules/parse5/",
           "packageDependencies": [
             ["parse5", "npm:3.0.3"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"]
+=======
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"]
+=======
+            ["@types/node", "npm:16.4.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }],
@@ -22616,7 +25186,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["pascal-case", "npm:3.1.2"],
             ["no-case", "npm:3.0.4"],
+<<<<<<< HEAD
             ["tslib", "npm:2.3.1"]
+=======
+            ["tslib", "npm:2.3.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -22698,10 +25272,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["path-parse", [
-        ["npm:1.0.6", {
-          "packageLocation": "./.yarn/cache/path-parse-npm-1.0.6-4a4c90546c-962a85dd38.zip/node_modules/path-parse/",
+        ["npm:1.0.7", {
+          "packageLocation": "./.yarn/cache/path-parse-npm-1.0.7-09564527b7-49abf3d811.zip/node_modules/path-parse/",
           "packageDependencies": [
-            ["path-parse", "npm:1.0.6"]
+            ["path-parse", "npm:1.0.7"]
           ],
           "linkType": "HARD",
         }]
@@ -22743,10 +25317,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["pbkdf2", [
-        ["npm:3.1.1", {
-          "packageLocation": "./.yarn/cache/pbkdf2-npm-3.1.1-bd4801f9ae-c3de26b8eb.zip/node_modules/pbkdf2/",
+        ["npm:3.1.2", {
+          "packageLocation": "./.yarn/cache/pbkdf2-npm-3.1.2-d67bbb584f-2c950a100b.zip/node_modules/pbkdf2/",
           "packageDependencies": [
-            ["pbkdf2", "npm:3.1.1"],
+            ["pbkdf2", "npm:3.1.2"],
             ["create-hash", "npm:1.2.0"],
             ["create-hmac", "npm:1.1.7"],
             ["ripemd160", "npm:2.0.2"],
@@ -22784,10 +25358,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["picomatch", [
-        ["npm:2.2.3", {
-          "packageLocation": "./.yarn/cache/picomatch-npm-2.2.3-3797e21cf0-45e2b882b5.zip/node_modules/picomatch/",
+        ["npm:2.3.0", {
+          "packageLocation": "./.yarn/cache/picomatch-npm-2.3.0-5e60e6c82d-16818720ea.zip/node_modules/picomatch/",
           "packageDependencies": [
-            ["picomatch", "npm:2.2.3"]
+            ["picomatch", "npm:2.3.0"]
           ],
           "linkType": "HARD",
         }]
@@ -22868,6 +25442,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["npm:7.4.0", {
           "packageLocation": "./.yarn/cache/pino-npm-7.4.0-20b3333866-c61bb43e7a.zip/node_modules/pino/",
           "packageDependencies": [
@@ -22883,6 +25458,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["safe-stable-stringify", "npm:2.2.0"],
             ["sonic-boom", "npm:2.3.0"],
             ["thread-stream", "npm:0.13.0"]
+=======
+        ["npm:6.11.3", {
+          "packageLocation": "./.yarn/cache/pino-npm-6.11.3-63b6174ef5-6fb82f11d4.zip/node_modules/pino/",
+          "packageDependencies": [
+            ["pino", "npm:6.11.3"],
+            ["fast-redact", "npm:3.0.1"],
+            ["fast-safe-stringify", "npm:2.0.8"],
+            ["flatstr", "npm:1.0.12"],
+            ["pino-std-serializers", "npm:3.2.0"],
+            ["quick-format-unescaped", "npm:4.0.3"],
+            ["sonic-boom", "npm:1.4.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.13.0", {
+          "packageLocation": "./.yarn/cache/pino-npm-6.13.0-03d793e748-7145de4287.zip/node_modules/pino/",
+          "packageDependencies": [
+<<<<<<< HEAD
+            ["pino", "npm:6.13.0"],
+            ["fast-redact", "npm:3.0.0"],
+=======
+            ["pino", "npm:6.12.0"],
+            ["fast-redact", "npm:3.0.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["fast-safe-stringify", "npm:2.0.8"],
+            ["flatstr", "npm:1.0.12"],
+            ["pino-std-serializers", "npm:3.2.0"],
+            ["quick-format-unescaped", "npm:4.0.3"],
+            ["sonic-boom", "npm:1.4.1"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -22906,10 +25511,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["npm:4.0.0", {
           "packageLocation": "./.yarn/cache/pino-std-serializers-npm-4.0.0-391192ed8b-89d487729b.zip/node_modules/pino-std-serializers/",
           "packageDependencies": [
             ["pino-std-serializers", "npm:4.0.0"]
+=======
+        ["npm:3.2.0", {
+          "packageLocation": "./.yarn/cache/pino-std-serializers-npm-3.2.0-9fd67503a4-77e29675b1.zip/node_modules/pino-std-serializers/",
+          "packageDependencies": [
+            ["pino-std-serializers", "npm:3.2.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -22978,10 +25590,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["popmotion", [
-        ["npm:9.3.5", {
-          "packageLocation": "./.yarn/cache/popmotion-npm-9.3.5-eeff490b09-b78d79a8ea.zip/node_modules/popmotion/",
+        ["npm:9.3.6", {
+          "packageLocation": "./.yarn/cache/popmotion-npm-9.3.6-7554353804-551446ec37.zip/node_modules/popmotion/",
           "packageDependencies": [
-            ["popmotion", "npm:9.3.5"],
+            ["popmotion", "npm:9.3.6"],
             ["framesync", "npm:5.3.0"],
             ["hey-listen", "npm:1.0.8"],
             ["style-value-types", "npm:4.1.4"],
@@ -23040,6 +25652,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["source-map-js", "npm:0.6.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:8.3.6", {
+          "packageLocation": "./.yarn/cache/postcss-npm-8.3.6-e6c5350483-ff55b91bea.zip/node_modules/postcss/",
+          "packageDependencies": [
+            ["postcss", "npm:8.3.6"],
+            ["colorette", "npm:1.2.2"],
+            ["nanoid", "npm:3.1.23"],
+            ["source-map-js", "npm:0.6.2"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["postcss-modules-extract-imports", [
@@ -23055,7 +25677,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-modules-extract-imports", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:3.0.0"],
             ["@types/postcss", null],
+<<<<<<< HEAD
             ["postcss", "npm:8.3.11"]
+=======
+<<<<<<< HEAD
+            ["postcss", "npm:8.3.9"]
+=======
+            ["postcss", "npm:8.3.6"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/postcss",
@@ -23077,9 +25707,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-modules-local-by-default", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:4.0.0"],
             ["@types/postcss", null],
+<<<<<<< HEAD
             ["icss-utils", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:5.1.0"],
             ["postcss", "npm:8.3.11"],
+=======
+<<<<<<< HEAD
+            ["icss-utils", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:5.1.0"],
+            ["postcss", "npm:8.3.9"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["postcss-selector-parser", "npm:6.0.4"],
+=======
+            ["icss-utils", "virtual:25c55dfa2153dbd05f87a5b55c79993e3826a75f415a1b9f60604d6a30a2d65a144c7816c1af965eaf5c482d36a37e0974616b6c29eaaff8669b9a006ec1f4f2#npm:5.1.0"],
+            ["postcss", "npm:8.3.6"],
+            ["postcss-selector-parser", "npm:6.0.6"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["postcss-value-parser", "npm:4.1.0"]
           ],
           "packagePeers": [
@@ -23102,8 +25743,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-modules-scope", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:3.0.0"],
             ["@types/postcss", null],
+<<<<<<< HEAD
             ["postcss", "npm:8.3.11"],
+=======
+<<<<<<< HEAD
+            ["postcss", "npm:8.3.9"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["postcss-selector-parser", "npm:6.0.4"]
+=======
+            ["postcss", "npm:8.3.6"],
+            ["postcss-selector-parser", "npm:6.0.6"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "packagePeers": [
             "@types/postcss",
@@ -23125,8 +25775,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-modules-values", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:4.0.0"],
             ["@types/postcss", null],
+<<<<<<< HEAD
             ["icss-utils", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:5.1.0"],
             ["postcss", "npm:8.3.11"]
+=======
+<<<<<<< HEAD
+            ["icss-utils", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:5.1.0"],
+            ["postcss", "npm:8.3.9"]
+=======
+            ["icss-utils", "virtual:25c55dfa2153dbd05f87a5b55c79993e3826a75f415a1b9f60604d6a30a2d65a144c7816c1af965eaf5c482d36a37e0974616b6c29eaaff8669b9a006ec1f4f2#npm:5.1.0"],
+            ["postcss", "npm:8.3.6"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "packagePeers": [
             "@types/postcss",
@@ -23136,13 +25796,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["postcss-selector-parser", [
-        ["npm:6.0.4", {
-          "packageLocation": "./.yarn/cache/postcss-selector-parser-npm-6.0.4-0a01b64fe5-2030e3439a.zip/node_modules/postcss-selector-parser/",
+        ["npm:6.0.6", {
+          "packageLocation": "./.yarn/cache/postcss-selector-parser-npm-6.0.6-4df491c1e3-3602758798.zip/node_modules/postcss-selector-parser/",
           "packageDependencies": [
-            ["postcss-selector-parser", "npm:6.0.4"],
+            ["postcss-selector-parser", "npm:6.0.6"],
             ["cssesc", "npm:3.0.0"],
-            ["indexes-of", "npm:1.0.1"],
-            ["uniq", "npm:1.0.1"],
             ["util-deprecate", "npm:1.0.2"]
           ],
           "linkType": "HARD",
@@ -23225,11 +25883,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:27.3.1", {
           "packageLocation": "./.yarn/cache/pretty-format-npm-27.3.1-872f4f2791-2979eae85a.zip/node_modules/pretty-format/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["pretty-format", "npm:27.3.1"],
+=======
+<<<<<<< HEAD
+            ["pretty-format", "npm:27.2.5"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@jest/types", "npm:27.2.5"],
             ["ansi-regex", "npm:5.0.1"],
+=======
+            ["pretty-format", "npm:26.6.2"],
+            ["@jest/types", "npm:26.6.2"],
+            ["ansi-regex", "npm:5.0.0"],
+            ["ansi-styles", "npm:4.3.0"],
+            ["react-is", "npm:17.0.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:27.0.6", {
+          "packageLocation": "./.yarn/cache/pretty-format-npm-27.0.6-c71fc37c41-1584f7fe29.zip/node_modules/pretty-format/",
+          "packageDependencies": [
+            ["pretty-format", "npm:27.0.6"],
+            ["@jest/types", "npm:27.0.6"],
+            ["ansi-regex", "npm:5.0.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["ansi-styles", "npm:5.2.0"],
-            ["react-is", "npm:17.0.1"]
+            ["react-is", "npm:17.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -23314,7 +25993,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/promise-inflight-virtual-838f1babdd/0/cache/promise-inflight-npm-1.0.1-5bb925afac-2274948309.zip/node_modules/promise-inflight/",
           "packageDependencies": [
             ["promise-inflight", "virtual:b85bc3f444ffaf1ed05d97da5b876360753cc42baad9edde6f8dfa4ddd18626276fd2905a01d195754cbea1c14bf81b5ad60fc333b9e366358ec67cbe0379524#npm:1.0.1"],
+<<<<<<< HEAD
             ["@types/bluebird", null],
+=======
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["bluebird", null]
           ],
           "packagePeers": [
@@ -23325,15 +26007,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["promise-retry", [
-        ["npm:1.1.1", {
-          "packageLocation": "./.yarn/cache/promise-retry-npm-1.1.1-56f07257a8-18180b4cf8.zip/node_modules/promise-retry/",
-          "packageDependencies": [
-            ["promise-retry", "npm:1.1.1"],
-            ["err-code", "npm:1.1.2"],
-            ["retry", "npm:0.10.1"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:2.0.1", {
           "packageLocation": "./.yarn/cache/promise-retry-npm-2.0.1-871f0b01b7-f96a3f6d90.zip/node_modules/promise-retry/",
           "packageDependencies": [
@@ -23407,11 +26080,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["proxy-addr", [
-        ["npm:2.0.6", {
-          "packageLocation": "./.yarn/cache/proxy-addr-npm-2.0.6-8fafed6ca5-2bad9b7a56.zip/node_modules/proxy-addr/",
+        ["npm:2.0.7", {
+          "packageLocation": "./.yarn/cache/proxy-addr-npm-2.0.7-dae6552872-29c6990ce9.zip/node_modules/proxy-addr/",
           "packageDependencies": [
-            ["proxy-addr", "npm:2.0.6"],
-            ["forwarded", "npm:0.1.2"],
+            ["proxy-addr", "npm:2.0.7"],
+            ["forwarded", "npm:0.2.0"],
             ["ipaddr.js", "npm:1.9.1"]
           ],
           "linkType": "HARD",
@@ -23458,21 +26131,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/public-encrypt-npm-4.0.3-b25e19fada-215d446e43.zip/node_modules/public-encrypt/",
           "packageDependencies": [
             ["public-encrypt", "npm:4.0.3"],
-            ["bn.js", "npm:4.11.9"],
-            ["browserify-rsa", "npm:4.0.1"],
+            ["bn.js", "npm:4.12.0"],
+            ["browserify-rsa", "npm:4.1.0"],
             ["create-hash", "npm:1.2.0"],
             ["parse-asn1", "npm:5.1.6"],
             ["randombytes", "npm:2.1.0"],
             ["safe-buffer", "npm:5.2.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["puka", [
-        ["npm:1.0.1", {
-          "packageLocation": "./.yarn/cache/puka-npm-1.0.1-e8350b8346-bccd754bf3.zip/node_modules/puka/",
-          "packageDependencies": [
-            ["puka", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -23526,7 +26190,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/puppeteer-npm-1.20.0-92b1d57042/node_modules/puppeteer/",
           "packageDependencies": [
             ["puppeteer", "npm:1.20.0"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["extract-zip", "npm:1.7.0"],
             ["https-proxy-agent", "npm:2.2.4"],
             ["mime", "npm:2.5.2"],
@@ -23540,9 +26212,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:11.0.0", {
           "packageLocation": "./.yarn/unplugged/puppeteer-npm-11.0.0-efeebaffbd/node_modules/puppeteer/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["puppeteer", "npm:11.0.0"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["puppeteer", "npm:10.4.0"],
+            ["debug", "virtual:2cff9d6bb67f60b405aa687457fee964fc556364e10becbb20a42adcab5bed428e93aa7104b6729be8f088e085a36221271d9a65f3974a1915c60950102d83cb#npm:4.3.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["devtools-protocol", "npm:0.0.901419"],
+=======
+            ["puppeteer", "npm:10.1.0"],
+            ["debug", "virtual:b6903cb0aaad9906148dfa505a0e5b88399e26dc9fd5f803943a849595d5c20ea7ebf5a1e9a758a58020d02214870ac72546b61ed9296c91b93f1f92936cf426#npm:4.3.1"],
+            ["devtools-protocol", "npm:0.0.883894"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["extract-zip", "npm:2.0.1"],
             ["https-proxy-agent", "npm:5.0.0"],
             ["node-fetch", "npm:2.6.5"],
@@ -23550,9 +26233,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["progress", "npm:2.0.3"],
             ["proxy-from-env", "npm:1.1.0"],
             ["rimraf", "npm:3.0.2"],
+<<<<<<< HEAD
             ["tar-fs", "npm:2.1.1"],
             ["unbzip2-stream", "npm:1.4.3"],
             ["ws", "virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:8.2.3"]
+=======
+            ["tar-fs", "npm:2.0.0"],
+            ["unbzip2-stream", "npm:1.3.3"],
+<<<<<<< HEAD
+            ["ws", "virtual:82010cf435bfdd815e56aa96b8d62d16ac586c3b4b7aacb920726db97fe019609213df6e9de787883e55fe3575d876d7238194a097c8f36ba631311b0fe374ce#npm:7.4.6"]
+=======
+            ["ws", "virtual:b6903cb0aaad9906148dfa505a0e5b88399e26dc9fd5f803943a849595d5c20ea7ebf5a1e9a758a58020d02214870ac72546b61ed9296c91b93f1f92936cf426#npm:7.4.6"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -23597,6 +26290,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["query-string", [
+        ["npm:6.14.1", {
+          "packageLocation": "./.yarn/cache/query-string-npm-6.14.1-dad16e37e6-f2c7347578.zip/node_modules/query-string/",
+          "packageDependencies": [
+            ["query-string", "npm:6.14.1"],
+            ["decode-uri-component", "npm:0.2.0"],
+            ["filter-obj", "npm:1.1.0"],
+            ["split-on-first", "npm:1.1.0"],
+            ["strict-uri-encode", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["querystring", [
         ["npm:0.2.0", {
           "packageLocation": "./.yarn/cache/querystring-npm-0.2.0-421b870c92-8258d6734f.zip/node_modules/querystring/",
@@ -23621,6 +26327,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["queue", "npm:6.0.2"],
             ["inherits", "npm:2.0.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["queue-microtask", [
+        ["npm:1.2.3", {
+          "packageLocation": "./.yarn/cache/queue-microtask-npm-1.2.3-fcc98e4e2d-b676f8c040.zip/node_modules/queue-microtask/",
+          "packageDependencies": [
+            ["queue-microtask", "npm:1.2.3"]
           ],
           "linkType": "HARD",
         }]
@@ -23740,8 +26455,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/rc-config-loader-npm-4.0.0-780c6ace5d-3543867a12.zip/node_modules/rc-config-loader/",
           "packageDependencies": [
             ["rc-config-loader", "npm:4.0.0"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
             ["js-yaml", "npm:4.1.0"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+            ["js-yaml", "npm:4.0.0"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["js-yaml", "npm:4.1.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["json5", "npm:2.2.0"],
             ["require-from-string", "npm:2.0.2"]
           ],
@@ -23810,7 +26535,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
             ["react-fast-compare", "npm:3.2.0"],
-            ["react-side-effect", "virtual:fc96391b28e52f1c7f623173c3b994f0328b9b996350e7cb57f77e0e03ab3a865926590462cfec39d028096c95023ee2045fedcd435847ff59f89cc26cf5cb09#npm:2.1.0"]
+            ["react-side-effect", "virtual:fc96391b28e52f1c7f623173c3b994f0328b9b996350e7cb57f77e0e03ab3a865926590462cfec39d028096c95023ee2045fedcd435847ff59f89cc26cf5cb09#npm:2.1.1"]
           ],
           "packagePeers": [
             "@types/react",
@@ -23862,10 +26587,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:17.0.1", {
-          "packageLocation": "./.yarn/cache/react-is-npm-17.0.1-876b80f7e5-5e6945a286.zip/node_modules/react-is/",
+        ["npm:17.0.2", {
+          "packageLocation": "./.yarn/cache/react-is-npm-17.0.2-091bbb8db6-9d6d111d89.zip/node_modules/react-is/",
           "packageDependencies": [
-            ["react-is", "npm:17.0.1"]
+            ["react-is", "npm:17.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -23880,18 +26605,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["react-side-effect", [
-        ["npm:2.1.0", {
-          "packageLocation": "./.yarn/cache/react-side-effect-npm-2.1.0-bf979181c2-9bd58e63d6.zip/node_modules/react-side-effect/",
+        ["npm:2.1.1", {
+          "packageLocation": "./.yarn/cache/react-side-effect-npm-2.1.1-52222d7f8f-324511ea8f.zip/node_modules/react-side-effect/",
           "packageDependencies": [
-            ["react-side-effect", "npm:2.1.0"]
+            ["react-side-effect", "npm:2.1.1"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:fc96391b28e52f1c7f623173c3b994f0328b9b996350e7cb57f77e0e03ab3a865926590462cfec39d028096c95023ee2045fedcd435847ff59f89cc26cf5cb09#npm:2.1.0", {
-          "packageLocation": "./.yarn/__virtual__/react-side-effect-virtual-ae9da277dc/0/cache/react-side-effect-npm-2.1.0-bf979181c2-9bd58e63d6.zip/node_modules/react-side-effect/",
+        ["virtual:fc96391b28e52f1c7f623173c3b994f0328b9b996350e7cb57f77e0e03ab3a865926590462cfec39d028096c95023ee2045fedcd435847ff59f89cc26cf5cb09#npm:2.1.1", {
+          "packageLocation": "./.yarn/__virtual__/react-side-effect-virtual-43317d958f/0/cache/react-side-effect-npm-2.1.1-52222d7f8f-324511ea8f.zip/node_modules/react-side-effect/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["react-side-effect", "virtual:fc96391b28e52f1c7f623173c3b994f0328b9b996350e7cb57f77e0e03ab3a865926590462cfec39d028096c95023ee2045fedcd435847ff59f89cc26cf5cb09#npm:2.1.0"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
+=======
+            ["@types/react", "npm:17.0.19"],
+=======
+            ["react-side-effect", "virtual:fc96391b28e52f1c7f623173c3b994f0328b9b996350e7cb57f77e0e03ab3a865926590462cfec39d028096c95023ee2045fedcd435847ff59f89cc26cf5cb09#npm:2.1.1"],
+            ["@types/react", "npm:17.0.14"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["react", "npm:17.0.2"]
           ],
           "packagePeers": [
@@ -23902,21 +26636,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["react-transition-group", [
-        ["npm:4.4.1", {
-          "packageLocation": "./.yarn/cache/react-transition-group-npm-4.4.1-5b62a122ef-0bcd8af483.zip/node_modules/react-transition-group/",
+        ["npm:4.4.2", {
+          "packageLocation": "./.yarn/cache/react-transition-group-npm-4.4.2-5052c30656-b67bf5b3e8.zip/node_modules/react-transition-group/",
           "packageDependencies": [
-            ["react-transition-group", "npm:4.4.1"]
+            ["react-transition-group", "npm:4.4.2"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.4.1", {
-          "packageLocation": "./.yarn/__virtual__/react-transition-group-virtual-09b189d7f8/0/cache/react-transition-group-npm-4.4.1-5b62a122ef-0bcd8af483.zip/node_modules/react-transition-group/",
+        ["virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.4.2", {
+          "packageLocation": "./.yarn/__virtual__/react-transition-group-virtual-b7490e6ff0/0/cache/react-transition-group-npm-4.4.2-5052c30656-b67bf5b3e8.zip/node_modules/react-transition-group/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["react-transition-group", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.4.1"],
+<<<<<<< HEAD
             ["@babel/runtime", "npm:7.16.3"],
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
             ["dom-helpers", "npm:5.2.0"],
+=======
+            ["@babel/runtime", "npm:7.13.9"],
+            ["@types/react", "npm:17.0.19"],
+=======
+            ["react-transition-group", "virtual:8928d698e688904b2159eead6ca8eb35caf2c3f264b9871e2ae4f9f306a5346536a5e047bf67e547154ba35ca749c3028ead0d9c42054b6de5e5987b87bbd554#npm:4.4.2"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["@types/react", "npm:17.0.14"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+            ["@types/react-dom", "npm:17.0.9"],
+            ["dom-helpers", "npm:5.2.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["loose-envify", "npm:1.4.0"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
@@ -23968,17 +26715,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["read-package-json", "npm:3.0.1"],
             ["glob", "npm:7.2.0"],
             ["json-parse-even-better-errors", "npm:2.3.1"],
-            ["normalize-package-data", "npm:3.0.0"],
+            ["normalize-package-data", "npm:3.0.2"],
             ["npm-normalize-package-bin", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["read-package-json-fast", [
-        ["npm:2.0.2", {
-          "packageLocation": "./.yarn/cache/read-package-json-fast-npm-2.0.2-886bc676d1-81a45b0bdb.zip/node_modules/read-package-json-fast/",
+        ["npm:2.0.3", {
+          "packageLocation": "./.yarn/cache/read-package-json-fast-npm-2.0.3-f163572d18-fca37b3b21.zip/node_modules/read-package-json-fast/",
           "packageDependencies": [
-            ["read-package-json-fast", "npm:2.0.2"],
+            ["read-package-json-fast", "npm:2.0.3"],
             ["json-parse-even-better-errors", "npm:2.3.1"],
             ["npm-normalize-package-bin", "npm:1.0.1"]
           ],
@@ -24022,7 +26769,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/read-pkg-npm-5.2.0-50426bd8dc-eb696e6052.zip/node_modules/read-pkg/",
           "packageDependencies": [
             ["read-pkg", "npm:5.2.0"],
-            ["@types/normalize-package-data", "npm:2.4.0"],
+            ["@types/normalize-package-data", "npm:2.4.1"],
             ["normalize-package-data", "npm:2.5.0"],
             ["parse-json", "npm:5.2.0"],
             ["type-fest", "npm:0.6.0"]
@@ -24110,11 +26857,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.5.0", {
-          "packageLocation": "./.yarn/cache/readdirp-npm-3.5.0-a1b1568d32-6b1a9341e2.zip/node_modules/readdirp/",
+        ["npm:3.6.0", {
+          "packageLocation": "./.yarn/cache/readdirp-npm-3.6.0-f950cc74ab-1ced032e6e.zip/node_modules/readdirp/",
           "packageDependencies": [
-            ["readdirp", "npm:3.5.0"],
-            ["picomatch", "npm:2.2.3"]
+            ["readdirp", "npm:3.6.0"],
+            ["picomatch", "npm:2.3.0"]
           ],
           "linkType": "HARD",
         }]
@@ -24149,11 +26896,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:0.7.0", {
-          "packageLocation": "./.yarn/cache/rechoir-npm-0.7.0-9bea79bab8-15f55f55e0.zip/node_modules/rechoir/",
+        ["npm:0.7.1", {
+          "packageLocation": "./.yarn/cache/rechoir-npm-0.7.1-0c7e5c1201-2a04aab4e2.zip/node_modules/rechoir/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"]
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -24198,10 +26950,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["regenerate", [
-        ["npm:1.4.1", {
-          "packageLocation": "./.yarn/cache/regenerate-npm-1.4.1-a91e5d9564-a7e8f78b54.zip/node_modules/regenerate/",
+        ["npm:1.4.2", {
+          "packageLocation": "./.yarn/cache/regenerate-npm-1.4.2-b296c5b63a-3317a09b2f.zip/node_modules/regenerate/",
           "packageDependencies": [
-            ["regenerate", "npm:1.4.1"]
+            ["regenerate", "npm:1.4.2"]
           ],
           "linkType": "HARD",
         }]
@@ -24211,7 +26963,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/regenerate-unicode-properties-npm-8.2.0-0e54c6463c-ee7db70ab2.zip/node_modules/regenerate-unicode-properties/",
           "packageDependencies": [
             ["regenerate-unicode-properties", "npm:8.2.0"],
-            ["regenerate", "npm:1.4.1"]
+            ["regenerate", "npm:1.4.2"]
           ],
           "linkType": "HARD",
         }]
@@ -24231,10 +26983,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:0.13.8", {
-          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.8-0450f887d6-5f89699ab5.zip/node_modules/regenerator-runtime/",
+        ["npm:0.13.9", {
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.9-6d02340eec-65ed455fe5.zip/node_modules/regenerator-runtime/",
           "packageDependencies": [
-            ["regenerator-runtime", "npm:0.13.8"]
+            ["regenerator-runtime", "npm:0.13.9"]
           ],
           "linkType": "HARD",
         }],
@@ -24251,7 +27003,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/regenerator-transform-npm-0.14.5-40045884e9-a467a3b652.zip/node_modules/regenerator-transform/",
           "packageDependencies": [
             ["regenerator-transform", "npm:0.14.5"],
+<<<<<<< HEAD
             ["@babel/runtime", "npm:7.16.3"]
+=======
+            ["@babel/runtime", "npm:7.14.8"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -24308,10 +27064,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/regexpu-core-npm-4.7.1-67fbfa97ed-368b4aab72.zip/node_modules/regexpu-core/",
           "packageDependencies": [
             ["regexpu-core", "npm:4.7.1"],
-            ["regenerate", "npm:1.4.1"],
+            ["regenerate", "npm:1.4.2"],
             ["regenerate-unicode-properties", "npm:8.2.0"],
             ["regjsgen", "npm:0.5.2"],
-            ["regjsparser", "npm:0.6.4"],
+            ["regjsparser", "npm:0.6.9"],
             ["unicode-match-property-ecmascript", "npm:1.0.4"],
             ["unicode-match-property-value-ecmascript", "npm:1.2.0"]
           ],
@@ -24319,10 +27075,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["registry-auth-token", [
-        ["npm:4.2.0", {
-          "packageLocation": "./.yarn/cache/registry-auth-token-npm-4.2.0-0aada8f019-e91fb7eff2.zip/node_modules/registry-auth-token/",
+        ["npm:4.2.1", {
+          "packageLocation": "./.yarn/cache/registry-auth-token-npm-4.2.1-200e2be697-aa72060b57.zip/node_modules/registry-auth-token/",
           "packageDependencies": [
-            ["registry-auth-token", "npm:4.2.0"],
+            ["registry-auth-token", "npm:4.2.1"],
             ["rc", "npm:1.2.8"]
           ],
           "linkType": "HARD",
@@ -24348,10 +27104,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["regjsparser", [
-        ["npm:0.6.4", {
-          "packageLocation": "./.yarn/cache/regjsparser-npm-0.6.4-d22abbbbd8-6058749f80.zip/node_modules/regjsparser/",
+        ["npm:0.6.9", {
+          "packageLocation": "./.yarn/cache/regjsparser-npm-0.6.9-4fe5869344-1c439ec46a.zip/node_modules/regjsparser/",
           "packageDependencies": [
-            ["regjsparser", "npm:0.6.4"],
+            ["regjsparser", "npm:0.6.9"],
             ["jsesc", "npm:0.5.0"]
           ],
           "linkType": "HARD",
@@ -24410,10 +27166,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["repeat-element", [
-        ["npm:1.1.3", {
-          "packageLocation": "./.yarn/cache/repeat-element-npm-1.1.3-a9dee226b4-0743a136b4.zip/node_modules/repeat-element/",
+        ["npm:1.1.4", {
+          "packageLocation": "./.yarn/cache/repeat-element-npm-1.1.4-7e649ab5b1-1edd0301b7.zip/node_modules/repeat-element/",
           "packageDependencies": [
-            ["repeat-element", "npm:1.1.3"]
+            ["repeat-element", "npm:1.1.4"]
           ],
           "linkType": "HARD",
         }]
@@ -24454,7 +27210,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-typedarray", "npm:1.0.0"],
             ["isstream", "npm:0.1.2"],
             ["json-stringify-safe", "npm:5.0.1"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["oauth-sign", "npm:0.8.2"],
             ["performance-now", "npm:2.1.0"],
             ["qs", "npm:6.5.2"],
@@ -24481,7 +27237,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-typedarray", "npm:1.0.0"],
             ["isstream", "npm:0.1.2"],
             ["json-stringify-safe", "npm:5.0.1"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["oauth-sign", "npm:0.9.0"],
             ["performance-now", "npm:2.1.0"],
             ["qs", "npm:6.5.2"],
@@ -24544,27 +27300,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b", {
           "packageLocation": "./.yarn/cache/resolve-patch-b4a69197d3-a0dd7d16a8.zip/node_modules/resolve/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
             ["is-core-module", "npm:2.8.0"],
+=======
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"],
+<<<<<<< HEAD
+            ["is-core-module", "npm:2.6.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["path-parse", "npm:1.0.6"]
+=======
+            ["is-core-module", "npm:2.5.0"],
+            ["path-parse", "npm:1.0.7"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }],
         ["patch:resolve@npm%3A2.0.0-next.3#~builtin<compat/resolve>::version=2.0.0-next.3&hash=07638b", {
           "packageLocation": "./.yarn/cache/resolve-patch-00f699a708-21684b4d99.zip/node_modules/resolve/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["resolve", "patch:resolve@npm%3A2.0.0-next.3#~builtin<compat/resolve>::version=2.0.0-next.3&hash=07638b"],
             ["is-core-module", "npm:2.8.0"],
+=======
+            ["resolve", "patch:resolve@npm%3A2.0.0-next.3#~builtin<compat/resolve>::version=2.0.0-next.3&hash=00b1ff"],
+<<<<<<< HEAD
+            ["is-core-module", "npm:2.6.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["path-parse", "npm:1.0.6"]
+=======
+            ["is-core-module", "npm:2.5.0"],
+            ["path-parse", "npm:1.0.7"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
       ]],
       ["resolve-alpn", [
-        ["npm:1.0.0", {
-          "packageLocation": "./.yarn/cache/resolve-alpn-npm-1.0.0-f655c150b7-146b739f14.zip/node_modules/resolve-alpn/",
+        ["npm:1.2.0", {
+          "packageLocation": "./.yarn/cache/resolve-alpn-npm-1.2.0-7f308b17b1-a38b5bf208.zip/node_modules/resolve-alpn/",
           "packageDependencies": [
-            ["resolve-alpn", "npm:1.0.0"]
+            ["resolve-alpn", "npm:1.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -24702,13 +27478,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["retry", [
-        ["npm:0.10.1", {
-          "packageLocation": "./.yarn/cache/retry-npm-0.10.1-49d64d46ee-133ef7c202.zip/node_modules/retry/",
-          "packageDependencies": [
-            ["retry", "npm:0.10.1"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:0.12.0", {
           "packageLocation": "./.yarn/cache/retry-npm-0.12.0-72ac7fb4cc-623bd7d2e5.zip/node_modules/retry/",
           "packageDependencies": [
@@ -24789,10 +27558,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["run-parallel", [
-        ["npm:1.1.9", {
-          "packageLocation": "./.yarn/cache/run-parallel-npm-1.1.9-83c6b2d620-8bbeda89c2.zip/node_modules/run-parallel/",
+        ["npm:1.2.0", {
+          "packageLocation": "./.yarn/cache/run-parallel-npm-1.2.0-3f47ff2034-cb4f97ad25.zip/node_modules/run-parallel/",
           "packageDependencies": [
-            ["run-parallel", "npm:1.1.9"]
+            ["run-parallel", "npm:1.2.0"],
+            ["queue-microtask", "npm:1.2.3"]
           ],
           "linkType": "HARD",
         }]
@@ -24928,8 +27698,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:3.1.1", {
           "packageLocation": "./.yarn/cache/schema-utils-npm-3.1.1-8704647575-fb73f3d759.zip/node_modules/schema-utils/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["schema-utils", "npm:3.1.1"],
+=======
+<<<<<<< HEAD
+            ["schema-utils", "npm:3.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/json-schema", "npm:7.0.9"],
+=======
+            ["schema-utils", "npm:3.1.1"],
+            ["@types/json-schema", "npm:7.0.8"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["ajv", "npm:6.12.6"],
             ["ajv-keywords", "virtual:8704647575acf2f5b19fccfcb0acebacd9c94259ebe9afcfaf4c053812fd896f10775930ee5a5949e20833a61503d2cd22aa259cbe69729f6a192de4bf43dc00#npm:3.5.2"]
           ],
@@ -24955,10 +27734,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["selfsigned", [
-        ["npm:1.10.8", {
-          "packageLocation": "./.yarn/cache/selfsigned-npm-1.10.8-c48e1ebfb2-c7028385cb.zip/node_modules/selfsigned/",
+        ["npm:1.10.11", {
+          "packageLocation": "./.yarn/cache/selfsigned-npm-1.10.11-b18173f015-1fd8fd317d.zip/node_modules/selfsigned/",
           "packageDependencies": [
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["node-forge", "npm:0.10.0"]
           ],
           "linkType": "HARD",
@@ -25065,14 +27844,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["serialize-javascript", [
-        ["npm:5.0.1", {
-          "packageLocation": "./.yarn/cache/serialize-javascript-npm-5.0.1-8ffc173f09-bb45a42769.zip/node_modules/serialize-javascript/",
-          "packageDependencies": [
-            ["serialize-javascript", "npm:5.0.1"],
-            ["randombytes", "npm:2.1.0"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:6.0.0", {
           "packageLocation": "./.yarn/cache/serialize-javascript-npm-6.0.0-0bb8a3c88d-56f90b562a.zip/node_modules/serialize-javascript/",
           "packageDependencies": [
@@ -25092,7 +27863,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
             ["escape-html", "npm:1.0.3"],
             ["http-errors", "npm:1.6.3"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["parseurl", "npm:1.3.3"]
           ],
           "linkType": "HARD",
@@ -25289,6 +28060,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rechoir", "npm:0.6.2"]
           ],
           "linkType": "HARD",
+<<<<<<< HEAD
         }],
         ["npm:0.8.4", {
           "packageLocation": "./.yarn/cache/shelljs-npm-0.8.4-e2890f4ce2-27f83206ef.zip/node_modules/shelljs/",
@@ -25299,6 +28071,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rechoir", "npm:0.6.2"]
           ],
           "linkType": "HARD",
+=======
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
         }]
       ]],
       ["shellwords", [
@@ -25368,11 +28142,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sirv", [
-        ["npm:1.0.10", {
-          "packageLocation": "./.yarn/cache/sirv-npm-1.0.10-0f2de6c31c-eebf70505a.zip/node_modules/sirv/",
+        ["npm:1.0.12", {
+          "packageLocation": "./.yarn/cache/sirv-npm-1.0.12-053cc794b2-30f56cfd94.zip/node_modules/sirv/",
           "packageDependencies": [
-            ["sirv", "npm:1.0.10"],
-            ["@polka/url", "npm:1.0.0-next.11"],
+            ["sirv", "npm:1.0.12"],
+            ["@polka/url", "npm:1.0.0-next.15"],
             ["mime", "npm:2.5.2"],
             ["totalist", "npm:1.1.0"]
           ],
@@ -25428,7 +28202,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/slice-ansi-npm-3.0.0-d9999864af-5ec6d022d1.zip/node_modules/slice-ansi/",
           "packageDependencies": [
             ["slice-ansi", "npm:3.0.0"],
-            ["ansi-styles", "npm:4.2.1"],
+            ["ansi-styles", "npm:4.3.0"],
             ["astral-regex", "npm:2.0.0"],
             ["is-fullwidth-code-point", "npm:3.0.0"]
           ],
@@ -25438,7 +28212,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/slice-ansi-npm-4.0.0-6eeca1d10e-4a82d7f085.zip/node_modules/slice-ansi/",
           "packageDependencies": [
             ["slice-ansi", "npm:4.0.0"],
-            ["ansi-styles", "npm:4.2.1"],
+            ["ansi-styles", "npm:4.3.0"],
             ["astral-regex", "npm:2.0.0"],
             ["is-fullwidth-code-point", "npm:3.0.0"]
           ],
@@ -25516,7 +28290,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/sockjs-npm-0.3.21-f454c51138-9614e5dded.zip/node_modules/sockjs/",
           "packageDependencies": [
             ["sockjs", "npm:0.3.21"],
-            ["faye-websocket", "npm:0.11.3"],
+            ["faye-websocket", "npm:0.11.4"],
             ["uuid", "npm:3.4.0"],
             ["websocket-driver", "npm:0.7.4"]
           ],
@@ -25524,16 +28298,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sockjs-client", [
-        ["npm:1.5.0", {
-          "packageLocation": "./.yarn/cache/sockjs-client-npm-1.5.0-0c9b762782-b09203361c.zip/node_modules/sockjs-client/",
+        ["npm:1.5.1", {
+          "packageLocation": "./.yarn/cache/sockjs-client-npm-1.5.1-8c51eedb04-ae963d6fd2.zip/node_modules/sockjs-client/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["sockjs-client", "npm:1.5.0"],
             ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
             ["eventsource", "npm:1.0.7"],
             ["faye-websocket", "npm:0.11.3"],
+=======
+            ["sockjs-client", "npm:1.5.1"],
+            ["debug", "virtual:bfddc3ec159414e62ee26e5675bb85890033abd44d8111133b5ca52cc5758ef2642aea66b160acaae1ebfaf62681252c445fb393565767e3d62f6ef4fd6d3c96#npm:3.2.7"],
+            ["eventsource", "npm:1.1.0"],
+            ["faye-websocket", "npm:0.11.4"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["inherits", "npm:2.0.4"],
             ["json3", "npm:3.3.3"],
-            ["url-parse", "npm:1.4.7"]
+            ["url-parse", "npm:1.5.1"]
           ],
           "linkType": "HARD",
         }]
@@ -25550,10 +28331,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["socks-proxy-agent", [
-        ["npm:5.0.0", {
-          "packageLocation": "./.yarn/cache/socks-proxy-agent-npm-5.0.0-0416dc71b7-1dd30d1cc3.zip/node_modules/socks-proxy-agent/",
+        ["npm:5.0.1", {
+          "packageLocation": "./.yarn/cache/socks-proxy-agent-npm-5.0.1-dc5271bb57-1b60c4977b.zip/node_modules/socks-proxy-agent/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["socks-proxy-agent", "npm:5.0.0"],
+<<<<<<< HEAD
             ["agent-base", "npm:6.0.2"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
             ["socks", "npm:2.6.1"]
@@ -25567,6 +28350,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["agent-base", "npm:6.0.2"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
             ["socks", "npm:2.6.1"]
+=======
+            ["agent-base", "npm:6.0.1"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+            ["socks", "npm:2.4.4"]
+=======
+            ["socks-proxy-agent", "npm:5.0.1"],
+            ["agent-base", "npm:6.0.2"],
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["socks", "npm:2.6.1"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -25581,11 +28375,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["npm:2.3.0", {
           "packageLocation": "./.yarn/cache/sonic-boom-npm-2.3.0-6a1292957e-208329d153.zip/node_modules/sonic-boom/",
           "packageDependencies": [
             ["sonic-boom", "npm:2.3.0"],
             ["atomic-sleep", "npm:1.0.0"]
+=======
+        ["npm:1.4.1", {
+          "packageLocation": "./.yarn/cache/sonic-boom-npm-1.4.1-e42b921f99-189fa8fe5c.zip/node_modules/sonic-boom/",
+          "packageDependencies": [
+            ["sonic-boom", "npm:1.4.1"],
+            ["atomic-sleep", "npm:1.0.0"],
+            ["flatstr", "npm:1.0.12"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -25621,8 +28424,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:1.53.1", {
           "packageLocation": "./.yarn/cache/sort-package-json-npm-1.53.1-ec8fc842d5-3bf0b1a625.zip/node_modules/sort-package-json/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["sort-package-json", "npm:1.53.1"],
             ["detect-indent", "npm:6.0.0"],
+=======
+            ["sort-package-json", "npm:1.50.0"],
+            ["detect-indent", "npm:6.1.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["detect-newline", "npm:3.1.0"],
             ["git-hooks-list", "npm:1.0.3"],
             ["globby", "npm:10.0.0"],
@@ -25672,7 +28480,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["atob", "npm:2.1.2"],
             ["decode-uri-component", "npm:0.2.0"],
             ["resolve-url", "npm:0.2.1"],
-            ["source-map-url", "npm:0.4.0"],
+            ["source-map-url", "npm:0.4.1"],
             ["urix", "npm:0.1.0"]
           ],
           "linkType": "HARD",
@@ -25716,10 +28524,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["source-map-url", [
-        ["npm:0.4.0", {
-          "packageLocation": "./.yarn/cache/source-map-url-npm-0.4.0-011efde48b-63ed54045f.zip/node_modules/source-map-url/",
+        ["npm:0.4.1", {
+          "packageLocation": "./.yarn/cache/source-map-url-npm-0.4.1-747a1f6eba-64c5c2c77a.zip/node_modules/source-map-url/",
           "packageDependencies": [
-            ["source-map-url", "npm:0.4.0"]
+            ["source-map-url", "npm:0.4.1"]
           ],
           "linkType": "HARD",
         }]
@@ -25750,7 +28558,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["spdx-correct", "npm:3.1.1"],
             ["spdx-expression-parse", "npm:3.0.1"],
-            ["spdx-license-ids", "npm:3.0.6"]
+            ["spdx-license-ids", "npm:3.0.9"]
           ],
           "linkType": "HARD",
         }]
@@ -25770,16 +28578,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["spdx-expression-parse", "npm:3.0.1"],
             ["spdx-exceptions", "npm:2.3.0"],
-            ["spdx-license-ids", "npm:3.0.6"]
+            ["spdx-license-ids", "npm:3.0.9"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["spdx-license-ids", [
-        ["npm:3.0.6", {
-          "packageLocation": "./.yarn/cache/spdx-license-ids-npm-3.0.6-05f79482d5-a14e89856c.zip/node_modules/spdx-license-ids/",
+        ["npm:3.0.9", {
+          "packageLocation": "./.yarn/cache/spdx-license-ids-npm-3.0.9-3f7722e2d4-021c632a45.zip/node_modules/spdx-license-ids/",
           "packageDependencies": [
-            ["spdx-license-ids", "npm:3.0.6"]
+            ["spdx-license-ids", "npm:3.0.9"]
           ],
           "linkType": "HARD",
         }]
@@ -25789,7 +28597,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/spdy-npm-4.0.2-7e5782a993-2c739d0ff6.zip/node_modules/spdy/",
           "packageDependencies": [
             ["spdy", "npm:4.0.2"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["handle-thing", "npm:2.0.1"],
             ["http-deceiver", "npm:1.2.7"],
             ["select-hose", "npm:2.0.0"],
@@ -25803,8 +28619,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/spdy-transport-npm-3.0.0-9f4f73f332-0fcaad3b83.zip/node_modules/spdy-transport/",
           "packageDependencies": [
             ["spdy-transport", "npm:3.0.0"],
+<<<<<<< HEAD
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
+=======
+<<<<<<< HEAD
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["detect-node", "npm:2.0.4"],
+=======
+            ["debug", "virtual:e0eb37cc68ff5fab073c335a101ac5ab9393758da15e8ed608e9fb0d57c594c6e7a19e9de08d56ae2b2f9b02f977f4b0c587d52f55e96138a6991bcd11eb2015#npm:4.3.2"],
+            ["detect-node", "npm:2.1.0"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["hpack.js", "npm:2.1.6"],
             ["obuf", "npm:1.1.2"],
             ["readable-stream", "npm:3.6.0"],
@@ -25827,6 +28652,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["split", "npm:1.0.1"],
             ["through", "npm:2.3.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["split-on-first", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/split-on-first-npm-1.1.0-e2f3ab5e4e-16ff85b54d.zip/node_modules/split-on-first/",
+          "packageDependencies": [
+            ["split-on-first", "npm:1.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -26003,6 +28837,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["strict-uri-encode", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/strict-uri-encode-npm-2.0.0-1ec3189376-eaac4cf978.zip/node_modules/strict-uri-encode/",
+          "packageDependencies": [
+            ["strict-uri-encode", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["string-argv", [
         ["npm:0.3.1", {
           "packageLocation": "./.yarn/cache/string-argv-npm-0.3.1-b4f6cd3d7b-efbd0289b5.zip/node_modules/string-argv/",
@@ -26013,10 +28856,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["string-length", [
-        ["npm:4.0.1", {
-          "packageLocation": "./.yarn/cache/string-length-npm-4.0.1-f4a493417a-7bd3191668.zip/node_modules/string-length/",
+        ["npm:4.0.2", {
+          "packageLocation": "./.yarn/cache/string-length-npm-4.0.2-675173c7a2-ce85533ef5.zip/node_modules/string-length/",
           "packageDependencies": [
-            ["string-length", "npm:4.0.1"],
+            ["string-length", "npm:4.0.2"],
             ["char-regex", "npm:1.0.2"],
             ["strip-ansi", "npm:6.0.1"]
           ],
@@ -26053,10 +28896,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.2.0", {
-          "packageLocation": "./.yarn/cache/string-width-npm-4.2.0-c4a2a66200-ee2c68df9a.zip/node_modules/string-width/",
+        ["npm:4.2.2", {
+          "packageLocation": "./.yarn/cache/string-width-npm-4.2.2-aa12d6b759-343e089b0e.zip/node_modules/string-width/",
           "packageDependencies": [
-            ["string-width", "npm:4.2.0"],
+            ["string-width", "npm:4.2.2"],
             ["emoji-regex", "npm:8.0.0"],
             ["is-fullwidth-code-point", "npm:3.0.0"],
             ["strip-ansi", "npm:6.0.1"]
@@ -26320,7 +29163,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["style-value-types", [
         ["npm:4.1.4", {
-          "packageLocation": "./.yarn/cache/style-value-types-npm-4.1.4-a70d22eaab-aca49c70e6.zip/node_modules/style-value-types/",
+          "packageLocation": "./.yarn/cache/style-value-types-npm-4.1.4-a70d22eaab-9618977007.zip/node_modules/style-value-types/",
           "packageDependencies": [
             ["style-value-types", "npm:4.1.4"],
             ["hey-listen", "npm:1.0.8"],
@@ -26386,21 +29229,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["supports-hyperlinks", [
-        ["npm:2.1.0", {
-          "packageLocation": "./.yarn/cache/supports-hyperlinks-npm-2.1.0-8e86724a40-e4f430c870.zip/node_modules/supports-hyperlinks/",
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/supports-hyperlinks-npm-2.2.0-9b22a6271b-aef04fb41f.zip/node_modules/supports-hyperlinks/",
           "packageDependencies": [
-            ["supports-hyperlinks", "npm:2.1.0"],
+            ["supports-hyperlinks", "npm:2.2.0"],
             ["has-flag", "npm:4.0.0"],
             ["supports-color", "npm:7.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["symbol-observable", [
-        ["npm:1.2.0", {
-          "packageLocation": "./.yarn/cache/symbol-observable-npm-1.2.0-9e812a0a39-48ffbc22e3.zip/node_modules/symbol-observable/",
-          "packageDependencies": [
-            ["symbol-observable", "npm:1.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -26443,12 +29277,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/table-npm-6.7.1-7d70e55c6d-053b61fa4e.zip/node_modules/table/",
           "packageDependencies": [
             ["table", "npm:6.7.1"],
-            ["ajv", "npm:8.6.0"],
+            ["ajv", "npm:8.6.2"],
             ["lodash.clonedeep", "npm:4.5.0"],
             ["lodash.truncate", "npm:4.4.2"],
             ["slice-ansi", "npm:4.0.0"],
+<<<<<<< HEAD
             ["string-width", "npm:4.2.0"],
             ["strip-ansi", "npm:6.0.1"]
+=======
+            ["string-width", "npm:4.2.2"],
+            ["strip-ansi", "npm:6.0.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -26523,7 +29362,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tar-stream-npm-2.2.0-884c79b510-699831a8b9.zip/node_modules/tar-stream/",
           "packageDependencies": [
             ["tar-stream", "npm:2.2.0"],
-            ["bl", "npm:4.0.3"],
+            ["bl", "npm:4.1.0"],
             ["end-of-stream", "npm:1.4.4"],
             ["fs-constants", "npm:1.0.0"],
             ["inherits", "npm:2.0.4"],
@@ -26570,17 +29409,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/terminal-link-npm-2.1.1-de80341758-ce3d2cd3a4.zip/node_modules/terminal-link/",
           "packageDependencies": [
             ["terminal-link", "npm:2.1.1"],
-            ["ansi-escapes", "npm:4.3.1"],
-            ["supports-hyperlinks", "npm:2.1.0"]
+            ["ansi-escapes", "npm:4.3.2"],
+            ["supports-hyperlinks", "npm:2.2.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["terser", [
+<<<<<<< HEAD
         ["npm:5.9.0", {
           "packageLocation": "./.yarn/cache/terser-npm-5.9.0-16d6a713ce-11c1246b19.zip/node_modules/terser/",
           "packageDependencies": [
             ["terser", "npm:5.9.0"],
+=======
+        ["npm:4.8.0", {
+          "packageLocation": "./.yarn/cache/terser-npm-4.8.0-272e3d2592-f980789097.zip/node_modules/terser/",
+          "packageDependencies": [
+            ["terser", "npm:4.8.0"],
+            ["commander", "npm:2.20.3"],
+            ["source-map", "npm:0.6.1"],
+            ["source-map-support", "npm:0.5.20"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:5.7.1", {
+          "packageLocation": "./.yarn/cache/terser-npm-5.7.1-94e625130b-9354af5c22.zip/node_modules/terser/",
+          "packageDependencies": [
+            ["terser", "npm:5.7.1"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["commander", "npm:2.20.3"],
             ["source-map", "npm:0.7.3"],
             ["source-map-support", "npm:0.5.21"]
@@ -26589,10 +29445,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["terser-webpack-plugin", [
-        ["npm:5.1.3", {
-          "packageLocation": "./.yarn/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+        ["npm:5.1.4", {
+          "packageLocation": "./.yarn/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
-            ["terser-webpack-plugin", "npm:5.1.3"]
+            ["terser-webpack-plugin", "npm:5.1.4"]
           ],
           "linkType": "SOFT",
         }],
@@ -26604,7 +29460,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"]
@@ -26623,7 +29483,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"]
@@ -26642,7 +29506,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"]
@@ -26661,7 +29529,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"]
@@ -26680,7 +29552,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"]
@@ -26699,7 +29575,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"]
@@ -26718,7 +29598,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"]
@@ -26737,7 +29621,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"]
@@ -26756,7 +29644,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"]
@@ -26775,7 +29667,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"]
@@ -26794,7 +29690,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"]
@@ -26813,7 +29713,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"]
@@ -26832,7 +29736,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"]
@@ -26851,7 +29759,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"]
@@ -26870,7 +29782,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"]
@@ -26889,7 +29805,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"]
@@ -26908,7 +29828,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"]
@@ -26927,7 +29851,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"]
@@ -26946,7 +29874,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"]
@@ -26965,7 +29897,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"]
@@ -26984,7 +29920,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"]
@@ -27003,7 +29943,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
             ["schema-utils", "npm:3.1.1"],
+<<<<<<< HEAD
             ["serialize-javascript", "npm:5.0.1"],
+=======
+            ["serialize-javascript", "npm:6.0.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"]
@@ -27020,8 +29964,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/test-exclude-npm-6.0.0-3fb03d69df-3b34a3d771.zip/node_modules/test-exclude/",
           "packageDependencies": [
             ["test-exclude", "npm:6.0.0"],
+<<<<<<< HEAD
             ["@istanbuljs/schema", "npm:0.1.2"],
             ["glob", "npm:7.2.0"],
+=======
+            ["@istanbuljs/schema", "npm:0.1.3"],
+            ["glob", "npm:7.1.7"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["minimatch", "npm:3.0.4"]
           ],
           "linkType": "HARD",
@@ -27378,10 +30327,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/trim-newlines-npm-3.0.0-ccf666d8fc-ad99b771e7.zip/node_modules/trim-newlines/",
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/trim-newlines-npm-3.0.1-22f1f216de-b530f3fadf.zip/node_modules/trim-newlines/",
           "packageDependencies": [
-            ["trim-newlines", "npm:3.0.0"]
+            ["trim-newlines", "npm:3.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -27412,8 +30361,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.memoize", "npm:4.1.2"],
             ["make-error", "npm:1.3.6"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
+=======
+<<<<<<< HEAD
+            ["typescript", "patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["yargs-parser", "npm:20.2.6"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"],
+            ["yargs-parser", "npm:20.2.9"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "packagePeers": [
             "@babel/core",
@@ -27457,8 +30415,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27478,8 +30441,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27499,8 +30467,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27520,8 +30493,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27541,8 +30519,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27562,8 +30545,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27583,8 +30571,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27604,8 +30597,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27625,8 +30623,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27646,8 +30649,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27667,8 +30675,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27688,8 +30701,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27709,8 +30727,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27730,8 +30753,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27751,8 +30779,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27772,8 +30805,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27793,8 +30831,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27814,8 +30857,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27835,8 +30883,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27856,8 +30909,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27877,8 +30935,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27898,8 +30961,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:9.2.6"],
             ["@types/typescript", null],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["chalk", "npm:4.1.2"],
             ["enhanced-resolve", "npm:5.8.3"],
+=======
+            ["chalk", "npm:4.1.1"],
+            ["enhanced-resolve", "npm:5.8.2"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
@@ -27955,11 +31023,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@cspotcode/source-map-support", "npm:0.7.0"],
             ["@swc/core", null],
             ["@swc/wasm", null],
+<<<<<<< HEAD
             ["@tsconfig/node10", "npm:1.0.7"],
             ["@tsconfig/node12", "npm:1.0.7"],
             ["@tsconfig/node14", "npm:1.0.0"],
             ["@tsconfig/node16", "npm:1.0.2"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"],
+=======
+            ["@types/node", "npm:14.17.21"],
+=======
+            ["@tsconfig/node10", "npm:1.0.8"],
+            ["@tsconfig/node12", "npm:1.0.9"],
+            ["@tsconfig/node14", "npm:1.0.1"],
+            ["@tsconfig/node16", "npm:1.0.2"],
+            ["@types/node", "npm:14.17.5"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/swc__core", null],
             ["@types/swc__wasm", null],
             ["@types/typescript", null],
@@ -28017,7 +31097,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["@types/node-notifier", null],
             ["@types/typescript", null],
-            ["chokidar", "npm:3.5.1"],
+            ["chokidar", "npm:3.5.2"],
             ["dynamic-dedupe", "npm:0.3.0"],
             ["minimist", "npm:1.2.5"],
             ["mkdirp", "npm:1.0.4"],
@@ -28073,6 +31153,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["npm:2.1.0", {
           "packageLocation": "./.yarn/cache/tslib-npm-2.1.0-81c9ac9b82-aa189c8179.zip/node_modules/tslib/",
           "packageDependencies": [
@@ -28080,6 +31161,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+<<<<<<< HEAD
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
         ["npm:2.3.1", {
           "packageLocation": "./.yarn/cache/tslib-npm-2.3.1-0e21e18015-de17a98d46.zip/node_modules/tslib/",
           "packageDependencies": [
@@ -28087,6 +31171,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
         ["npm:2.3.0", {
           "packageLocation": "./.yarn/cache/tslib-npm-2.3.0-277e75e108-8869694c26.zip/node_modules/tslib/",
           "packageDependencies": [
@@ -28213,10 +31299,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["type-fest", [
-        ["npm:0.11.0", {
-          "packageLocation": "./.yarn/cache/type-fest-npm-0.11.0-81410fe889-8e7589e1eb.zip/node_modules/type-fest/",
+        ["npm:0.13.1", {
+          "packageLocation": "./.yarn/cache/type-fest-npm-0.13.1-7f4486b973-e6bf2e3c44.zip/node_modules/type-fest/",
           "packageDependencies": [
-            ["type-fest", "npm:0.11.0"]
+            ["type-fest", "npm:0.13.1"]
           ],
           "linkType": "HARD",
         }],
@@ -28231,6 +31317,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/type-fest-npm-0.20.2-b36432617f-4fb3272df2.zip/node_modules/type-fest/",
           "packageDependencies": [
             ["type-fest", "npm:0.20.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:0.21.3", {
+          "packageLocation": "./.yarn/cache/type-fest-npm-0.21.3-5ff2a9c6fd-e6b32a3b38.zip/node_modules/type-fest/",
+          "packageDependencies": [
+            ["type-fest", "npm:0.21.3"]
           ],
           "linkType": "HARD",
         }],
@@ -28269,7 +31362,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["type-is", "npm:1.6.18"],
             ["media-typer", "npm:0.3.0"],
-            ["mime-types", "npm:2.1.27"]
+            ["mime-types", "npm:2.1.31"]
           ],
           "linkType": "HARD",
         }]
@@ -28312,10 +31405,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["uglify-js", [
-        ["npm:3.10.4", {
-          "packageLocation": "./.yarn/cache/uglify-js-npm-3.10.4-0abf59239e-9c9e9325e9.zip/node_modules/uglify-js/",
+        ["npm:3.14.0", {
+          "packageLocation": "./.yarn/cache/uglify-js-npm-3.14.0-3f7740378f-2a310b278b.zip/node_modules/uglify-js/",
           "packageDependencies": [
-            ["uglify-js", "npm:3.10.4"]
+            ["uglify-js", "npm:3.14.0"]
           ],
           "linkType": "HARD",
         }]
@@ -28428,15 +31521,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["get-value", "npm:2.0.6"],
             ["is-extendable", "npm:0.1.1"],
             ["set-value", "npm:2.0.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["uniq", [
-        ["npm:1.0.1", {
-          "packageLocation": "./.yarn/cache/uniq-npm-1.0.1-5cab2dd0f3-8206535f83.zip/node_modules/uniq/",
-          "packageDependencies": [
-            ["uniq", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -28571,8 +31655,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/update-notifier-npm-5.1.0-6bf595ecee-461e5e5b00.zip/node_modules/update-notifier/",
           "packageDependencies": [
             ["update-notifier", "npm:5.1.0"],
+<<<<<<< HEAD
             ["boxen", "npm:5.0.0"],
             ["chalk", "npm:4.1.2"],
+=======
+            ["boxen", "npm:5.0.1"],
+            ["chalk", "npm:4.1.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["configstore", "npm:5.0.1"],
             ["has-yarn", "npm:2.1.0"],
             ["import-lazy", "npm:2.1.0"],
@@ -28600,10 +31689,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["uri-js", [
-        ["npm:4.4.0", {
-          "packageLocation": "./.yarn/cache/uri-js-npm-4.4.0-a39c5b3ee7-0baf85a04d.zip/node_modules/uri-js/",
+        ["npm:4.4.1", {
+          "packageLocation": "./.yarn/cache/uri-js-npm-4.4.1-66d11cbcaf-7167432de6.zip/node_modules/uri-js/",
           "packageDependencies": [
-            ["uri-js", "npm:4.4.0"],
+            ["uri-js", "npm:4.4.1"],
             ["punycode", "npm:2.1.1"]
           ],
           "linkType": "HARD",
@@ -28639,10 +31728,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["url-parse", [
-        ["npm:1.4.7", {
-          "packageLocation": "./.yarn/cache/url-parse-npm-1.4.7-5f04e49040-3ede937508.zip/node_modules/url-parse/",
+        ["npm:1.5.1", {
+          "packageLocation": "./.yarn/cache/url-parse-npm-1.5.1-f861d2c6d2-ce5c400db5.zip/node_modules/url-parse/",
           "packageDependencies": [
-            ["url-parse", "npm:1.4.7"],
+            ["url-parse", "npm:1.5.1"],
             ["querystringify", "npm:2.2.0"],
             ["requires-port", "npm:1.0.0"]
           ],
@@ -28684,11 +31773,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["util", "npm:0.12.4"],
             ["inherits", "npm:2.0.4"],
-            ["is-arguments", "npm:1.0.4"],
-            ["is-generator-function", "npm:1.0.7"],
-            ["is-typed-array", "npm:1.1.3"],
+            ["is-arguments", "npm:1.1.0"],
+            ["is-generator-function", "npm:1.0.9"],
+            ["is-typed-array", "npm:1.1.5"],
             ["safe-buffer", "npm:5.2.1"],
-            ["which-typed-array", "npm:1.1.2"]
+            ["which-typed-array", "npm:1.1.4"]
           ],
           "linkType": "HARD",
         }]
@@ -28707,7 +31796,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/util-promisify-npm-2.1.0-99b8e9cdf0-75e74c4621.zip/node_modules/util-promisify/",
           "packageDependencies": [
             ["util-promisify", "npm:2.1.0"],
-            ["object.getownpropertydescriptors", "npm:2.1.0"]
+            ["object.getownpropertydescriptors", "npm:2.1.2"]
           ],
           "linkType": "HARD",
         }]
@@ -28747,10 +31836,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["v8-compile-cache", [
-        ["npm:2.2.0", {
-          "packageLocation": "./.yarn/cache/v8-compile-cache-npm-2.2.0-b4d8f03dca-b5916ac207.zip/node_modules/v8-compile-cache/",
+        ["npm:2.3.0", {
+          "packageLocation": "./.yarn/cache/v8-compile-cache-npm-2.3.0-961375f150-adb0a271ea.zip/node_modules/v8-compile-cache/",
           "packageDependencies": [
-            ["v8-compile-cache", "npm:2.2.0"]
+            ["v8-compile-cache", "npm:2.3.0"]
           ],
           "linkType": "HARD",
         }]
@@ -28761,7 +31850,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["v8-to-istanbul", "npm:8.1.0"],
             ["@types/istanbul-lib-coverage", "npm:2.0.3"],
-            ["convert-source-map", "npm:1.7.0"],
+            ["convert-source-map", "npm:1.8.0"],
             ["source-map", "npm:0.7.3"]
           ],
           "linkType": "HARD",
@@ -28962,7 +32051,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tmp", "npm:0.2.1"],
             ["update-notifier", "npm:5.1.0"],
             ["watchpack", "npm:2.1.1"],
+<<<<<<< HEAD
             ["ws", "virtual:82010cf435bfdd815e56aa96b8d62d16ac586c3b4b7aacb920726db97fe019609213df6e9de787883e55fe3575d876d7238194a097c8f36ba631311b0fe374ce#npm:7.4.6"],
+=======
+            ["ws", "virtual:b6903cb0aaad9906148dfa505a0e5b88399e26dc9fd5f803943a849595d5c20ea7ebf5a1e9a758a58020d02214870ac72546b61ed9296c91b93f1f92936cf426#npm:7.4.6"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["yargs", "npm:16.2.0"],
             ["zip-dir", "npm:2.0.0"]
           ],
@@ -29066,6 +32159,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29077,13 +32171,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29104,6 +32209,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29115,13 +32221,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29142,6 +32259,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29153,13 +32271,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29180,6 +32309,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29191,13 +32321,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29218,6 +32359,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29229,13 +32371,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29256,6 +32409,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29267,13 +32421,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29294,6 +32459,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29305,13 +32471,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29332,6 +32509,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29343,13 +32521,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29370,6 +32559,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29381,13 +32571,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29408,6 +32609,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29419,13 +32621,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29446,6 +32659,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29457,13 +32671,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29484,6 +32709,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29495,13 +32721,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29522,6 +32759,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29533,13 +32771,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29560,6 +32809,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29571,13 +32821,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29598,6 +32859,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29609,13 +32871,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29636,6 +32909,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29647,13 +32921,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29674,6 +32959,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29685,13 +32971,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29712,6 +33009,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29723,13 +33021,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29750,6 +33059,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29761,13 +33071,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29788,6 +33109,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29799,13 +33121,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29826,6 +33159,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29837,13 +33171,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29864,6 +33209,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
+<<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
             ["@types/webpack-cli", null],
             ["@webassemblyjs/ast", "npm:1.11.1"],
@@ -29875,13 +33221,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
             ["es-module-lexer", "npm:0.9.2"],
+=======
+            ["@types/json-schema", "npm:7.0.8"],
+            ["@webassemblyjs/ast", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
+            ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
+            ["acorn", "npm:8.4.1"],
+            ["browserslist", "npm:4.16.6"],
+            ["chrome-trace-event", "npm:1.0.3"],
+            ["enhanced-resolve", "npm:5.8.2"],
+            ["es-module-lexer", "npm:0.7.1"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["eslint-scope", "npm:5.1.1"],
             ["events", "npm:3.3.0"],
             ["glob-to-regexp", "npm:0.4.1"],
             ["graceful-fs", "npm:4.2.6"],
             ["json-parse-better-errors", "npm:1.0.2"],
             ["loader-runner", "npm:4.2.0"],
-            ["mime-types", "npm:2.1.27"],
+            ["mime-types", "npm:2.1.31"],
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
@@ -29901,6 +33258,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:4.5.0", {
           "packageLocation": "./.yarn/cache/webpack-bundle-analyzer-npm-4.5.0-82010cf435-158e96810e.zip/node_modules/webpack-bundle-analyzer/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["acorn", "npm:8.6.0"],
             ["acorn-walk", "npm:8.1.1"],
@@ -29911,6 +33269,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["opener", "npm:1.5.2"],
             ["sirv", "npm:1.0.10"],
             ["ws", "virtual:82010cf435bfdd815e56aa96b8d62d16ac586c3b4b7aacb920726db97fe019609213df6e9de787883e55fe3575d876d7238194a097c8f36ba631311b0fe374ce#npm:7.4.6"]
+=======
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+            ["acorn", "npm:8.4.1"],
+            ["acorn-walk", "npm:8.1.1"],
+            ["chalk", "npm:4.1.1"],
+            ["commander", "npm:6.2.1"],
+            ["gzip-size", "npm:6.0.0"],
+            ["lodash", "npm:4.17.21"],
+            ["opener", "npm:1.5.2"],
+            ["sirv", "npm:1.0.12"],
+            ["ws", "virtual:c21273b24765e094660999d0881168950b843a2dcbda969e689c75a08888b9dabeed73a8e89bf2c16063d59477f0ebaa1d0e1bfd06f12780b5a1c2a0e96b9830#npm:7.5.3"]
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
           ],
           "linkType": "HARD",
         }]
@@ -29926,8 +33296,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-6828d9149d/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -29967,8 +33346,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-98241eaba0/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30008,8 +33396,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-926a291454/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30049,8 +33446,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-1c32a0765b/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30090,8 +33496,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-3a277ce78b/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30131,8 +33546,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-48b9959038/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30172,8 +33596,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-19c4143a5c/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30213,8 +33646,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-0c697ada3e/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30254,8 +33696,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-3f32e0c8de/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30295,8 +33746,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-0ad1643061/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30336,8 +33796,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-08968bd349/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30377,8 +33846,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-33ddbba062/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30418,8 +33896,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-2481e2197b/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30459,8 +33946,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-f402b79693/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30500,8 +33996,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-6e378f6190/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30541,8 +34046,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-8de940084c/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30582,8 +34096,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-db3adb9c4a/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30623,8 +34146,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-459545f386/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30664,8 +34196,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-60d638e7fe/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30705,8 +34246,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-96ce65e5a8/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30746,8 +34296,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-660ecdf0c3/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30787,8 +34346,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1", {
           "packageLocation": "./.yarn/__virtual__/webpack-cli-virtual-85310a4727/0/cache/webpack-cli-npm-4.9.1-1b8a5f360f-2aff0349c1.zip/node_modules/webpack-cli/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
+=======
+<<<<<<< HEAD
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.0"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
+=======
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.7.2"],
+            ["@discoveryjs/json-ext", "npm:0.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/webpack", null],
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
@@ -30827,17 +34395,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["webpack-dev-middleware", [
-        ["npm:3.7.2", {
-          "packageLocation": "./.yarn/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
+        ["npm:3.7.3", {
+          "packageLocation": "./.yarn/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
-            ["webpack-dev-middleware", "npm:3.7.2"]
+            ["webpack-dev-middleware", "npm:3.7.3"]
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:192593f20d46689302edc7dad5f30bb0d17b2ec6d80fc21171e34615b79d83a7c10e436b122f389e52087d99e10b9d5e25a607a554e4647a774eedeb39f8de01#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-60db794550/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:192593f20d46689302edc7dad5f30bb0d17b2ec6d80fc21171e34615b79d83a7c10e436b122f389e52087d99e10b9d5e25a607a554e4647a774eedeb39f8de01#npm:3.7.2"],
+=======
+        ["virtual:015e88b2a9ee4bb9deeff6d9d6dbb129b60726ef5b20c4b6ed567adfa6c003b1469cd14457f960c56f87a7da966ccea489f4468d7d386b57155640ea44a2a124#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-79f7a679d2/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:015e88b2a9ee4bb9deeff6d9d6dbb129b60726ef5b20c4b6ed567adfa6c003b1469cd14457f960c56f87a7da966ccea489f4468d7d386b57155640ea44a2a124#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -30852,10 +34427,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:210732d5de67a66c3e0f5351aff78024d664f591107bcb2f2022788ebb86edefd081644823e9190de8a0997bf6114083a7f0b2e438f3db0fdffde64dec3aeb39#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-045606928c/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:210732d5de67a66c3e0f5351aff78024d664f591107bcb2f2022788ebb86edefd081644823e9190de8a0997bf6114083a7f0b2e438f3db0fdffde64dec3aeb39#npm:3.7.2"],
+=======
+        ["virtual:063ecd6a454fbf40d998b00484ce38643a50fcd089c6d51696b962b090ab6109f80311dbffe8840136fed951b78038cfa6140cc0c8b736eae1def14c844acf1e#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-e8734c094c/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:063ecd6a454fbf40d998b00484ce38643a50fcd089c6d51696b962b090ab6109f80311dbffe8840136fed951b78038cfa6140cc0c8b736eae1def14c844acf1e#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -30870,10 +34452,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:35deaf2f8b02b3ed95d2243e6b24c551ed036263d45c59d89864c17c0389ed71ca54d3aac9d413af65d2e98c2604fa45ee6d4b4d2aba37aa4e40a67aa3716b9a#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-6b2f97055d/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:35deaf2f8b02b3ed95d2243e6b24c551ed036263d45c59d89864c17c0389ed71ca54d3aac9d413af65d2e98c2604fa45ee6d4b4d2aba37aa4e40a67aa3716b9a#npm:3.7.2"],
+=======
+        ["virtual:1774ddb0534506cfc29aef5c2e8aea93b9cf77866e0fcc4e4fd6ce2efdeb1cca9f31763636a46cdf9a1bca4cc0ae8f82f7521090d6f82879a75a40fdf2afe0f4#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-483d9bfbfd/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:1774ddb0534506cfc29aef5c2e8aea93b9cf77866e0fcc4e4fd6ce2efdeb1cca9f31763636a46cdf9a1bca4cc0ae8f82f7521090d6f82879a75a40fdf2afe0f4#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -30888,10 +34477,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:3dda66c7790bc8955566bf8570ffe27bc429d5cedad944fb213e6d3ae3159aaf6f325304da89e97083dde74622dce0c14d4e1e86779d444fca082a6114139f0f#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-bf0f3f7e7d/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:3dda66c7790bc8955566bf8570ffe27bc429d5cedad944fb213e6d3ae3159aaf6f325304da89e97083dde74622dce0c14d4e1e86779d444fca082a6114139f0f#npm:3.7.2"],
+=======
+        ["virtual:180636387cdc162bd637e00eb8db22084e0334f5d112789f5d7fbec61e69536fe12ac178dd426f787bb4892b6f3e35b32a86b3669ba63889622e940e85d6faf7#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-d1eafd7ba3/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:180636387cdc162bd637e00eb8db22084e0334f5d112789f5d7fbec61e69536fe12ac178dd426f787bb4892b6f3e35b32a86b3669ba63889622e940e85d6faf7#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -30906,10 +34502,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:52f211c991696e70c3dd72ccdc3ee084adffdba33885806e57ddc1893237eacb0c7d092160db1b95df418b8193d840d5bcc0aad5d92f4815aefa37d55921ed9c#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-8f39f97594/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:52f211c991696e70c3dd72ccdc3ee084adffdba33885806e57ddc1893237eacb0c7d092160db1b95df418b8193d840d5bcc0aad5d92f4815aefa37d55921ed9c#npm:3.7.2"],
+=======
+        ["virtual:29fc036395aa9f04ac61b9cb4b580c656a510b0b3c8a102736c94e11f6444174ea582b1b9484bc6950d69dc7e615a947afe6a95db1938b8faff8cf8390389a3e#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-f568449d60/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:29fc036395aa9f04ac61b9cb4b580c656a510b0b3c8a102736c94e11f6444174ea582b1b9484bc6950d69dc7e615a947afe6a95db1938b8faff8cf8390389a3e#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -30924,10 +34527,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:536cbf68879b5766d71e724362ae359bba7589211262abd376514f52bfe9b44493b8b1cef5142a35857c4d20ea114af489a9bbee8209396e08702698cad2a81c#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-d3ae0e131b/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:536cbf68879b5766d71e724362ae359bba7589211262abd376514f52bfe9b44493b8b1cef5142a35857c4d20ea114af489a9bbee8209396e08702698cad2a81c#npm:3.7.2"],
+=======
+        ["virtual:3a884bc6e9899c60fecebb10b4b66729f5a89e5ced09599cb2fa27824e292d0a0e3f867d881de909a3bb3c540386cfdb87559332a1e39c8adbe94ef37080e8f4#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-891533b125/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:3a884bc6e9899c60fecebb10b4b66729f5a89e5ced09599cb2fa27824e292d0a0e3f867d881de909a3bb3c540386cfdb87559332a1e39c8adbe94ef37080e8f4#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -30942,10 +34552,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-c16a1455f7/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:3.7.2"],
+=======
+        ["virtual:4656bbe7083189a0818f1c809be803a0e922022e0e16835c95e86a422ce54dcdcb642420c0c2e1058dac13eecfec81328ea5251282f68aa174235598d533757d#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-b369758809/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:4656bbe7083189a0818f1c809be803a0e922022e0e16835c95e86a422ce54dcdcb642420c0c2e1058dac13eecfec81328ea5251282f68aa174235598d533757d#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -30960,10 +34577,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:6903702d33560b41212e7889b61a01ad637a0395140df57f1854667c25c5f8bcf280bdb847987bb71904beab55235570569b24113a0d178ed3a5547e4d1f9f70#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-2589e99dd1/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:6903702d33560b41212e7889b61a01ad637a0395140df57f1854667c25c5f8bcf280bdb847987bb71904beab55235570569b24113a0d178ed3a5547e4d1f9f70#npm:3.7.2"],
+=======
+        ["virtual:5bdba52a314e2f69383fbf2cd98fd63be3f1c6f1b0219e72e2d7a92a379654047bf9eb878c2f1f57f8dfd85f28e2739090c307badd10d6cbec7f3dd25319730a#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-4ef3c77caf/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:5bdba52a314e2f69383fbf2cd98fd63be3f1c6f1b0219e72e2d7a92a379654047bf9eb878c2f1f57f8dfd85f28e2739090c307badd10d6cbec7f3dd25319730a#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -30978,10 +34602,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:6c032d46f9c22181c4c4e06164dc506a6da3c40de9a4f34ea3c24f63a59fe13c75faa0798ad3e256b19a4b32c1eb1f301c6096a3e9d9ebf2adcc7fe49a3505a4#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-fbe6d007e0/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:6c032d46f9c22181c4c4e06164dc506a6da3c40de9a4f34ea3c24f63a59fe13c75faa0798ad3e256b19a4b32c1eb1f301c6096a3e9d9ebf2adcc7fe49a3505a4#npm:3.7.2"],
+=======
+        ["virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-cc058a782a/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -30996,10 +34627,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:77a358f43f0fd006045dc44d628018ffad8033a09a1a7a39ad5f5df26b773e586134cf3263527e33818c4a60b757b6bf8316ad41f0a2627230e5cd10b8e32103#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-e01c1e97d6/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:77a358f43f0fd006045dc44d628018ffad8033a09a1a7a39ad5f5df26b773e586134cf3263527e33818c4a60b757b6bf8316ad41f0a2627230e5cd10b8e32103#npm:3.7.2"],
+=======
+        ["virtual:5dde1b02e2db0b099fcdd5437d65fad2595e632e654d5ff5958d58067b1d702b52f96c9ca208dbdec11b70b20b6c2bd5e26e32a1571a5ceb345ccc42fef0c667#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-5466adf2b9/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:5dde1b02e2db0b099fcdd5437d65fad2595e632e654d5ff5958d58067b1d702b52f96c9ca208dbdec11b70b20b6c2bd5e26e32a1571a5ceb345ccc42fef0c667#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31014,10 +34652,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:7fadb7d66d33e68ea32294fdfef286aeb96a2c3649fa2728f10dc9111bb498825d35bcf99cffd580cf5c667bab0e54e6470efdd03381dc4ae04af17a6e1c1c3d#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-8bc1d15e1f/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:7fadb7d66d33e68ea32294fdfef286aeb96a2c3649fa2728f10dc9111bb498825d35bcf99cffd580cf5c667bab0e54e6470efdd03381dc4ae04af17a6e1c1c3d#npm:3.7.2"],
+=======
+        ["virtual:9e33c3fe30e905d097543d006b818df82b19dbf028ed057e9265fc82c3ae064c99886fbdf8d9c64f3b183d68e0b10ce0812229b4070ed350318a6a02599df0fe#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-92f6802ddc/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:9e33c3fe30e905d097543d006b818df82b19dbf028ed057e9265fc82c3ae064c99886fbdf8d9c64f3b183d68e0b10ce0812229b4070ed350318a6a02599df0fe#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31032,10 +34677,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:87a78aac3fcb4037cf6b50190c900f3595091acd849477045f25c7ab3f009d69e4d3e93b06933cce563e7c1e812c1e3c424f7fb8b383b5057f34146cc6f9220d#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-d57639305d/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:87a78aac3fcb4037cf6b50190c900f3595091acd849477045f25c7ab3f009d69e4d3e93b06933cce563e7c1e812c1e3c424f7fb8b383b5057f34146cc6f9220d#npm:3.7.2"],
+=======
+        ["virtual:a936d4c055cca81a1864b7077fe16aed976a097514380bd414b224da5099a993fe4b230b55d503163ea55669440bf9988ba699d9bcc3af013ed60240fcb6abfa#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-821477d0f7/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:a936d4c055cca81a1864b7077fe16aed976a097514380bd414b224da5099a993fe4b230b55d503163ea55669440bf9988ba699d9bcc3af013ed60240fcb6abfa#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31050,10 +34702,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:a9e38a9d8943554adf81f3090e47288e4bfeb696071425db43e2417c110382cee07b98f4b13e494595bcdd8c46ce569c9b366c835c450e7d077600cddd2029ba#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-ec9b4460d0/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:a9e38a9d8943554adf81f3090e47288e4bfeb696071425db43e2417c110382cee07b98f4b13e494595bcdd8c46ce569c9b366c835c450e7d077600cddd2029ba#npm:3.7.2"],
+=======
+        ["virtual:ab98f37a7db0a7e31e5aa9e274e7a258b5ee59f5ea2f72b1471a7ea5c2acbf30a2367ae05bebc8593c700a1e5c3e5e2bb4c81bcc6bb637363d4fc90a23c18e83#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-134b779300/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:ab98f37a7db0a7e31e5aa9e274e7a258b5ee59f5ea2f72b1471a7ea5c2acbf30a2367ae05bebc8593c700a1e5c3e5e2bb4c81bcc6bb637363d4fc90a23c18e83#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31068,10 +34727,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:aa691980d998213024f5912e11819477cd011cb143a3129894cfb23be834a5da887cbd432e0fb687833b56ac92653e8f54861e9830be076bec95650e5616711c#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-9c58704d9f/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:aa691980d998213024f5912e11819477cd011cb143a3129894cfb23be834a5da887cbd432e0fb687833b56ac92653e8f54861e9830be076bec95650e5616711c#npm:3.7.2"],
+=======
+        ["virtual:adf01d534fd2bbe22642fe47f1f067c0494483d7ed51e205f36aa74caa98646ab60d180597057f3223373a1ad68ecb8aeda3a02e1e0f062ce52f792fac475bce#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-d83e95f6fb/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:adf01d534fd2bbe22642fe47f1f067c0494483d7ed51e205f36aa74caa98646ab60d180597057f3223373a1ad68ecb8aeda3a02e1e0f062ce52f792fac475bce#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31086,10 +34752,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:c3e4bf545bb42b2542f24ae1b05d3eca80c1b5e10f3439dc2af35f4282b75696d462c0140f2d94674e0e8c4352a11631d52f48c175e2954b791a73b8024a0b0b#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-9fc60a1e1a/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:c3e4bf545bb42b2542f24ae1b05d3eca80c1b5e10f3439dc2af35f4282b75696d462c0140f2d94674e0e8c4352a11631d52f48c175e2954b791a73b8024a0b0b#npm:3.7.2"],
+=======
+        ["virtual:af922b89a429c6c5e26742c3477b640867cb221a88faeb368bbe8c9267298192804fd22cd9e349746d52eb446a9c359788121990a92a68e2033488553b338ea6#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-685159e8bd/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:af922b89a429c6c5e26742c3477b640867cb221a88faeb368bbe8c9267298192804fd22cd9e349746d52eb446a9c359788121990a92a68e2033488553b338ea6#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31104,10 +34777,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:caa83e7c3e800c4177da995cc591a39432aa00a0d6f18122e5e88fdb706af6d038f75938bb51d02b3c378a6dc6b6d6240b07f596e5f0c76def667c38bf4e6126#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-0ad581cae7/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:caa83e7c3e800c4177da995cc591a39432aa00a0d6f18122e5e88fdb706af6d038f75938bb51d02b3c378a6dc6b6d6240b07f596e5f0c76def667c38bf4e6126#npm:3.7.2"],
+=======
+        ["virtual:b5ad02d2c3915407db416f34d88127e14375c5db9bced3e21fbd8e760d9e806694d716e4b02afdc2d0844fa77a2eb3342d20bc3448f3645248e1c75be1cc1968#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-dd1472dad8/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:b5ad02d2c3915407db416f34d88127e14375c5db9bced3e21fbd8e760d9e806694d716e4b02afdc2d0844fa77a2eb3342d20bc3448f3645248e1c75be1cc1968#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31122,10 +34802,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:d9b464d57f679f2569e8addb1dd1f4df62c466eab00f43e8044b3fe678d09f7ebe587e4c82fb2e47373ebb82877a4199f3e8e47f6777541a568ef0d3fd0b7ddc#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-3b1ad66eb3/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:d9b464d57f679f2569e8addb1dd1f4df62c466eab00f43e8044b3fe678d09f7ebe587e4c82fb2e47373ebb82877a4199f3e8e47f6777541a568ef0d3fd0b7ddc#npm:3.7.2"],
+=======
+        ["virtual:b76f72b82078ffc2b4ebee223a199380cdc9c81cb1191e9816c8ca7649d6165e1a011bba5fbb237126792da00b483bef6042c130b6338d10a712c32d549af6dd#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-5488debe42/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:b76f72b82078ffc2b4ebee223a199380cdc9c81cb1191e9816c8ca7649d6165e1a011bba5fbb237126792da00b483bef6042c130b6338d10a712c32d549af6dd#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31140,10 +34827,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:da5002119af0be3d5a2fe77d6cb641e86c6d93664e7724dca013f877f2ccff44c9560ea91996d47baf2e07589952899079ddf043de6fd9ce416631630e687be0#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-059f36511c/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:da5002119af0be3d5a2fe77d6cb641e86c6d93664e7724dca013f877f2ccff44c9560ea91996d47baf2e07589952899079ddf043de6fd9ce416631630e687be0#npm:3.7.2"],
+=======
+        ["virtual:c094036fe18c14ec591093ceb41f91ec497ce21431d675ba788de0b1c9d381b2e0d6c897deafd5794324b9b683e794897f95f0900965384e5737315adadb10a9#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-7a172b5b7a/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:c094036fe18c14ec591093ceb41f91ec497ce21431d675ba788de0b1c9d381b2e0d6c897deafd5794324b9b683e794897f95f0900965384e5737315adadb10a9#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31158,10 +34852,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:de0af6808839a3fd4d20454fbf7bd91354ac1eb6bc0a07b84b5bb736fdf79fbbd3cf8a47971ce0e33dba67f89220ca932fb8f4a9d234d6e96858db5d175c240e#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-c0e3280410/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:de0af6808839a3fd4d20454fbf7bd91354ac1eb6bc0a07b84b5bb736fdf79fbbd3cf8a47971ce0e33dba67f89220ca932fb8f4a9d234d6e96858db5d175c240e#npm:3.7.2"],
+=======
+        ["virtual:dc857e7e6a663b71fb1aae241c098d7db968cb75a778d1b93be32fcbe3715036196ca252649cffe5a805cff71092c73a86a9cf113bcd4dfe339b2144596b4aca#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-32810516f8/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:dc857e7e6a663b71fb1aae241c098d7db968cb75a778d1b93be32fcbe3715036196ca252649cffe5a805cff71092c73a86a9cf113bcd4dfe339b2144596b4aca#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31176,10 +34877,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:e48dc824528284dd15349424cee29c1c363e5c7cbee861f3323a56ad244a1b8dc2821c5c1cf17307b8141209c55e72b3536fa813bf4a89ca1478e0398acd866b#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-315a3488ab/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:e48dc824528284dd15349424cee29c1c363e5c7cbee861f3323a56ad244a1b8dc2821c5c1cf17307b8141209c55e72b3536fa813bf4a89ca1478e0398acd866b#npm:3.7.2"],
+=======
+        ["virtual:e613f7c9f1c3879a2e24c22706b8166424f43c5afd02860225fcf7c2725a5c81420453459dfb520ecfec38c0bb26ec4be44ca07c648b093b23d5ae3cd2427920#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-c94aab9051/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:e613f7c9f1c3879a2e24c22706b8166424f43c5afd02860225fcf7c2725a5c81420453459dfb520ecfec38c0bb26ec4be44ca07c648b093b23d5ae3cd2427920#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31194,10 +34902,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:f111b52638138a4ff643a338d3f54ae9ecdc97bd4004ea0417199cc0ccc927112774db1a8edbac2631c25bff021e84359c6cb8673c4ff0426e7c63f4622ec140#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-49e8191d39/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:f111b52638138a4ff643a338d3f54ae9ecdc97bd4004ea0417199cc0ccc927112774db1a8edbac2631c25bff021e84359c6cb8673c4ff0426e7c63f4622ec140#npm:3.7.2"],
+=======
+        ["virtual:e676ce2b84d03207d07c38d11e1411c30244ce9cf198692a1146e08cefaf228b3671649bf27cea9380932ee7e2402dbbe11eb88fc0490f5c79a58f47a453830a#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-8c60f49970/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:e676ce2b84d03207d07c38d11e1411c30244ce9cf198692a1146e08cefaf228b3671649bf27cea9380932ee7e2402dbbe11eb88fc0490f5c79a58f47a453830a#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31212,10 +34927,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:f2f2d41ba620e211b65f5db5fb0516f981b4ee690c1a04259db81776552e22952b80f7c64c766899c19f0b237af82a44b242a5663ee4f26532ec8b24bfc60671#npm:3.7.2", {
           "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-caa15b18ed/0/cache/webpack-dev-middleware-npm-3.7.2-4f005aab9a-d7320d7a8c.zip/node_modules/webpack-dev-middleware/",
           "packageDependencies": [
             ["webpack-dev-middleware", "virtual:f2f2d41ba620e211b65f5db5fb0516f981b4ee690c1a04259db81776552e22952b80f7c64c766899c19f0b237af82a44b242a5663ee4f26532ec8b24bfc60671#npm:3.7.2"],
+=======
+        ["virtual:f9c9ff20ebc589630ba8b8bf0d88a19a9c80b89c1f77c28cbe622a70709038643673e80cfd7a4b4f567cd80c626394d5a37a8c9f72c0cbfded767b40afcc7e9c#npm:3.7.3", {
+          "packageLocation": "./.yarn/__virtual__/webpack-dev-middleware-virtual-f643ae93d6/0/cache/webpack-dev-middleware-npm-3.7.3-3986f4156e-faa3cdd7b8.zip/node_modules/webpack-dev-middleware/",
+          "packageDependencies": [
+            ["webpack-dev-middleware", "virtual:f9c9ff20ebc589630ba8b8bf0d88a19a9c80b89c1f77c28cbe622a70709038643673e80cfd7a4b4f567cd80c626394d5a37a8c9f72c0cbfded767b40afcc7e9c#npm:3.7.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["@types/webpack", null],
             ["memory-fs", "npm:0.4.1"],
             ["mime", "npm:2.5.2"],
@@ -31253,30 +34975,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"],
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:35deaf2f8b02b3ed95d2243e6b24c551ed036263d45c59d89864c17c0389ed71ca54d3aac9d413af65d2e98c2604fa45ee6d4b4d2aba37aa4e40a67aa3716b9a#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.58.1"],
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:b76f72b82078ffc2b4ebee223a199380cdc9c81cb1191e9816c8ca7649d6165e1a011bba5fbb237126792da00b483bef6042c130b6338d10a712c32d549af6dd#npm:3.7.2"],
+=======
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.46.0"],
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:b76f72b82078ffc2b4ebee223a199380cdc9c81cb1191e9816c8ca7649d6165e1a011bba5fbb237126792da00b483bef6042c130b6338d10a712c32d549af6dd#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31303,30 +35037,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"],
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:6c032d46f9c22181c4c4e06164dc506a6da3c40de9a4f34ea3c24f63a59fe13c75faa0798ad3e256b19a4b32c1eb1f301c6096a3e9d9ebf2adcc7fe49a3505a4#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.58.1"],
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:a936d4c055cca81a1864b7077fe16aed976a097514380bd414b224da5099a993fe4b230b55d503163ea55669440bf9988ba699d9bcc3af013ed60240fcb6abfa#npm:3.7.2"],
+=======
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.46.0"],
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:a936d4c055cca81a1864b7077fe16aed976a097514380bd414b224da5099a993fe4b230b55d503163ea55669440bf9988ba699d9bcc3af013ed60240fcb6abfa#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31353,30 +35099,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"],
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:aa691980d998213024f5912e11819477cd011cb143a3129894cfb23be834a5da887cbd432e0fb687833b56ac92653e8f54861e9830be076bec95650e5616711c#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.58.1"],
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:9e33c3fe30e905d097543d006b818df82b19dbf028ed057e9265fc82c3ae064c99886fbdf8d9c64f3b183d68e0b10ce0812229b4070ed350318a6a02599df0fe#npm:3.7.2"],
+=======
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.46.0"],
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:9e33c3fe30e905d097543d006b818df82b19dbf028ed057e9265fc82c3ae064c99886fbdf8d9c64f3b183d68e0b10ce0812229b4070ed350318a6a02599df0fe#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31403,30 +35161,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"],
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:d9b464d57f679f2569e8addb1dd1f4df62c466eab00f43e8044b3fe678d09f7ebe587e4c82fb2e47373ebb82877a4199f3e8e47f6777541a568ef0d3fd0b7ddc#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.58.1"],
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:3a884bc6e9899c60fecebb10b4b66729f5a89e5ced09599cb2fa27824e292d0a0e3f867d881de909a3bb3c540386cfdb87559332a1e39c8adbe94ef37080e8f4#npm:3.7.2"],
+=======
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.46.0"],
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:3a884bc6e9899c60fecebb10b4b66729f5a89e5ced09599cb2fa27824e292d0a0e3f867d881de909a3bb3c540386cfdb87559332a1e39c8adbe94ef37080e8f4#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31453,30 +35223,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"],
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:a9e38a9d8943554adf81f3090e47288e4bfeb696071425db43e2417c110382cee07b98f4b13e494595bcdd8c46ce569c9b366c835c450e7d077600cddd2029ba#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.58.1"],
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:c094036fe18c14ec591093ceb41f91ec497ce21431d675ba788de0b1c9d381b2e0d6c897deafd5794324b9b683e794897f95f0900965384e5737315adadb10a9#npm:3.7.2"],
+=======
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.46.0"],
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:c094036fe18c14ec591093ceb41f91ec497ce21431d675ba788de0b1c9d381b2e0d6c897deafd5794324b9b683e794897f95f0900965384e5737315adadb10a9#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31503,30 +35285,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"],
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:6903702d33560b41212e7889b61a01ad637a0395140df57f1854667c25c5f8bcf280bdb847987bb71904beab55235570569b24113a0d178ed3a5547e4d1f9f70#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.58.1"],
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:b5ad02d2c3915407db416f34d88127e14375c5db9bced3e21fbd8e760d9e806694d716e4b02afdc2d0844fa77a2eb3342d20bc3448f3645248e1c75be1cc1968#npm:3.7.2"],
+=======
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.46.0"],
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:b5ad02d2c3915407db416f34d88127e14375c5db9bced3e21fbd8e760d9e806694d716e4b02afdc2d0844fa77a2eb3342d20bc3448f3645248e1c75be1cc1968#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31553,30 +35347,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"],
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:87a78aac3fcb4037cf6b50190c900f3595091acd849477045f25c7ab3f009d69e4d3e93b06933cce563e7c1e812c1e3c424f7fb8b383b5057f34146cc6f9220d#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.58.1"],
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:ab98f37a7db0a7e31e5aa9e274e7a258b5ee59f5ea2f72b1471a7ea5c2acbf30a2367ae05bebc8593c700a1e5c3e5e2bb4c81bcc6bb637363d4fc90a23c18e83#npm:3.7.2"],
+=======
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.46.0"],
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:ab98f37a7db0a7e31e5aa9e274e7a258b5ee59f5ea2f72b1471a7ea5c2acbf30a2367ae05bebc8593c700a1e5c3e5e2bb4c81bcc6bb637363d4fc90a23c18e83#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31603,30 +35409,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"],
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:caa83e7c3e800c4177da995cc591a39432aa00a0d6f18122e5e88fdb706af6d038f75938bb51d02b3c378a6dc6b6d6240b07f596e5f0c76def667c38bf4e6126#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1"],
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:af922b89a429c6c5e26742c3477b640867cb221a88faeb368bbe8c9267298192804fd22cd9e349746d52eb446a9c359788121990a92a68e2033488553b338ea6#npm:3.7.2"],
+=======
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.46.0"],
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:af922b89a429c6c5e26742c3477b640867cb221a88faeb368bbe8c9267298192804fd22cd9e349746d52eb446a9c359788121990a92a68e2033488553b338ea6#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31653,30 +35471,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"],
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:da5002119af0be3d5a2fe77d6cb641e86c6d93664e7724dca013f877f2ccff44c9560ea91996d47baf2e07589952899079ddf043de6fd9ce416631630e687be0#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.58.1"],
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:e676ce2b84d03207d07c38d11e1411c30244ce9cf198692a1146e08cefaf228b3671649bf27cea9380932ee7e2402dbbe11eb88fc0490f5c79a58f47a453830a#npm:3.7.2"],
+=======
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.46.0"],
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:e676ce2b84d03207d07c38d11e1411c30244ce9cf198692a1146e08cefaf228b3671649bf27cea9380932ee7e2402dbbe11eb88fc0490f5c79a58f47a453830a#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31703,30 +35533,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"],
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:c3e4bf545bb42b2542f24ae1b05d3eca80c1b5e10f3439dc2af35f4282b75696d462c0140f2d94674e0e8c4352a11631d52f48c175e2954b791a73b8024a0b0b#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.58.1"],
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:5bdba52a314e2f69383fbf2cd98fd63be3f1c6f1b0219e72e2d7a92a379654047bf9eb878c2f1f57f8dfd85f28e2739090c307badd10d6cbec7f3dd25319730a#npm:3.7.2"],
+=======
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.46.0"],
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:5bdba52a314e2f69383fbf2cd98fd63be3f1c6f1b0219e72e2d7a92a379654047bf9eb878c2f1f57f8dfd85f28e2739090c307badd10d6cbec7f3dd25319730a#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31753,30 +35595,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"],
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:de0af6808839a3fd4d20454fbf7bd91354ac1eb6bc0a07b84b5bb736fdf79fbbd3cf8a47971ce0e33dba67f89220ca932fb8f4a9d234d6e96858db5d175c240e#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.58.1"],
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:adf01d534fd2bbe22642fe47f1f067c0494483d7ed51e205f36aa74caa98646ab60d180597057f3223373a1ad68ecb8aeda3a02e1e0f062ce52f792fac475bce#npm:3.7.2"],
+=======
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.46.0"],
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:adf01d534fd2bbe22642fe47f1f067c0494483d7ed51e205f36aa74caa98646ab60d180597057f3223373a1ad68ecb8aeda3a02e1e0f062ce52f792fac475bce#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31803,30 +35657,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"],
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:210732d5de67a66c3e0f5351aff78024d664f591107bcb2f2022788ebb86edefd081644823e9190de8a0997bf6114083a7f0b2e438f3db0fdffde64dec3aeb39#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.58.1"],
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:dc857e7e6a663b71fb1aae241c098d7db968cb75a778d1b93be32fcbe3715036196ca252649cffe5a805cff71092c73a86a9cf113bcd4dfe339b2144596b4aca#npm:3.7.2"],
+=======
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.46.0"],
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:dc857e7e6a663b71fb1aae241c098d7db968cb75a778d1b93be32fcbe3715036196ca252649cffe5a805cff71092c73a86a9cf113bcd4dfe339b2144596b4aca#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31853,30 +35719,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"],
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:e48dc824528284dd15349424cee29c1c363e5c7cbee861f3323a56ad244a1b8dc2821c5c1cf17307b8141209c55e72b3536fa813bf4a89ca1478e0398acd866b#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.58.1"],
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:f9c9ff20ebc589630ba8b8bf0d88a19a9c80b89c1f77c28cbe622a70709038643673e80cfd7a4b4f567cd80c626394d5a37a8c9f72c0cbfded767b40afcc7e9c#npm:3.7.2"],
+=======
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.46.0"],
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:f9c9ff20ebc589630ba8b8bf0d88a19a9c80b89c1f77c28cbe622a70709038643673e80cfd7a4b4f567cd80c626394d5a37a8c9f72c0cbfded767b40afcc7e9c#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31903,30 +35781,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"],
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:536cbf68879b5766d71e724362ae359bba7589211262abd376514f52bfe9b44493b8b1cef5142a35857c4d20ea114af489a9bbee8209396e08702698cad2a81c#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.58.1"],
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:180636387cdc162bd637e00eb8db22084e0334f5d112789f5d7fbec61e69536fe12ac178dd426f787bb4892b6f3e35b32a86b3669ba63889622e940e85d6faf7#npm:3.7.2"],
+=======
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.46.0"],
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:180636387cdc162bd637e00eb8db22084e0334f5d112789f5d7fbec61e69536fe12ac178dd426f787bb4892b6f3e35b32a86b3669ba63889622e940e85d6faf7#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -31953,30 +35843,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"],
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:3dda66c7790bc8955566bf8570ffe27bc429d5cedad944fb213e6d3ae3159aaf6f325304da89e97083dde74622dce0c14d4e1e86779d444fca082a6114139f0f#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.58.1"],
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:1774ddb0534506cfc29aef5c2e8aea93b9cf77866e0fcc4e4fd6ce2efdeb1cca9f31763636a46cdf9a1bca4cc0ae8f82f7521090d6f82879a75a40fdf2afe0f4#npm:3.7.2"],
+=======
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.46.0"],
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:1774ddb0534506cfc29aef5c2e8aea93b9cf77866e0fcc4e4fd6ce2efdeb1cca9f31763636a46cdf9a1bca4cc0ae8f82f7521090d6f82879a75a40fdf2afe0f4#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -32003,30 +35905,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"],
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:52f211c991696e70c3dd72ccdc3ee084adffdba33885806e57ddc1893237eacb0c7d092160db1b95df418b8193d840d5bcc0aad5d92f4815aefa37d55921ed9c#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.58.1"],
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:4656bbe7083189a0818f1c809be803a0e922022e0e16835c95e86a422ce54dcdcb642420c0c2e1058dac13eecfec81328ea5251282f68aa174235598d533757d#npm:3.7.2"],
+=======
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.46.0"],
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:4656bbe7083189a0818f1c809be803a0e922022e0e16835c95e86a422ce54dcdcb642420c0c2e1058dac13eecfec81328ea5251282f68aa174235598d533757d#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -32053,30 +35967,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.58.1"],
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:3.7.2"],
+=======
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.46.0"],
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -32103,30 +36029,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"],
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:7fadb7d66d33e68ea32294fdfef286aeb96a2c3649fa2728f10dc9111bb498825d35bcf99cffd580cf5c667bab0e54e6470efdd03381dc4ae04af17a6e1c1c3d#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.58.1"],
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:5dde1b02e2db0b099fcdd5437d65fad2595e632e654d5ff5958d58067b1d702b52f96c9ca208dbdec11b70b20b6c2bd5e26e32a1571a5ceb345ccc42fef0c667#npm:3.7.2"],
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.46.0"],
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:5dde1b02e2db0b099fcdd5437d65fad2595e632e654d5ff5958d58067b1d702b52f96c9ca208dbdec11b70b20b6c2bd5e26e32a1571a5ceb345ccc42fef0c667#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -32153,30 +36091,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"],
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:f111b52638138a4ff643a338d3f54ae9ecdc97bd4004ea0417199cc0ccc927112774db1a8edbac2631c25bff021e84359c6cb8673c4ff0426e7c63f4622ec140#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.58.1"],
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:015e88b2a9ee4bb9deeff6d9d6dbb129b60726ef5b20c4b6ed567adfa6c003b1469cd14457f960c56f87a7da966ccea489f4468d7d386b57155640ea44a2a124#npm:3.7.2"],
+=======
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.46.0"],
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:015e88b2a9ee4bb9deeff6d9d6dbb129b60726ef5b20c4b6ed567adfa6c003b1469cd14457f960c56f87a7da966ccea489f4468d7d386b57155640ea44a2a124#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -32203,30 +36153,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"],
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:f2f2d41ba620e211b65f5db5fb0516f981b4ee690c1a04259db81776552e22952b80f7c64c766899c19f0b237af82a44b242a5663ee4f26532ec8b24bfc60671#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.58.1"],
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:29fc036395aa9f04ac61b9cb4b580c656a510b0b3c8a102736c94e11f6444174ea582b1b9484bc6950d69dc7e615a947afe6a95db1938b8faff8cf8390389a3e#npm:3.7.2"],
+=======
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.46.0"],
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:29fc036395aa9f04ac61b9cb4b580c656a510b0b3c8a102736c94e11f6444174ea582b1b9484bc6950d69dc7e615a947afe6a95db1938b8faff8cf8390389a3e#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -32253,30 +36215,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"],
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:77a358f43f0fd006045dc44d628018ffad8033a09a1a7a39ad5f5df26b773e586134cf3263527e33818c4a60b757b6bf8316ad41f0a2627230e5cd10b8e32103#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.58.1"],
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:063ecd6a454fbf40d998b00484ce38643a50fcd089c6d51696b962b090ab6109f80311dbffe8840136fed951b78038cfa6140cc0c8b736eae1def14c844acf1e#npm:3.7.2"],
+=======
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.46.0"],
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:063ecd6a454fbf40d998b00484ce38643a50fcd089c6d51696b962b090ab6109f80311dbffe8840136fed951b78038cfa6140cc0c8b736eae1def14c844acf1e#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -32303,30 +36277,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:4.3.2"],
             ["del", "npm:4.1.1"],
             ["express", "npm:4.17.1"],
-            ["html-entities", "npm:1.3.1"],
+            ["html-entities", "npm:1.4.0"],
             ["http-proxy-middleware", "npm:0.19.1"],
             ["import-local", "npm:2.0.0"],
             ["internal-ip", "npm:4.3.0"],
             ["ip", "npm:1.1.5"],
             ["is-absolute-url", "npm:3.0.3"],
             ["killable", "npm:1.0.1"],
-            ["loglevel", "npm:1.7.0"],
+            ["loglevel", "npm:1.7.1"],
             ["opn", "npm:5.5.0"],
             ["p-retry", "npm:3.0.1"],
             ["portfinder", "npm:1.0.28"],
             ["schema-utils", "npm:1.0.0"],
-            ["selfsigned", "npm:1.10.8"],
+            ["selfsigned", "npm:1.10.11"],
             ["semver", "npm:6.3.0"],
             ["serve-index", "npm:1.9.1"],
             ["sockjs", "npm:0.3.21"],
-            ["sockjs-client", "npm:1.5.0"],
+            ["sockjs-client", "npm:1.5.1"],
             ["spdy", "npm:4.0.2"],
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"],
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:192593f20d46689302edc7dad5f30bb0d17b2ec6d80fc21171e34615b79d83a7c10e436b122f389e52087d99e10b9d5e25a607a554e4647a774eedeb39f8de01#npm:3.7.2"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.58.1"],
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.0"],
+            ["webpack-dev-middleware", "virtual:e613f7c9f1c3879a2e24c22706b8166424f43c5afd02860225fcf7c2725a5c81420453459dfb520ecfec38c0bb26ec4be44ca07c648b093b23d5ae3cd2427920#npm:3.7.2"],
+=======
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.46.0"],
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.7.2"],
+            ["webpack-dev-middleware", "virtual:e613f7c9f1c3879a2e24c22706b8166424f43c5afd02860225fcf7c2725a5c81420453459dfb520ecfec38c0bb26ec4be44ca07c648b093b23d5ae3cd2427920#npm:3.7.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:6.2.2"],
             ["yargs", "npm:13.3.2"]
@@ -32376,7 +36362,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/websocket-driver-npm-0.7.4-a72739da70-fffe5a33fe.zip/node_modules/websocket-driver/",
           "packageDependencies": [
             ["websocket-driver", "npm:0.7.4"],
-            ["http-parser-js", "npm:0.5.2"],
+            ["http-parser-js", "npm:0.5.3"],
             ["safe-buffer", "npm:5.2.1"],
             ["websocket-extensions", "npm:0.1.4"]
           ],
@@ -32439,10 +36425,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.6.0", {
-          "packageLocation": "./.yarn/cache/whatwg-url-npm-8.6.0-bbe77a5425-0149bee9b6.zip/node_modules/whatwg-url/",
+        ["npm:8.7.0", {
+          "packageLocation": "./.yarn/cache/whatwg-url-npm-8.7.0-67af66db8f-a87abcc6ce.zip/node_modules/whatwg-url/",
           "packageDependencies": [
-            ["whatwg-url", "npm:8.6.0"],
+            ["whatwg-url", "npm:8.7.0"],
             ["lodash", "npm:4.17.21"],
             ["tr46", "npm:2.1.0"],
             ["webidl-conversions", "npm:6.1.0"]
@@ -32491,11 +36477,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/which-boxed-primitive-npm-1.0.2-e214f9ae5a-53ce774c73.zip/node_modules/which-boxed-primitive/",
           "packageDependencies": [
             ["which-boxed-primitive", "npm:1.0.2"],
+<<<<<<< HEAD
             ["is-bigint", "npm:1.0.1"],
             ["is-boolean-object", "npm:1.1.0"],
             ["is-number-object", "npm:1.0.4"],
             ["is-string", "npm:1.0.7"],
             ["is-symbol", "npm:1.0.3"]
+=======
+            ["is-bigint", "npm:1.0.2"],
+            ["is-boolean-object", "npm:1.1.1"],
+            ["is-number-object", "npm:1.0.5"],
+            ["is-string", "npm:1.0.6"],
+            ["is-symbol", "npm:1.0.4"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -32510,16 +36504,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["which-typed-array", [
-        ["npm:1.1.2", {
-          "packageLocation": "./.yarn/cache/which-typed-array-npm-1.1.2-c3d789ea3d-b9aa2dcf90.zip/node_modules/which-typed-array/",
+        ["npm:1.1.4", {
+          "packageLocation": "./.yarn/cache/which-typed-array-npm-1.1.4-f7615bf1ef-369597a623.zip/node_modules/which-typed-array/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["which-typed-array", "npm:1.1.2"],
             ["available-typed-arrays", "npm:1.0.2"],
             ["es-abstract", "npm:1.19.1"],
+=======
+            ["which-typed-array", "npm:1.1.4"],
+            ["available-typed-arrays", "npm:1.0.4"],
+            ["call-bind", "npm:1.0.2"],
+            ["es-abstract", "npm:1.18.3"],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["foreach", "npm:2.0.5"],
             ["function-bind", "npm:1.1.1"],
             ["has-symbols", "npm:1.0.2"],
-            ["is-typed-array", "npm:1.1.3"]
+            ["is-typed-array", "npm:1.1.5"]
           ],
           "linkType": "HARD",
         }]
@@ -32547,7 +36548,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/widest-line-npm-3.1.0-717bf2680b-03db6c9d0a.zip/node_modules/widest-line/",
           "packageDependencies": [
             ["widest-line", "npm:3.1.0"],
-            ["string-width", "npm:4.2.0"]
+            ["string-width", "npm:4.2.2"]
           ],
           "linkType": "HARD",
         }]
@@ -32603,9 +36604,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/wrap-ansi-npm-6.2.0-439a7246d8-6cd96a4101.zip/node_modules/wrap-ansi/",
           "packageDependencies": [
             ["wrap-ansi", "npm:6.2.0"],
+<<<<<<< HEAD
             ["ansi-styles", "npm:4.2.1"],
             ["string-width", "npm:4.2.0"],
             ["strip-ansi", "npm:6.0.1"]
+=======
+            ["ansi-styles", "npm:4.3.0"],
+            ["string-width", "npm:4.2.2"],
+            ["strip-ansi", "npm:6.0.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }],
@@ -32613,9 +36620,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/wrap-ansi-npm-7.0.0-ad6e1a0554-a790b846fd.zip/node_modules/wrap-ansi/",
           "packageDependencies": [
             ["wrap-ansi", "npm:7.0.0"],
+<<<<<<< HEAD
             ["ansi-styles", "npm:4.2.1"],
             ["string-width", "npm:4.2.0"],
             ["strip-ansi", "npm:6.0.1"]
+=======
+            ["ansi-styles", "npm:4.3.0"],
+            ["string-width", "npm:4.2.2"],
+            ["strip-ansi", "npm:6.0.0"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
         }]
@@ -32688,7 +36701,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/write-json-file-npm-4.3.0-89a21c4468-33908c5919.zip/node_modules/write-json-file/",
           "packageDependencies": [
             ["write-json-file", "npm:4.3.0"],
-            ["detect-indent", "npm:6.0.0"],
+            ["detect-indent", "npm:6.1.0"],
             ["graceful-fs", "npm:4.2.6"],
             ["is-plain-obj", "npm:2.1.0"],
             ["make-dir", "npm:3.1.0"],
@@ -32732,10 +36745,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["npm:8.2.3", {
           "packageLocation": "./.yarn/cache/ws-npm-8.2.3-03a35b8ad7-c869296ccb.zip/node_modules/ws/",
           "packageDependencies": [
             ["ws", "npm:8.2.3"]
+=======
+        ["npm:7.5.3", {
+          "packageLocation": "./.yarn/cache/ws-npm-7.5.3-3a046a0b1a-423dc0d859.zip/node_modules/ws/",
+          "packageDependencies": [
+            ["ws", "npm:7.5.3"]
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "SOFT",
         }],
@@ -32775,10 +36795,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:82010cf435bfdd815e56aa96b8d62d16ac586c3b4b7aacb920726db97fe019609213df6e9de787883e55fe3575d876d7238194a097c8f36ba631311b0fe374ce#npm:7.4.6", {
           "packageLocation": "./.yarn/__virtual__/ws-virtual-a91fb73473/0/cache/ws-npm-7.4.6-9c9a725604-3a990b32ed.zip/node_modules/ws/",
           "packageDependencies": [
             ["ws", "virtual:82010cf435bfdd815e56aa96b8d62d16ac586c3b4b7aacb920726db97fe019609213df6e9de787883e55fe3575d876d7238194a097c8f36ba631311b0fe374ce#npm:7.4.6"],
+=======
+        ["virtual:b6903cb0aaad9906148dfa505a0e5b88399e26dc9fd5f803943a849595d5c20ea7ebf5a1e9a758a58020d02214870ac72546b61ed9296c91b93f1f92936cf426#npm:7.4.6", {
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-6b92de1eaf/0/cache/ws-npm-7.4.6-9c9a725604-3a990b32ed.zip/node_modules/ws/",
+          "packageDependencies": [
+            ["ws", "virtual:b6903cb0aaad9906148dfa505a0e5b88399e26dc9fd5f803943a849595d5c20ea7ebf5a1e9a758a58020d02214870ac72546b61ed9296c91b93f1f92936cf426#npm:7.4.6"],
+            ["@types/bufferutil", null],
+            ["@types/utf-8-validate", null],
+            ["bufferutil", null],
+            ["utf-8-validate", null]
+          ],
+          "packagePeers": [
+            "@types/bufferutil",
+            "@types/utf-8-validate",
+            "bufferutil",
+            "utf-8-validate"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:c21273b24765e094660999d0881168950b843a2dcbda969e689c75a08888b9dabeed73a8e89bf2c16063d59477f0ebaa1d0e1bfd06f12780b5a1c2a0e96b9830#npm:7.5.3", {
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-263a4091e8/0/cache/ws-npm-7.5.3-3a046a0b1a-423dc0d859.zip/node_modules/ws/",
+          "packageDependencies": [
+            ["ws", "virtual:c21273b24765e094660999d0881168950b843a2dcbda969e689c75a08888b9dabeed73a8e89bf2c16063d59477f0ebaa1d0e1bfd06f12780b5a1c2a0e96b9830#npm:7.5.3"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["@types/bufferutil", null],
             ["@types/utf-8-validate", null],
             ["bufferutil", null],
@@ -32869,7 +36913,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/xregexp-npm-4.4.1-f833f6b38a-134d701166.zip/node_modules/xregexp/",
           "packageDependencies": [
             ["xregexp", "npm:4.4.1"],
-            ["@babel/runtime-corejs3", "npm:7.14.7"]
+            ["@babel/runtime-corejs3", "npm:7.14.8"]
           ],
           "linkType": "HARD",
         }]
@@ -32884,17 +36928,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["y18n", [
-        ["npm:4.0.0", {
-          "packageLocation": "./.yarn/cache/y18n-npm-4.0.0-55cd797cc5-66e22d38bf.zip/node_modules/y18n/",
+        ["npm:4.0.3", {
+          "packageLocation": "./.yarn/cache/y18n-npm-4.0.3-ced95acdbc-014dfcd9b5.zip/node_modules/y18n/",
           "packageDependencies": [
-            ["y18n", "npm:4.0.0"]
+            ["y18n", "npm:4.0.3"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:5.0.5", {
-          "packageLocation": "./.yarn/cache/y18n-npm-5.0.5-1fa41a2023-f97d3cc7e5.zip/node_modules/y18n/",
+        ["npm:5.0.8", {
+          "packageLocation": "./.yarn/cache/y18n-npm-5.0.8-5f3a0a7e62-54f0fb9562.zip/node_modules/y18n/",
           "packageDependencies": [
-            ["y18n", "npm:5.0.5"]
+            ["y18n", "npm:5.0.8"]
           ],
           "linkType": "HARD",
         }]
@@ -32944,7 +36988,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["set-blocking", "npm:2.0.0"],
             ["string-width", "npm:3.1.0"],
             ["which-module", "npm:2.0.0"],
-            ["y18n", "npm:4.0.0"],
+            ["y18n", "npm:4.0.3"],
             ["yargs-parser", "npm:13.1.2"]
           ],
           "linkType": "HARD",
@@ -32961,7 +37005,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["set-blocking", "npm:2.0.0"],
             ["string-width", "npm:3.1.0"],
             ["which-module", "npm:2.0.0"],
-            ["y18n", "npm:4.0.0"],
+            ["y18n", "npm:4.0.3"],
             ["yargs-parser", "npm:13.1.2"]
           ],
           "linkType": "HARD",
@@ -32979,7 +37023,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["set-blocking", "npm:2.0.0"],
             ["string-width", "npm:3.1.0"],
             ["which-module", "npm:2.0.0"],
-            ["y18n", "npm:4.0.0"],
+            ["y18n", "npm:4.0.3"],
             ["yargs-parser", "npm:13.1.2"]
           ],
           "linkType": "HARD",
@@ -32988,6 +37032,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yargs-npm-16.2.0-547873d425-b14afbb51e.zip/node_modules/yargs/",
           "packageDependencies": [
             ["yargs", "npm:16.2.0"],
+            ["cliui", "npm:7.0.4"],
+            ["escalade", "npm:3.1.1"],
+            ["get-caller-file", "npm:2.0.5"],
+            ["require-directory", "npm:2.1.1"],
+            ["string-width", "npm:4.2.2"],
+            ["y18n", "npm:5.0.8"],
+            ["yargs-parser", "npm:20.2.9"]
+          ],
+          "linkType": "HARD",
+        }],
+<<<<<<< HEAD
+=======
+        ["npm:17.1.0", {
+          "packageLocation": "./.yarn/cache/yargs-npm-17.1.0-06b940cf1f-259d496db8.zip/node_modules/yargs/",
+          "packageDependencies": [
+<<<<<<< HEAD
+            ["yargs", "npm:17.1.0"],
             ["cliui", "npm:7.0.3"],
             ["escalade", "npm:3.1.1"],
             ["get-caller-file", "npm:2.0.5"],
@@ -32998,17 +37059,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+>>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
         ["npm:17.2.1", {
           "packageLocation": "./.yarn/cache/yargs-npm-17.2.1-592dabfd58-451aac46f8.zip/node_modules/yargs/",
           "packageDependencies": [
             ["yargs", "npm:17.2.1"],
             ["cliui", "npm:7.0.3"],
+=======
+            ["yargs", "npm:17.0.1"],
+            ["cliui", "npm:7.0.4"],
+>>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
             ["escalade", "npm:3.1.1"],
             ["get-caller-file", "npm:2.0.5"],
             ["require-directory", "npm:2.1.1"],
-            ["string-width", "npm:4.2.0"],
-            ["y18n", "npm:5.0.5"],
-            ["yargs-parser", "npm:20.2.6"]
+            ["string-width", "npm:4.2.2"],
+            ["y18n", "npm:5.0.8"],
+            ["yargs-parser", "npm:20.2.9"]
           ],
           "linkType": "HARD",
         }]
@@ -33023,6 +37089,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["npm:18.1.3", {
+          "packageLocation": "./.yarn/cache/yargs-parser-npm-18.1.3-0ba9c4f088-60e8c7d1b8.zip/node_modules/yargs-parser/",
+          "packageDependencies": [
+            ["yargs-parser", "npm:18.1.3"],
+            ["camelcase", "npm:5.3.1"],
+            ["decamelize", "npm:1.2.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:20.2.4", {
           "packageLocation": "./.yarn/cache/yargs-parser-npm-20.2.4-1de20916a6-d251998a37.zip/node_modules/yargs-parser/",
           "packageDependencies": [
@@ -33030,10 +37105,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:20.2.6", {
-          "packageLocation": "./.yarn/cache/yargs-parser-npm-20.2.6-909e598ff6-4209eed182.zip/node_modules/yargs-parser/",
+        ["npm:20.2.9", {
+          "packageLocation": "./.yarn/cache/yargs-parser-npm-20.2.9-a1d19e598d-8bb69015f2.zip/node_modules/yargs-parser/",
           "packageDependencies": [
-            ["yargs-parser", "npm:20.2.6"]
+            ["yargs-parser", "npm:20.2.9"]
           ],
           "linkType": "HARD",
         }]
