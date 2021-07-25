@@ -90,7 +90,15 @@ export class BackgroundScript {
       if (err) {
         StackTrace.fromError(err).then(stack => {
           stack.forEach(sf => {
-            console.log('sf %o', sf.toString())
+            console.log(
+              'sf %o',
+              sf
+                .toString()
+                .replace(
+                  'webpack://@coil/extension/src/',
+                  'webpack://@coil/extension/./src/'
+                )
+            )
           })
         })
       }

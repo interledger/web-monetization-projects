@@ -89,12 +89,7 @@ export class StackFrame {
   }
 
   toString() {
-    let fileName = this.getFileName() || ''
-    fileName = fileName.replace(
-      '@coil/extension/src/',
-      '@coil/extension/./src/'
-    )
-
+    const fileName = this.getFileName() || ''
     const lineNumber = this.getLineNumber() || ''
     const columnNumber = this.getColumnNumber() || ''
     const functionName = this.getFunctionName() || ''

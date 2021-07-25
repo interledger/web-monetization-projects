@@ -73,7 +73,7 @@ function _merge(
     return target
   })
 
-  console.log({ first, second, target })
+  // console.log({ first, second, target })
 
   return target
 }
@@ -136,7 +136,7 @@ export const StackTrace = {
     _opts?: StackTraceOptions
   ) {
     const opts: StackTraceOptions = _merge(_options, _opts)
-    console.log('StackTrace$$fromError opts', opts)
+    // console.log('StackTrace$$fromError opts', opts)
     const gps = opts.gps ?? new StackTraceGPS(opts)
 
     return new Promise<StackFrame[]>(resolve => {
@@ -153,16 +153,16 @@ export const StackTrace = {
                 .StackTraceGPS$$pinpoint(sf)
                 .then(
                   val => {
-                    console.log('pinpoint resolved', val)
+                    // console.log('pinpoint resolved', val)
                     resolve(val)
                   },
                   error => {
-                    console.log('pinpoint rejected', error)
+                    // console.log('pinpoint rejected', error)
                     resolveOriginal()
                   }
                 )
                 ['catch'](error => {
-                  console.error(error)
+                  // console.error(error)
                   resolveOriginal()
                 })
             })
