@@ -2797,7 +2797,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
             ["@material-ui/icons", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.2"],
             ["@material-ui/styles", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
-            ["@types/debug", "npm:4.1.6"],
+            ["@types/debug", "npm:4.1.7"],
             ["@types/filesystem", "npm:0.0.32"],
             ["@types/firefox", "npm:0.0.31"],
             ["@types/har-format", "npm:1.2.7"],
@@ -3125,7 +3125,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@coil/client", "workspace:packages/coil-client"],
             ["@commitlint/cli", "npm:12.1.4"],
             ["@commitlint/config-conventional", "npm:12.1.4"],
-            ["@types/debug", "npm:4.1.6"],
+            ["@types/debug", "npm:4.1.7"],
             ["@types/get-port", "npm:4.2.0"],
             ["@types/jest", "npm:26.0.24"],
             ["@types/node", "npm:14.17.5"],
@@ -5633,10 +5633,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.1.6", {
-          "packageLocation": "./.yarn/cache/@types-debug-npm-4.1.6-e06d0f44a7-b4c5d07fb3.zip/node_modules/@types/debug/",
+        ["npm:4.1.7", {
+          "packageLocation": "./.yarn/cache/@types-debug-npm-4.1.7-f54c81f8db-0a7b89d8ed.zip/node_modules/@types/debug/",
           "packageDependencies": [
-            ["@types/debug", "npm:4.1.6"]
+            ["@types/debug", "npm:4.1.7"],
+            ["@types/ms", "npm:0.7.31"]
           ],
           "linkType": "HARD",
         }]
@@ -5912,6 +5913,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-minimist-npm-1.2.0-cce0ca92ef-30cbd9acd7.zip/node_modules/@types/minimist/",
           "packageDependencies": [
             ["@types/minimist", "npm:1.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/ms", [
+        ["npm:0.7.31", {
+          "packageLocation": "./.yarn/cache/@types-ms-npm-0.7.31-ea3b89342b-daadd354ae.zip/node_modules/@types/ms/",
+          "packageDependencies": [
+            ["@types/ms", "npm:0.7.31"]
           ],
           "linkType": "HARD",
         }]
@@ -16955,7 +16965,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ilp-logger-npm-1.4.2-5c6565ae44-32d5e1d9c3.zip/node_modules/ilp-logger/",
           "packageDependencies": [
             ["ilp-logger", "npm:1.4.2"],
-            ["@types/debug", "npm:4.1.6"],
+            ["@types/debug", "npm:4.1.7"],
             ["debug", "virtual:5c6565ae444b792dcde6c509e447568014350d8fa19988fc85aa860ede8ffd57b097041179fd8651382ed2ed8ad02bda02f2c42952d39dd2a9cf26c2f5631496#npm:4.3.1"],
             ["supports-color", "npm:7.2.0"]
           ],

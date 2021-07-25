@@ -1505,7 +1505,7 @@ __metadata:
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
     "@material-ui/styles": ^4.11.4
-    "@types/debug": 4.1.6
+    "@types/debug": 4.1.7
     "@types/filesystem": 0.0.32
     "@types/firefox": 0.0.31
     "@types/har-format": 1.2.7
@@ -1823,7 +1823,7 @@ __metadata:
     "@coil/client": 0.0.0
     "@commitlint/cli": 12.1.4
     "@commitlint/config-conventional": 12.1.4
-    "@types/debug": 4.1.6
+    "@types/debug": 4.1.7
     "@types/get-port": 4.2.0
     "@types/jest": 26.0.24
     "@types/node": 14.17.5
@@ -4033,10 +4033,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/debug@npm:4.1.6, @types/debug@npm:^4.1.0":
-  version: 4.1.6
-  resolution: "@types/debug@npm:4.1.6"
-  checksum: b4c5d07fb383527b1416ab7911dd85c47da276d32f4a337425c0d54f84f36c55cac76ff2d5cd3c5b5f32d213912fcc4e5aa44aa5206e49929328b465bb63f310
+"@types/debug@npm:4.1.7, @types/debug@npm:^4.1.0":
+  version: 4.1.7
+  resolution: "@types/debug@npm:4.1.7"
+  dependencies:
+    "@types/ms": "*"
+  checksum: 0a7b89d8ed72526858f0b61c6fd81f477853e8c4415bb97f48b1b5545248d2ae389931680b94b393b993a7cfe893537a200647d93defe6d87159b96812305adc
   languageName: node
   linkType: hard
 
@@ -4270,6 +4272,13 @@ __metadata:
   version: 1.2.0
   resolution: "@types/minimist@npm:1.2.0"
   checksum: 30cbd9acd7ddb60bc3729adcc43a9da4940c90180fa0f08228f1da95ec6c00db2e3fd3af5280fc5345e3fa2637253bb5cf6625f30d571ef9bc3820a531febb7e
+  languageName: node
+  linkType: hard
+
+"@types/ms@npm:*":
+  version: 0.7.31
+  resolution: "@types/ms@npm:0.7.31"
+  checksum: daadd354aedde024cce6f5aa873fefe7b71b22cd0e28632a69e8b677aeb48ae8caa1c60e5919bb781df040d116b01cb4316335167a3fc0ef6a63fa3614c0f6da
   languageName: node
   linkType: hard
 
