@@ -1,3 +1,12 @@
-# Stacktrace Js Stacktrace Js
+# Stacktrace Js
 
-A work in progress. You probably don't want this.
+We forked the set of libraries at https://github.com/stacktracejs, so we could convert
+them to typescript and hack in some extra caching to make it performant enough for logging.
+
+### Credits
+
+All credit to [@eriwen](https://github.com/eriwen)
+
+### License
+
+See the [LICENSE](./LICENSE)
