@@ -125,11 +125,13 @@ async function main(): Promise<void> {
   await plugin.connect()
   dbg('Connected')
 
+  dbg('Creating connection from plugin')
   const connection = await IlpStream.createConnection({
     plugin,
     destinationAccount: details.destination_account,
     sharedSecret: Buffer.from(details.shared_secret, 'base64')
   })
+  dbg('plugin connection created')
 
   connection.on('close', () => {
     dbg('connection close')
@@ -138,9 +140,9 @@ async function main(): Promise<void> {
   connection.on('error', () => {
     dbg('connection error')
   })
-  dbg('Creating connection')
+  dbg('calling connection.connect()')
   await connection.connect()
-  dbg('Connected')
+  dbg('finished connection.connect()')
   startStream(`main`, connection, dbg)
 }
 
