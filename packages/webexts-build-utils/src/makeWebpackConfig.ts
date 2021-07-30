@@ -153,6 +153,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   const entry: Record<string, string> = {
     content: './src/content/content.ts',
     popup: './src/popup/popup.tsx',
+    devtools: './src/devtools/devtools.tsx',
     options: './src/options/options.tsx',
     background: './src/background/background.ts'
   }

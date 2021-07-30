@@ -12,6 +12,7 @@
   "icons": {
     "128": "res/icn-coil-ext@4x.png"
   },
+  "devtools_page": "static/devtools.html",
   "browser_action": {
     "default_icon": "res/icn-coil-ext@4x.png",
     "default_popup": "static/popup.html"

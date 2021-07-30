@@ -4,6 +4,10 @@ import * as tokens from '../../types/tokens'
 
 import Context = interfaces.Context
 
+import { StackTrace, StackTraceOptions } from '@stacktracejs/stacktrace-js'
+
+import { StackFrame } from '../../../../stacktracejs-stacktrace-js/src/stackframe'
+
 export function logger(name?: string) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return function decorator(
@@ -36,6 +40,12 @@ const getColor = (() => {
   }
 })()
 
+const opts: StackTraceOptions = {
+  resultsCache: {},
+  sourceCache: {},
+  sourceMapConsumerCache: {}
+}
+
 export function createLogger(context: Context) {
   const enabled = context.container.get<boolean>(tokens.LoggingEnabled)
   if (!enabled) {
@@ -57,10 +67,41 @@ export function createLogger(context: Context) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     return require('debug')(`coil-extension:${namespace}`)
   }
-  return console.log.bind(
-    // eslint-disable-next-line no-console
-    console,
-    `%c coil-extension:${namespace}`,
-    `color: ${getColor()}; background-color: black`
-  )
+
+  return (async (...args: any[]) => {
+    // const st = await StackTrace.get()
+    const st: StackFrame[] = []
+    const error = new Error()
+    const stack = error.stack ?? ''
+    const obj = {
+      nope: '',
+      get stack() {
+        StackTrace.fromError(error).then(st => {
+          obj.nope = st
+            .map(f =>
+              f.toString().replace(/(?<=webpack:\/\/.*?)\/src/, '/./src')
+            )
+            .join('\n')
+        })
+        console.log(stack)
+        return ''
+      }
+    }
+    return console.log(
+      `%c coil-extension:${namespace}`,
+      `color: ${getColor()}; background-color: black`,
+      ...args,
+      ...st.map(f =>
+        f.toString().replace(/(?<=webpack:\/\/.*?)\/src/, '/./src')
+      ),
+      obj
+    )
+  }) as typeof console.log
+
+  // return console.log.bind(
+  //   // eslint-disable-next-line no-console
+  //   console,
+  //   `%c coil-extension:${namespace}`,
+  //   `color: ${getColor()}; background-color: black`
+  // )
 }
