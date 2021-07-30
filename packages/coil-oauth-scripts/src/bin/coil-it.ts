@@ -104,7 +104,7 @@ async function main(): Promise<void> {
 
   const argv = process.argv.slice(2)
   const paymentPointer = argv[0] || '$twitter.xrptipbot.com/nfcpasses'
-  const { token, btpToken } = await login(dbg)
+  const { token, btpToken } = await login(dbg, true)
   dbg({ token, btpToken })
 
   const spspUrl = pointerToUrl(paymentPointer)

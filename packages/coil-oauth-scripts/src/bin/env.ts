@@ -20,7 +20,7 @@ const ClientOptions = class Options extends GraphQlClient.Options {
   coilDomain = COIL_DOMAIN
 }
 
-export async function login(dbg?: typeof console.log) {
+export async function login(dbg?: typeof console.log, whoAmI?: boolean) {
   const client = new GraphQlClient(new ClientOptions())
   if (dbg) {
     dbg('logging in')
@@ -35,6 +35,15 @@ export async function login(dbg?: typeof console.log) {
   const btpToken = await client.refreshBtpToken(token)
   if (dbg) {
     dbg('refreshed token')
+  }
+  if (whoAmI) {
+    if (dbg) {
+      dbg('getting whoAmI')
+    }
+    await client.whoAmI(token)
+    if (dbg) {
+      dbg('got whoAmI')
+    }
   }
   return { client, token, btpToken }
 }
