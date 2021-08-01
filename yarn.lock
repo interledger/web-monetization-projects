@@ -39,10 +39,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/compat-data@npm:^7.13.11, @babel/compat-data@npm:^7.14.5, @babel/compat-data@npm:^7.14.7":
-  version: 7.14.7
-  resolution: "@babel/compat-data@npm:7.14.7"
-  checksum: dcf7a72cb650206857a98cce1ab0973e67689f19afc3b30cabff6dbddf563f188d54d3b3f92a70c6bc1feb9049d8b2e601540e1d435b6866c77bffad0a441c9f
+"@babel/compat-data@npm:^7.13.11, @babel/compat-data@npm:^7.14.5, @babel/compat-data@npm:^7.14.7, @babel/compat-data@npm:^7.14.9":
+  version: 7.14.9
+  resolution: "@babel/compat-data@npm:7.14.9"
+  checksum: e7ca362954d8ae53c4b1f059b26bf15121fdef6401d8a88d12fd79c5ba4d1b355e2954fdf00891b1939ddc39826d7d9b252681bfe10ccf48ab8d015efd3c57d2
   languageName: node
   linkType: hard
 
@@ -297,10 +297,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-validator-identifier@npm:^7.14.5, @babel/helper-validator-identifier@npm:^7.14.8":
-  version: 7.14.8
-  resolution: "@babel/helper-validator-identifier@npm:7.14.8"
-  checksum: f21ad9a9f0a66a02e0e5f62d505cbeb9e01a7ac5bd34be0af9f916f0b6d8d40718efaf51b656b41759e3454703090b4d386105f1f97f6598ee5a3f8eb98adc6a
+"@babel/helper-validator-identifier@npm:^7.14.5, @babel/helper-validator-identifier@npm:^7.14.8, @babel/helper-validator-identifier@npm:^7.14.9":
+  version: 7.14.9
+  resolution: "@babel/helper-validator-identifier@npm:7.14.9"
+  checksum: 58552531a7674363e74672434c312ddaf1545b8a43308e1a7f38db58bf79c796c095a6dab6a6105eb0d783b97441f6cbb525bb887f29a35f232fcdbd8cb240dc
   languageName: node
   linkType: hard
 
@@ -367,16 +367,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-async-generator-functions@npm:^7.14.7":
-  version: 7.14.7
-  resolution: "@babel/plugin-proposal-async-generator-functions@npm:7.14.7"
+"@babel/plugin-proposal-async-generator-functions@npm:^7.14.9":
+  version: 7.14.9
+  resolution: "@babel/plugin-proposal-async-generator-functions@npm:7.14.9"
   dependencies:
     "@babel/helper-plugin-utils": ^7.14.5
     "@babel/helper-remap-async-to-generator": ^7.14.5
     "@babel/plugin-syntax-async-generators": ^7.8.4
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 09343a79385615f8d5f95aaef7c44af5e899c82f030f3d73546c2ffffa567c0949f0405052d7e32f643c0eb2a23590a5050f4606855b3506246d3d60e46f32e3
+  checksum: 2c03f8ccb8cefc37d62fbd1e5af9570b14df80334f2bb8351381675d6c8f945596479ea51e59478dff9c80e1c234cd1e94675b3b3ccf694e06dde880c78495fa
   languageName: node
   linkType: hard
 
@@ -812,9 +812,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-classes@npm:^7.14.5":
-  version: 7.14.5
-  resolution: "@babel/plugin-transform-classes@npm:7.14.5"
+"@babel/plugin-transform-classes@npm:^7.14.9":
+  version: 7.14.9
+  resolution: "@babel/plugin-transform-classes@npm:7.14.9"
   dependencies:
     "@babel/helper-annotate-as-pure": ^7.14.5
     "@babel/helper-function-name": ^7.14.5
@@ -825,7 +825,7 @@ __metadata:
     globals: ^11.1.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 42fc333a0d8a6a90b5c75e90d2ec21494f711ab7c58f2d074d95726cdd38f137e74653602a82d2d1a3e9bc504b5eff62418d70048514b672c9bd108bfb866e25
+  checksum: 9cb8e78b1249734de6d518a5e63fe429beed9d096298cd79cd1bd36836704cc3644d889d762ce079077bc007dbe4c950d66a58456d9472a123ab3c1100cff7b2
   languageName: node
   linkType: hard
 
@@ -985,14 +985,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-named-capturing-groups-regex@npm:^7.14.7":
-  version: 7.14.7
-  resolution: "@babel/plugin-transform-named-capturing-groups-regex@npm:7.14.7"
+"@babel/plugin-transform-named-capturing-groups-regex@npm:^7.14.9":
+  version: 7.14.9
+  resolution: "@babel/plugin-transform-named-capturing-groups-regex@npm:7.14.9"
   dependencies:
     "@babel/helper-create-regexp-features-plugin": ^7.14.5
   peerDependencies:
     "@babel/core": ^7.0.0
-  checksum: 3c68bc77cce387750ecd32d33e9ad0f0968245fbe03b36ec8dddc52bee3ee84757205db3b3b4fc605e055f08769312ef4dbf4a0c8adb8f02eb04b142ffcdf265
+  checksum: 81dda376c0af4c07ae252703481e8bd16d49045bd624697ff6b6635326f3f20fca9c574a2f0036bf7f4aa8c36baa9d926912538de486a189a3515bec7f72e16a
   languageName: node
   linkType: hard
 
@@ -1165,16 +1165,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:7.14.8":
-  version: 7.14.8
-  resolution: "@babel/preset-env@npm:7.14.8"
+"@babel/preset-env@npm:7.14.9":
+  version: 7.14.9
+  resolution: "@babel/preset-env@npm:7.14.9"
   dependencies:
-    "@babel/compat-data": ^7.14.7
+    "@babel/compat-data": ^7.14.9
     "@babel/helper-compilation-targets": ^7.14.5
     "@babel/helper-plugin-utils": ^7.14.5
     "@babel/helper-validator-option": ^7.14.5
     "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": ^7.14.5
-    "@babel/plugin-proposal-async-generator-functions": ^7.14.7
+    "@babel/plugin-proposal-async-generator-functions": ^7.14.9
     "@babel/plugin-proposal-class-properties": ^7.14.5
     "@babel/plugin-proposal-class-static-block": ^7.14.5
     "@babel/plugin-proposal-dynamic-import": ^7.14.5
@@ -1207,7 +1207,7 @@ __metadata:
     "@babel/plugin-transform-async-to-generator": ^7.14.5
     "@babel/plugin-transform-block-scoped-functions": ^7.14.5
     "@babel/plugin-transform-block-scoping": ^7.14.5
-    "@babel/plugin-transform-classes": ^7.14.5
+    "@babel/plugin-transform-classes": ^7.14.9
     "@babel/plugin-transform-computed-properties": ^7.14.5
     "@babel/plugin-transform-destructuring": ^7.14.7
     "@babel/plugin-transform-dotall-regex": ^7.14.5
@@ -1221,7 +1221,7 @@ __metadata:
     "@babel/plugin-transform-modules-commonjs": ^7.14.5
     "@babel/plugin-transform-modules-systemjs": ^7.14.5
     "@babel/plugin-transform-modules-umd": ^7.14.5
-    "@babel/plugin-transform-named-capturing-groups-regex": ^7.14.7
+    "@babel/plugin-transform-named-capturing-groups-regex": ^7.14.9
     "@babel/plugin-transform-new-target": ^7.14.5
     "@babel/plugin-transform-object-super": ^7.14.5
     "@babel/plugin-transform-parameters": ^7.14.5
@@ -1236,15 +1236,15 @@ __metadata:
     "@babel/plugin-transform-unicode-escapes": ^7.14.5
     "@babel/plugin-transform-unicode-regex": ^7.14.5
     "@babel/preset-modules": ^0.1.4
-    "@babel/types": ^7.14.8
+    "@babel/types": ^7.14.9
     babel-plugin-polyfill-corejs2: ^0.2.2
     babel-plugin-polyfill-corejs3: ^0.2.2
     babel-plugin-polyfill-regenerator: ^0.2.2
-    core-js-compat: ^3.15.0
+    core-js-compat: ^3.16.0
     semver: ^6.3.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: b52f08b9b6ca84c6941ca6e43ab9dcddc768dd197d5921a09778429648dc8fa85cafd92293859c9349be2ec4181e91821d4c376ccfd5e25538c30f500b1b3d5c
+  checksum: f2c1c4b6696a08c36cd09c40b7e3c243722ccee67221692de7601955fddb0401f787e6cb42b2d575eb6bcb129f75582f67ae85908b4cc16fa69dd88571d1d91c
   languageName: node
   linkType: hard
 
@@ -1332,13 +1332,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.0.0, @babel/types@npm:^7.14.5, @babel/types@npm:^7.14.8, @babel/types@npm:^7.3.0, @babel/types@npm:^7.3.3, @babel/types@npm:^7.4.4, @babel/types@npm:^7.8.3":
-  version: 7.14.8
-  resolution: "@babel/types@npm:7.14.8"
+"@babel/types@npm:^7.0.0, @babel/types@npm:^7.14.5, @babel/types@npm:^7.14.8, @babel/types@npm:^7.14.9, @babel/types@npm:^7.3.0, @babel/types@npm:^7.3.3, @babel/types@npm:^7.4.4, @babel/types@npm:^7.8.3":
+  version: 7.14.9
+  resolution: "@babel/types@npm:7.14.9"
   dependencies:
-    "@babel/helper-validator-identifier": ^7.14.8
+    "@babel/helper-validator-identifier": ^7.14.9
     to-fast-properties: ^2.0.0
-  checksum: d4ebd2e0e52f05cbcb3ded434d9fb49db73c239d98c4f7bd27beaf32fcd7c81aa30618237e87d53505d5e65fd20d688cb4237b6fa927a04831129a6044f2e4b5
+  checksum: 472d5b61de1c8cabce2318469738aa97aff2aa8a50a76ebdd467213c2efd3a2db664f3a42abcf52936eaebc1d47fc402f037b81830e51ad148035488463fe7d1
   languageName: node
   linkType: hard
 
@@ -1377,7 +1377,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/privacypass-sjcl": 0.0.0
     "@commitlint/cli": 13.1.0
@@ -1435,7 +1435,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -1492,7 +1492,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/anonymous-tokens": ^0.0.0
     "@coil/client": ^0.0.0
@@ -1583,7 +1583,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -1641,7 +1641,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/client": 0.0.0
     "@coil/polyfill-utils": ^0.0.0
@@ -1707,7 +1707,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -1759,7 +1759,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -1818,7 +1818,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/client": 0.0.0
     "@commitlint/cli": 13.1.0
@@ -1879,7 +1879,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -1939,7 +1939,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/client": 0.0.0
     "@commitlint/cli": 13.1.0
@@ -2196,7 +2196,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -2247,7 +2247,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -2363,7 +2363,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/polyfill-utils": ^0.0.0
     "@commitlint/cli": 13.1.0
@@ -4777,7 +4777,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 13.1.0
@@ -4840,7 +4840,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 13.1.0
@@ -4917,7 +4917,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -4973,7 +4973,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 13.1.0
@@ -5029,7 +5029,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 13.1.0
@@ -5093,7 +5093,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -5145,7 +5145,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
@@ -8387,13 +8387,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js-compat@npm:^3.15.0, core-js-compat@npm:^3.9.1":
-  version: 3.15.0
-  resolution: "core-js-compat@npm:3.15.0"
+"core-js-compat@npm:^3.16.0, core-js-compat@npm:^3.9.1":
+  version: 3.16.0
+  resolution: "core-js-compat@npm:3.16.0"
   dependencies:
     browserslist: ^4.16.6
     semver: 7.0.0
-  checksum: b836a8b289a19d8f12dfdd290a300ff81f60285b66d6a1968787b7ff0f76d14e5993b53623df3af12d515130f2f1bcced72f09d5df4b27aa281285fec9bbd1eb
+  checksum: 31f7a75a6109bad5d8d66ed3be47a2271543f8c99f7e3dea1aa1b82f41c37277266fb0193a86b1f9255833c087d2adfcf5d7935c3bc66a1cb21a9dc0ff453f7a
   languageName: node
   linkType: hard
 
@@ -22422,7 +22422,7 @@ sjcl@sublimator/sjcl:
     "@babel/plugin-proposal-class-properties": 7.14.5
     "@babel/plugin-proposal-decorators": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.14.7
-    "@babel/preset-env": 7.14.8
+    "@babel/preset-env": 7.14.9
     "@babel/preset-typescript": 7.14.5
     "@commitlint/cli": 13.1.0
     "@commitlint/config-conventional": 13.1.0
