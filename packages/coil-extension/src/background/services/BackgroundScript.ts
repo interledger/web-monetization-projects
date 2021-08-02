@@ -422,7 +422,15 @@ export class BackgroundScript {
         sendResponse(await this.youtube.fetchChannelId(request.data.youtubeUrl))
         break
       case 'sendTip':
-        sendResponse(await this.sendTip(request.data.amount))
+        sendResponse(await this.sendTip())
+        break
+      case 'initiateTip':
+        sendResponse(
+          await this.initiateTip(
+            request.data.amount,
+            request.data.paymentMethodId
+          )
+        )
         break
       case 'checkIFrameIsAllowedFromIFrameContentScript':
         sendResponse(
@@ -774,7 +782,7 @@ export class BackgroundScript {
     return true
   }
 
-  private async sendTip(tip: number): Promise<{ success: boolean }> {
+  private async sendTip(): Promise<{ success: boolean }> {
     const tabId = this.activeTab
     const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
     if (!streamId) {
@@ -796,25 +804,22 @@ export class BackgroundScript {
 
     const receiver = stream.getPaymentPointer()
     const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
-
-    // Set tip amount
-    const tipAmount = tip < 1 ? 1 : tip
-    const amount = Math.floor(tipAmount * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
-
-    // Set active tab url
-    const frameId = 0
-    const frame = notNullOrUndef(
-      this.framesService.getFrame({ frameId, tabId })
-    )
-    const activeTabUrl = frame.href
+    const amount = Math.floor(1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
 
     try {
       this.log(`sendTip: sending tip to ${receiver}`)
-
-      const result = await this.client.initiateTip(token, {
-        amount,
-        destination: receiver,
-        origin: activeTabUrl
+      const result = await this.client.query({
+        query: `
+          mutation sendTip($receiver: String!) {
+            sendTip(receiver: $receiver) {
+              success
+            }
+          }
+        `,
+        token,
+        variables: {
+          receiver
+        }
       })
       this.log(`sendTip: sent tip to ${receiver}`, result)
       const message: TipSent = {
@@ -830,6 +835,69 @@ export class BackgroundScript {
       return { success: true }
     } catch (e) {
       this.log(`sendTip: error. msg=${e.message}`)
+      return { success: false }
+    }
+  }
+
+  private async initiateTip(
+    tip: number,
+    paymentMethodId: string
+  ): Promise<{ success: boolean; id?: string }> {
+    const tabId = this.activeTab
+    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
+    if (!streamId) {
+      this.log('can not find top frame for tabId=%d', tabId)
+      return { success: false }
+    }
+    const stream = this.streams.getStream(streamId)
+    const token = this.auth.getStoredToken()
+
+    // TODO: return detailed errors
+    if (!stream || !token) {
+      this.log(
+        'initiateTip: no stream | token. !!stream !!token ',
+        !!stream,
+        !!token
+      )
+      return { success: false }
+    }
+
+    const receiver = stream.getPaymentPointer()
+    const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
+
+    // Set tip amount
+    const amount = Math.floor(tip * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
+
+    // Set active tab url
+    const frameId = 0
+    const frame = notNullOrUndef(
+      this.framesService.getFrame({ frameId, tabId })
+    )
+    const activeTabUrl = frame.href
+
+    try {
+      this.log(`initiateTip: sending tip to ${receiver}`)
+
+      const result = await this.client.initiateTip(token, {
+        amount,
+        destination: receiver,
+        origin: activeTabUrl,
+        paymentMethodId
+      })
+      this.log(`initiateTip: sent tip to ${receiver}`, result)
+      const message: TipSent = {
+        command: 'tip',
+        data: {
+          paymentPointer: receiver,
+          amount,
+          assetCode,
+          assetScale
+        }
+      }
+      this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
+      return { success: true, id: result.tip.id }
+    } catch (e) {
+      this.log(`initiateTip: error. msg=${e.message}`)
       return { success: false }
     }
   }
