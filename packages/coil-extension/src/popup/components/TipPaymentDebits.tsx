@@ -50,8 +50,8 @@ const Dot = styled('div')({
 // Models
 //
 interface ITipPaymentDebits {
-  tipCreditBalance: number
-  currentTipAmount: number
+  tipCreditCharge: number
+  creditCardCharge: number
 }
 
 //
@@ -60,25 +60,8 @@ interface ITipPaymentDebits {
 export const TipPaymentDebits = (
   props: ITipPaymentDebits
 ): React.ReactElement => {
-  const { currentTipAmount, tipCreditBalance } = props
+  const { tipCreditCharge, creditCardCharge } = props
   const { user } = useStore()
-
-  const getTipCreditCharge = (): number => {
-    if (tipCreditBalance >= currentTipAmount) {
-      return currentTipAmount
-    } else {
-      return tipCreditBalance
-    }
-  }
-
-  const getCreditCardCharge = (): number => {
-    if (currentTipAmount > getTipCreditCharge()) {
-      const chargeAmount = currentTipAmount - getTipCreditCharge()
-      return chargeAmount
-    } else {
-      return 0
-    }
-  }
 
   const creditCard = useMemo(() => {
     return user?.paymentMethods?.find(method => {
@@ -88,25 +71,17 @@ export const TipPaymentDebits = (
     })
   }, [user])
 
-  const tipCreditDetails = useMemo(() => {
-    return user?.paymentMethods?.find(method => {
-      if (method.type === 'tipCredit') {
-        return method
-      }
-    })
-  }, [user])
-
   return (
     <PaymentDebitsWrapper>
-      {getTipCreditCharge() > 0 && ( // show the tip credits only if they have been charged
+      {tipCreditCharge > 0 && ( // show the tip credits only if they have been charged
         <PaymentDebit>
           <PaymentMethod>
             <img src='/res/CoilLogo.svg' alt='coil icon' /> Tip credits
           </PaymentMethod>
-          <div>-${getTipCreditCharge().toFixed(2)}</div>
+          <div>-${tipCreditCharge.toFixed(2)}</div>
         </PaymentDebit>
       )}
-      {getCreditCardCharge() > 0 && ( // show the credit card only if it has been charged
+      {creditCardCharge > 0 && ( // show the credit card only if it has been charged
         <PaymentDebit>
           <PaymentMethod>
             <CreditCardIcon provider={creditCard?.details?.brandCode} />
@@ -116,7 +91,7 @@ export const TipPaymentDebits = (
             <Dot />
             {creditCard?.details?.last4}
           </PaymentMethod>
-          <div>-${getCreditCardCharge().toFixed(2)}</div>
+          <div>-${creditCardCharge.toFixed(2)}</div>
         </PaymentDebit>
       )}
     </PaymentDebitsWrapper>
