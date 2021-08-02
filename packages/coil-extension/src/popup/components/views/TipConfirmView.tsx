@@ -97,7 +97,7 @@ export const TipConfirmView = (
 
   const [animateForward, setAnimateForward] = useState<boolean>(true)
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
-  const [submitError, setSubmitError] = useState<boolean>(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   const getTipCreditCharge = (): number => {
     const creditBalance = tipCreditBalance || 0
