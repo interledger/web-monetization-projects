@@ -121,7 +121,7 @@ export const TipConfirmView = (
   const creditCardCharge = getCreditCardCharge()
 
   const handleSubmit = async () => {
-    setSubmitError(false)
+    setSubmitError(null)
     setIsSubmitting(true)
 
     //* currently the front end is responsible for splitting a tip between tipCredits and credit card */
