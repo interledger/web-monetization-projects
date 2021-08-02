@@ -3384,9 +3384,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["json5", "npm:2.2.0"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["npm-check-updates", "npm:12.0.0"],
             ["prettier", "npm:2.5.0"],
+=======
+<<<<<<< HEAD
+            ["lint-staged", "npm:11.2.3"],
+            ["npm-check-updates", "npm:11.6.0"],
+            ["prettier", "npm:2.4.1"],
+=======
+            ["lint-staged", "npm:11.1.0"],
+            ["npm-check-updates", "npm:11.8.3"],
+            ["prettier", "npm:2.3.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
             ["sort-package-json", "npm:1.53.1"],
@@ -6946,8 +6958,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-fetch-npm-2.5.12-e9530d4758-ad63c85ba6.zip/node_modules/@types/node-fetch/",
           "packageDependencies": [
             ["@types/node-fetch", "npm:2.5.12"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"],
+=======
+<<<<<<< HEAD
+            ["@types/node", "npm:14.17.21"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["form-data", "npm:3.0.0"]
+=======
+            ["@types/node", "npm:16.4.1"],
+            ["form-data", "npm:3.0.1"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
           ],
           "linkType": "HARD",
         }]
@@ -17304,8 +17325,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["file-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.2.0"],
             ["@types/webpack", null],
             ["loader-utils", "npm:2.0.0"],
+<<<<<<< HEAD
             ["schema-utils", "npm:3.1.1"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["schema-utils", "npm:3.1.0"],
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.58.1"]
+=======
+            ["schema-utils", "npm:3.1.1"],
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -22360,8 +22391,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["enquirer", "npm:2.3.6"],
             ["execa", "npm:5.1.1"],
+<<<<<<< HEAD
             ["lilconfig", "npm:2.0.4"],
             ["listr2", "virtual:9bba118e9e86d5b7a263878d5d7ca7d28ac5d563b0e84efa11a4c80b7c40995ff14ae1b8ef34dfb76a0ae0140df0e7183e88ca6788d8e881f901efe04991dedd#npm:3.13.3"],
+=======
+<<<<<<< HEAD
+            ["listr2", "virtual:241056ec2b406cd11fca5bfa059173682edbdc62c7d4cd09c6772ef5ecfacfc5ce5be3b424a0b8f772fecc58765b5ee3a6ecb3ab004f5152e094a7ad7e68bef1#npm:3.12.2"],
+=======
+            ["listr2", "virtual:17d565f3dd6b3843e4c2373b74fe6f47cbca11670ff28b5ecb3509d5b734c5bf48c3bad33706cf7a829772eafcbde415f3c76a572946e97d926e8ace76469020#npm:3.11.0"],
+            ["log-symbols", "npm:4.1.0"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["micromatch", "npm:4.0.4"],
             ["normalize-path", "npm:3.0.0"],
             ["object-inspect", "npm:1.11.0"],
@@ -22394,10 +22434,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:9bba118e9e86d5b7a263878d5d7ca7d28ac5d563b0e84efa11a4c80b7c40995ff14ae1b8ef34dfb76a0ae0140df0e7183e88ca6788d8e881f901efe04991dedd#npm:3.13.3", {
           "packageLocation": "./.yarn/__virtual__/listr2-virtual-5da6ca8e1c/0/cache/listr2-npm-3.13.3-521a6ceab5-3ece0f132c.zip/node_modules/listr2/",
           "packageDependencies": [
             ["listr2", "virtual:9bba118e9e86d5b7a263878d5d7ca7d28ac5d563b0e84efa11a4c80b7c40995ff14ae1b8ef34dfb76a0ae0140df0e7183e88ca6788d8e881f901efe04991dedd#npm:3.13.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:241056ec2b406cd11fca5bfa059173682edbdc62c7d4cd09c6772ef5ecfacfc5ce5be3b424a0b8f772fecc58765b5ee3a6ecb3ab004f5152e094a7ad7e68bef1#npm:3.12.2", {
+          "packageLocation": "./.yarn/__virtual__/listr2-virtual-f43ad315b5/0/cache/listr2-npm-3.12.2-934edf8469-92d72b9b6a.zip/node_modules/listr2/",
+          "packageDependencies": [
+            ["listr2", "virtual:241056ec2b406cd11fca5bfa059173682edbdc62c7d4cd09c6772ef5ecfacfc5ce5be3b424a0b8f772fecc58765b5ee3a6ecb3ab004f5152e094a7ad7e68bef1#npm:3.12.2"],
+=======
+        ["virtual:17d565f3dd6b3843e4c2373b74fe6f47cbca11670ff28b5ecb3509d5b734c5bf48c3bad33706cf7a829772eafcbde415f3c76a572946e97d926e8ace76469020#npm:3.11.0", {
+          "packageLocation": "./.yarn/__virtual__/listr2-virtual-b86ecd0f2c/0/cache/listr2-npm-3.11.0-a2fe7d17b1-6533edd430.zip/node_modules/listr2/",
+          "packageDependencies": [
+            ["listr2", "virtual:17d565f3dd6b3843e4c2373b74fe6f47cbca11670ff28b5ecb3509d5b734c5bf48c3bad33706cf7a829772eafcbde415f3c76a572946e97d926e8ace76469020#npm:3.11.0"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/enquirer", null],
             ["cli-truncate", "npm:2.1.0"],
 <<<<<<< HEAD
@@ -29452,10 +29506,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:05efa92c183b4998c3ea38a6acf6ea4dc3886ab57debcea21e873bcec54594a25106b77251e8d0c73b50e411cb5771a5e9649dbd81c4cbfe31bee91f1090bb29#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-442cdfcf44/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:05efa92c183b4998c3ea38a6acf6ea4dc3886ab57debcea21e873bcec54594a25106b77251e8d0c73b50e411cb5771a5e9649dbd81c4cbfe31bee91f1090bb29#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:0e1a6d17e63b8a441b73c15366790cd1dabe47bdf31f784b21b87701a602f35fb9cb24ac93db2332525ac2c9bd388ef6a63525fe1998a12d0b4d84aa7cba55da#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-d807d5e37e/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:0e1a6d17e63b8a441b73c15366790cd1dabe47bdf31f784b21b87701a602f35fb9cb24ac93db2332525ac2c9bd388ef6a63525fe1998a12d0b4d84aa7cba55da#npm:5.1.3"],
+=======
+        ["virtual:054268e29a036c05da378249588875b9e0a3910ca3f53748371214af37eae115c547f7683f068aac0f2140a80764ed63d8622e6c7b7e845ec8f61a7cecc98965#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-9ea9c6b55a/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:054268e29a036c05da378249588875b9e0a3910ca3f53748371214af37eae115c547f7683f068aac0f2140a80764ed63d8622e6c7b7e845ec8f61a7cecc98965#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29466,8 +29534,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29475,10 +29553,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:2fd881194368f085e1ea8d2b0c07a8c7106af972107a62f2f76d5cae83799e672d26006a3eb1041388eb26ffb98c4c4c28fec7e1e92f6a65d3b5e76a9978cfeb#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-3078a13b9b/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:2fd881194368f085e1ea8d2b0c07a8c7106af972107a62f2f76d5cae83799e672d26006a3eb1041388eb26ffb98c4c4c28fec7e1e92f6a65d3b5e76a9978cfeb#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:1277caf843039e3aad5f174ce85355ba32e543a9bf8107f9f794f0839a5b8dc87544d8b596d3d98fcd540036a936c183b9c6c5581e9fb140f400b54cdf3f8348#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-5a56ec2e30/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:1277caf843039e3aad5f174ce85355ba32e543a9bf8107f9f794f0839a5b8dc87544d8b596d3d98fcd540036a936c183b9c6c5581e9fb140f400b54cdf3f8348#npm:5.1.3"],
+=======
+        ["virtual:0a975e24b96d2f6eb5afc973d6bc1b1327acd08947dce98df33153a1eb5d2241e54545a6f9f962893011ae1daf105d3da8c60ee9329c427ba377de289ce7ced4#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-b703e38836/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:0a975e24b96d2f6eb5afc973d6bc1b1327acd08947dce98df33153a1eb5d2241e54545a6f9f962893011ae1daf105d3da8c60ee9329c427ba377de289ce7ced4#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29489,8 +29581,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29498,10 +29600,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:47e0f2c50f76bb15fd12d9de896691db66c9e5c508587520df5bd403d6ae645bf551d4093f06127821cc93e874875a3c4cfa5c527fbdd82948aba41098bc9588#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-3e48a57a65/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:47e0f2c50f76bb15fd12d9de896691db66c9e5c508587520df5bd403d6ae645bf551d4093f06127821cc93e874875a3c4cfa5c527fbdd82948aba41098bc9588#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:339ca442a50c9ee760ce8a4b43338aa19e119072de1625bb49604055e9d47eec30f0503085c0a99dd20580e905572470a5dfc46222e58ae95971a75eafa12c71#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-9b681fda9f/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:339ca442a50c9ee760ce8a4b43338aa19e119072de1625bb49604055e9d47eec30f0503085c0a99dd20580e905572470a5dfc46222e58ae95971a75eafa12c71#npm:5.1.3"],
+=======
+        ["virtual:1dedfc24dedfb3bc244ca78de92995eaa2f52f5647b14795feab442832c0d028ba6d6964d30ea6786503fc6c50bbd2a3f9205c13a2c7650548bb183c58d130e3#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-692efa3e59/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:1dedfc24dedfb3bc244ca78de92995eaa2f52f5647b14795feab442832c0d028ba6d6964d30ea6786503fc6c50bbd2a3f9205c13a2c7650548bb183c58d130e3#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29512,8 +29628,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29521,10 +29647,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:534b8392218970829a8e14897bd39e87e9bf0b88ef89dd96f835e66bdca462d04d5a003ecdff2edb1814efffd38fd24cc047b52e72941eb84997a0ae07e9711a#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-b45f75a25a/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:534b8392218970829a8e14897bd39e87e9bf0b88ef89dd96f835e66bdca462d04d5a003ecdff2edb1814efffd38fd24cc047b52e72941eb84997a0ae07e9711a#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:387bd2c0308f3d0189109d701ecda30166aed061501f5d30dbad2813435224ac2bfe2ee5b6420059509cfeaa7ec80988fc75d73d1fc4c89208dbde7fa01db797#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-4f0470991f/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:387bd2c0308f3d0189109d701ecda30166aed061501f5d30dbad2813435224ac2bfe2ee5b6420059509cfeaa7ec80988fc75d73d1fc4c89208dbde7fa01db797#npm:5.1.3"],
+=======
+        ["virtual:32b5d5ede01d74659db442fc8fd0fbb08b2312290d0437a277b1f0004731027f9ffe27616715dd7a245de8d83ee2f625d7025c48d3ab346e8ba1918d133e99bd#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-b893fa20ee/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:32b5d5ede01d74659db442fc8fd0fbb08b2312290d0437a277b1f0004731027f9ffe27616715dd7a245de8d83ee2f625d7025c48d3ab346e8ba1918d133e99bd#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29535,8 +29675,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29544,10 +29694,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:5a8e1cc25f476d7afd0f3d8d1d27b91c2a3bcdb53b651d9b19c7b7c2ee0c9c3e38f08691047f35a3bc66bea82255b65daebc482855251ce68beb76a292d4d4ff#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-52c765f328/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:5a8e1cc25f476d7afd0f3d8d1d27b91c2a3bcdb53b651d9b19c7b7c2ee0c9c3e38f08691047f35a3bc66bea82255b65daebc482855251ce68beb76a292d4d4ff#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:5a590d3293ccb920dfcbb0e022bbe6c6f0837a52101ef75637f253ce80ad9a116afb0a4c96f6a3b7a95f15759e981c3f3f09aac8d6200d0cb09f597009f5f1d7#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-3bb3a7df70/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:5a590d3293ccb920dfcbb0e022bbe6c6f0837a52101ef75637f253ce80ad9a116afb0a4c96f6a3b7a95f15759e981c3f3f09aac8d6200d0cb09f597009f5f1d7#npm:5.1.3"],
+=======
+        ["virtual:42f20afc92db3109868ea7a914edda1cd0632a29de0a2674109182e60627294768d959f69b42c4731ebfb8537f12b1617bb7e7a0f08fdc2f5ce5bf3aaebbc1d0#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-465b3b8288/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:42f20afc92db3109868ea7a914edda1cd0632a29de0a2674109182e60627294768d959f69b42c4731ebfb8537f12b1617bb7e7a0f08fdc2f5ce5bf3aaebbc1d0#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29558,8 +29722,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29567,10 +29741,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:728e7d679f697cf89504b39ed6bc996ca2e2681b234f9abcae2d0061d6b8b6b9285b92bd7e22bbe469b11e03ddc2ff6b516e579d69be2e6c13ec0acf1c7afcfd#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-294ebbf6d8/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:728e7d679f697cf89504b39ed6bc996ca2e2681b234f9abcae2d0061d6b8b6b9285b92bd7e22bbe469b11e03ddc2ff6b516e579d69be2e6c13ec0acf1c7afcfd#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:60410cdf16561401a95ab0bfb9adb86e4a19db8c1cb2e5f96b49692b5c6a5d1f99c09c385d4e4e9e1cb74b942f53419ef8359db26df23f1d1e2c4b9e7246ae4c#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-4f446839ef/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:60410cdf16561401a95ab0bfb9adb86e4a19db8c1cb2e5f96b49692b5c6a5d1f99c09c385d4e4e9e1cb74b942f53419ef8359db26df23f1d1e2c4b9e7246ae4c#npm:5.1.3"],
+=======
+        ["virtual:48b3b8e4eb38beb8ac3ccb1f10f0e69324e37ec14274c4d25c28e366377d5875a129b5468de0927d713905b813f3a3d9e90a34a7e6a2e410e53a121af1cd4536#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-ab9cf92950/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:48b3b8e4eb38beb8ac3ccb1f10f0e69324e37ec14274c4d25c28e366377d5875a129b5468de0927d713905b813f3a3d9e90a34a7e6a2e410e53a121af1cd4536#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29581,8 +29769,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29590,10 +29788,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:7419eccf36a504efb02b897fa13e69285c7b2bd2443334c8a62a1d9488eace8d8e01a16846d2d6ee6cd613bbce6773b8f39e04f5dd575f6b5d34b69f998b3fff#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-d09e66b4e0/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:7419eccf36a504efb02b897fa13e69285c7b2bd2443334c8a62a1d9488eace8d8e01a16846d2d6ee6cd613bbce6773b8f39e04f5dd575f6b5d34b69f998b3fff#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:607a753ae576686d1bd9c39288d73378ef27953258981c67b019dbc5f82d72439f989346dd388640226a714fe60f9368c58984e735c639b772e6a3ec89ee4e4c#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-fab59aa9f8/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:607a753ae576686d1bd9c39288d73378ef27953258981c67b019dbc5f82d72439f989346dd388640226a714fe60f9368c58984e735c639b772e6a3ec89ee4e4c#npm:5.1.3"],
+=======
+        ["virtual:4b10ddcbd57dbfd78544753f24fe7b23da28bfad1296b09bad75b42720561127ada82ee870bd9039c4e2da1d528ba961669eada0a125bfbfd6f768ea1ad65bae#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-f43af680b2/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:4b10ddcbd57dbfd78544753f24fe7b23da28bfad1296b09bad75b42720561127ada82ee870bd9039c4e2da1d528ba961669eada0a125bfbfd6f768ea1ad65bae#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29604,8 +29816,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29613,10 +29835,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:7af19718534aa0461cdc8e61166b57dc86254810ae4861380a411e0427f6d12348806263df733c4b050b7736815e0564ade39fb4d06d62a140fc35626f07575f#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-d3c7f77381/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:7af19718534aa0461cdc8e61166b57dc86254810ae4861380a411e0427f6d12348806263df733c4b050b7736815e0564ade39fb4d06d62a140fc35626f07575f#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-11c2c2aff7/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:5.1.3"],
+=======
+        ["virtual:7215ec68e200c544ae312e2a4b102323d6b12d3c68e28cf0df7646abb103c2fc17be0286769fd75f83918b6385598b98d4890f8152c47319b72d96a53dcb8cd4#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-f7bf4d5eab/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:7215ec68e200c544ae312e2a4b102323d6b12d3c68e28cf0df7646abb103c2fc17be0286769fd75f83918b6385598b98d4890f8152c47319b72d96a53dcb8cd4#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29627,8 +29863,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29636,10 +29882,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:7bf71d16a99dd0db3a7f9e7e5739a6586327a78fb3ef53810b10147e5311868c6e08fc6761325eaafe3b40f7be19151001569e898efa1bc02de27c40abbae985#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-c85e894bff/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:7bf71d16a99dd0db3a7f9e7e5739a6586327a78fb3ef53810b10147e5311868c6e08fc6761325eaafe3b40f7be19151001569e898efa1bc02de27c40abbae985#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:72f5c9a2e8df6b80518f4525a0124f47f823cd960bdc9be2ec86a76be7a2925f1e71f833bd63375bc53639b8a36dee0273352d6f97202836c430e241c1bc24ee#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-25c1ca9a16/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:72f5c9a2e8df6b80518f4525a0124f47f823cd960bdc9be2ec86a76be7a2925f1e71f833bd63375bc53639b8a36dee0273352d6f97202836c430e241c1bc24ee#npm:5.1.3"],
+=======
+        ["virtual:737fec1b9c41d55bce0c5eda9ff06731036dbbcec1c5167cc42ec1a2656744eb16809d2067ed95ee67c265ee6dd8ac4f8ac9f0d190d9bd21aa5a63d9fbe6ab83#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-e7470f737a/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:737fec1b9c41d55bce0c5eda9ff06731036dbbcec1c5167cc42ec1a2656744eb16809d2067ed95ee67c265ee6dd8ac4f8ac9f0d190d9bd21aa5a63d9fbe6ab83#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29650,8 +29910,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29659,10 +29929,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:7c22b7260311ce93b0d06a1b1a1580b081be1717e9de61ea2bd55b1150123d2c318a46f94ac83f40c80b808467139fa87cd03ae11d00f00dbfde32496fcb65d8#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-6ab285e3ba/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:7c22b7260311ce93b0d06a1b1a1580b081be1717e9de61ea2bd55b1150123d2c318a46f94ac83f40c80b808467139fa87cd03ae11d00f00dbfde32496fcb65d8#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:7d9687daf0584c46ede0a24f58824ae22c60696acca45dee0c9e6837ebe005fac0408e4b614f30204944f3aa0f0f23c34d863d0b303126d62cdb7106c90ea950#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-4c5ad994e4/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:7d9687daf0584c46ede0a24f58824ae22c60696acca45dee0c9e6837ebe005fac0408e4b614f30204944f3aa0f0f23c34d863d0b303126d62cdb7106c90ea950#npm:5.1.3"],
+=======
+        ["virtual:8047caa6f33b75759146b3cabe5d51a8dc4f69b9050ad1aa75c72c282dfa6d16ed4ef30015fb3774874a7d65efb98396dc668004d8ac5ca6c165b6a83ee52149#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-391752cd99/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:8047caa6f33b75759146b3cabe5d51a8dc4f69b9050ad1aa75c72c282dfa6d16ed4ef30015fb3774874a7d65efb98396dc668004d8ac5ca6c165b6a83ee52149#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29673,8 +29957,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29682,10 +29976,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:8e3d0a461120e01c6600065cf2021be3f68d6a90c711fed57ae92f79a01fc0c91f754a80ae05b4e7bd649f8b507eb69a05ff62fd0b45b68be4064dc58d63b115#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-b6366e6a38/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:8e3d0a461120e01c6600065cf2021be3f68d6a90c711fed57ae92f79a01fc0c91f754a80ae05b4e7bd649f8b507eb69a05ff62fd0b45b68be4064dc58d63b115#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:8de7e01ed053997d45f785a1d9fcb589a83376bf7562ee9ecf3d6cfe66ff8c9903797ab91ee3b691ee144c78b86bf2f7b7ae222b78c413ea11f4939883fcc08f#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-ae26da10f6/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:8de7e01ed053997d45f785a1d9fcb589a83376bf7562ee9ecf3d6cfe66ff8c9903797ab91ee3b691ee144c78b86bf2f7b7ae222b78c413ea11f4939883fcc08f#npm:5.1.3"],
+=======
+        ["virtual:95061ebec488c59cecdd093a251f75e0b0bf0a34bf988ee496f3608df116c9f7e34d09da2ec516eddbc7cd70af15129fb5a329bc60eb650daf3371a49a1dbdec#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-1258c5475f/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:95061ebec488c59cecdd093a251f75e0b0bf0a34bf988ee496f3608df116c9f7e34d09da2ec516eddbc7cd70af15129fb5a329bc60eb650daf3371a49a1dbdec#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29696,8 +30004,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29705,10 +30023,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:945b6050711e55b14979c0a2d001fb064bb88214218c555bc521afd3dc2fb9b5838f09600ed35638d2a4c01b22d97c2b2ba734f91ede3b044e41a6a8b1d602eb#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-ed11505afd/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:945b6050711e55b14979c0a2d001fb064bb88214218c555bc521afd3dc2fb9b5838f09600ed35638d2a4c01b22d97c2b2ba734f91ede3b044e41a6a8b1d602eb#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:a28e2a41db72f126351e400d85c45ed575c50e998bba8a604529fc4afcc60767f6240f5c8937a8175e4dd355ebeb018bb7243c1e23883cfe06226d55c21789d3#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-22bc58111c/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:a28e2a41db72f126351e400d85c45ed575c50e998bba8a604529fc4afcc60767f6240f5c8937a8175e4dd355ebeb018bb7243c1e23883cfe06226d55c21789d3#npm:5.1.3"],
+=======
+        ["virtual:9bb700412ee245bced480a4753928d401e93b8e27f77237feed4f9f7c7a1dedf20532be275dab9e8e0fce76e20f51aaaa6b107c1ba90c611e20ff86e10babdff#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-6f26ab5893/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:9bb700412ee245bced480a4753928d401e93b8e27f77237feed4f9f7c7a1dedf20532be275dab9e8e0fce76e20f51aaaa6b107c1ba90c611e20ff86e10babdff#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29719,8 +30051,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29728,10 +30070,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:98c5e1325607c55ea72d5a0790e0e976f05c35c21398bc29df76e0c62366978db38dcce26da653de7610e29faba37ac9acbcaa156ce14a7679117dbec258ddad#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-7d2b47b52f/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:98c5e1325607c55ea72d5a0790e0e976f05c35c21398bc29df76e0c62366978db38dcce26da653de7610e29faba37ac9acbcaa156ce14a7679117dbec258ddad#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:ae030795405aa587aa1fd8656ab11b26c4cfa8a40b14cb701ff752fb6aa536216fce48569f9e6f2684e7d8bb08ba7f51492e62a95a3be8f8fc375304407e3ca2#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-514eec2fff/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:ae030795405aa587aa1fd8656ab11b26c4cfa8a40b14cb701ff752fb6aa536216fce48569f9e6f2684e7d8bb08ba7f51492e62a95a3be8f8fc375304407e3ca2#npm:5.1.3"],
+=======
+        ["virtual:a1f2293bc410f20be2ab1de34216b3290da53c1d8d06aef825c964874fdc8d4f1df3210eaf92ae0f4165e20bdf9f384125c703a9b966ea536487c374464963e2#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-5aec6a3ad8/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:a1f2293bc410f20be2ab1de34216b3290da53c1d8d06aef825c964874fdc8d4f1df3210eaf92ae0f4165e20bdf9f384125c703a9b966ea536487c374464963e2#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29742,8 +30098,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29751,10 +30117,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:a1d5cc9e8ca28fbb0ace451ab9efe2f6e619c1a6a04c71abf2c4970b4ee9ee79f355171d5f641ad8b0a718e0fba18afaeb614061f6924ce2812b71c282c606d4#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-37bfbdc7c9/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:a1d5cc9e8ca28fbb0ace451ab9efe2f6e619c1a6a04c71abf2c4970b4ee9ee79f355171d5f641ad8b0a718e0fba18afaeb614061f6924ce2812b71c282c606d4#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:af3270ccb598afc4cb716332e9d984988f57094b056b08da49d284b43ede384f8c15171b6e02972dd66c1576194c810034e500c1dc43467e3187f1cfb84ff6ed#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-a9421ee6b7/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:af3270ccb598afc4cb716332e9d984988f57094b056b08da49d284b43ede384f8c15171b6e02972dd66c1576194c810034e500c1dc43467e3187f1cfb84ff6ed#npm:5.1.3"],
+=======
+        ["virtual:a459a0e0b120aad91bd0f6c074a8c42b51cef757f61dc858852ad14b291219eef30e0baa43264cdbed54d01e2ed450d94b81cd3c0e2e754268b42abe2c18ff5a#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-0eccd7f8a7/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:a459a0e0b120aad91bd0f6c074a8c42b51cef757f61dc858852ad14b291219eef30e0baa43264cdbed54d01e2ed450d94b81cd3c0e2e754268b42abe2c18ff5a#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29765,8 +30145,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29774,10 +30164,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:a515af837e716874033e2ceb80c0c42a5add3fc136c4b78018c0932eefa85b1d112bfd5d9b26e2bf21604d2b071a880e5a5cf68496277c0ef3af13d372467c9a#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-deb26478d9/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:a515af837e716874033e2ceb80c0c42a5add3fc136c4b78018c0932eefa85b1d112bfd5d9b26e2bf21604d2b071a880e5a5cf68496277c0ef3af13d372467c9a#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:c308f4faf0836fc683ea0198247ca94730124e1a07d8cba6300d7f93e7460ae333b326a8e9b201686bba6509c15fb3aeb5ee67108f834bbe4b5ef2235707620c#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-456c29c4db/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:c308f4faf0836fc683ea0198247ca94730124e1a07d8cba6300d7f93e7460ae333b326a8e9b201686bba6509c15fb3aeb5ee67108f834bbe4b5ef2235707620c#npm:5.1.3"],
+=======
+        ["virtual:c0c02f30aac80f4f42b53f08e00b53da6b78d78fa40e7d84d2ba8ae987ab3f8b2c589bf083b2465b4be73eb8b95f0bbf87a16bf3d43ffcc1c5bcc2bfc2633f58#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-5e03cfd02d/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:c0c02f30aac80f4f42b53f08e00b53da6b78d78fa40e7d84d2ba8ae987ab3f8b2c589bf083b2465b4be73eb8b95f0bbf87a16bf3d43ffcc1c5bcc2bfc2633f58#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29788,8 +30192,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29797,10 +30211,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:a58c3bdb8effb7034422e8db4ec8a6cb2d3f3eb2a81f8ae81a1e64b6b4c9d853d19f4a2190e0e17390a55df36bc2363e9d604885e01361f3dd0b50f58d1d280a#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-ad827183fa/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:a58c3bdb8effb7034422e8db4ec8a6cb2d3f3eb2a81f8ae81a1e64b6b4c9d853d19f4a2190e0e17390a55df36bc2363e9d604885e01361f3dd0b50f58d1d280a#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:c6b35d564f80807d5e7c87c45696ec622076557faa8cadbbc63c556d5f1f7f5aaa20851f0daaad4732eb512c5ada6206d9d8ea13709c6a0cce099e9f05122a56#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-2b036f7a7b/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:c6b35d564f80807d5e7c87c45696ec622076557faa8cadbbc63c556d5f1f7f5aaa20851f0daaad4732eb512c5ada6206d9d8ea13709c6a0cce099e9f05122a56#npm:5.1.3"],
+=======
+        ["virtual:c31be3beae8be309bfdbcab5d206b2e0d10800da27ecdd55962c2a3ac781166181b2063d032851a7e7e293f2ae0fcf23bbff8a08e11739fca51a8a1f73f08825#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-9873ecc55d/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:c31be3beae8be309bfdbcab5d206b2e0d10800da27ecdd55962c2a3ac781166181b2063d032851a7e7e293f2ae0fcf23bbff8a08e11739fca51a8a1f73f08825#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29811,8 +30239,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29820,10 +30258,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:ad4032cc3bc6c730a013fb4fde9c979cdb4d91bda8ef1358038f4b37aa452de9466c09b4be1b0640bdd64bcb60f69d6a7b687de5c547422ef21526d3bd286d6b#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-8871b94e39/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:ad4032cc3bc6c730a013fb4fde9c979cdb4d91bda8ef1358038f4b37aa452de9466c09b4be1b0640bdd64bcb60f69d6a7b687de5c547422ef21526d3bd286d6b#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:ca188ca178d1bf269230e1ed405745599387f94278af0ab88d8f9e68c23a989100ed1cfd45bfa90a394472fc8b5bf04e884ddd53e63618dc80d73e5904d9e140#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-f4e5d7760a/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:ca188ca178d1bf269230e1ed405745599387f94278af0ab88d8f9e68c23a989100ed1cfd45bfa90a394472fc8b5bf04e884ddd53e63618dc80d73e5904d9e140#npm:5.1.3"],
+=======
+        ["virtual:c5d8ea1c15b2d17493f81d8c263cf99dfd75e390d1d875ac40ffe1a657f8a9eefec18a1f03d435566a6a6d0077e56f1be465f2359a22bf04455030791d071195#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-1f219ff515/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:c5d8ea1c15b2d17493f81d8c263cf99dfd75e390d1d875ac40ffe1a657f8a9eefec18a1f03d435566a6a6d0077e56f1be465f2359a22bf04455030791d071195#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29834,8 +30286,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29843,10 +30305,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:adc13f2c754f2b6462ad82f3c01501c765f54479d639413bdf2f01f50fa5082403065d3f0843ace5c6f93be84fea7360ac4ca209ce41b558358e0df792c979f6#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-3585a149e0/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:adc13f2c754f2b6462ad82f3c01501c765f54479d639413bdf2f01f50fa5082403065d3f0843ace5c6f93be84fea7360ac4ca209ce41b558358e0df792c979f6#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:e14b5b943be738ad5a58a0daa167a24368ca669a3f5843a4f6057d42a158f85f55c150ffddd4b65e5887d180bd3ca2c590f675be1af0e10bc0b7b4841a88b410#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-9e12017dc1/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:e14b5b943be738ad5a58a0daa167a24368ca669a3f5843a4f6057d42a158f85f55c150ffddd4b65e5887d180bd3ca2c590f675be1af0e10bc0b7b4841a88b410#npm:5.1.3"],
+=======
+        ["virtual:cecd404c91ca824cb18837c19fb4ac4948f72ced94785c408b1ebe1e2fc5135c8b52303445bb251fb1b78103d867d57dc61b49e479ddcba46225dac26871ae0b#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-4d0750352d/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:cecd404c91ca824cb18837c19fb4ac4948f72ced94785c408b1ebe1e2fc5135c8b52303445bb251fb1b78103d867d57dc61b49e479ddcba46225dac26871ae0b#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29857,8 +30333,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29866,10 +30352,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:b1118bb625a4caf994e52df69c09424234270b9ac62dff8febf02e0caad8ceba5a444ec1abc78db078fb09219eed939c439cd30b9508c732b58bcf8a61c35289#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-6fb878fdd8/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:b1118bb625a4caf994e52df69c09424234270b9ac62dff8febf02e0caad8ceba5a444ec1abc78db078fb09219eed939c439cd30b9508c732b58bcf8a61c35289#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:e98d3e2ce2f7463628c1a9c44e61d1eb04a427b14b06b5813cb2c49a7192bdaa905ea17376f18099ff810a121e623c960497f277d3d465d4163e3f295d884723#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-12983bd3b8/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:e98d3e2ce2f7463628c1a9c44e61d1eb04a427b14b06b5813cb2c49a7192bdaa905ea17376f18099ff810a121e623c960497f277d3d465d4163e3f295d884723#npm:5.1.3"],
+=======
+        ["virtual:d4ceaa0e67d70f1c44296f50bd6d2b37041407c844730cd2bcbb9f2bd7dabc550bdc073a55fd8efbb423bb52a7bd9a4372cc2e122425ce5d88c8a66f20b2544e#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-b3f243b402/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:d4ceaa0e67d70f1c44296f50bd6d2b37041407c844730cd2bcbb9f2bd7dabc550bdc073a55fd8efbb423bb52a7bd9a4372cc2e122425ce5d88c8a66f20b2544e#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29880,8 +30380,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29889,10 +30399,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:ba9664f9225bae62576d2c7e698e1e089b62417c550cefd40f4948a63f737f515e346427529b1d6883daa2e93c77a04b814b896479d2322e73547062c9ec622d#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-77cfd90e5d/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:ba9664f9225bae62576d2c7e698e1e089b62417c550cefd40f4948a63f737f515e346427529b1d6883daa2e93c77a04b814b896479d2322e73547062c9ec622d#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:f17841ed0d3800daafa729c43a1be789ae39fcca7c1194abf636dee068a3647af1368523d18472a5e08c7241ed6451f556a20bcb0742df124213b13d4a4b1729#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-8bf3745bb3/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:f17841ed0d3800daafa729c43a1be789ae39fcca7c1194abf636dee068a3647af1368523d18472a5e08c7241ed6451f556a20bcb0742df124213b13d4a4b1729#npm:5.1.3"],
+=======
+        ["virtual:d8c434c769c724eb02ebecb55a787c9e573370f6b429a9cb5e140d86ad6576f161532c7cab9630be4f5f7dcf3d0c7f7d134491bb88821a5cc5920be2750694cc#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-efa9cc743a/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:d8c434c769c724eb02ebecb55a787c9e573370f6b429a9cb5e140d86ad6576f161532c7cab9630be4f5f7dcf3d0c7f7d134491bb88821a5cc5920be2750694cc#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29903,8 +30427,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29912,10 +30446,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:c45c32164cdb74aba403ceee915d9855fb522527d3fd60d8161fd5242e824a91798a543f30df60251c51d5b2b3285cd87d67daa82681e4a3fa1610f6582db6aa#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-d77c5b8498/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:c45c32164cdb74aba403ceee915d9855fb522527d3fd60d8161fd5242e824a91798a543f30df60251c51d5b2b3285cd87d67daa82681e4a3fa1610f6582db6aa#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:f90b89bf03da114fbed14f9616837b1a845fcdf09b2582a8c14af99c536587c293bae69b0aa0af90ab07d5cc8adb8596c6d2162e313f42ab7e6209f19632857f#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-06e9193471/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:f90b89bf03da114fbed14f9616837b1a845fcdf09b2582a8c14af99c536587c293bae69b0aa0af90ab07d5cc8adb8596c6d2162e313f42ab7e6209f19632857f#npm:5.1.3"],
+=======
+        ["virtual:f1fb71505e45790701f6c285725cb68f664a76c0b0a595e90bfa26c666519d36be446b6f3b57e4f90e95b66aea32347e99716f5655716484a4b85105f9be31d4#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-c70757f5af/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:f1fb71505e45790701f6c285725cb68f664a76c0b0a595e90bfa26c666519d36be446b6f3b57e4f90e95b66aea32347e99716f5655716484a4b85105f9be31d4#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29926,8 +30474,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -29935,10 +30493,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:da0f134d938bef19eade15612a1f3f7ddb38d5a94531ab7de9fdcedcc0583f0590a6d9093909af5d5b437eeceb2f484a869f594fac1dd57af57d75714196e907#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-94bb9c253f/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
             ["terser-webpack-plugin", "virtual:da0f134d938bef19eade15612a1f3f7ddb38d5a94531ab7de9fdcedcc0583f0590a6d9093909af5d5b437eeceb2f484a869f594fac1dd57af57d75714196e907#npm:5.1.3"],
+=======
+<<<<<<< HEAD
+        ["virtual:fc1c68517cebd9a51c9fb03596e32ffaf0e0eb55651631d10f3b75ce56e73440d88a009743e8cb5812d7a4534f158c424a58c5a968d0b414aba6e368c87d59ac#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-43c12a508b/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:fc1c68517cebd9a51c9fb03596e32ffaf0e0eb55651631d10f3b75ce56e73440d88a009743e8cb5812d7a4534f158c424a58c5a968d0b414aba6e368c87d59ac#npm:5.1.3"],
+=======
+        ["virtual:f8457ade37255251b0e1fcdfd5d5ff8d4fde0c9f73ea4412b5ef953d7456ea21835f0b52581d0b311ed704f09300a154635582c6cf8713dfcd05600cdd6859c3#npm:5.1.4", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-d8ca5ccbfd/0/cache/terser-webpack-plugin-npm-5.1.4-1c3135d8c0-7e5f97ac19.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:f8457ade37255251b0e1fcdfd5d5ff8d4fde0c9f73ea4412b5ef953d7456ea21835f0b52581d0b311ed704f09300a154635582c6cf8713dfcd05600cdd6859c3#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
             ["p-limit", "npm:3.1.0"],
@@ -29949,8 +30521,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serialize-javascript", "npm:6.0.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["source-map", "npm:0.6.1"],
+<<<<<<< HEAD
             ["terser", "npm:5.9.0"],
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"]
+=======
+<<<<<<< HEAD
+            ["terser", "npm:5.7.0"],
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.58.1"]
+=======
+            ["terser", "npm:5.7.1"],
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.46.0"]
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -30390,9 +30972,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:0.97.0", {
           "packageLocation": "./.yarn/cache/ts-json-schema-generator-npm-0.97.0-5b246ab2e0-99a3bff835.zip/node_modules/ts-json-schema-generator/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["ts-json-schema-generator", "npm:0.97.0"],
             ["@types/json-schema", "npm:7.0.9"],
             ["commander", "npm:8.3.0"],
+=======
+<<<<<<< HEAD
+            ["ts-json-schema-generator", "npm:0.96.0"],
+            ["@types/json-schema", "npm:7.0.9"],
+            ["commander", "npm:8.2.0"],
+=======
+            ["ts-json-schema-generator", "npm:0.95.0"],
+            ["@types/json-schema", "npm:7.0.8"],
+            ["commander", "npm:8.0.0"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["fast-json-stable-stringify", "npm:2.1.0"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["glob", "npm:7.2.0"],
             ["json5", "npm:2.2.0"],
             ["safe-stable-stringify", "npm:2.2.0"],
@@ -32156,8 +32751,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-728e7d679f/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32192,10 +32796,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:728e7d679f697cf89504b39ed6bc996ca2e2681b234f9abcae2d0061d6b8b6b9285b92bd7e22bbe469b11e03ddc2ff6b516e579d69be2e6c13ec0acf1c7afcfd#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:f90b89bf03da114fbed14f9616837b1a845fcdf09b2582a8c14af99c536587c293bae69b0aa0af90ab07d5cc8adb8596c6d2162e313f42ab7e6209f19632857f#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:cecd404c91ca824cb18837c19fb4ac4948f72ced94785c408b1ebe1e2fc5135c8b52303445bb251fb1b78103d867d57dc61b49e479ddcba46225dac26871ae0b#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32206,8 +32821,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-7419eccf36/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32242,10 +32866,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:7419eccf36a504efb02b897fa13e69285c7b2bd2443334c8a62a1d9488eace8d8e01a16846d2d6ee6cd613bbce6773b8f39e04f5dd575f6b5d34b69f998b3fff#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:607a753ae576686d1bd9c39288d73378ef27953258981c67b019dbc5f82d72439f989346dd388640226a714fe60f9368c58984e735c639b772e6a3ec89ee4e4c#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:9bb700412ee245bced480a4753928d401e93b8e27f77237feed4f9f7c7a1dedf20532be275dab9e8e0fce76e20f51aaaa6b107c1ba90c611e20ff86e10babdff#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32256,8 +32891,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-8e3d0a4611/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32292,10 +32936,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:8e3d0a461120e01c6600065cf2021be3f68d6a90c711fed57ae92f79a01fc0c91f754a80ae05b4e7bd649f8b507eb69a05ff62fd0b45b68be4064dc58d63b115#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:e98d3e2ce2f7463628c1a9c44e61d1eb04a427b14b06b5813cb2c49a7192bdaa905ea17376f18099ff810a121e623c960497f277d3d465d4163e3f295d884723#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:737fec1b9c41d55bce0c5eda9ff06731036dbbcec1c5167cc42ec1a2656744eb16809d2067ed95ee67c265ee6dd8ac4f8ac9f0d190d9bd21aa5a63d9fbe6ab83#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32306,8 +32961,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-98c5e13256/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32342,10 +33006,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:98c5e1325607c55ea72d5a0790e0e976f05c35c21398bc29df76e0c62366978db38dcce26da653de7610e29faba37ac9acbcaa156ce14a7679117dbec258ddad#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:60410cdf16561401a95ab0bfb9adb86e4a19db8c1cb2e5f96b49692b5c6a5d1f99c09c385d4e4e9e1cb74b942f53419ef8359db26df23f1d1e2c4b9e7246ae4c#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:48b3b8e4eb38beb8ac3ccb1f10f0e69324e37ec14274c4d25c28e366377d5875a129b5468de0927d713905b813f3a3d9e90a34a7e6a2e410e53a121af1cd4536#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32356,8 +33031,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-7c22b72603/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32392,10 +33076,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:7c22b7260311ce93b0d06a1b1a1580b081be1717e9de61ea2bd55b1150123d2c318a46f94ac83f40c80b808467139fa87cd03ae11d00f00dbfde32496fcb65d8#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:af3270ccb598afc4cb716332e9d984988f57094b056b08da49d284b43ede384f8c15171b6e02972dd66c1576194c810034e500c1dc43467e3187f1cfb84ff6ed#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:7215ec68e200c544ae312e2a4b102323d6b12d3c68e28cf0df7646abb103c2fc17be0286769fd75f83918b6385598b98d4890f8152c47319b72d96a53dcb8cd4#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32406,8 +33101,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-47e0f2c50f/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32442,10 +33146,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:47e0f2c50f76bb15fd12d9de896691db66c9e5c508587520df5bd403d6ae645bf551d4093f06127821cc93e874875a3c4cfa5c527fbdd82948aba41098bc9588#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:f17841ed0d3800daafa729c43a1be789ae39fcca7c1194abf636dee068a3647af1368523d18472a5e08c7241ed6451f556a20bcb0742df124213b13d4a4b1729#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:1dedfc24dedfb3bc244ca78de92995eaa2f52f5647b14795feab442832c0d028ba6d6964d30ea6786503fc6c50bbd2a3f9205c13a2c7650548bb183c58d130e3#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32456,8 +33171,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-b1118bb625/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32492,10 +33216,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:b1118bb625a4caf994e52df69c09424234270b9ac62dff8febf02e0caad8ceba5a444ec1abc78db078fb09219eed939c439cd30b9508c732b58bcf8a61c35289#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:fc1c68517cebd9a51c9fb03596e32ffaf0e0eb55651631d10f3b75ce56e73440d88a009743e8cb5812d7a4534f158c424a58c5a968d0b414aba6e368c87d59ac#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:f1fb71505e45790701f6c285725cb68f664a76c0b0a595e90bfa26c666519d36be446b6f3b57e4f90e95b66aea32347e99716f5655716484a4b85105f9be31d4#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32506,8 +33241,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-da0f134d93/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32542,10 +33286,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:da0f134d938bef19eade15612a1f3f7ddb38d5a94531ab7de9fdcedcc0583f0590a6d9093909af5d5b437eeceb2f484a869f594fac1dd57af57d75714196e907#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:ae030795405aa587aa1fd8656ab11b26c4cfa8a40b14cb701ff752fb6aa536216fce48569f9e6f2684e7d8bb08ba7f51492e62a95a3be8f8fc375304407e3ca2#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:c31be3beae8be309bfdbcab5d206b2e0d10800da27ecdd55962c2a3ac781166181b2063d032851a7e7e293f2ae0fcf23bbff8a08e11739fca51a8a1f73f08825#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32556,8 +33311,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-adc13f2c75/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32592,10 +33356,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:adc13f2c754f2b6462ad82f3c01501c765f54479d639413bdf2f01f50fa5082403065d3f0843ace5c6f93be84fea7360ac4ca209ce41b558358e0df792c979f6#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:387bd2c0308f3d0189109d701ecda30166aed061501f5d30dbad2813435224ac2bfe2ee5b6420059509cfeaa7ec80988fc75d73d1fc4c89208dbde7fa01db797#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:32b5d5ede01d74659db442fc8fd0fbb08b2312290d0437a277b1f0004731027f9ffe27616715dd7a245de8d83ee2f625d7025c48d3ab346e8ba1918d133e99bd#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32606,8 +33381,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-534b839221/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32642,10 +33426,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:534b8392218970829a8e14897bd39e87e9bf0b88ef89dd96f835e66bdca462d04d5a003ecdff2edb1814efffd38fd24cc047b52e72941eb84997a0ae07e9711a#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:ca188ca178d1bf269230e1ed405745599387f94278af0ab88d8f9e68c23a989100ed1cfd45bfa90a394472fc8b5bf04e884ddd53e63618dc80d73e5904d9e140#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:4b10ddcbd57dbfd78544753f24fe7b23da28bfad1296b09bad75b42720561127ada82ee870bd9039c4e2da1d528ba961669eada0a125bfbfd6f768ea1ad65bae#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32656,8 +33451,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-05efa92c18/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32692,10 +33496,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:05efa92c183b4998c3ea38a6acf6ea4dc3886ab57debcea21e873bcec54594a25106b77251e8d0c73b50e411cb5771a5e9649dbd81c4cbfe31bee91f1090bb29#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:5a590d3293ccb920dfcbb0e022bbe6c6f0837a52101ef75637f253ce80ad9a116afb0a4c96f6a3b7a95f15759e981c3f3f09aac8d6200d0cb09f597009f5f1d7#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:c5d8ea1c15b2d17493f81d8c263cf99dfd75e390d1d875ac40ffe1a657f8a9eefec18a1f03d435566a6a6d0077e56f1be465f2359a22bf04455030791d071195#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32706,8 +33521,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-7af1971853/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32742,10 +33566,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:7af19718534aa0461cdc8e61166b57dc86254810ae4861380a411e0427f6d12348806263df733c4b050b7736815e0564ade39fb4d06d62a140fc35626f07575f#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:c6b35d564f80807d5e7c87c45696ec622076557faa8cadbbc63c556d5f1f7f5aaa20851f0daaad4732eb512c5ada6206d9d8ea13709c6a0cce099e9f05122a56#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:a1f2293bc410f20be2ab1de34216b3290da53c1d8d06aef825c964874fdc8d4f1df3210eaf92ae0f4165e20bdf9f384125c703a9b966ea536487c374464963e2#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32756,8 +33591,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-945b605071/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32792,10 +33636,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:945b6050711e55b14979c0a2d001fb064bb88214218c555bc521afd3dc2fb9b5838f09600ed35638d2a4c01b22d97c2b2ba734f91ede3b044e41a6a8b1d602eb#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:c308f4faf0836fc683ea0198247ca94730124e1a07d8cba6300d7f93e7460ae333b326a8e9b201686bba6509c15fb3aeb5ee67108f834bbe4b5ef2235707620c#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:d4ceaa0e67d70f1c44296f50bd6d2b37041407c844730cd2bcbb9f2bd7dabc550bdc073a55fd8efbb423bb52a7bd9a4372cc2e122425ce5d88c8a66f20b2544e#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32806,8 +33661,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-a515af837e/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32842,10 +33706,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:a515af837e716874033e2ceb80c0c42a5add3fc136c4b78018c0932eefa85b1d112bfd5d9b26e2bf21604d2b071a880e5a5cf68496277c0ef3af13d372467c9a#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:7d9687daf0584c46ede0a24f58824ae22c60696acca45dee0c9e6837ebe005fac0408e4b614f30204944f3aa0f0f23c34d863d0b303126d62cdb7106c90ea950#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:a459a0e0b120aad91bd0f6c074a8c42b51cef757f61dc858852ad14b291219eef30e0baa43264cdbed54d01e2ed450d94b81cd3c0e2e754268b42abe2c18ff5a#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32856,8 +33731,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-c45c32164c/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32892,10 +33776,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:c45c32164cdb74aba403ceee915d9855fb522527d3fd60d8161fd5242e824a91798a543f30df60251c51d5b2b3285cd87d67daa82681e4a3fa1610f6582db6aa#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:8de7e01ed053997d45f785a1d9fcb589a83376bf7562ee9ecf3d6cfe66ff8c9903797ab91ee3b691ee144c78b86bf2f7b7ae222b78c413ea11f4939883fcc08f#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:d8c434c769c724eb02ebecb55a787c9e573370f6b429a9cb5e140d86ad6576f161532c7cab9630be4f5f7dcf3d0c7f7d134491bb88821a5cc5920be2750694cc#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32906,8 +33801,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-ad4032cc3b/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32942,10 +33846,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:ad4032cc3bc6c730a013fb4fde9c979cdb4d91bda8ef1358038f4b37aa452de9466c09b4be1b0640bdd64bcb60f69d6a7b687de5c547422ef21526d3bd286d6b#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:72f5c9a2e8df6b80518f4525a0124f47f823cd960bdc9be2ec86a76be7a2925f1e71f833bd63375bc53639b8a36dee0273352d6f97202836c430e241c1bc24ee#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:95061ebec488c59cecdd093a251f75e0b0bf0a34bf988ee496f3608df116c9f7e34d09da2ec516eddbc7cd70af15129fb5a329bc60eb650daf3371a49a1dbdec#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -32956,8 +33871,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-a58c3bdb8e/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -32992,10 +33916,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:a58c3bdb8effb7034422e8db4ec8a6cb2d3f3eb2a81f8ae81a1e64b6b4c9d853d19f4a2190e0e17390a55df36bc2363e9d604885e01361f3dd0b50f58d1d280a#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:c0c02f30aac80f4f42b53f08e00b53da6b78d78fa40e7d84d2ba8ae987ab3f8b2c589bf083b2465b4be73eb8b95f0bbf87a16bf3d43ffcc1c5bcc2bfc2633f58#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -33006,8 +33941,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-2fd8811943/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -33042,10 +33986,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:2fd881194368f085e1ea8d2b0c07a8c7106af972107a62f2f76d5cae83799e672d26006a3eb1041388eb26ffb98c4c4c28fec7e1e92f6a65d3b5e76a9978cfeb#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:1277caf843039e3aad5f174ce85355ba32e543a9bf8107f9f794f0839a5b8dc87544d8b596d3d98fcd540036a936c183b9c6c5581e9fb140f400b54cdf3f8348#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:054268e29a036c05da378249588875b9e0a3910ca3f53748371214af37eae115c547f7683f068aac0f2140a80764ed63d8622e6c7b7e845ec8f61a7cecc98965#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -33056,8 +34011,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-7bf71d16a9/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -33092,10 +34056,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:7bf71d16a99dd0db3a7f9e7e5739a6586327a78fb3ef53810b10147e5311868c6e08fc6761325eaafe3b40f7be19151001569e898efa1bc02de27c40abbae985#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:a28e2a41db72f126351e400d85c45ed575c50e998bba8a604529fc4afcc60767f6240f5c8937a8175e4dd355ebeb018bb7243c1e23883cfe06226d55c21789d3#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:f8457ade37255251b0e1fcdfd5d5ff8d4fde0c9f73ea4412b5ef953d7456ea21835f0b52581d0b311ed704f09300a154635582c6cf8713dfcd05600cdd6859c3#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -33106,8 +34081,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-ba9664f922/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -33142,10 +34126,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:ba9664f9225bae62576d2c7e698e1e089b62417c550cefd40f4948a63f737f515e346427529b1d6883daa2e93c77a04b814b896479d2322e73547062c9ec622d#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:339ca442a50c9ee760ce8a4b43338aa19e119072de1625bb49604055e9d47eec30f0503085c0a99dd20580e905572470a5dfc46222e58ae95971a75eafa12c71#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:8047caa6f33b75759146b3cabe5d51a8dc4f69b9050ad1aa75c72c282dfa6d16ed4ef30015fb3774874a7d65efb98396dc668004d8ac5ca6c165b6a83ee52149#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -33156,8 +34151,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-a1d5cc9e8c/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -33192,10 +34196,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:a1d5cc9e8ca28fbb0ace451ab9efe2f6e619c1a6a04c71abf2c4970b4ee9ee79f355171d5f641ad8b0a718e0fba18afaeb614061f6924ce2812b71c282c606d4#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:e14b5b943be738ad5a58a0daa167a24368ca669a3f5843a4f6057d42a158f85f55c150ffddd4b65e5887d180bd3ca2c590f675be1af0e10bc0b7b4841a88b410#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:0a975e24b96d2f6eb5afc973d6bc1b1327acd08947dce98df33153a1eb5d2241e54545a6f9f962893011ae1daf105d3da8c60ee9329c427ba377de289ce7ced4#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -33206,8 +34221,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-5a8e1cc25f/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
+<<<<<<< HEAD
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"],
+=======
+<<<<<<< HEAD
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.58.1"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["@types/eslint-scope", "npm:3.7.0"],
+=======
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.46.0"],
+            ["@types/eslint-scope", "npm:3.7.1"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
             ["@types/json-schema", "npm:7.0.9"],
@@ -33242,10 +34266,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.1"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:5a8e1cc25f476d7afd0f3d8d1d27b91c2a3bcdb53b651d9b19c7b7c2ee0c9c3e38f08691047f35a3bc66bea82255b65daebc482855251ce68beb76a292d4d4ff#npm:5.1.3"],
             ["watchpack", "npm:2.3.0"],
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.2"]
+=======
+<<<<<<< HEAD
+            ["terser-webpack-plugin", "virtual:0e1a6d17e63b8a441b73c15366790cd1dabe47bdf31f784b21b87701a602f35fb9cb24ac93db2332525ac2c9bd388ef6a63525fe1998a12d0b4d84aa7cba55da#npm:5.1.3"],
+=======
+            ["terser-webpack-plugin", "virtual:42f20afc92db3109868ea7a914edda1cd0632a29de0a2674109182e60627294768d959f69b42c4731ebfb8537f12b1617bb7e7a0f08fdc2f5ce5bf3aaebbc1d0#npm:5.1.4"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["watchpack", "npm:2.2.0"],
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.0"],
+            ["webpack-sources", "npm:3.2.0"]
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -33323,10 +34358,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33373,10 +34419,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33423,10 +34480,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33473,10 +34541,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33523,10 +34602,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33573,10 +34663,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33623,10 +34724,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33673,10 +34785,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33723,10 +34846,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33773,10 +34907,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33823,10 +34968,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33873,10 +35029,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33923,10 +35090,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -33973,10 +35151,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -34023,10 +35212,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -34073,10 +35273,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -34123,10 +35334,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -34173,10 +35395,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -34223,10 +35456,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -34273,10 +35517,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -34323,10 +35578,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -34373,10 +35639,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastest-levenshtein", "npm:1.0.12"],
             ["import-local", "npm:3.0.2"],
             ["interpret", "npm:2.2.0"],
+<<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
+<<<<<<< HEAD
             ["webpack-dev-server", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:3.11.3"],
+=======
+=======
+            ["rechoir", "npm:0.7.1"],
+            ["v8-compile-cache", "npm:2.3.0"],
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.46.0"],
+            ["webpack-bundle-analyzer", "npm:4.4.2"],
+>>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
+            ["webpack-dev-server", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:3.11.2"],
+>>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [

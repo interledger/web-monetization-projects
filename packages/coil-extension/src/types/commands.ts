@@ -189,6 +189,7 @@ export type ToBackgroundMessage =
   | ContentScriptInit
   | FetchYoutubeChannelId
   | SendTip
+  | InitiateTip
   | FrameStateChange
   | UnloadFrame
   | CheckIFrameIsAllowedFromIFrameContentScript
@@ -304,9 +305,6 @@ export interface SetMonetizationState {
  */
 export interface SendTip {
   command: 'sendTip'
-  data: {
-    amount: number
-  }
 }
 
 /**
@@ -315,6 +313,27 @@ export interface SendTip {
  */
 export interface SendTipResult {
   success: boolean
+}
+
+/**
+ * popup -> background
+ * browser.runtime.sendMessage
+ */
+export interface InitiateTip {
+  command: 'initiateTip'
+  data: {
+    amount: number
+    paymentMethodId: string
+  }
+}
+
+/**
+ * background -> popup
+ * reply to browser.runtime.sendMessage
+ */
+export interface InitiateTipResult {
+  success: boolean
+  id?: string
 }
 
 /**

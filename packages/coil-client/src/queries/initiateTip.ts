@@ -40,6 +40,7 @@ export interface InitiateTipInput {
   amount: string
   destination: string
   origin?: string
+  paymentMethodId: string
 }
 
 export async function initiateTip(
