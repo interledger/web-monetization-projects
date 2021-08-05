@@ -9,6 +9,7 @@ import {
   refreshBtpToken,
   whoAmI,
   featureEnabled,
+  tipPreview,
   initiateTip,
   minTipLimit
 } from './queries'
@@ -39,6 +40,7 @@ export class GraphQlClient {
   public whoAmI = whoAmI
   public adaptedPage = adaptedPage
   public featureEnabled = featureEnabled
+  public tipPreview = tipPreview
   public initiateTip = initiateTip
   public minTipLimit = minTipLimit
 
