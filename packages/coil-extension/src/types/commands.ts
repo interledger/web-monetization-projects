@@ -189,6 +189,7 @@ export type ToBackgroundMessage =
   | ContentScriptInit
   | FetchYoutubeChannelId
   | SendTip
+  | TipPreview
   | InitiateTip
   | FrameStateChange
   | UnloadFrame
@@ -319,11 +320,32 @@ export interface SendTipResult {
  * popup -> background
  * browser.runtime.sendMessage
  */
+export interface TipPreview {
+  command: 'tipPreview'
+  data: {
+    amount: number
+  }
+}
+
+/**
+ * background -> popup
+ * reply to browser.runtime.sendMessage
+ */
+export interface TipPreviewResult {
+  success: boolean
+  message?: string
+  creditCardCharge: string
+  tipCreditCharge: string
+}
+
+/**
+ * popup -> background
+ * browser.runtime.sendMessage
+ */
 export interface InitiateTip {
   command: 'initiateTip'
   data: {
     amount: number
-    paymentMethodId: string
   }
 }
 
@@ -336,6 +358,19 @@ export interface InitiateTipResult {
   id?: string
 }
 
+/**
+ *  background -> content
+ *  browser.tabs.sendMessage
+ */
+export interface TipQuoteResult {
+  command: 'tipQuote'
+  data: {
+    paymentPointer: string
+    amount: string
+    assetCode: string
+    assetScale: number
+  }
+}
 /**
  *  background -> content
  *  browser.tabs.sendMessage

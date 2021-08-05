@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { styled, Box } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close'
 import { motion } from 'framer-motion'
@@ -6,8 +6,12 @@ import { motion } from 'framer-motion'
 import { FitTextWrapper } from '../FitTextWrapper'
 import { Colors } from '../../../shared-theme/colors'
 import { TipPaymentDebits } from '../TipPaymentDebits'
-import { InitiateTip, InitiateTipResult } from '../../../types/commands'
-import { useStore } from '../../context/storeContext'
+import {
+  InitiateTip,
+  InitiateTipResult,
+  TipPreview,
+  TipPreviewResult
+} from '../../../types/commands'
 import { useHost } from '../../context/popupHostContext'
 
 import { TipProcessStep, ITipView } from './TipRouter'
@@ -90,73 +94,55 @@ const IconButton = styled('button')({
 export const TipConfirmView = (
   props: Omit<ITipView, 'setCurrentTipAmount'>
 ): React.ReactElement => {
+  const [tipCreditCharge, setTipCreditCharge] = useState(0)
+  const [creditCardCharge, setCreditCardCharge] = useState(0)
   const { runtime } = useHost()
-  const { user } = useStore()
-  const { tipCreditBalance } = user?.tipSettings || {}
   const { currentTipAmount, setTipProcessStep } = props
 
   const [animateForward, setAnimateForward] = useState<boolean>(true)
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
 
-  const getTipCreditCharge = (): number => {
-    const creditBalance = tipCreditBalance || 0
-    if (creditBalance >= currentTipAmount) {
-      return currentTipAmount
-    } else {
-      return creditBalance
+  const getTipQuotePromise = async (tipAmount: number) => {
+    const message: TipPreview = {
+      command: 'tipPreview',
+      data: {
+        amount: tipAmount
+      }
     }
+    return new Promise(resolve => {
+      runtime.sendMessage(message, (result: TipPreviewResult) => {
+        resolve(result)
+      })
+    }) as Promise<TipPreviewResult>
+  }
+  const getTipQuote = async (tipAmount: number) => {
+    const tipQuote = await getTipQuotePromise(tipAmount)
+    setTipCreditCharge(Number(tipQuote.tipCreditCharge))
+    setCreditCardCharge(Number(tipQuote.creditCardCharge))
   }
 
-  const getCreditCardCharge = (): number => {
-    const tipCreditCharge = getTipCreditCharge()
-    if (currentTipAmount > tipCreditCharge) {
-      const chargeAmount = currentTipAmount - tipCreditCharge
-      return chargeAmount
-    } else {
-      return 0
+  const sendTip = async (tipAmount: number) => {
+    const message: InitiateTip = {
+      command: 'initiateTip',
+      data: {
+        amount: tipAmount
+      }
     }
+
+    return new Promise(resolve => {
+      runtime.sendMessage(message, (result: InitiateTipResult) => {
+        resolve(result)
+      })
+    }) as Promise<InitiateTipResult>
   }
-  const tipCreditCharge = getTipCreditCharge()
-  const creditCardCharge = getCreditCardCharge()
 
   const handleSubmit = async () => {
     setSubmitError(null)
     setIsSubmitting(true)
-
-    //* currently the front end is responsible for splitting a tip between tipCredits and credit card */
-    // TODO: move this logic to the backend - front end should simply send the tip amount
-    // if the tipCreditAmount > 0
-    // get the tip credits payment method id
-    // submit a tip with credits
-    // if it errors out -> fire off UI error
-    // success -> continue
-
-    // if the creditCardAmount > 0
-    // get the credit card payment method id
-    // submit a tip with credit card
-    // if it errors out -> cancel tipCredit tip -> fire off UI error
-    // success -> update to next step
     try {
-      // get payment method ids
-      const tipCreditPaymentMethodId = user?.paymentMethods?.find(
-        method => method.type === 'tipCredit'
-      )?.id
-      const creditCardPaymentMethodId = user?.paymentMethods?.find(
-        method => method.type === 'tipCredit'
-      )?.id
-
-      if (!tipCreditPaymentMethodId || !creditCardPaymentMethodId) {
-        throw new Error('No payment method available')
-      }
-
-      // process payments
-      const { success: tipCreditTipSuccess, id: tipCreditTipId } =
-        await sendTip(tipCreditCharge, tipCreditPaymentMethodId)
-      const { success: creditCardTipSuccess, id: creditCardTipId } =
-        await sendTip(creditCardCharge, creditCardPaymentMethodId)
-
-      if (tipCreditTipSuccess || creditCardTipSuccess) {
+      const { success } = await sendTip(currentTipAmount)
+      if (success) {
         setTipProcessStep(TipProcessStep.TIP_COMPLETE)
       } else {
         throw new Error('Something went wrong')
@@ -175,22 +161,6 @@ export const TipConfirmView = (
 
   const handleClose = () => {
     window.close()
-  }
-
-  const sendTip = async (tipAmount: number, paymentMethodId: string) => {
-    const message: InitiateTip = {
-      command: 'initiateTip',
-      data: {
-        amount: tipAmount,
-        paymentMethodId
-      }
-    }
-
-    return new Promise(resolve => {
-      runtime.sendMessage(message, (result: InitiateTipResult) => {
-        resolve(result)
-      })
-    }) as Promise<InitiateTipResult>
   }
 
   // Animation Settings
@@ -225,6 +195,10 @@ export const TipConfirmView = (
     exit: (custom: boolean) =>
       custom ? progressExitAnimation : regressExitAnimation
   }
+
+  useEffect(() => {
+    getTipQuote(currentTipAmount)
+  }, [currentTipAmount])
 
   // Render
   return (

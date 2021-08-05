@@ -424,13 +424,11 @@ export class BackgroundScript {
       case 'sendTip':
         sendResponse(await this.sendTip())
         break
+      case 'tipPreview':
+        sendResponse(await this.tipPreview(request.data.amount))
+        break
       case 'initiateTip':
-        sendResponse(
-          await this.initiateTip(
-            request.data.amount,
-            request.data.paymentMethodId
-          )
-        )
+        sendResponse(await this.initiateTip(request.data.amount))
         break
       case 'checkIFrameIsAllowedFromIFrameContentScript':
         sendResponse(
@@ -839,9 +837,68 @@ export class BackgroundScript {
     }
   }
 
+  private async tipPreview(
+    tip: number
+  ): Promise<{
+    success: boolean
+    message?: string
+    creditCardCharge?: string
+    tipCreditCharge?: string
+  }> {
+    const tabId = this.activeTab
+    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
+    if (!streamId) {
+      this.log('can not find top frame for tabId=%d', tabId)
+      return { success: false }
+    }
+    const stream = this.streams.getStream(streamId)
+    const token = this.auth.getStoredToken()
+
+    // TODO: return detailed errors
+    if (!stream || !token) {
+      this.log(
+        'tipPreview: no stream | token. !!stream !!token ',
+        !!stream,
+        !!token
+      )
+      return { success: false }
+    }
+
+    const receiver = stream.getPaymentPointer()
+    const { exchangeRate } = stream.getAssetDetails()
+
+    // Set tip amount
+    const amount = Math.floor(tip * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
+
+    // Set active tab url
+    const frameId = 0
+    const frame = notNullOrUndef(
+      this.framesService.getFrame({ frameId, tabId })
+    )
+    const activeTabUrl = frame.href
+
+    try {
+      this.log('tipPreview: requesting tip preview')
+
+      const result = await this.client.tipPreview(token, {
+        amount,
+        destination: receiver,
+        origin: activeTabUrl
+      })
+
+      return {
+        success: true,
+        creditCardCharge: result.charges.creditCardCharge,
+        tipCreditCharge: result.charges.tipCreditCharge
+      }
+    } catch (e) {
+      this.log(`tipPreview: error. msg=${e.message}`)
+      return { success: false, message: e.message }
+    }
+  }
+
   private async initiateTip(
-    tip: number,
-    paymentMethodId: string
+    tip: number
   ): Promise<{ success: boolean; id?: string }> {
     const tabId = this.activeTab
     const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
@@ -881,8 +938,7 @@ export class BackgroundScript {
       const result = await this.client.initiateTip(token, {
         amount,
         destination: receiver,
-        origin: activeTabUrl,
-        paymentMethodId
+        origin: activeTabUrl
       })
       this.log(`initiateTip: sent tip to ${receiver}`, result)
       const message: TipSent = {
