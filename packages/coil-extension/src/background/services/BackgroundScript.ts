@@ -837,9 +837,7 @@ export class BackgroundScript {
     }
   }
 
-  private async tipPreview(
-    tip: number
-  ): Promise<{
+  private async tipPreview(tip: number): Promise<{
     success: boolean
     message?: string
     creditCardCharge?: string
@@ -897,9 +895,7 @@ export class BackgroundScript {
     }
   }
 
-  private async initiateTip(
-    tip: number
-  ): Promise<{ success: boolean; id?: string }> {
+  private async initiateTip(tip: number): Promise<{ success: boolean }> {
     const tabId = this.activeTab
     const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
     if (!streamId) {
@@ -951,7 +947,7 @@ export class BackgroundScript {
         }
       }
       this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
-      return { success: true, id: result.tip.id }
+      return { success: true }
     } catch (e) {
       this.log(`initiateTip: error. msg=${e.message}`)
       return { success: false }

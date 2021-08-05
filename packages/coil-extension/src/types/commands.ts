@@ -355,7 +355,6 @@ export interface InitiateTip {
  */
 export interface InitiateTipResult {
   success: boolean
-  id?: string
 }
 
 /**
