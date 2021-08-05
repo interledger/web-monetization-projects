@@ -101,7 +101,7 @@
     "@wext/shipit": "0.2.1",
     "@yarnpkg/pnpify": "2.4.0",
     "JSON2016": "1.0.0",
-    "addons-linter": "3.10.0",
+    "addons-linter": "3.11.0",
     "copy-webpack-plugin": "9.0.1",
     "crx-hotreload": "1.0.6",
     "eslint": "7.32.0",
