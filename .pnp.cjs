@@ -2834,7 +2834,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
-            ["http-server", "npm:0.12.3"],
+            ["http-server", "npm:13.0.0"],
             ["husky", "npm:7.0.1"],
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
@@ -13386,19 +13386,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["ecstatic", [
-        ["npm:3.3.2", {
-          "packageLocation": "./.yarn/cache/ecstatic-npm-3.3.2-35099559aa-61787fe020.zip/node_modules/ecstatic/",
-          "packageDependencies": [
-            ["ecstatic", "npm:3.3.2"],
-            ["he", "npm:1.2.0"],
-            ["mime", "npm:1.6.0"],
-            ["minimist", "npm:1.2.5"],
-            ["url-join", "npm:2.0.5"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["ee-first", [
         ["npm:1.1.1", {
           "packageLocation": "./.yarn/cache/ee-first-npm-1.1.1-33f8535b39-1b4cac778d.zip/node_modules/ee-first/",
@@ -16829,20 +16816,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["http-server", [
-        ["npm:0.12.3", {
-          "packageLocation": "./.yarn/cache/http-server-npm-0.12.3-798b1680fa-fdd8652638.zip/node_modules/http-server/",
+        ["npm:13.0.0", {
+          "packageLocation": "./.yarn/cache/http-server-npm-13.0.0-898908230b-a4d25a5b78.zip/node_modules/http-server/",
           "packageDependencies": [
-            ["http-server", "npm:0.12.3"],
+            ["http-server", "npm:13.0.0"],
             ["basic-auth", "npm:1.1.0"],
             ["colors", "npm:1.4.0"],
             ["corser", "npm:2.0.1"],
-            ["ecstatic", "npm:3.3.2"],
+            ["he", "npm:1.2.0"],
             ["http-proxy", "npm:1.18.1"],
+            ["mime", "npm:1.6.0"],
             ["minimist", "npm:1.2.5"],
             ["opener", "npm:1.5.2"],
             ["portfinder", "npm:1.0.28"],
             ["secure-compare", "npm:3.0.1"],
-            ["union", "npm:0.5.0"]
+            ["union", "npm:0.5.0"],
+            ["url-join", "npm:2.0.5"]
           ],
           "linkType": "HARD",
         }]
