@@ -1526,7 +1526,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 2.4.0
     JSON2016: 1.0.0
-    addons-linter: 3.11.0
+    addons-linter: 3.12.0
     copy-webpack-plugin: 9.0.1
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -2384,7 +2384,7 @@ __metadata:
     "@webmonetization/wext": ^0.0.0
     "@yarnpkg/pnpify": 2.4.0
     JSON2016: 1.0.0
-    addons-linter: 3.11.0
+    addons-linter: 3.12.0
     copy-webpack-plugin: 9.0.1
     crx-hotreload: 1.0.6
     css-loader: 6.2.0
@@ -3576,10 +3576,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:3.3.13":
-  version: 3.3.13
-  resolution: "@mdn/browser-compat-data@npm:3.3.13"
-  checksum: 51bb5b0fb3589d9f1bdbc0dab4d26e0ce1ffe98fa83510d19cba4fa672365ba9c14351713e4fd3b46dca6ee30f8e60916d5e845379428ba25ec2d62b9e405e54
+"@mdn/browser-compat-data@npm:3.3.14":
+  version: 3.3.14
+  resolution: "@mdn/browser-compat-data@npm:3.3.14"
+  checksum: 0363cc9cb3cef308b78b3ba82af0542ad928bacecc95ee1e849c134c3eb866f4771df9fb064fd4da42fdb28e2d6932e0abb6e47ed47fbc42a26a9b0a5aee1e9f
   languageName: node
   linkType: hard
 
@@ -5647,11 +5647,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:3.11.0":
-  version: 3.11.0
-  resolution: "addons-linter@npm:3.11.0"
+"addons-linter@npm:3.12.0":
+  version: 3.12.0
+  resolution: "addons-linter@npm:3.12.0"
   dependencies:
-    "@mdn/browser-compat-data": 3.3.13
+    "@mdn/browser-compat-data": 3.3.14
     addons-scanner-utils: 4.9.0
     ajv: 6.12.6
     ajv-merge-patch: 4.1.0
@@ -5679,11 +5679,11 @@ __metadata:
     source-map-support: 0.5.19
     tosource: 1.0.0
     upath: 2.0.1
-    yargs: 17.0.1
+    yargs: 17.1.0
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: 1aa20638af28c0b3a7a651a3dfe6f12ddd8e8293c7bfe13109ceee95b48b4a455ac644b64e9f603f6bcd22f7a0322c3949667020c90bedd78f4dfe35187aa382
+  checksum: 1a0006e45f0d929d2ee1c6fc82d7ff427e2548958038b95479fbbc167516a5051df8a21da70aa4e828015f5c9313f0e89559582f2ebf6f7bceaae286f6a54e9e
   languageName: node
   linkType: hard
 
@@ -23220,7 +23220,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"yargs@npm:17.0.1, yargs@npm:^17.0.0":
+"yargs@npm:17.0.1":
   version: 17.0.1
   resolution: "yargs@npm:17.0.1"
   dependencies:
@@ -23232,6 +23232,21 @@ sjcl@sublimator/sjcl:
     y18n: ^5.0.5
     yargs-parser: ^20.2.2
   checksum: 4ffffa5a82647e5d07840b64bed88c365b901d3d4a4c51745dddb10d177902d85014026d7224aae18c42df9ca3f75a41c5aff556e5342e2f8ffc5177d149cd17
+  languageName: node
+  linkType: hard
+
+"yargs@npm:17.1.0, yargs@npm:^17.0.0":
+  version: 17.1.0
+  resolution: "yargs@npm:17.1.0"
+  dependencies:
+    cliui: ^7.0.2
+    escalade: ^3.1.1
+    get-caller-file: ^2.0.5
+    require-directory: ^2.1.1
+    string-width: ^4.2.0
+    y18n: ^5.0.5
+    yargs-parser: ^20.2.2
+  checksum: 259d496db8fd499debfb0e8676c1d4c0a8259c730ca31a4ca1047841c407aa4099f5f008c16b1adcf04b6015a4aa6c758a59d583aab9df89a288c75ce8a621e1
   languageName: node
   linkType: hard
 
