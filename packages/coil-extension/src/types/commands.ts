@@ -190,7 +190,7 @@ export type ToBackgroundMessage =
   | FetchYoutubeChannelId
   | SendTip
   | TipPreview
-  | InitiateTip
+  | Tip
   | FrameStateChange
   | UnloadFrame
   | CheckIFrameIsAllowedFromIFrameContentScript
@@ -342,8 +342,8 @@ export interface TipPreviewResult {
  * popup -> background
  * browser.runtime.sendMessage
  */
-export interface InitiateTip {
-  command: 'initiateTip'
+export interface Tip {
+  command: 'tip'
   data: {
     amount: number
   }
@@ -353,7 +353,7 @@ export interface InitiateTip {
  * background -> popup
  * reply to browser.runtime.sendMessage
  */
-export interface InitiateTipResult {
+export interface TipResult {
   success: boolean
 }
 
