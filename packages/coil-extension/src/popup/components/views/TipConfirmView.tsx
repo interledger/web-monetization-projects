@@ -7,8 +7,8 @@ import { FitTextWrapper } from '../FitTextWrapper'
 import { Colors } from '../../../shared-theme/colors'
 import { TipPaymentDebits } from '../TipPaymentDebits'
 import {
-  InitiateTip,
-  InitiateTipResult,
+  Tip,
+  TipResult,
   TipPreview,
   TipPreviewResult
 } from '../../../types/commands'
@@ -123,18 +123,18 @@ export const TipConfirmView = (
   }
 
   const sendTip = async (tipAmount: number) => {
-    const message: InitiateTip = {
-      command: 'initiateTip',
+    const message: Tip = {
+      command: 'tip',
       data: {
         amount: tipAmount
       }
     }
 
     return new Promise(resolve => {
-      runtime.sendMessage(message, (result: InitiateTipResult) => {
+      runtime.sendMessage(message, (result: TipResult) => {
         resolve(result)
       })
-    }) as Promise<InitiateTipResult>
+    }) as Promise<TipResult>
   }
 
   const handleSubmit = async () => {
