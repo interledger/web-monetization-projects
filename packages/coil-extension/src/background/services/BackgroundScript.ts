@@ -427,8 +427,8 @@ export class BackgroundScript {
       case 'tipPreview':
         sendResponse(await this.tipPreview(request.data.amount))
         break
-      case 'initiateTip':
-        sendResponse(await this.initiateTip(request.data.amount))
+      case 'tip':
+        sendResponse(await this.tip(request.data.amount))
         break
       case 'checkIFrameIsAllowedFromIFrameContentScript':
         sendResponse(
@@ -895,7 +895,7 @@ export class BackgroundScript {
     }
   }
 
-  private async initiateTip(tip: number): Promise<{ success: boolean }> {
+  private async tip(tip: number): Promise<{ success: boolean }> {
     const tabId = this.activeTab
     const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
     if (!streamId) {
@@ -907,11 +907,7 @@ export class BackgroundScript {
 
     // TODO: return detailed errors
     if (!stream || !token) {
-      this.log(
-        'initiateTip: no stream | token. !!stream !!token ',
-        !!stream,
-        !!token
-      )
+      this.log('tip: no stream | token. !!stream !!token ', !!stream, !!token)
       return { success: false }
     }
 
@@ -929,14 +925,14 @@ export class BackgroundScript {
     const activeTabUrl = frame.href
 
     try {
-      this.log(`initiateTip: sending tip to ${receiver}`)
+      this.log(`tip: sending tip to ${receiver}`)
 
-      const result = await this.client.initiateTip(token, {
+      const result = await this.client.tip(token, {
         amount,
         destination: receiver,
         origin: activeTabUrl
       })
-      this.log(`initiateTip: sent tip to ${receiver}`, result)
+      this.log(`tip: sent tip to ${receiver}`, result)
       const message: TipSent = {
         command: 'tip',
         data: {
@@ -949,7 +945,7 @@ export class BackgroundScript {
       this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
       return { success: true }
     } catch (e) {
-      this.log(`initiateTip: error. msg=${e.message}`)
+      this.log(`tip: error. msg=${e.message}`)
       return { success: false }
     }
   }

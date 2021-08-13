@@ -162,7 +162,7 @@ export class ContentScript {
         } else if (request.command === 'onFrameAllowedChanged') {
           this.onFrameAllowedChanged(request)
         } else if (request.command === 'tip') {
-          debug('sendTip/initiateTip event')
+          debug('sendTip/tip event')
           const detail: TipEvent['detail'] = {
             amount: request.data.amount,
             assetCode: request.data.assetCode,
