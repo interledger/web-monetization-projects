@@ -1394,7 +1394,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -1451,7 +1451,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -1532,7 +1532,7 @@ __metadata:
     debug: ^4.3.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -1598,7 +1598,7 @@ __metadata:
     deepmerge: ^4.2.2
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -1663,7 +1663,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -1720,7 +1720,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -1777,7 +1777,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -1837,7 +1837,7 @@ __metadata:
     debug: ^4.3.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -1895,7 +1895,7 @@ __metadata:
     crypto-browserify: ^3.12.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -1953,7 +1953,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -2225,7 +2225,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -2277,7 +2277,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -2407,7 +2407,7 @@ __metadata:
     debug: ^4.3.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -4789,7 +4789,7 @@ __metadata:
     crypto-browserify: ^3.12.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -4859,7 +4859,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -4926,7 +4926,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -4983,7 +4983,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -5044,7 +5044,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -5100,7 +5100,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -5155,7 +5155,7 @@ __metadata:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
@@ -9915,13 +9915,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-node@npm:0.3.5, eslint-import-resolver-node@npm:^0.3.5":
-  version: 0.3.5
-  resolution: "eslint-import-resolver-node@npm:0.3.5"
+"eslint-import-resolver-node@npm:0.3.6, eslint-import-resolver-node@npm:^0.3.5":
+  version: 0.3.6
+  resolution: "eslint-import-resolver-node@npm:0.3.6"
   dependencies:
     debug: ^3.2.7
     resolve: ^1.20.0
-  checksum: 93a8176205f18c40d2c11c444fab89aa3990c5a5eed226ef03a893b5779e7cd4d1f5f52b2bbbbbe4b13fb2a75ef629278be0b52099480cbe6e7024888d9982dd
+  checksum: 6266733af1e112970e855a5bcc2d2058fb5ae16ad2a6d400705a86b29552b36131ffc5581b744c23d550de844206fb55e9193691619ee4dbf225c4bde526b1c8
   languageName: node
   linkType: hard
 
@@ -22417,7 +22417,7 @@ sjcl@sublimator/sjcl:
     copy-webpack-plugin: 9.0.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
-    eslint-import-resolver-node: 0.3.5
+    eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.24.0
     eslint-plugin-jest: 24.4.0
     eslint-plugin-jsx-a11y: 6.4.1
