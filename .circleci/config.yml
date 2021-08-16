@@ -255,9 +255,9 @@ jobs:
           command: |
             yarn dedupe --check
       - run:
-          name: Pnpify --sdk changes Check
+          name: yarn dlx @yarnpkg/sdks vscode
           command: |
-            yarn pnpify --sdk vscode
+            yarn dlx @yarnpkg/sdks vscode
             git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
       - run:
           name: Yarn format git diff --exit-code
