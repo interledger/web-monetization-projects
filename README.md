@@ -40,13 +40,10 @@ git clone git@github.com:coilhq/web-monetization-projects.git
 yarn
 ```
 
-### Node == 14 (no 15/16 support) 
+### Node >= 14
 
 The TypeScript is compiled into es2020, so the minimum version of node required is v14 (currently the LTS)
 See [nvm](https://github.com/nvm-sh/nvm#install--update-script) for an easy way to manage multiple versions
-
-**NOTE**: Currently there is an [issue](https://github.com/coilhq/web-monetization-projects/issues/2050) with Node versions greater than 14 until the next version of
-yarn is released.
 
 ### Visual Studio Code
 
