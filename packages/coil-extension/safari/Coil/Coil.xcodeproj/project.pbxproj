@@ -646,7 +646,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				DEVELOPMENT_TEAM = LGK2XW2SF3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
@@ -658,7 +658,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.ios.Coil.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil.Extension;
 				PRODUCT_NAME = "Coil Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -673,7 +673,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				DEVELOPMENT_TEAM = LGK2XW2SF3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
@@ -685,7 +685,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.ios.Coil.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil.Extension;
 				PRODUCT_NAME = "Coil Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -704,7 +704,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				DEVELOPMENT_TEAM = LGK2XW2SF3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Coil;
@@ -723,7 +723,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.ios.Coil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil;
 				PRODUCT_NAME = Coil;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -740,7 +740,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 344JWDH2AE;
+				DEVELOPMENT_TEAM = W9X45A2YV5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Coil;
@@ -759,7 +759,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndudfield.coil.safari.ios.Coil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil;
 				PRODUCT_NAME = Coil;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
