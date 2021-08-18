@@ -2697,7 +2697,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonwebtoken", "npm:8.5.1"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:11.1.2"],
-            ["localforage", "npm:1.9.0"],
+            ["localforage", "npm:1.10.0"],
             ["node-fetch", "npm:2.6.1"],
             ["prettier", "npm:2.3.2"],
             ["rimraf", "npm:3.0.2"],
@@ -19655,10 +19655,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["localforage", [
-        ["npm:1.9.0", {
-          "packageLocation": "./.yarn/cache/localforage-npm-1.9.0-5c11c66e94-dc0256ce87.zip/node_modules/localforage/",
+        ["npm:1.10.0", {
+          "packageLocation": "./.yarn/cache/localforage-npm-1.10.0-cf9ea9a436-f2978b434d.zip/node_modules/localforage/",
           "packageDependencies": [
-            ["localforage", "npm:1.9.0"],
+            ["localforage", "npm:1.10.0"],
             ["lie", "npm:3.1.1"]
           ],
           "linkType": "HARD",
