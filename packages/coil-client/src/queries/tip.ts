@@ -34,8 +34,6 @@ export async function tip(
   })
 
   const tip = message.data?.tip
-  console.log('---- mike - tip query')
-  console.log(message)
   const success = tip?.success
   const code = tip?.code
   if (!success) {

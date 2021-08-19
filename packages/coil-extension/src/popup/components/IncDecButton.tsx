@@ -207,7 +207,6 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
           // set the maximum velocity
           updatedVelocity = 10
         }
-        console.log(`vel: ${updatedVelocity}`)
         return updatedVelocity
       })
     },

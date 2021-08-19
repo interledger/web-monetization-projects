@@ -897,7 +897,6 @@ export class BackgroundScript {
   }
 
   private async tip(tip: number): Promise<{ success: boolean }> {
-    console.log('---- mike - background script - tip - 1')
     const tabId = this.activeTab
     const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
     if (!streamId) {
@@ -907,14 +906,8 @@ export class BackgroundScript {
     const stream = this.streams.getStream(streamId)
     const token = this.auth.getStoredToken()
 
-    console.log('--- mike - streams tabs and token')
-    console.log(stream)
-    console.log(tabId)
-    console.log(token)
-
     // TODO: return detailed errors
     if (!stream || !token) {
-      console.log('--- mike - no stream or token')
       this.log('tip: no stream | token. !!stream !!token ', !!stream, !!token)
       return { success: false }
     }
@@ -922,16 +915,10 @@ export class BackgroundScript {
     const receiver = stream.getPaymentPointer()
     const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
 
-    console.log('--- mike - receiver')
-    console.log(receiver)
-
     // Set tip amount
     // const amount = Math.floor(tip * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
     const CENTS = 100
     const tipAmountCents = Math.floor(tip * CENTS).toString()
-
-    console.log('--- mike - tip amount cents')
-    console.log(tipAmountCents)
 
     // Set active tab url
     const frameId = 0
@@ -941,25 +928,13 @@ export class BackgroundScript {
     const activeTabUrl = frame.href
 
     try {
-      console.log('--- mike - inside try')
       this.log(`tip: sending tip to ${receiver}`)
-
-      console.log('--- mike - tip input object')
-      const obj = {
-        tipAmountCents,
-        destination: receiver,
-        origin: activeTabUrl
-      }
-      console.log(obj)
 
       const result = await this.client.tip(token, {
         tipAmountCents,
         destination: receiver,
         origin: activeTabUrl
       })
-
-      console.log('--- mike - result')
-      console.log(result)
 
       this.log(`tip: sent tip to ${receiver}`, result)
       const message: TipSent = {
@@ -974,8 +949,6 @@ export class BackgroundScript {
       this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
       return { success: true }
     } catch (e) {
-      console.log('--- mike -error ')
-      console.log(e.message)
       this.log(`tip: error. msg=${e.message}`)
       return { success: false }
     }
