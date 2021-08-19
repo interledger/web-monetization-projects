@@ -123,15 +123,12 @@ export const TipConfirmView = (
   }
 
   const sendTip = async (tipAmount: number) => {
-    console.log('--- mike - inside sendTip')
     const message: Tip = {
       command: 'tip',
       data: {
         amount: tipAmount
       }
     }
-    console.log('--- message')
-    console.log(message)
 
     return new Promise(resolve => {
       runtime.sendMessage(message, (result: TipResult) => {
@@ -141,7 +138,6 @@ export const TipConfirmView = (
   }
 
   const handleSubmit = async () => {
-    console.log('--- mike - submit tip')
     setSubmitError(null)
     setIsSubmitting(true)
     try {
