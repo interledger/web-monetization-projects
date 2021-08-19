@@ -22,10 +22,6 @@ export const whoamiSelection = `
       scale
     }
 
-    tipCredit {
-      balanceCents
-    }
-
     tipping {
       limitRemaining
     }

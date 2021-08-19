@@ -1,12 +1,13 @@
 import { GraphQlClient } from '../graphQlClient'
 
-export const tipQuery = `mutation tip($input: tipInput!) {
+export const tipQuery = `mutation tip($input: TipInput!) {
   tip(input: $input) {
     code
     message
     success
   }
 }`
+
 export interface tipData {
   tip: {
     code: string
@@ -14,8 +15,9 @@ export interface tipData {
     success: boolean
   }
 }
-export interface tipInput {
-  amount: string
+
+export interface TipInput {
+  tipAmountCents: string
   destination: string
   origin?: string
 }
@@ -23,7 +25,7 @@ export interface tipInput {
 export async function tip(
   this: GraphQlClient,
   token: string,
-  input: tipInput
+  input: TipInput
 ): Promise<tipData['tip']> {
   const message = await this.query<tipData>({
     query: tipQuery,

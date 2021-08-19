@@ -1,6 +1,8 @@
 import { GraphQlClient } from '../graphQlClient'
 
-export const tipPreviewQuery = `query tipPreview($input: TipPreviewInput!) {
+import { TipInput } from './tip'
+
+export const tipPreviewQuery = `query tipPreview($input: TipInput!) {
   tipPreview(input: $input) {
     code
     message
@@ -26,16 +28,10 @@ export interface TipPreviewData {
   }
 }
 
-export interface TipPreviewInput {
-  amount: string
-  destination: string
-  origin?: string
-}
-
 export async function tipPreview(
   this: GraphQlClient,
   token: string,
-  input: TipPreviewInput
+  input: TipInput
 ): Promise<TipPreviewData['tipPreview']> {
   const message = await this.query<TipPreviewData>({
     query: tipPreviewQuery,
