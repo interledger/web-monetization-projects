@@ -78,10 +78,6 @@ describe('GraphQlClient#login', () => {
       scale
     }
 
-    tipCredit {
-      balanceCents
-    }
-
     tipping {
       limitRemaining
     }

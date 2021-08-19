@@ -15,9 +15,6 @@ export interface CoilUser {
     code: string
     scale: number
   }
-  tipCredit?: {
-    balanceCents: number
-  }
   tipping?: {
     limitRemaining: string
   }

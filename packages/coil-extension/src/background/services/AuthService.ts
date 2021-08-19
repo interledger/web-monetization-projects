@@ -189,7 +189,6 @@ export class AuthService extends EventEmitter {
       // Data needed for tipping
       // tipping-beta: featureEnabled: boolean
       // minimum tip limit: minTipLimit > minTipLimit
-      // tip credit balance: whoami > tipCredit > balanceCents
       // remaining daily amount: whoami > tipping > limitRemaining
 
       this.formatTipSettings(token)
@@ -207,7 +206,6 @@ export class AuthService extends EventEmitter {
       // Data needed for tipping
       // tipping-beta: featureEnabled: boolean
       // minimum tip limit: minTipLimit > minTipLimit
-      // tip credit balance: whoami > tipCredit > balanceCents
       // remaining daily amount: whoami > tipping > limitRemaining
       this.formatTipSettings(resp.data.refreshToken.token) // adds the tip settings info to the user object and formats it
       return resp.data.refreshToken.token
@@ -231,9 +229,6 @@ export class AuthService extends EventEmitter {
         minimumTipLimit: minTipLimitResp.data.minTipLimit.minTipLimit
           ? Number(minTipLimitResp.data.minTipLimit.minTipLimit) / 100
           : 1,
-        tipCreditBalance: this.store.user?.tipCredit?.balanceCents
-          ? this.store.user?.tipCredit?.balanceCents / 100
-          : 0, // convert from cents to dollars
         remainingDailyAmount: this.store.user?.tipping?.limitRemaining
           ? Number(this.store.user?.tipping?.limitRemaining) / 100
           : 0, // convert from cents to dollars

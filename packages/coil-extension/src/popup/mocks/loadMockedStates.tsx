@@ -45,7 +45,6 @@ const tipUser = {
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
     inTippingBeta: true,
-    tipCreditBalance: 10,
     minimumTipLimit: 1,
     remainingDailyAmount: 100,
     hotkeyTipAmounts: [5, 10, 50]
