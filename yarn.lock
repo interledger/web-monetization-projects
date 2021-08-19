@@ -1409,7 +1409,7 @@ __metadata:
     jsonwebtoken: 8.5.1
     lerna: 4.0.0
     lint-staged: 11.1.2
-    localforage: 1.9.0
+    localforage: 1.10.0
     node-fetch: ^2.6.1
     prettier: 2.3.2
     rimraf: 3.0.2
@@ -15109,12 +15109,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"localforage@npm:1.9.0":
-  version: 1.9.0
-  resolution: "localforage@npm:1.9.0"
+"localforage@npm:1.10.0":
+  version: 1.10.0
+  resolution: "localforage@npm:1.10.0"
   dependencies:
     lie: 3.1.1
-  checksum: dc0256ce875a51f7d493b81cf54381323cd78018ff2bd5455c3f2f180b0932fb99f5b41641fd2ae9b08a455acae66273a0567ee77f7653bfd9373bfea3b0f7f9
+  checksum: f2978b434dafff9bcb0d9498de57d97eba165402419939c944412e179cab1854782830b5ec196212560b22712d1dd03918939f59cf1d4fc1d756fca7950086cf
   languageName: node
   linkType: hard
 
