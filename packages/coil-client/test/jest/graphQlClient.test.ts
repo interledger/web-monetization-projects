@@ -64,6 +64,7 @@ describe('GraphQlClient#login', () => {
     
     id
     fullName
+    email
     customerId
     canTip
 

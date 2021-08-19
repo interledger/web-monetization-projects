@@ -5,6 +5,7 @@ export interface GraphQlResponse<T> {
 export interface CoilUser {
   id: string
   fullName: string
+  email: string
   customerId?: string
   subscription?: {
     active: boolean
