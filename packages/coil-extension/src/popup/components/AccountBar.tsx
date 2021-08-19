@@ -98,7 +98,7 @@ export const AccountBar = () => {
     <CoilToolbar>
       <CoilLogoImg />
       {validToken && user ? (
-        <Typography variant='body1'>{user.fullName}</Typography>
+        <Typography variant='body1'>{user.fullName ?? user.email}</Typography>
       ) : (
         <Muted>Not Logged in</Muted>
       )}

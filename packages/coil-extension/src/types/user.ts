@@ -1,6 +1,7 @@
 export interface User {
   id: string
   fullName: string
+  email: string
   customerId?: string
   canTip?: boolean
   subscription?: {

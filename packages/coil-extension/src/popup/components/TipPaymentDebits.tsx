@@ -63,6 +63,9 @@ export const TipPaymentDebits = (
   const { tipCreditCharge, creditCardCharge } = props
   const { user } = useStore()
 
+  const tipCreditChargeInDollars = (tipCreditCharge / 100).toFixed(2)
+  const creditCardChargeInDollars = (creditCardCharge / 100).toFixed(2)
+
   const creditCard = useMemo(() => {
     return user?.paymentMethods?.find(method => {
       if (method?.type === 'stripe') {
@@ -78,7 +81,7 @@ export const TipPaymentDebits = (
           <PaymentMethod>
             <img src='/res/CoilLogo.svg' alt='coil icon' /> Tip credits
           </PaymentMethod>
-          <div>-${tipCreditCharge.toFixed(2)}</div>
+          <div>-${tipCreditChargeInDollars}</div>
         </PaymentDebit>
       )}
       {creditCardCharge > 0 && ( // show the credit card only if it has been charged
@@ -91,7 +94,7 @@ export const TipPaymentDebits = (
             <Dot />
             {creditCard?.details?.last4}
           </PaymentMethod>
-          <div>-${creditCardCharge.toFixed(2)}</div>
+          <div>-${creditCardChargeInDollars}</div>
         </PaymentDebit>
       )}
     </PaymentDebitsWrapper>
