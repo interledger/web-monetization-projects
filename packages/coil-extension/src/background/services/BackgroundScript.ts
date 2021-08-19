@@ -866,7 +866,8 @@ export class BackgroundScript {
     const { exchangeRate } = stream.getAssetDetails()
 
     // Set tip amount
-    const amount = Math.floor(tip * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
+    const CENTS = 100
+    const tipAmountCents = Math.floor(tip * CENTS).toString()
 
     // Set active tab url
     const frameId = 0
@@ -879,7 +880,7 @@ export class BackgroundScript {
       this.log('tipPreview: requesting tip preview')
 
       const result = await this.client.tipPreview(token, {
-        amount,
+        tipAmountCents,
         destination: receiver,
         origin: activeTabUrl
       })
@@ -915,7 +916,10 @@ export class BackgroundScript {
     const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
 
     // Set tip amount
-    const amount = Math.floor(tip * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
+    // const amount = Math.floor(tip * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
+    const CENTS = 100
+    const tipAmountCents = Math.floor(tip * CENTS).toString()
+    console.log(tipAmountCents)
 
     // Set active tab url
     const frameId = 0
@@ -928,7 +932,7 @@ export class BackgroundScript {
       this.log(`tip: sending tip to ${receiver}`)
 
       const result = await this.client.tip(token, {
-        amount,
+        tipAmountCents,
         destination: receiver,
         origin: activeTabUrl
       })
@@ -937,7 +941,7 @@ export class BackgroundScript {
         command: 'tip',
         data: {
           paymentPointer: receiver,
-          amount,
+          amount: tipAmountCents,
           assetCode,
           assetScale
         }
