@@ -2834,7 +2834,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
-            ["http-server", "npm:13.0.0"],
+            ["http-server", "npm:13.0.1"],
             ["husky", "npm:7.0.1"],
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
@@ -16634,10 +16634,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["http-server", [
-        ["npm:13.0.0", {
-          "packageLocation": "./.yarn/cache/http-server-npm-13.0.0-898908230b-a4d25a5b78.zip/node_modules/http-server/",
+        ["npm:13.0.1", {
+          "packageLocation": "./.yarn/cache/http-server-npm-13.0.1-3dd2a00bca-ec105bd82d.zip/node_modules/http-server/",
           "packageDependencies": [
-            ["http-server", "npm:13.0.0"],
+            ["http-server", "npm:13.0.1"],
             ["basic-auth", "npm:1.1.0"],
             ["colors", "npm:1.4.0"],
             ["corser", "npm:2.0.1"],
