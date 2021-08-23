@@ -114,10 +114,13 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/helper-create-class-features-plugin@npm:^7.16.0":
   version: 7.16.0
   resolution: "@babel/helper-create-class-features-plugin@npm:7.16.0"
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 "@babel/helper-create-class-features-plugin@npm:^7.14.5, @babel/helper-create-class-features-plugin@npm:^7.15.0, @babel/helper-create-class-features-plugin@npm:^7.15.4":
   version: 7.15.4
@@ -140,18 +143,30 @@ __metadata:
 "@babel/helper-create-class-features-plugin@npm:^7.14.5, @babel/helper-create-class-features-plugin@npm:^7.14.6":
   version: 7.14.8
   resolution: "@babel/helper-create-class-features-plugin@npm:7.14.8"
+=======
+"@babel/helper-create-class-features-plugin@npm:^7.14.5, @babel/helper-create-class-features-plugin@npm:^7.15.0, @babel/helper-create-class-features-plugin@npm:^7.15.4":
+  version: 7.15.4
+  resolution: "@babel/helper-create-class-features-plugin@npm:7.15.4"
+>>>>>>> 68babb53... chore: squash merge conflicts
   dependencies:
-    "@babel/helper-annotate-as-pure": ^7.14.5
-    "@babel/helper-function-name": ^7.14.5
-    "@babel/helper-member-expression-to-functions": ^7.14.7
-    "@babel/helper-optimise-call-expression": ^7.14.5
-    "@babel/helper-replace-supers": ^7.14.5
-    "@babel/helper-split-export-declaration": ^7.14.5
+    "@babel/helper-annotate-as-pure": ^7.15.4
+    "@babel/helper-function-name": ^7.15.4
+    "@babel/helper-member-expression-to-functions": ^7.15.4
+    "@babel/helper-optimise-call-expression": ^7.15.4
+    "@babel/helper-replace-supers": ^7.15.4
+    "@babel/helper-split-export-declaration": ^7.15.4
   peerDependencies:
     "@babel/core": ^7.0.0
+<<<<<<< HEAD
   checksum: 4c0293cb6ee74cdab5a260f758b9ae401a5c409119156262bdc62584d02265511da78d179765abce87e7c8ed917dd679f6deb81beb7a688402b6f9cc1be41215
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+  checksum: 42fa8550125cd26ec5ff62f8d5383924b896a35326a31acced93a166661d1a1446199e5d2c8dc3685d70482127dc57cc6c22c5ffccadb58e72bfedf906fba817
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -224,6 +239,7 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/helper-member-expression-to-functions@npm:^7.16.0":
   version: 7.16.0
   resolution: "@babel/helper-member-expression-to-functions@npm:7.16.0"
@@ -231,6 +247,8 @@ __metadata:
     "@babel/types": ^7.16.0
   checksum: 58ef8e3a4af0c1dc43a2011f43f25502877ac1c5aa9a4a6586f0265ab857b65831f60560044bc9380df43c91ac21cad39a84095b91764b433d1acf18d27e38d6
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 "@babel/helper-member-expression-to-functions@npm:^7.15.4":
   version: 7.15.4
@@ -246,7 +264,18 @@ __metadata:
     "@babel/types": ^7.14.5
   checksum: 1768b849224002d7a8553226ad73e1e957fb6184b68234d5df7a45cf8e4453ed1208967c1cace1a4d973b223ddc881d105e372945ec688f09485dff0e8ed6180
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"@babel/helper-member-expression-to-functions@npm:^7.15.4":
+  version: 7.15.4
+  resolution: "@babel/helper-member-expression-to-functions@npm:7.15.4"
+  dependencies:
+    "@babel/types": ^7.15.4
+  checksum: 30cf27e2afbaf1d58d189c5f36951a6af7d2bfccdfdb7d57e91749620d9c3c37d78324a1725079d3ab4a0e5c4e5f3d5f19a275d5dd269baa2aa8852835b05d6d
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -1175,12 +1204,15 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/plugin-transform-typescript@npm:^7.16.0":
   version: 7.16.0
   resolution: "@babel/plugin-transform-typescript@npm:7.16.0"
   dependencies:
     "@babel/helper-create-class-features-plugin": ^7.16.0
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 "@babel/plugin-transform-typescript@npm:^7.15.0":
   version: 7.15.0
@@ -1194,20 +1226,39 @@ __metadata:
   dependencies:
     "@babel/helper-create-class-features-plugin": ^7.14.6
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"@babel/plugin-transform-typescript@npm:^7.15.0":
+  version: 7.15.0
+  resolution: "@babel/plugin-transform-typescript@npm:7.15.0"
+  dependencies:
+    "@babel/helper-create-class-features-plugin": ^7.15.0
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
     "@babel/helper-plugin-utils": ^7.14.5
     "@babel/plugin-syntax-typescript": ^7.16.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
 <<<<<<< HEAD
+<<<<<<< HEAD
   checksum: 3975d879516f856181c08daca4e283f4a01571287f45515360676eac43a998020a8ef5e1ffcb9fcf43e7916964e5861ce9469d4f954d44850b667d5bbdda53bb
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
   checksum: ec94df8917879c3ef908a20cf9e73ab3379074f7a972a615a8248af29d35d0a145b32feb70e610ac59548947996b6ec3135f4663ed26c7396013424a171e4635
 =======
   checksum: cb3117cfc9c8ebf9612b137eb660448e79a876a189fcad6b79641faa7200073bbfd08bf0e63c7ddb3a35b3d31457d6e90cf63565e64446a73866290dc97353fa
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+  checksum: ec94df8917879c3ef908a20cf9e73ab3379074f7a972a615a8248af29d35d0a145b32feb70e610ac59548947996b6ec3135f4663ed26c7396013424a171e4635
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -1404,19 +1455,28 @@ __metadata:
   resolution: "@babel/template@npm:7.15.4"
 =======
 "@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
-  version: 7.14.8
-  resolution: "@babel/runtime@npm:7.14.8"
+  version: 7.15.4
+  resolution: "@babel/runtime@npm:7.15.4"
   dependencies:
     regenerator-runtime: ^0.13.4
-  checksum: d2dd0ce51ddab78ac93928b04042425145d0dc8cc2b70150d47934f8703f55702eb0b2894f9bd47f66794ad04d8bb03a6a847d0138fbb7aa0b970b5ccd5cc8b7
+  checksum: c40825430400e47c19b97e4142d5315d2910305b9714d44a711472587ee2fd4521fdba5f02ddd9df3902f5e988d9854fa83f4da1e0c091f70f6983fa52480606
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@babel/template@npm:^7.14.5, @babel/template@npm:^7.3.3":
   version: 7.14.5
   resolution: "@babel/template@npm:7.14.5"
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"@babel/template@npm:^7.15.4, @babel/template@npm:^7.3.3":
+  version: 7.15.4
+  resolution: "@babel/template@npm:7.15.4"
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   dependencies:
     "@babel/code-frame": ^7.16.0
     "@babel/parser": ^7.16.0
@@ -1669,6 +1729,17 @@ __metadata:
     http-server: 14.0.0
     husky: 7.0.4
     framer-motion: ^4.1.4
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    http-server: 0.12.3
+    husky: 7.0.1
+>>>>>>> 786772ec... fix: build issues after rebase
+=======
+    http-server: 13.0.1
+    husky: 7.0.2
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
     inversify: ^6.0.0
@@ -2479,7 +2550,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@eslint/eslintrc@npm:^0.4.3":
+=======
+<<<<<<< HEAD
+"@eslint/eslintrc@npm:^0.4.2, @eslint/eslintrc@npm:^0.4.3":
+>>>>>>> baacfaf9... feat: added new tipping ui
+=======
+"@endemolshinegroup/cosmiconfig-typescript-loader@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@endemolshinegroup/cosmiconfig-typescript-loader@npm:3.0.2"
+  dependencies:
+    lodash.get: ^4
+    make-error: ^1
+    ts-node: ^9
+    tslib: ^2
+  peerDependencies:
+    cosmiconfig: ">=6"
+  checksum: 7fe0198622b1063c40572034df7e8ba867865a1b4815afe230795929abcf785758b34d7806a8e2100ba8ab4e92c5a1c3e11a980c466c4406df6e7ec6e50df8b6
+  languageName: node
+  linkType: hard
+
+"@eslint/eslintrc@npm:^0.4.3":
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   version: 0.4.3
   resolution: "@eslint/eslintrc@npm:0.4.3"
   dependencies:
@@ -4134,10 +4228,14 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@tsconfig/node16@npm:^1.0.2":
 =======
 "@tsconfig/node16@npm:^1.0.1":
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+"@tsconfig/node16@npm:^1.0.2":
+>>>>>>> 68babb53... chore: squash merge conflicts
   version: 1.0.2
   resolution: "@tsconfig/node16@npm:1.0.2"
   checksum: ca94d3639714672bbfd55f03521d3f56bb6a25479bd425da81faf21f13e1e9d15f40f97377dedbbf477a5841c5b0c8f4cd1b391f33553d750b9202c54c2c07aa
@@ -4415,7 +4513,12 @@ __metadata:
   dependencies:
     jest-diff: ^27.0.0
     pretty-format: ^27.0.0
+<<<<<<< HEAD
   checksum: 3683a9945821966f6dccddf337219a5d682633687c9d30df859223db553589f63e9b2c34e69f0cc845c86ffcf115742f25c12ea03c8d33d2244890fdc0af61e2
+=======
+  checksum: 972aaae341b83eb608970c93295282f1f9edc056dc8123635456cbaced822702673118d60279c7b889300e7c9a0726c3674d701115915e2e1967db09542389c2
+<<<<<<< HEAD
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -4437,6 +4540,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+  languageName: node
+  linkType: hard
+
+"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.7, @types/json-schema@npm:^7.0.8, @types/json-schema@npm:^7.0.9":
+  version: 7.0.9
+  resolution: "@types/json-schema@npm:7.0.9"
+  checksum: 259d0e25f11a21ba5c708f7ea47196bd396e379fddb79c76f9f4f62c945879dc21657904914313ec2754e443c5018ea8372362f323f30e0792897fdb2098a705
+  languageName: node
+  linkType: hard
+
+>>>>>>> 68babb53... chore: squash merge conflicts
 "@types/json5@npm:^0.0.29":
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
@@ -4517,11 +4632,14 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/node@npm:*, @types/node@npm:14.17.34, @types/node@npm:>= 8":
   version: 14.17.34
   resolution: "@types/node@npm:14.17.34"
   checksum: 803a7532b6998aca6aa1b3e6239f280e82612d4f641d38fbf08962c905ea9d1b278b2f09d396beac5120a4e68f33d7467298b197f2f00150ec1dcd546de02a89
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 "@types/node@npm:*, @types/node@npm:14.17.21, @types/node@npm:>= 8":
   version: 14.17.21
@@ -4540,7 +4658,16 @@ __metadata:
   resolution: "@types/node@npm:14.17.5"
   checksum: 8fba22a8df7bcea75039f08e00fcff8e331f6d367739a9631d3457bc3e8e5ddfdd60e1a5d685d9420312e9ed7cf2f2146d37224ec9f7d578fe8dd32ce3821e62
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"@types/node@npm:*, @types/node@npm:14.17.21":
+  version: 14.17.21
+  resolution: "@types/node@npm:14.17.21"
+  checksum: f5fc54b1a857f6a3a266c25521cddda28c711979ec6e443187076b0c99df08b8578c5c0bef64af35f13fc1475f8fd8a71619dd708219b855a8f28629f7880bbb
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -4730,12 +4857,13 @@ __metadata:
   linkType: hard
 
 "@types/yargs-parser@npm:*":
-  version: 20.2.1
-  resolution: "@types/yargs-parser@npm:20.2.1"
-  checksum: 1d039e64494a7a61ddd278349a3dc60b19f99ff0517425696e796f794e4252452b9d62178e69755ad03f439f9dc0c8c3d7b3a1201b3a24e134bac1a09fa11eaa
+  version: 15.0.0
+  resolution: "@types/yargs-parser@npm:15.0.0"
+  checksum: 333ab73a1f9c82c64b2fac2441558e58f062fbe7affc35bb53b8e755b62cdd32b1bbc6f4da23773887a2189bf04395e2a8c710df344df4cd578993aeefe98053
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 "@types/yargs@npm:^15.0.0":
@@ -4748,6 +4876,8 @@ __metadata:
   linkType: hard
 
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+>>>>>>> 68babb53... chore: squash merge conflicts
 "@types/yargs@npm:^16.0.0":
   version: 16.0.4
   resolution: "@types/yargs@npm:16.0.4"
@@ -4769,11 +4899,18 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+<<<<<<< HEAD
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 "@types/yauzl@npm:2.9.2, @types/yauzl@npm:^2.9.1":
 =======
 "@types/yauzl@npm:^2.9.1":
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+"@types/yauzl@npm:2.9.2, @types/yauzl@npm:^2.9.1":
+>>>>>>> 68babb53... chore: squash merge conflicts
   version: 2.9.2
   resolution: "@types/yauzl@npm:2.9.2"
   dependencies:
@@ -4783,10 +4920,13 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@typescript-eslint/eslint-plugin@npm:5.4.0":
   version: 5.4.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.4.0"
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 "@typescript-eslint/eslint-plugin@npm:5.0.0":
   version: 5.0.0
@@ -4796,7 +4936,15 @@ __metadata:
   version: 4.28.4
   resolution: "@typescript-eslint/eslint-plugin@npm:4.28.4"
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"@typescript-eslint/eslint-plugin@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:5.0.0"
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   dependencies:
     "@typescript-eslint/experimental-utils": 5.4.0
     "@typescript-eslint/scope-manager": 5.4.0
@@ -5787,10 +5935,14 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "acorn-walk@npm:^8.0.0, acorn-walk@npm:^8.1.1":
 =======
 "acorn-walk@npm:^8.0.0":
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+"acorn-walk@npm:^8.0.0, acorn-walk@npm:^8.1.1":
+>>>>>>> 68babb53... chore: squash merge conflicts
   version: 8.1.1
   resolution: "acorn-walk@npm:8.1.1"
   checksum: 5e4dafbcec14fbfac96e1f13726273e969a30fdf607ed4eb6ca335292f85b8c896393fee15837a8f2b27afd7ede0f1c6edb5b5e6d0123a8821fee1a834318e62
@@ -6856,10 +7008,13 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "babel-plugin-polyfill-corejs3@npm:^0.4.0":
   version: 0.4.0
   resolution: "babel-plugin-polyfill-corejs3@npm:0.4.0"
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 "babel-plugin-polyfill-corejs3@npm:^0.2.5":
   version: 0.2.5
@@ -6878,14 +7033,26 @@ __metadata:
 "babel-plugin-polyfill-corejs3@npm:^0.2.2":
   version: 0.2.3
   resolution: "babel-plugin-polyfill-corejs3@npm:0.2.3"
+=======
+"babel-plugin-polyfill-corejs3@npm:^0.2.5":
+  version: 0.2.5
+  resolution: "babel-plugin-polyfill-corejs3@npm:0.2.5"
+>>>>>>> 68babb53... chore: squash merge conflicts
   dependencies:
     "@babel/helper-define-polyfill-provider": ^0.2.2
-    core-js-compat: ^3.14.0
+    core-js-compat: ^3.16.2
   peerDependencies:
     "@babel/core": ^7.0.0-0
+<<<<<<< HEAD
   checksum: e390c5317b35808633d32db2c1718aef6af788df148adc6fa54e56d2266896ad2da2d200163f392e06ae1ebd1a0feaeaf18d7a337dea70387429618898b90a68
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+  checksum: 7d464001f6cecc6b85aef71307e3ef17980b15aae4b2ae75d38a3fc3166005f6354932f9c694566970a3fb428f8fbc44f94c46e055a5a85b7fe8820ca16f85b6
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -7693,23 +7860,35 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "caniuse-lite@npm:^1.0.30001280":
   version: 1.0.30001280
   resolution: "caniuse-lite@npm:1.0.30001280"
   checksum: 5794b22f4254927f095e83c65e89ddfc63065c7ed16e6544555a3252ee3d16e48f8a7846713dc64869c52e1abe9a2a93161804b40c2097d1abc9aaa0155a0b65
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 "caniuse-lite@npm:^1.0.30001264":
   version: 1.0.30001265
   resolution: "caniuse-lite@npm:1.0.30001265"
   checksum: 19f1943045503ebd182191075a991035523123db6985bcccde6702c445154a470a72ff064568a977b607a0c42789bed73ecee6a6a04601dd04691c1a1fdfbd1c
+<<<<<<< HEAD
 =======
 "caniuse-lite@npm:^1.0.30001219":
   version: 1.0.30001246
   resolution: "caniuse-lite@npm:1.0.30001246"
   checksum: e811aa80e8e6e80e6ef053027176b71b2d0b99adf809ce00de8e4dcb8df70237378b49d111d1cfd7482d25d0cb4ab848e230d077ac6abb9b92c0fe99b74c6900
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -8711,10 +8890,13 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "core-js-compat@npm:^3.18.0, core-js-compat@npm:^3.19.1":
   version: 3.19.1
   resolution: "core-js-compat@npm:3.19.1"
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 "core-js-compat@npm:^3.16.0, core-js-compat@npm:^3.16.2":
   version: 3.18.2
@@ -8736,7 +8918,19 @@ __metadata:
 =======
   checksum: ca68b51b4a75241dae44ae75bf01476c0c8505c1c6fe69dc3b3ae3ee0e8d39fadf415df21a2c46ea018c250aa76ba1a664e8cb2b6657a801eed1a2ac738d7968
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"core-js-compat@npm:^3.16.0, core-js-compat@npm:^3.16.2":
+  version: 3.18.2
+  resolution: "core-js-compat@npm:3.18.2"
+  dependencies:
+    browserslist: ^4.17.3
+    semver: 7.0.0
+  checksum: 8358d4a14725b68ccb5fcdd590e603f08933c1f89b0fc5415054048771d6ae9182dca89d0280ed44535ce7a5f6f2f6280774aa0b0410842c940a9a2149ab83d2
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -9120,14 +9314,23 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "debug@npm:4, debug@npm:4.3.2, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 "debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
 =======
 "debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1":
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   version: 4.3.2
   resolution: "debug@npm:4.3.2"
   dependencies:
@@ -9807,23 +10010,35 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "electron-to-chromium@npm:^1.3.896":
   version: 1.3.899
   resolution: "electron-to-chromium@npm:1.3.899"
   checksum: 1c6e59fb618c48710bfc5cd731d0ccc8120dceac12535698a304351dceffab78d71c20f4ecd2bd1b3ce7612a4e78380f2450ae5f801f5a87d37253043c6cdc0b
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 "electron-to-chromium@npm:^1.3.857":
   version: 1.3.860
   resolution: "electron-to-chromium@npm:1.3.860"
   checksum: 0446f14a1b9a43a2b4a60d1233171374b48112ae0270524887e1b592c1da615add9666955dad79793cd52489a1bb4f84091b24af36d38ef2c82b78b32dda7b9e
+<<<<<<< HEAD
 =======
 "electron-to-chromium@npm:^1.3.723":
   version: 1.3.785
   resolution: "electron-to-chromium@npm:1.3.785"
   checksum: 0ede1fccdf1e4f646048a6303579af582e8d73c2258cb74f4d34c366067da8d649e8ffeae77c5966e614849b79d17f54fe04e3b7286f084cb840b5b4dd70117e
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -9923,6 +10138,7 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.8.3":
   version: 5.8.3
   resolution: "enhanced-resolve@npm:5.8.3"
@@ -9939,6 +10155,15 @@ __metadata:
     tapable: ^2.2.0
   checksum: 6e871ec5b183220dbcdaff8580cbdacee5425e321790e5846abd1b573d20d2bcb37f73ee983fd10c6d6878d31a2d08e234e72fc91a81236d64623ee6ba7d6611
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+"enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.8.3":
+  version: 5.8.3
+  resolution: "enhanced-resolve@npm:5.8.3"
+  dependencies:
+    graceful-fs: ^4.2.4
+    tapable: ^2.2.0
+  checksum: d79fbe531106448b768bb0673fb623ec0202d7ee70373ab7d4f4745d5dfe0806f38c9db7e7da8c941288fe475ab3d538db3791fce522056eeea40ca398c9e287
+>>>>>>> 68babb53... chore: squash merge conflicts
   languageName: node
   linkType: hard
 
@@ -10970,10 +11195,14 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "execa@npm:^5.0.0, execa@npm:^5.1.1":
 =======
 "execa@npm:^5.0.0":
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+"execa@npm:^5.0.0, execa@npm:^5.1.1":
+>>>>>>> 68babb53... chore: squash merge conflicts
   version: 5.1.1
   resolution: "execa@npm:5.1.1"
   dependencies:
@@ -13737,6 +13966,7 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "is-core-module@npm:^2.2.0, is-core-module@npm:^2.6.0":
   version: 2.6.0
   resolution: "is-core-module@npm:2.6.0"
@@ -13751,7 +13981,18 @@ fsevents@^1.2.7:
     has: ^1.0.3
   checksum: e007de6ca5c391f8a669b9335192967d8815f9119f97d81fc4cde07febe09143263bc0146e86e813120223ea9a034cf0608d15b53b0269e19b4dc0a220ce0b4f
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"is-core-module@npm:^2.2.0, is-core-module@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "is-core-module@npm:2.6.0"
+  dependencies:
+    has: ^1.0.3
+  checksum: 183b3b96fed19822b13959876b0317e61fc2cb5ebcbc21639904c81f7ae328af57f8e18cc4750a9c4abebd686130c70d34a89521e57dbe002edfa4614507ce18
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -15675,6 +15916,7 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "listr2@npm:^3.13.3":
   version: 3.13.3
   resolution: "listr2@npm:3.13.3"
@@ -15683,6 +15925,8 @@ fsevents@^1.2.7:
     clone: ^2.1.2
     colorette: ^2.0.16
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 "listr2@npm:^3.12.2":
   version: 3.12.2
@@ -15698,7 +15942,18 @@ fsevents@^1.2.7:
     cli-truncate: ^2.1.0
     colorette: ^1.2.2
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"listr2@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "listr2@npm:3.12.2"
+  dependencies:
+    cli-truncate: ^2.1.0
+    colorette: ^1.4.0
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
     log-update: ^4.0.0
     p-map: ^4.0.0
     rxjs: ^7.4.0
@@ -15707,14 +15962,23 @@ fsevents@^1.2.7:
   peerDependencies:
     enquirer: ">= 2.3.0 < 3"
 <<<<<<< HEAD
+<<<<<<< HEAD
   checksum: 3ece0f132c13b25400cf7f8a31a6045ee9ab0b6c976c58f26ee5b71245eefb85d2d2d540b62ce8094eb14085733c88c45a306cd76106b74d5c9d48fb573b5386
 =======
+=======
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
   checksum: 92d72b9b6ae835893618c9a46015d538b8d39602208bd9dc0ddc2d73f3cb24175b5367c6af50a7a8ac6cdf2c1a0d4b398455dc4c4fce29954cb5267343a1d974
 =======
   checksum: 6533edd4304f5c113198db42b87ddb17fb3dc2167017b2d63c30df50c1277865fc0eed99c4f4c8abdfc5a960b997049dba14a65180fbf2851ad82f2259038a0c
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+  checksum: 92d72b9b6ae835893618c9a46015d538b8d39602208bd9dc0ddc2d73f3cb24175b5367c6af50a7a8ac6cdf2c1a0d4b398455dc4c4fce29954cb5267343a1d974
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -17849,6 +18113,7 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "p-each-series@npm:^2.1.0":
   version: 2.2.0
@@ -17858,6 +18123,8 @@ fsevents@^1.2.7:
   linkType: hard
 
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+>>>>>>> 68babb53... chore: squash merge conflicts
 "p-finally@npm:^1.0.0":
   version: 1.0.0
   resolution: "p-finally@npm:1.0.0"
@@ -18676,10 +18943,16 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "postcss@npm:8.3.11, postcss@npm:^8.2.15":
   version: 8.3.11
   resolution: "postcss@npm:8.3.11"
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8c77a00d... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 "postcss@npm:8.3.6":
   version: 8.3.6
   resolution: "postcss@npm:8.3.6"
@@ -18692,6 +18965,7 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "postcss@npm:8.3.9, postcss@npm:^8.2.15":
   version: 8.3.9
   resolution: "postcss@npm:8.3.9"
@@ -18700,23 +18974,42 @@ fsevents@^1.2.7:
   version: 8.3.5
   resolution: "postcss@npm:8.3.5"
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"postcss@npm:8.3.6, postcss@npm:^8.2.15":
+  version: 8.3.6
+  resolution: "postcss@npm:8.3.6"
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   dependencies:
     nanoid: ^3.1.30
     picocolors: ^1.0.0
     source-map-js: ^0.6.2
+<<<<<<< HEAD
   checksum: 1a230553d74c66aa9585c90781ed8ea75f19cefea405d2117b67fbeb24b5b5e0e17be2e0c5a07db31dd085643a13394127ab2222e940771b70498331bf20f35e
+=======
+<<<<<<< HEAD
+  checksum: b64d0e59bc027b2f09e5a84ca32b4f0620553812110e42295a79fd0e6ea664779e575c2d5e8d35a1b0804f0933ec878404c6e161e008b5bc51cba44eaef216ef
+=======
+  checksum: ff55b91bea21f42c2a94d77fd05c3f66dd15889c68506cf1dbb9cdee8c3b9e9d0e219bcbc6e61a107bd63e3cac0670176486e2a5794c106a4e1b9babceb79317
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.15":
-  version: 8.3.6
-  resolution: "postcss@npm:8.3.6"
+"postcss@npm:8.3.9":
+=======
+"postcss@npm:8.3.9, postcss@npm:^8.2.15":
+>>>>>>> 8c77a00d... chore: squash merge conflicts
+  version: 8.3.9
+  resolution: "postcss@npm:8.3.9"
   dependencies:
-    colorette: ^1.2.2
-    nanoid: ^3.1.23
+    nanoid: ^3.1.28
+    picocolors: ^0.2.1
     source-map-js: ^0.6.2
-  checksum: ff55b91bea21f42c2a94d77fd05c3f66dd15889c68506cf1dbb9cdee8c3b9e9d0e219bcbc6e61a107bd63e3cac0670176486e2a5794c106a4e1b9babceb79317
+  checksum: b64d0e59bc027b2f09e5a84ca32b4f0620553812110e42295a79fd0e6ea664779e575c2d5e8d35a1b0804f0933ec878404c6e161e008b5bc51cba44eaef216ef
   languageName: node
   linkType: hard
 
@@ -19988,12 +20281,18 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "resolve.exports@npm:^1.1.0":
   version: 1.1.0
   resolution: "resolve.exports@npm:1.1.0"
   checksum: 52865af8edb088f6c7759a328584a5de6b226754f004b742523adcfe398cfbc4559515104bc2ae87b8e78b1e4de46c9baec400b3fb1f7d517b86d2d48a098a2d
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 "resolve.exports@npm:^1.0.2":
   version: 1.0.2
   resolution: "resolve.exports@npm:1.0.2"
@@ -20002,10 +20301,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "resolve@^1.0.0, resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.14.2, resolve@^1.17.0, resolve@^1.20.0, resolve@^1.9.0":
 =======
 "resolve@^1.0.0, resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.13.1, resolve@^1.14.2, resolve@^1.20.0, resolve@^1.9.0":
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+"resolve@^1.0.0, resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.14.2, resolve@^1.20.0, resolve@^1.9.0":
+>>>>>>> 68babb53... chore: squash merge conflicts
   version: 1.20.0
   resolution: "resolve@npm:1.20.0"
   dependencies:
@@ -20026,10 +20329,14 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "resolve@patch:resolve@^1.0.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.17.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.9.0#~builtin<compat/resolve>":
 =======
 "resolve@patch:resolve@^1.0.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.13.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.9.0#~builtin<compat/resolve>":
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+"resolve@patch:resolve@^1.0.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.9.0#~builtin<compat/resolve>":
+>>>>>>> 68babb53... chore: squash merge conflicts
   version: 1.20.0
   resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"
   dependencies:
@@ -21638,7 +21945,23 @@ sjcl@sublimator/sjcl:
   resolution: "style-loader@npm:3.3.1"
   peerDependencies:
     webpack: ^5.0.0
+<<<<<<< HEAD
   checksum: 470feef680f59e2fce4d6601b5c55b88c01ad8d1dd693c528ffd591ff5fd7c01a4eff3bdbe62f26f847d6bd2430c9ab594be23307cfe7a3446ab236683f0d066
+=======
+  checksum: edad553a1ae74af9afb4dd582774d484e8e4e5f8c9593a921b0f3f0e2cdb3a58c4b44a3afb43021956804042eaffd68d5dc4f956d4c5f633e7e67eda6a750042
+<<<<<<< HEAD
+  languageName: node
+  linkType: hard
+
+"supports-color@npm:8.1.1, supports-color@npm:^8.0.0":
+  version: 8.1.1
+  resolution: "supports-color@npm:8.1.1"
+  dependencies:
+    has-flag: ^4.0.0
+  checksum: c052193a7e43c6cdc741eb7f378df605636e01ad434badf7324f17fb60c69a880d8d8fcdcb562cf94c2350e57b937d7425ab5b8326c67c2adc48f7c87c1db406
+=======
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
@@ -21649,6 +21972,15 @@ sjcl@sublimator/sjcl:
     hey-listen: ^1.0.8
     tslib: ^2.1.0
   checksum: 96189770076a2717bf579f7d73a49953f0c3d633b90fed9b44b8285cbbe7facd19d6d7a0d2802fb493b45995791f62b87983c3d3c24128818a69e593b6d77aed
+  languageName: node
+  linkType: hard
+
+"supports-color@npm:8.1.1, supports-color@npm:^8.0.0":
+  version: 8.1.1
+  resolution: "supports-color@npm:8.1.1"
+  dependencies:
+    has-flag: ^4.0.0
+  checksum: c052193a7e43c6cdc741eb7f378df605636e01ad434badf7324f17fb60c69a880d8d8fcdcb562cf94c2350e57b937d7425ab5b8326c67c2adc48f7c87c1db406
   languageName: node
   linkType: hard
 
@@ -21831,6 +22163,7 @@ sjcl@sublimator/sjcl:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "tar@npm:^6.0.1, tar@npm:^6.0.2, tar@npm:^6.0.5, tar@npm:^6.1.0":
   version: 6.1.8
   resolution: "tar@npm:6.1.8"
@@ -21839,6 +22172,11 @@ sjcl@sublimator/sjcl:
   version: 6.1.0
   resolution: "tar@npm:6.1.0"
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
+=======
+"tar@npm:^6.0.2, tar@npm:^6.0.5, tar@npm:^6.1.0":
+  version: 6.1.8
+  resolution: "tar@npm:6.1.8"
+>>>>>>> 68babb53... chore: squash merge conflicts
   dependencies:
     chownr: ^2.0.0
     fs-minipass: ^2.0.0
@@ -22265,9 +22603,9 @@ sjcl@sublimator/sjcl:
   linkType: hard
 
 "trim-newlines@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "trim-newlines@npm:3.0.1"
-  checksum: b530f3fadf78e570cf3c761fb74fef655beff6b0f84b29209bac6c9622db75ad1417f4a7b5d54c96605dcd72734ad44526fef9f396807b90839449eb543c6206
+  version: 3.0.0
+  resolution: "trim-newlines@npm:3.0.0"
+  checksum: ad99b771e7e6fc785cfdd60f3eeb794a6f2f230dd291987107974abd0c95a051d7cf3b6d45b542a59bfe67eb680c5b259ec19741e6fdfdbee0ab783ab8861585
   languageName: node
   linkType: hard
 
@@ -22456,6 +22794,7 @@ sjcl@sublimator/sjcl:
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "tslib@npm:^2, tslib@npm:^2.2.0":
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
@@ -22468,7 +22807,16 @@ sjcl@sublimator/sjcl:
   version: 2.3.0
   resolution: "tslib@npm:2.3.0"
   checksum: 8869694c26e4a7b56d449662fd54a4f9ba872c889d991202c74462bd99f10e61d5bd63199566c4284c0f742277736292a969642cc7b590f98727a7cae9529122
+<<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+=======
+"tslib@npm:^2, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.2.0":
+  version: 2.3.1
+  resolution: "tslib@npm:2.3.1"
+  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+>>>>>>> 68babb53... chore: squash merge conflicts
+>>>>>>> aa521d93 (fix: change the link to adjust daily limit)
   languageName: node
   linkType: hard
 
