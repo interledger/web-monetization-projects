@@ -36,7 +36,7 @@ export const TipWarning = (props: ITipWarning): React.ReactElement => {
     <WarningWrapper>
       {currentTipAmount >= remainingDailyAmount ? (
         <span>
-          <a href='https://coil.com/settings/account'>
+          <a href='https://coil.com/settings/tipping' target='_blank' rel="noreferrer">
             Increase daily tipping limit
           </a>
         </span>
