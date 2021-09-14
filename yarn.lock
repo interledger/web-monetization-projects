@@ -1418,7 +1418,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -1474,7 +1474,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -1564,7 +1564,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     uuid: ^8.3.2
     web-ext: 6.3.0
     webpack: 5.51.1
@@ -1623,7 +1623,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -1689,7 +1689,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     uuid: ^8.3.2
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
@@ -1742,7 +1742,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -1801,7 +1801,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -1861,7 +1861,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     web-ext: ^6.1.0
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
@@ -1921,7 +1921,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     util: ^0.12.4
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
@@ -1974,7 +1974,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -2246,7 +2246,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -2299,7 +2299,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -2438,7 +2438,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
     typeface-roboto: ^1.1.13
-    typescript: 4.3.5
+    typescript: 4.4.3
     uuid: ^8.3.2
     web-ext: 6.3.0
     webpack: 5.51.1
@@ -4815,7 +4815,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     util: ^0.12.4
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
@@ -4894,7 +4894,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -4949,7 +4949,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     uuid: ^8.3.2
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
@@ -5004,7 +5004,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -5069,7 +5069,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     uuid: ^8.3.2
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
@@ -5122,7 +5122,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -5176,7 +5176,7 @@ __metadata:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
@@ -21637,23 +21637,43 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typescript@4.3.5, typescript@~4.3.4":
-  version: 4.3.5
-  resolution: "typescript@npm:4.3.5"
+typescript@4.4.3:
+  version: 4.4.3
+  resolution: "typescript@npm:4.4.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: bab033b5e2b0790dd35b77fd005df976ef80b8d84fd2c6e63cc31808151875beae9216e5a315fe7068e8499905c3c354248fe83272cdfc13b7705635f0c66c97
+  checksum: 05823f21796d450531a7e4ab299715d38fd9ded0e4ce7400876053f4b5166ca3dde7a68cecfe72d9086039f03c0b6edba36516fb10ed83c5837d9600532ea4c2
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.3.5#~builtin<compat/typescript>, typescript@patch:typescript@~4.3.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.4.3#~builtin<compat/typescript>":
+  version: 4.4.3
+  resolution: "typescript@patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=d8b4e7"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 215a59742afb7e0c3668e2c50ca19813deb24b3cc0d16ac3591990e033728050aaa99e159a72b54cb43653f16c778a5cf9dfeed1f51c3b105710ae082c064af7
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@~4.3.4#~builtin<compat/typescript>":
   version: 4.3.5
   resolution: "typescript@patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: bc2c4fdf0f1557fdafe4ef74848c72ebd9c8c60829568248f869121aea2bb20e16649a252431d0acb185ec118143be22bed73d08f64379557810d82756afedde
+  languageName: node
+  linkType: hard
+
+typescript@~4.3.4:
+  version: 4.3.5
+  resolution: "typescript@npm:4.3.5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: bab033b5e2b0790dd35b77fd005df976ef80b8d84fd2c6e63cc31808151875beae9216e5a315fe7068e8499905c3c354248fe83272cdfc13b7705635f0c66c97
   languageName: node
   linkType: hard
 
@@ -22301,7 +22321,7 @@ sjcl@sublimator/sjcl:
     ts-node: 10.2.1
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.11.0
-    typescript: 4.3.5
+    typescript: 4.4.3
     webpack: 5.51.1
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
