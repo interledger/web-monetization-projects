@@ -1542,7 +1542,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    http-server: 13.0.1
+    http-server: 13.0.2
     husky: 7.0.2
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
@@ -12394,9 +12394,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"http-server@npm:13.0.1":
-  version: 13.0.1
-  resolution: "http-server@npm:13.0.1"
+"http-server@npm:13.0.2":
+  version: 13.0.2
+  resolution: "http-server@npm:13.0.2"
   dependencies:
     basic-auth: ^1.0.3
     colors: ^1.4.0
@@ -12412,7 +12412,7 @@ fsevents@^1.2.7:
     url-join: ^2.0.5
   bin:
     http-server: bin/http-server
-  checksum: ec105bd82db6a0b6acfac3a3eb6207df32d0398363e09128bd37c1ccbf15dbe94be62e6a8e2c441ff25b95560794e612c98728a4e6c363595b0470cb147c4c2d
+  checksum: 04ce03f51553d38571c428e8562ca6b63058b470f5784b77bb22c91514d204b5db58d129558be57bf0cdd937d6a868572a9b24176c800592da85025a5242583a
   languageName: node
   linkType: hard
 
