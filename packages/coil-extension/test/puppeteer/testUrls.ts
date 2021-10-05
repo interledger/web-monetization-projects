@@ -5,7 +5,7 @@ type Domain = string
 const urls = {
   'https://coil.com': {
     twitchUrl: 'https://twitch.tv/vinesauce',
-    youtubeUrl: 'https://www.youtube.com/watch?v=-QMbZx_w2_Y',
+    youtubeUrl: 'https://www.youtube.com/watch?v=l1btEwwRePs',
     externalSite: 'https://www.xrptipbot.com/',
     coilArticle:
       'https://coil.com/p/thomasgardnerjr/Margaritaville-Jimmy-Buffett-cover-w-Sharper-s-Florist/dwntYG8d5'
