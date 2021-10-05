@@ -66,7 +66,7 @@ async function run() {
     success =
       success &&
       results.details.events[0].event.detail.paymentPointer.endsWith(
-        'twitter.xrptipbot.com/sharafian_'
+        'ilp.uphold.com/gRa4mXFEMYrL'
       ) &&
       initialEvents ===
         'monetizationpending, monetizationstart, monetizationprogress' &&
