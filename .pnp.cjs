@@ -6074,10 +6074,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react-helmet", [
-        ["npm:6.1.2", {
-          "packageLocation": "./.yarn/cache/@types-react-helmet-npm-6.1.2-0cdeedab9b-ee66a7b950.zip/node_modules/@types/react-helmet/",
+        ["npm:6.1.3", {
+          "packageLocation": "./.yarn/cache/@types-react-helmet-npm-6.1.3-03daf158c5-3d9f04fe42.zip/node_modules/@types/react-helmet/",
           "packageDependencies": [
-            ["@types/react-helmet", "npm:6.1.2"],
+            ["@types/react-helmet", "npm:6.1.3"],
             ["@types/react", "npm:17.0.19"]
           ],
           "linkType": "HARD",
@@ -6660,7 +6660,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node-fetch", "npm:2.5.12"],
             ["@types/react", "npm:17.0.19"],
             ["@types/react-dom", "npm:17.0.9"],
-            ["@types/react-helmet", "npm:6.1.2"],
+            ["@types/react-helmet", "npm:6.1.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.29.3"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.29.3"],
             ["@webmonetization/react", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#workspace:packages/webmonetization-react"],
