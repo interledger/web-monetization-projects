@@ -9,6 +9,8 @@
     "module": "commonjs",
     "noEmit": false,
 
+    "useUnknownInCatchVariables": false,
+
     "jsx": "react",
     "downlevelIteration": true,
     "moduleResolution": "node",
