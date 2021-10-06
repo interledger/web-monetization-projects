@@ -30,9 +30,9 @@ function makeLogger(logElSelector: string) {
     await suite.test()
     log('<strong>all tests passed!</strong>\n', true)
     log('\n<strong>all tests passed!</strong>', false)
-  } catch (e) {
+  } catch (e: unknown) {
     log('')
     log('Last Error:')
-    log(e.message)
+    log((e as Error).message)
   }
 })()
