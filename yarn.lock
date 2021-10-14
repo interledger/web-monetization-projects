@@ -4527,9 +4527,9 @@ __metadata:
   linkType: hard
 
 "@types/yargs-parser@npm:*":
-  version: 20.2.1
-  resolution: "@types/yargs-parser@npm:20.2.1"
-  checksum: 1d039e64494a7a61ddd278349a3dc60b19f99ff0517425696e796f794e4252452b9d62178e69755ad03f439f9dc0c8c3d7b3a1201b3a24e134bac1a09fa11eaa
+  version: 15.0.0
+  resolution: "@types/yargs-parser@npm:15.0.0"
+  checksum: 333ab73a1f9c82c64b2fac2441558e58f062fbe7affc35bb53b8e755b62cdd32b1bbc6f4da23773887a2189bf04395e2a8c710df344df4cd578993aeefe98053
   languageName: node
   linkType: hard
 
@@ -18085,7 +18085,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.3.6, postcss@npm:^8.2.15":
+"postcss@npm:8.3.6":
   version: 8.3.6
   resolution: "postcss@npm:8.3.6"
   dependencies:
@@ -18096,7 +18096,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.3.9":
+"postcss@npm:8.3.9, postcss@npm:^8.2.15":
   version: 8.3.9
   resolution: "postcss@npm:8.3.9"
   dependencies:
@@ -21497,9 +21497,9 @@ sjcl@sublimator/sjcl:
   linkType: hard
 
 "trim-newlines@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "trim-newlines@npm:3.0.1"
-  checksum: b530f3fadf78e570cf3c761fb74fef655beff6b0f84b29209bac6c9622db75ad1417f4a7b5d54c96605dcd72734ad44526fef9f396807b90839449eb543c6206
+  version: 3.0.0
+  resolution: "trim-newlines@npm:3.0.0"
+  checksum: ad99b771e7e6fc785cfdd60f3eeb794a6f2f230dd291987107974abd0c95a051d7cf3b6d45b542a59bfe67eb680c5b259ec19741e6fdfdbee0ab783ab8861585
   languageName: node
   linkType: hard
 

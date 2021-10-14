@@ -6236,16 +6236,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-yargs-npm-16.0.4-7aaef7d6c8-caa21d2c95.zip/node_modules/@types/yargs/",
           "packageDependencies": [
             ["@types/yargs", "npm:16.0.4"],
-            ["@types/yargs-parser", "npm:20.2.1"]
+            ["@types/yargs-parser", "npm:15.0.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@types/yargs-parser", [
-        ["npm:20.2.1", {
-          "packageLocation": "./.yarn/cache/@types-yargs-parser-npm-20.2.1-2eed5b5c1c-1d039e6449.zip/node_modules/@types/yargs-parser/",
+        ["npm:15.0.0", {
+          "packageLocation": "./.yarn/cache/@types-yargs-parser-npm-15.0.0-db1d59832c-333ab73a1f.zip/node_modules/@types/yargs-parser/",
           "packageDependencies": [
-            ["@types/yargs-parser", "npm:20.2.1"]
+            ["@types/yargs-parser", "npm:15.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -12421,7 +12421,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.4.0"],
             ["@types/webpack", null],
             ["icss-utils", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:5.1.0"],
-            ["postcss", "npm:8.3.6"],
+            ["postcss", "npm:8.3.9"],
             ["postcss-modules-extract-imports", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:3.0.0"],
             ["postcss-modules-local-by-default", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:4.0.0"],
             ["postcss-modules-scope", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:3.0.0"],
@@ -17064,7 +17064,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["icss-utils", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:5.1.0"],
             ["@types/postcss", null],
-            ["postcss", "npm:8.3.6"]
+            ["postcss", "npm:8.3.9"]
           ],
           "packagePeers": [
             "@types/postcss",
@@ -20441,7 +20441,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["normalize-package-data", "npm:2.5.0"],
             ["read-pkg-up", "npm:7.0.1"],
             ["redent", "npm:3.0.0"],
-            ["trim-newlines", "npm:3.0.1"],
+            ["trim-newlines", "npm:3.0.0"],
             ["type-fest", "npm:0.13.1"],
             ["yargs-parser", "npm:18.1.3"]
           ],
@@ -20459,7 +20459,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["normalize-package-data", "npm:3.0.2"],
             ["read-pkg-up", "npm:7.0.1"],
             ["redent", "npm:3.0.0"],
-            ["trim-newlines", "npm:3.0.1"],
+            ["trim-newlines", "npm:3.0.0"],
             ["type-fest", "npm:0.18.1"],
             ["yargs-parser", "npm:20.2.9"]
           ],
@@ -22884,7 +22884,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-modules-extract-imports", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:3.0.0"],
             ["@types/postcss", null],
-            ["postcss", "npm:8.3.6"]
+            ["postcss", "npm:8.3.9"]
           ],
           "packagePeers": [
             "@types/postcss",
@@ -22907,7 +22907,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-modules-local-by-default", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:4.0.0"],
             ["@types/postcss", null],
             ["icss-utils", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:5.1.0"],
-            ["postcss", "npm:8.3.6"],
+            ["postcss", "npm:8.3.9"],
             ["postcss-selector-parser", "npm:6.0.6"],
             ["postcss-value-parser", "npm:4.1.0"]
           ],
@@ -22931,7 +22931,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["postcss-modules-scope", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:3.0.0"],
             ["@types/postcss", null],
-            ["postcss", "npm:8.3.6"],
+            ["postcss", "npm:8.3.9"],
             ["postcss-selector-parser", "npm:6.0.6"]
           ],
           "packagePeers": [
@@ -22955,7 +22955,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-modules-values", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:4.0.0"],
             ["@types/postcss", null],
             ["icss-utils", "virtual:8a141589bf3afb703bbdb0964cae2f139079e13b250d68a40f541b9d142dafdffb27ecbe2c439c9f719f7ca5817f3e0c6af3e8fa22720e351f8ec8cde398a172#npm:5.1.0"],
-            ["postcss", "npm:8.3.6"]
+            ["postcss", "npm:8.3.9"]
           ],
           "packagePeers": [
             "@types/postcss",
@@ -27102,10 +27102,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.0.1", {
-          "packageLocation": "./.yarn/cache/trim-newlines-npm-3.0.1-22f1f216de-b530f3fadf.zip/node_modules/trim-newlines/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/trim-newlines-npm-3.0.0-ccf666d8fc-ad99b771e7.zip/node_modules/trim-newlines/",
           "packageDependencies": [
-            ["trim-newlines", "npm:3.0.1"]
+            ["trim-newlines", "npm:3.0.0"]
           ],
           "linkType": "HARD",
         }]
