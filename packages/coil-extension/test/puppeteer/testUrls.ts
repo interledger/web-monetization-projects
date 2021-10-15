@@ -6,7 +6,7 @@ const urls = {
   'https://coil.com': {
     twitchUrl: 'https://twitch.tv/vinesauce',
     youtubeUrl: 'https://www.youtube.com/watch?v=8EKg_rBWZdc',
-    externalSite: 'https://hackernoon.com/',
+    externalSite: 'https://dev.to',
     coilArticle: 'https://coil.com/p/travis/Test-Image-Post/Kk8LC4Ebu'
   },
   'https://staging.coil.com': {
