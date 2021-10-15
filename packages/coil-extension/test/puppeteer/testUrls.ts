@@ -7,8 +7,7 @@ const urls = {
     twitchUrl: 'https://twitch.tv/vinesauce',
     youtubeUrl: 'https://www.youtube.com/watch?v=8EKg_rBWZdc',
     externalSite: 'https://hackernoon.com/',
-    coilArticle:
-      'https://coil.com/p/sharafian/Doubling-Down-on-Privacy/cD_ZiwT2J'
+    coilArticle: 'https://coil.com/p/travis/Test-Image-Post/Kk8LC4Ebu'
   },
   'https://staging.coil.com': {
     coilArticle:
