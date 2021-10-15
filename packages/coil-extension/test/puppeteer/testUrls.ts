@@ -5,10 +5,10 @@ type Domain = string
 const urls = {
   'https://coil.com': {
     twitchUrl: 'https://twitch.tv/vinesauce',
-    youtubeUrl: 'https://www.youtube.com/watch?v=l1btEwwRePs',
-    externalSite: 'https://www.xrptipbot.com/',
+    youtubeUrl: 'https://www.youtube.com/watch?v=8EKg_rBWZdc',
+    externalSite: 'https://hackernoon.com/',
     coilArticle:
-      'https://coil.com/p/thomasgardnerjr/Margaritaville-Jimmy-Buffett-cover-w-Sharper-s-Florist/dwntYG8d5'
+      'https://coil.com/p/sharafian/Doubling-Down-on-Privacy/cD_ZiwT2J'
   },
   'https://staging.coil.com': {
     coilArticle:
