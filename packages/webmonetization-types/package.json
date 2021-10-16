@@ -67,7 +67,7 @@
     "lint-staged": "11.2.3",
     "prettier": "2.4.1",
     "rimraf": "3.0.2",
-    "ts-jest": "27.0.5",
+    "ts-jest": "27.0.7",
     "ts-json-schema-generator": "0.96.0",
     "ts-loader": "9.2.6",
     "ts-node": "10.2.1",
