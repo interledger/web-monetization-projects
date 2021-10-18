@@ -1526,7 +1526,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 3.0.1
     JSON2016: 1.0.0
-    addons-linter: 3.19.0
+    addons-linter: 3.21.0
     copy-webpack-plugin: 9.0.1
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -2416,7 +2416,7 @@ __metadata:
     "@webmonetization/wext": ^0.0.0
     "@yarnpkg/pnpify": 3.0.1
     JSON2016: 1.0.0
-    addons-linter: 3.19.0
+    addons-linter: 3.21.0
     copy-webpack-plugin: 9.0.1
     crx-hotreload: 1.0.6
     css-loader: 6.4.0
@@ -5661,47 +5661,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:3.19.0":
-  version: 3.19.0
-  resolution: "addons-linter@npm:3.19.0"
-  dependencies:
-    "@mdn/browser-compat-data": 4.0.5
-    addons-moz-compare: 1.2.0
-    addons-scanner-utils: 5.0.0
-    ajv: 6.12.6
-    ajv-merge-patch: 4.1.0
-    chalk: 4.1.2
-    cheerio: 1.0.0-rc.10
-    columnify: 1.5.4
-    common-tags: 1.8.0
-    deepmerge: 4.2.2
-    dispensary: 0.62.0
-    eslint: 7.32.0
-    eslint-plugin-no-unsanitized: 3.1.5
-    eslint-visitor-keys: 3.0.0
-    espree: 9.0.0
-    esprima: 4.0.1
-    fluent-syntax: 0.13.0
-    glob: 7.2.0
-    image-size: 1.0.0
-    is-mergeable-object: 1.1.1
-    jed: 1.1.1
-    os-locale: 5.0.0
-    pino: 6.13.3
-    postcss: 8.3.9
-    relaxed-json: 1.0.3
-    semver: 7.3.5
-    source-map-support: 0.5.20
-    tosource: 1.0.0
-    upath: 2.0.1
-    yargs: 17.2.1
-    yauzl: 2.10.0
-  bin:
-    addons-linter: bin/addons-linter
-  checksum: 268c54a4dddec249a90ebfb92559abe38ab1ab0fc43eabbb4d0834cb6d72943bc3687ac8ecadacec4d89f5bcee8db5596d58db24803758557cafc0f917113764
-  languageName: node
-  linkType: hard
-
 "addons-linter@npm:3.20.0":
   version: 3.20.0
   resolution: "addons-linter@npm:3.20.0"
@@ -5740,6 +5699,47 @@ __metadata:
   bin:
     addons-linter: bin/addons-linter
   checksum: 13b683d47693e69b30bcb8670492a97b14202483d2d12f98fd042db138ea94531251b3a9a9bcb74f73e41aa69c6687a8bc93969d60258a873d6905b42352533c
+  languageName: node
+  linkType: hard
+
+"addons-linter@npm:3.21.0":
+  version: 3.21.0
+  resolution: "addons-linter@npm:3.21.0"
+  dependencies:
+    "@mdn/browser-compat-data": 4.0.5
+    addons-moz-compare: 1.2.0
+    addons-scanner-utils: 5.0.0
+    ajv: 6.12.6
+    ajv-merge-patch: 4.1.0
+    chalk: 4.1.2
+    cheerio: 1.0.0-rc.10
+    columnify: 1.5.4
+    common-tags: 1.8.0
+    deepmerge: 4.2.2
+    dispensary: 0.62.0
+    eslint: 7.32.0
+    eslint-plugin-no-unsanitized: 3.1.5
+    eslint-visitor-keys: 3.0.0
+    espree: 9.0.0
+    esprima: 4.0.1
+    fluent-syntax: 0.13.0
+    glob: 7.2.0
+    image-size: 1.0.0
+    is-mergeable-object: 1.1.1
+    jed: 1.1.1
+    os-locale: 5.0.0
+    pino: 6.13.3
+    postcss: 8.3.9
+    relaxed-json: 1.0.3
+    semver: 7.3.5
+    source-map-support: 0.5.20
+    tosource: 1.0.0
+    upath: 2.0.1
+    yargs: 17.2.1
+    yauzl: 2.10.0
+  bin:
+    addons-linter: bin/addons-linter
+  checksum: de69bbcc92b9a4b6dfe7bfec844a0ce151a187fda3f205594415a1d57f8909be6e745acc6515151c2979ede6074aaa0ef82b13ababd2483c656fc0e613df196e
   languageName: node
   linkType: hard
 

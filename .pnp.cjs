@@ -2818,7 +2818,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@wext/shipit", "patch:@wext/shipit@npm%3A0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515::version=0.2.1&hash=e24a92&locator=web-monetization%40workspace%3A."],
             ["@yarnpkg/pnpify", "npm:3.0.1"],
             ["JSON2016", "npm:1.0.0"],
-            ["addons-linter", "npm:3.19.0"],
+            ["addons-linter", "npm:3.21.0"],
             ["copy-webpack-plugin", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.0.1"],
             ["crx-hotreload", "npm:1.0.6"],
             ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
@@ -3782,7 +3782,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webmonetization/wext", "workspace:packages/webmonetization-wext"],
             ["@yarnpkg/pnpify", "npm:3.0.1"],
             ["JSON2016", "npm:1.0.0"],
-            ["addons-linter", "npm:3.19.0"],
+            ["addons-linter", "npm:3.21.0"],
             ["copy-webpack-plugin", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:9.0.1"],
             ["crx-hotreload", "npm:1.0.6"],
             ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.4.0"],
@@ -8573,10 +8573,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.19.0", {
-          "packageLocation": "./.yarn/cache/addons-linter-npm-3.19.0-56686b2874-268c54a4dd.zip/node_modules/addons-linter/",
+        ["npm:3.20.0", {
+          "packageLocation": "./.yarn/cache/addons-linter-npm-3.20.0-d5a771500f-13b683d476.zip/node_modules/addons-linter/",
           "packageDependencies": [
-            ["addons-linter", "npm:3.19.0"],
+            ["addons-linter", "npm:3.20.0"],
             ["@mdn/browser-compat-data", "npm:4.0.5"],
             ["addons-moz-compare", "npm:1.2.0"],
             ["addons-scanner-utils", "virtual:d5a771500f5554a047a2dc50011066c293d4efd551e6ccc373161487b8782ea83271dc86fdf5da4e4592dfdf262761fe301d693905e5ffc75ad6d1acb9780aaa#npm:5.0.0"],
@@ -8611,10 +8611,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.20.0", {
-          "packageLocation": "./.yarn/cache/addons-linter-npm-3.20.0-d5a771500f-13b683d476.zip/node_modules/addons-linter/",
+        ["npm:3.21.0", {
+          "packageLocation": "./.yarn/cache/addons-linter-npm-3.21.0-f6eac59862-de69bbcc92.zip/node_modules/addons-linter/",
           "packageDependencies": [
-            ["addons-linter", "npm:3.20.0"],
+            ["addons-linter", "npm:3.21.0"],
             ["@mdn/browser-compat-data", "npm:4.0.5"],
             ["addons-moz-compare", "npm:1.2.0"],
             ["addons-scanner-utils", "virtual:d5a771500f5554a047a2dc50011066c293d4efd551e6ccc373161487b8782ea83271dc86fdf5da4e4592dfdf262761fe301d693905e5ffc75ad6d1acb9780aaa#npm:5.0.0"],
