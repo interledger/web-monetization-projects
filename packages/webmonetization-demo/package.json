@@ -43,7 +43,7 @@
     "ilp-plugin-btp": "^1.5.0",
     "ilp-plugin-mini-accounts": "^4.2.0",
     "ilp-protocol-stream": "^2.7.0",
-    "inversify": "^5.1.1",
+    "inversify": "^6.0.0",
     "inversify-express-utils": "^6.3.2",
     "node-fetch": "^2.6.1",
     "oer-utils": "^5.1.2",
