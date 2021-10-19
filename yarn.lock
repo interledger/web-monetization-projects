@@ -1421,7 +1421,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -1477,7 +1477,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -1569,7 +1569,7 @@ __metadata:
     web-ext: 6.5.0
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -1626,7 +1626,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
     yaml: ^1.10.2
@@ -1693,7 +1693,7 @@ __metadata:
     uuid: ^8.3.2
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -1745,7 +1745,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -1804,7 +1804,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -1865,7 +1865,7 @@ __metadata:
     web-ext: ^6.1.0
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -1925,7 +1925,7 @@ __metadata:
     util: ^0.12.4
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -1977,7 +1977,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -2251,7 +2251,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -2304,7 +2304,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -2459,7 +2459,7 @@ __metadata:
     web-ext: 6.5.0
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -4836,7 +4836,7 @@ __metadata:
     util: ^0.12.4
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -4914,7 +4914,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -4970,7 +4970,7 @@ __metadata:
     uuid: ^8.3.2
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -5024,7 +5024,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   peerDependencies:
@@ -5090,7 +5090,7 @@ __metadata:
     uuid: ^8.3.2
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -5142,7 +5142,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -5196,7 +5196,7 @@ __metadata:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -22157,7 +22157,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"v8-compile-cache@npm:^2.0.3, v8-compile-cache@npm:^2.2.0":
+"v8-compile-cache@npm:^2.0.3":
   version: 2.2.0
   resolution: "v8-compile-cache@npm:2.2.0"
   checksum: b5916ac2079a4d3de003d9d657d37e1b96453603158ccf6f3d2cc64d0018b71f3576fd3534f519829f9641b4588c830b9363dc5821fe213a51c1b1b3728a382a
@@ -22417,7 +22417,7 @@ sjcl@sublimator/sjcl:
     typescript: 4.4.3
     webpack: 5.58.2
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
+    webpack-cli: 4.9.1
     webpack-dev-server: 3.11.2
     webpack-merge: 5.8.0
   languageName: unknown
@@ -22463,9 +22463,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:4.9.0":
-  version: 4.9.0
-  resolution: "webpack-cli@npm:4.9.0"
+"webpack-cli@npm:4.9.1":
+  version: 4.9.1
+  resolution: "webpack-cli@npm:4.9.1"
   dependencies:
     "@discoveryjs/json-ext": ^0.5.0
     "@webpack-cli/configtest": ^1.1.0
@@ -22478,7 +22478,6 @@ sjcl@sublimator/sjcl:
     import-local: ^3.0.2
     interpret: ^2.2.0
     rechoir: ^0.7.0
-    v8-compile-cache: ^2.2.0
     webpack-merge: ^5.7.3
   peerDependencies:
     webpack: 4.x.x || 5.x.x
@@ -22493,7 +22492,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     webpack-cli: bin/cli.js
-  checksum: bc378a23773510c9a6a58669fe782f7849b50cbb78a948723583e7b059eae2f49888eb6dba398361af916b3d56195d99cdb494a595a2ecc95a5638e99b59c923
+  checksum: 2aff0349c15e54d616e1fd6dc1f59be16ec1a630f652f948c0b4b108776d1889446e3498e83d9d514bf1b28c5125a8b87c4aeb5dceb41b593ba90765af673c4f
   languageName: node
   linkType: hard
 
