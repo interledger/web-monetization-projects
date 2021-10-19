@@ -1,7 +1,10 @@
 /*
     TipRouter
     
-    The tip router is responsible for all the local state that is relative the the tipping process as well as the logic that determines which tipping view is rendered. Also will need to pass context down to the rendered components.
+    The tip router is responsible for all the local state that 
+    is relative the the tipping process as well as the logic that 
+    determines which tipping view is rendered. Also will need to 
+    pass context down to the rendered components.
 */
 
 import React, { useState } from 'react'
