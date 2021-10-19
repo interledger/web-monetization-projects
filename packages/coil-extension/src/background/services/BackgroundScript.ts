@@ -843,47 +843,22 @@ export class BackgroundScript {
     creditCardCharge?: string
     tipCreditCharge?: string
   }> {
-    const tabId = this.activeTab
-    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
-    if (!streamId) {
-      this.log('can not find top frame for tabId=%d', tabId)
-      return { success: false }
-    }
-    const stream = this.streams.getStream(streamId)
     const token = this.auth.getStoredToken()
 
     // TODO: return detailed errors
-    if (!stream || !token) {
-      this.log(
-        'tipPreview: no stream | token. !!stream !!token ',
-        !!stream,
-        !!token
-      )
+    if (!token) {
+      this.log('tipPreview: token. !!token ', !!token)
       return { success: false }
     }
-
-    const receiver = stream.getPaymentPointer()
-    const { exchangeRate } = stream.getAssetDetails()
 
     // Set tip amount
     const CENTS = 100
     const tipAmountCents = Math.floor(tip * CENTS).toString()
 
-    // Set active tab url
-    const frameId = 0
-    const frame = notNullOrUndef(
-      this.framesService.getFrame({ frameId, tabId })
-    )
-    const activeTabUrl = frame.href
-
     try {
       this.log('tipPreview: requesting tip preview')
 
-      const result = await this.client.tipPreview(token, {
-        tipAmountCents,
-        destination: receiver,
-        origin: activeTabUrl
-      })
+      const result = await this.client.tipPreview(token, tipAmountCents)
 
       return {
         success: true,

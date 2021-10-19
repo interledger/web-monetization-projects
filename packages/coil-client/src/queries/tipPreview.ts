@@ -1,9 +1,7 @@
 import { GraphQlClient } from '../graphQlClient'
 
-import { TipInput } from './tip'
-
-export const tipPreviewQuery = `query tipPreview($input: TipInput!) {
-  tipPreview(input: $input) {
+export const tipPreviewQuery = `query tipPreview($tipAmountCents: String!) {
+  tipPreview(tipAmountCents: $tipAmountCents) {
     code
     message
     success
@@ -31,12 +29,12 @@ export interface TipPreviewData {
 export async function tipPreview(
   this: GraphQlClient,
   token: string,
-  input: TipInput
+  tipAmountCents: string
 ): Promise<TipPreviewData['tipPreview']> {
   const message = await this.query<TipPreviewData>({
     query: tipPreviewQuery,
     token,
-    variables: { input }
+    variables: { tipAmountCents }
   })
 
   const tipPreview = message.data?.tipPreview
