@@ -4177,10 +4177,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/html-minifier-terser@npm:^5.0.0":
-  version: 5.1.0
-  resolution: "@types/html-minifier-terser@npm:5.1.0"
-  checksum: 2a63ef76802160451771b1c3579057fb32eacf3741cfd03bd908d53c7cd38cc25e872bccb8fa384828147eefb54168c444a0f4e32a19df10bfbc9c8ae95c5d4f
+"@types/html-minifier-terser@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@types/html-minifier-terser@npm:6.0.0"
+  checksum: 8f602498d726c9fd30d2b895478b4e7cb1f91558d892e44f54533669dbbbfae572c5fb2b04ee4fa5cbe7f8d59982d2067bf5c2931a3aefcf8dac590e4494b103
   languageName: node
   linkType: hard
 
@@ -4888,7 +4888,7 @@ __metadata:
     eslint-plugin-standard: 5.0.0
     express: ^4.17.1
     figlet: ^1.5.0
-    html-webpack-plugin: 5.3.2
+    html-webpack-plugin: 5.4.0
     husky: 7.0.2
     ilp-plugin-btp: ^1.5.0
     ilp-plugin-mini-accounts: ^4.2.0
@@ -5071,7 +5071,7 @@ __metadata:
     eslint-plugin-react: 7.24.0
     eslint-plugin-react-hooks: 4.2.0
     eslint-plugin-standard: 5.0.0
-    html-webpack-plugin: 5.3.2
+    html-webpack-plugin: 5.4.0
     husky: 7.0.2
     jest: 27.3.0
     lerna: 4.0.0
@@ -7354,13 +7354,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camel-case@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "camel-case@npm:4.1.1"
+"camel-case@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "camel-case@npm:4.1.2"
   dependencies:
-    pascal-case: ^3.1.1
-    tslib: ^1.10.0
-  checksum: ba996819910deedd18d268b1bf0df38fe3745f8f5c9f377a95a2dfad5ebe420c255272271b95b57d37270bfcc19aac2b5984d5078509cf862e5279c063f3cbc9
+    pascal-case: ^3.1.2
+    tslib: ^2.0.3
+  checksum: bcbd25cd253b3cbc69be3f535750137dbf2beb70f093bdc575f73f800acc8443d34fd52ab8f0a2413c34f1e8203139ffc88428d8863e4dfe530cfb257a379ad6
   languageName: node
   linkType: hard
 
@@ -7716,12 +7716,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clean-css@npm:^4.2.3":
-  version: 4.2.3
-  resolution: "clean-css@npm:4.2.3"
+"clean-css@npm:^5.1.5":
+  version: 5.2.1
+  resolution: "clean-css@npm:5.2.1"
   dependencies:
     source-map: ~0.6.0
-  checksum: 613129973a038b8bb13e3975ad6b679feccb8c98f2a9d03e6bec9e60291ef1e6b5037ee8cb09a3470751adc52f43782b1dcb4cb049360230b48062d6e3314072
+  checksum: 45bf069a37d8d80a8e88933d7d26f5870aef086f7634ceda25865f6690e24fee1f1b49bf919f3cedb3d51d721534278ea5181b090256ea72ec0c3defb2aa17c2
   languageName: node
   linkType: hard
 
@@ -8022,13 +8022,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "commander@npm:4.1.1"
-  checksum: d7b9913ff92cae20cb577a4ac6fcc121bd6223319e54a40f51a14740a681ad5c574fd29a57da478a5f234a6fa6c52cbf0b7c641353e03c648b1ae85ba670b977
-  languageName: node
-  linkType: hard
-
 "commander@npm:^6.2.1":
   version: 6.2.1
   resolution: "commander@npm:6.2.1"
@@ -8043,7 +8036,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^8.2.0":
+"commander@npm:^8.1.0, commander@npm:^8.2.0":
   version: 8.2.0
   resolution: "commander@npm:8.2.0"
   checksum: e868805bc266777f7a9c8a740e15b9e02b8148d8251f577ea9b9ef373ac0bdeb77b9b60cfc033592c9e1affea89993be08c13c623f0c619f9bf152c0e4d12cb0
@@ -9370,13 +9363,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dot-case@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "dot-case@npm:3.0.3"
+"dot-case@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "dot-case@npm:3.0.4"
   dependencies:
-    no-case: ^3.0.3
-    tslib: ^1.10.0
-  checksum: d47f6b6aab0074e80323370802162a1ba52cf98d281330673fb6f8ac2d3933222251e503e4a9342e3bcce8974ac53eb2c61f4c07e3e64fb825e3ca848c278cf3
+    no-case: ^3.0.4
+    tslib: ^2.0.3
+  checksum: a65e3519414856df0228b9f645332f974f2bf5433370f544a681122eab59e66038fc3349b4be1cdc47152779dac71a5864f1ccda2f745e767c46e9c6543b1169
   languageName: node
   linkType: hard
 
@@ -12355,35 +12348,35 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"html-minifier-terser@npm:^5.0.1":
-  version: 5.1.1
-  resolution: "html-minifier-terser@npm:5.1.1"
+"html-minifier-terser@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "html-minifier-terser@npm:6.0.2"
   dependencies:
-    camel-case: ^4.1.1
-    clean-css: ^4.2.3
-    commander: ^4.1.1
+    camel-case: ^4.1.2
+    clean-css: ^5.1.5
+    commander: ^8.1.0
     he: ^1.2.0
-    param-case: ^3.0.3
+    param-case: ^3.0.4
     relateurl: ^0.2.7
-    terser: ^4.6.3
+    terser: ^5.7.2
   bin:
     html-minifier-terser: cli.js
-  checksum: 75ff3ff886631b9ecb3035acb8e7dd98c599bb4d4618ad6f7e487ee9752987dddcf6848dc3c1ab1d7fc1ad4484337c2ce39c19eac17b0342b4b15e4294c8a904
+  checksum: 9c8775ea036f7b04fd5a16607cf4242efdddc64884e84fcc81e27ef56505a12b8a9e1f9ac865ca00a77a3e4c21ef4ffb194dcc6492cdf6cfdfc73bf8de6d7c2d
   languageName: node
   linkType: hard
 
-"html-webpack-plugin@npm:5.3.2":
-  version: 5.3.2
-  resolution: "html-webpack-plugin@npm:5.3.2"
+"html-webpack-plugin@npm:5.4.0":
+  version: 5.4.0
+  resolution: "html-webpack-plugin@npm:5.4.0"
   dependencies:
-    "@types/html-minifier-terser": ^5.0.0
-    html-minifier-terser: ^5.0.1
+    "@types/html-minifier-terser": ^6.0.0
+    html-minifier-terser: ^6.0.2
     lodash: ^4.17.21
     pretty-error: ^3.0.4
     tapable: ^2.0.0
   peerDependencies:
     webpack: ^5.20.0
-  checksum: 9dd91c59fc795abfb484c0e311a72260899121662747ba2131259813e4c7b25066b2daf9fd609228c2cd02f2fa5bfe7eeabb99a756729533aa70bdb07b77ebba
+  checksum: 4963e1955df0d97021bc725700f2d24094506ea1b70d3a969edbd65127701523315993c5428ff8b36ab4bd5459a76e139d420d528ba76aade5565cb92361b89c
   languageName: node
   linkType: hard
 
@@ -15491,12 +15484,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lower-case@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "lower-case@npm:2.0.1"
+"lower-case@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "lower-case@npm:2.0.2"
   dependencies:
-    tslib: ^1.10.0
-  checksum: 3ec80a067c1e053eee323bdc040317cc629e59ee5a6248fa5c62d7fb0f8fe4eda1b2cfb4725f7428f542b45dcc7d35a3f4a98fef8b4b47de668109a79dd478d8
+    tslib: ^2.0.3
+  checksum: 83a0a5f159ad7614bee8bf976b96275f3954335a84fad2696927f609ddae902802c4f3312d86668722e668bef41400254807e1d3a7f2e8c3eede79691aa1f010
   languageName: node
   linkType: hard
 
@@ -16354,13 +16347,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"no-case@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "no-case@npm:3.0.3"
+"no-case@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "no-case@npm:3.0.4"
   dependencies:
-    lower-case: ^2.0.1
-    tslib: ^1.10.0
-  checksum: 1dc335f63b854833e9425f73720bedb4fcd85b06cb33768aedce826e2c3ed2718dc7cb222e0e24d296adfd16c66af3a7c1764c9618bec5f5b223520cfae8d5c8
+    lower-case: ^2.0.2
+    tslib: ^2.0.3
+  checksum: 0b2ebc113dfcf737d48dde49cfebf3ad2d82a8c3188e7100c6f375e30eafbef9e9124aadc3becef237b042fd5eb0aad2fd78669c20972d045bbe7fea8ba0be5c
   languageName: node
   linkType: hard
 
@@ -17414,13 +17407,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"param-case@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "param-case@npm:3.0.3"
+"param-case@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "param-case@npm:3.0.4"
   dependencies:
-    dot-case: ^3.0.3
-    tslib: ^1.10.0
-  checksum: aff6a8fb1e0a271fc9ee366a39eb33d8cb9302f62c000a06f37fe8c8ed47970fb272d8f899749ee51d46b2b73e8f5daa471fc9c45ce4669d763d1baf1c2668e8
+    dot-case: ^3.0.4
+    tslib: ^2.0.3
+  checksum: b34227fd0f794e078776eb3aa6247442056cb47761e9cd2c4c881c86d84c64205f6a56ef0d70b41ee7d77da02c3f4ed2f88e3896a8fefe08bdfb4deca037c687
   languageName: node
   linkType: hard
 
@@ -17559,13 +17552,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"pascal-case@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "pascal-case@npm:3.1.1"
+"pascal-case@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "pascal-case@npm:3.1.2"
   dependencies:
-    no-case: ^3.0.3
-    tslib: ^1.10.0
-  checksum: 7e37861305c19d1021f0d2f9f03802372579a44315a5c3ae4157d91dbc05340ee6a54b06ef4f6d85ce124d810e1bd25b039c2b5f7100eee91561d348307d7b8c
+    no-case: ^3.0.4
+    tslib: ^2.0.3
+  checksum: ba98bfd595fc91ef3d30f4243b1aee2f6ec41c53b4546bfa3039487c367abaa182471dcfc830a1f9e1a0df00c14a370514fa2b3a1aacc68b15a460c31116873e
   languageName: node
   linkType: hard
 
@@ -20268,7 +20261,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:0.5.20, source-map-support@npm:^0.5.12, source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12, source-map-support@npm:~0.5.19, source-map-support@npm:~0.5.4":
+"source-map-support@npm:0.5.20, source-map-support@npm:^0.5.12, source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.20, source-map-support@npm:~0.5.4":
   version: 0.5.20
   resolution: "source-map-support@npm:0.5.20"
   dependencies:
@@ -21083,29 +21076,16 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"terser@npm:^4.6.3":
-  version: 4.8.0
-  resolution: "terser@npm:4.8.0"
-  dependencies:
-    commander: ^2.20.0
-    source-map: ~0.6.1
-    source-map-support: ~0.5.12
-  bin:
-    terser: bin/terser
-  checksum: f980789097d4f856c1ef4b9a7ada37beb0bb022fb8aa3057968862b5864ad7c244253b3e269c9eb0ab7d0caf97b9521273f2d1cf1e0e942ff0016e0583859c71
-  languageName: node
-  linkType: hard
-
-"terser@npm:^5.7.0":
-  version: 5.7.0
-  resolution: "terser@npm:5.7.0"
+"terser@npm:^5.7.0, terser@npm:^5.7.2":
+  version: 5.9.0
+  resolution: "terser@npm:5.9.0"
   dependencies:
     commander: ^2.20.0
     source-map: ~0.7.2
-    source-map-support: ~0.5.19
+    source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: 3abeb551865079b27e2890dbec866054967d1963fc80a81e5e14e414c43db88ff53a5e88844c145df11bed01b28040aa96afd82113c6d1a6ad28409b6cae4fde
+  checksum: 11c1246b1991015a8881742878af779e3863fad42f626ffda957dbf28c94bf51e7994cffb9ffbec86ff3c23ab45ffa6d79d453c15e664306e35fc7b2c4eee5f4
   languageName: node
   linkType: hard
 
@@ -21585,14 +21565,14 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.10.0, tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
+"tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
   languageName: node
   linkType: hard
 
-"tslib@npm:^2, tslib@npm:^2.2.0":
+"tslib@npm:^2, tslib@npm:^2.0.3, tslib@npm:^2.2.0":
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
