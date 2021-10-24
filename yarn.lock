@@ -1827,7 +1827,7 @@ __metadata:
     "@types/get-port": 4.2.0
     "@types/jest": 27.0.1
     "@types/node": 14.17.27
-    "@types/tmp": 0.2.1
+    "@types/tmp": 0.2.2
     "@typescript-eslint/eslint-plugin": 5.1.0
     "@typescript-eslint/parser": 5.1.0
     "@webmonetization/types": 0.0.0
@@ -4474,10 +4474,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/tmp@npm:0.2.1":
-  version: 0.2.1
-  resolution: "@types/tmp@npm:0.2.1"
-  checksum: 2617d2a04811ca78a8d21f5ffc3bd7c392e03c440053a615b091f3e3726540d36babffc750614a803c81b9f2c5f218cdafc748d8cf4638eade2962f8ccddd2fa
+"@types/tmp@npm:0.2.2":
+  version: 0.2.2
+  resolution: "@types/tmp@npm:0.2.2"
+  checksum: e69613e93d83603e7f7c4863e1a92668ed8058958b0e857884803df8622905bfbbf0d5f438b8dc77633d74d25453231e722dd9dacf82dab360ed5fdc2f956b17
   languageName: node
   linkType: hard
 
