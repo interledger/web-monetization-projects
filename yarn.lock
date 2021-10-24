@@ -1408,7 +1408,7 @@ __metadata:
     jest: 27.3.1
     jsonwebtoken: 8.5.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     localforage: 1.10.0
     node-fetch: ^2.6.1
     prettier: 2.4.1
@@ -1465,7 +1465,7 @@ __metadata:
     jest: 27.3.1
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     node-fetch: ^2.6.1
     prettier: 2.4.1
     rimraf: 3.0.2
@@ -1552,7 +1552,7 @@ __metadata:
     jsonwebtoken: ^8.5.1
     jss: ^10.6.0
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     puppeteer: 10.4.0
     react: ^17.0.0
@@ -1612,7 +1612,7 @@ __metadata:
     jest: 27.3.1
     json5: ^2.2.0
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     npm-check-updates: ^11.6.0
     prettier: 2.4.1
     reduct: ^3.3.1
@@ -1678,7 +1678,7 @@ __metadata:
     ilp-protocol-stream: 2.7.0
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     node-fetch: ^2.6.1
     prettier: 2.4.1
     puppeteer: 10.4.0
@@ -1733,7 +1733,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     node-fetch: ^2.6.1
     prettier: 2.4.1
     rimraf: 3.0.2
@@ -1791,7 +1791,7 @@ __metadata:
     jest: 27.3.1
     keccak: ^3.0.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     node-fetch: ^2.6.1
     prettier: 2.4.1
     rimraf: 3.0.2
@@ -1851,7 +1851,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     puppeteer: ^10.0.0
     rimraf: 3.0.2
@@ -1909,7 +1909,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     process: ^0.11.10
     rimraf: 3.0.2
@@ -1966,7 +1966,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
@@ -2240,7 +2240,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
@@ -2293,7 +2293,7 @@ __metadata:
     inversify: ^6.0.0
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
@@ -2442,7 +2442,7 @@ __metadata:
     jest: 27.3.1
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     react: ^17.0.0
     react-dom: ^17.0.0
@@ -4820,7 +4820,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     process: ^0.11.10
     rimraf: 3.0.2
@@ -4897,7 +4897,7 @@ __metadata:
     inversify-express-utils: ^6.3.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     node-fetch: ^2.6.1
     oer-utils: ^5.1.2
     prettier: 2.4.1
@@ -4956,7 +4956,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     node-fetch: ^2.6.1
     prettier: 2.4.1
     reduct: ^3.3.1
@@ -5013,7 +5013,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
@@ -5075,7 +5075,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     react: ^17.0.0
     react-dom: ^17.0.0
@@ -5130,7 +5130,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
@@ -5185,7 +5185,7 @@ __metadata:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
@@ -8430,7 +8430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig@npm:^7.0.0, cosmiconfig@npm:^7.0.1":
+"cosmiconfig@npm:^7.0.0":
   version: 7.0.1
   resolution: "cosmiconfig@npm:7.0.1"
   dependencies:
@@ -14406,14 +14406,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "js-yaml@npm:4.0.0"
+"js-yaml@npm:^4.0.0, js-yaml@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "js-yaml@npm:4.1.0"
   dependencies:
     argparse: ^2.0.1
   bin:
     js-yaml: bin/js-yaml.js
-  checksum: 931d6dddb3589fa272c8273366c6dffa99fd6bd26ac7b70f9bac925c28cb7ae352b964192df84f90ecd7a2ff50ab87e6d58e2148eb19c89aa155c73ed847ab92
+  checksum: c7830dfd456c3ef2c6e355cc5a92e6700ceafa1d14bba54497b34a99f0376cecbb3e9ac14d3e5849b426d5a5140709a66237a8c991c675431271c4ce5504151a
   languageName: node
   linkType: hard
 
@@ -15118,6 +15118,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"lilconfig@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "lilconfig@npm:2.0.3"
+  checksum: 39fcd06c9f94bec0f7be969f89abcead96cf9334682007df63e6fbe9bdb0566cf8e1ca53a8f56d2acca802f28e8acbabe8ed4e6265ed5e419b6a1397db003741
+  languageName: node
+  linkType: hard
+
 "lines-and-columns@npm:^1.1.6":
   version: 1.1.6
   resolution: "lines-and-columns@npm:1.1.6"
@@ -15125,17 +15132,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:11.2.3":
-  version: 11.2.3
-  resolution: "lint-staged@npm:11.2.3"
+"lint-staged@npm:11.2.4":
+  version: 11.2.4
+  resolution: "lint-staged@npm:11.2.4"
   dependencies:
     cli-truncate: 2.1.0
     colorette: ^1.4.0
     commander: ^8.2.0
-    cosmiconfig: ^7.0.1
     debug: ^4.3.2
     enquirer: ^2.3.6
     execa: ^5.1.1
+    js-yaml: ^4.1.0
+    lilconfig: ^2.0.3
     listr2: ^3.12.2
     micromatch: ^4.0.4
     normalize-path: ^3.0.0
@@ -15145,7 +15153,7 @@ fsevents@^1.2.7:
     supports-color: 8.1.1
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: cf3a1612a8cb3790030fb1eaf98071b97be0c71e9ee87f2f65741321974178e9b15b480dac695bb126d2cd8751dd7d72071b13d7ea0e1a97a735d88bd3cc8bb7
+  checksum: 9c1478d1903029a1db15b81c3f4d56a99b28774871961d18ea38dff1d7648bbca2eaa55c53c5c71732add89994bb07d3b91ce127495a7e586f519dfdb8a45938
   languageName: node
   linkType: hard
 
@@ -22386,7 +22394,7 @@ sjcl@sublimator/sjcl:
     husky: 7.0.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 11.2.3
+    lint-staged: 11.2.4
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
