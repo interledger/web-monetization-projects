@@ -1526,7 +1526,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 3.0.1
     JSON2016: 1.0.0
-    addons-linter: 3.21.0
+    addons-linter: 3.22.0
     copy-webpack-plugin: 9.0.1
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -2416,7 +2416,7 @@ __metadata:
     "@webmonetization/wext": ^0.0.0
     "@yarnpkg/pnpify": 3.0.1
     JSON2016: 1.0.0
-    addons-linter: 3.21.0
+    addons-linter: 3.22.0
     copy-webpack-plugin: 9.0.1
     crx-hotreload: 1.0.6
     css-loader: 6.4.0
@@ -3599,6 +3599,13 @@ __metadata:
   version: 4.0.5
   resolution: "@mdn/browser-compat-data@npm:4.0.5"
   checksum: b855d0e327b80d9e858cfb3ca3b7fc99f3ad497e5acbf0548e5f2be034bf9155b9ef0e5351372a86cc97d97ed46cb794bd131290cdbe111dcdf1f40bd0c44fd7
+  languageName: node
+  linkType: hard
+
+"@mdn/browser-compat-data@npm:4.0.7":
+  version: 4.0.7
+  resolution: "@mdn/browser-compat-data@npm:4.0.7"
+  checksum: a5bead0223b0b8faca586b85acb237cf0876b399bec87008e3e0dbd9cc4c0ff0ca1c9b11dcb9ce42d24ad326d8bcf4cd63b7e3d15d0d18d7c8e68e88609b6e20
   languageName: node
   linkType: hard
 
@@ -5702,11 +5709,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:3.21.0":
-  version: 3.21.0
-  resolution: "addons-linter@npm:3.21.0"
+"addons-linter@npm:3.22.0":
+  version: 3.22.0
+  resolution: "addons-linter@npm:3.22.0"
   dependencies:
-    "@mdn/browser-compat-data": 4.0.5
+    "@mdn/browser-compat-data": 4.0.7
     addons-moz-compare: 1.2.0
     addons-scanner-utils: 5.0.0
     ajv: 6.12.6
@@ -5718,7 +5725,7 @@ __metadata:
     deepmerge: 4.2.2
     dispensary: 0.62.0
     eslint: 7.32.0
-    eslint-plugin-no-unsanitized: 3.1.5
+    eslint-plugin-no-unsanitized: 3.2.0
     eslint-visitor-keys: 3.0.0
     espree: 9.0.0
     esprima: 4.0.1
@@ -5728,8 +5735,8 @@ __metadata:
     is-mergeable-object: 1.1.1
     jed: 1.1.1
     os-locale: 5.0.0
-    pino: 6.13.3
-    postcss: 8.3.9
+    pino: 7.0.3
+    postcss: 8.3.11
     relaxed-json: 1.0.3
     semver: 7.3.5
     source-map-support: 0.5.20
@@ -5739,7 +5746,7 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: de69bbcc92b9a4b6dfe7bfec844a0ce151a187fda3f205594415a1d57f8909be6e745acc6515151c2979ede6074aaa0ef82b13ababd2483c656fc0e613df196e
+  checksum: b1979b43c0917224a448337e0d7e08915b1b61546bf213b9aa60ae1393e26272970e611baf336f46e662122fc90db7eb8a60f072575d773f21a6989a3b79a1c2
   languageName: node
   linkType: hard
 
@@ -9431,6 +9438,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"duplexify@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "duplexify@npm:4.1.2"
+  dependencies:
+    end-of-stream: ^1.4.1
+    inherits: ^2.0.3
+    readable-stream: ^3.1.1
+    stream-shift: ^1.0.0
+  checksum: 964376c61c0e92f6ed0694b3ba97c84f199413dc40ab8dfdaef80b7a7f4982fcabf796214e28ed614a5bc1ec45488a29b81e7d46fa3f5ddf65bcb118c20145ad
+  languageName: node
+  linkType: hard
+
 "dynamic-dedupe@npm:^0.3.0":
   version: 0.3.0
   resolution: "dynamic-dedupe@npm:0.3.0"
@@ -10023,6 +10042,15 @@ __metadata:
   peerDependencies:
     eslint: ^5 || ^6 || ^7
   checksum: 69eec332065612aa23602a22fd25fff158c9d02792ea191cafaba36edb8be08ba8a1ec12489c3abbe1cce82bb8e2022c671a4f142f83682a9d6df3f79bd36bb7
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-no-unsanitized@npm:3.2.0":
+  version: 3.2.0
+  resolution: "eslint-plugin-no-unsanitized@npm:3.2.0"
+  peerDependencies:
+    eslint: ^5 || ^6 || ^7
+  checksum: e5bdada86fe103e009a379473f5d35bb442acf48b5274a5e58c3a3f97331612fe2a01cfb527337e922344e4a977b1ba2a37185c1811e19f02856bfd8e0fa50ff
   languageName: node
   linkType: hard
 
@@ -16249,12 +16277,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.28":
-  version: 3.1.29
-  resolution: "nanoid@npm:3.1.29"
+"nanoid@npm:^3.1.28, nanoid@npm:^3.1.30":
+  version: 3.1.30
+  resolution: "nanoid@npm:3.1.30"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: 8837bc351ac6d26882d568ce3e1d5e2d5095b0c6ca99aa8f5710eff5153e0aea4c5273681c7642d9d7a6f6e20fb1d32e5eb1125c70b25bdead417f007d30f96f
+  checksum: 276d0d4b0c41c46aeefec5f09f093e4085a2352d06881c845db22b84f8ef72cc8defae6d76bfb1d8a2a128eb2dec42ab148d16582be4e7754c97905806ef57b6
   languageName: node
   linkType: hard
 
@@ -16953,6 +16981,13 @@ fsevents@^1.2.7:
     "@types/long": 4.0.1
     long: ^4.0.0
   checksum: e4b04ebbd178c6d7deb012b9206acdf059c4c9aabdf05b01a006df58a7810f263bb67e5dc8544565b6c030b709ae20e2a2e7efb0fcd386688e6caa8d6aa1537e
+  languageName: node
+  linkType: hard
+
+"on-exit-leak-free@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "on-exit-leak-free@npm:0.2.0"
+  checksum: d22b0f0538069110626b578db6e68b6ee0e85b1ee9cc5ef9b4de1bba431431d6a8da91a61e09d2ad46f22a96f968e5237833cb9d0b69bc4d294f7ec82f609b05
   languageName: node
   linkType: hard
 
@@ -17699,6 +17734,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"picocolors@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "picocolors@npm:1.0.0"
+  checksum: a2e8092dd86c8396bdba9f2b5481032848525b3dc295ce9b57896f931e63fc16f79805144321f72976383fc249584672a75cc18d6777c6b757603f372f745981
+  languageName: node
+  linkType: hard
+
 "picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.2.3":
   version: 2.2.3
   resolution: "picomatch@npm:2.2.3"
@@ -17750,6 +17792,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"pino-abstract-transport@npm:v0.4.0":
+  version: 0.4.0
+  resolution: "pino-abstract-transport@npm:0.4.0"
+  dependencies:
+    duplexify: ^4.1.2
+    split2: ^3.2.2
+  checksum: 9df1bc78e143008cbb6ef8d4d82f336d149e62cf5e395bb0cf3accb8dc46de1380609e8d661186217e2747a2358d22f50b232640f89c94759efa3efffe0c763d
+  languageName: node
+  linkType: hard
+
 "pino-std-serializers@npm:^2.3.0, pino-std-serializers@npm:^2.4.2":
   version: 2.5.0
   resolution: "pino-std-serializers@npm:2.5.0"
@@ -17761,6 +17813,13 @@ fsevents@^1.2.7:
   version: 3.1.1
   resolution: "pino-std-serializers@npm:3.1.1"
   checksum: ca9f28593b33c29d8ffb0421f6472caa84be2a35167f86082c624ed289759d9f2447c3906bab5f01f0db8a8576e54ad1480697509ea2378fa3cbf2b2f76259b9
+  languageName: node
+  linkType: hard
+
+"pino-std-serializers@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "pino-std-serializers@npm:4.0.0"
+  checksum: 89d487729b58c9d3273a0ee851ead068d6d2e2ccc1af8e1c1d28f1b3442423679bec7ec04d9a2aba36f94f335e82be9f4de19dc4fbc161e71c136aaa15b85ad3
   languageName: node
   linkType: hard
 
@@ -17794,6 +17853,26 @@ fsevents@^1.2.7:
   bin:
     pino: bin.js
   checksum: a580decd47a1c8b32a846ba1cb478087b523636d697bd4c57833d10b3f2b35c7d06739715ad9a291b41caf002b8d1bbf98674bfb3e99989fd41b7d934cca861c
+  languageName: node
+  linkType: hard
+
+"pino@npm:7.0.3":
+  version: 7.0.3
+  resolution: "pino@npm:7.0.3"
+  dependencies:
+    fast-redact: ^3.0.0
+    fastify-warning: ^0.2.0
+    get-caller-file: ^2.0.5
+    json-stringify-safe: ^5.0.1
+    on-exit-leak-free: ^0.2.0
+    pino-abstract-transport: v0.4.0
+    pino-std-serializers: ^4.0.0
+    quick-format-unescaped: ^4.0.3
+    sonic-boom: ^2.2.1
+    thread-stream: ^0.11.1
+  bin:
+    pino: bin.js
+  checksum: d429e0ce94923fb4e964c2d1296104ab5d596d9e43ae2dae071c1c2c6878ac40d172043ae7386aa9b71fee8be273c6d5d787e2b201e13f8f172432c824475df7
   languageName: node
   linkType: hard
 
@@ -17999,7 +18078,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.3.9, postcss@npm:^8.2.15":
+"postcss@npm:8.3.11, postcss@npm:^8.2.15":
+  version: 8.3.11
+  resolution: "postcss@npm:8.3.11"
+  dependencies:
+    nanoid: ^3.1.30
+    picocolors: ^1.0.0
+    source-map-js: ^0.6.2
+  checksum: 1a230553d74c66aa9585c90781ed8ea75f19cefea405d2117b67fbeb24b5b5e0e17be2e0c5a07db31dd085643a13394127ab2222e940771b70498331bf20f35e
+  languageName: node
+  linkType: hard
+
+"postcss@npm:8.3.9":
   version: 8.3.9
   resolution: "postcss@npm:8.3.9"
   dependencies:
@@ -20178,6 +20268,15 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+"sonic-boom@npm:^2.2.1":
+  version: 2.3.0
+  resolution: "sonic-boom@npm:2.3.0"
+  dependencies:
+    atomic-sleep: ^1.0.0
+  checksum: 208329d1533e99c436df0c41762554a9934b9af8b43cdb9792c2570292c9c78b5bc2c78d0ac0508d4a93568367d80ea3a2bb9cda31e882abcd111405bea4705f
+  languageName: node
+  linkType: hard
+
 "sort-keys@npm:^2.0.0":
   version: 2.0.0
   resolution: "sort-keys@npm:2.0.0"
@@ -20383,7 +20482,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"split2@npm:^3.0.0":
+"split2@npm:^3.0.0, split2@npm:^3.2.2":
   version: 3.2.2
   resolution: "split2@npm:3.2.2"
   dependencies:
@@ -20503,6 +20602,13 @@ sjcl@sublimator/sjcl:
   dependencies:
     debug: 2
   checksum: 4d86ff8cffe7c7587dc91433fff9dce38a93ea7e9f47560055addc81eae6b6befab22b75643ce539faf325fe2b17d371778242566bed086e75f6cffb1e76c06c
+  languageName: node
+  linkType: hard
+
+"stream-shift@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "stream-shift@npm:1.0.1"
+  checksum: 59b82b44b29ec3699b5519a49b3cedcc6db58c72fb40c04e005525dfdcab1c75c4e0c180b923c380f204bed78211b9bad8faecc7b93dece4d004c3f6ec75737b
   languageName: node
   linkType: hard
 
@@ -21133,6 +21239,13 @@ sjcl@sublimator/sjcl:
   dependencies:
     any-promise: ^1.0.0
   checksum: 84e1b804bfec49f3531215f17b4a6e50fd4397b5f7c1bccc427b9c656e1ecfb13ea79d899930184f78bc2f57285c54d9a50a590c8868f4f0cef5c1d9f898b05e
+  languageName: node
+  linkType: hard
+
+"thread-stream@npm:^0.11.1":
+  version: 0.11.1
+  resolution: "thread-stream@npm:0.11.1"
+  checksum: 47f9bccc3ef0046743187401a6c5264700bd7bcbf98ecb98ddcb2bf0c7f0066394a3c0836f37499f74b57b698e0374deba318946144e8c32d35f8124ce4e6280
   languageName: node
   linkType: hard
 
