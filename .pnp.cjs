@@ -2800,7 +2800,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/debug", "npm:4.1.7"],
             ["@types/filesystem", "npm:0.0.32"],
             ["@types/firefox", "npm:0.0.31"],
-            ["@types/har-format", "npm:1.2.7"],
+            ["@types/har-format", "npm:1.2.8"],
             ["@types/jest", "npm:27.0.1"],
             ["@types/jsonwebtoken", "npm:8.5.5"],
             ["@types/long", "npm:4.0.1"],
@@ -5805,10 +5805,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/har-format", [
-        ["npm:1.2.7", {
-          "packageLocation": "./.yarn/cache/@types-har-format-npm-1.2.7-a077e505d6-a2fd4a4d18.zip/node_modules/@types/har-format/",
+        ["npm:1.2.8", {
+          "packageLocation": "./.yarn/cache/@types-har-format-npm-1.2.8-87dbad66b0-a14c6f31fb.zip/node_modules/@types/har-format/",
           "packageDependencies": [
-            ["@types/har-format", "npm:1.2.7"]
+            ["@types/har-format", "npm:1.2.8"]
           ],
           "linkType": "HARD",
         }]
