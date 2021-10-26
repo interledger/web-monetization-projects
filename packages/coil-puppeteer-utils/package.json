@@ -54,7 +54,7 @@
     "@types/tmp": "0.2.2",
     "@typescript-eslint/eslint-plugin": "5.2.0",
     "@typescript-eslint/parser": "5.2.0",
-    "@yarnpkg/pnpify": "3.0.1",
+    "@yarnpkg/pnpify": "3.1.0",
     "JSON2016": "1.0.0",
     "copy-webpack-plugin": "9.0.1",
     "eslint": "7.32.0",
