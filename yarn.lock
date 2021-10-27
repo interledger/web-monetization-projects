@@ -1656,6 +1656,7 @@ __metadata:
     "@babel/preset-env": 7.16.4
     "@babel/preset-typescript": 7.16.0
     "@coil/privacypass-sjcl": 0.0.0
+<<<<<<< HEAD
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -1665,12 +1666,24 @@ __metadata:
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/jsonwebtoken": 8.5.5
+    "@types/node": 14.17.32
+    "@types/node-fetch": 2.5.12
+    "@types/sjcl": 1.0.30
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -1679,12 +1692,26 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     jsonwebtoken: 8.5.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
+=======
+    lint-staged: 11.2.6
+>>>>>>> b82a4279 (chore: squash merge main)
     localforage: 1.10.0
     node-fetch: ^2.6.1
     prettier: 2.5.0
@@ -1693,12 +1720,21 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -1716,18 +1752,28 @@ __metadata:
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@dier-makr/annotations": 0.0.0
+<<<<<<< HEAD
     "@types/jest": 27.0.3
     "@types/jsonwebtoken": 8.5.6
     "@types/node": 14.17.34
     "@types/node-fetch": 2.5.12
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/jest": 27.0.1
+    "@types/jsonwebtoken": 8.5.5
+    "@types/node": 14.17.32
+    "@types/node-fetch": 2.5.12
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -1736,12 +1782,26 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
+=======
+    lint-staged: 11.2.6
+>>>>>>> b82a4279 (chore: squash merge main)
     node-fetch: ^2.6.1
     prettier: 2.5.0
     rimraf: 3.0.2
@@ -1749,12 +1809,21 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -1785,6 +1854,7 @@ __metadata:
     "@types/filesystem": 0.0.32
     "@types/firefox": 0.0.31
     "@types/har-format": 1.2.8
+<<<<<<< HEAD
     "@types/jest": 27.0.3
     "@types/jsonwebtoken": 8.5.6
     "@types/long": 4.0.1
@@ -1795,6 +1865,18 @@ __metadata:
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/jest": 27.0.1
+    "@types/jsonwebtoken": 8.5.5
+    "@types/long": 4.0.1
+    "@types/node": 14.17.32
+    "@types/node-fetch": 2.5.12
+    "@types/react": 17.0.33
+    "@types/react-dom": 17.0.10
+    "@types/uuid": 8.3.1
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@webexts/build-utils": ^0.0.0
     "@webmonetization/polyfill-utils": ^0.0.0
     "@webmonetization/types": ^0.0.0
@@ -1802,13 +1884,19 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+<<<<<<< HEAD
     addons-linter: 4.4.0
     copy-webpack-plugin: 9.1.0
+=======
+    addons-linter: 3.22.0
+    copy-webpack-plugin: 9.0.1
+>>>>>>> b82a4279 (chore: squash merge main)
     crx-hotreload: 1.0.6
     debug: ^4.3.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -1817,6 +1905,16 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
 <<<<<<< HEAD
     http-server: 14.0.0
@@ -1835,9 +1933,14 @@ __metadata:
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 =======
     framer-motion: ^4.1.4
+<<<<<<< HEAD
     http-server: 13.0.1
     husky: 7.0.2
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+    http-server: 14.0.0
+    husky: 7.0.4
+>>>>>>> b82a4279 (chore: squash merge main)
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
     inversify: ^6.0.0
@@ -1846,9 +1949,15 @@ __metadata:
     jsonwebtoken: ^8.5.1
     jss: ^10.6.0
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
     puppeteer: 11.0.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+    puppeteer: 10.4.0
+>>>>>>> b82a4279 (chore: squash merge main)
     react: ^17.0.0
     react-dom: ^17.0.0
     reduct: ^3.3.1
@@ -1857,6 +1966,7 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     uuid: ^8.3.2
@@ -1865,6 +1975,16 @@ __metadata:
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    uuid: ^8.3.2
+    web-ext: 6.5.0
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -1873,6 +1993,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
+<<<<<<< HEAD
     "@babel/core": 7.16.0
     "@babel/plugin-proposal-class-properties": 7.16.0
     "@babel/plugin-proposal-decorators": 7.16.4
@@ -1885,6 +2006,20 @@ __metadata:
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@babel/core": 7.15.8
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.15.8
+    "@babel/plugin-proposal-object-rest-spread": 7.15.6
+    "@babel/preset-env": 7.15.8
+    "@babel/preset-typescript": 7.15.0
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-dir: ^1.3.0
@@ -1893,6 +2028,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -1901,27 +2037,55 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     json5: ^2.2.0
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     npm-check-updates: ^12.0.0
     prettier: 2.5.0
     reduct: ^3.3.1
     rimraf: 3.0.2
     sort-package-json: 1.53.1
+=======
+    lint-staged: 11.2.6
+    npm-check-updates: ^11.6.0
+    prettier: 2.4.1
+    reduct: ^3.3.1
+    rimraf: 3.0.2
+    sort-package-json: 1.50.0
+>>>>>>> b82a4279 (chore: squash merge main)
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
     yaml: ^1.10.2
   languageName: unknown
@@ -1945,11 +2109,19 @@ __metadata:
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
     "@types/long": 4.0.1
+<<<<<<< HEAD
     "@types/node": 14.17.34
     "@types/node-fetch": 2.5.12
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/node": 14.17.32
+    "@types/node-fetch": 2.5.12
+    "@types/uuid": 8.3.1
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@webmonetization/polyfill-utils": 0.0.0
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
@@ -1958,6 +2130,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -1966,13 +2139,27 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
+=======
+    lint-staged: 11.2.6
+>>>>>>> b82a4279 (chore: squash merge main)
     node-fetch: ^2.6.1
     prettier: 2.5.0
     puppeteer: 11.0.0
@@ -1982,6 +2169,7 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     uuid: ^8.3.2
@@ -1989,6 +2177,15 @@ __metadata:
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    uuid: ^8.3.2
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -1997,6 +2194,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
+<<<<<<< HEAD
     "@babel/core": 7.16.0
     "@babel/plugin-proposal-class-properties": 7.16.0
     "@babel/plugin-proposal-decorators": 7.16.4
@@ -2009,12 +2207,27 @@ __metadata:
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@babel/core": 7.15.8
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.15.8
+    "@babel/plugin-proposal-object-rest-spread": 7.15.6
+    "@babel/preset-env": 7.15.8
+    "@babel/preset-typescript": 7.15.0
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -2023,11 +2236,25 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
+=======
+    lint-staged: 11.2.6
+>>>>>>> b82a4279 (chore: squash merge main)
     node-fetch: ^2.6.1
     prettier: 2.5.0
     rimraf: 3.0.2
@@ -2035,12 +2262,21 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -2059,10 +2295,17 @@ __metadata:
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
     "@types/keccak": 3.0.1
+<<<<<<< HEAD
     "@types/node": 14.17.34
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/node": 14.17.32
+    "@types/sjcl": 1.0.30
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     asn1-parser: ^1.1.8
@@ -2072,6 +2315,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -2080,12 +2324,26 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     keccak: ^3.0.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
+=======
+    lint-staged: 11.2.6
+>>>>>>> b82a4279 (chore: squash merge main)
     node-fetch: ^2.6.1
     prettier: 2.5.0
     rimraf: 3.0.2
@@ -2094,12 +2352,21 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -2119,11 +2386,19 @@ __metadata:
     "@commitlint/config-conventional": 15.0.0
     "@types/debug": 4.1.7
     "@types/get-port": 4.2.0
+<<<<<<< HEAD
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
     "@types/tmp": 0.2.2
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@types/tmp": 0.2.2
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
@@ -2132,6 +2407,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -2140,20 +2416,37 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     get-port: ^5.1.1
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
     puppeteer: ^11.0.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+    puppeteer: ^10.0.0
+>>>>>>> b82a4279 (chore: squash merge main)
     rimraf: 3.0.2
     tmp: ^0.2.1
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     web-ext: ^6.1.0
@@ -2161,6 +2454,15 @@ __metadata:
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    web-ext: ^6.1.0
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -2169,6 +2471,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
+<<<<<<< HEAD
     "@babel/core": 7.16.0
     "@babel/plugin-proposal-class-properties": 7.16.0
     "@babel/plugin-proposal-decorators": 7.16.4
@@ -2181,6 +2484,20 @@ __metadata:
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@babel/core": 7.15.8
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.15.8
+    "@babel/plugin-proposal-object-rest-spread": 7.15.6
+    "@babel/preset-env": 7.15.8
+    "@babel/preset-typescript": 7.15.0
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     assert: ^2.0.0
@@ -2190,6 +2507,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -2198,13 +2516,28 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     events: ^3.3.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     process: ^0.11.10
     rimraf: 3.0.2
     setimmediate: ^1.0.5
@@ -2214,6 +2547,7 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     util: ^0.12.4
@@ -2221,6 +2555,15 @@ __metadata:
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    util: ^0.12.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -2236,18 +2579,28 @@ __metadata:
     "@babel/preset-env": 7.16.4
     "@babel/preset-typescript": 7.16.0
     "@coil/client": 0.0.0
+<<<<<<< HEAD
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -2256,23 +2609,47 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -2504,6 +2881,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
+<<<<<<< HEAD
     "@babel/core": 7.16.0
     "@babel/plugin-proposal-class-properties": 7.16.0
     "@babel/plugin-proposal-decorators": 7.16.4
@@ -2516,12 +2894,27 @@ __metadata:
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@babel/core": 7.15.8
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.15.8
+    "@babel/plugin-proposal-object-rest-spread": 7.15.6
+    "@babel/preset-env": 7.15.8
+    "@babel/preset-typescript": 7.15.0
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -2530,23 +2923,47 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -2564,16 +2981,24 @@ __metadata:
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@dier-makr/annotations": 0.0.0
+<<<<<<< HEAD
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -2582,24 +3007,48 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     inversify: ^6.0.0
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -2787,6 +3236,7 @@ __metadata:
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
+<<<<<<< HEAD
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
     "@types/react": 17.0.37
@@ -2794,20 +3244,37 @@ __metadata:
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@types/react": 17.0.33
+    "@types/react-dom": 17.0.10
+    "@types/uuid": 8.3.1
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@webexts/build-utils": 0.0.0
     "@webmonetization/polyfill-utils": ^0.0.0
     "@webmonetization/types": ^0.0.0
     "@webmonetization/wext": ^0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+<<<<<<< HEAD
     addons-linter: 4.4.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     css-loader: 6.5.1
+=======
+    addons-linter: 3.22.0
+    copy-webpack-plugin: 9.0.1
+    crx-hotreload: 1.0.6
+    css-loader: 6.5.0
+>>>>>>> b82a4279 (chore: squash merge main)
     debug: ^4.3.1
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -2816,6 +3283,16 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     file-loader: 6.2.0
     husky: 7.0.4
@@ -2826,8 +3303,13 @@ __metadata:
     jest: 27.3.1
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     react: ^17.0.0
     react-dom: ^17.0.0
     rimraf: 3.0.2
@@ -2840,11 +3322,19 @@ __metadata:
     typeface-roboto: ^1.1.13
     typescript: 4.4.4
     uuid: ^8.3.2
+<<<<<<< HEAD
     web-ext: 6.6.0
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    web-ext: 6.5.0
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -2884,10 +3374,14 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@jest/core@npm:^27.3.1":
 =======
 "@jest/core@npm:^27.2.5, @jest/core@npm:^27.3.1":
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+"@jest/core@npm:^27.3.1":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 27.3.1
   resolution: "@jest/core@npm:27.3.1"
   dependencies:
@@ -3983,10 +4477,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@mdn/browser-compat-data@npm:4.0.11":
   version: 4.0.11
   resolution: "@mdn/browser-compat-data@npm:4.0.11"
   checksum: 4bcb43aff661821b03cc5fcda28bc1a87b3f6b2b625cc5ef30552b2e3b59a21f7e75d592f63d4d2a7397ec0558b586d8a9adf10592cf4de2d9e68b3e7c12ad7f
+=======
+"@mdn/browser-compat-data@npm:4.0.5":
+  version: 4.0.5
+  resolution: "@mdn/browser-compat-data@npm:4.0.5"
+  checksum: b855d0e327b80d9e858cfb3ca3b7fc99f3ad497e5acbf0548e5f2be034bf9155b9ef0e5351372a86cc97d97ed46cb794bd131290cdbe111dcdf1f40bd0c44fd7
+>>>>>>> b82a4279 (chore: squash merge main)
+  languageName: node
+  linkType: hard
+
+"@mdn/browser-compat-data@npm:4.0.7":
+  version: 4.0.7
+  resolution: "@mdn/browser-compat-data@npm:4.0.7"
+  checksum: a5bead0223b0b8faca586b85acb237cf0876b399bec87008e3e0dbd9cc4c0ff0ca1c9b11dcb9ce42d24ad326d8bcf4cd63b7e3d15d0d18d7c8e68e88609b6e20
   languageName: node
   linkType: hard
 
@@ -4591,10 +5099,14 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "@types/html-minifier-terser@npm:^6.0.0":
   version: 6.0.0
   resolution: "@types/html-minifier-terser@npm:6.0.0"
   checksum: 8f602498d726c9fd30d2b895478b4e7cb1f91558d892e44f54533669dbbbfae572c5fb2b04ee4fa5cbe7f8d59982d2067bf5c2931a3aefcf8dac590e4494b103
+<<<<<<< HEAD
 =======
 "@types/html-minifier-terser@npm:^5.0.0":
 <<<<<<< HEAD
@@ -4613,6 +5125,8 @@ __metadata:
   resolution: "@types/html-minifier-terser@npm:5.1.2"
   checksum: 4bca779c44d2aebe4cc4036c5db370abe7466249038e9c5996cb3c192debeff1c75b7a2ab78e5fd2a014ad24ebf0f357f9a174a4298540dc1e1317d43aa69cfa
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -4779,6 +5293,7 @@ __metadata:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/node@npm:*, @types/node@npm:14.17.34, @types/node@npm:>= 8":
   version: 14.17.34
   resolution: "@types/node@npm:14.17.34"
@@ -4824,12 +5339,16 @@ __metadata:
 >>>>>>> 258bc78a (fix: build issues)
 =======
 "@types/node@npm:*, @types/node@npm:>= 8":
+=======
+"@types/node@npm:*, @types/node@npm:14.17.32, @types/node@npm:>= 8":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 14.17.32
   resolution: "@types/node@npm:14.17.32"
   checksum: c3ec45db5d8ca6ed80bcc2fe3cd9f15c1518d43cf048dd5444d1fcbe308d302a42721cb3f19548ac2e7b8b7db4f7f6cd4bf9ed58ab1d30a0bf61758350edd9d5
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@types/node@npm:14.17.21":
 >>>>>>> 48768561 (chore: fix yarn lock)
   version: 14.17.21
@@ -4839,6 +5358,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "@types/node@npm:^10.14.22, @types/node@npm:^10.5.1, @types/node@npm:^10.7.1":
   version: 10.17.35
   resolution: "@types/node@npm:10.17.35"
@@ -4895,12 +5416,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@types/react-dom@npm:17.0.11":
   version: 17.0.11
   resolution: "@types/react-dom@npm:17.0.11"
   dependencies:
     "@types/react": "*"
   checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
+=======
+"@types/react-dom@npm:17.0.10":
+  version: 17.0.10
+  resolution: "@types/react-dom@npm:17.0.10"
+  dependencies:
+    "@types/react": "*"
+  checksum: cc7d8d5b77ee2f3b989c107abd8ec0f2460ba1b1ee6e6d637124e1939594b5619fa4166ef0ea7632a69b68358e0b71aa618de446ccc416dcc0017175549da601
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -4922,14 +5452,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@types/react@npm:17.0.37":
   version: 17.0.37
   resolution: "@types/react@npm:17.0.37"
+=======
+"@types/react@npm:17.0.33":
+  version: 17.0.33
+  resolution: "@types/react@npm:17.0.33"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
+<<<<<<< HEAD
   checksum: e68b0d59aa69577fc6a6d654b25d5d8408625498f4c483f160b557fac21e840f6e8807cbde93e9f039949b6d624a019b1990d18499c1d65aecf3605c25e30242
+=======
+  checksum: 5f53f3dae034229ff1eccb5de1c16d046696e883f8eae81b86e95c532798e655015e4edff8a6c9ec8f1c0ef12bb60dec43622d06256ba33ba6069e67a74b8d4e
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -5041,6 +5581,7 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "@types/yauzl@npm:2.9.1":
   version: 2.9.1
@@ -5065,6 +5606,8 @@ __metadata:
 =======
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "@types/yauzl@npm:2.9.2, @types/yauzl@npm:^2.9.1":
   version: 2.9.2
   resolution: "@types/yauzl@npm:2.9.2"
@@ -5074,6 +5617,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5109,6 +5653,14 @@ __metadata:
   dependencies:
     "@typescript-eslint/experimental-utils": 5.4.0
     "@typescript-eslint/scope-manager": 5.4.0
+=======
+"@typescript-eslint/eslint-plugin@npm:5.2.0":
+  version: 5.2.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:5.2.0"
+  dependencies:
+    "@typescript-eslint/experimental-utils": 5.2.0
+    "@typescript-eslint/scope-manager": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     debug: ^4.3.2
     functional-red-black-tree: ^1.0.1
     ignore: ^5.1.8
@@ -5121,6 +5673,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
+<<<<<<< HEAD
   checksum: 83e8d5ab66405b9ff9a63dfc66ff45870c2ede6f7ef3368f57fa6140f97c4aac28d9e44b71f6443b004f41b5b36003a4609dc3bd51bcc96c72bd1f4d42af1d7b
   languageName: node
   linkType: hard
@@ -5153,6 +5706,13 @@ __metadata:
   resolution: "@typescript-eslint/parser@npm:5.4.0"
 =======
 "@typescript-eslint/experimental-utils@npm:^5.0.0":
+=======
+  checksum: 65dd4a671c1e29aeff6b3796f52941474fbdede5aa9908deb339cea61930a4b783bdbb311524787fdeb2f2883c31a8d2c491e99355fa16ac289a94533d84e6a7
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/experimental-utils@npm:5.2.0, @typescript-eslint/experimental-utils@npm:^5.0.0":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 5.2.0
   resolution: "@typescript-eslint/experimental-utils@npm:5.2.0"
   dependencies:
@@ -5168,6 +5728,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@typescript-eslint/parser@npm:5.0.0":
   version: 5.0.0
   resolution: "@typescript-eslint/parser@npm:5.0.0"
@@ -5176,12 +5737,22 @@ __metadata:
     "@typescript-eslint/scope-manager": 5.4.0
     "@typescript-eslint/types": 5.4.0
     "@typescript-eslint/typescript-estree": 5.4.0
+=======
+"@typescript-eslint/parser@npm:5.2.0":
+  version: 5.2.0
+  resolution: "@typescript-eslint/parser@npm:5.2.0"
+  dependencies:
+    "@typescript-eslint/scope-manager": 5.2.0
+    "@typescript-eslint/types": 5.2.0
+    "@typescript-eslint/typescript-estree": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     debug: ^4.3.2
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
+<<<<<<< HEAD
   checksum: d76732469cb100426fb9574713c1065c14969a502214b8b400e4829e5c01b1fe4744ce59a86ef9fd4ac5baf620454c517975b136b8735881f617e53322325cd7
   languageName: node
   linkType: hard
@@ -5201,6 +5772,9 @@ __metadata:
   version: 5.4.0
   resolution: "@typescript-eslint/types@npm:5.4.0"
   checksum: 8d1dc7149e597ae98917cc109136b8c081682158f688b2ca76256493e46b4acfda2135e30258200e83a40492678683393f0eb4d508d43b80b321ea006fc11a38
+=======
+  checksum: cde4d8e7fe70811ea42b49b8efd96e5ea0c1e2d2bd24c76b7fd98c35bc5ffd63f05ebcc7cc41658ef83d8950bf53cc6518e795ffe3275c4dce61c6c9d50996fc
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -5218,13 +5792,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:5.0.0":
-  version: 5.0.0
-  resolution: "@typescript-eslint/types@npm:5.0.0"
-  checksum: 424966c124cd02b8d8bebe3ae4fb264e23708018e6e63787a070ced1bb24c43c4e3b49adb895eaf9a8200bed5c97aa7a57a1605925b6fb56a091703648e29b40
-  languageName: node
-  linkType: hard
-
 "@typescript-eslint/types@npm:5.2.0":
   version: 5.2.0
   resolution: "@typescript-eslint/types@npm:5.2.0"
@@ -5232,6 +5799,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@typescript-eslint/typescript-estree@npm:5.0.0":
   version: 5.0.0
   resolution: "@typescript-eslint/typescript-estree@npm:5.0.0"
@@ -5256,6 +5824,8 @@ __metadata:
   version: 5.4.0
   resolution: "@typescript-eslint/visitor-keys@npm:5.4.0"
 =======
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "@typescript-eslint/typescript-estree@npm:5.2.0":
   version: 5.2.0
   resolution: "@typescript-eslint/typescript-estree@npm:5.2.0"
@@ -5274,6 +5844,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@typescript-eslint/visitor-keys@npm:5.0.0":
   version: 5.0.0
   resolution: "@typescript-eslint/visitor-keys@npm:5.0.0"
@@ -5285,6 +5856,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "@typescript-eslint/visitor-keys@npm:5.2.0":
   version: 5.2.0
   resolution: "@typescript-eslint/visitor-keys@npm:5.2.0"
@@ -5457,12 +6030,21 @@ __metadata:
     "@babel/preset-env": 7.16.4
     "@babel/preset-typescript": 7.16.0
     "@coil/webpack-utils": ^0.0.0
+<<<<<<< HEAD
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     assert: ^2.0.0
@@ -5473,6 +6055,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -5481,13 +6064,28 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     events: ^3.3.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     process: ^0.11.10
     rimraf: 3.0.2
     setimmediate: ^1.0.5
@@ -5497,6 +6095,7 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     util: ^0.12.4
@@ -5504,6 +6103,15 @@ __metadata:
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    util: ^0.12.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -5526,6 +6134,7 @@ __metadata:
     "@types/body-parser": 1.19.2
     "@types/express": 4.17.12
     "@types/figlet": 1.5.4
+<<<<<<< HEAD
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
     "@types/node-fetch": 2.5.12
@@ -5534,6 +6143,16 @@ __metadata:
     "@types/react-helmet": 6.1.4
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@types/node-fetch": 2.5.12
+    "@types/react": 17.0.33
+    "@types/react-dom": 17.0.10
+    "@types/react-helmet": 6.1.4
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@webmonetization/react": 0.0.12
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
@@ -5543,6 +6162,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -5551,6 +6171,16 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     express: ^4.17.1
     figlet: ^1.5.0
@@ -5563,7 +6193,11 @@ __metadata:
     inversify-express-utils: ^6.3.2
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
+=======
+    lint-staged: 11.2.6
+>>>>>>> b82a4279 (chore: squash merge main)
     node-fetch: ^2.6.1
     oer-utils: ^5.1.2
     prettier: 2.5.0
@@ -5576,12 +6210,21 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -5590,6 +6233,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
+<<<<<<< HEAD
     "@babel/core": 7.16.0
     "@babel/plugin-proposal-class-properties": 7.16.0
     "@babel/plugin-proposal-decorators": 7.16.4
@@ -5604,12 +6248,29 @@ __metadata:
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@babel/core": 7.15.8
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.15.8
+    "@babel/plugin-proposal-object-rest-spread": 7.15.6
+    "@babel/preset-env": 7.15.8
+    "@babel/preset-typescript": 7.15.0
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@types/node-fetch": 2.5.12
+    "@types/uuid": 8.3.1
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -5618,11 +6279,25 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
+=======
+    lint-staged: 11.2.6
+>>>>>>> b82a4279 (chore: squash merge main)
     node-fetch: ^2.6.1
     prettier: 2.5.0
     reduct: ^3.3.1
@@ -5631,6 +6306,7 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     uuid: ^8.3.2
@@ -5638,6 +6314,15 @@ __metadata:
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    uuid: ^8.3.2
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -5653,6 +6338,7 @@ __metadata:
     "@babel/preset-env": 7.16.4
     "@babel/preset-typescript": 7.16.0
     "@coil/webpack-utils": ^0.0.0
+<<<<<<< HEAD
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -5660,6 +6346,15 @@ __metadata:
     "@types/react": 17.0.37
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@types/react": 17.0.33
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
@@ -5667,6 +6362,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -5675,23 +6371,47 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   peerDependencies:
     react: ^16.13.1 || ^17.0.0
@@ -5713,6 +6433,7 @@ __metadata:
     "@commitlint/config-conventional": 15.0.0
     "@hot-loader/react-dom": 17.0.1
     "@types/ajv": 1.0.0
+<<<<<<< HEAD
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
     "@types/react": 17.0.37
@@ -5720,6 +6441,15 @@ __metadata:
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@types/react": 17.0.33
+    "@types/react-dom": 17.0.10
+    "@types/uuid": 8.3.1
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
@@ -5728,6 +6458,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -5736,13 +6467,28 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     html-webpack-plugin: 5.5.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     react: ^17.0.0
     react-dom: ^17.0.0
     react-hot-loader: ^4.13.0
@@ -5751,6 +6497,7 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     uuid: ^8.3.2
@@ -5758,6 +6505,15 @@ __metadata:
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    uuid: ^8.3.2
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -5766,6 +6522,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
+<<<<<<< HEAD
     "@babel/core": 7.16.0
     "@babel/plugin-proposal-class-properties": 7.16.0
     "@babel/plugin-proposal-decorators": 7.16.4
@@ -5778,12 +6535,27 @@ __metadata:
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@babel/core": 7.15.8
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.15.8
+    "@babel/plugin-proposal-object-rest-spread": 7.15.6
+    "@babel/preset-env": 7.15.8
+    "@babel/preset-typescript": 7.15.0
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -5792,10 +6564,21 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
     rimraf: 3.0.2
@@ -5810,6 +6593,22 @@ __metadata:
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+    rimraf: 3.0.2
+    ts-jest: 27.0.7
+    ts-json-schema-generator: 0.96.0
+    ts-loader: 9.2.6
+    ts-node: 10.4.0
+    ts-node-dev: 1.1.8
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -5827,10 +6626,17 @@ __metadata:
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@dier-makr/annotations": 0.0.0
+<<<<<<< HEAD
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@webmonetization/polyfill-utils": 0.0.0
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
@@ -5839,6 +6645,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -5847,23 +6654,47 @@ __metadata:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -5956,10 +6787,14 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@yarnpkg/core@npm:^3.1.0":
 =======
 "@yarnpkg/core@npm:^3.0.0":
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+"@yarnpkg/core@npm:^3.1.0":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 3.1.0
   resolution: "@yarnpkg/core@npm:3.1.0"
   dependencies:
@@ -6003,6 +6838,7 @@ __metadata:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@yarnpkg/fslib@npm:^2.5.0, @yarnpkg/fslib@npm:^2.6.0":
   version: 2.6.0
   resolution: "@yarnpkg/fslib@npm:2.6.0"
@@ -6030,6 +6866,9 @@ __metadata:
 >>>>>>> 258bc78a (fix: build issues)
 =======
 "@yarnpkg/fslib@npm:^2.5.0, @yarnpkg/fslib@npm:^2.5.1, @yarnpkg/fslib@npm:^2.6.0":
+=======
+"@yarnpkg/fslib@npm:^2.5.0, @yarnpkg/fslib@npm:^2.6.0":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 2.6.0
   resolution: "@yarnpkg/fslib@npm:2.6.0"
   dependencies:
@@ -6388,9 +7227,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "addons-linter@npm:4.4.0":
   version: 4.4.0
   resolution: "addons-linter@npm:4.4.0"
+=======
+"addons-linter@npm:3.20.0":
+  version: 3.20.0
+  resolution: "addons-linter@npm:3.20.0"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     "@mdn/browser-compat-data": 4.0.11
     addons-moz-compare: 1.2.0
@@ -6425,15 +7270,19 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
+<<<<<<< HEAD
   checksum: 58986002f35cfd99e59bdb53397d3feca1ecffc55d0a574c750096f805aed50b8ced1614454fecf4f08c163d6c8907576523d5f1ae89ada925c5df29a84722af
+=======
+  checksum: 13b683d47693e69b30bcb8670492a97b14202483d2d12f98fd042db138ea94531251b3a9a9bcb74f73e41aa69c6687a8bc93969d60258a873d6905b42352533c
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
-"addons-linter@npm:3.20.0":
-  version: 3.20.0
-  resolution: "addons-linter@npm:3.20.0"
+"addons-linter@npm:3.22.0":
+  version: 3.22.0
+  resolution: "addons-linter@npm:3.22.0"
   dependencies:
-    "@mdn/browser-compat-data": 4.0.5
+    "@mdn/browser-compat-data": 4.0.7
     addons-moz-compare: 1.2.0
     addons-scanner-utils: 5.0.0
     ajv: 6.12.6
@@ -6445,7 +7294,7 @@ __metadata:
     deepmerge: 4.2.2
     dispensary: 0.62.0
     eslint: 7.32.0
-    eslint-plugin-no-unsanitized: 3.1.5
+    eslint-plugin-no-unsanitized: 3.2.0
     eslint-visitor-keys: 3.0.0
     espree: 9.0.0
     esprima: 4.0.1
@@ -6455,8 +7304,8 @@ __metadata:
     is-mergeable-object: 1.1.1
     jed: 1.1.1
     os-locale: 5.0.0
-    pino: 6.13.3
-    postcss: 8.3.9
+    pino: 7.0.3
+    postcss: 8.3.11
     relaxed-json: 1.0.3
     semver: 7.3.5
     source-map-support: 0.5.20
@@ -6466,7 +7315,7 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: 13b683d47693e69b30bcb8670492a97b14202483d2d12f98fd042db138ea94531251b3a9a9bcb74f73e41aa69c6687a8bc93969d60258a873d6905b42352533c
+  checksum: b1979b43c0917224a448337e0d7e08915b1b61546bf213b9aa60ae1393e26272970e611baf336f46e662122fc90db7eb8a60f072575d773f21a6989a3b79a1c2
   languageName: node
   linkType: hard
 
@@ -6477,9 +7326,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "addons-scanner-utils@npm:6.1.0":
   version: 6.1.0
   resolution: "addons-scanner-utils@npm:6.1.0"
+=======
+"addons-scanner-utils@npm:5.0.0":
+  version: 5.0.0
+  resolution: "addons-scanner-utils@npm:5.0.0"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     "@types/yauzl": 2.9.2
     common-tags: 1.8.0
@@ -6980,6 +7835,7 @@ __metadata:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "array-includes@npm:^3.1.3, array-includes@npm:^3.1.4":
   version: 3.1.4
   resolution: "array-includes@npm:3.1.4"
@@ -7000,6 +7856,9 @@ __metadata:
   resolution: "array-includes@npm:3.1.3"
 >>>>>>> 258bc78a (fix: build issues)
 =======
+=======
+"array-includes@npm:^3.1.1, array-includes@npm:^3.1.3, array-includes@npm:^3.1.4":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 3.1.4
   resolution: "array-includes@npm:3.1.4"
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -7058,12 +7917,16 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "array.prototype.flat@npm:^1.2.5":
 =======
 "array.prototype.flat@npm:^1.2.4":
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+"array.prototype.flat@npm:^1.2.5":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 1.2.5
   resolution: "array.prototype.flat@npm:1.2.5"
 =======
@@ -8274,6 +9137,7 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "camel-case@npm:^4.1.2":
 =======
 "camel-case@npm:^4.1.1":
@@ -8287,6 +9151,9 @@ __metadata:
   resolution: "camel-case@npm:4.1.1"
 >>>>>>> 258bc78a (fix: build issues)
 =======
+=======
+"camel-case@npm:^4.1.2":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 4.1.2
   resolution: "camel-case@npm:4.1.2"
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -8702,6 +9569,7 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "clean-css@npm:^5.1.5":
   version: 5.2.1
   resolution: "clean-css@npm:5.2.1"
@@ -8716,6 +9584,14 @@ __metadata:
     source-map: ~0.6.0
   checksum: 045ff6fcf4b5c76a084b24e1633e0c78a13b24080338fc8544565a9751559aa32ff4ee5886d9e52c18a644a6ff119bd8e37bc58e574377c05382a1fb7dbe39f8
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+"clean-css@npm:^5.1.5":
+  version: 5.2.1
+  resolution: "clean-css@npm:5.2.1"
+  dependencies:
+    source-map: ~0.6.0
+  checksum: 45bf069a37d8d80a8e88933d7d26f5870aef086f7634ceda25865f6690e24fee1f1b49bf919f3cedb3d51d721534278ea5181b090256ea72ec0c3defb2aa17c2
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -8964,9 +9840,13 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "colorette@npm:^2.0.14, colorette@npm:^2.0.16":
 =======
 "colorette@npm:^1.2.2, colorette@npm:^1.4.0":
+=======
+"colorette@npm:^1.4.0":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 1.4.0
   resolution: "colorette@npm:1.4.0"
   checksum: 01c3c16058b182a4ab4c126a65a75faa4d38a20fa7c845090b25453acec6c371bb2c5dceb0a2338511f17902b9d1a9af0cadd8509c9403894b79311032c256c3
@@ -9057,10 +9937,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "commander@npm:^8.1.0, commander@npm:^8.2.0, commander@npm:^8.3.0":
   version: 8.3.0
   resolution: "commander@npm:8.3.0"
   checksum: 0f82321821fc27b83bd409510bb9deeebcfa799ff0bf5d102128b500b7af22872c0c92cb6a0ebc5a4cf19c6b550fba9cedfa7329d18c6442a625f851377bacf0
+=======
+"commander@npm:^8.1.0, commander@npm:^8.2.0":
+  version: 8.2.0
+  resolution: "commander@npm:8.2.0"
+  checksum: e868805bc266777f7a9c8a740e15b9e02b8148d8251f577ea9b9ef373ac0bdeb77b9b60cfc033592c9e1affea89993be08c13c623f0c619f9bf152c0e4d12cb0
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -9475,6 +10362,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "core-js@npm:3.18.0":
   version: 3.18.0
   resolution: "core-js@npm:3.18.0"
@@ -9482,6 +10370,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "core-js@npm:3.18.0":
   version: 3.18.0
   resolution: "core-js@npm:3.18.0"
@@ -9661,9 +10551,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "css-loader@npm:6.5.1":
   version: 6.5.1
   resolution: "css-loader@npm:6.5.1"
+=======
+"css-loader@npm:6.5.0":
+  version: 6.5.0
+  resolution: "css-loader@npm:6.5.0"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     icss-utils: ^5.1.0
     postcss: ^8.2.15
@@ -9675,7 +10571,11 @@ __metadata:
     semver: ^7.3.5
   peerDependencies:
     webpack: ^5.0.0
+<<<<<<< HEAD
   checksum: 5a3bedecb468038f09673d25c32d8db5b0baa6c38820253c54ce4c56c27a2250d5d5b4bace77dd5e20ba0a569604eb759362bab4e3128e7db2229e40857d4aca
+=======
+  checksum: 4f3e7b93df79293dca910de41c741486155ea8248e048ea51a74fc5570d3acb962b5be0b6740f3ad8006b40eb4ef375124de4f9507aebf7a42f5ca7b8a7807d1
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -11098,6 +11998,7 @@ __metadata:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "eslint-module-utils@npm:^2.7.1":
 =======
 "eslint-module-utils@npm:^2.6.2":
@@ -11114,11 +12015,16 @@ __metadata:
   version: 2.7.1
   resolution: "eslint-module-utils@npm:2.7.1"
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+"eslint-module-utils@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "eslint-module-utils@npm:2.7.0"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     debug: ^3.2.7
     find-up: ^2.1.0
     pkg-dir: ^2.0.0
-  checksum: c30dfa125aafe65e5f6a30a31c26932106fcf09934a2f47d7f8a393ed9106da7b07416f2337b55c85f9db0175c873ee0827be5429a24ec381b49940f342b9ac3
+  checksum: 98f284dee995ed3e12a7ea61525ad421abf1ec6483182555382c29d087890d6e79e8cad15edd189e3389e76e593098105d38435990e1fa4e6cb855869c79980a
   languageName: node
   linkType: hard
 
@@ -11134,18 +12040,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "eslint-plugin-import@npm:2.25.3":
   version: 2.25.3
   resolution: "eslint-plugin-import@npm:2.25.3"
+=======
+"eslint-plugin-import@npm:2.25.2":
+  version: 2.25.2
+  resolution: "eslint-plugin-import@npm:2.25.2"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     array-includes: ^3.1.4
     array.prototype.flat: ^1.2.5
     debug: ^2.6.9
     doctrine: ^2.1.0
     eslint-import-resolver-node: ^0.3.6
+<<<<<<< HEAD
     eslint-module-utils: ^2.7.1
     has: ^1.0.3
     is-core-module: ^2.8.0
+=======
+    eslint-module-utils: ^2.7.0
+    has: ^1.0.3
+    is-core-module: ^2.7.0
+>>>>>>> b82a4279 (chore: squash merge main)
     is-glob: ^4.0.3
     minimatch: ^3.0.4
     object.values: ^1.1.5
@@ -11153,6 +12071,7 @@ __metadata:
     tsconfig-paths: ^3.11.0
   peerDependencies:
     eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
+<<<<<<< HEAD
   checksum: 8bdf4b1fafb0e5c8f57a1673f72d84307d32c06a23942990d198c8b32a85a5ae0098872d1ef5bf80d7dfe8ec542f6a671e3c5e706731a80b493c9015f7a147f5
   languageName: node
   linkType: hard
@@ -11160,6 +12079,15 @@ __metadata:
 "eslint-plugin-jest@npm:25.3.0":
   version: 25.3.0
   resolution: "eslint-plugin-jest@npm:25.3.0"
+=======
+  checksum: 4ca36e37faf72fb1ed25361ea8a6abbcc9daa65f3a9ac1dc0a660029000456e8c8b98a87b8cc2316541b13c6e5915df41d2dc4a1d7fe0729d9b72b9a3bd5b909
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-jest@npm:25.2.2":
+  version: 25.2.2
+  resolution: "eslint-plugin-jest@npm:25.2.2"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     "@typescript-eslint/experimental-utils": ^5.0.0
   peerDependencies:
@@ -11168,9 +12096,13 @@ __metadata:
   peerDependenciesMeta:
     "@typescript-eslint/eslint-plugin":
       optional: true
+<<<<<<< HEAD
     jest:
       optional: true
   checksum: d801c166f528392fbb0234e34b893e97c24a7be049744f2d23b1702bce6202d5f0760886a591f884ffa82c7e01a2b06134e86da991bfa568ca5a90311e5f452e
+=======
+  checksum: ba78bf20625f017b47f2dc0fe12226f461e7b289fd7e3314421f51a993b142dd51017404524950a95978b3b86850a64931f0615f274cdfeeafea078abf594d73
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -11211,6 +12143,15 @@ __metadata:
   peerDependencies:
     eslint: ^6 || ^7 || ^8
   checksum: 70f2a66386cfe2d0b05241687a34e41ccbd60f113f5acb73a89fd97d6a675697ea1a6988b842efb3ffc9366a0945782624800cedaa0a5daa40d25ec89d0b8074
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-no-unsanitized@npm:3.2.0":
+  version: 3.2.0
+  resolution: "eslint-plugin-no-unsanitized@npm:3.2.0"
+  peerDependencies:
+    eslint: ^5 || ^6 || ^7
+  checksum: e5bdada86fe103e009a379473f5d35bb442acf48b5274a5e58c3a3f97331612fe2a01cfb527337e922344e4a977b1ba2a37185c1811e19f02856bfd8e0fa50ff
   languageName: node
   linkType: hard
 
@@ -11583,9 +12524,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "espree@npm:9.1.0, espree@npm:^9.0.0, espree@npm:^9.1.0":
   version: 9.1.0
   resolution: "espree@npm:9.1.0"
+=======
+"espree@npm:9.0.0":
+  version: 9.0.0
+  resolution: "espree@npm:9.0.0"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     acorn: ^8.6.0
     acorn-jsx: ^5.3.1
@@ -12411,6 +13358,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "firefox-profile@npm:4.2.2":
   version: 4.2.2
   resolution: "firefox-profile@npm:4.2.2"
@@ -12426,6 +13374,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "firefox-profile@npm:4.2.1":
   version: 4.2.1
   resolution: "firefox-profile@npm:4.2.1"
@@ -13998,6 +14948,7 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
 =======
 "iconv-lite@npm:^0.6.2":
@@ -14011,6 +14962,9 @@ fsevents@^1.2.7:
   resolution: "iconv-lite@npm:0.6.2"
 >>>>>>> 258bc78a (fix: build issues)
 =======
+=======
+"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -14465,6 +15419,7 @@ fsevents@^1.2.7:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "inversify@npm:*, inversify@npm:^6.0.0":
   version: 6.0.1
   resolution: "inversify@npm:6.0.1"
@@ -14474,12 +15429,16 @@ fsevents@^1.2.7:
 =======
 "inversify@npm:*":
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+"inversify@npm:*, inversify@npm:^6.0.0":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 6.0.1
   resolution: "inversify@npm:6.0.1"
   checksum: b6c9b56ef7817a71534b06101c2b0a0130b67c47a769f58794d9c0643591a83ac02be30a48c00cb729c0c83ece96dde369c419d48c32d0201c6cc7407629fbc5
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "inversify@npm:^5.1.1":
 <<<<<<< HEAD
 =======
@@ -14494,6 +15453,8 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "invert-kv@npm:^3.0.0":
   version: 3.0.1
   resolution: "invert-kv@npm:3.0.1"
@@ -14631,6 +15592,7 @@ fsevents@^1.2.7:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "is-core-module@npm:^2.2.0, is-core-module@npm:^2.8.0":
   version: 2.8.0
   resolution: "is-core-module@npm:2.8.0"
@@ -14643,6 +15605,9 @@ fsevents@^1.2.7:
   resolution: "is-ci@npm:3.0.0"
 =======
 "is-core-module@npm:^2.2.0":
+=======
+"is-core-module@npm:^2.2.0, is-core-module@npm:^2.7.0":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 2.7.0
   resolution: "is-core-module@npm:2.7.0"
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -14652,6 +15617,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "is-core-module@npm:^2.6.0":
   version: 2.8.0
   resolution: "is-core-module@npm:2.8.0"
@@ -14686,6 +15652,8 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "is-data-descriptor@npm:^0.1.4":
   version: 0.1.4
   resolution: "is-data-descriptor@npm:0.1.4"
@@ -15368,10 +16336,14 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "jest-cli@npm:^27.3.1":
 =======
 "jest-cli@npm:^27.2.5":
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+"jest-cli@npm:^27.3.1":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 27.3.1
   resolution: "jest-cli@npm:27.3.1"
   dependencies:
@@ -16657,9 +17629,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "lint-staged@npm:12.1.2":
   version: 12.1.2
   resolution: "lint-staged@npm:12.1.2"
+=======
+"lint-staged@npm:11.2.6":
+  version: 11.2.6
+  resolution: "lint-staged@npm:11.2.6"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
@@ -16677,7 +17655,11 @@ fsevents@^1.2.7:
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
+<<<<<<< HEAD
   checksum: ec84ce4f74d0d8fe314bd0b62fb5e0be64af692d1876f68c457116faef61b4b3b79d72df7819c248bfbb20c46e88fbe994128e7351e84bec7048263e00199925
+=======
+  checksum: b9071621db351c553579bd18df3d80fb753f851c4f1f72db0aaf12e713eab25b6d8a044dab2957817de7da02054a63f7725a49c763aee09295133f0d554f4d3f
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -17907,6 +18889,7 @@ fsevents@^1.2.7:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "nanoid@npm:^3.1.30":
 =======
 "nanoid@npm:^3.1.23, nanoid@npm:^3.1.28":
@@ -17920,6 +18903,9 @@ fsevents@^1.2.7:
 >>>>>>> 258bc78a (fix: build issues)
 =======
 "nanoid@npm:^3.1.23, nanoid@npm:^3.1.28, nanoid@npm:^3.1.30":
+=======
+"nanoid@npm:^3.1.28, nanoid@npm:^3.1.30":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 3.1.30
   resolution: "nanoid@npm:3.1.30"
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -18720,6 +19706,7 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "object.values@npm:^1.1.5":
 =======
 "object.values@npm:^1.1.4":
@@ -18733,6 +19720,9 @@ fsevents@^1.2.7:
   resolution: "object.values@npm:1.1.4"
 >>>>>>> 258bc78a (fix: build issues)
 =======
+=======
+"object.values@npm:^1.1.4, object.values@npm:^1.1.5":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 1.1.5
   resolution: "object.values@npm:1.1.5"
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -19231,12 +20221,16 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "param-case@npm:^3.0.4":
 =======
 "param-case@npm:^3.0.3":
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+"param-case@npm:^3.0.4":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 3.0.4
   resolution: "param-case@npm:3.0.4"
 =======
@@ -19597,6 +20591,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "pino-abstract-transport@npm:v0.5.0":
   version: 0.5.0
   resolution: "pino-abstract-transport@npm:0.5.0"
@@ -19604,6 +20599,15 @@ fsevents@^1.2.7:
     duplexify: ^4.1.2
     split2: ^4.0.0
   checksum: c503f867de3189f8217ab9cf794e8a631dddd0029a829f0f985f5511308152ebd53e363764fbc5570b3d1c715b341e3923456ce16ad84cd41be2b9a074ada234
+=======
+"pino-abstract-transport@npm:v0.4.0":
+  version: 0.4.0
+  resolution: "pino-abstract-transport@npm:0.4.0"
+  dependencies:
+    duplexify: ^4.1.2
+    split2: ^3.2.2
+  checksum: 9df1bc78e143008cbb6ef8d4d82f336d149e62cf5e395bb0cf3accb8dc46de1380609e8d661186217e2747a2358d22f50b232640f89c94759efa3efffe0c763d
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -19634,6 +20638,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"pino-std-serializers@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "pino-std-serializers@npm:4.0.0"
+  checksum: 89d487729b58c9d3273a0ee851ead068d6d2e2ccc1af8e1c1d28f1b3442423679bec7ec04d9a2aba36f94f335e82be9f4de19dc4fbc161e71c136aaa15b85ad3
+  languageName: node
+  linkType: hard
+
 "pino@npm:5.13.3":
   version: 5.13.3
   resolution: "pino@npm:5.13.3"
@@ -19650,13 +20661,37 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "pino@npm:7.4.0":
   version: 7.4.0
   resolution: "pino@npm:7.4.0"
+=======
+"pino@npm:6.13.3":
+  version: 6.13.3
+  resolution: "pino@npm:6.13.3"
+  dependencies:
+    fast-redact: ^3.0.0
+    fast-safe-stringify: ^2.0.8
+    fastify-warning: ^0.2.0
+    flatstr: ^1.0.12
+    pino-std-serializers: ^3.1.0
+    quick-format-unescaped: ^4.0.3
+    sonic-boom: ^1.0.2
+  bin:
+    pino: bin.js
+  checksum: a580decd47a1c8b32a846ba1cb478087b523636d697bd4c57833d10b3f2b35c7d06739715ad9a291b41caf002b8d1bbf98674bfb3e99989fd41b7d934cca861c
+  languageName: node
+  linkType: hard
+
+"pino@npm:7.0.3":
+  version: 7.0.3
+  resolution: "pino@npm:7.0.3"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     fast-redact: ^3.0.0
     fastify-warning: ^0.2.0
     get-caller-file: ^2.0.5
+<<<<<<< HEAD
     on-exit-leak-free: ^0.2.0
     pino-abstract-transport: v0.5.0
     pino-std-serializers: ^4.0.0
@@ -19668,6 +20703,18 @@ fsevents@^1.2.7:
   bin:
     pino: bin.js
   checksum: c61bb43e7a5661a22d710624ecacc54bf1e57ccd84c42edc6151beccd92dbd3cace60f2c2511eda713fd53eba5e96de0e2ed703637bdab3ecc9e02fdd4b757ff
+=======
+    json-stringify-safe: ^5.0.1
+    on-exit-leak-free: ^0.2.0
+    pino-abstract-transport: v0.4.0
+    pino-std-serializers: ^4.0.0
+    quick-format-unescaped: ^4.0.3
+    sonic-boom: ^2.2.1
+    thread-stream: ^0.11.1
+  bin:
+    pino: bin.js
+  checksum: d429e0ce94923fb4e964c2d1296104ab5d596d9e43ae2dae071c1c2c6878ac40d172043ae7386aa9b71fee8be273c6d5d787e2b201e13f8f172432c824475df7
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -19723,6 +20770,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
+=======
+"please-upgrade-node@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "please-upgrade-node@npm:3.2.0"
+  dependencies:
+    semver-compare: ^1.0.0
+  checksum: d87c41581a2a022fbe25965a97006238cd9b8cbbf49b39f78d262548149a9d30bd2bdf35fec3d810e0001e630cd46ef13c7e19c389dea8de7e64db271a2381bb
+  languageName: node
+  linkType: hard
+
+>>>>>>> b82a4279 (chore: squash merge main)
 "pluralize@npm:^1.2.1":
   version: 1.2.1
   resolution: "pluralize@npm:1.2.1"
@@ -19863,6 +20922,7 @@ fsevents@^1.2.7:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "postcss@npm:8.3.11, postcss@npm:^8.2.15":
   version: 8.3.11
   resolution: "postcss@npm:8.3.11"
@@ -19916,6 +20976,16 @@ fsevents@^1.2.7:
   checksum: ff55b91bea21f42c2a94d77fd05c3f66dd15889c68506cf1dbb9cdee8c3b9e9d0e219bcbc6e61a107bd63e3cac0670176486e2a5794c106a4e1b9babceb79317
 >>>>>>> 68babb53... chore: squash merge conflicts
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+"postcss@npm:8.3.11, postcss@npm:^8.2.15":
+  version: 8.3.11
+  resolution: "postcss@npm:8.3.11"
+  dependencies:
+    nanoid: ^3.1.30
+    picocolors: ^1.0.0
+    source-map-js: ^0.6.2
+  checksum: 1a230553d74c66aa9585c90781ed8ea75f19cefea405d2117b67fbeb24b5b5e0e17be2e0c5a07db31dd085643a13394127ab2222e940771b70498331bf20f35e
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -19932,17 +21002,6 @@ fsevents@^1.2.7:
     picocolors: ^0.2.1
     source-map-js: ^0.6.2
   checksum: b64d0e59bc027b2f09e5a84ca32b4f0620553812110e42295a79fd0e6ea664779e575c2d5e8d35a1b0804f0933ec878404c6e161e008b5bc51cba44eaef216ef
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.2.15":
-  version: 8.3.11
-  resolution: "postcss@npm:8.3.11"
-  dependencies:
-    nanoid: ^3.1.30
-    picocolors: ^1.0.0
-    source-map-js: ^0.6.2
-  checksum: 1a230553d74c66aa9585c90781ed8ea75f19cefea405d2117b67fbeb24b5b5e0e17be2e0c5a07db31dd085643a13394127ab2222e940771b70498331bf20f35e
   languageName: node
   linkType: hard
 
@@ -20928,6 +21987,7 @@ fsevents@^1.2.7:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "regexpp@npm:^3.0.0, regexpp@npm:^3.1.0, regexpp@npm:^3.2.0":
 =======
 "regexpp@npm:^3.0.0, regexpp@npm:^3.1.0":
@@ -20943,6 +22003,9 @@ fsevents@^1.2.7:
   checksum: 63bcb2c98d63274774c79bef256e03f716d25f1fa8427267d0302d1436a83fa0d905f4e8a172fdfa99fb4d84833df2fb3bf7da2a1a868f156e913174c32b1139
 >>>>>>> 258bc78a (fix: build issues)
 =======
+=======
+"regexpp@npm:^3.0.0, regexpp@npm:^3.1.0, regexpp@npm:^3.2.0":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 3.2.0
   resolution: "regexpp@npm:3.2.0"
   checksum: a78dc5c7158ad9ddcfe01aa9144f46e192ddbfa7b263895a70a5c6c73edd9ce85faf7c0430e59ac38839e1734e275b9c3de5c57ee3ab6edc0e0b1bdebefccef8
@@ -22005,6 +23068,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "sign-addon@npm:3.9.0":
   version: 3.9.0
   resolution: "sign-addon@npm:3.9.0"
@@ -22023,6 +23087,8 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
 "sign-addon@npm:3.9.0":
   version: 3.9.0
   resolution: "sign-addon@npm:3.9.0"
@@ -22286,6 +23352,15 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+"sonic-boom@npm:^2.2.1":
+  version: 2.3.0
+  resolution: "sonic-boom@npm:2.3.0"
+  dependencies:
+    atomic-sleep: ^1.0.0
+  checksum: 208329d1533e99c436df0c41762554a9934b9af8b43cdb9792c2570292c9c78b5bc2c78d0ac0508d4a93568367d80ea3a2bb9cda31e882abcd111405bea4705f
+  languageName: node
+  linkType: hard
+
 "sort-keys@npm:^2.0.0":
   version: 2.0.0
   resolution: "sort-keys@npm:2.0.0"
@@ -22366,6 +23441,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "source-map-support@npm:0.5.20":
   version: 0.5.20
   resolution: "source-map-support@npm:0.5.20"
@@ -22390,6 +23466,9 @@ sjcl@sublimator/sjcl:
 =======
 "source-map-support@npm:0.5.20, source-map-support@npm:^0.5.12, source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12, source-map-support@npm:~0.5.20, source-map-support@npm:~0.5.4":
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+"source-map-support@npm:0.5.20, source-map-support@npm:^0.5.12, source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.20, source-map-support@npm:~0.5.4":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 0.5.20
   resolution: "source-map-support@npm:0.5.20"
 >>>>>>> c4299913 (fix: update yarn lock)
@@ -22515,7 +23594,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"split2@npm:^3.0.0":
+"split2@npm:^3.0.0, split2@npm:^3.2.2":
   version: 3.2.2
   resolution: "split2@npm:3.2.2"
   dependencies:
@@ -22870,6 +23949,7 @@ sjcl@sublimator/sjcl:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "strip-ansi@npm:^6.0.0, strip-ansi@npm:^6.0.1":
   version: 6.0.1
   resolution: "strip-ansi@npm:6.0.1"
@@ -22893,6 +23973,9 @@ sjcl@sublimator/sjcl:
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
 "strip-ansi@npm:^6.0.0":
+=======
+"strip-ansi@npm:^6.0.0, strip-ansi@npm:^6.0.1":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 6.0.1
   resolution: "strip-ansi@npm:6.0.1"
   dependencies:
@@ -23032,6 +24115,7 @@ sjcl@sublimator/sjcl:
   peerDependencies:
     webpack: ^5.0.0
 <<<<<<< HEAD
+<<<<<<< HEAD
   checksum: 470feef680f59e2fce4d6601b5c55b88c01ad8d1dd693c528ffd591ff5fd7c01a4eff3bdbe62f26f847d6bd2430c9ab594be23307cfe7a3446ab236683f0d066
 =======
   checksum: edad553a1ae74af9afb4dd582774d484e8e4e5f8c9593a921b0f3f0e2cdb3a58c4b44a3afb43021956804042eaffd68d5dc4f956d4c5f633e7e67eda6a750042
@@ -23051,6 +24135,9 @@ sjcl@sublimator/sjcl:
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+  checksum: 470feef680f59e2fce4d6601b5c55b88c01ad8d1dd693c528ffd591ff5fd7c01a4eff3bdbe62f26f847d6bd2430c9ab594be23307cfe7a3446ab236683f0d066
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -23328,6 +24415,7 @@ sjcl@sublimator/sjcl:
   linkType: hard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "terser@npm:^5.7.0, terser@npm:^5.7.2":
   version: 5.9.0
   resolution: "terser@npm:5.9.0"
@@ -23363,6 +24451,9 @@ sjcl@sublimator/sjcl:
   resolution: "terser@npm:5.7.0"
 >>>>>>> 258bc78a (fix: build issues)
 =======
+=======
+"terser@npm:^5.7.0, terser@npm:^5.7.2":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 5.9.0
   resolution: "terser@npm:5.9.0"
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -23442,12 +24533,19 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "thread-stream@npm:^0.13.0":
   version: 0.13.0
   resolution: "thread-stream@npm:0.13.0"
   dependencies:
     real-require: ^0.1.0
   checksum: d72a44f133917c0c54f820d25c507f8d09b4841c8fba83deae14110a1a097884f6674c8d2953655f44753a828dc1a625214b9addefcc79084e6bd9febca36796
+=======
+"thread-stream@npm:^0.11.1":
+  version: 0.11.1
+  resolution: "thread-stream@npm:0.11.1"
+  checksum: 47f9bccc3ef0046743187401a6c5264700bd7bcbf98ecb98ddcb2bf0c7f0066394a3c0836f37499f74b57b698e0374deba318946144e8c32d35f8124ce4e6280
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -24125,6 +25223,7 @@ sjcl@sublimator/sjcl:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "typescript@4.4.4, typescript@^4.4.3, typescript@~4.4.3":
   version: 4.4.4
   resolution: "typescript@npm:4.4.4"
@@ -24169,6 +25268,9 @@ typescript@4.4.3:
 >>>>>>> 258bc78a (fix: build issues)
 =======
 "typescript@^4.4.3, typescript@~4.4.3":
+=======
+"typescript@4.4.4, typescript@^4.4.3, typescript@~4.4.3":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 4.4.4
   resolution: "typescript@npm:4.4.4"
   bin:
@@ -24178,6 +25280,7 @@ typescript@4.4.3:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "typescript@patch:typescript@4.4.3#~builtin<compat/typescript>":
 >>>>>>> 48768561 (chore: fix yarn lock)
   version: 4.4.3
@@ -24191,6 +25294,9 @@ typescript@4.4.3:
   linkType: hard
 
 "typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@~4.4.3#~builtin<compat/typescript>":
+=======
+"typescript@patch:typescript@4.4.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@~4.4.3#~builtin<compat/typescript>":
+>>>>>>> b82a4279 (chore: squash merge main)
   version: 4.4.4
   resolution: "typescript@patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"
   bin:
@@ -24611,13 +25717,6 @@ typescript@4.4.3:
   languageName: node
   linkType: hard
 
-"v8-compile-cache@npm:^2.2.0":
-  version: 2.3.0
-  resolution: "v8-compile-cache@npm:2.3.0"
-  checksum: adb0a271eaa2297f2f4c536acbfee872d0dd26ec2d76f66921aa7fc437319132773483344207bdbeee169225f4739016d8d2dbf0553913a52bb34da6d0334f8e
-  languageName: node
-  linkType: hard
-
 "v8-to-istanbul@npm:^8.1.0":
   version: 8.1.0
   resolution: "v8-to-istanbul@npm:8.1.0"
@@ -24745,6 +25844,7 @@ typescript@4.4.3:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "web-ext@npm:6.6.0, web-ext@npm:^6.1.0":
   version: 6.6.0
   resolution: "web-ext@npm:6.6.0"
@@ -24763,6 +25863,15 @@ typescript@4.4.3:
     "@babel/runtime": 7.13.9
     "@devicefarmer/adbkit": 2.11.3
     addons-linter: 4.4.0
+=======
+"web-ext@npm:6.5.0, web-ext@npm:^6.1.0":
+  version: 6.5.0
+  resolution: "web-ext@npm:6.5.0"
+  dependencies:
+    "@babel/runtime": 7.13.9
+    "@devicefarmer/adbkit": 2.11.3
+    addons-linter: 3.20.0
+>>>>>>> b82a4279 (chore: squash merge main)
     bunyan: 1.8.15
     camelcase: 6.2.0
     chrome-launcher: 0.15.0
@@ -24770,7 +25879,11 @@ typescript@4.4.3:
     decamelize: 5.0.0
     es6-error: 4.1.1
     event-to-promise: 0.8.0
+<<<<<<< HEAD
     firefox-profile: 4.2.2
+=======
+    firefox-profile: 4.2.1
+>>>>>>> b82a4279 (chore: squash merge main)
     fs-extra: 9.1.0
     fx-runner: 1.2.0
     import-fresh: 3.3.0
@@ -24792,7 +25905,11 @@ typescript@4.4.3:
     zip-dir: 2.0.0
   bin:
     web-ext: bin/web-ext
+<<<<<<< HEAD
   checksum: b0a3382a60520da2e9d2dc875865d792d5416bb76b4bc32d6358d453242cdf8f8ffa07bba0cf8f28ae6293b7aafe3ce6e298092555c71239741a83945ec088e5
+=======
+  checksum: fca1741464220900a72ed0c130116f64ecdb2ee0fe32fb9733281e7ac8353a4653d253de9c460ca7cd5fe03a6856cb8d419ce1115cbbff076e67bb298d54f154
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 
@@ -24840,50 +25957,11 @@ typescript@4.4.3:
   languageName: node
   linkType: hard
 
-"web-ext@npm:^6.1.0":
-  version: 6.5.0
-  resolution: "web-ext@npm:6.5.0"
-  dependencies:
-    "@babel/runtime": 7.13.9
-    "@devicefarmer/adbkit": 2.11.3
-    addons-linter: 3.20.0
-    bunyan: 1.8.15
-    camelcase: 6.2.0
-    chrome-launcher: 0.14.0
-    debounce: 1.2.0
-    decamelize: 5.0.0
-    es6-error: 4.1.1
-    event-to-promise: 0.8.0
-    firefox-profile: 4.2.1
-    fs-extra: 9.1.0
-    fx-runner: 1.1.0
-    import-fresh: 3.3.0
-    mkdirp: 1.0.4
-    multimatch: 5.0.0
-    mz: 2.7.0
-    node-notifier: 9.0.0
-    open: 7.4.2
-    parse-json: 5.2.0
-    sign-addon: 3.9.0
-    source-map-support: 0.5.20
-    strip-bom: 4.0.0
-    strip-json-comments: 3.1.1
-    tmp: 0.2.1
-    update-notifier: 5.1.0
-    watchpack: 2.1.1
-    ws: 7.4.6
-    yargs: 16.2.0
-    zip-dir: 2.0.0
-  bin:
-    web-ext: bin/web-ext
-  checksum: fca1741464220900a72ed0c130116f64ecdb2ee0fe32fb9733281e7ac8353a4653d253de9c460ca7cd5fe03a6856cb8d419ce1115cbbff076e67bb298d54f154
-  languageName: node
-  linkType: hard
-
 "web-monetization@workspace:.":
   version: 0.0.0-use.local
   resolution: "web-monetization@workspace:."
   dependencies:
+<<<<<<< HEAD
     "@babel/core": 7.16.0
     "@babel/plugin-proposal-class-properties": 7.16.0
     "@babel/plugin-proposal-decorators": 7.16.4
@@ -24896,12 +25974,27 @@ typescript@4.4.3:
     "@types/node": 14.17.34
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
+=======
+    "@babel/core": 7.15.8
+    "@babel/plugin-proposal-class-properties": 7.14.5
+    "@babel/plugin-proposal-decorators": 7.15.8
+    "@babel/plugin-proposal-object-rest-spread": 7.15.6
+    "@babel/preset-env": 7.15.8
+    "@babel/preset-typescript": 7.15.0
+    "@commitlint/cli": 13.2.1
+    "@commitlint/config-conventional": 13.2.0
+    "@types/jest": 27.0.1
+    "@types/node": 14.17.32
+    "@typescript-eslint/eslint-plugin": 5.2.0
+    "@typescript-eslint/parser": 5.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
     eslint-import-resolver-node: 0.3.6
+<<<<<<< HEAD
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0
     eslint-plugin-jsx-a11y: 6.5.1
@@ -24910,23 +26003,47 @@ typescript@4.4.3:
     eslint-plugin-promise: 5.1.1
     eslint-plugin-react: 7.27.1
     eslint-plugin-react-hooks: 4.3.0
+=======
+    eslint-plugin-import: 2.25.2
+    eslint-plugin-jest: 25.2.2
+    eslint-plugin-jsx-a11y: 6.4.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.24.0
+    eslint-plugin-react-hooks: 4.2.0
+>>>>>>> b82a4279 (chore: squash merge main)
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
+<<<<<<< HEAD
     lint-staged: 12.1.2
     prettier: 2.5.0
+=======
+    lint-staged: 11.2.6
+    prettier: 2.4.1
+>>>>>>> b82a4279 (chore: squash merge main)
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
+<<<<<<< HEAD
     tsconfig-paths: 3.12.0
     typescript: 4.4.4
     webpack: 5.64.4
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
+=======
+    tsconfig-paths: 3.11.0
+    typescript: 4.4.4
+    webpack: 5.60.0
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.2
+>>>>>>> b82a4279 (chore: squash merge main)
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
@@ -25107,9 +26224,15 @@ typescript@4.4.3:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "webpack@npm:5.64.4":
   version: 5.64.4
   resolution: "webpack@npm:5.64.4"
+=======
+"webpack@npm:5.60.0":
+  version: 5.60.0
+  resolution: "webpack@npm:5.60.0"
+>>>>>>> b82a4279 (chore: squash merge main)
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -25140,7 +26263,11 @@ typescript@4.4.3:
       optional: true
   bin:
     webpack: bin/webpack.js
+<<<<<<< HEAD
   checksum: 62ac598291374fa5269c80fcd82ad3cbf8e8c3f837c2bf6ea80812812154d9f4d3390c6fdc1ce85323e6fdd46132e3e3db08cde9a1b4d61197879e867c7c1375
+=======
+  checksum: 3c37424516cfb3c7c9cefc888b359b945913f801059fb7c496380b06830666116f71f394eac135e1721b6802ff846ffa73378d3c05a9e03e3c2890a6bfa5bba1
+>>>>>>> b82a4279 (chore: squash merge main)
   languageName: node
   linkType: hard
 

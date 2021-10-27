@@ -135,6 +135,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
@@ -147,12 +148,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.14.5"],
+            ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/plugin-proposal-object-rest-spread", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.6"],
+            ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.0"],
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -161,23 +177,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
             ["ts-loader", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
             ["webpack-dev-server", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -1435,6 +1475,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.8.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-async-generators-virtual-7fc41e8c52/0/cache/@babel-plugin-syntax-async-generators-npm-7.8.4-d10cf993c9-7ed1c1d9b9.zip/node_modules/@babel/plugin-syntax-async-generators/",
 =======
@@ -1463,8 +1504,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-async-generators-virtual-e7029a9c03/0/cache/@babel-plugin-syntax-async-generators-npm-7.8.4-d10cf993c9-7ed1c1d9b9.zip/node_modules/@babel/plugin-syntax-async-generators/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-async-generators-virtual-da23b66054/0/cache/@babel-plugin-syntax-async-generators-npm-7.8.4-d10cf993c9-7ed1c1d9b9.zip/node_modules/@babel/plugin-syntax-async-generators/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-async-generators", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.4"],
+            ["@babel/plugin-syntax-async-generators", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.4"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
@@ -1494,6 +1539,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1535,10 +1581,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-966e314117/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-7fe4d27fcc/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-bigint", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
+            ["@babel/plugin-syntax-bigint", "virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.8.3"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.15"]
@@ -1549,6 +1600,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["@types/babel__core", "npm:7.1.14"]
 >>>>>>> 258bc78a (fix: build issues)
+=======
+            ["@types/babel__core", null]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1556,6 +1610,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1576,8 +1631,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-7fe4d27fcc/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-bigint-virtual-3056034cb5/0/cache/@babel-plugin-syntax-bigint-npm-7.8.3-b05d971e6c-3a10849d83.zip/node_modules/@babel/plugin-syntax-bigint/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-bigint", "virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.8.3"],
+            ["@babel/plugin-syntax-bigint", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.15.8"],
 =======
         ["virtual:b7ac7cc5d0fa64a56d0def359840ee3c8fdd447dcc775a255dbc69042501be1cb6eed3d34637f0292778265fcd6d7ce56ccfd17f06e1218a7af4e03c38c10b4a#npm:7.8.3", {
@@ -1606,6 +1665,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.15"]
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 =======
@@ -1614,6 +1674,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["@types/babel__core", null]
 >>>>>>> 258bc78a (fix: build issues)
+=======
+            ["@types/babel__core", "npm:7.1.14"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1687,6 +1750,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.12.13", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-class-properties-virtual-dd1e55dbe3/0/cache/@babel-plugin-syntax-class-properties-npm-7.12.13-002ee9d930-24f34b196d.zip/node_modules/@babel/plugin-syntax-class-properties/",
 =======
@@ -1715,8 +1779,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.12.13", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-class-properties-virtual-eba643f890/0/cache/@babel-plugin-syntax-class-properties-npm-7.12.13-002ee9d930-24f34b196d.zip/node_modules/@babel/plugin-syntax-class-properties/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.12.13", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-class-properties-virtual-1d50f9a04f/0/cache/@babel-plugin-syntax-class-properties-npm-7.12.13-002ee9d930-24f34b196d.zip/node_modules/@babel/plugin-syntax-class-properties/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-class-properties", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.12.13"],
+            ["@babel/plugin-syntax-class-properties", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.12.13"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
@@ -1843,6 +1911,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-992bd45eaf/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
           "packageDependencies": [
@@ -1860,8 +1929,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-b64bc87a7f/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-992bd45eaf/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-import-meta", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.10.4"],
+            ["@babel/plugin-syntax-import-meta", "virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.10.4"],
             ["@babel/core", "npm:7.15.8"],
 =======
         ["virtual:85d0849a5791f89e8185622b0366e88283f3ae466c3457fe83408816cec327ab3ab26140ec5fa1b815c6276204571a7bad01b70c8638249a36b8146c74f9b458#npm:7.10.4", {
@@ -1885,6 +1958,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.15"]
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
 =======
@@ -1893,6 +1967,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["@types/babel__core", "npm:7.1.14"]
 >>>>>>> 258bc78a (fix: build issues)
+=======
+            ["@types/babel__core", null]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@babel/core",
@@ -1900,6 +1977,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1920,8 +1998,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-992bd45eaf/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-import-meta-virtual-07f2e27f73/0/cache/@babel-plugin-syntax-import-meta-npm-7.10.4-4a0a0158bc-166ac1125d.zip/node_modules/@babel/plugin-syntax-import-meta/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-import-meta", "virtual:20afa38a060df52b0181db219803f74cf9bbec4fd4e7a2ebc55a81f9dff03fde8022e027dcf4ecd6e5520fd66eb2a98d0f921fa6186432ca1e271e97d42777e9#npm:7.10.4"],
+            ["@babel/plugin-syntax-import-meta", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4"],
             ["@babel/core", "npm:7.15.8"],
 =======
         ["virtual:b7ac7cc5d0fa64a56d0def359840ee3c8fdd447dcc775a255dbc69042501be1cb6eed3d34637f0292778265fcd6d7ce56ccfd17f06e1218a7af4e03c38c10b4a#npm:7.10.4", {
@@ -1950,6 +2032,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["@types/babel__core", "npm:7.1.15"]
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 =======
@@ -1958,6 +2041,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["@types/babel__core", null]
 >>>>>>> 258bc78a (fix: build issues)
+=======
+            ["@types/babel__core", "npm:7.1.14"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@babel/core",
@@ -2031,6 +2117,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-json-strings-virtual-8c65b46adb/0/cache/@babel-plugin-syntax-json-strings-npm-7.8.3-6dc7848179-bf5aea1f31.zip/node_modules/@babel/plugin-syntax-json-strings/",
 =======
@@ -2059,8 +2146,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-json-strings-virtual-95124030e2/0/cache/@babel-plugin-syntax-json-strings-npm-7.8.3-6dc7848179-bf5aea1f31.zip/node_modules/@babel/plugin-syntax-json-strings/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-json-strings-virtual-f5be0e47b8/0/cache/@babel-plugin-syntax-json-strings-npm-7.8.3-6dc7848179-bf5aea1f31.zip/node_modules/@babel/plugin-syntax-json-strings/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-json-strings", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
+            ["@babel/plugin-syntax-json-strings", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
@@ -2147,6 +2238,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-logical-assignment-operators-virtual-a718005b86/0/cache/@babel-plugin-syntax-logical-assignment-operators-npm-7.10.4-72ae00fdf6-aff3357703.zip/node_modules/@babel/plugin-syntax-logical-assignment-operators/",
 =======
@@ -2175,8 +2267,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-logical-assignment-operators-virtual-90cd3750b7/0/cache/@babel-plugin-syntax-logical-assignment-operators-npm-7.10.4-72ae00fdf6-aff3357703.zip/node_modules/@babel/plugin-syntax-logical-assignment-operators/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-logical-assignment-operators-virtual-dbe34286bb/0/cache/@babel-plugin-syntax-logical-assignment-operators-npm-7.10.4-72ae00fdf6-aff3357703.zip/node_modules/@babel/plugin-syntax-logical-assignment-operators/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-logical-assignment-operators", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.10.4"],
+            ["@babel/plugin-syntax-logical-assignment-operators", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
@@ -2263,6 +2359,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-nullish-coalescing-operator-virtual-94bee471c9/0/cache/@babel-plugin-syntax-nullish-coalescing-operator-npm-7.8.3-8a723173b5-87aca49189.zip/node_modules/@babel/plugin-syntax-nullish-coalescing-operator/",
 =======
@@ -2291,8 +2388,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-nullish-coalescing-operator-virtual-b14324f581/0/cache/@babel-plugin-syntax-nullish-coalescing-operator-npm-7.8.3-8a723173b5-87aca49189.zip/node_modules/@babel/plugin-syntax-nullish-coalescing-operator/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-nullish-coalescing-operator-virtual-bee9d7567f/0/cache/@babel-plugin-syntax-nullish-coalescing-operator-npm-7.8.3-8a723173b5-87aca49189.zip/node_modules/@babel/plugin-syntax-nullish-coalescing-operator/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
+            ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
@@ -2379,6 +2480,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-numeric-separator-virtual-082a650980/0/cache/@babel-plugin-syntax-numeric-separator-npm-7.10.4-81444be605-01ec5547bd.zip/node_modules/@babel/plugin-syntax-numeric-separator/",
 =======
@@ -2407,8 +2509,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.10.4", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-numeric-separator-virtual-4a7143eb56/0/cache/@babel-plugin-syntax-numeric-separator-npm-7.10.4-81444be605-01ec5547bd.zip/node_modules/@babel/plugin-syntax-numeric-separator/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-numeric-separator-virtual-125ab2b03f/0/cache/@babel-plugin-syntax-numeric-separator-npm-7.10.4-81444be605-01ec5547bd.zip/node_modules/@babel/plugin-syntax-numeric-separator/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-numeric-separator", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.10.4"],
+            ["@babel/plugin-syntax-numeric-separator", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
@@ -2443,6 +2549,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-object-rest-spread-virtual-0afd0c8996/0/cache/@babel-plugin-syntax-object-rest-spread-npm-7.8.3-60bd05b6ae-fddcf581a5.zip/node_modules/@babel/plugin-syntax-object-rest-spread/",
           "packageDependencies": [
@@ -2458,8 +2565,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-object-rest-spread-virtual-ce6d49d840/0/cache/@babel-plugin-syntax-object-rest-spread-npm-7.8.3-60bd05b6ae-fddcf581a5.zip/node_modules/@babel/plugin-syntax-object-rest-spread/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-object-rest-spread-virtual-0afd0c8996/0/cache/@babel-plugin-syntax-object-rest-spread-npm-7.8.3-60bd05b6ae-fddcf581a5.zip/node_modules/@babel/plugin-syntax-object-rest-spread/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-object-rest-spread", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.15.8"],
 =======
         ["virtual:3511bb9af3b4bcafdd1f6dd780751ced1df4c9d39b42742d26f6f2a65801fef6c7cd1bbde6b4fffb39ef8ef3fbc6c3abab288085c07b3d16ae58ccb38d9e13a8#npm:7.8.3", {
@@ -2617,6 +2728,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-catch-binding-virtual-e91c2d98e5/0/cache/@babel-plugin-syntax-optional-catch-binding-npm-7.8.3-ce337427d8-910d90e72b.zip/node_modules/@babel/plugin-syntax-optional-catch-binding/",
 =======
@@ -2645,8 +2757,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-catch-binding-virtual-1887814bf9/0/cache/@babel-plugin-syntax-optional-catch-binding-npm-7.8.3-ce337427d8-910d90e72b.zip/node_modules/@babel/plugin-syntax-optional-catch-binding/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-catch-binding-virtual-f26f055782/0/cache/@babel-plugin-syntax-optional-catch-binding-npm-7.8.3-ce337427d8-910d90e72b.zip/node_modules/@babel/plugin-syntax-optional-catch-binding/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-optional-catch-binding", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-catch-binding", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
@@ -2733,6 +2849,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-chaining-virtual-ed7bad8b13/0/cache/@babel-plugin-syntax-optional-chaining-npm-7.8.3-f3f3c79579-eef94d53a1.zip/node_modules/@babel/plugin-syntax-optional-chaining/",
 =======
@@ -2761,8 +2878,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-chaining-virtual-28895e71fd/0/cache/@babel-plugin-syntax-optional-chaining-npm-7.8.3-f3f3c79579-eef94d53a1.zip/node_modules/@babel/plugin-syntax-optional-chaining/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-optional-chaining-virtual-b3a79a9c33/0/cache/@babel-plugin-syntax-optional-chaining-npm-7.8.3-f3f3c79579-eef94d53a1.zip/node_modules/@babel/plugin-syntax-optional-chaining/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-optional-chaining", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-chaining", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
@@ -2872,6 +2993,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:93d977ddda26cc072adb65ee007a00c73d15ffdd6d8bf4922171248aeb7e0e67c6cfc48cbc456ce8234b8d0ee2d68cd18f377201435a882111a64f74eb585e5c#npm:7.14.5", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-top-level-await-virtual-ae25576241/0/cache/@babel-plugin-syntax-top-level-await-npm-7.14.5-60a0a2e83b-bbd1a56b09.zip/node_modules/@babel/plugin-syntax-top-level-await/",
 =======
@@ -2900,8 +3022,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.14.5", {
           "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-top-level-await-virtual-9c1cc07b5b/0/cache/@babel-plugin-syntax-top-level-await-npm-7.14.5-60a0a2e83b-bbd1a56b09.zip/node_modules/@babel/plugin-syntax-top-level-await/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.14.5", {
+          "packageLocation": "./.yarn/__virtual__/@babel-plugin-syntax-top-level-await-virtual-5efce3eb63/0/cache/@babel-plugin-syntax-top-level-await-npm-7.14.5-60a0a2e83b-bbd1a56b09.zip/node_modules/@babel/plugin-syntax-top-level-await/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@babel/plugin-syntax-top-level-await", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.14.5"],
+            ["@babel/plugin-syntax-top-level-await", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.14.5"],
             ["@babel/core", "npm:7.15.8"],
             ["@babel/helper-plugin-utils", "npm:7.14.5"],
 <<<<<<< HEAD
@@ -4250,6 +4376,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
             ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@coil/privacypass-sjcl", "workspace:packages/coil-privacypass-sjcl"],
+<<<<<<< HEAD
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@types/jest", "npm:27.0.3"],
@@ -4259,12 +4386,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/sjcl", "npm:1.0.30"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/jsonwebtoken", "npm:8.5.5"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/node-fetch", "npm:2.5.12"],
+            ["@types/sjcl", "npm:1.0.30"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4273,12 +4412,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["localforage", "npm:1.10.0"],
 <<<<<<< HEAD
             ["node-fetch", "npm:2.6.5"],
@@ -4295,12 +4448,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
             ["webpack-dev-server", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -4320,18 +4482,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@dier-makr/annotations", "workspace:packages/dier-makr-annotations"],
+<<<<<<< HEAD
             ["@types/jest", "npm:27.0.3"],
             ["@types/jsonwebtoken", "npm:8.5.6"],
             ["@types/node", "npm:14.17.34"],
             ["@types/node-fetch", "npm:2.5.12"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/jsonwebtoken", "npm:8.5.5"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/node-fetch", "npm:2.5.12"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4340,17 +4512,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["lerna", "npm:4.0.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["node-fetch", "npm:2.6.5"],
             ["prettier", "npm:2.5.0"],
 =======
             ["lint-staged", "npm:11.2.3"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["node-fetch", "npm:2.6.1"],
             ["prettier", "npm:2.4.1"],
 >>>>>>> c4299913 (fix: update yarn lock)
@@ -4359,12 +4545,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
             ["webpack-dev-server", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -4397,6 +4592,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/filesystem", "npm:0.0.32"],
             ["@types/firefox", "npm:0.0.31"],
             ["@types/har-format", "npm:1.2.8"],
+<<<<<<< HEAD
             ["@types/jest", "npm:27.0.3"],
             ["@types/jsonwebtoken", "npm:8.5.6"],
             ["@types/long", "npm:4.0.1"],
@@ -4407,15 +4603,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/uuid", "npm:8.3.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/jsonwebtoken", "npm:8.5.5"],
+            ["@types/long", "npm:4.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/node-fetch", "npm:2.5.12"],
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
+            ["@types/uuid", "npm:8.3.1"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webexts/build-utils", "workspace:packages/webexts-build-utils"],
             ["@webmonetization/polyfill-utils", "workspace:packages/webmonetization-polyfill-utils"],
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@webmonetization/wext", "workspace:packages/webmonetization-wext"],
+<<<<<<< HEAD
             ["@wext/shipit", "patch:@wext/shipit@npm%3A0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515::version=0.2.1&hash=fbcdff&locator=web-monetization%40workspace%3A."],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["addons-linter", "npm:4.4.0"],
             ["copy-webpack-plugin", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.1.0"],
+=======
+            ["@wext/shipit", "patch:@wext/shipit@npm%3A0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515::version=0.2.1&hash=e24a92&locator=web-monetization%40workspace%3A."],
+            ["@yarnpkg/pnpify", "npm:3.1.0"],
+            ["JSON2016", "npm:1.0.0"],
+            ["addons-linter", "npm:3.22.0"],
+            ["copy-webpack-plugin", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.0.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["crx-hotreload", "npm:1.0.6"],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4432,6 +4648,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4440,6 +4657,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4470,9 +4697,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 =======
             ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.1.17"],
+<<<<<<< HEAD
             ["http-server", "npm:13.0.1"],
             ["husky", "npm:7.0.2"],
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["http-server", "npm:14.0.0"],
+            ["husky", "npm:7.0.4"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
             ["inversify", "npm:6.0.1"],
@@ -4481,9 +4713,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonwebtoken", "npm:8.5.1"],
             ["jss", "npm:10.6.0"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
             ["puppeteer", "npm:11.0.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+            ["puppeteer", "npm:10.4.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["reduct", "npm:3.3.1"],
@@ -4492,6 +4730,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["uuid", "npm:8.3.2"],
@@ -4500,6 +4739,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
             ["webpack-dev-server", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["uuid", "npm:8.3.2"],
+            ["web-ext", "npm:6.5.0"],
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -4510,6 +4759,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/coil-monorepo-upkeep/",
           "packageDependencies": [
             ["@coil/monorepo-upkeep", "workspace:packages/coil-monorepo-upkeep"],
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
@@ -4522,6 +4772,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.14.5"],
+            ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/plugin-proposal-object-rest-spread", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.6"],
+            ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.0"],
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-dir", "npm:1.3.0"],
@@ -4530,6 +4794,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4538,11 +4803,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["json5", "npm:2.2.0"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4556,6 +4832,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["lint-staged", "npm:11.2.3"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["npm-check-updates", "npm:11.6.0"],
             ["prettier", "npm:2.4.1"],
 <<<<<<< HEAD
@@ -4577,17 +4856,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
+<<<<<<< HEAD
             ["sort-package-json", "npm:1.53.1"],
+=======
+            ["sort-package-json", "npm:1.50.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
             ["ts-loader", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
             ["webpack-dev-server", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"],
             ["yaml", "npm:1.10.2"]
           ],
@@ -4613,11 +4905,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/long", "npm:4.0.1"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"],
             ["@types/node-fetch", "npm:2.5.12"],
             ["@types/uuid", "npm:8.3.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/node", "npm:14.17.32"],
+            ["@types/node-fetch", "npm:2.5.12"],
+            ["@types/uuid", "npm:8.3.1"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webmonetization/polyfill-utils", "workspace:packages/webmonetization-polyfill-utils"],
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
@@ -4626,6 +4926,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4634,6 +4935,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["ilp-plugin-btp", "npm:1.5.0"],
@@ -4641,12 +4952,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["node-fetch", "npm:2.6.5"],
             ["prettier", "npm:2.5.0"],
             ["puppeteer", "npm:11.0.0"],
 =======
             ["lint-staged", "npm:11.2.3"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["node-fetch", "npm:2.6.1"],
             ["prettier", "npm:2.4.1"],
             ["puppeteer", "npm:10.4.0"],
@@ -4657,6 +4972,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["uuid", "npm:8.3.2"],
@@ -4664,6 +4980,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
             ["webpack-dev-server", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["uuid", "npm:8.3.2"],
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -4674,6 +4999,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/coil-polyfill-utils/",
           "packageDependencies": [
             ["@coil/polyfill-utils", "workspace:packages/coil-polyfill-utils"],
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
@@ -4686,12 +5012,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.14.5"],
+            ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/plugin-proposal-object-rest-spread", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.6"],
+            ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.0"],
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4700,16 +5041,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["node-fetch", "npm:2.6.5"],
             ["prettier", "npm:2.5.0"],
 =======
             ["lint-staged", "npm:11.2.3"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["node-fetch", "npm:2.6.1"],
             ["prettier", "npm:2.4.1"],
 >>>>>>> c4299913 (fix: update yarn lock)
@@ -4718,12 +5073,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
             ["webpack-dev-server", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -4744,10 +5108,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/keccak", "npm:3.0.1"],
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.34"],
             ["@types/sjcl", "npm:1.0.30"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/node", "npm:14.17.32"],
+            ["@types/sjcl", "npm:1.0.30"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["asn1-parser", "npm:1.1.8"],
@@ -4757,6 +5128,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4777,9 +5149,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["husky", "npm:7.0.2"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.2.5"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+            ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
+            ["husky", "npm:7.0.4"],
+            ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["keccak", "npm:3.0.1"],
             ["lerna", "npm:4.0.0"],
-            ["lint-staged", "npm:11.2.3"],
+            ["lint-staged", "npm:11.2.6"],
             ["node-fetch", "npm:2.6.1"],
             ["prettier", "npm:2.4.1"],
 >>>>>>> c4299913 (fix: update yarn lock)
@@ -4789,12 +5174,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
             ["webpack-dev-server", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -4816,11 +5210,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@types/debug", "npm:4.1.7"],
             ["@types/get-port", "npm:4.2.0"],
+<<<<<<< HEAD
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.17.34"],
             ["@types/tmp", "npm:0.2.2"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/tmp", "npm:0.2.2"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
@@ -4846,6 +5248,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4854,14 +5257,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["get-port", "npm:5.1.1"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
             ["puppeteer", "npm:11.0.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+            ["puppeteer", "npm:10.4.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["rimraf", "npm:3.0.2"],
             ["tmp", "npm:0.2.1"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
@@ -4875,13 +5294,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"],
 =======
             ["tsconfig-paths", "npm:3.11.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
             ["web-ext", "npm:6.5.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.58.1"],
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
             ["webpack-dev-server", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:3.11.3"],
+=======
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -4892,6 +5318,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/coil-webpack-utils/",
           "packageDependencies": [
             ["@coil/webpack-utils", "workspace:packages/coil-webpack-utils"],
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
@@ -4904,6 +5331,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.14.5"],
+            ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/plugin-proposal-object-rest-spread", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.6"],
+            ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.0"],
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["assert", "npm:2.0.0"],
@@ -4913,6 +5354,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4921,13 +5363,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["events", "npm:3.3.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["process", "npm:0.11.10"],
             ["rimraf", "npm:3.0.2"],
             ["setimmediate", "npm:1.0.5"],
@@ -4937,6 +5394,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["util", "npm:0.12.4"],
@@ -4944,6 +5402,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
             ["webpack-dev-server", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["util", "npm:0.12.4"],
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -4961,18 +5428,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
             ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@coil/client", "workspace:packages/coil-client"],
+<<<<<<< HEAD
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -4981,23 +5458,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
             ["ts-loader", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
             ["webpack-dev-server", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -5289,7 +5790,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@devicefarmer/adbkit-monkey", "npm:1.0.1"],
             ["bluebird", "npm:2.9.34"],
             ["commander", "npm:2.20.3"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["node-forge", "npm:0.10.0"],
             ["split", "npm:0.3.3"]
           ],
@@ -5320,6 +5825,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/dier-makr-annotations/",
           "packageDependencies": [
             ["@dier-makr/annotations", "workspace:packages/dier-makr-annotations"],
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
@@ -5332,12 +5838,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.14.5"],
+            ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/plugin-proposal-object-rest-spread", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.6"],
+            ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.0"],
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -5346,23 +5867,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
             ["ts-loader", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
             ["webpack-dev-server", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -5382,16 +5927,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@dier-makr/annotations", "workspace:packages/dier-makr-annotations"],
+<<<<<<< HEAD
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -5400,24 +5953,48 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["inversify", "npm:6.0.1"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
             ["ts-loader", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
             ["webpack-dev-server", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -5593,7 +6170,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@hot-loader-react-dom-virtual-4552b21075/0/cache/@hot-loader-react-dom-npm-17.0.1-1ba2869259-64d47e6448.zip/node_modules/@hot-loader/react-dom/",
           "packageDependencies": [
             ["@hot-loader/react-dom", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:17.0.1"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
+=======
+            ["@types/react", "npm:17.0.33"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["loose-envify", "npm:1.4.0"],
             ["object-assign", "npm:4.1.1"],
             ["react", "npm:17.0.2"],
@@ -5676,6 +6257,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@dier-makr/inversify", "workspace:packages/dier-makr-inversify"],
             ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
             ["@material-ui/icons", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.2"],
+<<<<<<< HEAD
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.17.34"],
             ["@types/react", "npm:17.0.37"],
@@ -5683,12 +6265,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/uuid", "npm:8.3.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
+            ["@types/uuid", "npm:8.3.1"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webexts/build-utils", "workspace:packages/webexts-build-utils"],
             ["@webmonetization/polyfill-utils", "workspace:packages/webmonetization-polyfill-utils"],
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@webmonetization/wext", "workspace:packages/webmonetization-wext"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
+<<<<<<< HEAD
             ["addons-linter", "npm:4.4.0"],
             ["copy-webpack-plugin", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:9.1.0"],
             ["crx-hotreload", "npm:1.0.6"],
@@ -5704,11 +6296,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.4.0"],
+=======
+            ["addons-linter", "npm:3.22.0"],
+            ["copy-webpack-plugin", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:9.0.1"],
+            ["crx-hotreload", "npm:1.0.6"],
+            ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.5.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -5717,6 +6316,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["file-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.2.0"],
             ["husky", "npm:7.0.4"],
@@ -5727,8 +6336,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["rimraf", "npm:3.0.2"],
@@ -5739,6 +6353,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
             ["typeface-roboto", "npm:1.1.13"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["uuid", "npm:8.3.2"],
             ["web-ext", "npm:6.6.0"],
@@ -5746,6 +6361,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
             ["webpack-dev-server", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:3.11.3"],
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["uuid", "npm:8.3.2"],
+            ["web-ext", "npm:6.5.0"],
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -5858,6 +6482,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/@jest-core-virtual-4de5e1380c/0/cache/@jest-core-npm-27.3.1-897b06c732-f21d0d1fe9.zip/node_modules/@jest/core/",
           "packageDependencies": [
@@ -5918,10 +6543,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
         ["virtual:ae2dcb2f33a0683d9a2614127fcf5fc29c3b0141d93ded0cb100449ca191b4448c711f301f8dddfbf03bb5f25e0385d40af1f1151623ab5b406fd5caabb54d69#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/@jest-core-virtual-0e0afff685/0/cache/@jest-core-npm-27.3.1-897b06c732-f21d0d1fe9.zip/node_modules/@jest/core/",
+=======
+        ["virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1", {
+          "packageLocation": "./.yarn/__virtual__/@jest-core-virtual-4de5e1380c/0/cache/@jest-core-npm-27.3.1-897b06c732-f21d0d1fe9.zip/node_modules/@jest/core/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@jest/core", "virtual:ae2dcb2f33a0683d9a2614127fcf5fc29c3b0141d93ded0cb100449ca191b4448c711f301f8dddfbf03bb5f25e0385d40af1f1151623ab5b406fd5caabb54d69#npm:27.3.1"],
+            ["@jest/core", "virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1"],
             ["@jest/console", "npm:27.3.1"],
-            ["@jest/reporters", "virtual:0e0afff685944f05e8be06f98aa63e7d7496a495e34e4cbb49f0108857b8c4134375ef4c87738ce07c66162c883590885350c47aba43bf81721a9e8e3c989981#npm:27.3.1"],
+            ["@jest/reporters", "virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1"],
             ["@jest/test-result", "npm:27.3.1"],
             ["@jest/transform", "npm:27.3.1"],
             ["@jest/types", "npm:27.2.5"],
@@ -5936,6 +6565,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["graceful-fs", "npm:4.2.6"],
             ["jest-changed-files", "npm:27.3.0"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["jest-config", "virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1"],
             ["jest-haste-map", "npm:27.3.1"],
@@ -5952,6 +6582,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
             ["jest-config", "virtual:0e0afff685944f05e8be06f98aa63e7d7496a495e34e4cbb49f0108857b8c4134375ef4c87738ce07c66162c883590885350c47aba43bf81721a9e8e3c989981#npm:27.3.1"],
+=======
+            ["jest-config", "virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["jest-haste-map", "npm:27.3.1"],
             ["jest-message-util", "npm:27.3.1"],
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -6116,6 +6749,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/@jest-reporters-virtual-5ba8ce3270/0/cache/@jest-reporters-npm-27.3.1-e98c63de6a-ac095baa19.zip/node_modules/@jest/reporters/",
           "packageDependencies": [
@@ -6126,6 +6760,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@jest/reporters", "virtual:0e0afff685944f05e8be06f98aa63e7d7496a495e34e4cbb49f0108857b8c4134375ef4c87738ce07c66162c883590885350c47aba43bf81721a9e8e3c989981#npm:27.3.1"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1", {
+          "packageLocation": "./.yarn/__virtual__/@jest-reporters-virtual-5ba8ce3270/0/cache/@jest-reporters-npm-27.3.1-e98c63de6a-ac095baa19.zip/node_modules/@jest/reporters/",
+          "packageDependencies": [
+            ["@jest/reporters", "virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@bcoe/v8-coverage", "npm:0.2.3"],
             ["@jest/console", "npm:27.3.1"],
             ["@jest/test-result", "npm:27.3.1"],
@@ -7270,8 +7910,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@material-ui/system", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.3"],
             ["@material-ui/types", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:5.1.0"],
             ["@material-ui/utils", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.2"],
-            ["@types/react", "npm:17.0.19"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["@types/react-transition-group", "npm:4.4.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["clsx", "npm:1.1.1"],
@@ -7325,8 +7965,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@material-ui/core", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.11.4"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/material-ui__core", null],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
+=======
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"]
           ],
@@ -7381,10 +8026,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/hash", "npm:0.8.0"],
             ["@material-ui/types", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:5.1.0"],
             ["@material-ui/utils", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.2"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/react", "npm:17.0.19"],
             ["@types/react-dom", "npm:17.0.9"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["clsx", "npm:1.1.1"],
             ["csstype", "npm:2.6.13"],
             ["hoist-non-react-statics", "npm:3.3.2"],
@@ -7451,8 +8101,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@material-ui/system", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.3"],
             ["@babel/runtime", "npm:7.13.9"],
             ["@material-ui/utils", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.2"],
-            ["@types/react", "npm:17.0.19"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["csstype", "npm:2.6.13"],
 >>>>>>> 258bc78a (fix: build issues)
             ["prop-types", "npm:15.7.2"],
@@ -7484,6 +8134,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["@material-ui/types", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:5.1.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"]
 =======
             ["@types/react", "npm:17.0.19"]
@@ -7506,6 +8157,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/react", "npm:17.0.19"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["@types/react", "npm:17.0.33"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/react"
@@ -7549,10 +8203,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["@material-ui/utils", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.11.2"],
             ["@babel/runtime", "npm:7.13.9"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/react", "npm:17.0.19"],
             ["@types/react-dom", "npm:17.0.9"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
@@ -7568,10 +8227,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@mdn/browser-compat-data", [
+<<<<<<< HEAD
         ["npm:4.0.11", {
           "packageLocation": "./.yarn/cache/@mdn-browser-compat-data-npm-4.0.11-0c5c0d5ea7-4bcb43aff6.zip/node_modules/@mdn/browser-compat-data/",
           "packageDependencies": [
             ["@mdn/browser-compat-data", "npm:4.0.11"]
+=======
+        ["npm:4.0.5", {
+          "packageLocation": "./.yarn/cache/@mdn-browser-compat-data-npm-4.0.5-63dba41e74-b855d0e327.zip/node_modules/@mdn/browser-compat-data/",
+          "packageDependencies": [
+            ["@mdn/browser-compat-data", "npm:4.0.5"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.0.7", {
+          "packageLocation": "./.yarn/cache/@mdn-browser-compat-data-npm-4.0.7-583cf792c1-a5bead0223.zip/node_modules/@mdn/browser-compat-data/",
+          "packageDependencies": [
+            ["@mdn/browser-compat-data", "npm:4.0.7"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "linkType": "HARD",
         }]
@@ -8589,6 +9262,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["npm:6.0.0", {
           "packageLocation": "./.yarn/cache/@types-html-minifier-terser-npm-6.0.0-3667095d04-8f602498d7.zip/node_modules/@types/html-minifier-terser/",
           "packageDependencies": [
@@ -8611,6 +9285,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/html-minifier-terser", "npm:5.1.2"]
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["npm:6.0.0", {
+          "packageLocation": "./.yarn/cache/@types-html-minifier-terser-npm-6.0.0-3667095d04-8f602498d7.zip/node_modules/@types/html-minifier-terser/",
+          "packageDependencies": [
+            ["@types/html-minifier-terser", "npm:6.0.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "linkType": "HARD",
         }]
@@ -8869,6 +9549,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["npm:14.17.34", {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.17.34-1d7f20f643-803a7532b6.zip/node_modules/@types/node/",
 =======
@@ -8884,6 +9565,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:14.17.32", {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.17.32-a7799c3ea0-c3ec45db5d.zip/node_modules/@types/node/",
           "packageDependencies": [
@@ -8985,6 +9668,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react", [
+<<<<<<< HEAD
         ["npm:17.0.37", {
           "packageLocation": "./.yarn/cache/@types-react-npm-17.0.37-76d6f581ea-e68b0d59aa.zip/node_modules/@types/react/",
           "packageDependencies": [
@@ -8998,6 +9682,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["@types/react", "npm:17.0.19"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+        ["npm:17.0.33", {
+          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.33-27bb07477e-5f53f3dae0.zip/node_modules/@types/react/",
+          "packageDependencies": [
+            ["@types/react", "npm:17.0.33"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/prop-types", "npm:15.7.3"],
             ["@types/scheduler", "npm:0.16.1"],
             ["csstype", "npm:3.0.3"]
@@ -9023,11 +9713,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react-dom", [
+<<<<<<< HEAD
         ["npm:17.0.11", {
           "packageLocation": "./.yarn/cache/@types-react-dom-npm-17.0.11-fc2e584a96-4d5730dffb.zip/node_modules/@types/react-dom/",
           "packageDependencies": [
             ["@types/react-dom", "npm:17.0.11"],
             ["@types/react", "npm:17.0.37"]
+=======
+        ["npm:17.0.10", {
+          "packageLocation": "./.yarn/cache/@types-react-dom-npm-17.0.10-aea5504608-cc7d8d5b77.zip/node_modules/@types/react-dom/",
+          "packageDependencies": [
+            ["@types/react-dom", "npm:17.0.10"],
+            ["@types/react", "npm:17.0.33"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "linkType": "HARD",
         }]
@@ -9037,7 +9735,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-react-helmet-npm-6.1.4-5c548fad42-62f506297d.zip/node_modules/@types/react-helmet/",
           "packageDependencies": [
             ["@types/react-helmet", "npm:6.1.4"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"]
+=======
+            ["@types/react", "npm:17.0.33"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "linkType": "HARD",
         }]
@@ -9050,6 +9752,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["@types/react-transition-group", "npm:4.4.0"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@types/react", "npm:17.0.37"]
 =======
@@ -9073,6 +9776,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/react", "npm:17.0.19"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["@types/react", "npm:17.0.33"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "linkType": "HARD",
         }]
@@ -9268,6 +9974,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["@types/yauzl", [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         ["npm:2.9.1", {
           "packageLocation": "./.yarn/cache/@types-yauzl-npm-2.9.1-fc63c94ba6-9035415c65.zip/node_modules/@types/yauzl/",
@@ -9278,6 +9985,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:2.9.2", {
           "packageLocation": "./.yarn/cache/@types-yauzl-npm-2.9.2-30ac4b7918-dfb49abe82.zip/node_modules/@types/yauzl/",
           "packageDependencies": [
@@ -9317,6 +10026,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@typescript-eslint/eslint-plugin", [
+<<<<<<< HEAD
         ["npm:5.4.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-eslint-plugin-npm-5.4.0-2b8945430e-83e8d5ab66.zip/node_modules/@typescript-eslint/eslint-plugin/",
           "packageDependencies": [
@@ -9328,9 +10038,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-eslint-plugin-virtual-11444c9b2b/0/cache/@typescript-eslint-eslint-plugin-npm-5.4.0-2b8945430e-83e8d5ab66.zip/node_modules/@typescript-eslint/eslint-plugin/",
           "packageDependencies": [
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+        ["npm:5.2.0", {
+          "packageLocation": "./.yarn/cache/@typescript-eslint-eslint-plugin-npm-5.2.0-778c300cd6-65dd4a671c.zip/node_modules/@typescript-eslint/eslint-plugin/",
+          "packageDependencies": [
+            ["@typescript-eslint/eslint-plugin", "npm:5.2.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0", {
+          "packageLocation": "./.yarn/__virtual__/@typescript-eslint-eslint-plugin-virtual-b14da86ad8/0/cache/@typescript-eslint-eslint-plugin-npm-5.2.0-778c300cd6-65dd4a671c.zip/node_modules/@typescript-eslint/eslint-plugin/",
+          "packageDependencies": [
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint", null],
             ["@types/typescript", null],
             ["@types/typescript-eslint__parser", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9354,6 +10078,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/experimental-utils", "virtual:74d95f8b99c12bca5d7ab45379a96fe775264e4782f6d2e0da0093d4a57e0d84e05d27f5461fb2f1ba3e8631ed579522eacea9d94b46fbfa3c80c724d720bce0#npm:5.0.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["@typescript-eslint/scope-manager", "npm:5.0.0"],
+=======
+            ["@typescript-eslint/experimental-utils", "virtual:b14da86ad89e171ad9f7dd051c897eec0f7f3ac0654f27ed9434cf2e7cf8cd12cfff82d92de1de3a17eda448ad30438bb9496066f1acda3135828a778c8026ec#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/scope-manager", "npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
             ["eslint", "npm:7.32.0"],
             ["functional-red-black-tree", "npm:1.0.1"],
@@ -9373,8 +10102,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["regexpp", "npm:3.2.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["tsutils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:3.21.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
+=======
+            ["tsutils", "virtual:b14da86ad89e171ad9f7dd051c897eec0f7f3ac0654f27ed9434cf2e7cf8cd12cfff82d92de1de3a17eda448ad30438bb9496066f1acda3135828a778c8026ec#npm:3.21.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/eslint",
@@ -9388,6 +10122,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@typescript-eslint/experimental-utils", [
+<<<<<<< HEAD
         ["npm:5.4.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-experimental-utils-npm-5.4.0-606fccf48f-85c818a147.zip/node_modules/@typescript-eslint/experimental-utils/",
           "packageDependencies": [
@@ -9399,6 +10134,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:5.4.0", {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-experimental-utils-virtual-27a6be7206/0/cache/@typescript-eslint-experimental-utils-npm-5.4.0-606fccf48f-85c818a147.zip/node_modules/@typescript-eslint/experimental-utils/",
 =======
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:5.2.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-experimental-utils-npm-5.2.0-e38a935b0b-f1082fff0b.zip/node_modules/@typescript-eslint/experimental-utils/",
           "packageDependencies": [
@@ -9406,17 +10143,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:1a306c3f5bcbf6039ec5bd562f00aef89144719b4d65e5f529150d0cdf518dd10039298b76a4a8600e51d40921644f3367fe430ed54c493b87342262c1eed697#npm:5.2.0", {
-          "packageLocation": "./.yarn/__virtual__/@typescript-eslint-experimental-utils-virtual-0f3ed28c16/0/cache/@typescript-eslint-experimental-utils-npm-5.2.0-e38a935b0b-f1082fff0b.zip/node_modules/@typescript-eslint/experimental-utils/",
+        ["virtual:b14da86ad89e171ad9f7dd051c897eec0f7f3ac0654f27ed9434cf2e7cf8cd12cfff82d92de1de3a17eda448ad30438bb9496066f1acda3135828a778c8026ec#npm:5.2.0", {
+          "packageLocation": "./.yarn/__virtual__/@typescript-eslint-experimental-utils-virtual-96d6aa52bd/0/cache/@typescript-eslint-experimental-utils-npm-5.2.0-e38a935b0b-f1082fff0b.zip/node_modules/@typescript-eslint/experimental-utils/",
           "packageDependencies": [
-            ["@typescript-eslint/experimental-utils", "virtual:1a306c3f5bcbf6039ec5bd562f00aef89144719b4d65e5f529150d0cdf518dd10039298b76a4a8600e51d40921644f3367fe430ed54c493b87342262c1eed697#npm:5.2.0"],
+            ["@typescript-eslint/experimental-utils", "virtual:b14da86ad89e171ad9f7dd051c897eec0f7f3ac0654f27ed9434cf2e7cf8cd12cfff82d92de1de3a17eda448ad30438bb9496066f1acda3135828a778c8026ec#npm:5.2.0"],
             ["@types/eslint", null],
             ["@types/json-schema", "npm:7.0.9"],
             ["@typescript-eslint/scope-manager", "npm:5.2.0"],
             ["@typescript-eslint/types", "npm:5.2.0"],
-            ["@typescript-eslint/typescript-estree", "virtual:0f3ed28c16090894ff8cbbd998bcdd856b43a576246d50fcb82539b77c0391d97195de0832982ef4ab6b20904b3f19a79b9608e094814064851fdf5133636df2#npm:5.2.0"],
+            ["@typescript-eslint/typescript-estree", "virtual:96d6aa52bdfa8c61645f29b0e3e22a3094e49dff46b9b899e325f76066f33a4c95a7a3f49b8f0758e5e37578d38449b04acf3a46cdc8e8830925dc678f8b3e3f#npm:5.2.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-scope", "npm:5.1.1"],
+<<<<<<< HEAD
             ["eslint-utils", "virtual:0cb572adee674e7a3edf7d3f4f660556ad8b02f53966a492d3ad461152808f405e964f8e4c3ad012f8cf8ad811c0f17501aa6a7a896574f9ad17678d6b1ca618#npm:3.0.0"]
           ],
           "packagePeers": [
@@ -9438,6 +10176,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-scope", "npm:5.1.1"],
             ["eslint-utils", "virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:3.0.0"]
+=======
+            ["eslint-utils", "virtual:96d6aa52bdfa8c61645f29b0e3e22a3094e49dff46b9b899e325f76066f33a4c95a7a3f49b8f0758e5e37578d38449b04acf3a46cdc8e8830925dc678f8b3e3f#npm:3.0.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/eslint",
@@ -9447,6 +10188,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@typescript-eslint/parser", [
+<<<<<<< HEAD
         ["npm:5.4.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-parser-npm-5.4.0-5d39e997a0-d76732469c.zip/node_modules/@typescript-eslint/parser/",
           "packageDependencies": [
@@ -9502,6 +10244,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+        ["npm:5.2.0", {
+          "packageLocation": "./.yarn/cache/@typescript-eslint-parser-npm-5.2.0-e9d57c2817-cde4d8e7fe.zip/node_modules/@typescript-eslint/parser/",
+          "packageDependencies": [
+            ["@typescript-eslint/parser", "npm:5.2.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0", {
+          "packageLocation": "./.yarn/__virtual__/@typescript-eslint-parser-virtual-b5789a8816/0/cache/@typescript-eslint-parser-npm-5.2.0-e9d57c2817-cde4d8e7fe.zip/node_modules/@typescript-eslint/parser/",
+          "packageDependencies": [
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@types/eslint", null],
+            ["@typescript-eslint/scope-manager", "npm:5.2.0"],
+            ["@typescript-eslint/types", "npm:5.2.0"],
+            ["@typescript-eslint/typescript-estree", "virtual:b5789a8816151f55cc1add4f1db818f63362df91dca2eea80869637af4deb8148b5c384b700a77252ee8476ea4f20a4fea58f1f810f576c73be4df80f2b23e14#npm:5.2.0"],
+            ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
+            ["eslint", "npm:7.32.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/eslint",
@@ -9513,6 +10275,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@typescript-eslint/scope-manager", [
+<<<<<<< HEAD
         ["npm:5.4.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-scope-manager-npm-5.4.0-5e3f05fe52-681007e727.zip/node_modules/@typescript-eslint/scope-manager/",
           "packageDependencies": [
@@ -9522,6 +10285,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:5.2.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-scope-manager-npm-5.2.0-4bdd0926ee-aebd87d82c.zip/node_modules/@typescript-eslint/scope-manager/",
           "packageDependencies": [
@@ -9533,6 +10298,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@typescript-eslint/types", [
+<<<<<<< HEAD
         ["npm:5.4.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-types-npm-5.4.0-65ea53d6ea-8d1dc7149e.zip/node_modules/@typescript-eslint/types/",
           "packageDependencies": [
@@ -9540,6 +10306,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:5.2.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-types-npm-5.2.0-f9cb67d07f-dd283e6825.zip/node_modules/@typescript-eslint/types/",
           "packageDependencies": [
@@ -9549,6 +10317,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@typescript-eslint/typescript-estree", [
+<<<<<<< HEAD
         ["npm:5.4.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-typescript-estree-npm-5.4.0-2418777f04-2f818c629c.zip/node_modules/@typescript-eslint/typescript-estree/",
           "packageDependencies": [
@@ -9560,6 +10329,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:5.4.0", {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-f4b6afdfe6/0/cache/@typescript-eslint-typescript-estree-npm-5.4.0-2418777f04-2f818c629c.zip/node_modules/@typescript-eslint/typescript-estree/",
 =======
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:5.2.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-typescript-estree-npm-5.2.0-c3f2209810-9b5a7406cb.zip/node_modules/@typescript-eslint/typescript-estree/",
           "packageDependencies": [
@@ -9567,6 +10338,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:0cb572adee674e7a3edf7d3f4f660556ad8b02f53966a492d3ad461152808f405e964f8e4c3ad012f8cf8ad811c0f17501aa6a7a896574f9ad17678d6b1ca618#npm:5.0.0", {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-449ac4f57f/0/cache/@typescript-eslint-typescript-estree-npm-5.0.0-55ec79fe94-950e72b757.zip/node_modules/@typescript-eslint/typescript-estree/",
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -9622,8 +10394,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }],
         ["virtual:0f3ed28c16090894ff8cbbd998bcdd856b43a576246d50fcb82539b77c0391d97195de0832982ef4ab6b20904b3f19a79b9608e094814064851fdf5133636df2#npm:5.2.0", {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-0a5c426942/0/cache/@typescript-eslint-typescript-estree-npm-5.2.0-c3f2209810-9b5a7406cb.zip/node_modules/@typescript-eslint/typescript-estree/",
+=======
+        ["virtual:96d6aa52bdfa8c61645f29b0e3e22a3094e49dff46b9b899e325f76066f33a4c95a7a3f49b8f0758e5e37578d38449b04acf3a46cdc8e8830925dc678f8b3e3f#npm:5.2.0", {
+          "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-fc967df0bd/0/cache/@typescript-eslint-typescript-estree-npm-5.2.0-c3f2209810-9b5a7406cb.zip/node_modules/@typescript-eslint/typescript-estree/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["@typescript-eslint/typescript-estree", "virtual:0f3ed28c16090894ff8cbbd998bcdd856b43a576246d50fcb82539b77c0391d97195de0832982ef4ab6b20904b3f19a79b9608e094814064851fdf5133636df2#npm:5.2.0"],
+            ["@typescript-eslint/typescript-estree", "virtual:96d6aa52bdfa8c61645f29b0e3e22a3094e49dff46b9b899e325f76066f33a4c95a7a3f49b8f0758e5e37578d38449b04acf3a46cdc8e8830925dc678f8b3e3f#npm:5.2.0"],
             ["@typescript-eslint/types", "npm:5.2.0"],
             ["@typescript-eslint/visitor-keys", "npm:5.2.0"],
             ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
@@ -9631,7 +10407,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-glob", "npm:4.0.3"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["tsutils", "virtual:f4b6afdfe656ae6f8259fce98a7cb78f36ca447428422cf054e1f6003253b5d86bdc1a08d9d345a23cd23fd0311779ecb68e35a5904bcdcab4d909290dc95944#npm:3.21.0"],
+=======
+            ["tsutils", "virtual:fc967df0bd1577602012f1c46aee99098711cedc5f441989c6251b7091e9e162bf21b3bef98a6914cecaa8059e5e09d349ffaa41fb61df6ef58314ea9da01dd0#npm:3.21.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["typescript", null]
           ],
           "packagePeers": [
@@ -9640,6 +10420,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:ac21ca5eb0053f0850b4beddf4f7de4cab45d5e441450a17d1840dc05fbad3d4227273bcc775a52c3fda862ef02b40e1bf469445840ed364668b2cb357d536b2#npm:5.4.0", {
           "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-2b37e52da2/0/cache/@typescript-eslint-typescript-estree-npm-5.4.0-2418777f04-2f818c629c.zip/node_modules/@typescript-eslint/typescript-estree/",
           "packageDependencies": [
@@ -9665,6 +10446,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/typescript-estree", "virtual:a02e39e66eb9582e2fce010c9530cd4f6cfd41ed88984de8b3bd585a2d38e6d21203c37373c41dce8d182607a22b9d68a0876447fe3175cc092f9a28823ede57#npm:5.0.0"],
             ["@typescript-eslint/types", "npm:5.0.0"],
             ["@typescript-eslint/visitor-keys", "npm:5.0.0"],
+=======
+        ["virtual:b5789a8816151f55cc1add4f1db818f63362df91dca2eea80869637af4deb8148b5c384b700a77252ee8476ea4f20a4fea58f1f810f576c73be4df80f2b23e14#npm:5.2.0", {
+          "packageLocation": "./.yarn/__virtual__/@typescript-eslint-typescript-estree-virtual-efa8522b30/0/cache/@typescript-eslint-typescript-estree-npm-5.2.0-c3f2209810-9b5a7406cb.zip/node_modules/@typescript-eslint/typescript-estree/",
+          "packageDependencies": [
+            ["@typescript-eslint/typescript-estree", "virtual:b5789a8816151f55cc1add4f1db818f63362df91dca2eea80869637af4deb8148b5c384b700a77252ee8476ea4f20a4fea58f1f810f576c73be4df80f2b23e14#npm:5.2.0"],
+            ["@typescript-eslint/types", "npm:5.2.0"],
+            ["@typescript-eslint/visitor-keys", "npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["debug", "virtual:904b3fada4a3265c4dfeed8c42d6542b5b497582d17441c86eea102109bfc3b9e1825aad904bc43dd1b94603ff4820b8cb2ebcf24cfbaf45ecee04e5bc1076b8#npm:4.3.2"],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9685,8 +10474,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-glob", "npm:4.0.3"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["tsutils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:3.21.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
+=======
+            ["tsutils", "virtual:b14da86ad89e171ad9f7dd051c897eec0f7f3ac0654f27ed9434cf2e7cf8cd12cfff82d92de1de3a17eda448ad30438bb9496066f1acda3135828a778c8026ec#npm:3.21.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -9696,6 +10490,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@typescript-eslint/visitor-keys", [
+<<<<<<< HEAD
         ["npm:5.4.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-visitor-keys-npm-5.4.0-107ad6b2fc-a0c1c5e3fb.zip/node_modules/@typescript-eslint/visitor-keys/",
           "packageDependencies": [
@@ -9705,6 +10500,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:5.2.0", {
           "packageLocation": "./.yarn/cache/@typescript-eslint-visitor-keys-npm-5.2.0-bb6871fb99-1afcfeaf01.zip/node_modules/@typescript-eslint/visitor-keys/",
           "packageDependencies": [
@@ -9898,12 +10695,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
             ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@coil/webpack-utils", "workspace:packages/coil-webpack-utils"],
+<<<<<<< HEAD
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["assert", "npm:2.0.0"],
@@ -9914,6 +10720,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -9922,13 +10729,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["events", "npm:3.3.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["process", "npm:0.11.10"],
             ["rimraf", "npm:3.0.2"],
             ["setimmediate", "npm:1.0.5"],
@@ -9938,6 +10760,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["util", "npm:0.12.4"],
@@ -9945,6 +10768,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
             ["webpack-dev-server", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["util", "npm:0.12.4"],
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -9969,6 +10801,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/body-parser", "npm:1.19.2"],
             ["@types/express", "npm:4.17.8"],
             ["@types/figlet", "npm:1.5.4"],
+<<<<<<< HEAD
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.17.34"],
             ["@types/node-fetch", "npm:2.5.12"],
@@ -9977,6 +10810,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-helmet", "npm:6.1.4"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/node-fetch", "npm:2.5.12"],
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
+            ["@types/react-helmet", "npm:6.1.4"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webmonetization/react", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#workspace:packages/webmonetization-react"],
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
@@ -9986,6 +10829,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -9994,6 +10838,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["express", "npm:4.17.1"],
 <<<<<<< HEAD
@@ -10001,6 +10855,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["figlet", "npm:1.5.0"],
             ["html-webpack-plugin", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.5.0"],
             ["husky", "npm:7.0.4"],
+<<<<<<< HEAD
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-plugin-mini-accounts", "npm:4.2.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
@@ -10016,18 +10871,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["html-webpack-plugin", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.3.2"],
             ["husky", "npm:7.0.2"],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-plugin-mini-accounts", "npm:4.2.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
-            ["inversify", "npm:5.1.1"],
+            ["inversify", "npm:6.0.1"],
             ["inversify-express-utils", "npm:6.3.2"],
-            ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.2.5"],
+            ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:11.2.3"],
 <<<<<<< HEAD
 >>>>>>> c4299913 (fix: update yarn lock)
             ["node-fetch", "npm:2.6.5"],
 =======
+=======
+            ["lint-staged", "npm:11.2.6"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["node-fetch", "npm:2.6.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["oer-utils", "npm:5.1.2"],
@@ -10041,12 +10902,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
             ["webpack-dev-server", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -10057,6 +10927,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/webmonetization-polyfill-utils/",
           "packageDependencies": [
             ["@webmonetization/polyfill-utils", "workspace:packages/webmonetization-polyfill-utils"],
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
@@ -10071,12 +10942,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/uuid", "npm:8.3.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.14.5"],
+            ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/plugin-proposal-object-rest-spread", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.6"],
+            ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.0"],
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/node-fetch", "npm:2.5.12"],
+            ["@types/uuid", "npm:8.3.1"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -10085,16 +10973,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["node-fetch", "npm:2.6.5"],
             ["prettier", "npm:2.5.0"],
 =======
             ["lint-staged", "npm:11.2.3"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["node-fetch", "npm:2.6.1"],
             ["prettier", "npm:2.4.1"],
 >>>>>>> c4299913 (fix: update yarn lock)
@@ -10104,6 +11006,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["uuid", "npm:8.3.2"],
@@ -10111,6 +11014,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
             ["webpack-dev-server", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["uuid", "npm:8.3.2"],
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -10128,6 +11040,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
             ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@coil/webpack-utils", "workspace:packages/coil-webpack-utils"],
+<<<<<<< HEAD
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@types/jest", "npm:27.0.3"],
@@ -10135,6 +11048,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.37"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/react", "npm:17.0.33"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
@@ -10142,6 +11064,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -10150,24 +11073,48 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["react", "npm:17.0.2"],
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
             ["ts-loader", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
             ["webpack-dev-server", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "packagePeers": [
@@ -10187,6 +11134,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
             ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@coil/webpack-utils", "workspace:packages/coil-webpack-utils"],
+<<<<<<< HEAD
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@types/jest", "npm:27.0.3"],
@@ -10194,6 +11142,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.37"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/react", "npm:17.0.33"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
@@ -10201,6 +11158,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -10209,23 +11167,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
             ["ts-loader", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
             ["webpack-dev-server", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -10247,6 +11229,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@hot-loader/react-dom", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:17.0.1"],
             ["@types/ajv", "npm:1.0.0"],
+<<<<<<< HEAD
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.17.34"],
             ["@types/react", "npm:17.0.37"],
@@ -10254,6 +11237,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/uuid", "npm:8.3.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
+            ["@types/uuid", "npm:8.3.1"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
@@ -10275,6 +11267,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -10283,13 +11276,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["html-webpack-plugin", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.5.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["react-hot-loader", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.13.0"],
@@ -10298,6 +11306,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-loader", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["uuid", "npm:8.3.2"],
@@ -10305,6 +11314,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
             ["webpack-dev-server", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["uuid", "npm:8.3.2"],
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -10315,6 +11333,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/webmonetization-types/",
           "packageDependencies": [
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
@@ -10327,12 +11346,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.14.5"],
+            ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/plugin-proposal-object-rest-spread", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.6"],
+            ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.0"],
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -10341,10 +11375,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
             ["rimraf", "npm:3.0.2"],
@@ -10359,6 +11404,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
             ["webpack-dev-server", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:3.11.3"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+            ["rimraf", "npm:3.0.2"],
+            ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
+            ["ts-json-schema-generator", "npm:0.96.0"],
+            ["ts-loader", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:9.2.6"],
+            ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
+            ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -10378,10 +11439,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
             ["@dier-makr/annotations", "workspace:packages/dier-makr-annotations"],
+<<<<<<< HEAD
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webmonetization/polyfill-utils", "workspace:packages/webmonetization-polyfill-utils"],
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
@@ -10390,6 +11458,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -10398,23 +11467,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
             ["ts-loader", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
             ["webpack-dev-server", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -10434,7 +11527,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:08968bd349f03f7395fbfd20260f6cb7e1ac0f090373c7daf6a2cc18d4989f4611c12e6925ccf56d94567d4ada37d3c5cac0c2408148e283388c7b8de0f81bd0#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"],
+=======
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10451,7 +11548,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:0ad164306119c2de4d522f7cb8b1b879c5bc469891f9d0d56266943d5562791fd8e6481539dda14b5301256f329454db684f0fb2603055608ae60c8f1690291a#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"],
+=======
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10468,7 +11569,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:0c697ada3e54830c5b9e9e886f8481ac1a1b0daaf033f9152a40f38f2a1741dbe23f3db6c431d6aa1a9932f9dd60a4c0bf64f59330840d9fd642baee17084364#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"],
+=======
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10485,7 +11590,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:19c4143a5cdd524e85edf95c13a7e77d90e49f7cef3145201ce5a1a05ff63f19fa4f7695b4995c196cb82db8120539fc13e7de6ab12950641f7fd149a31a9f79#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"],
+=======
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10502,7 +11611,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:1c32a0765b9ac2e1852301903665dbfaa4dab622cd5c0a5aa32db1bd4d025a80b8f9a4445e39d0bfd07d8a38a48bd564b21b9e4afa328373c34534593e6128ed#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"],
+=======
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10519,7 +11632,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:2481e2197b0e11cc37dd319732d7f76e9ce8800e2a56fb0593a23e3835408384623b6d265796d3c9134ad886fa451ed9a7f1a11d56951f31709b14ca5693ea2e#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"],
+=======
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10536,7 +11653,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:33ddbba0626582da11ceec471c54337971a2a48eab64b10f7476df0b6f3d9d6403a206f0be6992aa6393b126f632bcf2bd9117d8269aa4dad2988ea853320052#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"],
+=======
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10553,7 +11674,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:3a277ce78b88e39c64a75569c6528db754af9a28a655881d13106ea1eb7f24e39dc9153ab253b4a1ee11239bf690811a526911451b434766a2818b4507d89a6f#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"],
+=======
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10570,7 +11695,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:3f32e0c8ded0fb59da0b407f32439e5e0a1e61135bcc6c94178cd441b6df76492605f09f48d9f1bb1412e1516160c10afcb70aad75e497742afc712f29e469fd#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"],
+=======
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10587,7 +11716,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:459545f386d2f04abfbe45343982ec8fbd539dc2533943df2c88486044d11956632b57e97f5f57d1fbff568e877da60c871ff9ee558e95bb4ef22c99a8ff1ef3#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"],
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10604,7 +11737,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:48b99590381b694505b40165da445b0cdb2fcd9bdf114829c7187907d5ed48900b67ff37123773379ee70eb7b0fe6d604d34f26317e28fff8bef5a61e641e92f#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"],
+=======
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10621,7 +11758,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:60d638e7fe0de38bded787c3a9f42701ad0d5e5b242433afcb514b4e61a2cbaf1f98019d9e2551f06f663199fdd0e370d2a804893edf11d4b08dac6eb6060c85#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"],
+=======
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10638,7 +11779,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:660ecdf0c3516705dcae07f7ccb7fcb1c319ccb70413b872ec972a5ed41b6617f905035aed61a074d7f6eb3155c5d28ca7723b1b021eddcd92a9feef287273e5#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"],
+=======
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10655,7 +11800,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:6828d9149db6542b6b07c7d2cf360c8bb7e6068caff8ba9f12e9ac5b4b7c2ce52e54745fa8f666d9c6b1888acd67832a06bdef2f0c14f475515f752d1cb4e22a#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"],
+=======
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10672,7 +11821,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:6e378f619077fa7962c988b7af9c99a32de1999d5afd75919c5b12dc00db2b77d45c04ff2c61269b7c4ce2f42797dc227aeab6d120cad5fc5bf4ba597f921629#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"],
+=======
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10689,7 +11842,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:85310a47271775ea6141f62d26902696129af5961fbd0df53ecbb1e8d70a6ee98d615b97f8d52f728ec4f761b536fb5ceaaa48c9bc00da623666c9271081727a#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"],
+=======
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10706,7 +11863,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:8de940084c5d1c7a278356a35076d4fd49ab6615274d1fd6fb68f52689a249eb6d37172b902184756b5ce3aaf4957e3864675cfc65a5b0bf6e6bc859c75d8527#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"],
+=======
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10723,7 +11884,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:926a29145483fbc5710638bee0b188a52cb0bea5791a957724f90960bfdd7d31c2be499415f82472d2fffb705353ff04d4b30f40b7a3d0b92b0a10a37e80ac77#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"],
+=======
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10740,7 +11905,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:96ce65e5a823a2687d48f9b22db707edab5c4c9657582cdb7061cc024605d44c5b5b00f649e060214d6ff9ea66cd899a407e6022071207f7ad0fc46a8b2cb621#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"],
+=======
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10757,7 +11926,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:98241eaba08c94fb42d08f02a865e50ad26434bf72d645279dbe7bddf769174a6151bb4e887d883b3c2e6113ced5666865714b6f9701781a60a7cd2c78c322a3#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"],
+=======
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10774,7 +11947,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:db3adb9c4abb520060abd032114acb03a1bca7e834cda2f601b4ecb0c68e43c3481bc82b3137ad2a1db63840c9e0be1b0fb95d982d6469799206f98ea572e3c9#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
+=======
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10791,7 +11968,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webpack-cli/configtest", "virtual:f402b79693c355263206f9f76285eeb9d61fcb492038c962876810a0203971fbe10e97764e404ad4b0e53d002f487c7ec810538b0c41831e31b754f0285a475e#npm:1.1.0"],
             ["@types/webpack", null],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"],
+=======
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"]
           ],
           "packagePeers": [
@@ -10821,6 +12002,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"]
 =======
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.0"]
@@ -10843,6 +12025,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -10879,9 +12064,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
 =======
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -10898,6 +12087,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"]
 =======
@@ -10921,6 +12111,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -10937,6 +12130,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"]
 =======
@@ -10960,6 +12154,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -10976,6 +12173,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"]
 =======
@@ -10999,6 +12197,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11035,9 +12236,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
 =======
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11054,6 +12259,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"]
 =======
@@ -11077,6 +12283,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11108,6 +12317,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 =======
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.0"]
 >>>>>>> 68babb53... chore: squash merge conflicts
@@ -11116,6 +12326,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11147,6 +12360,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 =======
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.0"]
 >>>>>>> 68babb53... chore: squash merge conflicts
@@ -11155,6 +12369,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11171,6 +12388,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"]
 =======
@@ -11194,6 +12412,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11210,6 +12431,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"]
 =======
@@ -11233,6 +12455,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11264,6 +12489,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 =======
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.0"]
 >>>>>>> 68babb53... chore: squash merge conflicts
@@ -11272,6 +12498,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11308,9 +12537,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
 =======
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11327,6 +12560,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"]
 =======
@@ -11350,6 +12584,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11366,6 +12603,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"]
 =======
@@ -11389,6 +12627,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11405,6 +12646,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"]
 =======
@@ -11428,6 +12670,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11444,6 +12689,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"]
 =======
@@ -11467,6 +12713,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11483,6 +12732,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"]
 =======
@@ -11506,6 +12756,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11537,6 +12790,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 =======
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.0"]
 >>>>>>> 68babb53... chore: squash merge conflicts
@@ -11545,6 +12799,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11576,6 +12833,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 =======
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.0"]
 >>>>>>> 68babb53... chore: squash merge conflicts
@@ -11584,6 +12842,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["envinfo", "npm:7.8.1"],
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11600,6 +12861,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"]
 =======
@@ -11623,6 +12885,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11639,6 +12904,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["envinfo", "npm:7.7.4"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"]
 =======
@@ -11662,6 +12928,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11683,9 +12952,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:08968bd349f03f7395fbfd20260f6cb7e1ac0f090373c7daf6a2cc18d4989f4611c12e6925ccf56d94567d4ada37d3c5cac0c2408148e283388c7b8de0f81bd0#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
             ["webpack-dev-server", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11700,9 +12974,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:0ad164306119c2de4d522f7cb8b1b879c5bc469891f9d0d56266943d5562791fd8e6481539dda14b5301256f329454db684f0fb2603055608ae60c8f1690291a#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
             ["webpack-dev-server", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11717,9 +12996,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:0c697ada3e54830c5b9e9e886f8481ac1a1b0daaf033f9152a40f38f2a1741dbe23f3db6c431d6aa1a9932f9dd60a4c0bf64f59330840d9fd642baee17084364#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
             ["webpack-dev-server", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11734,9 +13018,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:19c4143a5cdd524e85edf95c13a7e77d90e49f7cef3145201ce5a1a05ff63f19fa4f7695b4995c196cb82db8120539fc13e7de6ab12950641f7fd149a31a9f79#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
             ["webpack-dev-server", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11751,9 +13040,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:1c32a0765b9ac2e1852301903665dbfaa4dab622cd5c0a5aa32db1bd4d025a80b8f9a4445e39d0bfd07d8a38a48bd564b21b9e4afa328373c34534593e6128ed#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
             ["webpack-dev-server", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11768,9 +13062,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:2481e2197b0e11cc37dd319732d7f76e9ce8800e2a56fb0593a23e3835408384623b6d265796d3c9134ad886fa451ed9a7f1a11d56951f31709b14ca5693ea2e#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
             ["webpack-dev-server", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11785,9 +13084,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:33ddbba0626582da11ceec471c54337971a2a48eab64b10f7476df0b6f3d9d6403a206f0be6992aa6393b126f632bcf2bd9117d8269aa4dad2988ea853320052#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
             ["webpack-dev-server", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11802,9 +13106,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:3a277ce78b88e39c64a75569c6528db754af9a28a655881d13106ea1eb7f24e39dc9153ab253b4a1ee11239bf690811a526911451b434766a2818b4507d89a6f#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
             ["webpack-dev-server", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11819,9 +13128,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:3f32e0c8ded0fb59da0b407f32439e5e0a1e61135bcc6c94178cd441b6df76492605f09f48d9f1bb1412e1516160c10afcb70aad75e497742afc712f29e469fd#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
             ["webpack-dev-server", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11836,9 +13150,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:459545f386d2f04abfbe45343982ec8fbd539dc2533943df2c88486044d11956632b57e97f5f57d1fbff568e877da60c871ff9ee558e95bb4ef22c99a8ff1ef3#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
             ["webpack-dev-server", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11853,9 +13172,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:48b99590381b694505b40165da445b0cdb2fcd9bdf114829c7187907d5ed48900b67ff37123773379ee70eb7b0fe6d604d34f26317e28fff8bef5a61e641e92f#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
             ["webpack-dev-server", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11870,9 +13194,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:60d638e7fe0de38bded787c3a9f42701ad0d5e5b242433afcb514b4e61a2cbaf1f98019d9e2551f06f663199fdd0e370d2a804893edf11d4b08dac6eb6060c85#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
             ["webpack-dev-server", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11887,9 +13216,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:660ecdf0c3516705dcae07f7ccb7fcb1c319ccb70413b872ec972a5ed41b6617f905035aed61a074d7f6eb3155c5d28ca7723b1b021eddcd92a9feef287273e5#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
             ["webpack-dev-server", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11904,9 +13238,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:6828d9149db6542b6b07c7d2cf360c8bb7e6068caff8ba9f12e9ac5b4b7c2ce52e54745fa8f666d9c6b1888acd67832a06bdef2f0c14f475515f752d1cb4e22a#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
             ["webpack-dev-server", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11921,9 +13260,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:6e378f619077fa7962c988b7af9c99a32de1999d5afd75919c5b12dc00db2b77d45c04ff2c61269b7c4ce2f42797dc227aeab6d120cad5fc5bf4ba597f921629#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
             ["webpack-dev-server", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11938,9 +13282,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:85310a47271775ea6141f62d26902696129af5961fbd0df53ecbb1e8d70a6ee98d615b97f8d52f728ec4f761b536fb5ceaaa48c9bc00da623666c9271081727a#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
             ["webpack-dev-server", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11955,9 +13304,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:8de940084c5d1c7a278356a35076d4fd49ab6615274d1fd6fb68f52689a249eb6d37172b902184756b5ce3aaf4957e3864675cfc65a5b0bf6e6bc859c75d8527#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
             ["webpack-dev-server", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11972,9 +13326,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:926a29145483fbc5710638bee0b188a52cb0bea5791a957724f90960bfdd7d31c2be499415f82472d2fffb705353ff04d4b30f40b7a3d0b92b0a10a37e80ac77#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
             ["webpack-dev-server", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -11989,9 +13348,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:96ce65e5a823a2687d48f9b22db707edab5c4c9657582cdb7061cc024605d44c5b5b00f649e060214d6ff9ea66cd899a407e6022071207f7ad0fc46a8b2cb621#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
             ["webpack-dev-server", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -12006,9 +13370,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:98241eaba08c94fb42d08f02a865e50ad26434bf72d645279dbe7bddf769174a6151bb4e887d883b3c2e6113ced5666865714b6f9701781a60a7cd2c78c322a3#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
             ["webpack-dev-server", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -12023,9 +13392,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:db3adb9c4abb520060abd032114acb03a1bca7e834cda2f601b4ecb0c68e43c3481bc82b3137ad2a1db63840c9e0be1b0fb95d982d6469799206f98ea572e3c9#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
             ["webpack-dev-server", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -12040,9 +13414,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@webpack-cli/serve", "virtual:f402b79693c355263206f9f76285eeb9d61fcb492038c962876810a0203971fbe10e97764e404ad4b0e53d002f487c7ec810538b0c41831e31b754f0285a475e#npm:1.6.0"],
             ["@types/webpack-cli", null],
+<<<<<<< HEAD
             ["@types/webpack-dev-server", null],
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
             ["webpack-dev-server", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:3.11.3"]
+=======
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:3.11.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack-cli",
@@ -12257,6 +13636,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@yarnpkg-nm-npm-3.0.0-1443583427-f1c3ad2688.zip/node_modules/@yarnpkg/nm/",
           "packageDependencies": [
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["@yarnpkg/nm", "npm:3.0.0"],
             ["@yarnpkg/core", "npm:3.1.0"],
             ["@yarnpkg/fslib", "npm:2.6.0"]
@@ -12271,6 +13651,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/fslib", "npm:2.5.1"]
 >>>>>>> 258bc78a (fix: build issues)
 =======
+=======
+            ["@yarnpkg/nm", "npm:3.0.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/core", "npm:3.1.0"],
             ["@yarnpkg/fslib", "npm:2.6.0"]
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -12362,6 +13745,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@yarnpkg-pnpify-npm-3.1.0-3723536d4d-cf88928aa1.zip/node_modules/@yarnpkg/pnpify/",
           "packageDependencies": [
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["@yarnpkg/core", "npm:3.1.0"],
             ["@yarnpkg/fslib", "npm:2.6.0"],
@@ -12380,6 +13764,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clipanion", "virtual:b644898db9d00f9f37d5eb44e36f20e9479b44afd1de161232b42c49fdda6d24ee83083e27e52420bf3b4985c46a47d2bef42581f5a599abf04e801793aa0916#npm:3.0.1"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
+=======
+            ["@yarnpkg/pnpify", "npm:3.1.0"],
+            ["@yarnpkg/core", "npm:3.1.0"],
+            ["@yarnpkg/fslib", "npm:2.6.0"],
+            ["@yarnpkg/nm", "npm:3.0.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["clipanion", "virtual:11e49090eef2ab4a7d256d57407eff59125c10a45a2c4a95d4b4eed662e01c6bb0b545ee238f4cce0100c8d2885c1a88c24bcf184f4baba2c58b80f525a4f6ab#npm:3.0.1"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["cross-spawn", "npm:7.0.3"],
@@ -12542,6 +13932,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:a58c3bdb8effb7034422e8db4ec8a6cb2d3f3eb2a81f8ae81a1e64b6b4c9d853d19f4a2190e0e17390a55df36bc2363e9d604885e01361f3dd0b50f58d1d280a#npm:1.7.6", {
           "packageLocation": "./.yarn/__virtual__/acorn-import-assertions-virtual-1c0199ed22/0/cache/acorn-import-assertions-npm-1.7.6-06125ebcd0-bc8a1585ab.zip/node_modules/acorn-import-assertions/",
           "packageDependencies": [
@@ -12558,6 +13949,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6", {
+          "packageLocation": "./.yarn/__virtual__/acorn-import-assertions-virtual-fcfbd2fdf5/0/cache/acorn-import-assertions-npm-1.7.6-06125ebcd0-bc8a1585ab.zip/node_modules/acorn-import-assertions/",
+          "packageDependencies": [
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/acorn", null],
             ["acorn", "npm:8.6.0"]
           ],
@@ -12676,7 +14073,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["adbkit-monkey", "npm:1.0.1"],
             ["bluebird", "npm:2.9.34"],
             ["commander", "npm:2.20.3"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["node-forge", "npm:0.7.6"],
             ["split", "npm:0.3.3"]
           ],
@@ -12756,6 +14157,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["npm:4.4.0", {
           "packageLocation": "./.yarn/cache/addons-linter-npm-4.4.0-66b9876589-58986002f3.zip/node_modules/addons-linter/",
 =======
@@ -12802,6 +14204,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["addons-linter", "npm:4.4.0"],
             ["@mdn/browser-compat-data", "npm:4.0.11"],
+=======
+        ["npm:3.20.0", {
+          "packageLocation": "./.yarn/cache/addons-linter-npm-3.20.0-d5a771500f-13b683d476.zip/node_modules/addons-linter/",
+          "packageDependencies": [
+            ["addons-linter", "npm:3.20.0"],
+            ["@mdn/browser-compat-data", "npm:4.0.5"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["addons-moz-compare", "npm:1.2.0"],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12845,11 +14254,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.20.0", {
-          "packageLocation": "./.yarn/cache/addons-linter-npm-3.20.0-d5a771500f-13b683d476.zip/node_modules/addons-linter/",
+        ["npm:3.22.0", {
+          "packageLocation": "./.yarn/cache/addons-linter-npm-3.22.0-6507f9a003-b1979b43c0.zip/node_modules/addons-linter/",
           "packageDependencies": [
-            ["addons-linter", "npm:3.20.0"],
-            ["@mdn/browser-compat-data", "npm:4.0.5"],
+            ["addons-linter", "npm:3.22.0"],
+            ["@mdn/browser-compat-data", "npm:4.0.7"],
             ["addons-moz-compare", "npm:1.2.0"],
             ["addons-scanner-utils", "virtual:d5a771500f5554a047a2dc50011066c293d4efd551e6ccc373161487b8782ea83271dc86fdf5da4e4592dfdf262761fe301d693905e5ffc75ad6d1acb9780aaa#npm:5.0.0"],
             ["ajv", "npm:6.12.6"],
@@ -12862,7 +14271,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["deepmerge", "npm:4.2.2"],
             ["dispensary", "npm:0.62.0"],
             ["eslint", "npm:7.32.0"],
-            ["eslint-plugin-no-unsanitized", "virtual:d5a771500f5554a047a2dc50011066c293d4efd551e6ccc373161487b8782ea83271dc86fdf5da4e4592dfdf262761fe301d693905e5ffc75ad6d1acb9780aaa#npm:3.1.5"],
+            ["eslint-plugin-no-unsanitized", "virtual:6507f9a0032b697d9f38599f06d01ffa23ccf5ff060e9c776acc01e734cbdfb5a4bcca518a8922febd5e0ba91030ceceeddd46f3b225262847f9d4bd366e96a7#npm:3.2.0"],
             ["eslint-visitor-keys", "npm:3.0.0"],
             ["espree", "npm:9.0.0"],
             ["esprima", "npm:4.0.1"],
@@ -12872,8 +14281,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-mergeable-object", "npm:1.1.1"],
             ["jed", "npm:1.1.1"],
             ["os-locale", "npm:5.0.0"],
-            ["pino", "npm:6.13.3"],
-            ["postcss", "npm:8.3.9"],
+            ["pino", "npm:7.0.3"],
+            ["postcss", "npm:8.3.11"],
             ["relaxed-json", "npm:1.0.3"],
             ["semver", "npm:7.3.5"],
             ["source-map-support", "npm:0.5.20"],
@@ -12948,6 +14357,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["addons-scanner-utils", [
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["npm:6.1.0", {
           "packageLocation": "./.yarn/cache/addons-scanner-utils-npm-6.1.0-8f1baa45ba-d97cbeaa55.zip/node_modules/addons-scanner-utils/",
 =======
@@ -12958,6 +14368,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:5.0.0", {
           "packageLocation": "./.yarn/cache/addons-scanner-utils-npm-5.0.0-f64dc4648b-ffcd857a10.zip/node_modules/addons-scanner-utils/",
 <<<<<<< HEAD
@@ -12983,6 +14395,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
         ["virtual:56686b2874cf08585b63b8fc6f8792751aa1a052d868d834ecfd031ed8d435b27301fb15a297720217c0e8efd44f72ad836ff3430aa1db5d2d59810e2e4290c8#npm:5.0.0", {
           "packageLocation": "./.yarn/__virtual__/addons-scanner-utils-virtual-8164c3e10a/0/cache/addons-scanner-utils-npm-5.0.0-f64dc4648b-ffcd857a10.zip/node_modules/addons-scanner-utils/",
@@ -13036,6 +14449,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 =======
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["virtual:d5a771500f5554a047a2dc50011066c293d4efd551e6ccc373161487b8782ea83271dc86fdf5da4e4592dfdf262761fe301d693905e5ffc75ad6d1acb9780aaa#npm:5.0.0", {
           "packageLocation": "./.yarn/__virtual__/addons-scanner-utils-virtual-8e44ac648c/0/cache/addons-scanner-utils-npm-5.0.0-f64dc4648b-ffcd857a10.zip/node_modules/addons-scanner-utils/",
           "packageDependencies": [
@@ -14122,6 +15537,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:c61008a0e486d11c5d12f93844b2cd75ec5736236f87621ed10e104c633bf4481b9925efd82711424ba548cbafab120612f2a7a8136f66b66d6ec9e4b66e2804#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/babel-jest-virtual-b304174277/0/cache/babel-jest-npm-27.3.1-7be86a2396-b0edc7ee34.zip/node_modules/babel-jest/",
           "packageDependencies": [
@@ -14151,15 +15567,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
         ["virtual:1f787e81b676a9c4051528e2567fff5a6a15f5f7632121aab98c6258c20b13d995648145443c8fdc5e66c41d3717d4c6756f2050bab6c0f2507ad3083833129f#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/babel-jest-virtual-b8708d0012/0/cache/babel-jest-npm-27.3.1-7be86a2396-b0edc7ee34.zip/node_modules/babel-jest/",
+=======
+        ["virtual:c61008a0e486d11c5d12f93844b2cd75ec5736236f87621ed10e104c633bf4481b9925efd82711424ba548cbafab120612f2a7a8136f66b66d6ec9e4b66e2804#npm:27.3.1", {
+          "packageLocation": "./.yarn/__virtual__/babel-jest-virtual-b304174277/0/cache/babel-jest-npm-27.3.1-7be86a2396-b0edc7ee34.zip/node_modules/babel-jest/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["babel-jest", "virtual:1f787e81b676a9c4051528e2567fff5a6a15f5f7632121aab98c6258c20b13d995648145443c8fdc5e66c41d3717d4c6756f2050bab6c0f2507ad3083833129f#npm:27.3.1"],
+            ["babel-jest", "virtual:c61008a0e486d11c5d12f93844b2cd75ec5736236f87621ed10e104c633bf4481b9925efd82711424ba548cbafab120612f2a7a8136f66b66d6ec9e4b66e2804#npm:27.3.1"],
             ["@babel/core", "npm:7.15.8"],
             ["@jest/transform", "npm:27.3.1"],
             ["@jest/types", "npm:27.2.5"],
             ["@types/babel__core", "npm:7.1.14"],
             ["babel-plugin-istanbul", "npm:6.0.0"],
+<<<<<<< HEAD
             ["babel-preset-jest", "virtual:b8708d00121cd7eb247cdad635bab819e17fda4fcd7a61345456ca3fc27d24a230bd1496407f4654d04c8c8fbd4608d018b14143ce3c95dd824fc27df92e913a#npm:27.2.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+            ["babel-preset-jest", "virtual:b304174277a54192866f4ebb3714d96b3f35f96ab0201b35955f706c8db22e0774c15ad8666db7c4bb49966d307ec9e71b387322ee2bfeb4e3450ffc82a98c3c#npm:27.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["chalk", "npm:4.1.2"],
             ["graceful-fs", "npm:4.2.6"],
             ["slash", "npm:3.0.0"]
@@ -14454,6 +15878,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:edbaee482097e03d0cdbf9ab13137b980c69b75e5f9cd978d2d70fdab82585a3790839888132deb4a0655e76709f73877aa652c74a41b9dc70ab9d3c93d69784#npm:1.0.0", {
           "packageLocation": "./.yarn/__virtual__/babel-preset-current-node-syntax-virtual-508b54a52c/0/cache/babel-preset-current-node-syntax-npm-1.0.0-1b2199003e-05c193dcf1.zip/node_modules/babel-preset-current-node-syntax/",
           "packageDependencies": [
@@ -14527,21 +15952,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:fb3c6e7f70e69f14d5638d5317a92ad1ce5a47c0747d244f3c003ae9a0ac44550cf5e9f58dc80d475fbb5aecde87ab84a31304af13326540f722d44e392b4c2c#npm:1.0.0", {
           "packageLocation": "./.yarn/__virtual__/babel-preset-current-node-syntax-virtual-18476edeb7/0/cache/babel-preset-current-node-syntax-npm-1.0.0-1b2199003e-05c193dcf1.zip/node_modules/babel-preset-current-node-syntax/",
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:edbaee482097e03d0cdbf9ab13137b980c69b75e5f9cd978d2d70fdab82585a3790839888132deb4a0655e76709f73877aa652c74a41b9dc70ab9d3c93d69784#npm:1.0.0", {
+          "packageLocation": "./.yarn/__virtual__/babel-preset-current-node-syntax-virtual-508b54a52c/0/cache/babel-preset-current-node-syntax-npm-1.0.0-1b2199003e-05c193dcf1.zip/node_modules/babel-preset-current-node-syntax/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["babel-preset-current-node-syntax", "virtual:fb3c6e7f70e69f14d5638d5317a92ad1ce5a47c0747d244f3c003ae9a0ac44550cf5e9f58dc80d475fbb5aecde87ab84a31304af13326540f722d44e392b4c2c#npm:1.0.0"],
+            ["babel-preset-current-node-syntax", "virtual:edbaee482097e03d0cdbf9ab13137b980c69b75e5f9cd978d2d70fdab82585a3790839888132deb4a0655e76709f73877aa652c74a41b9dc70ab9d3c93d69784#npm:1.0.0"],
             ["@babel/core", "npm:7.15.8"],
-            ["@babel/plugin-syntax-async-generators", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.4"],
-            ["@babel/plugin-syntax-bigint", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
-            ["@babel/plugin-syntax-class-properties", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.12.13"],
-            ["@babel/plugin-syntax-import-meta", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.10.4"],
-            ["@babel/plugin-syntax-json-strings", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
-            ["@babel/plugin-syntax-logical-assignment-operators", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.10.4"],
-            ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
-            ["@babel/plugin-syntax-numeric-separator", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.10.4"],
-            ["@babel/plugin-syntax-object-rest-spread", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
-            ["@babel/plugin-syntax-optional-catch-binding", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
-            ["@babel/plugin-syntax-optional-chaining", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.8.3"],
-            ["@babel/plugin-syntax-top-level-await", "virtual:18476edeb7861250ec4991c9a57957a56265322e094b7dfd4bd55f377fb7d51c7105785e071b03efe1f8b0626455404527fa326e9531d2bded4bc6887d293bbf#npm:7.14.5"],
+            ["@babel/plugin-syntax-async-generators", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.4"],
+            ["@babel/plugin-syntax-bigint", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
+            ["@babel/plugin-syntax-class-properties", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.12.13"],
+            ["@babel/plugin-syntax-import-meta", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4"],
+            ["@babel/plugin-syntax-json-strings", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
+            ["@babel/plugin-syntax-logical-assignment-operators", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4"],
+            ["@babel/plugin-syntax-nullish-coalescing-operator", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
+            ["@babel/plugin-syntax-numeric-separator", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.10.4"],
+            ["@babel/plugin-syntax-object-rest-spread", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-catch-binding", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
+            ["@babel/plugin-syntax-optional-chaining", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.8.3"],
+            ["@babel/plugin-syntax-top-level-await", "virtual:508b54a52c996901d11bdd1f2e9b955d398fdef39298aeacb8fb5cdb5541f89ce26546c4665b5ca789c1e94ed8c009f4c06b095142eead6fd07aa7591318ea0e#npm:7.14.5"],
             ["@types/babel__core", "npm:7.1.14"]
           ],
           "packagePeers": [
@@ -14559,6 +15988,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
         ["virtual:b304174277a54192866f4ebb3714d96b3f35f96ab0201b35955f706c8db22e0774c15ad8666db7c4bb49966d307ec9e71b387322ee2bfeb4e3450ffc82a98c3c#npm:27.2.0", {
           "packageLocation": "./.yarn/__virtual__/babel-preset-jest-virtual-edbaee4820/0/cache/babel-preset-jest-npm-27.2.0-c41a40dfbe-c484e6e7c6.zip/node_modules/babel-preset-jest/",
@@ -14610,13 +16040,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
         ["virtual:b8708d00121cd7eb247cdad635bab819e17fda4fcd7a61345456ca3fc27d24a230bd1496407f4654d04c8c8fbd4608d018b14143ce3c95dd824fc27df92e913a#npm:27.2.0", {
           "packageLocation": "./.yarn/__virtual__/babel-preset-jest-virtual-fb3c6e7f70/0/cache/babel-preset-jest-npm-27.2.0-c41a40dfbe-c484e6e7c6.zip/node_modules/babel-preset-jest/",
+=======
+        ["virtual:b304174277a54192866f4ebb3714d96b3f35f96ab0201b35955f706c8db22e0774c15ad8666db7c4bb49966d307ec9e71b387322ee2bfeb4e3450ffc82a98c3c#npm:27.2.0", {
+          "packageLocation": "./.yarn/__virtual__/babel-preset-jest-virtual-edbaee4820/0/cache/babel-preset-jest-npm-27.2.0-c41a40dfbe-c484e6e7c6.zip/node_modules/babel-preset-jest/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["babel-preset-jest", "virtual:b8708d00121cd7eb247cdad635bab819e17fda4fcd7a61345456ca3fc27d24a230bd1496407f4654d04c8c8fbd4608d018b14143ce3c95dd824fc27df92e913a#npm:27.2.0"],
+            ["babel-preset-jest", "virtual:b304174277a54192866f4ebb3714d96b3f35f96ab0201b35955f706c8db22e0774c15ad8666db7c4bb49966d307ec9e71b387322ee2bfeb4e3450ffc82a98c3c#npm:27.2.0"],
             ["@babel/core", "npm:7.15.8"],
             ["@types/babel__core", "npm:7.1.14"],
             ["babel-plugin-jest-hoist", "npm:27.2.0"],
+<<<<<<< HEAD
             ["babel-preset-current-node-syntax", "virtual:fb3c6e7f70e69f14d5638d5317a92ad1ce5a47c0747d244f3c003ae9a0ac44550cf5e9f58dc80d475fbb5aecde87ab84a31304af13326540f722d44e392b4c2c#npm:1.0.0"]
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+            ["babel-preset-current-node-syntax", "virtual:edbaee482097e03d0cdbf9ab13137b980c69b75e5f9cd978d2d70fdab82585a3790839888132deb4a0655e76709f73877aa652c74a41b9dc70ab9d3c93d69784#npm:1.0.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@babel/core",
@@ -14811,10 +16249,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bytes", "npm:3.0.0"],
             ["content-type", "npm:1.0.4"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
 =======
             ["debug", "virtual:520b8137c106fd11866473e4e5f9893c9784c7d2d628bc453197b884d88d0e1601a6a0af06b047c31a788467cca6a7f25f8fef5306b50ee3635ad4295b474ae2#npm:2.6.9"],
 >>>>>>> 258bc78a (fix: build issues)
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["depd", "npm:1.1.2"],
             ["http-errors", "npm:1.6.3"],
             ["iconv-lite", "npm:0.4.19"],
@@ -14836,7 +16278,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["body-parser", "npm:1.19.0"],
             ["bytes", "npm:3.1.0"],
             ["content-type", "npm:1.0.4"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["depd", "npm:1.1.2"],
             ["http-errors", "npm:1.7.2"],
             ["iconv-lite", "npm:0.4.24"],
@@ -15940,6 +17386,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["clean-css", [
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["npm:5.2.1", {
           "packageLocation": "./.yarn/cache/clean-css-npm-5.2.1-0cb7e508c1-45bf069a37.zip/node_modules/clean-css/",
           "packageDependencies": [
@@ -15950,6 +17397,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["clean-css", "npm:4.2.4"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["npm:5.2.1", {
+          "packageLocation": "./.yarn/cache/clean-css-npm-5.2.1-0cb7e508c1-45bf069a37.zip/node_modules/clean-css/",
+          "packageDependencies": [
+            ["clean-css", "npm:5.2.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["source-map", "npm:0.6.1"]
           ],
           "linkType": "HARD",
@@ -16447,7 +17900,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["accepts", "npm:1.3.7"],
             ["bytes", "npm:3.0.0"],
             ["compressible", "npm:2.0.18"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["on-headers", "npm:1.0.2"],
             ["safe-buffer", "npm:5.1.2"],
             ["vary", "npm:1.1.2"]
@@ -16785,7 +18242,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"]
+=======
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -16828,7 +18289,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"]
+=======
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -16871,7 +18336,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"]
+=======
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -16914,7 +18383,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"]
+=======
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -16957,7 +18430,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"]
+=======
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17000,7 +18477,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"]
+=======
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17043,7 +18524,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"]
+=======
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17086,7 +18571,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"]
+=======
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17129,7 +18618,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"]
+=======
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17172,7 +18665,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"]
+=======
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17215,7 +18712,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"]
+=======
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17258,7 +18759,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"]
+=======
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17301,7 +18806,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"]
+=======
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17344,7 +18853,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"]
+=======
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17387,7 +18900,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"]
+=======
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17430,7 +18947,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"]
+=======
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17473,7 +18994,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"]
+=======
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17516,7 +19041,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"]
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17559,7 +19088,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"]
+=======
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17602,7 +19135,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"]
+=======
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17645,7 +19182,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"]
+=======
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17684,7 +19225,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["schema-utils", "npm:3.1.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["serialize-javascript", "npm:6.0.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"]
+=======
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -17705,6 +19250,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["npm:3.16.0", {
           "packageLocation": "./.yarn/unplugged/core-js-npm-3.16.0-81e18c66e6/node_modules/core-js/",
 <<<<<<< HEAD
@@ -17717,6 +19263,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:3.18.0", {
           "packageLocation": "./.yarn/unplugged/core-js-npm-3.18.0-0e015720b9/node_modules/core-js/",
           "packageDependencies": [
@@ -17972,6 +19520,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["css-loader", [
+<<<<<<< HEAD
         ["npm:6.5.1", {
           "packageLocation": "./.yarn/cache/css-loader-npm-6.5.1-a34b2a752f-5a3bedecb4.zip/node_modules/css-loader/",
           "packageDependencies": [
@@ -18031,6 +19580,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-value-parser", "npm:4.1.0"],
             ["semver", "npm:7.3.5"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"]
+=======
+        ["npm:6.5.0", {
+          "packageLocation": "./.yarn/cache/css-loader-npm-6.5.0-f62041d20f-4f3e7b93df.zip/node_modules/css-loader/",
+          "packageDependencies": [
+            ["css-loader", "npm:6.5.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.5.0", {
+          "packageLocation": "./.yarn/__virtual__/css-loader-virtual-8e6df77795/0/cache/css-loader-npm-6.5.0-f62041d20f-4f3e7b93df.zip/node_modules/css-loader/",
+          "packageDependencies": [
+            ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.5.0"],
+            ["@types/webpack", null],
+            ["icss-utils", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:5.1.0"],
+            ["postcss", "npm:8.3.11"],
+            ["postcss-modules-extract-imports", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:3.0.0"],
+            ["postcss-modules-local-by-default", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:4.0.0"],
+            ["postcss-modules-scope", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:3.0.0"],
+            ["postcss-modules-values", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:4.0.0"],
+            ["postcss-value-parser", "npm:4.1.0"],
+            ["semver", "npm:7.3.5"],
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -18278,6 +19850,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:241056ec2b406cd11fca5bfa059173682edbdc62c7d4cd09c6772ef5ecfacfc5ce5be3b424a0b8f772fecc58765b5ee3a6ecb3ab004f5152e094a7ad7e68bef1#npm:4.3.2", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-3ae7c82e7a/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
           "packageDependencies": [
@@ -18309,6 +19882,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["virtual:2cff9d6bb67f60b405aa687457fee964fc556364e10becbb20a42adcab5bed428e93aa7104b6729be8f088e085a36221271d9a65f3974a1915c60950102d83cb#npm:4.3.1", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-ede17f736f/0/cache/debug-npm-4.3.1-22e08d605e-2c3352e37d.zip/node_modules/debug/",
           "packageDependencies": [
@@ -18330,6 +19905,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:5c6565ae444b792dcde6c509e447568014350d8fa19988fc85aa860ede8ffd57b097041179fd8651382ed2ed8ad02bda02f2c42952d39dd2a9cf26c2f5631496#npm:4.3.2", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-fc856ff746/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
           "packageDependencies": [
@@ -18345,8 +19921,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
         ["virtual:520b8137c106fd11866473e4e5f9893c9784c7d2d628bc453197b884d88d0e1601a6a0af06b047c31a788467cca6a7f25f8fef5306b50ee3635ad4295b474ae2#npm:2.6.9", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-677931e188/0/cache/debug-npm-2.6.9-7d4cb597dc-d2f51589ca.zip/node_modules/debug/",
+=======
+        ["virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-785d8660ab/0/cache/debug-npm-2.6.9-7d4cb597dc-d2f51589ca.zip/node_modules/debug/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["debug", "virtual:520b8137c106fd11866473e4e5f9893c9784c7d2d628bc453197b884d88d0e1601a6a0af06b047c31a788467cca6a7f25f8fef5306b50ee3635ad4295b474ae2#npm:2.6.9"],
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
             ["ms", "npm:2.0.0"],
             ["supports-color", null]
           ],
@@ -18517,6 +20097,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "packagePeers": [
             "@types/supports-color",
+            "supports-color"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:ef34454158be481d36a7b74cc0ad7b3c6b9cf4b2bfaee1dba13379e0fcb4bd8b3fb9d67dcaffa85c811433d6453f6c8e02c88918aa32b31d89588dd7fe0654c6#npm:4.3.2", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-4ca32dba7b/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:ef34454158be481d36a7b74cc0ad7b3c6b9cf4b2bfaee1dba13379e0fcb4bd8b3fb9d67dcaffa85c811433d6453f6c8e02c88918aa32b31d89588dd7fe0654c6#npm:4.3.2"],
+            ["ms", "npm:2.1.2"],
+            ["supports-color", "npm:8.1.1"]
+          ],
+          "packagePeers": [
             "supports-color"
           ],
           "linkType": "HARD",
@@ -19897,7 +21489,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-code-frame", "npm:6.26.0"],
             ["chalk", "npm:1.1.3"],
             ["concat-stream", "npm:1.6.2"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["doctrine", "npm:2.1.0"],
             ["escope", "npm:3.6.0"],
             ["espree", "npm:3.5.4"],
@@ -20144,10 +21740,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["eslint-module-utils", [
-        ["npm:2.7.1", {
-          "packageLocation": "./.yarn/cache/eslint-module-utils-npm-2.7.1-2b7798b493-c30dfa125a.zip/node_modules/eslint-module-utils/",
+        ["npm:2.7.0", {
+          "packageLocation": "./.yarn/cache/eslint-module-utils-npm-2.7.0-945431a138-98f284dee9.zip/node_modules/eslint-module-utils/",
           "packageDependencies": [
-            ["eslint-module-utils", "npm:2.7.1"],
+            ["eslint-module-utils", "npm:2.7.0"],
             ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
             ["find-up", "npm:2.1.0"],
             ["pkg-dir", "npm:2.0.0"]
@@ -20180,6 +21776,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["eslint-plugin-import", [
+<<<<<<< HEAD
         ["npm:2.25.3", {
           "packageLocation": "./.yarn/cache/eslint-plugin-import-npm-2.25.3-f5faefaae3-8bdf4b1faf.zip/node_modules/eslint-plugin-import/",
           "packageDependencies": [
@@ -20191,11 +21788,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/eslint-plugin-import-virtual-bf03f94c13/0/cache/eslint-plugin-import-npm-2.25.3-f5faefaae3-8bdf4b1faf.zip/node_modules/eslint-plugin-import/",
           "packageDependencies": [
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
+=======
+        ["npm:2.25.2", {
+          "packageLocation": "./.yarn/cache/eslint-plugin-import-npm-2.25.2-98db0f107a-4ca36e37fa.zip/node_modules/eslint-plugin-import/",
+          "packageDependencies": [
+            ["eslint-plugin-import", "npm:2.25.2"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2", {
+          "packageLocation": "./.yarn/__virtual__/eslint-plugin-import-virtual-2effb742c5/0/cache/eslint-plugin-import-npm-2.25.2-98db0f107a-4ca36e37fa.zip/node_modules/eslint-plugin-import/",
+          "packageDependencies": [
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint", null],
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["array-includes", "npm:3.1.4"],
             ["array.prototype.flat", "npm:1.2.5"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
 =======
@@ -20248,12 +21859,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-module-utils", "npm:2.7.1"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["find-up", "npm:2.1.0"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+            ["doctrine", "npm:2.1.0"],
+            ["eslint", "npm:7.32.0"],
+            ["eslint-import-resolver-node", "npm:0.3.6"],
+            ["eslint-module-utils", "npm:2.7.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["has", "npm:1.0.3"],
-            ["is-core-module", "npm:2.8.0"],
+            ["is-core-module", "npm:2.7.0"],
+            ["is-glob", "npm:4.0.3"],
             ["minimatch", "npm:3.0.4"],
             ["object.values", "npm:1.1.5"],
-            ["pkg-up", "npm:2.0.0"],
-            ["read-pkg-up", "npm:3.0.0"],
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"],
             ["tsconfig-paths", "npm:3.11.0"]
 >>>>>>> c4299913 (fix: update yarn lock)
@@ -20266,6 +21883,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["eslint-plugin-jest", [
+<<<<<<< HEAD
         ["npm:25.3.0", {
           "packageLocation": "./.yarn/cache/eslint-plugin-jest-npm-25.3.0-59c6c408d3-d801c166f5.zip/node_modules/eslint-plugin-jest/",
           "packageDependencies": [
@@ -20277,9 +21895,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/eslint-plugin-jest-virtual-130cbf8a0e/0/cache/eslint-plugin-jest-npm-25.3.0-59c6c408d3-d801c166f5.zip/node_modules/eslint-plugin-jest/",
           "packageDependencies": [
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
+=======
+        ["npm:25.2.2", {
+          "packageLocation": "./.yarn/cache/eslint-plugin-jest-npm-25.2.2-08d41f3f7d-ba78bf2062.zip/node_modules/eslint-plugin-jest/",
+          "packageDependencies": [
+            ["eslint-plugin-jest", "npm:25.2.2"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2", {
+          "packageLocation": "./.yarn/__virtual__/eslint-plugin-jest-virtual-587f985b35/0/cache/eslint-plugin-jest-npm-25.2.2-08d41f3f7d-ba78bf2062.zip/node_modules/eslint-plugin-jest/",
+          "packageDependencies": [
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint", null],
             ["@types/jest", "npm:27.0.3"],
             ["@types/typescript-eslint__eslint-plugin", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/experimental-utils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:5.4.0"],
@@ -20288,6 +21920,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["@typescript-eslint/experimental-utils", "virtual:1a306c3f5bcbf6039ec5bd562f00aef89144719b4d65e5f529150d0cdf518dd10039298b76a4a8600e51d40921644f3367fe430ed54c493b87342262c1eed697#npm:5.2.0"],
+=======
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/experimental-utils", "virtual:b14da86ad89e171ad9f7dd051c897eec0f7f3ac0654f27ed9434cf2e7cf8cd12cfff82d92de1de3a17eda448ad30438bb9496066f1acda3135828a778c8026ec#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint", "npm:7.32.0"]
 >>>>>>> 48768561 (chore: fix yarn lock)
           ],
@@ -20406,6 +22042,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:66b9876589cf114dba2877632382553ccf86393e9b74b5ce26a9e7d9c30b4002753b66733db582b2c4a2a8a8c62692cc59ebebbb3713c52c633b52658c955d4b#npm:4.0.0", {
           "packageLocation": "./.yarn/__virtual__/eslint-plugin-no-unsanitized-virtual-70585865d8/0/cache/eslint-plugin-no-unsanitized-npm-4.0.0-d009460b04-70f2a66386.zip/node_modules/eslint-plugin-no-unsanitized/",
           "packageDependencies": [
@@ -20423,6 +22060,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-no-unsanitized", "virtual:7bfea589c84f01c3f73ee39683812704edd78c293116a52b4f06c17e102e75bcb21a0dc3db9e9728410b285cfd225e73983cb3c8b18f1668aaaaae5db08a165c#npm:3.1.5"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
+=======
+        ["npm:3.2.0", {
+          "packageLocation": "./.yarn/cache/eslint-plugin-no-unsanitized-npm-3.2.0-8f0bde9db6-e5bdada86f.zip/node_modules/eslint-plugin-no-unsanitized/",
+          "packageDependencies": [
+            ["eslint-plugin-no-unsanitized", "npm:3.2.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:6507f9a0032b697d9f38599f06d01ffa23ccf5ff060e9c776acc01e734cbdfb5a4bcca518a8922febd5e0ba91030ceceeddd46f3b225262847f9d4bd366e96a7#npm:3.2.0", {
+          "packageLocation": "./.yarn/__virtual__/eslint-plugin-no-unsanitized-virtual-88402baefa/0/cache/eslint-plugin-no-unsanitized-npm-3.2.0-8f0bde9db6-e5bdada86f.zip/node_modules/eslint-plugin-no-unsanitized/",
+          "packageDependencies": [
+            ["eslint-plugin-no-unsanitized", "virtual:6507f9a0032b697d9f38599f06d01ffa23ccf5ff060e9c776acc01e734cbdfb5a4bcca518a8922febd5e0ba91030ceceeddd46f3b225262847f9d4bd366e96a7#npm:3.2.0"],
+            ["@types/eslint", null],
+            ["eslint", "npm:7.32.0"]
+          ],
+          "packagePeers": [
+            "@types/eslint",
+            "eslint"
+          ],
+          "linkType": "HARD",
+        }],
+>>>>>>> b82a4279 (chore: squash merge main)
         ["virtual:d5a771500f5554a047a2dc50011066c293d4efd551e6ccc373161487b8782ea83271dc86fdf5da4e4592dfdf262761fe301d693905e5ffc75ad6d1acb9780aaa#npm:3.1.5", {
           "packageLocation": "./.yarn/__virtual__/eslint-plugin-no-unsanitized-virtual-33d69eb703/0/cache/eslint-plugin-no-unsanitized-npm-3.1.5-deaa95d826-69eec33206.zip/node_modules/eslint-plugin-no-unsanitized/",
           "packageDependencies": [
@@ -20675,6 +22334,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:19231e7a876e62a3305ea09e400ae71af5d6561a052e08d6d8df6032aafb86b7102156f829b949f9bbfa05939834ad775dcdf5acafa1769e0ce3283c98e6e2c0#npm:3.0.0", {
           "packageLocation": "./.yarn/__virtual__/eslint-utils-virtual-e5761ed555/0/cache/eslint-utils-npm-3.0.0-630b3a4013-0668fe02f5.zip/node_modules/eslint-utils/",
           "packageDependencies": [
@@ -20693,6 +22353,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/eslint-utils-virtual-f391a422c0/0/cache/eslint-utils-npm-3.0.0-630b3a4013-0668fe02f5.zip/node_modules/eslint-utils/",
           "packageDependencies": [
             ["eslint-utils", "virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:3.0.0"],
+=======
+        ["virtual:96d6aa52bdfa8c61645f29b0e3e22a3094e49dff46b9b899e325f76066f33a4c95a7a3f49b8f0758e5e37578d38449b04acf3a46cdc8e8830925dc678f8b3e3f#npm:3.0.0", {
+          "packageLocation": "./.yarn/__virtual__/eslint-utils-virtual-9fbc4f6523/0/cache/eslint-utils-npm-3.0.0-630b3a4013-0668fe02f5.zip/node_modules/eslint-utils/",
+          "packageDependencies": [
+            ["eslint-utils", "virtual:96d6aa52bdfa8c61645f29b0e3e22a3094e49dff46b9b899e325f76066f33a4c95a7a3f49b8f0758e5e37578d38449b04acf3a46cdc8e8830925dc678f8b3e3f#npm:3.0.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint", null],
             ["eslint", "npm:7.32.0"],
             ["eslint-visitor-keys", "npm:2.1.0"]
@@ -20775,6 +22441,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["npm:9.1.0", {
           "packageLocation": "./.yarn/cache/espree-npm-9.1.0-fd22538590-ba9b0f759c.zip/node_modules/espree/",
           "packageDependencies": [
@@ -20793,6 +22460,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:9.0.0", {
           "packageLocation": "./.yarn/cache/espree-npm-9.0.0-77ec52a2b9-f313c642e3.zip/node_modules/espree/",
           "packageDependencies": [
@@ -21022,7 +22691,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/expand-brackets-npm-2.1.4-392c703c48-1781d422e7.zip/node_modules/expand-brackets/",
           "packageDependencies": [
             ["expand-brackets", "npm:2.1.4"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["define-property", "npm:0.2.5"],
             ["extend-shallow", "npm:2.0.1"],
             ["posix-character-classes", "npm:0.1.1"],
@@ -21065,10 +22738,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cookie", "npm:0.3.1"],
             ["cookie-signature", "npm:1.0.6"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
 =======
             ["debug", "virtual:520b8137c106fd11866473e4e5f9893c9784c7d2d628bc453197b884d88d0e1601a6a0af06b047c31a788467cca6a7f25f8fef5306b50ee3635ad4295b474ae2#npm:2.6.9"],
 >>>>>>> 258bc78a (fix: build issues)
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["depd", "npm:1.1.2"],
             ["encodeurl", "npm:1.0.2"],
             ["escape-html", "npm:1.0.3"],
@@ -21114,7 +22791,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["content-type", "npm:1.0.4"],
             ["cookie", "npm:0.4.0"],
             ["cookie-signature", "npm:1.0.6"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["depd", "npm:1.1.2"],
             ["encodeurl", "npm:1.0.2"],
             ["escape-html", "npm:1.0.3"],
@@ -21223,7 +22904,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["extract-zip", "npm:1.7.0"],
             ["concat-stream", "npm:1.6.2"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["mkdirp", "npm:0.5.5"],
             ["yauzl", "npm:2.10.0"]
           ],
@@ -21548,6 +23233,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 <<<<<<< HEAD
             ["schema-utils", "npm:3.1.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.58.1"]
 =======
             ["schema-utils", "npm:3.1.1"],
@@ -21568,6 +23254,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -21611,7 +23300,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/finalhandler-npm-1.1.0-49da7761f1-fb22b42031.zip/node_modules/finalhandler/",
           "packageDependencies": [
             ["finalhandler", "npm:1.1.0"],
-            ["debug", "virtual:520b8137c106fd11866473e4e5f9893c9784c7d2d628bc453197b884d88d0e1601a6a0af06b047c31a788467cca6a7f25f8fef5306b50ee3635ad4295b474ae2#npm:2.6.9"],
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
             ["encodeurl", "npm:1.0.2"],
             ["escape-html", "npm:1.0.3"],
             ["on-finished", "npm:2.3.0"],
@@ -21648,7 +23337,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/finalhandler-npm-1.1.2-55a75d6b53-617880460c.zip/node_modules/finalhandler/",
           "packageDependencies": [
             ["finalhandler", "npm:1.1.2"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["encodeurl", "npm:1.0.2"],
             ["escape-html", "npm:1.0.3"],
             ["on-finished", "npm:2.3.0"],
@@ -21723,6 +23416,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["npm:4.2.2", {
           "packageLocation": "./.yarn/cache/firefox-profile-npm-4.2.2-41ba0ada9c-21f338accb.zip/node_modules/firefox-profile/",
           "packageDependencies": [
@@ -21760,6 +23454,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:4.2.1", {
           "packageLocation": "./.yarn/cache/firefox-profile-npm-4.2.1-e3edbb3fa9-ab60bbe488.zip/node_modules/firefox-profile/",
           "packageDependencies": [
@@ -21957,8 +23653,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.1.17"],
             ["@emotion/is-prop-valid", "npm:0.8.8"],
-            ["@types/react", "npm:17.0.19"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["framesync", "npm:5.3.0"],
             ["hey-listen", "npm:1.0.8"],
             ["popmotion", "npm:9.3.6"],
@@ -23155,6 +24851,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/html-minifier-terser-npm-6.0.2-3a759c4206-9c8775ea03.zip/node_modules/html-minifier-terser/",
           "packageDependencies": [
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["html-minifier-terser", "npm:6.0.2"],
             ["camel-case", "npm:4.1.2"],
             ["clean-css", "npm:5.2.1"],
@@ -23165,6 +24862,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clean-css", "npm:4.2.4"],
             ["commander", "npm:4.1.1"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+            ["html-minifier-terser", "npm:6.0.2"],
+            ["camel-case", "npm:4.1.2"],
+            ["clean-css", "npm:5.2.1"],
+            ["commander", "npm:8.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["he", "npm:1.2.0"],
             ["param-case", "npm:3.0.4"],
             ["relateurl", "npm:0.2.7"],
@@ -23185,6 +24888,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/html-webpack-plugin-virtual-b11e8e582f/0/cache/html-webpack-plugin-npm-5.5.0-75c5a14e55-f3d84d0df7.zip/node_modules/html-webpack-plugin/",
           "packageDependencies": [
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["html-webpack-plugin", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.5.0"],
             ["@types/html-minifier-terser", "npm:6.0.0"],
 =======
@@ -23199,10 +24903,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["@types/html-minifier-terser", "npm:5.1.2"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+            ["html-webpack-plugin", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.5.0"],
+            ["@types/html-minifier-terser", "npm:6.0.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["html-minifier-terser", "npm:6.0.2"],
             ["loader-utils", "npm:2.0.0"],
             ["lodash", "npm:4.17.21"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["pretty-error", "npm:4.0.0"],
             ["tapable", "npm:2.2.0"],
@@ -23212,6 +24921,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tapable", "npm:2.2.0"],
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["pretty-error", "npm:4.0.0"],
+            ["tapable", "npm:2.2.0"],
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -23222,6 +24936,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.5.0", {
           "packageLocation": "./.yarn/__virtual__/html-webpack-plugin-virtual-13ba917235/0/cache/html-webpack-plugin-npm-5.5.0-75c5a14e55-f3d84d0df7.zip/node_modules/html-webpack-plugin/",
           "packageDependencies": [
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["html-webpack-plugin", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.5.0"],
             ["@types/html-minifier-terser", "npm:6.0.0"],
@@ -23237,10 +24952,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["@types/html-minifier-terser", "npm:5.1.2"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+            ["html-webpack-plugin", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.5.0"],
+            ["@types/html-minifier-terser", "npm:6.0.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["html-minifier-terser", "npm:6.0.2"],
             ["loader-utils", "npm:2.0.0"],
             ["lodash", "npm:4.17.21"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["pretty-error", "npm:4.0.0"],
             ["tapable", "npm:2.2.0"],
@@ -23250,6 +24970,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tapable", "npm:2.2.0"],
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["pretty-error", "npm:4.0.0"],
+            ["tapable", "npm:2.2.0"],
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -23599,10 +25324,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:5.1.0", {
           "packageLocation": "./.yarn/__virtual__/icss-utils-virtual-235a406ed8/0/cache/icss-utils-npm-5.1.0-8d8c062d07-5c324d2835.zip/node_modules/icss-utils/",
           "packageDependencies": [
             ["icss-utils", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:5.1.0"],
+=======
+        ["virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:5.1.0", {
+          "packageLocation": "./.yarn/__virtual__/icss-utils-virtual-db341ccf29/0/cache/icss-utils-npm-5.1.0-8d8c062d07-5c324d2835.zip/node_modules/icss-utils/",
+          "packageDependencies": [
+            ["icss-utils", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:5.1.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/postcss", null],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24160,6 +25892,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["inversify", [
+<<<<<<< HEAD
         ["npm:6.0.1", {
           "packageLocation": "./.yarn/cache/inversify-npm-6.0.1-39ef6784da-b6c9b56ef7.zip/node_modules/inversify/",
           "packageDependencies": [
@@ -24167,6 +25900,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:6.0.1", {
           "packageLocation": "./.yarn/cache/inversify-npm-6.0.1-39ef6784da-b6c9b56ef7.zip/node_modules/inversify/",
           "packageDependencies": [
@@ -24433,6 +26168,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["has", "npm:1.0.3"]
           ],
           "linkType": "HARD",
+<<<<<<< HEAD
         }],
         ["npm:2.8.0", {
           "packageLocation": "./.yarn/cache/is-core-module-npm-2.8.0-acc8c42f1b-f8b5271489.zip/node_modules/is-core-module/",
@@ -24442,6 +26178,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["has", "npm:1.0.3"]
           ],
           "linkType": "HARD",
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         }]
       ]],
       ["is-data-descriptor", [
@@ -25243,16 +26981,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/jest-virtual-75819f16c3/0/cache/jest-npm-27.3.1-6ea4ebda94-ae4f0c83fb.zip/node_modules/jest/",
           "packageDependencies": [
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["@jest/core", "virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1"],
 =======
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.2.5"],
             ["@jest/core", "virtual:ae2dcb2f33a0683d9a2614127fcf5fc29c3b0141d93ded0cb100449ca191b4448c711f301f8dddfbf03bb5f25e0385d40af1f1151623ab5b406fd5caabb54d69#npm:27.3.1"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+            ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
+            ["@jest/core", "virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/node-notifier", null],
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["import-local", "npm:3.0.2"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["jest-cli", "virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1"],
 =======
@@ -25265,6 +27009,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["jest-cli", "virtual:ae2dcb2f33a0683d9a2614127fcf5fc29c3b0141d93ded0cb100449ca191b4448c711f301f8dddfbf03bb5f25e0385d40af1f1151623ab5b406fd5caabb54d69#npm:27.3.1"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+            ["jest-cli", "virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["node-notifier", null]
           ],
           "packagePeers": [
@@ -25377,6 +27124,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/jest-cli-virtual-861ff42e10/0/cache/jest-cli-npm-27.3.1-3bfc3a9cbc-e27187aa30.zip/node_modules/jest-cli/",
           "packageDependencies": [
@@ -25389,6 +27137,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-cli", "virtual:ae2dcb2f33a0683d9a2614127fcf5fc29c3b0141d93ded0cb100449ca191b4448c711f301f8dddfbf03bb5f25e0385d40af1f1151623ab5b406fd5caabb54d69#npm:27.3.1"],
             ["@jest/core", "virtual:ae2dcb2f33a0683d9a2614127fcf5fc29c3b0141d93ded0cb100449ca191b4448c711f301f8dddfbf03bb5f25e0385d40af1f1151623ab5b406fd5caabb54d69#npm:27.3.1"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+        ["virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1", {
+          "packageLocation": "./.yarn/__virtual__/jest-cli-virtual-861ff42e10/0/cache/jest-cli-npm-27.3.1-3bfc3a9cbc-e27187aa30.zip/node_modules/jest-cli/",
+          "packageDependencies": [
+            ["jest-cli", "virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1"],
+            ["@jest/core", "virtual:75819f16c3fa6aa5c94957d22e3d3ebb2bfc048e5955ad2ab9839398e1882e9e656e8c1e6236ffa92f37c629f46dd0ab513714f44c995abf0f43932c7aae7391#npm:27.3.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@jest/test-result", "npm:27.3.1"],
             ["@jest/types", "npm:27.2.5"],
             ["@types/node-notifier", null],
@@ -25398,6 +27153,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["graceful-fs", "npm:4.2.6"],
             ["import-local", "npm:3.0.2"],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["jest-config", "virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1"],
             ["jest-util", "npm:27.3.1"],
@@ -25415,6 +27171,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
             ["jest-config", "virtual:0e0afff685944f05e8be06f98aa63e7d7496a495e34e4cbb49f0108857b8c4134375ef4c87738ce07c66162c883590885350c47aba43bf81721a9e8e3c989981#npm:27.3.1"],
+=======
+            ["jest-config", "virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["jest-util", "npm:27.3.1"],
             ["jest-validate", "npm:27.3.1"],
 >>>>>>> 48768561 (chore: fix yarn lock)
@@ -25438,6 +27197,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/jest-config-virtual-c61008a0e4/0/cache/jest-config-npm-27.3.1-8c4eee5f7f-1a86b03456.zip/node_modules/jest-config/",
           "packageDependencies": [
@@ -25450,14 +27210,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
         ["virtual:0e0afff685944f05e8be06f98aa63e7d7496a495e34e4cbb49f0108857b8c4134375ef4c87738ce07c66162c883590885350c47aba43bf81721a9e8e3c989981#npm:27.3.1", {
           "packageLocation": "./.yarn/__virtual__/jest-config-virtual-1f787e81b6/0/cache/jest-config-npm-27.3.1-8c4eee5f7f-1a86b03456.zip/node_modules/jest-config/",
+=======
+        ["virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1", {
+          "packageLocation": "./.yarn/__virtual__/jest-config-virtual-c61008a0e4/0/cache/jest-config-npm-27.3.1-8c4eee5f7f-1a86b03456.zip/node_modules/jest-config/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["jest-config", "virtual:0e0afff685944f05e8be06f98aa63e7d7496a495e34e4cbb49f0108857b8c4134375ef4c87738ce07c66162c883590885350c47aba43bf81721a9e8e3c989981#npm:27.3.1"],
+            ["jest-config", "virtual:4de5e1380c5791d5b9f35238b72eca9063ec46a894fa9b65549d5e681bf6b578582f0c999e3da0b84787ccfaf7bf39a6c649dc0597aaa76ef624caa9b5d8b40a#npm:27.3.1"],
             ["@babel/core", "npm:7.15.8"],
             ["@jest/test-sequencer", "npm:27.3.1"],
             ["@jest/types", "npm:27.2.5"],
             ["@types/ts-node", null],
+<<<<<<< HEAD
             ["babel-jest", "virtual:1f787e81b676a9c4051528e2567fff5a6a15f5f7632121aab98c6258c20b13d995648145443c8fdc5e66c41d3717d4c6756f2050bab6c0f2507ad3083833129f#npm:27.3.1"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+            ["babel-jest", "virtual:c61008a0e486d11c5d12f93844b2cd75ec5736236f87621ed10e104c633bf4481b9925efd82711424ba548cbafab120612f2a7a8136f66b66d6ec9e4b66e2804#npm:27.3.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["chalk", "npm:4.1.2"],
             ["ci-info", "npm:3.2.0"],
             ["deepmerge", "npm:4.2.2"],
@@ -27564,8 +29332,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lighthouse-logger", "npm:1.3.0"],
 =======
             ["lighthouse-logger", "npm:1.2.0"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["debug", "virtual:520b8137c106fd11866473e4e5f9893c9784c7d2d628bc453197b884d88d0e1601a6a0af06b047c31a788467cca6a7f25f8fef5306b50ee3635ad4295b474ae2#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["marky", "npm:1.2.1"]
           ],
           "linkType": "HARD",
@@ -27591,6 +29363,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["lint-staged", [
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["npm:12.1.2", {
           "packageLocation": "./.yarn/cache/lint-staged-npm-12.1.2-9bba118e9e-ec84ce4f74.zip/node_modules/lint-staged/",
           "packageDependencies": [
@@ -27602,12 +29375,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
         ["npm:11.2.3", {
           "packageLocation": "./.yarn/cache/lint-staged-npm-11.2.3-241056ec2b-cf3a1612a8.zip/node_modules/lint-staged/",
+=======
+        ["npm:11.2.6", {
+          "packageLocation": "./.yarn/cache/lint-staged-npm-11.2.6-ef34454158-b9071621db.zip/node_modules/lint-staged/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["lint-staged", "npm:11.2.3"],
+            ["lint-staged", "npm:11.2.6"],
             ["cli-truncate", "npm:2.1.0"],
             ["colorette", "npm:1.4.0"],
             ["commander", "npm:8.2.0"],
             ["cosmiconfig", "npm:7.0.1"],
+<<<<<<< HEAD
             ["debug", "virtual:241056ec2b406cd11fca5bfa059173682edbdc62c7d4cd09c6772ef5ecfacfc5ce5be3b424a0b8f772fecc58765b5ee3a6ecb3ab004f5152e094a7ad7e68bef1#npm:4.3.2"],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27644,6 +29422,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["execa", "npm:5.1.1"],
             ["listr2", "virtual:241056ec2b406cd11fca5bfa059173682edbdc62c7d4cd09c6772ef5ecfacfc5ce5be3b424a0b8f772fecc58765b5ee3a6ecb3ab004f5152e094a7ad7e68bef1#npm:3.12.2"],
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["debug", "virtual:ef34454158be481d36a7b74cc0ad7b3c6b9cf4b2bfaee1dba13379e0fcb4bd8b3fb9d67dcaffa85c811433d6453f6c8e02c88918aa32b31d89588dd7fe0654c6#npm:4.3.2"],
+            ["enquirer", "npm:2.3.6"],
+            ["execa", "npm:5.1.1"],
+            ["listr2", "virtual:ef34454158be481d36a7b74cc0ad7b3c6b9cf4b2bfaee1dba13379e0fcb4bd8b3fb9d67dcaffa85c811433d6453f6c8e02c88918aa32b31d89588dd7fe0654c6#npm:3.12.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["micromatch", "npm:4.0.4"],
             ["normalize-path", "npm:3.0.0"],
             ["object-inspect", "npm:1.11.0"],
@@ -27681,6 +29465,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:9bba118e9e86d5b7a263878d5d7ca7d28ac5d563b0e84efa11a4c80b7c40995ff14ae1b8ef34dfb76a0ae0140df0e7183e88ca6788d8e881f901efe04991dedd#npm:3.13.3", {
           "packageLocation": "./.yarn/__virtual__/listr2-virtual-5da6ca8e1c/0/cache/listr2-npm-3.13.3-521a6ceab5-3ece0f132c.zip/node_modules/listr2/",
           "packageDependencies": [
@@ -27698,6 +29483,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["listr2", "virtual:17d565f3dd6b3843e4c2373b74fe6f47cbca11670ff28b5ecb3509d5b734c5bf48c3bad33706cf7a829772eafcbde415f3c76a572946e97d926e8ace76469020#npm:3.11.0"],
 >>>>>>> b52f2a63... refactor: reset sendTip added initiateTip and split tips into two calls
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
+=======
+        ["virtual:ef34454158be481d36a7b74cc0ad7b3c6b9cf4b2bfaee1dba13379e0fcb4bd8b3fb9d67dcaffa85c811433d6453f6c8e02c88918aa32b31d89588dd7fe0654c6#npm:3.12.2", {
+          "packageLocation": "./.yarn/__virtual__/listr2-virtual-783e40d6de/0/cache/listr2-npm-3.12.2-934edf8469-92d72b9b6a.zip/node_modules/listr2/",
+          "packageDependencies": [
+            ["listr2", "virtual:ef34454158be481d36a7b74cc0ad7b3c6b9cf4b2bfaee1dba13379e0fcb4bd8b3fb9d67dcaffa85c811433d6453f6c8e02c88918aa32b31d89588dd7fe0654c6#npm:3.12.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/enquirer", null],
             ["cli-truncate", "npm:2.1.0"],
 <<<<<<< HEAD
@@ -30976,19 +32767,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:6.13.0", {
-          "packageLocation": "./.yarn/cache/pino-npm-6.13.0-03d793e748-7145de4287.zip/node_modules/pino/",
-          "packageDependencies": [
-            ["pino", "npm:6.13.0"],
-            ["fast-redact", "npm:3.0.0"],
-            ["fast-safe-stringify", "npm:2.0.8"],
-            ["flatstr", "npm:1.0.12"],
-            ["pino-std-serializers", "npm:3.1.1"],
-            ["quick-format-unescaped", "npm:4.0.3"],
-            ["sonic-boom", "npm:1.1.0"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:6.13.3", {
           "packageLocation": "./.yarn/cache/pino-npm-6.13.3-50e2aceb53-a580decd47.zip/node_modules/pino/",
           "packageDependencies": [
@@ -30996,6 +32774,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-redact", "npm:3.0.0"],
             ["fast-safe-stringify", "npm:2.0.8"],
             ["fastify-warning", "npm:0.2.0"],
+            ["flatstr", "npm:1.0.12"],
+            ["pino-std-serializers", "npm:3.1.1"],
+            ["quick-format-unescaped", "npm:4.0.3"],
+            ["sonic-boom", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:7.0.3", {
+          "packageLocation": "./.yarn/cache/pino-npm-7.0.3-71b57a1dad-d429e0ce94.zip/node_modules/pino/",
+          "packageDependencies": [
+            ["pino", "npm:7.0.3"],
+            ["fast-redact", "npm:3.0.0"],
+            ["fastify-warning", "npm:0.2.0"],
+<<<<<<< HEAD
             ["flatstr", "npm:1.0.12"],
 <<<<<<< HEAD
             ["pino-std-serializers", "npm:3.2.0"],
@@ -31019,6 +32811,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["quick-format-unescaped", "npm:4.0.3"],
             ["sonic-boom", "npm:1.1.0"]
 >>>>>>> 258bc78a (fix: build issues)
+=======
+            ["get-caller-file", "npm:2.0.5"],
+            ["json-stringify-safe", "npm:5.0.1"],
+            ["on-exit-leak-free", "npm:0.2.0"],
+            ["pino-abstract-transport", "npm:0.4.0"],
+            ["pino-std-serializers", "npm:4.0.0"],
+            ["quick-format-unescaped", "npm:4.0.3"],
+            ["sonic-boom", "npm:2.3.0"],
+            ["thread-stream", "npm:0.11.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["pino-abstract-transport", [
+        ["npm:0.4.0", {
+          "packageLocation": "./.yarn/cache/pino-abstract-transport-npm-0.4.0-0d0e316a28-9df1bc78e1.zip/node_modules/pino-abstract-transport/",
+          "packageDependencies": [
+            ["pino-abstract-transport", "npm:0.4.0"],
+            ["duplexify", "npm:4.1.2"],
+            ["split2", "npm:3.2.2"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "linkType": "HARD",
 =======
@@ -31051,6 +32864,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["pino-std-serializers", "npm:3.1.1"]
 >>>>>>> 258bc78a (fix: build issues)
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/pino-std-serializers-npm-4.0.0-391192ed8b-89d487729b.zip/node_modules/pino-std-serializers/",
+          "packageDependencies": [
+            ["pino-std-serializers", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -31091,6 +32911,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+<<<<<<< HEAD
+=======
+      ["please-upgrade-node", [
+        ["npm:3.2.0", {
+          "packageLocation": "./.yarn/cache/please-upgrade-node-npm-3.2.0-3f653350ed-d87c41581a.zip/node_modules/please-upgrade-node/",
+          "packageDependencies": [
+            ["please-upgrade-node", "npm:3.2.0"],
+            ["semver-compare", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+>>>>>>> b82a4279 (chore: squash merge main)
       ["pluralize", [
         ["npm:1.2.1", {
           "packageLocation": "./.yarn/cache/pluralize-npm-1.2.1-61ce8a1426-81d77b2f4c.zip/node_modules/pluralize/",
@@ -31189,6 +33022,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
         ["npm:8.3.6", {
           "packageLocation": "./.yarn/cache/postcss-npm-8.3.6-e6c5350483-ff55b91bea.zip/node_modules/postcss/",
@@ -31200,6 +33034,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:8.3.9", {
           "packageLocation": "./.yarn/cache/postcss-npm-8.3.9-f40ddb7d0e-b64d0e59bc.zip/node_modules/postcss/",
           "packageDependencies": [
@@ -31248,10 +33084,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:3.0.0", {
           "packageLocation": "./.yarn/__virtual__/postcss-modules-extract-imports-virtual-2220257c99/0/cache/postcss-modules-extract-imports-npm-3.0.0-619311282d-4b65f2f138.zip/node_modules/postcss-modules-extract-imports/",
           "packageDependencies": [
             ["postcss-modules-extract-imports", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:3.0.0"],
+=======
+        ["virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:3.0.0", {
+          "packageLocation": "./.yarn/__virtual__/postcss-modules-extract-imports-virtual-0ca3b49055/0/cache/postcss-modules-extract-imports-npm-3.0.0-619311282d-4b65f2f138.zip/node_modules/postcss-modules-extract-imports/",
+          "packageDependencies": [
+            ["postcss-modules-extract-imports", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:3.0.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/postcss", null],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31295,6 +33138,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:4.0.0", {
           "packageLocation": "./.yarn/__virtual__/postcss-modules-local-by-default-virtual-69e47cceb4/0/cache/postcss-modules-local-by-default-npm-4.0.0-794014f0a5-6cf570badc.zip/node_modules/postcss-modules-local-by-default/",
           "packageDependencies": [
@@ -31334,6 +33178,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-selector-parser", "npm:6.0.6"],
 =======
 =======
+=======
+        ["virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:4.0.0", {
+          "packageLocation": "./.yarn/__virtual__/postcss-modules-local-by-default-virtual-2f26fa7db1/0/cache/postcss-modules-local-by-default-npm-4.0.0-794014f0a5-6cf570badc.zip/node_modules/postcss-modules-local-by-default/",
+          "packageDependencies": [
+            ["postcss-modules-local-by-default", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:4.0.0"],
+            ["@types/postcss", null],
+            ["icss-utils", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:5.1.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["postcss", "npm:8.3.11"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["postcss-selector-parser", "npm:6.0.4"],
@@ -31355,10 +33207,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:3.0.0", {
           "packageLocation": "./.yarn/__virtual__/postcss-modules-scope-virtual-fc9c51313b/0/cache/postcss-modules-scope-npm-3.0.0-0678040a26-330b9398db.zip/node_modules/postcss-modules-scope/",
           "packageDependencies": [
             ["postcss-modules-scope", "virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:3.0.0"],
+=======
+        ["virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:3.0.0", {
+          "packageLocation": "./.yarn/__virtual__/postcss-modules-scope-virtual-c8d82b444c/0/cache/postcss-modules-scope-npm-3.0.0-0678040a26-330b9398db.zip/node_modules/postcss-modules-scope/",
+          "packageDependencies": [
+            ["postcss-modules-scope", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:3.0.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/postcss", null],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31404,6 +33263,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:0b1820e104c87073482a6cd9e58b70a5ad3f42225ce1741a00d3b7f04aa8a58c610503c862a0bb987c821347072381d2196a6f46157230e967ece0efa1838b64#npm:4.0.0", {
           "packageLocation": "./.yarn/__virtual__/postcss-modules-values-virtual-dbcdb450b6/0/cache/postcss-modules-values-npm-4.0.0-63d7ec543a-f7f2cdf14a.zip/node_modules/postcss-modules-values/",
           "packageDependencies": [
@@ -31441,6 +33301,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.3.9"]
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+        ["virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:4.0.0", {
+          "packageLocation": "./.yarn/__virtual__/postcss-modules-values-virtual-ef969cc03e/0/cache/postcss-modules-values-npm-4.0.0-63d7ec543a-f7f2cdf14a.zip/node_modules/postcss-modules-values/",
+          "packageDependencies": [
+            ["postcss-modules-values", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:4.0.0"],
+            ["@types/postcss", null],
+            ["icss-utils", "virtual:8e6df7779577864a32a274d567d031f52f0b08b561737bbdfc616889f1f4b41b292a0162f6439a89ee8a6cbeeab150ddb6ca46feb70b05faf0764f3d98b9a7f4#npm:5.1.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["postcss", "npm:8.3.11"]
 >>>>>>> 48768561 (chore: fix yarn lock)
           ],
@@ -32197,7 +34065,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-dom-virtual-5de717be09/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/",
           "packageDependencies": [
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
+=======
+            ["@types/react", "npm:17.0.33"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["loose-envify", "npm:1.4.0"],
             ["object-assign", "npm:4.1.1"],
             ["react", "npm:17.0.2"],
@@ -32231,7 +34103,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-helmet-virtual-fc96391b28/0/cache/react-helmet-npm-6.1.0-20fd5447ff-a4998479da.zip/node_modules/react-helmet/",
           "packageDependencies": [
             ["react-helmet", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:6.1.0"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
+=======
+            ["@types/react", "npm:17.0.33"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["object-assign", "npm:4.1.1"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
@@ -32258,8 +34134,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["react-hot-loader", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.13.0"],
             ["@hot-loader/react-dom", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:17.0.1"],
+<<<<<<< HEAD
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
+=======
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["fast-levenshtein", "npm:2.0.6"],
             ["global", "npm:4.4.0"],
             ["hoist-non-react-statics", "npm:3.3.2"],
@@ -32340,9 +34221,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-side-effect", "virtual:fc96391b28e52f1c7f623173c3b994f0328b9b996350e7cb57f77e0e03ab3a865926590462cfec39d028096c95023ee2045fedcd435847ff59f89cc26cf5cb09#npm:2.1.1"],
 =======
             ["react-side-effect", "virtual:fc96391b28e52f1c7f623173c3b994f0328b9b996350e7cb57f77e0e03ab3a865926590462cfec39d028096c95023ee2045fedcd435847ff59f89cc26cf5cb09#npm:2.1.0"],
+<<<<<<< HEAD
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/react", "npm:17.0.19"],
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["@types/react", "npm:17.0.33"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["react", "npm:17.0.2"]
           ],
           "packagePeers": [
@@ -32393,8 +34278,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["react-transition-group", "virtual:2cb336cfbd352a44a3c56372ea6c34cad14cbc557dbbe4b9f3c0fe40d80090ea33836f1e9b0daa4ff682aa7ed8435c2bc42e1d15fac51a62866e021d32682c2a#npm:4.4.1"],
             ["@babel/runtime", "npm:7.13.9"],
-            ["@types/react", "npm:17.0.19"],
-            ["@types/react-dom", "npm:17.0.9"],
+            ["@types/react", "npm:17.0.33"],
+            ["@types/react-dom", "npm:17.0.10"],
             ["dom-helpers", "npm:5.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["loose-envify", "npm:1.4.0"],
@@ -33600,10 +35485,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["send", "npm:0.16.1"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
 =======
             ["debug", "virtual:520b8137c106fd11866473e4e5f9893c9784c7d2d628bc453197b884d88d0e1601a6a0af06b047c31a788467cca6a7f25f8fef5306b50ee3635ad4295b474ae2#npm:2.6.9"],
 >>>>>>> 258bc78a (fix: build issues)
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["depd", "npm:1.1.2"],
             ["destroy", "npm:1.0.4"],
             ["encodeurl", "npm:1.0.2"],
@@ -33628,7 +35517,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/send-npm-0.17.1-aad5512679-d214c2fa42.zip/node_modules/send/",
           "packageDependencies": [
             ["send", "npm:0.17.1"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["depd", "npm:1.1.2"],
             ["destroy", "npm:1.0.4"],
             ["encodeurl", "npm:1.0.2"],
@@ -33670,7 +35563,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["serve-index", "npm:1.9.1"],
             ["accepts", "npm:1.3.7"],
             ["batch", "npm:0.6.1"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["escape-html", "npm:1.0.3"],
             ["http-errors", "npm:1.6.3"],
             ["mime-types", "npm:2.1.27"],
@@ -33922,6 +35819,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["npm:3.9.0", {
           "packageLocation": "./.yarn/cache/sign-addon-npm-3.9.0-aa2587ea7b-18a8a6c3fe.zip/node_modules/sign-addon/",
           "packageDependencies": [
@@ -33960,6 +35858,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:3.9.0", {
           "packageLocation": "./.yarn/cache/sign-addon-npm-3.9.0-aa2587ea7b-18a8a6c3fe.zip/node_modules/sign-addon/",
           "packageDependencies": [
@@ -34098,7 +35998,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["snapdragon", "npm:0.8.2"],
             ["base", "npm:0.11.2"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"],
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["define-property", "npm:0.2.5"],
             ["extend-shallow", "npm:2.0.1"],
             ["map-cache", "npm:0.2.2"],
@@ -34260,6 +36164,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
           ],
           "linkType": "HARD",
+        }],
+        ["npm:2.3.0", {
+          "packageLocation": "./.yarn/cache/sonic-boom-npm-2.3.0-6a1292957e-208329d153.zip/node_modules/sonic-boom/",
+          "packageDependencies": [
+            ["sonic-boom", "npm:2.3.0"],
+            ["atomic-sleep", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["sort-keys", [
@@ -34379,6 +36291,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }],
         ["npm:0.5.20", {
           "packageLocation": "./.yarn/cache/source-map-support-npm-0.5.20-edfc5ce275-43946aff45.zip/node_modules/source-map-support/",
+<<<<<<< HEAD
           "packageDependencies": [
 <<<<<<< HEAD
             ["source-map-support", "npm:0.5.20"],
@@ -34397,6 +36310,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }],
         ["npm:0.5.21", {
           "packageLocation": "./.yarn/cache/source-map-support-npm-0.5.21-09ca99e250-43e98d700d.zip/node_modules/source-map-support/",
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
 <<<<<<< HEAD
             ["source-map-support", "npm:0.5.21"],
@@ -34693,7 +36608,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/stream-parser-npm-0.3.1-0b70187c85-4d86ff8cff.zip/node_modules/stream-parser/",
           "packageDependencies": [
             ["stream-parser", "npm:0.3.1"],
+<<<<<<< HEAD
             ["debug", "virtual:bf03f94c13d20a66273e4014aa04f03da100b473c8e4e087624285e8b2d45c993d79e893f362fec40cba191441202f2e9722c1301dc56f2819313fae9fd4bc81#npm:2.6.9"]
+=======
+            ["debug", "virtual:2effb742c5b23ecccd99f37e850d7d5c940ed3ee405232f549dd2ef7290e0082d559d705d3104c4014575bcb5f5dd8d20635f562b2de0558823d0ad9546dea3f#npm:2.6.9"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "linkType": "HARD",
         }]
@@ -35056,7 +36975,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["style-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:3.3.1"],
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"]
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -35344,6 +37267,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["terser", [
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["npm:5.9.0", {
           "packageLocation": "./.yarn/cache/terser-npm-5.9.0-16d6a713ce-11c1246b19.zip/node_modules/terser/",
           "packageDependencies": [
@@ -35359,6 +37283,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:5.9.0", {
           "packageLocation": "./.yarn/cache/terser-npm-5.9.0-16d6a713ce-11c1246b19.zip/node_modules/terser/",
           "packageDependencies": [
@@ -35395,6 +37321,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ["virtual:05efa92c183b4998c3ea38a6acf6ea4dc3886ab57debcea21e873bcec54594a25106b77251e8d0c73b50e411cb5771a5e9649dbd81c4cbfe31bee91f1090bb29#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-442cdfcf44/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
           "packageDependencies": [
@@ -35423,6 +37350,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["terser-webpack-plugin", "virtual:0e1a6d17e63b8a441b73c15366790cd1dabe47bdf31f784b21b87701a602f35fb9cb24ac93db2332525ac2c9bd388ef6a63525fe1998a12d0b4d84aa7cba55da#npm:5.1.4"],
 >>>>>>> 68babb53... chore: squash merge conflicts
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+        ["virtual:0da0d3dc648acf1676b87eb6041e9d784713999896d36b2c44fcfe5c9925c272e4f35a5c30bd4bfd9559eca7d0d96032b53afb1d5bac144453d82c8471950d7d#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-92d4880fa4/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:0da0d3dc648acf1676b87eb6041e9d784713999896d36b2c44fcfe5c9925c272e4f35a5c30bd4bfd9559eca7d0d96032b53afb1d5bac144453d82c8471950d7d#npm:5.1.3"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
 =======
@@ -35482,9 +37415,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -35492,6 +37429,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35524,6 +37462,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["terser-webpack-plugin", "virtual:1277caf843039e3aad5f174ce85355ba32e543a9bf8107f9f794f0839a5b8dc87544d8b596d3d98fcd540036a936c183b9c6c5581e9fb140f400b54cdf3f8348#npm:5.1.4"],
 >>>>>>> 68babb53... chore: squash merge conflicts
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+        ["virtual:13857d8ab3baa29cd8827fef4c24f8f1edf2b7ee84e0a561656d307a6ac1c99311062dd3c360fdc7c4b0deccd386d57490e282facdcd9471ff5342f9faafccf8#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-02aa484855/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:13857d8ab3baa29cd8827fef4c24f8f1edf2b7ee84e0a561656d307a6ac1c99311062dd3c360fdc7c4b0deccd386d57490e282facdcd9471ff5342f9faafccf8#npm:5.1.3"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
 =======
@@ -35583,9 +37527,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -35593,6 +37541,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35634,8 +37583,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:339ca442a50c9ee760ce8a4b43338aa19e119072de1625bb49604055e9d47eec30f0503085c0a99dd20580e905572470a5dfc46222e58ae95971a75eafa12c71#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-9b681fda9f/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:1a01170f43614a22879b9cc4001d58cdd4bac334ab5f230f81ac74d9ca545b95da8ed0f24089539ed0d6f2445df9452aa175ee9c50ba7a996fd2bf749768d3fa#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-9f573901fa/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:339ca442a50c9ee760ce8a4b43338aa19e119072de1625bb49604055e9d47eec30f0503085c0a99dd20580e905572470a5dfc46222e58ae95971a75eafa12c71#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:1a01170f43614a22879b9cc4001d58cdd4bac334ab5f230f81ac74d9ca545b95da8ed0f24089539ed0d6f2445df9452aa175ee9c50ba7a996fd2bf749768d3fa#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -35684,9 +37637,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -35694,6 +37651,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35726,6 +37684,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["terser-webpack-plugin", "virtual:387bd2c0308f3d0189109d701ecda30166aed061501f5d30dbad2813435224ac2bfe2ee5b6420059509cfeaa7ec80988fc75d73d1fc4c89208dbde7fa01db797#npm:5.1.4"],
 >>>>>>> 68babb53... chore: squash merge conflicts
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+        ["virtual:2a30381c086f7f5b303e875cd5e8c0565bacb7e68f914f81d654002f33c372df2bb5606238ba4d967193f5da620622c178cb619328360fe6838d974ea6afcaaf#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-85551744d0/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:2a30381c086f7f5b303e875cd5e8c0565bacb7e68f914f81d654002f33c372df2bb5606238ba4d967193f5da620622c178cb619328360fe6838d974ea6afcaaf#npm:5.1.3"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
 =======
@@ -35785,9 +37749,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -35795,6 +37763,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35827,6 +37796,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["terser-webpack-plugin", "virtual:5a590d3293ccb920dfcbb0e022bbe6c6f0837a52101ef75637f253ce80ad9a116afb0a4c96f6a3b7a95f15759e981c3f3f09aac8d6200d0cb09f597009f5f1d7#npm:5.1.4"],
 >>>>>>> 68babb53... chore: squash merge conflicts
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+        ["virtual:2e2f2a2440e682ae825bdf022b6257d38d510d6ce4e5b7f74edd0222864f52eadce1f210614fadbdb393255898148762e313d738980e3e8dc56cbebee43c7077#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-c7d1ef0580/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:2e2f2a2440e682ae825bdf022b6257d38d510d6ce4e5b7f74edd0222864f52eadce1f210614fadbdb393255898148762e313d738980e3e8dc56cbebee43c7077#npm:5.1.3"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
 =======
@@ -35886,9 +37861,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -35896,6 +37875,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35937,8 +37917,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:60410cdf16561401a95ab0bfb9adb86e4a19db8c1cb2e5f96b49692b5c6a5d1f99c09c385d4e4e9e1cb74b942f53419ef8359db26df23f1d1e2c4b9e7246ae4c#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-4f446839ef/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:38c85239a2e8fc7f91ab9d4c90431a78dc56376cf01e351473548351d1b12534216404044c8d9eceaed19fbc114f0c050e05d527f16c57dafa7785bb324935bb#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-9f3b505fc2/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:60410cdf16561401a95ab0bfb9adb86e4a19db8c1cb2e5f96b49692b5c6a5d1f99c09c385d4e4e9e1cb74b942f53419ef8359db26df23f1d1e2c4b9e7246ae4c#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:38c85239a2e8fc7f91ab9d4c90431a78dc56376cf01e351473548351d1b12534216404044c8d9eceaed19fbc114f0c050e05d527f16c57dafa7785bb324935bb#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -35987,9 +37971,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -35997,6 +37985,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36029,6 +38018,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["terser-webpack-plugin", "virtual:607a753ae576686d1bd9c39288d73378ef27953258981c67b019dbc5f82d72439f989346dd388640226a714fe60f9368c58984e735c639b772e6a3ec89ee4e4c#npm:5.1.4"],
 >>>>>>> 68babb53... chore: squash merge conflicts
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+        ["virtual:39c88fc29298995f31aae2012d27651954d119513c5faee9e0a39c3283840a269cd27d5589c33a2dd79f93665b5f5a668c00c6c62052984141fb5aa9e3da8383#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-4b25cb4b27/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:39c88fc29298995f31aae2012d27651954d119513c5faee9e0a39c3283840a269cd27d5589c33a2dd79f93665b5f5a668c00c6c62052984141fb5aa9e3da8383#npm:5.1.3"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
 =======
@@ -36088,9 +38083,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -36098,6 +38097,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36139,8 +38139,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-11c2c2aff7/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:438c712be26b62cca3b7671e018ffad2c8b19840fca350bca108231b63529930b1f84eab9484a5a3939cb1ac548b924bd9fde6b5b11cf93e787dbefb9e874f0d#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-003135ca5d/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:438c712be26b62cca3b7671e018ffad2c8b19840fca350bca108231b63529930b1f84eab9484a5a3939cb1ac548b924bd9fde6b5b11cf93e787dbefb9e874f0d#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -36189,9 +38193,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -36199,6 +38207,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36240,8 +38249,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:72f5c9a2e8df6b80518f4525a0124f47f823cd960bdc9be2ec86a76be7a2925f1e71f833bd63375bc53639b8a36dee0273352d6f97202836c430e241c1bc24ee#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-25c1ca9a16/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:46cf3da8ad6f67c29b13e7fd13f1ed272b30a29c0557e9af03a35e5674157302930390c8288330a546dfdbcb43fa0d4a4b8cfa63f4351087130910acef5e2193#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-1928bc29ba/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:72f5c9a2e8df6b80518f4525a0124f47f823cd960bdc9be2ec86a76be7a2925f1e71f833bd63375bc53639b8a36dee0273352d6f97202836c430e241c1bc24ee#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:46cf3da8ad6f67c29b13e7fd13f1ed272b30a29c0557e9af03a35e5674157302930390c8288330a546dfdbcb43fa0d4a4b8cfa63f4351087130910acef5e2193#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -36290,9 +38303,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -36300,6 +38317,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36332,6 +38350,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["terser-webpack-plugin", "virtual:7d9687daf0584c46ede0a24f58824ae22c60696acca45dee0c9e6837ebe005fac0408e4b614f30204944f3aa0f0f23c34d863d0b303126d62cdb7106c90ea950#npm:5.1.4"],
 >>>>>>> 68babb53... chore: squash merge conflicts
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+        ["virtual:6959c1001fd962ad256de699b1c20affd8d25fffcb63cf63d08da6e2bf32dc6d89cefe9c556e889962b1c5754e8afd0398db1c5977ac8aea54e18e4b0eb01e63#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-e358d8cb49/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:6959c1001fd962ad256de699b1c20affd8d25fffcb63cf63d08da6e2bf32dc6d89cefe9c556e889962b1c5754e8afd0398db1c5977ac8aea54e18e4b0eb01e63#npm:5.1.3"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
 =======
@@ -36391,9 +38415,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -36401,6 +38429,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36442,8 +38471,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:8de7e01ed053997d45f785a1d9fcb589a83376bf7562ee9ecf3d6cfe66ff8c9903797ab91ee3b691ee144c78b86bf2f7b7ae222b78c413ea11f4939883fcc08f#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-ae26da10f6/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:6bf202e2261f23955a7a88e36551d8b537b3a19eb5658963a46b531fd6ab61efd364a7d5d040bea81382411e45180926085ad21d3efbb687797bba24fae785a9#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-59b14d380e/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:8de7e01ed053997d45f785a1d9fcb589a83376bf7562ee9ecf3d6cfe66ff8c9903797ab91ee3b691ee144c78b86bf2f7b7ae222b78c413ea11f4939883fcc08f#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:6bf202e2261f23955a7a88e36551d8b537b3a19eb5658963a46b531fd6ab61efd364a7d5d040bea81382411e45180926085ad21d3efbb687797bba24fae785a9#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -36492,9 +38525,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -36502,6 +38539,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36543,8 +38581,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:a28e2a41db72f126351e400d85c45ed575c50e998bba8a604529fc4afcc60767f6240f5c8937a8175e4dd355ebeb018bb7243c1e23883cfe06226d55c21789d3#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-22bc58111c/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:70db78d176190a56c7795c9ed592afbfb4d986f40010d3b8132597f72ae503e14fa1115643368927a3492789dcb839ad6d7e8f9f80b9f2a4f8efbfd781457484#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-ccfd4df22c/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:a28e2a41db72f126351e400d85c45ed575c50e998bba8a604529fc4afcc60767f6240f5c8937a8175e4dd355ebeb018bb7243c1e23883cfe06226d55c21789d3#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:70db78d176190a56c7795c9ed592afbfb4d986f40010d3b8132597f72ae503e14fa1115643368927a3492789dcb839ad6d7e8f9f80b9f2a4f8efbfd781457484#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -36593,9 +38635,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -36603,6 +38649,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36635,6 +38682,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["terser-webpack-plugin", "virtual:ae030795405aa587aa1fd8656ab11b26c4cfa8a40b14cb701ff752fb6aa536216fce48569f9e6f2684e7d8bb08ba7f51492e62a95a3be8f8fc375304407e3ca2#npm:5.1.4"],
 >>>>>>> 68babb53... chore: squash merge conflicts
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+        ["virtual:72a11189bb29aae79a93795393a88dd0d27dba88774f9efcb9c660a301c9f43cbb80c2b49a1e6d73ff326ba7ff1dfa15b8be36077a90e144780972fddadf2308#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-d948d5b550/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:72a11189bb29aae79a93795393a88dd0d27dba88774f9efcb9c660a301c9f43cbb80c2b49a1e6d73ff326ba7ff1dfa15b8be36077a90e144780972fddadf2308#npm:5.1.3"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
 =======
@@ -36694,9 +38747,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -36704,6 +38761,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36745,8 +38803,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:af3270ccb598afc4cb716332e9d984988f57094b056b08da49d284b43ede384f8c15171b6e02972dd66c1576194c810034e500c1dc43467e3187f1cfb84ff6ed#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-a9421ee6b7/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-0a87b801b2/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:af3270ccb598afc4cb716332e9d984988f57094b056b08da49d284b43ede384f8c15171b6e02972dd66c1576194c810034e500c1dc43467e3187f1cfb84ff6ed#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -36795,9 +38857,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -36805,6 +38871,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36846,8 +38913,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:c308f4faf0836fc683ea0198247ca94730124e1a07d8cba6300d7f93e7460ae333b326a8e9b201686bba6509c15fb3aeb5ee67108f834bbe4b5ef2235707620c#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-456c29c4db/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:79920e38f2f8ad28fd912523a61330ffe4c680cb37eb98a1cd4cbdc396e31d5517c8543d0f003b89e3c7d747d72ee11deac62d9da12c4786b95100dccd4a3ee6#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-93eaca6ea6/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:c308f4faf0836fc683ea0198247ca94730124e1a07d8cba6300d7f93e7460ae333b326a8e9b201686bba6509c15fb3aeb5ee67108f834bbe4b5ef2235707620c#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:79920e38f2f8ad28fd912523a61330ffe4c680cb37eb98a1cd4cbdc396e31d5517c8543d0f003b89e3c7d747d72ee11deac62d9da12c4786b95100dccd4a3ee6#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -36896,9 +38967,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -36906,6 +38981,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36938,6 +39014,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["terser-webpack-plugin", "virtual:c6b35d564f80807d5e7c87c45696ec622076557faa8cadbbc63c556d5f1f7f5aaa20851f0daaad4732eb512c5ada6206d9d8ea13709c6a0cce099e9f05122a56#npm:5.1.4"],
 >>>>>>> 68babb53... chore: squash merge conflicts
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+        ["virtual:849bfb0fee659ef92c60941729a458ad60970ec9abbcad3352d44c442211b5db6af588a3378af1acd6871ee81034c7fcb4c816939ae4b01efa7fe45addc2460c#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-8c6364731c/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+          "packageDependencies": [
+            ["terser-webpack-plugin", "virtual:849bfb0fee659ef92c60941729a458ad60970ec9abbcad3352d44c442211b5db6af588a3378af1acd6871ee81034c7fcb4c816939ae4b01efa7fe45addc2460c#npm:5.1.3"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/webpack", null],
             ["jest-worker", "npm:27.3.1"],
 =======
@@ -36997,9 +39079,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -37007,6 +39093,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37048,8 +39135,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:ca188ca178d1bf269230e1ed405745599387f94278af0ab88d8f9e68c23a989100ed1cfd45bfa90a394472fc8b5bf04e884ddd53e63618dc80d73e5904d9e140#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-f4e5d7760a/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:9c15c600e26e2c6a9183eb27a6342f5e36dda78f337ae1e199aabe5d14a1442a548b65e90be00ea42cc59adc9035a6be17d6291350187af98af61c2bf1689c6b#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-770154459d/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:ca188ca178d1bf269230e1ed405745599387f94278af0ab88d8f9e68c23a989100ed1cfd45bfa90a394472fc8b5bf04e884ddd53e63618dc80d73e5904d9e140#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:9c15c600e26e2c6a9183eb27a6342f5e36dda78f337ae1e199aabe5d14a1442a548b65e90be00ea42cc59adc9035a6be17d6291350187af98af61c2bf1689c6b#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -37098,9 +39189,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -37108,6 +39203,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37149,8 +39245,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:e14b5b943be738ad5a58a0daa167a24368ca669a3f5843a4f6057d42a158f85f55c150ffddd4b65e5887d180bd3ca2c590f675be1af0e10bc0b7b4841a88b410#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-9e12017dc1/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:a21ecd8c5ae7ff01b6dde7b48041dbdf71ec63887dbef56f60378390e81a42b907e79172ade8b08f72a621fe5e92e9f9f46725862fa757070479bae2ef1c2b72#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-b6a2414787/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:e14b5b943be738ad5a58a0daa167a24368ca669a3f5843a4f6057d42a158f85f55c150ffddd4b65e5887d180bd3ca2c590f675be1af0e10bc0b7b4841a88b410#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:a21ecd8c5ae7ff01b6dde7b48041dbdf71ec63887dbef56f60378390e81a42b907e79172ade8b08f72a621fe5e92e9f9f46725862fa757070479bae2ef1c2b72#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -37199,9 +39299,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -37209,6 +39313,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37250,8 +39355,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:e98d3e2ce2f7463628c1a9c44e61d1eb04a427b14b06b5813cb2c49a7192bdaa905ea17376f18099ff810a121e623c960497f277d3d465d4163e3f295d884723#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-12983bd3b8/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:c4cf327a8e5e0d6330ac25bbc55e3a450cc2f7db5d0cc4b00383381e1bbe0f97d880096f507a89fc1e466a222e3263e2ad763b9262126c156d9b69f288c41224#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-66669eb805/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:e98d3e2ce2f7463628c1a9c44e61d1eb04a427b14b06b5813cb2c49a7192bdaa905ea17376f18099ff810a121e623c960497f277d3d465d4163e3f295d884723#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:c4cf327a8e5e0d6330ac25bbc55e3a450cc2f7db5d0cc4b00383381e1bbe0f97d880096f507a89fc1e466a222e3263e2ad763b9262126c156d9b69f288c41224#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -37300,9 +39409,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -37310,6 +39423,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37351,8 +39465,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f17841ed0d3800daafa729c43a1be789ae39fcca7c1194abf636dee068a3647af1368523d18472a5e08c7241ed6451f556a20bcb0742df124213b13d4a4b1729#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-8bf3745bb3/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:cab0e1c84a967ebfbfdffb46e00c56175253fe726923a8a24bb19b4ac76ee1f91eb14addd179da4e8b2283dfb2f8d5515dc2610170fa3685b97cd62135227a66#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-8d84faca43/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:f17841ed0d3800daafa729c43a1be789ae39fcca7c1194abf636dee068a3647af1368523d18472a5e08c7241ed6451f556a20bcb0742df124213b13d4a4b1729#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:cab0e1c84a967ebfbfdffb46e00c56175253fe726923a8a24bb19b4ac76ee1f91eb14addd179da4e8b2283dfb2f8d5515dc2610170fa3685b97cd62135227a66#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -37401,9 +39519,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -37411,6 +39533,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37452,8 +39575,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:f90b89bf03da114fbed14f9616837b1a845fcdf09b2582a8c14af99c536587c293bae69b0aa0af90ab07d5cc8adb8596c6d2162e313f42ab7e6209f19632857f#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-06e9193471/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:efe5c9c514350f95736c69080274b6c3c5af2e3cd2ca87d29c31e1ef2918252970d261dd2009ca1e4c06cbb2725dff945935c0e4edc95958d333ac33b61b07d0#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-7bf5239bbe/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:f90b89bf03da114fbed14f9616837b1a845fcdf09b2582a8c14af99c536587c293bae69b0aa0af90ab07d5cc8adb8596c6d2162e313f42ab7e6209f19632857f#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:efe5c9c514350f95736c69080274b6c3c5af2e3cd2ca87d29c31e1ef2918252970d261dd2009ca1e4c06cbb2725dff945935c0e4edc95958d333ac33b61b07d0#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -37502,9 +39629,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -37512,6 +39643,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37553,8 +39685,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:fc1c68517cebd9a51c9fb03596e32ffaf0e0eb55651631d10f3b75ce56e73440d88a009743e8cb5812d7a4534f158c424a58c5a968d0b414aba6e368c87d59ac#npm:5.1.3", {
           "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-43c12a508b/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
 >>>>>>> 258bc78a (fix: build issues)
+=======
+        ["virtual:fac10f0e2c4ff4cf53ae7c15c85f8e5db0924c11ff65baeb0718d75b1dd77a841f01ffd7afe2327a177778f9a8e85a440115e7de1f4319ad71cb22e59708ce31#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-447e807fa8/0/cache/terser-webpack-plugin-npm-5.1.3-003d67fe0b-f042b0a600.zip/node_modules/terser-webpack-plugin/",
+>>>>>>> b82a4279 (chore: squash merge main)
           "packageDependencies": [
-            ["terser-webpack-plugin", "virtual:fc1c68517cebd9a51c9fb03596e32ffaf0e0eb55651631d10f3b75ce56e73440d88a009743e8cb5812d7a4534f158c424a58c5a968d0b414aba6e368c87d59ac#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:fac10f0e2c4ff4cf53ae7c15c85f8e5db0924c11ff65baeb0718d75b1dd77a841f01ffd7afe2327a177778f9a8e85a440115e7de1f4319ad71cb22e59708ce31#npm:5.1.3"],
             ["@types/webpack", null],
 <<<<<<< HEAD
             ["jest-worker", "npm:27.2.5"],
@@ -37603,9 +39739,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["terser", "npm:5.9.0"],
+<<<<<<< HEAD
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.58.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
+=======
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/webpack",
@@ -37674,11 +39814,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["thread-stream", [
+<<<<<<< HEAD
         ["npm:0.13.0", {
           "packageLocation": "./.yarn/cache/thread-stream-npm-0.13.0-f072d4df5e-d72a44f133.zip/node_modules/thread-stream/",
           "packageDependencies": [
             ["thread-stream", "npm:0.13.0"],
             ["real-require", "npm:0.1.0"]
+=======
+        ["npm:0.11.1", {
+          "packageLocation": "./.yarn/cache/thread-stream-npm-0.11.1-d7c0babce8-47f9bccc3e.zip/node_modules/thread-stream/",
+          "packageDependencies": [
+            ["thread-stream", "npm:0.11.1"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "linkType": "HARD",
         }]
@@ -37990,7 +40137,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/ts-jest-virtual-0feb66c7f5/0/cache/ts-jest-npm-27.0.7-ed0add2515-3711361cb5.zip/node_modules/ts-jest/",
           "packageDependencies": [
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
+=======
+            ["@babel/core", "npm:7.15.8"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/babel-jest", null],
             ["@types/babel__core", null],
             ["@types/jest", "npm:27.0.3"],
@@ -37999,15 +40150,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bs-logger", "npm:0.2.6"],
             ["fast-json-stable-stringify", "npm:2.1.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
 =======
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.2.5"],
 >>>>>>> 48768561 (chore: fix yarn lock)
+=======
+            ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["jest-util", "npm:27.3.1"],
             ["json5", "npm:2.2.0"],
             ["lodash.memoize", "npm:4.1.2"],
             ["make-error", "npm:1.3.6"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38025,6 +40181,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["typescript", "patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"],
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["yargs-parser", "npm:20.2.6"]
           ],
           "packagePeers": [
@@ -38099,8 +40258,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38120,8 +40284,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38141,8 +40310,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38162,8 +40336,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38183,8 +40362,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38204,8 +40388,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38225,8 +40414,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38246,8 +40440,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38267,8 +40466,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38288,8 +40492,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38309,8 +40518,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38330,8 +40544,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38351,8 +40570,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38372,8 +40596,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38393,8 +40622,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38414,8 +40648,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38435,8 +40674,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38456,8 +40700,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38477,8 +40726,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38498,8 +40752,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38519,8 +40778,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38540,8 +40804,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38590,9 +40859,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.2.1", {
-          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-03a8fb1339/0/cache/ts-node-npm-10.2.1-18dc22b42d-f37d2827a5.zip/node_modules/ts-node/",
+        ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0", {
+          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-d65324ea62/0/cache/ts-node-npm-10.4.0-04cb6e2279-3933ac0a93.zip/node_modules/ts-node/",
           "packageDependencies": [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
@@ -38626,6 +40896,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.2.1"],
             ["@cspotcode/source-map-support", "npm:0.6.1"],
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
+=======
+            ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
+            ["@cspotcode/source-map-support", "npm:0.7.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@swc/core", null],
             ["@swc/wasm", null],
 <<<<<<< HEAD
@@ -38653,6 +40927,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node16", "npm:1.0.2"],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["@types/node", "npm:14.17.5"],
 >>>>>>> 981e30cd... fix: attempt to fix ci build replaced lock file
 <<<<<<< HEAD
@@ -38669,6 +40944,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["acorn-walk", "npm:8.1.1"],
 =======
             ["@types/node", "npm:14.17.21"],
+=======
+            ["@types/node", "npm:14.17.32"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/swc__core", null],
             ["@types/swc__wasm", null],
             ["@types/typescript", null],
@@ -38683,7 +40961,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["create-require", "npm:1.1.1"],
             ["diff", "npm:4.0.2"],
             ["make-error", "npm:1.3.6"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["yn", "npm:3.1.1"]
           ],
           "packagePeers": [
@@ -38706,8 +40988,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["create-require", "npm:1.1.1"],
             ["diff", "npm:4.0.2"],
             ["make-error", "npm:1.3.6"],
+<<<<<<< HEAD
             ["source-map-support", "npm:0.5.21"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
+=======
+            ["source-map-support", "npm:0.5.20"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["yn", "npm:3.1.1"]
           ],
           "packagePeers": [
@@ -38742,7 +41029,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tree-kill", "npm:1.2.2"],
             ["ts-node", "virtual:f62f4e35c7c96ee75cd546e5bc23d469420ab89f40dbfb5f664403aa42d3aa21827f18d2fb77593811ca80c2ff9e56ca42c19a4f9f31edc325c5e58287f5d176#npm:9.1.1"],
             ["tsconfig", "npm:7.0.0"],
+<<<<<<< HEAD
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
+=======
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/node-notifier",
@@ -38821,6 +41112,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+<<<<<<< HEAD
         ["virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:3.21.0", {
           "packageLocation": "./.yarn/__virtual__/tsutils-virtual-fdf66c8116/0/cache/tsutils-npm-3.21.0-347e6636c5-1843f4c1b2.zip/node_modules/tsutils/",
           "packageDependencies": [
@@ -38828,6 +41120,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/typescript", null],
             ["tslib", "npm:1.14.1"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
+=======
+        ["virtual:b14da86ad89e171ad9f7dd051c897eec0f7f3ac0654f27ed9434cf2e7cf8cd12cfff82d92de1de3a17eda448ad30438bb9496066f1acda3135828a778c8026ec#npm:3.21.0", {
+          "packageLocation": "./.yarn/__virtual__/tsutils-virtual-d70fe9e41f/0/cache/tsutils-npm-3.21.0-347e6636c5-1843f4c1b2.zip/node_modules/tsutils/",
+          "packageDependencies": [
+            ["tsutils", "virtual:b14da86ad89e171ad9f7dd051c897eec0f7f3ac0654f27ed9434cf2e7cf8cd12cfff82d92de1de3a17eda448ad30438bb9496066f1acda3135828a778c8026ec#npm:3.21.0"],
+            ["@types/typescript", null],
+            ["tslib", "npm:1.14.1"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"]
+>>>>>>> b82a4279 (chore: squash merge main)
           ],
           "packagePeers": [
             "@types/typescript",
@@ -38835,10 +41136,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:f4b6afdfe656ae6f8259fce98a7cb78f36ca447428422cf054e1f6003253b5d86bdc1a08d9d345a23cd23fd0311779ecb68e35a5904bcdcab4d909290dc95944#npm:3.21.0", {
           "packageLocation": "./.yarn/__virtual__/tsutils-virtual-3be2beaf6b/0/cache/tsutils-npm-3.21.0-347e6636c5-1843f4c1b2.zip/node_modules/tsutils/",
           "packageDependencies": [
             ["tsutils", "virtual:f4b6afdfe656ae6f8259fce98a7cb78f36ca447428422cf054e1f6003253b5d86bdc1a08d9d345a23cd23fd0311779ecb68e35a5904bcdcab4d909290dc95944#npm:3.21.0"],
+=======
+        ["virtual:fc967df0bd1577602012f1c46aee99098711cedc5f441989c6251b7091e9e162bf21b3bef98a6914cecaa8059e5e09d349ffaa41fb61df6ef58314ea9da01dd0#npm:3.21.0", {
+          "packageLocation": "./.yarn/__virtual__/tsutils-virtual-0a3696409b/0/cache/tsutils-npm-3.21.0-347e6636c5-1843f4c1b2.zip/node_modules/tsutils/",
+          "packageDependencies": [
+            ["tsutils", "virtual:fc967df0bd1577602012f1c46aee99098711cedc5f441989c6251b7091e9e162bf21b3bef98a6914cecaa8059e5e09d349ffaa41fb61df6ef58314ea9da01dd0#npm:3.21.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/typescript", null],
             ["tslib", "npm:1.14.1"],
             ["typescript", null]
@@ -39021,6 +41329,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["typescript", [
+<<<<<<< HEAD
         ["patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53", {
           "packageLocation": "./.yarn/cache/typescript-patch-7a081096b0-bd629ad0da.zip/node_modules/typescript/",
           "packageDependencies": [
@@ -39028,6 +41337,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b", {
           "packageLocation": "./.yarn/cache/typescript-patch-29eb8bf885-c97c33903f.zip/node_modules/typescript/",
           "packageDependencies": [
@@ -39478,13 +41789,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.2.0"]
           ],
           "linkType": "HARD",
-        }],
-        ["npm:2.3.0", {
-          "packageLocation": "./.yarn/cache/v8-compile-cache-npm-2.3.0-961375f150-adb0a271ea.zip/node_modules/v8-compile-cache/",
-          "packageDependencies": [
-            ["v8-compile-cache", "npm:2.3.0"]
-          ],
-          "linkType": "HARD",
         }]
       ]],
       ["v8-to-istanbul", [
@@ -39663,6 +41967,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["npm:6.6.0", {
           "packageLocation": "./.yarn/cache/web-ext-npm-6.6.0-34fd2d68db-b0a3382a60.zip/node_modules/web-ext/",
           "packageDependencies": [
@@ -39700,6 +42005,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:6.5.0", {
           "packageLocation": "./.yarn/cache/web-ext-npm-6.5.0-1111bd61bd-fca1741464.zip/node_modules/web-ext/",
           "packageDependencies": [
@@ -39743,6 +42050,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["web-monetization", "workspace:."],
+<<<<<<< HEAD
             ["@babel/core", "npm:7.16.0"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.0"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.4"],
@@ -39755,12 +42063,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.34"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.4.0"],
+=======
+            ["@babel/core", "npm:7.15.8"],
+            ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.14.5"],
+            ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/plugin-proposal-object-rest-spread", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.6"],
+            ["@babel/preset-env", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.8"],
+            ["@babel/preset-typescript", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.15.0"],
+            ["@commitlint/cli", "npm:13.2.1"],
+            ["@commitlint/config-conventional", "npm:13.2.0"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:14.17.32"],
+            ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+            ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["copy-webpack-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:9.1.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:8.3.0"],
             ["eslint-import-resolver-node", "npm:0.3.6"],
+<<<<<<< HEAD
             ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.3"],
             ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.3.0"],
             ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.5.1"],
@@ -39769,23 +42092,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.27.1"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
+=======
+            ["eslint-plugin-import", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:2.25.2"],
+            ["eslint-plugin-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:25.2.2"],
+            ["eslint-plugin-jsx-a11y", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:6.4.1"],
+            ["eslint-plugin-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:11.1.0"],
+            ["eslint-plugin-prettier", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.4.1"],
+            ["eslint-plugin-promise", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.1.1"],
+            ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.24.0"],
+            ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.2.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.3.1"],
             ["lerna", "npm:4.0.0"],
+<<<<<<< HEAD
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.5.0"],
+=======
+            ["lint-staged", "npm:11.2.6"],
+            ["prettier", "npm:2.4.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
             ["ts-loader", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
+<<<<<<< HEAD
             ["tsconfig-paths", "npm:3.12.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
             ["webpack-dev-server", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.11.3"],
+=======
+            ["tsconfig-paths", "npm:3.11.0"],
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"],
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"],
+            ["webpack-bundle-analyzer", "npm:4.5.0"],
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
+            ["webpack-dev-server", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.11.2"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-merge", "npm:5.8.0"]
           ],
           "linkType": "SOFT",
@@ -39815,6 +42162,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["webpack", [
+<<<<<<< HEAD
         ["npm:5.64.4", {
           "packageLocation": "./.yarn/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -39842,6 +42190,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.58.1"],
+=======
+        ["npm:5.60.0", {
+          "packageLocation": "./.yarn/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "npm:5.60.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-6bf202e226/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
@@ -39868,7 +42229,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -39916,9 +42277,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:f90b89bf03da114fbed14f9616837b1a845fcdf09b2582a8c14af99c536587c293bae69b0aa0af90ab07d5cc8adb8596c6d2162e313f42ab7e6209f19632857f#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:6bf202e2261f23955a7a88e36551d8b537b3a19eb5658963a46b531fd6ab61efd364a7d5d040bea81382411e45180926085ad21d3efbb687797bba24fae785a9#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.0"],
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -39928,6 +42289,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-7419eccf36/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -39953,6 +42315,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["@types/eslint-scope", "npm:3.7.1"],
 =======
+=======
+        ["virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-a21ecd8c5a/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/estree", "npm:0.0.50"],
@@ -39980,7 +42348,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -40028,9 +42396,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:607a753ae576686d1bd9c39288d73378ef27953258981c67b019dbc5f82d72439f989346dd388640226a714fe60f9368c58984e735c639b772e6a3ec89ee4e4c#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:a21ecd8c5ae7ff01b6dde7b48041dbdf71ec63887dbef56f60378390e81a42b907e79172ade8b08f72a621fe5e92e9f9f46725862fa757070479bae2ef1c2b72#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.0"],
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -40040,6 +42408,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-8e3d0a4611/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -40060,6 +42429,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.58.1"],
+=======
+        ["virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-efe5c9c514/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
             ["@types/json-schema", "npm:7.0.9"],
@@ -40083,7 +42458,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
 <<<<<<< HEAD
 =======
@@ -40140,9 +42515,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:e98d3e2ce2f7463628c1a9c44e61d1eb04a427b14b06b5813cb2c49a7192bdaa905ea17376f18099ff810a121e623c960497f277d3d465d4163e3f295d884723#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:efe5c9c514350f95736c69080274b6c3c5af2e3cd2ca87d29c31e1ef2918252970d261dd2009ca1e4c06cbb2725dff945935c0e4edc95958d333ac33b61b07d0#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.0"],
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -40152,6 +42527,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-98c5e13256/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -40172,6 +42548,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.58.1"],
+=======
+        ["virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-46cf3da8ad/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
             ["@types/json-schema", "npm:7.0.9"],
@@ -40195,7 +42577,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
 <<<<<<< HEAD
 =======
@@ -40252,9 +42634,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:60410cdf16561401a95ab0bfb9adb86e4a19db8c1cb2e5f96b49692b5c6a5d1f99c09c385d4e4e9e1cb74b942f53419ef8359db26df23f1d1e2c4b9e7246ae4c#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:46cf3da8ad6f67c29b13e7fd13f1ed272b30a29c0557e9af03a35e5674157302930390c8288330a546dfdbcb43fa0d4a4b8cfa63f4351087130910acef5e2193#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.0"],
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -40264,6 +42646,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-7c22b72603/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -40289,6 +42672,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["@types/eslint-scope", "npm:3.7.1"],
 =======
+=======
+        ["virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-0da0d3dc64/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/estree", "npm:0.0.50"],
@@ -40316,7 +42705,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -40364,9 +42753,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:af3270ccb598afc4cb716332e9d984988f57094b056b08da49d284b43ede384f8c15171b6e02972dd66c1576194c810034e500c1dc43467e3187f1cfb84ff6ed#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:0da0d3dc648acf1676b87eb6041e9d784713999896d36b2c44fcfe5c9925c272e4f35a5c30bd4bfd9559eca7d0d96032b53afb1d5bac144453d82c8471950d7d#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.0"],
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -40376,6 +42765,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-47e0f2c50f/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -40389,6 +42779,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.58.1"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
+=======
+        ["virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-849bfb0fee/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 =======
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.46.0"],
@@ -40425,7 +42821,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
 <<<<<<< HEAD
 =======
@@ -40482,9 +42878,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:f17841ed0d3800daafa729c43a1be789ae39fcca7c1194abf636dee068a3647af1368523d18472a5e08c7241ed6451f556a20bcb0742df124213b13d4a4b1729#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:849bfb0fee659ef92c60941729a458ad60970ec9abbcad3352d44c442211b5db6af588a3378af1acd6871ee81034c7fcb4c816939ae4b01efa7fe45addc2460c#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.0"],
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -40494,6 +42890,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-b1118bb625/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -40600,6 +42997,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
+=======
+        ["virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-438c712be2/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 =======
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.46.0"],
@@ -40632,7 +43035,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -40676,10 +43079,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
+<<<<<<< HEAD
             ["terser-webpack-plugin", "virtual:fc1c68517cebd9a51c9fb03596e32ffaf0e0eb55651631d10f3b75ce56e73440d88a009743e8cb5812d7a4534f158c424a58c5a968d0b414aba6e368c87d59ac#npm:5.1.3"],
 >>>>>>> 258bc78a (fix: build issues)
+=======
+            ["terser-webpack-plugin", "virtual:438c712be26b62cca3b7671e018ffad2c8b19840fca350bca108231b63529930b1f84eab9484a5a3939cb1ac548b924bd9fde6b5b11cf93e787dbefb9e874f0d#npm:5.1.3"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.0"],
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
           ],
           "packagePeers": [
@@ -40687,10 +43094,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1", {
-          "packageLocation": "./.yarn/__virtual__/webpack-virtual-ae03079540/0/cache/webpack-npm-5.58.1-f62d411577-e05576c5c7.zip/node_modules/webpack/",
+        ["virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-cab0e1c84a/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
           "packageDependencies": [
-            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1"],
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"],
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
             ["@types/json-schema", "npm:7.0.9"],
@@ -40698,7 +43105,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -40713,13 +43120,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["neo-async", "npm:2.6.2"],
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:ae030795405aa587aa1fd8656ab11b26c4cfa8a40b14cb701ff752fb6aa536216fce48569f9e6f2684e7d8bb08ba7f51492e62a95a3be8f8fc375304407e3ca2#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:cab0e1c84a967ebfbfdffb46e00c56175253fe726923a8a24bb19b4ac76ee1f91eb14addd179da4e8b2283dfb2f8d5515dc2610170fa3685b97cd62135227a66#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
+<<<<<<< HEAD
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.0"],
 <<<<<<< HEAD
             ["webpack-sources", "npm:3.2.1"]
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -40729,6 +43140,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-adc13f2c75/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -40754,6 +43166,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["@types/eslint-scope", "npm:3.7.1"],
 =======
+=======
+        ["virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-2e2f2a2440/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/estree", "npm:0.0.50"],
@@ -40778,7 +43196,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
 <<<<<<< HEAD
 =======
@@ -40835,9 +43253,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:387bd2c0308f3d0189109d701ecda30166aed061501f5d30dbad2813435224ac2bfe2ee5b6420059509cfeaa7ec80988fc75d73d1fc4c89208dbde7fa01db797#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:2e2f2a2440e682ae825bdf022b6257d38d510d6ce4e5b7f74edd0222864f52eadce1f210614fadbdb393255898148762e313d738980e3e8dc56cbebee43c7077#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.0"],
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -40847,6 +43265,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-534b839221/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -40867,6 +43286,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.58.1"],
+=======
+        ["virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-2a30381c08/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
             ["@types/json-schema", "npm:7.0.9"],
@@ -40890,7 +43315,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
 <<<<<<< HEAD
 =======
@@ -40947,9 +43372,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:ca188ca178d1bf269230e1ed405745599387f94278af0ab88d8f9e68c23a989100ed1cfd45bfa90a394472fc8b5bf04e884ddd53e63618dc80d73e5904d9e140#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:2a30381c086f7f5b303e875cd5e8c0565bacb7e68f914f81d654002f33c372df2bb5606238ba4d967193f5da620622c178cb619328360fe6838d974ea6afcaaf#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.0"],
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -40959,6 +43384,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-05efa92c18/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -40984,6 +43410,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["@types/eslint-scope", "npm:3.7.1"],
 =======
+=======
+        ["virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-79920e38f2/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/estree", "npm:0.0.50"],
@@ -41011,7 +43443,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -41059,9 +43491,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:5a590d3293ccb920dfcbb0e022bbe6c6f0837a52101ef75637f253ce80ad9a116afb0a4c96f6a3b7a95f15759e981c3f3f09aac8d6200d0cb09f597009f5f1d7#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:79920e38f2f8ad28fd912523a61330ffe4c680cb37eb98a1cd4cbdc396e31d5517c8543d0f003b89e3c7d747d72ee11deac62d9da12c4786b95100dccd4a3ee6#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.0"],
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -41071,6 +43503,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-7af1971853/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -41091,6 +43524,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.58.1"],
+=======
+        ["virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-38c85239a2/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
             ["@types/json-schema", "npm:7.0.9"],
@@ -41119,12 +43558,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["acorn", "npm:8.5.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.8.0"],
             ["browserslist", "npm:4.17.4"],
 >>>>>>> c4299913 (fix: update yarn lock)
             ["chrome-trace-event", "npm:1.0.3"],
 =======
             ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+=======
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
 >>>>>>> 258bc78a (fix: build issues)
@@ -41173,9 +43616,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:c6b35d564f80807d5e7c87c45696ec622076557faa8cadbbc63c556d5f1f7f5aaa20851f0daaad4732eb512c5ada6206d9d8ea13709c6a0cce099e9f05122a56#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:38c85239a2e8fc7f91ab9d4c90431a78dc56376cf01e351473548351d1b12534216404044c8d9eceaed19fbc114f0c050e05d527f16c57dafa7785bb324935bb#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.0"],
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -41185,6 +43628,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-945b605071/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -41210,6 +43654,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["@types/eslint-scope", "npm:3.7.1"],
 =======
+=======
+        ["virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-70db78d176/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/estree", "npm:0.0.50"],
@@ -41237,7 +43687,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -41285,9 +43735,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:c308f4faf0836fc683ea0198247ca94730124e1a07d8cba6300d7f93e7460ae333b326a8e9b201686bba6509c15fb3aeb5ee67108f834bbe4b5ef2235707620c#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:70db78d176190a56c7795c9ed592afbfb4d986f40010d3b8132597f72ae503e14fa1115643368927a3492789dcb839ad6d7e8f9f80b9f2a4f8efbfd781457484#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.0"],
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -41297,6 +43747,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-a515af837e/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -41317,6 +43768,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.58.1"],
+=======
+        ["virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-6959c1001f/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
@@ -41343,7 +43800,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -41391,9 +43848,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:7d9687daf0584c46ede0a24f58824ae22c60696acca45dee0c9e6837ebe005fac0408e4b614f30204944f3aa0f0f23c34d863d0b303126d62cdb7106c90ea950#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:6959c1001fd962ad256de699b1c20affd8d25fffcb63cf63d08da6e2bf32dc6d89cefe9c556e889962b1c5754e8afd0398db1c5977ac8aea54e18e4b0eb01e63#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.0"],
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -41403,6 +43860,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-c45c32164c/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -41416,6 +43874,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.58.1"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
+=======
+        ["virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-39c88fc292/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 =======
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.46.0"],
@@ -41455,7 +43919,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -41503,9 +43967,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:8de7e01ed053997d45f785a1d9fcb589a83376bf7562ee9ecf3d6cfe66ff8c9903797ab91ee3b691ee144c78b86bf2f7b7ae222b78c413ea11f4939883fcc08f#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:39c88fc29298995f31aae2012d27651954d119513c5faee9e0a39c3283840a269cd27d5589c33a2dd79f93665b5f5a668c00c6c62052984141fb5aa9e3da8383#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.0"],
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -41515,6 +43979,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-ad4032cc3b/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -41535,6 +44000,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.58.1"],
+=======
+        ["virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-1a01170f43/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
             ["@types/json-schema", "npm:7.0.9"],
@@ -41558,7 +44029,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
 =======
             ["acorn", "npm:8.5.0"],
@@ -41617,9 +44088,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:72f5c9a2e8df6b80518f4525a0124f47f823cd960bdc9be2ec86a76be7a2925f1e71f833bd63375bc53639b8a36dee0273352d6f97202836c430e241c1bc24ee#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:1a01170f43614a22879b9cc4001d58cdd4bac334ab5f230f81ac74d9ca545b95da8ed0f24089539ed0d6f2445df9452aa175ee9c50ba7a996fd2bf749768d3fa#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.0"],
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -41629,6 +44100,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-a58c3bdb8e/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -41642,6 +44114,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.58.1"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
+=======
+        ["virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-7486204c70/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 =======
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.46.0"],
@@ -41681,7 +44159,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -41729,9 +44207,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.0"],
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -41741,6 +44219,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-2fd8811943/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -41766,6 +44245,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["@types/eslint-scope", "npm:3.7.1"],
 =======
+=======
+        ["virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-c4cf327a8e/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/estree", "npm:0.0.50"],
@@ -41790,7 +44275,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
 <<<<<<< HEAD
 =======
@@ -41847,9 +44332,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:1277caf843039e3aad5f174ce85355ba32e543a9bf8107f9f794f0839a5b8dc87544d8b596d3d98fcd540036a936c183b9c6c5581e9fb140f400b54cdf3f8348#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:c4cf327a8e5e0d6330ac25bbc55e3a450cc2f7db5d0cc4b00383381e1bbe0f97d880096f507a89fc1e466a222e3263e2ad763b9262126c156d9b69f288c41224#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.0"],
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -41859,6 +44344,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-7bf71d16a9/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -41879,6 +44365,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.58.1"],
+=======
+        ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-9c15c600e2/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
             ["@types/json-schema", "npm:7.0.9"],
@@ -41902,7 +44394,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
 <<<<<<< HEAD
 =======
@@ -41959,9 +44451,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:a28e2a41db72f126351e400d85c45ed575c50e998bba8a604529fc4afcc60767f6240f5c8937a8175e4dd355ebeb018bb7243c1e23883cfe06226d55c21789d3#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:9c15c600e26e2c6a9183eb27a6342f5e36dda78f337ae1e199aabe5d14a1442a548b65e90be00ea42cc59adc9035a6be17d6291350187af98af61c2bf1689c6b#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.0"],
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -41971,6 +44463,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-ba9664f922/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -41984,6 +44477,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.58.1"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
+=======
+        ["virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-72a11189bb/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 =======
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.46.0"],
@@ -42023,7 +44522,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -42071,9 +44570,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:339ca442a50c9ee760ce8a4b43338aa19e119072de1625bb49604055e9d47eec30f0503085c0a99dd20580e905572470a5dfc46222e58ae95971a75eafa12c71#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:72a11189bb29aae79a93795393a88dd0d27dba88774f9efcb9c660a301c9f43cbb80c2b49a1e6d73ff326ba7ff1dfa15b8be36077a90e144780972fddadf2308#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.0"],
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -42083,6 +44582,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-a1d5cc9e8c/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -42103,6 +44603,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.58.1"],
+=======
+        ["virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-fac10f0e2c/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
             ["@types/estree", "npm:0.0.50"],
 <<<<<<< HEAD
@@ -42129,7 +44635,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -42177,9 +44683,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:e14b5b943be738ad5a58a0daa167a24368ca669a3f5843a4f6057d42a158f85f55c150ffddd4b65e5887d180bd3ca2c590f675be1af0e10bc0b7b4841a88b410#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:fac10f0e2c4ff4cf53ae7c15c85f8e5db0924c11ff65baeb0718d75b1dd77a841f01ffd7afe2327a177778f9a8e85a440115e7de1f4319ad71cb22e59708ce31#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.0"],
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -42189,6 +44695,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+<<<<<<< HEAD
         ["virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4", {
           "packageLocation": "./.yarn/__virtual__/webpack-virtual-5a8e1cc25f/0/cache/webpack-npm-5.64.4-9716df3ca9-62ac598291.zip/node_modules/webpack/",
           "packageDependencies": [
@@ -42202,6 +44709,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.58.1"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
+=======
+        ["virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0", {
+          "packageLocation": "./.yarn/__virtual__/webpack-virtual-13857d8ab3/0/cache/webpack-npm-5.60.0-4763b66d54-3c37424516.zip/node_modules/webpack/",
+          "packageDependencies": [
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@types/eslint-scope", "npm:3.7.0"],
 =======
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.46.0"],
@@ -42241,7 +44754,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
             ["acorn", "npm:8.5.0"],
-            ["acorn-import-assertions", "virtual:6f2a18a13c73a7476e594a394b745b9220b4f6b9868bdc042ca3145a237db437bce9b3ad6cb11f4acb0606c626cc15be55b35a141c12bb7358df84c105421530#npm:1.7.6"],
+            ["acorn-import-assertions", "virtual:7486204c709cad38e1935249ba3a183217ddd3840dc2f23848cae388b2d36ed1805c66c61e8f0062ed8b3e25b47b59daaae2049c704d1810ec7b1585248e340e#npm:1.7.6"],
             ["browserslist", "npm:4.17.3"],
             ["chrome-trace-event", "npm:1.0.2"],
             ["enhanced-resolve", "npm:5.8.3"],
@@ -42289,9 +44802,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["schema-utils", "npm:3.1.0"],
             ["tapable", "npm:2.2.0"],
-            ["terser-webpack-plugin", "virtual:0e1a6d17e63b8a441b73c15366790cd1dabe47bdf31f784b21b87701a602f35fb9cb24ac93db2332525ac2c9bd388ef6a63525fe1998a12d0b4d84aa7cba55da#npm:5.1.3"],
+            ["terser-webpack-plugin", "virtual:13857d8ab3baa29cd8827fef4c24f8f1edf2b7ee84e0a561656d307a6ac1c99311062dd3c360fdc7c4b0deccd386d57490e282facdcd9471ff5342f9faafccf8#npm:5.1.3"],
             ["watchpack", "npm:2.2.0"],
-            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.0"],
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
             ["webpack-sources", "npm:3.2.0"]
 >>>>>>> 258bc78a (fix: build issues)
           ],
@@ -42353,6 +44866,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
 =======
 =======
@@ -42374,17 +44888,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.5"],
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:6828d9149db6542b6b07c7d2cf360c8bb7e6068caff8ba9f12e9ac5b4b7c2ce52e54745fa8f666d9c6b1888acd67832a06bdef2f0c14f475515f752d1cb4e22a#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:6828d9149db6542b6b07c7d2cf360c8bb7e6068caff8ba9f12e9ac5b4b7c2ce52e54745fa8f666d9c6b1888acd67832a06bdef2f0c14f475515f752d1cb4e22a#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:6828d9149db6542b6b07c7d2cf360c8bb7e6068caff8ba9f12e9ac5b4b7c2ce52e54745fa8f666d9c6b1888acd67832a06bdef2f0c14f475515f752d1cb4e22a#npm:1.6.0"],
 =======
@@ -42393,6 +44914,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:6828d9149db6542b6b07c7d2cf360c8bb7e6068caff8ba9f12e9ac5b4b7c2ce52e54745fa8f666d9c6b1888acd67832a06bdef2f0c14f475515f752d1cb4e22a#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -42404,6 +44928,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -42423,6 +44948,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.58.1"],
+=======
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -42448,6 +44976,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
 =======
 =======
@@ -42468,10 +44997,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:98241eaba08c94fb42d08f02a865e50ad26434bf72d645279dbe7bddf769174a6151bb4e887d883b3c2e6113ced5666865714b6f9701781a60a7cd2c78c322a3#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:98241eaba08c94fb42d08f02a865e50ad26434bf72d645279dbe7bddf769174a6151bb4e887d883b3c2e6113ced5666865714b6f9701781a60a7cd2c78c322a3#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:98241eaba08c94fb42d08f02a865e50ad26434bf72d645279dbe7bddf769174a6151bb4e887d883b3c2e6113ced5666865714b6f9701781a60a7cd2c78c322a3#npm:1.6.0"],
 =======
@@ -42480,6 +45015,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:98241eaba08c94fb42d08f02a865e50ad26434bf72d645279dbe7bddf769174a6151bb4e887d883b3c2e6113ced5666865714b6f9701781a60a7cd2c78c322a3#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -42491,6 +45029,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -42510,6 +45049,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.58.1"],
+=======
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -42535,6 +45077,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
 =======
 =======
@@ -42556,17 +45099,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.5"],
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:926a29145483fbc5710638bee0b188a52cb0bea5791a957724f90960bfdd7d31c2be499415f82472d2fffb705353ff04d4b30f40b7a3d0b92b0a10a37e80ac77#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:926a29145483fbc5710638bee0b188a52cb0bea5791a957724f90960bfdd7d31c2be499415f82472d2fffb705353ff04d4b30f40b7a3d0b92b0a10a37e80ac77#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:926a29145483fbc5710638bee0b188a52cb0bea5791a957724f90960bfdd7d31c2be499415f82472d2fffb705353ff04d4b30f40b7a3d0b92b0a10a37e80ac77#npm:1.6.0"],
 =======
@@ -42575,6 +45125,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:926a29145483fbc5710638bee0b188a52cb0bea5791a957724f90960bfdd7d31c2be499415f82472d2fffb705353ff04d4b30f40b7a3d0b92b0a10a37e80ac77#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -42599,12 +45152,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.58.1"],
+=======
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -42630,6 +45187,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
 =======
 =======
@@ -42650,10 +45208,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:1c32a0765b9ac2e1852301903665dbfaa4dab622cd5c0a5aa32db1bd4d025a80b8f9a4445e39d0bfd07d8a38a48bd564b21b9e4afa328373c34534593e6128ed#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:1c32a0765b9ac2e1852301903665dbfaa4dab622cd5c0a5aa32db1bd4d025a80b8f9a4445e39d0bfd07d8a38a48bd564b21b9e4afa328373c34534593e6128ed#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:1c32a0765b9ac2e1852301903665dbfaa4dab622cd5c0a5aa32db1bd4d025a80b8f9a4445e39d0bfd07d8a38a48bd564b21b9e4afa328373c34534593e6128ed#npm:1.6.0"],
 =======
@@ -42662,6 +45226,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:1c32a0765b9ac2e1852301903665dbfaa4dab622cd5c0a5aa32db1bd4d025a80b8f9a4445e39d0bfd07d8a38a48bd564b21b9e4afa328373c34534593e6128ed#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -42686,12 +45253,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.58.1"],
+=======
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -42717,6 +45288,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
 =======
 =======
@@ -42738,17 +45310,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.5"],
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:3a277ce78b88e39c64a75569c6528db754af9a28a655881d13106ea1eb7f24e39dc9153ab253b4a1ee11239bf690811a526911451b434766a2818b4507d89a6f#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:3a277ce78b88e39c64a75569c6528db754af9a28a655881d13106ea1eb7f24e39dc9153ab253b4a1ee11239bf690811a526911451b434766a2818b4507d89a6f#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:3a277ce78b88e39c64a75569c6528db754af9a28a655881d13106ea1eb7f24e39dc9153ab253b4a1ee11239bf690811a526911451b434766a2818b4507d89a6f#npm:1.6.0"],
 =======
@@ -42757,6 +45336,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:3a277ce78b88e39c64a75569c6528db754af9a28a655881d13106ea1eb7f24e39dc9153ab253b4a1ee11239bf690811a526911451b434766a2818b4507d89a6f#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -42781,12 +45363,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.58.1"],
+=======
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -42812,6 +45398,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
 =======
 =======
@@ -42832,10 +45419,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:48b99590381b694505b40165da445b0cdb2fcd9bdf114829c7187907d5ed48900b67ff37123773379ee70eb7b0fe6d604d34f26317e28fff8bef5a61e641e92f#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:48b99590381b694505b40165da445b0cdb2fcd9bdf114829c7187907d5ed48900b67ff37123773379ee70eb7b0fe6d604d34f26317e28fff8bef5a61e641e92f#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:48b99590381b694505b40165da445b0cdb2fcd9bdf114829c7187907d5ed48900b67ff37123773379ee70eb7b0fe6d604d34f26317e28fff8bef5a61e641e92f#npm:1.6.0"],
 =======
@@ -42844,6 +45437,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:48b99590381b694505b40165da445b0cdb2fcd9bdf114829c7187907d5ed48900b67ff37123773379ee70eb7b0fe6d604d34f26317e28fff8bef5a61e641e92f#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -42868,12 +45464,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.58.1"],
+=======
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -42899,6 +45499,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
 =======
 =======
@@ -42920,17 +45521,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.5"],
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:19c4143a5cdd524e85edf95c13a7e77d90e49f7cef3145201ce5a1a05ff63f19fa4f7695b4995c196cb82db8120539fc13e7de6ab12950641f7fd149a31a9f79#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:19c4143a5cdd524e85edf95c13a7e77d90e49f7cef3145201ce5a1a05ff63f19fa4f7695b4995c196cb82db8120539fc13e7de6ab12950641f7fd149a31a9f79#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:19c4143a5cdd524e85edf95c13a7e77d90e49f7cef3145201ce5a1a05ff63f19fa4f7695b4995c196cb82db8120539fc13e7de6ab12950641f7fd149a31a9f79#npm:1.6.0"],
 =======
@@ -42939,6 +45547,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:19c4143a5cdd524e85edf95c13a7e77d90e49f7cef3145201ce5a1a05ff63f19fa4f7695b4995c196cb82db8120539fc13e7de6ab12950641f7fd149a31a9f79#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -42950,6 +45561,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -42969,6 +45581,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.58.1"],
+=======
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -42994,6 +45609,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
 =======
 =======
@@ -43001,6 +45617,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 =======
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.7.2"],
@@ -43018,14 +45637,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:0c697ada3e54830c5b9e9e886f8481ac1a1b0daaf033f9152a40f38f2a1741dbe23f3db6c431d6aa1a9932f9dd60a4c0bf64f59330840d9fd642baee17084364#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:0c697ada3e54830c5b9e9e886f8481ac1a1b0daaf033f9152a40f38f2a1741dbe23f3db6c431d6aa1a9932f9dd60a4c0bf64f59330840d9fd642baee17084364#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:0c697ada3e54830c5b9e9e886f8481ac1a1b0daaf033f9152a40f38f2a1741dbe23f3db6c431d6aa1a9932f9dd60a4c0bf64f59330840d9fd642baee17084364#npm:1.6.0"],
 =======
@@ -43034,6 +45657,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:0c697ada3e54830c5b9e9e886f8481ac1a1b0daaf033f9152a40f38f2a1741dbe23f3db6c431d6aa1a9932f9dd60a4c0bf64f59330840d9fd642baee17084364#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43058,12 +45684,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1"],
+=======
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43089,6 +45719,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
 =======
 =======
@@ -43109,10 +45740,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:3f32e0c8ded0fb59da0b407f32439e5e0a1e61135bcc6c94178cd441b6df76492605f09f48d9f1bb1412e1516160c10afcb70aad75e497742afc712f29e469fd#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:3f32e0c8ded0fb59da0b407f32439e5e0a1e61135bcc6c94178cd441b6df76492605f09f48d9f1bb1412e1516160c10afcb70aad75e497742afc712f29e469fd#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:3f32e0c8ded0fb59da0b407f32439e5e0a1e61135bcc6c94178cd441b6df76492605f09f48d9f1bb1412e1516160c10afcb70aad75e497742afc712f29e469fd#npm:1.6.0"],
 =======
@@ -43121,6 +45758,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:3f32e0c8ded0fb59da0b407f32439e5e0a1e61135bcc6c94178cd441b6df76492605f09f48d9f1bb1412e1516160c10afcb70aad75e497742afc712f29e469fd#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43132,6 +45772,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -43151,6 +45792,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.58.1"],
+=======
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43176,6 +45820,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
 =======
 =======
@@ -43183,6 +45828,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 =======
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.7.2"],
@@ -43200,14 +45848,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:0ad164306119c2de4d522f7cb8b1b879c5bc469891f9d0d56266943d5562791fd8e6481539dda14b5301256f329454db684f0fb2603055608ae60c8f1690291a#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:0ad164306119c2de4d522f7cb8b1b879c5bc469891f9d0d56266943d5562791fd8e6481539dda14b5301256f329454db684f0fb2603055608ae60c8f1690291a#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:0ad164306119c2de4d522f7cb8b1b879c5bc469891f9d0d56266943d5562791fd8e6481539dda14b5301256f329454db684f0fb2603055608ae60c8f1690291a#npm:1.6.0"],
 =======
@@ -43216,6 +45868,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:0ad164306119c2de4d522f7cb8b1b879c5bc469891f9d0d56266943d5562791fd8e6481539dda14b5301256f329454db684f0fb2603055608ae60c8f1690291a#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43227,6 +45882,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -43246,6 +45902,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.58.1"],
+=======
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43271,6 +45930,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
 =======
 =======
@@ -43291,10 +45951,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:08968bd349f03f7395fbfd20260f6cb7e1ac0f090373c7daf6a2cc18d4989f4611c12e6925ccf56d94567d4ada37d3c5cac0c2408148e283388c7b8de0f81bd0#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:08968bd349f03f7395fbfd20260f6cb7e1ac0f090373c7daf6a2cc18d4989f4611c12e6925ccf56d94567d4ada37d3c5cac0c2408148e283388c7b8de0f81bd0#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:08968bd349f03f7395fbfd20260f6cb7e1ac0f090373c7daf6a2cc18d4989f4611c12e6925ccf56d94567d4ada37d3c5cac0c2408148e283388c7b8de0f81bd0#npm:1.6.0"],
 =======
@@ -43303,6 +45969,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:08968bd349f03f7395fbfd20260f6cb7e1ac0f090373c7daf6a2cc18d4989f4611c12e6925ccf56d94567d4ada37d3c5cac0c2408148e283388c7b8de0f81bd0#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43314,6 +45983,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -43333,6 +46003,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.58.1"],
+=======
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43358,6 +46031,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
 =======
 =======
@@ -43379,17 +46053,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.5"],
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:33ddbba0626582da11ceec471c54337971a2a48eab64b10f7476df0b6f3d9d6403a206f0be6992aa6393b126f632bcf2bd9117d8269aa4dad2988ea853320052#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:33ddbba0626582da11ceec471c54337971a2a48eab64b10f7476df0b6f3d9d6403a206f0be6992aa6393b126f632bcf2bd9117d8269aa4dad2988ea853320052#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:33ddbba0626582da11ceec471c54337971a2a48eab64b10f7476df0b6f3d9d6403a206f0be6992aa6393b126f632bcf2bd9117d8269aa4dad2988ea853320052#npm:1.6.0"],
 =======
@@ -43398,6 +46079,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:33ddbba0626582da11ceec471c54337971a2a48eab64b10f7476df0b6f3d9d6403a206f0be6992aa6393b126f632bcf2bd9117d8269aa4dad2988ea853320052#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43422,12 +46106,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.58.1"],
+=======
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43453,6 +46141,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
 =======
 =======
@@ -43473,10 +46162,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:2481e2197b0e11cc37dd319732d7f76e9ce8800e2a56fb0593a23e3835408384623b6d265796d3c9134ad886fa451ed9a7f1a11d56951f31709b14ca5693ea2e#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:2481e2197b0e11cc37dd319732d7f76e9ce8800e2a56fb0593a23e3835408384623b6d265796d3c9134ad886fa451ed9a7f1a11d56951f31709b14ca5693ea2e#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:2481e2197b0e11cc37dd319732d7f76e9ce8800e2a56fb0593a23e3835408384623b6d265796d3c9134ad886fa451ed9a7f1a11d56951f31709b14ca5693ea2e#npm:1.6.0"],
 =======
@@ -43485,6 +46180,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:2481e2197b0e11cc37dd319732d7f76e9ce8800e2a56fb0593a23e3835408384623b6d265796d3c9134ad886fa451ed9a7f1a11d56951f31709b14ca5693ea2e#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43509,12 +46207,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.58.1"],
+=======
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43540,6 +46242,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
 =======
 =======
@@ -43547,6 +46250,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 =======
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.7.2"],
@@ -43564,14 +46270,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:f402b79693c355263206f9f76285eeb9d61fcb492038c962876810a0203971fbe10e97764e404ad4b0e53d002f487c7ec810538b0c41831e31b754f0285a475e#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:f402b79693c355263206f9f76285eeb9d61fcb492038c962876810a0203971fbe10e97764e404ad4b0e53d002f487c7ec810538b0c41831e31b754f0285a475e#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:f402b79693c355263206f9f76285eeb9d61fcb492038c962876810a0203971fbe10e97764e404ad4b0e53d002f487c7ec810538b0c41831e31b754f0285a475e#npm:1.6.0"],
 =======
@@ -43580,6 +46290,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:f402b79693c355263206f9f76285eeb9d61fcb492038c962876810a0203971fbe10e97764e404ad4b0e53d002f487c7ec810538b0c41831e31b754f0285a475e#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43591,6 +46304,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -43610,6 +46324,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.58.1"],
+=======
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43635,6 +46352,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
 =======
 =======
@@ -43655,10 +46373,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:6e378f619077fa7962c988b7af9c99a32de1999d5afd75919c5b12dc00db2b77d45c04ff2c61269b7c4ce2f42797dc227aeab6d120cad5fc5bf4ba597f921629#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:6e378f619077fa7962c988b7af9c99a32de1999d5afd75919c5b12dc00db2b77d45c04ff2c61269b7c4ce2f42797dc227aeab6d120cad5fc5bf4ba597f921629#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:6e378f619077fa7962c988b7af9c99a32de1999d5afd75919c5b12dc00db2b77d45c04ff2c61269b7c4ce2f42797dc227aeab6d120cad5fc5bf4ba597f921629#npm:1.6.0"],
 =======
@@ -43667,6 +46391,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:6e378f619077fa7962c988b7af9c99a32de1999d5afd75919c5b12dc00db2b77d45c04ff2c61269b7c4ce2f42797dc227aeab6d120cad5fc5bf4ba597f921629#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43691,12 +46418,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.58.1"],
+=======
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43722,6 +46453,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
 =======
 =======
@@ -43729,6 +46461,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 =======
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.7.2"],
@@ -43746,14 +46481,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:8de940084c5d1c7a278356a35076d4fd49ab6615274d1fd6fb68f52689a249eb6d37172b902184756b5ce3aaf4957e3864675cfc65a5b0bf6e6bc859c75d8527#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:8de940084c5d1c7a278356a35076d4fd49ab6615274d1fd6fb68f52689a249eb6d37172b902184756b5ce3aaf4957e3864675cfc65a5b0bf6e6bc859c75d8527#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:8de940084c5d1c7a278356a35076d4fd49ab6615274d1fd6fb68f52689a249eb6d37172b902184756b5ce3aaf4957e3864675cfc65a5b0bf6e6bc859c75d8527#npm:1.6.0"],
 =======
@@ -43762,6 +46501,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:8de940084c5d1c7a278356a35076d4fd49ab6615274d1fd6fb68f52689a249eb6d37172b902184756b5ce3aaf4957e3864675cfc65a5b0bf6e6bc859c75d8527#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43786,12 +46528,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.58.1"],
+=======
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43817,6 +46563,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
 =======
 =======
@@ -43837,10 +46584,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:db3adb9c4abb520060abd032114acb03a1bca7e834cda2f601b4ecb0c68e43c3481bc82b3137ad2a1db63840c9e0be1b0fb95d982d6469799206f98ea572e3c9#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:db3adb9c4abb520060abd032114acb03a1bca7e834cda2f601b4ecb0c68e43c3481bc82b3137ad2a1db63840c9e0be1b0fb95d982d6469799206f98ea572e3c9#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:db3adb9c4abb520060abd032114acb03a1bca7e834cda2f601b4ecb0c68e43c3481bc82b3137ad2a1db63840c9e0be1b0fb95d982d6469799206f98ea572e3c9#npm:1.6.0"],
 =======
@@ -43849,6 +46602,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:db3adb9c4abb520060abd032114acb03a1bca7e834cda2f601b4ecb0c68e43c3481bc82b3137ad2a1db63840c9e0be1b0fb95d982d6469799206f98ea572e3c9#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43860,6 +46616,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -43879,6 +46636,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.58.1"],
+=======
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43904,6 +46664,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
 =======
 =======
@@ -43925,17 +46686,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.5"],
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:459545f386d2f04abfbe45343982ec8fbd539dc2533943df2c88486044d11956632b57e97f5f57d1fbff568e877da60c871ff9ee558e95bb4ef22c99a8ff1ef3#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:459545f386d2f04abfbe45343982ec8fbd539dc2533943df2c88486044d11956632b57e97f5f57d1fbff568e877da60c871ff9ee558e95bb4ef22c99a8ff1ef3#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:459545f386d2f04abfbe45343982ec8fbd539dc2533943df2c88486044d11956632b57e97f5f57d1fbff568e877da60c871ff9ee558e95bb4ef22c99a8ff1ef3#npm:1.6.0"],
 =======
@@ -43944,6 +46712,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:459545f386d2f04abfbe45343982ec8fbd539dc2533943df2c88486044d11956632b57e97f5f57d1fbff568e877da60c871ff9ee558e95bb4ef22c99a8ff1ef3#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -43955,6 +46726,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -43974,6 +46746,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.58.1"],
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -43999,6 +46774,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
 =======
 =======
@@ -44019,10 +46795,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:60d638e7fe0de38bded787c3a9f42701ad0d5e5b242433afcb514b4e61a2cbaf1f98019d9e2551f06f663199fdd0e370d2a804893edf11d4b08dac6eb6060c85#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:60d638e7fe0de38bded787c3a9f42701ad0d5e5b242433afcb514b4e61a2cbaf1f98019d9e2551f06f663199fdd0e370d2a804893edf11d4b08dac6eb6060c85#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:60d638e7fe0de38bded787c3a9f42701ad0d5e5b242433afcb514b4e61a2cbaf1f98019d9e2551f06f663199fdd0e370d2a804893edf11d4b08dac6eb6060c85#npm:1.6.0"],
 =======
@@ -44031,6 +46813,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:60d638e7fe0de38bded787c3a9f42701ad0d5e5b242433afcb514b4e61a2cbaf1f98019d9e2551f06f663199fdd0e370d2a804893edf11d4b08dac6eb6060c85#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -44042,6 +46827,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -44061,6 +46847,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.58.1"],
+=======
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -44086,6 +46875,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
 =======
 =======
@@ -44107,17 +46897,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.5"],
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:96ce65e5a823a2687d48f9b22db707edab5c4c9657582cdb7061cc024605d44c5b5b00f649e060214d6ff9ea66cd899a407e6022071207f7ad0fc46a8b2cb621#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:96ce65e5a823a2687d48f9b22db707edab5c4c9657582cdb7061cc024605d44c5b5b00f649e060214d6ff9ea66cd899a407e6022071207f7ad0fc46a8b2cb621#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:96ce65e5a823a2687d48f9b22db707edab5c4c9657582cdb7061cc024605d44c5b5b00f649e060214d6ff9ea66cd899a407e6022071207f7ad0fc46a8b2cb621#npm:1.6.0"],
 =======
@@ -44126,6 +46923,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:96ce65e5a823a2687d48f9b22db707edab5c4c9657582cdb7061cc024605d44c5b5b00f649e060214d6ff9ea66cd899a407e6022071207f7ad0fc46a8b2cb621#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -44137,6 +46937,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             ["rechoir", "npm:0.7.0"],
+<<<<<<< HEAD
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
 <<<<<<< HEAD
@@ -44156,6 +46957,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.58.1"],
+=======
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -44181,6 +46985,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
 =======
 =======
@@ -44201,10 +47006,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
+            ["@discoveryjs/json-ext", "npm:0.5.1"],
+            ["@types/webpack", null],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:660ecdf0c3516705dcae07f7ccb7fcb1c319ccb70413b872ec972a5ed41b6617f905035aed61a074d7f6eb3155c5d28ca7723b1b021eddcd92a9feef287273e5#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:660ecdf0c3516705dcae07f7ccb7fcb1c319ccb70413b872ec972a5ed41b6617f905035aed61a074d7f6eb3155c5d28ca7723b1b021eddcd92a9feef287273e5#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:660ecdf0c3516705dcae07f7ccb7fcb1c319ccb70413b872ec972a5ed41b6617f905035aed61a074d7f6eb3155c5d28ca7723b1b021eddcd92a9feef287273e5#npm:1.6.0"],
 =======
@@ -44213,6 +47024,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:660ecdf0c3516705dcae07f7ccb7fcb1c319ccb70413b872ec972a5ed41b6617f905035aed61a074d7f6eb3155c5d28ca7723b1b021eddcd92a9feef287273e5#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -44237,12 +47051,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.58.1"],
+=======
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -44268,6 +47086,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
 =======
 =======
@@ -44275,6 +47094,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.0"],
 >>>>>>> 8f92efe4 (fix: attempt to fix ci build replaced lock file)
+=======
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 =======
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.7.2"],
@@ -44292,14 +47114,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discoveryjs/json-ext", "npm:0.5.1"],
 >>>>>>> 258bc78a (fix: build issues)
             ["@types/webpack", null],
+<<<<<<< HEAD
             ["@types/webpack-bundle-analyzer", null],
             ["@types/webpack-cli__generators", null],
             ["@types/webpack-cli__migrate", null],
             ["@types/webpack-dev-server", null],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
             ["@webpack-cli/configtest", "virtual:85310a47271775ea6141f62d26902696129af5961fbd0df53ecbb1e8d70a6ee98d615b97f8d52f728ec4f761b536fb5ceaaa48c9bc00da623666c9271081727a#npm:1.1.0"],
             ["@webpack-cli/generators", null],
             ["@webpack-cli/info", "virtual:85310a47271775ea6141f62d26902696129af5961fbd0df53ecbb1e8d70a6ee98d615b97f8d52f728ec4f761b536fb5ceaaa48c9bc00da623666c9271081727a#npm:1.4.0"],
             ["@webpack-cli/migrate", null],
+<<<<<<< HEAD
 <<<<<<< HEAD
             ["@webpack-cli/serve", "virtual:85310a47271775ea6141f62d26902696129af5961fbd0df53ecbb1e8d70a6ee98d615b97f8d52f728ec4f761b536fb5ceaaa48c9bc00da623666c9271081727a#npm:1.6.0"],
 =======
@@ -44308,6 +47134,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 >>>>>>> c4299913 (fix: update yarn lock)
             ["colorette", "npm:2.0.16"],
 =======
+=======
+            ["@webpack-cli/serve", "virtual:85310a47271775ea6141f62d26902696129af5961fbd0df53ecbb1e8d70a6ee98d615b97f8d52f728ec4f761b536fb5ceaaa48c9bc00da623666c9271081727a#npm:1.6.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["colorette", "npm:2.0.14"],
 >>>>>>> 258bc78a (fix: build issues)
             ["commander", "npm:7.2.0"],
@@ -44332,12 +47161,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["rechoir", "npm:0.7.0"],
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["v8-compile-cache", "npm:2.2.0"],
 >>>>>>> 258bc78a (fix: build issues)
 =======
             ["v8-compile-cache", "npm:2.3.0"],
 >>>>>>> 48768561 (chore: fix yarn lock)
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.58.1"],
+=======
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-dev-server", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:3.11.2"],
 >>>>>>> 3aae16cc (refactor: reset sendTip added initiateTip and split tips into two calls)
@@ -44389,7 +47222,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"],
+=======
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44421,7 +47258,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"],
+=======
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44453,7 +47294,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"],
+=======
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44485,7 +47330,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"],
+=======
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44517,7 +47366,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"],
+=======
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44549,7 +47402,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"],
+=======
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44581,7 +47438,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
+=======
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44613,7 +47474,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"],
+=======
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44645,7 +47510,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.4"],
+=======
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44677,7 +47546,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"],
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44709,7 +47582,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"],
+=======
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44741,7 +47618,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"],
+=======
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44773,7 +47654,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"],
+=======
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44805,7 +47690,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"],
+=======
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44837,7 +47726,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.4"],
+=======
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44869,7 +47762,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"],
+=======
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44901,7 +47798,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"],
+=======
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44933,7 +47834,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"],
+=======
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44965,7 +47870,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.4"],
+=======
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -44997,7 +47906,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"],
+=======
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -45029,7 +47942,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"],
+=======
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -45061,7 +47978,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.5.2"],
             ["mkdirp", "npm:0.5.5"],
             ["range-parser", "npm:1.2.1"],
+<<<<<<< HEAD
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"],
+=======
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-log", "npm:2.0.0"]
           ],
           "packagePeers": [
@@ -45117,6 +48038,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.4"],
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:35deaf2f8b02b3ed95d2243e6b24c551ed036263d45c59d89864c17c0389ed71ca54d3aac9d413af65d2e98c2604fa45ee6d4b4d2aba37aa4e40a67aa3716b9a#npm:3.7.2"],
@@ -45126,6 +48048,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.58.1"],
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.0"],
+=======
+            ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.60.0"],
+            ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:b76f72b82078ffc2b4ebee223a199380cdc9c81cb1191e9816c8ca7649d6165e1a011bba5fbb237126792da00b483bef6042c130b6338d10a712c32d549af6dd#npm:3.7.2"],
 =======
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.46.0"],
@@ -45264,6 +48190,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.4"],
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:aa691980d998213024f5912e11819477cd011cb143a3129894cfb23be834a5da887cbd432e0fb687833b56ac92653e8f54861e9830be076bec95650e5616711c#npm:3.7.2"],
@@ -45281,6 +48208,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.58.1"],
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.0"],
+=======
+            ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.60.0"],
+            ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:a936d4c055cca81a1864b7077fe16aed976a097514380bd414b224da5099a993fe4b230b55d503163ea55669440bf9988ba699d9bcc3af013ed60240fcb6abfa#npm:3.7.2"],
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:6.2.2"],
@@ -45327,6 +48258,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.58.1"],
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.0"],
@@ -45338,6 +48270,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.60.0"],
+            ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:9e33c3fe30e905d097543d006b818df82b19dbf028ed057e9265fc82c3ae064c99886fbdf8d9c64f3b183d68e0b10ce0812229b4070ed350318a6a02599df0fe#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -45390,6 +48326,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.4"],
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:d9b464d57f679f2569e8addb1dd1f4df62c466eab00f43e8044b3fe678d09f7ebe587e4c82fb2e47373ebb82877a4199f3e8e47f6777541a568ef0d3fd0b7ddc#npm:3.7.2"],
@@ -45399,6 +48336,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.58.1"],
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.0"],
+=======
+            ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.60.0"],
+            ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:3a884bc6e9899c60fecebb10b4b66729f5a89e5ced09599cb2fa27824e292d0a0e3f867d881de909a3bb3c540386cfdb87559332a1e39c8adbe94ef37080e8f4#npm:3.7.2"],
 =======
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.46.0"],
@@ -45468,6 +48409,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.4"],
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:a9e38a9d8943554adf81f3090e47288e4bfeb696071425db43e2417c110382cee07b98f4b13e494595bcdd8c46ce569c9b366c835c450e7d077600cddd2029ba#npm:3.7.2"],
@@ -45477,6 +48419,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.58.1"],
             ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.0"],
+=======
+            ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.60.0"],
+            ["webpack-cli", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:c094036fe18c14ec591093ceb41f91ec497ce21431d675ba788de0b1c9d381b2e0d6c897deafd5794324b9b683e794897f95f0900965384e5737315adadb10a9#npm:3.7.2"],
 =======
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.46.0"],
@@ -45546,6 +48492,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.4"],
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:6903702d33560b41212e7889b61a01ad637a0395140df57f1854667c25c5f8bcf280bdb847987bb71904beab55235570569b24113a0d178ed3a5547e4d1f9f70#npm:3.7.2"],
@@ -45555,6 +48502,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.58.1"],
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.0"],
+=======
+            ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.60.0"],
+            ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:b5ad02d2c3915407db416f34d88127e14375c5db9bced3e21fbd8e760d9e806694d716e4b02afdc2d0844fa77a2eb3342d20bc3448f3645248e1c75be1cc1968#npm:3.7.2"],
 =======
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.46.0"],
@@ -45624,6 +48575,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.4"],
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:87a78aac3fcb4037cf6b50190c900f3595091acd849477045f25c7ab3f009d69e4d3e93b06933cce563e7c1e812c1e3c424f7fb8b383b5057f34146cc6f9220d#npm:3.7.2"],
@@ -45633,6 +48585,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.58.1"],
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.0"],
+=======
+            ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.60.0"],
+            ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:ab98f37a7db0a7e31e5aa9e274e7a258b5ee59f5ea2f72b1471a7ea5c2acbf30a2367ae05bebc8593c700a1e5c3e5e2bb4c81bcc6bb637363d4fc90a23c18e83#npm:3.7.2"],
 =======
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.46.0"],
@@ -45702,6 +48658,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.4"],
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:caa83e7c3e800c4177da995cc591a39432aa00a0d6f18122e5e88fdb706af6d038f75938bb51d02b3c378a6dc6b6d6240b07f596e5f0c76def667c38bf4e6126#npm:3.7.2"],
@@ -45711,6 +48668,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.58.1"],
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.0"],
+=======
+            ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.60.0"],
+            ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:af922b89a429c6c5e26742c3477b640867cb221a88faeb368bbe8c9267298192804fd22cd9e349746d52eb446a9c359788121990a92a68e2033488553b338ea6#npm:3.7.2"],
 =======
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.46.0"],
@@ -45780,6 +48741,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.4"],
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:da5002119af0be3d5a2fe77d6cb641e86c6d93664e7724dca013f877f2ccff44c9560ea91996d47baf2e07589952899079ddf043de6fd9ce416631630e687be0#npm:3.7.2"],
@@ -45789,6 +48751,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.58.1"],
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.0"],
+=======
+            ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.60.0"],
+            ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:e676ce2b84d03207d07c38d11e1411c30244ce9cf198692a1146e08cefaf228b3671649bf27cea9380932ee7e2402dbbe11eb88fc0490f5c79a58f47a453830a#npm:3.7.2"],
 =======
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.46.0"],
@@ -45995,6 +48961,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.4"],
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:210732d5de67a66c3e0f5351aff78024d664f591107bcb2f2022788ebb86edefd081644823e9190de8a0997bf6114083a7f0b2e438f3db0fdffde64dec3aeb39#npm:3.7.2"],
@@ -46016,6 +48983,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.58.1"],
             ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.0"],
+=======
+            ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.60.0"],
+            ["webpack-cli", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:5bdba52a314e2f69383fbf2cd98fd63be3f1c6f1b0219e72e2d7a92a379654047bf9eb878c2f1f57f8dfd85f28e2739090c307badd10d6cbec7f3dd25319730a#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -46065,6 +49036,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["url", "npm:0.11.0"],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> aa521d93 (fix: change the link to adjust daily limit)
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46081,6 +49053,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.58.1"],
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.0"],
+=======
+            ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.60.0"],
+            ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:adf01d534fd2bbe22642fe47f1f067c0494483d7ed51e205f36aa74caa98646ab60d180597057f3223373a1ad68ecb8aeda3a02e1e0f062ce52f792fac475bce#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -46134,6 +49110,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.4"],
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:e48dc824528284dd15349424cee29c1c363e5c7cbee861f3323a56ad244a1b8dc2821c5c1cf17307b8141209c55e72b3536fa813bf4a89ca1478e0398acd866b#npm:3.7.2"],
@@ -46161,6 +49138,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.58.1"],
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.0"],
+=======
+            ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.60.0"],
+            ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:dc857e7e6a663b71fb1aae241c098d7db968cb75a778d1b93be32fcbe3715036196ca252649cffe5a805cff71092c73a86a9cf113bcd4dfe339b2144596b4aca#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -46214,6 +49195,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.4"],
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:536cbf68879b5766d71e724362ae359bba7589211262abd376514f52bfe9b44493b8b1cef5142a35857c4d20ea114af489a9bbee8209396e08702698cad2a81c#npm:3.7.2"],
@@ -46234,6 +49216,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.58.1"],
             ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.0"],
+=======
+            ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.60.0"],
+            ["webpack-cli", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:f9c9ff20ebc589630ba8b8bf0d88a19a9c80b89c1f77c28cbe622a70709038643673e80cfd7a4b4f567cd80c626394d5a37a8c9f72c0cbfded767b40afcc7e9c#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -46290,6 +49276,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.4"],
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:3dda66c7790bc8955566bf8570ffe27bc429d5cedad944fb213e6d3ae3159aaf6f325304da89e97083dde74622dce0c14d4e1e86779d444fca082a6114139f0f#npm:3.7.2"],
@@ -46313,6 +49300,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.58.1"],
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.0"],
+=======
+            ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.60.0"],
+            ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:180636387cdc162bd637e00eb8db22084e0334f5d112789f5d7fbec61e69536fe12ac178dd426f787bb4892b6f3e35b32a86b3669ba63889622e940e85d6faf7#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -46365,6 +49356,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.4"],
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:52f211c991696e70c3dd72ccdc3ee084adffdba33885806e57ddc1893237eacb0c7d092160db1b95df418b8193d840d5bcc0aad5d92f4815aefa37d55921ed9c#npm:3.7.2"],
@@ -46375,6 +49367,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.58.1"],
             ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.0"],
+=======
+            ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.60.0"],
+            ["webpack-cli", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:1774ddb0534506cfc29aef5c2e8aea93b9cf77866e0fcc4e4fd6ce2efdeb1cca9f31763636a46cdf9a1bca4cc0ae8f82f7521090d6f82879a75a40fdf2afe0f4#npm:3.7.2"],
             ["webpack-log", "npm:2.0.0"],
             ["ws", "virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:6.2.2"],
@@ -46421,6 +49417,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-ansi", "npm:3.0.1"],
             ["supports-color", "npm:6.1.0"],
             ["url", "npm:0.11.0"],
+<<<<<<< HEAD
 >>>>>>> c4299913 (fix: update yarn lock)
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.58.1"],
             ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.0"],
@@ -46432,6 +49429,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.60.0"],
+            ["webpack-cli", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:4656bbe7083189a0818f1c809be803a0e922022e0e16835c95e86a422ce54dcdcb642420c0c2e1058dac13eecfec81328ea5251282f68aa174235598d533757d#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -46484,6 +49485,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.4"],
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:64abac97ca49e86cce1244b94e2e7077f66800cacf23d17dc613e94eca72e401515c101f11eca95eb832756e019cc3ad554971c46ee6e7d358f418f0a408c938#npm:3.7.2"],
@@ -46493,6 +49495,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.58.1"],
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.0"],
+=======
+            ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.60.0"],
+            ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:5bf3df9d78a3057b15d980ada1921674cb800a5ac70eefbfa9adfb32f6b682e6ab2cf89a0fcb8de31b38d9f509430fe21f42a0d8d01b63bfdd3af1a917d11628#npm:3.7.2"],
 =======
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.46.0"],
@@ -46562,6 +49568,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.4"],
             ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:7fadb7d66d33e68ea32294fdfef286aeb96a2c3649fa2728f10dc9111bb498825d35bcf99cffd580cf5c667bab0e54e6470efdd03381dc4ae04af17a6e1c1c3d#npm:3.7.2"],
@@ -46581,6 +49588,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.60.0"],
+            ["webpack-cli", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:5dde1b02e2db0b099fcdd5437d65fad2595e632e654d5ff5958d58067b1d702b52f96c9ca208dbdec11b70b20b6c2bd5e26e32a1571a5ceb345ccc42fef0c667#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -46633,6 +49644,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.4"],
             ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:f111b52638138a4ff643a338d3f54ae9ecdc97bd4004ea0417199cc0ccc927112774db1a8edbac2631c25bff021e84359c6cb8673c4ff0426e7c63f4622ec140#npm:3.7.2"],
@@ -46659,6 +49671,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.60.0"],
+            ["webpack-cli", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:015e88b2a9ee4bb9deeff6d9d6dbb129b60726ef5b20c4b6ed567adfa6c003b1469cd14457f960c56f87a7da966ccea489f4468d7d386b57155640ea44a2a124#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -46711,6 +49727,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.4"],
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:f2f2d41ba620e211b65f5db5fb0516f981b4ee690c1a04259db81776552e22952b80f7c64c766899c19f0b237af82a44b242a5663ee4f26532ec8b24bfc60671#npm:3.7.2"],
@@ -46730,6 +49747,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.60.0"],
+            ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:29fc036395aa9f04ac61b9cb4b580c656a510b0b3c8a102736c94e11f6444174ea582b1b9484bc6950d69dc7e615a947afe6a95db1938b8faff8cf8390389a3e#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -46782,6 +49803,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.4"],
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:77a358f43f0fd006045dc44d628018ffad8033a09a1a7a39ad5f5df26b773e586134cf3263527e33818c4a60b757b6bf8316ad41f0a2627230e5cd10b8e32103#npm:3.7.2"],
@@ -46791,6 +49813,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.58.1"],
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.0"],
+=======
+            ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.60.0"],
+            ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:063ecd6a454fbf40d998b00484ce38643a50fcd089c6d51696b962b090ab6109f80311dbffe8840136fed951b78038cfa6140cc0c8b736eae1def14c844acf1e#npm:3.7.2"],
 =======
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.46.0"],
@@ -46860,6 +49886,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.4"],
             ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
             ["webpack-dev-middleware", "virtual:192593f20d46689302edc7dad5f30bb0d17b2ec6d80fc21171e34615b79d83a7c10e436b122f389e52087d99e10b9d5e25a607a554e4647a774eedeb39f8de01#npm:3.7.2"],
@@ -46879,6 +49906,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 =======
 >>>>>>> c4299913 (fix: update yarn lock)
 =======
+=======
+            ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.60.0"],
+            ["webpack-cli", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:4.9.1"],
+>>>>>>> b82a4279 (chore: squash merge main)
             ["webpack-dev-middleware", "virtual:e613f7c9f1c3879a2e24c22706b8166424f43c5afd02860225fcf7c2725a5c81420453459dfb520ecfec38c0bb26ec4be44ca07c648b093b23d5ae3cd2427920#npm:3.7.2"],
 >>>>>>> 258bc78a (fix: build issues)
             ["webpack-log", "npm:2.0.0"],
@@ -47690,6 +50721,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         ["npm:17.1.0", {
           "packageLocation": "./.yarn/cache/yargs-npm-17.1.0-06b940cf1f-259d496db8.zip/node_modules/yargs/",
@@ -47731,6 +50763,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+=======
+>>>>>>> b82a4279 (chore: squash merge main)
         ["npm:17.2.1", {
           "packageLocation": "./.yarn/cache/yargs-npm-17.2.1-592dabfd58-451aac46f8.zip/node_modules/yargs/",
           "packageDependencies": [
