@@ -888,10 +888,8 @@ export class BackgroundScript {
     }
 
     const receiver = stream.getPaymentPointer()
-    const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
 
     // Set tip amount
-    // const amount = Math.floor(tip * 1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
     const CENTS = 100
     const tipAmountCents = Math.floor(tip * CENTS).toString()
 
@@ -912,16 +910,6 @@ export class BackgroundScript {
       })
 
       this.log(`tip: sent tip to ${receiver}`, result)
-      const message: TipSent = {
-        command: 'tip',
-        data: {
-          paymentPointer: receiver,
-          amount: tipAmountCents,
-          assetCode,
-          assetScale
-        }
-      }
-      this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
       return { success: true }
     } catch (e) {
       this.log(`tip: error. msg=${e.message}`)
