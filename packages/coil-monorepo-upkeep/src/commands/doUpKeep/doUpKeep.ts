@@ -227,7 +227,7 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
           isFolder = false
           paths[`${li.name}/${name}`] = [`${path}/${name}.ts`]
         } else {
-          throw new Error()
+          throw new Error(`${folderPath} or ${tsPath} must exist`)
         }
         cmd(`rm -rf ${packagePath}/${name}`, { cwd: fromRoot('.') })
         cmd(`mkdir ${packagePath}/${name}`, { cwd: fromRoot('.') })

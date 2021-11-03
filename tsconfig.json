@@ -27,6 +27,9 @@
       "@webmonetization/types": [
         "packages/webmonetization-types/src"
       ],
+      "@webmonetization/types/draft2": [
+        "packages/webmonetization-types/src/draft2"
+      ],
       "@coil/anonymous-tokens": [
         "packages/coil-anonymous-tokens/src"
       ],

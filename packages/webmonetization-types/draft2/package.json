@@ -1,0 +1,7 @@
+{
+  "name": "@webmonetization/types/draft2",
+  "private": true,
+  "version": "0.0.0",
+  "main": "../build/draft2",
+  "types": "../build/draft2"
+}

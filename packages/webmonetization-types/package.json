@@ -16,6 +16,9 @@
   "author": "Coil Team <info@coil.com>",
   "main": "./build",
   "types": "./build",
+  "subpackages": [
+    "draft2"
+  ],
   "files": [
     "build/*"
   ],
