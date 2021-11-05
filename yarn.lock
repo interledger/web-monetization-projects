@@ -5167,7 +5167,7 @@ __metadata:
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
-    ts-json-schema-generator: 0.96.0
+    ts-json-schema-generator: 0.97.0
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
@@ -10896,7 +10896,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-json-stable-stringify@npm:2.x, fast-json-stable-stringify@npm:^2.0.0, fast-json-stable-stringify@npm:^2.1.0":
+"fast-json-stable-stringify@npm:2.x, fast-json-stable-stringify@npm:^2.0.0":
   version: 2.1.0
   resolution: "fast-json-stable-stringify@npm:2.1.0"
   checksum: b191531e36c607977e5b1c47811158733c34ccb3bfde92c44798929e9b4154884378536d26ad90dfecd32e1ffc09c545d23535ad91b3161a27ddbb8ebe0cbecb
@@ -19639,6 +19639,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"safe-stable-stringify@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "safe-stable-stringify@npm:2.2.0"
+  checksum: 09facfbc43259f02422ff00ecbb3490d19a7b4f9545852c8a0045bd3d0120bc07f6e5f803f124312c237db688b7051fe85670c817ebba66f8530c5049201e0b2
+  languageName: node
+  linkType: hard
+
 "safer-buffer@npm:>= 2.1.2 < 3, safer-buffer@npm:>= 2.1.2 < 3.0.0, safer-buffer@npm:^2.0.2, safer-buffer@npm:^2.1.0, safer-buffer@npm:~2.1.0":
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
@@ -21583,20 +21590,19 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:0.96.0":
-  version: 0.96.0
-  resolution: "ts-json-schema-generator@npm:0.96.0"
+"ts-json-schema-generator@npm:0.97.0":
+  version: 0.97.0
+  resolution: "ts-json-schema-generator@npm:0.97.0"
   dependencies:
     "@types/json-schema": ^7.0.9
     commander: ^8.2.0
-    fast-json-stable-stringify: ^2.1.0
     glob: ^7.2.0
-    json-stable-stringify: ^1.0.1
     json5: ^2.2.0
+    safe-stable-stringify: ^2.2.0
     typescript: ~4.4.3
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: 659d46e07c96b7cf6595ad4fa8eedb7d960f6b36f4962b8bd98433b22e19d3d1965da294b2edeeddf563f10688b51e906c736bac40028bd5d08c7aadfa75e41c
+  checksum: 99a3bff835944d6eddd464048b35f6ba9dff147fa25126ac25cbbeeea090f7aada82ceb6066fd5bc01cc08629b84e1c89401ff560f07eb1f70569d9ac66b2e29
   languageName: node
   linkType: hard
 

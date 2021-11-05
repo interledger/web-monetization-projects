@@ -7053,7 +7053,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.4.1"],
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
-            ["ts-json-schema-generator", "npm:0.96.0"],
+            ["ts-json-schema-generator", "npm:0.97.0"],
             ["ts-loader", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
@@ -24755,6 +24755,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["safe-stable-stringify", [
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/safe-stable-stringify-npm-2.2.0-336efeb371-09facfbc43.zip/node_modules/safe-stable-stringify/",
+          "packageDependencies": [
+            ["safe-stable-stringify", "npm:2.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["safer-buffer", [
         ["npm:2.1.2", {
           "packageLocation": "./.yarn/cache/safer-buffer-npm-2.1.2-8d5c0b705e-cab8f25ae6.zip/node_modules/safer-buffer/",
@@ -27260,16 +27269,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ts-json-schema-generator", [
-        ["npm:0.96.0", {
-          "packageLocation": "./.yarn/cache/ts-json-schema-generator-npm-0.96.0-7391bef9d8-659d46e07c.zip/node_modules/ts-json-schema-generator/",
+        ["npm:0.97.0", {
+          "packageLocation": "./.yarn/cache/ts-json-schema-generator-npm-0.97.0-5b246ab2e0-99a3bff835.zip/node_modules/ts-json-schema-generator/",
           "packageDependencies": [
-            ["ts-json-schema-generator", "npm:0.96.0"],
+            ["ts-json-schema-generator", "npm:0.97.0"],
             ["@types/json-schema", "npm:7.0.9"],
             ["commander", "npm:8.2.0"],
-            ["fast-json-stable-stringify", "npm:2.1.0"],
             ["glob", "npm:7.2.0"],
-            ["json-stable-stringify", "npm:1.0.1"],
             ["json5", "npm:2.2.0"],
+            ["safe-stable-stringify", "npm:2.2.0"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
           ],
           "linkType": "HARD",
