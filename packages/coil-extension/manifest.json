@@ -3,7 +3,7 @@
   "description": "Support websites and creators with Web Monetization",
   "version": "0.0.56",
   "manifest_version": 2,
-  "content_security_policy": "script-src 'self' 'sha256-ZB4S3fpmqhkYmY2fAkJhOuCiCW9xtnSo9QaJPSzPH7Q='; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'sha256-CnrilUnQacMib3D47lDCrpBSgQTI5uZqwiiWtiTGfOA='; object-src 'self'",
   "browser_specific_settings": {
     "gecko": {
       "id": "coilfirefoxextension@coil.com"
