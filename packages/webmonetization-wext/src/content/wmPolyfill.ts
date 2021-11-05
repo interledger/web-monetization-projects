@@ -34,15 +34,28 @@ export const wmPolyFillMinimal = `
   document.addEventListener('monetization-v1', function(event) {
     const {type, detail} = event.detail
     if (type === 'monetizationstatechange') {
+      // document.monetization
       document.monetization.state = detail.state
+
+      // navigator.monetization
+      const oldState = navigator.monetization.state
+
+      let newState
       if (detail.state === 'started') {
-        navigator.monetization.state = 'interactive'
+        newState = 'interactive'
       }
       if (detail.state === 'pending') {
-        navigator.monetization.state = 'interactive'
+        newState = 'interactive'
       }
       if (detail.state === 'stopped') {
-        navigator.monetization.state = 'idle'
+        newState = 'idle'
+      }
+      if (newState !== oldState) {
+        navigator.monetization.state = newState
+        navigator.monetization.dispatchEvent(new CustomEvent('statechange', {detail: {
+          newState: newState,
+          oldState: oldState
+          }}))
       }
     } else {
       document.monetization.dispatchEvent(
