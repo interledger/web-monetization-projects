@@ -25,17 +25,34 @@ const progressLoggingCode = createBindingCode('monetizationprogress')
 
 // language=JavaScript
 export const wmPolyFillMinimal = `
+  navigator.monetization = new EventTarget()
+  navigator.monetization.state = 'idle'
+
   document.monetization = document.createElement('div')
   document.monetization.state = 'stopped'
+
   document.addEventListener('monetization-v1', function(event) {
     const {type, detail} = event.detail
     if (type === 'monetizationstatechange') {
       document.monetization.state = detail.state
+      if (detail.state === 'started') {
+        navigator.monetization.state = 'interactive'
+      }
+      if (detail.state === 'pending') {
+        navigator.monetization.state = 'interactive'
+      }
+      if (detail.state === 'stopped') {
+        navigator.monetization.state = 'idle'
+      }
     } else {
       document.monetization.dispatchEvent(
         new CustomEvent(type, {
           detail: detail
         }))
+      if (type === 'monetizationprogress') {
+        navigator.monetization.dispatchEvent(
+          new CustomEvent('monetization', {detail: detail}))
+      }
     }
   })
 `
