@@ -53,8 +53,8 @@ export const wmPolyFillMinimal = `
       if (newState !== oldState) {
         navigator.monetization.state = newState
         navigator.monetization.dispatchEvent(new CustomEvent('statechange', {detail: {
-          newState: newState,
-          oldState: oldState
+          state: newState,
+          previous: oldState
           }}))
       }
     } else {
