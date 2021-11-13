@@ -102,7 +102,7 @@
     "@yarnpkg/pnpify": "3.1.0",
     "JSON2016": "1.0.0",
     "addons-linter": "4.1.0",
-    "copy-webpack-plugin": "9.0.1",
+    "copy-webpack-plugin": "9.1.0",
     "crx-hotreload": "1.0.6",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
