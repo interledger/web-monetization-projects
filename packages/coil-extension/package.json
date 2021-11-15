@@ -29,7 +29,6 @@
     "dev": "WEXT_MANIFEST_SUFFIX=Dev TSCONFIG_DEBUG=true TS_LOADER_TRANSPILE_ONLY=true LIVE_RELOAD=true yarn",
     "dev-chrome-prod": "yarn dev build-prod chrome --watch",
     "dev-chrome-staging": "yarn dev build-staging chrome --watch",
-    "web-ext-reload": "web-ext run --reload -s $PWD/dist -p default-release",
     "dev-edge-prod": "yarn dev build-prod edge --watch",
     "dev-edge-staging": "yarn dev build-staging edge --watch",
     "dev-firefox-prod": "yarn dev build-prod firefox --watch",
@@ -39,14 +38,15 @@
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "precommit": "echo lint-staged runs from root",
     "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
-    "publish:preview": "WEXT_SHIPIT_CHROME_EXTENSION_ID=iehmfkldnblennopinmmagfidpflefkp WEXT_MANIFEST_SUFFIX=Preview ./scripts/publish-coildev-chrome-store.sh",
     "publish:dev": "./scripts/publish-coildev-chrome-store.sh",
+    "publish:preview": "WEXT_SHIPIT_CHROME_EXTENSION_ID=iehmfkldnblennopinmmagfidpflefkp WEXT_MANIFEST_SUFFIX=Preview ./scripts/publish-coildev-chrome-store.sh",
     "serve:dist": "http-server -p 4000 dist",
     "serve:fixtures": "http-server -p 4000 test/fixtures",
     "serve:fixtures-iframes": "http-server -p 4000 test/fixtures/iframes",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --verbose --coverage",
-    "upkeep": "cd ../.. && yarn upkeep"
+    "upkeep": "cd ../.. && yarn upkeep",
+    "web-ext-reload": "web-ext run --reload -s $PWD/dist -p default-release"
   },
   "dependencies": {
     "@abraham/reflection": "^0.8.0",
