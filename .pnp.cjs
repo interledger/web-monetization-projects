@@ -5714,10 +5714,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/body-parser", [
-        ["npm:1.19.1", {
-          "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.1-4151ae2e82-2990656ea2.zip/node_modules/@types/body-parser/",
+        ["npm:1.19.2", {
+          "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.2-f845b7b538-e17840c7d7.zip/node_modules/@types/body-parser/",
           "packageDependencies": [
-            ["@types/body-parser", "npm:1.19.1"],
+            ["@types/body-parser", "npm:1.19.2"],
             ["@types/connect", "npm:3.4.33"],
             ["@types/node", "npm:14.17.33"]
           ],
@@ -5818,7 +5818,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-express-npm-4.17.8-c21b94ed16-ca265de4f9.zip/node_modules/@types/express/",
           "packageDependencies": [
             ["@types/express", "npm:4.17.8"],
-            ["@types/body-parser", "npm:1.19.1"],
+            ["@types/body-parser", "npm:1.19.2"],
             ["@types/express-serve-static-core", "npm:4.17.12"],
             ["@types/qs", "npm:6.9.5"],
             ["@types/serve-static", "npm:1.13.5"]
@@ -6764,7 +6764,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:14.1.0"],
             ["@commitlint/config-conventional", "npm:14.1.0"],
             ["@hot-loader/react-dom", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:17.0.1"],
-            ["@types/body-parser", "npm:1.19.1"],
+            ["@types/body-parser", "npm:1.19.2"],
             ["@types/express", "npm:4.17.8"],
             ["@types/figlet", "npm:1.5.4"],
             ["@types/jest", "npm:27.0.2"],
