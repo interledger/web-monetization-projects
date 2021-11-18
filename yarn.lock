@@ -4087,13 +4087,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/body-parser@npm:*, @types/body-parser@npm:1.19.1":
-  version: 1.19.1
-  resolution: "@types/body-parser@npm:1.19.1"
+"@types/body-parser@npm:*, @types/body-parser@npm:1.19.2":
+  version: 1.19.2
+  resolution: "@types/body-parser@npm:1.19.2"
   dependencies:
     "@types/connect": "*"
     "@types/node": "*"
-  checksum: 2990656ea2de81f3529a3359a79a13b67feb4c627caf7a367fdc0017a178e567b0cc410546bdd219104ad7197c5ee5a90b70193f5253839ea43d9cdb2d2dacee
+  checksum: e17840c7d747a549f00aebe72c89313d09fbc4b632b949b2470c5cb3b1cb73863901ae84d9335b567a79ec5efcfb8a28ff8e3f36bc8748a9686756b6d5681f40
   languageName: node
   linkType: hard
 
@@ -4943,7 +4943,7 @@ __metadata:
     "@commitlint/cli": 14.1.0
     "@commitlint/config-conventional": 14.1.0
     "@hot-loader/react-dom": 17.0.1
-    "@types/body-parser": 1.19.1
+    "@types/body-parser": 1.19.2
     "@types/express": 4.17.12
     "@types/figlet": 1.5.4
     "@types/jest": 27.0.2
