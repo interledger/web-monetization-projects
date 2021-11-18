@@ -57,7 +57,6 @@ export const wmPolyFillMinimal = `
         },
 
         set(val) {
-          // Hello PPK :)
           // NOTE: document.title will edit an existing <title> tag, and
           // append a <title> if none exist
           if (val === null) {
@@ -68,12 +67,19 @@ export const wmPolyFillMinimal = `
           } else if (typeof val !== 'string') {
             throw new Error('pointer must be https:// url string')
           } else {
-            let link = document.querySelector(selector)
-            if (!link) {
-              link = document.createElement('link')
-              link.setAttribute('rel', 'monetization')
-              link.setAttribute('href', val)
-              document.head.appendChild(link)
+            let existing = document.querySelector(selector)
+            if (!existing) {
+              const newLink = document.createElement('link')
+              // The monetization tag observer likely needs these all in
+              // good shape, hence the separate code blocks depending on
+              // whether we have an existing link or not.
+              newLink.setAttribute('rel', 'monetization')
+              newLink.setAttribute('href', val)
+              // TODO: this could be null
+              document.head.appendChild(newLink)
+            }
+            else {
+              existing.setAttribute('href', val)
             }
           }
         }
