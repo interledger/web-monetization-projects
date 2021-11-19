@@ -26,16 +26,75 @@ const progressLoggingCode = createBindingCode('monetizationprogress')
 export const wmPolyFillMinimal = `
   const selector = 'link[rel="monetization"]'
 
+  // navigator.monetization only ever lives in the main page context, so
+  // we are fine to create these custom events in that main context too.
+  class MonetizationEvent extends Event {
+    #detail = null
+
+    constructor(detail) {
+      super('monetization')
+      this.#detail = detail
+      Object.assign(this, detail)
+    }
+
+    get [Symbol.toStringTag]() {
+      return 'MonetizationEvent'
+    }
+
+    toJSON() {
+      return this.#detail
+    }
+  }
+
+  class MonetizationStateChangeEvent extends Event {
+    constructor() {
+      super('statechange')
+    }
+
+    get [Symbol.toStringTag]() {
+      return 'MonetizationStateChangeEvent'
+    }
+  }
+
   class Monetization extends EventTarget {
     state = 'idle'
+    #monetizationlistener = null
+    #statechangelistener = null
+
+    addEventListener(type, callback, options) {
+      super.addEventListener(type, callback, options)
+    }
+
+    get onmonetization() {
+      return this.#monetizationlistener
+    }
+
+    set onmonetization(callback) {
+      if (!callback && this.#monetizationlistener) {
+        this.removeEventListener('monetization', this.#monetizationlistener)
+      }
+      this.#monetizationlistener = callback
+      this.addEventListener('monetization', callback)
+    }
+
+    get onstatechange() {
+      return this.#statechangelistener
+    }
+
+    set onstatechange(callback) {
+      if (!callback && this.#statechangelistener) {
+        this.removeEventListener('statechange', this.#statechangelistener)
+      }
+      this.#statechangelistener = callback
+      this.addEventListener('statechange', callback)
+    }
 
     get [Symbol.toStringTag]() {
       return 'Monetization'
     }
 
-
     toJSON() {
-      const json = {state: this.state}
+      const json = { state: this.state }
       if (Monetization.prototype.hasOwnProperty('pointer')) {
         json['pointer'] = this.pointer
       }
@@ -45,9 +104,6 @@ export const wmPolyFillMinimal = `
 
   if (localStorage.WM_POINTER_PROPERTY) {
     Object.defineProperty(Monetization.prototype, 'pointer', {
-      enumerable: true,
-      configurable: true,
-      writeable: true,
         get() {
           const link = document.querySelector(selector)
           if (link && link.hasAttribute('href')) {
@@ -77,8 +133,7 @@ export const wmPolyFillMinimal = `
               newLink.setAttribute('href', val)
               // TODO: this could be null
               document.head.appendChild(newLink)
-            }
-            else {
+            } else {
               existing.setAttribute('href', val)
             }
           }
@@ -114,8 +169,8 @@ export const wmPolyFillMinimal = `
       }
       if (newState && (newState !== oldState)) {
         navigator.monetization.state = newState
-        const stateChange = new CustomEvent('statechange')
-        navigator.monetization.dispatchEvent(stateChange)
+
+        navigator.monetization.dispatchEvent(new MonetizationStateChangeEvent())
       }
     } else {
       document.monetization.dispatchEvent(
@@ -124,7 +179,7 @@ export const wmPolyFillMinimal = `
         }))
       if (type === 'monetizationprogress') {
         navigator.monetization.dispatchEvent(
-          new CustomEvent('monetization', { detail: detail }))
+          new MonetizationEvent(detail))
       }
     }
   })
@@ -138,13 +193,18 @@ export const wmPolyfill = `
     ${basicEventsLoggingCode}
     navigator.monetization.addEventListener('statechange', (e) => {
       console.log(
-        '%c Web-Monetization-2 statechange event: %s',
-        'color: aqua; background-color: black', navigator.monetization.state)
+        '%c Web-Monetization-2 statechange event: %s %o',
+        'color: aqua; background-color: black', navigator.monetization.state, e)
     })
   }
 
   if (localStorage.WM_DEBUG_PROGRESS) {
-    ${progressLoggingCode}
+    /*${progressLoggingCode}*/
+    navigator.monetization.addEventListener('monetization', (e) => {
+      console.log(
+        '%c Web-Monetization-2 monetization event: %o',
+        'color: aqua; background-color: black', e)
+    })
   }
 `
 
