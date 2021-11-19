@@ -45,6 +45,7 @@ const config: webpack.Configuration = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      scriptLoading: 'blocking',
       template: './test/fixtures/test.html',
       filename: './index.html'
     })
