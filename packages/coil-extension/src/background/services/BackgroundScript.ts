@@ -101,7 +101,7 @@ export class BackgroundScript {
     this.handleStreamsAbortEvent()
     this.popup.setDefaultInactive()
     this.framesService.monitor()
-    this.bindOnInstalled()
+    this.bindOnInstalledAndOnUpdateAvailable()
     void this.initAuth()
   }
 
@@ -1038,7 +1038,7 @@ export class BackgroundScript {
     })
   }
 
-  private bindOnInstalled() {
+  private bindOnInstalledAndOnUpdateAvailable() {
     // This can mess up the puppeteer tests
     if (!this.buildConfig.isCI) {
       this.api.runtime.onInstalled.addListener(details => {
@@ -1046,6 +1046,17 @@ export class BackgroundScript {
           this.api.tabs.create({ url: `${this.coilDomain}/signup` })
         }
       })
+      const showUpdate = (details: { version: string }) => {
+        this.api.notifications.create({
+          type: 'basic',
+          // TODO: BuildConfig this
+          title: 'CoilPreview extension update available',
+          iconUrl: '/res/icn-coil-ext@4x.png',
+          requireInteraction: true,
+          message: `Version ${details.version} is available`
+        })
+      }
+      this.api.runtime.onUpdateAvailable.addListener(showUpdate)
     }
   }
 }
