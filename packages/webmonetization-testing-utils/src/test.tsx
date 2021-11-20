@@ -19,6 +19,7 @@ function makeLogger(logElSelector: string) {
 
 ;(async function main() {
   const log = makeLogger('#log')
+  log(`document.readyState ${document.readyState}`)
 
   const suite = new MonetizationImplTest(
     document as MonetizationExtendedDocument,
