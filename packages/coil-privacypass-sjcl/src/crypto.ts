@@ -360,9 +360,11 @@ export function parseSignaturefromPEM(pemSignature: string) {
     const r = sjcl.codec.bytes.toBits(json.children[0].value)
     const s = sjcl.codec.bytes.toBits(json.children[1].value)
     return sjcl.bitArray.concat(r, s)
-  } catch (e) {
+  } catch (e: unknown) {
     throw new Error(
-      '[privacy-pass]: Failed on parsing commitment signature. ' + e.message
+      `[privacy-pass]: Failed on parsing commitment signature. ${
+        (e as Error).message
+      }`
     )
   }
 }
@@ -379,9 +381,9 @@ export function parsePublicKeyfromPEM(pemPublicKey: string) {
     const xy = json.children[1].value
     const point = sec1DecodeFromBytes(xy)
     return new sjcl.ecc.ecdsa.publicKey(CURVE, point)
-  } catch (e) {
+  } catch (e: unknown) {
     throw new Error(
-      '[privacy-pass]: Failed on parsing public key. ' + e.message
+      `[privacy-pass]: Failed on parsing public key. ${(e as Error).message}`
     )
   }
 }

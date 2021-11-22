@@ -2,6 +2,7 @@
   <head>
     <!-- the id="money" is just so we can control this from js -->
     <!-- Use $ilp-sandbox.uphold.com/2mk2AXqH2aRq for staging -->
+    <!-- alt: content="$ilp.uphold.com/gRa4mXFEMYrL"-->
     <meta
       id="money"
       name="monetization"
@@ -78,7 +79,7 @@
             const meta = document.createElement('meta')
             meta.id = 'money'
             meta.name = 'monetization'
-            meta.content = '$twitter.xrptipbot.com/Coil'
+            meta.content = '$ilp.uphold.com/gRa4mXFEMYrL'
             document.head.appendChild(meta)
             document.getElementById('remove').disabled = false
             document.getElementById('add').disabled = true
@@ -91,7 +92,7 @@
             setTimeout(() => {
               remove()
               add()
-            }, 5000)
+            }, 10000)
           }
         // removeThenAddQuicklyToCheckStoppedEventHasCorrectRequestId()
 

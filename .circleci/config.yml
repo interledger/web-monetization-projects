@@ -108,13 +108,14 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
+          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
+            xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
       # - run:
       #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
       #     command: |
@@ -136,13 +137,14 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/logout-test.ts
+          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
+            xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
 
       # - run:
       #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
@@ -253,9 +255,9 @@ jobs:
           command: |
             yarn dedupe --check
       - run:
-          name: Pnpify --sdk changes Check
+          name: yarn dlx @yarnpkg/sdks vscode
           command: |
-            yarn pnpify --sdk vscode
+            yarn dlx @yarnpkg/sdks vscode
             git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
       - run:
           name: Yarn format git diff --exit-code

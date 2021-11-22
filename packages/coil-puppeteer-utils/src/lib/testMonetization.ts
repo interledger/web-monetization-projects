@@ -30,7 +30,12 @@ export interface TestPageResults {
   page: Page
   url: string
   stoppedPromise: Promise<OnMonetizationEvent>
-  details: any
+  details: {
+    statesSeen: Set<string>
+    eventsSeen: Set<string>
+    state: string | null
+    events: Array<{ event: MonetizationEvent; monetizationState: string }>
+  }
 }
 
 export interface TestPageParameters {
@@ -175,8 +180,8 @@ export async function testMonetization({
     success: success && state === 'started',
     url,
     details: {
-      statesSeen: statesSeen.values(),
-      eventsSeen: eventsSeen.values(),
+      statesSeen: statesSeen,
+      eventsSeen: eventsSeen,
       state,
       events
     }

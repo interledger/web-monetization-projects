@@ -1,4 +1,12 @@
-<a name="coil-extension@0.0.55"></a>
+<a name="coil-extension@0.0.56"></a>
+
+# [coil-extension@0.0.56](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.55...coil-extension@0.0.56) (2021-07-20)
+
+### Bug Fixes
+
+- Fix race condition caused by concurrent startWebMonetization [#2149](https://github.com/coilhq/web-monetization-projects/pull/2149) [#2144](https://github.com/coilhq/web-monetization-projects/issues/2144)
+
+- <a name="coil-extension@0.0.55"></a>
 
 # [coil-extension@0.0.55](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.54...coil-extension@0.0.55) (2021-07-09)
 

@@ -1,12 +1,13 @@
 import { inject, injectable } from 'inversify'
 
 import * as tokens from '../../types/tokens'
+import { FrameSpec } from '../../types/FrameSpec'
 
 import { TabStates } from './TabStates'
 
 @injectable()
 export class ActiveTabLogger {
-  sendLogs = false
+  sendLogs = Boolean(localStorage.ACTIVE_TAB_LOGGING)
   sendLogEvents = true
 
   constructor(
@@ -15,7 +16,7 @@ export class ActiveTabLogger {
     private api = chrome
   ) {}
 
-  log(log: string) {
+  log(log: string, frame?: FrameSpec) {
     if (!this.sendLogs) {
       return
     }
@@ -28,7 +29,7 @@ export class ActiveTabLogger {
             log: log
           }
         }
-        this.api.tabs.sendMessage(tab.id, message)
+        this.api.tabs.sendMessage(frame?.tabId ?? tab.id, message)
       }
     })
   }

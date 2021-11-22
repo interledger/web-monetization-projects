@@ -67,7 +67,7 @@ export class MonetizationImplTest {
 
   private async dynamicContentChange(meta: HTMLMetaElement) {
     this.startSection('dynnamic content change: stop previous to stop new')
-    meta.content = '$twitter.xrptipbot.com/Coil'
+    meta.content = '$ilp.uphold.com/gRa4mXFEMYrL'
     await this.waitStop()
     return this.pendingToProgress()
   }
@@ -76,7 +76,7 @@ export class MonetizationImplTest {
     this.startSection('dynamic meta addition: pending to progress')
     const meta = this.document.createElement('meta')
     meta.name = 'monetization'
-    meta.content = '$twitter.xrptipbot.com/sharafian_'
+    meta.content = '$ilp.gatehub.net/789114352'
     this.document.head.appendChild(meta)
     const { requestId } = await this.pendingToProgress()
     return { requestId, meta }
@@ -86,7 +86,7 @@ export class MonetizationImplTest {
     this.startSection('dynamic link addition: pending to progress')
     const link = this.document.createElement('link')
     link.rel = 'monetization'
-    link.href = 'https://twitter.xrptipbot.com/sharafian_'
+    link.href = 'https://ilp.gatehub.net/789114352'
     this.document.head.appendChild(link)
     const { requestId } = await this.pendingToProgress()
     return { requestId, link }
@@ -145,7 +145,10 @@ export class MonetizationImplTest {
     // noinspection SuspiciousTypeOfGuard
     this.assert(typeof document.monetization.state === 'string')
     this.step('document.monetization.state should initialize "stopped"')
-    this.assert(document.monetization.state === 'stopped')
+    this.assert(
+      document.monetization.state === 'stopped',
+      `got ${document.monetization.state}`
+    )
     this.step(`should have &lt;meta id="initial-static"...&gt; tag`)
     this.assert(meta?.id === 'initial-static')
     return this.pendingToProgress()

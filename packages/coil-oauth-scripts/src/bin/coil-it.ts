@@ -36,7 +36,8 @@ async function getPaymentDetails(
 
 function startStream(
   id: number | string,
-  connection: IlpStream.Connection
+  connection: IlpStream.Connection,
+  dbg: typeof console.log
 ): IlpStream.DataAndMoneyStream {
   const startedAt = Date.now()
   let last = startedAt
@@ -93,9 +94,17 @@ async function main(): Promise<void> {
     throw new Error('Must set COIL_USER and COIL_PASSWORD env vars')
   }
 
+  const startedAt = Date.now()
+  let latest = startedAt
+  const dbg = (...args: any[]) => {
+    const now = Date.now()
+    console.log(`(t=${now - startedAt}ms, d=${now - latest}ms)`, ...args)
+    latest = now
+  }
+
   const argv = process.argv.slice(2)
   const paymentPointer = argv[0] || '$twitter.xrptipbot.com/nfcpasses'
-  const { token, btpToken } = await login()
+  const { token, btpToken } = await login(dbg, true)
   dbg({ token, btpToken })
 
   const spspUrl = pointerToUrl(paymentPointer)
@@ -108,6 +117,7 @@ async function main(): Promise<void> {
     btpToken
   })
   const monetizationId = uuid.v4()
+  dbg('Getting payment details')
   const details = await getPaymentDetails(spspUrl, monetizationId)
   dbg({ details })
 
@@ -115,11 +125,13 @@ async function main(): Promise<void> {
   await plugin.connect()
   dbg('Connected')
 
+  dbg('Creating connection from plugin')
   const connection = await IlpStream.createConnection({
     plugin,
     destinationAccount: details.destination_account,
     sharedSecret: Buffer.from(details.shared_secret, 'base64')
   })
+  dbg('plugin connection created')
 
   connection.on('close', () => {
     dbg('connection close')
@@ -128,10 +140,10 @@ async function main(): Promise<void> {
   connection.on('error', () => {
     dbg('connection error')
   })
-  dbg('Creating connection')
+  dbg('calling connection.connect()')
   await connection.connect()
-  dbg('Connected')
-  startStream(`main`, connection)
+  dbg('finished connection.connect()')
+  startStream(`main`, connection, dbg)
 }
 
 if (require.main === module) {

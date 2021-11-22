@@ -21,7 +21,7 @@ export class AdaptedContentService {
   // on stale operations
   private runs = 0
 
-  private constructor(
+  constructor(
     private monetization: DocumentMonetization,
     @inject(tokens.ContentRuntime)
     private contentRuntime: ContentRuntime,
