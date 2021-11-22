@@ -1443,7 +1443,7 @@ __metadata:
     jest: 27.3.1
     jsonwebtoken: 8.5.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     localforage: 1.10.0
     node-fetch: ^2.6.1
     prettier: 2.4.1
@@ -1452,9 +1452,9 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -1500,7 +1500,7 @@ __metadata:
     jest: 27.3.1
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     node-fetch: ^2.6.1
     prettier: 2.4.1
     rimraf: 3.0.2
@@ -1508,9 +1508,9 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -1549,7 +1549,7 @@ __metadata:
     "@types/long": 4.0.1
     "@types/node": 14.17.34
     "@types/node-fetch": 2.5.12
-    "@types/react": 17.0.35
+    "@types/react": 17.0.36
     "@types/react-dom": 17.0.11
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.4.0
@@ -1587,7 +1587,7 @@ __metadata:
     jsonwebtoken: ^8.5.1
     jss: ^10.6.0
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     puppeteer: 11.0.0
     react: ^17.0.0
@@ -1598,11 +1598,11 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
     uuid: ^8.3.2
     web-ext: 6.5.0
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -1647,7 +1647,7 @@ __metadata:
     jest: 27.3.1
     json5: ^2.2.0
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     npm-check-updates: ^12.0.0
     prettier: 2.4.1
     reduct: ^3.3.1
@@ -1657,9 +1657,9 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -1713,7 +1713,7 @@ __metadata:
     ilp-protocol-stream: 2.7.0
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     node-fetch: ^2.6.1
     prettier: 2.4.1
     puppeteer: 11.0.0
@@ -1723,10 +1723,10 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
     uuid: ^8.3.2
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -1768,7 +1768,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     node-fetch: ^2.6.1
     prettier: 2.4.1
     rimraf: 3.0.2
@@ -1776,9 +1776,9 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -1826,7 +1826,7 @@ __metadata:
     jest: 27.3.1
     keccak: ^3.0.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     node-fetch: ^2.6.1
     prettier: 2.4.1
     rimraf: 3.0.2
@@ -1835,9 +1835,9 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -1886,7 +1886,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     puppeteer: ^11.0.0
     rimraf: 3.0.2
@@ -1895,10 +1895,10 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
     web-ext: ^6.1.0
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -1944,7 +1944,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     process: ^0.11.10
     rimraf: 3.0.2
@@ -1955,10 +1955,10 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
     util: ^0.12.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -2001,16 +2001,16 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -2275,16 +2275,16 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -2328,16 +2328,16 @@ __metadata:
     inversify: ^6.0.0
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -2475,7 +2475,7 @@ __metadata:
     "@material-ui/icons": ^4.11.2
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
-    "@types/react": 17.0.35
+    "@types/react": 17.0.36
     "@types/react-dom": 17.0.11
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.4.0
@@ -2512,7 +2512,7 @@ __metadata:
     jest: 27.3.1
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     react: ^17.0.0
     react-dom: ^17.0.0
@@ -2522,12 +2522,12 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typeface-roboto: ^1.1.13
     typescript: 4.4.4
     uuid: ^8.3.2
     web-ext: 6.5.0
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -4488,14 +4488,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.35":
-  version: 17.0.35
-  resolution: "@types/react@npm:17.0.35"
+"@types/react@npm:17.0.36":
+  version: 17.0.36
+  resolution: "@types/react@npm:17.0.36"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 33e2bf8068ccc5330f089f5d4bee54649c2d5b512edee4a9e44c113271a69ea8c71ddbd3103b205eb971fd4c358e9f69d707df08bec90b3c33492db374614eb7
+  checksum: feeaa484d5d7e354ba6830b06342dec6fd1a2ac87f73d21d3d4f2a3d311459de4090330a1e8af7275c8d1e7737b655a7550c8dd3dbc74ccf34ffd3fc824bbd12
   languageName: node
   linkType: hard
 
@@ -4906,7 +4906,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     process: ^0.11.10
     rimraf: 3.0.2
@@ -4917,10 +4917,10 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
     util: ^0.12.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -4949,7 +4949,7 @@ __metadata:
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
     "@types/node-fetch": 2.5.12
-    "@types/react": 17.0.35
+    "@types/react": 17.0.36
     "@types/react-dom": 17.0.11
     "@types/react-helmet": 6.1.4
     "@typescript-eslint/eslint-plugin": 5.4.0
@@ -4983,7 +4983,7 @@ __metadata:
     inversify-express-utils: ^6.3.2
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     node-fetch: ^2.6.1
     oer-utils: ^5.1.2
     prettier: 2.4.1
@@ -4996,9 +4996,9 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -5042,7 +5042,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     node-fetch: ^2.6.1
     prettier: 2.4.1
     reduct: ^3.3.1
@@ -5051,10 +5051,10 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
     uuid: ^8.3.2
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -5077,7 +5077,7 @@ __metadata:
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
-    "@types/react": 17.0.35
+    "@types/react": 17.0.36
     "@typescript-eslint/eslint-plugin": 5.4.0
     "@typescript-eslint/parser": 5.4.0
     "@webmonetization/types": 0.0.0
@@ -5099,16 +5099,16 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -5135,7 +5135,7 @@ __metadata:
     "@types/ajv": 1.0.0
     "@types/jest": 27.0.3
     "@types/node": 14.17.34
-    "@types/react": 17.0.35
+    "@types/react": 17.0.36
     "@types/react-dom": 17.0.11
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.4.0
@@ -5161,7 +5161,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     react: ^17.0.0
     react-dom: ^17.0.0
@@ -5171,10 +5171,10 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
     uuid: ^8.3.2
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -5216,7 +5216,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
@@ -5224,9 +5224,9 @@ __metadata:
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -5271,16 +5271,16 @@ __metadata:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -8578,7 +8578,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig@npm:^7.0.0, cosmiconfig@npm:^7.0.1":
+"cosmiconfig@npm:^7.0.0":
   version: 7.0.1
   resolution: "cosmiconfig@npm:7.0.1"
   dependencies:
@@ -15347,6 +15347,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"lilconfig@npm:2.0.4":
+  version: 2.0.4
+  resolution: "lilconfig@npm:2.0.4"
+  checksum: 02ae530aa49218d782eb79e92c600ea5220828987f85aa3403fa512cadc7efe38c0ac7d0cd2edf600ad3fae1f6c1752f5b4bb78c0d9950435b044d53d507c9e1
+  languageName: node
+  linkType: hard
+
 "lines-and-columns@npm:^1.1.6":
   version: 1.1.6
   resolution: "lines-and-columns@npm:1.1.6"
@@ -15354,26 +15361,27 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.0.3":
-  version: 12.0.3
-  resolution: "lint-staged@npm:12.0.3"
+"lint-staged@npm:12.1.1":
+  version: 12.1.1
+  resolution: "lint-staged@npm:12.1.1"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
     commander: ^8.3.0
-    cosmiconfig: ^7.0.1
     debug: ^4.3.2
     enquirer: ^2.3.6
     execa: ^5.1.1
+    lilconfig: 2.0.4
     listr2: ^3.13.3
     micromatch: ^4.0.4
     normalize-path: ^3.0.0
     object-inspect: ^1.11.0
     string-argv: ^0.3.1
     supports-color: ^9.0.2
+    yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 08a20d9c93bab3e26baf6f92a9f39d114636eba4f3cf6b6c3893cac8db612963563a9ba6cd477f4fd5af265e04976b049e70647ff8732e7469a5d989840f9148
+  checksum: 1c4ec4cbccac7040b7d676f0e4f99d9e8d69360ec99d69cbfb12b6c27708ba8a076741712f1b45e67099fc640b1049a27cba8866a85a299a6048ab39d8e4faa7
   languageName: node
   linkType: hard
 
@@ -21939,15 +21947,15 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"tsconfig-paths@npm:3.11.0, tsconfig-paths@npm:^3.11.0":
-  version: 3.11.0
-  resolution: "tsconfig-paths@npm:3.11.0"
+"tsconfig-paths@npm:3.12.0, tsconfig-paths@npm:^3.11.0":
+  version: 3.12.0
+  resolution: "tsconfig-paths@npm:3.12.0"
   dependencies:
     "@types/json5": ^0.0.29
     json5: ^1.0.1
     minimist: ^1.2.0
     strip-bom: ^3.0.0
-  checksum: e14aaa6883f316d611db41cbb0fc8779b59c66b31d1e045565ad4540c77ccd3d2bb66f7c261b74ff535d3cc6b4a1ce21dc84774bf2a2a603ed6b0fb96f7e0cc7
+  checksum: 4999ec6cd1c7cc06750a460dbc0d39fe3595a4308cb5f1d0d0a8283009cf9c0a30d5a156508c28fe3a47760508af5263ab288fc23d71e9762779674257a95d3b
   languageName: node
   linkType: hard
 
@@ -22802,16 +22810,16 @@ sjcl@sublimator/sjcl:
     husky: 7.0.4
     jest: 27.3.1
     lerna: 4.0.0
-    lint-staged: 12.0.3
+    lint-staged: 12.1.1
     prettier: 2.4.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
-    tsconfig-paths: 3.11.0
+    tsconfig-paths: 3.12.0
     typescript: 4.4.4
-    webpack: 5.64.1
+    webpack: 5.64.2
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
@@ -22989,9 +22997,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.64.1":
-  version: 5.64.1
-  resolution: "webpack@npm:5.64.1"
+"webpack@npm:5.64.2":
+  version: 5.64.2
+  resolution: "webpack@npm:5.64.2"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -23022,7 +23030,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: d2a1baddaed03f2ce70c13501b89935d4bb4af30b4accb0d2dfbd00ec6f491eaf46272346cedcf013b477e131c8cc202ee0b2d2c51ece1cfb713fd2d98b80a52
+  checksum: e02fcd3bfdc7e3322291b476af60f46dc4a31ec4349af4d1d47018b8e449820968d4ab8f1e8b313dd5cfcf1b47c7f976fe39fde73411d03c173a692c3dae428e
   languageName: node
   linkType: hard
 
