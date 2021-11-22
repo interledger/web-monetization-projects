@@ -173,7 +173,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
@@ -2756,7 +2756,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:4.9.1"],
@@ -2814,7 +2814,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:4.9.1"],
@@ -2906,7 +2906,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["uuid", "npm:8.3.2"],
             ["web-ext", "npm:6.5.0"],
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.2"],
@@ -2967,7 +2967,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.1"],
@@ -3035,7 +3035,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["uuid", "npm:8.3.2"],
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
@@ -3090,7 +3090,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:4.9.1"],
@@ -3151,7 +3151,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:4.9.1"],
@@ -3213,7 +3213,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["web-ext", "npm:6.5.0"],
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
@@ -3275,7 +3275,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["util", "npm:0.12.4"],
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
@@ -3330,7 +3330,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:4.9.1"],
@@ -3436,7 +3436,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cosmiconfig", "npm:7.0.1"],
             ["lodash", "npm:4.17.21"],
             ["resolve-from", "npm:5.0.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
           ],
           "linkType": "HARD",
         }]
@@ -3628,7 +3628,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:4.9.1"],
@@ -3683,7 +3683,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:4.9.1"],
@@ -3905,7 +3905,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
             ["typeface-roboto", "npm:1.1.13"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["uuid", "npm:8.3.2"],
             ["web-ext", "npm:6.5.0"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.2"],
@@ -6362,7 +6362,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["regexpp", "npm:3.2.0"],
             ["semver", "npm:7.3.5"],
             ["tsutils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:3.21.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "packagePeers": [
             "@types/eslint",
@@ -6422,7 +6422,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/typescript-estree", "virtual:ac21ca5eb0053f0850b4beddf4f7de4cab45d5e441450a17d1840dc05fbad3d4227273bcc775a52c3fda862ef02b40e1bf469445840ed364668b2cb357d536b2#npm:5.4.0"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
             ["eslint", "npm:7.32.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "packagePeers": [
             "@types/eslint",
@@ -6493,7 +6493,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-glob", "npm:4.0.3"],
             ["semver", "npm:7.3.5"],
             ["tsutils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:3.21.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "packagePeers": [
             "@types/typescript",
@@ -6737,7 +6737,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["util", "npm:0.12.4"],
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
@@ -6818,7 +6818,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:4.9.1"],
@@ -6875,7 +6875,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["uuid", "npm:8.3.2"],
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
@@ -6933,7 +6933,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:4.9.1"],
@@ -6991,7 +6991,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:4.9.1"],
@@ -7056,7 +7056,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["uuid", "npm:8.3.2"],
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
@@ -7111,7 +7111,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:4.9.1"],
@@ -7167,7 +7167,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:4.9.1"],
@@ -27493,7 +27493,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.memoize", "npm:4.1.2"],
             ["make-error", "npm:1.3.6"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["yargs-parser", "npm:20.2.6"]
           ],
           "packagePeers": [
@@ -27519,7 +27519,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["glob", "npm:7.2.0"],
             ["json5", "npm:2.2.0"],
             ["safe-stable-stringify", "npm:2.2.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
           ],
           "linkType": "HARD",
         }]
@@ -27542,7 +27542,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:036c64549664c67394df337e676b32eab1cd42330c2e806e0acb2eda85b2418cc69b1c48ac66de0ec1ef28cbf2de0265465d4e2b9764080739b1bbd64f41f148#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27563,7 +27563,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:2e63dd146a24800a77dddc171c05ac0ff8a477e91a9d0de42eabf2cb1660c2ecefaa76a924b9222dafa4dade85f71f40e182060b7656690700ce0978d7b08a15#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27584,7 +27584,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:4df1de691675bbb080466c3af5f74f7f9b2dec7c44ee1bed1baa3b9ee00d06b7153cc6329c7a4f001123a0bfdcf9b18afda0aeba8a317c19a3056afcdee9da5a#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27605,7 +27605,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:5509f4729b225ceb5b33ab73c7460f4103d5500e34d5a17db878789f2ba6871de4f190f05b6ee75a6756ad56b064099a020313b444c987f5a186465bdaee44ee#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27626,7 +27626,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:745d44aa1d1e0104e6ca9ab533d43f6a50258b01af5be473877ccff2738fb4d8a667e7f46703d5a63e1a02f9fc079e0083da8fd5c7758d8acd9a7787b40e167d#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27647,7 +27647,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:79b878e705e4bcd07b2ac6fe5fd517204b1c59c46fbc839f13c2f4022138b3590d5e8fb7333ac775699093b313ce7224f474c410b9a3659033c88af7cac10b9b#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27668,7 +27668,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27689,7 +27689,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27710,7 +27710,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:93a7d51ea12a5ec2e5c91b9253fb507eb219d51d1a8a296890042a863b4e2fc6ff2cd2a02b48be5252e171b6282f1edacd4debeb11e5ea4fd966c670d162863e#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27731,7 +27731,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:a17b3240fbe735e4e5a246665adf977e2e725066502102facd8780ada9a6b5910cdde20bc790799a41bf7300928258945d4b63489bfaf5d4cc919bbf3ca66e7d#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27752,7 +27752,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:a20ad4796c874a7e1c03f813af3829113e81229de60d11014313f3d50c9f8a8af9f8697a04fcdb73680e443aa4a7a9e6e4866ad63b29b27783010abba654e21c#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27773,7 +27773,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:a9a7e7161d8ca14084455bce3efd4ad531a9910ceb71226d6928ee788761767b2d8f681f8a11ad6d749e6ed7a13a36600bc67abe90c13ea3e4a5e86ddece4a89#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27794,7 +27794,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:b6d975538ad8ca65e4c5ac65b749b1ac99af9658a78f91dfff5c64bef01b0d3884d263bf0044ac4b699e033c8a1da7dd5d103498ab099366a31a112b2f0c23a7#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27815,7 +27815,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:bef75159738da012da6689cd76b2ea21d8905dec57d1086a46b0e423fcae047664617e90f63a0c3642ace57e6f7bff1839cfee43c2e086977b1ac210ba67e8ac#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27836,7 +27836,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:d0c09eb269e3878027a3b9c9fb0fee9358e570c07372e372dee5a0682e2a5e30b69baee973f8f2974b67ad5d550f4241e07521b453eb29bdffacb6962024af59#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27857,7 +27857,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:d817ab60489a840be8785b1e7e322bbd4c4afef631984a507934849767350060a400f2f2dbc209e134ed1a4e445ebecaa99cff6baa3a7456934de884547b88d0#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27878,7 +27878,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27899,7 +27899,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27920,7 +27920,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27941,7 +27941,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27962,7 +27962,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:f1d9a871dbb9382d1036af66b0845189ca684ac6496348412875dc13944e44ad83c7fe4cbffa4116b33bac5fe880cafe354a1b5d119ca6257c2730638838fdbd#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -27983,7 +27983,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enhanced-resolve", "npm:5.8.3"],
             ["micromatch", "npm:4.0.4"],
             ["semver", "npm:7.3.5"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:f33903cebf5cb01fb4eefc7110999e060dea911d3bdf1a77d772def97e528d150a5c9a5675f7ab7c439f374a993807b08fdf3c5ef26f511219578d110719dcbd#npm:5.64.2"]
           ],
           "packagePeers": [
@@ -28050,7 +28050,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["create-require", "npm:1.1.1"],
             ["diff", "npm:4.0.2"],
             ["make-error", "npm:1.3.6"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["yn", "npm:3.1.1"]
           ],
           "packagePeers": [
@@ -28074,7 +28074,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["diff", "npm:4.0.2"],
             ["make-error", "npm:1.3.6"],
             ["source-map-support", "npm:0.5.20"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["yn", "npm:3.1.1"]
           ],
           "packagePeers": [
@@ -28109,7 +28109,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tree-kill", "npm:1.2.2"],
             ["ts-node", "virtual:f62f4e35c7c96ee75cd546e5bc23d469420ab89f40dbfb5f664403aa42d3aa21827f18d2fb77593811ca80c2ff9e56ca42c19a4f9f31edc325c5e58287f5d176#npm:9.1.1"],
             ["tsconfig", "npm:7.0.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "packagePeers": [
             "@types/node-notifier",
@@ -28183,7 +28183,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tsutils", "virtual:11444c9b2bba76d7aa9dbd1d3d8c2d037a301c4d05d5166bde967901b83dd350a177780ff063c827604371ff295e57b6ee6a1939aac217fae027730d8d774d98#npm:3.21.0"],
             ["@types/typescript", null],
             ["tslib", "npm:1.14.1"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "packagePeers": [
             "@types/typescript",
@@ -28377,10 +28377,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["typescript", [
-        ["patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8", {
-          "packageLocation": "./.yarn/cache/typescript-patch-d95d140154-bd629ad0da.zip/node_modules/typescript/",
+        ["patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53", {
+          "packageLocation": "./.yarn/cache/typescript-patch-7a081096b0-bd629ad0da.zip/node_modules/typescript/",
           "packageDependencies": [
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53", {
+          "packageLocation": "./.yarn/cache/typescript-patch-613ccf361e-53838d56ab.zip/node_modules/typescript/",
+          "packageDependencies": [
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "linkType": "HARD",
         }]
@@ -29086,7 +29093,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.4.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
             ["tsconfig-paths", "npm:3.12.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
             ["webpack", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.64.2"],
             ["webpack-bundle-analyzer", "npm:4.5.0"],
             ["webpack-cli", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.9.1"],
@@ -33188,17 +33195,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
   }, {basePath: basePath || __dirname});
   }
 
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["pnpHook"] = factory();
-	else
-		root["pnpHook"] = factory();
-})(global, function() {
-return /******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 368:
@@ -37606,10 +37603,10 @@ const Filename = {
   pnpCjs: `.pnp.cjs`,
   rc: `.yarnrc.yml`
 };
-const npath = Object.create((external_path_default()));
+const path_npath = Object.create((external_path_default()));
 const ppath = Object.create((external_path_default()).posix);
 
-npath.cwd = () => process.cwd();
+path_npath.cwd = () => process.cwd();
 
 ppath.cwd = () => toPortablePath(process.cwd());
 
@@ -37634,10 +37631,10 @@ const contains = function (pathUtils, from, to) {
   }
 };
 
-npath.fromPortablePath = fromPortablePath;
-npath.toPortablePath = toPortablePath;
+path_npath.fromPortablePath = fromPortablePath;
+path_npath.toPortablePath = toPortablePath;
 
-npath.contains = (from, to) => contains(npath, from, to);
+path_npath.contains = (from, to) => contains(path_npath, from, to);
 
 ppath.contains = (from, to) => contains(ppath, from, to);
 
@@ -37664,10 +37661,10 @@ function toPortablePath(p) {
 }
 
 function convertPath(targetPathUtils, sourcePath) {
-  return targetPathUtils === npath ? fromPortablePath(sourcePath) : toPortablePath(sourcePath);
+  return targetPathUtils === path_npath ? fromPortablePath(sourcePath) : toPortablePath(sourcePath);
 }
 function toFilename(filename) {
-  if (npath.parse(filename).dir !== `` || ppath.parse(filename).dir !== ``) throw new Error(`Invalid filename: "${filename}"`);
+  if (path_npath.parse(filename).dir !== `` || ppath.parse(filename).dir !== ``) throw new Error(`Invalid filename: "${filename}"`);
   return filename;
 }
 ;// CONCATENATED MODULE: ../yarnpkg-fslib/sources/algorithms/copyPromise.ts
@@ -38446,20 +38443,20 @@ class NodeFS extends BasePortableFakeFS {
 
   async openPromise(p, flags, mode) {
     return await new Promise((resolve, reject) => {
-      this.realFs.open(npath.fromPortablePath(p), flags, mode, this.makeCallback(resolve, reject));
+      this.realFs.open(path_npath.fromPortablePath(p), flags, mode, this.makeCallback(resolve, reject));
     });
   }
 
   openSync(p, flags, mode) {
-    return this.realFs.openSync(npath.fromPortablePath(p), flags, mode);
+    return this.realFs.openSync(path_npath.fromPortablePath(p), flags, mode);
   }
 
   async opendirPromise(p, opts) {
     return await new Promise((resolve, reject) => {
       if (typeof opts !== `undefined`) {
-        this.realFs.opendir(npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
+        this.realFs.opendir(path_npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
       } else {
-        this.realFs.opendir(npath.fromPortablePath(p), this.makeCallback(resolve, reject));
+        this.realFs.opendir(path_npath.fromPortablePath(p), this.makeCallback(resolve, reject));
       }
     }).then(dir => {
       return Object.defineProperty(dir, `path`, {
@@ -38471,7 +38468,7 @@ class NodeFS extends BasePortableFakeFS {
   }
 
   opendirSync(p, opts) {
-    const dir = typeof opts !== `undefined` ? this.realFs.opendirSync(npath.fromPortablePath(p), opts) : this.realFs.opendirSync(npath.fromPortablePath(p));
+    const dir = typeof opts !== `undefined` ? this.realFs.opendirSync(path_npath.fromPortablePath(p), opts) : this.realFs.opendirSync(path_npath.fromPortablePath(p));
     return Object.defineProperty(dir, `path`, {
       value: p,
       configurable: true,
@@ -38524,62 +38521,62 @@ class NodeFS extends BasePortableFakeFS {
   }
 
   createReadStream(p, opts) {
-    const realPath = p !== null ? npath.fromPortablePath(p) : p;
+    const realPath = p !== null ? path_npath.fromPortablePath(p) : p;
     return this.realFs.createReadStream(realPath, opts);
   }
 
   createWriteStream(p, opts) {
-    const realPath = p !== null ? npath.fromPortablePath(p) : p;
+    const realPath = p !== null ? path_npath.fromPortablePath(p) : p;
     return this.realFs.createWriteStream(realPath, opts);
   }
 
   async realpathPromise(p) {
     return await new Promise((resolve, reject) => {
-      this.realFs.realpath(npath.fromPortablePath(p), {}, this.makeCallback(resolve, reject));
+      this.realFs.realpath(path_npath.fromPortablePath(p), {}, this.makeCallback(resolve, reject));
     }).then(path => {
-      return npath.toPortablePath(path);
+      return path_npath.toPortablePath(path);
     });
   }
 
   realpathSync(p) {
-    return npath.toPortablePath(this.realFs.realpathSync(npath.fromPortablePath(p), {}));
+    return path_npath.toPortablePath(this.realFs.realpathSync(path_npath.fromPortablePath(p), {}));
   }
 
   async existsPromise(p) {
     return await new Promise(resolve => {
-      this.realFs.exists(npath.fromPortablePath(p), resolve);
+      this.realFs.exists(path_npath.fromPortablePath(p), resolve);
     });
   }
 
   accessSync(p, mode) {
-    return this.realFs.accessSync(npath.fromPortablePath(p), mode);
+    return this.realFs.accessSync(path_npath.fromPortablePath(p), mode);
   }
 
   async accessPromise(p, mode) {
     return await new Promise((resolve, reject) => {
-      this.realFs.access(npath.fromPortablePath(p), mode, this.makeCallback(resolve, reject));
+      this.realFs.access(path_npath.fromPortablePath(p), mode, this.makeCallback(resolve, reject));
     });
   }
 
   existsSync(p) {
-    return this.realFs.existsSync(npath.fromPortablePath(p));
+    return this.realFs.existsSync(path_npath.fromPortablePath(p));
   }
 
   async statPromise(p, opts) {
     return await new Promise((resolve, reject) => {
       if (opts) {
-        this.realFs.stat(npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
+        this.realFs.stat(path_npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
       } else {
-        this.realFs.stat(npath.fromPortablePath(p), this.makeCallback(resolve, reject));
+        this.realFs.stat(path_npath.fromPortablePath(p), this.makeCallback(resolve, reject));
       }
     });
   }
 
   statSync(p, opts) {
     if (opts) {
-      return this.realFs.statSync(npath.fromPortablePath(p), opts);
+      return this.realFs.statSync(path_npath.fromPortablePath(p), opts);
     } else {
-      return this.realFs.statSync(npath.fromPortablePath(p));
+      return this.realFs.statSync(path_npath.fromPortablePath(p));
     }
   }
 
@@ -38607,9 +38604,9 @@ class NodeFS extends BasePortableFakeFS {
     return await new Promise((resolve, reject) => {
       if (opts) {
         // @ts-expect-error - TS does not know this takes options
-        this.realFs.lstat(npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
+        this.realFs.lstat(path_npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
       } else {
-        this.realFs.lstat(npath.fromPortablePath(p), this.makeCallback(resolve, reject));
+        this.realFs.lstat(path_npath.fromPortablePath(p), this.makeCallback(resolve, reject));
       }
     });
   }
@@ -38617,55 +38614,55 @@ class NodeFS extends BasePortableFakeFS {
   lstatSync(p, opts) {
     if (opts) {
       // @ts-expect-error - TS does not know this takes options
-      return this.realFs.lstatSync(npath.fromPortablePath(p), opts);
+      return this.realFs.lstatSync(path_npath.fromPortablePath(p), opts);
     } else {
-      return this.realFs.lstatSync(npath.fromPortablePath(p));
+      return this.realFs.lstatSync(path_npath.fromPortablePath(p));
     }
   }
 
   async chmodPromise(p, mask) {
     return await new Promise((resolve, reject) => {
-      this.realFs.chmod(npath.fromPortablePath(p), mask, this.makeCallback(resolve, reject));
+      this.realFs.chmod(path_npath.fromPortablePath(p), mask, this.makeCallback(resolve, reject));
     });
   }
 
   chmodSync(p, mask) {
-    return this.realFs.chmodSync(npath.fromPortablePath(p), mask);
+    return this.realFs.chmodSync(path_npath.fromPortablePath(p), mask);
   }
 
   async chownPromise(p, uid, gid) {
     return await new Promise((resolve, reject) => {
-      this.realFs.chown(npath.fromPortablePath(p), uid, gid, this.makeCallback(resolve, reject));
+      this.realFs.chown(path_npath.fromPortablePath(p), uid, gid, this.makeCallback(resolve, reject));
     });
   }
 
   chownSync(p, uid, gid) {
-    return this.realFs.chownSync(npath.fromPortablePath(p), uid, gid);
+    return this.realFs.chownSync(path_npath.fromPortablePath(p), uid, gid);
   }
 
   async renamePromise(oldP, newP) {
     return await new Promise((resolve, reject) => {
-      this.realFs.rename(npath.fromPortablePath(oldP), npath.fromPortablePath(newP), this.makeCallback(resolve, reject));
+      this.realFs.rename(path_npath.fromPortablePath(oldP), path_npath.fromPortablePath(newP), this.makeCallback(resolve, reject));
     });
   }
 
   renameSync(oldP, newP) {
-    return this.realFs.renameSync(npath.fromPortablePath(oldP), npath.fromPortablePath(newP));
+    return this.realFs.renameSync(path_npath.fromPortablePath(oldP), path_npath.fromPortablePath(newP));
   }
 
   async copyFilePromise(sourceP, destP, flags = 0) {
     return await new Promise((resolve, reject) => {
-      this.realFs.copyFile(npath.fromPortablePath(sourceP), npath.fromPortablePath(destP), flags, this.makeCallback(resolve, reject));
+      this.realFs.copyFile(path_npath.fromPortablePath(sourceP), path_npath.fromPortablePath(destP), flags, this.makeCallback(resolve, reject));
     });
   }
 
   copyFileSync(sourceP, destP, flags = 0) {
-    return this.realFs.copyFileSync(npath.fromPortablePath(sourceP), npath.fromPortablePath(destP), flags);
+    return this.realFs.copyFileSync(path_npath.fromPortablePath(sourceP), path_npath.fromPortablePath(destP), flags);
   }
 
   async appendFilePromise(p, content, opts) {
     return await new Promise((resolve, reject) => {
-      const fsNativePath = typeof p === `string` ? npath.fromPortablePath(p) : p;
+      const fsNativePath = typeof p === `string` ? path_npath.fromPortablePath(p) : p;
 
       if (opts) {
         this.realFs.appendFile(fsNativePath, content, opts, this.makeCallback(resolve, reject));
@@ -38676,7 +38673,7 @@ class NodeFS extends BasePortableFakeFS {
   }
 
   appendFileSync(p, content, opts) {
-    const fsNativePath = typeof p === `string` ? npath.fromPortablePath(p) : p;
+    const fsNativePath = typeof p === `string` ? path_npath.fromPortablePath(p) : p;
 
     if (opts) {
       this.realFs.appendFileSync(fsNativePath, content, opts);
@@ -38687,7 +38684,7 @@ class NodeFS extends BasePortableFakeFS {
 
   async writeFilePromise(p, content, opts) {
     return await new Promise((resolve, reject) => {
-      const fsNativePath = typeof p === `string` ? npath.fromPortablePath(p) : p;
+      const fsNativePath = typeof p === `string` ? path_npath.fromPortablePath(p) : p;
 
       if (opts) {
         this.realFs.writeFile(fsNativePath, content, opts, this.makeCallback(resolve, reject));
@@ -38698,7 +38695,7 @@ class NodeFS extends BasePortableFakeFS {
   }
 
   writeFileSync(p, content, opts) {
-    const fsNativePath = typeof p === `string` ? npath.fromPortablePath(p) : p;
+    const fsNativePath = typeof p === `string` ? path_npath.fromPortablePath(p) : p;
 
     if (opts) {
       this.realFs.writeFileSync(fsNativePath, content, opts);
@@ -38709,22 +38706,22 @@ class NodeFS extends BasePortableFakeFS {
 
   async unlinkPromise(p) {
     return await new Promise((resolve, reject) => {
-      this.realFs.unlink(npath.fromPortablePath(p), this.makeCallback(resolve, reject));
+      this.realFs.unlink(path_npath.fromPortablePath(p), this.makeCallback(resolve, reject));
     });
   }
 
   unlinkSync(p) {
-    return this.realFs.unlinkSync(npath.fromPortablePath(p));
+    return this.realFs.unlinkSync(path_npath.fromPortablePath(p));
   }
 
   async utimesPromise(p, atime, mtime) {
     return await new Promise((resolve, reject) => {
-      this.realFs.utimes(npath.fromPortablePath(p), atime, mtime, this.makeCallback(resolve, reject));
+      this.realFs.utimes(path_npath.fromPortablePath(p), atime, mtime, this.makeCallback(resolve, reject));
     });
   }
 
   utimesSync(p, atime, mtime) {
-    this.realFs.utimesSync(npath.fromPortablePath(p), atime, mtime);
+    this.realFs.utimesSync(path_npath.fromPortablePath(p), atime, mtime);
   }
 
   async lutimesPromiseImpl(p, atime, mtime) {
@@ -38732,7 +38729,7 @@ class NodeFS extends BasePortableFakeFS {
     const lutimes = this.realFs.lutimes;
     if (typeof lutimes === `undefined`) throw ENOSYS(`unavailable Node binding`, `lutimes '${p}'`);
     return await new Promise((resolve, reject) => {
-      lutimes.call(this.realFs, npath.fromPortablePath(p), atime, mtime, this.makeCallback(resolve, reject));
+      lutimes.call(this.realFs, path_npath.fromPortablePath(p), atime, mtime, this.makeCallback(resolve, reject));
     });
   }
 
@@ -38740,122 +38737,122 @@ class NodeFS extends BasePortableFakeFS {
     // @ts-expect-error: Not yet in DefinitelyTyped
     const lutimesSync = this.realFs.lutimesSync;
     if (typeof lutimesSync === `undefined`) throw ENOSYS(`unavailable Node binding`, `lutimes '${p}'`);
-    lutimesSync.call(this.realFs, npath.fromPortablePath(p), atime, mtime);
+    lutimesSync.call(this.realFs, path_npath.fromPortablePath(p), atime, mtime);
   }
 
   async mkdirPromise(p, opts) {
     return await new Promise((resolve, reject) => {
-      this.realFs.mkdir(npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
+      this.realFs.mkdir(path_npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
     });
   }
 
   mkdirSync(p, opts) {
-    return this.realFs.mkdirSync(npath.fromPortablePath(p), opts);
+    return this.realFs.mkdirSync(path_npath.fromPortablePath(p), opts);
   }
 
   async rmdirPromise(p, opts) {
     return await new Promise((resolve, reject) => {
       // TODO: always pass opts when min node version is 12.10+
       if (opts) {
-        this.realFs.rmdir(npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
+        this.realFs.rmdir(path_npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
       } else {
-        this.realFs.rmdir(npath.fromPortablePath(p), this.makeCallback(resolve, reject));
+        this.realFs.rmdir(path_npath.fromPortablePath(p), this.makeCallback(resolve, reject));
       }
     });
   }
 
   rmdirSync(p, opts) {
-    return this.realFs.rmdirSync(npath.fromPortablePath(p), opts);
+    return this.realFs.rmdirSync(path_npath.fromPortablePath(p), opts);
   }
 
   async linkPromise(existingP, newP) {
     return await new Promise((resolve, reject) => {
-      this.realFs.link(npath.fromPortablePath(existingP), npath.fromPortablePath(newP), this.makeCallback(resolve, reject));
+      this.realFs.link(path_npath.fromPortablePath(existingP), path_npath.fromPortablePath(newP), this.makeCallback(resolve, reject));
     });
   }
 
   linkSync(existingP, newP) {
-    return this.realFs.linkSync(npath.fromPortablePath(existingP), npath.fromPortablePath(newP));
+    return this.realFs.linkSync(path_npath.fromPortablePath(existingP), path_npath.fromPortablePath(newP));
   }
 
   async symlinkPromise(target, p, type) {
     return await new Promise((resolve, reject) => {
-      this.realFs.symlink(npath.fromPortablePath(target.replace(/\/+$/, ``)), npath.fromPortablePath(p), type, this.makeCallback(resolve, reject));
+      this.realFs.symlink(path_npath.fromPortablePath(target.replace(/\/+$/, ``)), path_npath.fromPortablePath(p), type, this.makeCallback(resolve, reject));
     });
   }
 
   symlinkSync(target, p, type) {
-    return this.realFs.symlinkSync(npath.fromPortablePath(target.replace(/\/+$/, ``)), npath.fromPortablePath(p), type);
+    return this.realFs.symlinkSync(path_npath.fromPortablePath(target.replace(/\/+$/, ``)), path_npath.fromPortablePath(p), type);
   }
 
   async readFilePromise(p, encoding) {
     return await new Promise((resolve, reject) => {
-      const fsNativePath = typeof p === `string` ? npath.fromPortablePath(p) : p;
+      const fsNativePath = typeof p === `string` ? path_npath.fromPortablePath(p) : p;
       this.realFs.readFile(fsNativePath, encoding, this.makeCallback(resolve, reject));
     });
   }
 
   readFileSync(p, encoding) {
-    const fsNativePath = typeof p === `string` ? npath.fromPortablePath(p) : p;
+    const fsNativePath = typeof p === `string` ? path_npath.fromPortablePath(p) : p;
     return this.realFs.readFileSync(fsNativePath, encoding);
   }
 
   async readdirPromise(p, opts) {
     return await new Promise((resolve, reject) => {
       if (opts === null || opts === void 0 ? void 0 : opts.withFileTypes) {
-        this.realFs.readdir(npath.fromPortablePath(p), {
+        this.realFs.readdir(path_npath.fromPortablePath(p), {
           withFileTypes: true
         }, this.makeCallback(resolve, reject));
       } else {
-        this.realFs.readdir(npath.fromPortablePath(p), this.makeCallback(value => resolve(value), reject));
+        this.realFs.readdir(path_npath.fromPortablePath(p), this.makeCallback(value => resolve(value), reject));
       }
     });
   }
 
   readdirSync(p, opts) {
     if (opts === null || opts === void 0 ? void 0 : opts.withFileTypes) {
-      return this.realFs.readdirSync(npath.fromPortablePath(p), {
+      return this.realFs.readdirSync(path_npath.fromPortablePath(p), {
         withFileTypes: true
       });
     } else {
-      return this.realFs.readdirSync(npath.fromPortablePath(p));
+      return this.realFs.readdirSync(path_npath.fromPortablePath(p));
     }
   }
 
   async readlinkPromise(p) {
     return await new Promise((resolve, reject) => {
-      this.realFs.readlink(npath.fromPortablePath(p), this.makeCallback(resolve, reject));
+      this.realFs.readlink(path_npath.fromPortablePath(p), this.makeCallback(resolve, reject));
     }).then(path => {
-      return npath.toPortablePath(path);
+      return path_npath.toPortablePath(path);
     });
   }
 
   readlinkSync(p) {
-    return npath.toPortablePath(this.realFs.readlinkSync(npath.fromPortablePath(p)));
+    return path_npath.toPortablePath(this.realFs.readlinkSync(path_npath.fromPortablePath(p)));
   }
 
   async truncatePromise(p, len) {
     return await new Promise((resolve, reject) => {
-      this.realFs.truncate(npath.fromPortablePath(p), len, this.makeCallback(resolve, reject));
+      this.realFs.truncate(path_npath.fromPortablePath(p), len, this.makeCallback(resolve, reject));
     });
   }
 
   truncateSync(p, len) {
-    return this.realFs.truncateSync(npath.fromPortablePath(p), len);
+    return this.realFs.truncateSync(path_npath.fromPortablePath(p), len);
   }
 
   watch(p, a, b) {
-    return this.realFs.watch(npath.fromPortablePath(p), // @ts-expect-error
+    return this.realFs.watch(path_npath.fromPortablePath(p), // @ts-expect-error
     a, b);
   }
 
   watchFile(p, a, b) {
-    return this.realFs.watchFile(npath.fromPortablePath(p), // @ts-expect-error
+    return this.realFs.watchFile(path_npath.fromPortablePath(p), // @ts-expect-error
     a, b);
   }
 
   unwatchFile(p, cb) {
-    return this.realFs.unwatchFile(npath.fromPortablePath(p), cb);
+    return this.realFs.unwatchFile(path_npath.fromPortablePath(p), cb);
   }
 
   makeCallback(resolve, reject) {
@@ -39872,7 +39869,7 @@ class ZipFS extends BasePortableFakeFS {
       }
 
       if (typeof source === `string`) {
-        this.zip = this.libzip.open(npath.fromPortablePath(source), flags, errPtr);
+        this.zip = this.libzip.open(path_npath.fromPortablePath(source), flags, errPtr);
       } else {
         const lzSource = this.allocateUnattachedSource(source);
 
@@ -42255,7 +42252,7 @@ const external_url_namespaceObject = require("url");;
 
 class URLFS extends ProxiedFS {
   constructor(baseFs) {
-    super(npath);
+    super(path_npath);
     this.baseFs = baseFs;
   }
 
@@ -42440,16 +42437,16 @@ function extendFs(realFs, fakeFs) {
 
 class PosixFS extends ProxiedFS {
   constructor(baseFs) {
-    super(npath);
+    super(path_npath);
     this.baseFs = baseFs;
   }
 
   mapFromBase(path) {
-    return npath.fromPortablePath(path);
+    return path_npath.fromPortablePath(path);
   }
 
   mapToBase(path) {
-    return npath.toPortablePath(path);
+    return path_npath.toPortablePath(path);
   }
 
 }
@@ -42508,7 +42505,7 @@ function getIssuerModule(parent) {
   return issuer || null;
 }
 function getPathForDisplay(p) {
-  return npath.normalize(npath.fromPortablePath(p));
+  return path_npath.normalize(path_npath.fromPortablePath(p));
 }
 ;// CONCATENATED MODULE: ./sources/loader/nodeUtils.ts
 
@@ -42516,32 +42513,7 @@ function getPathForDisplay(p) {
  // @ts-expect-error
 
 const builtinModules = new Set(external_module_.Module.builtinModules || Object.keys(process.binding(`natives`)));
-const isBuiltinModule = request => request.startsWith(`node:`) || builtinModules.has(request); // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/run_main.js#L11-L24
-
-function resolveMainPath(main) {
-  let mainPath = external_module_.Module._findPath(npath.resolve(main), null, true);
-
-  if (!mainPath) return false; // const preserveSymlinksMain = getOptionValue(`--preserve-symlinks-main`);
-  // if (!preserveSymlinksMain)
-
-  mainPath = external_fs_default().realpathSync(mainPath);
-  return mainPath;
-} // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/run_main.js#L26-L41
-
-function shouldUseESMLoader(mainPath) {
-  // const userLoader = getOptionValue(`--experimental-loader`);
-  // if (userLoader)
-  //   return true;
-  // const esModuleSpecifierResolution =
-  //   getOptionValue(`--experimental-specifier-resolution`);
-  // if (esModuleSpecifierResolution === `node`)
-  //   return true;
-  // Determine the module format of the main
-  if (mainPath && mainPath.endsWith(`.mjs`)) return true;
-  if (!mainPath || mainPath.endsWith(`.cjs`)) return false;
-  const pkg = readPackageScope(mainPath);
-  return pkg && pkg.data.type === `module`;
-} // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/cjs/loader.js#L315-L330
+const isBuiltinModule = request => request.startsWith(`node:`) || builtinModules.has(request); // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/cjs/loader.js#L315-L330
 
 function readPackageScope(checkPath) {
   const rootSeparatorIndex = checkPath.indexOf(npath.sep);
@@ -42566,8 +42538,8 @@ function readPackageScope(checkPath) {
 
 function readPackage(requestPath) {
   const jsonPath = npath.resolve(requestPath, `package.json`);
-  if (!external_fs_default().existsSync(jsonPath)) return null;
-  return JSON.parse(external_fs_default().readFileSync(jsonPath, `utf8`));
+  if (!fs.existsSync(jsonPath)) return null;
+  return JSON.parse(fs.readFileSync(jsonPath, `utf8`));
 }
 ;// CONCATENATED MODULE: ./sources/loader/applyPatch.ts
 
@@ -42645,7 +42617,7 @@ function applyPatch(pnpapi, opts) {
 
 
     const isOwnedByRuntime = parentApi !== null ? parentApi.findPackageLocator(modulePath) !== null : false;
-    const moduleApiPath = isOwnedByRuntime ? parentApiPath : opts.manager.findApiPathFor(npath.dirname(modulePath));
+    const moduleApiPath = isOwnedByRuntime ? parentApiPath : opts.manager.findApiPathFor(path_npath.dirname(modulePath));
     const entry = moduleApiPath !== null ? opts.manager.getApiEntry(moduleApiPath) : {
       instance: null,
       cache: defaultCache
@@ -42654,8 +42626,8 @@ function applyPatch(pnpapi, opts) {
     const cacheEntry = entry.cache[modulePath];
 
     if (cacheEntry) {
-      // When a dynamic import is used in CJS files Node adds the module
-      // to the cache but doesn't load it so we do it here.
+      // When the Node ESM loader encounters CJS modules it adds them
+      // to the cache but doesn't load them so we do that here.
       //
       // Keep track of and check if the module is already loading to
       // handle circular requires.
@@ -42664,7 +42636,13 @@ function applyPatch(pnpapi, opts) {
       // create modules without the `loaded` and `load` properties
       if (cacheEntry.loaded === false && cacheEntry.isLoading !== true) {
         try {
-          cacheEntry.isLoading = true;
+          cacheEntry.isLoading = true; // The main module is exposed as a global variable
+
+          if (isMain) {
+            process.mainModule = cacheEntry;
+            cacheEntry.id = `.`;
+          }
+
           cacheEntry.load(modulePath);
         } finally {
           cacheEntry.isLoading = false;
@@ -42677,7 +42655,7 @@ function applyPatch(pnpapi, opts) {
 
     const module = new external_module_.Module(modulePath, parent !== null && parent !== void 0 ? parent : undefined);
     module.pnpApiPath = moduleApiPath;
-    entry.cache[modulePath] = module; // The main module is exposed as global variable
+    entry.cache[modulePath] = module; // The main module is exposed as a global variable
 
     if (isMain) {
       process.mainModule = module;
@@ -42724,7 +42702,7 @@ function applyPatch(pnpapi, opts) {
     const issuer = getIssuerModule(module);
 
     if (issuer !== null) {
-      const path = npath.dirname(issuer.filename);
+      const path = path_npath.dirname(issuer.filename);
       const apiPath = opts.manager.getApiPathFromParent(issuer);
       return [{
         apiPath,
@@ -42733,7 +42711,7 @@ function applyPatch(pnpapi, opts) {
       }];
     } else {
       const path = process.cwd();
-      const apiPath = (_a = opts.manager.findApiPathFor(npath.join(path, `[file]`))) !== null && _a !== void 0 ? _a : opts.manager.getApiPathFromParent(null);
+      const apiPath = (_a = opts.manager.findApiPathFor(path_npath.join(path, `[file]`))) !== null && _a !== void 0 ? _a : opts.manager.getApiPathFromParent(null);
       return [{
         apiPath,
         path,
@@ -42744,7 +42722,7 @@ function applyPatch(pnpapi, opts) {
 
   function makeFakeParent(path) {
     const fakeParent = new external_module_.Module(``);
-    const fakeFilePath = npath.join(path, `[file]`);
+    const fakeFilePath = path_npath.join(path, `[file]`);
     fakeParent.paths = external_module_.Module._nodeModulePaths(fakeFilePath);
     return fakeParent;
   } // Splits a require request into its components, or return null if the request is a file path
@@ -42789,11 +42767,11 @@ function applyPatch(pnpapi, opts) {
     const issuerSpecs = options && options.paths ? getIssuerSpecsFromPaths(options.paths) : getIssuerSpecsFromModule(parent);
 
     if (request.match(pathRegExp) === null) {
-      const parentDirectory = (parent === null || parent === void 0 ? void 0 : parent.filename) != null ? npath.dirname(parent.filename) : null;
-      const absoluteRequest = npath.isAbsolute(request) ? request : parentDirectory !== null ? npath.resolve(parentDirectory, request) : null;
+      const parentDirectory = (parent === null || parent === void 0 ? void 0 : parent.filename) != null ? path_npath.dirname(parent.filename) : null;
+      const absoluteRequest = path_npath.isAbsolute(request) ? request : parentDirectory !== null ? path_npath.resolve(parentDirectory, request) : null;
 
       if (absoluteRequest !== null) {
-        const apiPath = parentDirectory === npath.dirname(absoluteRequest) && (parent === null || parent === void 0 ? void 0 : parent.pnpApiPath) ? parent.pnpApiPath : opts.manager.findApiPathFor(absoluteRequest);
+        const apiPath = parentDirectory === path_npath.dirname(absoluteRequest) && (parent === null || parent === void 0 ? void 0 : parent.pnpApiPath) ? parent.pnpApiPath : opts.manager.findApiPathFor(absoluteRequest);
 
         if (apiPath !== null) {
           issuerSpecs.unshift({
@@ -42850,7 +42828,7 @@ function applyPatch(pnpapi, opts) {
     if (request === `pnpapi`) return false;
     if (!enableNativeHooks) return originalFindPath.call(external_module_.Module, request, paths, isMain); // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/cjs/loader.js#L490-L494
 
-    const isAbsolute = npath.isAbsolute(request);
+    const isAbsolute = path_npath.isAbsolute(request);
     if (isAbsolute) paths = [``];else if (!paths || paths.length === 0) return false;
 
     for (const path of paths) {
@@ -42875,23 +42853,6 @@ function applyPatch(pnpapi, opts) {
     }
 
     return false;
-  }; // Specifying the `--experimental-loader` flag makes Node enter ESM mode so we change it to not do that
-  // https://github.com/nodejs/node/blob/e817ba70f56c4bfd5d4a68dce8b165142312e7b6/lib/internal/modules/run_main.js#L72-L81
-  // Tested by https://github.com/yarnpkg/berry/blob/d80ee2dc5298d31eb864288d77671a2264713371/packages/acceptance-tests/pkg-tests-specs/sources/pnp-esm.test.ts#L226-L244
-  // Upstream issue https://github.com/nodejs/node/issues/33226
-
-
-  const originalRunMain = moduleExports.runMain;
-
-  moduleExports.runMain = function (main = process.argv[1]) {
-    const resolvedMain = resolveMainPath(main);
-    const useESMLoader = resolvedMain ? shouldUseESMLoader(resolvedMain) : false;
-
-    if (useESMLoader) {
-      originalRunMain(main);
-    } else {
-      external_module_.Module._load(main, null, true);
-    }
   };
 
   patchFs((external_fs_default()), new PosixFS(opts.fakeFs));
@@ -42901,7 +42862,7 @@ function applyPatch(pnpapi, opts) {
 function hydrateRuntimeState(data, {
   basePath
 }) {
-  const portablePath = npath.toPortablePath(basePath);
+  const portablePath = path_npath.toPortablePath(basePath);
   const absolutePortablePath = ppath.resolve(portablePath);
   const ignorePattern = data.ignorePatternData !== null ? new RegExp(data.ignorePatternData) : null;
   const packageLocatorsByLocations = new Map();
@@ -43434,7 +43395,7 @@ function makeApi(runtimeState, opts) {
     // the {paths} option at all, since it internally makes _resolveFilename create another
     // fake module anyway.
 
-    return external_module_.Module._resolveFilename(npath.fromPortablePath(request), makeFakeModule(npath.fromPortablePath(issuer)), false, {
+    return external_module_.Module._resolveFilename(path_npath.fromPortablePath(request), makeFakeModule(path_npath.fromPortablePath(issuer)), false, {
       plugnplay: false
     });
   }
@@ -43607,7 +43568,7 @@ function makeApi(runtimeState, opts) {
     considerBuiltins = true
   } = {}) {
     // The 'pnpapi' request is reserved and will always return the path to the PnP file, from everywhere
-    if (request === `pnpapi`) return npath.toPortablePath(opts.pnpapiResolution); // Bailout if the request is a native module
+    if (request === `pnpapi`) return path_npath.toPortablePath(opts.pnpapiResolution); // Bailout if the request is a native module
 
     if (considerBuiltins && isBuiltinModule(request)) return null;
     const requestForDisplay = getPathForDisplay(request);
@@ -43633,7 +43594,7 @@ function makeApi(runtimeState, opts) {
           });
         }
 
-        return npath.toPortablePath(result);
+        return path_npath.toPortablePath(result);
       }
     }
 
@@ -43687,7 +43648,7 @@ function makeApi(runtimeState, opts) {
           });
         }
 
-        return npath.toPortablePath(result);
+        return path_npath.toPortablePath(result);
       }
 
       const issuerInformation = getPackageInformationSafe(issuerLocator); // We obtain the dependency reference in regard to the package that request it
@@ -43967,35 +43928,35 @@ function makeApi(runtimeState, opts) {
     getPackageInformation: locator => {
       const info = getPackageInformation(locator);
       if (info === null) return null;
-      const packageLocation = npath.fromPortablePath(info.packageLocation);
+      const packageLocation = path_npath.fromPortablePath(info.packageLocation);
       const nativeInfo = { ...info,
         packageLocation
       };
       return nativeInfo;
     },
     findPackageLocator: path => {
-      return findPackageLocator(npath.toPortablePath(path));
+      return findPackageLocator(path_npath.toPortablePath(path));
     },
     resolveToUnqualified: maybeLog(`resolveToUnqualified`, (request, issuer, opts) => {
-      const portableIssuer = issuer !== null ? npath.toPortablePath(issuer) : null;
-      const resolution = resolveToUnqualified(npath.toPortablePath(request), portableIssuer, opts);
+      const portableIssuer = issuer !== null ? path_npath.toPortablePath(issuer) : null;
+      const resolution = resolveToUnqualified(path_npath.toPortablePath(request), portableIssuer, opts);
       if (resolution === null) return null;
-      return npath.fromPortablePath(resolution);
+      return path_npath.fromPortablePath(resolution);
     }),
     resolveUnqualified: maybeLog(`resolveUnqualified`, (unqualifiedPath, opts) => {
-      return npath.fromPortablePath(resolveUnqualified(npath.toPortablePath(unqualifiedPath), opts));
+      return path_npath.fromPortablePath(resolveUnqualified(path_npath.toPortablePath(unqualifiedPath), opts));
     }),
     resolveRequest: maybeLog(`resolveRequest`, (request, issuer, opts) => {
-      const portableIssuer = issuer !== null ? npath.toPortablePath(issuer) : null;
-      const resolution = resolveRequest(npath.toPortablePath(request), portableIssuer, opts);
+      const portableIssuer = issuer !== null ? path_npath.toPortablePath(issuer) : null;
+      const resolution = resolveRequest(path_npath.toPortablePath(request), portableIssuer, opts);
       if (resolution === null) return null;
-      return npath.fromPortablePath(resolution);
+      return path_npath.fromPortablePath(resolution);
     }),
     resolveVirtual: maybeLog(`resolveVirtual`, path => {
-      const result = resolveVirtual(npath.toPortablePath(path));
+      const result = resolveVirtual(path_npath.toPortablePath(path));
 
       if (result !== null) {
-        return npath.fromPortablePath(result);
+        return path_npath.fromPortablePath(result);
       } else {
         return null;
       }
@@ -44006,8 +43967,8 @@ function makeApi(runtimeState, opts) {
 
 
 function makeManager(pnpapi, opts) {
-  const initialApiPath = npath.toPortablePath(pnpapi.resolveToUnqualified(`pnpapi`, null));
-  const initialApiStats = opts.fakeFs.statSync(npath.toPortablePath(initialApiPath));
+  const initialApiPath = path_npath.toPortablePath(pnpapi.resolveToUnqualified(`pnpapi`, null));
+  const initialApiStats = opts.fakeFs.statSync(path_npath.toPortablePath(initialApiPath));
   const apiMetadata = new Map([[initialApiPath, {
     cache: external_module_.Module._cache,
     instance: pnpapi,
@@ -44016,7 +43977,7 @@ function makeManager(pnpapi, opts) {
   }]]);
 
   function loadApiInstance(pnpApiPath) {
-    const nativePath = npath.fromPortablePath(pnpApiPath); // @ts-expect-error
+    const nativePath = path_npath.fromPortablePath(pnpApiPath); // @ts-expect-error
 
     const module = new external_module_.Module(nativePath, null); // @ts-expect-error
 
@@ -44031,7 +43992,7 @@ function makeManager(pnpapi, opts) {
     const stats = opts.fakeFs.statSync(pnpApiPath);
 
     if (stats.mtime > apiEntry.stats.mtime) {
-      process.emitWarning(`[Warning] The runtime detected new informations in a PnP file; reloading the API instance (${npath.fromPortablePath(pnpApiPath)})`);
+      process.emitWarning(`[Warning] The runtime detected new informations in a PnP file; reloading the API instance (${path_npath.fromPortablePath(pnpApiPath)})`);
       apiEntry.stats = stats;
       apiEntry.instance = loadApiInstance(pnpApiPath);
     }
@@ -44099,11 +44060,11 @@ function makeManager(pnpapi, opts) {
 
     if (bestCandidate) {
       if (bestCandidate.apiPaths.length === 1) return bestCandidate.apiPaths[0];
-      const controlSegment = bestCandidate.apiPaths.map(apiPath => `  ${npath.fromPortablePath(apiPath)}`).join(`\n`);
+      const controlSegment = bestCandidate.apiPaths.map(apiPath => `  ${path_npath.fromPortablePath(apiPath)}`).join(`\n`);
       throw new Error(`Unable to locate pnpapi, the module '${modulePath}' is controlled by multiple pnpapi instances.\nThis is usually caused by using the global cache (enableGlobalCache: true)\n\nControlled by:\n${controlSegment}\n`);
     }
 
-    const start = ppath.resolve(npath.toPortablePath(modulePath));
+    const start = ppath.resolve(path_npath.toPortablePath(modulePath));
     let curr;
     let next = start;
 
@@ -44303,8 +44264,6 @@ if (process.mainModule === __non_webpack_module__) {
 }
 })();
 
-__webpack_exports__ = __webpack_exports__.default;
-/******/ 	return __webpack_exports__;
+module.exports = __webpack_exports__.default;
 /******/ })()
 ;
-});
