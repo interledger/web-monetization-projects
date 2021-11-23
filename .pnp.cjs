@@ -2868,7 +2868,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@wext/shipit", "patch:@wext/shipit@npm%3A0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515::version=0.2.1&hash=fbcdff&locator=web-monetization%40workspace%3A."],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
-            ["addons-linter", "npm:4.2.0"],
+            ["addons-linter", "npm:4.3.0"],
             ["copy-webpack-plugin", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.1.0"],
             ["crx-hotreload", "npm:1.0.6"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
@@ -3760,7 +3760,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@eslint/eslintrc", "npm:1.0.4"],
             ["ajv", "npm:6.12.6"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
-            ["espree", "npm:9.0.0"],
+            ["espree", "npm:9.1.0"],
             ["globals", "npm:13.9.0"],
             ["ignore", "npm:4.0.6"],
             ["import-fresh", "npm:3.3.0"],
@@ -3867,7 +3867,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webmonetization/wext", "workspace:packages/webmonetization-wext"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
-            ["addons-linter", "npm:4.2.0"],
+            ["addons-linter", "npm:4.3.0"],
             ["copy-webpack-plugin", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:9.1.0"],
             ["crx-hotreload", "npm:1.0.6"],
             ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.5.1"],
@@ -5209,10 +5209,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@mdn/browser-compat-data", [
-        ["npm:4.0.10", {
-          "packageLocation": "./.yarn/cache/@mdn-browser-compat-data-npm-4.0.10-618ef8680e-fcb7fac153.zip/node_modules/@mdn/browser-compat-data/",
+        ["npm:4.0.11", {
+          "packageLocation": "./.yarn/cache/@mdn-browser-compat-data-npm-4.0.11-0c5c0d5ea7-4bcb43aff6.zip/node_modules/@mdn/browser-compat-data/",
           "packageDependencies": [
-            ["@mdn/browser-compat-data", "npm:4.0.10"]
+            ["@mdn/browser-compat-data", "npm:4.0.11"]
           ],
           "linkType": "HARD",
         }],
@@ -8527,10 +8527,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.5.0", {
-          "packageLocation": "./.yarn/cache/acorn-npm-8.5.0-faed0ea119-2e4c1dbed3.zip/node_modules/acorn/",
+        ["npm:8.6.0", {
+          "packageLocation": "./.yarn/cache/acorn-npm-8.6.0-9de50afc7d-9d0de73b73.zip/node_modules/acorn/",
           "packageDependencies": [
-            ["acorn", "npm:8.5.0"]
+            ["acorn", "npm:8.6.0"]
           ],
           "linkType": "HARD",
         }]
@@ -8559,7 +8559,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["@types/acorn", null],
-            ["acorn", "npm:8.5.0"]
+            ["acorn", "npm:8.6.0"]
           ],
           "packagePeers": [
             "@types/acorn",
@@ -8589,7 +8589,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["acorn-jsx", "virtual:77ec52a2b9cceffd566df1c21862c553f048c3b3a9e61fef05be168830f015f2c6623bef122039c5545c88ac094f01e6a8057b73cb621a1ca41023cc601dfc59#npm:5.3.2"],
             ["@types/acorn", null],
-            ["acorn", "npm:8.5.0"]
+            ["acorn", "npm:8.6.0"]
           ],
           "packagePeers": [
             "@types/acorn",
@@ -8766,24 +8766,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.2.0", {
-          "packageLocation": "./.yarn/cache/addons-linter-npm-4.2.0-c52d072704-440ed2514f.zip/node_modules/addons-linter/",
+        ["npm:4.3.0", {
+          "packageLocation": "./.yarn/cache/addons-linter-npm-4.3.0-4d164b6fc6-84289751e8.zip/node_modules/addons-linter/",
           "packageDependencies": [
-            ["addons-linter", "npm:4.2.0"],
-            ["@mdn/browser-compat-data", "npm:4.0.10"],
+            ["addons-linter", "npm:4.3.0"],
+            ["@mdn/browser-compat-data", "npm:4.0.11"],
             ["addons-moz-compare", "npm:1.2.0"],
-            ["addons-scanner-utils", "virtual:c52d072704a10546198e85cb589516a20e591eec808d7bc6306605b84404b8f30edb7796205abf3b3944303111df9891654a06969b8d9b49b87989d49698f12e#npm:6.1.0"],
+            ["addons-scanner-utils", "virtual:4d164b6fc698651dc7317a60cbe05d315a66fd9eaa3777ace21e47db9058a72e98bc7820c9bef732cdaade6b092450d5adc3d8992ecb7e9404233d7fef0fdf7b#npm:6.1.0"],
             ["ajv", "npm:6.12.6"],
             ["ajv-merge-patch", "virtual:d5a771500f5554a047a2dc50011066c293d4efd551e6ccc373161487b8782ea83271dc86fdf5da4e4592dfdf262761fe301d693905e5ffc75ad6d1acb9780aaa#npm:4.1.0"],
             ["chalk", "npm:4.1.2"],
             ["cheerio", "npm:1.0.0-rc.10"],
             ["columnify", "npm:1.5.4"],
-            ["common-tags", "npm:1.8.1"],
+            ["common-tags", "npm:1.8.2"],
             ["deepmerge", "npm:4.2.2"],
-            ["eslint", "npm:8.2.0"],
-            ["eslint-plugin-no-unsanitized", "virtual:c52d072704a10546198e85cb589516a20e591eec808d7bc6306605b84404b8f30edb7796205abf3b3944303111df9891654a06969b8d9b49b87989d49698f12e#npm:4.0.0"],
+            ["eslint", "npm:8.3.0"],
+            ["eslint-plugin-no-unsanitized", "virtual:4d164b6fc698651dc7317a60cbe05d315a66fd9eaa3777ace21e47db9058a72e98bc7820c9bef732cdaade6b092450d5adc3d8992ecb7e9404233d7fef0fdf7b#npm:4.0.0"],
             ["eslint-visitor-keys", "npm:3.1.0"],
-            ["espree", "npm:9.0.0"],
+            ["espree", "npm:9.1.0"],
             ["esprima", "npm:4.0.1"],
             ["fluent-syntax", "npm:0.13.0"],
             ["glob", "npm:7.2.0"],
@@ -8791,12 +8791,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-mergeable-object", "npm:1.1.1"],
             ["jed", "npm:1.1.1"],
             ["os-locale", "npm:5.0.0"],
-            ["pino", "npm:7.2.0"],
+            ["pino", "npm:7.4.0"],
             ["postcss", "npm:8.3.11"],
             ["relaxed-json", "npm:1.0.3"],
             ["semver", "npm:7.3.5"],
             ["sha.js", "npm:2.4.11"],
-            ["source-map-support", "npm:0.5.20"],
+            ["source-map-support", "npm:0.5.21"],
             ["tosource", "npm:1.0.0"],
             ["upath", "npm:2.0.1"],
             ["yargs", "npm:17.2.1"],
@@ -8829,10 +8829,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:c52d072704a10546198e85cb589516a20e591eec808d7bc6306605b84404b8f30edb7796205abf3b3944303111df9891654a06969b8d9b49b87989d49698f12e#npm:6.1.0", {
-          "packageLocation": "./.yarn/__virtual__/addons-scanner-utils-virtual-27bb7a76cc/0/cache/addons-scanner-utils-npm-6.1.0-8f1baa45ba-d97cbeaa55.zip/node_modules/addons-scanner-utils/",
+        ["virtual:4d164b6fc698651dc7317a60cbe05d315a66fd9eaa3777ace21e47db9058a72e98bc7820c9bef732cdaade6b092450d5adc3d8992ecb7e9404233d7fef0fdf7b#npm:6.1.0", {
+          "packageLocation": "./.yarn/__virtual__/addons-scanner-utils-virtual-4ff979fab4/0/cache/addons-scanner-utils-npm-6.1.0-8f1baa45ba-d97cbeaa55.zip/node_modules/addons-scanner-utils/",
           "packageDependencies": [
-            ["addons-scanner-utils", "virtual:c52d072704a10546198e85cb589516a20e591eec808d7bc6306605b84404b8f30edb7796205abf3b3944303111df9891654a06969b8d9b49b87989d49698f12e#npm:6.1.0"],
+            ["addons-scanner-utils", "virtual:4d164b6fc698651dc7317a60cbe05d315a66fd9eaa3777ace21e47db9058a72e98bc7820c9bef732cdaade6b092450d5adc3d8992ecb7e9404233d7fef0fdf7b#npm:6.1.0"],
             ["@types/body-parser", null],
             ["@types/download", null],
             ["@types/express", null],
@@ -11558,10 +11558,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:1.8.1", {
-          "packageLocation": "./.yarn/cache/common-tags-npm-1.8.1-86cdad0ef7-991279f124.zip/node_modules/common-tags/",
+        ["npm:1.8.2", {
+          "packageLocation": "./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/",
           "packageDependencies": [
-            ["common-tags", "npm:1.8.1"]
+            ["common-tags", "npm:1.8.2"]
           ],
           "linkType": "HARD",
         }]
@@ -13287,7 +13287,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pino", "npm:5.13.6"],
             ["request", "npm:2.88.2"],
             ["sha.js", "npm:2.4.11"],
-            ["source-map-support", "npm:0.5.20"],
+            ["source-map-support", "npm:0.5.21"],
             ["yargs", "npm:14.0.0"]
           ],
           "linkType": "HARD",
@@ -13301,7 +13301,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pino", "npm:6.11.3"],
             ["request", "npm:2.88.2"],
             ["sha.js", "npm:2.4.11"],
-            ["source-map-support", "npm:0.5.20"],
+            ["source-map-support", "npm:0.5.21"],
             ["yargs", "npm:16.2.0"]
           ],
           "linkType": "HARD",
@@ -14231,10 +14231,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.2.0", {
-          "packageLocation": "./.yarn/cache/eslint-npm-8.2.0-6d0abafe92-19f2f4e23b.zip/node_modules/eslint/",
+        ["npm:8.3.0", {
+          "packageLocation": "./.yarn/cache/eslint-npm-8.3.0-19231e7a87-c0338471fc.zip/node_modules/eslint/",
           "packageDependencies": [
-            ["eslint", "npm:8.2.0"],
+            ["eslint", "npm:8.3.0"],
             ["@eslint/eslintrc", "npm:1.0.4"],
             ["@humanwhocodes/config-array", "npm:0.6.0"],
             ["ajv", "npm:6.12.6"],
@@ -14244,10 +14244,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["doctrine", "npm:3.0.0"],
             ["enquirer", "npm:2.3.6"],
             ["escape-string-regexp", "npm:4.0.0"],
-            ["eslint-scope", "npm:6.0.0"],
-            ["eslint-utils", "virtual:6d0abafe924380b8a54934deb981250aecd1fb8124363457a374cef0557d01fb4814e3ba24dc97878e46ace75335e5f2ff24faa593260513f9428ef3fbe949ae#npm:3.0.0"],
+            ["eslint-scope", "npm:7.1.0"],
+            ["eslint-utils", "virtual:19231e7a876e62a3305ea09e400ae71af5d6561a052e08d6d8df6032aafb86b7102156f829b949f9bbfa05939834ad775dcdf5acafa1769e0ce3283c98e6e2c0#npm:3.0.0"],
             ["eslint-visitor-keys", "npm:3.1.0"],
-            ["espree", "npm:9.0.0"],
+            ["espree", "npm:9.1.0"],
             ["esquery", "npm:1.4.0"],
             ["esutils", "npm:2.0.3"],
             ["fast-deep-equal", "npm:3.1.3"],
@@ -14471,12 +14471,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:c52d072704a10546198e85cb589516a20e591eec808d7bc6306605b84404b8f30edb7796205abf3b3944303111df9891654a06969b8d9b49b87989d49698f12e#npm:4.0.0", {
-          "packageLocation": "./.yarn/__virtual__/eslint-plugin-no-unsanitized-virtual-1961ed1d8a/0/cache/eslint-plugin-no-unsanitized-npm-4.0.0-d009460b04-70f2a66386.zip/node_modules/eslint-plugin-no-unsanitized/",
+        ["virtual:4d164b6fc698651dc7317a60cbe05d315a66fd9eaa3777ace21e47db9058a72e98bc7820c9bef732cdaade6b092450d5adc3d8992ecb7e9404233d7fef0fdf7b#npm:4.0.0", {
+          "packageLocation": "./.yarn/__virtual__/eslint-plugin-no-unsanitized-virtual-7c9d58338f/0/cache/eslint-plugin-no-unsanitized-npm-4.0.0-d009460b04-70f2a66386.zip/node_modules/eslint-plugin-no-unsanitized/",
           "packageDependencies": [
-            ["eslint-plugin-no-unsanitized", "virtual:c52d072704a10546198e85cb589516a20e591eec808d7bc6306605b84404b8f30edb7796205abf3b3944303111df9891654a06969b8d9b49b87989d49698f12e#npm:4.0.0"],
+            ["eslint-plugin-no-unsanitized", "virtual:4d164b6fc698651dc7317a60cbe05d315a66fd9eaa3777ace21e47db9058a72e98bc7820c9bef732cdaade6b092450d5adc3d8992ecb7e9404233d7fef0fdf7b#npm:4.0.0"],
             ["@types/eslint", null],
-            ["eslint", "npm:8.2.0"]
+            ["eslint", "npm:8.3.0"]
           ],
           "packagePeers": [
             "@types/eslint",
@@ -14678,10 +14678,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:6.0.0", {
-          "packageLocation": "./.yarn/cache/eslint-scope-npm-6.0.0-0abb812d77-3f1b3578f2.zip/node_modules/eslint-scope/",
+        ["npm:7.1.0", {
+          "packageLocation": "./.yarn/cache/eslint-scope-npm-7.1.0-463f7a0979-2070470a07.zip/node_modules/eslint-scope/",
           "packageDependencies": [
-            ["eslint-scope", "npm:6.0.0"],
+            ["eslint-scope", "npm:7.1.0"],
             ["esrecurse", "npm:4.3.0"],
             ["estraverse", "npm:5.3.0"]
           ],
@@ -14712,12 +14712,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:3.0.0", {
-          "packageLocation": "./.yarn/__virtual__/eslint-utils-virtual-f391a422c0/0/cache/eslint-utils-npm-3.0.0-630b3a4013-0668fe02f5.zip/node_modules/eslint-utils/",
+        ["virtual:19231e7a876e62a3305ea09e400ae71af5d6561a052e08d6d8df6032aafb86b7102156f829b949f9bbfa05939834ad775dcdf5acafa1769e0ce3283c98e6e2c0#npm:3.0.0", {
+          "packageLocation": "./.yarn/__virtual__/eslint-utils-virtual-e5761ed555/0/cache/eslint-utils-npm-3.0.0-630b3a4013-0668fe02f5.zip/node_modules/eslint-utils/",
           "packageDependencies": [
-            ["eslint-utils", "virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:3.0.0"],
+            ["eslint-utils", "virtual:19231e7a876e62a3305ea09e400ae71af5d6561a052e08d6d8df6032aafb86b7102156f829b949f9bbfa05939834ad775dcdf5acafa1769e0ce3283c98e6e2c0#npm:3.0.0"],
             ["@types/eslint", null],
-            ["eslint", "npm:7.32.0"],
+            ["eslint", "npm:8.3.0"],
             ["eslint-visitor-keys", "npm:2.1.0"]
           ],
           "packagePeers": [
@@ -14726,12 +14726,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:6d0abafe924380b8a54934deb981250aecd1fb8124363457a374cef0557d01fb4814e3ba24dc97878e46ace75335e5f2ff24faa593260513f9428ef3fbe949ae#npm:3.0.0", {
-          "packageLocation": "./.yarn/__virtual__/eslint-utils-virtual-2e237e1eb5/0/cache/eslint-utils-npm-3.0.0-630b3a4013-0668fe02f5.zip/node_modules/eslint-utils/",
+        ["virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:3.0.0", {
+          "packageLocation": "./.yarn/__virtual__/eslint-utils-virtual-f391a422c0/0/cache/eslint-utils-npm-3.0.0-630b3a4013-0668fe02f5.zip/node_modules/eslint-utils/",
           "packageDependencies": [
-            ["eslint-utils", "virtual:6d0abafe924380b8a54934deb981250aecd1fb8124363457a374cef0557d01fb4814e3ba24dc97878e46ace75335e5f2ff24faa593260513f9428ef3fbe949ae#npm:3.0.0"],
+            ["eslint-utils", "virtual:27a6be720685dae0e8ce951f7a231a4f9603c00017f806eea9b7b417a173ae31f5476e79bb2e978bafc1c9a8c702f2e9ef1f0b33c244e4bd24630d18d8a39a9c#npm:3.0.0"],
             ["@types/eslint", null],
-            ["eslint", "npm:8.2.0"],
+            ["eslint", "npm:7.32.0"],
             ["eslint-visitor-keys", "npm:2.1.0"]
           ],
           "packagePeers": [
@@ -14822,7 +14822,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/espree-npm-9.0.0-77ec52a2b9-f313c642e3.zip/node_modules/espree/",
           "packageDependencies": [
             ["espree", "npm:9.0.0"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
+            ["acorn-jsx", "virtual:77ec52a2b9cceffd566df1c21862c553f048c3b3a9e61fef05be168830f015f2c6623bef122039c5545c88ac094f01e6a8057b73cb621a1ca41023cc601dfc59#npm:5.3.2"],
+            ["eslint-visitor-keys", "npm:3.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:9.1.0", {
+          "packageLocation": "./.yarn/cache/espree-npm-9.1.0-fd22538590-ba9b0f759c.zip/node_modules/espree/",
+          "packageDependencies": [
+            ["espree", "npm:9.1.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-jsx", "virtual:77ec52a2b9cceffd566df1c21862c553f048c3b3a9e61fef05be168830f015f2c6623bef122039c5545c88ac094f01e6a8057b73cb621a1ca41023cc601dfc59#npm:5.3.2"],
             ["eslint-visitor-keys", "npm:3.1.0"]
           ],
@@ -19043,7 +19053,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-runtime", "npm:27.3.1"],
             ["jest-util", "npm:27.3.1"],
             ["jest-worker", "npm:27.3.1"],
-            ["source-map-support", "npm:0.5.20"],
+            ["source-map-support", "npm:0.5.21"],
             ["throat", "npm:6.0.1"]
           ],
           "linkType": "HARD",
@@ -19273,7 +19283,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsdom", "virtual:2fb8134cca879c352f6b6204cc6e303f31dc3b62f860619e421de0844463c9d4171042de8d7da05cb84c0b0d6b319c887761eb78ea5bce5779afd8d677792b73#npm:16.6.0"],
             ["@types/canvas", null],
             ["abab", "npm:2.0.5"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-globals", "npm:6.0.0"],
             ["canvas", null],
             ["cssom", "npm:0.4.4"],
@@ -21673,7 +21683,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:3.0.2"],
             ["semver", "npm:7.3.5"],
             ["semver-utils", "npm:1.1.4"],
-            ["source-map-support", "npm:0.5.20"],
+            ["source-map-support", "npm:0.5.21"],
             ["spawn-please", "npm:1.0.0"],
             ["update-notifier", "npm:5.1.0"]
           ],
@@ -22963,10 +22973,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.2.0", {
-          "packageLocation": "./.yarn/cache/pino-npm-7.2.0-bd931cd2d3-e921003000.zip/node_modules/pino/",
+        ["npm:7.4.0", {
+          "packageLocation": "./.yarn/cache/pino-npm-7.4.0-20b3333866-c61bb43e7a.zip/node_modules/pino/",
           "packageDependencies": [
-            ["pino", "npm:7.2.0"],
+            ["pino", "npm:7.4.0"],
             ["fast-redact", "npm:3.0.0"],
             ["fastify-warning", "npm:0.2.0"],
             ["get-caller-file", "npm:2.0.5"],
@@ -25805,6 +25815,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["source-map", "npm:0.6.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:0.5.21", {
+          "packageLocation": "./.yarn/cache/source-map-support-npm-0.5.21-09ca99e250-43e98d700d.zip/node_modules/source-map-support/",
+          "packageDependencies": [
+            ["source-map-support", "npm:0.5.21"],
+            ["buffer-from", "npm:1.1.1"],
+            ["source-map", "npm:0.6.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["source-map-url", [
@@ -26664,7 +26683,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["terser", "npm:5.9.0"],
             ["commander", "npm:2.20.3"],
             ["source-map", "npm:0.7.3"],
-            ["source-map-support", "npm:0.5.20"]
+            ["source-map-support", "npm:0.5.21"]
           ],
           "linkType": "HARD",
         }]
@@ -28019,7 +28038,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["create-require", "npm:1.1.1"],
             ["diff", "npm:4.0.2"],
             ["make-error", "npm:1.3.6"],
-            ["source-map-support", "npm:0.5.20"],
+            ["source-map-support", "npm:0.5.21"],
             ["typescript", null],
             ["yn", "npm:3.1.1"]
           ],
@@ -28044,7 +28063,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/swc__core", null],
             ["@types/swc__wasm", null],
             ["@types/typescript", null],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-walk", "npm:8.1.1"],
             ["arg", "npm:4.1.3"],
             ["create-require", "npm:1.1.1"],
@@ -28073,7 +28092,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["create-require", "npm:1.1.1"],
             ["diff", "npm:4.0.2"],
             ["make-error", "npm:1.3.6"],
-            ["source-map-support", "npm:0.5.20"],
+            ["source-map-support", "npm:0.5.21"],
             ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"],
             ["yn", "npm:3.1.1"]
           ],
@@ -28105,7 +28124,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-notifier", null],
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
             ["rimraf", "npm:2.7.1"],
-            ["source-map-support", "npm:0.5.20"],
+            ["source-map-support", "npm:0.5.21"],
             ["tree-kill", "npm:1.2.2"],
             ["ts-node", "virtual:f62f4e35c7c96ee75cd546e5bc23d469420ab89f40dbfb5f664403aa42d3aa21827f18d2fb77593811ca80c2ff9e56ca42c19a4f9f31edc325c5e58287f5d176#npm:9.1.1"],
             ["tsconfig", "npm:7.0.0"],
@@ -29145,7 +29164,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29183,7 +29202,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29221,7 +29240,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29259,7 +29278,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29297,7 +29316,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29335,7 +29354,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29373,7 +29392,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29411,7 +29430,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29449,7 +29468,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29487,7 +29506,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29525,7 +29544,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29563,7 +29582,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29601,7 +29620,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29639,7 +29658,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29677,7 +29696,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29715,7 +29734,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29753,7 +29772,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29791,7 +29810,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29829,7 +29848,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29867,7 +29886,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29905,7 +29924,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29943,7 +29962,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.11.1"],
             ["@webassemblyjs/wasm-edit", "npm:1.11.1"],
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-import-assertions", "virtual:74665be065ff5fb93b8bb4f6e18c7da6a2a87705797ad5bc37a622e648e70c73883bcd48a62455cf2364824a9d89109ac8f66976302c94fb87c863d36ce766a0#npm:1.7.6"],
             ["browserslist", "npm:4.18.1"],
             ["chrome-trace-event", "npm:1.0.2"],
@@ -29976,7 +29995,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/webpack-bundle-analyzer-npm-4.5.0-82010cf435-158e96810e.zip/node_modules/webpack-bundle-analyzer/",
           "packageDependencies": [
             ["webpack-bundle-analyzer", "npm:4.5.0"],
-            ["acorn", "npm:8.5.0"],
+            ["acorn", "npm:8.6.0"],
             ["acorn-walk", "npm:8.1.1"],
             ["chalk", "npm:4.1.2"],
             ["commander", "npm:7.2.0"],
