@@ -79,11 +79,13 @@ export const wmPolyFillMinimal = `
       }
 
       set onmonetization(callback) {
-        if (!callback && this.#monetizationlistener) {
+        if (callback === null && this.#monetizationlistener) {
           this.removeEventListener('monetization', this.#monetizationlistener)
+          this.#monetizationlistener = null
+        } else {
+          this.addEventListener('monetization', callback)
+          this.#monetizationlistener = callback
         }
-        this.#monetizationlistener = callback
-        this.addEventListener('monetization', callback)
       }
 
       get onstatechange() {
@@ -91,11 +93,13 @@ export const wmPolyFillMinimal = `
       }
 
       set onstatechange(callback) {
-        if (!callback && this.#statechangelistener) {
+        if (callback === null && this.#statechangelistener) {
           this.removeEventListener('statechange', this.#statechangelistener)
+          this.#statechangelistener = null
+        } else {
+          this.addEventListener('statechange', callback)
+          this.#statechangelistener = callback
         }
-        this.#statechangelistener = callback
-        this.addEventListener('statechange', callback)
       }
 
       get [Symbol.toStringTag]() {
@@ -111,6 +115,7 @@ export const wmPolyFillMinimal = `
       }
     }
 
+    // TODO: url as per the event
     if (localStorage.WM_POINTER_PROPERTY) {
       Object.defineProperty(Monetization.prototype, 'pointer', {
           get() {
@@ -186,8 +191,12 @@ export const wmPolyFillMinimal = `
             detail: detail
           }))
         if (type === 'monetizationprogress') {
+          const toNew = {...detail}
+          // paymentPointer is renamed to url
+          toNew.url = toNew.paymentPointer
+          delete toNew.paymentPointer
           monetization.dispatchEvent(
-            new MonetizationEvent(detail))
+            new MonetizationEvent(toNew))
         }
       }
     })
