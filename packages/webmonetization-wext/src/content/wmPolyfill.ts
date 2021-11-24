@@ -25,6 +25,7 @@ const progressLoggingCode = createBindingCode('monetizationprogress')
 
 // TODO: would be nicer to hotrod the webpack script and implement this
 // in typescript somehow
+// See: https://webpack.js.org/guides/asset-modules/
 // language=JavaScript
 export const wmPolyFillMinimal = `
   // Block scope everything so nothing is defined on window
@@ -150,7 +151,7 @@ export const wmPolyFillMinimal = `
       )
     }
 
-    navigator.monetization = new Monetization()
+    const monetization = navigator.monetization = new Monetization()
 
     document.monetization = new EventTarget()
     document.monetization.state = 'stopped'
@@ -176,9 +177,8 @@ export const wmPolyFillMinimal = `
           newState = 'idle'
         }
         if (newState && (newState !== oldState)) {
-          navigator.monetization.state = newState
-
-          navigator.monetization.dispatchEvent(new MonetizationStateChangeEvent())
+          monetization.state = newState
+          monetization.dispatchEvent(new MonetizationStateChangeEvent())
         }
       } else {
         document.monetization.dispatchEvent(
@@ -186,7 +186,7 @@ export const wmPolyFillMinimal = `
             detail: detail
           }))
         if (type === 'monetizationprogress') {
-          navigator.monetization.dispatchEvent(
+          monetization.dispatchEvent(
             new MonetizationEvent(detail))
         }
       }
