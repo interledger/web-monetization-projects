@@ -8,13 +8,11 @@ import {
 } from '@webmonetization/types'
 import { inject, injectable } from '@dier-makr/annotations'
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
-import {
-  WextIncludePolyfillMessage,
-  WextPolyfillSrc
-} from '@webmonetization/wext/tokens'
+
+import { WextPolyfillSrc } from '../tokens'
 
 import { ScriptInjection } from './ScriptInjection'
-import { includePolyFillMessage, wmPolyfill } from './wmPolyfill'
+import { includePolyFillMessage } from './wmPolyfill'
 
 interface SetStateParams {
   state: MonetizationState
