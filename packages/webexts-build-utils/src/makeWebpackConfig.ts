@@ -68,10 +68,11 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   WEXT_BUILD_CONFIG.isCI = Boolean(process.env.CI)
 
   // Possible to override name/version so can publish as different extension
-  const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
+  const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX ?? ''
   const WEXT_MANIFEST_SUFFIX_NO_DATE = process.env.WEXT_MANIFEST_SUFFIX_NO_DATE
   const WEXT_MANIFEST_VERSION = process.env.WEXT_MANIFEST_VERSION
-  const WEXT_MANIFEST_VERSION_NAME = process.env.WEXT_MANIFEST_VERSION_NAME
+  const WEXT_MANIFEST_VERSION_NAME =
+    process.env.WEXT_MANIFEST_VERSION_NAME ?? ''
   const WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID =
     process.env.WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
 
@@ -197,7 +198,12 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         WEBPACK_DEFINE_API: API,
         WEBPACK_DEFINE_VERSION: JSON.stringify(VERSION),
         WEBPACK_DEFINE_BROWSER: JSON.stringify(BROWSER),
-        WEBPACK_DEFINE_BUILD_CONFIG: JSON.stringify(WEXT_BUILD_CONFIG)
+        WEBPACK_DEFINE_BUILD_CONFIG: JSON.stringify(WEXT_BUILD_CONFIG),
+        WEBPACK_DEFINE_WEXT_MANIFEST_VERSION_NAME: JSON.stringify(
+          WEXT_MANIFEST_VERSION_NAME
+        ),
+        WEBPACK_DEFINE_WEXT_MANIFEST_SUFFIX:
+          JSON.stringify(WEXT_MANIFEST_SUFFIX)
       }),
       new CopyPlugin({ patterns: copyToDist }),
       {

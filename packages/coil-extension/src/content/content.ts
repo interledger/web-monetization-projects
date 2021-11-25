@@ -4,11 +4,19 @@ import { Container } from 'inversify'
 import { GraphQlClientOptions } from '@coil/client'
 import { inversifyModule } from '@dier-makr/inversify'
 import { GlobalModule } from '@dier-makr/annotations'
+import { wmPolyfill } from '@webmonetization/wext/content'
 
 import * as tokens from '../types/tokens'
-import { API, COIL_DOMAIN } from '../webpackDefines'
+import {
+  API,
+  BUILD_CONFIG,
+  COIL_DOMAIN,
+  VERSION,
+  WEXT_MANIFEST_SUFFIX
+} from '../webpackDefines'
 import { ClientOptions } from '../services/ClientOptions'
 import { loggingEnabled } from '../util/isLoggingEnabled'
+import { WextPolyfillSrc } from '../types/tokens'
 
 import { ContentScript } from './services/ContentScript'
 
@@ -26,6 +34,19 @@ function configureContainer(container: Container) {
   container.bind(Storage).toConstantValue(localStorage)
   container.bind(Window).toConstantValue(window)
   container.bind(Document).toConstantValue(document)
+
+  // language=JavaScript
+  const extensionPolyfill = `
+    navigator.monetization.extensionVersion = ${JSON.stringify(
+      `Coil${WEXT_MANIFEST_SUFFIX} ${VERSION.version}`
+    )};
+  `
+
+  container
+    .bind(WextPolyfillSrc)
+    .toConstantValue(
+      wmPolyfill.replace('// <REPLACEMENT_PLACEHOLDER />', extensionPolyfill)
+    )
 }
 
 function main() {

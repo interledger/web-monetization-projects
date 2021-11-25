@@ -6,8 +6,12 @@ import {
   MonetizationStopEvent,
   TipEvent
 } from '@webmonetization/types'
-import { injectable } from '@dier-makr/annotations'
+import { inject, injectable } from '@dier-makr/annotations'
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
+import {
+  WextIncludePolyfillMessage,
+  WextPolyfillSrc
+} from '@webmonetization/wext/tokens'
 
 import { ScriptInjection } from './ScriptInjection'
 import { includePolyFillMessage, wmPolyfill } from './wmPolyfill'
@@ -40,11 +44,16 @@ export class DocumentMonetization {
   private state: MonetizationState = 'stopped'
   private request?: MonetizationRequest
 
-  constructor(private doc: Document, private scripts: ScriptInjection) {}
+  constructor(
+    private doc: Document,
+    private scripts: ScriptInjection,
+    @inject(WextPolyfillSrc)
+    private polyfillText: string
+  ) {}
 
   injectDocumentMonetization() {
     try {
-      this.scripts.inject(wmPolyfill)
+      this.scripts.inject(this.polyfillText)
     } catch (e) {
       console.warn(includePolyFillMessage)
     }

@@ -8,7 +8,7 @@ describe('wmPolyfill', () => {
     const digest = createHash('sha256').update(data).digest()
     const rebuilt = `sha256-${digest.toString('base64')}`
     expect(rebuilt).toMatchInlineSnapshot(
-      `"sha256-YQjo2sRaaRnuBfvqSl8uFI3nTgvya+cf4isuIIbIH8I="`
+      `"sha256-lse3+u9LXPK436ejKm318NpFs8hXM8yYP/qGvvhTA0g="`
     )
   })
 })

@@ -11,7 +11,7 @@ set -ex
 
 export WEXT_MANIFEST_VERSION="$COIL_DEV_VERSION"
 # shellcheck disable=SC2155
-export WEXT_MANIFEST_VERSION_NAME="$COIL_DEV_VERSION - $(git branch --show) - $(git show -s --pretty='%h - %ad' --date=short)"
+export WEXT_MANIFEST_VERSION_NAME="Coil$WEXT_MANIFEST_SUFFIX $COIL_DEV_VERSION - $(git branch --show) - $(git show -s --pretty='%h - %ad' --date=short)"
 export WEXT_MANIFEST_SUFFIX=${WEXT_MANIFEST_SUFFIX:-'Dev'}
 export WEXT_MANIFEST_SUFFIX_NO_DATE='true'
 # shellcheck disable=SC2155

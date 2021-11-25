@@ -222,6 +222,8 @@ export const wmPolyfill = `
     })
   }
 
+  // <REPLACEMENT_PLACEHOLDER />
+
   if (localStorage.WM_DEBUG_PROGRESS) {
       /*${progressLoggingCode}*/
     navigator.monetization.addEventListener('monetization', (e) => {
