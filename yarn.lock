@@ -1446,7 +1446,7 @@ __metadata:
     lint-staged: 12.1.2
     localforage: 1.10.0
     node-fetch: ^2.6.1
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
@@ -1502,7 +1502,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.2
     node-fetch: ^2.6.1
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
@@ -1588,7 +1588,7 @@ __metadata:
     jss: ^10.6.0
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     puppeteer: 11.0.0
     react: ^17.0.0
     react-dom: ^17.0.0
@@ -1649,7 +1649,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.2
     npm-check-updates: ^12.0.0
-    prettier: 2.4.1
+    prettier: 2.5.0
     reduct: ^3.3.1
     rimraf: 3.0.2
     sort-package-json: 1.53.1
@@ -1715,7 +1715,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.2
     node-fetch: ^2.6.1
-    prettier: 2.4.1
+    prettier: 2.5.0
     puppeteer: 11.0.0
     reduct: ^3.3.1
     rimraf: 3.0.2
@@ -1770,7 +1770,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.2
     node-fetch: ^2.6.1
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
@@ -1828,7 +1828,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.2
     node-fetch: ^2.6.1
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     sjcl: sublimator/sjcl
     ts-jest: 27.0.7
@@ -1887,7 +1887,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     puppeteer: ^11.0.0
     rimraf: 3.0.2
     tmp: ^0.2.1
@@ -1945,7 +1945,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     process: ^0.11.10
     rimraf: 3.0.2
     setimmediate: ^1.0.5
@@ -2002,7 +2002,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
@@ -2276,7 +2276,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
@@ -2329,7 +2329,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
@@ -2513,7 +2513,7 @@ __metadata:
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     react: ^17.0.0
     react-dom: ^17.0.0
     rimraf: 3.0.2
@@ -4900,7 +4900,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     process: ^0.11.10
     rimraf: 3.0.2
     setimmediate: ^1.0.5
@@ -4979,7 +4979,7 @@ __metadata:
     lint-staged: 12.1.2
     node-fetch: ^2.6.1
     oer-utils: ^5.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     react: ^17.0.0
     react-dom: ^17.0.0
     react-helmet: ^6.1.0
@@ -5037,7 +5037,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.2
     node-fetch: ^2.6.1
-    prettier: 2.4.1
+    prettier: 2.5.0
     reduct: ^3.3.1
     rimraf: 3.0.2
     ts-jest: 27.0.7
@@ -5093,7 +5093,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
@@ -5155,7 +5155,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     react: ^17.0.0
     react-dom: ^17.0.0
     react-hot-loader: ^4.13.0
@@ -5210,7 +5210,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-json-schema-generator: 0.97.0
@@ -5265,7 +5265,7 @@ __metadata:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
@@ -18192,12 +18192,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.4.1":
-  version: 2.4.1
-  resolution: "prettier@npm:2.4.1"
+"prettier@npm:2.5.0":
+  version: 2.5.0
+  resolution: "prettier@npm:2.5.0"
   bin:
     prettier: bin-prettier.js
-  checksum: cc6830588b401b0d742862fe9c46bc9118204fb307c3abe0e49e95b35ed23629573807ffdf9cdd65289c252a0bb51fc0171437f6626ee36378dea80f0ee80b91
+  checksum: aad1b35b73e7c14596d389d90977a83dad0db689ba5802a0ef319c357b7867f55b885db197972aa6a56c30f53088c9f8e0d7f7930ae074c275a4e9cbe091d21d
   languageName: node
   linkType: hard
 
@@ -22661,7 +22661,7 @@ sjcl@sublimator/sjcl:
     jest: 27.3.1
     lerna: 4.0.0
     lint-staged: 12.1.2
-    prettier: 2.4.1
+    prettier: 2.5.0
     rimraf: 3.0.2
     ts-jest: 27.0.7
     ts-loader: 9.2.6
