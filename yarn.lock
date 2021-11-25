@@ -1561,7 +1561,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
-    addons-linter: 4.3.0
+    addons-linter: 4.4.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -2486,7 +2486,7 @@ __metadata:
     "@webmonetization/wext": ^0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
-    addons-linter: 4.3.0
+    addons-linter: 4.4.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     css-loader: 6.5.1
@@ -5789,9 +5789,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:4.3.0":
-  version: 4.3.0
-  resolution: "addons-linter@npm:4.3.0"
+"addons-linter@npm:4.4.0":
+  version: 4.4.0
+  resolution: "addons-linter@npm:4.4.0"
   dependencies:
     "@mdn/browser-compat-data": 4.0.11
     addons-moz-compare: 1.2.0
@@ -5826,7 +5826,7 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: 84289751e8275e1bb0e17e915adb99170c80ca3b9018e73550f7b1ebda31aa5b34d51e01f24aef03cba5ed3614cd6460b69ef6057c063ae7d6cec621dea60f1f
+  checksum: 58986002f35cfd99e59bdb53397d3feca1ecffc55d0a574c750096f805aed50b8ced1614454fecf4f08c163d6c8907576523d5f1ae89ada925c5df29a84722af
   languageName: node
   linkType: hard
 
