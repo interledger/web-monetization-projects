@@ -2896,7 +2896,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.4.1"],
-            ["puppeteer", "npm:11.0.0"],
+            ["puppeteer", "npm:12.0.0"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["reduct", "npm:3.3.1"],
@@ -3027,7 +3027,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.1.2"],
             ["node-fetch", "npm:2.6.5"],
             ["prettier", "npm:2.4.1"],
-            ["puppeteer", "npm:11.0.0"],
+            ["puppeteer", "npm:12.0.0"],
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
@@ -3205,7 +3205,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.1.2"],
             ["prettier", "npm:2.4.1"],
-            ["puppeteer", "npm:11.0.0"],
+            ["puppeteer", "npm:12.0.0"],
             ["rimraf", "npm:3.0.2"],
             ["tmp", "npm:0.2.1"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.0.7"],
@@ -13218,10 +13218,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["devtools-protocol", [
-        ["npm:0.0.901419", {
-          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.901419-b95044bb43-de68331ddf.zip/node_modules/devtools-protocol/",
+        ["npm:0.0.937139", {
+          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.937139-4b7914002f-4ac9d9e5fa.zip/node_modules/devtools-protocol/",
           "packageDependencies": [
-            ["devtools-protocol", "npm:0.0.901419"]
+            ["devtools-protocol", "npm:0.0.937139"]
           ],
           "linkType": "HARD",
         }]
@@ -23646,12 +23646,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:11.0.0", {
-          "packageLocation": "./.yarn/unplugged/puppeteer-npm-11.0.0-efeebaffbd/node_modules/puppeteer/",
+        ["npm:12.0.0", {
+          "packageLocation": "./.yarn/unplugged/puppeteer-npm-12.0.0-0f876e526f/node_modules/puppeteer/",
           "packageDependencies": [
-            ["puppeteer", "npm:11.0.0"],
+            ["puppeteer", "npm:12.0.0"],
             ["debug", "virtual:24c0670a0dd5336de8e9d36ce94c8b696cc66bf2f157358e53a1649e6047bfc20104ef799a035ae68ee7761447ecfa64a6d54a5971d436f7ea6ab984abfab5de#npm:4.3.2"],
-            ["devtools-protocol", "npm:0.0.901419"],
+            ["devtools-protocol", "npm:0.0.937139"],
             ["extract-zip", "npm:2.0.1"],
             ["https-proxy-agent", "npm:5.0.0"],
             ["node-fetch", "npm:2.6.5"],
@@ -23661,7 +23661,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:3.0.2"],
             ["tar-fs", "npm:2.1.1"],
             ["unbzip2-stream", "npm:1.4.3"],
-            ["ws", "virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:8.2.3"]
+            ["ws", "virtual:0f876e526f5de63f3abc413fd23f15aaf2190644894fd723410e2021de51295945ce368a2dc73f6b30f93b809cc20c2dda3e4b4028c2805536eb11d58f81bbba#npm:8.2.3"]
           ],
           "linkType": "HARD",
         }]
@@ -32832,6 +32832,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["virtual:0f876e526f5de63f3abc413fd23f15aaf2190644894fd723410e2021de51295945ce368a2dc73f6b30f93b809cc20c2dda3e4b4028c2805536eb11d58f81bbba#npm:8.2.3", {
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-db79fba35b/0/cache/ws-npm-8.2.3-03a35b8ad7-c869296ccb.zip/node_modules/ws/",
+          "packageDependencies": [
+            ["ws", "virtual:0f876e526f5de63f3abc413fd23f15aaf2190644894fd723410e2021de51295945ce368a2dc73f6b30f93b809cc20c2dda3e4b4028c2805536eb11d58f81bbba#npm:8.2.3"],
+            ["@types/bufferutil", null],
+            ["@types/utf-8-validate", null],
+            ["bufferutil", null],
+            ["utf-8-validate", null]
+          ],
+          "packagePeers": [
+            "@types/bufferutil",
+            "@types/utf-8-validate",
+            "bufferutil",
+            "utf-8-validate"
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:27846e22c595de340b270a5013cb897178e82bb562fa9eacdd305e3dbcfab0ae1c9d6666037d93e2dc890933abb98e043a1183311b21a09153c77438170ec09a#npm:7.1.2", {
           "packageLocation": "./.yarn/__virtual__/ws-virtual-6f32270303/0/cache/ws-npm-7.1.2-823379a189-73f1d3c110.zip/node_modules/ws/",
           "packageDependencies": [
@@ -32872,23 +32889,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/ws-virtual-a91fb73473/0/cache/ws-npm-7.4.6-9c9a725604-3a990b32ed.zip/node_modules/ws/",
           "packageDependencies": [
             ["ws", "virtual:82010cf435bfdd815e56aa96b8d62d16ac586c3b4b7aacb920726db97fe019609213df6e9de787883e55fe3575d876d7238194a097c8f36ba631311b0fe374ce#npm:7.4.6"],
-            ["@types/bufferutil", null],
-            ["@types/utf-8-validate", null],
-            ["bufferutil", null],
-            ["utf-8-validate", null]
-          ],
-          "packagePeers": [
-            "@types/bufferutil",
-            "@types/utf-8-validate",
-            "bufferutil",
-            "utf-8-validate"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:8.2.3", {
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-b8fb7ea65b/0/cache/ws-npm-8.2.3-03a35b8ad7-c869296ccb.zip/node_modules/ws/",
-          "packageDependencies": [
-            ["ws", "virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:8.2.3"],
             ["@types/bufferutil", null],
             ["@types/utf-8-validate", null],
             ["bufferutil", null],
