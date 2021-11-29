@@ -5,6 +5,7 @@ export interface GraphQlResponse<T> {
 export interface CoilUser {
   id: string
   fullName: string
+  email: string
   customerId?: string
   subscription?: {
     active: boolean
@@ -15,4 +16,17 @@ export interface CoilUser {
     code: string
     scale: number
   }
+  tipping?: {
+    limitRemaining: string
+  }
+  paymentMethods?: Array<ICoilUserPaymentMethod>
+}
+
+interface ICoilUserPaymentMethod {
+  id: string
+  type: string
+  details: {
+    last4: string
+    brandCode: string
+  } | null
 }

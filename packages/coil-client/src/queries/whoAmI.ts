@@ -8,6 +8,7 @@ export interface WhoAmIData {
 export const whoamiSelection = `
     id
     fullName
+    email
     customerId
     canTip
 
@@ -20,6 +21,21 @@ export const whoamiSelection = `
     currencyPreferences {
       code
       scale
+    }
+
+    tipping {
+      limitRemaining
+    }
+
+    paymentMethods {
+      id
+      type
+      details {
+        ... on StripeCardDetails {
+          last4
+          brandCode
+        }
+      }
     }
 `
 
