@@ -15,7 +15,8 @@ const ButtonWithMargin = styled(Button as ButtonType)({
   color: Colors.White,
   '&:hover': {
     backgroundColor: '#000000',
-    color: Colors.White
+    color: Colors.White,
+    boxShadow: 'none'
   }
 })
 

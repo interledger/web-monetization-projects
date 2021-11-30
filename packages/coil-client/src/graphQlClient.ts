@@ -7,7 +7,11 @@ import {
   login,
   queryToken,
   refreshBtpToken,
-  whoAmI
+  whoAmI,
+  featureEnabled,
+  tipPreview,
+  tip,
+  minTipLimit
 } from './queries'
 
 // Reference class for DI/reduct
@@ -35,6 +39,10 @@ export class GraphQlClient {
   public queryToken = queryToken
   public whoAmI = whoAmI
   public adaptedPage = adaptedPage
+  public featureEnabled = featureEnabled
+  public tipPreview = tipPreview
+  public tip = tip
+  public minTipLimit = minTipLimit
 
   public constructor(
     @inject(GraphQlClientOptions)

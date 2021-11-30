@@ -64,6 +64,7 @@ describe('GraphQlClient#login', () => {
     
     id
     fullName
+    email
     customerId
     canTip
 
@@ -76,6 +77,21 @@ describe('GraphQlClient#login', () => {
     currencyPreferences {
       code
       scale
+    }
+
+    tipping {
+      limitRemaining
+    }
+
+    paymentMethods {
+      id
+      type
+      details {
+        ... on StripeCardDetails {
+          last4
+          brandCode
+        }
+      }
     }
 
   }

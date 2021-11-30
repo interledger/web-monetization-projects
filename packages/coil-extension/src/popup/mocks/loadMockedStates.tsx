@@ -29,6 +29,7 @@ export function makeStorage(mock: any): Pick<StorageService, 'get'> {
 const user = {
   id: 'cjmbxifo0leaf0711ilgecwdb',
   fullName: 'Nicholas Dudfield',
+  email: 'mock-email@coil.com',
   customerId: 'cus_EmQtvoQVyJgZ75',
   subscription: { active: true },
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
@@ -39,10 +40,32 @@ const tipUser = {
   id: 'cjmbxifo0leaf0711ilgecwdb',
   canTip: true,
   fullName: 'Nicholas Dudfield',
+  email: 'mock-email@coil.com',
   customerId: 'cus_EmQtvoQVyJgZ75',
   subscription: { active: true },
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
-  currencyPreferences: { code: 'USD', scale: 9 }
+  currencyPreferences: { code: 'USD', scale: 9 },
+  tipSettings: {
+    inTippingBeta: true,
+    minimumTipLimit: 1,
+    remainingDailyAmount: 100,
+    hotkeyTipAmounts: [5, 10, 50]
+  },
+  paymentMethods: [
+    {
+      id: 'test-id-stripe',
+      type: 'stripe',
+      details: {
+        last4: '5678',
+        brandCode: 'MasterCard'
+      }
+    },
+    {
+      id: 'test-id-tip',
+      type: 'tipCredit',
+      details: null
+    }
+  ]
 }
 
 function mockState(partial: Partial<PopupStateType>): PopupStateType {
@@ -131,6 +154,7 @@ const welcomeToCoil = mockState({
 const aliceUser: User = {
   id: 'cjlcvi8fr002m07113mklvsck',
   fullName: 'Alice Lee',
+  email: 'mock-email@coil.com',
   customerId: undefined,
   subscription: undefined,
   invitation: undefined,
