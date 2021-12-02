@@ -24,7 +24,7 @@ const basicEventsLoggingCode = createBindingCode(
 const progressLoggingCode = createBindingCode('monetizationprogress')
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const val = require('./polyfill/polyfillMinimalTs.ts')
+const val = require('./polyfill/polyfillMinimalTs')
 
 // language=JavaScript
 // export const wmPolyFillMinimal = `
