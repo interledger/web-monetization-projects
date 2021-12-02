@@ -23,22 +23,27 @@ const basicEventsLoggingCode = createBindingCode(
 // is set.
 const progressLoggingCode = createBindingCode('monetizationprogress')
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const val = require('./polyfill/polyfillMinimalTs.ts')
+
 // language=JavaScript
-export const wmPolyFillMinimal = `
-  document.monetization = document.createElement('div')
-  document.monetization.state = 'stopped'
-  document.addEventListener('monetization-v1', function(event) {
-    const {type, detail} = event.detail
-    if (type === 'monetizationstatechange') {
-      document.monetization.state = detail.state
-    } else {
-      document.monetization.dispatchEvent(
-        new CustomEvent(type, {
-          detail: detail
-        }))
-    }
-  })
-`
+// export const wmPolyFillMinimal = `
+//   document.monetization = document.createElement('div')
+//   document.monetization.state = 'stopped'
+//   document.addEventListener('monetization-v1', function(event) {
+//     const {type, detail} = event.detail
+//     if (type === 'monetizationstatechange') {
+//       document.monetization.state = detail.state
+//     } else {
+//       document.monetization.dispatchEvent(
+//         new CustomEvent(type, {
+//           detail: detail
+//         }))
+//     }
+//   })
+// `
+
+export const wmPolyFillMinimal = val
 
 // language=JavaScript
 export const wmPolyfill = `

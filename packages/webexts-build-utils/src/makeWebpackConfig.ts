@@ -227,9 +227,20 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       libraryTarget: 'umd'
     },
 
+    resolveLoader: {
+      alias: {
+        triq: require.resolve(__dirname + '/triq.js')
+      }
+    },
+
     module: {
       // noParse: [ /\bws$/ ],
       rules: [
+        {
+          test: /polyfillMinimalTs.ts$/,
+          type: 'asset/source',
+          use: 'triq'
+        },
         {
           test: /\.tsx?$/,
           exclude: /node_modules/,
