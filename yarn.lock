@@ -3994,6 +3994,58 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js":
+  version: 0.0.0-use.local
+  resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
+  dependencies:
+    "@babel/core": 7.16.0
+    "@babel/plugin-proposal-class-properties": 7.16.0
+    "@babel/plugin-proposal-decorators": 7.16.4
+    "@babel/plugin-proposal-object-rest-spread": 7.16.0
+    "@babel/preset-env": 7.16.4
+    "@babel/preset-typescript": 7.16.0
+    "@commitlint/cli": 15.0.0
+    "@commitlint/config-conventional": 15.0.0
+    "@types/jest": 27.0.3
+    "@types/node": 14.17.34
+    "@typescript-eslint/eslint-plugin": 5.5.0
+    "@typescript-eslint/parser": 5.5.0
+    "@yarnpkg/pnpify": 3.1.0
+    JSON2016: 1.0.0
+    copy-webpack-plugin: 9.1.0
+    eslint: 7.32.0
+    eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: 0.3.6
+    eslint-plugin-import: 2.25.3
+    eslint-plugin-jest: 25.3.0
+    eslint-plugin-jsx-a11y: 6.5.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-prettier: 3.4.1
+    eslint-plugin-promise: 5.1.1
+    eslint-plugin-react: 7.27.1
+    eslint-plugin-react-hooks: 4.3.0
+    eslint-plugin-standard: 5.0.0
+    husky: 7.0.4
+    jest: 27.4.0
+    lerna: 4.0.0
+    lint-staged: 12.1.2
+    prettier: 2.5.0
+    rimraf: 3.0.2
+    source-map: 0.5.6
+    ts-jest: 27.0.7
+    ts-loader: 9.2.6
+    ts-node: 10.4.0
+    ts-node-dev: 1.1.8
+    tsconfig-paths: 3.12.0
+    typescript: 4.4.4
+    webpack: 5.64.4
+    webpack-bundle-analyzer: 4.5.0
+    webpack-cli: 4.9.1
+    webpack-dev-server: 3.11.3
+    webpack-merge: 5.8.0
+  languageName: unknown
+  linkType: soft
+
 "@szmarczak/http-timer@npm:^1.1.2":
   version: 1.1.2
   resolution: "@szmarczak/http-timer@npm:1.1.2"
@@ -20552,6 +20604,13 @@ sjcl@sublimator/sjcl:
   version: 0.4.0
   resolution: "source-map-url@npm:0.4.0"
   checksum: 63ed54045fcd7b4ec7ca17513f48fdc23b573eef679326ecf1a31333e1aaecc0a9c085adaa7d118283b160e65b71cc72da9e1385f2de4ac5ed68294e3920d719
+  languageName: node
+  linkType: hard
+
+"source-map@npm:0.5.6":
+  version: 0.5.6
+  resolution: "source-map@npm:0.5.6"
+  checksum: 390b3f5165c9631a74fb6fb55ba61e62a7f9b7d4026ae0e2bfc2899c241d71c1bccb8731c496dc7f7cb79a5f523406eb03d8c5bebe8448ee3fc38168e2d209c8
   languageName: node
   linkType: hard
 
