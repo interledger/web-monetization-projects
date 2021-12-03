@@ -1,11 +1,14 @@
 import React from 'react'
 import { Box, styled, Theme } from '@material-ui/core'
 import { theme } from 'packages/interledger-minute-extension/src/theme'
-// import {SettingsIcon} from '@material-ui/icons'
 import SettingsIcon from '@material-ui/icons/Settings'
 
 import { WebMonetized } from './components/icons/WebMonetized'
 import { Gift } from './components/icons/Gift'
+import { TipRouter } from './components/views/TipRouter'
+import { MonetizedRouter } from './components/views/MonetizedRouter'
+import { CoilDiscoverView } from './components/views/CoilDiscoverView'
+import { useRouter } from './context/routerContext'
 
 //
 // Styles
@@ -34,7 +37,7 @@ const NavButton = styled('div')(({ theme }: Theme) => ({
   justifyContent: 'center',
   padding: '19px 0px',
   color: theme.palette.Grey200,
-  '&:hover': {
+  '&:hover, &.active': {
     '&:nth-child(1)': {
       color: theme.palette.Green700
     },
@@ -48,18 +51,30 @@ const NavButton = styled('div')(({ theme }: Theme) => ({
 }))
 
 export const NewExtension = () => {
+  const router = useRouter()
   return (
     <OuterDiv>
       <Box style={{ backgroundColor: 'red' }}>Header Placeholder</Box>
-      <Box style={{ backgroundColor: 'pink', flex: '1' }}>Body Placeholder</Box>
+      <Box style={{ backgroundColor: 'pink', flex: '1' }}>
+        <button onClick={router.back}>back</button>
+      </Box>
       <NavBar>
-        <NavButton>
+        <NavButton
+          className={router.path.includes('streaming') ? 'active' : ''}
+          onClick={() => router.push('streaming')}
+        >
           <WebMonetized />
         </NavButton>
-        <NavButton>
+        <NavButton
+          className={router.path.includes('tipping') ? 'active' : ''}
+          onClick={() => router.push('tipping')}
+        >
           <Gift />
         </NavButton>
-        <NavButton>
+        <NavButton
+          className={router.path.includes('settings') ? 'active' : ''}
+          onClick={() => router.push('settings')}
+        >
           <SettingsIcon />
         </NavButton>
       </NavBar>
