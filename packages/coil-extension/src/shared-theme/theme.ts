@@ -29,7 +29,8 @@ export const theme = createMuiTheme({
     },
     secondary: {
       main: Colors.Grey100
-    }
+    },
+    ...Colors
   },
   breakpoints,
   overrides: {
