@@ -39,48 +39,51 @@ export const wmPolyFillMinimal = `
     }
   })
   {
-    const dbg = () => {}
+    const dbg = () => {
+    }
     // dbg('setonmonetization property start')
     const handlers = new WeakMap()
-    Object.defineProperty(HTMLElement.prototype, 'onmonetization', {
+    var attributes = {
       enumerable: true,
-      configurable: true,
+      configurable: false,
       get() {
-        return handlers.get(this)
+        return handlers.get(this) || null
       },
       set(val) {
-        // dbg('set onmonetization called, with', val)
+        dbg('set onmonetization called, with', val)
         const listener = handlers.get(this)
         if (listener) {
-          // dbg('removing existing listener')
+          dbg('removing existing listener')
           this.removeEventListener('monetization', listener)
         }
 
-        if (val === null) {
+        if (val === null || val === undefined) {
           handlers.delete(this)
         } else {
           this.addEventListener('monetization', val)
           handlers.set(this, val)
         }
       }
-    })
-    // dbg('setonmonetization property end')
-    // dbg('add coil-onmonetization-attr-changed handler start')
+    }
+    Object.defineProperty(HTMLElement.prototype, 'onmonetization', attributes)
+    Object.defineProperty(Window.prototype, 'onmonetization', attributes)
+    dbg('setonmonetization property end')
+    dbg('add coil-onmonetization-attr-changed handler start')
     class MonetizationEvent extends Event {
       constructor(type, details) {
-        super('monetization', {bubbles: true})
+        super('monetization', { bubbles: true })
         Object.assign(this, details)
       }
-      
-      get [Symbol.toStringTag] () {
+
+      get [Symbol.toStringTag]() {
         return 'MonetizationEvent'
       }
     }
 
     document.addEventListener('coil-monetization', (event) => {
-      // dbg(
-      //   'coil-monetization event'
-      // )
+      dbg(
+        'coil-monetization event'
+      )
       const monetizationEvent = new MonetizationEvent('monetization', event.detail)
       event.target.dispatchEvent(monetizationEvent)
     })
@@ -93,7 +96,7 @@ export const wmPolyFillMinimal = `
         event.target.onmonetization = null
       }
     })
-    // dbg('add coil-onmonetization-attr-changed handler end')
+    dbg('add coil-onmonetization-attr-changed handler end')
   }
 `
 
