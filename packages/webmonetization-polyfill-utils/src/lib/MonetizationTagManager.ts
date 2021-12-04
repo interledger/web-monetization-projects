@@ -209,7 +209,7 @@ export class MonetizationTagManager {
       )
     }
     if (
-      details.tagType === 'meta' &&
+      (details.tagType === 'meta' || details.tagType === 'link') &&
       this.monetizationTags.size + 1 > this.maxMetas
     ) {
       throw new Error(
@@ -294,12 +294,12 @@ export class MonetizationTagManager {
   private checkMonetizationAttr(node: HTMLElement) {
     console.log('checkMonetizationAttr', node)
     const haveAttr = this.fireOnMonetizationChangeIfHaveAttribute({ node })
-    if (haveAttr) {
-      this.onMonetizationAttrObserver.observe(node, {
-        childList: false,
-        attributeFilter: ['onmonetization']
-      })
-    }
+    // if (haveAttr ) {
+    this.onMonetizationAttrObserver.observe(node, {
+      childList: false,
+      attributeFilter: ['onmonetization']
+    })
+    // }
   }
 
   private onOnMonetizationChangeObserved(records: MutationRecord[]) {
