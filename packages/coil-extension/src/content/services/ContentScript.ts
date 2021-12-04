@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify'
 import {
-  MonetizationTagObserver,
+  MonetizationTagManager,
   PaymentDetails,
   whenDocumentReady
 } from '@webmonetization/polyfill-utils'
@@ -76,7 +76,7 @@ export class ContentScript {
       this.runtime.sendMessage(request)
     }
 
-    const monitor = new MonetizationTagObserver(
+    const monitor = new MonetizationTagManager(
       this.window,
       this.document,
       ({ started, stopped }) => {

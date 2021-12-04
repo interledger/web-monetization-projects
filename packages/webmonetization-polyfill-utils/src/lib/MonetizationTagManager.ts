@@ -4,12 +4,14 @@ import { whenDocumentReady } from './whenDocumentReady'
 import { CustomError } from './CustomError'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
-const debug = (..._: unknown[]) => {}
+const debug = console.log.bind(console, 'niq: ')
 
 export interface PaymentDetails {
   requestId: string
   paymentPointer: string
   initiatingUrl: string
+  fromBody: boolean
+  tagType: TagType
 }
 
 export enum IDGenerationStrategy {
@@ -25,6 +27,7 @@ export enum IDGenerationStrategy {
 export interface PaymentDetailsChangeArguments {
   started: PaymentDetails | null
   stopped: PaymentDetails | null
+  // paused / disabled ?
 }
 
 export type PaymentDetailsChangeCallback = (
@@ -42,7 +45,7 @@ export function getTagType(tag: MonetizationTag): TagType {
 
 export class DeprecatedMetaTagIgnoredError extends CustomError {}
 
-export class MonetizationTagObserver {
+export class MonetizationTagManager {
   /**
    * This class as written should be used in such a way that it has a lifetime
    * the same as the content script.
@@ -51,9 +54,8 @@ export class MonetizationTagObserver {
   private readonly pageLoadId = uuid()
 
   private affinity: TagType = 'meta'
-  private head: HTMLHeadElement | null = null
   private headObserver: MutationObserver
-  private metaTags = new Map<
+  private monetizationTags = new Map<
     MonetizationTag,
     {
       details: PaymentDetails
@@ -61,9 +63,20 @@ export class MonetizationTagObserver {
     }
   >()
 
+  // TODO: do we even need a WeakRef ??
+  private linkTagsById = new Map<string, WeakRef<HTMLLinkElement>>()
+
+  dispatchLinkEventByLinkId(id: string, event: CustomEvent) {
+    const ref = this.linkTagsById.get(id)
+    const link = ref?.deref()
+    if (link) {
+      link.dispatchEvent(event)
+    }
+  }
+
   constructor(
     private window: Window,
-    private document: HTMLDocument,
+    private document: Document,
     private callback: PaymentDetailsChangeCallback,
     private maxMetas = 1,
     private idGenerationStrategy = IDGenerationStrategy.META_ADDED_CHANGED
@@ -81,8 +94,7 @@ export class MonetizationTagObserver {
   }
 
   private start() {
-    this.head = this.document.head
-    const metas: MetaList = this.head.querySelectorAll(
+    const metas: MetaList = this.document.querySelectorAll(
       'meta[name="monetization"],link[rel="monetization"]'
     )
     metas.forEach(m => {
@@ -92,7 +104,7 @@ export class MonetizationTagObserver {
         console.error(e)
       }
     })
-    this.headObserver.observe(this.head, { childList: true })
+    this.headObserver.observe(this.document, { subtree: true, childList: true })
   }
 
   private onHeadChildListObserved(records: MutationRecord[]) {
@@ -148,12 +160,12 @@ export class MonetizationTagObserver {
     }
   }
 
-  private onAddedTag(meta: MonetizationTag) {
-    const type = getTagType(meta)
+  private onAddedTag(tag: MonetizationTag) {
+    const type = getTagType(tag)
     if (type != this.affinity) {
       if (type === 'link') {
         this.affinity = 'link'
-        for (const tag of this.metaTags.keys()) {
+        for (const tag of this.monetizationTags.keys()) {
           this.onRemovedTag(tag)
         }
       } else {
@@ -167,9 +179,18 @@ export class MonetizationTagObserver {
       }
     }
 
-    const details = this.getPaymentDetails(meta)
+    const details = this.getPaymentDetails(tag)
+    if (details.fromBody && details.tagType === 'meta') {
+      throw new Error(
+        'Web-Monetization Error: <meta name="monetization"> ' +
+          'must be in the document head'
+      )
+    }
 
-    if (this.metaTags.size + 1 > this.maxMetas) {
+    if (
+      details.tagType === 'meta' &&
+      this.monetizationTags.size + 1 > this.maxMetas
+    ) {
       throw new Error(
         `Web-Monetization Error: Ignoring tag with ` +
           `paymentPointer=${details.paymentPointer}, only ${this.maxMetas} ` +
@@ -180,24 +201,32 @@ export class MonetizationTagObserver {
     const observer = new MutationObserver(
       this.onPaymentEndpointChangeObserved.bind(this)
     )
-    observer.observe(meta, {
+    observer.observe(tag, {
       attributeOldValue: true,
       childList: false,
-      attributeFilter: [meta instanceof HTMLMetaElement ? 'content' : 'href']
+      attributeFilter:
+        details.tagType === 'meta' ? ['content'] : ['href', 'disabled', 'rel']
     })
-    this.metaTags.set(meta, { observer, details })
+    if (details.tagType === 'link') {
+      this.linkTagsById.set(details.requestId, tag)
+    }
+
+    this.monetizationTags.set(tag, { observer, details })
     this.callback({ stopped: null, started: details })
   }
 
   private onRemovedTag(meta: MonetizationTag) {
     const entry = this.getEntry(meta)
     entry.observer.disconnect()
-    this.metaTags.delete(meta)
+    this.monetizationTags.delete(meta)
+    if (entry.details.tagType === 'link') {
+      this.linkTagsById.delete(entry.details.requestId)
+    }
     this.callback({ started: null, stopped: entry.details })
   }
 
   private getEntry(meta: MonetizationTag) {
-    const entry = this.metaTags.get(meta)
+    const entry = this.monetizationTags.get(meta)
     if (!entry) {
       throw new Error('meta not tracked: ' + meta.outerHTML)
     }
@@ -218,7 +247,9 @@ export class MonetizationTagObserver {
     return {
       requestId: this.getWebMonetizationId(),
       paymentPointer: paymentPointer.trim(),
-      initiatingUrl: this.window.location.href
+      initiatingUrl: this.window.location.href,
+      tagType: getTagType(meta),
+      fromBody: meta.parentElement != this.document.head
     }
   }
 

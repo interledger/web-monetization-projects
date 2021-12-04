@@ -2586,7 +2586,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/core@npm:^27.4.3":
+"@jest/core@npm:^27.4.0, @jest/core@npm:^27.4.3":
   version: 27.4.3
   resolution: "@jest/core@npm:27.4.3"
   dependencies:
@@ -10194,6 +10194,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-promise@npm:5.1.1":
+  version: 5.1.1
+  resolution: "eslint-plugin-promise@npm:5.1.1"
+  peerDependencies:
+    eslint: ^7.0.0
+  checksum: 97ffd570265ed9677b4103ba3fb18b19fa3471eb6581c5c3c426bcec249c9e89cfac735e5ddb403a794cab7fda1b53be151a30e1d3b71485630d7f28e1bb1ad6
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-promise@npm:5.2.0":
   version: 5.2.0
   resolution: "eslint-plugin-promise@npm:5.2.0"
@@ -14144,7 +14153,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jest-cli@npm:^27.4.3":
+"jest-cli@npm:^27.4.0, jest-cli@npm:^27.4.3":
   version: 27.4.3
   resolution: "jest-cli@npm:27.4.3"
   dependencies:
@@ -14580,6 +14589,24 @@ fsevents@^1.2.7:
     merge-stream: ^2.0.0
     supports-color: ^8.0.0
   checksum: 81516042201b36841cbf657bdd7304ef26e4b99e6ec108fb8eff977f8769f5a26359aa926ab7776d30fe71e0ab9a6df48c4a06ff0973cb60f4fa3e6949c2f470
+  languageName: node
+  linkType: hard
+
+"jest@npm:27.4.0":
+  version: 27.4.0
+  resolution: "jest@npm:27.4.0"
+  dependencies:
+    "@jest/core": ^27.4.0
+    import-local: ^3.0.2
+    jest-cli: ^27.4.0
+  peerDependencies:
+    node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
+  peerDependenciesMeta:
+    node-notifier:
+      optional: true
+  bin:
+    jest: bin/jest.js
+  checksum: 609c6a9fdc8bf98539b2ddba7720207f081eb66e1916e91804cb70e3bbc0d4924eaffbc5b521d6d7f3d7d28842d27de1c0847de4e78309457089f50202a07d31
   languageName: node
   linkType: hard
 
@@ -22158,17 +22185,17 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.5.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
-  version: 4.5.2
-  resolution: "typescript@patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"
+"typescript@npm:4.4.4, typescript@~4.4.3":
+  version: 4.4.4
+  resolution: "typescript@npm:4.4.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 53838d56aba6fcc947d63aa0771e5d966b1b648fddafed6e221d7f38c71219c4e036ece8cfe9e35ed80cf5a35ff4eb958934c993f99c3233773ec4f9ccd53f69
+  checksum: 89ecb8436bb48ef5594d49289f5f89103071716b6e4844278f4fb3362856e31203e187a9c76d205c3f0b674d221a058fd28310dbcbcf5d95e9a57229bb5203f1
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@~4.4.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.4.4#~builtin<compat/typescript>, typescript@patch:typescript@~4.4.3#~builtin<compat/typescript>":
   version: 4.4.4
   resolution: "typescript@patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"
   bin:
@@ -22178,13 +22205,13 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-typescript@~4.4.3:
-  version: 4.4.4
-  resolution: "typescript@npm:4.4.4"
+"typescript@patch:typescript@4.5.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
+  version: 4.5.2
+  resolution: "typescript@patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 89ecb8436bb48ef5594d49289f5f89103071716b6e4844278f4fb3362856e31203e187a9c76d205c3f0b674d221a058fd28310dbcbcf5d95e9a57229bb5203f1
+  checksum: 53838d56aba6fcc947d63aa0771e5d966b1b648fddafed6e221d7f38c71219c4e036ece8cfe9e35ed80cf5a35ff4eb958934c993f99c3233773ec4f9ccd53f69
   languageName: node
   linkType: hard
 
