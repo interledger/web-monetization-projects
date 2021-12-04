@@ -27,7 +27,8 @@ export enum IDGenerationStrategy {
 export interface PaymentDetailsChangeArguments {
   started: PaymentDetails | null
   stopped: PaymentDetails | null
-  // paused / disabled ?
+  // paused / disabled ? .... no, just create a new requestId,
+  // fire stopped on disabled ofc
 }
 
 export type PaymentDetailsChangeCallback = (
@@ -208,7 +209,10 @@ export class MonetizationTagManager {
         details.tagType === 'meta' ? ['content'] : ['href', 'disabled', 'rel']
     })
     if (details.tagType === 'link') {
-      this.linkTagsById.set(details.requestId, tag)
+      this.linkTagsById.set(
+        details.requestId,
+        new WeakRef(tag as HTMLLinkElement)
+      )
     }
 
     this.monetizationTags.set(tag, { observer, details })
