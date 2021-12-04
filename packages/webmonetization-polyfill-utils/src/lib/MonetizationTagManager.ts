@@ -46,6 +46,11 @@ export function getTagType(tag: MonetizationTag): TagType {
 
 export class DeprecatedMetaTagIgnoredError extends CustomError {}
 
+interface FireOnMonetizationChangeIfHaveAttributeParams {
+  node: HTMLElement
+  force?: boolean
+}
+
 export class MonetizationTagManager {
   /**
    * This class as written should be used in such a way that it has a lifetime
@@ -56,6 +61,7 @@ export class MonetizationTagManager {
 
   private affinity: TagType = 'meta'
   private headObserver: MutationObserver
+  private onMonetizationAttrObserver: MutationObserver
   private monetizationTags = new Map<
     MonetizationTag,
     {
@@ -85,6 +91,9 @@ export class MonetizationTagManager {
     this.headObserver = new MutationObserver(
       this.onHeadChildListObserved.bind(this)
     )
+    this.onMonetizationAttrObserver = new MutationObserver(
+      this.onOnMonetizationChangeObserved.bind(this)
+    )
   }
 
   /**
@@ -105,6 +114,15 @@ export class MonetizationTagManager {
         console.error(e)
       }
     })
+    const onMonetizations =
+      this.document.querySelectorAll<HTMLElement>('[onmonetization]')
+    onMonetizations.forEach(om => {
+      try {
+        this.checkMonetizationAttr(om)
+      } catch (e) {
+        console.error(e)
+      }
+    })
     this.headObserver.observe(this.document, { subtree: true, childList: true })
   }
 
@@ -121,6 +139,9 @@ export class MonetizationTagManager {
         } else if (op === 'removed') {
           this.onRemovedTag(node)
         }
+      }
+      if (op === 'added' && node instanceof HTMLElement) {
+        this.checkMonetizationAttr(node)
       }
     }
 
@@ -187,7 +208,6 @@ export class MonetizationTagManager {
           'must be in the document head'
       )
     }
-
     if (
       details.tagType === 'meta' &&
       this.monetizationTags.size + 1 > this.maxMetas
@@ -206,7 +226,9 @@ export class MonetizationTagManager {
       attributeOldValue: true,
       childList: false,
       attributeFilter:
-        details.tagType === 'meta' ? ['content'] : ['href', 'disabled', 'rel']
+        details.tagType === 'meta'
+          ? ['content']
+          : ['href', 'disabled', 'rel', 'onmonetization']
     })
     if (details.tagType === 'link') {
       this.linkTagsById.set(
@@ -267,5 +289,51 @@ export class MonetizationTagManager {
     } else {
       throw new Error()
     }
+  }
+
+  private checkMonetizationAttr(node: HTMLElement) {
+    console.log('checkMonetizationAttr', node)
+    const haveAttr = this.fireOnMonetizationChangeIfHaveAttribute({ node })
+    if (haveAttr) {
+      this.onMonetizationAttrObserver.observe(node, {
+        childList: false,
+        attributeFilter: ['onmonetization']
+      })
+    }
+  }
+
+  private onOnMonetizationChangeObserved(records: MutationRecord[]) {
+    for (const record of records) {
+      if (
+        record.type === 'attributes' &&
+        record.target instanceof HTMLElement
+      ) {
+        this.fireOnMonetizationChangeIfHaveAttribute({
+          node: record.target,
+          force: true
+        })
+      }
+    }
+  }
+
+  private fireOnMonetizationChangeIfHaveAttribute({
+    node,
+    force = false
+  }: FireOnMonetizationChangeIfHaveAttributeParams) {
+    const attribute = node.getAttribute('onmonetization')
+    if (attribute || force) {
+      const customEvent = new CustomEvent('coil-onmonetization-attr-changed', {
+        bubbles: true,
+        detail: {
+          attribute
+        }
+      })
+      const result = node.dispatchEvent(customEvent)
+      console.log('dispatched coil-onmonetization-attr-changed ev', result)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // not in the right context
+      // ;(tag as any).onmonetization = new Function(attribute)
+    }
+    return Boolean(attribute)
   }
 }

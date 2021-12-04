@@ -28,7 +28,7 @@ export const wmPolyFillMinimal = `
   document.monetization = document.createElement('div')
   document.monetization.state = 'stopped'
   document.addEventListener('monetization-v1', function(event) {
-    const {type, detail} = event.detail
+    const { type, detail } = event.detail
     if (type === 'monetizationstatechange') {
       document.monetization.state = detail.state
     } else {
@@ -38,6 +38,62 @@ export const wmPolyFillMinimal = `
         }))
     }
   })
+  {
+    console.log('setonmonetization property start')
+    const handlers = new WeakMap()
+    Object.defineProperty(HTMLElement.prototype, 'onmonetization', {
+      enumerable: true,
+      configurable: true,
+      get() {
+        return handlers.get(this)
+      },
+      set(val) {
+        console.log('set onmonetization called, with', val)
+        const listener = handlers.get(this)
+        if (listener) {
+          console.log('removing existing listener')
+          this.removeEventListener('monetization', listener)
+        }
+
+        if (val === null) {
+          handlers.delete(this)
+        } else {
+          this.addEventListener('monetization', val)
+          handlers.set(this, val)
+        }
+      }
+    })
+    console.log('setonmonetization property end')
+    console.log('add coil-onmonetization-attr-changed handler start')
+    class MonetizationEvent extends Event {
+      constructor(type, details) {
+        super('monetization', {bubbles: true})
+        Object.assign(this, details)
+      }
+      
+      get [Symbol.toStringTag] () {
+        return 'MonetizationEvent'
+      }
+    }
+
+    document.addEventListener('coil-monetization', (event) => {
+      // console.log(
+      //   'coil-monetization event'
+      // )
+      const monetizationEvent = new MonetizationEvent('monetization', event.detail)
+      event.target.dispatchEvent(monetizationEvent)
+    })
+    document.addEventListener('coil-onmonetization-attr-changed', (event) => {
+      console.log('coil-onmonetization-attr-changed', event.detail.attribute)
+      const { attribute } = event.detail
+      if (attribute) {
+        event.target.onmonetization = new Function(attribute).bind(event.target)
+      } else {
+        event.target.onmonetization = null
+      }
+    })
+    console.log('add coil-onmonetization-attr-changed handler end')
+  }
 `
 
 // language=JavaScript

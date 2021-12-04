@@ -91,6 +91,26 @@ export class ContentScript {
 
     // // Scan for WM meta tags when page is interactive
     monitor.startWhenDocumentReady()
+
+    this.runtime.onMessage.addListener((message: ToContentMessage) => {
+      if (message.command === 'monetizationProgress') {
+        const data = message.data
+        monitor.dispatchLinkEventByLinkId(
+          data.requestId,
+          new CustomEvent('coil-monetization', {
+            bubbles: true,
+            cancelable: false,
+            detail: {
+              paymentPointer: data.paymentPointer,
+              receipt: data.receipt,
+              assetScale: data.assetCode,
+              assetCode: data.assetCode,
+              amount: data.amount
+            }
+          })
+        )
+      }
+    })
   }
 
   private async doStartMonetization() {
@@ -145,6 +165,7 @@ export class ContentScript {
             requestId: request.data.requestId
           }
           this.monetization.dispatchMonetizationProgressEvent(detail)
+          this.monetization
         } else if (request.command === 'monetizationStart') {
           debug('monetizationStart event')
           this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
