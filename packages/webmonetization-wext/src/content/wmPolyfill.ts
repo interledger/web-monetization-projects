@@ -39,7 +39,8 @@ export const wmPolyFillMinimal = `
     }
   })
   {
-    console.log('setonmonetization property start')
+    const dbg = () => {}
+    // dbg('setonmonetization property start')
     const handlers = new WeakMap()
     Object.defineProperty(HTMLElement.prototype, 'onmonetization', {
       enumerable: true,
@@ -48,10 +49,10 @@ export const wmPolyFillMinimal = `
         return handlers.get(this)
       },
       set(val) {
-        console.log('set onmonetization called, with', val)
+        // dbg('set onmonetization called, with', val)
         const listener = handlers.get(this)
         if (listener) {
-          console.log('removing existing listener')
+          // dbg('removing existing listener')
           this.removeEventListener('monetization', listener)
         }
 
@@ -63,8 +64,8 @@ export const wmPolyFillMinimal = `
         }
       }
     })
-    console.log('setonmonetization property end')
-    console.log('add coil-onmonetization-attr-changed handler start')
+    // dbg('setonmonetization property end')
+    // dbg('add coil-onmonetization-attr-changed handler start')
     class MonetizationEvent extends Event {
       constructor(type, details) {
         super('monetization', {bubbles: true})
@@ -77,14 +78,14 @@ export const wmPolyFillMinimal = `
     }
 
     document.addEventListener('coil-monetization', (event) => {
-      // console.log(
+      // dbg(
       //   'coil-monetization event'
       // )
       const monetizationEvent = new MonetizationEvent('monetization', event.detail)
       event.target.dispatchEvent(monetizationEvent)
     })
     document.addEventListener('coil-onmonetization-attr-changed', (event) => {
-      console.log('coil-onmonetization-attr-changed', event.detail.attribute)
+      // dbg('coil-onmonetization-attr-changed', event.detail.attribute)
       const { attribute } = event.detail
       if (attribute) {
         event.target.onmonetization = new Function(attribute).bind(event.target)
@@ -92,7 +93,7 @@ export const wmPolyFillMinimal = `
         event.target.onmonetization = null
       }
     })
-    console.log('add coil-onmonetization-attr-changed handler end')
+    // dbg('add coil-onmonetization-attr-changed handler end')
   }
 `
 

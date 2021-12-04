@@ -4,7 +4,7 @@ import { whenDocumentReady } from './whenDocumentReady'
 import { CustomError } from './CustomError'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
-const debug = console.log.bind(console, 'niq: ')
+const debug = (...args: unknown[]) => {}
 
 export interface PaymentDetails {
   requestId: string
@@ -292,14 +292,12 @@ export class MonetizationTagManager {
   }
 
   private checkMonetizationAttr(node: HTMLElement) {
-    console.log('checkMonetizationAttr', node)
+    debug('checkMonetizationAttr', node)
     const haveAttr = this.fireOnMonetizationChangeIfHaveAttribute({ node })
-    // if (haveAttr ) {
     this.onMonetizationAttrObserver.observe(node, {
       childList: false,
       attributeFilter: ['onmonetization']
     })
-    // }
   }
 
   private onOnMonetizationChangeObserved(records: MutationRecord[]) {
@@ -329,7 +327,7 @@ export class MonetizationTagManager {
         }
       })
       const result = node.dispatchEvent(customEvent)
-      console.log('dispatched coil-onmonetization-attr-changed ev', result)
+      debug('dispatched coil-onmonetization-attr-changed ev', result)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       // not in the right context
       // ;(tag as any).onmonetization = new Function(attribute)
