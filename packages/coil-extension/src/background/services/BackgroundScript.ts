@@ -21,6 +21,7 @@ import {
   ResumeWebMonetization,
   SetMonetizationState,
   SetStreamControls,
+  SPSPRequestEvent,
   StartWebMonetization,
   TipSent,
   ToBackgroundMessage
@@ -99,6 +100,7 @@ export class BackgroundScript {
     this.setFramesOnRemovedListener()
     this.routeStreamsMoneyEventsToContentScript()
     this.handleStreamsAbortEvent()
+    this.handleStreamsSPSPEvents()
     this.popup.setDefaultInactive()
     this.framesService.monitor()
     this.bindOnInstalled()
@@ -1133,5 +1135,19 @@ export class BackgroundScript {
         }
       })
     }
+  }
+
+  private handleStreamsSPSPEvents() {
+    this.streams.on('spsp-event', (event, requestId) => {
+      const frame = this.assoc.getFrame(requestId)
+      const command: SPSPRequestEvent = {
+        command: 'spspRequestEvent',
+        data: {
+          event: event,
+          requestId
+        }
+      }
+      this.framesService.sendCommand(frame, command)
+    })
   }
 }

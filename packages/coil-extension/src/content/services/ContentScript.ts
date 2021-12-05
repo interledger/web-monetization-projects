@@ -76,7 +76,7 @@ export class ContentScript {
       this.runtime.sendMessage(request)
     }
 
-    const monitor = new MonetizationTagManager(
+    const tagManager = new MonetizationTagManager(
       this.window,
       this.document,
       ({ started, stopped }) => {
@@ -89,13 +89,13 @@ export class ContentScript {
       }
     )
 
-    // // Scan for WM meta tags when page is interactive
-    monitor.startWhenDocumentReady()
+    // // Scan for WM tags when page is interactive
+    tagManager.startWhenDocumentReady()
 
     this.runtime.onMessage.addListener((message: ToContentMessage) => {
       if (message.command === 'monetizationProgress') {
         const data = message.data
-        monitor.dispatchLinkEventByLinkId(
+        tagManager.dispatchLinkEventByLinkId(
           data.requestId,
           new CustomEvent('coil-monetization', {
             bubbles: true,
@@ -109,6 +109,11 @@ export class ContentScript {
             }
           })
         )
+      } else if (message.command === 'spspRequestEvent') {
+        const {
+          data: { requestId, event }
+        } = message
+        tagManager.dispatchLinkEventByLinkId(requestId, new Event(event))
       }
     })
   }

@@ -178,9 +178,10 @@ export class Stream extends EventEmitter {
       let btpToken: string | undefined
       let plugin, attempt
       try {
+        const spspDetailsPromise = await this._getSPSPDetails()
         btpToken = await this._anonTokens.getToken(this._authToken)
         plugin = await this._makePlugin(btpToken)
-        const spspDetails = await this._getSPSPDetails()
+        const spspDetails = await spspDetailsPromise
         this.container
           .rebind(tokens.NoContextLoggerName)
           .toConstantValue(`StreamAttempt:${this._requestId}:${++ATTEMPT}`)
@@ -240,12 +241,16 @@ export class Stream extends EventEmitter {
     this._debug('fetching spsp details. url=', this._spspUrl)
     let details: SPSPResponse
     try {
+      this.emit('spsp-event', 'loadstart', this._requestId)
       details = await getSPSPResponse(this._spspUrl, this._requestId)
+      this.emit('spsp-event', 'load', this._requestId)
     } catch (e) {
       if (e instanceof SPSPError) {
+        this.emit('spsp-event', 'error', this._requestId)
         const status = e.response?.status
         // Abort on Bad Request 4XX
         if (!status || (status >= 400 && status < 500)) {
+          this.emit('spsp-event', 'abort', this._requestId)
           this.abort()
         }
       }

@@ -418,6 +418,18 @@ export interface LogInActiveTab {
   }
 }
 
+/**
+ *  background -> content
+ *  browser.tabs.sendMessage
+ */
+export interface SPSPRequestEvent {
+  command: 'spspRequestEvent'
+  data: {
+    requestId: string
+    event: 'load' | 'error' | 'abort' | 'loadstart'
+  }
+}
+
 export type ToContentMessage =
   | CheckAdaptedContent
   | MonetizationProgress
@@ -429,5 +441,6 @@ export type ToContentMessage =
   | TipSent
   | ClearToken
   | LogInActiveTab
+  | SPSPRequestEvent
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup

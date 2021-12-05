@@ -11,7 +11,13 @@
       established
     </p>
     <video id="1" onmonetization="console.log(this, event)">
-      <link rel="monetization" href="https://ilp.uphold.com/gRa4mXFEMYrL" />
+      <link
+        onerror="console.log('link errored!')"
+        onloadstart="console.log('link load started!')"
+        onload="console.log('link loaded!')"
+        rel="monetization"
+        href="https://ilp.uphold.com/gRa4mXFEMYrL"
+      />
     </video>
   </body>
 </html>

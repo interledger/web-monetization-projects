@@ -73,7 +73,7 @@ export class MonetizationTagManager {
   // TODO: do we even need a WeakRef ??
   private linkTagsById = new Map<string, WeakRef<HTMLLinkElement>>()
 
-  dispatchLinkEventByLinkId(id: string, event: CustomEvent) {
+  dispatchLinkEventByLinkId(id: string, event: Event) {
     const ref = this.linkTagsById.get(id)
     const link = ref?.deref()
     if (link) {
