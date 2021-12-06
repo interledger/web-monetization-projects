@@ -3,6 +3,7 @@ import { Box, styled, Theme } from '@material-ui/core'
 import SettingsIcon from '@material-ui/icons/Settings'
 
 import { useRouter } from '../context/routerContext'
+import { ROUTES } from '../contants'
 
 import { WebMonetized } from './icons/WebMonetized'
 import { Gift } from './icons/Gift'
@@ -42,19 +43,20 @@ export const NavBar = () => {
     <Box display='flex'>
       <NavButton
         className={router.path.includes('streaming') ? 'active' : ''}
-        onClick={() => router.push('streaming')}
+        onClick={() => router.to(ROUTES.streaming)}
       >
         <WebMonetized />
       </NavButton>
+      {/* Need to chec if the user has tipping enabled to dsiplay the tipping button */}
       <NavButton
         className={router.path.includes('tipping') ? 'active' : ''}
-        onClick={() => router.push('tipping')}
+        onClick={() => router.to(ROUTES.tipping)}
       >
         <Gift />
       </NavButton>
       <NavButton
         className={router.path.includes('settings') ? 'active' : ''}
-        onClick={() => router.push('settings')}
+        onClick={() => router.to(ROUTES.settings)}
       >
         <SettingsIcon />
       </NavButton>

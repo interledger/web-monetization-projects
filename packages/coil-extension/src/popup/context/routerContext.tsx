@@ -1,13 +1,13 @@
 import React, { createContext, useContext, useState } from 'react'
 
-import { ROUTES } from '../types'
+import { ROUTES } from '../contants'
 
 const RouterContext = createContext(ROUTES.streaming)
 
 export const RouterProvider: React.FC = props => {
   const [route, setRoute] = useState(ROUTES.streaming)
   const [backRoute, setBackRoute] = useState(null)
-  const pushRoute = (newRoute: ROUTES) => {
+  const toRoute = (newRoute: ROUTES) => {
     setBackRoute(route)
     setRoute(newRoute)
   }
@@ -15,7 +15,7 @@ export const RouterProvider: React.FC = props => {
     setRoute(backRoute)
   }
 
-  const providerValue = { path: route, push: pushRoute, back: goBack }
+  const providerValue = { path: route, to: toRoute, back: goBack }
   return (
     <RouterContext.Provider value={providerValue}>
       {props.children}

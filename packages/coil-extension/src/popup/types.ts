@@ -14,9 +14,3 @@ export interface PopupHost {
   events: EventEmitter
   runtime: PopupRuntime
 }
-
-export enum ROUTES {
-  streaming = 'streaming',
-  tipping = 'tipping',
-  settings = 'settings'
-}
