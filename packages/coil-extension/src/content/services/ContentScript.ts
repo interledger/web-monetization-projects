@@ -103,7 +103,7 @@ export class ContentScript {
             detail: {
               paymentPointer: data.paymentPointer,
               receipt: data.receipt,
-              assetScale: data.assetCode,
+              assetScale: data.assetScale,
               assetCode: data.assetCode,
               amount: data.amount
             }

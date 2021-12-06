@@ -80,14 +80,14 @@ export const wmPolyFillMinimal = `
       }
     }
 
-    document.addEventListener('coil-monetization', (event) => {
+    window.addEventListener('coil-monetization', (event) => {
       dbg(
         'coil-monetization event'
       )
       const monetizationEvent = new MonetizationEvent('monetization', event.detail)
       event.target.dispatchEvent(monetizationEvent)
-    })
-    document.addEventListener('coil-onmonetization-attr-changed', (event) => {
+    }, {capture: true})
+    window.addEventListener('coil-onmonetization-attr-changed', (event) => {
       // dbg('coil-onmonetization-attr-changed', event.detail.attribute)
       const { attribute } = event.detail
       if (attribute) {
@@ -95,7 +95,7 @@ export const wmPolyFillMinimal = `
       } else {
         event.target.onmonetization = null
       }
-    })
+    }, {capture: true})
     dbg('add coil-onmonetization-attr-changed handler end')
   }
 `
