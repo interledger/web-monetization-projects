@@ -25,8 +25,16 @@ const progressLoggingCode = createBindingCode('monetizationprogress')
 
 // language=JavaScript
 export const wmPolyFillMinimal = `
-  document.monetization = document.createElement('div')
-  document.monetization.state = 'stopped'
+  class Monetization extends EventTarget {
+    state = 'stopped'
+    get [Symbol.toStringTag]() {
+      return 'Monetization'
+    }
+  }
+  
+  document.monetization = new Monetization()
+  // TODO: use coil-monetization-v1 and update content script that sends
+  // the events
   document.addEventListener('monetization-v1', function(event) {
     const { type, detail } = event.detail
     if (type === 'monetizationstatechange') {
@@ -41,7 +49,7 @@ export const wmPolyFillMinimal = `
   {
     const dbg = () => {
     }
-    // dbg('setonmonetization property start')
+    dbg('setonmonetization property start')
     const handlers = new WeakMap()
     var attributes = {
       enumerable: true,
@@ -52,23 +60,32 @@ export const wmPolyFillMinimal = `
       set(val) {
         dbg('set onmonetization called, with', val)
         const listener = handlers.get(this)
-        if (listener) {
-          dbg('removing existing listener')
-          this.removeEventListener('monetization', listener)
+        if (listener && listener === val) {
+          // nothing to do here ?
+          return
         }
-
-        if (val === null || val === undefined) {
+        const removeAnyExisting = () => {
+          if (listener) {
+            dbg('removing existing listener')
+            this.removeEventListener('monetization', listener)
+          }
+        }
+        if (val == null /* OR undefined*/) {
           handlers.delete(this)
-        } else {
+          removeAnyExisting()
+        } else if (typeof val === 'function') {
+          removeAnyExisting()
           this.addEventListener('monetization', val)
           handlers.set(this, val)
+        } else {
+          throw new Error("val must be a function, got " + typeof val)
         }
       }
     }
     Object.defineProperty(HTMLElement.prototype, 'onmonetization', attributes)
     Object.defineProperty(Window.prototype, 'onmonetization', attributes)
     dbg('setonmonetization property end')
-    dbg('add coil-onmonetization-attr-changed handler start')
+    dbg('add coil-onmonetization-v2-attr-changed handler start')
     class MonetizationEvent extends Event {
       constructor(type, details) {
         super('monetization', { bubbles: true })
@@ -87,16 +104,18 @@ export const wmPolyFillMinimal = `
       const monetizationEvent = new MonetizationEvent('monetization', event.detail)
       event.target.dispatchEvent(monetizationEvent)
     }, {capture: true})
-    window.addEventListener('coil-onmonetization-attr-changed', (event) => {
-      // dbg('coil-onmonetization-attr-changed', event.detail.attribute)
+    window.addEventListener('coil-onmonetization-v2-attr-changed', (event) => {
+      dbg('coil-onmonetization-attr-changed', event.detail.attribute)
       const { attribute } = event.detail
       if (attribute) {
+        // TODO: what are the CSP issues here?
+        // is there any alternative ??
         event.target.onmonetization = new Function(attribute).bind(event.target)
       } else {
         event.target.onmonetization = null
       }
     }, {capture: true})
-    dbg('add coil-onmonetization-attr-changed handler end')
+    dbg('add coil-onmonetization-v2-attr-changed handler end')
   }
 `
 

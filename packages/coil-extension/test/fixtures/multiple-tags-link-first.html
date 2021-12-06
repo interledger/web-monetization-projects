@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <title>Link Tag</title>
+    <script>
+      window.onload = function () {
+        console.log('window.onload function 1')
+      }
+      window.onload = function () {
+        console.log('window.onload function 2')
+      }
+    </script>
   </head>
   <body>
     <p>Page includes a link THEN a meta tag</p>
