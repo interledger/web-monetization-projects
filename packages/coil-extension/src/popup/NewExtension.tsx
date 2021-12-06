@@ -1,20 +1,13 @@
 import React from 'react'
-import { Box, styled, Theme } from '@material-ui/core'
-import { theme } from 'packages/interledger-minute-extension/src/theme'
-import SettingsIcon from '@material-ui/icons/Settings'
+import { Box, styled } from '@material-ui/core'
 
-import { WebMonetized } from './components/icons/WebMonetized'
-import { Gift } from './components/icons/Gift'
-import { TipRouter } from './components/views/TipRouter'
-import { MonetizedRouter } from './components/views/MonetizedRouter'
-import { CoilDiscoverView } from './components/views/CoilDiscoverView'
-import { useRouter } from './context/routerContext'
+import { Header } from './components/Header'
 import { NavBar } from './components/NavBar'
 
 //
 // Styles
 //
-const OuterDiv = styled('div')({
+const AppContainer = styled('div')({
   width: '308px',
   maxWidth: '308px',
   height: '455px',
@@ -26,15 +19,22 @@ const OuterDiv = styled('div')({
   flexDirection: 'column'
 })
 
+const BodyContainer = styled('div')({
+  backgroundColor: 'pink',
+  flex: '1',
+  display: 'flex',
+  flexDirection: 'column'
+})
+
+//
+// Component
+//
 export const NewExtension = () => {
-  const router = useRouter()
   return (
-    <OuterDiv>
-      <Box style={{ backgroundColor: 'red' }}>Header Placeholder</Box>
-      <Box style={{ backgroundColor: 'pink', flex: '1' }}>
-        <button onClick={router.back}>back</button>
-      </Box>
+    <AppContainer>
+      <Header />
+      <BodyContainer>View router here</BodyContainer>
       <NavBar />
-    </OuterDiv>
+    </AppContainer>
   )
 }
