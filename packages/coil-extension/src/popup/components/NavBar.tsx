@@ -12,14 +12,14 @@ import { Gift } from './icons/Gift'
 // Styles
 //
 
-const NavButton = styled('div')(({ theme }: Theme) => ({
+const NavButton = styled('div')(({ theme }: { theme: Theme }) => ({
   cursor: 'pointer',
   flex: '1',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   padding: '19px 0px',
-  color: theme.palette.Grey200,
+  color: theme.palette.Grey100,
   '&:hover, &.active': {
     '&:nth-child(1)': {
       color: theme.palette.Green700

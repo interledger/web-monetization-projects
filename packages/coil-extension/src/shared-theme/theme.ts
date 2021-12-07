@@ -1,6 +1,11 @@
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createMuiTheme, ThemeOptions, Theme } from '@material-ui/core/styles'
 
 import { Colors } from './colors'
+
+//
+// Utilities
+//
+const spacing = (factor: number): string => `${0.5 * factor}rem`
 
 const breakpoints = {
   values: {
@@ -20,8 +25,21 @@ const body = {
   fontSize: '14px',
   color: Colors.Grey700
 }
-export const theme = createMuiTheme({
+
+// wrapper allows us to add custom props to the theme
+const createMuiThemeWrapper = (options: ThemeOptions): Theme => {
+  return createMuiTheme({
+    ...options
+  })
+}
+
+//
+// Theme settings
+//
+export const theme = createMuiThemeWrapper({
+  spacing: spacing,
   palette: {
+    ...Colors,
     primary: {
       light: Colors.White,
       main: Colors.Blue,
@@ -29,8 +47,7 @@ export const theme = createMuiTheme({
     },
     secondary: {
       main: Colors.Grey100
-    },
-    ...Colors
+    }
   },
   breakpoints,
   overrides: {

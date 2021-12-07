@@ -2,12 +2,23 @@ import React, { createContext, useContext, useState } from 'react'
 
 import { ROUTES } from '../contants'
 
-const RouterContext = createContext(ROUTES.streaming)
+//
+// Models
+//
+interface IRouterContext {
+  path: string
+  to: (str: string) => void
+  back: () => void
+}
 
+// Context
+const RouterContext = createContext({} as IRouterContext)
+
+// Provider
 export const RouterProvider: React.FC = props => {
-  const [route, setRoute] = useState(ROUTES.streaming)
-  const [backRoute, setBackRoute] = useState(null)
-  const toRoute = (newRoute: ROUTES) => {
+  const [route, setRoute] = useState<string>(ROUTES.streaming)
+  const [backRoute, setBackRoute] = useState<string>(ROUTES.streaming)
+  const toRoute = (newRoute: string) => {
     setBackRoute(route)
     setRoute(newRoute)
   }
@@ -23,6 +34,7 @@ export const RouterProvider: React.FC = props => {
   )
 }
 
+// Hook
 export const useRouter = () => {
   const context = useContext(RouterContext)
   return context
