@@ -1,11 +1,7 @@
 import React from 'react'
-import { Box, styled } from '@material-ui/core'
+import { styled } from '@material-ui/core'
 
-import { Header } from './components/Header'
-import { NavBar } from './components/NavBar'
 import { Router } from './components/views/Router'
-import { ROUTES } from './contants'
-import { useRouter } from './context/routerContext'
 
 //
 // Styles

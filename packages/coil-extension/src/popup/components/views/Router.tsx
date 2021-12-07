@@ -6,6 +6,9 @@ import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../contants'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 
+//
+// Component
+//
 export const Router = () => {
   const router = useRouter()
   switch (router.path) {
