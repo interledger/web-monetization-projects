@@ -6,6 +6,8 @@ import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../contants'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 
+import { SettingsView } from './SettingsView'
+
 //
 // Component
 //
@@ -14,11 +16,7 @@ export const Router = () => {
   switch (router.path) {
     case ROUTES.settings: {
       // /settings
-      return (
-        <NewHeaderFooterLayout title='Settings'>
-          <div>settings</div>
-        </NewHeaderFooterLayout>
-      )
+      return <SettingsView />
     }
     case ROUTES.tipping: {
       // /tipping
