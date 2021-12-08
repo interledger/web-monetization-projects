@@ -26,17 +26,6 @@ export const whoamiSelection = `
     tipping {
       limitRemaining
     }
-
-    paymentMethods {
-      id
-      type
-      details {
-        ... on StripeCardDetails {
-          last4
-          brandCode
-        }
-      }
-    }
 `
 
 export const whoamiQuery = `{
