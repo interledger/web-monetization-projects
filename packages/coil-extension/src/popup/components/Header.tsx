@@ -20,9 +20,9 @@ const CloseButton = styled('button')(({ theme }) => ({
   border: 'none',
   backgroundColor: 'transparent',
   padding: '0',
-  color: theme.palette.Grey100,
+  color: theme.palette.Grey200,
   '&:hover': {
-    color: theme.palette.Grey500
+    color: theme.palette.Grey700
   }
 }))
 

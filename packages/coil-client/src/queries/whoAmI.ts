@@ -9,6 +9,7 @@ export const whoamiSelection = `
     id
     fullName
     email
+    profilePicture
     customerId
     canTip
 

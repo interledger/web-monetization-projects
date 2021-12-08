@@ -9,6 +9,7 @@ declare module '@material-ui/core/styles/createPalette' {
     Grey700?: string
     Grey500?: string
     Grey100?: string
+    Grey200?: string
     Grey50?: string
     White?: string
     Blue700?: string
@@ -38,6 +39,7 @@ declare module '@material-ui/core/styles/createPalette' {
     Grey700?: string
     Grey500?: string
     Grey100?: string
+    Grey200?: string
     Grey50?: string
     White?: string
     Blue700?: string

@@ -74,6 +74,7 @@ const tipUserNewUi = {
   canTip: true,
   fullName: 'Nicholas Dudfield',
   email: 'mock-email@coil.com',
+  profilePicture: 'https://cdn.coil.com/images/msPiV_0ZS928Fc-HJcdVAw.jpg',
   customerId: 'cus_EmQtvoQVyJgZ75',
   subscription: { active: true },
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },

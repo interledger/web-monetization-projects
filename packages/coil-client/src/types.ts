@@ -6,6 +6,7 @@ export interface CoilUser {
   id: string
   fullName: string
   email: string
+  profilePicture?: string
   customerId?: string
   subscription?: {
     active: boolean

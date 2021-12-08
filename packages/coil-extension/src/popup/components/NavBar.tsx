@@ -19,7 +19,7 @@ const NavButton = styled('div')(({ theme }: { theme: Theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   padding: '19px 0px',
-  color: theme.palette.Grey100,
+  color: theme.palette.Grey200,
   '&:hover, &.active': {
     '&:nth-child(1)': {
       color: theme.palette.Green700
