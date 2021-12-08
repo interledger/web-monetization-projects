@@ -36,6 +36,7 @@ const ProfilePicture = styled('div')(({ src }: { src: string }) => ({
   borderRadius: '64px',
   backgroundImage: `url("${src}")`,
   backgroundSize: 'cover',
+  backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat'
 }))
 
@@ -64,7 +65,7 @@ const SettingsButton = styled('div')(({ theme }: { theme: Theme }) => ({
 // Component
 //
 export const SettingsView = () => {
-  const { validToken, user, extensionBuildString } = useStore()
+  const { user } = useStore()
   const {
     coilDomain,
     runtime: { tabOpener }
@@ -89,13 +90,14 @@ export const SettingsView = () => {
                 {user.fullName}
               </Typography>
             )}
-            {user?.email && (
+            {(user?.shortName || user?.email) && (
               <Typography variant='subtitle1' align='center'>
-                {user.email}
+                {user.shortName ?? user.email}
               </Typography>
             )}
           </div>
         </ProfileContainer>
+
         <SettingsButton
           onClick={() => tabOpener(`${coilDomain}/settings/acount`)}
         >

@@ -2,6 +2,7 @@ export interface User {
   newUi?: boolean // todo: remove this when testing the new ui is done
   id: string
   fullName: string
+  shortName?: string
   email: string
   profilePicture?: string
   customerId?: string

@@ -8,6 +8,7 @@ export interface WhoAmIData {
 export const whoamiSelection = `
     id
     fullName
+    shortName
     email
     profilePicture
     customerId

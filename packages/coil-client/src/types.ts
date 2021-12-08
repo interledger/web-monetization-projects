@@ -5,6 +5,7 @@ export interface GraphQlResponse<T> {
 export interface CoilUser {
   id: string
   fullName: string
+  shortName?: string
   email: string
   profilePicture?: string
   customerId?: string
