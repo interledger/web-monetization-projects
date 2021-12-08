@@ -1,11 +1,9 @@
 import React from 'react'
-import { Box, Typography, styled, Theme } from '@material-ui/core'
+import { Typography, styled, Theme } from '@material-ui/core'
 import PersonIcon from '@material-ui/icons/Person'
 import ExploreIcon from '@material-ui/icons/Explore'
-import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline'
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline'
 import ChevronRightRoundedIcon from '@material-ui/icons/ChevronRightRounded'
-import { theme } from 'packages/interledger-minute-extension/src/theme'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { useStore } from '../../context/storeContext'
@@ -83,15 +81,15 @@ export const SettingsView = () => {
           }}
         >
           <div>
-            {user.profilePicture && (
+            {user?.profilePicture && (
               <ProfilePicture src={user.profilePicture} />
             )}
-            {user.fullName && (
+            {user?.fullName && (
               <Typography variant='h6' align='center'>
                 {user.fullName}
               </Typography>
             )}
-            {user.email && (
+            {user?.email && (
               <Typography variant='subtitle1' align='center'>
                 {user.email}
               </Typography>
