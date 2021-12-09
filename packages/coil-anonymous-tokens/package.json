@@ -70,7 +70,7 @@
     "lerna": "4.0.0",
     "lint-staged": "12.1.2",
     "localforage": "1.10.0",
-    "prettier": "2.5.0",
+    "prettier": "2.5.1",
     "rimraf": "3.0.2",
     "ts-jest": "27.0.7",
     "ts-loader": "9.2.6",
