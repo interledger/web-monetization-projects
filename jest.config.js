@@ -36,7 +36,22 @@ let config = {
       isolatedModules: ISOLATED_MODULES,
       diagnostics: false
     }
-  }
+  },
+
+  // coverage
+  coverageReporters: ['json', 'lcov', 'text', 'clover', 'html'],
+  coveragePathIgnorePatterns: ['/node_modules/'],
+  coverageDirectory: 'results/coverage',
+  collectCoverageFrom: [
+    // every top level "src" directory under packages
+    'packages/*/src/**/*.{js,jsx,ts,tsx}',
+    // additional directories not under "src"
+    'packages/coil-extension/assets/**/*.{js,jsx,ts,tsx}',
+    'packages/coil-webpack-utils/polyfills/**/*.{js,jsx,ts,tsx}',
+    // Exclude test packages
+    '!packages/coil-puppeteer-utils/**',
+    '!**/node_modules/**'
+  ]
 }
 
 const localConfPath = `${__dirname}/jest.config.local.js`
