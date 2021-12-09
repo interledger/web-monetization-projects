@@ -83,17 +83,6 @@ describe('GraphQlClient#login', () => {
       limitRemaining
     }
 
-    paymentMethods {
-      id
-      type
-      details {
-        ... on StripeCardDetails {
-          last4
-          brandCode
-        }
-      }
-    }
-
   }
 }"
 `)
