@@ -23,11 +23,6 @@ const moduleNameMapper = MAP_PATHS_TO_MODULES ? pathsToModuleNames : undefined
 let config = {
   preset: 'ts-jest',
   testMatch: ['<rootDir>/packages/*/test/jest/**/*.test.[jt]s?(x)'],
-  // TODO: remove following line
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '<rootDir>/packages/coil-oauth-scripts/'
-  ],
   testEnvironment: 'jsdom',
   rootDir: '.',
   moduleNameMapper,
