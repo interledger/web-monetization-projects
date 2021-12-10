@@ -23,6 +23,11 @@ const moduleNameMapper = MAP_PATHS_TO_MODULES ? pathsToModuleNames : undefined
 let config = {
   preset: 'ts-jest',
   testMatch: ['<rootDir>/packages/*/test/jest/**/*.test.[jt]s?(x)'],
+  // TODO: remove following line
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '<rootDir>/packages/coil-oauth-scripts/'
+  ],
   testEnvironment: 'jsdom',
   rootDir: '.',
   moduleNameMapper,
@@ -36,21 +41,20 @@ let config = {
       isolatedModules: ISOLATED_MODULES,
       diagnostics: false
     }
-  },
+  }
 
   // coverage
-  coverageReporters: ['json', 'lcov', 'text', 'clover', 'html'],
-  coveragePathIgnorePatterns: ['node_modules'],
-  coverageDirectory: 'results/coverage',
-  collectCoverageFrom: [
-    // every top level "src" directory under packages
-    'packages/coil-extension/src/**/*.{js,jsx,ts,tsx}',
-    // additional directories not under "src"
-    'packages/coil-extension/assets/**/*.{js,jsx,ts,tsx}',
-    'packages/coil-webpack-utils/polyfills/**/*.{js,jsx,ts,tsx}',
-    // Exclude test packages
-    '!packages/coil-puppeteer-utils/**'
-  ]
+  // coverageReporters: ['json', 'lcov', 'text', 'clover', 'html'],
+  // coverageDirectory: 'results/coverage',
+  // collectCoverageFrom: [
+  //   // every top level "src" directory under packages
+  //   'packages/coil-extension/src/**/*.{js,jsx,ts,tsx}',
+  //   // additional directories not under "src"
+  //   'packages/coil-extension/assets/**/*.{js,jsx,ts,tsx}',
+  //   'packages/coil-webpack-utils/polyfills/**/*.{js,jsx,ts,tsx}',
+  //   // Exclude test packages
+  //   '!packages/coil-puppeteer-utils/**'
+  // ]
 }
 
 const localConfPath = `${__dirname}/jest.config.local.js`
