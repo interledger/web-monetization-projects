@@ -26,20 +26,21 @@ export const whoamiSelection = `
     tipping {
       limitRemaining
     }
+
+    paymentMethods {
+      id
+      type
+        details {
+      ... on StripeCardDetails {
+          last4
+          brandCode
+        }
+      }
+    }
 `
 
 // TODO: these have changed but is screwing up renovate and aren't really
 // used in any deployed version of the extension.
-// paymentMethods {
-//   id
-//   type
-//     details {
-//   ... on StripeCardDetails {
-//       last4
-//       brandCode
-//     }
-//   }
-// }
 
 export const whoamiQuery = `{
   whoami {
