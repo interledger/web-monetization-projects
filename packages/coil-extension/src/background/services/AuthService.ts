@@ -232,7 +232,7 @@ export class AuthService extends EventEmitter {
         remainingDailyAmount: this.store.user?.tipping?.limitRemaining
           ? Number(this.store.user?.tipping?.limitRemaining) / 100
           : 0, // convert from cents to dollars
-        hotkeyTipAmounts: [5, 10, 50] // dollar amounts - not yet set by user
+        hotkeyTipAmounts: [1, 2, 5] // dollar amounts - not yet set by user
       }
       this.store.user = {
         ...this.store.user,
