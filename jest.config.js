@@ -40,7 +40,7 @@ let config = {
 
   // coverage
   coverageReporters: ['json', 'lcov', 'text', 'clover', 'html'],
-  coveragePathIgnorePatterns: ['/node_modules/'],
+  coveragePathIgnorePatterns: ['node_modules'],
   coverageDirectory: 'results/coverage',
   collectCoverageFrom: [
     // every top level "src" directory under packages
