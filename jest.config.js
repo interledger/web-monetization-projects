@@ -22,9 +22,7 @@ const moduleNameMapper = MAP_PATHS_TO_MODULES ? pathsToModuleNames : undefined
 
 let config = {
   preset: 'ts-jest',
-  testMatch: [
-    '<rootDir>/packages/coil-extension/test/jest/**/*.test.[jt]s?(x)'
-  ],
+  testMatch: ['<rootDir>/packages/*/test/jest/**/*.test.[jt]s?(x)'],
   testEnvironment: 'jsdom',
   rootDir: '.',
   moduleNameMapper,
@@ -46,13 +44,12 @@ let config = {
   coverageDirectory: 'results/coverage',
   collectCoverageFrom: [
     // every top level "src" directory under packages
-    'packages/*/src/**/*.{js,jsx,ts,tsx}',
+    'packages/coil-extension/src/**/*.{js,jsx,ts,tsx}',
     // additional directories not under "src"
     'packages/coil-extension/assets/**/*.{js,jsx,ts,tsx}',
     'packages/coil-webpack-utils/polyfills/**/*.{js,jsx,ts,tsx}',
     // Exclude test packages
-    '!packages/coil-puppeteer-utils/**',
-    '!**/node_modules/**'
+    '!packages/coil-puppeteer-utils/**'
   ]
 }
 
