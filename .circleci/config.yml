@@ -202,7 +202,7 @@ jobs:
           name: Run jest from build
           command: |
             export DEBUG='coil*'
-            yarn clean:build
+            yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
             xvfb-run -a yarn test:coverage
@@ -223,7 +223,7 @@ jobs:
       - run:
           name: Lerna run jest from build
           command: |
-            yarn clean:build
+            yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
             xvfb-run -a yarn lerna run --stream test:coverage
