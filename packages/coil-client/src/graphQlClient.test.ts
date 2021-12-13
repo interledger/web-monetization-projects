@@ -60,13 +60,15 @@ describe('GraphQlClient#login', () => {
           token
         }
 
-        whoami {
-          
-          id
-          fullName
-          email
-          customerId
-          canTip
+  whoami {
+    
+    id
+    fullName
+    shortName
+    email
+    profilePicture
+    customerId
+    canTip
 
           subscription {
             active
