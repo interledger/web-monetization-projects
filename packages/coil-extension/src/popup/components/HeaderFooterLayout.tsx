@@ -6,7 +6,7 @@
 */
 
 import React from 'react'
-import { styled, Typography } from '@material-ui/core'
+import { styled, Typography, Theme } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
 import { useStore } from '../context/storeContext'
@@ -24,11 +24,12 @@ const OuterDiv = styled('div')({
   height: 'auto'
 })
 
-const CoilContainer = styled(Container)(({ theme }) => ({
-  paddingRight: `${theme.spacing(3)}px`,
-  paddingLeft: `${theme.spacing(3)}px`,
-  paddingTop: `${theme.spacing(2)}px`,
-  paddingBottom: `${theme.spacing(2)}px`,
+const CoilContainer = styled(Container)(({ theme }: { theme: Theme }) => ({
+  paddingRight: theme.spacing(3),
+  paddingLeft: theme.spacing(3),
+  paddingTop: theme.spacing(2),
+  paddingBottom: theme.spacing(2),
+
   backgroundColor: Colors.Grey99
 }))
 

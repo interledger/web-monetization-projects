@@ -77,13 +77,13 @@ const totals: Array<PageTotal> = [
 ]
 
 const MainPanel = styled('div')(({ theme }) => ({
-  marginTop: `${theme.spacing(4)}px`,
-  marginBottom: `${theme.spacing(2)}px`,
+  marginTop: theme.spacing(4),
+  marginBottom: theme.spacing(2),
   width: '100%',
   maxWidth: '1032px',
-  marginLeft: `${theme.spacing(2)}px`,
-  marginRight: `${theme.spacing(2)}px`,
-  padding: `${theme.spacing(2)}px`,
+  marginLeft: theme.spacing(2),
+  marginRight: theme.spacing(2),
+  padding: theme.spacing(2),
   background: '#ffffff',
   borderRadius: '10px'
 }))
