@@ -1,7 +1,7 @@
 const { parse: parseJSON } = require('JSON2016/JSON2016.js')
 const { readFileSync, existsSync } = require('fs')
 const { resolve } = require('path')
-const { pathsToModuleNameMapper } = require('ts-jest/utils')
+const { pathsToModuleNameMapper } = require('ts-jest')
 
 const SKIP_LIB_CHECK = Boolean(
   process.env.TS_JEST_COMPILER_OPTIONS_SKIP_LIB_CHECK
