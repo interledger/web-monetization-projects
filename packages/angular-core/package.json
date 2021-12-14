@@ -1,7 +1,7 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
   "name": "@angular/core",
-  "version": "0.0.0",
+  "version": "13.1.0",
   "keywords": [
     "ilp",
     "web-monetization"
