@@ -4,6 +4,7 @@ import { Container } from 'inversify'
 import { GraphQlClientOptions } from '@coil/client'
 import { inversifyModule } from '@dier-makr/inversify'
 import { GlobalModule } from '@dier-makr/annotations'
+import { YARN_PRIORITY } from '@angular/core'
 
 import * as tokens from '../types/tokens'
 import { API, COIL_DOMAIN } from '../webpackDefines'
@@ -38,3 +39,5 @@ function main() {
   container.get(ContentScript).init()
 }
 main()
+
+console.log({ YARN_PRIORITY })

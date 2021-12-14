@@ -6,6 +6,9 @@
     "baseUrl": ".",
     "skipLibCheck": false,
     "paths": {
+      "@angular/core": [
+        "packages/angular-core/src"
+      ],
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
       ],

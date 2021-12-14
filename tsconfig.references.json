@@ -3,6 +3,9 @@
   "files": [],
   "references": [
     {
+      "path": "packages/angular-core/tsconfig.build.json"
+    },
+    {
       "path": "packages/coil-monorepo-upkeep/tsconfig.build.json"
     },
     {
