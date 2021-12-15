@@ -17,6 +17,10 @@ references:
     matrix:
       parameters:
         node-version: [ "14", "16", "17" ]
+  just-one-node-version-matrix: &just-latest-lts-node-version
+    matrix:
+      parameters:
+        node-version: [ "16" ]
 
 jobs:
   # Run Linting
@@ -171,7 +175,7 @@ jobs:
       - *save_cache
 
   build-root-tsconfig:
-    <<: *parameterized-node-version
+    <<: *just-latest-lts-node-version
     steps:
       - checkout
       - *restore_cache
