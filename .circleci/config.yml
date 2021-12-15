@@ -188,7 +188,7 @@ jobs:
   # Make sure there are no issues here that somehow other jobs haven't captured.
   # This has been a problem in the past and could be again.
   build-root-tsconfig:
-    <<: *just-latest-lts-node-version
+    <<: *parameterized-node-version
     steps:
       - checkout
       - *restore_cache
@@ -298,7 +298,7 @@ workflows:
       - build-all-package-references-typescript:
           <<: *node-version-matrix
       - build-root-tsconfig:
-          <<: *node-version-matrix
+          <<: *just-latest-lts-node-version
       - coil-extension-package:
           <<: *node-version-matrix
       - packages-build-scripts:
