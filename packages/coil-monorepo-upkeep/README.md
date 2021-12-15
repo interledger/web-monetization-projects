@@ -23,8 +23,8 @@ of various files like:
 ### History
 
 What the `upkeep` command is, is an evolution of a small script we were working
-on, a long time ago when Adrian and I were experimenting with typescript
-options for the interledger monorepo.
+on a long time ago, when Adrian and I were experimenting with monorepo structure
+for the InterledgerJS set of packages.
 
 The requirements were the following:
 
@@ -66,7 +66,7 @@ The requirements were the following:
         depends upon, generating "path" : "..."} entries for the references
         section
 
-- Depending on the task at hand dynamic compilation (on the fly, with transpile
+- Depending on the task at hand, dynamic compilation (on the fly, with transpile
   only set to true) can be faster.
 
   Note that when upkeep was born, webpack's ts-loader' support for project
@@ -78,12 +78,12 @@ The requirements were the following:
 
 To get all these things working at once it was much easier to script the shape
 and structure of the monorepo. In this way iterating on ideas was much faster
-and less error prone (which can lead to confusions about how things work)
+and less error-prone (which can lead to confusions about how things work)
 
 It was tricky to set things up where it always worked, so if something didn't
 work it was added to the CI (much easier/faster than testing everything by hand
 locally)
 
 So when you see tests running under multiple configurations, it's testing that
-the monorepo is still strucutured in a way that it works in the various ways
+the monorepo is still structured in a way that it works in the various ways
 one may want to use it.
