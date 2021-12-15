@@ -183,7 +183,14 @@ jobs:
       - *save_cache
 
   jest-all:
-    <<: *parameterized-node-version
+    parameters:
+      command:
+        type: string
+        default: test:coverage
+      node-version:
+        type: string
+    docker:
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     resource_class: large
     steps:
       - run:
@@ -197,7 +204,7 @@ jobs:
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            xvfb-run -a yarn test:coverage
+            xvfb-run -a yarn << parameters.command >>
       - run:
           name: Run jest from build
           command: |
@@ -205,11 +212,18 @@ jobs:
             yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
-            xvfb-run -a yarn test:coverage
+            xvfb-run -a yarn << parameters.command >>
       - *save_cache
 
   jest-lerna-all:
-    <<: *parameterized-node-version
+    parameters:
+      command:
+        type: string
+        default: test:coverage
+      node-version:
+        type: string
+    docker:
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     resource_class: xlarge
     steps:
       - checkout
@@ -219,14 +233,14 @@ jobs:
           name: Lerna run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            xvfb-run -a yarn lerna run --stream test:coverage
+            xvfb-run -a yarn lerna run --stream << parameters.command >>
       - run:
           name: Lerna run jest from build
           command: |
             yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
-            xvfb-run -a yarn lerna run --stream test:coverage
+            xvfb-run -a yarn lerna run --stream << parameters.command >>
       - *save_cache
 
   packages-build-scripts:
@@ -305,14 +319,21 @@ workflows:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          <<: *node-version-matrix
+          matrix:
+            parameters:
+              # TODO: DRY it up
+              node-version: [ "14", "16" ]
+              command: [ "test:coverage", "test:e2e:coverage" ]
       - jest-lerna-all:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          <<: *node-version-matrix
+          matrix:
+            parameters:
+              node-version: [ "14", "16" ]
+              command: [ "test:coverage", "test:e2e:coverage" ]
       - coil-extension-puppeteer:
           context: web-monetization-tests
           filters:
