@@ -26,6 +26,7 @@ export const whoamiSelection = `
     }
 
     tipping {
+      lastTippedAmount
       limitRemaining
     }
 `

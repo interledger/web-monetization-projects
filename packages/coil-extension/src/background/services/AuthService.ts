@@ -228,10 +228,13 @@ export class AuthService extends EventEmitter {
         inTippingBeta: featureFlagResp.data.featureEnabled,
         minimumTipLimit: minTipLimitResp.data.minTipLimit.minTipLimit
           ? Number(minTipLimitResp.data.minTipLimit.minTipLimit) / 100
-          : 1,
+          : 1, // convert from cents to dollars
         remainingDailyAmount: this.store.user?.tipping?.limitRemaining
           ? Number(this.store.user?.tipping?.limitRemaining) / 100
           : 0, // convert from cents to dollars
+        lastTippedAmountUSD: this.store.user?.tipping?.limitRemaining
+          ? Number(this.store.user?.tipping?.lastTippedAmount) / 100
+          : 1, // convert from cents to dollars
         hotkeyTipAmounts: [1, 2, 5] // dollar amounts - not yet set by user
       }
       this.store.user = {

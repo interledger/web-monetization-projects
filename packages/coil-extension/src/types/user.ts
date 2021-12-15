@@ -20,6 +20,7 @@ export interface User {
     scale: number
   }
   tipping?: {
+    lastTippedAmount: string
     limitRemaining: string
   }
   minimumTipLimit?: number
@@ -27,6 +28,7 @@ export interface User {
     inTippingBeta?: boolean
     minimumTipLimit: number
     remainingDailyAmount: number
+    lastTippedAmountUSD: number
     hotkeyTipAmounts: Array<number>
   }
   paymentMethods?: Array<IUserPaymentMethod>

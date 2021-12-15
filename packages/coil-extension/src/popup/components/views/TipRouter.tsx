@@ -11,6 +11,8 @@ import React, { useState } from 'react'
 import { styled } from '@material-ui/core'
 import { AnimatePresence } from 'framer-motion'
 
+import { useStore } from '../../context/storeContext'
+
 import { TipView } from './TipView'
 import { TipConfirmView } from './TipConfirmView'
 import { TipCompleteView } from './TipCompleteView'
@@ -50,7 +52,19 @@ export const TipRouter = () => {
   const [tipProcessStep, setTipProcessStep] = useState<TipProcessStep>(
     TipProcessStep.TIP
   )
-  const [currentTipAmount, setCurrentTipAmount] = useState<number>(1)
+  const { user } = useStore()
+  const { minimumTipLimit, lastTippedAmountUSD } = user?.tipSettings || {}
+  const defaultTipAmount = () => {
+    if (lastTippedAmountUSD) {
+      return lastTippedAmountUSD
+    } else if (minimumTipLimit) {
+      return minimumTipLimit
+    } else {
+      return 1
+    }
+  }
+  const [currentTipAmount, setCurrentTipAmount] =
+    useState<number>(defaultTipAmount)
 
   return (
     <OuterDiv>
