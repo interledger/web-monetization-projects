@@ -22,7 +22,10 @@ const moduleNameMapper = MAP_PATHS_TO_MODULES ? pathsToModuleNames : undefined
 
 let config = {
   preset: 'ts-jest',
-  testMatch: ['<rootDir>/packages/*/test/jest/**/*.test.[jt]s?(x)'],
+  testMatch: [
+    '<rootDir>/packages/*/src/**/*.test.[jt]s?(x)',
+    '<rootDir>/packages/*/test/jest/**/*.test.[jt]s?(x)'
+  ],
   testEnvironment: 'jsdom',
   rootDir: '.',
   moduleNameMapper,
@@ -36,7 +39,10 @@ let config = {
       isolatedModules: ISOLATED_MODULES,
       diagnostics: false
     }
-  }
+  },
+  coverageReporters: ['json', 'lcov', 'text', 'clover', 'html'],
+  coveragePathIgnorePatterns: ['/node_modules/'],
+  coverageDirectory: 'results/coverage'
 }
 
 const localConfPath = `${__dirname}/jest.config.local.js`

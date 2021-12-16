@@ -1,5 +1,8 @@
 // FROM UPKEEP TEMPLATE
 module.exports = {
   ...require('../../jest.config'),
-  testMatch: ['<rootDir>/test/jest/**/*.test.[jt]s?(x)']
+  testMatch: [
+    '<rootDir>/test/jest/**/*.test.[jt]s?(x)',
+    '<rootDir>/src/**/*.test.[jt]s?(x)'
+  ]
 }

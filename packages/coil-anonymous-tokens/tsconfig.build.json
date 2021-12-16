@@ -10,6 +10,9 @@
   "include": [
     "src"
   ],
+  "exclude": [
+    "**/*.test.ts"
+  ],
   "references": [
     {
       "path": "../coil-privacypass-sjcl/tsconfig.build.json"

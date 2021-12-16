@@ -172,7 +172,8 @@ function upKeepTypeScriptBuildConfig(subPackage: LernaListItem) {
       tsBuildInfoFile: './build/tsconfig.build.tsbuildinfo',
       rootDir: 'src'
     },
-    include: ['src']
+    include: ['src'],
+    exclude: ['**/*.test.ts']
   }
   if (subPackage.dependencies.length) {
     tsconfig.references = subPackage.dependencies.map(li => {

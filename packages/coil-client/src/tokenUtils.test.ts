@@ -2,7 +2,7 @@ import assert from 'assert'
 
 import { CoilTokenUtils, DecodedToken, decodeToken } from '@coil/client'
 
-import { testToken } from '../fixtures/testToken'
+import { testToken } from '../test/fixtures/testToken'
 
 /**
  * Use JSON.{stringify,parse} instead of actually creating jwts

@@ -10,6 +10,9 @@
   "include": [
     "src"
   ],
+  "exclude": [
+    "**/*.test.ts"
+  ],
   "references": [
     {
       "path": "../coil-webpack-utils/tsconfig.build.json"
