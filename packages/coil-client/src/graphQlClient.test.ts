@@ -60,15 +60,15 @@ describe('GraphQlClient#login', () => {
           token
         }
 
-  whoami {
-    
-    id
-    fullName
-    shortName
-    email
-    profilePicture
-    customerId
-    canTip
+        whoami {
+          
+          id
+          fullName
+          shortName
+          email
+          profilePicture
+          customerId
+          canTip
 
           subscription {
             active
@@ -82,6 +82,7 @@ describe('GraphQlClient#login', () => {
           }
 
           tipping {
+            lastTippedAmount
             limitRemaining
           }
 
