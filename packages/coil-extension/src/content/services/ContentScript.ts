@@ -44,6 +44,8 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 @injectable()
 export class ContentScript {
   private paused = false
+  private tagManager!: MonetizationTagManager
+
   constructor(
     private storage: Storage,
     private window: Window,
@@ -96,6 +98,7 @@ export class ContentScript {
       }
     )
 
+    this.tagManager = tagManager
     // // Scan for WM tags when page is interactive
     tagManager.startWhenDocumentReady()
 
@@ -275,7 +278,10 @@ export class ContentScript {
         this.paused = true
         // TODO:WM2
         const requestId = this.monetization.getMonetizationRequest()?.requestId
-        const requestIds = requestId ? [requestId] : []
+        const requestIds = (requestId ? [requestId] : []).concat(
+          this.tagManager.linkTags()
+        )
+
         if (requestIds.length) {
           const pause: PauseWebMonetization = {
             command: 'pauseWebMonetization',
@@ -290,13 +296,16 @@ export class ContentScript {
         debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
         const requestId = this.monetization.getMonetizationRequest()?.requestId
+        const requestIds = (requestId ? [requestId] : []).concat(
+          this.tagManager.linkTags()
+        )
         //TODO:WM2
-        if (requestId) {
+        if (requestIds.length) {
           const resume: ResumeWebMonetization = {
             command: 'resumeWebMonetization',
             data: {
               // TODO:WM2
-              requestIds: [requestId]
+              requestIds
             }
           }
           runtime.sendMessage(resume)

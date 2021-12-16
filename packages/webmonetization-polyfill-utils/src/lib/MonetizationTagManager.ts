@@ -83,6 +83,10 @@ export class MonetizationTagManager {
     }
   }
 
+  linkTags(): string[] {
+    return Array.from(this.linkTagsById.keys())
+  }
+
   isLinkTag(id: string) {
     return Boolean(this.linkTagsById.has(id))
   }
