@@ -14,40 +14,46 @@ export class StreamAssociationsWM2 {
     [streamId: string]: FrameSpec
   } = {}
 
-  getTabStreams(tabId: number) {
-    return this.tabsToFramesToStreams[tabId]
+  getTabStreams(tabId: number): string[] {
+    return Object.values(this.tabsToFramesToStreams[tabId] ?? {}).reduce(
+      (accum, set) => {
+        set.forEach(v => accum.push(v))
+        return accum
+      },
+      [] as string[]
+    )
   }
 
-  clearTabStreams(tabId: number) {
+  clearTabStreams(tabId: number): void {
     delete this.tabsToFramesToStreams[tabId]
   }
 
-  clearFrame(streamId: string) {
+  clearStreamFrame(streamId: string): void {
     delete this.streamsToFrames[streamId]
   }
 
-  getFrame(streamId: string) {
+  getStreamFrame(streamId: string): FrameSpec {
     return this.streamsToFrames[streamId]
   }
 
-  setFrame(streamId: string, frame: FrameSpec) {
+  setStreamFrame(streamId: string, frame: FrameSpec): void {
     this.streamsToFrames[streamId] = frame
   }
 
-  clearStreams({ tabId, frameId }: FrameSpec) {
+  clearStreams({ tabId, frameId }: FrameSpec): void {
     const tabsToFramesToStream = this.tabsToFramesToStreams[tabId]
     if (tabsToFramesToStream) {
       delete tabsToFramesToStream[frameId]
     }
   }
 
-  getStreams({ tabId, frameId }: FrameSpec) {
-    return this.tabsToFramesToStreams[tabId]
-      ? this.tabsToFramesToStreams[tabId][frameId]
-      : undefined
+  getStreams({ tabId, frameId }: FrameSpec): string[] {
+    return Array.from(
+      this.tabsToFramesToStreams[tabId]?.[frameId]?.values() ?? []
+    )
   }
 
-  addStreamId({ tabId, frameId }: FrameSpec, streamId: string) {
+  addStreamId({ tabId, frameId }: FrameSpec, streamId: string): void {
     const ensured = (this.tabsToFramesToStreams[tabId] ??= {})
     ensured[frameId] ??= new Set<string>()
     ensured[frameId].add(streamId)
