@@ -173,7 +173,7 @@ function upKeepTypeScriptBuildConfig(subPackage: LernaListItem) {
       rootDir: 'src'
     },
     include: ['src'],
-    exclude: ['**/*.test.ts']
+    exclude: ['src/**/*.test.ts', 'src/**/*.test.tsx']
   }
   if (subPackage.dependencies.length) {
     tsconfig.references = subPackage.dependencies.map(li => {

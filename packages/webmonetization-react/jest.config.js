@@ -2,7 +2,7 @@
 module.exports = {
   ...require('../../jest.config'),
   testMatch: [
-    '<rootDir>/test/jest/**/*.test.[jt]s?(x)',
-    '<rootDir>/src/**/*.test.[jt]s?(x)'
+    '<rootDir>/test/jest/**/*.test.ts?(x)',
+    '<rootDir>/src/**/*.test.ts?(x)'
   ]
 }
