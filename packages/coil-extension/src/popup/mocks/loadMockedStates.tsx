@@ -49,6 +49,43 @@ const tipUser = {
     inTippingBeta: true,
     minimumTipLimit: 1,
     remainingDailyAmount: 100,
+    lastTippedAmountUSD: 2,
+    hotkeyTipAmounts: [5, 10, 50]
+  },
+  paymentMethods: [
+    {
+      id: 'test-id-stripe',
+      type: 'stripe',
+      details: {
+        last4: '5678',
+        brandCode: 'MasterCard'
+      }
+    },
+    {
+      id: 'test-id-tip',
+      type: 'tipCredit',
+      details: null
+    }
+  ]
+}
+
+const tipUserNewUi = {
+  newUi: true,
+  id: 'cjmbxifo0leaf0711ilgecwdb',
+  canTip: true,
+  fullName: 'Mike Will',
+  shortName: 'mwill',
+  email: 'mock-email@coil.com',
+  profilePicture: 'https://cdn.coil.com/images/msPiV_0ZS928Fc-HJcdVAw.jpg',
+  customerId: 'cus_EmQtvoQVyJgZ75',
+  subscription: { active: true },
+  invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
+  currencyPreferences: { code: 'USD', scale: 9 },
+  tipSettings: {
+    inTippingBeta: true,
+    minimumTipLimit: 1,
+    remainingDailyAmount: 100,
+    lastTippedAmountUSD: 2,
     hotkeyTipAmounts: [5, 10, 50]
   },
   paymentMethods: [
@@ -103,6 +140,15 @@ const userCanTip = mockState({
   coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
   monetizedTotal: 10854,
   user: tipUser,
+  validToken: true,
+  adapted: false
+})
+
+const userCanTipNewUi = mockState({
+  monetized: true,
+  coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
+  monetizedTotal: 10854,
+  user: tipUserNewUi,
   validToken: true,
   adapted: false
 })
@@ -169,6 +215,7 @@ const aliceUnsubscribed = mockState({
 })
 
 const MOCK_STATES = [
+  { name: 'New Extension UI', state: userCanTipNewUi },
   { name: 'Paying Coil Article', state: payingCoilArticle },
   { name: 'Not Supported', state: notSupported },
   { name: 'Tipping', state: userCanTip },

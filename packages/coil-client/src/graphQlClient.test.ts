@@ -64,7 +64,9 @@ describe('GraphQlClient#login', () => {
           
           id
           fullName
+          shortName
           email
+          profilePicture
           customerId
           canTip
 
@@ -80,6 +82,7 @@ describe('GraphQlClient#login', () => {
           }
 
           tipping {
+            lastTippedAmount
             limitRemaining
           }
 

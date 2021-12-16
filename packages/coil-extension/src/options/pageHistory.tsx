@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => {
 })
 
 const PageHistoryH4 = styled(Typography)(({ theme }) => ({
-  margin: `${theme.spacing(2)}px 0`
+  margin: `${theme.spacing(2)} 0`
 }))
 
 const MobileHeading = styled(Typography)({

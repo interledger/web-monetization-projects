@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { useStore } from '../../context/storeContext'
+import { NewExtension } from '../../NewExtension'
 
 import { LoggedOutView } from './LoggedOutView'
 import { UnsubscribedView } from './UnsubscribedView'
@@ -15,6 +16,12 @@ export function ViewRouter(): React.ReactElement {
 
   //* Moved all the render logic from Status, PaidViews, CoilViews, and MonetizedPage here to Index
   //* Not sure how I feel about the readability vs the original method.
+
+  // Testing the new View structure
+  // The NewExtension will replace ViewRouter in index.tsx -> should change name to App or Extension
+  if (user?.newUi) {
+    return <NewExtension />
+  }
 
   //
   // Invalid user views
