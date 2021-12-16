@@ -9,6 +9,7 @@ Thumbs.db
 *.tsbuildinfo
 package-lock.json
 coverage
+results
 yarn-error.log
 
 # Clean out stuff
