@@ -4,8 +4,9 @@ import { whenDocumentReady } from './whenDocumentReady'
 import { CustomError } from './CustomError'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
-const debug = console.log.bind(console, 'MonetizationTagManager')
-//  (...args: unknown[]) => {}
+const debug =
+  // console.log.bind(console, 'MonetizationTagManager')
+  (...args: unknown[]) => {}
 
 export interface PaymentDetails {
   requestId: string
