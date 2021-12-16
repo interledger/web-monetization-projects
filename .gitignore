@@ -14,6 +14,7 @@ yarn-error.log
 # Clean out stuff
 packages/*/build
 packages/*/coverage
+packages/*/results
 packages/*/dist
 
 .eslintrc.local.js
