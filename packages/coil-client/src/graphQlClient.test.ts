@@ -6,7 +6,7 @@ import {
 } from '@coil/client'
 import fetch from 'node-fetch'
 
-import { testToken } from '../fixtures/testToken'
+import { testToken } from '../test/fixtures/testToken'
 
 describe('GraphQlClient#login', () => {
   it('should return a token via login method', async () => {
@@ -55,36 +55,36 @@ describe('GraphQlClient#login', () => {
     // This test seems pointless, but we had issues with auto generated
     // circular imports causing the whoami selection here to be `undefined`
     expect(queryTokenQuery).toMatchInlineSnapshot(`
-"{
-  refreshToken {
-    token
-  }
+      "{
+        refreshToken {
+          token
+        }
 
-  whoami {
-    
-    id
-    fullName
-    email
-    customerId
-    canTip
+        whoami {
+          
+          id
+          fullName
+          email
+          customerId
+          canTip
 
-    subscription {
-      active
-      endDate
-      trialEndDate
-    }
+          subscription {
+            active
+            endDate
+            trialEndDate
+          }
 
-    currencyPreferences {
-      code
-      scale
-    }
+          currencyPreferences {
+            code
+            scale
+          }
 
-    tipping {
-      limitRemaining
-    }
+          tipping {
+            limitRemaining
+          }
 
-  }
-}"
-`)
+        }
+      }"
+    `)
   })
 })

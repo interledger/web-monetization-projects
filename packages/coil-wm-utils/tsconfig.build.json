@@ -10,6 +10,10 @@
   "include": [
     "src"
   ],
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ],
   "references": [
     {
       "path": "../dier-makr-annotations/tsconfig.build.json"

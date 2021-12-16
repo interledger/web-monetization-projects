@@ -1,4 +1,4 @@
-import { formatAmount, parseAmount } from '../../src/util/currencyFormatting'
+import { formatAmount, parseAmount } from './currencyFormatting'
 
 describe('Currency utils', () => {
   it('should parse an amount and reformat to same string', () => {

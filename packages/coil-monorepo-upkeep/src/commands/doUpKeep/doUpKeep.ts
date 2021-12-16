@@ -136,6 +136,8 @@ function setCommonScriptsAndMergeOverrides(
       upkeep: 'cd ../.. && yarn upkeep',
       'lint:all': "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
+      'test:e2e': 'yarn test --config jest-e2e.config.js',
+      'test:e2e:coverage': 'yarn test:coverage --config jest-e2e.config.js',
       test: 'jest --passWithNoTests',
       'test:coverage': 'yarn test --verbose --coverage'
     }
@@ -170,7 +172,8 @@ function upKeepTypeScriptBuildConfig(subPackage: LernaListItem) {
       tsBuildInfoFile: './build/tsconfig.build.tsbuildinfo',
       rootDir: 'src'
     },
-    include: ['src']
+    include: ['src'],
+    exclude: ['src/**/*.test.ts', 'src/**/*.test.tsx']
   }
   if (subPackage.dependencies.length) {
     tsconfig.references = subPackage.dependencies.map(li => {

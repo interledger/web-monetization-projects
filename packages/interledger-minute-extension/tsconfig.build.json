@@ -10,6 +10,10 @@
   "include": [
     "src"
   ],
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ],
   "references": [
     {
       "path": "../coil-polyfill-utils/tsconfig.build.json"

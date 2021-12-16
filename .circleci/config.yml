@@ -17,6 +17,10 @@ references:
     matrix:
       parameters:
         node-version: [ "14", "16" ]
+  just-one-node-version-matrix: &just-latest-lts-node-version
+    matrix:
+      parameters:
+        node-version: [ "16" ]
 
 jobs:
   # Run Linting
@@ -116,6 +120,7 @@ jobs:
             yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
             xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
+     # Firefox puppeteer was not working at one point and it's on the TODO to reinstate
       # - run:
       #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
       #     command: |
@@ -128,7 +133,16 @@ jobs:
       #       xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
       # - *save_cache
 
+  # There have been and likely will be again issues that only surface in transpileOnly mode,
+  # so we test this specifically and separately.
   coil-extension-puppeteer-transpile-only:
+    # It may be overkill, but the jobs are run in parallel, so it doesn't generally slow
+    # anyone down and sometimes provides extra data points. There have been regressions
+    # introduced in dependencies that only show up on particular versions of node.
+
+    # A shameful thing to say, but when tests are flakey (as e2e tests are bound to be
+    # when they touch live servers), it's helpful to have multiple runs for more data points
+    # so the node matrix is helpful again.
     <<: *parameterized-node-version
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
@@ -170,6 +184,9 @@ jobs:
             yarn build:ts --verbose
       - *save_cache
 
+  # This builds the root tsconfig that the IDE uses and the tests are run under.
+  # Make sure there are no issues here that somehow other jobs haven't captured.
+  # This has been a problem in the past and could be again.
   build-root-tsconfig:
     <<: *parameterized-node-version
     steps:
@@ -183,7 +200,14 @@ jobs:
       - *save_cache
 
   jest-all:
-    <<: *parameterized-node-version
+    parameters:
+      command:
+        type: string
+        default: test:coverage
+      node-version:
+        type: string
+    docker:
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     resource_class: large
     steps:
       - run:
@@ -197,19 +221,26 @@ jobs:
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            xvfb-run -a yarn test:coverage
+            xvfb-run -a yarn << parameters.command >>
       - run:
           name: Run jest from build
           command: |
             export DEBUG='coil*'
-            yarn clean:build
+            yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
-            xvfb-run -a yarn test:coverage
+            xvfb-run -a yarn << parameters.command >>
       - *save_cache
 
   jest-lerna-all:
-    <<: *parameterized-node-version
+    parameters:
+      command:
+        type: string
+        default: test:coverage
+      node-version:
+        type: string
+    docker:
+      - image: circleci/node:<< parameters.node-version >>-buster-browsers
     resource_class: xlarge
     steps:
       - checkout
@@ -219,14 +250,14 @@ jobs:
           name: Lerna run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            xvfb-run -a yarn lerna run --stream test:coverage
+            xvfb-run -a yarn lerna run --stream << parameters.command >>
       - run:
           name: Lerna run jest from build
           command: |
-            yarn clean:build
+            yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
-            xvfb-run -a yarn lerna run --stream test:coverage
+            xvfb-run -a yarn lerna run --stream << parameters.command >>
       - *save_cache
 
   packages-build-scripts:
@@ -281,7 +312,7 @@ workflows:
       - build-all-package-references-typescript:
           <<: *node-version-matrix
       - build-root-tsconfig:
-          <<: *node-version-matrix
+          <<: *just-latest-lts-node-version
       - coil-extension-package:
           <<: *node-version-matrix
       - packages-build-scripts:
@@ -305,14 +336,21 @@ workflows:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          <<: *node-version-matrix
+          matrix:
+            parameters:
+              # TODO: DRY it up
+              node-version: [ "14", "16" ]
+              command: [ "test:coverage", "test:e2e:coverage" ]
       - jest-lerna-all:
           context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
-          <<: *node-version-matrix
+          matrix:
+            parameters:
+              node-version: [ "14", "16" ]
+              command: [ "test:coverage", "test:e2e:coverage" ]
       - coil-extension-puppeteer:
           context: web-monetization-tests
           filters:
