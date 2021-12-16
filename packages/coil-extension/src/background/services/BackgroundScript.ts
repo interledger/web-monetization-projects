@@ -928,8 +928,12 @@ export class BackgroundScript {
     }
   }
 
-  private doPauseWebMonetization(frame: FrameSpec, requestId?: string[]) {
-    const ids = requestId ?? this.assoc.getStreams(frame)
+  private doPauseWebMonetization(frame: FrameSpec, requestIds?: string[]) {
+    this.activeTabLogger.log(
+      'doPause ' + JSON.stringify({ frame, requestIds }),
+      frame
+    )
+    const ids = requestIds ?? this.assoc.getStreams(frame)
     ids.forEach(id => {
       this.tabStates.logLastMonetizationCommand(frame, 'pause', id)
       this.log('pausing stream', id)
@@ -939,8 +943,12 @@ export class BackgroundScript {
     return true
   }
 
-  private doResumeWebMonetization(frame: FrameSpec, requestId?: string[]) {
-    const ids = requestId ?? this.assoc.getStreams(frame)
+  private doResumeWebMonetization(frame: FrameSpec, requestIds?: string[]) {
+    this.activeTabLogger.log(
+      'doResume ' + JSON.stringify({ frame, requestIds }),
+      frame
+    )
+    const ids = requestIds ?? this.assoc.getStreams(frame)
     ids.forEach(id => {
       this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
       this.log('resuming stream', ids)
