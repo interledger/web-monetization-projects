@@ -46,7 +46,14 @@ describe('StreamAssociations', () => {
     const tabStreams = assoc.getTabStreams(1)
     expect(tabStreams).toBeInstanceOf(Array)
     expect(tabStreams).toHaveLength(6)
-    expect(tabStreams).toEqual(['a', 'b', 'c', 'd', 'e', 'f'])
+    expect(tabStreams).toEqual([
+      ['a', frame],
+      ['b', frame],
+      ['c', frame],
+      ['d', frame1],
+      ['e', frame1],
+      ['f', frame2]
+    ])
   })
 
   it('should delete all frame associations after clearTabStreams', () => {
