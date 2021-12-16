@@ -31,7 +31,7 @@ export const wmPolyFillMinimal = `
       return 'Monetization'
     }
   }
-  
+
   document.monetization = new Monetization()
   // TODO: use coil-monetization-v1 and update content script that sends
   // the events
@@ -104,7 +104,7 @@ export const wmPolyFillMinimal = `
       const monetizationEvent = new MonetizationEvent('monetization', event.detail)
       event.target.dispatchEvent(monetizationEvent)
     }, {capture: true})
-    window.addEventListener('coil-onmonetization-v2-attr-changed', (event) => {
+    window.addEventListener('coil-onmonetization-attr-changed', (event) => {
       dbg('coil-onmonetization-attr-changed', event.detail.attribute)
       const { attribute } = event.detail
       if (attribute) {

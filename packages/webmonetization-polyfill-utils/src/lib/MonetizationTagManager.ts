@@ -4,7 +4,8 @@ import { whenDocumentReady } from './whenDocumentReady'
 import { CustomError } from './CustomError'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
-const debug = (...args: unknown[]) => {}
+const debug = console.log.bind(console, 'MonetizationTagManager')
+//  (...args: unknown[]) => {}
 
 export interface PaymentDetails {
   requestId: string
@@ -77,8 +78,13 @@ export class MonetizationTagManager {
     const ref = this.linkTagsById.get(id)
     const link = ref?.deref()
     if (link) {
+      // debug('dispatchLinkEventByLinkId', id, event)
       link.dispatchEvent(event)
     }
+  }
+
+  isLinkTag(id: string) {
+    return Boolean(this.linkTagsById.has(id))
   }
 
   constructor(
@@ -209,7 +215,7 @@ export class MonetizationTagManager {
       )
     }
     if (
-      (details.tagType === 'meta' || details.tagType === 'link') &&
+      details.tagType === 'meta' /*|| details.tagType === 'link'*/ &&
       this.monetizationTags.size + 1 > this.maxMetas
     ) {
       throw new Error(

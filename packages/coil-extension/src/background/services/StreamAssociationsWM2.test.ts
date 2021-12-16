@@ -14,6 +14,14 @@ describe('StreamAssociations', () => {
     expect(streams).toHaveLength(1)
   })
 
+  it('should set reverse association when adding stream id', () => {
+    const assoc = new StreamAssociationsWM2()
+    const streamA = 'a'
+    const frame = { tabId: 1, frameId: 0 }
+    assoc.addStreamId(frame, streamA)
+    expect(assoc.getStreamFrame(streamA)).toEqual(frame)
+  })
+
   it('getStreams should return an array view list of streams', () => {
     const assoc = new StreamAssociationsWM2()
     const frame = { tabId: 1, frameId: 0 }
@@ -39,6 +47,23 @@ describe('StreamAssociations', () => {
     expect(tabStreams).toBeInstanceOf(Array)
     expect(tabStreams).toHaveLength(6)
     expect(tabStreams).toEqual(['a', 'b', 'c', 'd', 'e', 'f'])
+  })
+
+  it('should delete all frame associations after clearTabStreams', () => {
+    const assoc = new StreamAssociationsWM2()
+    const frame = { tabId: 1, frameId: 0 }
+    const frame2 = { tabId: 1, frameId: 2 }
+
+    assoc.addStreamId(frame, 'a')
+    assoc.addStreamId(frame2, 'f')
+
+    expect(assoc.getStreamFrame('a')).toEqual(frame)
+    expect(assoc.getStreamFrame('f')).toEqual(frame2)
+
+    assoc.clearTabStreams(frame.tabId)
+
+    expect(assoc.getStreamFrame('a')).toBeUndefined()
+    expect(assoc.getStreamFrame('f')).toBeUndefined()
   })
 
   it('clearStreams should empty the internal store', () => {

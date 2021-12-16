@@ -58,8 +58,11 @@ export class ContentScript {
 
   handleMonetizationTag() {
     const startMonetization = async (details: PaymentDetails) => {
-      this.monetization.setMonetizationRequest({ ...details })
-      await this.doStartMonetization()
+      // TODO: WM2
+      if (details.tagType === 'meta') {
+        this.monetization.setMonetizationRequest({ ...details })
+      }
+      await this.doStartMonetization(details)
     }
 
     const stopMonetization = (details: PaymentDetails) => {
@@ -67,15 +70,19 @@ export class ContentScript {
         command: 'stopWebMonetization',
         data: details
       }
-      this.monetization.setState({
-        requestId: details.requestId,
-        state: 'stopped',
-        finalized: true
-      })
-      this.monetization.setMonetizationRequest(undefined)
+      // TODO: WM2
+      if (details.tagType === 'meta') {
+        this.monetization.setState({
+          requestId: details.requestId,
+          state: 'stopped',
+          finalized: true
+        })
+        this.monetization.setMonetizationRequest(undefined)
+      }
       this.runtime.sendMessage(request)
     }
 
+    //TODO:WM2 move this out of this damn closure
     const tagManager = new MonetizationTagManager(
       this.window,
       this.document,
@@ -114,11 +121,23 @@ export class ContentScript {
           data: { requestId, event }
         } = message
         tagManager.dispatchLinkEventByLinkId(requestId, new Event(event))
+      } else if (message.command === 'setMonetizationState') {
+        if (!tagManager.isLinkTag(message.data.requestId)) {
+          this.monetization.setState(message.data)
+        }
+      } else if (message.command === 'monetizationStart') {
+        debug('monetizationStart event')
+        if (!tagManager.isLinkTag(message.data.requestId)) {
+          this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
+            message.data
+          )
+        }
       }
     })
   }
 
-  private async doStartMonetization() {
+  // TODO: WM2
+  private async doStartMonetization(request: PaymentDetails) {
     if (this.frames.isIFrame) {
       const allowed = await new Promise<boolean>(resolve => {
         const message: CheckIFrameIsAllowedFromIFrameContentScript = {
@@ -138,9 +157,7 @@ export class ContentScript {
         return
       }
     }
-    this.runtime.sendMessage(
-      startWebMonetizationMessage(this.monetization.getMonetizationRequest())
-    )
+    this.runtime.sendMessage(startWebMonetizationMessage(request))
   }
 
   setRuntimeMessageListener() {
@@ -158,8 +175,6 @@ export class ContentScript {
             debug('checkAdaptedContent without from')
           }
           void this.adaptedContent.checkAdaptedContent()
-        } else if (request.command === 'setMonetizationState') {
-          this.monetization.setState(request.data)
         } else if (request.command === 'monetizationProgress') {
           const detail: MonetizationProgressEvent['detail'] = {
             amount: request.data.amount,
@@ -171,11 +186,6 @@ export class ContentScript {
           }
           this.monetization.dispatchMonetizationProgressEvent(detail)
           this.monetization
-        } else if (request.command === 'monetizationStart') {
-          debug('monetizationStart event')
-          this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
-            request.data
-          )
         } else if (request.command === 'checkIFrameIsAllowedFromBackground') {
           this.frames
             .checkIfIframeIsAllowedFromBackground(request.data.frame)
@@ -263,24 +273,34 @@ export class ContentScript {
     setWatch({
       pause: (reason: string) => {
         this.paused = true
-        const pause: PauseWebMonetization = {
-          command: 'pauseWebMonetization',
-          data: {
-            requestId: this.monetization.getMonetizationRequest()?.requestId
+        // TODO:WM2
+        const requestId = this.monetization.getMonetizationRequest()?.requestId
+        const requestIds = requestId ? [requestId] : []
+        if (requestIds.length) {
+          const pause: PauseWebMonetization = {
+            command: 'pauseWebMonetization',
+            data: {
+              requestIds
+            }
           }
+          runtime.sendMessage(pause)
         }
-        runtime.sendMessage(pause)
       },
       resume: (reason: string) => {
         debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
-        const resume: ResumeWebMonetization = {
-          command: 'resumeWebMonetization',
-          data: {
-            requestId: this.monetization.getMonetizationRequest()?.requestId
+        const requestId = this.monetization.getMonetizationRequest()?.requestId
+        //TODO:WM2
+        if (requestId) {
+          const resume: ResumeWebMonetization = {
+            command: 'resumeWebMonetization',
+            data: {
+              // TODO:WM2
+              requestIds: [requestId]
+            }
           }
+          runtime.sendMessage(resume)
         }
-        runtime.sendMessage(resume)
       }
     })
   }
@@ -291,12 +311,13 @@ export class ContentScript {
     if (allowed) {
       if (monetizationRequest && this.monetization.getState() === 'stopped') {
         // The pause needs to be done after the async allow checks and start
-        this.doStartMonetization().then(() => {
+        this.doStartMonetization(monetizationRequest).then(() => {
           if (this.paused) {
             const pause: PauseWebMonetization = {
               command: 'pauseWebMonetization',
               data: {
-                requestId: monetizationRequest.requestId
+                // TODO:WM2
+                requestIds: [monetizationRequest.requestId]
               }
             }
             this.runtime.sendMessage(pause)
