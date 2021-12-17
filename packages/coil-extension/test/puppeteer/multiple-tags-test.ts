@@ -1,6 +1,8 @@
 import * as cp from 'child_process'
 import * as pathMod from 'path'
+import process from 'process'
 
+import getPort from 'get-port'
 import {
   debug,
   initBrowserAndLoginFromEnv,
@@ -9,18 +11,23 @@ import {
 
 class Server {
   serverHandle?: cp.ChildProcess
-
   constructor(private cmd: string, private args: string[]) {}
 
   async start() {
     this.serverHandle = cp.spawn(this.cmd, this.args, { stdio: 'pipe' })
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       this.serverHandle?.stdout?.once('data', resolve)
+      this.serverHandle?.stderr?.once('data', err => reject(err.toString()))
     })
   }
 
+  get pid() {
+    return this.serverHandle?.pid
+  }
+
   stop() {
-    this.serverHandle?.kill()
+    // Kill it real dead with -9
+    this.serverHandle?.kill(9)
   }
 }
 
@@ -28,13 +35,33 @@ async function run() {
   const { context } = await initBrowserAndLoginFromEnv()
   debug('logged in')
   const fixturesDir = pathMod.resolve(__dirname, '../fixtures')
-  const server = new Server('yarn', ['http-server', fixturesDir, '-p', '4000'])
+  const port = await getPort()
+  debug('Starting server on port: ', port)
+  const server = new Server('yarn', [
+    'http-server',
+    fixturesDir,
+    '-p',
+    port.toString()
+  ])
+
+  const usingStaging = process.env.COIL_DOMAIN?.includes('staging')
+  const paymentPointer = usingStaging
+    ? 'ilp-sandbox.uphold.com/2mk2AXqH2aRq'
+    : 'ilp.uphold.com/gRa4mXFEMYrL'
+  const suffix = usingStaging ? '-staging' : ''
+
+  process.addListener('exit', async () => {
+    debug('Force killing http-server with pid=', server.pid)
+    await server.stop()
+  })
+
   await server.start()
+
   debug('server.started')
   let success = true
   const testUrls = [
-    'http://localhost:4000/multiple-tags-meta-first.html',
-    'http://localhost:4000/multiple-tags-link-first.html'
+    `http://localhost:${port}/multiple-tags-meta-first${suffix}.html`,
+    `http://localhost:${port}/multiple-tags-link-first${suffix}.html`
   ]
   for (const url of testUrls) {
     debug(`testing url ${url}`)
@@ -63,11 +90,16 @@ async function run() {
     debug('initialEvents', initialEvents)
     debug('trailingEventsSet', trailingEventsSet)
 
+    const paymentPointerCorrect =
+      results.details.events[0].event.detail.paymentPointer.endsWith(
+        paymentPointer
+      )
+
+    debug({ paymentPointerCorrect })
+
     success =
       success &&
-      results.details.events[0].event.detail.paymentPointer.endsWith(
-        'ilp.uphold.com/gRa4mXFEMYrL'
-      ) &&
+      paymentPointerCorrect &&
       initialEvents ===
         'monetizationpending, monetizationstart, monetizationprogress' &&
       (trailingEventsSet === 'monetizationprogress' ||
@@ -81,6 +113,7 @@ async function run() {
   }
 
   await server.stop()
+  debug({ success })
   process.exit(success ? 0 : 1)
 }
 
