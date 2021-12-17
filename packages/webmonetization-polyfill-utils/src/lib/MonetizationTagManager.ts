@@ -84,7 +84,7 @@ export class MonetizationTagManager {
     }
   }
 
-  linkTags(): string[] {
+  linkTagIds(): string[] {
     return Array.from(this.linkTagsById.keys())
   }
 

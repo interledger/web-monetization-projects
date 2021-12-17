@@ -279,7 +279,7 @@ export class ContentScript {
         // TODO:WM2
         const requestId = this.monetization.getMonetizationRequest()?.requestId
         const requestIds = (requestId ? [requestId] : []).concat(
-          this.tagManager.linkTags()
+          this.tagManager.linkTagIds()
         )
 
         if (requestIds.length) {
@@ -297,7 +297,7 @@ export class ContentScript {
         this.paused = false
         const requestId = this.monetization.getMonetizationRequest()?.requestId
         const requestIds = (requestId ? [requestId] : []).concat(
-          this.tagManager.linkTags()
+          this.tagManager.linkTagIds()
         )
         //TODO:WM2
         if (requestIds.length) {
