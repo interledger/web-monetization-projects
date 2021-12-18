@@ -47,6 +47,7 @@ export async function initCoil({
     await timeout(100)
   } else {
     await page.goto(`${COIL_DOMAIN}/login`)
+    await page.bringToFront()
 
     const loginSelector = '[data-cy="login-email"]'
     const passwordSelector = '[data-cy="login-password"]'
