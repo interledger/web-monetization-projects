@@ -90,7 +90,7 @@
     "@types/debug": "4.1.7",
     "@types/filesystem": "0.0.32",
     "@types/firefox": "0.0.31",
-    "@types/get-port": "^4.2.0",
+    "@types/get-port": "4.2.0",
     "@types/har-format": "1.2.8",
     "@types/jest": "27.0.3",
     "@types/jsonwebtoken": "8.5.6",
