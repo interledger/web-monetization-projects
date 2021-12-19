@@ -3201,7 +3201,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/get-port", "npm:4.2.0"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:14.18.0"],
-            ["@types/tmp", "npm:0.2.2"],
+            ["@types/tmp", "npm:0.2.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.7.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.7.0"],
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
@@ -6377,10 +6377,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/tmp", [
-        ["npm:0.2.2", {
-          "packageLocation": "./.yarn/cache/@types-tmp-npm-0.2.2-bd634f6e9f-e69613e93d.zip/node_modules/@types/tmp/",
+        ["npm:0.2.3", {
+          "packageLocation": "./.yarn/cache/@types-tmp-npm-0.2.3-ca9c2eba00-0ca45e99b3.zip/node_modules/@types/tmp/",
           "packageDependencies": [
-            ["@types/tmp", "npm:0.2.2"]
+            ["@types/tmp", "npm:0.2.3"]
           ],
           "linkType": "HARD",
         }]
