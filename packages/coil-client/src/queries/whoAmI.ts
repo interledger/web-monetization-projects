@@ -8,7 +8,9 @@ export interface WhoAmIData {
 export const whoamiSelection = `
     id
     fullName
+    shortName
     email
+    profilePicture
     customerId
     canTip
 
@@ -24,6 +26,7 @@ export const whoamiSelection = `
     }
 
     tipping {
+      lastTippedAmount
       limitRemaining
     }
 `

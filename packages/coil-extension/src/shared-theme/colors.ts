@@ -4,6 +4,7 @@ export const Colors = {
   Grey89: '#E3E3E3',
   Grey99: '#FCFCFC',
   Grey100: '#DDE0E5',
+  Grey200: '#C1C5CD',
   Grey500: '#A4A8B1',
   // TODO: Grey500 is different to the old Grey500
   // https://www.figma.com/file/QBDNeSLdmN52wreAJlgdiKOC/Extension?node-id=538%3A59

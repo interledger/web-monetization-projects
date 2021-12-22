@@ -6,16 +6,6 @@ import { useHost } from '../context/popupHostContext'
 import { StatusTypography } from './util/StatusTypography'
 import { StatusButton } from './StatusButton'
 
-const UnverifiedFooter = styled('div')(({ theme }) => ({
-  paddingRight: `${theme.spacing(2)}px`,
-  paddingLeft: `${theme.spacing(2)}px`,
-  position: 'absolute',
-  bottom: `${theme.spacing(4)}vh`,
-  left: 0,
-  right: 0,
-  margin: 'auto'
-}))
-
 const NoBreak = styled('span')({
   display: 'inline-block',
   whiteSpace: 'nowrap'

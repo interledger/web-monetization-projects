@@ -1,7 +1,10 @@
 export interface User {
+  newUi?: boolean // todo: remove this when testing the new ui is done
   id: string
   fullName: string
+  shortName?: string
   email: string
+  profilePicture?: string
   customerId?: string
   canTip?: boolean
   subscription?: {
@@ -17,6 +20,7 @@ export interface User {
     scale: number
   }
   tipping?: {
+    lastTippedAmount: string
     limitRemaining: string
   }
   minimumTipLimit?: number
@@ -24,6 +28,7 @@ export interface User {
     inTippingBeta?: boolean
     minimumTipLimit: number
     remainingDailyAmount: number
+    lastTippedAmountUSD: number
     hotkeyTipAmounts: Array<number>
   }
   paymentMethods?: Array<IUserPaymentMethod>
