@@ -5,7 +5,7 @@ import * as tokens from '../../types/tokens'
 import { timeoutRejecting } from '../../util/timeout'
 
 /**
- * See {@link handleCoilTokenMessage}
+ * See {@link ContentAuthService#handleCoilTokenMessage}
  *
  * Refused to display 'https://coil.com/healthz' in a frame because an
  * ancestor violates the following Content Security Policy directive:

@@ -27,6 +27,7 @@ const progressLoggingCode = createBindingCode('monetizationprogress')
 export const wmPolyFillMinimal = `
   class Monetization extends EventTarget {
     state = 'stopped'
+
     get [Symbol.toStringTag]() {
       return 'Monetization'
     }
@@ -82,10 +83,33 @@ export const wmPolyFillMinimal = `
         }
       }
     }
+
+    const supportsOriginal = DOMTokenList.prototype.supports
+    const supportsMonetization = Symbol.for('link-supports-monetization')
+    DOMTokenList.prototype.supports = function(token) {
+      if (this[supportsMonetization] && token === 'monetization') {
+        return true
+      } else {
+        return supportsOriginal.call(this, token)
+      }
+    }
+
+    const relList = Object.getOwnPropertyDescriptor(HTMLLinkElement.prototype, 'relList')
+    const relListGetOriginal = relList.get
+
+    relList.get = function() {
+      const val = relListGetOriginal.call(this)
+      val[supportsMonetization] = true
+      return val
+    }
+
+    Object.defineProperty(HTMLLinkElement.prototype, 'relList', relList)
     Object.defineProperty(HTMLElement.prototype, 'onmonetization', attributes)
     Object.defineProperty(Window.prototype, 'onmonetization', attributes)
     dbg('setonmonetization property end')
     dbg('add coil-onmonetization-v2-attr-changed handler start')
+
+    //
     class MonetizationEvent extends Event {
       constructor(type, details) {
         super('monetization', { bubbles: true })
@@ -103,7 +127,7 @@ export const wmPolyFillMinimal = `
       )
       const monetizationEvent = new MonetizationEvent('monetization', event.detail)
       event.target.dispatchEvent(monetizationEvent)
-    }, {capture: true})
+    }, { capture: true })
     window.addEventListener('coil-onmonetization-attr-changed', (event) => {
       dbg('coil-onmonetization-attr-changed', event.detail.attribute)
       const { attribute } = event.detail
@@ -114,7 +138,7 @@ export const wmPolyFillMinimal = `
       } else {
         event.target.onmonetization = null
       }
-    }, {capture: true})
+    }, { capture: true })
     dbg('add coil-onmonetization-v2-attr-changed handler end')
   }
 `
