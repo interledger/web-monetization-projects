@@ -256,9 +256,7 @@ export class MonetizationTagManager {
     const entry = this.getEntry(meta)
     entry.observer.disconnect()
     this.monetizationTags.delete(meta)
-    if (entry.details.tagType === 'link') {
-      this.linkTagsById.delete(entry.details.requestId)
-    }
+    this.cleanupLink(entry.details)
     this.callback({ started: null, stopped: entry.details })
   }
 
@@ -273,9 +271,16 @@ export class MonetizationTagManager {
   private onChangedPaymentEndpoint(meta: MonetizationTag) {
     const entry = this.getEntry(meta)
     const stopped = entry.details
+    this.cleanupLink(stopped)
     const started = this.getPaymentDetails(meta)
     entry.details = started
     this.callback({ started, stopped })
+  }
+
+  private cleanupLink(stopped: PaymentDetails) {
+    if (stopped.tagType === 'link') {
+      this.linkTagsById.delete(stopped.requestId)
+    }
   }
 
   private getPaymentDetails(meta: MonetizationTag): PaymentDetails {
