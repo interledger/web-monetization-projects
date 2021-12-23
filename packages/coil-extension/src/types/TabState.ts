@@ -16,10 +16,6 @@ export interface FrameState {
       }
     | undefined
     | null
-  lastMonetization: {
-    requestId: string | null
-    command: MonetizationCommand | null
-  }
 }
 
 export interface TabState {

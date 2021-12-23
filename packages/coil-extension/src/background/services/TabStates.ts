@@ -67,11 +67,7 @@ export class TabStates {
     return {
       monetized: false,
       adapted: false,
-      total: 0,
-      lastMonetization: {
-        requestId: null,
-        command: null
-      }
+      total: 0
     }
   }
 
@@ -141,7 +137,7 @@ export class TabStates {
         this.getFrameOrDefault(frame)[`requestId-lastCommand-${details}`]
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const last = maybeNull!
-      details = last.details
+      details = last?.details ?? { requestId: details }
     }
 
     this.setFrame(frame, {

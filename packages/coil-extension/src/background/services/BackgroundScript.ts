@@ -736,11 +736,9 @@ export class BackgroundScript {
     // out a monetization tag.
     // TODO: WM2
     const WM2 = request.data.tagType === 'link'
-    if (
-      !WM2 &&
-      this.tabStates.getFrameOrDefault(frame).lastMonetization.requestId !==
-        requestId
-    ) {
+
+    const frameOrDefault = this.tabStates.getFrameOrDefault(frame)
+    if (!WM2 && !frameOrDefault[`requestId-lastCommand-${requestId}`]) {
       // The pending message (if sent) will have been ignored on the content
       // script side in this case too, so there's no need to send a stop, as
       // will already have been stopped (for that id).
