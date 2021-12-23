@@ -101,42 +101,6 @@ export class ContentScript {
     this.tagManager = tagManager
     // // Scan for WM tags when page is interactive
     tagManager.startWhenDocumentReady()
-
-    this.runtime.onMessage.addListener((message: ToContentMessage) => {
-      if (message.command === 'monetizationProgress') {
-        const data = message.data
-        tagManager.dispatchLinkEventByLinkId(
-          data.requestId,
-          new CustomEvent('coil-monetization', {
-            bubbles: true,
-            cancelable: false,
-            detail: {
-              paymentPointer: data.paymentPointer,
-              receipt: data.receipt,
-              assetScale: data.assetScale,
-              assetCode: data.assetCode,
-              amount: data.amount
-            }
-          })
-        )
-      } else if (message.command === 'spspRequestEvent') {
-        const {
-          data: { requestId, event }
-        } = message
-        tagManager.dispatchLinkEventByLinkId(requestId, new Event(event))
-      } else if (message.command === 'setMonetizationState') {
-        if (!tagManager.isLinkTag(message.data.requestId)) {
-          this.monetization.setState(message.data)
-        }
-      } else if (message.command === 'monetizationStart') {
-        debug('monetizationStart event')
-        if (!tagManager.isLinkTag(message.data.requestId)) {
-          this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
-            message.data
-          )
-        }
-      }
-    })
   }
 
   // TODO: WM2
@@ -188,7 +152,21 @@ export class ContentScript {
             requestId: request.data.requestId
           }
           this.monetization.dispatchMonetizationProgressEvent(detail)
-          this.monetization
+          const data = request.data
+          this.tagManager.dispatchLinkEventByLinkId(
+            data.requestId,
+            new CustomEvent('coil-monetization', {
+              bubbles: true,
+              cancelable: false,
+              detail: {
+                paymentPointer: data.paymentPointer,
+                receipt: data.receipt,
+                assetScale: data.assetScale,
+                assetCode: data.assetCode,
+                amount: data.amount
+              }
+            })
+          )
         } else if (request.command === 'checkIFrameIsAllowedFromBackground') {
           this.frames
             .checkIfIframeIsAllowedFromBackground(request.data.frame)
@@ -213,7 +191,24 @@ export class ContentScript {
           this.storage.removeItem('token')
         } else if (request.command === 'logInActiveTab') {
           debug('LOG FROM BG', request.data.log)
+        } else if (request.command === 'spspRequestEvent') {
+          const {
+            data: { requestId, event }
+          } = request
+          this.tagManager.dispatchLinkEventByLinkId(requestId, new Event(event))
+        } else if (request.command === 'setMonetizationState') {
+          if (!this.tagManager.isLinkTag(request.data.requestId)) {
+            this.monetization.setState(request.data)
+          }
+        } else if (request.command === 'monetizationStart') {
+          debug('monetizationStart event')
+          if (!this.tagManager.isLinkTag(request.data.requestId)) {
+            this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
+              request.data
+            )
+          }
         }
+
         // Don't need to return true here, not using sendResponse
         // https://developer.chrome.com/apps/runtime#event-onMessage
       }

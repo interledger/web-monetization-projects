@@ -1,3 +1,5 @@
+import { PaymentDetails } from '@webmonetization/polyfill-utils'
+
 import { PlayOrPauseState, StickyState } from './streamControls'
 
 export type MonetizationCommand = 'pause' | 'stop' | 'start' | 'resume'
@@ -7,6 +9,13 @@ export interface FrameState {
   monetized: boolean
   // Tracks the total amount of `source` money sent (not was received)
   total: number
+  [x: `requestId-lastCommand-${string}`]:
+    | {
+        command: MonetizationCommand
+        details: PaymentDetails
+      }
+    | undefined
+    | null
   lastMonetization: {
     requestId: string | null
     command: MonetizationCommand | null

@@ -1,4 +1,5 @@
 import { injectable } from 'inversify'
+import { PaymentDetails } from '@webmonetization/polyfill-utils'
 
 import { FrameState, MonetizationCommand, TabState } from '../../types/TabState'
 import { IconState } from '../../types/commands'
@@ -133,12 +134,20 @@ export class TabStates {
   logLastMonetizationCommand(
     frame: FrameSpec,
     command: MonetizationCommand,
-    requestId?: string
+    details: PaymentDetails | string
   ) {
+    if (typeof details === 'string') {
+      const maybeNull =
+        this.getFrameOrDefault(frame)[`requestId-lastCommand-${details}`]
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      const last = maybeNull!
+      details = last.details
+    }
+
     this.setFrame(frame, {
-      lastMonetization: {
-        requestId: requestId || null,
-        command
+      [`requestId-lastCommand-${details.requestId}`]: {
+        command,
+        details: details
       }
     })
   }

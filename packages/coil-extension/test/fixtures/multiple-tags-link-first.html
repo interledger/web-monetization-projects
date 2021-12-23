@@ -19,14 +19,14 @@
       established
     </p>
     <video id="1">
-      <link rel="monetization" href="https://ilp.uphold.com/gRa4mXFEMYrL" />
-    </video>
-    <video id="2">
       <link
-        onload="console.log('link loaded!')"
+        onload="console.log('onload', this, event)"
+        onmonetization="console.log('monetization', this, event)"
+        onerror="console.log('error', this, event)"
         rel="monetization"
         href="https://ilp.uphold.com/gRa4mXFEMYrL"
       />
     </video>
+    <video id="2"></video>
   </body>
 </html>

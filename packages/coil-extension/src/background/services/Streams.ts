@@ -63,6 +63,7 @@ export class Streams extends EventEmitter {
   closeStream(id: string) {
     if (this._streams[id]) {
       void this._streams[id].stop()
+      this.emit('close', id)
       this._streams[id].removeAllListeners()
       delete this._streams[id]
     }

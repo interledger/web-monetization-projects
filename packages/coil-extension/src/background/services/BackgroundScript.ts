@@ -21,7 +21,6 @@ import {
   ResumeWebMonetization,
   SetMonetizationState,
   SetStreamControls,
-  SPSPRequestEvent,
   StartWebMonetization,
   TipSent,
   ToBackgroundMessage
@@ -40,12 +39,11 @@ import { PopupBrowserAction } from './PopupBrowserAction'
 import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
-import { StreamAssociations } from './StreamAssociations'
 import { ActiveTabLogger } from './ActiveTabLogger'
+import { StreamAssociationsWM2 } from './StreamAssociationsWM2'
+import { SPSPStateWM2 } from './SPSPStateWM2'
 
 import MessageSender = chrome.runtime.MessageSender
-
-import { StreamAssociationsWM2 } from './StreamAssociationsWM2'
 
 @injectable()
 export class BackgroundScript {
@@ -53,6 +51,7 @@ export class BackgroundScript {
     private popup: PopupBrowserAction,
     private assoc: StreamAssociationsWM2,
     private streams: Streams,
+    private spspState: SPSPStateWM2,
     private tabStates: TabStates,
     private storage: StorageService,
     @inject(tokens.LocalStorageProxy)
@@ -102,7 +101,7 @@ export class BackgroundScript {
     this.setFramesOnRemovedListener()
     this.routeStreamsMoneyEventsToContentScript()
     this.handleStreamsAbortEvent()
-    this.handleStreamsSPSPEvents()
+    this.spspState.bindToStreamsEvents()
     this.popup.setDefaultInactive()
     this.framesService.monitor()
     this.bindOnInstalled()
@@ -318,7 +317,11 @@ export class BackgroundScript {
         }
       }
       this.handleMonetizedSite(frame, details.initiatingUrl, details)
-      this.api.tabs.sendMessage(tabId, message, { frameId })
+      // We don't want to send this progress event if the link has already
+      // errored.
+      if (this.spspState.sendProgressEvent(details.requestId)) {
+        this.api.tabs.sendMessage(tabId, message, { frameId })
+      }
       this.savePacketToHistoryDb(details)
     })
   }
@@ -654,7 +657,7 @@ export class BackgroundScript {
     const { requestId } = request.data
 
     this.activeTabLogger.log(`startWM called with ${requestId}`, frame)
-    this.tabStates.logLastMonetizationCommand(frame, 'start', requestId)
+    this.tabStates.logLastMonetizationCommand(frame, 'start', request.data)
 
     // This used to be sent from content script as a separate message
     this.mayMonetizeSite(sender, request.data.initiatingUrl)
@@ -732,7 +735,7 @@ export class BackgroundScript {
     // (which will update `whoami`) which takes longer than it does to switch
     // out a monetization tag.
     // TODO: WM2
-    const WM2 = true
+    const WM2 = request.data.tagType === 'link'
     if (
       !WM2 &&
       this.tabStates.getFrameOrDefault(frame).lastMonetization.requestId !==
@@ -757,8 +760,10 @@ export class BackgroundScript {
 
     // TODO:WM2
     // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    const lastCommand: string = 'start'
-    // this.tabStates.getFrameOrDefault(frame).lastMonetization.command
+    const lastCommand =
+      this.tabStates.getFrameOrDefault(frame)[
+        `requestId-lastCommand-${requestId}`
+      ]?.command
 
     if (lastCommand !== 'start' && lastCommand !== 'pause') {
       this.log('startWebMonetization cancelled via', lastCommand)
@@ -997,14 +1002,12 @@ export class BackgroundScript {
 
   private doStopWebMonetization(frame: FrameSpec) {
     const requestIds = this.assoc.getStreams(frame)
-    if (requestIds) {
-      this.tabStates.logLastMonetizationCommand(frame, 'stop', requestIds[0])
-    }
 
     const closed = this._closeStreams(frame.tabId, frame.frameId)
     // May be noop other side if stop monetization was initiated from
     // ContentScript
     requestIds.forEach(requestId => {
+      this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
       this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
     })
 
@@ -1153,19 +1156,5 @@ export class BackgroundScript {
         }
       })
     }
-  }
-
-  private handleStreamsSPSPEvents() {
-    this.streams.on('spsp-event', (event, requestId) => {
-      const frame = this.assoc.getStreamFrame(requestId)
-      const command: SPSPRequestEvent = {
-        command: 'spspRequestEvent',
-        data: {
-          event: event,
-          requestId
-        }
-      }
-      this.framesService.sendCommand(frame, command)
-    })
   }
 }

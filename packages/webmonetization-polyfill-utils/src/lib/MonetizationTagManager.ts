@@ -38,7 +38,7 @@ export type PaymentDetailsChangeCallback = (
 ) => void
 
 export type MonetizationTag = HTMLMetaElement | HTMLLinkElement
-export type MetaList = NodeListOf<MonetizationTag>
+export type MonetizationTagList = NodeListOf<MonetizationTag>
 
 export type TagType = 'meta' | 'link'
 
@@ -108,17 +108,18 @@ export class MonetizationTagManager {
   }
 
   /**
-   * The head will be null early on so we must wait
+   * The head will be null early on, so we must wait
    */
   startWhenDocumentReady(): void {
     whenDocumentReady(this.document, this.start.bind(this))
   }
 
   private start() {
-    const metas: MetaList = this.document.querySelectorAll(
-      'meta[name="monetization"],link[rel="monetization"]'
-    )
-    metas.forEach(m => {
+    const monetizationTags: MonetizationTagList =
+      this.document.querySelectorAll(
+        'meta[name="monetization"],link[rel="monetization"]'
+      )
+    monetizationTags.forEach(m => {
       try {
         this.onAddedTag(m)
       } catch (e) {
@@ -256,7 +257,7 @@ export class MonetizationTagManager {
     const entry = this.getEntry(meta)
     entry.observer.disconnect()
     this.monetizationTags.delete(meta)
-    this.cleanupLink(entry.details)
+    this.clearLinkById(entry.details)
     this.callback({ started: null, stopped: entry.details })
   }
 
@@ -271,13 +272,17 @@ export class MonetizationTagManager {
   private onChangedPaymentEndpoint(meta: MonetizationTag) {
     const entry = this.getEntry(meta)
     const stopped = entry.details
-    this.cleanupLink(stopped)
+    this.clearLinkById(stopped)
     const started = this.getPaymentDetails(meta)
     entry.details = started
+    if (started.tagType === 'link') {
+      const linkRef = new WeakRef(meta as HTMLLinkElement)
+      this.linkTagsById.set(started.requestId, linkRef)
+    }
     this.callback({ started, stopped })
   }
 
-  private cleanupLink(stopped: PaymentDetails) {
+  private clearLinkById(stopped: PaymentDetails) {
     if (stopped.tagType === 'link') {
       this.linkTagsById.delete(stopped.requestId)
     }
@@ -309,7 +314,7 @@ export class MonetizationTagManager {
 
   private checkMonetizationAttr(node: HTMLElement) {
     debug('checkMonetizationAttr', node)
-    const haveAttr = this.fireOnMonetizationChangeIfHaveAttribute({ node })
+    this.fireOnMonetizationChangeIfHaveAttribute({ node })
     this.onMonetizationAttrObserver.observe(node, {
       childList: false,
       attributeFilter: ['onmonetization']
@@ -336,6 +341,7 @@ export class MonetizationTagManager {
   }: FireOnMonetizationChangeIfHaveAttributeParams) {
     const attribute = node.getAttribute('onmonetization')
     if (attribute || force) {
+      // TODO: don't use coil here, it's in a generic module
       const customEvent = new CustomEvent('coil-onmonetization-attr-changed', {
         bubbles: true,
         detail: {
