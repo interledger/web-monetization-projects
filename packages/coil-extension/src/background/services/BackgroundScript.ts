@@ -734,10 +734,13 @@ export class BackgroundScript {
     // masked state changes. e.g. `getTokenMaybeRefreshAndStoreState`
     // (which will update `whoami`) which takes longer than it does to switch
     // out a monetization tag.
-    // TODO: WM2
+    // TODO:WM2
     const WM2 = request.data.tagType === 'link'
 
     const frameOrDefault = this.tabStates.getFrameOrDefault(frame)
+    // TODO:WM2 this assumes the stop event from content script properly
+    // propagated to background script and caused the requestId to be deleted.
+    // I don't think that's the case??
     if (!WM2 && !frameOrDefault[`requestId-lastCommand-${requestId}`]) {
       // The pending message (if sent) will have been ignored on the content
       // script side in this case too, so there's no need to send a stop, as
