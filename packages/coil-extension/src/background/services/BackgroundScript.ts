@@ -1,7 +1,6 @@
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 import { MonetizationState } from '@webmonetization/types'
-import { resolvePaymentEndpoint } from '@webmonetization/polyfill-utils'
 
 import { notNullOrUndef } from '../../util/nullables'
 import { StorageService } from '../../services/storage'
@@ -12,22 +11,15 @@ import {
   CheckIFrameIsAllowedFromBackground,
   ClosePopup,
   ContentScriptInit,
-  MonetizationProgress,
-  MonetizationStart,
   OnFrameAllowedChanged,
-  PauseWebMonetization,
   ReportCorrelationIdFromIFrameContentScript,
   ReportCorrelationIdToParentContentScript,
-  ResumeWebMonetization,
   SetMonetizationState,
-  SetStreamControls,
-  StartWebMonetization,
   TipSent,
   ToBackgroundMessage
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
-import { TabState } from '../../types/TabState'
-import { getFrameSpec, getTab } from '../../util/tabs'
+import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
 
@@ -42,6 +34,7 @@ import { BackgroundFramesService } from './BackgroundFramesService'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { StreamAssociationsWM2 } from './StreamAssociationsWM2'
 import { SPSPStateWM2 } from './SPSPStateWM2'
+import { MonetizationService } from './MonetizationService'
 
 import MessageSender = chrome.runtime.MessageSender
 
@@ -57,6 +50,7 @@ export class BackgroundScript {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private auth: AuthService,
+    private monetization: MonetizationService,
     private youtube: YoutubeService,
     private activeTabLogger: ActiveTabLogger,
     private framesService: BackgroundFramesService,
@@ -99,9 +93,11 @@ export class BackgroundScript {
     this.setTabsOnRemovedListener()
     this.setFramesOnChangedListener()
     this.setFramesOnRemovedListener()
-    this.routeStreamsMoneyEventsToContentScript()
-    this.handleStreamsAbortEvent()
+
+    this.monetization.routeStreamsMoneyEventsToContentScript()
     this.spspState.bindToStreamsEvents()
+
+    this.handleStreamsAbortEvent()
     this.popup.setDefaultInactive()
     this.framesService.monitor()
     this.bindOnInstalled()
@@ -126,7 +122,7 @@ export class BackgroundScript {
         this.log('tabs.onActivated %o', activeInfo)
       }
       this.activeTab = activeInfo.tabId
-      this.reloadTabState({ from: 'onActivated' })
+      this.tabStates.reloadTabState({ from: 'onActivated' })
     })
     if (this.buildConfig.logTabsApiEvents) {
       if (this.api.tabs.onActiveChanged) {
@@ -175,7 +171,7 @@ export class BackgroundScript {
             return
           }
           this.activeTab = tabs[0].id
-          this.reloadTabState({ from: 'onFocusChanged' })
+          this.tabStates.reloadTabState({ from: 'onFocusChanged' })
         })
       })
     }
@@ -202,7 +198,7 @@ export class BackgroundScript {
     this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
       if (tabs.length === 0 || tabs[0].id == null) return
       this.activeTab = tabs[0].id
-      this.reloadTabState({ from: 'initial' })
+      this.tabStates.reloadTabState({ from: 'initial' })
     })
   }
 
@@ -288,44 +284,6 @@ export class BackgroundScript {
     })
   }
 
-  private routeStreamsMoneyEventsToContentScript() {
-    // pass stream monetization events to the correct tab
-    this.streams.on('money', (details: StreamMoneyEvent) => {
-      const frame = this.assoc.getStreamFrame(details.requestId)
-      const { tabId, frameId } = frame
-      if (details.packetNumber === 0) {
-        const message: MonetizationStart = {
-          command: 'monetizationStart',
-          data: {
-            paymentPointer: details.paymentPointer,
-            requestId: details.requestId
-          }
-        }
-        this.api.tabs.sendMessage(tabId, message, { frameId })
-      }
-
-      const message: MonetizationProgress = {
-        command: 'monetizationProgress',
-        data: {
-          paymentPointer: details.paymentPointer,
-          amount: details.amount,
-          assetCode: details.assetCode,
-          requestId: details.requestId,
-          assetScale: details.assetScale,
-          sentAmount: details.sentAmount,
-          receipt: details.receipt
-        }
-      }
-      this.handleMonetizedSite(frame, details.initiatingUrl, details)
-      // We don't want to send this progress event if the link has already
-      // errored.
-      if (this.spspState.sendProgressEvent(details.requestId)) {
-        this.api.tabs.sendMessage(tabId, message, { frameId })
-      }
-      this.savePacketToHistoryDb(details)
-    })
-  }
-
   private savePacketToHistoryDb(_: StreamMoneyEvent) {
     // this.db.incrementSite(details)
   }
@@ -405,22 +363,24 @@ export class BackgroundScript {
         break
       case 'startWebMonetization':
         this.log('got startwebmonetization')
-        sendResponse(await this.startWebMonetization(request, sender))
+        sendResponse(
+          await this.monetization.startWebMonetization(request, sender)
+        )
         break
       case 'pauseWebMonetization':
-        sendResponse(this.pauseWebMonetization(request, sender))
+        sendResponse(this.monetization.pauseWebMonetization(request, sender))
         break
       case 'resumeWebMonetization':
-        sendResponse(this.resumeWebMonetization(request, sender))
+        sendResponse(this.monetization.resumeWebMonetization(request, sender))
         break
       case 'stopWebMonetization':
-        sendResponse(this.stopWebMonetization(sender))
+        sendResponse(this.monetization.stopWebMonetization(sender))
         break
       case 'isRateLimited':
         sendResponse(await this.isRateLimited())
         break
       case 'setStreamControls':
-        sendResponse(this.setStreamControls(request, sender))
+        sendResponse(this.monetization.setStreamControls(request, sender))
         break
       case 'contentScriptInit':
         sendResponse(this.contentScriptInit(request, sender))
@@ -468,7 +428,7 @@ export class BackgroundScript {
       coilSite: url
     })
     if (url) {
-      this.reloadTabState({ from: 'setCoilUrlForPopupIfNeeded' })
+      this.tabStates.reloadTabState({ from: 'setCoilUrlForPopupIfNeeded' })
     }
   }
 
@@ -506,23 +466,8 @@ export class BackgroundScript {
     )
 
     if (this.activeTab === tabId) {
-      this.reloadTabState()
+      this.tabStates.reloadTabState({})
     }
-  }
-
-  mayMonetizeSite(sender: chrome.runtime.MessageSender, initiatingUrl: string) {
-    this.setFrameMonetized(getFrameSpec(sender), initiatingUrl)
-  }
-
-  handleMonetizedSite(
-    { tabId, frameId }: FrameSpec,
-    url: string,
-    packet: { sentAmount: string }
-  ) {
-    const tabState = this.tabStates.get(tabId)
-    const frameTotal = tabState?.frameStates[frameId]?.total ?? 0
-    const newFrameTotal = frameTotal + Number(packet?.sentAmount ?? 0)
-    this.setFrameMonetized({ tabId, frameId }, url, newFrameTotal)
   }
 
   adaptedSite(data: AdaptedSite['data'], sender: MessageSender) {
@@ -530,59 +475,6 @@ export class BackgroundScript {
     this.tabStates.setFrame(spec, {
       adapted: data.state
     })
-  }
-
-  reloadTabState(opts: { from?: string } = {}) {
-    const { from } = opts
-
-    const tab = this.activeTab
-    const state = () => this.tabStates.get(tab)
-    this.setLocalStorageFromState(state())
-    this.setBrowserActionStateFromAuthAndTabState()
-    // Don't work off stale state, set(...) creates a copy ...
-    this.popup.setBrowserAction(tab, state())
-    if (from) {
-      this.log(
-        `reloadTabState tab=${tab}`,
-        `from=${from}`,
-        JSON.stringify(state(), null, 2)
-      )
-    }
-  }
-
-  private setLocalStorageFromState(state: TabState) {
-    const frameStates = Object.values(state.frameStates)
-
-    state && state.coilSite
-      ? this.storage.set('coilSite', state.coilSite)
-      : this.storage.remove('coilSite')
-    // TODO: Another valid case might be a singular adapted iframe inside a non
-    // monetized top page.
-    this.storage.set('adapted', Boolean(state?.frameStates[0]?.adapted))
-    state && frameStates.find(f => f.monetized)
-      ? this.storage.set('monetized', true)
-      : this.storage.remove('monetized')
-
-    if (state && state.playState && state.stickyState) {
-      this.store.playState = state.playState
-      this.store.stickyState = state.stickyState
-    } else if (state) {
-      delete this.store.playState
-      delete this.store.stickyState
-    }
-
-    if (this.buildConfig.extensionBuildString) {
-      this.store.extensionBuildString = this.buildConfig.extensionBuildString
-    }
-    if (this.buildConfig.extensionPopupFooterString) {
-      this.store.extensionPopupFooterString =
-        this.buildConfig.extensionPopupFooterString
-    }
-
-    if (state) {
-      const total = frameStates.reduce((acc, val) => acc + val.total, 0)
-      this.storage.set('monetizedTotal', total)
-    }
   }
 
   async checkIFrameIsAllowedFromIFrameContentScript(sender: MessageSender) {
@@ -646,154 +538,6 @@ export class BackgroundScript {
       }
     }
     this.api.tabs.sendMessage(frame.tabId, message, { frameId: parentId })
-  }
-
-  async startWebMonetization(
-    request: StartWebMonetization,
-    sender: MessageSender
-  ) {
-    const frame = getFrameSpec(sender)
-    const { tabId, frameId } = frame
-    const { requestId } = request.data
-
-    this.activeTabLogger.log(`startWM called with ${requestId}`, frame)
-    this.tabStates.logLastMonetizationCommand(frame, 'start', request.data)
-
-    // This used to be sent from content script as a separate message
-    this.mayMonetizeSite(sender, request.data.initiatingUrl)
-
-    // This may throw so do after mayMonetizeSite has had a chance to set
-    // the page as being monetized (or attempted to be)
-    const spspEndpoint = resolvePaymentEndpoint(request.data.paymentPointer)
-
-    const userBeforeReAuth = this.store.user
-    let emittedPending = false
-    const emitPending = () => {
-      // Set the requestId so that DocumentMonetization#setState will ignore
-      // this message if tags are added and removed extremely fast.
-      this.sendSetMonetizationStateMessage(
-        frame,
-        'pending',
-        request.data.requestId
-      )
-      emittedPending = true
-    }
-
-    const setUnavailable = (fromNo: 'token' | 'subscription') => {
-      this.tabStates.setIcon(tabId, 'unavailable')
-      this.reloadTabState({ from: `no ${fromNo}` })
-    }
-
-    // If we are optimistic we have an active subscription (things could have
-    // changed since our last cached whoami query), emit pending immediately,
-    // otherwise wait until recheck auth/whoami, potentially not even emitting.
-    if (userBeforeReAuth?.subscription?.active) {
-      emitPending()
-    } else {
-      setUnavailable('subscription')
-    }
-
-    this.log('startWebMonetization, request', request)
-
-    this.log('loading token for monetization', requestId)
-    const token = await this.auth.getTokenMaybeRefreshAndStoreState()
-    if (!token) {
-      // not signed in.
-      // eslint-disable-next-line no-console
-      if (this.loggingEnabled) {
-        console.warn('startWebMonetization cancelled; no token')
-      }
-      this.activeTabLogger.log('startWebMonetization cancelled; no token')
-      this.sendSetMonetizationStateMessage(
-        frame,
-        'stopped',
-        request.data.requestId
-      )
-      setUnavailable('token')
-      return false
-    }
-    if (!this.store.user?.subscription?.active) {
-      if (this.loggingEnabled) {
-        console.warn('startWebMonetization cancelled; no active subscription')
-      }
-      this.activeTabLogger.log(
-        'startWebMonetization cancelled; no active subscription',
-        frame
-      )
-      this.sendSetMonetizationStateMessage(
-        frame,
-        'stopped',
-        request.data.requestId
-      )
-      setUnavailable('subscription')
-      return false
-    }
-
-    // Check that this startWebMonetization invocation is still valid before
-    // we go ahead. Any operation that we `await`d on could have potentially
-    // masked state changes. e.g. `getTokenMaybeRefreshAndStoreState`
-    // (which will update `whoami`) which takes longer than it does to switch
-    // out a monetization tag.
-    // TODO:WM2
-    const WM2 = request.data.tagType === 'link'
-
-    const frameOrDefault = this.tabStates.getFrameOrDefault(frame)
-    // TODO:WM2 this assumes the stop event from content script properly
-    // propagated to background script and caused the requestId to be deleted.
-    // I don't think that's the case??
-    if (!WM2 && !frameOrDefault[`requestId-lastCommand-${requestId}`]) {
-      // The pending message (if sent) will have been ignored on the content
-      // script side in this case too, so there's no need to send a stop, as
-      // will already have been stopped (for that id).
-      // If we sent a stopped message, it would need to be tagged with
-      // requestId, and would only ever be ignored (
-      // due to the new monetization request implied in the if condition)
-      this.activeTabLogger.log(
-        `startWebMonetization aborted; stale requestId: ${requestId}`,
-        frame
-      )
-      return false
-    }
-
-    if (!emittedPending) {
-      emitPending()
-    }
-
-    // TODO:WM2
-    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    const lastCommand =
-      this.tabStates.getFrameOrDefault(frame)[
-        `requestId-lastCommand-${requestId}`
-      ]?.command
-
-    if (lastCommand !== 'start' && lastCommand !== 'pause') {
-      this.log('startWebMonetization cancelled via', lastCommand)
-      this.activeTabLogger.log(
-        `startWebMonetization cancelled via ${lastCommand}`,
-        frame
-      )
-      return false
-    }
-
-    this.log('starting stream', requestId)
-    // We need to start this stream, even if we've already received a pause.
-    // That way we can "resume" it later.
-    this.assoc.addStreamId(frame, requestId)
-    this.streams.beginStream(requestId, {
-      token,
-      spspEndpoint,
-      ...request.data,
-      initiatingUrl: request.data.initiatingUrl
-    })
-
-    if (lastCommand === 'pause') {
-      // TODO: why do we need the timeout here ?
-      setTimeout(() => {
-        // TODO:WM2
-        this.doPauseWebMonetization(frame, [requestId])
-      }, 0)
-    }
-    return true
   }
 
   private async sendTip(): Promise<{ success: boolean }> {
@@ -934,91 +678,15 @@ export class BackgroundScript {
     }
   }
 
-  private doPauseWebMonetization(frame: FrameSpec, requestIds?: string[]) {
-    this.activeTabLogger.log(
-      'doPause ' + JSON.stringify({ frame, requestIds }),
-      frame
-    )
-    const ids = requestIds ?? this.assoc.getStreams(frame)
-    ids.forEach(id => {
-      this.tabStates.logLastMonetizationCommand(frame, 'pause', id)
-      this.log('pausing stream', id)
-      this.streams.pauseStream(id)
-      this.sendSetMonetizationStateMessage(frame, 'stopped', id)
-    })
-    return true
-  }
-
-  private doResumeWebMonetization(frame: FrameSpec, requestIds?: string[]) {
-    this.activeTabLogger.log(
-      'doResume ' + JSON.stringify({ frame, requestIds }),
-      frame
-    )
-    const ids = requestIds ?? this.assoc.getStreams(frame)
-    ids.forEach(id => {
-      this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
-      this.log('resuming stream', ids)
-      this.sendSetMonetizationStateMessage(frame, 'pending', id)
-      this.streams.resumeStream(id)
-    })
-    return true
-  }
-
-  pauseWebMonetization(request: PauseWebMonetization, sender: MessageSender) {
-    if (this.tabStates.get(getTab(sender)).stickyState === 'sticky') {
-      return
-    }
-    return this.doPauseWebMonetization(
-      getFrameSpec(sender),
-      request.data.requestIds
-    )
-  }
-
-  resumeWebMonetization(request: ResumeWebMonetization, sender: MessageSender) {
-    // Note that this gets sent regardless of whether actually monetized or not
-    // it's more like 'set tab interactive'
-    if (this.tabStates.get(getTab(sender)).playState === 'paused') {
-      return
-    }
-    return this.doResumeWebMonetization(
-      getFrameSpec(sender),
-      request.data.requestIds
-    )
-  }
-
   private handleStreamsAbortEvent() {
     this.streams.on('abort', requestId => {
       this.log('aborting monetization request', requestId)
       const frame = this.assoc.getStreamFrame(requestId)
       if (frame) {
         // TODO: one stream abort will take down all streams??
-        this.doStopWebMonetization(frame)
+        this.monetization.doStopWebMonetization(frame)
       }
     })
-  }
-
-  stopWebMonetization(sender: MessageSender) {
-    return this.doStopWebMonetization(getFrameSpec(sender))
-  }
-
-  private doStopWebMonetization(frame: FrameSpec) {
-    const requestIds = this.assoc.getStreams(frame)
-
-    const closed = this._closeStreams(frame.tabId, frame.frameId)
-    // May be noop other side if stop monetization was initiated from
-    // ContentScript
-    requestIds.forEach(requestId => {
-      this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
-      this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
-    })
-
-    if (closed) {
-      this.tabStates.clearFrame(frame)
-    }
-    this.reloadTabState({
-      from: 'stopWebMonetization'
-    })
-    return true
   }
 
   sendSetMonetizationStateMessage(
@@ -1038,24 +706,7 @@ export class BackgroundScript {
   }
 
   _closeStreams(tabId: number, frameId?: number) {
-    const streamIds = this.assoc.getTabStreams(tabId)
-    const haveFrameId = typeof frameId !== 'undefined'
-
-    let closed = 0
-    streamIds.forEach(([streamId, innerFrameId]) => {
-      if (haveFrameId && innerFrameId.frameId !== frameId) {
-        return
-      }
-      this.log('closing stream with id', streamId)
-      this.streams.closeStream(streamId)
-      closed++
-    })
-    if (haveFrameId) {
-      this.assoc.clearStreams({ tabId, frameId: frameId as number })
-    } else {
-      this.assoc.clearTabStreams(tabId)
-    }
-    return !!closed
+    return this.monetization._closeStreams(tabId, frameId)
   }
 
   // This feature is no longer used
@@ -1091,33 +742,7 @@ export class BackgroundScript {
     )
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')
-    this.reloadTabState()
-    return true
-  }
-
-  private setStreamControls(request: SetStreamControls, _: MessageSender) {
-    const tabId = this.activeTab
-    this.log('setStreamControls', request)
-
-    this.tabStates.set(tabId, {
-      stickyState: request.data.sticky,
-      playState: request.data.play
-    })
-    if (request.data.action === 'togglePlayOrPause') {
-      const tabState = this.tabStates.get(tabId)
-      const framesForTab = Object.keys(tabState.frameStates).map(Number)
-      this.log({ framesForTab })
-      if (request.data.play === 'paused') {
-        framesForTab.forEach(frameId => {
-          this.doPauseWebMonetization({ frameId, tabId })
-        })
-      } else if (request.data.play === 'playing') {
-        framesForTab.forEach(frameId => {
-          this.doResumeWebMonetization({ frameId, tabId })
-        })
-      }
-    }
-    this.reloadTabState({ from: request.command })
+    this.tabStates.reloadTabState({})
     return true
   }
 
@@ -1127,7 +752,7 @@ export class BackgroundScript {
     // it loaded. Noop if no stream for tab.
     this._closeStreams(tabId, frameId)
     this.tabStates.clearFrame(spec)
-    this.reloadTabState({
+    this.tabStates.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
     return true

@@ -1,16 +1,34 @@
-import { injectable } from 'inversify'
+import { inject, injectable } from 'inversify'
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
+import { StorageService } from '@webmonetization/wext/services'
 
 import { FrameState, MonetizationCommand, TabState } from '../../types/TabState'
 import { IconState } from '../../types/commands'
 import { FrameSpec } from '../../types/FrameSpec'
+import * as tokens from '../../types/tokens'
+import { LocalStorageProxy } from '../../types/storage'
+import { BuildConfig } from '../../types/BuildConfig'
+
+import { AuthService } from './AuthService'
+import { PopupBrowserAction } from './PopupBrowserAction'
+import { Logger, logger } from './utils'
 
 @injectable()
 export class TabStates {
   activeTab: number | null = null
   private tabStates: { [tab: number]: TabState } = {}
 
-  constructor() {}
+  constructor(
+    private storage: StorageService,
+    @inject(tokens.LocalStorageProxy)
+    private store: LocalStorageProxy,
+    private auth: AuthService,
+    @inject(tokens.BuildConfig)
+    private buildConfig: BuildConfig,
+    private popup: PopupBrowserAction,
+    @logger('TabStates')
+    private log: Logger
+  ) {}
 
   set(tab: number, state: Partial<TabState> = {}) {
     const existingState = this.get(tab)
@@ -146,5 +164,101 @@ export class TabStates {
         details: details
       }
     })
+  }
+
+  reloadTabState(opts: { from?: string } = {}) {
+    const { from } = opts
+
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const tab = this.activeTab!
+    const state = () => this.get(tab)
+    this.setLocalStorageFromState(state())
+    this.setBrowserActionStateFromAuthAndTabState()
+    // Don't work off stale state, set(...) creates a copy ...
+    this.popup.setBrowserAction(tab, state())
+    if (from) {
+      this.log(
+        `reloadTabState tab=${tab}`,
+        `from=${from}`,
+        JSON.stringify(state(), null, 2)
+      )
+    }
+  }
+
+  private setBrowserActionStateFromAuthAndTabState() {
+    const token = this.auth.getStoredToken()
+
+    if (!token || !this.store.validToken) {
+      this.popup.disable()
+    }
+
+    const tabId = this.activeTab
+
+    if (tabId) {
+      const tabState = this.getActiveOrDefault()
+
+      if (Object.values(tabState.frameStates).find(f => f.monetized)) {
+        this.setIcon(tabId, 'monetized')
+      }
+
+      if (token == null) {
+        this.setIcon(tabId, 'unavailable')
+      } else if (token) {
+        this.popup.enable()
+
+        const tabState = this.getActiveOrDefault()
+        const frameStates = Object.values(tabState.frameStates)
+        const hasStream = frameStates.find(f => f.monetized)
+        const hasBeenPaid = hasStream && frameStates.find(f => f.total > 0)
+
+        if (hasStream) {
+          this.setIcon(tabId, 'monetized')
+          if (hasBeenPaid) {
+            const state =
+              tabState.playState === 'playing'
+                ? 'streaming'
+                : 'streaming-paused'
+            this.setIcon(tabId, state)
+          }
+        } else {
+          this.setIcon(tabId, 'inactive')
+        }
+      }
+    }
+  }
+
+  private setLocalStorageFromState(state: TabState) {
+    const frameStates = Object.values(state.frameStates)
+
+    state && state.coilSite
+      ? this.storage.set('coilSite', state.coilSite)
+      : this.storage.remove('coilSite')
+    // TODO: Another valid case might be a singular adapted iframe inside a non
+    // monetized top page.
+    this.storage.set('adapted', Boolean(state?.frameStates[0]?.adapted))
+    state && frameStates.find(f => f.monetized)
+      ? this.storage.set('monetized', true)
+      : this.storage.remove('monetized')
+
+    if (state && state.playState && state.stickyState) {
+      this.store.playState = state.playState
+      this.store.stickyState = state.stickyState
+    } else if (state) {
+      delete this.store.playState
+      delete this.store.stickyState
+    }
+
+    if (this.buildConfig.extensionBuildString) {
+      this.store.extensionBuildString = this.buildConfig.extensionBuildString
+    }
+    if (this.buildConfig.extensionPopupFooterString) {
+      this.store.extensionPopupFooterString =
+        this.buildConfig.extensionPopupFooterString
+    }
+
+    if (state) {
+      const total = frameStates.reduce((acc, val) => acc + val.total, 0)
+      this.storage.set('monetizedTotal', total)
+    }
   }
 }
