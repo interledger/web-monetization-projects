@@ -29,6 +29,18 @@ async function configureContainer(container: Container) {
   container.bind(Storage).toConstantValue(localStorage)
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
+  container.bind(tokens.ActiveTab).toDynamicValue(async () => {
+    for (const currentWindow of [true, false]) {
+      const tabs = await new Promise<chrome.tabs.Tab[]>(resolve => {
+        chrome.tabs.query({ active: true, currentWindow }, tabs => {
+          resolve(tabs)
+        })
+      })
+      if (tabs.length) {
+        return tabs[0].id
+      }
+    }
+  })
 
   container.bind(Stream).toSelf().inTransientScope()
 
@@ -72,7 +84,7 @@ async function main() {
   })
 
   await configureContainer(container)
-  window.bg = container.get(BackgroundScript)
+  window.bg = await container.getAsync(BackgroundScript)
   void window.bg.run()
 }
 

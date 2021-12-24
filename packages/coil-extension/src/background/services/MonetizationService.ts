@@ -44,15 +44,9 @@ export class MonetizationService {
     private loggingEnabled: boolean,
     @logger('MonetizationService')
     private log: Logger,
-    @inject(tokens.BuildConfig)
-    private buildConfig: BuildConfig,
     @inject(tokens.WextApi)
     private api = chrome
-  ) {
-    if (this.loggingEnabled) {
-      console.log('BuildConfig', this.buildConfig)
-    }
-  }
+  ) {}
 
   get activeTab() {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -416,5 +410,22 @@ export class MonetizationService {
       }
     }
     this.api.tabs.sendMessage(tabId, message, { frameId })
+  }
+
+  handleStreamsAbortEvent() {
+    this.streams.on('abort', requestId => {
+      this.log('aborting monetization request', requestId)
+      const frame = this.assoc.getStreamFrame(requestId)
+      if (frame) {
+        // TODO: one stream abort will take down all streams??
+        this.doStopWebMonetization(frame)
+      }
+    })
+  }
+
+  init() {
+    this.handleStreamsAbortEvent()
+    this.routeStreamsMoneyEventsToContentScript()
+    this.spspState.bindToStreamsEvents()
   }
 }

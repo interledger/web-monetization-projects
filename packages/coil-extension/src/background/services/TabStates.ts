@@ -15,7 +15,6 @@ import { Logger, logger } from './utils'
 
 @injectable()
 export class TabStates {
-  activeTab: number | null = null
   private tabStates: { [tab: number]: TabState } = {}
 
   constructor(
@@ -25,6 +24,8 @@ export class TabStates {
     private auth: AuthService,
     @inject(tokens.BuildConfig)
     private buildConfig: BuildConfig,
+    @inject(tokens.ActiveTab)
+    public activeTab: number,
     private popup: PopupBrowserAction,
     @logger('TabStates')
     private log: Logger
@@ -169,8 +170,7 @@ export class TabStates {
   reloadTabState(opts: { from?: string } = {}) {
     const { from } = opts
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const tab = this.activeTab!
+    const tab = this.activeTab
     const state = () => this.get(tab)
     this.setLocalStorageFromState(state())
     this.setBrowserActionStateFromAuthAndTabState()

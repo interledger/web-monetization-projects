@@ -94,10 +94,8 @@ export class BackgroundScript {
     this.setFramesOnChangedListener()
     this.setFramesOnRemovedListener()
 
-    this.monetization.routeStreamsMoneyEventsToContentScript()
-    this.spspState.bindToStreamsEvents()
+    this.monetization.init()
 
-    this.handleStreamsAbortEvent()
     this.popup.setDefaultInactive()
     this.framesService.monitor()
     this.bindOnInstalled()
@@ -195,11 +193,7 @@ export class BackgroundScript {
 
   private initializeActiveTab() {
     // initialize tab so we can set its state right away
-    this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
-      if (tabs.length === 0 || tabs[0].id == null) return
-      this.activeTab = tabs[0].id
-      this.tabStates.reloadTabState({ from: 'initial' })
-    })
+    this.tabStates.reloadTabState({ from: 'initial' })
   }
 
   private setTabsOnRemovedListener() {
@@ -687,22 +681,6 @@ export class BackgroundScript {
         this.monetization.doStopWebMonetization(frame)
       }
     })
-  }
-
-  sendSetMonetizationStateMessage(
-    { tabId, frameId }: FrameSpec,
-    state: MonetizationState,
-    requestId: string
-  ) {
-    const message: SetMonetizationState = {
-      command: 'setMonetizationState',
-      data: {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        requestId,
-        state
-      }
-    }
-    this.api.tabs.sendMessage(tabId, message, { frameId })
   }
 
   _closeStreams(tabId: number, frameId?: number) {
