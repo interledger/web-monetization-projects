@@ -7,7 +7,7 @@
 ## Development Process
 
 Ultimately we want `main` branch to be in a 'good' state at all times, with good test
-coverage, so we can practice CD, pushing the extensions to dev channels.
+coverage, so we can practice CD, publishing the extensions to dev channels automatically.
 
 Currently, we mostly rely on puppeteer tests which don't cover all the test scenarios.
 Therefore, **we must do manual testing before release**, as it's too much of an impediment
@@ -40,7 +40,7 @@ git clone git@github.com:coilhq/web-monetization-projects.git
 yarn
 ```
 
-### Node >= 14 
+### Node >= 14
 
 The TypeScript is compiled into es2020, so the minimum version of node required is v14 (currently the LTS)
 See [nvm](https://github.com/nvm-sh/nvm#install--update-script) for an easy way to manage multiple versions
@@ -77,7 +77,7 @@ This is not a big deal when prettier is run before commit and enforced in the CI
 
 This repository is managed using lerna, yarn and typescript project references, with some custom code to
 generate consistent package.json/tsconfig.build.json/etc and src/test folder structure.
-See the [coil-monorepo-upkeep](packages/coil-monorepo-upkeep) folder for details
+See the [coil-monorepo-upkeep](packages/coil-monorepo-upkeep) folder for details.
 
 ## Development workflow
 
