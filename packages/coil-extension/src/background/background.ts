@@ -30,6 +30,10 @@ async function configureContainer(container: Container) {
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
   container.bind(tokens.ActiveTab).toDynamicValue(async () => {
+    // This query will not pick up dev tools tabs which may be currently active
+    // so, we need to query for other active tabs in that case and select the
+    // first. It's possible that this may also result in an empty response set,
+    // however hopefully this state will be very transient.
     for (const currentWindow of [true, false]) {
       const tabs = await new Promise<chrome.tabs.Tab[]>(resolve => {
         chrome.tabs.query({ active: true, currentWindow }, tabs => {

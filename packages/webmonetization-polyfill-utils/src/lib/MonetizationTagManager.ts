@@ -72,7 +72,6 @@ export class MonetizationTagManager {
     }
   >()
 
-  // TODO: do we even need a WeakRef ??
   private linkTagsById = new Map<string, WeakRef<HTMLLinkElement>>()
 
   dispatchLinkEventByLinkId(id: string, event: Event) {
@@ -111,10 +110,12 @@ export class MonetizationTagManager {
    * The head will be null early on, so we must wait
    */
   startWhenDocumentReady(): void {
+    console.log('hello')
     whenDocumentReady(this.document, this.start.bind(this))
   }
 
-  private start() {
+  start() {
+    console.log('hello')
     const monetizationTags: MonetizationTagList =
       this.document.querySelectorAll(
         'meta[name="monetization"],link[rel="monetization"]'
@@ -173,7 +174,7 @@ export class MonetizationTagManager {
     }
   }
 
-  private onPaymentEndpointChangeObserved(records: MutationRecord[]) {
+  private onMonetizationTagAttributesChange(records: MutationRecord[]) {
     for (const record of records) {
       if (
         record.type === 'attributes' &&
@@ -190,6 +191,14 @@ export class MonetizationTagManager {
         record.target['href'] !== record.oldValue
       ) {
         this.onChangedPaymentEndpoint(record.target)
+      } else if (
+        record.type === 'attributes' &&
+        record.attributeName === 'disabled' &&
+        record.target instanceof HTMLLinkElement &&
+        // can't use record.target[disabled] as it's a Boolean not string
+        record.target.getAttribute('disabled') !== record.oldValue
+      ) {
+        this.onChangedPaymentEndpoint(record.target, record.target.disabled)
       }
     }
   }
@@ -232,7 +241,7 @@ export class MonetizationTagManager {
     }
 
     const observer = new MutationObserver(
-      this.onPaymentEndpointChangeObserved.bind(this)
+      this.onMonetizationTagAttributesChange.bind(this)
     )
     observer.observe(tag, {
       attributeOldValue: true,
@@ -269,15 +278,18 @@ export class MonetizationTagManager {
     return entry
   }
 
-  private onChangedPaymentEndpoint(meta: MonetizationTag) {
-    const entry = this.getEntry(meta)
+  private onChangedPaymentEndpoint(tag: MonetizationTag, disabled = false) {
+    const entry = this.getEntry(tag)
     const stopped = entry.details
     this.clearLinkById(stopped)
-    const started = this.getPaymentDetails(meta)
-    entry.details = started
-    if (started.tagType === 'link') {
-      const linkRef = new WeakRef(meta as HTMLLinkElement)
-      this.linkTagsById.set(started.requestId, linkRef)
+    let started: PaymentDetails | null = null
+    if (!disabled) {
+      started = this.getPaymentDetails(tag)
+      entry.details = started
+      if (started.tagType === 'link') {
+        const linkRef = new WeakRef(tag as HTMLLinkElement)
+        this.linkTagsById.set(started.requestId, linkRef)
+      }
     }
     this.callback({ started, stopped })
   }
