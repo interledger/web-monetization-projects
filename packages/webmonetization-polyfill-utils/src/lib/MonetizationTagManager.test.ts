@@ -152,13 +152,17 @@ describe('MonetizationTagManager', () => {
   })
 
   it('should stop the initial meta and use the secondary link', async () => {
+    // TODO: we could optimize away the pointless start by checking on start
+    // for existing tags in the dom, and filtering metas if links were found.
+
     const meta = makeMeta('$tag.com/meta')
     const link = makeLink('$tag.com/link')
     document.head.appendChild(meta)
-    document.head.appendChild(link)
     const callback = jest.fn()
     manager = makeManager(callback)
     manager.startWhenDocumentReady()
+    document.head.appendChild(link)
+    await timeout(0)
     expect(callback).toHaveBeenCalledTimes(3)
     expect(callback).toHaveBeenNthCalledWith(1, {
       started: {
