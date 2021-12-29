@@ -55,7 +55,7 @@ interface FireOnMonetizationChangeIfHaveAttributeParams {
 
 export const metaDeprecatedMessage =
   'Web-Monetization Error: ' +
-  'A `<link rel="monetization">` tag has been seen so ' +
+  'A `<link rel="monetization">` tag has been seen, so ' +
   'ignoring deprecated `<meta name="monetization">` tag and ' +
   'using only `<link rel="monetization">` tags consistently'
 
@@ -68,8 +68,10 @@ export class MonetizationTagManager {
   private readonly pageLoadId = uuid()
 
   private affinity: TagType = 'meta'
+
   private headObserver: MutationObserver
   private onMonetizationAttrObserver: MutationObserver
+
   private monetizationTags = new Map<
     MonetizationTag,
     {
@@ -366,5 +368,14 @@ export class MonetizationTagManager {
       // ;(tag as any).onmonetization = new Function(attribute)
     }
     return Boolean(attribute)
+  }
+
+  stop() {
+    this.headObserver?.disconnect()
+    this.onMonetizationAttrObserver?.disconnect()
+    for (const val of this.monetizationTags.values()) {
+      val.observer.disconnect()
+    }
+    this.monetizationTags.clear
   }
 }

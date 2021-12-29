@@ -51,15 +51,22 @@ const makeChangesCallback = (): [
 }
 
 describe('MonetizationTagManager', () => {
+  let manager: MonetizationTagManager
+  afterEach(() => {
+    manager?.stop()
+    document
+      .querySelectorAll('meta[name="monetization"],link[rel="monetization"]')
+      .forEach(element => element.remove())
+  })
   it('should emit an event with `started` when a tag is added', async () => {
     const link = makeLink('$ilp.uphold.com/gRa4mXFEMYrL')
     const [changes, callback] = makeChangesCallback()
 
-    const manager = makeManager(callback)
+    manager = makeManager(callback)
 
     jest.spyOn(manager, 'start')
     manager.startWhenDocumentReady()
-    expect(manager['start']).toBeCalled()
+    expect(manager['start']).toHaveBeenCalled()
 
     document.head.appendChild(link)
     expect(document.readyState).toBe('complete')
@@ -82,7 +89,7 @@ describe('MonetizationTagManager', () => {
     () => {
       const link = makeLink('$ilp.uphold.com/already')
       const [changes, callback] = makeChangesCallback()
-      const manager = makeManager(callback)
+      manager = makeManager(callback)
       document.head.appendChild(link)
       expect(changes.started).toBeNull()
       manager.startWhenDocumentReady()
@@ -99,7 +106,7 @@ describe('MonetizationTagManager', () => {
   it('should set fromBody: true when tag is from body', async () => {
     const link = makeLink('$ilp.uphold.com/inBody')
     const [changes, callback] = makeChangesCallback()
-    const manager = makeManager(callback)
+    manager = makeManager(callback)
     manager.startWhenDocumentReady()
     document.body.appendChild(link)
     await timeout(0)
@@ -116,7 +123,7 @@ describe('MonetizationTagManager', () => {
   it('should throw an error when a meta is added after a link', async () => {
     const link = makeLink('$ilp.uphold.com/linkBeforeMeta')
     const [changes, callback] = makeChangesCallback()
-    const manager = makeManager(callback)
+    manager = makeManager(callback)
     manager.startWhenDocumentReady()
     document.body.appendChild(link)
     await timeout(0)
@@ -142,5 +149,46 @@ describe('MonetizationTagManager', () => {
     expect(typeof callArg).toBe('string')
     const firstLine = callArg.split('\n')
     expect(firstLine[0]).toBe(`Error: Uncaught [Error: ${message}]`)
+  })
+
+  it('should stop the initial meta and use the secondary link', async () => {
+    const meta = makeMeta('$tag.com/meta')
+    const link = makeLink('$tag.com/link')
+    document.head.appendChild(meta)
+    document.head.appendChild(link)
+    const callback = jest.fn()
+    manager = makeManager(callback)
+    manager.startWhenDocumentReady()
+    expect(callback).toHaveBeenCalledTimes(3)
+    expect(callback).toHaveBeenNthCalledWith(1, {
+      started: {
+        fromBody: false,
+        initiatingUrl: 'http://localhost/',
+        paymentPointer: meta.content,
+        requestId: expectUuid4,
+        tagType: 'meta'
+      },
+      stopped: null
+    })
+    expect(callback).toHaveBeenNthCalledWith(2, {
+      started: null,
+      stopped: {
+        fromBody: false,
+        initiatingUrl: 'http://localhost/',
+        paymentPointer: meta.content,
+        requestId: expectUuid4,
+        tagType: 'meta'
+      }
+    })
+    expect(callback).toHaveBeenNthCalledWith(3, {
+      started: {
+        fromBody: false,
+        initiatingUrl: 'http://localhost/',
+        paymentPointer: link.href,
+        requestId: expectUuid4,
+        tagType: 'link'
+      },
+      stopped: null
+    })
   })
 })
