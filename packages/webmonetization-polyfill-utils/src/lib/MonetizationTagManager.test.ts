@@ -8,9 +8,9 @@ import {
 const timeout = async (ms = 0) =>
   new Promise(resolve => setTimeout(resolve, ms))
 
-const expectUuid4 = expect.stringMatching(
+const uuidRegex =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i
-)
+const expectUuid4 = expect.stringMatching(uuidRegex)
 
 const makeLink = (pp: string) => {
   const link = document.createElement('link')
@@ -58,7 +58,7 @@ describe('MonetizationTagManager', () => {
       .querySelectorAll('meta[name="monetization"],link[rel="monetization"]')
       .forEach(element => element.remove())
   })
-  it('should emit an event with `started` when a tag is added', async () => {
+  it('should invoke callback with `started` when a tag is added', async () => {
     const link = makeLink('$ilp.uphold.com/gRa4mXFEMYrL')
     const [changes, callback] = makeChangesCallback()
 
@@ -84,7 +84,7 @@ describe('MonetizationTagManager', () => {
     })
   })
   it(
-    'should emit an event with `started` immediately upon starting ' +
+    'should invoke callback with `started` immediately upon starting, ' +
       'when a tag is already in the document',
     () => {
       const link = makeLink('$ilp.uphold.com/already')
@@ -151,7 +151,7 @@ describe('MonetizationTagManager', () => {
     expect(firstLine[0]).toBe(`Error: Uncaught [Error: ${message}]`)
   })
 
-  it('should stop the initial meta and use the secondary link', async () => {
+  it('should stop an initial meta and use the secondary link', async () => {
     // TODO: we could optimize away the pointless start by checking on start
     // for existing tags in the dom, and filtering metas if links were found.
 
