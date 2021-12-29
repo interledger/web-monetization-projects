@@ -110,12 +110,10 @@ export class MonetizationTagManager {
    * The head will be null early on, so we must wait
    */
   startWhenDocumentReady(): void {
-    console.log('hello')
     whenDocumentReady(this.document, this.start.bind(this))
   }
 
   start() {
-    console.log('hello')
     const monetizationTags: MonetizationTagList =
       this.document.querySelectorAll(
         'meta[name="monetization"],link[rel="monetization"]'
