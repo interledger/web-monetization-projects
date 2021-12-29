@@ -53,6 +53,12 @@ interface FireOnMonetizationChangeIfHaveAttributeParams {
   force?: boolean
 }
 
+export const metaDeprecatedMessage =
+  'Web-Monetization Error: ' +
+  'A `<link rel="monetization">` tag has been seen so ' +
+  'ignoring deprecated `<meta name="monetization">` tag and ' +
+  'using only `<link rel="monetization">` tags consistently'
+
 export class MonetizationTagManager {
   /**
    * This class as written should be used in such a way that it has a lifetime
@@ -211,12 +217,7 @@ export class MonetizationTagManager {
         }
       } else {
         // TODO: just console.warn and return early ?
-        throw new DeprecatedMetaTagIgnoredError(
-          'Web-Monetization Error: ' +
-            'A `<link rel="monetization">` tag has been seen so ' +
-            'ignoring deprecated `<meta name="monetization">` tag and ' +
-            'using only `<link rel="monetization">` tags consistently'
-        )
+        throw new DeprecatedMetaTagIgnoredError(metaDeprecatedMessage)
       }
     }
 

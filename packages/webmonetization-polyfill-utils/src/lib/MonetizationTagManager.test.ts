@@ -1,4 +1,5 @@
 import {
+  metaDeprecatedMessage,
   MonetizationTagManager,
   PaymentDetailsChangeArguments,
   PaymentDetailsChangeCallback
@@ -16,6 +17,22 @@ const makeLink = (pp: string) => {
   link.setAttribute('rel', 'monetization')
   link.setAttribute('href', pp.replace(/^\$/, 'https://'))
   return link
+}
+
+const makeMeta = (pp: string) => {
+  const link = document.createElement('meta')
+  link.setAttribute('name', 'monetization')
+  link.setAttribute('content', pp)
+  return link
+}
+
+const captureOneWindowError = async (timeout = 10e3): Promise<ErrorEvent> => {
+  return Promise.race([
+    new Promise<ErrorEvent>(resolve => {
+      window.addEventListener('error', resolve)
+    }),
+    new Promise<never>((_, reject) => setTimeout(reject, timeout))
+  ])
 }
 
 const makeManager = (cb: PaymentDetailsChangeCallback) => {
@@ -79,4 +96,51 @@ describe('MonetizationTagManager', () => {
       })
     }
   )
+  it('should set fromBody: true when tag is from body', async () => {
+    const link = makeLink('$ilp.uphold.com/inBody')
+    const [changes, callback] = makeChangesCallback()
+    const manager = makeManager(callback)
+    manager.startWhenDocumentReady()
+    document.body.appendChild(link)
+    await timeout(0)
+
+    expect(changes.started).toEqual({
+      requestId: expectUuid4,
+      paymentPointer: 'https://ilp.uphold.com/inBody',
+      initiatingUrl: 'http://localhost/',
+      tagType: 'link',
+      fromBody: true
+    })
+  })
+
+  it('should throw an error when a meta is added after a link', async () => {
+    const link = makeLink('$ilp.uphold.com/linkBeforeMeta')
+    const [changes, callback] = makeChangesCallback()
+    const manager = makeManager(callback)
+    manager.startWhenDocumentReady()
+    document.body.appendChild(link)
+    await timeout(0)
+
+    expect(changes.started).toEqual({
+      requestId: expectUuid4,
+      paymentPointer: 'https://ilp.uphold.com/linkBeforeMeta',
+      initiatingUrl: 'http://localhost/',
+      tagType: 'link',
+      fromBody: true
+    })
+    const meta = makeMeta('$ilp.uphold.com/meta')
+    document.head.appendChild(meta)
+
+    // At least in JSDOM this isn't called directly by our code, but rather
+    // it's called by some uncaught exception error code
+    const spy = jest.spyOn(console, 'error')
+    const error = await captureOneWindowError()
+    const message = metaDeprecatedMessage
+    expect(error.error.message).toEqual(message)
+    const callArg = spy.mock.calls[0][0]
+    // why is this a string ?
+    expect(typeof callArg).toBe('string')
+    const firstLine = callArg.split('\n')
+    expect(firstLine[0]).toBe(`Error: Uncaught [Error: ${message}]`)
+  })
 })
