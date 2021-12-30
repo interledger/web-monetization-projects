@@ -100,10 +100,5 @@
   "engines": {
     "node": ">= 14.0.0"
   },
-  "packageManager": "yarn@3.1.1",
-  "dependenciesMeta": {
-    "inversify@6.0.1": {
-      "unplugged": true
-    }
-  }
+  "packageManager": "yarn@3.1.1"
 }

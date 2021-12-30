@@ -18082,7 +18082,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["inversify", [
         ["npm:6.0.1", {
-          "packageLocation": "./.yarn/unplugged/inversify-npm-6.0.1-39ef6784da/node_modules/inversify/",
+          "packageLocation": "./.yarn/cache/inversify-npm-6.0.1-39ef6784da-b6c9b56ef7.zip/node_modules/inversify/",
           "packageDependencies": [
             ["inversify", "npm:6.0.1"]
           ],
