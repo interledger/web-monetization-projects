@@ -151,6 +151,32 @@ describe('MonetizationTagManager', () => {
     expect(firstLine[0]).toBe(`Error: Uncaught [Error: ${message}]`)
   })
 
+  it('should throw an error when trying to use more than one meta', async () => {
+    const ppa = makeMeta('$a.pp.com')
+    const ppb = makeMeta('$b.pp.com')
+    const cb = jest.fn()
+    manager = makeManager(cb)
+    manager.startWhenDocumentReady()
+    document.head.appendChild(ppa)
+    document.head.appendChild(ppb)
+    const errorEvent = await captureOneWindowError()
+    expect(errorEvent.message).toMatchInlineSnapshot(
+      `"Web-Monetization Error: Ignoring tag with paymentPointer=$b.pp.com, only 1 monetization tag[s] supported at a time. "`
+    )
+  })
+
+  it('should throw an error when trying to use meta in the body', async () => {
+    const ppa = makeMeta('$body.pp.com')
+    const cb = jest.fn()
+    manager = makeManager(cb)
+    manager.startWhenDocumentReady()
+    document.body.appendChild(ppa)
+    const errorEvent = await captureOneWindowError()
+    expect(errorEvent.message).toMatchInlineSnapshot(
+      `"Web-Monetization Error: <meta name=\\"monetization\\"> must be in the document head"`
+    )
+  })
+
   it('should stop an initial meta and use the secondary link', async () => {
     // TODO: we could optimize away the pointless start by checking on start
     // for existing tags in the dom, and filtering metas if links were found.
