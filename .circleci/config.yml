@@ -221,6 +221,13 @@ jobs:
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             xvfb-run -a yarn << parameters.command >>
       - run:
+          name: Run jest via babel
+          command: |
+            export DEBUG='coil*'
+            export TS_JEST_MAP_PATHS_TO_MODULES=true
+            cp jest.config.local.example.js jest.config.local.js 
+            xvfb-run -a yarn << parameters.command >>
+      - run:
           name: Run jest from build
           command: |
             export DEBUG='coil*'
