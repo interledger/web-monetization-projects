@@ -24,7 +24,9 @@ jest.setTimeout(120e3)
 async function getBtpTokenFromEnv() {
   const user = env.COIL_USER
   const password = env.COIL_PASSWORD
-  const client = new coilClient.GraphQlClient()
+  const client = new coilClient.GraphQlClient(
+    new coilClient.GraphQlClientOptions()
+  )
   const token = await client.login(user, password)
   return await client.refreshBtpToken(token)
 }
