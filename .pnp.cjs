@@ -2918,7 +2918,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:7.0.4"],
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
-            ["inversify", "npm:6.0.1"],
+            ["inversify", "patch:inversify@npm%3A6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::version=6.0.1&hash=0f43d2&locator=web-monetization%40workspace%3A."],
             ["inversify-logger-middleware", "npm:3.1.0"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.4.5"],
             ["jsonwebtoken", "npm:8.5.1"],
@@ -3720,7 +3720,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
-            ["inversify", "npm:6.0.1"],
+            ["inversify", "patch:inversify@npm%3A6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::version=6.0.1&hash=0f43d2&locator=web-monetization%40workspace%3A."],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.4.5"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.1.3"],
@@ -3967,7 +3967,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:7.0.4"],
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
-            ["inversify", "npm:6.0.1"],
+            ["inversify", "patch:inversify@npm%3A6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::version=6.0.1&hash=0f43d2&locator=web-monetization%40workspace%3A."],
             ["inversify-logger-middleware", "npm:3.1.0"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.4.5"],
             ["jsonwebtoken", "npm:8.5.1"],
@@ -6939,7 +6939,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-plugin-mini-accounts", "npm:4.2.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
-            ["inversify", "npm:6.0.1"],
+            ["inversify", "patch:inversify@npm%3A6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::version=6.0.1&hash=0f43d2&locator=web-monetization%40workspace%3A."],
             ["inversify-express-utils", "npm:6.3.2"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.4.5"],
             ["lerna", "npm:4.0.0"],
@@ -18081,10 +18081,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["inversify", [
-        ["npm:6.0.1", {
-          "packageLocation": "./.yarn/cache/inversify-npm-6.0.1-39ef6784da-b6c9b56ef7.zip/node_modules/inversify/",
+        ["patch:inversify@npm%3A6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::version=6.0.1&hash=0f43d2&locator=web-monetization%40workspace%3A.", {
+          "packageLocation": "./.yarn/cache/inversify-patch-58e67e0341-0d0a4d02d4.zip/node_modules/inversify/",
           "packageDependencies": [
-            ["inversify", "npm:6.0.1"]
+            ["inversify", "patch:inversify@npm%3A6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::version=6.0.1&hash=0f43d2&locator=web-monetization%40workspace%3A."]
           ],
           "linkType": "HARD",
         }]
@@ -18097,7 +18097,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.8"],
             ["express", "npm:4.16.2"],
             ["http-status-codes", "npm:1.4.0"],
-            ["inversify", "npm:6.0.1"]
+            ["inversify", "patch:inversify@npm%3A6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::version=6.0.1&hash=0f43d2&locator=web-monetization%40workspace%3A."]
           ],
           "linkType": "HARD",
         }]
@@ -18108,7 +18108,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["inversify-logger-middleware", "npm:3.1.0"],
             ["chalk", "npm:2.3.0"],
-            ["inversify", "npm:6.0.1"]
+            ["inversify", "patch:inversify@npm%3A6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::version=6.0.1&hash=0f43d2&locator=web-monetization%40workspace%3A."]
           ],
           "linkType": "HARD",
         }]

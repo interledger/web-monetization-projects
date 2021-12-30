@@ -13548,10 +13548,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"inversify@npm:*, inversify@npm:^6.0.0":
+"inversify@npm:6.0.1":
   version: 6.0.1
   resolution: "inversify@npm:6.0.1"
   checksum: b6c9b56ef7817a71534b06101c2b0a0130b67c47a769f58794d9c0643591a83ac02be30a48c00cb729c0c83ece96dde369c419d48c32d0201c6cc7407629fbc5
+  languageName: node
+  linkType: hard
+
+"inversify@patch:inversify@npm:6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::locator=web-monetization%40workspace%3A.":
+  version: 6.0.1
+  resolution: "inversify@patch:inversify@npm%3A6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da::version=6.0.1&hash=0f43d2&locator=web-monetization%40workspace%3A."
+  checksum: 0d0a4d02d4baca27ef2a4c17b25b511b61942f72de8551badfacd7d6feba96ca59d413f075fceae0f98f247647719066ff560cde15df3e6f246476070e1fe7bc
   languageName: node
   linkType: hard
 
