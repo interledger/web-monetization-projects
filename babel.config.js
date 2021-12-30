@@ -1,7 +1,12 @@
 // babel.config.js
+const nodeMajorVersion = Number(process.versions.node.split('.')[0])
+
 module.exports = {
   presets: [
-    ['@babel/preset-env', { loose: false, targets: { node: 16 } }],
+    [
+      '@babel/preset-env',
+      { loose: false, targets: { node: nodeMajorVersion } }
+    ],
     ['@babel/preset-typescript', { onlyRemoveTypeImports: true }]
   ],
   plugins: [
