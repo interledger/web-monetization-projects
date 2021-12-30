@@ -195,4 +195,101 @@ describe('MonetizationTagManager', () => {
       stopped: null
     })
   })
+
+  it('should not invoke callback when link starts disabled', async () => {
+    const link = makeLink('$ilp.uphold.com/gRa4mXFEMYrL')
+    const [changes, callback] = makeChangesCallback()
+    link.setAttribute('disabled', '')
+    expect(link).toMatchInlineSnapshot(`
+      <link
+        disabled=""
+        href="https://ilp.uphold.com/gRa4mXFEMYrL"
+        rel="monetization"
+      />
+    `)
+    manager = makeManager(callback)
+    manager.startWhenDocumentReady()
+    document.body.appendChild(link)
+    await timeout(0)
+    expect(changes.started).toBeNull()
+    expect(changes.stopped).toBeNull()
+  })
+
+  it('should invoked stopped when link becomes disabled', async () => {
+    const pp = 'https://ilp.uphold.com/toBeDisabled'
+    const link = makeLink(pp)
+    const [changes, callback] = makeChangesCallback()
+    manager = makeManager(callback)
+    manager.startWhenDocumentReady()
+    document.body.appendChild(link)
+    await timeout(0)
+    expect(changes.started?.paymentPointer).toBe(pp)
+    const started = { ...changes.started }
+    expect(changes.stopped).toBeNull()
+    const endpoint = jest.spyOn(manager, 'onChangedPaymentEndpoint')
+    link.setAttribute('disabled', 'true')
+    await timeout(0)
+    expect(link).toMatchInlineSnapshot(`
+      <link
+        disabled="true"
+        href="https://ilp.uphold.com/toBeDisabled"
+        rel="monetization"
+      />
+    `)
+    expect(endpoint.mock.calls).toMatchInlineSnapshot(`
+      Array [
+        Array [
+          <link
+            disabled="true"
+            href="https://ilp.uphold.com/toBeDisabled"
+            rel="monetization"
+          />,
+          true,
+          false,
+        ],
+      ]
+    `)
+    expect(endpoint).toHaveBeenCalled()
+    expect(changes.started).toBeNull()
+    expect(changes.stopped).toEqual(started)
+  })
+
+  it('should invoke callback with started when disabled link becomes enabled', async () => {
+    const pp = 'https://ilp.uphold.com/startsDisabled'
+    const link = makeLink(pp)
+    link.setAttribute('disabled', 'true')
+
+    const [changes, callback] = makeChangesCallback()
+    manager = makeManager(callback)
+    document.body.appendChild(link)
+    manager.startWhenDocumentReady()
+    await timeout(0)
+
+    // Is this just a JSDOM thing ?
+    expect(link.disabled).toBeUndefined()
+    // Disabled attr is definitely set
+    expect(link.getAttributeNames()).toMatchInlineSnapshot(`
+      Array [
+        "rel",
+        "href",
+        "disabled",
+      ]
+    `)
+    // Disabled attr is definitely set
+    expect(link).toMatchInlineSnapshot(`
+      <link
+        disabled="true"
+        href="https://ilp.uphold.com/startsDisabled"
+        rel="monetization"
+      />
+    `)
+
+    expect(changes.started).toBeNull()
+    expect(changes.stopped).toBeNull()
+
+    link.removeAttribute('disabled')
+    await timeout(0)
+    expect(changes.started?.paymentPointer).toBe(pp)
+    expect(changes.stopped).toBeNull()
+  })
 })

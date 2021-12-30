@@ -180,7 +180,7 @@ export class MonetizationTagManager {
     }
   }
 
-  private onMonetizationTagAttributesChange(records: MutationRecord[]) {
+  onMonetizationTagAttributesChange(records: MutationRecord[]) {
     for (const record of records) {
       if (
         record.type === 'attributes' &&
@@ -204,7 +204,11 @@ export class MonetizationTagManager {
         // can't use record.target[disabled] as it's a Boolean not string
         record.target.getAttribute('disabled') !== record.oldValue
       ) {
-        this.onChangedPaymentEndpoint(record.target, record.target.disabled)
+        const wasDisabled = record.oldValue !== null
+        const isDisabled = record.target.hasAttribute('disabled')
+        if (wasDisabled != isDisabled) {
+          this.onChangedPaymentEndpoint(record.target, isDisabled, wasDisabled)
+        }
       }
     }
   }
@@ -260,7 +264,11 @@ export class MonetizationTagManager {
     }
 
     this.monetizationTags.set(tag, { observer, details })
-    this.callback({ stopped: null, started: details })
+    if (tag instanceof HTMLLinkElement && tag.hasAttribute('disabled')) {
+      return
+    } else {
+      this.callback({ stopped: null, started: details })
+    }
   }
 
   private onRemovedTag(meta: MonetizationTag) {
@@ -279,10 +287,14 @@ export class MonetizationTagManager {
     return entry
   }
 
-  private onChangedPaymentEndpoint(tag: MonetizationTag, disabled = false) {
+  onChangedPaymentEndpoint(
+    tag: MonetizationTag,
+    disabled = false,
+    wasDisabled = false
+  ) {
     const entry = this.getEntry(tag)
-    const stopped = entry.details
-    this.clearLinkById(stopped)
+    const stopped = wasDisabled ? null : entry.details
+    this.clearLinkById(entry.details)
     let started: PaymentDetails | null = null
     if (!disabled) {
       started = this.getPaymentDetails(tag)
