@@ -45,7 +45,7 @@ export class MonetizationService {
     @logger('MonetizationService')
     private log: Logger,
     @inject(tokens.WextApi)
-    private api: { tabs: { sendMessage: ChromeTabs['sendMessage'] } } = chrome
+    private api: { tabs: { sendMessage: ChromeTabs['sendMessage'] } }
   ) {}
 
   get activeTab() {

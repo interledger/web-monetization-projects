@@ -20,7 +20,7 @@ export class SiteToken {
     @inject(tokens.CoilDomain)
     private coilDomain: string,
     @inject(tokens.WextApi)
-    private api = chrome
+    private api: typeof chrome
   ) {}
 
   /**

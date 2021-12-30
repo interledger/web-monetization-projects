@@ -46,7 +46,7 @@ export class GraphQlClient {
 
   public constructor(
     @inject(GraphQlClientOptions)
-    private config: GraphQlClientOptions = new GraphQlClientOptions()
+    private config: GraphQlClientOptions
   ) {
     this.fetch = this.config.fetch
   }

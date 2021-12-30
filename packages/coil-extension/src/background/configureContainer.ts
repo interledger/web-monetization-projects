@@ -15,17 +15,17 @@ interface ConfigureContainerParams {
   loggingEnabled: boolean
   coilDomain: string
   btpEndpoint?: string
-  api: any
+  wextApi: any
   buildConfig: Record<string, unknown>
   storage: Storage
   getActiveTab: () => Promise<any>
 }
 
-export async function configureContainer({
+export function configureContainer({
   container,
   loggingEnabled,
   coilDomain,
-  api,
+  wextApi,
   buildConfig,
   btpEndpoint,
   storage,
@@ -37,7 +37,7 @@ export async function configureContainer({
   }
 
   container.bind(tokens.CoilDomain).toConstantValue(coilDomain)
-  container.bind(tokens.WextApi).toConstantValue(api)
+  container.bind(tokens.WextApi).toConstantValue(wextApi)
   container.bind(tokens.BuildConfig).toConstantValue(buildConfig)
   container.bind(tokens.LoggingEnabled).toConstantValue(loggingEnabled)
   container.bind(GraphQlClient.Options).to(ClientOptions)

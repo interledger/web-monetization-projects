@@ -40,7 +40,7 @@ async function main() {
     container: container,
     loggingEnabled,
     coilDomain: COIL_DOMAIN,
-    api: API,
+    wextApi: API,
     buildConfig: BUILD_CONFIG,
     storage: localStorage,
     getActiveTab: async () => {

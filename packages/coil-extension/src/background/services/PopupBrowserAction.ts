@@ -7,7 +7,7 @@ import { BuildConfig } from '../../types/BuildConfig'
 import { TabOpener } from './TabOpener'
 import { PopupIconService } from './PopupIconService'
 
-import TabIconDetails = chrome.browserAction.TabIconDetails
+type TabIconDetails = chrome.browserAction.TabIconDetails
 
 type Action = (tab: chrome.tabs.Tab) => void
 
@@ -29,7 +29,7 @@ export class PopupBrowserAction {
     @inject(tokens.BuildConfig)
     private buildConfig: BuildConfig,
     @inject(tokens.CoilDomain) private coilDomain: string,
-    @inject(tokens.WextApi) private api = chrome
+    @inject(tokens.WextApi) private api: typeof chrome
   ) {
     this.openLogin = this.tabOpener.opener(`${this.coilDomain}/login`)
     // disable popup if on android

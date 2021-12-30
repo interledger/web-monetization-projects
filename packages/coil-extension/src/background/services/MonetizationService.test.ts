@@ -61,7 +61,7 @@ describe('MonetizationService', () => {
       container,
       buildConfig: {},
       coilDomain: 'https://coil.com',
-      api,
+      wextApi: api,
       storage: localStorage,
       getActiveTab: async () => 0,
       loggingEnabled: true
@@ -87,6 +87,6 @@ describe('MonetizationService', () => {
     activeTabLogger.log('why does not work')
     expect(api.tabs.query).toHaveBeenCalled()
     container.get(AuthService)
-    container.getAsync(MonetizationService)
+    await container.getAsync(MonetizationService)
   })
 })

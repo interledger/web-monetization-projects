@@ -63,7 +63,7 @@ export function run() {
       }
     })
     ReactDOM.render(
-      <IndexWithRoot storage={new StorageService()} host={host} />,
+      <IndexWithRoot storage={new StorageService(localStorage)} host={host} />,
       rootEl
     )
   } else {

@@ -19,7 +19,7 @@ export class SPSPStateWM2 {
     private assoc: StreamAssociationsWM2,
     private streams: Streams,
     @inject(tokens.WextApi)
-    private wext = chrome
+    private wext: typeof chrome
   ) {}
 
   bindToStreamsEvents() {
