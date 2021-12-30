@@ -59,13 +59,13 @@ export class AuthService extends EventEmitter {
   private trace = (..._: unknown[]) => {}
 
   constructor(
-    @inject(tokens.LocalStorageProxy)
-    private store: LocalStorageProxy,
-    private client: GraphQlClient,
     @inject(tokens.CoilDomain)
     private domain: string,
     @logger('AuthService')
     private log: Logger,
+    @inject(tokens.LocalStorageProxy)
+    private store: LocalStorageProxy,
+    private client: GraphQlClient,
     private siteToken: SiteToken,
     private activeTabs: ActiveTabLogger
   ) {

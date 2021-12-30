@@ -16,12 +16,11 @@ import {
   SPSPError,
   SPSPResponse
 } from '@webmonetization/polyfill-utils'
-import { Container, inject, injectable } from 'inversify'
+import { Container, inject, injectable, optional } from 'inversify'
 import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
-import { BTP_ENDPOINT } from '../../webpackDefines'
 
 import { AnonymousTokens } from './AnonymousTokens'
 import { Logger, logger } from './utils'
@@ -73,6 +72,12 @@ type OnMoneyEvent = {
   receipt?: string
 }
 
+interface Created extends PaymentDetails {
+  token: string
+  spspEndpoint: string
+  initiatingUrl: string
+}
+
 @injectable()
 export class Stream extends EventEmitter {
   private readonly _requestId: string
@@ -102,19 +107,15 @@ export class Stream extends EventEmitter {
     private readonly _debug: Logger,
     private container: Container,
     @inject(tokens.StreamDetails)
-    {
-      requestId,
-      spspEndpoint,
-      paymentPointer,
-      token,
-      initiatingUrl
-    }: PaymentDetails & {
-      token: string
-      spspEndpoint: string
-      initiatingUrl: string
-    }
+    create: Created,
+    @inject(tokens.BtpEndpoint)
+    @optional()
+    private btpEndpoint?: string
   ) {
     super()
+
+    const { requestId, spspEndpoint, paymentPointer, token, initiatingUrl } =
+      create
 
     this._paymentPointer = paymentPointer
     this._requestId = requestId
@@ -138,8 +139,8 @@ export class Stream extends EventEmitter {
     server.pathname = '/btp'
     this._server = server.href.replace(/^http/, 'btp+ws')
 
-    if (BTP_ENDPOINT) {
-      this._server = BTP_ENDPOINT
+    if (this.btpEndpoint) {
+      this._server = this.btpEndpoint
     }
   }
 

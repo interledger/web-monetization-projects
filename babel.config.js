@@ -1,12 +1,17 @@
 // babel.config.js
 module.exports = {
   presets: [
-    ['@babel/preset-env', { targets: { node: '12' } }],
-    '@babel/preset-typescript'
+    ['@babel/preset-env', { targets: { node: 16 } }],
+    ['@babel/preset-typescript', { onlyRemoveTypeImports: true }]
   ],
   plugins: [
-    ['@babel/proposal-decorators', { legacy: true }],
-    '@babel/proposal-class-properties',
-    '@babel/proposal-object-rest-spread'
+    'babel-plugin-transform-typescript-metadata',
+    [
+      '@babel/plugin-proposal-decorators',
+      { legacy: true, decoratorsBeforeExport: undefined }
+    ],
+    'babel-plugin-parameter-decorator',
+    ['@babel/plugin-proposal-class-properties', {}],
+    '@babel/plugin-proposal-object-rest-spread'
   ]
 }

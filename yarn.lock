@@ -46,7 +46,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.16.5, @babel/core@npm:^7.1.0, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.16.5, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
   version: 7.16.5
   resolution: "@babel/core@npm:7.16.5"
   dependencies:
@@ -402,7 +402,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-class-properties@npm:7.16.5, @babel/plugin-proposal-class-properties@npm:^7.16.5":
+"@babel/plugin-proposal-class-properties@npm:^7.16.5":
   version: 7.16.5
   resolution: "@babel/plugin-proposal-class-properties@npm:7.16.5"
   dependencies:
@@ -427,7 +427,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-decorators@npm:7.16.5":
+"@babel/plugin-proposal-decorators@npm:^7.16.5":
   version: 7.16.5
   resolution: "@babel/plugin-proposal-decorators@npm:7.16.5"
   dependencies:
@@ -512,7 +512,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-object-rest-spread@npm:7.16.5, @babel/plugin-proposal-object-rest-spread@npm:^7.16.5":
+"@babel/plugin-proposal-object-rest-spread@npm:^7.16.5":
   version: 7.16.5
   resolution: "@babel/plugin-proposal-object-rest-spread@npm:7.16.5"
   dependencies:
@@ -1188,7 +1188,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:7.16.5":
+"@babel/preset-env@npm:^7.16.5":
   version: 7.16.5
   resolution: "@babel/preset-env@npm:7.16.5"
   dependencies:
@@ -1287,7 +1287,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:7.16.5":
+"@babel/preset-typescript@npm:^7.16.5":
   version: 7.16.5
   resolution: "@babel/preset-typescript@npm:7.16.5"
   dependencies:
@@ -1421,12 +1421,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/privacypass-sjcl": 0.0.0
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
@@ -1439,6 +1439,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -1453,7 +1455,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     jsonwebtoken: 8.5.1
     lerna: 4.0.0
     lint-staged: 12.1.3
@@ -1479,12 +1481,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@dier-makr/annotations": 0.0.0
@@ -1496,6 +1498,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -1510,7 +1514,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
     lint-staged: 12.1.3
@@ -1536,12 +1540,12 @@ __metadata:
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
     "@abraham/reflection": ^0.8.0
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/anonymous-tokens": ^0.0.0
     "@coil/client": ^0.0.0
     "@coil/polyfill-utils": ^0.0.0
@@ -1576,6 +1580,8 @@ __metadata:
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     addons-linter: 4.5.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -1599,7 +1605,7 @@ __metadata:
     ilp-protocol-stream: 2.7.0
     inversify: ^6.0.0
     inversify-logger-middleware: ^3.1.0
-    jest: 27.4.5
+    jest: ^27.4.5
     jsonwebtoken: ^8.5.1
     jss: ^10.6.0
     lerna: 4.0.0
@@ -1630,12 +1636,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -1644,6 +1650,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-dir: ^1.3.0
     copy-webpack-plugin: 9.1.0
     deepmerge: ^4.2.2
@@ -1660,7 +1668,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     json5: ^2.2.0
     lerna: 4.0.0
     lint-staged: 12.1.3
@@ -1688,12 +1696,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/client": 0.0.0
     "@coil/polyfill-utils": ^0.0.0
     "@coil/puppeteer-utils": ^0.0.0
@@ -1711,6 +1719,8 @@ __metadata:
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -1727,7 +1737,7 @@ __metadata:
     husky: 7.0.4
     ilp-plugin-btp: 1.5.0
     ilp-protocol-stream: 2.7.0
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     node-fetch: ^2.6.1
@@ -1754,12 +1764,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -1768,6 +1778,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -1782,7 +1794,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     node-fetch: ^2.6.1
@@ -1806,12 +1818,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -1824,6 +1836,8 @@ __metadata:
     JSON2016: 1.0.0
     asn1-parser: ^1.1.8
     atob: ^2.1.2
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     btoa: ^1.2.1
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
@@ -1839,7 +1853,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     keccak: ^3.0.1
     lerna: 4.0.0
     lint-staged: 12.1.3
@@ -1865,12 +1879,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/client": 0.0.0
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
@@ -1884,6 +1898,8 @@ __metadata:
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     debug: ^4.3.1
     eslint: 7.32.0
@@ -1900,7 +1916,7 @@ __metadata:
     eslint-plugin-standard: 5.0.0
     get-port: ^5.1.1
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -1926,12 +1942,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -1941,6 +1957,8 @@ __metadata:
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     assert: ^2.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     buffer: ^6.0.3
     copy-webpack-plugin: 9.1.0
     crypto-browserify: ^3.12.0
@@ -1958,7 +1976,7 @@ __metadata:
     eslint-plugin-standard: 5.0.0
     events: ^3.3.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -1986,12 +2004,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/client": 0.0.0
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
@@ -2001,6 +2019,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -2015,7 +2035,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -2261,12 +2281,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -2275,6 +2295,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -2289,7 +2311,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -2312,12 +2334,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@dier-makr/annotations": 0.0.0
@@ -2327,6 +2349,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -2342,7 +2366,7 @@ __metadata:
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     inversify: ^6.0.0
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -2504,12 +2528,12 @@ __metadata:
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
     "@abraham/reflection": ^0.8.0
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/polyfill-utils": ^0.0.0
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
@@ -2530,6 +2554,8 @@ __metadata:
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     addons-linter: 4.5.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     css-loader: 6.5.1
@@ -2552,7 +2578,7 @@ __metadata:
     ilp-protocol-stream: 2.7.0
     inversify: ^6.0.0
     inversify-logger-middleware: ^3.1.0
-    jest: 27.4.5
+    jest: ^27.4.5
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
     lint-staged: 12.1.3
@@ -4031,12 +4057,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -4045,6 +4071,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -4059,7 +4087,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -4965,12 +4993,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
@@ -4981,6 +5009,8 @@ __metadata:
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     assert: ^2.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     buffer: ^6.0.3
     copy-webpack-plugin: 9.1.0
     crx-hotreload: ^1.0.6
@@ -4999,7 +5029,7 @@ __metadata:
     eslint-plugin-standard: 5.0.0
     events: ^3.3.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -5028,12 +5058,12 @@ __metadata:
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
     "@abraham/reflection": ^0.8.0
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
@@ -5053,6 +5083,8 @@ __metadata:
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     body-parser: ^1.19.0
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
@@ -5076,7 +5108,7 @@ __metadata:
     ilp-protocol-stream: ^2.7.0
     inversify: ^6.0.0
     inversify-express-utils: ^6.3.2
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     node-fetch: ^2.6.1
@@ -5105,12 +5137,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -5121,6 +5153,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -5135,7 +5169,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     node-fetch: ^2.6.1
@@ -5161,12 +5195,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
@@ -5178,6 +5212,8 @@ __metadata:
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -5192,7 +5228,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -5217,12 +5253,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
@@ -5239,6 +5275,8 @@ __metadata:
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
     ajv: ^8.6.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -5254,7 +5292,7 @@ __metadata:
     eslint-plugin-standard: 5.0.0
     html-webpack-plugin: 5.5.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -5281,12 +5319,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -5295,6 +5333,8 @@ __metadata:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -5309,7 +5349,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -5333,12 +5373,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@dier-makr/annotations": 0.0.0
@@ -5350,6 +5390,8 @@ __metadata:
     "@webmonetization/types": 0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -5364,7 +5406,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -6808,6 +6850,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-parameter-decorator@npm:^1.0.16":
+  version: 1.0.16
+  resolution: "babel-plugin-parameter-decorator@npm:1.0.16"
+  checksum: 5a0d8ce40be86274abcfa3ba38b4ebcb265b717da9ba2d18242fa9d914d35fbb107fe222deafb0932ef30eed0b9b31fd85ea632b7d721beef626f5f797645b64
+  languageName: node
+  linkType: hard
+
 "babel-plugin-polyfill-corejs2@npm:^0.3.0":
   version: 0.3.0
   resolution: "babel-plugin-polyfill-corejs2@npm:0.3.0"
@@ -6841,6 +6890,15 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: ecca4389fd557554efc6de834f84f7c85e83c348d5283de2032d35429bc7121ed6f336553d3d704021f9bef22fca339fbee560d3b0fb8bb1d4eca2fecaaeebcb
+  languageName: node
+  linkType: hard
+
+"babel-plugin-transform-typescript-metadata@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "babel-plugin-transform-typescript-metadata@npm:0.3.2"
+  dependencies:
+    "@babel/helper-plugin-utils": ^7.0.0
+  checksum: 15aa2a05c9ec2817155cc15746e55e0e06dd57762e7fc1eea168ce9a65fd89372174ecc7506434b6abde367a264c5953f27468a0c3dcab2fb4a14bec1c719536
   languageName: node
   linkType: hard
 
@@ -14741,7 +14799,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jest@npm:27.4.5":
+"jest@npm:^27.4.5":
   version: 27.4.5
   resolution: "jest@npm:27.4.5"
   dependencies:
@@ -23003,12 +23061,12 @@ typescript@~4.4.3:
   version: 0.0.0-use.local
   resolution: "web-monetization@workspace:."
   dependencies:
-    "@babel/core": 7.16.5
-    "@babel/plugin-proposal-class-properties": 7.16.5
-    "@babel/plugin-proposal-decorators": 7.16.5
-    "@babel/plugin-proposal-object-rest-spread": 7.16.5
-    "@babel/preset-env": 7.16.5
-    "@babel/preset-typescript": 7.16.5
+    "@babel/core": ^7.16.5
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/plugin-proposal-decorators": ^7.16.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/preset-typescript": ^7.16.5
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@types/jest": 27.0.3
@@ -23017,6 +23075,8 @@ typescript@~4.4.3:
     "@typescript-eslint/parser": 5.8.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
+    babel-plugin-parameter-decorator: ^1.0.16
+    babel-plugin-transform-typescript-metadata: ^0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 7.32.0
     eslint-config-prettier: 8.3.0
@@ -23031,7 +23091,7 @@ typescript@~4.4.3:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
-    jest: 27.4.5
+    jest: ^27.4.5
     lerna: 4.0.0
     lint-staged: 12.1.3
     prettier: 2.5.1
@@ -23047,6 +23107,9 @@ typescript@~4.4.3:
     webpack-cli: 4.9.1
     webpack-dev-server: 3.11.3
     webpack-merge: 5.8.0
+  dependenciesMeta:
+    inversify@6.0.1:
+      unplugged: true
   languageName: unknown
   linkType: soft
 

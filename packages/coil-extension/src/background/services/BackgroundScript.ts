@@ -1,6 +1,5 @@
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
-import { MonetizationState } from '@webmonetization/types'
 
 import { notNullOrUndef } from '../../util/nullables'
 import { StorageService } from '../../services/storage'
@@ -23,7 +22,6 @@ import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
 
-import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
 import { TabStates } from './TabStates'
 import { Streams } from './Streams'
@@ -276,10 +274,6 @@ export class BackgroundScript {
         }
       }
     })
-  }
-
-  private savePacketToHistoryDb(_: StreamMoneyEvent) {
-    // this.db.incrementSite(details)
   }
 
   async adaptedPageDetails(variables: { url: string; channelId?: string }) {

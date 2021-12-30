@@ -1,5 +1,6 @@
 export * from '@webmonetization/wext/tokens'
 export const CoilDomain = Symbol('CoilDomain')
+export const BtpEndpoint = Symbol('BtpEndpoint')
 export const LocalStorageProxy = Symbol('LocalStorageProxy')
 export const ContentRuntime = Symbol('ContentRuntime')
 export const Logger = Symbol('Logger')

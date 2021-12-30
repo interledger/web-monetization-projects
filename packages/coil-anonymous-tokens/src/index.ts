@@ -15,7 +15,7 @@ import {
   StorableBlindToken,
   verifyProof
 } from '@coil/privacypass-sjcl'
-import { SjclEllipticalPoint } from 'sjcl'
+import type { SjclEllipticalPoint } from 'sjcl'
 
 import { portableFetch } from './portableFetch'
 

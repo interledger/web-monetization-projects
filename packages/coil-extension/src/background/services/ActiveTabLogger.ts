@@ -9,7 +9,7 @@ export class ActiveTabLogger {
 
   constructor(
     @inject(tokens.WextApi)
-    private api = chrome
+    private api: typeof chrome
   ) {}
 
   log(log: string, frame?: FrameSpec) {

@@ -15,7 +15,6 @@ import {
 import { LocalStorageProxy } from '../../types/storage'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
-import { BuildConfig } from '../../types/BuildConfig'
 
 import { AuthService } from './AuthService'
 import { TabStates } from './TabStates'
@@ -23,11 +22,12 @@ import { Streams } from './Streams'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { StreamAssociationsWM2 } from './StreamAssociationsWM2'
-
-import MessageSender = chrome.runtime.MessageSender
-
 import { StreamMoneyEvent } from './Stream'
 import { SPSPStateWM2 } from './SPSPStateWM2'
+
+type MessageSender = chrome.runtime.MessageSender
+
+type ChromeTabs = typeof chrome['tabs']
 
 @injectable()
 export class MonetizationService {
@@ -45,7 +45,7 @@ export class MonetizationService {
     @logger('MonetizationService')
     private log: Logger,
     @inject(tokens.WextApi)
-    private api = chrome
+    private api: { tabs: { sendMessage: ChromeTabs['sendMessage'] } } = chrome
   ) {}
 
   get activeTab() {
@@ -376,6 +376,14 @@ export class MonetizationService {
     return !!closed
   }
 
+  stopWebMonetizationStream(requestId: string) {
+    this.streams.closeStream(requestId)
+    const frame = this.assoc.getStreamFrame(requestId)
+    this.assoc.clearStreamFrame(requestId)
+    this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
+    this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
+  }
+
   doStopWebMonetization(frame: FrameSpec) {
     const requestIds = this.assoc.getStreams(frame)
 
@@ -417,7 +425,7 @@ export class MonetizationService {
       this.log('aborting monetization request', requestId)
       const frame = this.assoc.getStreamFrame(requestId)
       if (frame) {
-        // TODO:WM2 one stream abort will take down all streams??
+        // TODO:WM2:H one stream abort will take down all streams??
         this.doStopWebMonetization(frame)
       }
     })

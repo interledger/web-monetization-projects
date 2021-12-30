@@ -1,4 +1,4 @@
-import MessageSender = chrome.runtime.MessageSender
+type MessageSender = chrome.runtime.MessageSender
 
 import { notNullOrUndef } from './nullables'
 
