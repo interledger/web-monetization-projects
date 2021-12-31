@@ -667,13 +667,9 @@ export class BackgroundScript {
   }
 
   private handleStreamsAbortEvent() {
-    this.streams.on('abort', requestId => {
+    this.streams.on('abort', (requestId: string) => {
       this.log('aborting monetization request', requestId)
-      const frame = this.assoc.getStreamFrame(requestId)
-      if (frame) {
-        // TODO: one stream abort will take down all streams??
-        this.monetization.doStopWebMonetization(frame)
-      }
+      this.monetization.stopWebMonetizationStream(requestId)
     })
   }
 

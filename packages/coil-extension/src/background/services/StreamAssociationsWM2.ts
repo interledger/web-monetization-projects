@@ -35,6 +35,12 @@ export class StreamAssociationsWM2 {
     delete this.streamsToFrames[streamId]
   }
 
+  clearStreamFrameAndFromFrameSet(streamId: string) {
+    const { tabId, frameId } = this.getStreamFrame(streamId)
+    this.clearStreamFrame(streamId)
+    this.tabsToFramesToStreams[tabId]?.[frameId]?.delete(streamId)
+  }
+
   getStreamFrame(streamId: string): FrameSpec {
     return this.streamsToFrames[streamId]
   }

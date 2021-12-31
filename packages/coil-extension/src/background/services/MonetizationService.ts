@@ -379,7 +379,7 @@ export class MonetizationService {
   stopWebMonetizationStream(requestId: string) {
     this.streams.closeStream(requestId)
     const frame = this.assoc.getStreamFrame(requestId)
-    this.assoc.clearStreamFrame(requestId)
+    this.assoc.clearStreamFrameAndFromFrameSet(requestId)
     this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
     this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
   }
