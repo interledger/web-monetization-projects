@@ -291,6 +291,7 @@ export class ContentScript {
         debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
         const requestId = this.monetization.getMonetizationRequest()?.requestId
+        // TODO: could just get them ALL from the tagManager ?
         const requestIds = (requestId ? [requestId] : []).concat(
           this.tagManager.linkTagIds()
         )
