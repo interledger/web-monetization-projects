@@ -420,14 +420,10 @@ export class MonetizationService {
     this.api.tabs.sendMessage(tabId, message, { frameId })
   }
 
-  handleStreamsAbortEvent() {
-    this.streams.on('abort', requestId => {
+  private handleStreamsAbortEvent() {
+    this.streams.on('abort', (requestId: string) => {
       this.log('aborting monetization request', requestId)
-      const frame = this.assoc.getStreamFrame(requestId)
-      if (frame) {
-        // TODO:WM2:H one stream abort will take down all streams??
-        this.doStopWebMonetization(frame)
-      }
+      this.stopWebMonetizationStream(requestId)
     })
   }
 

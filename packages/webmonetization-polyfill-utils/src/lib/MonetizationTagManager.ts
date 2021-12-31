@@ -388,6 +388,10 @@ export class MonetizationTagManager {
     for (const val of this.monetizationTags.values()) {
       val.observer.disconnect()
     }
-    this.monetizationTags.clear
+    this.monetizationTags.clear()
+  }
+
+  atMostOneTag() {
+    return this.monetizationTags.size <= 1
   }
 }

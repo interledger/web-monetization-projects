@@ -666,13 +666,6 @@ export class BackgroundScript {
     }
   }
 
-  private handleStreamsAbortEvent() {
-    this.streams.on('abort', (requestId: string) => {
-      this.log('aborting monetization request', requestId)
-      this.monetization.stopWebMonetizationStream(requestId)
-    })
-  }
-
   _closeStreams(tabId: number, frameId?: number) {
     return this.monetization._closeStreams(tabId, frameId)
   }
