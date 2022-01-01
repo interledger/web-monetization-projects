@@ -1433,7 +1433,7 @@ __metadata:
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.6
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/node-fetch": 2.5.12
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 5.8.1
@@ -1491,7 +1491,7 @@ __metadata:
     "@dier-makr/annotations": 0.0.0
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.6
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/node-fetch": 2.5.12
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
@@ -1562,7 +1562,7 @@ __metadata:
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.6
     "@types/long": 4.0.1
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/node-fetch": 2.5.12
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
@@ -1640,7 +1640,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
@@ -1703,7 +1703,7 @@ __metadata:
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
     "@types/long": 4.0.1
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/node-fetch": 2.5.12
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.8.1
@@ -1764,7 +1764,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
@@ -1817,7 +1817,7 @@ __metadata:
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
     "@types/keccak": 3.0.1
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
@@ -1878,7 +1878,7 @@ __metadata:
     "@types/debug": 4.1.7
     "@types/get-port": 4.2.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/tmp": 0.2.3
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
@@ -1936,7 +1936,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
@@ -1997,7 +1997,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
@@ -2284,7 +2284,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
@@ -2336,7 +2336,7 @@ __metadata:
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/annotations": 0.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
@@ -2517,7 +2517,7 @@ __metadata:
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
     "@types/uuid": 8.3.3
@@ -4040,7 +4040,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
@@ -4493,10 +4493,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:14.18.3, @types/node@npm:>= 8":
-  version: 14.18.3
-  resolution: "@types/node@npm:14.18.3"
-  checksum: 72275674a25b0e9d4fe213449d874fd3e8280a84d911a359d298d68b84550b6a3210d484dc2662b8eb6e0b1829f4dac5e60cb7c01ce78878b316305c798d1cbb
+"@types/node@npm:*, @types/node@npm:14.18.4, @types/node@npm:>= 8":
+  version: 14.18.4
+  resolution: "@types/node@npm:14.18.4"
+  checksum: 12015baff875140579d4c8982a7c239685ceee3a7b0ea58e6d6918d001582a752bfbc13e5c06c745e2bb10261068e632929fdf3e013c98fba006cd0cc4c67bf9
   languageName: node
   linkType: hard
 
@@ -4975,7 +4975,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
@@ -5042,7 +5042,7 @@ __metadata:
     "@types/express": 4.17.12
     "@types/figlet": 1.5.4
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/node-fetch": 2.5.12
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
@@ -5114,7 +5114,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/node-fetch": 2.5.12
     "@types/uuid": 8.3.3
     "@typescript-eslint/eslint-plugin": 5.8.1
@@ -5171,7 +5171,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/react": 17.0.38
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
@@ -5229,7 +5229,7 @@ __metadata:
     "@hot-loader/react-dom": 17.0.1
     "@types/ajv": 1.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
     "@types/uuid": 8.3.3
@@ -5290,7 +5290,7 @@ __metadata:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
@@ -5343,7 +5343,7 @@ __metadata:
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/annotations": 0.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@webmonetization/polyfill-utils": 0.0.0
@@ -23019,7 +23019,7 @@ typescript@~4.4.3:
     "@commitlint/cli": 16.0.1
     "@commitlint/config-conventional": 16.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.3
+    "@types/node": 14.18.4
     "@typescript-eslint/eslint-plugin": 5.8.1
     "@typescript-eslint/parser": 5.8.1
     "@yarnpkg/pnpify": 3.1.0
