@@ -57,6 +57,7 @@ describe('MonetizationTagManager', () => {
     document
       .querySelectorAll('meta[name="monetization"],link[rel="monetization"]')
       .forEach(element => element.remove())
+    document.body.innerHTML = ''
   })
   it('should invoke callback with `started` when a tag is added', async () => {
     const link = makeLink('$ilp.uphold.com/gRa4mXFEMYrL')
