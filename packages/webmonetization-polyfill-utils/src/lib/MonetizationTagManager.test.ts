@@ -1,5 +1,3 @@
-import { doc } from 'prettier'
-
 import {
   metaDeprecatedMessage,
   MonetizationTagManager,
