@@ -366,18 +366,14 @@ export class MonetizationTagManager {
   }: FireOnMonetizationChangeIfHaveAttributeParams) {
     const attribute = node.getAttribute('onmonetization')
     if (attribute || force) {
-      // TODO:WM2 don't use coil here, it's in a generic module
-      const customEvent = new CustomEvent('coil-onmonetization-attr-changed', {
+      const customEvent = new CustomEvent('onmonetization-attr-changed', {
         bubbles: true,
         detail: {
           attribute
         }
       })
       const result = node.dispatchEvent(customEvent)
-      debug('dispatched coil-onmonetization-attr-changed ev', result)
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      // not in the right context
-      // ;(tag as any).onmonetization = new Function(attribute)
+      debug('dispatched onmonetization-attr-changed ev', result)
     }
     return Boolean(attribute)
   }

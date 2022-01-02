@@ -120,6 +120,24 @@ describe('MonetizationTagManager', () => {
     })
   })
 
+  it('should fire onmonetization-attr-changed bubbling on elements with the right attrs', () => {
+    const [_, callback] = makeChangesCallback()
+    manager = makeManager(callback)
+    document.body.innerHTML = `
+    <div><p id="ptag" onmonetization="console.log('OK')"></p></div>
+    `
+    const ptag = document.getElementById('ptag')
+    ptag?.addEventListener('onmonetization-attr-changed', event => {
+      expect(event.bubbles).toBe(true)
+      expect((event as CustomEvent).detail.attribute).toBe("console.log('OK')")
+    })
+    document.addEventListener('onmonetization-attr-changed', event => {
+      expect(event.target).toBe(ptag)
+    })
+    manager.startWhenDocumentReady()
+    expect.assertions(3)
+  })
+
   it('should throw an error when a meta is added after a link', async () => {
     const link = makeLink('$ilp.uphold.com/linkBeforeMeta')
     const [changes, callback] = makeChangesCallback()

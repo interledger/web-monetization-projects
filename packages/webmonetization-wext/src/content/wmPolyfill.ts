@@ -128,8 +128,8 @@ export const wmPolyFillMinimal = `
       const monetizationEvent = new MonetizationEvent('monetization', event.detail)
       event.target.dispatchEvent(monetizationEvent)
     }, { capture: true })
-    window.addEventListener('coil-onmonetization-attr-changed', (event) => {
-      dbg('coil-onmonetization-attr-changed', event.detail.attribute)
+    window.addEventListener('onmonetization-attr-changed', (event) => {
+      dbg('onmonetization-attr-changed', event.detail.attribute)
       const { attribute } = event.detail
       if (attribute) {
         // TODO: what are the CSP issues here?
