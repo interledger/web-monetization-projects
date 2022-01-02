@@ -1,3 +1,5 @@
+import { doc } from 'prettier'
+
 import {
   metaDeprecatedMessage,
   MonetizationTagManager,
@@ -127,15 +129,28 @@ describe('MonetizationTagManager', () => {
     <div><p id="ptag" onmonetization="console.log('OK')"></p></div>
     `
     const ptag = document.getElementById('ptag')
+    let firing = 1
     ptag?.addEventListener('onmonetization-attr-changed', event => {
-      expect(event.bubbles).toBe(true)
-      expect((event as CustomEvent).detail.attribute).toBe("console.log('OK')")
+      // This is never fired via listening with option capture:true and by
+      // calling event.stopPropagation
+      expect(firing++).toBe(2)
     })
-    document.addEventListener('onmonetization-attr-changed', event => {
-      expect(event.target).toBe(ptag)
-    })
+    document.addEventListener(
+      'onmonetization-attr-changed',
+      event => {
+        expect(firing++).toBe(1)
+        expect(event.bubbles).toBe(true)
+        expect((event as CustomEvent).detail.attribute).toBe(
+          "console.log('OK')"
+        )
+        expect(event.target).toBe(ptag)
+        expect(event.currentTarget).toBe(document)
+        event.stopPropagation()
+      },
+      { capture: true }
+    )
     manager.startWhenDocumentReady()
-    expect.assertions(3)
+    expect.assertions(5)
   })
 
   it('should throw an error when a meta is added after a link', async () => {
