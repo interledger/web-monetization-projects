@@ -241,6 +241,27 @@ describe('MonetizationTagManager', () => {
     expect(changes.stopped).toBeNull()
   })
 
+  it(
+    'should provide a way of knowing when to ' +
+      'support document.monetization for link tags that used ' +
+      'document.monetization',
+    async () => {
+      const link = makeLink('$tag.com/link')
+      const [changes, callback] = makeChangesCallback()
+      manager = makeManager(callback)
+      manager.startWhenDocumentReady()
+      document.body.appendChild(link)
+      // wait for MutationObserver
+      await timeout()
+      expect(manager.atMostOneTagAndNoneInBody()).toBe(false)
+      link.remove()
+      document.head.appendChild(link)
+      // wait for MutationObserver
+      await timeout()
+      expect(manager.atMostOneTagAndNoneInBody()).toBe(true)
+    }
+  )
+
   it('should invoked stopped when link becomes disabled', async () => {
     const pp = 'https://ilp.uphold.com/toBeDisabled'
     const link = makeLink(pp)

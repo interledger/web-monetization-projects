@@ -366,7 +366,7 @@ export class MonetizationTagManager {
   }: FireOnMonetizationChangeIfHaveAttributeParams) {
     const attribute = node.getAttribute('onmonetization')
     if (attribute || force) {
-      // TODO: don't use coil here, it's in a generic module
+      // TODO:WM2 don't use coil here, it's in a generic module
       const customEvent = new CustomEvent('coil-onmonetization-attr-changed', {
         bubbles: true,
         detail: {
@@ -391,7 +391,13 @@ export class MonetizationTagManager {
     this.monetizationTags.clear()
   }
 
-  atMostOneTag() {
-    return this.monetizationTags.size <= 1
+  atMostOneTagAndNoneInBody() {
+    let fromBody = false
+    for (const value of this.monetizationTags.values()) {
+      if (value.details.fromBody) {
+        fromBody = true
+      }
+    }
+    return this.monetizationTags.size <= 1 && !fromBody
   }
 }

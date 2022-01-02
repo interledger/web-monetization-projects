@@ -61,7 +61,7 @@ export class ContentScript {
   handleMonetizationTag() {
     const startMonetization = async (details: PaymentDetails) => {
       // TODO: WM2
-      if (this.tagManager.atMostOneTag()) {
+      if (this.tagManager.atMostOneTagAndNoneInBody()) {
         this.monetization.setMonetizationRequest({ ...details })
       }
       await this.doStartMonetization(details)
@@ -73,7 +73,7 @@ export class ContentScript {
         data: details
       }
       // TODO: WM2
-      if (this.tagManager.atMostOneTag()) {
+      if (this.tagManager.atMostOneTagAndNoneInBody()) {
         this.monetization.setState({
           requestId: details.requestId,
           state: 'stopped',
@@ -197,12 +197,12 @@ export class ContentScript {
           } = request
           this.tagManager.dispatchLinkEventByLinkId(requestId, new Event(event))
         } else if (request.command === 'setMonetizationState') {
-          if (this.tagManager.atMostOneTag()) {
+          if (this.tagManager.atMostOneTagAndNoneInBody()) {
             this.monetization.setState(request.data)
           }
         } else if (request.command === 'monetizationStart') {
           debug('monetizationStart event')
-          if (this.tagManager.atMostOneTag()) {
+          if (this.tagManager.atMostOneTagAndNoneInBody()) {
             this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
               request.data
             )
