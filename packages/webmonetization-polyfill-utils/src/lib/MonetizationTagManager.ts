@@ -60,6 +60,8 @@ export const MonetizationTagAttrs = {
   link: ['href', 'disabled', 'rel', 'crossorigin', 'type']
 }
 
+const MAX_NUMBER_META_TAGS = 1
+
 export class MonetizationTagManager {
   private affinity: TagType = 'meta'
   private headObserver: MutationObserver
@@ -93,8 +95,7 @@ export class MonetizationTagManager {
   constructor(
     private window: Window,
     private document: Document,
-    private callback: PaymentDetailsChangeCallback,
-    private maxMetas = 1
+    private callback: PaymentDetailsChangeCallback
   ) {
     this.headObserver = new MutationObserver(
       this.onHeadChildListObserved.bind(this)
@@ -247,11 +248,11 @@ export class MonetizationTagManager {
     }
     if (
       details.tagType === 'meta' /*|| details.tagType === 'link'*/ &&
-      this.monetizationTags.size + 1 > this.maxMetas
+      this.monetizationTags.size + 1 > MAX_NUMBER_META_TAGS
     ) {
       throw new Error(
         `Web-Monetization Error: Ignoring tag with ` +
-          `paymentPointer=${details.paymentPointer}, only ${this.maxMetas} ` +
+          `paymentPointer=${details.paymentPointer}, only ${MAX_NUMBER_META_TAGS} ` +
           `monetization tag[s] supported at a time. `
       )
     }
