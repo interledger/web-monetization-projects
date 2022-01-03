@@ -64,7 +64,7 @@ const MAX_NUMBER_META_TAGS = 1
 
 export class MonetizationTagManager {
   private affinity: TagType = 'meta'
-  private headObserver: MutationObserver
+  private documentObserver: MutationObserver
   private onMonetizationAttrObserver: MutationObserver
   private monetizationTags = new Map<
     MonetizationTag,
@@ -97,8 +97,8 @@ export class MonetizationTagManager {
     private document: Document,
     private callback: PaymentDetailsChangeCallback
   ) {
-    this.headObserver = new MutationObserver(
-      this.onHeadChildListObserved.bind(this)
+    this.documentObserver = new MutationObserver(
+      this.onChildListObserved.bind(this)
     )
     this.onMonetizationAttrObserver = new MutationObserver(
       this.onOnMonetizationChangeObserved.bind(this)
@@ -133,10 +133,13 @@ export class MonetizationTagManager {
         console.error(e)
       }
     })
-    this.headObserver.observe(this.document, { subtree: true, childList: true })
+    this.documentObserver.observe(this.document, {
+      subtree: true,
+      childList: true
+    })
   }
 
-  private onHeadChildListObserved(records: MutationRecord[]) {
+  private onChildListObserved(records: MutationRecord[]) {
     debug('head mutation records.length=', records.length)
     const check = (op: string, node: Node) => {
       debug('head node', op, node)
@@ -384,7 +387,7 @@ export class MonetizationTagManager {
   }
 
   stop() {
-    this.headObserver?.disconnect()
+    this.documentObserver?.disconnect()
     this.onMonetizationAttrObserver?.disconnect()
     for (const val of this.monetizationTags.values()) {
       val.observer.disconnect()
