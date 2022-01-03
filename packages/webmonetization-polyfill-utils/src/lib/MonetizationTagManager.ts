@@ -90,10 +90,6 @@ export class MonetizationTagManager {
     )
   }
 
-  isLinkTag(id: string) {
-    return Boolean(this.linkTagsById.has(id))
-  }
-
   constructor(
     private window: Window,
     private document: Document,
