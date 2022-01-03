@@ -78,6 +78,7 @@ export class MonetizationTagManager {
     MonetizationTag,
     {
       details: PaymentDetails
+      // TODO: we don't really need an observer per tag, one will do
       observer: MutationObserver
       attrs: Record<string, string | null>
     }

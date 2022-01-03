@@ -1,5 +1,6 @@
 import { createHash } from 'crypto'
 
+// noinspection ES6PreferShortImport
 import { wmPolyfill } from '../../../src/content/wmPolyfill'
 
 describe('wmPolyfill', () => {
