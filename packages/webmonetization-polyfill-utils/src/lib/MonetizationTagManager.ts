@@ -155,9 +155,15 @@ export class MonetizationTagManager {
     debug('head mutation records.length=', records.length)
     const check = (op: string, node: Node) => {
       debug('head node', op, node)
+      // TODO: track all tags where name/rel is either not set or is
+      //  monetization. It doesn't seem likely that a tag would change type from
+      // stylesheet to monetization.
+      // That would really complicate onAddedTag though
       if (
-        (node instanceof HTMLMetaElement && node.name === 'monetization') ||
-        (node instanceof HTMLLinkElement && node.rel === 'monetization')
+        (node instanceof HTMLMetaElement &&
+          /*!node.name ||*/ node.name === 'monetization') ||
+        (node instanceof HTMLLinkElement &&
+          /*!node.rel || */ node.rel === 'monetization')
       ) {
         if (op === 'added') {
           this.onAddedTag(node)
@@ -223,6 +229,17 @@ export class MonetizationTagManager {
     }
   }
 
+  /**
+   *
+   * @param tag - HTMLLinkElement or HTMLMetaElement
+   *
+   * Checks tag type to set affinity - link or meta
+   * Tracks link by requestId
+   * Checks invariants - no meta in head
+   *                   - no more than one meta
+   *                   - no metas when affinity with links already set
+   * Sets up attributes observer
+   */
   private onAddedTag(tag: MonetizationTag) {
     const type = getTagType(tag)
     if (type != this.affinity) {
@@ -232,7 +249,6 @@ export class MonetizationTagManager {
           this.onRemovedTag(tag)
         }
       } else {
-        // TODO: just console.warn and return early ?
         throw new DeprecatedMetaTagIgnoredError(metaDeprecatedMessage)
       }
     }
