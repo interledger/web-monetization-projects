@@ -3,15 +3,17 @@ import { v4 as uuidV4 } from 'uuid'
 import { whenDocumentReady } from './whenDocumentReady'
 import { CustomError } from './CustomError'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
 const debug =
   // console.log.bind(console, 'MonetizationTagManager')
-  (...args: unknown[]) => {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/no-empty-function
+  (..._: unknown[]) => {}
 
 export interface PaymentDetails {
-  // This doesn't map 1 to 1 with a monetization tag, rather with a
-  // configuration of a tag. e.g. a new href on a link will mean a new
-  // requestId
+  /**
+   * This doesn't map 1 to 1 with a monetization tag, rather with a
+   * configuration of a tag. e.g. a new href on a link will mean a new
+   * requestId
+   */
   requestId: string
   paymentPointer: string
   initiatingUrl: string
@@ -62,10 +64,16 @@ export const MonetizationTagAttrs = {
 
 const MAX_NUMBER_META_TAGS = 1
 
+/**
+ * TODO: document
+ *  1. any performance optimizations
+ */
 export class MonetizationTagManager {
   private affinity: TagType = 'meta'
   private documentObserver: MutationObserver
   private onMonetizationAttrObserver: MutationObserver
+  // TODO: what if we track tags that are inactive for whatever reason
+  // it will effect the size count.
   private monetizationTags = new Map<
     MonetizationTag,
     {
@@ -81,7 +89,7 @@ export class MonetizationTagManager {
     const ref = this.linkTagsById.get(id)
     const link = ref?.deref()
     if (link) {
-      // debug('dispatchLinkEventByLinkId', id, event)
+      debug('dispatchLinkEventByLinkId', id, event)
       link.dispatchEvent(event)
     }
   }
@@ -121,6 +129,7 @@ export class MonetizationTagManager {
       try {
         this.onAddedTag(m)
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.error(e)
       }
     })
@@ -130,6 +139,7 @@ export class MonetizationTagManager {
       try {
         this.checkMonetizationAttr(om)
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.error(e)
       }
     })
