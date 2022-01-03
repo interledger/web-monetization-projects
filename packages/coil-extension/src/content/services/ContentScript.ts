@@ -153,7 +153,7 @@ export class ContentScript {
           }
           this.monetization.dispatchMonetizationProgressEvent(detail)
           const data = request.data
-          this.tagManager.dispatchLinkEventByLinkId(
+          this.tagManager.dispatchEventByLinkId(
             data.requestId,
             new CustomEvent('coil-monetization', {
               bubbles: true,
@@ -195,7 +195,7 @@ export class ContentScript {
           const {
             data: { requestId, event }
           } = request
-          this.tagManager.dispatchLinkEventByLinkId(requestId, new Event(event))
+          this.tagManager.dispatchEventByLinkId(requestId, new Event(event))
         } else if (request.command === 'setMonetizationState') {
           if (this.tagManager.atMostOneTagAndNoneInBody()) {
             this.monetization.setState(request.data)
@@ -270,13 +270,9 @@ export class ContentScript {
     const runtime = this.runtime
     setWatch({
       pause: (reason: string) => {
+        debug(`pauseWebMonetization reason ${reason}`)
         this.paused = true
-        // TODO:WM2
-        const requestId = this.monetization.getMonetizationRequest()?.requestId
-        const requestIds = (requestId ? [requestId] : []).concat(
-          this.tagManager.linkTagIds()
-        )
-
+        const requestIds = this.tagManager.requestIds()
         if (requestIds.length) {
           const pause: PauseWebMonetization = {
             command: 'pauseWebMonetization',
@@ -290,17 +286,11 @@ export class ContentScript {
       resume: (reason: string) => {
         debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
-        const requestId = this.monetization.getMonetizationRequest()?.requestId
-        // TODO: could just get them ALL from the tagManager ?
-        const requestIds = (requestId ? [requestId] : []).concat(
-          this.tagManager.linkTagIds()
-        )
-        //TODO:WM2
+        const requestIds = this.tagManager.requestIds()
         if (requestIds.length) {
           const resume: ResumeWebMonetization = {
             command: 'resumeWebMonetization',
             data: {
-              // TODO:WM2
               requestIds
             }
           }

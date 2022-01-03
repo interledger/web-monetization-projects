@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuidV4 } from 'uuid'
 
 import { whenDocumentReady } from './whenDocumentReady'
 import { CustomError } from './CustomError'
@@ -9,16 +9,14 @@ const debug =
   (...args: unknown[]) => {}
 
 export interface PaymentDetails {
+  // This doesn't map 1 to 1 with a monetization tag, rather with a
+  // configuration of a tag. e.g. a new href on a link will mean a new
+  // requestId
   requestId: string
   paymentPointer: string
   initiatingUrl: string
   fromBody: boolean
   tagType: TagType
-}
-
-export enum IDGenerationStrategy {
-  PAGE_LOAD,
-  META_ADDED_CHANGED
 }
 
 /**
@@ -29,8 +27,6 @@ export enum IDGenerationStrategy {
 export interface PaymentDetailsChangeArguments {
   started: PaymentDetails | null
   stopped: PaymentDetails | null
-  // paused / disabled ? .... no, just create a new requestId,
-  // fire stopped on disabled ofc
 }
 
 export type PaymentDetailsChangeCallback = (
@@ -65,18 +61,9 @@ export const MonetizationTagAttrs = {
 }
 
 export class MonetizationTagManager {
-  /**
-   * This class as written should be used in such a way that it has a lifetime
-   * the same as the content script.
-   * See {@link IDGenerationStrategy.PAGE_LOAD}
-   */
-  private readonly pageLoadId = uuid()
-
   private affinity: TagType = 'meta'
-
   private headObserver: MutationObserver
   private onMonetizationAttrObserver: MutationObserver
-
   private monetizationTags = new Map<
     MonetizationTag,
     {
@@ -88,7 +75,7 @@ export class MonetizationTagManager {
 
   private linkTagsById = new Map<string, WeakRef<HTMLLinkElement>>()
 
-  dispatchLinkEventByLinkId(id: string, event: Event) {
+  dispatchEventByLinkId(id: string, event: Event) {
     const ref = this.linkTagsById.get(id)
     const link = ref?.deref()
     if (link) {
@@ -97,8 +84,10 @@ export class MonetizationTagManager {
     }
   }
 
-  linkTagIds(): string[] {
-    return Array.from(this.linkTagsById.keys())
+  requestIds(): string[] {
+    return Array.from(this.monetizationTags.values()).map(
+      e => e.details.requestId
+    )
   }
 
   isLinkTag(id: string) {
@@ -109,8 +98,7 @@ export class MonetizationTagManager {
     private window: Window,
     private document: Document,
     private callback: PaymentDetailsChangeCallback,
-    private maxMetas = 1,
-    private idGenerationStrategy = IDGenerationStrategy.META_ADDED_CHANGED
+    private maxMetas = 1
   ) {
     this.headObserver = new MutationObserver(
       this.onHeadChildListObserved.bind(this)
@@ -239,6 +227,7 @@ export class MonetizationTagManager {
    *                   - no more than one meta
    *                   - no metas when affinity with links already set
    * Sets up attributes observer
+   * Invokes this.callback unless tag is disabled
    */
   private onAddedTag(tag: MonetizationTag) {
     const type = getTagType(tag)
@@ -348,23 +337,11 @@ export class MonetizationTagManager {
     const paymentPointer =
       meta instanceof HTMLMetaElement ? meta.content : meta.href
     return {
-      requestId: this.getWebMonetizationId(),
+      requestId: uuidV4(),
       paymentPointer: paymentPointer.trim(),
       initiatingUrl: this.window.location.href,
       tagType: getTagType(meta),
       fromBody: meta.parentElement != this.document.head
-    }
-  }
-
-  private getWebMonetizationId(): string {
-    if (this.idGenerationStrategy === IDGenerationStrategy.PAGE_LOAD) {
-      return this.pageLoadId
-    } else if (
-      this.idGenerationStrategy === IDGenerationStrategy.META_ADDED_CHANGED
-    ) {
-      return uuid()
-    } else {
-      throw new Error()
     }
   }
 
