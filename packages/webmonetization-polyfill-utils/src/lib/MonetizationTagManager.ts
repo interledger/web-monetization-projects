@@ -59,6 +59,11 @@ export const metaDeprecatedMessage =
   'ignoring deprecated `<meta name="monetization">` tag and ' +
   'using only `<link rel="monetization">` tags consistently'
 
+export const MonetizationTagAttrs = {
+  meta: ['content', 'name'],
+  link: ['href', 'disabled', 'rel', 'crossorigin', 'type']
+}
+
 export class MonetizationTagManager {
   /**
    * This class as written should be used in such a way that it has a lifetime
@@ -77,6 +82,7 @@ export class MonetizationTagManager {
     {
       details: PaymentDetails
       observer: MutationObserver
+      attrs: Record<string, string | null>
     }
   >()
 
@@ -181,6 +187,10 @@ export class MonetizationTagManager {
   }
 
   onMonetizationTagAttributesChange(records: MutationRecord[]) {
+    // TODO:WM2 link tag href could change to something nonsense
+    // record >> [S] << ... what about the case of href and disabled changing
+    // at the same time ?, then onChangedPaymentEndpoint would be fired more
+    // than once.
     for (const record of records) {
       if (
         record.type === 'attributes' &&
@@ -253,8 +263,8 @@ export class MonetizationTagManager {
       childList: false,
       attributeFilter:
         details.tagType === 'meta'
-          ? ['content']
-          : ['href', 'disabled', 'rel', 'crossorigin', 'type']
+          ? MonetizationTagAttrs.meta
+          : MonetizationTagAttrs.link
     })
     if (details.tagType === 'link') {
       this.linkTagsById.set(
@@ -263,7 +273,12 @@ export class MonetizationTagManager {
       )
     }
 
-    this.monetizationTags.set(tag, { observer, details })
+    const attrs = Object.fromEntries(
+      MonetizationTagAttrs[details.tagType].map(attr => {
+        return [attr, tag.getAttribute(attr)]
+      })
+    )
+    this.monetizationTags.set(tag, { observer, details, attrs })
     if (tag instanceof HTMLLinkElement && tag.hasAttribute('disabled')) {
       return
     } else {
