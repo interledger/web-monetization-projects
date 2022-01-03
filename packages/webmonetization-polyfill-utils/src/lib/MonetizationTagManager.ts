@@ -254,7 +254,7 @@ export class MonetizationTagManager {
       attributeFilter:
         details.tagType === 'meta'
           ? ['content']
-          : ['href', 'disabled', 'rel', 'onmonetization']
+          : ['href', 'disabled', 'rel', 'crossorigin', 'type']
     })
     if (details.tagType === 'link') {
       this.linkTagsById.set(
