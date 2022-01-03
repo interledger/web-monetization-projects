@@ -64,6 +64,14 @@ export const MonetizationTagAttrs = {
 
 const MAX_NUMBER_META_TAGS = 1
 
+function paymentPointerSpecified(tag: MonetizationTag) {
+  if (tag instanceof HTMLLinkElement) {
+    return Boolean(tag.rel)
+  } else {
+    return Boolean(tag.content)
+  }
+}
+
 /**
  * TODO: document
  *  1. any performance optimizations
@@ -71,15 +79,13 @@ const MAX_NUMBER_META_TAGS = 1
 export class MonetizationTagManager {
   private affinity: TagType = 'meta'
   private documentObserver: MutationObserver
-  private onMonetizationAttrObserver: MutationObserver
-  // TODO: what if we track tags that are inactive for whatever reason
-  // it will effect the size count.
+  private monetizationAttrObserver: MutationObserver
+  private monetizationTagAttrObserver: MutationObserver
+
   private monetizationTags = new Map<
     MonetizationTag,
     {
       details: PaymentDetails
-      // TODO: we don't really need an observer per tag, one will do
-      observer: MutationObserver
       attrs: Record<string, string | null>
     }
   >()
@@ -109,8 +115,11 @@ export class MonetizationTagManager {
     this.documentObserver = new MutationObserver(
       this.onChildListObserved.bind(this)
     )
-    this.onMonetizationAttrObserver = new MutationObserver(
+    this.monetizationAttrObserver = new MutationObserver(
       this.onOnMonetizationChangeObserved.bind(this)
+    )
+    this.monetizationTagAttrObserver = new MutationObserver(
+      this.onMonetizationTagAttributesChange.bind(this)
     )
   }
 
@@ -126,9 +135,10 @@ export class MonetizationTagManager {
       this.document.querySelectorAll(
         'meta[name="monetization"],link[rel="monetization"]'
       )
-    monetizationTags.forEach(m => {
+    monetizationTags.forEach(tag => {
       try {
-        this.onAddedTag(m)
+        this.observeMonetizationTagAttrs(tag)
+        this.onAddedTag(tag)
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e)
@@ -160,11 +170,12 @@ export class MonetizationTagManager {
       // That would really complicate onAddedTag though
       if (
         (node instanceof HTMLMetaElement &&
-          /*!node.name ||*/ node.name === 'monetization') ||
+          (!node.name || node.name === 'monetization')) ||
         (node instanceof HTMLLinkElement &&
-          /*!node.rel || */ node.rel === 'monetization')
+          (!node.rel || node.rel === 'monetization'))
       ) {
         if (op === 'added') {
+          this.observeMonetizationTagAttrs(node)
           this.onAddedTag(node)
         } else if (op === 'removed') {
           this.onRemovedTag(node)
@@ -242,6 +253,10 @@ export class MonetizationTagManager {
    */
   private onAddedTag(tag: MonetizationTag) {
     const type = getTagType(tag)
+    if (!paymentPointerSpecified(tag)) {
+      return
+    }
+
     if (type != this.affinity) {
       if (type === 'link') {
         this.affinity = 'link'
@@ -271,17 +286,6 @@ export class MonetizationTagManager {
       )
     }
 
-    const observer = new MutationObserver(
-      this.onMonetizationTagAttributesChange.bind(this)
-    )
-    observer.observe(tag, {
-      attributeOldValue: true,
-      childList: false,
-      attributeFilter:
-        details.tagType === 'meta'
-          ? MonetizationTagAttrs.meta
-          : MonetizationTagAttrs.link
-    })
     if (details.tagType === 'link') {
       this.linkTagsById.set(
         details.requestId,
@@ -294,7 +298,7 @@ export class MonetizationTagManager {
         return [attr, tag.getAttribute(attr)]
       })
     )
-    this.monetizationTags.set(tag, { observer, details, attrs })
+    this.monetizationTags.set(tag, { details, attrs })
     if (tag instanceof HTMLLinkElement && tag.hasAttribute('disabled')) {
       return
     } else {
@@ -302,9 +306,16 @@ export class MonetizationTagManager {
     }
   }
 
+  private observeMonetizationTagAttrs(tag: MonetizationTag) {
+    this.monetizationTagAttrObserver.observe(tag, {
+      childList: false,
+      attributeOldValue: true,
+      attributeFilter: MonetizationTagAttrs[getTagType(tag)]
+    })
+  }
+
   private onRemovedTag(meta: MonetizationTag) {
     const entry = this.getEntry(meta)
-    entry.observer.disconnect()
     this.monetizationTags.delete(meta)
     this.clearLinkById(entry.details)
     this.callback({ started: null, stopped: entry.details })
@@ -359,7 +370,7 @@ export class MonetizationTagManager {
   private checkMonetizationAttr(node: HTMLElement) {
     debug('checkMonetizationAttr', node)
     this.fireOnMonetizationChangeIfHaveAttribute({ node })
-    this.onMonetizationAttrObserver.observe(node, {
+    this.monetizationAttrObserver.observe(node, {
       childList: false,
       attributeFilter: ['onmonetization']
     })
@@ -399,10 +410,8 @@ export class MonetizationTagManager {
 
   stop() {
     this.documentObserver?.disconnect()
-    this.onMonetizationAttrObserver?.disconnect()
-    for (const val of this.monetizationTags.values()) {
-      val.observer.disconnect()
-    }
+    this.monetizationAttrObserver?.disconnect()
+    this.monetizationTagAttrObserver?.disconnect()
     this.monetizationTags.clear()
   }
 
