@@ -64,12 +64,29 @@ export const MonetizationTagAttrs = {
 
 const MAX_NUMBER_META_TAGS = 1
 
-function paymentPointerSpecified(tag: MonetizationTag) {
+function monetizationTagTypeSpecified(
+  tag: Node,
+  ambiguous = false
+): tag is MonetizationTag {
   if (tag instanceof HTMLLinkElement) {
-    return Boolean(tag.rel)
+    return tag.rel === 'monetization' || (ambiguous && !tag.rel)
+  } else if (tag instanceof HTMLMetaElement) {
+    return tag.name === 'monetization' || (ambiguous && !tag.name)
   } else {
-    return Boolean(tag.content)
+    return false
   }
+}
+
+function nodeIsPotentiallyMonetizationTag(node: Node): node is MonetizationTag {
+  return node instanceof HTMLLinkElement || node instanceof HTMLMetaElement
+}
+
+function getTagAttrs(tag: MonetizationTag, tagType: TagType) {
+  return Object.fromEntries(
+    MonetizationTagAttrs[tagType].map(attr => {
+      return [attr, tag.getAttribute(attr)]
+    })
+  )
 }
 
 /**
@@ -78,9 +95,9 @@ function paymentPointerSpecified(tag: MonetizationTag) {
  */
 export class MonetizationTagManager {
   private affinity: TagType = 'meta'
-  private documentObserver: MutationObserver
-  private monetizationAttrObserver: MutationObserver
-  private monetizationTagAttrObserver: MutationObserver
+  private documentObserver!: MutationObserver
+  private monetizationAttrObserver!: MutationObserver
+  private monetizationTagAttrObserver!: MutationObserver
 
   private monetizationTags = new Map<
     MonetizationTag,
@@ -111,17 +128,7 @@ export class MonetizationTagManager {
     private window: Window,
     private document: Document,
     private callback: PaymentDetailsChangeCallback
-  ) {
-    this.documentObserver = new MutationObserver(
-      this.onChildListObserved.bind(this)
-    )
-    this.monetizationAttrObserver = new MutationObserver(
-      this.onOnMonetizationChangeObserved.bind(this)
-    )
-    this.monetizationTagAttrObserver = new MutationObserver(
-      this.onMonetizationTagAttributesChange.bind(this)
-    )
-  }
+  ) {}
 
   /**
    * The head will be null early on, so we must wait
@@ -131,13 +138,24 @@ export class MonetizationTagManager {
   }
 
   start() {
+    this.documentObserver = new MutationObserver(
+      this.onChildListObserved.bind(this)
+    )
+    this.monetizationAttrObserver = new MutationObserver(
+      this.onOnMonetizationChangeObserved.bind(this)
+    )
+    this.monetizationTagAttrObserver = new MutationObserver(
+      this._onMonetizationTagAttrsChange.bind(this)
+    )
+
     const monetizationTags: MonetizationTagList =
-      this.document.querySelectorAll(
-        'meta[name="monetization"],link[rel="monetization"]'
-      )
+      this.document.querySelectorAll('meta,link')
     monetizationTags.forEach(tag => {
       try {
-        this.observeMonetizationTagAttrs(tag)
+        this._observeMonetizationTagAttrs(tag)
+        if (!monetizationTagTypeSpecified(tag)) {
+          return
+        }
         this.onAddedTag(tag)
       } catch (e) {
         // eslint-disable-next-line no-console
@@ -147,12 +165,7 @@ export class MonetizationTagManager {
     const onMonetizations =
       this.document.querySelectorAll<HTMLElement>('[onmonetization]')
     onMonetizations.forEach(om => {
-      try {
-        this.checkMonetizationAttr(om)
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error(e)
-      }
+      this.checkMonetizationAttr(om)
     })
     this.documentObserver.observe(this.document, {
       subtree: true,
@@ -164,21 +177,14 @@ export class MonetizationTagManager {
     debug('head mutation records.length=', records.length)
     const check = (op: string, node: Node) => {
       debug('head node', op, node)
-      // TODO: track all tags where name/rel is either not set or is
-      //  monetization. It doesn't seem likely that a tag would change type from
-      // stylesheet to monetization.
-      // That would really complicate onAddedTag though
-      if (
-        (node instanceof HTMLMetaElement &&
-          (!node.name || node.name === 'monetization')) ||
-        (node instanceof HTMLLinkElement &&
-          (!node.rel || node.rel === 'monetization'))
-      ) {
+      if (nodeIsPotentiallyMonetizationTag(node)) {
         if (op === 'added') {
-          this.observeMonetizationTagAttrs(node)
-          this.onAddedTag(node)
-        } else if (op === 'removed') {
-          this.onRemovedTag(node)
+          this._observeMonetizationTagAttrs(node)
+          if (monetizationTagTypeSpecified(node)) {
+            this.onAddedTag(node)
+          }
+        } else if (op === 'removed' && this.monetizationTags.has(node)) {
+          this._onRemovedTag(node)
         }
       }
       if (op === 'added' && node instanceof HTMLElement) {
@@ -202,39 +208,62 @@ export class MonetizationTagManager {
     }
   }
 
-  onMonetizationTagAttributesChange(records: MutationRecord[]) {
-    // TODO:WM2 link tag href could change to something nonsense
-    // record >> [S] << ... what about the case of href and disabled changing
-    // at the same time ?, then onChangedPaymentEndpoint would be fired more
-    // than once.
+  _onMonetizationTagAttrsChange(records: MutationRecord[]) {
+    const handledTags = new Set<Node>()
+    // Check for a non specified link or meta with the type now specified and
+    // just treat it as a newly seen, monetization tag
     for (const record of records) {
+      const target = record.target as MonetizationTag
+      if (handledTags.has(target)) {
+        continue
+      }
+      const hasTarget = this.monetizationTags.has(target)
+      const typeSpecified = monetizationTagTypeSpecified(target)
+      if (!hasTarget && typeSpecified) {
+        this.onAddedTag(target)
+        handledTags.add(target)
+      }
+      if (hasTarget && !typeSpecified) {
+        this._onRemovedTag(target)
+        handledTags.add(target)
+      }
+    }
+
+    for (const record of records) {
+      const target = record.target
+      if (handledTags.has(target)) {
+        continue
+      }
+
       if (
         record.type === 'attributes' &&
-        record.attributeName === 'content' &&
-        record.target instanceof HTMLMetaElement &&
-        record.target['content'] !== record.oldValue
+        record.attributeName === 'disabled' &&
+        target instanceof HTMLLinkElement &&
+        // can't use record.target[disabled] as it's a Boolean not string
+        target.getAttribute('disabled') !== record.oldValue
       ) {
-        const meta = record.target
-        this.onChangedPaymentEndpoint(meta)
+        const wasDisabled = record.oldValue !== null
+        const isDisabled = target.hasAttribute('disabled')
+        if (wasDisabled != isDisabled) {
+          this.onChangedPaymentEndpoint(target, isDisabled, wasDisabled)
+          handledTags.add(target)
+        }
+      } else if (
+        record.type === 'attributes' &&
+        record.attributeName === 'content' &&
+        target instanceof HTMLMetaElement &&
+        target['content'] !== record.oldValue
+      ) {
+        this.onChangedPaymentEndpoint(target)
+        handledTags.add(target)
       } else if (
         record.type === 'attributes' &&
         record.attributeName === 'href' &&
-        record.target instanceof HTMLLinkElement &&
-        record.target['href'] !== record.oldValue
+        target instanceof HTMLLinkElement &&
+        target['href'] !== record.oldValue
       ) {
-        this.onChangedPaymentEndpoint(record.target)
-      } else if (
-        record.type === 'attributes' &&
-        record.attributeName === 'disabled' &&
-        record.target instanceof HTMLLinkElement &&
-        // can't use record.target[disabled] as it's a Boolean not string
-        record.target.getAttribute('disabled') !== record.oldValue
-      ) {
-        const wasDisabled = record.oldValue !== null
-        const isDisabled = record.target.hasAttribute('disabled')
-        if (wasDisabled != isDisabled) {
-          this.onChangedPaymentEndpoint(record.target, isDisabled, wasDisabled)
-        }
+        this.onChangedPaymentEndpoint(target)
+        handledTags.add(target)
       }
     }
   }
@@ -253,7 +282,7 @@ export class MonetizationTagManager {
    */
   private onAddedTag(tag: MonetizationTag) {
     const type = getTagType(tag)
-    if (!paymentPointerSpecified(tag)) {
+    if (!monetizationTagTypeSpecified(tag)) {
       return
     }
 
@@ -261,7 +290,7 @@ export class MonetizationTagManager {
       if (type === 'link') {
         this.affinity = 'link'
         for (const tag of this.monetizationTags.keys()) {
-          this.onRemovedTag(tag)
+          this._onRemovedTag(tag)
         }
       } else {
         throw new DeprecatedMetaTagIgnoredError(metaDeprecatedMessage)
@@ -293,11 +322,7 @@ export class MonetizationTagManager {
       )
     }
 
-    const attrs = Object.fromEntries(
-      MonetizationTagAttrs[details.tagType].map(attr => {
-        return [attr, tag.getAttribute(attr)]
-      })
-    )
+    const attrs = getTagAttrs(tag, details.tagType)
     this.monetizationTags.set(tag, { details, attrs })
     if (tag instanceof HTMLLinkElement && tag.hasAttribute('disabled')) {
       return
@@ -306,17 +331,19 @@ export class MonetizationTagManager {
     }
   }
 
-  private observeMonetizationTagAttrs(tag: MonetizationTag) {
+  _observeMonetizationTagAttrs(tag: MonetizationTag) {
+    const attributeFilter = MonetizationTagAttrs[getTagType(tag)]
     this.monetizationTagAttrObserver.observe(tag, {
       childList: false,
+      attributes: true,
       attributeOldValue: true,
-      attributeFilter: MonetizationTagAttrs[getTagType(tag)]
+      attributeFilter
     })
   }
 
-  private onRemovedTag(meta: MonetizationTag) {
-    const entry = this.getEntry(meta)
-    this.monetizationTags.delete(meta)
+  _onRemovedTag(tag: MonetizationTag) {
+    const entry = this.getEntry(tag)
+    this.monetizationTags.delete(tag)
     this.clearLinkById(entry.details)
     this.callback({ started: null, stopped: entry.details })
   }
@@ -324,7 +351,7 @@ export class MonetizationTagManager {
   private getEntry(meta: MonetizationTag) {
     const entry = this.monetizationTags.get(meta)
     if (!entry) {
-      throw new Error('meta not tracked: ' + meta.outerHTML)
+      throw new Error('tag not tracked: ' + meta.outerHTML)
     }
     return entry
   }
@@ -341,6 +368,7 @@ export class MonetizationTagManager {
     if (!disabled) {
       started = this.getPaymentDetails(tag)
       entry.details = started
+      entry.attrs = getTagAttrs(tag, entry.details.tagType)
       if (started.tagType === 'link') {
         const linkRef = new WeakRef(tag as HTMLLinkElement)
         this.linkTagsById.set(started.requestId, linkRef)

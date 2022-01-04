@@ -54,9 +54,7 @@ describe('MonetizationTagManager', () => {
   let manager: MonetizationTagManager
   afterEach(() => {
     manager?.stop()
-    document
-      .querySelectorAll('meta[name="monetization"],link[rel="monetization"]')
-      .forEach(element => element.remove())
+    document.head.innerHTML = ''
     document.body.innerHTML = ''
   })
   it('should invoke callback with `started` when a tag is added', async () => {
@@ -134,6 +132,10 @@ describe('MonetizationTagManager', () => {
       // calling event.stopPropagation
       expect(firing++).toBe(2)
     })
+
+    // The polyfill in the content script will bind to this event and then
+    // invoke `event.target.onmonetization = new Function(event.detail.attribute)`
+    // in the main page JavaScript context.
     document.addEventListener(
       'onmonetization-attr-changed',
       event => {
@@ -370,5 +372,99 @@ describe('MonetizationTagManager', () => {
     await timeout(0)
     expect(changes.started?.paymentPointer).toBe(pp)
     expect(changes.stopped).toBeNull()
+  })
+
+  it('should observe empty metas, then invoke start when name=monetization set', async () => {
+    const pp = '$ilp.uphold.com/noName'
+    const meta = makeMeta(pp)
+    meta.removeAttribute('name')
+    const [changes, callback] = makeChangesCallback()
+    manager = makeManager(callback)
+
+    const observeSpy = jest.spyOn(manager, '_observeMonetizationTagAttrs')
+    const attChangesSpy = jest.spyOn(manager, '_onMonetizationTagAttrsChange')
+
+    manager.startWhenDocumentReady()
+    document.head.appendChild(meta)
+    await timeout()
+
+    expect(observeSpy).toHaveBeenCalledWith(meta)
+
+    await timeout(0)
+    expect(changes.started).toBeNull()
+    expect(changes.stopped).toBeNull()
+    expect(attChangesSpy).not.toHaveBeenCalled()
+    expect(meta.name).toBe('')
+    meta.setAttribute('name', 'monetization')
+    await timeout()
+    expect(meta.name).toBe('monetization')
+    expect(attChangesSpy).toHaveBeenCalled()
+
+    expect(changes.started?.paymentPointer).toBe(pp)
+    meta.name = ''
+    await timeout(0)
+    expect(changes.stopped?.paymentPointer).toBe(pp)
+  })
+
+  it('should observe empty metas with incorrect @name then invoke start when name=monetization set', async () => {
+    const pp = '$ilp.uphold.com/noName'
+    const meta = makeMeta(pp)
+    meta.name = 'bitcoin'
+
+    const [changes, callback] = makeChangesCallback()
+    manager = makeManager(callback)
+    document.head.appendChild(meta)
+    manager.startWhenDocumentReady()
+
+    expect(changes.started).toBeNull()
+    expect(changes.stopped).toBeNull()
+
+    meta.setAttribute('name', 'monetization')
+    await timeout()
+    expect(meta.name).toBe('monetization')
+    expect(changes.started?.paymentPointer).toBe(pp)
+  })
+
+  it('should be able to handle multiple link mutations', async () => {
+    const pp = 'https://ilp.uphold.com/noName'
+    const link1 = makeLink(pp)
+    const link2 = makeLink(pp)
+    const callback = jest.fn()
+    manager = makeManager(callback)
+    document.head.appendChild(link1)
+    document.head.appendChild(link2)
+    // set this before start
+    const spied = jest.spyOn(manager, '_onMonetizationTagAttrsChange')
+    const removed = jest.spyOn(manager, '_onRemovedTag')
+
+    manager.startWhenDocumentReady()
+    expect(callback).toBeCalledTimes(2)
+    link1.rel = 'bitcoin'
+    link2.rel = 'bitcoin'
+    await timeout()
+    // This will be called with multiple records
+    expect(spied).toHaveBeenCalledTimes(1)
+    const mutations = spied.mock.calls[0][0]
+    expect(mutations[0].target).toBe(link1)
+    expect(mutations[1].target).toBe(link2)
+    expect(removed).toHaveBeenCalledTimes(2)
+  })
+
+  it('should only invoke started callback once for multiple attr changes', async () => {
+    expect.assertions(2)
+
+    const pp = 'https://ilp.uphold.com/noName'
+    const link1 = makeLink(pp)
+    const callback = jest.fn()
+    manager = makeManager(callback)
+    document.head.appendChild(link1)
+    manager.startWhenDocumentReady()
+    expect(callback).toHaveBeenCalledTimes(1)
+    // Change disabled and href at the same time
+    link1.setAttribute('crossorigin', 'anonymous')
+    link1.setAttribute('disabled', '')
+    link1.setAttribute('href', 'https://ilp.uphold.com/noBody')
+    await timeout()
+    expect(callback).toHaveBeenCalledTimes(2)
   })
 })
