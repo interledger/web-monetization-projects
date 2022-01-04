@@ -23,7 +23,7 @@ import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { StreamAssociations } from './StreamAssociations'
 import { StreamMoneyEvent } from './Stream'
-import { SPSPStateWM2 } from './SPSPStateWM2'
+import { SPSPState } from './SPSPState'
 
 type MessageSender = chrome.runtime.MessageSender
 
@@ -38,7 +38,7 @@ export class MonetizationService {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private auth: AuthService,
-    private spspState: SPSPStateWM2,
+    private spspState: SPSPState,
     private activeTabLogger: ActiveTabLogger,
     @inject(tokens.LoggingEnabled)
     private loggingEnabled: boolean,

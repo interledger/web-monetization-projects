@@ -31,7 +31,7 @@ import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { StreamAssociations } from './StreamAssociations'
-import { SPSPStateWM2 } from './SPSPStateWM2'
+import { SPSPState } from './SPSPState'
 import { MonetizationService } from './MonetizationService'
 
 import MessageSender = chrome.runtime.MessageSender
@@ -42,7 +42,7 @@ export class BackgroundScript {
     private popup: PopupBrowserAction,
     private assoc: StreamAssociations,
     private streams: Streams,
-    private spspState: SPSPStateWM2,
+    private spspState: SPSPState,
     private tabStates: TabStates,
     private storage: StorageService,
     @inject(tokens.LocalStorageProxy)

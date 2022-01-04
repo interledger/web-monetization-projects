@@ -300,19 +300,24 @@ export class ContentScript {
     })
   }
 
-  private onFrameAllowedChanged(request: OnFrameAllowedChanged) {
-    const allowed = request.data.allowed
+  private onFrameAllowedChanged(message: OnFrameAllowedChanged) {
+    const allowed = message.data.allowed
     const monetizationRequest = this.monetization.getMonetizationRequest()
+    const requests = this.tagManager.linkRequests()
     if (allowed) {
+      // TODO: WM2 how to do the state check on the link requests ?
       if (monetizationRequest && this.monetization.getState() === 'stopped') {
+        requests.push(monetizationRequest)
         // The pause needs to be done after the async allow checks and start
-        this.doStartMonetization(monetizationRequest).then(() => {
+      }
+      for (const request of requests) {
+        this.doStartMonetization(request).then(() => {
           if (this.paused) {
             const pause: PauseWebMonetization = {
               command: 'pauseWebMonetization',
               data: {
                 // TODO:WM2
-                requestIds: [monetizationRequest.requestId]
+                requestIds: [request.requestId]
               }
             }
             this.runtime.sendMessage(pause)
@@ -320,10 +325,14 @@ export class ContentScript {
         })
       }
     } else {
+      const requests = this.tagManager.linkRequests()
       if (monetizationRequest) {
+        requests.push(monetizationRequest)
+      }
+      for (const request of requests) {
         const message: StopWebMonetization = {
           command: 'stopWebMonetization',
-          data: monetizationRequest
+          data: request
         }
         this.runtime.sendMessage(message)
       }

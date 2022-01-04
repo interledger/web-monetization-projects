@@ -99,6 +99,7 @@ export class MonetizationTagManager {
   private monetizationAttrObserver!: MutationObserver
   private monetizationTagAttrObserver!: MutationObserver
 
+  // TODO: this should not contain any non active (e.g. disabled) requests
   private monetizationTags = new Map<
     MonetizationTag,
     {
@@ -122,6 +123,12 @@ export class MonetizationTagManager {
     return Array.from(this.monetizationTags.values()).map(
       e => e.details.requestId
     )
+  }
+
+  linkRequests(): PaymentDetails[] {
+    return Array.from(this.monetizationTags.values())
+      .map(e => e.details)
+      .filter(d => d.tagType === 'link')
   }
 
   constructor(
@@ -219,6 +226,8 @@ export class MonetizationTagManager {
       }
       const hasTarget = this.monetizationTags.has(target)
       const typeSpecified = monetizationTagTypeSpecified(target)
+      // this will also handle the case of a @disabled tag that
+      // is not tracked, becoming enabled
       if (!hasTarget && typeSpecified) {
         this.onAddedTag(target)
         handledTags.add(target)
@@ -283,6 +292,10 @@ export class MonetizationTagManager {
   private onAddedTag(tag: MonetizationTag) {
     const type = getTagType(tag)
     if (!monetizationTagTypeSpecified(tag)) {
+      return
+    }
+    // TODO:WM2 any other cases?
+    if (type === 'link' && tag.hasAttribute('disabled')) {
       return
     }
 

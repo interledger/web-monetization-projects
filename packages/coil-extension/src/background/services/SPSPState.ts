@@ -7,7 +7,7 @@ import { Streams } from './Streams'
 import { StreamAssociations } from './StreamAssociations'
 
 @injectable()
-export class SPSPStateWM2 {
+export class SPSPState {
   streamState: {
     [requestId: string]: {
       loaded: boolean
@@ -33,7 +33,7 @@ export class SPSPStateWM2 {
 
   //TODO:WM2
   sendProgressEvent(requestId: string): boolean {
-    return true
+    return !this.streamState[requestId]?.erred
   }
 
   /**

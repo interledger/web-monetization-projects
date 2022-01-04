@@ -425,6 +425,19 @@ describe('MonetizationTagManager', () => {
     expect(changes.started?.paymentPointer).toBe(pp)
   })
 
+  it('should pick up changes to link href', async () => {
+    const pp = 'https://ilp.uphold.com/noName'
+    const link1 = makeLink(pp)
+    const callback = jest.fn()
+    manager = makeManager(callback)
+    document.head.appendChild(link1)
+    manager.startWhenDocumentReady()
+    expect(callback).toHaveBeenCalledTimes(1)
+    link1.href = `${pp}Suffixed`
+    await timeout()
+    expect(callback).toHaveBeenCalledTimes(2)
+  })
+
   it('should be able to handle multiple link mutations', async () => {
     const pp = 'https://ilp.uphold.com/noName'
     const link1 = makeLink(pp)
@@ -448,6 +461,22 @@ describe('MonetizationTagManager', () => {
     expect(mutations[0].target).toBe(link1)
     expect(mutations[1].target).toBe(link2)
     expect(removed).toHaveBeenCalledTimes(2)
+  })
+
+  it('should not keep a tag that starts disabled in monetizationTags', async () => {
+    const pp = 'https://ilp.uphold.com/noName'
+    const link = makeLink(pp)
+    link.setAttribute('disabled', 'true')
+    const callback = jest.fn()
+    manager = makeManager(callback)
+    document.head.appendChild(link)
+    manager.startWhenDocumentReady()
+    const tags = manager['monetizationTags']
+    expect(tags.size).toBe(0)
+    expect(callback).toHaveBeenCalledTimes(0)
+    link.removeAttribute('disabled')
+    await timeout()
+    expect(callback).toHaveBeenCalledTimes(1)
   })
 
   it('should only invoke started callback once for multiple attr changes', async () => {
