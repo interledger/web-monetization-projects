@@ -4,7 +4,7 @@ import * as tokens from '@webmonetization/wext/tokens'
 import { SPSPRequestEvent } from '../../types/commands'
 
 import { Streams } from './Streams'
-import { StreamAssociationsWM2 } from './StreamAssociationsWM2'
+import { StreamAssociations } from './StreamAssociations'
 
 @injectable()
 export class SPSPStateWM2 {
@@ -16,7 +16,7 @@ export class SPSPStateWM2 {
   } = {}
 
   constructor(
-    private assoc: StreamAssociationsWM2,
+    private assoc: StreamAssociations,
     private streams: Streams,
     @inject(tokens.WextApi)
     private wext: typeof chrome

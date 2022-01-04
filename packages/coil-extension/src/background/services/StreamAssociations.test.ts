@@ -1,10 +1,10 @@
 import '@abraham/reflection'
 
-import { StreamAssociationsWM2 } from './StreamAssociationsWM2'
+import { StreamAssociations } from './StreamAssociations'
 
 describe('StreamAssociations', () => {
   it('should internally store only unique strings for each frame', () => {
-    const assoc = new StreamAssociationsWM2()
+    const assoc = new StreamAssociations()
     const streamA = 'a'
     const frame = { tabId: 1, frameId: 0 }
     assoc.addStreamId(frame, streamA)
@@ -15,7 +15,7 @@ describe('StreamAssociations', () => {
   })
 
   it('should set reverse association when adding stream id', () => {
-    const assoc = new StreamAssociationsWM2()
+    const assoc = new StreamAssociations()
     const streamA = 'a'
     const frame = { tabId: 1, frameId: 0 }
     assoc.addStreamId(frame, streamA)
@@ -23,14 +23,14 @@ describe('StreamAssociations', () => {
   })
 
   it('getStreams should return an array view list of streams', () => {
-    const assoc = new StreamAssociationsWM2()
+    const assoc = new StreamAssociations()
     const frame = { tabId: 1, frameId: 0 }
     const streams = assoc.getStreams(frame)
     expect(streams).toBeInstanceOf(Array)
   })
 
   it('getTabStreams should return an aggregate array list', () => {
-    const assoc = new StreamAssociationsWM2()
+    const assoc = new StreamAssociations()
     const frame = { tabId: 1, frameId: 0 }
     const frame1 = { tabId: 1, frameId: 1 }
     const frame2 = { tabId: 1, frameId: 2 }
@@ -57,7 +57,7 @@ describe('StreamAssociations', () => {
   })
 
   it('should delete all frame associations after clearTabStreams', () => {
-    const assoc = new StreamAssociationsWM2()
+    const assoc = new StreamAssociations()
     const frame = { tabId: 1, frameId: 0 }
     const frame2 = { tabId: 1, frameId: 2 }
 
@@ -74,7 +74,7 @@ describe('StreamAssociations', () => {
   })
 
   it('clearStreams should empty the internal store', () => {
-    const assoc = new StreamAssociationsWM2()
+    const assoc = new StreamAssociations()
     const frame = { tabId: 1, frameId: 1 }
 
     // Add 3 streams, equivalent to 3 <link> tags

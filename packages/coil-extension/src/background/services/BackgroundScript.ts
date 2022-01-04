@@ -30,7 +30,7 @@ import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { ActiveTabLogger } from './ActiveTabLogger'
-import { StreamAssociationsWM2 } from './StreamAssociationsWM2'
+import { StreamAssociations } from './StreamAssociations'
 import { SPSPStateWM2 } from './SPSPStateWM2'
 import { MonetizationService } from './MonetizationService'
 
@@ -40,7 +40,7 @@ import MessageSender = chrome.runtime.MessageSender
 export class BackgroundScript {
   constructor(
     private popup: PopupBrowserAction,
-    private assoc: StreamAssociationsWM2,
+    private assoc: StreamAssociations,
     private streams: Streams,
     private spspState: SPSPStateWM2,
     private tabStates: TabStates,

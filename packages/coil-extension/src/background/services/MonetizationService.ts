@@ -21,7 +21,7 @@ import { TabStates } from './TabStates'
 import { Streams } from './Streams'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
-import { StreamAssociationsWM2 } from './StreamAssociationsWM2'
+import { StreamAssociations } from './StreamAssociations'
 import { StreamMoneyEvent } from './Stream'
 import { SPSPStateWM2 } from './SPSPStateWM2'
 
@@ -32,7 +32,7 @@ type ChromeTabs = typeof chrome['tabs']
 @injectable()
 export class MonetizationService {
   constructor(
-    private assoc: StreamAssociationsWM2,
+    private assoc: StreamAssociations,
     private streams: Streams,
     private tabStates: TabStates,
     @inject(tokens.LocalStorageProxy)
