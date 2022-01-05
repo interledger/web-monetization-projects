@@ -32,8 +32,8 @@ export function configureContainer({
   getActiveTab
 }: ConfigureContainerParams) {
   if (loggingEnabled) {
-    // const logger = makeLoggerMiddleware()
-    // container.applyMiddleware(logger)
+    const logger = makeLoggerMiddleware()
+    container.applyMiddleware(logger)
   }
 
   container.bind(tokens.CoilDomain).toConstantValue(coilDomain)
