@@ -89,10 +89,6 @@ function getTagAttrs(tag: MonetizationTag, tagType: TagType) {
   )
 }
 
-/**
- * TODO: document
- *  1. any performance optimizations
- */
 export class MonetizationTagManager {
   private affinity: TagType = 'meta'
   private documentObserver!: MutationObserver
@@ -102,6 +98,7 @@ export class MonetizationTagManager {
     MonetizationTag,
     {
       details: PaymentDetails
+      // TODO: should this just go straight on the payment details?
       attrs: Record<string, string | null>
     }
   >()
@@ -133,23 +130,26 @@ export class MonetizationTagManager {
     private window: Window,
     private document: Document,
     private callback: PaymentDetailsChangeCallback
-  ) {}
-
-  /**
-   * The head will be null early on, so we must wait
-   */
-  startWhenDocumentReady(): void {
-    whenDocumentReady(this.document, this.start.bind(this))
+  ) {
+    this.documentObserver = new MutationObserver(records =>
+      this._onWholeDocumentObserved(records)
+    )
+    this.monetizationTagAttrObserver = new MutationObserver(records =>
+      this._onMonetizationTagAttrsChange(records)
+    )
   }
 
-  start() {
-    this.documentObserver = new MutationObserver(
-      this._onWholeDocumentObserved.bind(this)
-    )
-    this.monetizationTagAttrObserver = new MutationObserver(
-      this._onMonetizationTagAttrsChange.bind(this)
-    )
+  /**
+   * The head will be null early on when invoked in an extension content script,
+   * so we may need to wait
+   */
+  startWhenDocumentReady(): void {
+    whenDocumentReady(this.document, this._start.bind(this))
+  }
 
+  // Though this is `public`, it's not part of the public interface, so we
+  // prefix this method with `_`
+  _start() {
     const monetizationTags: MonetizationTagList =
       this.document.querySelectorAll('meta,link')
     monetizationTags.forEach(tag => {
@@ -255,7 +255,7 @@ export class MonetizationTagManager {
         const wasDisabled = record.oldValue !== null
         const isDisabled = target.hasAttribute('disabled')
         if (wasDisabled != isDisabled) {
-          this.onChangedPaymentEndpoint(target, isDisabled, wasDisabled)
+          this._onChangedPaymentEndpoint(target, isDisabled, wasDisabled)
           handledTags.add(target)
         }
       } else if (
@@ -264,7 +264,7 @@ export class MonetizationTagManager {
         target instanceof HTMLMetaElement &&
         target['content'] !== record.oldValue
       ) {
-        this.onChangedPaymentEndpoint(target)
+        this._onChangedPaymentEndpoint(target)
         handledTags.add(target)
       } else if (
         record.type === 'attributes' &&
@@ -272,7 +272,7 @@ export class MonetizationTagManager {
         target instanceof HTMLLinkElement &&
         target['href'] !== record.oldValue
       ) {
-        this.onChangedPaymentEndpoint(target)
+        this._onChangedPaymentEndpoint(target)
         handledTags.add(target)
       }
     }
@@ -366,7 +366,7 @@ export class MonetizationTagManager {
     return entry
   }
 
-  onChangedPaymentEndpoint(
+  _onChangedPaymentEndpoint(
     tag: MonetizationTag,
     disabled = false,
     wasDisabled = false

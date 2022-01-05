@@ -6,6 +6,10 @@ import { SPSPRequestEvent } from '../../types/commands'
 import { Streams } from './Streams'
 import { StreamAssociations } from './StreamAssociations'
 
+/**
+ * This is hacky/transient adapter so that we can get WM2 working as
+ * specified before a full rewrite is complete.
+ */
 @injectable()
 export class SPSPState {
   streamState: {

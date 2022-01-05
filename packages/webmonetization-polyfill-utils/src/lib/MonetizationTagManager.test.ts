@@ -63,9 +63,9 @@ describe('MonetizationTagManager', () => {
 
     manager = makeManager(callback)
 
-    jest.spyOn(manager, 'start')
+    jest.spyOn(manager, '_start')
     manager.startWhenDocumentReady()
-    expect(manager['start']).toHaveBeenCalled()
+    expect(manager['_start']).toHaveBeenCalled()
 
     document.head.appendChild(link)
     expect(document.readyState).toBe('complete')
@@ -307,7 +307,7 @@ describe('MonetizationTagManager', () => {
     expect(changes.started?.paymentPointer).toBe(pp)
     const started = { ...changes.started }
     expect(changes.stopped).toBeNull()
-    const endpoint = jest.spyOn(manager, 'onChangedPaymentEndpoint')
+    const endpoint = jest.spyOn(manager, '_onChangedPaymentEndpoint')
     link.setAttribute('disabled', 'true')
     await timeout(0)
     expect(link).toMatchInlineSnapshot(`
