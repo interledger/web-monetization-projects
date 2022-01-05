@@ -155,9 +155,6 @@ export class MonetizationTagManager {
     monetizationTags.forEach(tag => {
       try {
         this._observeMonetizationTagAttrs(tag)
-        if (!monetizationTagTypeSpecified(tag)) {
-          return
-        }
         this.onAddedTag(tag)
       } catch (e) {
         // eslint-disable-next-line no-console
@@ -181,9 +178,7 @@ export class MonetizationTagManager {
     if (nodeIsPotentiallyMonetizationTag(node)) {
       if (op === 'added') {
         this._observeMonetizationTagAttrs(node)
-        if (monetizationTagTypeSpecified(node)) {
-          this.onAddedTag(node)
-        }
+        this.onAddedTag(node)
       } else if (op === 'removed' && this.monetizationTags.has(node)) {
         this._onRemovedTag(node)
       }
