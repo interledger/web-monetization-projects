@@ -29,7 +29,7 @@ const makeMeta = (pp: string) => {
 const captureOneWindowError = async (timeout = 10e3): Promise<ErrorEvent> => {
   return Promise.race([
     new Promise<ErrorEvent>(resolve => {
-      window.addEventListener('error', resolve)
+      window.addEventListener('error', resolve, { once: true })
     }),
     new Promise<never>((_, reject) => setTimeout(reject, timeout))
   ])
@@ -495,5 +495,18 @@ describe('MonetizationTagManager', () => {
     link1.setAttribute('href', 'https://ilp.uphold.com/noBody')
     await timeout()
     expect(callback).toHaveBeenCalledTimes(2)
+  })
+
+  it('should only need one observer, for added/removed nodes and onmonetization', async () => {
+    const callback = jest.fn()
+    manager = makeManager(callback)
+    const spy = jest.spyOn(manager, '_onWholeDocumentObserved')
+    document.body.innerHTML = `<p id="ptag" onmonetization="console.log('hello')"></p>`
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const ptag = document.getElementById('ptag')!
+    manager.startWhenDocumentReady()
+    ptag.setAttribute('onmonetization', "console.log('hello world!')")
+    await timeout()
+    expect(spy.mock.calls[0][0][0].type).toBe('attributes')
   })
 })

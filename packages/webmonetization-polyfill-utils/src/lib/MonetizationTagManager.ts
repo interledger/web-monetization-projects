@@ -48,7 +48,7 @@ export class DeprecatedMetaTagIgnoredError extends CustomError {}
 
 interface FireOnMonetizationChangeIfHaveAttributeParams {
   node: HTMLElement
-  force?: boolean
+  wasChange?: boolean
 }
 
 export const metaDeprecatedMessage =
@@ -96,10 +96,8 @@ function getTagAttrs(tag: MonetizationTag, tagType: TagType) {
 export class MonetizationTagManager {
   private affinity: TagType = 'meta'
   private documentObserver!: MutationObserver
-  private monetizationAttrObserver!: MutationObserver
   private monetizationTagAttrObserver!: MutationObserver
 
-  // TODO: this should not contain any non active (e.g. disabled) requests
   private monetizationTags = new Map<
     MonetizationTag,
     {
@@ -146,10 +144,7 @@ export class MonetizationTagManager {
 
   start() {
     this.documentObserver = new MutationObserver(
-      this.onChildListObserved.bind(this)
-    )
-    this.monetizationAttrObserver = new MutationObserver(
-      this.onOnMonetizationChangeObserved.bind(this)
+      this._onWholeDocumentObserved.bind(this)
     )
     this.monetizationTagAttrObserver = new MutationObserver(
       this._onMonetizationTagAttrsChange.bind(this)
@@ -176,43 +171,49 @@ export class MonetizationTagManager {
     })
     this.documentObserver.observe(this.document, {
       subtree: true,
-      childList: true
+      childList: true,
+      attributeFilter: ['onmonetization']
     })
   }
 
-  private onChildListObserved(records: MutationRecord[]) {
-    debug('head mutation records.length=', records.length)
-    const check = (op: string, node: Node) => {
-      debug('head node', op, node)
-      if (nodeIsPotentiallyMonetizationTag(node)) {
-        if (op === 'added') {
-          this._observeMonetizationTagAttrs(node)
-          if (monetizationTagTypeSpecified(node)) {
-            this.onAddedTag(node)
-          }
-        } else if (op === 'removed' && this.monetizationTags.has(node)) {
-          this._onRemovedTag(node)
+  _check(op: string, node: Node) {
+    debug('head node', op, node)
+    if (nodeIsPotentiallyMonetizationTag(node)) {
+      if (op === 'added') {
+        this._observeMonetizationTagAttrs(node)
+        if (monetizationTagTypeSpecified(node)) {
+          this.onAddedTag(node)
         }
-      }
-      if (op === 'added' && node instanceof HTMLElement) {
-        this.checkMonetizationAttr(node)
+      } else if (op === 'removed' && this.monetizationTags.has(node)) {
+        this._onRemovedTag(node)
       }
     }
+    if (op === 'added' && node instanceof HTMLElement) {
+      this.checkMonetizationAttr(node)
+    }
+  }
+
+  _checkRemoved = this._check.bind(this, 'removed')
+  _checkAdded = this._check.bind(this, 'added')
+
+  _onWholeDocumentObserved(records: MutationRecord[]) {
+    debug('head mutation records.length=', records.length)
 
     // Explicitly remove these first
     for (const record of records) {
       debug('Record', record.type, record.target)
       if (record.type === 'childList') {
-        record.removedNodes.forEach(check.bind(null, 'removed'))
+        record.removedNodes.forEach(this._checkRemoved)
       }
     }
 
     for (const record of records) {
       debug('Record', record.type, record.target)
       if (record.type === 'childList') {
-        record.addedNodes.forEach(check.bind(null, 'added'))
+        record.addedNodes.forEach(this._checkAdded)
       }
     }
+    this.onOnMonetizationChangeObserved(records)
   }
 
   _onMonetizationTagAttrsChange(records: MutationRecord[]) {
@@ -337,11 +338,7 @@ export class MonetizationTagManager {
 
     const attrs = getTagAttrs(tag, details.tagType)
     this.monetizationTags.set(tag, { details, attrs })
-    if (tag instanceof HTMLLinkElement && tag.hasAttribute('disabled')) {
-      return
-    } else {
-      this.callback({ stopped: null, started: details })
-    }
+    this.callback({ stopped: null, started: details })
   }
 
   _observeMonetizationTagAttrs(tag: MonetizationTag) {
@@ -411,21 +408,18 @@ export class MonetizationTagManager {
   private checkMonetizationAttr(node: HTMLElement) {
     debug('checkMonetizationAttr', node)
     this.fireOnMonetizationChangeIfHaveAttribute({ node })
-    this.monetizationAttrObserver.observe(node, {
-      childList: false,
-      attributeFilter: ['onmonetization']
-    })
   }
 
   private onOnMonetizationChangeObserved(records: MutationRecord[]) {
     for (const record of records) {
       if (
         record.type === 'attributes' &&
-        record.target instanceof HTMLElement
+        record.target instanceof HTMLElement &&
+        record.attributeName === 'onmonetization'
       ) {
         this.fireOnMonetizationChangeIfHaveAttribute({
           node: record.target,
-          force: true
+          wasChange: true
         })
       }
     }
@@ -433,10 +427,10 @@ export class MonetizationTagManager {
 
   private fireOnMonetizationChangeIfHaveAttribute({
     node,
-    force = false
+    wasChange = false
   }: FireOnMonetizationChangeIfHaveAttributeParams) {
     const attribute = node.getAttribute('onmonetization')
-    if (attribute || force) {
+    if (attribute || wasChange) {
       const customEvent = new CustomEvent('onmonetization-attr-changed', {
         bubbles: true,
         detail: {
@@ -451,7 +445,6 @@ export class MonetizationTagManager {
 
   stop() {
     this.documentObserver?.disconnect()
-    this.monetizationAttrObserver?.disconnect()
     this.monetizationTagAttrObserver?.disconnect()
     this.monetizationTags.clear()
   }
