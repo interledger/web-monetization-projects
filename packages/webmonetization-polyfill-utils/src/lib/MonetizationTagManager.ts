@@ -210,6 +210,11 @@ export class MonetizationTagManager {
     this.onOnMonetizationChangeObserved(records)
   }
 
+  /**
+   * This needs to handle more than one tag at a time. The changes are
+   * aggregated.
+   * @param records
+   */
   _onMonetizationTagAttrsChange(records: MutationRecord[]) {
     const handledTags = new Set<Node>()
     // Check for a non specified link or meta with the type now specified and
@@ -226,10 +231,14 @@ export class MonetizationTagManager {
       if (!hasTarget && typeSpecified) {
         this.onAddedTag(target)
         handledTags.add(target)
-      }
-      if (hasTarget && !typeSpecified) {
+      } else if (hasTarget && !typeSpecified) {
         this._onRemovedTag(target)
         handledTags.add(target)
+      } else if (!hasTarget && !typeSpecified) {
+        // ignore these changes
+        handledTags.add(target)
+      } else if (hasTarget && typeSpecified) {
+        // handle below
       }
     }
 
@@ -346,16 +355,18 @@ export class MonetizationTagManager {
   }
 
   _onRemovedTag(tag: MonetizationTag) {
-    const entry = this.getEntry(tag)
+    const entry = this.getEntry(tag, '_onRemovedTag')
     this.monetizationTags.delete(tag)
     this.clearLinkById(entry.details)
     this.callback({ started: null, stopped: entry.details })
   }
 
-  private getEntry(meta: MonetizationTag) {
+  private getEntry(meta: MonetizationTag, caller = '') {
     const entry = this.monetizationTags.get(meta)
     if (!entry) {
-      throw new Error('tag not tracked: ' + meta.outerHTML)
+      throw new Error(
+        `${caller}: tag not tracked: ${meta.outerHTML.slice(0, 200)}`
+      )
     }
     return entry
   }
@@ -365,7 +376,7 @@ export class MonetizationTagManager {
     disabled = false,
     wasDisabled = false
   ) {
-    const entry = this.getEntry(tag)
+    const entry = this.getEntry(tag, '_onChangedPaymentEndpoint')
     const stopped = wasDisabled ? null : entry.details
     this.clearLinkById(entry.details)
     let started: PaymentDetails | null = null
