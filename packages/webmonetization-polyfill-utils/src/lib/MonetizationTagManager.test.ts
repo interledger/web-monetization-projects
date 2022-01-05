@@ -1,5 +1,8 @@
+import { resolvePaymentEndpoint } from '@webmonetization/polyfill-utils'
+
 import {
   metaDeprecatedMessage,
+  MonetizationTag,
   MonetizationTagManager,
   PaymentDetailsChangeArguments,
   PaymentDetailsChangeCallback
@@ -15,7 +18,7 @@ const expectUuid4 = expect.stringMatching(uuidRegex)
 const makeLink = (pp: string) => {
   const link = document.createElement('link')
   link.setAttribute('rel', 'monetization')
-  link.setAttribute('href', pp.replace(/^\$/, 'https://'))
+  link.setAttribute('href', resolvePaymentEndpoint(pp))
   return link
 }
 
@@ -39,6 +42,23 @@ const makeManager = (cb: PaymentDetailsChangeCallback) => {
   return new MonetizationTagManager(window, document, cb)
 }
 
+const makeLinkAttrs = (pp: string) => {
+  return {
+    crossorigin: null,
+    disabled: null,
+    href: resolvePaymentEndpoint(pp),
+    rel: 'monetization',
+    type: null
+  }
+}
+
+const makeMetaAttrs = (pp: string) => {
+  return {
+    content: pp,
+    name: 'monetization'
+  }
+}
+
 const makeChangesCallback = (): [
   PaymentDetailsChangeArguments,
   PaymentDetailsChangeCallback
@@ -58,7 +78,8 @@ describe('MonetizationTagManager', () => {
     document.body.innerHTML = ''
   })
   it('should invoke callback with `started` when a tag is added', async () => {
-    const link = makeLink('$ilp.uphold.com/gRa4mXFEMYrL')
+    const pp = '$ilp.uphold.com/gRa4mXFEMYrL'
+    const link = makeLink(pp)
     const [changes, callback] = makeChangesCallback()
 
     manager = makeManager(callback)
@@ -76,6 +97,7 @@ describe('MonetizationTagManager', () => {
 
     expect(changes.started).toEqual({
       requestId: expectUuid4,
+      attrs: makeLinkAttrs(pp),
       paymentPointer: 'https://ilp.uphold.com/gRa4mXFEMYrL',
       initiatingUrl: 'http://localhost/',
       tagType: 'link',
@@ -86,7 +108,8 @@ describe('MonetizationTagManager', () => {
     'should invoke callback with `started` immediately upon starting, ' +
       'when a tag is already in the document',
     () => {
-      const link = makeLink('$ilp.uphold.com/already')
+      const pp = '$ilp.uphold.com/already'
+      const link = makeLink(pp)
       const [changes, callback] = makeChangesCallback()
       manager = makeManager(callback)
       document.head.appendChild(link)
@@ -94,6 +117,7 @@ describe('MonetizationTagManager', () => {
       manager.startWhenDocumentReady()
       // don't need to wait for MutationObserver
       expect(changes.started).toEqual({
+        attrs: makeLinkAttrs(pp),
         requestId: expectUuid4,
         paymentPointer: 'https://ilp.uphold.com/already',
         initiatingUrl: 'http://localhost/',
@@ -103,7 +127,8 @@ describe('MonetizationTagManager', () => {
     }
   )
   it('should set fromBody: true when tag is from body', async () => {
-    const link = makeLink('$ilp.uphold.com/inBody')
+    const pp = '$ilp.uphold.com/inBody'
+    const link = makeLink(pp)
     const [changes, callback] = makeChangesCallback()
     manager = makeManager(callback)
     manager.startWhenDocumentReady()
@@ -111,6 +136,7 @@ describe('MonetizationTagManager', () => {
     await timeout(0)
 
     expect(changes.started).toEqual({
+      attrs: makeLinkAttrs(pp),
       requestId: expectUuid4,
       paymentPointer: 'https://ilp.uphold.com/inBody',
       initiatingUrl: 'http://localhost/',
@@ -148,14 +174,15 @@ describe('MonetizationTagManager', () => {
         expect(event.currentTarget).toBe(document)
         event.stopPropagation()
       },
-      { capture: true }
+      { capture: true, once: true }
     )
     manager.startWhenDocumentReady()
     expect.assertions(5)
   })
 
   it('should throw an error when a meta is added after a link', async () => {
-    const link = makeLink('$ilp.uphold.com/linkBeforeMeta')
+    const pp = '$ilp.uphold.com/linkBeforeMeta'
+    const link = makeLink(pp)
     const [changes, callback] = makeChangesCallback()
     manager = makeManager(callback)
     manager.startWhenDocumentReady()
@@ -164,6 +191,7 @@ describe('MonetizationTagManager', () => {
 
     expect(changes.started).toEqual({
       requestId: expectUuid4,
+      attrs: makeLinkAttrs(pp),
       paymentPointer: 'https://ilp.uphold.com/linkBeforeMeta',
       initiatingUrl: 'http://localhost/',
       tagType: 'link',
@@ -215,8 +243,10 @@ describe('MonetizationTagManager', () => {
     // TODO: we could optimize away the pointless start by checking on start
     // for existing tags in the dom, and filtering metas if links were found.
 
-    const meta = makeMeta('$tag.com/meta')
-    const link = makeLink('$tag.com/link')
+    const metaPp = '$tag.com/meta'
+    const meta = makeMeta(metaPp)
+    const linkPp = '$tag.com/link'
+    const link = makeLink(linkPp)
     document.head.appendChild(meta)
     const callback = jest.fn()
     manager = makeManager(callback)
@@ -224,28 +254,25 @@ describe('MonetizationTagManager', () => {
     document.head.appendChild(link)
     await timeout(0)
     expect(callback).toHaveBeenCalledTimes(3)
+    const started = {
+      attrs: makeMetaAttrs(metaPp),
+      fromBody: false,
+      initiatingUrl: 'http://localhost/',
+      paymentPointer: meta.content,
+      requestId: expectUuid4,
+      tagType: 'meta'
+    }
     expect(callback).toHaveBeenNthCalledWith(1, {
-      started: {
-        fromBody: false,
-        initiatingUrl: 'http://localhost/',
-        paymentPointer: meta.content,
-        requestId: expectUuid4,
-        tagType: 'meta'
-      },
+      started,
       stopped: null
     })
     expect(callback).toHaveBeenNthCalledWith(2, {
       started: null,
-      stopped: {
-        fromBody: false,
-        initiatingUrl: 'http://localhost/',
-        paymentPointer: meta.content,
-        requestId: expectUuid4,
-        tagType: 'meta'
-      }
+      stopped: started
     })
     expect(callback).toHaveBeenNthCalledWith(3, {
       started: {
+        attrs: makeLinkAttrs(linkPp),
         fromBody: false,
         initiatingUrl: 'http://localhost/',
         paymentPointer: link.href,

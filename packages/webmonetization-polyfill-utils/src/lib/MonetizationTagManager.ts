@@ -19,6 +19,7 @@ export interface PaymentDetails {
   initiatingUrl: string
   fromBody: boolean
   tagType: TagType
+  attrs: Record<string, string | null>
 }
 
 /**
@@ -48,7 +49,7 @@ export class DeprecatedMetaTagIgnoredError extends CustomError {}
 
 interface FireOnMonetizationChangeIfHaveAttributeParams {
   node: HTMLElement
-  wasChange?: boolean
+  changeDetected?: boolean
 }
 
 export const metaDeprecatedMessage =
@@ -98,8 +99,6 @@ export class MonetizationTagManager {
     MonetizationTag,
     {
       details: PaymentDetails
-      // TODO: should this just go straight on the payment details?
-      attrs: Record<string, string | null>
     }
   >()
 
@@ -286,10 +285,12 @@ export class MonetizationTagManager {
    * Invokes this.callback unless tag is disabled
    */
   private onAddedTag(tag: MonetizationTag) {
-    const type = getTagType(tag)
     if (!monetizationTagTypeSpecified(tag)) {
       return
     }
+
+    const type = getTagType(tag)
+
     // TODO:WM2 any other cases?
     if (type === 'link' && tag.hasAttribute('disabled')) {
       return
@@ -331,8 +332,7 @@ export class MonetizationTagManager {
       )
     }
 
-    const attrs = getTagAttrs(tag, details.tagType)
-    this.monetizationTags.set(tag, { details, attrs })
+    this.monetizationTags.set(tag, { details })
     this.callback({ stopped: null, started: details })
   }
 
@@ -340,7 +340,6 @@ export class MonetizationTagManager {
     const attributeFilter = MonetizationTagAttrs[getTagType(tag)]
     this.monetizationTagAttrObserver.observe(tag, {
       childList: false,
-      attributes: true,
       attributeOldValue: true,
       attributeFilter
     })
@@ -373,7 +372,6 @@ export class MonetizationTagManager {
     if (!disabled) {
       started = this.getPaymentDetails(tag)
       entry.details = started
-      entry.attrs = getTagAttrs(tag, entry.details.tagType)
       if (started.tagType === 'link') {
         const linkRef = new WeakRef(tag as HTMLLinkElement)
         this.linkTagsById.set(started.requestId, linkRef)
@@ -388,21 +386,23 @@ export class MonetizationTagManager {
     }
   }
 
-  private getPaymentDetails(meta: MonetizationTag): PaymentDetails {
+  private getPaymentDetails(tag: MonetizationTag): PaymentDetails {
+    const tagType = getTagType(tag)
     const paymentPointer =
-      meta instanceof HTMLMetaElement ? meta.content : meta.href
+      tag instanceof HTMLMetaElement ? tag.content : tag.href
     return {
+      attrs: getTagAttrs(tag, tagType),
       requestId: uuidV4(),
       paymentPointer: paymentPointer.trim(),
       initiatingUrl: this.window.location.href,
-      tagType: getTagType(meta),
-      fromBody: meta.parentElement != this.document.head
+      tagType: getTagType(tag),
+      fromBody: tag.parentElement != this.document.head
     }
   }
 
   private checkMonetizationAttr(node: HTMLElement) {
     debug('checkMonetizationAttr', node)
-    this.fireOnMonetizationChangeIfHaveAttribute({ node })
+    this.fireOnMonetizationAttrChangedEvent({ node })
   }
 
   private onOnMonetizationChangeObserved(records: MutationRecord[]) {
@@ -412,20 +412,20 @@ export class MonetizationTagManager {
         record.target instanceof HTMLElement &&
         record.attributeName === 'onmonetization'
       ) {
-        this.fireOnMonetizationChangeIfHaveAttribute({
+        this.fireOnMonetizationAttrChangedEvent({
           node: record.target,
-          wasChange: true
+          changeDetected: true
         })
       }
     }
   }
 
-  private fireOnMonetizationChangeIfHaveAttribute({
+  private fireOnMonetizationAttrChangedEvent({
     node,
-    wasChange = false
+    changeDetected = false
   }: FireOnMonetizationChangeIfHaveAttributeParams) {
     const attribute = node.getAttribute('onmonetization')
-    if (attribute || wasChange) {
+    if (attribute || changeDetected) {
       const customEvent = new CustomEvent('onmonetization-attr-changed', {
         bubbles: true,
         detail: {
@@ -435,12 +435,11 @@ export class MonetizationTagManager {
       const result = node.dispatchEvent(customEvent)
       debug('dispatched onmonetization-attr-changed ev', result)
     }
-    return Boolean(attribute)
   }
 
   stop() {
-    this.documentObserver?.disconnect()
-    this.monetizationTagAttrObserver?.disconnect()
+    this.documentObserver.disconnect()
+    this.monetizationTagAttrObserver.disconnect()
     this.monetizationTags.clear()
   }
 
