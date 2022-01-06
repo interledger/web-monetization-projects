@@ -16,7 +16,7 @@ references:
   node-version-matrix: &node-version-matrix
     matrix:
       parameters:
-        node-version: [ "14", "16" ]
+        node-version: [ "14", "16", "17" ]
   just-one-node-version-matrix: &just-latest-lts-node-version
     matrix:
       parameters:
