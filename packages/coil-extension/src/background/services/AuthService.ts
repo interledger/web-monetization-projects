@@ -23,8 +23,8 @@ import { ActiveTabLogger } from './ActiveTabLogger'
 
  ### Incognito Notes
  The manifest declares "incognito":"spanning" with ONE background page instance
- shared between contexts. If you log in in one context, you'll be logged in
- everywhere. If you logout from one context, you'll be logged out everywhere.
+ shared between contexts. If you log in,in one context, you'll be logged in
+ everywhere. If you log out from one context, you'll be logged out everywhere.
 
  ### Site <-> Extension token synchronization
  - Every time you land on a coil.com frame the content script will send the
@@ -41,7 +41,7 @@ import { ActiveTabLogger } from './ActiveTabLogger'
  site. This supports convenient use of incognito contexts.
 
  We could do this only for incognito contexts and instead logout in normal
- contexts, but it's possible you could login via an incognito context first,
+ contexts, but it's possible you could log in via an incognito context first,
  then see no token in a normal context, infer that the user had logged out, then
  very confusingly propagate this logged out state to the incognito context.
 
