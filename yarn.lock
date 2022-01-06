@@ -1566,7 +1566,7 @@ __metadata:
     "@types/node-fetch": 2.5.12
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
-    "@types/uuid": 8.3.3
+    "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.9.0
     "@typescript-eslint/parser": 5.9.0
     "@webexts/build-utils": ^0.0.0
@@ -1705,7 +1705,7 @@ __metadata:
     "@types/long": 4.0.1
     "@types/node": 14.18.5
     "@types/node-fetch": 2.5.12
-    "@types/uuid": 8.3.3
+    "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.9.0
     "@typescript-eslint/parser": 5.9.0
     "@webmonetization/polyfill-utils": 0.0.0
@@ -2520,7 +2520,7 @@ __metadata:
     "@types/node": 14.18.5
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
-    "@types/uuid": 8.3.3
+    "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.9.0
     "@typescript-eslint/parser": 5.9.0
     "@webexts/build-utils": 0.0.0
@@ -4669,10 +4669,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/uuid@npm:8.3.3":
-  version: 8.3.3
-  resolution: "@types/uuid@npm:8.3.3"
-  checksum: 3f340155bb1161f9ffa7163926d6222fea8f3505c23619b72bcc230883354926672c08a06510c7a543f73553c792a84444cc1744cff631b4ba988763e4bd7a8f
+"@types/uuid@npm:8.3.4":
+  version: 8.3.4
+  resolution: "@types/uuid@npm:8.3.4"
+  checksum: 6f11f3ff70f30210edaa8071422d405e9c1d4e53abbe50fdce365150d3c698fe7bbff65c1e71ae080cbfb8fded860dbb5e174da96fdbbdfcaa3fb3daa474d20f
   languageName: node
   linkType: hard
 
@@ -5133,7 +5133,7 @@ __metadata:
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@types/node-fetch": 2.5.12
-    "@types/uuid": 8.3.3
+    "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.9.0
     "@typescript-eslint/parser": 5.9.0
     "@yarnpkg/pnpify": 3.1.0
@@ -5249,7 +5249,7 @@ __metadata:
     "@types/node": 14.18.5
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
-    "@types/uuid": 8.3.3
+    "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.9.0
     "@typescript-eslint/parser": 5.9.0
     "@webmonetization/types": 0.0.0
