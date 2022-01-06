@@ -238,45 +238,36 @@ export class MonetizationTagManager {
         // ignore these changes
         handledTags.add(target)
       } else if (hasTarget && typeSpecified) {
-        // handle below
-      }
-    }
-
-    for (const record of records) {
-      const target = record.target
-      if (handledTags.has(target)) {
-        continue
-      }
-
-      if (
-        record.type === 'attributes' &&
-        record.attributeName === 'disabled' &&
-        target instanceof HTMLLinkElement &&
-        // can't use record.target[disabled] as it's a Boolean not string
-        target.getAttribute('disabled') !== record.oldValue
-      ) {
-        const wasDisabled = record.oldValue !== null
-        const isDisabled = target.hasAttribute('disabled')
-        if (wasDisabled != isDisabled) {
-          this._onChangedPaymentEndpoint(target, isDisabled, wasDisabled)
+        if (
+          record.type === 'attributes' &&
+          record.attributeName === 'disabled' &&
+          target instanceof HTMLLinkElement &&
+          // can't use record.target[disabled] as it's a Boolean not string
+          target.getAttribute('disabled') !== record.oldValue
+        ) {
+          const wasDisabled = record.oldValue !== null
+          const isDisabled = target.hasAttribute('disabled')
+          if (wasDisabled != isDisabled) {
+            this._onChangedPaymentEndpoint(target, isDisabled, wasDisabled)
+            handledTags.add(target)
+          }
+        } else if (
+          record.type === 'attributes' &&
+          record.attributeName === 'content' &&
+          target instanceof HTMLMetaElement &&
+          target.content !== record.oldValue
+        ) {
+          this._onChangedPaymentEndpoint(target)
+          handledTags.add(target)
+        } else if (
+          record.type === 'attributes' &&
+          record.attributeName === 'href' &&
+          target instanceof HTMLLinkElement &&
+          target.href !== record.oldValue
+        ) {
+          this._onChangedPaymentEndpoint(target)
           handledTags.add(target)
         }
-      } else if (
-        record.type === 'attributes' &&
-        record.attributeName === 'content' &&
-        target instanceof HTMLMetaElement &&
-        target['content'] !== record.oldValue
-      ) {
-        this._onChangedPaymentEndpoint(target)
-        handledTags.add(target)
-      } else if (
-        record.type === 'attributes' &&
-        record.attributeName === 'href' &&
-        target instanceof HTMLLinkElement &&
-        target['href'] !== record.oldValue
-      ) {
-        this._onChangedPaymentEndpoint(target)
-        handledTags.add(target)
       }
     }
   }
