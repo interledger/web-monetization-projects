@@ -404,6 +404,8 @@ export class MonetizationTagManager {
     return {
       attrs: getTagAttrs(tag, tagType),
       requestId: uuidV4(),
+      // The payment pointer validation/resolution (./well-known/pay) is done
+      // elsewhere
       paymentPointer: paymentPointer.trim(),
       initiatingUrl: this.window.location.href,
       tagType: getTagType(tag),
