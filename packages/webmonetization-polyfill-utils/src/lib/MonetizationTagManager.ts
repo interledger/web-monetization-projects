@@ -139,15 +139,15 @@ export class MonetizationTagManager {
   }
 
   /**
-   * The head will be null early on when invoked in an extension content script,
-   * so we may need to wait
+   * Wait until the document is ready and formed
    */
   startWhenDocumentReady(): void {
     whenDocumentReady(this.document, this._start.bind(this))
   }
 
   // Though this is `public`, it's not part of the public interface, so we
-  // prefix this method with `_`
+  // prefix this method with `_` with no `private` modifier, in order to
+  // jest.spyOn it.
   _start() {
     const monetizationTags: MonetizationTagList =
       this.document.querySelectorAll('meta,link')
@@ -191,7 +191,7 @@ export class MonetizationTagManager {
   _checkAdded = this._check.bind(this, 'added')
 
   _onWholeDocumentObserved(records: MutationRecord[]) {
-    debug('head mutation records.length=', records.length)
+    debug('document mutation records.length=', records.length)
 
     // Explicitly remove these first
     for (const record of records) {
