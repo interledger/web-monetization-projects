@@ -2919,7 +2919,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.1.5"],
             ["prettier", "npm:2.5.1"],
-            ["puppeteer", "npm:11.0.0"],
+            ["puppeteer", "npm:13.0.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["reduct", "npm:3.3.1"],
@@ -3050,7 +3050,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.1.5"],
             ["node-fetch", "npm:2.6.5"],
             ["prettier", "npm:2.5.1"],
-            ["puppeteer", "npm:11.0.0"],
+            ["puppeteer", "npm:13.0.1"],
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.1.1"],
@@ -3228,7 +3228,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.1.5"],
             ["prettier", "npm:2.5.1"],
-            ["puppeteer", "npm:11.0.0"],
+            ["puppeteer", "npm:13.0.1"],
             ["rimraf", "npm:3.0.2"],
             ["tmp", "npm:0.2.1"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.1.1"],
@@ -13052,6 +13052,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["virtual:ae1ede61120f1102b66e9933c5bde4673b2641150a285d817ccd56055513c4da12d0dfb6e8bced0f36007eb9bcda2219b2db3cc694c2448e3cd63e404456e413#npm:4.3.2", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-0beec213c6/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:ae1ede61120f1102b66e9933c5bde4673b2641150a285d817ccd56055513c4da12d0dfb6e8bced0f36007eb9bcda2219b2db3cc694c2448e3cd63e404456e413#npm:4.3.2"],
+            ["@types/supports-color", null],
+            ["ms", "npm:2.1.2"],
+            ["supports-color", null]
+          ],
+          "packagePeers": [
+            "@types/supports-color",
+            "supports-color"
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:cd09931b551ca98d0f277043053c1aacbb51a1761781f9e53ea4c026fe55d451188c73e0fe054a18985bc5a85883a657e75091b5aaf492001d800601141e0046#npm:2.6.9", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-f5427d7a30/0/cache/debug-npm-2.6.9-7d4cb597dc-d2f51589ca.zip/node_modules/debug/",
           "packageDependencies": [
@@ -13070,20 +13084,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-b810fb6338/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",
           "packageDependencies": [
             ["debug", "virtual:d9426786c635bc4b52511d6cc4b56156f50d780a698c0e20fc6caf10d3be51cbf176e79cff882f4d42a23ff4d0f89fe94222849578214e7fbae0f2754c82af02#npm:3.2.7"],
-            ["@types/supports-color", null],
-            ["ms", "npm:2.1.2"],
-            ["supports-color", null]
-          ],
-          "packagePeers": [
-            "@types/supports-color",
-            "supports-color"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:4.3.2", {
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-5f8597e6f6/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
-          "packageDependencies": [
-            ["debug", "virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:4.3.2"],
             ["@types/supports-color", null],
             ["ms", "npm:2.1.2"],
             ["supports-color", null]
@@ -13452,10 +13452,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["devtools-protocol", [
-        ["npm:0.0.901419", {
-          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.901419-b95044bb43-de68331ddf.zip/node_modules/devtools-protocol/",
+        ["npm:0.0.937139", {
+          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.937139-4b7914002f-4ac9d9e5fa.zip/node_modules/devtools-protocol/",
           "packageDependencies": [
-            ["devtools-protocol", "npm:0.0.901419"]
+            ["devtools-protocol", "npm:0.0.937139"]
           ],
           "linkType": "HARD",
         }]
@@ -23923,12 +23923,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:11.0.0", {
-          "packageLocation": "./.yarn/unplugged/puppeteer-npm-11.0.0-efeebaffbd/node_modules/puppeteer/",
+        ["npm:13.0.1", {
+          "packageLocation": "./.yarn/unplugged/puppeteer-npm-13.0.1-ae1ede6112/node_modules/puppeteer/",
           "packageDependencies": [
-            ["puppeteer", "npm:11.0.0"],
-            ["debug", "virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:4.3.2"],
-            ["devtools-protocol", "npm:0.0.901419"],
+            ["puppeteer", "npm:13.0.1"],
+            ["debug", "virtual:ae1ede61120f1102b66e9933c5bde4673b2641150a285d817ccd56055513c4da12d0dfb6e8bced0f36007eb9bcda2219b2db3cc694c2448e3cd63e404456e413#npm:4.3.2"],
+            ["devtools-protocol", "npm:0.0.937139"],
             ["extract-zip", "npm:2.0.1"],
             ["https-proxy-agent", "npm:5.0.0"],
             ["node-fetch", "npm:2.6.5"],
@@ -23938,7 +23938,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:3.0.2"],
             ["tar-fs", "npm:2.1.1"],
             ["unbzip2-stream", "npm:1.4.3"],
-            ["ws", "virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:8.2.3"]
+            ["ws", "virtual:ae1ede61120f1102b66e9933c5bde4673b2641150a285d817ccd56055513c4da12d0dfb6e8bced0f36007eb9bcda2219b2db3cc694c2448e3cd63e404456e413#npm:8.2.3"]
           ],
           "linkType": "HARD",
         }]
@@ -33408,10 +33408,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:8.2.3", {
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-b8fb7ea65b/0/cache/ws-npm-8.2.3-03a35b8ad7-c869296ccb.zip/node_modules/ws/",
+        ["virtual:ae1ede61120f1102b66e9933c5bde4673b2641150a285d817ccd56055513c4da12d0dfb6e8bced0f36007eb9bcda2219b2db3cc694c2448e3cd63e404456e413#npm:8.2.3", {
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-bb4b0280dc/0/cache/ws-npm-8.2.3-03a35b8ad7-c869296ccb.zip/node_modules/ws/",
           "packageDependencies": [
-            ["ws", "virtual:efeebaffbdd824848b1fa4ec9a7c48890bf32c21c060717625a2dfd0b2346e4f5b0201caf85b783722ec1230a10169c955a17136ddcdfa3775e1117bd967f5ad#npm:8.2.3"],
+            ["ws", "virtual:ae1ede61120f1102b66e9933c5bde4673b2641150a285d817ccd56055513c4da12d0dfb6e8bced0f36007eb9bcda2219b2db3cc694c2448e3cd63e404456e413#npm:8.2.3"],
             ["@types/bufferutil", null],
             ["@types/utf-8-validate", null],
             ["bufferutil", null],
