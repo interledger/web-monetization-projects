@@ -4,7 +4,7 @@ import React from 'react'
 
 import { useRouter } from '../../context/routerContext'
 import { useStore } from '../../context/storeContext'
-import { ROUTES } from '../../contants'
+import { ROUTES } from '../../constants'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 
 import { SettingsView } from './SettingsView'
