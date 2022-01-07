@@ -2879,7 +2879,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node-fetch", "npm:2.5.12"],
             ["@types/react", "npm:17.0.38"],
             ["@types/react-dom", "npm:17.0.11"],
-            ["@types/uuid", "npm:8.3.3"],
+            ["@types/uuid", "npm:8.3.4"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@webexts/build-utils", "workspace:packages/webexts-build-utils"],
@@ -3022,7 +3022,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/long", "npm:4.0.1"],
             ["@types/node", "npm:14.18.5"],
             ["@types/node-fetch", "npm:2.5.12"],
-            ["@types/uuid", "npm:8.3.3"],
+            ["@types/uuid", "npm:8.3.4"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@webmonetization/polyfill-utils", "workspace:packages/webmonetization-polyfill-utils"],
@@ -3898,7 +3898,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.18.5"],
             ["@types/react", "npm:17.0.38"],
             ["@types/react-dom", "npm:17.0.11"],
-            ["@types/uuid", "npm:8.3.3"],
+            ["@types/uuid", "npm:8.3.4"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@webexts/build-utils", "workspace:packages/webexts-build-utils"],
@@ -6384,10 +6384,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/uuid", [
-        ["npm:8.3.3", {
-          "packageLocation": "./.yarn/cache/@types-uuid-npm-8.3.3-805fed50df-3f340155bb.zip/node_modules/@types/uuid/",
+        ["npm:8.3.4", {
+          "packageLocation": "./.yarn/cache/@types-uuid-npm-8.3.4-7547f4402c-6f11f3ff70.zip/node_modules/@types/uuid/",
           "packageDependencies": [
-            ["@types/uuid", "npm:8.3.3"]
+            ["@types/uuid", "npm:8.3.4"]
           ],
           "linkType": "HARD",
         }]
@@ -6968,7 +6968,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.4.0"],
             ["@types/node", "npm:14.18.5"],
             ["@types/node-fetch", "npm:2.5.12"],
-            ["@types/uuid", "npm:8.3.3"],
+            ["@types/uuid", "npm:8.3.4"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
@@ -7145,7 +7145,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.18.5"],
             ["@types/react", "npm:17.0.38"],
             ["@types/react-dom", "npm:17.0.11"],
-            ["@types/uuid", "npm:8.3.3"],
+            ["@types/uuid", "npm:8.3.4"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.9.0"],
             ["@webmonetization/types", "workspace:packages/webmonetization-types"],
