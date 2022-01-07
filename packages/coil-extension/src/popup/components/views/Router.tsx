@@ -13,14 +13,13 @@ import { StreamingNotWebMonetizedView } from './StreamingNotWebMonetizedView'
 import { StreamingNoMembershipView } from './StreamingNoMembershipView'
 import { StreamingCoilView } from './StreamingCoilView'
 import { StreamingCoilDiscoverView } from './StreamingCoilDiscoverView'
-import { TipRouter } from './TipRouter'
 
 //
 // Component
 //
 export const Router = () => {
   const router = useRouter()
-  const { validToken, user, monetized, coilSite } = useStore()
+  const { user, monetized, coilSite } = useStore()
 
   switch (router.path) {
     // /settings
@@ -31,7 +30,8 @@ export const Router = () => {
     case ROUTES.tipping: {
       return (
         <NewHeaderFooterLayout title='Tip This Site'>
-          <TipRouter />
+          <div>Tipping</div>
+          <button onClick={() => router.to(ROUTES.tippingConfirm)}>next</button>
         </NewHeaderFooterLayout>
       )
     }
@@ -55,71 +55,37 @@ export const Router = () => {
         </NewHeaderFooterLayout>
       )
     }
-    // /streaming/monetized
-    case ROUTES.streamingWebMo: {
-      return <StreamingWebMonetizedView />
-    }
-    // /streaming/notmonetized
-    case ROUTES.streamingNoWebMo: {
-      return <StreamingNotWebMonetizedView />
-    }
-    // /streaming/nomembership
-    case ROUTES.streamingNoMembership: {
-      return <StreamingNoMembershipView />
-    }
-    // /streaming/coil
-    case ROUTES.streamingCoil: {
-      return <StreamingCoilView />
-    }
-    // /streaming/coil/discover
-    case ROUTES.streamingCoilDiscover: {
-      return <StreamingCoilDiscoverView />
-    }
     // /streaming
     case ROUTES.streaming:
     default: {
-      // this page should check the logic for what to display
+      // check the logic for what state to display for the streaming page
 
-      // redirect to /streaming/nomembership
+      // Streaming - No Membership
       if (
         !user?.subscription ||
         (user.subscription && !user.subscription.active)
       ) {
-        // router.to(ROUTES.streamingNoMembership)
-        // return null
         return <StreamingNoMembershipView />
       }
 
-      // redirect to /streaming/coil/discover
-      // redirect to /streaming/coil
+      // Streaming - Coil Site > Discover
+      // Streaming - Coil Site
       if (coilSite && !monetized) {
         const { pathname } = new URL(coilSite)
         if (pathname === '/discover') {
-          // router.to(ROUTES.streamingCoilDiscover)
-          // return null
           return <StreamingCoilDiscoverView />
         } else {
-          // router.to(ROUTES.streamingCoil)
-          // return null
           return <StreamingCoilView />
         }
       }
 
-      // redirect to /streaming/monetized
-      // redirect to /streaming/notmonetized
+      // Streaming - Web Monetized Site
+      // Streaming - Not Web Monetized Site
       if (monetized) {
-        // router.to(ROUTES.streamingWebMo)
-        // return null
         return <StreamingWebMonetizedView />
-        // handles the monetized views based on local state
       } else {
-        // Non Monetized Page
-        // router.to(ROUTES.streamingNoWebMo)
-        // return null
         return <StreamingNotWebMonetizedView />
       }
-
-      return null
     }
   }
 }
