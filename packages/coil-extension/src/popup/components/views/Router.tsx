@@ -13,6 +13,7 @@ import { StreamingNotWebMonetizedView } from './StreamingNotWebMonetizedView'
 import { StreamingNoMembershipView } from './StreamingNoMembershipView'
 import { StreamingCoilView } from './StreamingCoilView'
 import { StreamingCoilDiscoverView } from './StreamingCoilDiscoverView'
+import { TipRouter } from './TipRouter'
 
 //
 // Component
@@ -30,8 +31,7 @@ export const Router = () => {
     case ROUTES.tipping: {
       return (
         <NewHeaderFooterLayout title='Tip This Site'>
-          <div>Tipping</div>
-          <button onClick={() => router.to(ROUTES.tippingConfirm)}>next</button>
+          <TipRouter />
         </NewHeaderFooterLayout>
       )
     }
