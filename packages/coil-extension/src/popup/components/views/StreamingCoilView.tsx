@@ -29,7 +29,7 @@ export const StreamingCoilView = () => {
   } = useHost()
 
   const onClick = tabOpener(coilDomain + '/discover')
-  const firstName = user.fullName.split(' ')[0]
+  const firstName = user?.fullName.split(' ')[0]
 
   return (
     <NewHeaderFooterLayout title='Streaming Payments'>
@@ -41,7 +41,7 @@ export const StreamingCoilView = () => {
         align='center'
         style={{ marginBottom: theme.spacing(1) }}
       >
-        Welcome, {firstName}
+        Welcome{firstName ? `, ${firstName}` : ''}
       </Typography>
       <Typography variant='subtitle1' align='center'>
         Explore the world of web monetized
