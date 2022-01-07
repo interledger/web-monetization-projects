@@ -16,7 +16,7 @@ const RouterContext = createContext({} as IRouterContext)
 
 // Provider
 export const RouterProvider: React.FC = props => {
-  const [route, setRoute] = useState<string>(ROUTES.settings) // todo: set default to 'streaming'
+  const [route, setRoute] = useState<string>(ROUTES.streaming) // todo: set default to 'streaming'
   const [backRoute, setBackRoute] = useState<string>(ROUTES.streaming)
   const toRoute = (newRoute: string) => {
     setBackRoute(route)

@@ -7,7 +7,11 @@ import { ROUTES } from '../../contants'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 
 import { SettingsView } from './SettingsView'
-
+import { StreamingWebMonetizedView } from './StreamingWebMonitizedView'
+import { StreamingNotWebMonetizedView } from './StreamingNotWebMonetizedView'
+import { StreamingNoMembershipView } from './StreamingNoMembershipView'
+import { StreamingCoilView } from './StreamingCoilView'
+import { StreamingCoilDiscoverView } from './StreamingCoilDiscoverView'
 //
 // Component
 //
@@ -49,59 +53,24 @@ export const Router = () => {
     }
     case ROUTES.streamingNoWebMo: {
       // /streaming/notmonetized
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>Not WebMonetized</div>
-          <button onClick={() => router.to(ROUTES.streamingNoMembership)}>
-            no membership
-          </button>
-        </NewHeaderFooterLayout>
-      )
+      return <StreamingNotWebMonetizedView />
     }
     case ROUTES.streamingNoMembership: {
       // /streaming/nomembership
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>No Membership</div>
-          <button onClick={() => router.to(ROUTES.streamingCoil)}>
-            coil site
-          </button>
-        </NewHeaderFooterLayout>
-      )
+      return <StreamingNoMembershipView />
     }
     case ROUTES.streamingCoil: {
       // /streaming/coil
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>Coil Site</div>
-          <button onClick={() => router.to(ROUTES.streamingCoilDiscover)}>
-            coil site discover
-          </button>
-        </NewHeaderFooterLayout>
-      )
+      return <StreamingCoilView />
     }
     case ROUTES.streamingCoilDiscover: {
       // /streaming/coil/discover
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>Coil Discover</div>
-          <button onClick={() => router.to(ROUTES.streaming)}>
-            streaming home
-          </button>
-        </NewHeaderFooterLayout>
-      )
+      return <StreamingCoilDiscoverView />
     }
     case ROUTES.streaming: // /streaming
     default: {
       // this page should check the logic for what to display
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>streaming</div>
-          <button onClick={() => router.to(ROUTES.streamingNoWebMo)}>
-            no webmo
-          </button>
-        </NewHeaderFooterLayout>
-      )
+      return <StreamingWebMonetizedView />
     }
   }
 }
