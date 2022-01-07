@@ -85,8 +85,9 @@ export const Router = () => {
         !user?.subscription ||
         (user.subscription && !user.subscription.active)
       ) {
-        router.to(ROUTES.streamingNoMembership)
-        return null
+        // router.to(ROUTES.streamingNoMembership)
+        // return null
+        return <StreamingNoMembershipView />
       }
 
       // redirect to /streaming/coil/discover
@@ -94,24 +95,28 @@ export const Router = () => {
       if (coilSite && !monetized) {
         const { pathname } = new URL(coilSite)
         if (pathname === '/discover') {
-          router.to(ROUTES.streamingCoilDiscover)
-          return null
+          // router.to(ROUTES.streamingCoilDiscover)
+          // return null
+          return <StreamingCoilDiscoverView />
         } else {
-          router.to(ROUTES.streamingCoil)
-          return null
+          // router.to(ROUTES.streamingCoil)
+          // return null
+          return <StreamingCoilView />
         }
       }
 
       // redirect to /streaming/monetized
       // redirect to /streaming/notmonetized
       if (monetized) {
-        router.to(ROUTES.streamingWebMo)
-        return null
+        // router.to(ROUTES.streamingWebMo)
+        // return null
+        return <StreamingWebMonetizedView />
         // handles the monetized views based on local state
       } else {
         // Non Monetized Page
-        router.to(ROUTES.streamingNoWebMo)
-        return null
+        // router.to(ROUTES.streamingNoWebMo)
+        // return null
+        return <StreamingNotWebMonetizedView />
       }
 
       return null
