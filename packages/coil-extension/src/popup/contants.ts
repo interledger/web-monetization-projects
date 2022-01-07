@@ -1,5 +1,6 @@
 export enum ROUTES {
   streaming = 'streaming',
+  streamingWebMo = 'streaming/monetized',
   streamingNoWebMo = 'streaming/notmonetized',
   streamingNoMembership = 'streaming/nomembership',
   streamingCoil = 'streaming/coil',
