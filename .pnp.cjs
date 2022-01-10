@@ -2907,7 +2907,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.3.3"],
             ["get-port", "npm:5.1.1"],
-            ["http-server", "npm:14.0.0"],
+            ["http-server", "npm:14.1.0"],
             ["husky", "npm:7.0.4"],
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-protocol-stream", "npm:2.7.0"],
@@ -11647,13 +11647,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colors", "npm:1.0.3"]
           ],
           "linkType": "HARD",
-        }],
-        ["npm:1.4.0", {
-          "packageLocation": "./.yarn/cache/colors-npm-1.4.0-7e2cf12234-98aa2c2418.zip/node_modules/colors/",
-          "packageDependencies": [
-            ["colors", "npm:1.4.0"]
-          ],
-          "linkType": "HARD",
         }]
       ]],
       ["columnify", [
@@ -17445,12 +17438,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["http-server", [
-        ["npm:14.0.0", {
-          "packageLocation": "./.yarn/cache/http-server-npm-14.0.0-fb39a7f2f7-2b7d0f86e7.zip/node_modules/http-server/",
+        ["npm:14.1.0", {
+          "packageLocation": "./.yarn/cache/http-server-npm-14.1.0-ab0746a665-9a88fb47aa.zip/node_modules/http-server/",
           "packageDependencies": [
-            ["http-server", "npm:14.0.0"],
+            ["http-server", "npm:14.1.0"],
             ["basic-auth", "npm:2.0.1"],
-            ["colors", "npm:1.4.0"],
+            ["chalk", "npm:4.1.2"],
             ["corser", "npm:2.0.1"],
             ["he", "npm:1.2.0"],
             ["html-encoding-sniffer", "npm:3.0.0"],
