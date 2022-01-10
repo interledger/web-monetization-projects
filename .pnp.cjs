@@ -5908,12 +5908,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/express", [
-        ["npm:4.17.8", {
-          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.8-c21b94ed16-ca265de4f9.zip/node_modules/@types/express/",
+        ["npm:4.17.13", {
+          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.13-0e12fe9c24-12a2a0e6c4.zip/node_modules/@types/express/",
           "packageDependencies": [
-            ["@types/express", "npm:4.17.8"],
+            ["@types/express", "npm:4.17.13"],
             ["@types/body-parser", "npm:1.19.2"],
-            ["@types/express-serve-static-core", "npm:4.17.12"],
+            ["@types/express-serve-static-core", "npm:4.17.27"],
             ["@types/qs", "npm:6.9.5"],
             ["@types/serve-static", "npm:1.13.5"]
           ],
@@ -5921,10 +5921,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/express-serve-static-core", [
-        ["npm:4.17.12", {
-          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.12-160295195b-50812d557a.zip/node_modules/@types/express-serve-static-core/",
+        ["npm:4.17.27", {
+          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.27-a6c300c8eb-fef52b941f.zip/node_modules/@types/express-serve-static-core/",
           "packageDependencies": [
-            ["@types/express-serve-static-core", "npm:4.17.12"],
+            ["@types/express-serve-static-core", "npm:4.17.27"],
             ["@types/node", "npm:14.18.5"],
             ["@types/qs", "npm:6.9.5"],
             ["@types/range-parser", "npm:1.2.3"]
@@ -6323,7 +6323,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.13.5-9e6c8c7261-82d93129d0.zip/node_modules/@types/serve-static/",
           "packageDependencies": [
             ["@types/serve-static", "npm:1.13.5"],
-            ["@types/express-serve-static-core", "npm:4.17.12"],
+            ["@types/express-serve-static-core", "npm:4.17.27"],
             ["@types/mime", "npm:2.0.3"]
           ],
           "linkType": "HARD",
@@ -6889,7 +6889,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:16.0.0"],
             ["@hot-loader/react-dom", "virtual:8e332b9e25a8e72f1e665cf281551e5e1d6bdcea6a6395b96cc1aedae447d1a4478609e8c4257a9a9e35cc47d661d3da8ab67baff93dc95abfe7cd9f3b489408#npm:17.0.1"],
             ["@types/body-parser", "npm:1.19.2"],
-            ["@types/express", "npm:4.17.8"],
+            ["@types/express", "npm:4.17.13"],
             ["@types/figlet", "npm:1.5.4"],
             ["@types/jest", "npm:27.4.0"],
             ["@types/node", "npm:14.18.5"],
@@ -18074,7 +18074,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/inversify-express-utils-npm-6.3.2-d1950ccc47-1e04a15b6b.zip/node_modules/inversify-express-utils/",
           "packageDependencies": [
             ["inversify-express-utils", "npm:6.3.2"],
-            ["@types/express", "npm:4.17.8"],
+            ["@types/express", "npm:4.17.13"],
             ["express", "npm:4.16.2"],
             ["http-status-codes", "npm:1.4.0"],
             ["inversify", "npm:6.0.1"]
