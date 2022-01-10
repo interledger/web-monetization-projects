@@ -830,20 +830,18 @@ export class BackgroundScript {
     try {
       const token = this.auth.getStoredToken()
       if (!token) return { success: false, message: 'No token found' }
-      console.log('sending to tippingService.tip')
-      console.log('token: ' + token)
-      console.log('tip: ' + tip)
-      console.log('tabId: ' + tabId)
-      console.log('streamId: ' + streamId)
-      console.log(this.tippingService)
-      return this.tippingService.tip(
+      const tipResult = await this.tippingService.tip(
         tip,
         tabId,
         this.streams.getStream(streamId),
         token
       )
+      if (tipResult.success) {
+        // if succeeded, refresh tip settings
+        await this.tippingService.updateTipSettings(token)
+      }
+      return tipResult
     } catch (e) {
-      console.log(e)
       return { success: false, message: e.message }
     }
   }

@@ -24,7 +24,6 @@ export class TippingService extends EventEmitter {
     private framesService: BackgroundFramesService
   ) {
     super()
-    console.log('tipping service constructor')
   }
 
   async updateTipSettings(token: string): Promise<string | null> {
