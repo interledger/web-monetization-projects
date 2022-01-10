@@ -61,10 +61,7 @@ export const Router = () => {
       // check the logic for what state to display for the streaming page
 
       // Streaming - No Membership
-      if (
-        !user?.subscription ||
-        (user.subscription && !user.subscription.active)
-      ) {
+      if (!user?.subscription?.active) {
         return <StreamingNoMembershipView />
       }
 
