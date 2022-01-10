@@ -14,6 +14,7 @@ import { BackgroundScript } from './services/BackgroundScript'
 import { BackgroundStorageService } from './services/BackgroundStorageService'
 import { Stream } from './services/Stream'
 import { createLogger } from './services/utils'
+import { TippingService } from './services/TippingService'
 
 async function configureContainer(container: Container) {
   if (loggingEnabled) {
