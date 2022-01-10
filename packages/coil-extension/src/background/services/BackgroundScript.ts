@@ -430,7 +430,6 @@ export class BackgroundScript {
         sendResponse(await this.tipPreview(request.data.amount))
         break
       case 'tip':
-        console.log('attempting tip send')
         sendResponse(await this.tip(request.data.amount))
         break
       case 'checkIFrameIsAllowedFromIFrameContentScript':

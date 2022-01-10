@@ -143,7 +143,6 @@ export class TippingService extends EventEmitter {
     stream: Stream,
     token: string
   ): Promise<{ code: string; message: string; success: boolean }> {
-    console.log('got service call')
     if (!stream) {
       this.log('can not find top frame for tabId=%d', tabId)
       throw new Error('Stream was undefined')
@@ -169,7 +168,6 @@ export class TippingService extends EventEmitter {
 
     try {
       this.log(`tip: sending tip to ${receiver}`)
-      console.log(`tip: sending tip to ${receiver}`)
 
       const result = await this.client.tip(token, {
         tipAmountCents,
@@ -178,11 +176,10 @@ export class TippingService extends EventEmitter {
       })
 
       this.log(`tip: sent tip to ${receiver}`, result)
-      console.log(`tip: sent tip to ${receiver}`, result)
       return result
     } catch (e) {
       this.log(`tip: error. msg=${e.message}`)
-      console.log(`tip: error. msg=${e.message}`)
+      console.warn(`tip: error. msg=${e.message}`)
       throw new Error(e.message)
     }
   }
