@@ -400,7 +400,9 @@ export class MonetizationTagManager {
         const linkRef = new WeakRef(tag as HTMLLinkElement)
         this.linkTagsById.set(started.requestId, linkRef)
       } else {
-        tag.dispatchEvent(new ErrorEvent('error', { error }))
+        // const event = new ErrorEvent('error', { error })
+        const event = new Event('error')
+        tag.dispatchEvent(event)
       }
     }
     return returnValue
