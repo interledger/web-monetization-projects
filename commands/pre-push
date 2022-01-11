@@ -11,11 +11,11 @@ REFS=$(cat)
 parent_pid=$PPID
 push_command=''
 
-#until [[ "$push_command" == git* ]]; do
-#  push_command=$(ps -ocommand= -p $parent_pid)
-#  parent_pid=$(ps -o ppid= $parent_pid)
-#  # echo "command = $push_command"
-#done
+until [[ "$push_command" == git* ]]; do
+  push_command=$(ps -ocommand= -p $parent_pid)
+  parent_pid=$(ps -o ppid= $parent_pid)
+  # echo "command = $push_command"
+done
 
 if [[ -n $REFS && $REFS != *"$BRANCH"* && -z $SKIP_HUSKY_PRE_PUSH ]]
 then
