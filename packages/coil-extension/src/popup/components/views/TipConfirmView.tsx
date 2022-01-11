@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { styled, Box } from '@material-ui/core'
-import { motion } from 'framer-motion'
 
 import { Header } from '../Header'
 import { FitTextWrapper } from '../FitTextWrapper'

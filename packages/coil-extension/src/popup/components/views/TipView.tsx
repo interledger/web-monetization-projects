@@ -1,6 +1,5 @@
 import React from 'react'
 import { styled, Box } from '@material-ui/core'
-import { motion } from 'framer-motion'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { AmountInput } from '../AmountInput'
