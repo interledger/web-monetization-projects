@@ -56,7 +56,7 @@ const HotkeyButton = styled('button')({
 export const HotkeyAmountButtons = (): React.ReactElement => {
   const router = useRouter()
   const { user } = useStore()
-  const { hotkeyTipAmounts, remainingDailyAmount } = user?.tipSettings || {}
+  const { hotkeyTipAmounts, remainingDailyAmount = 0 } = user?.tipSettings || {}
   const { setCurrentTipAmount } = useTip()
 
   const handleSelectAmount = (amount: number) => {
@@ -65,7 +65,7 @@ export const HotkeyAmountButtons = (): React.ReactElement => {
   }
   return (
     <HotkeyButtonsWrapper>
-      {hotkeyTipAmounts.map((amount: number, index: number) => {
+      {hotkeyTipAmounts?.map((amount: number, index: number) => {
         return (
           <HotkeyButton
             key={`pdt-${index}`}

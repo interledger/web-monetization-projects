@@ -24,7 +24,7 @@ const WarningWrapper = styled('div')({
 //
 export const TipWarning = (): React.ReactElement => {
   const { user } = useStore()
-  const { remainingDailyAmount } = user?.tipSettings || {}
+  const { remainingDailyAmount = 0 } = user?.tipSettings || {}
   const { currentTipAmount } = useTip()
 
   return (

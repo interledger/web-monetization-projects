@@ -67,30 +67,15 @@ export const TipRouter = () => {
     useState<number>(defaultTipAmount)
 
   if (tipProcessStep === TipProcessStep.TIP) {
-    return (
-      <TipView
-        key='tip'
-        currentTipAmount={currentTipAmount}
-        setCurrentTipAmount={setCurrentTipAmount}
-        setTipProcessStep={setTipProcessStep}
-      />
-    )
+    return <TipView key='tip' />
   }
 
   if (tipProcessStep === TipProcessStep.TIP_CONFIRM) {
-    return (
-      <TipConfirmView
-        key='confirm'
-        currentTipAmount={currentTipAmount}
-        setTipProcessStep={setTipProcessStep}
-      />
-    )
+    return <TipConfirmView key='confirm' />
   }
 
   if (tipProcessStep === TipProcessStep.TIP_COMPLETE) {
-    return (
-      <TipCompleteView key='complete' currentTipAmount={currentTipAmount} />
-    )
+    return <TipCompleteView key='complete' />
   }
 
   return null
