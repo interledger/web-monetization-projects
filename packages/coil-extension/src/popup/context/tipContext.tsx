@@ -27,9 +27,9 @@ export const TipProvider: React.FC<ITipProvider> = props => {
   const {
     tipSettings: {
       lastTippedAmountUSD = 1,
-      inTippingBeta,
+      inTippingBeta = false,
       remainingDailyAmount = 0
-    },
+    } = {},
     paymentMethods,
     tipCredits = 10
   } = userObject ?? {}
