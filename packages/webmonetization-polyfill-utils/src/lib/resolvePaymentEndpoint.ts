@@ -1,20 +1,29 @@
-export function resolvePaymentEndpoint(pointerOrUrl: string) {
-  const httpUrl = pointerOrUrl.replace(/^\$/, 'https://')
+export class PaymentEndpointError extends Error {}
+
+export function resolvePaymentEndpoint(pointerOrUrl: string, urlOnly = false) {
+  const httpUrl = urlOnly
+    ? pointerOrUrl
+    : pointerOrUrl.replace(/^\$/, 'https://')
 
   let url: URL
   try {
     url = new URL(httpUrl)
     if (!url.protocol.match(/https?:/)) {
+      const spec = urlOnly ? '' : 'either a payment pointer or '
       // noinspection ExceptionCaughtLocallyJS
-      throw new Error(
-        'SPSP endpoint must be specified as either a ' +
-          'payment pointer or fully resolved https:// url '
+      throw new PaymentEndpointError(
+        `SPSP endpoint must be specified as ${spec}fully resolved https:// url, ` +
+          `got ${JSON.stringify(pointerOrUrl)} `
       )
     }
   } catch (e) {
-    throw new Error(
-      `Invalid payment pointer/url: ${JSON.stringify(pointerOrUrl)}`
-    )
+    if (e instanceof PaymentEndpointError) {
+      throw e
+    } else {
+      throw new PaymentEndpointError(
+        `Invalid payment pointer/url: ${JSON.stringify(pointerOrUrl)}`
+      )
+    }
   }
 
   const isPaymentPointer = pointerOrUrl.startsWith('$')
@@ -23,9 +32,9 @@ export function resolvePaymentEndpoint(pointerOrUrl: string) {
     isPaymentPointer &&
     (url.hash || url.search || url.port || url.username || url.password)
   ) {
-    throw new Error(
+    throw new PaymentEndpointError(
       'Payment pointer must not contain ' +
-        'query/fragment/port/username elements: ' +
+        'query/fragment/port/username/password elements: ' +
         JSON.stringify({
           hash: url.hash,
           search: url.search,

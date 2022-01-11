@@ -391,7 +391,7 @@ export class MonetizationTagManager {
     if (started.tagType === 'link') {
       let error: Error | null = null
       try {
-        resolvePaymentEndpoint(started.paymentPointer)
+        resolvePaymentEndpoint(started.paymentPointer, true)
       } catch (e) {
         error = e
         returnValue = null

@@ -1,4 +1,7 @@
-import { resolvePaymentEndpoint } from '@webmonetization/polyfill-utils'
+import {
+  PaymentEndpointError,
+  resolvePaymentEndpoint
+} from '@webmonetization/polyfill-utils'
 
 import {
   metaDeprecatedMessage,
@@ -536,26 +539,23 @@ describe('MonetizationTagManager', () => {
     expect(spy.mock.calls[0][0][0].type).toBe('attributes')
   })
 
-  it(
-    'should emit error events on the links when ' +
-      'payment pointer is not well formed',
-    async () => {
-      expect.assertions(1)
-      const manager = makeManager(jest.fn())
-      manager.startWhenDocumentReady()
-      const link = makeLink('ftp://invalid.com', { dontResolve: true })
-      await Promise.race([
-        new Promise<void>(resolve => {
-          link.addEventListener('error', event => {
-            expect(event.error.message).toMatchInlineSnapshot(
-              `"Invalid payment pointer/url: \\"ftp://invalid.com/\\""`
-            )
-            resolve()
-          })
-        }),
-        timeout(1)
-      ])
-      document.head.appendChild(link)
-    }
-  )
+  it('should emit error events on the links when payment pointer is not well formed', async () => {
+    expect.assertions(2)
+    const manager = makeManager(jest.fn())
+    manager.startWhenDocumentReady()
+    const link = makeLink('ftp://invalid.com', { dontResolve: true })
+    await Promise.race([
+      new Promise<void>(resolve => {
+        link.addEventListener('error', event => {
+          expect(event.error).toBeInstanceOf(PaymentEndpointError)
+          expect(event.error.message).toMatchInlineSnapshot(
+            `"SPSP endpoint must be specified as fully resolved https:// url, got \\"ftp://invalid.com/\\" "`
+          )
+          resolve()
+        })
+      }),
+      timeout()
+    ])
+    document.head.appendChild(link)
+  })
 })
