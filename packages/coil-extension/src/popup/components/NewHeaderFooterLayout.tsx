@@ -10,7 +10,6 @@ import { NavBar } from './NavBar'
 // Styles
 //
 const BodyContainer = styled('div')({
-  backgroundColor: 'pink',
   flex: '1',
   display: 'flex',
   flexDirection: 'column'

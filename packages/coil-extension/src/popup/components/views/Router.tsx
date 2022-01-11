@@ -3,23 +3,31 @@
 import React from 'react'
 
 import { useRouter } from '../../context/routerContext'
-import { ROUTES } from '../../contants'
+import { useStore } from '../../context/storeContext'
+import { ROUTES } from '../../constants'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 
 import { SettingsView } from './SettingsView'
+import { StreamingWebMonetizedView } from './StreamingWebMonitizedView'
+import { StreamingNotWebMonetizedView } from './StreamingNotWebMonetizedView'
+import { StreamingNoMembershipView } from './StreamingNoMembershipView'
+import { StreamingCoilView } from './StreamingCoilView'
+import { StreamingCoilDiscoverView } from './StreamingCoilDiscoverView'
 
 //
 // Component
 //
 export const Router = () => {
   const router = useRouter()
+  const { user, monetized, coilSite } = useStore()
+
   switch (router.path) {
+    // /settings
     case ROUTES.settings: {
-      // /settings
       return <SettingsView />
     }
+    // /tipping
     case ROUTES.tipping: {
-      // /tipping
       return (
         <NewHeaderFooterLayout title='Tip This Site'>
           <div>Tipping</div>
@@ -27,8 +35,8 @@ export const Router = () => {
         </NewHeaderFooterLayout>
       )
     }
+    // /tipping/confirm
     case ROUTES.tippingConfirm: {
-      // /tipping/confirm
       return (
         <div>
           tipping confirm
@@ -38,8 +46,8 @@ export const Router = () => {
         </div>
       )
     }
+    // /tipping/complete
     case ROUTES.tippingComplete: {
-      // /tipping/complete
       return (
         <NewHeaderFooterLayout>
           <div>tipping complete</div>
@@ -47,61 +55,34 @@ export const Router = () => {
         </NewHeaderFooterLayout>
       )
     }
-    case ROUTES.streamingNoWebMo: {
-      // /streaming/notmonetized
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>Not WebMonetized</div>
-          <button onClick={() => router.to(ROUTES.streamingNoMembership)}>
-            no membership
-          </button>
-        </NewHeaderFooterLayout>
-      )
-    }
-    case ROUTES.streamingNoMembership: {
-      // /streaming/nomembership
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>No Membership</div>
-          <button onClick={() => router.to(ROUTES.streamingCoil)}>
-            coil site
-          </button>
-        </NewHeaderFooterLayout>
-      )
-    }
-    case ROUTES.streamingCoil: {
-      // /streaming/coil
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>Coil Site</div>
-          <button onClick={() => router.to(ROUTES.streamingCoilDiscover)}>
-            coil site discover
-          </button>
-        </NewHeaderFooterLayout>
-      )
-    }
-    case ROUTES.streamingCoilDiscover: {
-      // /streaming/coil/discover
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>Coil Discover</div>
-          <button onClick={() => router.to(ROUTES.streaming)}>
-            streaming home
-          </button>
-        </NewHeaderFooterLayout>
-      )
-    }
-    case ROUTES.streaming: // /streaming
+    // /streaming
+    case ROUTES.streaming:
     default: {
-      // this page should check the logic for what to display
-      return (
-        <NewHeaderFooterLayout title='Streaming Payments'>
-          <div>streaming</div>
-          <button onClick={() => router.to(ROUTES.streamingNoWebMo)}>
-            no webmo
-          </button>
-        </NewHeaderFooterLayout>
-      )
+      // check the logic for what state to display for the streaming page
+
+      // Streaming - No Membership
+      if (!user?.subscription?.active) {
+        return <StreamingNoMembershipView />
+      }
+
+      // Streaming - Coil Site > Discover
+      // Streaming - Coil Site
+      if (coilSite && !monetized) {
+        const { pathname } = new URL(coilSite)
+        if (pathname === '/discover') {
+          return <StreamingCoilDiscoverView />
+        } else {
+          return <StreamingCoilView />
+        }
+      }
+
+      // Streaming - Web Monetized Site
+      // Streaming - Not Web Monetized Site
+      if (monetized) {
+        return <StreamingWebMonetizedView />
+      } else {
+        return <StreamingNotWebMonetizedView />
+      }
     }
   }
 }

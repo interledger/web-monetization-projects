@@ -3,7 +3,7 @@ import { Box, styled, Theme } from '@material-ui/core'
 import SettingsIcon from '@material-ui/icons/Settings'
 
 import { useRouter } from '../context/routerContext'
-import { ROUTES } from '../contants'
+import { ROUTES } from '../constants'
 
 import { WebMonetized } from './icons/WebMonetized'
 import { Gift } from './icons/Gift'
