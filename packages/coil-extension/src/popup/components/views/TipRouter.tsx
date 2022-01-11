@@ -50,7 +50,7 @@ export interface ITipView {
 //
 export const TipRouter = () => {
   const [tipProcessStep, setTipProcessStep] = useState<TipProcessStep>(
-    TipProcessStep.TIP_CONFIRM
+    TipProcessStep.TIP_COMPLETE
   )
   const { user } = useStore()
   const { minimumTipLimit, lastTippedAmountUSD } = user?.tipSettings || {}

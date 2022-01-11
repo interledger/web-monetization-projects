@@ -14,8 +14,9 @@ import { StreamingNoMembershipView } from './StreamingNoMembershipView'
 import { StreamingCoilView } from './StreamingCoilView'
 import { StreamingCoilDiscoverView } from './StreamingCoilDiscoverView'
 import { TipView } from './TipView'
-import { TipRouter } from './TipRouter'
 import { TipConfirmView } from './TipConfirmView'
+import { TipCompleteView } from './TipCompleteView'
+import { TipRouter } from './TipRouter'
 
 //
 // Component
@@ -37,16 +38,12 @@ export const Router = () => {
     // /tipping/confirm
     case ROUTES.tippingConfirm: {
       // /tipping/confirm
-      return <TipRouter />
+      return <TipConfirmView />
     }
     // /tipping/complete
     case ROUTES.tippingComplete: {
-      return (
-        <NewHeaderFooterLayout>
-          <div>tipping complete</div>
-          <button onClick={() => router.to(ROUTES.streaming)}>home</button>
-        </NewHeaderFooterLayout>
-      )
+      // /tipping/complete
+      return <TipRouter />
     }
     // /streaming
     case ROUTES.streaming:

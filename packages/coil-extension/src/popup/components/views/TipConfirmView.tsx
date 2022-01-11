@@ -13,8 +13,9 @@ import {
   TipPreviewResult
 } from '../../../types/commands'
 import { useHost } from '../../context/popupHostContext'
-
-import { TipProcessStep, ITipView } from './TipRouter'
+import { useTip } from '../../context/tipContext'
+import { useRouter } from '../../context/routerContext'
+import { ROUTES } from '../../contants'
 
 //
 // Style
@@ -59,7 +60,7 @@ const CancelButton = styled('button')({
   backgroundColor: 'transparent',
   color: Colors.Grey500,
   border: 'none',
-  borderRadius: '10px',
+  borderRadius: '100px',
   fontFamily: 'CircularStd',
   fontWeight: 'bold',
   fontSize: '16px',
@@ -76,13 +77,14 @@ const CancelButton = styled('button')({
 //
 // Component
 //
-export const TipConfirmView = (
-  props: Omit<ITipView, 'setCurrentTipAmount'>
-): React.ReactElement => {
+export const TipConfirmView = (): React.ReactElement => {
   const [tipCreditCharge, setTipCreditCharge] = useState(0)
   const [creditCardCharge, setCreditCardCharge] = useState(0)
+
   const { runtime } = useHost()
-  const { currentTipAmount, setTipProcessStep } = props
+
+  const { currentTipAmount } = useTip()
+  const router = useRouter()
 
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
@@ -122,7 +124,7 @@ export const TipConfirmView = (
   }
 
   const handleSubmit = async () => {
-    // setTipProcessStep(TipProcessStep.TIP_COMPLETE)
+    // router.to(ROUTES.tippingComplete)
 
     setSubmitError(null)
     setIsSubmitting(true)
@@ -130,7 +132,7 @@ export const TipConfirmView = (
       const { success } = await sendTip(currentTipAmount)
 
       if (success) {
-        setTipProcessStep(TipProcessStep.TIP_COMPLETE)
+        router.to(ROUTES.tippingComplete)
       } else {
         throw new Error('Something went wrong')
       }
@@ -142,7 +144,7 @@ export const TipConfirmView = (
 
   const handleUndo = () => {
     // reset to tip view
-    setTipProcessStep(TipProcessStep.TIP)
+    router.to(ROUTES.tipping)
   }
 
   useEffect(() => {
