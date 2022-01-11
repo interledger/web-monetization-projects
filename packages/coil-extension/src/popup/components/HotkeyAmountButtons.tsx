@@ -5,7 +5,7 @@ import { Colors } from '../../shared-theme/colors'
 import { useStore } from '../context/storeContext'
 import { useTip } from '../context/tipContext'
 import { useRouter } from '../context/routerContext'
-import { ROUTES } from '../contants'
+import { ROUTES } from '../constants'
 
 import { TipProcessStep } from './views/TipRouter'
 

@@ -15,7 +15,7 @@ import {
 import { useHost } from '../../context/popupHostContext'
 import { useTip } from '../../context/tipContext'
 import { useRouter } from '../../context/routerContext'
-import { ROUTES } from '../../contants'
+import { ROUTES } from '../../constants'
 
 //
 // Style
