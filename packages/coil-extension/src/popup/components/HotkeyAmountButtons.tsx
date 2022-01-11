@@ -2,8 +2,13 @@ import React from 'react'
 import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
+import { useStore } from '../context/storeContext'
+import { useTip } from '../context/tipContext'
+import { useRouter } from '../context/routerContext'
+import { ROUTES } from '../contants'
 
 import { TipProcessStep } from './views/TipRouter'
+
 //
 // Styles
 //
@@ -46,31 +51,17 @@ const HotkeyButton = styled('button')({
 })
 
 //
-// Models
-//
-interface IHotkeyAmountButtons {
-  hotkeyTipAmounts: Array<number>
-  remainingDailyAmount: number
-  setCurrentTipAmount: (amount: number) => void
-  setTipProcessStep: (step: TipProcessStep) => void
-}
-
-//
 // Component
 //
-export const HotkeyAmountButtons = (
-  props: IHotkeyAmountButtons
-): React.ReactElement => {
-  const {
-    setCurrentTipAmount,
-    setTipProcessStep,
-    hotkeyTipAmounts,
-    remainingDailyAmount
-  } = props
+export const HotkeyAmountButtons = (): React.ReactElement => {
+  const router = useRouter()
+  const { user } = useStore()
+  const { hotkeyTipAmounts, remainingDailyAmount } = user?.tipSettings || {}
+  const { setCurrentTipAmount } = useTip()
 
   const handleSelectAmount = (amount: number) => {
     setCurrentTipAmount(amount)
-    setTipProcessStep(TipProcessStep.TIP_CONFIRM)
+    router.to(ROUTES.tippingConfirm)
   }
   return (
     <HotkeyButtonsWrapper>

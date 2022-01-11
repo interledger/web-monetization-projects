@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react'
 import { styled, SvgIcon, SvgIconProps } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
+import { useStore } from '../context/storeContext'
+import { useTip } from '../context/tipContext'
 
 //
 // Styles
@@ -28,6 +30,7 @@ const IncDecButtonWrapper = styled('button')({
     color: Colors.Violet700
   },
   '&:disabled': {
+    backgroundColor: 'transparent',
     color: Colors.Grey100,
     cursor: 'not-allowed'
   }
@@ -102,10 +105,6 @@ export enum IncDec {
 
 interface IIncDecButton {
   type: IncDec
-  currentTipAmount: number
-  setCurrentTipAmount: (amount: number) => void
-  minimumTipLimit: number
-  remainingDailyAmount: number
 }
 
 //
@@ -143,19 +142,18 @@ function useInterval(callback: () => void, delay: number | null) {
 // Component
 //
 export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
-  const {
-    type,
-    minimumTipLimit,
-    remainingDailyAmount,
-    currentTipAmount,
-    setCurrentTipAmount
-  } = props
+  const { type } = props
+
+  const { user } = useStore()
+  const { remainingDailyAmount = 0, minimumTipLimit = 1 } =
+    user?.tipSettings || {}
+  const { currentTipAmount, setCurrentTipAmount } = useTip()
+
   const initialVelocity = 150
   const [velocity, setVelocity] = useState<number>(initialVelocity)
   const [isRunning, setIsRunning] = useState<boolean>(false)
 
-  // Click logic
-  const handleIncDecClick = () => {
+  const updateAmount = () => {
     let amount = currentTipAmount
     if (type === IncDec.Inc) {
       if (amount == remainingDailyAmount) return
@@ -163,10 +161,20 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
     } else if (type == IncDec.Dec) {
       amount = amount - 1
     }
-    if (isRunning) {
-      return
+    if (amount <= minimumTipLimit) {
+      amount = minimumTipLimit
+      stop()
+    }
+    if (amount >= remainingDailyAmount) {
+      amount = remainingDailyAmount
+      stop()
     }
     setCurrentTipAmount(amount)
+  }
+
+  // Click logic
+  const handleIncDecClick = () => {
+    updateAmount()
   }
 
   //
@@ -175,28 +183,7 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
   // Adjust the amount while button is pressed
   useInterval(
     () => {
-      let amount = currentTipAmount
-
-      // handle increment/decrement
-      if (type === IncDec.Inc) {
-        if (amount == remainingDailyAmount) return
-        amount = amount + 1
-      } else if (type == IncDec.Dec) {
-        amount = amount - 1
-      }
-
-      // handle amount is below min or above max
-      if (amount < minimumTipLimit) {
-        amount = minimumTipLimit
-        stop()
-      }
-      if (amount > remainingDailyAmount) {
-        amount = remainingDailyAmount
-        stop()
-      }
-
-      // perform update
-      setCurrentTipAmount(amount)
+      updateAmount()
     },
     isRunning ? velocity : null
   )

@@ -8,8 +8,9 @@ import { HotkeyAmountButtons } from '../HotkeyAmountButtons'
 import { TipWarning } from '../TipWarning'
 import { Colors } from '../../../shared-theme/colors'
 import { useStore } from '../../context/storeContext'
-
-import { TipProcessStep, ITipView } from './TipRouter'
+import { useTip } from '../../context/tipContext'
+import { useRouter } from '../../context/routerContext'
+import { ROUTES } from '../../contants'
 
 //
 // Styles
@@ -48,16 +49,14 @@ const Button = styled('button')({
 //
 // Component
 //
-export const TipView: React.FC<ITipView> = (
-  props: React.PropsWithChildren<ITipView>
-) => {
+export const TipView: React.FC = () => {
   const { user } = useStore()
-  const { hotkeyTipAmounts, remainingDailyAmount, minimumTipLimit } =
-    user?.tipSettings || {}
-  const { currentTipAmount, setCurrentTipAmount, setTipProcessStep } = props
+  const { remainingDailyAmount } = user?.tipSettings || {}
+  const { currentTipAmount } = useTip()
+  const router = useRouter()
 
   const handleTip = () => {
-    setTipProcessStep(TipProcessStep.TIP_CONFIRM)
+    router.to(ROUTES.tippingConfirm)
   }
 
   // Render
@@ -65,26 +64,13 @@ export const TipView: React.FC<ITipView> = (
     <NewHeaderFooterLayout title='Support This Site'>
       <ComponentWrapper>
         <Box mt={6}>
-          <AmountInput
-            currentTipAmount={currentTipAmount}
-            setCurrentTipAmount={setCurrentTipAmount}
-            remainingDailyAmount={remainingDailyAmount || 0}
-            minimumTipLimit={minimumTipLimit || 1}
-          />
+          <AmountInput />
         </Box>
         <Box mt={5}>
-          <HotkeyAmountButtons
-            hotkeyTipAmounts={hotkeyTipAmounts || []}
-            remainingDailyAmount={remainingDailyAmount || 0}
-            setCurrentTipAmount={setCurrentTipAmount}
-            setTipProcessStep={setTipProcessStep}
-          />
+          <HotkeyAmountButtons />
         </Box>
         <Box mt={4} flex='1'>
-          <TipWarning
-            currentTipAmount={currentTipAmount}
-            remainingDailyAmount={remainingDailyAmount || 0}
-          />
+          <TipWarning />
         </Box>
         <Box mb={2}>
           <Button

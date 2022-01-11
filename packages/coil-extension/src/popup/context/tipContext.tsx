@@ -52,11 +52,7 @@ export const TipProvider: React.FC = props => {
     useState<number>(max)
 
   const updateCurrentTipAmount = (amount: number) => {
-    if (amount <= max) {
-      setCurrentTipAmount(amount)
-    } else {
-      setCurrentTipAmount(max)
-    }
+    setCurrentTipAmount(amount)
   }
 
   const providerValue = {
