@@ -16,7 +16,6 @@ import { StreamingCoilDiscoverView } from './StreamingCoilDiscoverView'
 import { TipView } from './TipView'
 import { TipConfirmView } from './TipConfirmView'
 import { TipCompleteView } from './TipCompleteView'
-import { TipRouter } from './TipRouter'
 
 //
 // Component
@@ -43,7 +42,7 @@ export const Router = () => {
     // /tipping/complete
     case ROUTES.tippingComplete: {
       // /tipping/complete
-      return <TipRouter />
+      return <TipCompleteView />
     }
     // /streaming
     case ROUTES.streaming:

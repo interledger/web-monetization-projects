@@ -5,6 +5,7 @@ import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { Colors } from '../../../shared-theme/colors'
 import { FitTextWrapper } from '../FitTextWrapper'
 import { RandomThankYouMessage } from '../RandomThankYouMessage'
+import { useTip } from '../../context/tipContext'
 
 //
 // Styles
@@ -31,10 +32,8 @@ const BodyWrapper = styled('div')(({ url }: { url: string }) => ({
 //
 // Component
 //
-export const TipCompleteView = (props: {
-  currentTipAmount: number
-}): React.ReactElement => {
-  const { currentTipAmount } = props
+export const TipCompleteView = (): React.ReactElement => {
+  const { currentTipAmount } = useTip()
 
   const getBackgroundImageUrl = () => {
     let ImgUrl = '/res/Level1.gif'
