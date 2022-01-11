@@ -12,15 +12,13 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 const CHROMIUM_BASED_BROWSER = /chrome|edge/
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Func = { (...args: any[]): void }
+type Func = { (...args: unknown[]): void }
 
 function ignoreInvocations(name: string, ignore: number, func: Func) {
   let n = 0
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (...args: any[]) => {
+  return (...args: unknown[]) => {
     if (n++ < ignore) {
-      // eslint-disable-next-line no-console
       console.warn(`IGNORING ${name} FUNCTION INVOCATION ${n}`)
       return
     } else {
