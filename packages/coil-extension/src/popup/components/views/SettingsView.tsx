@@ -70,6 +70,7 @@ export const SettingsView = () => {
     coilDomain,
     runtime: { tabOpener }
   } = useHost()
+
   return (
     <NewHeaderFooterLayout title='Settings'>
       <SettingsPageContainer>
@@ -98,23 +99,21 @@ export const SettingsView = () => {
           </div>
         </ProfileContainer>
 
-        <SettingsButton
-          onClick={() => tabOpener(`${coilDomain}/settings/acount`)}
-        >
+        <SettingsButton onClick={tabOpener(`${coilDomain}/settings/acount`)}>
           <PersonIcon />
           <span className='title'>Account</span>
           <span className='icon-open'>
             <ChevronRightRoundedIcon />
           </span>
         </SettingsButton>
-        <SettingsButton onClick={() => tabOpener(`${coilDomain}/discover`)}>
+        <SettingsButton onClick={tabOpener(`${coilDomain}/discover`)}>
           <ExploreIcon />
           <span className='title'>Discover</span>
           <span className='icon-open'>
             <ChevronRightRoundedIcon />
           </span>
         </SettingsButton>
-        <SettingsButton onClick={() => tabOpener(`${coilDomain}/about`)}>
+        <SettingsButton onClick={tabOpener(`${coilDomain}/about`)}>
           <HelpOutlineIcon />
           <span className='title'>About</span>
           <span className='icon-open'>
