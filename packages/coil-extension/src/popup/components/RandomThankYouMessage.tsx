@@ -17,11 +17,21 @@ const RandomMessageWrapper = styled('div')({
 export const RandomThankYouMessage = () => {
   const [random, setRandom] = useState<number>(0)
 
+  // const messagesArray = [
+  //   'Thanks for your support! \n ❤️💸❤️',
+  //   'You are a rockstar 🤘\n Thank you for your support.',
+  //   'Woohoo!!! You made my day.',
+  //   'Make it rain!'
+  // ]
+
   const messagesArray = [
-    'Thanks for your support! \n ❤️💸❤️',
-    'You are a rockstar 🤘\n Thank you for your support.',
-    'Woohoo!!! You made my day.',
-    'Make it rain!'
+    'Thanks for the tip!',
+    'Thanks for tipping',
+    'Thanks for your support!',
+    'Thanks so much',
+    'Thanks for your generosity',
+    "You're too kind!",
+    "You're awesome!"
   ]
 
   useEffect(() => {

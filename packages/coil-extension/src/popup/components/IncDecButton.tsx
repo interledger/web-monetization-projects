@@ -12,20 +12,23 @@ const IncDecButtonWrapper = styled('button')({
   height: '32px',
   border: 'none',
   borderRadius: '32px',
-  backgroundColor: Colors.Grey100,
-  color: Colors.Grey500,
+  backgroundColor: 'transparent',
+  color: Colors.Grey800,
   flexShrink: 0,
   display: 'flex',
   alignItems: 'center',
   outline: 'none',
   justifyContent: 'center',
   '&:hover': {
-    backgroundColor: Colors.Grey800,
-    color: '#FFFFFF'
+    backgroundColor: Colors.Violet10,
+    color: Colors.Violet700
+  },
+  '&:active': {
+    backgroundColor: Colors.Violet200,
+    color: Colors.Violet700
   },
   '&:disabled': {
     color: Colors.Grey100,
-    backgroundColor: Colors.Grey50,
     cursor: 'not-allowed'
   }
 })

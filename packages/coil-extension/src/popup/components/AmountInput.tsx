@@ -12,7 +12,7 @@ import { ITipView } from './views/TipRouter'
 const CurrentAmountWrapper = styled('div')({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-around',
+  justifyContent: 'space-between',
   height: '62px'
 })
 

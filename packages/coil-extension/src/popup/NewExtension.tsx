@@ -9,8 +9,8 @@ import { Router } from './components/views/Router'
 const AppContainer = styled('div')({
   width: '308px',
   maxWidth: '308px',
-  height: '455px',
-  maxHeight: '455px',
+  height: '457px',
+  maxHeight: '457px',
   position: 'relative',
   overflow: 'hidden',
   background: '#FFFFFF',

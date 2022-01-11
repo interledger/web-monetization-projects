@@ -16,9 +16,9 @@ const HotkeyButtonsWrapper = styled('div')({
 const HotkeyButton = styled('button')({
   cursor: 'pointer',
   border: 'none',
-  borderRadius: '10px',
-  backgroundColor: Colors.Grey100,
-  color: Colors.Grey500,
+  borderRadius: '100px',
+  backgroundColor: Colors.Violet10,
+  color: Colors.Violet700,
   fontFamily: 'CircularStd',
   fontWeight: 'bold',
   fontSize: '16px',
@@ -28,7 +28,11 @@ const HotkeyButton = styled('button')({
   width: '54px',
   flex: '1',
   '&:hover': {
-    backgroundColor: Colors.Grey800,
+    backgroundColor: Colors.Violet400,
+    color: '#FFFFFF'
+  },
+  '&:active': {
+    backgroundColor: Colors.Violet700,
     color: '#FFFFFF'
   },
   '&:disabled': {
