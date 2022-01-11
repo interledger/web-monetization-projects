@@ -34,7 +34,7 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.0.0",
     "reduct": "^3.3.1",
     "uuid": "^8.3.2"
   },
@@ -49,7 +49,7 @@
     "@commitlint/config-conventional": "16.0.0",
     "@types/jest": "27.4.0",
     "@types/node": "14.18.5",
-    "@types/node-fetch": "2.5.12",
+    "@types/node-fetch": "3.0.2",
     "@types/uuid": "8.3.4",
     "@typescript-eslint/eslint-plugin": "5.9.1",
     "@typescript-eslint/parser": "5.9.1",
