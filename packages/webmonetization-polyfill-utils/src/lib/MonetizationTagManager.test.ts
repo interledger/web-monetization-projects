@@ -2,7 +2,6 @@ import { resolvePaymentEndpoint } from '@webmonetization/polyfill-utils'
 
 import {
   metaDeprecatedMessage,
-  MonetizationTag,
   MonetizationTagManager,
   PaymentDetailsChangeArguments,
   PaymentDetailsChangeCallback
@@ -15,10 +14,10 @@ const uuidRegex =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 const expectUuid4 = expect.stringMatching(uuidRegex)
 
-const makeLink = (pp: string) => {
+const makeLink = (pp: string, opts?: { dontResolve?: boolean }) => {
   const link = document.createElement('link')
   link.setAttribute('rel', 'monetization')
-  link.setAttribute('href', resolvePaymentEndpoint(pp))
+  link.setAttribute('href', opts?.dontResolve ? pp : resolvePaymentEndpoint(pp))
   return link
 }
 
@@ -536,4 +535,27 @@ describe('MonetizationTagManager', () => {
     await timeout()
     expect(spy.mock.calls[0][0][0].type).toBe('attributes')
   })
+
+  it(
+    'should emit error events on the links when ' +
+      'payment pointer is not well formed',
+    async () => {
+      expect.assertions(1)
+      const manager = makeManager(jest.fn())
+      manager.startWhenDocumentReady()
+      const link = makeLink('ftp://invalid.com', { dontResolve: true })
+      await Promise.race([
+        new Promise<void>(resolve => {
+          link.addEventListener('error', event => {
+            expect(event.error.message).toMatchInlineSnapshot(
+              `"Invalid payment pointer/url: \\"ftp://invalid.com/\\""`
+            )
+            resolve()
+          })
+        }),
+        timeout(1)
+      ])
+      document.head.appendChild(link)
+    }
+  )
 })

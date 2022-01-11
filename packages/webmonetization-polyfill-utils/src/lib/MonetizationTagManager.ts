@@ -2,6 +2,7 @@ import { v4 as uuidV4 } from 'uuid'
 
 import { whenDocumentReady } from './whenDocumentReady'
 import { CustomError } from './CustomError'
+import { resolvePaymentEndpoint } from './resolvePaymentEndpoint'
 
 const debug =
   // console.log.bind(console, 'MonetizationTagManager')
@@ -307,33 +308,32 @@ export class MonetizationTagManager {
       }
     }
 
-    const details = this.getPaymentDetails(tag)
-    if (details.fromBody && details.tagType === 'meta') {
+    let started: PaymentDetails | null = this.getPaymentDetails(tag)
+    if (started.fromBody && started.tagType === 'meta') {
       throw new Error(
         'Web-Monetization Error: <meta name="monetization"> ' +
           'must be in the document head'
       )
     }
     if (
-      details.tagType === 'meta' /*|| details.tagType === 'link'*/ &&
+      started.tagType === 'meta' /*|| details.tagType === 'link'*/ &&
       this.monetizationTags.size + 1 > MAX_NUMBER_META_TAGS
     ) {
       throw new Error(
         `Web-Monetization Error: Ignoring tag with ` +
-          `paymentPointer=${details.paymentPointer}, only ${MAX_NUMBER_META_TAGS} ` +
+          `paymentPointer=${started.paymentPointer}, only ${MAX_NUMBER_META_TAGS} ` +
           `monetization tag[s] supported at a time. `
       )
     }
 
-    if (details.tagType === 'link') {
-      this.linkTagsById.set(
-        details.requestId,
-        new WeakRef(tag as HTMLLinkElement)
-      )
+    if (started.tagType === 'link') {
+      started = this.checkStartedLinkForWellFormedness(started, tag)
     }
 
-    this.monetizationTags.set(tag, { details })
-    this.callback({ stopped: null, started: details })
+    if (started) {
+      this.monetizationTags.set(tag, { details: started })
+    }
+    this.callback({ stopped: null, started: started })
   }
 
   _observeMonetizationTagAttrs(tag: MonetizationTag) {
@@ -373,13 +373,35 @@ export class MonetizationTagManager {
     let started: PaymentDetails | null = null
     if (!disabled) {
       started = this.getPaymentDetails(tag)
-      entry.details = started
-      if (started.tagType === 'link') {
-        const linkRef = new WeakRef(tag as HTMLLinkElement)
-        this.linkTagsById.set(started.requestId, linkRef)
+      started = this.checkStartedLinkForWellFormedness(started, tag)
+      if (started) {
+        entry.details = started
       }
     }
     this.callback({ started, stopped })
+  }
+
+  private checkStartedLinkForWellFormedness(
+    started: PaymentDetails,
+    tag: MonetizationTag
+  ) {
+    let returnValue: PaymentDetails | null = started
+    if (started.tagType === 'link') {
+      let error: Error | null = null
+      try {
+        resolvePaymentEndpoint(started.paymentPointer)
+      } catch (e) {
+        error = e
+        returnValue = null
+      }
+      if (!error && returnValue) {
+        const linkRef = new WeakRef(tag as HTMLLinkElement)
+        this.linkTagsById.set(started.requestId, linkRef)
+      } else {
+        tag.dispatchEvent(new ErrorEvent('error', { error }))
+      }
+    }
+    return returnValue
   }
 
   private clearLinkById(stopped: PaymentDetails) {
