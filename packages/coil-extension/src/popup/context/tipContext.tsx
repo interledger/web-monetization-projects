@@ -1,69 +1,88 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState, useMemo } from 'react'
+import { StorageService } from '@webmonetization/wext/services'
 
 //
 // Models
 //
 interface ITipContext {
   currentTipAmount: number
-  maxAllowableTipAmount: number
+  maxAllowableTipAmount: number // possibly move to background in formatTipSettings util when done
   setCurrentTipAmount: (amount: number) => void
+}
+
+interface ITipProvider {
+  storage: Pick<StorageService, 'get'>
 }
 
 // Context
 const TipContext = createContext({} as ITipContext)
 
 // Provider
-export const TipProvider: React.FC = props => {
-  const storedDailyTipLimitRemaining = 100
-  const storedTipCredits = 10
-  const tippingBetaFeatureFlag = true
-  const hasStoredCreditCard = true
+export const TipProvider: React.FC<ITipProvider> = props => {
+  const { storage, children } = props
+  const userObject = storage.get('user')
 
-  // this could be a util instead of storing in state if initializing with the correct values doesn't work
+  // todo: need to add tipCredits and paymentMethods to background queries
+  // todo: when nathan and brandon are done with COIL-1642 and COIL-1674
+  const {
+    tipSettings: {
+      lastTippedAmountUSD = 1,
+      inTippingBeta,
+      remainingDailyAmount = 0
+    },
+    paymentMethods,
+    tipCredits = 10
+  } = userObject ?? {}
+
+  const creditCard = useMemo(() => {
+    return paymentMethods?.find((method: any) => {
+      if (method?.type === 'stripe') {
+        return method
+      }
+    })
+  }, [paymentMethods])
+
+  // todo: this could be a util instead of storing in state if initializing with the correct values doesn't work
+  // todo: possibly move to background in formatTipSettings util when done
   const calculateMax = () => {
-    // calculate max here
     let newMax = 0
-    if (tippingBetaFeatureFlag == true) {
+    if (inTippingBeta == true) {
       // if the user has a cc on file
       // only true limit is daily limit
       // otherwise limit is tip credits
-      if (hasStoredCreditCard) {
-        newMax = storedDailyTipLimitRemaining
+      if (creditCard) {
+        newMax = remainingDailyAmount
       } else {
-        newMax = storedTipCredits
+        newMax = tipCredits
       }
     } else {
       // user is not in beta and can only tip with credits
       // if credits is less than daily limit -> limit is credits
       // if credits is greater than daily limit -> limit is daily limit
-      if (storedTipCredits < storedDailyTipLimitRemaining) {
-        newMax = storedTipCredits
+      if (tipCredits < remainingDailyAmount) {
+        newMax = tipCredits
       } else {
-        newMax = storedDailyTipLimitRemaining
+        newMax = remainingDailyAmount
       }
     }
     return newMax
   }
 
-  const max = calculateMax()
+  const max = calculateMax() // possibly move to background in formatTipSettings util when done
 
-  const [currentTipAmount, setCurrentTipAmount] = useState<number>(12)
+  const [currentTipAmount, setCurrentTipAmount] =
+    useState<number>(lastTippedAmountUSD)
   const [maxAllowableTipAmount, setMaxAllowableTipAmount] =
-    useState<number>(max)
-
-  const updateCurrentTipAmount = (amount: number) => {
-    setCurrentTipAmount(amount)
-  }
+    useState<number>(max) // possibly move to background in formatTipSettings util when done
 
   const providerValue = {
     currentTipAmount: currentTipAmount,
     maxAllowableTipAmount: maxAllowableTipAmount,
-    setCurrentTipAmount: updateCurrentTipAmount
+    setCurrentTipAmount: setCurrentTipAmount
   }
+
   return (
-    <TipContext.Provider value={providerValue}>
-      {props.children}
-    </TipContext.Provider>
+    <TipContext.Provider value={providerValue}>{children}</TipContext.Provider>
   )
 }
 
@@ -72,23 +91,3 @@ export const useTip = () => {
   const context = useContext(TipContext)
   return context
 }
-
-// // Reducers
-// export const SOME_ACTION = 'SOME_ACTION'
-// export const UPDATE_CURRENT_TIP_AMOUNT = 'UPDATE_CURRENT_TIP_AMOUNT'
-
-// export const tipReducer = (state, action) => {
-//   switch(action.type){
-//     case UPDATE_CURRENT_TIP_AMOUNT:
-//       let updatedState = [...state]
-//       const
-//       return state
-//     default: return state
-//   }
-// }
-
-// const defaultState = {
-//   currentTipAmount: 1, // need to initialize from user.tipSettings.lastTippedAmount
-//   allowableMaximumTipAmount: 10, // need to initialize based on daily tip limit - tip credit balance - tipping-beta featrue flag
-// }
-// const [ tipState, dispatch ] = useReducer(tipReducer, defaultState)
