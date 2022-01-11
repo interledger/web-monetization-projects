@@ -82,7 +82,7 @@ jobs:
 
   publish-packages:
     docker:
-      - image: circleci/node:14-buster-browsers
+      - image: circleci/node:17-buster-browsers
     steps:
       - checkout
       - *restore_cache
