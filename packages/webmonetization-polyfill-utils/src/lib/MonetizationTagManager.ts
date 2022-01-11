@@ -332,8 +332,8 @@ export class MonetizationTagManager {
 
     if (started) {
       this.monetizationTags.set(tag, { details: started })
+      this.callback({ stopped: null, started: started })
     }
-    this.callback({ stopped: null, started: started })
   }
 
   _observeMonetizationTagAttrs(tag: MonetizationTag) {
@@ -378,7 +378,9 @@ export class MonetizationTagManager {
         entry.details = started
       }
     }
-    this.callback({ started, stopped })
+    if (started || stopped) {
+      this.callback({ started, stopped })
+    }
   }
 
   private checkStartedLinkForWellFormedness(
