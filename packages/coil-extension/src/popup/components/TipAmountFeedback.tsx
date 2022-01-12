@@ -25,7 +25,7 @@ export const TipAmountFeedback = () => {
   const { user } = useStore()
   const {
     paymentMethods,
-    tipCredits,
+    tipCredits = 0,
     tipSettings: { inTippingBeta = false, remainingDailyAmount = 0 } = {}
   } = user ?? {}
   const {

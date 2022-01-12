@@ -14,7 +14,7 @@ import { Gift } from './icons/Gift'
 //
 
 const NavButton = styled('div')(
-  ({ theme, disabled }: { theme: Theme; disabled: boolean }) => ({
+  ({ theme, disabled }: { theme: Theme; disabled?: boolean }) => ({
     cursor: 'pointer',
     flex: '1',
     display: disabled ? 'none' : 'flex',
@@ -43,7 +43,8 @@ const NavButton = styled('div')(
 export const NavBar = () => {
   const router = useRouter()
   const { user } = useStore()
-  const { tipCredits, tipSettings: { inTippingBeta = false } = {} } = user ?? {}
+  const { tipCredits = 0, tipSettings: { inTippingBeta = false } = {} } =
+    user ?? {}
 
   const newUiFeatureFlag = true //todo: need to replace with background api call
 
