@@ -1,6 +1,15 @@
 import React, { createContext, useContext, useState, useMemo } from 'react'
 import { StorageService } from '@webmonetization/wext/services'
 
+/*
+ maxAllowableTipAmount -> needed to easily disable tip adjustments or submission
+  - IncDecButton
+  - AmountInput > handleInputChange
+  - HotkeyAmountButton
+  - TipView > Send Button
+  - TipAmountFeedback
+*/
+
 //
 // Models
 //

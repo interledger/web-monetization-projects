@@ -4,12 +4,12 @@ import { styled, Box } from '@material-ui/core'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { AmountInput } from '../AmountInput'
 import { HotkeyAmountButtons } from '../HotkeyAmountButtons'
-import { TipWarning } from '../TipWarning'
 import { Colors } from '../../../shared-theme/colors'
 import { useStore } from '../../context/storeContext'
 import { useTip } from '../../context/tipContext'
 import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../constants'
+import { TipAmountFeedback } from '../TipAmountFeedback'
 
 //
 // Styles
@@ -68,8 +68,8 @@ export const TipView: React.FC = () => {
         <Box mt={5}>
           <HotkeyAmountButtons />
         </Box>
-        <Box mt={4} flex='1'>
-          <TipWarning />
+        <Box mt={4} mb={1} flex='1'>
+          <TipAmountFeedback />
         </Box>
         <Box mb={2}>
           <Button
