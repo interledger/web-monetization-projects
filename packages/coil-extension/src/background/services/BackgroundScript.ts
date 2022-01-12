@@ -39,6 +39,7 @@ import { PopupBrowserAction } from './PopupBrowserAction'
 import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
+import { TippingService } from './TippingService'
 import { StreamAssociations } from './StreamAssociations'
 import { ActiveTabLogger } from './ActiveTabLogger'
 
@@ -55,6 +56,7 @@ export class BackgroundScript {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private auth: AuthService,
+    private tippingService: TippingService,
     private youtube: YoutubeService,
     private activeTabLogger: ActiveTabLogger,
     private framesService: BackgroundFramesService,
@@ -102,7 +104,7 @@ export class BackgroundScript {
     this.popup.setDefaultInactive()
     this.framesService.monitor()
     this.bindOnInstalled()
-    void this.initAuth()
+    void (await this.initAuth())
   }
 
   private async initAuth() {
@@ -780,55 +782,24 @@ export class BackgroundScript {
     return true
   }
 
-  private async sendTip(): Promise<{ success: boolean }> {
+  async sendTip() {
     const tabId = this.activeTab
     const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
-    if (!streamId) {
-      this.log('can not find top frame for tabId=%d', tabId)
-      return { success: false }
-    }
-    const stream = this.streams.getStream(streamId)
-    const token = this.auth.getStoredToken()
 
-    // TODO: return detailed errors
-    if (!stream || !token) {
-      this.log(
-        'sendTip: no stream | token. !!stream !!token ',
-        !!stream,
-        !!token
-      )
-      return { success: false }
-    }
-
-    const receiver = stream.getPaymentPointer()
-    const { assetCode, assetScale, exchangeRate } = stream.getAssetDetails()
-    const amount = Math.floor(1e9 * exchangeRate).toString() // 1 USD, assetScale = 9
+    if (!streamId) return { success: false }
 
     try {
-      this.log(`sendTip: sending tip to ${receiver}`)
-      const result = await this.client.query({
-        query: `
-          mutation sendTip($receiver: String!) {
-            sendTip(receiver: $receiver) {
-              success
-            }
-          }
-        `,
-        token,
-        variables: {
-          receiver
-        }
-      })
-      this.log(`sendTip: sent tip to ${receiver}`, result)
-      const message: TipSent = {
-        command: 'tip',
-        data: {
-          paymentPointer: receiver,
-          amount,
-          assetCode,
-          assetScale
-        }
+      const token = this.auth.getStoredToken()
+      if (!token) {
+        return { success: false }
       }
+      const message = await this.tippingService.sendTip(
+        tabId,
+        streamId,
+        this.streams.getStream(streamId),
+        token
+      )
+      await this.tippingService.updateTipSettings(token)
       this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
       return { success: true }
     } catch (e) {
@@ -837,83 +808,47 @@ export class BackgroundScript {
     }
   }
 
-  private async tipPreview(tip: number): Promise<{
+  private async tipPreview(amount: number): Promise<{
     success: boolean
     message?: string
     creditCardCharge?: string
     tipCreditCharge?: string
   }> {
-    const token = this.auth.getStoredToken()
-
-    // TODO: return detailed errors
-    if (!token) {
-      this.log('tipPreview: token. !!token ', !!token)
-      return { success: false }
-    }
-
-    // Set tip amount
-    const CENTS = 100
-    const tipAmountCents = Math.floor(tip * CENTS).toString()
-
     try {
-      this.log('tipPreview: requesting tip preview')
-
-      const result = await this.client.tipPreview(token, tipAmountCents)
-
-      return {
-        success: true,
-        creditCardCharge: result.charges.creditCardCharge,
-        tipCreditCharge: result.charges.tipCreditCharge
-      }
+      const token = this.auth.getStoredToken()
+      if (!token) return { success: false, message: 'No token found' }
+      return await this.tippingService.tipPreview(amount, token)
     } catch (e) {
-      this.log(`tipPreview: error. msg=${e.message}`)
       return { success: false, message: e.message }
     }
   }
 
-  private async tip(tip: number): Promise<{ success: boolean }> {
+  public async tip(
+    tip: number
+  ): Promise<{ success: boolean; message: string }> {
     const tabId = this.activeTab
     const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
-    if (!streamId) {
-      this.log('can not find top frame for tabId=%d', tabId)
-      return { success: false }
-    }
-    const stream = this.streams.getStream(streamId)
-    const token = this.auth.getStoredToken()
 
-    // TODO: return detailed errors
-    if (!stream || !token) {
-      this.log('tip: no stream | token. !!stream !!token ', !!stream, !!token)
-      return { success: false }
-    }
-
-    const receiver = stream.getPaymentPointer()
-
-    // Set tip amount
-    const CENTS = 100
-    const tipAmountCents = Math.floor(tip * CENTS).toString()
-
-    // Set active tab url
-    const frameId = 0
-    const frame = notNullOrUndef(
-      this.framesService.getFrame({ frameId, tabId })
-    )
-    const activeTabUrl = frame.href
+    if (!streamId) return { success: false, message: 'No stream found' }
 
     try {
-      this.log(`tip: sending tip to ${receiver}`)
-
-      const result = await this.client.tip(token, {
-        tipAmountCents,
-        destination: receiver,
-        origin: activeTabUrl
-      })
-
-      this.log(`tip: sent tip to ${receiver}`, result)
-      return { success: true }
+      const token = this.auth.getStoredToken()
+      if (!token) return { success: false, message: 'No token found' }
+      const tipResult = await this.tippingService.tip(
+        tip,
+        tabId,
+        this.streams.getStream(streamId),
+        token
+      )
+      if (tipResult.success) {
+        // if succeeded, refresh tip settings
+        await this.tippingService.updateTipSettings(token)
+      } else {
+        return { success: false, message: 'Failed tip' }
+      }
+      return tipResult
     } catch (e) {
-      this.log(`tip: error. msg=${e.message}`)
-      return { success: false }
+      return { success: false, message: e.message }
     }
   }
 

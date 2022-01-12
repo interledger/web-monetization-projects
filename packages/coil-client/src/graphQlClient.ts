@@ -11,6 +11,7 @@ import {
   featureEnabled,
   tipPreview,
   tip,
+  tipSettings,
   minTipLimit
 } from './queries'
 
@@ -42,6 +43,7 @@ export class GraphQlClient {
   public featureEnabled = featureEnabled
   public tipPreview = tipPreview
   public tip = tip
+  public tipSettings = tipSettings
   public minTipLimit = minTipLimit
 
   public constructor(

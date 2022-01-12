@@ -6,10 +6,12 @@ import { inject, injectable } from 'inversify'
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { TimeoutError } from '../../util/timeout'
+import { formatTipSettings } from '../util/formatters'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
+import { TippingService } from './TippingService'
 
 /**
  ## Extension Authentication
@@ -67,7 +69,8 @@ export class AuthService extends EventEmitter {
     @logger('AuthService')
     private log: Logger,
     private siteToken: SiteToken,
-    private activeTabs: ActiveTabLogger
+    private activeTabs: ActiveTabLogger,
+    private tippingService: TippingService
   ) {
     super()
   }
@@ -182,16 +185,16 @@ export class AuthService extends EventEmitter {
 
     this.log('updateWhoAmi resp', resp.data)
     if (resp.data?.whoami) {
-      this.store.user = {
-        ...resp.data.whoami
-      }
+      this.store.user = resp.data.whoami
 
       // Data needed for tipping
       // tipping-beta: featureEnabled: boolean
       // minimum tip limit: minTipLimit > minTipLimit
       // remaining daily amount: whoami > tipping > limitRemaining
 
-      this.formatTipSettings(token)
+      if (this.store.user) {
+        await this.tippingService.updateTipSettings(token)
+      }
       return token
     } else {
       return null
@@ -207,40 +210,14 @@ export class AuthService extends EventEmitter {
       // tipping-beta: featureEnabled: boolean
       // minimum tip limit: minTipLimit > minTipLimit
       // remaining daily amount: whoami > tipping > limitRemaining
-      this.formatTipSettings(resp.data.refreshToken.token) // adds the tip settings info to the user object and formats it
+      if (this.store.user) {
+        await this.tippingService.updateTipSettings(
+          resp.data.refreshToken.token
+        )
+      }
       return resp.data.refreshToken.token
     } else {
       return null
-    }
-  }
-
-  private async formatTipSettings(token: string) {
-    // convert all tip settings from cents to dollars
-    // set default hotkey tip amounts since we don't yet get them from the user
-    // add feature flag and minTipLimit
-    if (this.store.user) {
-      const featureFlagResp = await this.client.featureEnabled(
-        token,
-        'tipping-beta'
-      )
-      const minTipLimitResp = await this.client.minTipLimit(token)
-      const formattedTipSettings = {
-        inTippingBeta: featureFlagResp.data.featureEnabled,
-        minimumTipLimit: minTipLimitResp.data.minTipLimit.minTipLimit
-          ? Number(minTipLimitResp.data.minTipLimit.minTipLimit) / 100
-          : 1, // convert from cents to dollars
-        remainingDailyAmount: this.store.user?.tipping?.limitRemaining
-          ? Number(this.store.user?.tipping?.limitRemaining) / 100
-          : 0, // convert from cents to dollars
-        lastTippedAmountUSD: this.store.user?.tipping?.limitRemaining
-          ? Number(this.store.user?.tipping?.lastTippedAmount) / 100
-          : 1, // convert from cents to dollars
-        hotkeyTipAmounts: [1, 2, 5] // dollar amounts - not yet set by user
-      }
-      this.store.user = {
-        ...this.store.user,
-        tipSettings: formattedTipSettings
-      }
     }
   }
 
