@@ -2,9 +2,10 @@ import React, { useState, useRef, useEffect } from 'react'
 import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
+import { useStore } from '../context/storeContext'
+import { useTip } from '../context/tipContext'
 
 import { IncDecButton, IncDec } from './IncDecButton'
-import { ITipView } from './views/TipRouter'
 
 //
 // Styles
@@ -12,7 +13,7 @@ import { ITipView } from './views/TipRouter'
 const CurrentAmountWrapper = styled('div')({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-around',
+  justifyContent: 'space-between',
   height: '62px'
 })
 
@@ -59,17 +60,9 @@ const Input = styled('input')({
 })
 
 //
-// Models
-//
-interface IAmountInput extends Omit<ITipView, 'context' | 'setTipProcessStep'> {
-  minimumTipLimit: number
-  remainingDailyAmount: number
-}
-
-//
 // Component
 //
-export const AmountInput = (props: IAmountInput): React.ReactElement => {
+export const AmountInput = (): React.ReactElement => {
   const defaultFontSize = 64
   const characterSpacing = 0.6
   const maxAmountWidth = 160
@@ -79,12 +72,10 @@ export const AmountInput = (props: IAmountInput): React.ReactElement => {
   const [isUserInput, setIsUserInput] = useState<boolean>(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const {
-    currentTipAmount,
-    setCurrentTipAmount,
-    minimumTipLimit,
-    remainingDailyAmount
-  } = props
+  const { user } = useStore()
+  const { remainingDailyAmount = 0, minimumTipLimit = 1 } =
+    user?.tipSettings || {}
+  const { currentTipAmount, setCurrentTipAmount } = useTip()
 
   // set focus to the input field when it loads. Cannot use 'autoFocus' because eslint-plugin-jsx-a11y
   useEffect(() => {
@@ -120,7 +111,7 @@ export const AmountInput = (props: IAmountInput): React.ReactElement => {
       containsDecimal = true
     }
 
-    // handle if the value is above the minimum
+    // handle if the value is below the minimum
     let value = Number(e.target.value)
     if (value < minimumTipLimit || isNaN(value)) {
       value = minimumTipLimit
@@ -176,13 +167,7 @@ export const AmountInput = (props: IAmountInput): React.ReactElement => {
 
   return (
     <CurrentAmountWrapper>
-      <IncDecButton
-        type={IncDec.Dec}
-        currentTipAmount={currentTipAmount}
-        setCurrentTipAmount={setCurrentTipAmount}
-        minimumTipLimit={minimumTipLimit}
-        remainingDailyAmount={remainingDailyAmount}
-      />
+      <IncDecButton type={IncDec.Dec} />
       {isUserInput ? (
         // render tip manual input
         <InputWrapper size={displayFontSize}>
@@ -208,13 +193,7 @@ export const AmountInput = (props: IAmountInput): React.ReactElement => {
             : currentTipAmount.toFixed(2)}
         </Amount>
       )}
-      <IncDecButton
-        type={IncDec.Inc}
-        currentTipAmount={currentTipAmount}
-        setCurrentTipAmount={setCurrentTipAmount}
-        minimumTipLimit={minimumTipLimit}
-        remainingDailyAmount={remainingDailyAmount}
-      />
+      <IncDecButton type={IncDec.Inc} />
     </CurrentAmountWrapper>
   )
 }

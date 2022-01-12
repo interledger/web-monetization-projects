@@ -8,6 +8,7 @@ import { PopupHostContext } from './context/popupHostContext'
 import { StoreContext, useStoreState } from './context/storeContext'
 import { ViewRouter } from './components/views/ViewRouter'
 import { RouterProvider } from './context/routerContext'
+import { TipProvider } from './context/tipContext'
 
 export function Index(props: {
   storage: Pick<StorageService, 'get'>
@@ -19,8 +20,10 @@ export function Index(props: {
     <PopupHostContext.Provider value={props.host}>
       <StoreContext.Provider value={store}>
         <RouterProvider>
-          {/* should replace ViewRouter with  NewExtension when done -> rename the NewExtension to something like App */}
-          <ViewRouter />
+          <TipProvider storage={props.storage}>
+            {/* should replace ViewRouter with  NewExtension when done -> rename the NewExtension to something like App */}
+            <ViewRouter />
+          </TipProvider>
         </RouterProvider>
       </StoreContext.Provider>
     </PopupHostContext.Provider>

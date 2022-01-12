@@ -25,6 +25,8 @@ export const Colors = {
   Green700: '#0EB871',
   Yellow400: '#FFC559',
   Yellow700: '#F8A811',
+  Violet10: '#DFD6FF',
+  Violet200: '#9A7DFF',
   Violet400: '#815DFF',
   Orange400: '#FF8A62',
   Violet700: '#690DFF',

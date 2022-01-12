@@ -2,6 +2,8 @@ import React from 'react'
 import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
+import { useStore } from '../context/storeContext'
+import { useTip } from '../context/tipContext'
 
 //
 // Styles
@@ -18,20 +20,13 @@ const WarningWrapper = styled('div')({
 })
 
 //
-// Models
-//
-interface ITipWarning {
-  currentTipAmount: number
-  remainingDailyAmount: number
-}
-
-//
 // Component
 //
-export const TipWarning = (props: ITipWarning): React.ReactElement => {
-  const { currentTipAmount, remainingDailyAmount } = props
+export const TipWarning = (): React.ReactElement => {
+  const { user } = useStore()
+  const { remainingDailyAmount = 0 } = user?.tipSettings || {}
+  const { currentTipAmount } = useTip()
 
-  //todo - update link once billing infrastructure is complete and we have a view for changing the limit
   return (
     <WarningWrapper>
       {currentTipAmount >= remainingDailyAmount ? (

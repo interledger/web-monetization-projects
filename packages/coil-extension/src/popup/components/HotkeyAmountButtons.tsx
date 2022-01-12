@@ -2,8 +2,13 @@ import React from 'react'
 import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
+import { useStore } from '../context/storeContext'
+import { useTip } from '../context/tipContext'
+import { useRouter } from '../context/routerContext'
+import { ROUTES } from '../constants'
 
 import { TipProcessStep } from './views/TipRouter'
+
 //
 // Styles
 //
@@ -16,9 +21,9 @@ const HotkeyButtonsWrapper = styled('div')({
 const HotkeyButton = styled('button')({
   cursor: 'pointer',
   border: 'none',
-  borderRadius: '10px',
-  backgroundColor: Colors.Grey100,
-  color: Colors.Grey500,
+  borderRadius: '100px',
+  backgroundColor: Colors.Violet10,
+  color: Colors.Violet700,
   fontFamily: 'CircularStd',
   fontWeight: 'bold',
   fontSize: '16px',
@@ -28,7 +33,11 @@ const HotkeyButton = styled('button')({
   width: '54px',
   flex: '1',
   '&:hover': {
-    backgroundColor: Colors.Grey800,
+    backgroundColor: Colors.Violet400,
+    color: '#FFFFFF'
+  },
+  '&:active': {
+    backgroundColor: Colors.Violet700,
     color: '#FFFFFF'
   },
   '&:disabled': {
@@ -42,35 +51,21 @@ const HotkeyButton = styled('button')({
 })
 
 //
-// Models
-//
-interface IHotkeyAmountButtons {
-  hotkeyTipAmounts: Array<number>
-  remainingDailyAmount: number
-  setCurrentTipAmount: (amount: number) => void
-  setTipProcessStep: (step: TipProcessStep) => void
-}
-
-//
 // Component
 //
-export const HotkeyAmountButtons = (
-  props: IHotkeyAmountButtons
-): React.ReactElement => {
-  const {
-    setCurrentTipAmount,
-    setTipProcessStep,
-    hotkeyTipAmounts,
-    remainingDailyAmount
-  } = props
+export const HotkeyAmountButtons = (): React.ReactElement => {
+  const router = useRouter()
+  const { user } = useStore()
+  const { hotkeyTipAmounts, remainingDailyAmount = 0 } = user?.tipSettings || {}
+  const { setCurrentTipAmount } = useTip()
 
   const handleSelectAmount = (amount: number) => {
     setCurrentTipAmount(amount)
-    setTipProcessStep(TipProcessStep.TIP_CONFIRM)
+    router.to(ROUTES.tippingConfirm)
   }
   return (
     <HotkeyButtonsWrapper>
-      {hotkeyTipAmounts.map((amount: number, index: number) => {
+      {hotkeyTipAmounts?.map((amount: number, index: number) => {
         return (
           <HotkeyButton
             key={`pdt-${index}`}

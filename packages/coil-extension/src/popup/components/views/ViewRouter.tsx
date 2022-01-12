@@ -9,7 +9,6 @@ import { CoilDiscoverView } from './CoilDiscoverView'
 import { CoilPopupView } from './CoilPopupView'
 import { MonetizedRouter } from './MonetizedRouter'
 import { UnmonetizedPageView } from './UnmonetizedPageView'
-import { TipRouter } from './TipRouter'
 
 export function ViewRouter(): React.ReactElement {
   const { validToken, user, monetized, coilSite } = useStore()
@@ -19,9 +18,13 @@ export function ViewRouter(): React.ReactElement {
 
   // Testing the new View structure
   // The NewExtension will replace ViewRouter in index.tsx -> should change name to App or Extension
-  if (user?.newUi) {
+  if (user?.tipSettings?.inTippingBeta) {
     return <NewExtension />
   }
+
+  //
+  // Legacy Views
+  //
 
   //
   // Invalid user views
@@ -51,12 +54,8 @@ export function ViewRouter(): React.ReactElement {
 
   // Monetized views
   if (monetized) {
-    const showNewTipUi = user?.tipSettings?.inTippingBeta
-    if (showNewTipUi) {
-      return <TipRouter /> // handles the tip views based on local state
-    } else {
-      return <MonetizedRouter /> // handles the monetized views based on local state
-    }
+    // Monetized Page
+    return <MonetizedRouter /> // handles the monetized views based on local state
   } else {
     // Non Monetized Page
     return <UnmonetizedPageView />
