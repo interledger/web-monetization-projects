@@ -84,8 +84,8 @@ const tipUserNewUi = {
   tipSettings: {
     inTippingBeta: true,
     minimumTipLimit: 1,
-    remainingDailyAmount: 100,
-    lastTippedAmountUSD: 2,
+    remainingDailyAmount: 10,
+    lastTippedAmountUSD: 25,
     hotkeyTipAmounts: [5, 10, 50]
   },
   paymentMethods: [
@@ -102,7 +102,8 @@ const tipUserNewUi = {
       type: 'tipCredit',
       details: null
     }
-  ]
+  ],
+  tipCredits: 5
 }
 
 function mockState(partial: Partial<PopupStateType>): PopupStateType {
