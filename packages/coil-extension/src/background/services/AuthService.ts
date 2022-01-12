@@ -11,6 +11,7 @@ import { formatTipSettings } from '../util/formatters'
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
+import { TippingService } from './TippingService'
 
 /**
  ## Extension Authentication
@@ -68,7 +69,8 @@ export class AuthService extends EventEmitter {
     @logger('AuthService')
     private log: Logger,
     private siteToken: SiteToken,
-    private activeTabs: ActiveTabLogger
+    private activeTabs: ActiveTabLogger,
+    private tippingService: TippingService
   ) {
     super()
   }
@@ -191,15 +193,7 @@ export class AuthService extends EventEmitter {
       // remaining daily amount: whoami > tipping > limitRemaining
 
       if (this.store.user) {
-        this.store.user = {
-          ...this.store.user,
-          tipSettings: await formatTipSettings(
-            this.client,
-            token,
-            this.store.user?.tipping?.limitRemaining,
-            this.store.user?.tipping?.lastTippedAmount
-          )
-        }
+        await this.tippingService.updateTipSettings(token)
       }
       return token
     } else {
@@ -217,15 +211,9 @@ export class AuthService extends EventEmitter {
       // minimum tip limit: minTipLimit > minTipLimit
       // remaining daily amount: whoami > tipping > limitRemaining
       if (this.store.user) {
-        this.store.user = {
-          ...this.store.user,
-          tipSettings: await formatTipSettings(
-            this.client,
-            resp.data.refreshToken.token,
-            this.store.user?.tipping?.limitRemaining,
-            this.store.user?.tipping?.lastTippedAmount
-          )
-        }
+        await this.tippingService.updateTipSettings(
+          resp.data.refreshToken.token
+        )
       }
       return resp.data.refreshToken.token
     } else {

@@ -1,16 +1,13 @@
-import { GraphQlClient } from '@coil/client'
-
 export async function formatTipSettings(
-  client: GraphQlClient,
   token: string,
   limitRemaining: any,
-  lastTippedAmount: any
+  lastTippedAmount: any,
+  featureFlagResp: any,
+  minTipLimitResp: any
 ) {
   // convert all tip settings from cents to dollars
   // set default hotkey tip amounts since we don't yet get them from the user
   // add feature flag and minTipLimit
-  const featureFlagResp = await client.featureEnabled(token, 'tipping-beta')
-  const minTipLimitResp = await client.minTipLimit(token)
   return {
     inTippingBeta: featureFlagResp.data.featureEnabled,
     minimumTipLimit: minTipLimitResp.data.minTipLimit.minTipLimit
