@@ -50,7 +50,7 @@ export const TipView: React.FC = () => {
         <Box mt={4} mb={1} flex='1'>
           <TipAmountFeedback />
         </Box>
-        <Box mb={2}>
+        <Box mb={1}>
           <CtaButton onClick={handleTip} disabled={buttonDisabled}>
             Send $
             {Number.isInteger(currentTipAmount)

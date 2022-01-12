@@ -45,13 +45,13 @@ const tipUserNewUi = {
   email: 'mock-email@coil.com',
   profilePicture: 'https://cdn.coil.com/images/msPiV_0ZS928Fc-HJcdVAw.jpg',
   customerId: 'cus_EmQtvoQVyJgZ75',
-  subscription: { active: true },
+  subscription: { active: false },
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
     inTippingBeta: true,
     minimumTipLimit: 1,
-    remainingDailyAmount: 30,
+    remainingDailyAmount: 100,
     lastTippedAmountUSD: 25,
     hotkeyTipAmounts: [5, 10, 50]
   },
@@ -81,7 +81,7 @@ const tipUserNewUiCompare = {
   email: 'mock-email@coil.com',
   profilePicture: 'https://cdn.coil.com/images/msPiV_0ZS928Fc-HJcdVAw.jpg',
   customerId: 'cus_EmQtvoQVyJgZ75',
-  subscription: { active: true },
+  subscription: { active: false },
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {

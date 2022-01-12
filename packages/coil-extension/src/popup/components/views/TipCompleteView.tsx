@@ -18,7 +18,7 @@ const BodyWrapper = styled('div')(({ url }: { url: string }) => ({
   display: 'flex',
   flexDirection: 'column',
   backgroundImage: `url("${url}")`, //* the 'random' prop is needed so the gif animation replays every load
-  backgroundSize: '105% 105%',
+  backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'bottom',
   textAlign: 'center',
@@ -58,7 +58,7 @@ export const TipCompleteView = (): React.ReactElement => {
     <>
       <BodyWrapper url={getBackgroundImageUrl()}>
         <Header />
-        <Box mt={5} mb={3} px={3}>
+        <Box mt={5} mb={2} px={3}>
           <FitTextWrapper defaultFontSize={80}>
             $
             {Number.isInteger(currentTipAmount)

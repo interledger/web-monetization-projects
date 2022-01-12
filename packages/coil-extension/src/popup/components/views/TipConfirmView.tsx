@@ -179,7 +179,7 @@ export const TipConfirmView = (): React.ReactElement => {
             {isSubmitting ? 'Sending...' : submitError ? 'Retry' : 'Confirm'}
           </CtaButton>
         </Box>
-        <Box mt='10px' mb='20px'>
+        <Box mt={1} mb='14px'>
           <CancelButton onClick={handleUndo} disabled={isSubmitting}>
             Cancel
           </CancelButton>

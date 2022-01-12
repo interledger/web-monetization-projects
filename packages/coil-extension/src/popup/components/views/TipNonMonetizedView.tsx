@@ -50,7 +50,7 @@ export const TipNonMonetizedView: React.FC = () => {
         <Box mt={4} mb={1} flex='1'>
           <TipAmountFeedback />
         </Box>
-        <Box mb={2}>
+        <Box mb={1}>
           <Button disabled={true}>
             This site can&apos;t receive Coil tips
           </Button>
