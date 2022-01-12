@@ -3,6 +3,7 @@ import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
 import { useStore } from '../context/storeContext'
+import { getCreditCardFromPaymentMethods } from '../../util/getCreditCardFromPaymentMethods'
 
 import { CreditCardIcon } from './icons/CreditCardIcon'
 
@@ -71,11 +72,8 @@ export const TipPaymentDebits = (
   const creditCardChargeInDollars = (creditCardCharge / 100).toFixed(2)
 
   const creditCard = useMemo(() => {
-    return user?.paymentMethods?.find(method => {
-      if (method?.type === 'stripe') {
-        return method
-      }
-    })
+    const card = getCreditCardFromPaymentMethods(user?.paymentMethods)
+    return card
   }, [user])
 
   return (

@@ -4,6 +4,7 @@ import { Box, Typography, styled, Theme } from '@material-ui/core'
 import { useTip } from '../context/tipContext'
 import { useStore } from '../context/storeContext'
 import { useHost } from '../context/popupHostContext'
+import { getCreditCardFromPaymentMethods } from '../../util/getCreditCardFromPaymentMethods'
 
 import { LinkUnderlined } from './LinkUnderlined'
 
@@ -32,12 +33,7 @@ export const TipAmountFeedback = () => {
     runtime: { tabOpener }
   } = useHost()
 
-  // todo: this is done frequently enough it should become a util
-  const creditCard = paymentMethods?.find(method => {
-    if (method?.type === 'stripe') {
-      return method
-    }
-  })
+  const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
   const getChargeAmountDisplay = () => {
     let charge = tipCredits - currentTipAmount

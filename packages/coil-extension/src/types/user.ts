@@ -34,7 +34,7 @@ export interface User {
   paymentMethods?: Array<IUserPaymentMethod>
 }
 
-interface IUserPaymentMethod {
+export interface IUserPaymentMethod {
   id: string
   type: string
   details: {

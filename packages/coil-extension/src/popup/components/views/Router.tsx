@@ -15,6 +15,7 @@ import { StreamingCoilDiscoverView } from './StreamingCoilDiscoverView'
 import { TipView } from './TipView'
 import { TipConfirmView } from './TipConfirmView'
 import { TipCompleteView } from './TipCompleteView'
+import { TipNonMonetizedView } from './TipNonMonetizedView'
 
 //
 // Component
@@ -31,6 +32,13 @@ export const Router = () => {
     // /tipping
     case ROUTES.tipping: {
       // /tipping
+
+      // Tipping - non monetized site | Coil site
+      if (!monetized) {
+        return <TipNonMonetizedView />
+      }
+
+      // Tipping - monetized sites
       return <TipView />
     }
     // /tipping/confirm
