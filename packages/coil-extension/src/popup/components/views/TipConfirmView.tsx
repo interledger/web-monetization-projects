@@ -157,7 +157,7 @@ export const TipConfirmView = (): React.ReactElement => {
         >
           Pay with
         </Box>
-        <Box mt={2} flex='1' display='flex'>
+        <Box mt={1} flex='1' display='flex'>
           {submitError ? (
             <Box
               width='100%'
