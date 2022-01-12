@@ -1,15 +1,6 @@
 import React, { createContext, useContext, useState, useMemo } from 'react'
 import { StorageService } from '@webmonetization/wext/services'
 
-/*
- maxAllowableTipAmount -> needed to easily disable tip adjustments or submission
-  - IncDecButton
-  - AmountInput > handleInputChange
-  - HotkeyAmountButton
-  - TipView > Send Button
-  - TipAmountFeedback
-*/
-
 //
 // Models
 //
@@ -40,30 +31,28 @@ export const TipProvider: React.FC<ITipProvider> = props => {
       remainingDailyAmount = 0
     } = {},
     paymentMethods,
-    tipCredits = 10
+    tipCredits = 0
   } = userObject ?? {}
 
-  const creditCard = useMemo(() => {
-    return paymentMethods?.find((method: any) => {
-      if (method?.type === 'stripe') {
-        return method
-      }
-    })
-  }, [paymentMethods])
+  const creditCard = paymentMethods?.find((method: any) => {
+    if (method?.type === 'stripe') {
+      return method
+    }
+  })
 
   // todo: this could be a util instead of storing in state if initializing with the correct values doesn't work
   // todo: possibly move to background in formatTipSettings util when done
-  const calculateMax = () => {
+  const calculateMax = (
+    inTippingBeta: boolean,
+    hasCreditCard: boolean,
+    tipCredits: number,
+    remainingDailyAmount: number
+  ) => {
     let newMax = 0
-    if (inTippingBeta == true) {
-      // if the user has a cc on file
-      // only true limit is daily limit
-      // otherwise limit is tip credits
-      if (creditCard) {
-        newMax = remainingDailyAmount
-      } else {
-        newMax = tipCredits
-      }
+    if (inTippingBeta && creditCard) {
+      // if the user is in the beta they are allowed to use a cc
+      // if the user has a cc the only limit that matters is the max daily
+      newMax = remainingDailyAmount
     } else {
       // user is not in beta and can only tip with credits
       // if credits is less than daily limit -> limit is credits
@@ -77,10 +66,16 @@ export const TipProvider: React.FC<ITipProvider> = props => {
     return newMax
   }
 
-  const max = calculateMax() // possibly move to background in formatTipSettings util when done
+  const max = calculateMax(
+    inTippingBeta,
+    !!creditCard,
+    tipCredits,
+    remainingDailyAmount
+  ) // possibly move to background in formatTipSettings util when done
+  const initialTipAmount = max < lastTippedAmountUSD ? max : lastTippedAmountUSD
 
   const [currentTipAmount, setCurrentTipAmount] =
-    useState<number>(lastTippedAmountUSD)
+    useState<number>(initialTipAmount)
   const [maxAllowableTipAmount, setMaxAllowableTipAmount] =
     useState<number>(max) // possibly move to background in formatTipSettings util when done
 

@@ -15,6 +15,7 @@ import { useHost } from '../../context/popupHostContext'
 import { useTip } from '../../context/tipContext'
 import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../constants'
+import { CtaButton } from '../CtaButton'
 
 //
 // Style
@@ -24,30 +25,6 @@ const ComponentWrapper = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   padding: '0px 24px'
-})
-
-const Button = styled('button')({
-  position: 'relative',
-  overflow: 'hidden',
-  cursor: 'pointer',
-  width: '100%',
-  height: '48px',
-  backgroundColor: Colors.Grey800,
-  color: '#FFFFFF',
-  fontFamily: 'CircularStd',
-  fontWeight: 'bold',
-  fontSize: '16px',
-  letterSpacing: '.5px',
-  border: 'none',
-  borderRadius: '100px',
-  '&:hover': {
-    backgroundColor: '#000000'
-  },
-  '&:disabled': {
-    cursor: 'not-allowed',
-    backgroundColor: Colors.Grey500,
-    color: Colors.Grey100
-  }
 })
 
 const CancelButton = styled('button')({
@@ -198,9 +175,9 @@ export const TipConfirmView = (): React.ReactElement => {
           )}
         </Box>
         <Box mt={1}>
-          <Button onClick={handleSubmit} disabled={isSubmitting}>
+          <CtaButton onClick={handleSubmit} disabled={isSubmitting}>
             {isSubmitting ? 'Sending...' : submitError ? 'Retry' : 'Confirm'}
-          </Button>
+          </CtaButton>
         </Box>
         <Box mt='10px' mb='20px'>
           <CancelButton onClick={handleUndo} disabled={isSubmitting}>

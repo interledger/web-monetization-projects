@@ -11,8 +11,8 @@ import { LinkUnderlined } from './LinkUnderlined'
 // Styles
 //
 const ChargeAmount = styled('strong')(
-  ({ theme, isZero }: { theme: Theme; isZero?: boolean }) => ({
-    color: isZero ? theme.palette.Grey200 : theme.palette.Grey800
+  ({ theme, iszero }: { theme: Theme; iszero?: boolean }) => ({
+    color: iszero ? theme.palette.Grey200 : theme.palette.Grey800
   })
 )
 
@@ -23,14 +23,21 @@ export const TipAmountFeedback = () => {
   const { currentTipAmount } = useTip()
   const { user } = useStore()
   const {
+    paymentMethods,
+    tipCredits,
+    tipSettings: { inTippingBeta = false, remainingDailyAmount = 0 } = {}
+  } = user ?? {}
+  const {
     coilDomain,
     runtime: { tabOpener }
   } = useHost()
 
-  const tipCredits = 2
-  const inTippingBeta = false
-  const hasCreditCard = false
-  const remainingDailyLimit = 4
+  // todo: this is done frequently enough it should become a util
+  const creditCard = paymentMethods?.find(method => {
+    if (method?.type === 'stripe') {
+      return method
+    }
+  })
 
   const getChargeAmountDisplay = () => {
     let charge = tipCredits - currentTipAmount
@@ -38,7 +45,7 @@ export const TipAmountFeedback = () => {
 
     // for amounts greater than the available tip credits require that the user is
     // also in the beta and has a credit card on file
-    if (currentTipAmount > tipCredits && inTippingBeta && hasCreditCard) {
+    if (currentTipAmount > tipCredits && inTippingBeta && creditCard) {
       charge = currentTipAmount - tipCredits
       chargeDisplay = 'Credit card charge:'
     }
@@ -46,14 +53,14 @@ export const TipAmountFeedback = () => {
     return (
       <Typography variant='subtitle1'>
         {chargeDisplay}{' '}
-        <ChargeAmount isZero={charge == 0}>${charge.toFixed(2)}</ChargeAmount>
+        <ChargeAmount iszero={charge == 0}>${charge.toFixed(2)}</ChargeAmount>
       </Typography>
     )
   }
 
   const getRestrictedMessage = () => {
     let prompt = null
-    if (currentTipAmount >= remainingDailyLimit) {
+    if (currentTipAmount >= remainingDailyAmount) {
       prompt = (
         <Typography variant='subtitle1'>
           Daily limit reached.{' '}
@@ -63,7 +70,7 @@ export const TipAmountFeedback = () => {
         </Typography>
       )
     }
-    if (currentTipAmount >= tipCredits && inTippingBeta && !hasCreditCard) {
+    if (currentTipAmount >= tipCredits && inTippingBeta && !creditCard) {
       prompt = (
         <Typography variant='subtitle1'>
           <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/billing`)}>
