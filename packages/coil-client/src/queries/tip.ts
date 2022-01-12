@@ -9,10 +9,12 @@ export const tipQuery = `mutation tip($input: TipInput!) {
 }`
 
 export const tipSettingsQuery = `
-  whoami {
-    tipping {
-      lastTippedAmount
-      limitRemaining
+  query updateTipSettings {
+    whoami {
+      tipping {
+        lastTippedAmount
+         limitRemaining
+      }
     }
   }
 `
@@ -26,9 +28,11 @@ export interface TipData {
 }
 
 export interface TipSettingsData {
-  tipping: {
-    lastTippedAmount: number
-    limitRemaining: number
+  whoami: {
+    tipping: {
+      lastTippedAmount: number
+      limitRemaining: number
+    }
   }
 }
 
@@ -64,15 +68,15 @@ export async function tip(
 export async function tipSettings(
   this: GraphQlClient,
   token: string
-): Promise<TipSettingsData['tipping']> {
+): Promise<TipSettingsData['whoami']['tipping']> {
   const message = await this.query<TipSettingsData>({
     query: tipSettingsQuery,
     token
   })
 
-  if (!message.data?.tipping) {
+  if (!message.data?.whoami?.tipping) {
     throw new Error(`graphql query failed. query=\`${tipSettingsQuery}\``)
   }
 
-  return message.data?.tipping
+  return message.data?.whoami?.tipping
 }

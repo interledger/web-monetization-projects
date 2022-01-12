@@ -41,8 +41,8 @@ export class TippingService extends EventEmitter {
           ...this.store.user,
           tipSettings: await formatTipSettings(
             token,
-            this.store.user?.tipping?.limitRemaining,
-            this.store.user?.tipping?.lastTippedAmount,
+            resp.limitRemaining,
+            resp.lastTippedAmount,
             await this.client.featureEnabled(token, 'tipping-beta'),
             await this.client.minTipLimit(token)
           )

@@ -789,12 +789,17 @@ export class BackgroundScript {
     if (!streamId) return { success: false }
 
     try {
+      const token = this.auth.getStoredToken()
+      if (!token) {
+        return { success: false }
+      }
       const message = await this.tippingService.sendTip(
         tabId,
         streamId,
         this.streams.getStream(streamId),
-        this.auth.getStoredToken()
+        token
       )
+      await this.tippingService.updateTipSettings(token)
       this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
       return { success: true }
     } catch (e) {
@@ -838,6 +843,8 @@ export class BackgroundScript {
       if (tipResult.success) {
         // if succeeded, refresh tip settings
         await this.tippingService.updateTipSettings(token)
+      } else {
+        return { success: false, message: 'Failed tip' }
       }
       return tipResult
     } catch (e) {
