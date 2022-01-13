@@ -15,8 +15,8 @@ import { timeout } from '../../content/util/timeout'
 
 import { logger, Logger } from './utils'
 
-import GetFrameResultDetails = chrome.webNavigation.GetFrameResultDetails
-import MessageSender = chrome.runtime.MessageSender
+type GetFrameResultDetails = chrome.webNavigation.GetFrameResultDetails
+type MessageSender = chrome.runtime.MessageSender
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface Frame extends Record<string, any> {

@@ -321,7 +321,7 @@ export class BackgroundScript {
         sendResponse(this.monetization.resumeWebMonetization(request, sender))
         break
       case 'stopWebMonetization':
-        sendResponse(this.monetization.stopWebMonetization(sender))
+        sendResponse(this.monetization.stopWebMonetization(request, sender))
         break
       case 'isRateLimited':
         sendResponse(await this.isRateLimited())

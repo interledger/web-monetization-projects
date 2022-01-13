@@ -10,7 +10,8 @@ import {
   ResumeWebMonetization,
   SetMonetizationState,
   SetStreamControls,
-  StartWebMonetization
+  StartWebMonetization,
+  StopWebMonetization
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { getFrameSpec, getTab } from '../../util/tabs'
@@ -105,7 +106,7 @@ export class MonetizationService {
           receipt: details.receipt
         }
       }
-      this.handleMonetizedSite(frame, details.initiatingUrl, details)
+      this.handleMonetizationProgress(frame, details.initiatingUrl, details)
       // We don't want to send this progress event if the link has already
       // errored.
       if (this.spspState.sendProgressEvent(details.requestId)) {
@@ -114,7 +115,7 @@ export class MonetizationService {
     })
   }
 
-  handleMonetizedSite(
+  handleMonetizationProgress(
     { tabId, frameId }: FrameSpec,
     url: string,
     packet: { sentAmount: string }
@@ -206,19 +207,18 @@ export class MonetizationService {
       return false
     }
 
+    const lastCommand =
+      this.tabStates.getFrameOrDefault(frame)[
+        `requestId-lastCommand-${requestId}`
+      ]?.command
+
     // Check that this startWebMonetization invocation is still valid before
     // we go ahead. Any operation that we `await`d on could have potentially
     // masked state changes. e.g. `getTokenMaybeRefreshAndStoreState`
     // (which will update `whoami`) which takes longer than it does to switch
     // out a monetization tag.
-    // TODO:WM2
-    const WM2 = request.data.tagType === 'link'
 
-    const frameOrDefault = this.tabStates.getFrameOrDefault(frame)
-    // TODO:WM2 this assumes the stop event from content script properly
-    // propagated to background script and caused the requestId to be deleted.
-    // I don't think that's the case??
-    if (!WM2 && !frameOrDefault[`requestId-lastCommand-${requestId}`]) {
+    if (lastCommand === 'stop') {
       // The pending message (if sent) will have been ignored on the content
       // script side in this case too, so there's no need to send a stop, as
       // will already have been stopped (for that id).
@@ -238,10 +238,6 @@ export class MonetizationService {
 
     // TODO:WM2
     // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    const lastCommand =
-      this.tabStates.getFrameOrDefault(frame)[
-        `requestId-lastCommand-${requestId}`
-      ]?.command
 
     if (lastCommand !== 'start' && lastCommand !== 'pause') {
       this.log('startWebMonetization cancelled via', lastCommand)
@@ -351,8 +347,8 @@ export class MonetizationService {
     )
   }
 
-  stopWebMonetization(sender: MessageSender) {
-    return this.doStopWebMonetization(getFrameSpec(sender))
+  stopWebMonetization(request: StopWebMonetization, sender: MessageSender) {
+    return this.stopWebMonetizationStream(request.data.requestId)
   }
 
   _closeStreams(tabId: number, frameId?: number) {
@@ -384,25 +380,25 @@ export class MonetizationService {
     this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
   }
 
-  doStopWebMonetization(frame: FrameSpec) {
-    const requestIds = this.assoc.getStreams(frame)
-
-    const closed = this._closeStreams(frame.tabId, frame.frameId)
-    // May be noop other side if stop monetization was initiated from
-    // ContentScript
-    requestIds.forEach(requestId => {
-      this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
-      this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
-    })
-
-    if (closed) {
-      this.tabStates.clearFrame(frame)
-    }
-    this.tabStates.reloadTabState({
-      from: 'stopWebMonetization'
-    })
-    return true
-  }
+  // doStopWebMonetization(frame: FrameSpec) {
+  //   const requestIds = this.assoc.getStreams(frame)
+  //
+  //   const closed = this._closeStreams(frame.tabId, frame.frameId)
+  //   // May be noop other side if stop monetization was initiated from
+  //   // ContentScript
+  //   requestIds.forEach(requestId => {
+  //     this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
+  //     this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
+  //   })
+  //
+  //   if (closed) {
+  //     this.tabStates.clearFrame(frame)
+  //   }
+  //   this.tabStates.reloadTabState({
+  //     from: 'stopWebMonetization'
+  //   })
+  //   return true
+  // }
 
   sendSetMonetizationStateMessage(
     { tabId, frameId }: FrameSpec,
