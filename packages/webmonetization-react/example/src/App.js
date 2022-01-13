@@ -8,10 +8,18 @@ import Conditional from './Conditional'
 const App = () => (
   <BrowserRouter>
     <Switch>
-      <Route path='/details' component={Details} />
-      <Route path='/hidden' component={Hidden} />
-      <Route path='/conditional' component={Conditional} />
-      <Route component={List} />
+      <Route path='/details'>
+        <Details />
+      </Route>
+      <Route path='/hidden'>
+        <Hidden />
+      </Route>
+      <Route path='/conditional'>
+        <Conditional />
+      </Route>
+      <Route>
+        <List />
+      </Route>
     </Switch>
   </BrowserRouter>
 )
