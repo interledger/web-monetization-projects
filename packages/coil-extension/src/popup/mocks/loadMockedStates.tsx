@@ -36,39 +36,6 @@ const user = {
   currencyPreferences: { code: 'USD', scale: 9 }
 }
 
-const tipUser = {
-  id: 'cjmbxifo0leaf0711ilgecwdb',
-  canTip: true,
-  fullName: 'Nicholas Dudfield',
-  email: 'mock-email@coil.com',
-  customerId: 'cus_EmQtvoQVyJgZ75',
-  subscription: { active: true },
-  invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
-  currencyPreferences: { code: 'USD', scale: 9 },
-  tipSettings: {
-    inTippingBeta: true,
-    minimumTipLimit: 1,
-    remainingDailyAmount: 100,
-    lastTippedAmountUSD: 2,
-    hotkeyTipAmounts: [5, 10, 50]
-  },
-  paymentMethods: [
-    {
-      id: 'test-id-stripe',
-      type: 'stripe',
-      details: {
-        last4: '5678',
-        brandCode: 'MasterCard'
-      }
-    },
-    {
-      id: 'test-id-tip',
-      type: 'tipCredit',
-      details: null
-    }
-  ]
-}
-
 const tipUserNewUi = {
   newUi: true,
   id: 'cjmbxifo0leaf0711ilgecwdb',
@@ -78,14 +45,14 @@ const tipUserNewUi = {
   email: 'mock-email@coil.com',
   profilePicture: 'https://cdn.coil.com/images/msPiV_0ZS928Fc-HJcdVAw.jpg',
   customerId: 'cus_EmQtvoQVyJgZ75',
-  subscription: { active: true },
+  subscription: { active: false },
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
     inTippingBeta: true,
     minimumTipLimit: 1,
     remainingDailyAmount: 100,
-    lastTippedAmountUSD: 2,
+    lastTippedAmountUSD: 25,
     hotkeyTipAmounts: [5, 10, 50]
   },
   paymentMethods: [
@@ -102,7 +69,44 @@ const tipUserNewUi = {
       type: 'tipCredit',
       details: null
     }
-  ]
+  ],
+  tipCredits: 20
+}
+const tipUserNewUiCompare = {
+  newUi: true,
+  id: 'cjmbxifo0leaf0711ilgecwdb',
+  canTip: true,
+  fullName: 'Michael Will',
+  shortName: 'mwill',
+  email: 'mock-email@coil.com',
+  profilePicture: 'https://cdn.coil.com/images/msPiV_0ZS928Fc-HJcdVAw.jpg',
+  customerId: 'cus_EmQtvoQVyJgZ75',
+  subscription: { active: false },
+  invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
+  currencyPreferences: { code: 'USD', scale: 9 },
+  tipSettings: {
+    inTippingBeta: true,
+    minimumTipLimit: 1,
+    remainingDailyAmount: 30,
+    lastTippedAmountUSD: 25,
+    hotkeyTipAmounts: [5, 10, 50]
+  },
+  paymentMethods: [
+    {
+      id: 'test-id-stripe',
+      type: 'stripe',
+      details: {
+        last4: '5678',
+        brandCode: 'MasterCard'
+      }
+    },
+    {
+      id: 'test-id-tip',
+      type: 'tipCredit',
+      details: null
+    }
+  ],
+  tipCredits: 20
 }
 
 function mockState(partial: Partial<PopupStateType>): PopupStateType {
@@ -119,6 +123,26 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
   return { ...ret, ...partial }
 }
 
+const userCanTipNewUi = mockState({
+  monetized: true,
+  // coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
+  // coilSite: 'https://coil.com/discover',
+  monetizedTotal: 10854,
+  user: tipUserNewUi,
+  validToken: true,
+  adapted: false
+})
+
+const userCanTipNewUiCompare = mockState({
+  monetized: false,
+  // coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
+  // coilSite: 'https://coil.com/discover',
+  monetizedTotal: 10854,
+  user: tipUserNewUiCompare,
+  validToken: true,
+  adapted: false
+})
+
 const notSupported = mockState({
   monetizedTotal: 0,
   user: user,
@@ -131,25 +155,6 @@ const payingCoilArticle = mockState({
   coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
   monetizedTotal: 10854,
   user: user,
-  validToken: true,
-  adapted: false
-})
-
-const userCanTip = mockState({
-  monetized: true,
-  coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
-  monetizedTotal: 10854,
-  user: tipUser,
-  validToken: true,
-  adapted: false
-})
-
-const userCanTipNewUi = mockState({
-  monetized: true,
-  // coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
-  // coilSite: 'https://coil.com/discover',
-  monetizedTotal: 10854,
-  user: tipUserNewUi,
   validToken: true,
   adapted: false
 })
@@ -217,9 +222,9 @@ const aliceUnsubscribed = mockState({
 
 const MOCK_STATES = [
   { name: 'New Extension UI', state: userCanTipNewUi },
+  { name: 'New Extension UI Compare', state: userCanTipNewUiCompare },
   { name: 'Paying Coil Article', state: payingCoilArticle },
   { name: 'Not Supported', state: notSupported },
-  { name: 'Tipping', state: userCanTip },
   { name: 'Start Discovering', state: startDiscovering },
   { name: 'Paying', state: payingNonCoilSite },
   { name: 'Welcome To Coil', state: welcomeToCoil },

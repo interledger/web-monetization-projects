@@ -32,9 +32,10 @@ export interface User {
     hotkeyTipAmounts: Array<number>
   }
   paymentMethods?: Array<IUserPaymentMethod>
+  tipCredits?: number // todo might need to update once we connect to api
 }
 
-interface IUserPaymentMethod {
+export interface IUserPaymentMethod {
   id: string
   type: string
   details: {

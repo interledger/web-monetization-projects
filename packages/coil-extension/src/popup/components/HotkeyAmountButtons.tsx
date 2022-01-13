@@ -7,8 +7,6 @@ import { useTip } from '../context/tipContext'
 import { useRouter } from '../context/routerContext'
 import { ROUTES } from '../constants'
 
-import { TipProcessStep } from './views/TipRouter'
-
 //
 // Styles
 //
@@ -56,8 +54,8 @@ const HotkeyButton = styled('button')({
 export const HotkeyAmountButtons = (): React.ReactElement => {
   const router = useRouter()
   const { user } = useStore()
-  const { hotkeyTipAmounts, remainingDailyAmount = 0 } = user?.tipSettings || {}
-  const { setCurrentTipAmount } = useTip()
+  const { hotkeyTipAmounts } = user?.tipSettings || {}
+  const { setCurrentTipAmount, maxAllowableTipAmount } = useTip()
 
   const handleSelectAmount = (amount: number) => {
     setCurrentTipAmount(amount)
@@ -69,7 +67,7 @@ export const HotkeyAmountButtons = (): React.ReactElement => {
         return (
           <HotkeyButton
             key={`pdt-${index}`}
-            disabled={amount > remainingDailyAmount}
+            disabled={amount > maxAllowableTipAmount}
             onClick={() => handleSelectAmount(amount)}
           >
             ${Number.isInteger(amount) ? amount : amount.toFixed(2)}

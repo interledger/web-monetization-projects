@@ -4,12 +4,7 @@ import { styled, Box } from '@material-ui/core'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { AmountInput } from '../AmountInput'
 import { HotkeyAmountButtons } from '../HotkeyAmountButtons'
-import { Colors } from '../../../shared-theme/colors'
-import { useTip } from '../../context/tipContext'
-import { useRouter } from '../../context/routerContext'
-import { ROUTES } from '../../constants'
 import { TipAmountFeedback } from '../TipAmountFeedback'
-import { CtaButton } from '../CtaButton'
 
 //
 // Styles
@@ -21,23 +16,28 @@ const ComponentWrapper = styled('div')({
   flexDirection: 'column'
 })
 
+const Button = styled('button')(({ theme }) => ({
+  cursor: 'pointer',
+  width: '100%',
+  height: '48px',
+  backgroundColor: theme.palette.Grey50,
+  color: theme.palette.Grey500,
+  fontFamily: 'CircularStd',
+  fontSize: '14px',
+  letterSpacing: '.5px',
+  border: 'none',
+  borderRadius: '100px',
+  '&:disabled': {
+    cursor: 'not-allowed',
+    backgroundColor: theme.palette.Grey50,
+    color: theme.palette.Grey500
+  }
+}))
+
 //
 // Component
 //
-export const TipView: React.FC = () => {
-  const { currentTipAmount, maxAllowableTipAmount } = useTip()
-  const router = useRouter()
-
-  const handleTip = () => {
-    router.to(ROUTES.tippingConfirm)
-  }
-
-  const buttonDisabled =
-    currentTipAmount > maxAllowableTipAmount ||
-    currentTipAmount == 0 ||
-    maxAllowableTipAmount == 0
-
-  // Render
+export const TipNonMonetizedView: React.FC = () => {
   return (
     <NewHeaderFooterLayout title='Support This Site'>
       <ComponentWrapper>
@@ -51,12 +51,9 @@ export const TipView: React.FC = () => {
           <TipAmountFeedback />
         </Box>
         <Box mb={1}>
-          <CtaButton onClick={handleTip} disabled={buttonDisabled}>
-            Send $
-            {Number.isInteger(currentTipAmount)
-              ? currentTipAmount
-              : currentTipAmount.toFixed(2)}
-          </CtaButton>
+          <Button disabled={true}>
+            This site can&apos;t receive Coil tips
+          </Button>
         </Box>
       </ComponentWrapper>
     </NewHeaderFooterLayout>

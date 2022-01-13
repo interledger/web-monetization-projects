@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState, useMemo } from 'react'
 import { StorageService } from '@webmonetization/wext/services'
 
+import { getCreditCardFromPaymentMethods } from '../../util/getCreditCardFromPaymentMethods'
+
 //
 // Models
 //
@@ -20,7 +22,9 @@ const TipContext = createContext({} as ITipContext)
 // Provider
 export const TipProvider: React.FC<ITipProvider> = props => {
   const { storage, children } = props
+
   const userObject = storage.get('user')
+  const monetized = storage.get('monetized')
 
   // todo: need to add tipCredits and paymentMethods to background queries
   // todo: when nathan and brandon are done with COIL-1642 and COIL-1674
@@ -31,30 +35,31 @@ export const TipProvider: React.FC<ITipProvider> = props => {
       remainingDailyAmount = 0
     } = {},
     paymentMethods,
-    tipCredits = 10
+    tipCredits = 0
   } = userObject ?? {}
 
-  const creditCard = useMemo(() => {
-    return paymentMethods?.find((method: any) => {
-      if (method?.type === 'stripe') {
-        return method
-      }
-    })
-  }, [paymentMethods])
+  const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
   // todo: this could be a util instead of storing in state if initializing with the correct values doesn't work
   // todo: possibly move to background in formatTipSettings util when done
-  const calculateMax = () => {
+  //* the maxAllowableTip is primarily responsible for disabling tipping inputs
+  const calculateMax = (
+    monetized: boolean,
+    inTippingBeta: boolean,
+    hasCreditCard: boolean,
+    tipCredits: number,
+    remainingDailyAmount: number
+  ) => {
     let newMax = 0
-    if (inTippingBeta == true) {
-      // if the user has a cc on file
-      // only true limit is daily limit
-      // otherwise limit is tip credits
-      if (creditCard) {
-        newMax = remainingDailyAmount
-      } else {
-        newMax = tipCredits
-      }
+    if (!monetized) {
+      // if the site is not monetized, the user is not allowed to tip, therefore
+      // the max is zero
+      return newMax
+    }
+    if (inTippingBeta && hasCreditCard) {
+      // if the user is in the beta they are allowed to use a cc
+      // if the user has a cc the only limit that matters is the max daily
+      newMax = remainingDailyAmount
     } else {
       // user is not in beta and can only tip with credits
       // if credits is less than daily limit -> limit is credits
@@ -68,10 +73,17 @@ export const TipProvider: React.FC<ITipProvider> = props => {
     return newMax
   }
 
-  const max = calculateMax() // possibly move to background in formatTipSettings util when done
+  const max = calculateMax(
+    monetized,
+    inTippingBeta,
+    !!creditCard,
+    tipCredits,
+    remainingDailyAmount
+  ) // possibly move to background in formatTipSettings util when done
+  const initialTipAmount = max < lastTippedAmountUSD ? max : lastTippedAmountUSD
 
   const [currentTipAmount, setCurrentTipAmount] =
-    useState<number>(lastTippedAmountUSD)
+    useState<number>(initialTipAmount)
   const [maxAllowableTipAmount, setMaxAllowableTipAmount] =
     useState<number>(max) // possibly move to background in formatTipSettings util when done
 

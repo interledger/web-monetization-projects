@@ -43,12 +43,14 @@ export const StreamingCoilView = () => {
       >
         Welcome{firstName ? `, ${firstName}` : ''}
       </Typography>
-      <Typography variant='subtitle1' align='center'>
-        Explore the world of web monetized
-        <br />
-        content on our Discover page
-      </Typography>
-      <Box mt={2} px={3}>
+      <Box flex='1'>
+        <Typography variant='subtitle1' align='center'>
+          Explore the world of web monetized
+          <br />
+          content on our Discover page
+        </Typography>
+      </Box>
+      <Box mt={2} mb={1} px={3}>
         <CtaButton onClick={onClick}>Discover now</CtaButton>
       </Box>
     </NewHeaderFooterLayout>

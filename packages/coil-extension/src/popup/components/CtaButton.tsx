@@ -19,7 +19,7 @@ export const CtaButton = styled('button')(({ theme }: { theme: Theme }) => ({
   },
   '&:disabled': {
     cursor: 'not-allowed',
-    backgroundColor: theme.palette.Grey500,
-    color: theme.palette.Grey100
+    backgroundColor: theme.palette.Grey100,
+    color: theme.palette.White
   }
 }))
