@@ -73,7 +73,7 @@ const tipUserNewUi = {
   newUi: true,
   id: 'cjmbxifo0leaf0711ilgecwdb',
   canTip: true,
-  fullName: 'Mike Will',
+  fullName: 'Michael Will',
   shortName: 'mwill',
   email: 'mock-email@coil.com',
   profilePicture: 'https://cdn.coil.com/images/msPiV_0ZS928Fc-HJcdVAw.jpg',
@@ -146,7 +146,8 @@ const userCanTip = mockState({
 
 const userCanTipNewUi = mockState({
   monetized: true,
-  coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
+  // coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
+  // coilSite: 'https://coil.com/discover',
   monetizedTotal: 10854,
   user: tipUserNewUi,
   validToken: true,
