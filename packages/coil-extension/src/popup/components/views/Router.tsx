@@ -5,7 +5,6 @@ import React from 'react'
 import { useRouter } from '../../context/routerContext'
 import { useStore } from '../../context/storeContext'
 import { ROUTES } from '../../constants'
-import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 
 import { SettingsView } from './SettingsView'
 import { StreamingWebMonetizedView } from './StreamingWebMonitizedView'
@@ -13,6 +12,9 @@ import { StreamingNotWebMonetizedView } from './StreamingNotWebMonetizedView'
 import { StreamingNoMembershipView } from './StreamingNoMembershipView'
 import { StreamingCoilView } from './StreamingCoilView'
 import { StreamingCoilDiscoverView } from './StreamingCoilDiscoverView'
+import { TipView } from './TipView'
+import { TipConfirmView } from './TipConfirmView'
+import { TipCompleteView } from './TipCompleteView'
 
 //
 // Component
@@ -28,32 +30,18 @@ export const Router = () => {
     }
     // /tipping
     case ROUTES.tipping: {
-      return (
-        <NewHeaderFooterLayout title='Tip This Site'>
-          <div>Tipping</div>
-          <button onClick={() => router.to(ROUTES.tippingConfirm)}>next</button>
-        </NewHeaderFooterLayout>
-      )
+      // /tipping
+      return <TipView />
     }
     // /tipping/confirm
     case ROUTES.tippingConfirm: {
-      return (
-        <div>
-          tipping confirm
-          <button onClick={() => router.to(ROUTES.tippingComplete)}>
-            next
-          </button>
-        </div>
-      )
+      // /tipping/confirm
+      return <TipConfirmView />
     }
     // /tipping/complete
     case ROUTES.tippingComplete: {
-      return (
-        <NewHeaderFooterLayout>
-          <div>tipping complete</div>
-          <button onClick={() => router.to(ROUTES.streaming)}>home</button>
-        </NewHeaderFooterLayout>
-      )
+      // /tipping/complete
+      return <TipCompleteView />
     }
     // /streaming
     case ROUTES.streaming:

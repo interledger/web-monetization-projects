@@ -34,7 +34,7 @@ export const Header: React.FC = props => {
     <HeaderContainer>
       <CoilLogo />
       <HeaderTitle>{props.children}</HeaderTitle>
-      <CloseButton>
+      <CloseButton onClick={() => window.close()}>
         <CloseRoundedIcon />
       </CloseButton>
     </HeaderContainer>

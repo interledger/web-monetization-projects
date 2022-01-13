@@ -50,7 +50,7 @@ export interface ITipView {
 //
 export const TipRouter = () => {
   const [tipProcessStep, setTipProcessStep] = useState<TipProcessStep>(
-    TipProcessStep.TIP
+    TipProcessStep.TIP_COMPLETE
   )
   const { user } = useStore()
   const { minimumTipLimit, lastTippedAmountUSD } = user?.tipSettings || {}
@@ -66,28 +66,17 @@ export const TipRouter = () => {
   const [currentTipAmount, setCurrentTipAmount] =
     useState<number>(defaultTipAmount)
 
-  return (
-    <OuterDiv>
-      <AnimatePresence initial={false}>
-        {tipProcessStep === TipProcessStep.TIP && (
-          <TipView
-            key='tip'
-            currentTipAmount={currentTipAmount}
-            setCurrentTipAmount={setCurrentTipAmount}
-            setTipProcessStep={setTipProcessStep}
-          />
-        )}
-        {tipProcessStep === TipProcessStep.TIP_CONFIRM && (
-          <TipConfirmView
-            key='confirm'
-            currentTipAmount={currentTipAmount}
-            setTipProcessStep={setTipProcessStep}
-          />
-        )}
-        {tipProcessStep === TipProcessStep.TIP_COMPLETE && (
-          <TipCompleteView key='complete' currentTipAmount={currentTipAmount} />
-        )}
-      </AnimatePresence>
-    </OuterDiv>
-  )
+  if (tipProcessStep === TipProcessStep.TIP) {
+    return <TipView key='tip' />
+  }
+
+  if (tipProcessStep === TipProcessStep.TIP_CONFIRM) {
+    return <TipConfirmView key='confirm' />
+  }
+
+  if (tipProcessStep === TipProcessStep.TIP_COMPLETE) {
+    return <TipCompleteView key='complete' />
+  }
+
+  return null
 }

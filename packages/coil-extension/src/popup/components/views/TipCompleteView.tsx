@@ -1,27 +1,21 @@
-/*
-    TipCompleteView
-
-    responsible for rendering the final tip view for users to see how much they just tipped as well as be presented with the 'undo' option.
-*/
-
 import React from 'react'
 import { styled, Box } from '@material-ui/core'
-import CloseIcon from '@material-ui/icons/Close'
 
+import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { Colors } from '../../../shared-theme/colors'
 import { FitTextWrapper } from '../FitTextWrapper'
 import { RandomThankYouMessage } from '../RandomThankYouMessage'
+import { useTip } from '../../context/tipContext'
 
 //
 // Styles
 //
 
-const ExtensionBodyWrapper = styled('div')(({ url }: { url: string }) => ({
+const BodyWrapper = styled('div')(({ url }: { url: string }) => ({
+  flex: 1,
   display: 'flex',
   flexDirection: 'column',
-  padding: '14px 24px 0px 24px',
-  minHeight: '457px', // based on the first views body height to keep consistent
-  maxHeight: '457px', // based on the first views body height to keep consistent
+  padding: '0px 24px',
   backgroundImage: `url("${url}")`, //* the 'random' prop is needed so the gif animation replays every load
   backgroundSize: '105% 105%',
   backgroundRepeat: 'no-repeat',
@@ -35,30 +29,11 @@ const ExtensionBodyWrapper = styled('div')(({ url }: { url: string }) => ({
   }
 }))
 
-const IconButton = styled('button')({
-  cursor: 'pointer',
-  background: 'transparent',
-  border: 'none',
-  lineHeight: '0px',
-  padding: '0px',
-  marginRight: '-10px',
-  color: Colors.Grey500,
-  '&:hover': {
-    color: Colors.Grey800
-  }
-})
-
 //
 // Component
 //
-export const TipCompleteView = (props: {
-  currentTipAmount: number
-}): React.ReactElement => {
-  const { currentTipAmount } = props
-
-  const handleClose = () => {
-    window.close()
-  }
+export const TipCompleteView = (): React.ReactElement => {
+  const { currentTipAmount } = useTip()
 
   const getBackgroundImageUrl = () => {
     let ImgUrl = '/res/Level1.gif'
@@ -79,15 +54,9 @@ export const TipCompleteView = (props: {
   }
 
   return (
-    <div>
-      <ExtensionBodyWrapper url={getBackgroundImageUrl()}>
-        <Box textAlign='right' mb='25px'>
-          <IconButton onClick={handleClose}>
-            <CloseIcon />
-          </IconButton>
-        </Box>
-        <RandomThankYouMessage />
-        <Box my='30px'>
+    <NewHeaderFooterLayout>
+      <BodyWrapper url={getBackgroundImageUrl()}>
+        <Box mt={5} mb={3}>
           <FitTextWrapper defaultFontSize={80}>
             $
             {Number.isInteger(currentTipAmount)
@@ -95,7 +64,8 @@ export const TipCompleteView = (props: {
               : currentTipAmount.toFixed(2)}
           </FitTextWrapper>
         </Box>
-      </ExtensionBodyWrapper>
-    </div>
+        <RandomThankYouMessage />
+      </BodyWrapper>
+    </NewHeaderFooterLayout>
   )
 }
