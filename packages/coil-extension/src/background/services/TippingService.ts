@@ -27,27 +27,55 @@ export class TippingService extends EventEmitter {
   }
 
   async updateTipSettings(token: string): Promise<string | null> {
+    /* 
+      updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings 
+      after it fetches the data it then formats the values to make it easier for the views to consume
+    */
+    console.log('update tip settings')
+    console.log(this.store.user)
+
     const resp = await this.client.tipSettings(token)
+    console.log('--- resp')
+    console.log(resp)
+    const tippingFlagResp = await this.client.featureEnabled(
+      token,
+      'tipping-beta'
+    )
 
     this.log('updateTippingSettings', resp)
-    if (resp.lastTippedAmount && resp.limitRemaining) {
-      // Data needed for tipping
-      // tipping-beta: featureEnabled: boolean
-      // minimum tip limit: minTipLimit > minTipLimit
-      // remaining daily amount: tipping > limitRemaining
+    if (this.store.user && resp.data?.whoami && resp.data?.minTipLimit) {
+      console.log('after checking responses')
 
+      // destructuring response values and setting defaults
+      const {
+        minTipLimit: { minTipLimit = 1 },
+        whoami
+      } = resp.data ?? {}
+      const {
+        tipCredit,
+        tipping: { lastTippedAmount = 0, limitRemaining = 0 } = {}
+      } = whoami ?? {}
+      // tipCredit will return null for users who have no tip credits -> destructuring doesn't work on null values
+      const balanceCents = tipCredit == null ? 0 : tipCredit?.balanceCents ?? 0
+
+      const formattedTipSettings = await formatTipSettings(
+        Number(limitRemaining),
+        Number(lastTippedAmount),
+        tippingFlagResp.data?.featureEnabled ?? false,
+        Number(minTipLimit),
+        Number(balanceCents)
+      )
+      console.log('--- formatted ')
+      console.log(formattedTipSettings)
+
+      // update user object on local storage
       if (this.store.user) {
         this.store.user = {
           ...this.store.user,
-          tipSettings: await formatTipSettings(
-            token,
-            resp.limitRemaining,
-            resp.lastTippedAmount,
-            await this.client.featureEnabled(token, 'tipping-beta'),
-            await this.client.minTipLimit(token)
-          )
+          tipSettings: { ...formattedTipSettings }
         }
       }
+
       return token
     } else {
       return null

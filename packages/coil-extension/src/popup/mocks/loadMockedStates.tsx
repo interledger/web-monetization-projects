@@ -52,7 +52,7 @@ const tipUserNewUi = {
     inTippingBeta: true,
     minimumTipLimit: 1,
     remainingDailyAmount: 100,
-    lastTippedAmountUSD: 25,
+    lastTippedAmount: 25,
     hotkeyTipAmounts: [5, 10, 50]
   },
   paymentMethods: [
@@ -88,7 +88,7 @@ const tipUserNewUiCompare = {
     inTippingBeta: true,
     minimumTipLimit: 1,
     remainingDailyAmount: 30,
-    lastTippedAmountUSD: 25,
+    lastTippedAmount: 25,
     hotkeyTipAmounts: [5, 10, 50]
   },
   paymentMethods: [

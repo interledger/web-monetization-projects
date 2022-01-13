@@ -30,7 +30,7 @@ export const TipProvider: React.FC<ITipProvider> = props => {
   // todo: when nathan and brandon are done with COIL-1642 and COIL-1674
   const {
     tipSettings: {
-      lastTippedAmountUSD = 1,
+      lastTippedAmount = 1,
       inTippingBeta = false,
       remainingDailyAmount = 0
     } = {},
@@ -80,7 +80,7 @@ export const TipProvider: React.FC<ITipProvider> = props => {
     tipCredits,
     remainingDailyAmount
   ) // possibly move to background in formatTipSettings util when done
-  const initialTipAmount = max < lastTippedAmountUSD ? max : lastTippedAmountUSD
+  const initialTipAmount = max < lastTippedAmount ? max : lastTippedAmount
 
   const [currentTipAmount, setCurrentTipAmount] =
     useState<number>(initialTipAmount)
