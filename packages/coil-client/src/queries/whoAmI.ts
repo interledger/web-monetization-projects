@@ -24,11 +24,6 @@ export const whoamiSelection = `
       code
       scale
     }
-
-    tipping {
-      lastTippedAmount
-      limitRemaining
-    }
 `
 
 // TODO: these have changed but is screwing up renovate and aren't really
