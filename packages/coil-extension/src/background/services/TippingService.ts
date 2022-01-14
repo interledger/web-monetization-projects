@@ -32,41 +32,35 @@ export class TippingService extends EventEmitter {
       after it fetches the data it then formats the values to make it easier for the views to consume
     */
     console.log('update tip settings')
-    console.log(this.store.user)
 
     const resp = await this.client.tipSettings(token)
-    console.log('--- resp')
-    console.log(resp)
     const tippingFlagResp = await this.client.featureEnabled(
       token,
       'tipping-beta'
     )
 
     this.log('updateTippingSettings', resp)
-    if (this.store.user && resp.data?.whoami && resp.data?.minTipLimit) {
-      console.log('after checking responses')
-
+    if (resp.data?.whoami && resp.data?.minTipLimit) {
       // destructuring response values and setting defaults
       const {
         minTipLimit: { minTipLimit = 1 },
+        getUserTipCredit,
         whoami
       } = resp.data ?? {}
-      const {
-        tipCredit,
-        tipping: { lastTippedAmount = 0, limitRemaining = 0 } = {}
-      } = whoami ?? {}
+      const { tipping: { lastTippedAmount = 0, limitRemaining = 0 } = {} } =
+        whoami ?? {}
       // tipCredit will return null for users who have no tip credits -> destructuring doesn't work on null values
-      const balanceCents = tipCredit == null ? 0 : tipCredit?.balanceCents ?? 0
-
+      const tipCreditBalanceCents =
+        getUserTipCredit == null ? 0 : getUserTipCredit?.balance ?? 0
+      console.log('-- tip credit balance')
+      console.log(tipCreditBalanceCents)
       const formattedTipSettings = await formatTipSettings(
         Number(limitRemaining),
         Number(lastTippedAmount),
         tippingFlagResp.data?.featureEnabled ?? false,
         Number(minTipLimit),
-        Number(balanceCents)
+        Number(tipCreditBalanceCents)
       )
-      console.log('--- formatted ')
-      console.log(formattedTipSettings)
 
       // update user object on local storage
       if (this.store.user) {

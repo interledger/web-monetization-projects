@@ -3,34 +3,32 @@ import { GraphQlClient } from '../graphQlClient'
 export const tipSettingsQuery = `
   query updateTipSettings {
     whoami {
-      id
       tipping {
         lastTippedAmount
         limitRemaining
       }
-      tipCredit {
-        balanceCents
-      }
     }
     minTipLimit {
       minTipLimit
+    }
+    getUserTipCredit {
+        balance
     }
   }
 `
 
 export interface TipSettingsData {
   whoami: {
-    id: string
     tipping: {
       lastTippedAmount: number
       limitRemaining: number
     }
-    tipCredit: {
-      balanceCents: number
-    }
   }
   minTipLimit: {
     minTipLimit: string
+  }
+  getUserTipCredit: {
+    balance: number
   }
 }
 

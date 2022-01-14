@@ -24,6 +24,17 @@ export const whoamiSelection = `
       code
       scale
     }
+
+    paymentMethods {
+      id
+      type
+        details {
+          ... on StripeCardDetails {
+          last4
+          brandCode
+        }
+      }
+    }    
 `
 
 // TODO: these have changed but is screwing up renovate and aren't really
