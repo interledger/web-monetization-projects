@@ -10,13 +10,18 @@ type FormattedTipSettings = {
 //* the maxAllowableTip is primarily responsible for disabling tipping inputs
 //* retuns max tip amount USD according to constraints
 //* a zero max tip amount will disable tip inputs
-const calculateMaxAllowableTip = (
+export const calculateMaxAllowableTip = (
+  siteIsMonetized: boolean,
   tippingBetaFeatureFlag: boolean,
   hasCreditCard: boolean,
   tipCredits: number,
   remainingDailyAmount: number
 ) => {
   let newMax = 0
+  if (!siteIsMonetized) {
+    // if the site is not monetized the max amount should default to $0
+    return newMax
+  }
   if (tippingBetaFeatureFlag && hasCreditCard) {
     // if the user is in the beta they are allowed to use a cc
     // if the user has a cc the only limit that matters is the max daily
@@ -35,6 +40,7 @@ const calculateMaxAllowableTip = (
 }
 
 export async function formatTipSettings(
+  siteIsMonetized: boolean,
   tippingBetaFeatureFlag: boolean,
   hasCreditCard: boolean,
   limitRemainingCents: number,
@@ -58,6 +64,7 @@ export async function formatTipSettings(
     : 0
 
   const maxAllowableTipAmountUSD = calculateMaxAllowableTip(
+    siteIsMonetized,
     tippingBetaFeatureFlag,
     hasCreditCard,
     tipCreditsUSD,

@@ -60,8 +60,15 @@ export class TippingService extends EventEmitter {
           return paymentMethod.type === 'stripe'
         }) > -1
 
+      // need to know if the site is monetized in order to calculate the maximum allowable tip
+      // a non monetized site should default to $0
+      const siteIsMonetized = this.store.monetized
+        ? this.store.monetized
+        : false
+
       // format the tip settings
       const formattedTipSettings = await formatTipSettings(
+        siteIsMonetized,
         tippingBetaFeatureFlag,
         hasCreditCard,
         Number(limitRemaining),
@@ -76,12 +83,7 @@ export class TippingService extends EventEmitter {
           ...this.store.user,
           tippingBetaFeatureFlag,
           extensionNewUiFeatureFlag,
-          tipSettings: {
-            ...formattedTipSettings,
-            maxAllowableTipAmount: this.store.monetized
-              ? formattedTipSettings.maxAllowableTipAmount
-              : 0 // max allowable tip should be $0 if the site is not monetized - used to disable tip inputs
-          }
+          tipSettings: { ...formattedTipSettings }
         }
       }
 
