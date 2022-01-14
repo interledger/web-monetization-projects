@@ -80,6 +80,23 @@ jobs:
             yarn addons-linter coilfirefoxextension@coil.com.xpi
       - *save_cache
 
+  build-extension-e2e-coil:
+    docker:
+      - image: circleci/node:16-buster-browsers
+    steps:
+      - checkout
+      - run:
+          name: Publish staging extension for coil e2e tests
+          command: |
+            yarn
+            cd packages/coil-extension
+            yarn build-staging
+            mkdir /tmp/coil-chrome-ext-e2e-staging
+            tar -cvzf /tmp/coil-chrome-ext-e2e-staging/chromeext.tar dist
+      - store_artifacts:
+          path: /tmp/coil-chrome-ext-e2e-staging/chromeext.tar
+          destination: chrome-ext-staging
+
   publish-packages:
     docker:
       - image: circleci/node:14-buster-browsers
@@ -365,3 +382,13 @@ workflows:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
           <<: *node-version-matrix
+      - build-extension-e2e-coil:
+          requires:
+            - jest-all
+            - jest-lerna-all
+            - coil-extension-puppeteer
+            - coil-extension-puppeteer-transpile-only
+          filters:  # using regex filters requires the entire branch to match
+            branches:
+              only:  # only branches matching the below regex filters will run
+                - main
