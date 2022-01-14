@@ -49,7 +49,6 @@ const tipUserNewUi = {
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
-    inTippingBeta: true,
     minimumTipLimit: 1,
     remainingDailyAmount: 100,
     lastTippedAmount: 25,
@@ -70,7 +69,9 @@ const tipUserNewUi = {
       type: 'tipCredit',
       details: null
     }
-  ]
+  ],
+  tippingBetaFeatureFlag: true,
+  extensionNewUiFeatureFlag: true
 }
 const tipUserNewUiCompare = {
   newUi: true,
@@ -85,7 +86,6 @@ const tipUserNewUiCompare = {
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
-    inTippingBeta: true,
     minimumTipLimit: 1,
     remainingDailyAmount: 30,
     lastTippedAmount: 25,
@@ -106,7 +106,9 @@ const tipUserNewUiCompare = {
       type: 'tipCredit',
       details: null
     }
-  ]
+  ],
+  tippingBetaFeatureFlag: true,
+  extensionNewUiFeatureFlag: true
 }
 
 function mockState(partial: Partial<PopupStateType>): PopupStateType {

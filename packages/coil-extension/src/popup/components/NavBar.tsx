@@ -43,15 +43,17 @@ const NavButton = styled('div')(
 export const NavBar = () => {
   const router = useRouter()
   const { user } = useStore()
-  const { tipSettings: { inTippingBeta = false, tipCredits = 0 } = {} } =
-    user ?? {}
-
-  const newUiFeatureFlag = true //todo: need to replace with background api call
+  const {
+    tippingBetaFeatureFlag,
+    extensionNewUiFeatureFlag,
+    tipSettings: { tipCredits = 0 } = {}
+  } = user ?? {}
 
   // this might cause some odd rendering side effects once the user has completed a tip that would
   // drain their tipCredit balance and revoke their eligibility to use tipping
-  const canTip =
-    newUiFeatureFlag && ((!inTippingBeta && tipCredits > 0) || inTippingBeta)
+  const allowTipping =
+    extensionNewUiFeatureFlag &&
+    ((!tippingBetaFeatureFlag && tipCredits > 0) || tippingBetaFeatureFlag)
 
   return (
     <Box display='flex'>
@@ -62,7 +64,7 @@ export const NavBar = () => {
         <WebMonetized />
       </NavButton>
       <NavButton
-        disabled={!canTip}
+        disabled={!allowTipping}
         className={router.path.includes('tipping') ? 'active' : ''}
         onClick={() => router.to(ROUTES.tipping)}
       >

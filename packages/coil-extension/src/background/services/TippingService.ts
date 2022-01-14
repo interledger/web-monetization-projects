@@ -34,30 +34,28 @@ export class TippingService extends EventEmitter {
     console.log('update tip settings')
 
     const resp = await this.client.tipSettings(token)
-    const tippingFlagResp = await this.client.featureEnabled(
-      token,
-      'tipping-beta'
-    )
+    // const tippingBetaFlagResp = await this.client.featureEnabled( token, 'tipping-beta' )
+    // const extensionNewUiFlagResp = await this.client.featureEnabled( token, 'extension-new-ui' )
 
     this.log('updateTippingSettings', resp)
     if (resp.data?.whoami && resp.data?.minTipLimit) {
       // destructuring response values and setting defaults
       const {
+        whoami,
         minTipLimit: { minTipLimit = 1 },
         getUserTipCredit,
-        whoami
+        tippingBetaFeatureFlag,
+        extensionNewUiFeatureFlag
       } = resp.data ?? {}
       const { tipping: { lastTippedAmount = 0, limitRemaining = 0 } = {} } =
         whoami ?? {}
       // tipCredit will return null for users who have no tip credits -> destructuring doesn't work on null values
       const tipCreditBalanceCents =
         getUserTipCredit == null ? 0 : getUserTipCredit?.balance ?? 0
-      console.log('-- tip credit balance')
-      console.log(tipCreditBalanceCents)
+
       const formattedTipSettings = await formatTipSettings(
         Number(limitRemaining),
         Number(lastTippedAmount),
-        tippingFlagResp.data?.featureEnabled ?? false,
         Number(minTipLimit),
         Number(tipCreditBalanceCents)
       )
@@ -66,6 +64,10 @@ export class TippingService extends EventEmitter {
       if (this.store.user) {
         this.store.user = {
           ...this.store.user,
+          tippingBetaFeatureFlag,
+          extensionNewUiFeatureFlag,
+          // tippingBetaFeatureFlag: tippingBetaFlagResp.data.featureEnabled ?? false,
+          // extensionNewUiFeatureFlag: extensionNewUiFlagResp.data.featureEnabled ?? false,
           tipSettings: { ...formattedTipSettings }
         }
       }

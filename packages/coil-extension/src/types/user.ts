@@ -20,7 +20,6 @@ export interface User {
     scale: number
   }
   tipSettings?: {
-    inTippingBeta?: boolean
     tipCredits?: number
     minimumTipLimit: number
     remainingDailyAmount: number
@@ -28,6 +27,8 @@ export interface User {
     hotkeyTipAmounts: Array<number>
   }
   paymentMethods?: Array<IUserPaymentMethod>
+  tippingBetaFeatureFlag?: boolean
+  extensionNewUiFeatureFlag?: boolean
 }
 
 export interface IUserPaymentMethod {

@@ -14,6 +14,8 @@ export const tipSettingsQuery = `
     getUserTipCredit {
         balance
     }
+    tippingBetaFeatureFlag: featureEnabled(key: "tipping-beta")
+    extensionNewUiFeatureFlag: featureEnabled(key: "extension-new-ui")
   }
 `
 
@@ -30,6 +32,8 @@ export interface TipSettingsData {
   getUserTipCredit: {
     balance: number
   }
+  tippingBetaFeatureFlag: boolean
+  extensionNewUiFeatureFlag: boolean
 }
 
 export async function tipSettings(this: GraphQlClient, token: string) {

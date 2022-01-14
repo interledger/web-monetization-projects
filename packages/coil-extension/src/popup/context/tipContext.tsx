@@ -29,11 +29,11 @@ export const TipProvider: React.FC<ITipProvider> = props => {
   const {
     tipSettings: {
       lastTippedAmount = 1,
-      inTippingBeta = false,
       remainingDailyAmount = 0,
       tipCredits = 0
     } = {},
-    paymentMethods
+    paymentMethods,
+    tippingBetaFeatureFlag
   } = userObject ?? {}
 
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
@@ -41,9 +41,9 @@ export const TipProvider: React.FC<ITipProvider> = props => {
   // todo: this could be a util instead of storing in state if initializing with the correct values doesn't work
   // todo: possibly move to background in formatTipSettings util when done
   //* the maxAllowableTip is primarily responsible for disabling tipping inputs
-  const calculateMax = (
+  const calculateMaxAllowableTip = (
     monetized: boolean,
-    inTippingBeta: boolean,
+    tippingBetaFeatureFlag: boolean,
     hasCreditCard: boolean,
     tipCredits: number,
     remainingDailyAmount: number
@@ -54,7 +54,7 @@ export const TipProvider: React.FC<ITipProvider> = props => {
       // the max is zero
       return newMax
     }
-    if (inTippingBeta && hasCreditCard) {
+    if (tippingBetaFeatureFlag && hasCreditCard) {
       // if the user is in the beta they are allowed to use a cc
       // if the user has a cc the only limit that matters is the max daily
       newMax = remainingDailyAmount
@@ -71,9 +71,9 @@ export const TipProvider: React.FC<ITipProvider> = props => {
     return newMax
   }
 
-  const max = calculateMax(
+  const max = calculateMaxAllowableTip(
     monetized,
-    inTippingBeta,
+    tippingBetaFeatureFlag,
     !!creditCard,
     tipCredits,
     remainingDailyAmount

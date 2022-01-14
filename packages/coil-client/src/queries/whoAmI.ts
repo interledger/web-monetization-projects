@@ -34,21 +34,9 @@ export const whoamiSelection = `
           brandCode
         }
       }
-    }    
+    }
 `
-
-// TODO: these have changed but is screwing up renovate and aren't really
-// used in any deployed version of the extension.
-// paymentMethods {
-//   id
-//   type
-//     details {
-//   ... on StripeCardDetails {
-//       last4
-//       brandCode
-//     }
-//   }
-// }
+// ! --> paymentMethods selection might screwing up renovate
 
 export const whoamiQuery = `{
   whoami {
