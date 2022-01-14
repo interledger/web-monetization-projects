@@ -49,11 +49,12 @@ const tipUserNewUi = {
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
-    inTippingBeta: true,
     minimumTipLimit: 1,
     remainingDailyAmount: 100,
-    lastTippedAmountUSD: 25,
-    hotkeyTipAmounts: [5, 10, 50]
+    lastTippedAmount: 25,
+    hotkeyTipAmounts: [5, 10, 50],
+    tipCredits: 20,
+    maxAllowableTipAmount: 100
   },
   paymentMethods: [
     {
@@ -61,7 +62,8 @@ const tipUserNewUi = {
       type: 'stripe',
       details: {
         last4: '5678',
-        brandCode: 'MasterCard'
+        brandCode: 'MasterCard',
+        status: 'Valid'
       }
     },
     {
@@ -70,7 +72,8 @@ const tipUserNewUi = {
       details: null
     }
   ],
-  tipCredits: 20
+  tippingBetaFeatureFlag: true,
+  extensionNewUiFeatureFlag: true
 }
 const tipUserNewUiCompare = {
   newUi: true,
@@ -85,11 +88,12 @@ const tipUserNewUiCompare = {
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
-    inTippingBeta: true,
     minimumTipLimit: 1,
     remainingDailyAmount: 30,
-    lastTippedAmountUSD: 25,
-    hotkeyTipAmounts: [5, 10, 50]
+    lastTippedAmount: 25,
+    hotkeyTipAmounts: [5, 10, 50],
+    tipCredits: 20,
+    maxAllowableTipAmount: 100
   },
   paymentMethods: [
     {
@@ -97,7 +101,8 @@ const tipUserNewUiCompare = {
       type: 'stripe',
       details: {
         last4: '5678',
-        brandCode: 'MasterCard'
+        brandCode: 'MasterCard',
+        status: 'Valid'
       }
     },
     {
@@ -106,7 +111,8 @@ const tipUserNewUiCompare = {
       details: null
     }
   ],
-  tipCredits: 20
+  tippingBetaFeatureFlag: true,
+  extensionNewUiFeatureFlag: true
 }
 
 function mockState(partial: Partial<PopupStateType>): PopupStateType {

@@ -24,9 +24,9 @@ export const TipAmountFeedback = () => {
   const { currentTipAmount } = useTip()
   const { user } = useStore()
   const {
+    tippingBetaFeatureFlag,
     paymentMethods,
-    tipCredits = 0,
-    tipSettings: { inTippingBeta = false, remainingDailyAmount = 0 } = {}
+    tipSettings: { remainingDailyAmount = 0, tipCredits = 0 } = {}
   } = user ?? {}
   const {
     coilDomain,
@@ -41,7 +41,7 @@ export const TipAmountFeedback = () => {
 
     // for amounts greater than the available tip credits require that the user is
     // also in the beta and has a credit card on file
-    if (currentTipAmount > tipCredits && inTippingBeta && creditCard) {
+    if (currentTipAmount > tipCredits && tippingBetaFeatureFlag && creditCard) {
       charge = currentTipAmount - tipCredits
       chargeDisplay = 'Credit card charge:'
     }
@@ -66,7 +66,11 @@ export const TipAmountFeedback = () => {
         </Typography>
       )
     }
-    if (currentTipAmount >= tipCredits && inTippingBeta && !creditCard) {
+    if (
+      currentTipAmount >= tipCredits &&
+      tippingBetaFeatureFlag &&
+      !creditCard
+    ) {
       prompt = (
         <Typography variant='subtitle1'>
           <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/billing`)}>

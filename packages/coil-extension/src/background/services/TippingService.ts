@@ -8,6 +8,7 @@ import * as tokens from '../../types/tokens'
 import { formatTipSettings } from '../util/formatters'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
+import { IUserPaymentMethod } from '../../types/user'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
@@ -27,27 +28,65 @@ export class TippingService extends EventEmitter {
   }
 
   async updateTipSettings(token: string): Promise<string | null> {
+    /* 
+      updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings 
+      after it fetches the data it then formats the values to make it easier for the views to consume
+    */
+
     const resp = await this.client.tipSettings(token)
 
     this.log('updateTippingSettings', resp)
-    if (resp.lastTippedAmount && resp.limitRemaining) {
-      // Data needed for tipping
-      // tipping-beta: featureEnabled: boolean
-      // minimum tip limit: minTipLimit > minTipLimit
-      // remaining daily amount: tipping > limitRemaining
+    if (resp.data?.whoami && resp.data?.minTipLimit) {
+      // destructuring response values and setting defaults
+      const {
+        whoami,
+        minTipLimit: { minTipLimit = 1 },
+        getUserTipCredit,
+        tippingBetaFeatureFlag,
+        extensionNewUiFeatureFlag
+      } = resp.data ?? {}
+      const { tipping: { lastTippedAmount = 0, limitRemaining = 0 } = {} } =
+        whoami ?? {}
+      // tipCredit will return null for users who have no tip credits -> destructuring doesn't work on null values
+      const tipCreditBalanceCents =
+        getUserTipCredit == null ? 0 : getUserTipCredit?.balance ?? 0
 
+      // need to know if the user has a credit card in order to calculate the maximum allowable tip
+      // getting the payment methods out of the user object in the store
+      const { paymentMethods = [] as Array<IUserPaymentMethod> } =
+        this.store.user ?? {}
+      const hasCreditCard =
+        paymentMethods.findIndex((paymentMethod: IUserPaymentMethod) => {
+          return paymentMethod.type === 'stripe'
+        }) > -1
+
+      // need to know if the site is monetized in order to calculate the maximum allowable tip
+      // a non monetized site should default to $0
+      const siteIsMonetized = this.store.monetized
+        ? this.store.monetized
+        : false
+
+      // format the tip settings
+      const formattedTipSettings = await formatTipSettings(
+        siteIsMonetized,
+        tippingBetaFeatureFlag,
+        hasCreditCard,
+        Number(limitRemaining),
+        Number(lastTippedAmount),
+        Number(minTipLimit),
+        Number(tipCreditBalanceCents)
+      )
+
+      // update user object on local storage
       if (this.store.user) {
         this.store.user = {
           ...this.store.user,
-          tipSettings: await formatTipSettings(
-            token,
-            resp.limitRemaining,
-            resp.lastTippedAmount,
-            await this.client.featureEnabled(token, 'tipping-beta'),
-            await this.client.minTipLimit(token)
-          )
+          tippingBetaFeatureFlag,
+          extensionNewUiFeatureFlag,
+          tipSettings: { ...formattedTipSettings }
         }
       }
+
       return token
     } else {
       return null

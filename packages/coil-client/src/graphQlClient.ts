@@ -11,8 +11,7 @@ import {
   featureEnabled,
   tipPreview,
   tip,
-  tipSettings,
-  minTipLimit
+  tipSettings
 } from './queries'
 
 // Reference class for DI/reduct
@@ -44,7 +43,6 @@ export class GraphQlClient {
   public tipPreview = tipPreview
   public tip = tip
   public tipSettings = tipSettings
-  public minTipLimit = minTipLimit
 
   public constructor(
     @inject(GraphQlClientOptions)

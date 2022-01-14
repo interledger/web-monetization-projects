@@ -19,20 +19,17 @@ export interface User {
     code: string
     scale: number
   }
-  tipping?: {
-    lastTippedAmount: string
-    limitRemaining: string
-  }
-  minimumTipLimit?: number
   tipSettings?: {
-    inTippingBeta?: boolean
+    tipCredits: number
     minimumTipLimit: number
     remainingDailyAmount: number
-    lastTippedAmountUSD: number
+    lastTippedAmount: number
     hotkeyTipAmounts: Array<number>
+    maxAllowableTipAmount: number
   }
   paymentMethods?: Array<IUserPaymentMethod>
-  tipCredits?: number // todo might need to update once we connect to api
+  tippingBetaFeatureFlag?: boolean
+  extensionNewUiFeatureFlag?: boolean
 }
 
 export interface IUserPaymentMethod {
@@ -41,5 +38,6 @@ export interface IUserPaymentMethod {
   details: {
     last4: string
     brandCode: string
+    status: string
   } | null
 }
