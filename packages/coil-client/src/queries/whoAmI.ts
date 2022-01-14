@@ -25,20 +25,19 @@ export const whoamiSelection = `
       scale
     }
 
-    
+    paymentMethods {
+      id
+      type
+        details {
+          ... on StripeCardDetails {
+          last4
+          brandCode
+          status
+        }
+      }
+    }
 `
 // ! --> paymentMethods selection might screwing up renovate and puppetteer jobs on CI
-// paymentMethods {
-//   id
-//   type
-//     details {
-//       ... on StripeCardDetails {
-//       last4
-//       brandCode
-//       status
-//     }
-//   }
-// }
 
 export const whoamiQuery = `{
   whoami {
