@@ -1,15 +1,15 @@
 import '@abraham/reflection'
 
 import { Container } from 'inversify'
+import {
+  PaymentDetails,
+  resolvePaymentEndpoint
+} from '@webmonetization/polyfill-utils'
 
 import { configureContainer } from '../configureContainer'
 import { decorateThirdPartyClasses } from '../../services/decorateThirdPartyClasses'
 
 type MessageSender = chrome.runtime.MessageSender
-import {
-  PaymentDetails,
-  resolvePaymentEndpoint
-} from '@webmonetization/polyfill-utils'
 
 import { StartWebMonetization } from '../../types/commands'
 import * as tokens from '../../types/tokens'
@@ -17,6 +17,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import { User } from '../../types/user'
 import { FrameSpec } from '../../types/FrameSpec'
 import { timeout } from '../../content/util/timeout'
+import { isFrameMonetized } from '../../types/TabState'
 
 import { AuthService } from './AuthService'
 import { Streams } from './Streams'
@@ -155,6 +156,6 @@ describe('MonetizationService', () => {
 
     const tabStates = container.get(TabStates)
     // TODO:WM2
-    expect(tabStates.getFrameOrDefault(frame).monetized).toBe(false)
+    expect(isFrameMonetized(tabStates.getFrameOrDefault(frame))).toBe(false)
   })
 })

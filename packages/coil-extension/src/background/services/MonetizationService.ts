@@ -64,7 +64,6 @@ export class MonetizationService {
     this.tabStates.setFrame(
       { tabId, frameId },
       {
-        monetized: true,
         total: total || (tabState.frameStates[frameId]?.total ?? 0)
       }
     )
@@ -235,9 +234,6 @@ export class MonetizationService {
     if (!emittedPending) {
       emitPending()
     }
-
-    // TODO:WM2
-    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
 
     if (lastCommand !== 'start' && lastCommand !== 'pause') {
       this.log('startWebMonetization cancelled via', lastCommand)

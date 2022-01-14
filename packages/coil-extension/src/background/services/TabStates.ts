@@ -2,7 +2,12 @@ import { inject, injectable } from 'inversify'
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
 import { StorageService } from '@webmonetization/wext/services'
 
-import { FrameState, MonetizationCommand, TabState } from '../../types/TabState'
+import {
+  FrameState,
+  isFrameMonetized,
+  MonetizationCommand,
+  TabState
+} from '../../types/TabState'
 import { IconState } from '../../types/commands'
 import { FrameSpec } from '../../types/FrameSpec'
 import * as tokens from '../../types/tokens'
@@ -84,7 +89,6 @@ export class TabStates {
 
   private makeFrameStateDefault(): FrameState {
     return {
-      monetized: false,
       adapted: false,
       total: 0
     }
@@ -197,7 +201,7 @@ export class TabStates {
     if (tabId) {
       const tabState = this.getActiveOrDefault()
 
-      if (Object.values(tabState.frameStates).find(f => f.monetized)) {
+      if (Object.values(tabState.frameStates).find(f => isFrameMonetized(f))) {
         this.setIcon(tabId, 'monetized')
       }
 
@@ -208,7 +212,8 @@ export class TabStates {
 
         const tabState = this.getActiveOrDefault()
         const frameStates = Object.values(tabState.frameStates)
-        const hasStream = frameStates.find(f => f.monetized)
+        const hasStream = frameStates.find(f => isFrameMonetized(f))
+
         const hasBeenPaid = hasStream && frameStates.find(f => f.total > 0)
 
         if (hasStream) {
@@ -236,7 +241,7 @@ export class TabStates {
     // TODO: Another valid case might be a singular adapted iframe inside a non
     // monetized top page.
     this.storage.set('adapted', Boolean(state?.frameStates[0]?.adapted))
-    state && frameStates.find(f => f.monetized)
+    state && frameStates.find(f => isFrameMonetized(f))
       ? this.storage.set('monetized', true)
       : this.storage.remove('monetized')
 
