@@ -8,6 +8,7 @@ import * as tokens from '../../types/tokens'
 import { formatTipSettings } from '../util/formatters'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
+import { IUserPaymentMethod } from '../../types/user'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
@@ -31,11 +32,8 @@ export class TippingService extends EventEmitter {
       updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings 
       after it fetches the data it then formats the values to make it easier for the views to consume
     */
-    console.log('update tip settings')
 
     const resp = await this.client.tipSettings(token)
-    // const tippingBetaFlagResp = await this.client.featureEnabled( token, 'tipping-beta' )
-    // const extensionNewUiFlagResp = await this.client.featureEnabled( token, 'extension-new-ui' )
 
     this.log('updateTippingSettings', resp)
     if (resp.data?.whoami && resp.data?.minTipLimit) {
@@ -53,7 +51,19 @@ export class TippingService extends EventEmitter {
       const tipCreditBalanceCents =
         getUserTipCredit == null ? 0 : getUserTipCredit?.balance ?? 0
 
+      // need to know if the user has a credit card in order to calculate the maximum allowable tip
+      // getting the payment methods out of the user object in the store
+      const { paymentMethods = [] as Array<IUserPaymentMethod> } =
+        this.store.user ?? {}
+      const hasCreditCard =
+        paymentMethods.findIndex((paymentMethod: IUserPaymentMethod) => {
+          return paymentMethod.type === 'stripe'
+        }) > -1
+
+      // format the tip settings
       const formattedTipSettings = await formatTipSettings(
+        tippingBetaFeatureFlag,
+        hasCreditCard,
         Number(limitRemaining),
         Number(lastTippedAmount),
         Number(minTipLimit),
@@ -66,9 +76,12 @@ export class TippingService extends EventEmitter {
           ...this.store.user,
           tippingBetaFeatureFlag,
           extensionNewUiFeatureFlag,
-          // tippingBetaFeatureFlag: tippingBetaFlagResp.data.featureEnabled ?? false,
-          // extensionNewUiFeatureFlag: extensionNewUiFlagResp.data.featureEnabled ?? false,
-          tipSettings: { ...formattedTipSettings }
+          tipSettings: {
+            ...formattedTipSettings,
+            maxAllowableTipAmount: this.store.monetized
+              ? formattedTipSettings.maxAllowableTipAmount
+              : 0 // max allowable tip should be $0 if the site is not monetized - used to disable tip inputs
+          }
         }
       }
 

@@ -53,7 +53,8 @@ const tipUserNewUi = {
     remainingDailyAmount: 100,
     lastTippedAmount: 25,
     hotkeyTipAmounts: [5, 10, 50],
-    tipCredits: 20
+    tipCredits: 20,
+    maxAllowableTipAmount: 100
   },
   paymentMethods: [
     {
@@ -90,7 +91,8 @@ const tipUserNewUiCompare = {
     remainingDailyAmount: 30,
     lastTippedAmount: 25,
     hotkeyTipAmounts: [5, 10, 50],
-    tipCredits: 20
+    tipCredits: 20,
+    maxAllowableTipAmount: 100
   },
   paymentMethods: [
     {
