@@ -4,6 +4,7 @@ export interface GraphQlResponse<T> {
 
 export interface CoilUser {
   id: string
+  canTip?: boolean
   fullName: string
   shortName?: string
   email: string
