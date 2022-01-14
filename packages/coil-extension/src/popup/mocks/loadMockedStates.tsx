@@ -62,7 +62,8 @@ const tipUserNewUi = {
       type: 'stripe',
       details: {
         last4: '5678',
-        brandCode: 'MasterCard'
+        brandCode: 'MasterCard',
+        status: 'Valid'
       }
     },
     {
@@ -100,7 +101,8 @@ const tipUserNewUiCompare = {
       type: 'stripe',
       details: {
         last4: '5678',
-        brandCode: 'MasterCard'
+        brandCode: 'MasterCard',
+        status: 'Valid'
       }
     },
     {
