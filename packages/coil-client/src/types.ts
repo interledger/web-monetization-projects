@@ -27,5 +27,6 @@ interface ICoilUserPaymentMethod {
   details: {
     last4: string
     brandCode: string
+    status: string
   } | null
 }

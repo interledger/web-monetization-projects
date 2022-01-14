@@ -32,6 +32,7 @@ export const whoamiSelection = `
           ... on StripeCardDetails {
           last4
           brandCode
+          status
         }
       }
     }

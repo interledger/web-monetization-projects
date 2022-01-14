@@ -145,9 +145,9 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
   const { type } = props
 
   const { user } = useStore()
-  const { minimumTipLimit = 1 } = user?.tipSettings || {}
-  const { currentTipAmount, setCurrentTipAmount, maxAllowableTipAmount } =
-    useTip()
+  const { minimumTipLimit = 1, maxAllowableTipAmount = 0 } =
+    user?.tipSettings || {}
+  const { currentTipAmount, setCurrentTipAmount } = useTip()
 
   const initialVelocity = 150
   const [velocity, setVelocity] = useState<number>(initialVelocity)
