@@ -25,10 +25,11 @@ declare global {
   }
 
   interface HTMLLinkElement {
-    onmonetization: (evt: MonetizationEvent) => void
+    onmonetization: ((evt: MonetizationEvent) => void) | null
   }
   interface Window {
-    onmonetization: (evt: MonetizationEvent) => void
+    onmonetization: ((evt: MonetizationEvent) => void) | null
+    MonetizationEvent: new (...args: unknown[]) => MonetizationEvent
   }
 }
 
@@ -43,20 +44,46 @@ describe('wmPolyfill jsdom', () => {
     const link = document.createElement('link')
     expect(link.relList.supports('monetization')).toBe(true)
   })
-  it('HTMLElement.onmonetization should be null when not set', () => {
+  test('HTMLElement.onmonetization should be null when not set', () => {
     const link = document.createElement('link')
     expect(link.onmonetization).toBeNull()
   })
-  it('Window.onmonetization should be null when not set', () => {
+  test('Window.onmonetization should be null when not set', () => {
     expect(window.onmonetization).toBeNull()
   })
-  it('HTMLElement.onmonetization should return what was set', () => {
+  test('HTMLElement.onmonetization should return what was set', () => {
     const link = document.createElement('link')
     const cb = (link.onmonetization = () => null)
     expect(link.onmonetization).toBe(cb)
   })
-  it('Window.onmonetization should return what was set', () => {
+  test('Window.onmonetization should return what was set', () => {
     const cb = (window.onmonetization = () => null)
     expect(window.onmonetization).toBe(cb)
   })
+
+  test('window.MonetizationEvent should be set', () => {
+    expect(window.MonetizationEvent).not.toBeUndefined()
+  })
+
+  test('window.onmonetization should remove handler when set to null', () => {
+    expect.assertions(0)
+    window.onmonetization = event => {
+      expect(event).toBeDefined()
+    }
+    window.onmonetization = null
+    const event = new window.MonetizationEvent('monetization', {})
+    window.dispatchEvent(event)
+  })
+  test(
+    'window.onmonetization handler should be invoked ' +
+      'when monetization event dispatched',
+    () => {
+      expect.assertions(1)
+      window.onmonetization = event => {
+        expect(event).toBeDefined()
+      }
+      const event = new window.MonetizationEvent('monetization', {})
+      window.dispatchEvent(event)
+    }
+  )
 })

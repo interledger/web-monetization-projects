@@ -121,6 +121,8 @@ export const wmPolyFillMinimal = `
       }
     }
 
+    window.MonetizationEvent = MonetizationEvent
+
     window.addEventListener('coil-monetization', (event) => {
       dbg(
         'coil-monetization event'
