@@ -123,9 +123,9 @@ export const wmPolyFillMinimal = `
 
     window.MonetizationEvent = MonetizationEvent
 
-    window.addEventListener('coil-monetization', (event) => {
+    window.addEventListener('monetization-v2', (event) => {
       dbg(
-        'coil-monetization event'
+        'monetization-v2 event'
       )
       const monetizationEvent = new MonetizationEvent('monetization', event.detail)
       event.target.dispatchEvent(monetizationEvent)

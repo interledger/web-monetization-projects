@@ -155,7 +155,7 @@ export class ContentScript {
           const data = request.data
           this.tagManager.dispatchEventByLinkId(
             data.requestId,
-            new CustomEvent('coil-monetization', {
+            new CustomEvent('monetization-v2', {
               bubbles: true,
               cancelable: false,
               detail: {
