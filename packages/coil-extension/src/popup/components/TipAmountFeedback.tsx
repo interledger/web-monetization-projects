@@ -25,8 +25,11 @@ export const TipAmountFeedback = () => {
   const { user } = useStore()
   const {
     paymentMethods,
-    tipCredits = 0,
-    tipSettings: { inTippingBeta = false, remainingDailyAmount = 0 } = {}
+    tipSettings: {
+      inTippingBeta = false,
+      remainingDailyAmount = 0,
+      tipCredits = 0
+    } = {}
   } = user ?? {}
   const {
     coilDomain,

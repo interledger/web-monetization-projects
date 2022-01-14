@@ -18,10 +18,6 @@ export interface CoilUser {
     code: string
     scale: number
   }
-  tipping?: {
-    lastTippedAmount: string
-    limitRemaining: string
-  }
   paymentMethods?: Array<ICoilUserPaymentMethod>
 }
 

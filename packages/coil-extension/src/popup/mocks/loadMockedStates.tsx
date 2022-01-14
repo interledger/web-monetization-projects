@@ -53,7 +53,8 @@ const tipUserNewUi = {
     minimumTipLimit: 1,
     remainingDailyAmount: 100,
     lastTippedAmount: 25,
-    hotkeyTipAmounts: [5, 10, 50]
+    hotkeyTipAmounts: [5, 10, 50],
+    tipCredits: 20
   },
   paymentMethods: [
     {
@@ -69,8 +70,7 @@ const tipUserNewUi = {
       type: 'tipCredit',
       details: null
     }
-  ],
-  tipCredits: 20
+  ]
 }
 const tipUserNewUiCompare = {
   newUi: true,
@@ -89,7 +89,8 @@ const tipUserNewUiCompare = {
     minimumTipLimit: 1,
     remainingDailyAmount: 30,
     lastTippedAmount: 25,
-    hotkeyTipAmounts: [5, 10, 50]
+    hotkeyTipAmounts: [5, 10, 50],
+    tipCredits: 20
   },
   paymentMethods: [
     {
@@ -105,8 +106,7 @@ const tipUserNewUiCompare = {
       type: 'tipCredit',
       details: null
     }
-  ],
-  tipCredits: 20
+  ]
 }
 
 function mockState(partial: Partial<PopupStateType>): PopupStateType {

@@ -26,16 +26,14 @@ export const TipProvider: React.FC<ITipProvider> = props => {
   const userObject = storage.get('user')
   const monetized = storage.get('monetized')
 
-  // todo: need to add tipCredits and paymentMethods to background queries
-  // todo: when nathan and brandon are done with COIL-1642 and COIL-1674
   const {
     tipSettings: {
       lastTippedAmount = 1,
       inTippingBeta = false,
-      remainingDailyAmount = 0
+      remainingDailyAmount = 0,
+      tipCredits = 0
     } = {},
-    paymentMethods,
-    tipCredits = 0
+    paymentMethods
   } = userObject ?? {}
 
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)

@@ -43,7 +43,7 @@ const NavButton = styled('div')(
 export const NavBar = () => {
   const router = useRouter()
   const { user } = useStore()
-  const { tipCredits = 0, tipSettings: { inTippingBeta = false } = {} } =
+  const { tipSettings: { inTippingBeta = false, tipCredits = 0 } = {} } =
     user ?? {}
 
   const newUiFeatureFlag = true //todo: need to replace with background api call

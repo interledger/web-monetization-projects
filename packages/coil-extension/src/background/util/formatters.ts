@@ -1,10 +1,19 @@
+type FormattedTipSettings = {
+  inTippingBeta: boolean
+  minimumTipLimit: number
+  remainingDailyAmount: number
+  lastTippedAmount: number
+  tipCredits: number
+  hotkeyTipAmounts: Array<number>
+}
+
 export async function formatTipSettings(
   limitRemainingCents: number,
   lastTippedAmountCents: number,
   inTippingBeta: boolean,
   minimumTipLimitCents: number,
   tipCreditBalanceCents: number
-) {
+): Promise<FormattedTipSettings> {
   // convert all tip settings from cents to dollars
   // set default hotkey tip amounts since we don't yet get them from the user
   // add feature flag and minTipLimit
