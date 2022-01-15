@@ -31,7 +31,7 @@ async function getPaymentDetails(
       'Web-Monetization-Id': monetizationId
     }
   })
-  return response.json()
+  return response.json() as Promise<SPSPResponse>
 }
 
 function startStream(

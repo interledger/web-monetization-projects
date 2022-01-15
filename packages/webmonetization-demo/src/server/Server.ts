@@ -38,7 +38,8 @@ export class Server extends BaseHttpController {
       method: 'POST',
       body: receipt
     })
-    const amount = parseInt((await verifyResp.json()).amount)
+    const response = (await verifyResp.json()) as { amount: string }
+    const amount = parseInt(response.amount)
 
     if (this.balances[requestId]) {
       this.balances[requestId] += amount
