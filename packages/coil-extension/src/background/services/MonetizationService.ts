@@ -374,6 +374,7 @@ export class MonetizationService {
     this.assoc.clearStreamFrameAndFromFrameSet(requestId)
     this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
     this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
+    this.tabStates.reloadTabState({ from: 'stopWebMonetization' })
   }
 
   // doStopWebMonetization(frame: FrameSpec) {

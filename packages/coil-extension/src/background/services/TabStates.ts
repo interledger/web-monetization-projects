@@ -5,6 +5,7 @@ import { StorageService } from '@webmonetization/wext/services'
 import {
   FrameState,
   isFrameMonetized,
+  isFrameStreaming,
   MonetizationCommand,
   TabState
 } from '../../types/TabState'
@@ -212,13 +213,13 @@ export class TabStates {
 
         const tabState = this.getActiveOrDefault()
         const frameStates = Object.values(tabState.frameStates)
-        const hasStream = frameStates.find(f => isFrameMonetized(f))
-
-        const hasBeenPaid = hasStream && frameStates.find(f => f.total > 0)
+        const hasStream = Boolean(frameStates.find(f => isFrameMonetized(f)))
+        const isStreaming: boolean =
+          hasStream && Boolean(frameStates.find(f => isFrameStreaming(f)))
 
         if (hasStream) {
           this.setIcon(tabId, 'monetized')
-          if (hasBeenPaid) {
+          if (isStreaming) {
             const state =
               tabState.playState === 'playing'
                 ? 'streaming'

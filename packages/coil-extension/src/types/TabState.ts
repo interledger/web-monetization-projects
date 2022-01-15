@@ -27,6 +27,14 @@ export function isFrameMonetized(frameState: FrameState) {
   )
 }
 
+export function isFrameStreaming(frameState: FrameState) {
+  return Object.keys(frameState).some(
+    key =>
+      key.startsWith(LastCommandKey) &&
+      frameState[key as LastCommandKeyType]?.command === 'start'
+  )
+}
+
 export interface TabState {
   favicon?: string
   coilSite?: string
