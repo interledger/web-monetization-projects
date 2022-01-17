@@ -24,9 +24,11 @@ declare global {
     type: 'monetization'
   }
 
-  interface HTMLLinkElement {
+  interface HTMLElement {
     onmonetization: ((evt: MonetizationEvent) => void) | null
   }
+
+  // TODO: should also be available on Document
   interface Window {
     onmonetization: ((evt: MonetizationEvent) => void) | null
     MonetizationEvent: new (...args: unknown[]) => MonetizationEvent

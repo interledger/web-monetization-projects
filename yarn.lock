@@ -1423,6 +1423,7 @@ __metadata:
     "@coil/privacypass-sjcl": 0.0.0
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.7
     "@types/node": 14.18.5
@@ -1455,6 +1456,7 @@ __metadata:
     localforage: 1.10.0
     node-fetch: ^2.6.1
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -1484,6 +1486,7 @@ __metadata:
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/annotations": 0.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.7
     "@types/node": 14.18.5
@@ -1514,6 +1517,7 @@ __metadata:
     lint-staged: 12.1.7
     node-fetch: ^2.6.1
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -1538,6 +1542,7 @@ __metadata:
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
+    "@babel/plugin-transform-modules-commonjs": ^7.16.8
     "@babel/preset-env": 7.16.8
     "@babel/preset-typescript": 7.16.7
     "@coil/anonymous-tokens": ^0.0.0
@@ -1551,6 +1556,7 @@ __metadata:
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
     "@material-ui/styles": ^4.11.4
+    "@swc/jest": ^0.2.17
     "@types/debug": 4.1.7
     "@types/filesystem": 0.0.32
     "@types/firefox": 0.0.31
@@ -1609,6 +1615,7 @@ __metadata:
     react: ^17.0.0
     react-dom: ^17.0.0
     reduct: ^3.3.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -1639,6 +1646,7 @@ __metadata:
     "@babel/preset-typescript": 7.16.7
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -1670,6 +1678,7 @@ __metadata:
     npm-check-updates: ^12.0.0
     prettier: 2.5.1
     reduct: ^3.3.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     sort-package-json: 1.53.1
     ts-jest: 27.1.1
@@ -1704,6 +1713,7 @@ __metadata:
     "@coil/webpack-utils": 0.0.0
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/long": 4.0.1
     "@types/node": 14.18.5
@@ -1740,6 +1750,7 @@ __metadata:
     prettier: 2.5.1
     puppeteer: 11.0.0
     reduct: ^3.3.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -1769,6 +1780,7 @@ __metadata:
     "@babel/preset-typescript": 7.16.7
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -1796,6 +1808,7 @@ __metadata:
     lint-staged: 12.1.7
     node-fetch: ^2.6.1
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -1824,6 +1837,7 @@ __metadata:
     "@babel/preset-typescript": 7.16.7
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/keccak": 3.0.1
     "@types/node": 14.18.5
@@ -1857,6 +1871,7 @@ __metadata:
     lint-staged: 12.1.7
     node-fetch: ^2.6.1
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     sjcl: sublimator/sjcl
     ts-jest: 27.1.1
@@ -1887,6 +1902,7 @@ __metadata:
     "@coil/client": 0.0.0
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/debug": 4.1.7
     "@types/get-port": 4.2.0
     "@types/jest": 27.4.0
@@ -1920,6 +1936,7 @@ __metadata:
     lint-staged: 12.1.7
     prettier: 2.5.1
     puppeteer: ^11.0.0
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     tmp: ^0.2.1
     ts-jest: 27.1.1
@@ -1950,6 +1967,7 @@ __metadata:
     "@babel/preset-typescript": 7.16.7
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -1981,6 +1999,7 @@ __metadata:
     lint-staged: 12.1.7
     prettier: 2.5.1
     process: ^0.11.10
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     setimmediate: ^1.0.5
     stream-browserify: ^3.0.0
@@ -2014,6 +2033,7 @@ __metadata:
     "@coil/client": 0.0.0
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -2040,6 +2060,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.7
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -2304,6 +2325,7 @@ __metadata:
     "@babel/preset-typescript": 7.16.7
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -2330,6 +2352,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.7
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -2359,6 +2382,7 @@ __metadata:
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/annotations": 0.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -2386,6 +2410,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.7
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -2514,6 +2539,7 @@ __metadata:
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@types/react": 17.0.38
@@ -2559,6 +2585,7 @@ __metadata:
     prettier: 2.5.1
     react: ^17.0.0
     react-dom: ^17.0.0
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     style-loader: 3.3.1
     ts-jest: 27.1.1
@@ -2650,6 +2677,15 @@ __metadata:
     node-notifier:
       optional: true
   checksum: 24ed123ef1819fa8c6069706760efac9904ee8824b22c346259be2017d820b5e578a4d444339448a576a0158e6fec91d18fdedb201bc97d7390b105d665f3642
+  languageName: node
+  linkType: hard
+
+"@jest/create-cache-key-function@npm:^27.4.2":
+  version: 27.4.2
+  resolution: "@jest/create-cache-key-function@npm:27.4.2"
+  dependencies:
+    "@jest/types": ^27.4.2
+  checksum: 46eeb4460798c6bba9da5bba6d07030012a9290ee6d2e3537e49110e57e6bcb118d9075a942ec3c1b1a2eebb50746d231bc9b15749980dd3817c41db3179c27a
   languageName: node
   linkType: hard
 
@@ -3722,6 +3758,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@napi-rs/triples@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@napi-rs/triples@npm:1.1.0"
+  checksum: 8da77d47ec15704b1936f5f3995951459fc5d604bf2ed400d9579e3356dc0aeb486b217a503f675dda653221751e1fd5dcaaf8de1bab3c71853e8cfd72309709
+  languageName: node
+  linkType: hard
+
+"@node-rs/helper@npm:^1.0.0":
+  version: 1.3.2
+  resolution: "@node-rs/helper@npm:1.3.2"
+  dependencies:
+    "@napi-rs/triples": ^1.1.0
+  checksum: 402ac25840e0549c29a63cc55891ba96cda04032ed99c73ed795e0ce850f9bd824bf9cdd2e4337ee30b076061c6430e4574605529285b71336b52ee72d15e5b9
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.3":
   version: 2.1.3
   resolution: "@nodelib/fs.scandir@npm:2.1.3"
@@ -4040,6 +4092,7 @@ __metadata:
     "@babel/preset-typescript": 7.16.7
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -4066,6 +4119,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.7
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     source-map: 0.5.6
     ts-jest: 27.1.1
@@ -4081,6 +4135,157 @@ __metadata:
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
+
+"@swc/core-android-arm-eabi@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-android-arm-eabi@npm:1.2.129"
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-android-arm64@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-android-arm64@npm:1.2.129"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-arm64@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-darwin-arm64@npm:1.2.129"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-darwin-x64@npm:1.2.129"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-freebsd-x64@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-freebsd-x64@npm:1.2.129"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm-gnueabihf@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.129"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-gnu@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.2.129"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-musl@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-linux-arm64-musl@npm:1.2.129"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-gnu@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-linux-x64-gnu@npm:1.2.129"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-musl@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-linux-x64-musl@npm:1.2.129"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-arm64-msvc@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.2.129"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-ia32-msvc@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.2.129"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-x64-msvc@npm:1.2.129":
+  version: 1.2.129
+  resolution: "@swc/core-win32-x64-msvc@npm:1.2.129"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:*":
+  version: 1.2.129
+  resolution: "@swc/core@npm:1.2.129"
+  dependencies:
+    "@node-rs/helper": ^1.0.0
+    "@swc/core-android-arm-eabi": 1.2.129
+    "@swc/core-android-arm64": 1.2.129
+    "@swc/core-darwin-arm64": 1.2.129
+    "@swc/core-darwin-x64": 1.2.129
+    "@swc/core-freebsd-x64": 1.2.129
+    "@swc/core-linux-arm-gnueabihf": 1.2.129
+    "@swc/core-linux-arm64-gnu": 1.2.129
+    "@swc/core-linux-arm64-musl": 1.2.129
+    "@swc/core-linux-x64-gnu": 1.2.129
+    "@swc/core-linux-x64-musl": 1.2.129
+    "@swc/core-win32-arm64-msvc": 1.2.129
+    "@swc/core-win32-ia32-msvc": 1.2.129
+    "@swc/core-win32-x64-msvc": 1.2.129
+  dependenciesMeta:
+    "@swc/core-android-arm-eabi":
+      optional: true
+    "@swc/core-android-arm64":
+      optional: true
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-freebsd-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  checksum: a263ab78f181ebb2fc22c9d715d444608cf9e6edf2c1640aa6b52499185a61ff8687b63ea33716585e77e604214f2dce55bc0561a647f4ba17cc9c66ac373b82
+  languageName: node
+  linkType: hard
+
+"@swc/jest@npm:^0.2.17":
+  version: 0.2.17
+  resolution: "@swc/jest@npm:0.2.17"
+  dependencies:
+    "@jest/create-cache-key-function": ^27.4.2
+  peerDependencies:
+    "@swc/core": "*"
+  checksum: 33e08c71adaa3d46f47b888b954c8f61513804a1b3ee24fdc13ccbbb89ca6c96b474eef4002b96edcd6090a308a1aafd313073ae4bcd6339fcc3a22e2f29f1b7
+  languageName: node
+  linkType: hard
 
 "@szmarczak/http-timer@npm:^1.1.2":
   version: 1.1.2
@@ -5057,6 +5262,7 @@ __metadata:
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -5089,6 +5295,7 @@ __metadata:
     lint-staged: 12.1.7
     prettier: 2.5.1
     process: ^0.11.10
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     setimmediate: ^1.0.5
     stream-browserify: ^3.0.0
@@ -5123,6 +5330,7 @@ __metadata:
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
     "@hot-loader/react-dom": 17.0.1
+    "@swc/jest": ^0.2.17
     "@types/body-parser": 1.19.2
     "@types/express": 4.17.12
     "@types/figlet": 1.5.4
@@ -5173,6 +5381,7 @@ __metadata:
     react-dom: ^17.0.0
     react-helmet: ^6.1.0
     react-hot-loader: ^4.13.0
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -5201,6 +5410,7 @@ __metadata:
     "@babel/preset-typescript": 7.16.7
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@types/node-fetch": 2.5.12
@@ -5231,6 +5441,7 @@ __metadata:
     node-fetch: ^2.6.1
     prettier: 2.5.1
     reduct: ^3.3.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -5261,6 +5472,7 @@ __metadata:
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@types/react": 17.0.38
@@ -5289,6 +5501,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.7
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -5321,6 +5534,7 @@ __metadata:
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
     "@hot-loader/react-dom": 17.0.1
+    "@swc/jest": ^0.2.17
     "@types/ajv": 1.0.0
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
@@ -5357,6 +5571,7 @@ __metadata:
     react: ^17.0.0
     react-dom: ^17.0.0
     react-hot-loader: ^4.13.0
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -5386,6 +5601,7 @@ __metadata:
     "@babel/preset-typescript": 7.16.7
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -5412,6 +5628,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.7
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-json-schema-generator: 0.97.0
@@ -5442,6 +5659,7 @@ __metadata:
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/annotations": 0.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -5470,6 +5688,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.1.7
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6
@@ -19321,6 +19540,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:^0.13.9":
+  version: 0.13.9
+  resolution: "regenerator-runtime@npm:0.13.9"
+  checksum: 65ed455fe5afd799e2897baf691ca21c2772e1a969d19bb0c4695757c2d96249eb74ee3553ea34a91062b2a676beedf630b4c1551cc6299afb937be1426ec55e
+  languageName: node
+  linkType: hard
+
 "regenerator-runtime@npm:^0.9.5":
   version: 0.9.6
   resolution: "regenerator-runtime@npm:0.9.6"
@@ -22874,6 +23100,7 @@ typescript@~4.4.3:
     "@babel/preset-typescript": 7.16.7
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
+    "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/node": 14.18.5
     "@typescript-eslint/eslint-plugin": 5.9.1
@@ -22900,6 +23127,7 @@ typescript@~4.4.3:
     lerna: 4.0.0
     lint-staged: 12.1.7
     prettier: 2.5.1
+    regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     ts-jest: 27.1.1
     ts-loader: 9.2.6

@@ -30,6 +30,9 @@ let config = {
   rootDir: '.',
   moduleNameMapper,
   moduleFileExtensions: ['js', 'ts', 'tsx', 'jsx', 'json'],
+  "transform": {
+    "^.+\\.tsx?$": "@swc/jest"
+  },
   globals: {
     'ts-jest': {
       compilerOptions: {
