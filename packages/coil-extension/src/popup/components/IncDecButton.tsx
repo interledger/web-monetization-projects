@@ -145,7 +145,7 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
   const { type } = props
 
   const { user } = useStore()
-  const { remainingDailyAmount = 0, minimumTipLimit = 1 } =
+  const { minimumTipLimit = 1, maxAllowableTipAmount = 0 } =
     user?.tipSettings || {}
   const { currentTipAmount, setCurrentTipAmount } = useTip()
 
@@ -156,7 +156,7 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
   const updateAmount = () => {
     let amount = currentTipAmount
     if (type === IncDec.Inc) {
-      if (amount == remainingDailyAmount) return
+      if (amount == maxAllowableTipAmount) return
       amount = amount + 1
     } else if (type == IncDec.Dec) {
       amount = amount - 1
@@ -165,8 +165,8 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
       amount = minimumTipLimit
       stop()
     }
-    if (amount >= remainingDailyAmount) {
-      amount = remainingDailyAmount
+    if (amount >= maxAllowableTipAmount) {
+      amount = maxAllowableTipAmount
       stop()
     }
     setCurrentTipAmount(amount)
@@ -214,7 +214,7 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
 
   const getDisabledState = () => {
     if (type == IncDec.Inc) {
-      return currentTipAmount >= remainingDailyAmount
+      return currentTipAmount >= maxAllowableTipAmount
     } else {
       return currentTipAmount <= minimumTipLimit
     }

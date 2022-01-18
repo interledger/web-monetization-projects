@@ -2,6 +2,8 @@ import React from 'react'
 import { styled, Box } from '@material-ui/core'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
+import { Header } from '../Header'
+import { NavBar } from '../NavBar'
 import { Colors } from '../../../shared-theme/colors'
 import { FitTextWrapper } from '../FitTextWrapper'
 import { RandomThankYouMessage } from '../RandomThankYouMessage'
@@ -15,9 +17,8 @@ const BodyWrapper = styled('div')(({ url }: { url: string }) => ({
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
-  padding: '0px 24px',
   backgroundImage: `url("${url}")`, //* the 'random' prop is needed so the gif animation replays every load
-  backgroundSize: '105% 105%',
+  backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'bottom',
   textAlign: 'center',
@@ -54,9 +55,10 @@ export const TipCompleteView = (): React.ReactElement => {
   }
 
   return (
-    <NewHeaderFooterLayout>
+    <>
       <BodyWrapper url={getBackgroundImageUrl()}>
-        <Box mt={5} mb={3}>
+        <Header />
+        <Box mt={5} mb={2} px={3}>
           <FitTextWrapper defaultFontSize={80}>
             $
             {Number.isInteger(currentTipAmount)
@@ -64,8 +66,11 @@ export const TipCompleteView = (): React.ReactElement => {
               : currentTipAmount.toFixed(2)}
           </FitTextWrapper>
         </Box>
-        <RandomThankYouMessage />
+        <Box px={3}>
+          <RandomThankYouMessage />
+        </Box>
       </BodyWrapper>
-    </NewHeaderFooterLayout>
+      <NavBar />
+    </>
   )
 }

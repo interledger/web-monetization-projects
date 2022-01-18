@@ -51,6 +51,13 @@ export const theme = createMuiThemeWrapper({
   },
   breakpoints,
   overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        strong: {
+          fontWeight: 500
+        }
+      }
+    },
     MuiMenuItem: {
       root: {
         paddingTop: '8px',

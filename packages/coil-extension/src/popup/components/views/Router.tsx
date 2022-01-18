@@ -15,6 +15,7 @@ import { StreamingCoilDiscoverView } from './StreamingCoilDiscoverView'
 import { TipView } from './TipView'
 import { TipConfirmView } from './TipConfirmView'
 import { TipCompleteView } from './TipCompleteView'
+import { TipNonMonetizedView } from './TipNonMonetizedView'
 
 //
 // Component
@@ -31,6 +32,13 @@ export const Router = () => {
     // /tipping
     case ROUTES.tipping: {
       // /tipping
+
+      // Tipping - non monetized site | Coil site
+      if (!monetized) {
+        return <TipNonMonetizedView />
+      }
+
+      // Tipping - monetized sites
       return <TipView />
     }
     // /tipping/confirm
@@ -49,7 +57,7 @@ export const Router = () => {
       // check the logic for what state to display for the streaming page
 
       // Streaming - No Membership
-      if (!user?.subscription?.active) {
+      if (monetized && !user?.subscription?.active) {
         return <StreamingNoMembershipView />
       }
 

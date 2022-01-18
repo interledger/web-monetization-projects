@@ -1,5 +1,6 @@
 import React from 'react'
 import { Typography, styled, Theme } from '@material-ui/core'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import PersonIcon from '@material-ui/icons/Person'
 import ExploreIcon from '@material-ui/icons/Explore'
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline'
@@ -40,6 +41,19 @@ const ProfilePicture = styled('div')(({ src }: { src: string }) => ({
   backgroundRepeat: 'no-repeat'
 }))
 
+const ProfileIcon = styled('div')(({ theme }: { theme: Theme }) => ({
+  height: '64px',
+  width: '64px',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  marginBottom: '8px',
+  '& > svg': {
+    width: '64px',
+    height: '64px',
+    color: theme.palette.Grey500
+  }
+}))
+
 const SettingsButton = styled('div')(({ theme }: { theme: Theme }) => ({
   cursor: 'pointer',
   display: 'flex',
@@ -71,6 +85,31 @@ export const SettingsView = () => {
     runtime: { tabOpener }
   } = useHost()
 
+  const getPrimaryName = () => {
+    if (user?.fullName) {
+      return user.fullName
+    }
+
+    if (user?.shortName) {
+      return user.shortName
+    }
+
+    if (user?.email) {
+      return user.email
+    }
+  }
+
+  const getSecondaryName = () => {
+    if (user?.fullName && user?.shortName) {
+      return user.shortName
+    } else {
+      if (user?.shortName) {
+        return user.email
+      }
+      return
+    }
+  }
+
   return (
     <NewHeaderFooterLayout title='Settings'>
       <SettingsPageContainer>
@@ -83,17 +122,21 @@ export const SettingsView = () => {
           }}
         >
           <div>
-            {user?.profilePicture && (
+            {user?.profilePicture ? (
               <ProfilePicture src={user.profilePicture} />
+            ) : (
+              <ProfileIcon>
+                <AccountCircleIcon />
+              </ProfileIcon>
             )}
-            {user?.fullName && (
+            {getPrimaryName() && (
               <Typography variant='h6' align='center'>
-                {user.fullName}
+                {getPrimaryName()}
               </Typography>
             )}
-            {(user?.shortName || user?.email) && (
+            {getSecondaryName() && (
               <Typography variant='subtitle1' align='center'>
-                {user.shortName ?? user.email}
+                {getSecondaryName()}
               </Typography>
             )}
           </div>

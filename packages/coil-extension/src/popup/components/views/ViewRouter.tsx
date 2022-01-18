@@ -18,7 +18,7 @@ export function ViewRouter(): React.ReactElement {
 
   // Testing the new View structure
   // The NewExtension will replace ViewRouter in index.tsx -> should change name to App or Extension
-  if (user?.tipSettings?.inTippingBeta) {
+  if (user?.extensionNewUiFeatureFlag) {
     return <NewExtension />
   }
 

@@ -52,6 +52,12 @@ describe('GraphQlClient#login', () => {
   })
 
   it('should compose the queries correctly', () => {
+    //! NOTE: This test fails if any changes are made to the whoami call.
+    //! All the selections can match but if the spacing of the selections is condensed or even
+    //! just off from some randomness the test will fail - again it fails because of tab indents or spacing
+    //! if you get a failed test due to snapshots or a bunch of failed CI tests run yarn jest locally and
+    //! see if this file is the problem. Should only happen if you update the whoami query.
+
     // This test seems pointless, but we had issues with auto generated
     // circular imports causing the whoami selection here to be `undefined`
     expect(queryTokenQuery).toMatchInlineSnapshot(`
@@ -81,9 +87,16 @@ describe('GraphQlClient#login', () => {
             scale
           }
 
-          tipping {
-            lastTippedAmount
-            limitRemaining
+          paymentMethods {
+            id
+            type
+              details {
+                ... on StripeCardDetails {
+                last4
+                brandCode
+                status
+              }
+            }
           }
 
         }

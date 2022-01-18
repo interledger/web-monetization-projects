@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react'
-import { styled, Box } from '@material-ui/core'
+import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
 import { useStore } from '../context/storeContext'
+import { getCreditCardFromPaymentMethods } from '../../util/getCreditCardFromPaymentMethods'
 
 import { CreditCardIcon } from './icons/CreditCardIcon'
 
@@ -31,6 +32,10 @@ const PaymentMethod = styled('div')({
     marginRight: '8px'
   }
 })
+
+const PaymentAmount = styled('strong')(({ theme }) => ({
+  color: theme.palette.Grey800
+}))
 
 const Dot = styled('div')({
   backgroundColor: Colors.Grey700,
@@ -67,11 +72,8 @@ export const TipPaymentDebits = (
   const creditCardChargeInDollars = (creditCardCharge / 100).toFixed(2)
 
   const creditCard = useMemo(() => {
-    return user?.paymentMethods?.find(method => {
-      if (method?.type === 'stripe') {
-        return method
-      }
-    })
+    const card = getCreditCardFromPaymentMethods(user?.paymentMethods)
+    return card
   }, [user])
 
   return (
@@ -81,7 +83,7 @@ export const TipPaymentDebits = (
           <PaymentMethod>
             <img src='/res/CoilLogo.svg' alt='coil icon' /> Tip credits
           </PaymentMethod>
-          <div>-${tipCreditChargeInDollars}</div>
+          <PaymentAmount>${tipCreditChargeInDollars}</PaymentAmount>
         </PaymentDebit>
       )}
       {creditCardCharge > 0 && ( // show the credit card only if it has been charged
@@ -94,7 +96,7 @@ export const TipPaymentDebits = (
             <Dot />
             {creditCard?.details?.last4}
           </PaymentMethod>
-          <div>-${creditCardChargeInDollars}</div>
+          <PaymentAmount>${creditCardChargeInDollars}</PaymentAmount>
         </PaymentDebit>
       )}
     </PaymentDebitsWrapper>

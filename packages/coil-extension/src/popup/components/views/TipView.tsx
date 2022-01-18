@@ -4,12 +4,12 @@ import { styled, Box } from '@material-ui/core'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { AmountInput } from '../AmountInput'
 import { HotkeyAmountButtons } from '../HotkeyAmountButtons'
-import { TipWarning } from '../TipWarning'
-import { Colors } from '../../../shared-theme/colors'
 import { useStore } from '../../context/storeContext'
 import { useTip } from '../../context/tipContext'
 import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../constants'
+import { TipAmountFeedback } from '../TipAmountFeedback'
+import { CtaButton } from '../CtaButton'
 
 //
 // Styles
@@ -21,42 +21,23 @@ const ComponentWrapper = styled('div')({
   flexDirection: 'column'
 })
 
-const Button = styled('button')({
-  position: 'relative',
-  overflow: 'hidden',
-  cursor: 'pointer',
-  width: '100%',
-  height: '48px',
-  backgroundColor: Colors.Grey800,
-  color: '#FFFFFF',
-  fontFamily: 'CircularStd',
-  fontWeight: 'bold',
-  fontSize: '16px',
-  letterSpacing: '.5px',
-  border: 'none',
-  borderRadius: '100px',
-  '&:hover': {
-    backgroundColor: '#000000'
-  },
-  '&:disabled': {
-    cursor: 'not-allowed',
-    backgroundColor: Colors.Grey500,
-    color: Colors.Grey100
-  }
-})
-
 //
 // Component
 //
 export const TipView: React.FC = () => {
-  const { user } = useStore()
-  const { remainingDailyAmount } = user?.tipSettings || {}
   const { currentTipAmount } = useTip()
   const router = useRouter()
+  const { user } = useStore()
+  const { maxAllowableTipAmount = 0 } = user?.tipSettings ?? {}
 
   const handleTip = () => {
     router.to(ROUTES.tippingConfirm)
   }
+
+  const buttonDisabled =
+    currentTipAmount > maxAllowableTipAmount ||
+    currentTipAmount == 0 ||
+    maxAllowableTipAmount == 0
 
   // Render
   return (
@@ -68,19 +49,16 @@ export const TipView: React.FC = () => {
         <Box mt={5}>
           <HotkeyAmountButtons />
         </Box>
-        <Box mt={4} flex='1'>
-          <TipWarning />
+        <Box mt={4} mb={1} flex='1'>
+          <TipAmountFeedback />
         </Box>
-        <Box mb={2}>
-          <Button
-            onClick={handleTip}
-            disabled={currentTipAmount > (remainingDailyAmount || 0)}
-          >
+        <Box mb={1}>
+          <CtaButton onClick={handleTip} disabled={buttonDisabled}>
             Send $
             {Number.isInteger(currentTipAmount)
               ? currentTipAmount
               : currentTipAmount.toFixed(2)}
-          </Button>
+          </CtaButton>
         </Box>
       </ComponentWrapper>
     </NewHeaderFooterLayout>

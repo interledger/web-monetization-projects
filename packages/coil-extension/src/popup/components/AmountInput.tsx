@@ -17,13 +17,16 @@ const CurrentAmountWrapper = styled('div')({
   height: '62px'
 })
 
-const Amount = styled('div')(({ size }: { size: number }) => ({
-  cursor: 'pointer',
-  fontSize: `${size}px`,
-  fontWeight: 'bold',
-  color: Colors.Grey800,
-  letterSpacing: '0px'
-}))
+const Amount = styled('div')(
+  ({ size, disabled }: { size: number; disabled: boolean }) => ({
+    pointerEvents: disabled ? 'none' : 'inherit',
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    fontSize: `${size}px`,
+    fontWeight: 'bold',
+    color: disabled ? Colors.Grey100 : Colors.Grey800,
+    letterSpacing: '0px'
+  })
+)
 
 const InputWrapper = styled('div')(({ size }: { size: number }) => ({
   display: 'flex',
@@ -73,7 +76,7 @@ export const AmountInput = (): React.ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null)
 
   const { user } = useStore()
-  const { remainingDailyAmount = 0, minimumTipLimit = 1 } =
+  const { minimumTipLimit = 1, maxAllowableTipAmount = 0 } =
     user?.tipSettings || {}
   const { currentTipAmount, setCurrentTipAmount } = useTip()
 
@@ -118,8 +121,8 @@ export const AmountInput = (): React.ReactElement => {
     }
 
     // handle if the input is higher than the remaining daily limit
-    if (value > remainingDailyAmount) {
-      value = remainingDailyAmount
+    if (value > maxAllowableTipAmount) {
+      value = maxAllowableTipAmount
       if (isUserInput && inputRef.current) {
         inputRef.current.value = value.toString()
       }
@@ -186,7 +189,11 @@ export const AmountInput = (): React.ReactElement => {
         </InputWrapper>
       ) : (
         // render tip display
-        <Amount size={displayFontSize} onClick={() => setIsUserInput(true)}>
+        <Amount
+          size={displayFontSize}
+          onClick={() => setIsUserInput(true)}
+          disabled={maxAllowableTipAmount == 0}
+        >
           $
           {Number.isInteger(currentTipAmount)
             ? currentTipAmount

@@ -59,12 +59,14 @@ export const StreamingNoMembershipView = () => {
       >
         Support this content
       </Typography>
-      <Typography variant='subtitle1' align='center'>
-        Get a $5/mo Coil membership to
-        <br />
-        support content and creators you love
-      </Typography>
-      <Box mt={2} px={3}>
+      <Box flex='1'>
+        <Typography variant='subtitle1' align='center'>
+          Get a $5/mo Coil membership to
+          <br />
+          support content and creators you love
+        </Typography>
+      </Box>
+      <Box mt={2} mb={1} px={3}>
         <CtaButton onClick={onClick}>Become a member</CtaButton>
       </Box>
     </NewHeaderFooterLayout>
