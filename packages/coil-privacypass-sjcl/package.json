@@ -55,7 +55,7 @@
     "@commitlint/config-conventional": "16.0.0",
     "@types/jest": "27.4.0",
     "@types/keccak": "3.0.1",
-    "@types/node": "14.18.5",
+    "@types/node": "14.18.7",
     "@types/sjcl": "1.0.30",
     "@typescript-eslint/eslint-plugin": "5.10.0",
     "@typescript-eslint/parser": "5.10.0",
