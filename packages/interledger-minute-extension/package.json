@@ -67,7 +67,7 @@
     "@commitlint/config-conventional": "16.0.0",
     "@swc/jest": "^0.2.17",
     "@types/jest": "27.4.0",
-    "@types/node": "14.18.5",
+    "@types/node": "14.18.7",
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
     "@types/uuid": "8.3.4",
