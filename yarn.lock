@@ -2420,16 +2420,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hot-loader/react-dom@npm:*, @hot-loader/react-dom@npm:17.0.1":
-  version: 17.0.1
-  resolution: "@hot-loader/react-dom@npm:17.0.1"
+"@hot-loader/react-dom@npm:*, @hot-loader/react-dom@npm:17.0.2":
+  version: 17.0.2
+  resolution: "@hot-loader/react-dom@npm:17.0.2"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-    scheduler: ^0.20.1
+    scheduler: ^0.20.2
   peerDependencies:
-    react: 17.0.1
-  checksum: 64d47e6448f006802cbcad9787b305a9f2a51d3cfdda09d0b69b6f6ae8a6b6781c06bf0c2367ad8a747336b413e65f9434bbdcef945c1dbd9f8d38d367bd30ef
+    react: 17.0.2
+  checksum: 180de3211aff1d60fd9d2a9130ba7977e2e356b1ecd2e7c50a98e6507bb7873f0523b44fa63142f0ffdc629d2933994f4add86e1f19288941f9d223bd28f5e48
   languageName: node
   linkType: hard
 
@@ -5140,7 +5140,7 @@ __metadata:
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
-    "@hot-loader/react-dom": 17.0.1
+    "@hot-loader/react-dom": 17.0.2
     "@types/body-parser": 1.19.2
     "@types/express": 4.17.12
     "@types/figlet": 1.5.4
@@ -5329,7 +5329,7 @@ __metadata:
     "@coil/webpack-utils": ^0.0.0
     "@commitlint/cli": 16.0.2
     "@commitlint/config-conventional": 16.0.0
-    "@hot-loader/react-dom": 17.0.1
+    "@hot-loader/react-dom": 17.0.2
     "@types/ajv": 1.0.0
     "@types/jest": 27.4.0
     "@types/node": 14.18.7
@@ -19980,7 +19980,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.20.1, scheduler@npm:^0.20.2":
+"scheduler@npm:^0.20.2":
   version: 0.20.2
   resolution: "scheduler@npm:0.20.2"
   dependencies:
