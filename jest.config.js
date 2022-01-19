@@ -30,9 +30,10 @@ let config = {
   rootDir: '.',
   moduleNameMapper,
   moduleFileExtensions: ['js', 'ts', 'tsx', 'jsx', 'json'],
-  "transform": {
-    "^.+\\.tsx?$": "@swc/jest"
+  transform: {
+    '^.+\\.tsx?$': '@swc/jest'
   },
+  setupFiles: [__dirname + '/commands/jest/loadReflection.js'],
   globals: {
     'ts-jest': {
       compilerOptions: {
