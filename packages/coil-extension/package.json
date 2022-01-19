@@ -95,7 +95,7 @@
     "@types/jest": "27.4.0",
     "@types/jsonwebtoken": "8.5.8",
     "@types/long": "4.0.1",
-    "@types/node": "14.18.8",
+    "@types/node": "14.18.9",
     "@types/node-fetch": "2.5.12",
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
