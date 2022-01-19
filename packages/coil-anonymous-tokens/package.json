@@ -42,7 +42,7 @@
     "@babel/plugin-proposal-object-rest-spread": "7.16.7",
     "@babel/preset-env": "7.16.8",
     "@babel/preset-typescript": "7.16.7",
-    "@commitlint/cli": "16.0.2",
+    "@commitlint/cli": "16.0.3",
     "@commitlint/config-conventional": "16.0.0",
     "@types/jest": "27.4.0",
     "@types/jsonwebtoken": "8.5.8",
