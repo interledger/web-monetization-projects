@@ -2902,7 +2902,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["http-server", "npm:14.1.0"],
             ["husky", "npm:7.0.4"],
             ["ilp-plugin-btp", "npm:1.5.0"],
-            ["ilp-protocol-stream", "npm:2.7.0"],
+            ["ilp-protocol-stream", "npm:2.7.1"],
             ["inversify", "npm:6.0.1"],
             ["inversify-logger-middleware", "npm:3.1.0"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.4.7"],
@@ -3036,7 +3036,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
             ["husky", "npm:7.0.4"],
             ["ilp-plugin-btp", "npm:1.5.0"],
-            ["ilp-protocol-stream", "npm:2.7.0"],
+            ["ilp-protocol-stream", "npm:2.7.1"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.4.7"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.2.0"],
@@ -3893,7 +3893,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["file-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.2.0"],
             ["husky", "npm:7.0.4"],
             ["ilp-plugin-btp", "npm:1.5.0"],
-            ["ilp-protocol-stream", "npm:2.7.0"],
+            ["ilp-protocol-stream", "npm:2.7.1"],
             ["inversify", "npm:6.0.1"],
             ["inversify-logger-middleware", "npm:3.1.0"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.4.7"],
@@ -7037,7 +7037,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:7.0.4"],
             ["ilp-plugin-btp", "npm:1.5.0"],
             ["ilp-plugin-mini-accounts", "npm:4.2.0"],
-            ["ilp-protocol-stream", "npm:2.7.0"],
+            ["ilp-protocol-stream", "npm:2.7.1"],
             ["inversify", "npm:6.0.1"],
             ["inversify-express-utils", "npm:6.3.2"],
             ["jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.4.7"],
@@ -17801,10 +17801,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ilp-protocol-stream", [
-        ["npm:2.7.0", {
-          "packageLocation": "./.yarn/cache/ilp-protocol-stream-npm-2.7.0-1ea7dbc00f-61195c68b1.zip/node_modules/ilp-protocol-stream/",
+        ["npm:2.7.1", {
+          "packageLocation": "./.yarn/cache/ilp-protocol-stream-npm-2.7.1-7e66a6a452-f5a1f17dd0.zip/node_modules/ilp-protocol-stream/",
           "packageDependencies": [
-            ["ilp-protocol-stream", "npm:2.7.0"],
+            ["ilp-protocol-stream", "npm:2.7.1"],
             ["@types/long", "npm:4.0.1"],
             ["@types/node", "npm:10.17.35"],
             ["ilp-logger", "npm:1.4.2"],
