@@ -32,12 +32,17 @@ export const StreamingNoMembershipView = () => {
   const onClick = tabOpener(coilDomain + '/settings/payment')
 
   useEffect(() => {
-    this.streamingPaused = lottie.loadAnimation({
-      container: lottieAnchor.current,
-      animationData: streamingOnAnimation,
-      autoplay: false
-    })
-  }, [])
+    if (lottieAnchor.current) {
+      // normally we would use this.streamingPaused = lootie
+      // but compiler is throwing error "this Object is possibly undefined", which is not possible: https://github.com/microsoft/TypeScript/issues/15385
+
+      const streamingPaused = lottie.loadAnimation({
+        container: lottieAnchor.current,
+        animationData: streamingOnAnimation,
+        autoplay: false
+      })
+    }
+  }, [lottieAnchor])
 
   return (
     <NewHeaderFooterLayout title='Streaming Payments'>

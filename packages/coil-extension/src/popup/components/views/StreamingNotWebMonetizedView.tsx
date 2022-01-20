@@ -29,12 +29,17 @@ export const StreamingNotWebMonetizedView = () => {
   const lottieAnchor = useRef(null)
 
   useEffect(() => {
-    this.streamingOff = lottie.loadAnimation({
-      container: lottieAnchor.current,
-      animationData: streamingOffAnimation,
-      autoplay: true
-    })
-  }, [])
+    if (lottieAnchor.current) {
+      // normally we would use this.streamingOff = lootie
+      // but compiler is throwing error "this Object is possibly undefined", which is not possible: https://github.com/microsoft/TypeScript/issues/15385
+
+      const streamingOff = lottie.loadAnimation({
+        container: lottieAnchor.current,
+        animationData: streamingOffAnimation,
+        autoplay: true
+      })
+    }
+  }, [lottieAnchor])
 
   return (
     <NewHeaderFooterLayout title='Streaming Payments'>

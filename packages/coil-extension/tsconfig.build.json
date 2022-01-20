@@ -8,7 +8,8 @@
     "rootDir": "src"
   },
   "include": [
-    "src"
+    "src",
+    "src/popup/components/lottie-animations/*.json"
   ],
   "exclude": [
     "src/**/*.test.ts",
