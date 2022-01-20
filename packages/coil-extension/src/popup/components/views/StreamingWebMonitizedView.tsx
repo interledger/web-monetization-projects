@@ -1,21 +1,19 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import lottie from 'lottie-web'
 import { Typography, styled, Theme, useTheme } from '@material-ui/core'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
+import streamingOnAnimation from '../lottie-animations/wm_streaming_on.json'
 
 //
 // Styles
 //
-const ImgWrapper = styled('div')(({ theme }: { theme: Theme }) => ({
-  position: 'relative',
-  marginTop: theme.spacing(6),
+const LottieWrapper = styled('div')(({ theme }: { theme: Theme }) => ({
+  marginTop: theme.spacing(4),
+  height: 'auto',
+  width: '196px',
   marginLeft: 'auto',
   marginRight: 'auto'
-}))
-
-const StreamingImg = styled('img')(({ theme }: { theme: Theme }) => ({
-  position: 'absolute',
-  top: theme.spacing(3)
 }))
 
 //
@@ -23,12 +21,19 @@ const StreamingImg = styled('img')(({ theme }: { theme: Theme }) => ({
 //
 export const StreamingWebMonetizedView = () => {
   const theme = useTheme()
+  const lottieAnchor = useRef(null)
+
+  useEffect(() => {
+    this.streamingOn = lottie.loadAnimation({
+      container: lottieAnchor.current,
+      animationData: streamingOnAnimation,
+      autoplay: true
+    })
+  }, [])
+
   return (
     <NewHeaderFooterLayout title='Streaming Payments'>
-      <ImgWrapper>
-        <StreamingImg src='/res/stream_loop.svg' width='171' height='22' />
-        <img src='/res/img-woman.png' />
-      </ImgWrapper>
+      <LottieWrapper ref={lottieAnchor} />
       <Typography
         variant='h6'
         align='center'
