@@ -2910,6 +2910,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jss", "npm:10.6.0"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.3.1"],
+            ["lottie-web", "npm:5.8.1"],
             ["prettier", "npm:2.5.1"],
             ["puppeteer", "npm:13.1.2"],
             ["react", "npm:17.0.2"],
@@ -20586,6 +20587,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["loose-envify", "npm:1.4.0"],
             ["js-tokens", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lottie-web", [
+        ["npm:5.8.1", {
+          "packageLocation": "./.yarn/cache/lottie-web-npm-5.8.1-04482d1a86-48c19ea786.zip/node_modules/lottie-web/",
+          "packageDependencies": [
+            ["lottie-web", "npm:5.8.1"]
           ],
           "linkType": "HARD",
         }]

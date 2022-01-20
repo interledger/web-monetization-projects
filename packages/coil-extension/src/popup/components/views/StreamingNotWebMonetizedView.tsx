@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Typography, styled, Theme, useTheme } from '@material-ui/core'
+import lottie from 'lottie-web'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
-import { useHost } from '../../context/popupHostContext'
+import streamingOffAnimation from '../lottie-animations/wm_streaming_off.json'
 
 //
 // Styles
@@ -34,12 +35,21 @@ const Link = styled('a')(({ theme }: { theme: Theme }) => ({
 export const StreamingNotWebMonetizedView = () => {
   const theme = useTheme()
 
+  useEffect(() => {
+    this.streamingOff = lottie.loadAnimation({
+      container: document.getElementById('lottie-anchor'),
+      animationData: streamingOffAnimation,
+      autoplay: true
+    })
+  }, [])
+
   return (
     <NewHeaderFooterLayout title='Streaming Payments'>
       <ImgWrapper>
         <StreamingImg src='/res/stream_loop.svg' width='171' height='22' />
         <PrimaryImg src='/res/img-woman.png' />
       </ImgWrapper>
+      <div id='lottie-anchor'></div>
       <Typography
         variant='h6'
         align='center'
