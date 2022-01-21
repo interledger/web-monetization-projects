@@ -10,7 +10,7 @@ import streamingOffAnimation from '../lottie-animations/wm_streaming_off.json'
 //
 const LottieWrapper = styled('div')(({ theme }: { theme: Theme }) => ({
   marginTop: theme.spacing(4),
-  height: 'auto',
+  height: '152px',
   width: '196px',
   marginLeft: 'auto',
   marginRight: 'auto'
@@ -30,10 +30,7 @@ export const StreamingNotWebMonetizedView = () => {
 
   useEffect(() => {
     if (lottieAnchor.current) {
-      // normally we would use this.streamingOff = lootie
-      // but compiler is throwing error "this Object is possibly undefined", which is not possible: https://github.com/microsoft/TypeScript/issues/15385
-
-      const streamingOff = lottie.loadAnimation({
+      lottie.loadAnimation({
         container: lottieAnchor.current,
         animationData: streamingOffAnimation,
         autoplay: true

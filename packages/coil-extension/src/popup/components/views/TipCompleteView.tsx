@@ -1,7 +1,6 @@
 import React from 'react'
 import { styled, Box } from '@material-ui/core'
 
-import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { Header } from '../Header'
 import { NavBar } from '../NavBar'
 import { Colors } from '../../../shared-theme/colors'
