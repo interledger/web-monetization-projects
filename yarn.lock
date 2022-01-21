@@ -1588,7 +1588,7 @@ __metadata:
     http-server: 14.1.0
     husky: 7.0.4
     ilp-plugin-btp: 1.5.0
-    ilp-protocol-stream: 2.7.0
+    ilp-protocol-stream: 2.7.1
     inversify: ^6.0.0
     inversify-logger-middleware: ^3.1.0
     jest: 27.4.7
@@ -1718,7 +1718,7 @@ __metadata:
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     ilp-plugin-btp: 1.5.0
-    ilp-protocol-stream: 2.7.0
+    ilp-protocol-stream: 2.7.1
     jest: 27.4.7
     lerna: 4.0.0
     lint-staged: 12.2.0
@@ -2512,7 +2512,7 @@ __metadata:
     file-loader: 6.2.0
     husky: 7.0.4
     ilp-plugin-btp: 1.5.0
-    ilp-protocol-stream: 2.7.0
+    ilp-protocol-stream: 2.7.1
     inversify: ^6.0.0
     inversify-logger-middleware: ^3.1.0
     jest: 27.4.7
@@ -13243,9 +13243,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"ilp-protocol-stream@npm:2.7.0, ilp-protocol-stream@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "ilp-protocol-stream@npm:2.7.0"
+"ilp-protocol-stream@npm:2.7.1, ilp-protocol-stream@npm:^2.7.0":
+  version: 2.7.1
+  resolution: "ilp-protocol-stream@npm:2.7.1"
   dependencies:
     "@types/node": ^10.14.22
     ilp-logger: ^1.3.1
@@ -13254,7 +13254,7 @@ fsevents@^1.2.7:
     long: ^4.0.0
     oer-utils: ^5.0.1
     uuid: ^3.4.0
-  checksum: 61195c68b188c71a1a8bc449dd435fdb764a0380f7c11d89843fd12e477811663c9507f8f1373d2acc34b9ac90e916006005bfe31bfa6994ab684c8eeea93891
+  checksum: f5a1f17dd02ca1f1039e487eed9ad63a509003edea958ec3327811e20fa4170f05085faa101d9e0381e9a2e1721611c879671e7a73d78ef9dbb8ccf834d47e33
   languageName: node
   linkType: hard
 
