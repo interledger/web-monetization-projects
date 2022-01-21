@@ -22,8 +22,25 @@ const LottieWrapper = styled('div')(({ theme }: { theme: Theme }) => ({
 //
 export const StreamingWebMonetizedView = () => {
   const theme = useTheme()
-  const { monetizedTotal } = useStore()
+  const { monetizedTotal, adapted } = useStore()
   const lottieAnchor = useRef(null)
+
+  // site message is for standard web monetized sites
+  const siteMessage = (
+    <>
+      Your Coil Membership streams
+      <br />
+      payments to this site while you&apos;re on it
+    </>
+  )
+  // content message is for web applications like twitch and youtube where the creator has web monetized their specific content
+  const contentMessage = (
+    <>
+      Your Coil Membership supports this
+      <br />
+      creator while you enjoy their content
+    </>
+  )
 
   useEffect(() => {
     if (lottieAnchor.current) {
@@ -49,9 +66,7 @@ export const StreamingWebMonetizedView = () => {
         Thank You!
       </Typography>
       <Typography variant='subtitle1' align='center'>
-        Your Coil Membership streams
-        <br />
-        payments to this site while you&apos;re on it
+        {adapted ? contentMessage : siteMessage}
       </Typography>
     </NewHeaderFooterLayout>
   )
