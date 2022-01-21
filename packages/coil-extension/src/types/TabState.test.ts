@@ -3,10 +3,11 @@ import { FrameState, isFrameMonetized } from './TabState'
 describe('isFrameStateMonetized', () => {
   it('isFrameStateMonetized', () => {
     const frameState: FrameState = {
-      total: 0,
       adapted: false,
       ['monetization-state-a']: {
         command: 'start',
+        total: 0,
+        lastPacket: 0,
         details: {
           requestId: 'a',
           paymentPointer: '',
