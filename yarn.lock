@@ -37,30 +37,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.16.7, @babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0":
-  version: 7.16.7
-  resolution: "@babel/core@npm:7.16.7"
+"@babel/core@npm:7.16.10, @babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0":
+  version: 7.16.10
+  resolution: "@babel/core@npm:7.16.10"
   dependencies:
     "@babel/code-frame": ^7.16.7
-    "@babel/generator": ^7.16.7
+    "@babel/generator": ^7.16.8
     "@babel/helper-compilation-targets": ^7.16.7
     "@babel/helper-module-transforms": ^7.16.7
     "@babel/helpers": ^7.16.7
-    "@babel/parser": ^7.16.7
+    "@babel/parser": ^7.16.10
     "@babel/template": ^7.16.7
-    "@babel/traverse": ^7.16.7
-    "@babel/types": ^7.16.7
+    "@babel/traverse": ^7.16.10
+    "@babel/types": ^7.16.8
     convert-source-map: ^1.7.0
     debug: ^4.1.0
     gensync: ^1.0.0-beta.2
     json5: ^2.1.2
     semver: ^6.3.0
     source-map: ^0.5.0
-  checksum: 3206e077e76db189726c4da19a5296eae11c6c1f5abea7013e74f18708bb91616914717ff8d8ca466cc0ba9d2d2147e9a84c3c357b9ad4cba601da14107838ed
+  checksum: d34c5edf9258e620d0cbea4ed25a2615f5ab86dc7f7c1b96ac19817fb7d57bfae9af72dc244385a724225dbc701cb878d9559158aee9659e2a3c69d03f93f3e1
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^7.16.7, @babel/generator@npm:^7.16.8, @babel/generator@npm:^7.7.2":
+"@babel/generator@npm:^7.16.8, @babel/generator@npm:^7.7.2":
   version: 7.16.8
   resolution: "@babel/generator@npm:7.16.8"
   dependencies:
@@ -104,9 +104,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-create-class-features-plugin@npm:^7.16.7":
-  version: 7.16.7
-  resolution: "@babel/helper-create-class-features-plugin@npm:7.16.7"
+"@babel/helper-create-class-features-plugin@npm:^7.16.10, @babel/helper-create-class-features-plugin@npm:^7.16.7":
+  version: 7.16.10
+  resolution: "@babel/helper-create-class-features-plugin@npm:7.16.10"
   dependencies:
     "@babel/helper-annotate-as-pure": ^7.16.7
     "@babel/helper-environment-visitor": ^7.16.7
@@ -117,7 +117,7 @@ __metadata:
     "@babel/helper-split-export-declaration": ^7.16.7
   peerDependencies:
     "@babel/core": ^7.0.0
-  checksum: 55f4eccb93ce12c3a5d9acadf8176ed26a6f02db12d3b2d1a7337bb81139677c7b6fb54ddc01c160895e1f8134946b3bebe59428ef3a7cd9b62692bd3a2c654f
+  checksum: 2ab266aac7f94403311f63a17d32abb718ff040339bcae19880091de3fdb4e8d7196cb4e680f01a92924eb1a00a143364456e452c511c0b7b6e0b1a4b0e696da
   languageName: node
   linkType: hard
 
@@ -347,12 +347,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.1.0, @babel/parser@npm:^7.14.7, @babel/parser@npm:^7.16.7, @babel/parser@npm:^7.16.8":
-  version: 7.16.8
-  resolution: "@babel/parser@npm:7.16.8"
+"@babel/parser@npm:^7.1.0, @babel/parser@npm:^7.14.7, @babel/parser@npm:^7.16.10, @babel/parser@npm:^7.16.7":
+  version: 7.16.10
+  resolution: "@babel/parser@npm:7.16.10"
   bin:
     parser: ./bin/babel-parser.js
-  checksum: f6bc2eb1f298fcb81db34c2d343fd05d8c59dbc5419a88c1cb4d298c7a3863e4d54f5a4f38a40e1aa979e4ce355816348730b471c1d787d424ed52b270fc7be0
+  checksum: d760606039de8ab8c68e993b7d3ae461754ef51dbf1fbd88d1428bf37d7e13bfb7205105332f0ac0a55d3534c231da527ab7b2db26e7cef6e0f9c8940a3c91a3
   languageName: node
   linkType: hard
 
@@ -543,15 +543,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-private-methods@npm:^7.16.7":
-  version: 7.16.7
-  resolution: "@babel/plugin-proposal-private-methods@npm:7.16.7"
+"@babel/plugin-proposal-private-methods@npm:^7.16.11":
+  version: 7.16.11
+  resolution: "@babel/plugin-proposal-private-methods@npm:7.16.11"
   dependencies:
-    "@babel/helper-create-class-features-plugin": ^7.16.7
+    "@babel/helper-create-class-features-plugin": ^7.16.10
     "@babel/helper-plugin-utils": ^7.16.7
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 1d3aef6f1818278d257ed6f1a90ec3b0cfe85e1b24cabf1bcd0d2a0033f8ae15f9cb36140ec2adc2a317f63fc78095ce0b5c154f73128e0f84480879a4b64269
+  checksum: b333e5aa91c265bb394a57b5f4ae1a34fc8ee73a8d75506b12df258d8b5342107cbd9261f95e606bd3264a5b023db77f1f95be30c2e526683916c57f793f7943
   languageName: node
   linkType: hard
 
@@ -1180,9 +1180,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:7.16.8":
-  version: 7.16.8
-  resolution: "@babel/preset-env@npm:7.16.8"
+"@babel/preset-env@npm:7.16.11":
+  version: 7.16.11
+  resolution: "@babel/preset-env@npm:7.16.11"
   dependencies:
     "@babel/compat-data": ^7.16.8
     "@babel/helper-compilation-targets": ^7.16.7
@@ -1202,7 +1202,7 @@ __metadata:
     "@babel/plugin-proposal-object-rest-spread": ^7.16.7
     "@babel/plugin-proposal-optional-catch-binding": ^7.16.7
     "@babel/plugin-proposal-optional-chaining": ^7.16.7
-    "@babel/plugin-proposal-private-methods": ^7.16.7
+    "@babel/plugin-proposal-private-methods": ^7.16.11
     "@babel/plugin-proposal-private-property-in-object": ^7.16.7
     "@babel/plugin-proposal-unicode-property-regex": ^7.16.7
     "@babel/plugin-syntax-async-generators": ^7.8.4
@@ -1260,7 +1260,7 @@ __metadata:
     semver: ^6.3.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 834fc0638b26e9a118a4deaac828ebb9cc17c4d1aa6497e6588003de1ff3768b1ee9bfddd055ccc6be526c65b92d5c463168da2425d26a53c836b38eeb3362cb
+  checksum: c8029c272073df787309d983ae458dd094b57f87152b8ccad95c7c8b1e82b042c1077e169538aae5f98b7659de0632d10708d9c85acf21a5e9406d7dd3656d8c
   languageName: node
   linkType: hard
 
@@ -1340,9 +1340,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/traverse@npm:^7.13.0, @babel/traverse@npm:^7.16.7, @babel/traverse@npm:^7.16.8, @babel/traverse@npm:^7.7.2":
-  version: 7.16.8
-  resolution: "@babel/traverse@npm:7.16.8"
+"@babel/traverse@npm:^7.13.0, @babel/traverse@npm:^7.16.10, @babel/traverse@npm:^7.16.7, @babel/traverse@npm:^7.16.8, @babel/traverse@npm:^7.7.2":
+  version: 7.16.10
+  resolution: "@babel/traverse@npm:7.16.10"
   dependencies:
     "@babel/code-frame": ^7.16.7
     "@babel/generator": ^7.16.8
@@ -1350,11 +1350,11 @@ __metadata:
     "@babel/helper-function-name": ^7.16.7
     "@babel/helper-hoist-variables": ^7.16.7
     "@babel/helper-split-export-declaration": ^7.16.7
-    "@babel/parser": ^7.16.8
+    "@babel/parser": ^7.16.10
     "@babel/types": ^7.16.8
     debug: ^4.1.0
     globals: ^11.1.0
-  checksum: 303bc328289c73bd57dc8b90e83dfa9f4dae8e7039c95350994db67b2850a7966645c2c9f3292d0621f2051bb3d34439dc294b258dc1ad0e9d7eab04ac6bcb44
+  checksum: 58f52314f8a02157cd3004712e703e6b22dff57cee4bc1ab1954c511c6f885fd7763ea68d2d5f006891bc7b77b1f2e9c8c7cb0354f580c8343d5559ed971d087
   languageName: node
   linkType: hard
 
@@ -1414,19 +1414,19 @@ __metadata:
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/privacypass-sjcl": 0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.8
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/node-fetch": 2.5.12
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 5.10.0
@@ -1452,7 +1452,7 @@ __metadata:
     jest: 27.4.7
     jsonwebtoken: 8.5.1
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     localforage: 1.10.0
     node-fetch: ^2.6.1
     prettier: 2.5.1
@@ -1463,7 +1463,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -1477,19 +1477,19 @@ __metadata:
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/annotations": 0.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.8
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/node-fetch": 2.5.12
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
@@ -1514,7 +1514,7 @@ __metadata:
     jest: 27.4.7
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     node-fetch: ^2.6.1
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
@@ -1524,7 +1524,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -1538,18 +1538,18 @@ __metadata:
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
     "@babel/plugin-transform-modules-commonjs": ^7.16.8
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/anonymous-tokens": ^0.0.0
     "@coil/client": ^0.0.0
     "@coil/polyfill-utils": ^0.0.0
     "@coil/puppeteer-utils": ^0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/annotations": ^0.0.0
     "@dier-makr/inversify": ^0.0.0
@@ -1565,7 +1565,7 @@ __metadata:
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.8
     "@types/long": 4.0.1
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/node-fetch": 2.5.12
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
@@ -1602,14 +1602,14 @@ __metadata:
     http-server: 14.1.0
     husky: 7.0.4
     ilp-plugin-btp: 1.5.0
-    ilp-protocol-stream: 2.7.0
+    ilp-protocol-stream: 2.7.1
     inversify: ^6.0.0
     inversify-logger-middleware: ^3.1.0
     jest: 27.4.7
     jsonwebtoken: ^8.5.1
     jss: ^10.6.0
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     puppeteer: 11.0.0
     react: ^17.0.0
@@ -1622,7 +1622,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     uuid: ^8.3.2
     web-ext: 6.6.0
     webpack: 5.66.0
@@ -1638,17 +1638,17 @@ __metadata:
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -1674,7 +1674,7 @@ __metadata:
     jest: 27.4.7
     json5: ^2.2.0
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     npm-check-updates: ^12.0.0
     prettier: 2.5.1
     reduct: ^3.3.1
@@ -1686,7 +1686,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -1701,22 +1701,22 @@ __metadata:
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/client": 0.0.0
     "@coil/polyfill-utils": ^0.0.0
     "@coil/puppeteer-utils": ^0.0.0
     "@coil/webpack-utils": 0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/long": 4.0.1
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/node-fetch": 2.5.12
     "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.10.0
@@ -1742,10 +1742,10 @@ __metadata:
     eslint-plugin-standard: 5.0.0
     husky: 7.0.4
     ilp-plugin-btp: 1.5.0
-    ilp-protocol-stream: 2.7.0
+    ilp-protocol-stream: 2.7.1
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     node-fetch: ^2.6.1
     prettier: 2.5.1
     puppeteer: 11.0.0
@@ -1757,7 +1757,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     uuid: ^8.3.2
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
@@ -1772,17 +1772,17 @@ __metadata:
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -1805,7 +1805,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     node-fetch: ^2.6.1
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
@@ -1815,7 +1815,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -1829,18 +1829,18 @@ __metadata:
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
     "@types/keccak": 3.0.1
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
@@ -1868,7 +1868,7 @@ __metadata:
     jest: 27.4.7
     keccak: ^3.0.1
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     node-fetch: ^2.6.1
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
@@ -1879,7 +1879,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -1893,20 +1893,20 @@ __metadata:
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/client": 0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/debug": 4.1.7
     "@types/get-port": 4.2.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/tmp": 0.2.3
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
@@ -1933,7 +1933,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     puppeteer: ^11.0.0
     regenerator-runtime: ^0.13.9
@@ -1944,7 +1944,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     web-ext: ^6.1.0
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
@@ -1959,17 +1959,17 @@ __metadata:
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -1996,7 +1996,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     process: ^0.11.10
     regenerator-runtime: ^0.13.9
@@ -2009,7 +2009,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     util: ^0.12.4
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
@@ -2024,18 +2024,18 @@ __metadata:
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/client": 0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -2058,7 +2058,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
@@ -2067,7 +2067,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -2076,9 +2076,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@commitlint/cli@npm:16.0.2":
-  version: 16.0.2
-  resolution: "@commitlint/cli@npm:16.0.2"
+"@commitlint/cli@npm:16.0.3":
+  version: 16.0.3
+  resolution: "@commitlint/cli@npm:16.0.3"
   dependencies:
     "@commitlint/format": ^16.0.0
     "@commitlint/lint": ^16.0.0
@@ -2091,7 +2091,7 @@ __metadata:
     yargs: ^17.0.0
   bin:
     commitlint: cli.js
-  checksum: 20760e0f8d54cfffad8a3c24ab4052b815d4545e2237f6b2c54a9a9a1190bf69adcff49b22ba665ae5e3b758b17b7a9dfb162d49d8b3926a756f60a314edd5e3
+  checksum: d4aeb8e32abf597707743f4e5f66726255e55604c18e1e9459153bfed721173e18a12d6351f496f62b22dc6f1f177d581ec34a3297dc9a97e25c3c767ddb43b0
   languageName: node
   linkType: hard
 
@@ -2317,17 +2317,17 @@ __metadata:
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -2350,7 +2350,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
@@ -2359,7 +2359,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -2373,18 +2373,18 @@ __metadata:
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/annotations": 0.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -2408,7 +2408,7 @@ __metadata:
     inversify: ^6.0.0
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
@@ -2417,7 +2417,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -2527,21 +2527,21 @@ __metadata:
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/polyfill-utils": ^0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/inversify": ^0.0.0
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
     "@types/uuid": 8.3.4
@@ -2575,13 +2575,13 @@ __metadata:
     file-loader: 6.2.0
     husky: 7.0.4
     ilp-plugin-btp: 1.5.0
-    ilp-protocol-stream: 2.7.0
+    ilp-protocol-stream: 2.7.1
     inversify: ^6.0.0
     inversify-logger-middleware: ^3.1.0
     jest: 27.4.7
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     react: ^17.0.0
     react-dom: ^17.0.0
@@ -2594,7 +2594,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typeface-roboto: ^1.1.13
-    typescript: 4.5.4
+    typescript: 4.5.5
     uuid: ^8.3.2
     web-ext: 6.6.0
     webpack: 5.66.0
@@ -4084,17 +4084,17 @@ __metadata:
   resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -4117,7 +4117,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
@@ -4127,7 +4127,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -4729,10 +4729,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:14.18.8, @types/node@npm:>= 8":
-  version: 14.18.8
-  resolution: "@types/node@npm:14.18.8"
-  checksum: 35c510295085522e4b6691788b886e7453295922114ad02d7003f23444beb48e5258e804168c4ff45bc6349f2e6c7da643549bcbf53990f43816a2309c3db5bb
+"@types/node@npm:*, @types/node@npm:14.18.9, @types/node@npm:>= 8":
+  version: 14.18.9
+  resolution: "@types/node@npm:14.18.9"
+  checksum: a85dae901b5c3b318747e66f2228c0f0778bcd73430a01d7c42814c04ba1070f2817b865d0c5f0c1813b89afeebb34d19cf2662252bae9dc0c18d3ad23fc98c3
   languageName: node
   linkType: hard
 
@@ -5314,18 +5314,18 @@ __metadata:
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/webpack-utils": ^0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -5353,7 +5353,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     process: ^0.11.10
     regenerator-runtime: ^0.13.9
@@ -5366,7 +5366,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     util: ^0.12.4
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
@@ -5381,14 +5381,14 @@ __metadata:
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/webpack-utils": ^0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@hot-loader/react-dom": 17.0.2
     "@swc/jest": ^0.2.17
@@ -5396,7 +5396,7 @@ __metadata:
     "@types/express": 4.17.12
     "@types/figlet": 1.5.4
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/node-fetch": 2.5.12
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
@@ -5434,7 +5434,7 @@ __metadata:
     inversify-express-utils: ^6.3.2
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     node-fetch: ^2.6.1
     oer-utils: ^5.1.2
     prettier: 2.5.1
@@ -5449,7 +5449,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -5463,17 +5463,17 @@ __metadata:
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/node-fetch": 2.5.12
     "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.10.0
@@ -5498,7 +5498,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     node-fetch: ^2.6.1
     prettier: 2.5.1
     reduct: ^3.3.1
@@ -5509,7 +5509,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     uuid: ^8.3.2
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
@@ -5524,18 +5524,18 @@ __metadata:
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/webpack-utils": ^0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/react": 17.0.38
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
@@ -5560,7 +5560,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
@@ -5569,7 +5569,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -5585,20 +5585,20 @@ __metadata:
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
     "@coil/webpack-utils": ^0.0.0
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@hot-loader/react-dom": 17.0.2
     "@swc/jest": ^0.2.17
     "@types/ajv": 1.0.0
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
     "@types/uuid": 8.3.4
@@ -5627,7 +5627,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     react: ^17.0.0
     react-dom: ^17.0.0
@@ -5639,7 +5639,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     uuid: ^8.3.2
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
@@ -5654,17 +5654,17 @@ __metadata:
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -5687,7 +5687,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
@@ -5697,7 +5697,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -5711,18 +5711,18 @@ __metadata:
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@dier-makr/annotations": 0.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@webmonetization/polyfill-utils": 0.0.0
@@ -5747,7 +5747,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
@@ -5756,7 +5756,7 @@ __metadata:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
@@ -13538,9 +13538,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"ilp-protocol-stream@npm:2.7.0, ilp-protocol-stream@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "ilp-protocol-stream@npm:2.7.0"
+"ilp-protocol-stream@npm:2.7.1, ilp-protocol-stream@npm:^2.7.0":
+  version: 2.7.1
+  resolution: "ilp-protocol-stream@npm:2.7.1"
   dependencies:
     "@types/node": ^10.14.22
     ilp-logger: ^1.3.1
@@ -13549,7 +13549,7 @@ fsevents@^1.2.7:
     long: ^4.0.0
     oer-utils: ^5.0.1
     uuid: ^3.4.0
-  checksum: 61195c68b188c71a1a8bc449dd435fdb764a0380f7c11d89843fd12e477811663c9507f8f1373d2acc34b9ac90e916006005bfe31bfa6994ab684c8eeea93891
+  checksum: f5a1f17dd02ca1f1039e487eed9ad63a509003edea958ec3327811e20fa4170f05085faa101d9e0381e9a2e1721611c879671e7a73d78ef9dbb8ccf834d47e33
   languageName: node
   linkType: hard
 
@@ -15870,9 +15870,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.1.7":
-  version: 12.1.7
-  resolution: "lint-staged@npm:12.1.7"
+"lint-staged@npm:12.2.2":
+  version: 12.2.2
+  resolution: "lint-staged@npm:12.2.2"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
@@ -15889,7 +15889,7 @@ fsevents@^1.2.7:
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 3d0757706c8b0ca3f004bb2ffa89a9d5fc97ccdebfa4cde29a9636c661538780e194b99cbc5e4b8b89b13986187b33c97e009b09014511bbd45ee05ba557d0eb
+  checksum: 27db9c9e88d2c0835c16679de9a98a0909ea09b90f5be3179c7d0ae21e85547e7776349df9654e61c71833d18a0162833cd726df3a70022ba10708ccec08b17d
   languageName: node
   linkType: hard
 
@@ -22571,23 +22571,23 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typescript@^4.4.3, typescript@npm:4.5.4":
-  version: 4.5.4
-  resolution: "typescript@npm:4.5.4"
+"typescript@^4.4.3, typescript@npm:4.5.5":
+  version: 4.5.5
+  resolution: "typescript@npm:4.5.5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 59f3243f9cd6fe3161e6150ff6bf795fc843b4234a655dbd938a310515e0d61afd1ac942799e7415e4334255e41c2c49b7dd5d9fd38a17acd25a6779ca7e0961
+  checksum: 506f4c919dc8aeaafa92068c997f1d213b9df4d9756d0fae1a1e7ab66b585ab3498050e236113a1c9e57ee08c21ec6814ca7a7f61378c058d79af50a4b1f5a5e
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.5.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
-  version: 4.5.4
-  resolution: "typescript@patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"
+"typescript@patch:typescript@4.5.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
+  version: 4.5.5
+  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 2e488dde7d2c4a2fa2e79cf2470600f8ce81bc0563c276b72df8ff412d74456ae532ba824650ae936ce207440c79720ddcfaa25e3cb4477572b8534fa4e34d49
+  checksum: c05c318d79c690f101d7ffb34cd6c7d6bbd884d3af9cefe7749ad0cd6be43c7082f098280982ca945dcba23fde34a08fed9602bb26540936baf8c0520727d3ba
   languageName: node
   linkType: hard
 
@@ -23198,17 +23198,17 @@ typescript@~4.4.3:
   resolution: "web-monetization@workspace:."
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.16.7
+    "@babel/core": 7.16.10
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.16.7
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
-    "@babel/preset-env": 7.16.8
+    "@babel/preset-env": 7.16.11
     "@babel/preset-typescript": 7.16.7
-    "@commitlint/cli": 16.0.2
+    "@commitlint/cli": 16.0.3
     "@commitlint/config-conventional": 16.0.0
     "@swc/jest": ^0.2.17
     "@types/jest": 27.4.0
-    "@types/node": 14.18.8
+    "@types/node": 14.18.9
     "@typescript-eslint/eslint-plugin": 5.10.0
     "@typescript-eslint/parser": 5.10.0
     "@yarnpkg/pnpify": 3.1.0
@@ -23231,7 +23231,7 @@ typescript@~4.4.3:
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.2
     prettier: 2.5.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
@@ -23240,7 +23240,7 @@ typescript@~4.4.3:
     ts-node: 10.4.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
-    typescript: 4.5.4
+    typescript: 4.5.5
     webpack: 5.66.0
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.1
