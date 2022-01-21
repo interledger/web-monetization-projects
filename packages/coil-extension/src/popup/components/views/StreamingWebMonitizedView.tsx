@@ -43,11 +43,12 @@ export const StreamingWebMonetizedView = () => {
   )
 
   useEffect(() => {
+    const playAnimation = monetizedTotal !== 0 && monetizedTotal !== null
     if (lottieAnchor.current) {
       lottie.loadAnimation({
         container: lottieAnchor.current,
         animationData: streamingOnAnimation,
-        autoplay: monetizedTotal !== 0
+        autoplay: playAnimation
       })
     }
   }, [lottieAnchor])

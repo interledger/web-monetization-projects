@@ -133,7 +133,7 @@ const userCanTipNewUi = mockState({
   monetized: true,
   // coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
   // coilSite: 'https://coil.com/discover',
-  monetizedTotal: 10854,
+  monetizedTotal: 0,
   user: tipUserNewUi,
   validToken: true,
   adapted: false
