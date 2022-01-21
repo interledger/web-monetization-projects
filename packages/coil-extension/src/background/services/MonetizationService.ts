@@ -162,7 +162,12 @@ export class MonetizationService {
     this.log('startWebMonetization, request', request)
 
     this.log('loading token for monetization', requestId)
-    const token = await this.auth.getTokenMaybeRefreshAndStoreState()
+    let token: string | null
+    try {
+      token = await this.auth.getTokenMaybeRefreshAndStoreState()
+    } catch (e) {
+      token = null
+    }
     if (!token) {
       // not signed in.
       // eslint-disable-next-line no-console
