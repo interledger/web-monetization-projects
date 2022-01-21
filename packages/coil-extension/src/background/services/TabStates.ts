@@ -158,18 +158,26 @@ export class TabStates {
   ) {
     if (typeof details === 'string') {
       const maybeNull =
-        this.getFrameOrDefault(frame)[`requestId-lastCommand-${details}`]
+        this.getFrameOrDefault(frame)[`monetization-state-${details}`]
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const last = maybeNull!
       details = last?.details ?? { requestId: details }
     }
 
     this.setFrame(frame, {
-      [`requestId-lastCommand-${details.requestId}`]: {
+      [`monetization-state-${details.requestId}`]: {
         command,
-        details: details
+        details: details,
+        total: this.getTotal(frame, details)
       }
     })
+  }
+
+  private getTotal(frame: FrameSpec, details: PaymentDetails) {
+    return (
+      this.getFrameOrDefault(frame)[`monetization-state-${details.requestId}`]
+        ?.total ?? 0
+    )
   }
 
   reloadTabState(opts: { from?: string } = {}) {

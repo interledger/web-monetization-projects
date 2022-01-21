@@ -3,17 +3,18 @@ import { PaymentDetails } from '@webmonetization/polyfill-utils'
 import { PlayOrPauseState, StickyState } from './streamControls'
 
 export type MonetizationCommand = 'pause' | 'stop' | 'start' | 'resume'
-export const LastCommandKey = `requestId-lastCommand-` as const
-export type LastCommandKeyType = typeof LastCommandKey
+export const MonetizationStateKey = `monetization-state-` as const
+export type MonetizationStateKeyType = typeof MonetizationStateKey
 
 export interface FrameState {
   adapted: boolean
   // Tracks the total amount of `source` money sent (not was received)
   total: number
-  [x: `${LastCommandKeyType}${string}`]:
+  [x: `${MonetizationStateKeyType}${string}`]:
     | {
         command: MonetizationCommand
         details: PaymentDetails
+        total: number
       }
     | undefined
     | null
@@ -22,16 +23,16 @@ export interface FrameState {
 export function isFrameMonetized(frameState: FrameState) {
   return Object.keys(frameState).some(
     key =>
-      key.startsWith(LastCommandKey) &&
-      frameState[key as LastCommandKeyType]?.command !== 'stop'
+      key.startsWith(MonetizationStateKey) &&
+      frameState[key as MonetizationStateKeyType]?.command !== 'stop'
   )
 }
 
 export function isFrameStreaming(frameState: FrameState) {
   return Object.keys(frameState).some(
     key =>
-      key.startsWith(LastCommandKey) &&
-      frameState[key as LastCommandKeyType]?.command === 'start'
+      key.startsWith(MonetizationStateKey) &&
+      frameState[key as MonetizationStateKeyType]?.command === 'start'
   )
 }
 

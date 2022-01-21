@@ -207,9 +207,8 @@ export class MonetizationService {
     }
 
     const lastCommand =
-      this.tabStates.getFrameOrDefault(frame)[
-        `requestId-lastCommand-${requestId}`
-      ]?.command
+      this.tabStates.getFrameOrDefault(frame)[`monetization-state-${requestId}`]
+        ?.command
 
     // Check that this startWebMonetization invocation is still valid before
     // we go ahead. Any operation that we `await`d on could have potentially

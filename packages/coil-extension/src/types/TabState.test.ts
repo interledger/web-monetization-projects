@@ -5,7 +5,7 @@ describe('isFrameStateMonetized', () => {
     const frameState: FrameState = {
       total: 0,
       adapted: false,
-      ['requestId-lastCommand-a']: {
+      ['monetization-state-a']: {
         command: 'start',
         details: {
           requestId: 'a',
