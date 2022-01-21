@@ -9,12 +9,12 @@ export type MonetizationStateKeyType = typeof MonetizationStateKey
 export interface FrameState {
   adapted: boolean
   // Tracks the total amount of `source` money sent (not was received)
-  total: number
   [x: `${MonetizationStateKeyType}${string}`]:
     | {
         command: MonetizationCommand
         details: PaymentDetails
         total: number
+        lastPacket: number
       }
     | undefined
     | null
@@ -34,6 +34,28 @@ export function isFrameStreaming(frameState: FrameState) {
       key.startsWith(MonetizationStateKey) &&
       frameState[key as MonetizationStateKeyType]?.command === 'start'
   )
+}
+
+export function getFrameTotal(frameState: FrameState) {
+  return getRequestStates(frameState).reduce((acc, val) => {
+    return acc + val.total
+  }, 0)
+}
+
+export function getRequestStates(frame: FrameState) {
+  return Object.keys(frame)
+    .filter(key => key.startsWith(MonetizationStateKey))
+    .map(
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      k => frame[k as MonetizationStateKeyType]!
+    )
+}
+
+export function hasRecentPacket(frameState: FrameState) {
+  const now = Date.now()
+  return getRequestStates(frameState).some(s => {
+    return now - s.lastPacket <= 5e3
+  })
 }
 
 export interface TabState {

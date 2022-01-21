@@ -4,6 +4,8 @@ import { StorageService } from '@webmonetization/wext/services'
 
 import {
   FrameState,
+  getFrameTotal,
+  hasRecentPacket,
   isFrameMonetized,
   isFrameStreaming,
   MonetizationCommand,
@@ -90,8 +92,7 @@ export class TabStates {
 
   private makeFrameStateDefault(): FrameState {
     return {
-      adapted: false,
-      total: 0
+      adapted: false
     }
   }
 
@@ -168,12 +169,13 @@ export class TabStates {
       [`monetization-state-${details.requestId}`]: {
         command,
         details: details,
-        total: this.getTotal(frame, details)
+        total: this.getTotal(frame, details),
+        lastPacket: 0
       }
     })
   }
 
-  private getTotal(frame: FrameSpec, details: PaymentDetails) {
+  getTotal(frame: FrameSpec, details: PaymentDetails) {
     return (
       this.getFrameOrDefault(frame)[`monetization-state-${details.requestId}`]
         ?.total ?? 0
@@ -223,7 +225,15 @@ export class TabStates {
         const frameStates = Object.values(tabState.frameStates)
         const hasStream = Boolean(frameStates.find(f => isFrameMonetized(f)))
         const isStreaming: boolean =
-          hasStream && Boolean(frameStates.find(f => isFrameStreaming(f)))
+          hasStream &&
+          Boolean(
+            frameStates.find(
+              f =>
+                isFrameStreaming(f) &&
+                getFrameTotal(f) > 0 &&
+                hasRecentPacket(f)
+            )
+          )
 
         if (hasStream) {
           this.setIcon(tabId, 'monetized')
@@ -271,8 +281,20 @@ export class TabStates {
     }
 
     if (state) {
-      const total = frameStates.reduce((acc, val) => acc + val.total, 0)
+      const total = frameStates.reduce(
+        (acc, val) => acc + getFrameTotal(val),
+        0
+      )
       this.storage.set('monetizedTotal', total)
+    }
+  }
+
+  incrementTotal(frame: FrameSpec, requestId: string, incr: number) {
+    const state =
+      this.getFrameOrDefault(frame)[`monetization-state-${requestId}`]
+    if (state != null) {
+      state.total += incr
+      state.lastPacket = Date.now()
     }
   }
 }

@@ -56,25 +56,14 @@ export class MonetizationService {
 
   setFrameMonetized(
     { tabId, frameId }: FrameSpec,
-    senderUrl: string,
-    total?: number
+    requestId: string,
+    total = 0
   ) {
-    const tabState = this.tabStates.get(tabId)
-
-    this.tabStates.setFrame(
-      { tabId, frameId },
-      {
-        total: total || (tabState.frameStates[frameId]?.total ?? 0)
-      }
-    )
+    this.tabStates.incrementTotal({ tabId, frameId }, requestId, total)
 
     if (this.activeTab === tabId) {
       this.tabStates.reloadTabState()
     }
-  }
-
-  mayMonetizeSite(sender: chrome.runtime.MessageSender, initiatingUrl: string) {
-    this.setFrameMonetized(getFrameSpec(sender), initiatingUrl)
   }
 
   routeStreamsMoneyEventsToContentScript() {
@@ -105,7 +94,7 @@ export class MonetizationService {
           receipt: details.receipt
         }
       }
-      this.handleMonetizationProgress(frame, details.initiatingUrl, details)
+      this.handleMonetizationProgress(frame, details)
       // We don't want to send this progress event if the link has already
       // errored.
       if (this.spspState.sendProgressEvent(details.requestId)) {
@@ -116,13 +105,13 @@ export class MonetizationService {
 
   handleMonetizationProgress(
     { tabId, frameId }: FrameSpec,
-    url: string,
-    packet: { sentAmount: string }
+    details: StreamMoneyEvent
   ) {
-    const tabState = this.tabStates.get(tabId)
-    const frameTotal = tabState?.frameStates[frameId]?.total ?? 0
-    const newFrameTotal = frameTotal + Number(packet?.sentAmount ?? 0)
-    this.setFrameMonetized({ tabId, frameId }, url, newFrameTotal)
+    this.setFrameMonetized(
+      { tabId, frameId },
+      details.requestId,
+      Number(details?.sentAmount ?? '0')
+    )
   }
 
   async startWebMonetization(
@@ -137,7 +126,7 @@ export class MonetizationService {
     this.tabStates.logLastMonetizationCommand(frame, 'start', request.data)
 
     // This used to be sent from content script as a separate message
-    this.mayMonetizeSite(sender, request.data.initiatingUrl)
+    this.setFrameMonetized(frame, requestId, 0)
 
     // This may throw so do after mayMonetizeSite has had a chance to set
     // the page as being monetized (or attempted to be)
