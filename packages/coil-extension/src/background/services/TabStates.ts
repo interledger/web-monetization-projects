@@ -106,7 +106,8 @@ export class TabStates {
 
   getFrameOrDefault({ tabId, frameId }: FrameSpec) {
     return (
-      this.tabStates[tabId].frameStates[frameId] ?? this.makeFrameStateDefault()
+      this.tabStates[tabId]?.frameStates?.[frameId] ??
+      this.makeFrameStateDefault()
     )
   }
 
@@ -165,21 +166,21 @@ export class TabStates {
       details = last?.details ?? { requestId: details }
     }
 
+    const total = this.getTotal(frame, details)
     this.setFrame(frame, {
       [`monetization-state-${details.requestId}`]: {
         command,
         details: details,
-        total: this.getTotal(frame, details),
+        total: total,
+        // TODO
         lastPacket: 0
       }
     })
   }
 
   getTotal(frame: FrameSpec, details: PaymentDetails) {
-    return (
-      this.getFrameOrDefault(frame)[`monetization-state-${details.requestId}`]
-        ?.total ?? 0
-    )
+    const frameOrDefault = this.getFrameOrDefault(frame)
+    return frameOrDefault[`monetization-state-${details.requestId}`]?.total ?? 0
   }
 
   reloadTabState(opts: { from?: string } = {}) {
@@ -290,11 +291,12 @@ export class TabStates {
   }
 
   incrementTotal(frame: FrameSpec, requestId: string, incr: number) {
-    const state =
-      this.getFrameOrDefault(frame)[`monetization-state-${requestId}`]
+    const key = `monetization-state-${requestId}` as const
+    const state = this.getFrameOrDefault(frame)[key]
     if (state != null) {
       state.total += incr
       state.lastPacket = Date.now()
+      this.setFrame(frame, { [key]: { ...state } })
     }
   }
 }

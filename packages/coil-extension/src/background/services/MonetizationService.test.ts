@@ -18,6 +18,7 @@ import { User } from '../../types/user'
 import { FrameSpec } from '../../types/FrameSpec'
 import { timeout } from '../../content/util/timeout'
 import { isFrameMonetized } from '../../types/TabState'
+import { getFrameSpec } from '../../util/tabs'
 
 import { AuthService } from './AuthService'
 import { Streams } from './Streams'
@@ -111,9 +112,11 @@ describe('MonetizationService', () => {
       return token
     })
 
+    const tabStates = await container.getAsync(TabStates)
     const service = await container.getAsync(MonetizationService)
-    const frame: FrameSpec = { tabId: 0, frameId: 0 }
+    let frame: FrameSpec = { tabId: 0, frameId: 0 }
     const sender = mockMessageSender(frame)
+    frame = getFrameSpec(sender)
 
     const paymentPointer = '$b.tags.com/ok'
     const details: PaymentDetails = mockPaymentDetails(paymentPointer)
@@ -122,7 +125,9 @@ describe('MonetizationService', () => {
       data: details
     }
 
+    expect(tabStates.activeTab).toBe(0)
     const startPromise = service.startWebMonetization(startRequest, sender)
+
     service.pauseWebMonetization(
       {
         command: 'pauseWebMonetization',
@@ -153,9 +158,6 @@ describe('MonetizationService', () => {
       sender
     )
     expect(closeStream).toHaveBeenCalledWith(details.requestId)
-
-    const tabStates = container.get(TabStates)
-    // TODO:WM2
     expect(isFrameMonetized(tabStates.getFrameOrDefault(frame))).toBe(false)
   })
 })
