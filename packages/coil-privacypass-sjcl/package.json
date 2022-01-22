@@ -41,7 +41,7 @@
     "atob": "^2.1.2",
     "btoa": "^1.2.1",
     "keccak": "^3.0.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.0.0",
     "sjcl": "sublimator/sjcl"
   },
   "devDependencies": {

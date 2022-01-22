@@ -1450,7 +1450,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.2.2
     localforage: 1.10.0
-    node-fetch: ^2.6.1
+    node-fetch: ^3.0.0
     prettier: 2.5.1
     rimraf: 3.0.2
     ts-jest: 27.1.3
@@ -1506,7 +1506,7 @@ __metadata:
     jsonwebtoken: ^8.5.1
     lerna: 4.0.0
     lint-staged: 12.2.2
-    node-fetch: ^2.6.1
+    node-fetch: ^3.0.0
     prettier: 2.5.1
     rimraf: 3.0.2
     ts-jest: 27.1.3
@@ -1722,7 +1722,7 @@ __metadata:
     jest: 27.4.7
     lerna: 4.0.0
     lint-staged: 12.2.2
-    node-fetch: ^2.6.1
+    node-fetch: ^3.0.0
     prettier: 2.5.1
     puppeteer: 11.0.0
     reduct: ^3.3.1
@@ -1777,7 +1777,7 @@ __metadata:
     jest: 27.4.7
     lerna: 4.0.0
     lint-staged: 12.2.2
-    node-fetch: ^2.6.1
+    node-fetch: ^3.0.0
     prettier: 2.5.1
     rimraf: 3.0.2
     ts-jest: 27.1.3
@@ -1835,7 +1835,7 @@ __metadata:
     keccak: ^3.0.1
     lerna: 4.0.0
     lint-staged: 12.2.2
-    node-fetch: ^2.6.1
+    node-fetch: ^3.0.0
     prettier: 2.5.1
     rimraf: 3.0.2
     sjcl: sublimator/sjcl
@@ -5182,7 +5182,7 @@ __metadata:
     jest: 27.4.7
     lerna: 4.0.0
     lint-staged: 12.2.2
-    node-fetch: ^2.6.1
+    node-fetch: ^3.0.0
     oer-utils: ^5.1.2
     prettier: 2.5.1
     react: ^17.0.0
@@ -5241,7 +5241,7 @@ __metadata:
     jest: 27.4.7
     lerna: 4.0.0
     lint-staged: 12.2.2
-    node-fetch: ^2.6.1
+    node-fetch: ^3.0.0
     prettier: 2.5.1
     reduct: ^3.3.1
     rimraf: 3.0.2
@@ -9077,6 +9077,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"data-uri-to-buffer@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "data-uri-to-buffer@npm:4.0.0"
+  checksum: a010653869abe8bb51259432894ac62c52bf79ad761d418d94396f48c346f2ae739c46b254e8bb5987bded8a653d467db1968db3a69bab1d33aa5567baa5cfc7
+  languageName: node
+  linkType: hard
+
 "data-urls@npm:^2.0.0":
   version: 2.0.0
   resolution: "data-urls@npm:2.0.0"
@@ -11380,6 +11387,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fetch-blob@npm:^3.1.2, fetch-blob@npm:^3.1.4":
+  version: 3.1.4
+  resolution: "fetch-blob@npm:3.1.4"
+  dependencies:
+    node-domexception: ^1.0.0
+    web-streams-polyfill: ^3.0.3
+  checksum: 81b074f38a2dbfd546dd58e482cefe14e605abd609e272804bf089d588d84f39e3e95b35640bfb376f71d5038c123d4d41be49d9cdf87e5ec8939d37738df0b6
+  languageName: node
+  linkType: hard
+
 "figgy-pudding@npm:^3.5.1":
   version: 3.5.2
   resolution: "figgy-pudding@npm:3.5.2"
@@ -11728,6 +11745,15 @@ __metadata:
     combined-stream: ^1.0.6
     mime-types: ^2.1.12
   checksum: 10c1780fa13dbe1ff3100114c2ce1f9307f8be10b14bf16e103815356ff567b6be39d70fc4a40f8990b9660012dc24b0f5e1dde1b6426166eb23a445ba068ca3
+  languageName: node
+  linkType: hard
+
+"formdata-polyfill@npm:^4.0.10":
+  version: 4.0.10
+  resolution: "formdata-polyfill@npm:4.0.10"
+  dependencies:
+    fetch-blob: ^3.1.2
+  checksum: 82a34df292afadd82b43d4a740ce387bc08541e0a534358425193017bf9fb3567875dc5f69564984b1da979979b70703aa73dee715a17b6c229752ae736dd9db
   languageName: node
   linkType: hard
 
@@ -16786,12 +16812,30 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"node-domexception@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "node-domexception@npm:1.0.0"
+  checksum: ee1d37dd2a4eb26a8a92cd6b64dfc29caec72bff5e1ed9aba80c294f57a31ba4895a60fd48347cf17dd6e766da0ae87d75657dfd1f384ebfa60462c2283f5c7f
+  languageName: node
+  linkType: hard
+
 "node-fetch@npm:2.6.5, node-fetch@npm:^2.6.1":
   version: 2.6.5
   resolution: "node-fetch@npm:2.6.5"
   dependencies:
     whatwg-url: ^5.0.0
   checksum: 4e83db450718e70762882f00d96f647a7f2f3170035225934ddd5450cb1d91ef339ceb180d3687bcb0a6ed78c3fa5636ce8d3e44ec81ab59e0224ebf8965f65f
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:^3.0.0":
+  version: 3.2.0
+  resolution: "node-fetch@npm:3.2.0"
+  dependencies:
+    data-uri-to-buffer: ^4.0.0
+    fetch-blob: ^3.1.4
+    formdata-polyfill: ^4.0.10
+  checksum: 1c809a0f64dd11cc18b49f990440e22c471da47da2a6d6b3388a83beba9d23ba7eaca1b9bf706a792bd283b824cf1a76777910859b9c28ad33a59f2ae4e44f8e
   languageName: node
   linkType: hard
 
@@ -22941,6 +22985,13 @@ typescript@~4.4.3:
     webpack-merge: 5.8.0
   languageName: unknown
   linkType: soft
+
+"web-streams-polyfill@npm:^3.0.3":
+  version: 3.2.0
+  resolution: "web-streams-polyfill@npm:3.2.0"
+  checksum: e23ad0649392fa0159dbfc6bb27474c308c3f332d9078cfef3c06c154165bef18732c5814126147c6c712f604216ddc950c171c854e3821f020e0d2d721a5958
+  languageName: node
+  linkType: hard
 
 "webidl-conversions@npm:^3.0.0":
   version: 3.0.1

@@ -47,7 +47,7 @@
     "ilp-protocol-stream": "^2.7.0",
     "inversify": "^6.0.0",
     "inversify-express-utils": "^6.3.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.0.0",
     "oer-utils": "^5.1.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
