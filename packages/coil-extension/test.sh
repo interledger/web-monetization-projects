@@ -12,6 +12,26 @@ CI=${CI:-}
 # and makes sure the stream has closed so is a good default
 TESTFILE=${1-'test/puppeteer/logout-test.ts'}
 
+function retry()
+{
+        local n=0
+        local try=$1
+        local cmd="${@: 2}"
+        [[ $# -le 1 ]] && {
+        echo "Usage $0 <retry_number> <Command>"; }
+
+        until [[ $n -ge $try ]]
+        do
+                $cmd && break || {
+                        echo "Command Fail.."
+                        ((n++))
+                        echo "retry $n ::"
+                        sleep 1;
+                        }
+
+        done
+}
+
 if [[ ${DEV} = 'false' ]]
 then
   COMMAND="ts-node -r tsconfig-paths/register -T -P test/tsconfig.json"
@@ -21,6 +41,4 @@ fi
 
 export DEBUG='coil*'
 
-# shellcheck disable=SC2086
-yarn $COMMAND \
-    "$TESTFILE"
+retry 3 yarn "$COMMAND" "$TESTFILE"
