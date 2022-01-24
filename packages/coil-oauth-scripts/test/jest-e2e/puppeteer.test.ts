@@ -93,6 +93,8 @@ afterAll(async () => {
 })
 
 describe('OAuthScripts', () => {
+  jest.retryTimes(3)
+
   it('should get a non zero monetizationprogress event', async () => {
     await testMonetization({
       context,
