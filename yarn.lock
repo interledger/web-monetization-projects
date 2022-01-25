@@ -1584,7 +1584,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
     framer-motion: ^5.0.0
-    get-port: ^5.1.1
+    get-port: ^6.0.0
     http-server: 14.1.0
     husky: 7.0.4
     ilp-plugin-btp: 1.5.0
@@ -1890,7 +1890,7 @@ __metadata:
     eslint-plugin-react: 7.28.0
     eslint-plugin-react-hooks: 4.3.0
     eslint-plugin-standard: 5.0.0
-    get-port: ^5.1.1
+    get-port: ^6.0.0
     husky: 7.0.4
     jest: 27.4.7
     lerna: 4.0.0
@@ -11970,7 +11970,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"get-port@npm:*, get-port@npm:^5.1.1":
+"get-port@npm:*, get-port@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "get-port@npm:6.0.0"
+  checksum: 9c7b370a00deb8f8330a5a5c38b5902a0dec3725890f4472e665b0d17caf448d3805ca22fc66fa68721018e9ee99773c0c253d9ec70d2ca70b5a8e602aed7629
+  languageName: node
+  linkType: hard
+
+"get-port@npm:^5.1.1":
   version: 5.1.1
   resolution: "get-port@npm:5.1.1"
   checksum: 0162663ffe5c09e748cd79d97b74cd70e5a5c84b760a475ce5767b357fb2a57cb821cee412d646aa8a156ed39b78aab88974eddaa9e5ee926173c036c0713787
