@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useMemo } from 'react'
 import { StorageService } from '@webmonetization/wext/services'
 
 import { getCreditCardFromPaymentMethods } from '../../util/getCreditCardFromPaymentMethods'
+import { calculateMaxAllowableTip } from '../../util/calculateMaxAllowableTip'
 
 //
 // Models
@@ -75,7 +76,7 @@ export const TipProvider: React.FC<ITipProvider> = props => {
 
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
-  const maxTipAllowed = calculateMaxTipAllowed(
+  const maxTipAllowed = calculateMaxAllowableTip(
     monetized,
     tippingBetaFeatureFlag,
     !!creditCard,
