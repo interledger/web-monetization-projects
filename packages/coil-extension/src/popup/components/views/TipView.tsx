@@ -4,7 +4,6 @@ import { styled, Box } from '@material-ui/core'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { AmountInput } from '../AmountInput'
 import { HotkeyAmountButtons } from '../HotkeyAmountButtons'
-import { useStore } from '../../context/storeContext'
 import { useTip } from '../../context/tipContext'
 import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../constants'
@@ -25,10 +24,8 @@ const ComponentWrapper = styled('div')({
 // Component
 //
 export const TipView: React.FC = () => {
-  const { currentTipAmount } = useTip()
+  const { currentTipAmount, maxAllowableTipAmount } = useTip()
   const router = useRouter()
-  const { user } = useStore()
-  const { maxAllowableTipAmount = 0 } = user?.tipSettings ?? {}
 
   const handleTip = () => {
     router.to(ROUTES.tippingConfirm)

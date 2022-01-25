@@ -1,4 +1,4 @@
-import { calculateMaxAllowableTip } from '../../src/background/util/formatters'
+import { calculateMaxAllowableTip } from '../../src/util/calculateMaxAllowableTip'
 
 describe('Calculate maximum allowable tip amount', () => {
   it('Non monetized sites should default to $0 max allowable tip', () => {

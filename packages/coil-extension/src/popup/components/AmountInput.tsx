@@ -76,9 +76,9 @@ export const AmountInput = (): React.ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null)
 
   const { user } = useStore()
-  const { minimumTipLimit = 1, maxAllowableTipAmount = 0 } =
-    user?.tipSettings || {}
-  const { currentTipAmount, setCurrentTipAmount } = useTip()
+  const { minimumTipLimit = 1 } = user?.tipSettings || {}
+  const { currentTipAmount, setCurrentTipAmount, maxAllowableTipAmount } =
+    useTip()
 
   // set focus to the input field when it loads. Cannot use 'autoFocus' because eslint-plugin-jsx-a11y
   useEffect(() => {

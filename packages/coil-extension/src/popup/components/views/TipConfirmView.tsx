@@ -105,12 +105,13 @@ export const TipConfirmView = (): React.ReactElement => {
     setSubmitError(null)
     setIsSubmitting(true)
     try {
-      const { success } = await sendTip(currentTipAmount)
+      const { success, message } = await sendTip(currentTipAmount)
 
       if (success) {
         router.to(ROUTES.tippingComplete)
       } else {
-        throw new Error('Something went wrong')
+        const errorMsg = message ? message : 'Something went wrong'
+        throw new Error(errorMsg)
       }
     } catch (error) {
       setSubmitError(error.message)
@@ -165,7 +166,7 @@ export const TipConfirmView = (): React.ReactElement => {
               color={Colors.Red400}
               alignSelf='center'
             >
-              Something went wrong.
+              {submitError}
             </Box>
           ) : (
             <TipPaymentDebits

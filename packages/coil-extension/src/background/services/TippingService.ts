@@ -8,7 +8,6 @@ import * as tokens from '../../types/tokens'
 import { formatTipSettings } from '../util/formatters'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
-import { IUserPaymentMethod } from '../../types/user'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
@@ -52,26 +51,8 @@ export class TippingService extends EventEmitter {
       const tipCreditBalanceCents =
         getUserTipCredit == null ? 0 : getUserTipCredit?.balance ?? 0
 
-      // need to know if the user has a credit card in order to calculate the maximum allowable tip
-      // getting the payment methods out of the user object in the store
-      const { paymentMethods = [] as Array<IUserPaymentMethod> } =
-        this.store.user ?? {}
-      const hasCreditCard =
-        paymentMethods.findIndex((paymentMethod: IUserPaymentMethod) => {
-          return paymentMethod.type === 'stripe'
-        }) > -1
-
-      // need to know if the site is monetized in order to calculate the maximum allowable tip
-      // a non monetized site should default to $0
-      const siteIsMonetized = this.store.monetized
-        ? this.store.monetized
-        : false
-
       // format the tip settings
       const formattedTipSettings = await formatTipSettings(
-        siteIsMonetized,
-        tippingBetaFeatureFlag,
-        hasCreditCard,
         Number(limitRemaining),
         Number(lastTippedAmount),
         Number(minTipLimit),
