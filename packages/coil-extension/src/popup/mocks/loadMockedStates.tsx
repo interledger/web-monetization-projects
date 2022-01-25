@@ -45,7 +45,7 @@ const tipUserNewUi = {
   email: 'mock-email@coil.com',
   profilePicture: 'https://cdn.coil.com/images/msPiV_0ZS928Fc-HJcdVAw.jpg',
   customerId: 'cus_EmQtvoQVyJgZ75',
-  subscription: { active: false },
+  subscription: { active: true },
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
@@ -131,7 +131,7 @@ const userCanTipNewUi = mockState({
   monetized: true,
   // coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
   // coilSite: 'https://coil.com/discover',
-  monetizedTotal: 10854,
+  monetizedTotal: 0,
   user: tipUserNewUi,
   validToken: true,
   adapted: false

@@ -53,6 +53,10 @@ export const theme = createMuiThemeWrapper({
   overrides: {
     MuiCssBaseline: {
       '@global': {
+        body: {
+          fontFamily:
+            'CircularStd, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif'
+        },
         strong: {
           fontWeight: 500
         }

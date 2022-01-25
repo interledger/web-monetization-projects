@@ -17,6 +17,7 @@ const HeaderTitle = styled('div')(({ theme }) => ({
   color: theme.palette.Grey800
 }))
 const CloseButton = styled('button')(({ theme }) => ({
+  cursor: 'pointer',
   border: 'none',
   backgroundColor: 'transparent',
   padding: '0',

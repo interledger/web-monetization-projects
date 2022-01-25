@@ -1,35 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import lottie from 'lottie-web'
 import { Typography, styled, Theme, useTheme, Box } from '@material-ui/core'
 
 import { useHost } from '../../context/popupHostContext'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
-import { WebMonetized } from '../icons/WebMonetized'
 import { CtaButton } from '../CtaButton'
+import streamingOnAnimation from '../lottie-animations/wm_streaming_on.json'
+
 //
 // Styles
 //
-const ImgWrapper = styled('div')(({ theme }: { theme: Theme }) => ({
-  position: 'relative',
-  marginTop: theme.spacing(6),
+const LottieWrapper = styled('div')(({ theme }: { theme: Theme }) => ({
+  marginTop: theme.spacing(4),
+  height: '152px',
+  width: '196px',
   marginLeft: 'auto',
   marginRight: 'auto'
-}))
-
-const WebMoIconWrapper = styled('div')(({ theme }: { theme: Theme }) => ({
-  position: 'absolute',
-  top: theme.spacing(1),
-  width: theme.spacing(8),
-  height: theme.spacing(8),
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: theme.palette.Green400,
-  borderRadius: '100%',
-  '& > svg': {
-    width: theme.spacing(5),
-    height: theme.spacing(5),
-    color: theme.palette.White
-  }
 }))
 
 //
@@ -41,17 +27,23 @@ export const StreamingNoMembershipView = () => {
     coilDomain,
     runtime: { tabOpener }
   } = useHost()
+  const lottieAnchor = useRef(null)
 
   const onClick = tabOpener(coilDomain + '/settings/payment')
 
+  useEffect(() => {
+    if (lottieAnchor.current) {
+      lottie.loadAnimation({
+        container: lottieAnchor.current,
+        animationData: streamingOnAnimation,
+        autoplay: false
+      })
+    }
+  }, [lottieAnchor])
+
   return (
     <NewHeaderFooterLayout title='Streaming Payments'>
-      <ImgWrapper>
-        <WebMoIconWrapper>
-          <WebMonetized />
-        </WebMoIconWrapper>
-        <img src='/res/img-woman.png' />
-      </ImgWrapper>
+      <LottieWrapper ref={lottieAnchor} />
       <Typography
         variant='h6'
         align='center'

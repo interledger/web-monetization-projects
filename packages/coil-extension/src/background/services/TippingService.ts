@@ -181,6 +181,9 @@ export class TippingService extends EventEmitter {
     // Set tip amount
     const CENTS = 100
     const tipAmountCents = Math.floor(tip * CENTS).toString()
+    const tipAmountNanoUSD = Math.floor(
+      Number(tipAmountCents) * 10 ** 7
+    ).toString()
 
     // Set active tab url
     const frameId = 0
@@ -203,7 +206,7 @@ export class TippingService extends EventEmitter {
         command: 'tip',
         data: {
           paymentPointer: receiver,
-          amount: tipAmountCents,
+          amount: tipAmountNanoUSD,
           assetCode,
           assetScale
         }

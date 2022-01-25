@@ -1,10 +1,7 @@
 import React from 'react'
-import { styled, Box } from '@material-ui/core'
+import { styled, Typography, Box, useTheme } from '@material-ui/core'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
-import { AmountInput } from '../AmountInput'
-import { HotkeyAmountButtons } from '../HotkeyAmountButtons'
-import { TipAmountFeedback } from '../TipAmountFeedback'
 
 //
 // Styles
@@ -38,24 +35,27 @@ const Button = styled('button')(({ theme }) => ({
 // Component
 //
 export const TipNonMonetizedView: React.FC = () => {
+  const theme = useTheme()
   return (
     <NewHeaderFooterLayout title='Support This Site'>
-      <ComponentWrapper>
-        <Box mt={6}>
-          <AmountInput />
-        </Box>
-        <Box mt={5}>
-          <HotkeyAmountButtons />
-        </Box>
-        <Box mt={4} mb={1} flex='1'>
-          <TipAmountFeedback />
-        </Box>
-        <Box mb={1}>
-          <Button disabled={true}>
-            This site can&apos;t receive Coil tips
-          </Button>
-        </Box>
-      </ComponentWrapper>
+      <Box mt={4} mb={2}>
+        <img
+          src='/res/img-tipping-off.png'
+          style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+        />
+      </Box>
+      <Typography
+        variant='h6'
+        align='center'
+        style={{ marginBottom: theme.spacing(1) }}
+      >
+        This site can&apos;t receive tips
+      </Typography>
+      <Typography variant='subtitle1' align='center'>
+        Only web monetized sites can
+        <br />
+        receive Coil tips.
+      </Typography>
     </NewHeaderFooterLayout>
   )
 }
