@@ -48,6 +48,7 @@
     "test:e2e": "yarn test --config jest-e2e.config.js",
     "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.js",
     "upkeep": "cd ../.. && yarn upkeep",
+    "testit": "python dev.py",
     "web-ext-reload": "web-ext run --reload -s $PWD/dist -p default-release"
   },
   "dependencies": {
