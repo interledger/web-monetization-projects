@@ -15,4 +15,16 @@ const urls = {
   }
 } as Record<Domain, TestUrls>
 
+const nodeVersion = Number(process.version.replace(/[^0-0.]/, '').split('.')[0])
+
+if (nodeVersion > 14) {
+  // There is some kind of bug that manifests in puppeteer 12+ on node 16+
+  // where if there is an empty iframe (with src= about: blank) then the test
+  // will fail with complaints about a detached frame.
+  // See: https://github.com/coilhq/web-monetization-projects/issues/2411
+  // This is only a problem for youtube urls, so don't test this url on node
+  // versions greater than 14.
+  delete urls['https://coil.com']['youtubeUrl']
+}
+
 export const testUrls = urls
