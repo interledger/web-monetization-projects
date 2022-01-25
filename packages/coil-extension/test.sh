@@ -14,6 +14,7 @@ TESTFILE=${1-'test/puppeteer/logout-test.ts'}
 
 function retry()
 {
+        echo "BASH version is" $(bash --version)
         local n=0
         local try=$1
         local cmd="${@: 2}"
