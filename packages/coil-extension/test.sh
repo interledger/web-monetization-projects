@@ -12,28 +12,28 @@ CI=${CI:-}
 # and makes sure the stream has closed so is a good default
 TESTFILE=${1-'test/puppeteer/logout-test.ts'}
 
-function retry()
-{
-        local n=0
-        local try=$1
-        local cmd="${@: 2}"
-        [[ $# -le 1 ]] && {
-        echo "Usage $0 <retry_number> <Command>"; }
+function retry() {
+  local n=0
+  local try=$1
+  local cmd="${@:2}"
+  [[ $# -le 1 ]] && {
+    echo "Usage $0 <retry_number> <Command>"
+  }
 
-        until [[ $n -ge $try ]]
-        do
-                $cmd && break || {
-                        echo "Command Fail.."
-                        ((n++))
-                        echo "retry $n ::"
-                        sleep 1;
-                        }
+  until [[ $n -ge $try ]]; do
+    $cmd && break || {
+      echo "Command Fail.."
+      # echo the n++ else the ((n++)) *seems* to be treated as an exit code
+      # and -u will bail
+      echo $((n++))
+      echo "retry $n ::"
+      sleep 1
+    }
 
-        done
+  done
 }
 
-if [[ ${DEV} = 'false' ]]
-then
+if [[ ${DEV} = 'false' ]]; then
   COMMAND="ts-node -r tsconfig-paths/register -T -P test/tsconfig.json"
 else
   COMMAND="ts-node-dev -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpile-only"
