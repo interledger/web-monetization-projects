@@ -22,7 +22,8 @@ export class TippingService extends EventEmitter {
     private client: GraphQlClient,
     @logger('TippingService')
     private log: Logger,
-    private framesService: BackgroundFramesService
+    private framesService: BackgroundFramesService,
+    private api = chrome
   ) {
     super()
   }
@@ -194,6 +195,7 @@ export class TippingService extends EventEmitter {
     }
 
     const receiver = stream.getPaymentPointer()
+    const { assetCode, assetScale } = stream.getAssetDetails()
 
     // Set tip amount
     const CENTS = 100
@@ -216,6 +218,16 @@ export class TippingService extends EventEmitter {
       })
 
       this.log(`tip: sent tip to ${receiver}`, result)
+      const message = {
+        command: 'tip',
+        data: {
+          paymentPointer: receiver,
+          amount: tipAmountCents,
+          assetCode,
+          assetScale
+        }
+      }
+      this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
       return result
     } catch (e) {
       this.log(`tip: error. msg=${e.message}`)
