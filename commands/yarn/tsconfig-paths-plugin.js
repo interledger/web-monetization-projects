@@ -9,6 +9,8 @@ module.exports = {
           if (!(scriptEnv.TSCONFIG_PATHS_REGISTER === 'false')) {
             scriptEnv.NODE_OPTIONS += ' --require tsconfig-paths/register'
           }
+          scriptEnv.NODE_OPTIONS += ' --experimental-modules'
+          console.log('scriptEnv.NODE_OPTIONS', scriptEnv.NODE_OPTIONS)
         }
       }
     }
