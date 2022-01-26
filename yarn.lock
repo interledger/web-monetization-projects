@@ -1610,8 +1610,9 @@ __metadata:
     jss: ^10.6.0
     lerna: 4.0.0
     lint-staged: 12.3.1
+    lottie-web: ^5.8.1
     prettier: 2.5.1
-    puppeteer: 11.0.0
+    puppeteer: 13.1.2
     react: ^17.0.0
     react-dom: ^17.0.0
     reduct: ^3.3.1
@@ -1748,7 +1749,7 @@ __metadata:
     lint-staged: 12.3.1
     node-fetch: ^2.6.1
     prettier: 2.5.1
-    puppeteer: 11.0.0
+    puppeteer: 13.1.2
     reduct: ^3.3.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
@@ -1935,7 +1936,7 @@ __metadata:
     lerna: 4.0.0
     lint-staged: 12.3.1
     prettier: 2.5.1
-    puppeteer: ^11.0.0
+    puppeteer: ^13.1.1
     regenerator-runtime: ^0.13.9
     rimraf: 3.0.2
     tmp: ^0.2.1
@@ -9687,10 +9688,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devtools-protocol@npm:0.0.901419":
-  version: 0.0.901419
-  resolution: "devtools-protocol@npm:0.0.901419"
-  checksum: de68331ddfb35b828ad743d939d9237e122f76d4a6cbf1e64f6c6d8e9c2c5cc65a5f1994db0fead90192cca1aa9dbed2ea822a7da7b58104cd041a90e215b9a3
+"devtools-protocol@npm:0.0.948846":
+  version: 0.0.948846
+  resolution: "devtools-protocol@npm:0.0.948846"
+  checksum: add29ebdcc60d2ccb11f8c7125c3d500957da63bac6bc7633041761ea12320febebbc58530e94bc23e0586ce4de2623fb5eaae0971ecbfc778f7159448519b0a
   languageName: node
   linkType: hard
 
@@ -16074,6 +16075,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"lottie-web@npm:^5.8.1":
+  version: 5.8.1
+  resolution: "lottie-web@npm:5.8.1"
+  checksum: 48c19ea7863310150dc9e46855b0f85179f3768ac0c0cf4f3ffb18944819079d3046c31ca04f2748291f3c413a855329a12ce9c3faae056a1a869776b6ed12a9
+  languageName: node
+  linkType: hard
+
 "loud-rejection@npm:^1.0.0":
   version: 1.6.0
   resolution: "loud-rejection@npm:1.6.0"
@@ -16979,12 +16987,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:2.6.5, node-fetch@npm:^2.6.1":
-  version: 2.6.5
-  resolution: "node-fetch@npm:2.6.5"
+"node-fetch@npm:2.6.7, node-fetch@npm:^2.6.1":
+  version: 2.6.7
+  resolution: "node-fetch@npm:2.6.7"
   dependencies:
     whatwg-url: ^5.0.0
-  checksum: 4e83db450718e70762882f00d96f647a7f2f3170035225934ddd5450cb1d91ef339ceb180d3687bcb0a6ed78c3fa5636ce8d3e44ec81ab59e0224ebf8965f65f
+  peerDependencies:
+    encoding: ^0.1.0
+  peerDependenciesMeta:
+    encoding:
+      optional: true
+  checksum: 8d816ffd1ee22cab8301c7756ef04f3437f18dace86a1dae22cf81db8ef29c0bf6655f3215cb0cdb22b420b6fe141e64b26905e7f33f9377a7fa59135ea3e10b
   languageName: node
   linkType: hard
 
@@ -18943,15 +18956,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:11.0.0, puppeteer@npm:^11.0.0":
-  version: 11.0.0
-  resolution: "puppeteer@npm:11.0.0"
+"puppeteer@npm:13.1.2, puppeteer@npm:^13.1.1":
+  version: 13.1.2
+  resolution: "puppeteer@npm:13.1.2"
   dependencies:
     debug: 4.3.2
-    devtools-protocol: 0.0.901419
+    devtools-protocol: 0.0.948846
     extract-zip: 2.0.1
     https-proxy-agent: 5.0.0
-    node-fetch: 2.6.5
+    node-fetch: 2.6.7
     pkg-dir: 4.2.0
     progress: 2.0.3
     proxy-from-env: 1.1.0
@@ -18959,7 +18972,7 @@ fsevents@^1.2.7:
     tar-fs: 2.1.1
     unbzip2-stream: 1.4.3
     ws: 8.2.3
-  checksum: 36ff07f3f9c4fed1dc36bc2849c5d2e269ed31edcec15423184fb29c62414e8b902777a27741e4b143c35c4a37a03da11ec903a20e288c39de6dc75d1266891d
+  checksum: 754624a2ef604c15992799045513715e37b267e362487927397eb869931bccc3e1d7953986ffa7e140a83184110dd3e16670f058c05d558b8c3a413208f312e6
   languageName: node
   linkType: hard
 

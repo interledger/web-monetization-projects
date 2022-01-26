@@ -355,6 +355,7 @@ export interface Tip {
  */
 export interface TipResult {
   success: boolean
+  message?: string
 }
 
 /**

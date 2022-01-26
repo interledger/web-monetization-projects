@@ -8,7 +8,9 @@
     "rootDir": "src"
   },
   "include": [
-    "src"
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.json"
   ],
   "exclude": [
     "src/**/*.test.ts",

@@ -8,7 +8,6 @@ import * as tokens from '../../types/tokens'
 import { formatTipSettings } from '../util/formatters'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
-import { IUserPaymentMethod } from '../../types/user'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
@@ -22,7 +21,8 @@ export class TippingService extends EventEmitter {
     private client: GraphQlClient,
     @logger('TippingService')
     private log: Logger,
-    private framesService: BackgroundFramesService
+    private framesService: BackgroundFramesService,
+    private api = chrome
   ) {
     super()
   }
@@ -51,26 +51,8 @@ export class TippingService extends EventEmitter {
       const tipCreditBalanceCents =
         getUserTipCredit == null ? 0 : getUserTipCredit?.balance ?? 0
 
-      // need to know if the user has a credit card in order to calculate the maximum allowable tip
-      // getting the payment methods out of the user object in the store
-      const { paymentMethods = [] as Array<IUserPaymentMethod> } =
-        this.store.user ?? {}
-      const hasCreditCard =
-        paymentMethods.findIndex((paymentMethod: IUserPaymentMethod) => {
-          return paymentMethod.type === 'stripe'
-        }) > -1
-
-      // need to know if the site is monetized in order to calculate the maximum allowable tip
-      // a non monetized site should default to $0
-      const siteIsMonetized = this.store.monetized
-        ? this.store.monetized
-        : false
-
       // format the tip settings
       const formattedTipSettings = await formatTipSettings(
-        siteIsMonetized,
-        tippingBetaFeatureFlag,
-        hasCreditCard,
         Number(limitRemaining),
         Number(lastTippedAmount),
         Number(minTipLimit),
@@ -194,10 +176,14 @@ export class TippingService extends EventEmitter {
     }
 
     const receiver = stream.getPaymentPointer()
+    const { assetCode, assetScale } = stream.getAssetDetails()
 
     // Set tip amount
     const CENTS = 100
     const tipAmountCents = Math.floor(tip * CENTS).toString()
+    const tipAmountNanoUSD = Math.floor(
+      Number(tipAmountCents) * 10 ** 7
+    ).toString()
 
     // Set active tab url
     const frameId = 0
@@ -216,6 +202,16 @@ export class TippingService extends EventEmitter {
       })
 
       this.log(`tip: sent tip to ${receiver}`, result)
+      const message = {
+        command: 'tip',
+        data: {
+          paymentPointer: receiver,
+          amount: tipAmountNanoUSD,
+          assetCode,
+          assetScale
+        }
+      }
+      this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
       return result
     } catch (e) {
       this.log(`tip: error. msg=${e.message}`)

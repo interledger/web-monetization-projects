@@ -172,7 +172,9 @@ function upKeepTypeScriptBuildConfig(subPackage: LernaListItem) {
       tsBuildInfoFile: './build/tsconfig.build.tsbuildinfo',
       rootDir: 'src'
     },
-    include: ['src'],
+    // Unfortunately, resolveJsonModule: true and simply `src` does
+    // not seem to work
+    include: ['src/**/*.tsx', 'src/**/*.ts', 'src/**/*.json'],
     exclude: ['src/**/*.test.ts', 'src/**/*.test.tsx']
   }
   if (subPackage.dependencies.length) {
