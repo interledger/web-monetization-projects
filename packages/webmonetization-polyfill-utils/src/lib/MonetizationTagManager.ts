@@ -282,7 +282,6 @@ export class MonetizationTagManager {
    * Checks invariants - no meta in head
    *                   - no more than one meta
    *                   - no metas when affinity with links already set
-   * Sets up attributes observer
    * Invokes this.callback unless tag is disabled
    */
   private onAddedTag(tag: MonetizationTag) {
