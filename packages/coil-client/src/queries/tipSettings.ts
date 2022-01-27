@@ -6,13 +6,11 @@ export const tipSettingsQuery = `
       tipping {
         lastTippedAmount
         limitRemaining
+        totalTipCredit
       }
     }
     minTipLimit {
       minTipLimit
-    }
-    getUserTipCredit {
-        balance
     }
     tippingBetaFeatureFlag: featureEnabled(key: "tipping-beta")
     extensionNewUiFeatureFlag: featureEnabled(key: "extension-new-ui")
@@ -24,13 +22,11 @@ export interface TipSettingsData {
     tipping: {
       lastTippedAmount: number
       limitRemaining: number
+      totalTipCredit: number
     }
   }
   minTipLimit: {
     minTipLimit: string
-  }
-  getUserTipCredit: {
-    balance: number
   }
   tippingBetaFeatureFlag: boolean
   extensionNewUiFeatureFlag: boolean
