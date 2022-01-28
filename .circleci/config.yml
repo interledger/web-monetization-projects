@@ -95,11 +95,8 @@ jobs:
             yarn build-staging
             mkdir /tmp/coil-chrome-ext-e2e-staging
             tar -cvzf /tmp/coil-chrome-ext-e2e-staging/chromeext.tar dist
-            gsutil cp /tmp/coil-chrome-ext-e2e-staging/chromeext.tar gs://web-monetization-projects/latest.zip
-      - store_artifacts:
-          path: /tmp/coil-chrome-ext-e2e-staging/chromeext.tar
-          destination: chrome-ext-staging
-
+            gsutil cp /tmp/coil-chrome-ext-e2e-staging/chromeext.tar gs://web-monetization-projects/extension/latest.tar
+      
   publish-packages:
     docker:
       - image: circleci/node:14-buster-browsers
@@ -395,6 +392,7 @@ workflows:
             branches:
               only:  # only branches matching the below regex filters will run
                 - main
+                - rl-gcloud-creds
 references:
   gcloud-get-creds:
     description: 'Get deploy credentials to Google Cloud'
