@@ -402,4 +402,5 @@ workflows:
       - build-extension-e2e-coil:
           filters:  # using regex filters requires the entire branch to match
             branches:
-              ignore: /pull\/[0-9]+/
+              only:  # only branches matching the below regex filters will run
+                - main
