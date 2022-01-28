@@ -400,6 +400,11 @@ workflows:
               ignore: /pull\/[0-9]+/
           <<: *node-version-matrix
       - build-extension-e2e-coil:
+          requires:
+            - jest-all
+            - jest-lerna-all
+            - coil-extension-puppeteer
+            - coil-extension-puppeteer-transpile-only
           filters:  # using regex filters requires the entire branch to match
             branches:
               only:  # only branches matching the below regex filters will run
