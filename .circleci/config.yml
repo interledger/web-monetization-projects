@@ -100,7 +100,7 @@ jobs:
     docker:
       - image: circleci/node:16-buster-browsers
     steps:
-      - gcloud-get-creds:
+      - gcloud-get-creds
       - checkout
       - run:
           name: Publish staging extension for coil e2e tests
