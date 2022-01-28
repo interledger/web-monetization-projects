@@ -22,10 +22,8 @@ commands:
             ENVIRONMENT=staging
             echo $DEPLOY_KEY > $HOME/gcp-key.json
             gcloud auth activate-service-account --key-file $HOME/gcp-key.json
-            gcloud auth configure-docker --quiet
             echo 'export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcp-key.json"' >> $BASH_ENV
-            gcloud config set project $PROJECT
-            gcloud container clusters get-credentials --zone=us-central1-a primary
+
 references:
   parameterized-node-version: &parameterized-node-version
     parameters:
