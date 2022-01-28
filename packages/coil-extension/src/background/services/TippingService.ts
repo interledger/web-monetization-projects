@@ -22,6 +22,7 @@ export class TippingService extends EventEmitter {
     @logger('TippingService')
     private log: Logger,
     private framesService: BackgroundFramesService,
+    @inject(tokens.WextApi)
     private api: typeof chrome
   ) {
     super()
