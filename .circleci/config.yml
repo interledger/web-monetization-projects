@@ -405,6 +405,4 @@ workflows:
       - build-extension-e2e-coil:
           filters:  # using regex filters requires the entire branch to match
             branches:
-              only:  # only branches matching the below regex filters will run
-                - main
-                - rl-gcloud-creds-2
+              ignore: /pull\/[0-9]+/
