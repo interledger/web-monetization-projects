@@ -9,22 +9,13 @@ parameters:
 commands:
   gcloud-get-creds: 
     description: 'Get deploy credentials to Google Cloud'
-    parameters:
-      env:
-        type: string
     steps:
       - run:
           name: 'Getting deploy credentials'
           command: |
             DEPLOY_KEY=$GCLOUD_UPLOAD_BUCKET_CREDENTIALS
             PROJECT="exalted-beanbag-213300"
-            ENVIRONMENT=<< parameters.env >>
-            case $ENVIRONMENT in
-              production)
-                echo "Production environment"
-                PROJECT="stellar-chariot-213418"
-                DEPLOY_KEY=$GCLOUD_PRODUCTION_DEPLOY
-            esac
+            ENVIRONMENT=staging
             echo $DEPLOY_KEY > $HOME/gcp-key.json
             gcloud auth activate-service-account --key-file $HOME/gcp-key.json
             gcloud auth configure-docker --quiet
@@ -110,7 +101,6 @@ jobs:
       - image: circleci/node:16-buster-browsers
     steps:
       - gcloud-get-creds:
-          env: 'staging'
       - checkout
       - run:
           name: Publish staging extension for coil e2e tests
@@ -120,6 +110,11 @@ jobs:
             yarn build-staging
             mkdir /tmp/coil-chrome-ext-e2e-staging
             tar -cvzf /tmp/coil-chrome-ext-e2e-staging/chromeext.tar dist
+            sudo apt-get install apt-transport-https ca-certificates gnupg
+            echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+            curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+            sudo apt-get update && sudo apt-get install google-cloud-sdk
+            gcloud init
             gsutil cp /tmp/coil-chrome-ext-e2e-staging/chromeext.tar gs://web-monetization-projects/extension/latest.tar
       
   publish-packages:
@@ -408,11 +403,6 @@ workflows:
               ignore: /pull\/[0-9]+/
           <<: *node-version-matrix
       - build-extension-e2e-coil:
-          requires:
-            - jest-all
-            - jest-lerna-all
-            - coil-extension-puppeteer
-            - coil-extension-puppeteer-transpile-only
           filters:  # using regex filters requires the entire branch to match
             branches:
               only:  # only branches matching the below regex filters will run
