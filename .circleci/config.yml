@@ -84,6 +84,8 @@ jobs:
     docker:
       - image: circleci/node:16-buster-browsers
     steps:
+      - gcloud-get-creds:
+        env: 'staging'
       - checkout
       - run:
           name: Publish staging extension for coil e2e tests
@@ -93,6 +95,7 @@ jobs:
             yarn build-staging
             mkdir /tmp/coil-chrome-ext-e2e-staging
             tar -cvzf /tmp/coil-chrome-ext-e2e-staging/chromeext.tar dist
+            gsutil cp /tmp/coil-chrome-ext-e2e-staging/chromeext.tar gs://web-monetization-projects/latest.zip
       - store_artifacts:
           path: /tmp/coil-chrome-ext-e2e-staging/chromeext.tar
           destination: chrome-ext-staging
@@ -392,3 +395,28 @@ workflows:
             branches:
               only:  # only branches matching the below regex filters will run
                 - main
+references:
+  gcloud-get-creds:
+    description: 'Get deploy credentials to Google Cloud'
+    parameters:
+      env:
+        type: string
+    steps:
+      - run:
+          name: 'Getting deploy credentials'
+          command: |
+            DEPLOY_KEY=$GCLOUD_UPLOAD_BUCKET_CREDENTIALS
+            PROJECT="exalted-beanbag-213300"
+            ENVIRONMENT=<< parameters.env >>
+            case $ENVIRONMENT in
+              production)
+                echo "Production environment"
+                PROJECT="stellar-chariot-213418"
+                DEPLOY_KEY=$GCLOUD_PRODUCTION_DEPLOY
+            esac
+            echo $DEPLOY_KEY > $HOME/gcp-key.json
+            gcloud auth activate-service-account --key-file $HOME/gcp-key.json
+            gcloud auth configure-docker --quiet
+            echo 'export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcp-key.json"' >> $BASH_ENV
+            gcloud config set project $PROJECT
+            gcloud container clusters get-credentials --zone=us-central1-a primary
