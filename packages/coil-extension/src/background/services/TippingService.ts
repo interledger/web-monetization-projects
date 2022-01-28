@@ -22,14 +22,14 @@ export class TippingService extends EventEmitter {
     @logger('TippingService')
     private log: Logger,
     private framesService: BackgroundFramesService,
-    private api = chrome
+    private api: typeof chrome
   ) {
     super()
   }
 
   async updateTipSettings(token: string): Promise<string | null> {
-    /* 
-      updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings 
+    /*
+      updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings
       after it fetches the data it then formats the values to make it easier for the views to consume
     */
 
