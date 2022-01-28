@@ -6,6 +6,31 @@ parameters:
     default: "https://coil.com"
     enum: ["https://coil.com", "https://staging.coil.com"]
 
+commands:
+  gcloud-get-creds: 
+    description: 'Get deploy credentials to Google Cloud'
+    parameters:
+      env:
+        type: string
+    steps:
+      - run:
+          name: 'Getting deploy credentials'
+          command: |
+            DEPLOY_KEY=$GCLOUD_UPLOAD_BUCKET_CREDENTIALS
+            PROJECT="exalted-beanbag-213300"
+            ENVIRONMENT=<< parameters.env >>
+            case $ENVIRONMENT in
+              production)
+                echo "Production environment"
+                PROJECT="stellar-chariot-213418"
+                DEPLOY_KEY=$GCLOUD_PRODUCTION_DEPLOY
+            esac
+            echo $DEPLOY_KEY > $HOME/gcp-key.json
+            gcloud auth activate-service-account --key-file $HOME/gcp-key.json
+            gcloud auth configure-docker --quiet
+            echo 'export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcp-key.json"' >> $BASH_ENV
+            gcloud config set project $PROJECT
+            gcloud container clusters get-credentials --zone=us-central1-a primary
 references:
   parameterized-node-version: &parameterized-node-version
     parameters:
@@ -85,7 +110,7 @@ jobs:
       - image: circleci/node:16-buster-browsers
     steps:
       - gcloud-get-creds:
-        env: 'staging'
+          env: 'staging'
       - checkout
       - run:
           name: Publish staging extension for coil e2e tests
@@ -393,28 +418,3 @@ workflows:
               only:  # only branches matching the below regex filters will run
                 - main
                 - rl-gcloud-creds
-references:
-  gcloud-get-creds:
-    description: 'Get deploy credentials to Google Cloud'
-    parameters:
-      env:
-        type: string
-    steps:
-      - run:
-          name: 'Getting deploy credentials'
-          command: |
-            DEPLOY_KEY=$GCLOUD_UPLOAD_BUCKET_CREDENTIALS
-            PROJECT="exalted-beanbag-213300"
-            ENVIRONMENT=<< parameters.env >>
-            case $ENVIRONMENT in
-              production)
-                echo "Production environment"
-                PROJECT="stellar-chariot-213418"
-                DEPLOY_KEY=$GCLOUD_PRODUCTION_DEPLOY
-            esac
-            echo $DEPLOY_KEY > $HOME/gcp-key.json
-            gcloud auth activate-service-account --key-file $HOME/gcp-key.json
-            gcloud auth configure-docker --quiet
-            echo 'export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcp-key.json"' >> $BASH_ENV
-            gcloud config set project $PROJECT
-            gcloud container clusters get-credentials --zone=us-central1-a primary
