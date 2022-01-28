@@ -13,6 +13,11 @@ commands:
       - run:
           name: 'Getting deploy credentials'
           command: |
+            sudo apt-get install apt-transport-https ca-certificates gnupg
+            echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+            curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+            sudo apt-get update && sudo apt-get install google-cloud-sdk
+            gcloud init
             DEPLOY_KEY=$GCLOUD_UPLOAD_BUCKET_CREDENTIALS
             PROJECT="exalted-beanbag-213300"
             ENVIRONMENT=staging
@@ -110,11 +115,6 @@ jobs:
             yarn build-staging
             mkdir /tmp/coil-chrome-ext-e2e-staging
             tar -cvzf /tmp/coil-chrome-ext-e2e-staging/chromeext.tar dist
-            sudo apt-get install apt-transport-https ca-certificates gnupg
-            echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-            curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-            sudo apt-get update && sudo apt-get install google-cloud-sdk
-            gcloud init
             gsutil cp /tmp/coil-chrome-ext-e2e-staging/chromeext.tar gs://web-monetization-projects/extension/latest.tar
       
   publish-packages:
