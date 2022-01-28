@@ -44,8 +44,13 @@ export class TippingService extends EventEmitter {
         tippingBetaFeatureFlag,
         extensionNewUiFeatureFlag
       } = resp.data ?? {}
-      const { tipping: { lastTippedAmount = 0, limitRemaining = 0, totalTipCredit = 0 } = {} } =
-        whoami ?? {}
+      const {
+        tipping: {
+          lastTippedAmount = 0,
+          limitRemaining = 0,
+          totalTipCredit = 0
+        } = {}
+      } = whoami ?? {}
 
       // need to know if the user has a credit card in order to calculate the maximum allowable tip
       // getting the payment methods out of the user object in the store
