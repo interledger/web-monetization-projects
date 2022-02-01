@@ -40,23 +40,24 @@ export class TippingService extends EventEmitter {
       // destructuring response values and setting defaults
       const {
         whoami,
-        minTipLimit: { minTipLimit = 1 },
-        getUserTipCredit,
+        minTipLimit: { minTipLimitAmountCentsUsd = 1 },
         tippingBetaFeatureFlag,
         extensionNewUiFeatureFlag
       } = resp.data ?? {}
-      const { tipping: { lastTippedAmount = 0, limitRemaining = 0 } = {} } =
-        whoami ?? {}
-      // tipCredit will return null for users who have no tip credits -> destructuring doesn't work on null values
-      const tipCreditBalanceCents =
-        getUserTipCredit == null ? 0 : getUserTipCredit?.balance ?? 0
+      const {
+        tipping: {
+          lastTippedAmountCentsUsd = 0,
+          limitRemainingAmountCentsUsd = 0,
+          totalTipCreditAmountCentsUsd = 0
+        } = {}
+      } = whoami ?? {}
 
       // format the tip settings
       const formattedTipSettings = await formatTipSettings(
-        Number(limitRemaining),
-        Number(lastTippedAmount),
-        Number(minTipLimit),
-        Number(tipCreditBalanceCents)
+        Number(limitRemainingAmountCentsUsd),
+        Number(lastTippedAmountCentsUsd),
+        Number(minTipLimitAmountCentsUsd),
+        Number(totalTipCreditAmountCentsUsd)
       )
 
       // update user object on local storage
@@ -196,7 +197,7 @@ export class TippingService extends EventEmitter {
       this.log(`tip: sending tip to ${receiver}`)
 
       const result = await this.client.tip(token, {
-        tipAmountCents,
+        amountCentsUsd: tipAmountCents,
         destination: receiver,
         origin: activeTabUrl
       })
