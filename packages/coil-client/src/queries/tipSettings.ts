@@ -26,7 +26,7 @@ export interface TipSettingsData {
     }
   }
   minTipLimit: {
-    minTipLimitAmountCentsUsd: string
+    minTipLimitAmountCentsUsd: number
   }
   tippingBetaFeatureFlag: boolean
   extensionNewUiFeatureFlag: boolean

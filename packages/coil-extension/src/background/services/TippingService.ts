@@ -5,9 +5,9 @@ import { inject, injectable } from 'inversify'
 
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
-import { formatTipSettings } from '../util/formatters'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
+import { convertCentsToDollars } from '../../util/convertUsdAmounts'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
@@ -40,7 +40,7 @@ export class TippingService extends EventEmitter {
       // destructuring response values and setting defaults
       const {
         whoami,
-        minTipLimit: { minTipLimitAmountCentsUsd = 1 },
+        minTipLimit: { minTipLimitAmountCentsUsd = 100 },
         tippingBetaFeatureFlag,
         extensionNewUiFeatureFlag
       } = resp.data ?? {}
@@ -52,13 +52,17 @@ export class TippingService extends EventEmitter {
         } = {}
       } = whoami ?? {}
 
-      // format the tip settings
-      const formattedTipSettings = await formatTipSettings(
-        Number(limitRemainingAmountCentsUsd),
-        Number(lastTippedAmountCentsUsd),
-        Number(minTipLimitAmountCentsUsd),
-        Number(totalTipCreditAmountCentsUsd)
-      )
+      const tipSettings = {
+        totalTipCreditAmountUsd: convertCentsToDollars(
+          totalTipCreditAmountCentsUsd
+        ),
+        minTipLimitAmountUsd: convertCentsToDollars(minTipLimitAmountCentsUsd),
+        limitRemainingAmountUsd: convertCentsToDollars(
+          limitRemainingAmountCentsUsd
+        ),
+        lastTippedAmountUsd: convertCentsToDollars(lastTippedAmountCentsUsd),
+        hotkeyTipAmountsUsd: [1, 2, 5] // not yet set by user
+      }
 
       // update user object on local storage
       if (this.store.user) {
@@ -66,7 +70,7 @@ export class TippingService extends EventEmitter {
           ...this.store.user,
           tippingBetaFeatureFlag,
           extensionNewUiFeatureFlag,
-          tipSettings: { ...formattedTipSettings }
+          tipSettings
         }
       }
 

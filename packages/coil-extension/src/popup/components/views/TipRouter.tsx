@@ -53,12 +53,12 @@ export const TipRouter = () => {
     TipProcessStep.TIP_COMPLETE
   )
   const { user } = useStore()
-  const { minimumTipLimit, lastTippedAmount } = user?.tipSettings || {}
+  const { minTipLimitAmountUsd, lastTippedAmountUsd } = user?.tipSettings || {}
   const defaultTipAmount = () => {
-    if (lastTippedAmount) {
-      return lastTippedAmount
-    } else if (minimumTipLimit) {
-      return minimumTipLimit
+    if (lastTippedAmountUsd) {
+      return lastTippedAmountUsd
+    } else if (minTipLimitAmountUsd) {
+      return minTipLimitAmountUsd
     } else {
       return 1
     }

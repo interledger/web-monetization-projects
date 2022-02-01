@@ -49,11 +49,11 @@ const tipUserNewUi = {
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
-    minimumTipLimit: 1,
-    remainingDailyAmount: 100,
-    lastTippedAmount: 25,
-    hotkeyTipAmounts: [5, 10, 50],
-    tipCredits: 20
+    minTipLimitAmountUsd: 1,
+    limitRemainingAmountUsd: 100,
+    lastTippedAmountUsd: 25,
+    hotkeyTipAmountsUsd: [5, 10, 50],
+    totalTipCreditAmountUsd: 20
   },
   paymentMethods: [
     {
@@ -87,11 +87,11 @@ const tipUserNewUiCompare = {
   invitation: { usedAt: '2018-09-22T00:28:32.714Z' },
   currencyPreferences: { code: 'USD', scale: 9 },
   tipSettings: {
-    minimumTipLimit: 1,
-    remainingDailyAmount: 30,
-    lastTippedAmount: 25,
-    hotkeyTipAmounts: [5, 10, 50],
-    tipCredits: 20
+    minTipLimitAmountUsd: 1,
+    limitRemainingAmountUsd: 30,
+    lastTippedAmountUsd: 25,
+    hotkeyTipAmountsUsd: [5, 10, 50],
+    totalTipCreditAmountUsd: 20
   },
   paymentMethods: [
     {

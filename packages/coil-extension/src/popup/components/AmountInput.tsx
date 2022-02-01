@@ -76,7 +76,7 @@ export const AmountInput = (): React.ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null)
 
   const { user } = useStore()
-  const { minimumTipLimit = 1 } = user?.tipSettings || {}
+  const { minTipLimitAmountUsd = 1 } = user?.tipSettings || {}
   const { currentTipAmount, setCurrentTipAmount, maxAllowableTipAmount } =
     useTip()
 
@@ -116,8 +116,8 @@ export const AmountInput = (): React.ReactElement => {
 
     // handle if the value is below the minimum
     let value = Number(e.target.value)
-    if (value < minimumTipLimit || isNaN(value)) {
-      value = minimumTipLimit
+    if (value < minTipLimitAmountUsd || isNaN(value)) {
+      value = minTipLimitAmountUsd
     }
 
     // handle if the input is higher than the remaining daily limit
