@@ -146,17 +146,20 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
 
   const { user } = useStore()
   const { minTipLimitAmountUsd = 1 } = user?.tipSettings || {}
-  const { currentTipAmount, setCurrentTipAmount, maxAllowableTipAmount } =
-    useTip()
+  const {
+    currentTipAmountUsd,
+    setCurrentTipAmountUsd,
+    maxAllowableTipAmountUsd
+  } = useTip()
 
   const initialVelocity = 150
   const [velocity, setVelocity] = useState<number>(initialVelocity)
   const [isRunning, setIsRunning] = useState<boolean>(false)
 
   const updateAmount = () => {
-    let amount = currentTipAmount
+    let amount = currentTipAmountUsd
     if (type === IncDec.Inc) {
-      if (amount == maxAllowableTipAmount) return
+      if (amount == maxAllowableTipAmountUsd) return
       amount = amount + 1
     } else if (type == IncDec.Dec) {
       amount = amount - 1
@@ -165,11 +168,11 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
       amount = minTipLimitAmountUsd
       stop()
     }
-    if (amount >= maxAllowableTipAmount) {
-      amount = maxAllowableTipAmount
+    if (amount >= maxAllowableTipAmountUsd) {
+      amount = maxAllowableTipAmountUsd
       stop()
     }
-    setCurrentTipAmount(amount)
+    setCurrentTipAmountUsd(amount)
   }
 
   // Click logic
@@ -214,9 +217,9 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
 
   const getDisabledState = () => {
     if (type == IncDec.Inc) {
-      return currentTipAmount >= maxAllowableTipAmount
+      return currentTipAmountUsd >= maxAllowableTipAmountUsd
     } else {
-      return currentTipAmount <= minTipLimitAmountUsd
+      return currentTipAmountUsd <= minTipLimitAmountUsd
     }
   }
 

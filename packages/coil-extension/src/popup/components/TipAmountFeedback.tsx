@@ -21,7 +21,7 @@ const ChargeAmount = styled('strong')(
 // Component
 //
 export const TipAmountFeedback = () => {
-  const { currentTipAmount } = useTip()
+  const { currentTipAmountUsd } = useTip()
   const { user } = useStore()
   const {
     tippingBetaFeatureFlag,
@@ -40,7 +40,7 @@ export const TipAmountFeedback = () => {
 
   const getRestrictedMessage = () => {
     let prompt = null
-    if (currentTipAmount >= limitRemainingAmountUsd) {
+    if (currentTipAmountUsd >= limitRemainingAmountUsd) {
       prompt = (
         <Typography variant='subtitle1'>
           Daily limit reached.{' '}
@@ -51,7 +51,7 @@ export const TipAmountFeedback = () => {
       )
     }
     if (
-      currentTipAmount >= totalTipCreditAmountUsd &&
+      currentTipAmountUsd >= totalTipCreditAmountUsd &&
       tippingBetaFeatureFlag &&
       !creditCard
     ) {

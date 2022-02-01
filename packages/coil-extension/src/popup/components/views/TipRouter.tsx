@@ -40,8 +40,8 @@ export enum TipProcessStep {
 }
 
 export interface ITipView {
-  currentTipAmount: number
-  setCurrentTipAmount: (amount: number) => void
+  currentTipAmountUsd: number
+  setCurrentTipAmountUsd: (amount: number) => void
   setTipProcessStep: (step: TipProcessStep) => void
 }
 
@@ -63,7 +63,7 @@ export const TipRouter = () => {
       return 1
     }
   }
-  const [currentTipAmount, setCurrentTipAmount] =
+  const [currentTipAmountUsd, setCurrentTipAmountUsd] =
     useState<number>(defaultTipAmount)
 
   if (tipProcessStep === TipProcessStep.TIP) {

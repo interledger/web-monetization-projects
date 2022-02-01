@@ -55,10 +55,10 @@ export const HotkeyAmountButtons = (): React.ReactElement => {
   const router = useRouter()
   const { user } = useStore()
   const { hotkeyTipAmountsUsd } = user?.tipSettings || {}
-  const { setCurrentTipAmount, maxAllowableTipAmount } = useTip()
+  const { setCurrentTipAmountUsd, maxAllowableTipAmountUsd } = useTip()
 
   const handleSelectAmount = (amountUsd: number) => {
-    setCurrentTipAmount(amountUsd)
+    setCurrentTipAmountUsd(amountUsd)
     router.to(ROUTES.tippingConfirm)
   }
   return (
@@ -67,7 +67,7 @@ export const HotkeyAmountButtons = (): React.ReactElement => {
         return (
           <HotkeyButton
             key={`pdt-${index}`}
-            disabled={amountUsd > maxAllowableTipAmount}
+            disabled={amountUsd > maxAllowableTipAmountUsd}
             onClick={() => handleSelectAmount(amountUsd)}
           >
             ${Number.isInteger(amountUsd) ? amountUsd : amountUsd.toFixed(2)}

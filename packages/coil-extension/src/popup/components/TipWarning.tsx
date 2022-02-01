@@ -25,11 +25,11 @@ const WarningWrapper = styled('div')({
 export const TipWarning = (): React.ReactElement => {
   const { user } = useStore()
   const { limitRemainingAmountUsd = 0 } = user?.tipSettings || {}
-  const { currentTipAmount } = useTip()
+  const { currentTipAmountUsd } = useTip()
 
   return (
     <WarningWrapper>
-      {currentTipAmount >= limitRemainingAmountUsd ? (
+      {currentTipAmountUsd >= limitRemainingAmountUsd ? (
         <span>
           <a
             href='https://coil.com/settings/tipping'
