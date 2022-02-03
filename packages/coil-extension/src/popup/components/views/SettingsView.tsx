@@ -107,8 +107,10 @@ export const SettingsView = () => {
       if (user?.shortName || user?.fullName) {
         return user.email
       } else {
-        const emailDomain = user.email.split('@')[1]
-        return `@${emailDomain}`
+        if (user?.email) {
+          const emailDomain = user.email.split('@')[1]
+          return `@${emailDomain}`
+        }
       }
     }
   }
