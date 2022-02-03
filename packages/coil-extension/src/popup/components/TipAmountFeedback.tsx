@@ -35,25 +35,6 @@ export const TipAmountFeedback = () => {
 
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
-  const getChargeAmountDisplay = () => {
-    let charge = tipCredits - currentTipAmount
-    let chargeDisplay = 'Tip credits:'
-
-    // for amounts greater than the available tip credits require that the user is
-    // also in the beta and has a credit card on file
-    if (currentTipAmount > tipCredits && tippingBetaFeatureFlag && creditCard) {
-      charge = currentTipAmount - tipCredits
-      chargeDisplay = 'Credit card charge:'
-    }
-    charge = charge < 0 ? 0 : charge
-    return (
-      <Typography variant='subtitle1'>
-        {chargeDisplay}{' '}
-        <ChargeAmount iszero={charge == 0}>${charge.toFixed(2)}</ChargeAmount>
-      </Typography>
-    )
-  }
-
   const getRestrictedMessage = () => {
     let prompt = null
     if (currentTipAmount >= remainingDailyAmount) {
@@ -84,7 +65,14 @@ export const TipAmountFeedback = () => {
 
   return (
     <Box textAlign='center'>
-      <Box>{getChargeAmountDisplay()}</Box>
+      <Box>
+        <Typography variant='subtitle1'>
+          Available tip credits:{' '}
+          <ChargeAmount iszero={tipCredits == 0}>
+            ${tipCredits.toFixed(2)}
+          </ChargeAmount>
+        </Typography>
+      </Box>
       <Box>{getRestrictedMessage()}</Box>
     </Box>
   )
