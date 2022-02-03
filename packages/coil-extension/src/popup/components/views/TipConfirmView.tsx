@@ -59,7 +59,7 @@ export const TipConfirmView = (): React.ReactElement => {
 
   const { runtime } = useHost()
 
-  const { currentTipAmount } = useTip()
+  const { currentTipAmountUsd } = useTip()
   const router = useRouter()
 
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
@@ -105,7 +105,7 @@ export const TipConfirmView = (): React.ReactElement => {
     setSubmitError(null)
     setIsSubmitting(true)
     try {
-      const { success, message } = await sendTip(currentTipAmount)
+      const { success, message } = await sendTip(currentTipAmountUsd)
 
       if (success) {
         router.to(ROUTES.tippingComplete)
@@ -125,8 +125,8 @@ export const TipConfirmView = (): React.ReactElement => {
   }
 
   useEffect(() => {
-    getTipQuote(currentTipAmount)
-  }, [currentTipAmount])
+    getTipQuote(currentTipAmountUsd)
+  }, [currentTipAmountUsd])
 
   // Render
   return (
@@ -145,9 +145,9 @@ export const TipConfirmView = (): React.ReactElement => {
         </Box>
         <FitTextWrapper defaultFontSize={64}>
           $
-          {Number.isInteger(currentTipAmount)
-            ? currentTipAmount
-            : currentTipAmount.toFixed(2)}
+          {Number.isInteger(currentTipAmountUsd)
+            ? currentTipAmountUsd
+            : currentTipAmountUsd.toFixed(2)}
         </FitTextWrapper>
         <Box
           mt={5}

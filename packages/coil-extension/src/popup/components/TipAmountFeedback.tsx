@@ -21,12 +21,15 @@ const ChargeAmount = styled('strong')(
 // Component
 //
 export const TipAmountFeedback = () => {
-  const { currentTipAmount } = useTip()
+  const { currentTipAmountUsd } = useTip()
   const { user } = useStore()
   const {
     tippingBetaFeatureFlag,
     paymentMethods,
-    tipSettings: { remainingDailyAmount = 0, tipCredits = 0 } = {}
+    tipSettings: {
+      limitRemainingAmountUsd = 0,
+      totalTipCreditAmountUsd = 0
+    } = {}
   } = user ?? {}
   const {
     coilDomain,
@@ -37,7 +40,7 @@ export const TipAmountFeedback = () => {
 
   const getRestrictedMessage = () => {
     let prompt = null
-    if (currentTipAmount >= remainingDailyAmount) {
+    if (currentTipAmountUsd >= limitRemainingAmountUsd) {
       prompt = (
         <Typography variant='subtitle1'>
           Daily limit reached.{' '}
@@ -48,7 +51,7 @@ export const TipAmountFeedback = () => {
       )
     }
     if (
-      currentTipAmount >= tipCredits &&
+      currentTipAmountUsd >= totalTipCreditAmountUsd &&
       tippingBetaFeatureFlag &&
       !creditCard
     ) {
@@ -68,8 +71,8 @@ export const TipAmountFeedback = () => {
       <Box>
         <Typography variant='subtitle1'>
           Available tip credits:{' '}
-          <ChargeAmount iszero={tipCredits == 0}>
-            ${tipCredits.toFixed(2)}
+          <ChargeAmount iszero={totalTipCreditAmountUsd == 0}>
+            ${totalTipCreditAmountUsd.toFixed(2)}
           </ChargeAmount>
         </Typography>
       </Box>

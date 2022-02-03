@@ -33,17 +33,17 @@ const BodyWrapper = styled('div')(({ url }: { url: string }) => ({
 // Component
 //
 export const TipCompleteView = (): React.ReactElement => {
-  const { currentTipAmount } = useTip()
+  const { currentTipAmountUsd } = useTip()
 
   const getBackgroundImageUrl = () => {
     let ImgUrl = '/res/Level1.gif'
-    if (currentTipAmount >= 5 && currentTipAmount <= 20) {
+    if (currentTipAmountUsd >= 5 && currentTipAmountUsd <= 20) {
       ImgUrl = '/res/Level2.gif'
     }
-    if (currentTipAmount > 20 && currentTipAmount <= 50) {
+    if (currentTipAmountUsd > 20 && currentTipAmountUsd <= 50) {
       ImgUrl = '/res/Level3.gif'
     }
-    if (currentTipAmount > 50) {
+    if (currentTipAmountUsd > 50) {
       ImgUrl = '/res/Level4.gif'
     }
     // adding a random number to the url allows it re-render the animation on the same page
@@ -60,9 +60,9 @@ export const TipCompleteView = (): React.ReactElement => {
         <Box mt={5} mb={2} px={3}>
           <FitTextWrapper defaultFontSize={80}>
             $
-            {Number.isInteger(currentTipAmount)
-              ? currentTipAmount
-              : currentTipAmount.toFixed(2)}
+            {Number.isInteger(currentTipAmountUsd)
+              ? currentTipAmountUsd
+              : currentTipAmountUsd.toFixed(2)}
           </FitTextWrapper>
         </Box>
         <Box px={3}>
