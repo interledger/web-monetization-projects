@@ -55,7 +55,11 @@ const HotkeyButton = styled('button')(
 export const HotkeyAmountButtons = (): React.ReactElement => {
   const { user } = useStore()
   const { hotkeyTipAmountsUsd } = user?.tipSettings || {}
-  const { setCurrentTipAmountUsd, maxAllowableTipAmountUsd, currentTipAmountUsd } = useTip()
+  const {
+    setCurrentTipAmountUsd,
+    maxAllowableTipAmountUsd,
+    currentTipAmountUsd
+  } = useTip()
 
   const handleSelectAmount = (amountUsd: number) => {
     setCurrentTipAmountUsd(amountUsd)
