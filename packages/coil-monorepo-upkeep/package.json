@@ -46,7 +46,7 @@
     "json5": "^2.2.0",
     "npm-check-updates": "^12.0.0",
     "reduct": "^3.3.1",
-    "sort-package-json": "1.53.1",
+    "sort-package-json": "1.54.0",
     "yaml": "^1.10.2"
   },
   "devDependencies": {
