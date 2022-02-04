@@ -2897,7 +2897,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.28.0"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.3.0"],
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
-            ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:6.2.1"],
+            ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.3.3"],
             ["get-port", "npm:5.1.1"],
             ["http-server", "npm:14.1.0"],
             ["husky", "npm:7.0.4"],
@@ -16054,23 +16054,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["framer-motion", [
-        ["npm:6.2.1", {
-          "packageLocation": "./.yarn/cache/framer-motion-npm-6.2.1-21d200463c-7c00417de8.zip/node_modules/framer-motion/",
+        ["npm:5.3.3", {
+          "packageLocation": "./.yarn/cache/framer-motion-npm-5.3.3-b32699d868-95a112cf42.zip/node_modules/framer-motion/",
           "packageDependencies": [
-            ["framer-motion", "npm:6.2.1"]
+            ["framer-motion", "npm:5.3.3"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:6.2.1", {
-          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-bc590687e7/0/cache/framer-motion-npm-6.2.1-21d200463c-7c00417de8.zip/node_modules/framer-motion/",
+        ["virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.3.3", {
+          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-3319240393/0/cache/framer-motion-npm-5.3.3-b32699d868-95a112cf42.zip/node_modules/framer-motion/",
           "packageDependencies": [
-            ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:6.2.1"],
+            ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.3.3"],
             ["@emotion/is-prop-valid", "npm:0.8.8"],
             ["@types/react", "npm:17.0.39"],
             ["@types/react-dom", "npm:17.0.11"],
             ["framesync", "npm:6.0.1"],
             ["hey-listen", "npm:1.0.8"],
-            ["popmotion", "npm:11.0.3"],
+            ["popmotion", "npm:11.0.0"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["style-value-types", "npm:5.0.0"],
@@ -16090,6 +16090,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/framesync-npm-6.0.1-937c080b05-a23ebe8f7e.zip/node_modules/framesync/",
           "packageDependencies": [
             ["framesync", "npm:6.0.1"],
+            ["tslib", "npm:2.3.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/framesync-npm-6.1.0-4436b2ca8f-f3a933987a.zip/node_modules/framesync/",
+          "packageDependencies": [
+            ["framesync", "npm:6.1.0"],
             ["tslib", "npm:2.3.1"]
           ],
           "linkType": "HARD",
@@ -23209,11 +23217,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["popmotion", [
-        ["npm:11.0.3", {
-          "packageLocation": "./.yarn/cache/popmotion-npm-11.0.3-120f81eddd-9fe7d03b4e.zip/node_modules/popmotion/",
+        ["npm:11.0.0", {
+          "packageLocation": "./.yarn/cache/popmotion-npm-11.0.0-970b6e76c3-0e21489526.zip/node_modules/popmotion/",
           "packageDependencies": [
-            ["popmotion", "npm:11.0.3"],
-            ["framesync", "npm:6.0.1"],
+            ["popmotion", "npm:11.0.0"],
+            ["framesync", "npm:6.1.0"],
             ["hey-listen", "npm:1.0.8"],
             ["style-value-types", "npm:5.0.0"],
             ["tslib", "npm:2.3.1"]
