@@ -33,9 +33,10 @@ export const TipProvider: React.FC<ITipProvider> = props => {
 
   const {
     tipSettings: {
-      lastTippedAmountUsd = 1,
+      lastTippedAmountUsd = 0,
       totalTipCreditAmountUsd = 0,
-      limitRemainingAmountUsd = 0
+      limitRemainingAmountUsd = 0,
+      minTipLimitAmountUsd = 1
     } = {},
     paymentMethods,
     tippingBetaFeatureFlag
@@ -51,10 +52,14 @@ export const TipProvider: React.FC<ITipProvider> = props => {
     limitRemainingAmountUsd
   )
 
-  const initialTipAmountUsd =
-    maxTipAllowedUsd < lastTippedAmountUsd
-      ? maxTipAllowedUsd
-      : lastTippedAmountUsd
+  let initialTipAmountUsd = minTipLimitAmountUsd
+  if (lastTippedAmountUsd > 0) {
+    if (maxTipAllowedUsd < lastTippedAmountUsd) {
+      initialTipAmountUsd = maxTipAllowedUsd
+    } else {
+      initialTipAmountUsd = lastTippedAmountUsd
+    }
+  }
 
   const [currentTipAmountUsd, setCurrentTipAmountUsd] =
     useState<number>(initialTipAmountUsd)
