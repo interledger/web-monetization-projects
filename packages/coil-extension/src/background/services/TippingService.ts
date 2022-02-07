@@ -40,17 +40,18 @@ export class TippingService extends EventEmitter {
       // destructuring response values and setting defaults
       const {
         whoami,
-        minTipLimit: { minTipLimitAmountCentsUsd = 100 },
+        minTipLimit,
         tippingBetaFeatureFlag,
         extensionNewUiFeatureFlag
       } = resp.data ?? {}
+
       const {
-        tipping: {
-          lastTippedAmountCentsUsd = 0,
-          limitRemainingAmountCentsUsd = 0,
-          totalTipCreditAmountCentsUsd = 0
-        } = {}
-      } = whoami ?? {}
+        lastTippedAmountCentsUsd = 0,
+        limitRemainingAmountCentsUsd = 0,
+        totalTipCreditAmountCentsUsd = 0
+      } = whoami?.tipping ?? {}
+
+      const { minTipLimitAmountCentsUsd = 100 } = minTipLimit ?? {}
 
       const tipSettings = {
         totalTipCreditAmountUsd: convertCentsToDollars(
