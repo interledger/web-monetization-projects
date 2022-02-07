@@ -58,7 +58,7 @@ export const TipConfirmView = (): React.ReactElement => {
 
   const { runtime } = useHost()
 
-  const { currentTipAmountUsd } = useTip()
+  const { currentTipAmountUsd, setFinalTipAmountUsd } = useTip()
   const router = useRouter()
 
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
@@ -102,6 +102,9 @@ export const TipConfirmView = (): React.ReactElement => {
     setSubmitError(null)
     setIsSubmitting(true)
     try {
+      // setting the final tip amount first
+      // this is done so that the tip context can properly update when storage is updated
+      setFinalTipAmountUsd(currentTipAmountUsd)
       const { success, message } = await sendTip(currentTipAmountUsd)
 
       if (success) {
