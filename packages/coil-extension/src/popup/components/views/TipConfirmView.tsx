@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { styled, Box } from '@material-ui/core'
 
-import { Header } from '../Header'
 import { FitTextWrapper } from '../FitTextWrapper'
 import { Colors } from '../../../shared-theme/colors'
 import { TipPaymentDebits } from '../TipPaymentDebits'
@@ -100,8 +99,6 @@ export const TipConfirmView = (): React.ReactElement => {
   }
 
   const handleSubmit = async () => {
-    // router.to(ROUTES.tippingComplete)
-
     setSubmitError(null)
     setIsSubmitting(true)
     try {
@@ -130,62 +127,59 @@ export const TipConfirmView = (): React.ReactElement => {
 
   // Render
   return (
-    <>
-      <Header />
-      <ComponentWrapper>
-        <Box
-          mt='9px'
-          mb={2}
-          textAlign='center'
-          color={Colors.Grey800}
-          fontWeight='normal'
-          fontSize='18px'
-        >
-          You will send
-        </Box>
-        <FitTextWrapper defaultFontSize={64}>
-          $
-          {Number.isInteger(currentTipAmountUsd)
-            ? currentTipAmountUsd
-            : currentTipAmountUsd.toFixed(2)}
-        </FitTextWrapper>
-        <Box
-          mt={5}
-          textAlign='center'
-          color={Colors.Grey800}
-          fontWeight='normal'
-          fontSize='18px'
-        >
-          Pay with
-        </Box>
-        <Box mt={1} flex='1' display='flex'>
-          {submitError ? (
-            <Box
-              width='100%'
-              textAlign='center'
-              color={Colors.Red400}
-              alignSelf='center'
-            >
-              {submitError}
-            </Box>
-          ) : (
-            <TipPaymentDebits
-              tipCreditCharge={tipCreditCharge}
-              creditCardCharge={creditCardCharge}
-            />
-          )}
-        </Box>
-        <Box mt={1}>
-          <CtaButton onClick={handleSubmit} disabled={isSubmitting}>
-            {isSubmitting ? 'Sending...' : submitError ? 'Retry' : 'Confirm'}
-          </CtaButton>
-        </Box>
-        <Box mt={1} mb='14px'>
-          <CancelButton onClick={handleUndo} disabled={isSubmitting}>
-            Cancel
-          </CancelButton>
-        </Box>
-      </ComponentWrapper>
-    </>
+    <ComponentWrapper>
+      <Box
+        mt='59px'
+        mb={2}
+        textAlign='center'
+        color={Colors.Grey800}
+        fontWeight='normal'
+        fontSize='18px'
+      >
+        You will send
+      </Box>
+      <FitTextWrapper defaultFontSize={64}>
+        $
+        {Number.isInteger(currentTipAmountUsd)
+          ? currentTipAmountUsd
+          : currentTipAmountUsd.toFixed(2)}
+      </FitTextWrapper>
+      <Box
+        mt={5}
+        textAlign='center'
+        color={Colors.Grey800}
+        fontWeight='normal'
+        fontSize='18px'
+      >
+        Pay with
+      </Box>
+      <Box mt={1} flex='1' display='flex'>
+        {submitError ? (
+          <Box
+            width='100%'
+            textAlign='center'
+            color={Colors.Red400}
+            alignSelf='center'
+          >
+            {submitError}
+          </Box>
+        ) : (
+          <TipPaymentDebits
+            tipCreditCharge={tipCreditCharge}
+            creditCardCharge={creditCardCharge}
+          />
+        )}
+      </Box>
+      <Box mt={1}>
+        <CtaButton onClick={handleSubmit} disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : submitError ? 'Retry' : 'Confirm'}
+        </CtaButton>
+      </Box>
+      <Box mt={1} mb='14px'>
+        <CancelButton onClick={handleUndo} disabled={isSubmitting}>
+          Cancel
+        </CancelButton>
+      </Box>
+    </ComponentWrapper>
   )
 }
