@@ -37,17 +37,5 @@ export async function tipSettings(this: GraphQlClient, token: string) {
     query: tipSettingsQuery,
     token
   })
-
-  if (!message.data?.whoami?.tipping) {
-    throw new Error(
-      `graphql query failed. query=\`${tipSettingsQuery}\`. could not get tipping selection`
-    )
-  }
-  if (!message.data?.minTipLimit) {
-    throw new Error(
-      `graphql query failed. query=\`${tipSettingsQuery}\`. could not get minTipLimit selection`
-    )
-  }
-
   return message
 }
