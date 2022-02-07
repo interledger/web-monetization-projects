@@ -2912,7 +2912,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.3.3"],
             ["lottie-web", "npm:5.8.1"],
             ["prettier", "npm:2.5.1"],
-            ["puppeteer", "npm:13.1.3"],
+            ["puppeteer", "npm:13.2.0"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["reduct", "npm:3.3.1"],
@@ -3043,7 +3043,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.3.3"],
             ["node-fetch", "virtual:47e6e4e8739500cab0d33398974ffa4d7439d46d28a011617678fc84685ffbb35436f24f3e53b4d589582b83e2755d52d43e5b7431f78620304a4de8a788df1f#npm:2.6.7"],
             ["prettier", "npm:2.5.1"],
-            ["puppeteer", "npm:13.1.3"],
+            ["puppeteer", "npm:13.2.0"],
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.1.3"],
@@ -3221,7 +3221,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.3.3"],
             ["prettier", "npm:2.5.1"],
-            ["puppeteer", "npm:13.1.3"],
+            ["puppeteer", "npm:13.2.0"],
             ["rimraf", "npm:3.0.2"],
             ["tmp", "npm:0.2.1"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.1.3"],
@@ -13021,13 +13021,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["npm:4.3.2", {
-          "packageLocation": "./.yarn/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
-          "packageDependencies": [
-            ["debug", "npm:4.3.2"]
-          ],
-          "linkType": "SOFT",
-        }],
         ["npm:4.3.3", {
           "packageLocation": "./.yarn/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",
           "packageDependencies": [
@@ -13070,20 +13063,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supports-color", null],
             ["ms", "npm:2.1.2"],
             ["supports-color", "npm:9.2.1"]
-          ],
-          "packagePeers": [
-            "@types/supports-color",
-            "supports-color"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:b32c7f28bddc141358152ec46a6a3a4116256bb6a15f8d4f64f1d60be0a858cb876b1619ebb541ae63c802f0d760199a3b55156334449949394cfa454d354efd#npm:4.3.2", {
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-5227035b73/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",
-          "packageDependencies": [
-            ["debug", "virtual:b32c7f28bddc141358152ec46a6a3a4116256bb6a15f8d4f64f1d60be0a858cb876b1619ebb541ae63c802f0d760199a3b55156334449949394cfa454d354efd#npm:4.3.2"],
-            ["@types/supports-color", null],
-            ["ms", "npm:2.1.2"],
-            ["supports-color", null]
           ],
           "packagePeers": [
             "@types/supports-color",
@@ -13472,10 +13451,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["devtools-protocol", [
-        ["npm:0.0.948846", {
-          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.948846-7227b21e69-add29ebdcc.zip/node_modules/devtools-protocol/",
+        ["npm:0.0.960912", {
+          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.960912-49dae31b6d-e14bb94e2d.zip/node_modules/devtools-protocol/",
           "packageDependencies": [
-            ["devtools-protocol", "npm:0.0.948846"]
+            ["devtools-protocol", "npm:0.0.960912"]
           ],
           "linkType": "HARD",
         }]
@@ -23787,12 +23766,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:13.1.3", {
-          "packageLocation": "./.yarn/unplugged/puppeteer-npm-13.1.3-b32c7f28bd/node_modules/puppeteer/",
+        ["npm:13.2.0", {
+          "packageLocation": "./.yarn/unplugged/puppeteer-npm-13.2.0-5595d43df8/node_modules/puppeteer/",
           "packageDependencies": [
-            ["puppeteer", "npm:13.1.3"],
-            ["debug", "virtual:b32c7f28bddc141358152ec46a6a3a4116256bb6a15f8d4f64f1d60be0a858cb876b1619ebb541ae63c802f0d760199a3b55156334449949394cfa454d354efd#npm:4.3.2"],
-            ["devtools-protocol", "npm:0.0.948846"],
+            ["puppeteer", "npm:13.2.0"],
+            ["debug", "virtual:25c7c5da4952e564a553923dd6ce680b6a424c199a63cef78112603fb694812d9d883b7f49f0cb31b38be30c0a248125e5fbdbd2978fa0d53368430ccf5e593a#npm:4.3.3"],
+            ["devtools-protocol", "npm:0.0.960912"],
             ["extract-zip", "npm:2.0.1"],
             ["https-proxy-agent", "npm:5.0.0"],
             ["node-fetch", "virtual:47e6e4e8739500cab0d33398974ffa4d7439d46d28a011617678fc84685ffbb35436f24f3e53b4d589582b83e2755d52d43e5b7431f78620304a4de8a788df1f#npm:2.6.7"],
@@ -23802,7 +23781,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:3.0.2"],
             ["tar-fs", "npm:2.1.1"],
             ["unbzip2-stream", "npm:1.4.3"],
-            ["ws", "virtual:b32c7f28bddc141358152ec46a6a3a4116256bb6a15f8d4f64f1d60be0a858cb876b1619ebb541ae63c802f0d760199a3b55156334449949394cfa454d354efd#npm:8.2.3"]
+            ["ws", "virtual:5595d43df8b1700c2e44034fa60ff87fe24b3bcf35da2cec60717011d721e7bbb25a8050773bc27ceade512dfb675b63bd7671dec3733caa10158624ca204d03#npm:8.2.3"]
           ],
           "linkType": "HARD",
         }]
@@ -33082,6 +33061,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["virtual:5595d43df8b1700c2e44034fa60ff87fe24b3bcf35da2cec60717011d721e7bbb25a8050773bc27ceade512dfb675b63bd7671dec3733caa10158624ca204d03#npm:8.2.3", {
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-7c6dc80258/0/cache/ws-npm-8.2.3-03a35b8ad7-c869296ccb.zip/node_modules/ws/",
+          "packageDependencies": [
+            ["ws", "virtual:5595d43df8b1700c2e44034fa60ff87fe24b3bcf35da2cec60717011d721e7bbb25a8050773bc27ceade512dfb675b63bd7671dec3733caa10158624ca204d03#npm:8.2.3"],
+            ["@types/bufferutil", null],
+            ["@types/utf-8-validate", null],
+            ["bufferutil", null],
+            ["utf-8-validate", null]
+          ],
+          "packagePeers": [
+            "@types/bufferutil",
+            "@types/utf-8-validate",
+            "bufferutil",
+            "utf-8-validate"
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:82010cf435bfdd815e56aa96b8d62d16ac586c3b4b7aacb920726db97fe019609213df6e9de787883e55fe3575d876d7238194a097c8f36ba631311b0fe374ce#npm:7.4.6", {
           "packageLocation": "./.yarn/__virtual__/ws-virtual-a91fb73473/0/cache/ws-npm-7.4.6-9c9a725604-3a990b32ed.zip/node_modules/ws/",
           "packageDependencies": [
@@ -33106,23 +33102,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bufferutil", null],
             ["@types/utf-8-validate", null],
             ["async-limiter", "npm:1.0.1"],
-            ["bufferutil", null],
-            ["utf-8-validate", null]
-          ],
-          "packagePeers": [
-            "@types/bufferutil",
-            "@types/utf-8-validate",
-            "bufferutil",
-            "utf-8-validate"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:b32c7f28bddc141358152ec46a6a3a4116256bb6a15f8d4f64f1d60be0a858cb876b1619ebb541ae63c802f0d760199a3b55156334449949394cfa454d354efd#npm:8.2.3", {
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-14826ba45f/0/cache/ws-npm-8.2.3-03a35b8ad7-c869296ccb.zip/node_modules/ws/",
-          "packageDependencies": [
-            ["ws", "virtual:b32c7f28bddc141358152ec46a6a3a4116256bb6a15f8d4f64f1d60be0a858cb876b1619ebb541ae63c802f0d760199a3b55156334449949394cfa454d354efd#npm:8.2.3"],
-            ["@types/bufferutil", null],
-            ["@types/utf-8-validate", null],
             ["bufferutil", null],
             ["utf-8-validate", null]
           ],
