@@ -40,8 +40,8 @@ export enum TipProcessStep {
 }
 
 export interface ITipView {
-  currentTipAmount: number
-  setCurrentTipAmount: (amount: number) => void
+  currentTipAmountUsd: number
+  setCurrentTipAmountUsd: (amount: number) => void
   setTipProcessStep: (step: TipProcessStep) => void
 }
 
@@ -53,17 +53,17 @@ export const TipRouter = () => {
     TipProcessStep.TIP_COMPLETE
   )
   const { user } = useStore()
-  const { minimumTipLimit, lastTippedAmount } = user?.tipSettings || {}
+  const { minTipLimitAmountUsd, lastTippedAmountUsd } = user?.tipSettings || {}
   const defaultTipAmount = () => {
-    if (lastTippedAmount) {
-      return lastTippedAmount
-    } else if (minimumTipLimit) {
-      return minimumTipLimit
+    if (lastTippedAmountUsd) {
+      return lastTippedAmountUsd
+    } else if (minTipLimitAmountUsd) {
+      return minTipLimitAmountUsd
     } else {
       return 1
     }
   }
-  const [currentTipAmount, setCurrentTipAmount] =
+  const [currentTipAmountUsd, setCurrentTipAmountUsd] =
     useState<number>(defaultTipAmount)
 
   if (tipProcessStep === TipProcessStep.TIP) {

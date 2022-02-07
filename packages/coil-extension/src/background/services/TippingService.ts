@@ -5,9 +5,9 @@ import { inject, injectable } from 'inversify'
 
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
-import { formatTipSettings } from '../util/formatters'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
+import { convertCentsToDollars } from '../../util/convertUsdAmounts'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
@@ -41,24 +41,29 @@ export class TippingService extends EventEmitter {
       // destructuring response values and setting defaults
       const {
         whoami,
-        minTipLimit: { minTipLimit = 1 },
-        getUserTipCredit,
+        minTipLimit: { minTipLimitAmountCentsUsd = 100 },
         tippingBetaFeatureFlag,
         extensionNewUiFeatureFlag
       } = resp.data ?? {}
-      const { tipping: { lastTippedAmount = 0, limitRemaining = 0 } = {} } =
-        whoami ?? {}
-      // tipCredit will return null for users who have no tip credits -> destructuring doesn't work on null values
-      const tipCreditBalanceCents =
-        getUserTipCredit == null ? 0 : getUserTipCredit?.balance ?? 0
+      const {
+        tipping: {
+          lastTippedAmountCentsUsd = 0,
+          limitRemainingAmountCentsUsd = 0,
+          totalTipCreditAmountCentsUsd = 0
+        } = {}
+      } = whoami ?? {}
 
-      // format the tip settings
-      const formattedTipSettings = await formatTipSettings(
-        Number(limitRemaining),
-        Number(lastTippedAmount),
-        Number(minTipLimit),
-        Number(tipCreditBalanceCents)
-      )
+      const tipSettings = {
+        totalTipCreditAmountUsd: convertCentsToDollars(
+          totalTipCreditAmountCentsUsd
+        ),
+        minTipLimitAmountUsd: convertCentsToDollars(minTipLimitAmountCentsUsd),
+        limitRemainingAmountUsd: convertCentsToDollars(
+          limitRemainingAmountCentsUsd
+        ),
+        lastTippedAmountUsd: convertCentsToDollars(lastTippedAmountCentsUsd),
+        hotkeyTipAmountsUsd: [1, 2, 5] // not yet set by user
+      }
 
       // update user object on local storage
       if (this.store.user) {
@@ -66,7 +71,7 @@ export class TippingService extends EventEmitter {
           ...this.store.user,
           tippingBetaFeatureFlag,
           extensionNewUiFeatureFlag,
-          tipSettings: { ...formattedTipSettings }
+          tipSettings
         }
       }
 
@@ -197,7 +202,7 @@ export class TippingService extends EventEmitter {
       this.log(`tip: sending tip to ${receiver}`)
 
       const result = await this.client.tip(token, {
-        tipAmountCents,
+        amountCentsUsd: tipAmountCents,
         destination: receiver,
         origin: activeTabUrl
       })

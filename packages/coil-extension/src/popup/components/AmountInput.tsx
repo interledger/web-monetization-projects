@@ -76,9 +76,12 @@ export const AmountInput = (): React.ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null)
 
   const { user } = useStore()
-  const { minimumTipLimit = 1 } = user?.tipSettings || {}
-  const { currentTipAmount, setCurrentTipAmount, maxAllowableTipAmount } =
-    useTip()
+  const { minTipLimitAmountUsd = 1 } = user?.tipSettings || {}
+  const {
+    currentTipAmountUsd,
+    setCurrentTipAmountUsd,
+    maxAllowableTipAmountUsd
+  } = useTip()
 
   // set focus to the input field when it loads. Cannot use 'autoFocus' because eslint-plugin-jsx-a11y
   useEffect(() => {
@@ -86,15 +89,15 @@ export const AmountInput = (): React.ReactElement => {
       inputRef.current.focus()
       // Make sure the input width is correct on focus.
       inputRef.current.style.width = `${
-        currentTipAmount.toString().length * 40
+        currentTipAmountUsd.toString().length * 40
       }px`
     }
   }, [isUserInput])
 
   // adjust the amount displayed font size
   useEffect(() => {
-    handleAdjustFontSize(currentTipAmount)
-  }, [currentTipAmount])
+    handleAdjustFontSize(currentTipAmountUsd)
+  }, [currentTipAmountUsd])
 
   // validates the manual input and updates the state with the current amount
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -116,13 +119,13 @@ export const AmountInput = (): React.ReactElement => {
 
     // handle if the value is below the minimum
     let value = Number(e.target.value)
-    if (value < minimumTipLimit || isNaN(value)) {
-      value = minimumTipLimit
+    if (value < minTipLimitAmountUsd || isNaN(value)) {
+      value = minTipLimitAmountUsd
     }
 
     // handle if the input is higher than the remaining daily limit
-    if (value > maxAllowableTipAmount) {
-      value = maxAllowableTipAmount
+    if (value > maxAllowableTipAmountUsd) {
+      value = maxAllowableTipAmountUsd
       if (isUserInput && inputRef.current) {
         inputRef.current.value = value.toString()
       }
@@ -146,7 +149,7 @@ export const AmountInput = (): React.ReactElement => {
     }
 
     // update state
-    setCurrentTipAmount(value)
+    setCurrentTipAmountUsd(value)
   }
 
   // updates the display font size in order to keep the font size within it's container
@@ -180,7 +183,7 @@ export const AmountInput = (): React.ReactElement => {
             type='numerical'
             maxLength={10}
             size={1}
-            placeholder={currentTipAmount.toString()}
+            placeholder={currentTipAmountUsd.toString()}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               handleInputChange(e)
             }
@@ -192,12 +195,12 @@ export const AmountInput = (): React.ReactElement => {
         <Amount
           size={displayFontSize}
           onClick={() => setIsUserInput(true)}
-          disabled={maxAllowableTipAmount == 0}
+          disabled={maxAllowableTipAmountUsd == 0}
         >
           $
-          {Number.isInteger(currentTipAmount)
-            ? currentTipAmount
-            : currentTipAmount.toFixed(2)}
+          {Number.isInteger(currentTipAmountUsd)
+            ? currentTipAmountUsd
+            : currentTipAmountUsd.toFixed(2)}
         </Amount>
       )}
       <IncDecButton type={IncDec.Inc} />

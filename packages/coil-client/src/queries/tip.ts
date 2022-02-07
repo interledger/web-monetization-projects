@@ -17,7 +17,7 @@ export interface TipData {
 }
 
 export interface TipInput {
-  tipAmountCents: string
+  amountCentsUsd: string
   destination: string
   origin?: string
 }

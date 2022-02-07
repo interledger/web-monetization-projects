@@ -1,11 +1,8 @@
 import React from 'react'
-import { styled } from '@material-ui/core'
+import { styled, Theme } from '@material-ui/core'
 
-import { Colors } from '../../shared-theme/colors'
 import { useStore } from '../context/storeContext'
 import { useTip } from '../context/tipContext'
-import { useRouter } from '../context/routerContext'
-import { ROUTES } from '../constants'
 
 //
 // Styles
@@ -16,61 +13,68 @@ const HotkeyButtonsWrapper = styled('div')({
   justifyContent: 'space-between'
 })
 
-const HotkeyButton = styled('button')({
-  cursor: 'pointer',
-  border: 'none',
-  borderRadius: '100px',
-  backgroundColor: Colors.Violet10,
-  color: Colors.Violet700,
-  fontFamily: 'CircularStd',
-  fontWeight: 'bold',
-  fontSize: '16px',
-  letterSpacing: '.5px',
-  textAlign: 'center',
-  padding: '10px 0px',
-  width: '54px',
-  flex: '1',
-  '&:hover': {
-    backgroundColor: Colors.Violet400,
-    color: '#FFFFFF'
-  },
-  '&:active': {
-    backgroundColor: Colors.Violet700,
-    color: '#FFFFFF'
-  },
-  '&:disabled': {
-    cursor: 'not-allowed',
-    backgroundColor: Colors.Grey50,
-    color: Colors.Grey100
-  },
-  '&:nth-child(2)': {
-    margin: '0px 15px'
-  }
-})
+const HotkeyButton = styled('button')(
+  ({ theme, active }: { theme: Theme; active: boolean }) => ({
+    cursor: 'pointer',
+    border: 'none',
+    borderRadius: '100px',
+    backgroundColor: active ? theme.palette.Violet700 : theme.palette.Violet10,
+    color: active ? '#FFFFFF' : theme.palette.Violet700,
+    fontFamily: 'CircularStd',
+    fontWeight: 'bold',
+    fontSize: '16px',
+    letterSpacing: '.5px',
+    textAlign: 'center',
+    padding: '10px 0px',
+    width: '54px',
+    flex: '1',
+    '&:hover': {
+      backgroundColor: active
+        ? theme.palette.Violet700
+        : theme.palette.Violet400,
+      color: '#FFFFFF'
+    },
+    '&:active': {
+      backgroundColor: theme.palette.Violet700,
+      color: '#FFFFFF'
+    },
+    '&:disabled': {
+      cursor: 'not-allowed',
+      backgroundColor: theme.palette.Grey50,
+      color: theme.palette.Grey100
+    },
+    '&:nth-child(2)': {
+      margin: '0px 15px'
+    }
+  })
+)
 
 //
 // Component
 //
 export const HotkeyAmountButtons = (): React.ReactElement => {
-  const router = useRouter()
   const { user } = useStore()
-  const { hotkeyTipAmounts } = user?.tipSettings || {}
-  const { setCurrentTipAmount, maxAllowableTipAmount } = useTip()
+  const { hotkeyTipAmountsUsd } = user?.tipSettings || {}
+  const {
+    setCurrentTipAmountUsd,
+    maxAllowableTipAmountUsd,
+    currentTipAmountUsd
+  } = useTip()
 
-  const handleSelectAmount = (amount: number) => {
-    setCurrentTipAmount(amount)
-    router.to(ROUTES.tippingConfirm)
+  const handleSelectAmount = (amountUsd: number) => {
+    setCurrentTipAmountUsd(amountUsd)
   }
   return (
     <HotkeyButtonsWrapper>
-      {hotkeyTipAmounts?.map((amount: number, index: number) => {
+      {hotkeyTipAmountsUsd?.map((amountUsd: number, index: number) => {
         return (
           <HotkeyButton
             key={`pdt-${index}`}
-            disabled={amount > maxAllowableTipAmount}
-            onClick={() => handleSelectAmount(amount)}
+            active={amountUsd === currentTipAmountUsd}
+            disabled={amountUsd > maxAllowableTipAmountUsd}
+            onClick={() => handleSelectAmount(amountUsd)}
           >
-            ${Number.isInteger(amount) ? amount : amount.toFixed(2)}
+            ${Number.isInteger(amountUsd) ? amountUsd : amountUsd.toFixed(2)}
           </HotkeyButton>
         )
       })}

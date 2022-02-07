@@ -6,6 +6,24 @@ parameters:
     default: "https://coil.com"
     enum: ["https://coil.com", "https://staging.coil.com"]
 
+commands:
+  gcloud-get-creds: 
+    description: 'Get deploy credentials to Google Cloud'
+    steps:
+      - run:
+          name: 'Getting deploy credentials'
+          command: |
+            sudo apt-get install apt-transport-https ca-certificates gnupg
+            echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+            curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+            sudo apt-get update && sudo apt-get install google-cloud-sdk
+            DEPLOY_KEY=$GCLOUD_UPLOAD_BUCKET_CREDENTIALS
+            PROJECT="exalted-beanbag-213300"
+            ENVIRONMENT=staging
+            echo $DEPLOY_KEY > $HOME/gcp-key.json
+            gcloud auth activate-service-account --key-file $HOME/gcp-key.json
+            echo 'export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcp-key.json"' >> $BASH_ENV
+
 references:
   parameterized-node-version: &parameterized-node-version
     parameters:
@@ -84,6 +102,7 @@ jobs:
     docker:
       - image: circleci/node:16-buster-browsers
     steps:
+      - gcloud-get-creds
       - checkout
       - run:
           name: Publish staging extension for coil e2e tests
@@ -93,10 +112,8 @@ jobs:
             yarn build-staging
             mkdir /tmp/coil-chrome-ext-e2e-staging
             tar -cvzf /tmp/coil-chrome-ext-e2e-staging/chromeext.tar dist
-      - store_artifacts:
-          path: /tmp/coil-chrome-ext-e2e-staging/chromeext.tar
-          destination: chrome-ext-staging
-
+            gsutil cp /tmp/coil-chrome-ext-e2e-staging/chromeext.tar gs://web-monetization-projects/extension/latest.tar
+      
   publish-packages:
     docker:
       - image: circleci/node:14-buster-browsers

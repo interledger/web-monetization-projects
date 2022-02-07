@@ -8,9 +8,9 @@ import { calculateMaxAllowableTip } from '../../util/calculateMaxAllowableTip'
 // Models
 //
 interface ITipContext {
-  currentTipAmount: number
-  maxAllowableTipAmount: number //* the maxAllowableTip is primarily responsible for disabling tipping inputs
-  setCurrentTipAmount: (amount: number) => void
+  currentTipAmountUsd: number
+  maxAllowableTipAmountUsd: number //* the maxAllowableTip is primarily responsible for disabling tipping inputs
+  setCurrentTipAmountUsd: (amount: number) => void
 }
 
 interface ITipProvider {
@@ -33,9 +33,10 @@ export const TipProvider: React.FC<ITipProvider> = props => {
 
   const {
     tipSettings: {
-      lastTippedAmount = 1,
-      tipCredits = 0,
-      remainingDailyAmount = 0
+      lastTippedAmountUsd = 0,
+      totalTipCreditAmountUsd = 0,
+      limitRemainingAmountUsd = 0,
+      minTipLimitAmountUsd = 1
     } = {},
     paymentMethods,
     tippingBetaFeatureFlag
@@ -43,26 +44,32 @@ export const TipProvider: React.FC<ITipProvider> = props => {
 
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
-  const maxTipAllowed = calculateMaxAllowableTip(
+  const maxTipAllowedUsd = calculateMaxAllowableTip(
     monetized,
     tippingBetaFeatureFlag,
     !!creditCard,
-    tipCredits,
-    remainingDailyAmount
+    totalTipCreditAmountUsd,
+    limitRemainingAmountUsd
   )
 
-  const initialTipAmount =
-    maxTipAllowed < lastTippedAmount ? maxTipAllowed : lastTippedAmount
+  let initialTipAmountUsd = minTipLimitAmountUsd
+  if (lastTippedAmountUsd > 0) {
+    if (maxTipAllowedUsd < lastTippedAmountUsd) {
+      initialTipAmountUsd = maxTipAllowedUsd
+    } else {
+      initialTipAmountUsd = lastTippedAmountUsd
+    }
+  }
 
-  const [currentTipAmount, setCurrentTipAmount] =
-    useState<number>(initialTipAmount)
-  const [maxAllowableTipAmount, setMaxAllowableTipAmount] =
-    useState<number>(maxTipAllowed)
+  const [currentTipAmountUsd, setCurrentTipAmountUsd] =
+    useState<number>(initialTipAmountUsd)
+  const [maxAllowableTipAmountUsd, setMaxAllowableTipAmountUsd] =
+    useState<number>(maxTipAllowedUsd)
 
   const providerValue = {
-    currentTipAmount: currentTipAmount,
-    maxAllowableTipAmount: maxAllowableTipAmount,
-    setCurrentTipAmount: setCurrentTipAmount
+    currentTipAmountUsd: currentTipAmountUsd,
+    maxAllowableTipAmountUsd: maxAllowableTipAmountUsd,
+    setCurrentTipAmountUsd: setCurrentTipAmountUsd
   }
 
   return (

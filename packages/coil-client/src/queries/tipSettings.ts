@@ -4,15 +4,13 @@ export const tipSettingsQuery = `
   query updateTipSettings {
     whoami {
       tipping {
-        lastTippedAmount
-        limitRemaining
+        lastTippedAmountCentsUsd
+        limitRemainingAmountCentsUsd
+        totalTipCreditAmountCentsUsd
       }
     }
     minTipLimit {
-      minTipLimit
-    }
-    getUserTipCredit {
-        balance
+      minTipLimitAmountCentsUsd
     }
     tippingBetaFeatureFlag: featureEnabled(key: "tipping-beta")
     extensionNewUiFeatureFlag: featureEnabled(key: "extension-new-ui")
@@ -22,15 +20,13 @@ export const tipSettingsQuery = `
 export interface TipSettingsData {
   whoami: {
     tipping: {
-      lastTippedAmount: number
-      limitRemaining: number
+      lastTippedAmountCentsUsd: number
+      limitRemainingAmountCentsUsd: number
+      totalTipCreditAmountCentsUsd: number
     }
   }
   minTipLimit: {
-    minTipLimit: string
-  }
-  getUserTipCredit: {
-    balance: number
+    minTipLimitAmountCentsUsd: number
   }
   tippingBetaFeatureFlag: boolean
   extensionNewUiFeatureFlag: boolean

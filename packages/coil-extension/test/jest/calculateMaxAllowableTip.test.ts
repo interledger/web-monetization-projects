@@ -5,102 +5,102 @@ describe('Calculate maximum allowable tip amount', () => {
     const siteIsMonetized = false
     const tippingBetaFeatureFlag = true
     const hasCreditCard = true
-    const tipCredits = 10
-    const remainingDailyAmount = 20
+    const totalTipCreditAmountUsd = 10
+    const limitRemainingAmountUsd = 20
 
     const newMax = calculateMaxAllowableTip(
       siteIsMonetized,
       tippingBetaFeatureFlag,
       hasCreditCard,
-      tipCredits,
-      remainingDailyAmount
+      totalTipCreditAmountUsd,
+      limitRemainingAmountUsd
     )
 
     expect(newMax).toBe(0)
   })
-  it('User is part of the tipping-beta and has a credit card on file --> max = remainingDailyAmount', () => {
+  it('User is part of the tipping-beta and has a credit card on file --> max = limitRemainingAmountUsd', () => {
     const siteIsMonetized = true
     const tippingBetaFeatureFlag = true
     const hasCreditCard = true
-    const tipCredits = 10
-    const remainingDailyAmount = 20
+    const totalTipCreditAmountUsd = 10
+    const limitRemainingAmountUsd = 20
 
     const newMax = calculateMaxAllowableTip(
       siteIsMonetized,
       tippingBetaFeatureFlag,
       hasCreditCard,
-      tipCredits,
-      remainingDailyAmount
+      totalTipCreditAmountUsd,
+      limitRemainingAmountUsd
     )
 
-    expect(newMax).toBe(remainingDailyAmount)
+    expect(newMax).toBe(limitRemainingAmountUsd)
   })
-  it('User is part of the tipping-beta, does NOT have a credit card on file, tipCredits > remainingDailyAmount --> max = remainingDailyAmount', () => {
+  it('User is part of the tipping-beta, does NOT have a credit card on file, totalTipCreditAmountUsd > limitRemainingAmountUsd --> max = limitRemainingAmountUsd', () => {
     const siteIsMonetized = true
     const tippingBetaFeatureFlag = true
     const hasCreditCard = false
-    const tipCredits = 20
-    const remainingDailyAmount = 10
+    const totalTipCreditAmountUsd = 20
+    const limitRemainingAmountUsd = 10
 
     const newMax = calculateMaxAllowableTip(
       siteIsMonetized,
       tippingBetaFeatureFlag,
       hasCreditCard,
-      tipCredits,
-      remainingDailyAmount
+      totalTipCreditAmountUsd,
+      limitRemainingAmountUsd
     )
 
-    expect(newMax).toBe(remainingDailyAmount)
+    expect(newMax).toBe(limitRemainingAmountUsd)
   })
-  it('User is part of the tipping-beta, does NOT have a credit card on file, tipCredits < remainingDailyAmount --> max = tipCredits', () => {
+  it('User is part of the tipping-beta, does NOT have a credit card on file, totalTipCreditAmountUsd < limitRemainingAmountUsd --> max = totalTipCreditAmountUsd', () => {
     const siteIsMonetized = true
     const tippingBetaFeatureFlag = true
     const hasCreditCard = false
-    const tipCredits = 5
-    const remainingDailyAmount = 10
+    const totalTipCreditAmountUsd = 5
+    const limitRemainingAmountUsd = 10
 
     const newMax = calculateMaxAllowableTip(
       siteIsMonetized,
       tippingBetaFeatureFlag,
       hasCreditCard,
-      tipCredits,
-      remainingDailyAmount
+      totalTipCreditAmountUsd,
+      limitRemainingAmountUsd
     )
 
-    expect(newMax).toBe(tipCredits)
+    expect(newMax).toBe(totalTipCreditAmountUsd)
   })
-  it('Users tipCredits < remainingDailyAmount --> max = tipCredits', () => {
+  it('Users totalTipCreditAmountUsd < limitRemainingAmountUsd --> max = totalTipCreditAmountUsd', () => {
     const siteIsMonetized = true
     const tippingBetaFeatureFlag = false
     const hasCreditCard = false
-    const tipCredits = 5
-    const remainingDailyAmount = 10
+    const totalTipCreditAmountUsd = 5
+    const limitRemainingAmountUsd = 10
 
     const newMax = calculateMaxAllowableTip(
       siteIsMonetized,
       tippingBetaFeatureFlag,
       hasCreditCard,
-      tipCredits,
-      remainingDailyAmount
+      totalTipCreditAmountUsd,
+      limitRemainingAmountUsd
     )
 
-    expect(newMax).toBe(tipCredits)
+    expect(newMax).toBe(totalTipCreditAmountUsd)
   })
-  it('Users tipCredits > remainingDailyAmount --> max = remainingDailyAmount', () => {
+  it('Users totalTipCreditAmountUsd > limitRemainingAmountUsd --> max = limitRemainingAmountUsd', () => {
     const siteIsMonetized = true
     const tippingBetaFeatureFlag = false
     const hasCreditCard = false
-    const tipCredits = 50
-    const remainingDailyAmount = 10
+    const totalTipCreditAmountUsd = 50
+    const limitRemainingAmountUsd = 10
 
     const newMax = calculateMaxAllowableTip(
       siteIsMonetized,
       tippingBetaFeatureFlag,
       hasCreditCard,
-      tipCredits,
-      remainingDailyAmount
+      totalTipCreditAmountUsd,
+      limitRemainingAmountUsd
     )
 
-    expect(newMax).toBe(remainingDailyAmount)
+    expect(newMax).toBe(limitRemainingAmountUsd)
   })
 })

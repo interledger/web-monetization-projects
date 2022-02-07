@@ -24,7 +24,7 @@ const ComponentWrapper = styled('div')({
 // Component
 //
 export const TipView: React.FC = () => {
-  const { currentTipAmount, maxAllowableTipAmount } = useTip()
+  const { currentTipAmountUsd, maxAllowableTipAmountUsd } = useTip()
   const router = useRouter()
 
   const handleTip = () => {
@@ -32,9 +32,9 @@ export const TipView: React.FC = () => {
   }
 
   const buttonDisabled =
-    currentTipAmount > maxAllowableTipAmount ||
-    currentTipAmount == 0 ||
-    maxAllowableTipAmount == 0
+    currentTipAmountUsd > maxAllowableTipAmountUsd ||
+    currentTipAmountUsd == 0 ||
+    maxAllowableTipAmountUsd == 0
 
   // Render
   return (
@@ -52,9 +52,9 @@ export const TipView: React.FC = () => {
         <Box mb={1}>
           <CtaButton onClick={handleTip} disabled={buttonDisabled}>
             Send $
-            {Number.isInteger(currentTipAmount)
-              ? currentTipAmount
-              : currentTipAmount.toFixed(2)}
+            {Number.isInteger(currentTipAmountUsd)
+              ? currentTipAmountUsd
+              : currentTipAmountUsd.toFixed(2)}
           </CtaButton>
         </Box>
       </ComponentWrapper>

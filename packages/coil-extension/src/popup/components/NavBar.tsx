@@ -46,14 +46,15 @@ export const NavBar = () => {
   const {
     tippingBetaFeatureFlag,
     extensionNewUiFeatureFlag,
-    tipSettings: { tipCredits = 0 } = {}
+    tipSettings: { totalTipCreditAmountUsd = 0 } = {}
   } = user ?? {}
 
   // this might cause some odd rendering side effects once the user has completed a tip that would
   // drain their tipCredit balance and revoke their eligibility to use tipping
   const allowTipping =
     extensionNewUiFeatureFlag &&
-    ((!tippingBetaFeatureFlag && tipCredits > 0) || tippingBetaFeatureFlag)
+    ((!tippingBetaFeatureFlag && totalTipCreditAmountUsd > 0) ||
+      tippingBetaFeatureFlag)
 
   return (
     <Box display='flex'>

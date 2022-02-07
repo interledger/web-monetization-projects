@@ -21,12 +21,15 @@ const ChargeAmount = styled('strong')(
 // Component
 //
 export const TipAmountFeedback = () => {
-  const { currentTipAmount } = useTip()
+  const { currentTipAmountUsd } = useTip()
   const { user } = useStore()
   const {
     tippingBetaFeatureFlag,
     paymentMethods,
-    tipSettings: { remainingDailyAmount = 0, tipCredits = 0 } = {}
+    tipSettings: {
+      limitRemainingAmountUsd = 0,
+      totalTipCreditAmountUsd = 0
+    } = {}
   } = user ?? {}
   const {
     coilDomain,
@@ -35,28 +38,9 @@ export const TipAmountFeedback = () => {
 
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
-  const getChargeAmountDisplay = () => {
-    let charge = tipCredits - currentTipAmount
-    let chargeDisplay = 'Tip credits:'
-
-    // for amounts greater than the available tip credits require that the user is
-    // also in the beta and has a credit card on file
-    if (currentTipAmount > tipCredits && tippingBetaFeatureFlag && creditCard) {
-      charge = currentTipAmount - tipCredits
-      chargeDisplay = 'Credit card charge:'
-    }
-    charge = charge < 0 ? 0 : charge
-    return (
-      <Typography variant='subtitle1'>
-        {chargeDisplay}{' '}
-        <ChargeAmount iszero={charge == 0}>${charge.toFixed(2)}</ChargeAmount>
-      </Typography>
-    )
-  }
-
   const getRestrictedMessage = () => {
     let prompt = null
-    if (currentTipAmount >= remainingDailyAmount) {
+    if (currentTipAmountUsd >= limitRemainingAmountUsd) {
       prompt = (
         <Typography variant='subtitle1'>
           Daily limit reached.{' '}
@@ -67,7 +51,7 @@ export const TipAmountFeedback = () => {
       )
     }
     if (
-      currentTipAmount >= tipCredits &&
+      currentTipAmountUsd >= totalTipCreditAmountUsd &&
       tippingBetaFeatureFlag &&
       !creditCard
     ) {
@@ -84,7 +68,14 @@ export const TipAmountFeedback = () => {
 
   return (
     <Box textAlign='center'>
-      <Box>{getChargeAmountDisplay()}</Box>
+      <Box>
+        <Typography variant='subtitle1'>
+          Available tip credits:{' '}
+          <ChargeAmount iszero={totalTipCreditAmountUsd == 0}>
+            ${totalTipCreditAmountUsd.toFixed(2)}
+          </ChargeAmount>
+        </Typography>
+      </Box>
       <Box>{getRestrictedMessage()}</Box>
     </Box>
   )
