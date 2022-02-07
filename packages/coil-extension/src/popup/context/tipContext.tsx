@@ -60,6 +60,9 @@ export const TipProvider: React.FC<ITipProvider> = props => {
       initialTipAmountUsd = lastTippedAmountUsd
     }
   }
+  if (maxTipAllowedUsd === 0) {
+    initialTipAmountUsd = maxTipAllowedUsd
+  }
 
   const [currentTipAmountUsd, setCurrentTipAmountUsd] =
     useState<number>(initialTipAmountUsd)

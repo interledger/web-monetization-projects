@@ -9,6 +9,7 @@ import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../constants'
 import { TipAmountFeedback } from '../TipAmountFeedback'
 import { CtaButton } from '../CtaButton'
+import { useStore } from '../../context/storeContext'
 
 //
 // Styles
@@ -25,13 +26,17 @@ const ComponentWrapper = styled('div')({
 //
 export const TipView: React.FC = () => {
   const { currentTipAmountUsd, maxAllowableTipAmountUsd } = useTip()
+  const { user } = useStore()
   const router = useRouter()
+
+  const { tipSettings: { minTipLimitAmountUsd = 1 } = {} } = user ?? {}
 
   const handleTip = () => {
     router.to(ROUTES.tippingConfirm)
   }
 
   const buttonDisabled =
+    currentTipAmountUsd < minTipLimitAmountUsd ||
     currentTipAmountUsd > maxAllowableTipAmountUsd ||
     currentTipAmountUsd == 0 ||
     maxAllowableTipAmountUsd == 0
