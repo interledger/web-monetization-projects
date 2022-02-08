@@ -6,11 +6,13 @@ import { inject, injectable } from 'inversify'
 import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { TimeoutError } from '../../util/timeout'
+import { User } from '../../types/user'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { TippingService } from './TippingService'
+import { formatTipSettings } from './formatTipSettings.util'
 
 /**
  ## Extension Authentication
@@ -180,11 +182,17 @@ export class AuthService extends EventEmitter {
   }
 
   private async updateWhoAmi(token: string): Promise<string | null> {
-    const resp = await this.client.whoAmI(token)
+    const [resp, tipResp] = await Promise.all([
+      this.client.whoAmI(token),
+      this.client.tipSettings(token)
+    ])
 
     this.log('updateWhoAmi resp', resp.data)
-    if (resp.data?.whoami) {
-      this.store.user = resp.data.whoami
+    if (resp.data?.whoami && tipResp.data?.whoami?.tipping) {
+      this.store.user = {
+        ...resp.data.whoami,
+        ...formatTipSettings(tipResp.data)
+      }
 
       // Data needed for tipping
       // tipping-beta: featureEnabled: boolean
@@ -201,19 +209,24 @@ export class AuthService extends EventEmitter {
   }
 
   private async refreshTokenAndUpdateWhoAmi(token: string) {
-    const resp = await this.client.queryToken(token)
-    if (resp.data?.refreshToken?.token && resp.data?.whoami) {
-      this.store.user = resp.data.whoami
+    const [resp, tipResp] = await Promise.all([
+      this.client.queryToken(token),
+      this.client.tipSettings(token)
+    ])
 
+    if (
+      resp.data?.refreshToken?.token &&
+      resp.data?.whoami &&
+      tipResp.data?.whoami.tipping
+    ) {
+      this.store.user = {
+        ...resp.data.whoami,
+        ...formatTipSettings(tipResp.data)
+      }
       // Data needed for tipping
       // tipping-beta: featureEnabled: boolean
       // minimum tip limit: minTipLimit > minTipLimit
       // remaining daily amount: whoami > tipping > limitRemaining
-      if (this.store.user) {
-        await this.tippingService.updateTipSettings(
-          resp.data.refreshToken.token
-        )
-      }
       return resp.data.refreshToken.token
     } else {
       return null

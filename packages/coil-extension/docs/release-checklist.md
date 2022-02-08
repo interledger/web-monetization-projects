@@ -54,6 +54,7 @@ make sense.
 - [ ] Ensure that you are [logged in with a user with valid subscription](https://coil.com/settings/membership)
 
   - ![image](https://user-images.githubusercontent.com/525211/71150879-28d04300-2265-11ea-96da-7d720c101575.png)
+    (or trial)
 
 - [ ] [example.com](http://example.com/) should say "This site isn't supported yet"
 
