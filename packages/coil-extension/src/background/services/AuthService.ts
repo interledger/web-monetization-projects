@@ -188,20 +188,12 @@ export class AuthService extends EventEmitter {
     ])
 
     this.log('updateWhoAmi resp', resp.data)
-    if (resp.data?.whoami && tipResp.data?.whoami?.tipping) {
+    if (resp.data?.whoami && tipResp.data?.whoami) {
       this.store.user = {
         ...resp.data.whoami,
         ...formatTipSettings(tipResp.data)
       }
 
-      // Data needed for tipping
-      // tipping-beta: featureEnabled: boolean
-      // minimum tip limit: minTipLimit > minTipLimit
-      // remaining daily amount: whoami > tipping > limitRemaining
-
-      if (this.store.user) {
-        await this.tippingService.updateTipSettings(token)
-      }
       return token
     } else {
       return null
@@ -217,16 +209,12 @@ export class AuthService extends EventEmitter {
     if (
       resp.data?.refreshToken?.token &&
       resp.data?.whoami &&
-      tipResp.data?.whoami.tipping
+      tipResp.data?.whoami
     ) {
       this.store.user = {
         ...resp.data.whoami,
         ...formatTipSettings(tipResp.data)
       }
-      // Data needed for tipping
-      // tipping-beta: featureEnabled: boolean
-      // minimum tip limit: minTipLimit > minTipLimit
-      // remaining daily amount: whoami > tipping > limitRemaining
       return resp.data.refreshToken.token
     } else {
       return null
