@@ -37,8 +37,8 @@ const Button = styled('button')(({ theme }) => ({
 export const TipNonMonetizedView: React.FC = () => {
   const theme = useTheme()
   return (
-    <NewHeaderFooterLayout title='Support This Site'>
-      <Box mt={4} mb={2}>
+    <NewHeaderFooterLayout title='Tip This Site'>
+      <Box mt={4} mb={2} height='156px'>
         <img
           src='/res/img-tipping-off.png'
           style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto' }}

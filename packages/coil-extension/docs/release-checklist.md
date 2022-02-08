@@ -19,7 +19,8 @@ When releasing, we can copy this markdown into the PR for a release.
 - [ ] Update the [CHANGELOG.md](../CHANGELOG.md)
 
   - You can compare with latest commit before tagging via something like:
-    `https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.48...8f359e45f843a4f9a01c090a02e73519413d900b`
+    `https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.56...main`
+    (substitute release branch name for "main")
 
 ### Zipping Extension Source Files
 
@@ -54,6 +55,7 @@ make sense.
 - [ ] Ensure that you are [logged in with a user with valid subscription](https://coil.com/settings/membership)
 
   - ![image](https://user-images.githubusercontent.com/525211/71150879-28d04300-2265-11ea-96da-7d720c101575.png)
+    (or trial)
 
 - [ ] [example.com](http://example.com/) should say "This site isn't supported yet"
 
