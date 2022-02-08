@@ -1567,7 +1567,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
-    addons-linter: 4.8.0
+    addons-linter: 4.9.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -2493,7 +2493,7 @@ __metadata:
     "@webmonetization/wext": ^0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
-    addons-linter: 4.8.0
+    addons-linter: 4.9.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     css-loader: 6.6.0
@@ -3679,10 +3679,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:4.1.5":
-  version: 4.1.5
-  resolution: "@mdn/browser-compat-data@npm:4.1.5"
-  checksum: f0af5504a5e731943b2d486080d31e28bfc0ba81210dcfceb0d001bc38b0fe195cfe005c206ef53439c2e5ac4e76dfac9497b54c13bd4121c32e1e779db48f49
+"@mdn/browser-compat-data@npm:4.1.6":
+  version: 4.1.6
+  resolution: "@mdn/browser-compat-data@npm:4.1.6"
+  checksum: 6eeee302e7c288febe0ee296e3198a86ed6dd9cf9e21ae594620fc51c9a5d5da910c8be9974be8672693c2db7fdfbdfc71733a8c9e8b4330d20b3ef1a13ffe0b
   languageName: node
   linkType: hard
 
@@ -5927,18 +5927,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:4.8.0":
-  version: 4.8.0
-  resolution: "addons-linter@npm:4.8.0"
+"addons-linter@npm:4.9.0":
+  version: 4.9.0
+  resolution: "addons-linter@npm:4.9.0"
   dependencies:
-    "@mdn/browser-compat-data": 4.1.5
+    "@mdn/browser-compat-data": 4.1.6
     addons-moz-compare: 1.2.0
-    addons-scanner-utils: 6.2.0
+    addons-scanner-utils: 6.3.0
     ajv: 6.12.6
     ajv-merge-patch: 4.1.0
     chalk: 4.1.2
     cheerio: 1.0.0-rc.10
-    columnify: 1.5.4
+    columnify: 1.6.0
     common-tags: 1.8.2
     deepmerge: 4.2.2
     eslint: 8.8.0
@@ -5953,7 +5953,7 @@ __metadata:
     jed: 1.1.1
     os-locale: 5.0.0
     pino: 7.6.5
-    postcss: 8.4.5
+    postcss: 8.4.6
     relaxed-json: 1.0.3
     semver: 7.3.5
     sha.js: 2.4.11
@@ -5964,7 +5964,7 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: 9db456326a4946370d8faead9966af5bd62aa11a10dbe2fddd836469fe58e70a4e846baef0448a62c3d9795a061468b99c16ebc83f21f7da3311e98b96f0772b
+  checksum: ff84040e17c786f5523ae415b28911a2218e22da47b6af31a9469a2734241a6b6ed4e89db89c63ec7b350a7f66c7f467532a6ad776dcbd62f218a4cb48b83696
   languageName: node
   linkType: hard
 
@@ -5995,9 +5995,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-scanner-utils@npm:6.2.0":
-  version: 6.2.0
-  resolution: "addons-scanner-utils@npm:6.2.0"
+"addons-scanner-utils@npm:6.3.0":
+  version: 6.3.0
+  resolution: "addons-scanner-utils@npm:6.3.0"
   dependencies:
     "@types/yauzl": 2.9.2
     common-tags: 1.8.2
@@ -6007,11 +6007,11 @@ __metadata:
     yauzl: 2.10.0
   peerDependencies:
     "@types/download": 8.0.1
-    body-parser: 1.19.0
+    body-parser: 1.19.1
     download: 8.0.0
-    express: 4.17.1
+    express: 4.17.2
     safe-compare: 1.1.4
-  checksum: 82390eaf20ae80181a7e1ffa0bbd1d6d395f1803a6c9d7ea50126106023109705d5f5a5bdb922b34970a2aa29a29fbb35e1f5425d26e4ed291b91369b821d9fb
+  checksum: 7fdae8107ae45586ff8170620af36689023b5878d2d71f55a87927594d819005eaba10573ee50951d90d738cbd63f9dbab8bd2d995807a2b6dfc6b8eaaea4b96
   languageName: node
   linkType: hard
 
@@ -8248,13 +8248,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"columnify@npm:1.5.4, columnify@npm:^1.5.4":
+"columnify@npm:1.5.4":
   version: 1.5.4
   resolution: "columnify@npm:1.5.4"
   dependencies:
     strip-ansi: ^3.0.0
     wcwidth: ^1.0.0
   checksum: f0693937412ec41d387f8ae89ff8cd5811a07ad636f753f0276ba8394fd76c0f610621ebeb379d6adcb30d98696919546dbbf93a28bd4e546efc7e30d905edc2
+  languageName: node
+  linkType: hard
+
+"columnify@npm:1.6.0, columnify@npm:^1.5.4":
+  version: 1.6.0
+  resolution: "columnify@npm:1.6.0"
+  dependencies:
+    strip-ansi: ^6.0.1
+    wcwidth: ^1.0.0
+  checksum: 0d590023616a27bcd2135c0f6ddd6fac94543263f9995538bbe391068976e30545e5534d369737ec7c3e9db4e53e70a277462de46aeb5a36e6997b4c7559c335
   languageName: node
   linkType: hard
 
@@ -18331,18 +18341,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.5":
-  version: 8.4.5
-  resolution: "postcss@npm:8.4.5"
-  dependencies:
-    nanoid: ^3.1.30
-    picocolors: ^1.0.0
-    source-map-js: ^1.0.1
-  checksum: b78abdd89c10f7b48f4bdcd376104a19d6e9c7495ab521729bdb3df315af6c211360e9f06887ad3bc0ab0f61a04b91d68ea11462997c79cced58b9ccd66fac07
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.4.5":
+"postcss@npm:8.4.6, postcss@npm:^8.4.5":
   version: 8.4.6
   resolution: "postcss@npm:8.4.6"
   dependencies:
@@ -20575,7 +20574,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.1, source-map-js@npm:^1.0.2":
+"source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
   checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
