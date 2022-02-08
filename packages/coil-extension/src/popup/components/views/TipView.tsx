@@ -43,7 +43,7 @@ export const TipView: React.FC = () => {
 
   // Render
   return (
-    <NewHeaderFooterLayout title='Support This Site'>
+    <NewHeaderFooterLayout title='Tip This Site'>
       <ComponentWrapper>
         <Box mt={6}>
           <AmountInput />
