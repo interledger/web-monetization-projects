@@ -32,7 +32,7 @@ export const StreamingCoilView = () => {
   const firstName = user?.fullName?.split(' ')[0]
 
   return (
-    <NewHeaderFooterLayout title='Stream Payments'>
+    <NewHeaderFooterLayout title='Streaming Payments'>
       <ImgWrapper>
         <img src='/res/img-discover.svg' />
       </ImgWrapper>

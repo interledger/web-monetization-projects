@@ -21,7 +21,7 @@ export const StreamingCoilDiscoverView = () => {
   const theme = useTheme()
 
   return (
-    <NewHeaderFooterLayout title='Stream Payments'>
+    <NewHeaderFooterLayout title='Streaming Payments'>
       <ImgWrapper>
         <img src='/res/img-discover.svg' />
       </ImgWrapper>
@@ -35,7 +35,7 @@ export const StreamingCoilDiscoverView = () => {
       <Typography variant='subtitle1' align='center'>
         Learn all about the creators and content
         <br />
-        you can support using Web Monetization
+        you can support using web monetization
       </Typography>
     </NewHeaderFooterLayout>
   )

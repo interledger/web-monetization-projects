@@ -42,7 +42,7 @@ export const StreamingNoMembershipView = () => {
   }, [lottieAnchor])
 
   return (
-    <NewHeaderFooterLayout title='Stream Payments'>
+    <NewHeaderFooterLayout title='Streaming Payments'>
       <LottieWrapper ref={lottieAnchor} />
       <Typography
         variant='h6'

@@ -107,7 +107,7 @@ export class ContentScript {
         // eslint-disable-next-line no-console
         console.error(
           '<iframe> (or one of its ancestors) ' +
-            'is not authorized to allow Web Monetization, %s',
+            'is not authorized to allow web monetization, %s',
           window.location.href
         )
         return
