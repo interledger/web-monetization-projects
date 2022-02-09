@@ -7,6 +7,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
+import { TipAssets } from '../consts/AssetConstants'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
@@ -178,9 +179,9 @@ export class TippingService extends EventEmitter {
         command: 'tip',
         data: {
           paymentPointer: receiver,
-          amount: tipAmountNanoUSD,
-          assetCode,
-          assetScale
+          amount: tipAmountCents,
+          assetCode: TipAssets.assetCode,
+          assetScale: TipAssets.assetScale
         }
       }
       this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
