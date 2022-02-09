@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
-import lottie, { AnimationItem } from 'lottie-web'
-import { styled, Theme, Typography, useTheme } from '@material-ui/core'
+import React, { useEffect, useRef } from 'react'
+import lottie from 'lottie-web'
+import { Typography, styled, Theme, useTheme } from '@material-ui/core'
 
 import { useStore } from '../../context/storeContext'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
@@ -23,57 +23,7 @@ const LottieWrapper = styled('div')(({ theme }: { theme: Theme }) => ({
 export const StreamingWebMonetizedView = () => {
   const theme = useTheme()
   const { monetizedTotal, adapted } = useStore()
-
   const lottieAnchor = useRef(null)
-  const [lastPacket, setLastPacket] = useState(0)
-  const [now, setNow] = useState(Date.now())
-  const [loaded, setLoaded] = useState(false)
-  const [lottieAnim, setLottieAnim] = useState<null | AnimationItem>(null)
-  const playAnimation =
-    typeof monetizedTotal === 'number' &&
-    monetizedTotal > 0 &&
-    now - lastPacket <= 5e3
-
-  // Update `now` every second so that recent packet check works
-  useEffect(() => {
-    const handle = window.setInterval(() => {
-      setNow(Date.now())
-    }, 1e3)
-    return () => {
-      window.clearInterval(handle)
-    }
-  })
-
-  // Set the lastPacket time whenever monetized total changes
-  useEffect(() => {
-    if (monetizedTotal && monetizedTotal > 0) {
-      setLastPacket(Date.now())
-    }
-  }, [monetizedTotal])
-
-  // Load the lottie-web animation item
-  useEffect(() => {
-    if (lottieAnchor.current && !loaded) {
-      setLottieAnim(
-        lottie.loadAnimation({
-          container: lottieAnchor.current,
-          animationData: streamingOnAnimation
-        })
-      )
-      setLoaded(true)
-    }
-  }, [lottieAnchor, loaded])
-
-  // Set the play or stopped state
-  useEffect(() => {
-    if (loaded && lottieAnim /* appease T.S. */) {
-      if (playAnimation) {
-        lottieAnim.play()
-      } else {
-        lottieAnim.stop()
-      }
-    }
-  }, [loaded, playAnimation])
 
   // site message is for standard web monetized sites
   const siteMessage = (
@@ -92,8 +42,19 @@ export const StreamingWebMonetizedView = () => {
     </>
   )
 
+  useEffect(() => {
+    const playAnimation = monetizedTotal !== 0 && monetizedTotal !== null
+    if (lottieAnchor.current) {
+      lottie.loadAnimation({
+        container: lottieAnchor.current,
+        animationData: streamingOnAnimation,
+        autoplay: playAnimation
+      })
+    }
+  }, [lottieAnchor])
+
   return (
-    <NewHeaderFooterLayout title='Stream Payments'>
+    <NewHeaderFooterLayout title='Streaming Payments'>
       <LottieWrapper ref={lottieAnchor} />
       <Typography
         variant='h6'

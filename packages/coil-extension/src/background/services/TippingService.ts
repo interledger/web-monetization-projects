@@ -7,11 +7,11 @@ import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
+import { convertCentsToDollars } from '../../util/convertUsdAmounts'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
 import { BackgroundFramesService } from './BackgroundFramesService'
-import { formatTipSettings } from './formatTipSettings.util'
 
 @injectable()
 export class TippingService extends EventEmitter {
@@ -22,28 +22,62 @@ export class TippingService extends EventEmitter {
     @logger('TippingService')
     private log: Logger,
     private framesService: BackgroundFramesService,
-    @inject(tokens.WextApi)
-    private api: typeof chrome
+    private api = chrome
   ) {
     super()
   }
 
-  async updateTipSettings(token: string): Promise<void> {
-    /*
-      updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings
+  async updateTipSettings(token: string): Promise<string | null> {
+    /* 
+      updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings 
       after it fetches the data it then formats the values to make it easier for the views to consume
     */
+
     const resp = await this.client.tipSettings(token)
+
     this.log('updateTippingSettings', resp)
     if (resp.data?.whoami && resp.data?.minTipLimit) {
-      const formatted = formatTipSettings(resp.data)
+      // destructuring response values and setting defaults
+      const {
+        whoami,
+        minTipLimit,
+        tippingBetaFeatureFlag,
+        extensionNewUiFeatureFlag
+      } = resp.data ?? {}
+
+      const {
+        lastTippedAmountCentsUsd = 0,
+        limitRemainingAmountCentsUsd = 0,
+        totalTipCreditAmountCentsUsd = 0
+      } = whoami?.tipping ?? {}
+
+      const { minTipLimitAmountCentsUsd = 100 } = minTipLimit ?? {}
+
+      const tipSettings = {
+        totalTipCreditAmountUsd: convertCentsToDollars(
+          totalTipCreditAmountCentsUsd
+        ),
+        minTipLimitAmountUsd: convertCentsToDollars(minTipLimitAmountCentsUsd),
+        limitRemainingAmountUsd: convertCentsToDollars(
+          limitRemainingAmountCentsUsd
+        ),
+        lastTippedAmountUsd: convertCentsToDollars(lastTippedAmountCentsUsd),
+        hotkeyTipAmountsUsd: [1, 2, 5] // not yet set by user
+      }
+
       // update user object on local storage
       if (this.store.user) {
         this.store.user = {
           ...this.store.user,
-          ...formatted
+          tippingBetaFeatureFlag,
+          extensionNewUiFeatureFlag,
+          tipSettings
         }
       }
+
+      return token
+    } else {
+      return null
     }
   }
 

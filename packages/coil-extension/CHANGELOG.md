@@ -1,29 +1,4 @@
-<a name="coil-extension@0.0.57"></a>
-
-# [coil-extension@0.0.57](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.56...coil-extension@0.0.57) (2022-02-08)
-
-### New Features
-
-- Add new UI & tipping closed beta
-
-  - [#2306](https://github.com/coilhq/web-monetization-projects/pull/2306)
-  - [#2484](https://github.com/coilhq/web-monetization-projects/pull/2484)
-  - [#2503](https://github.com/coilhq/web-monetization-projects/pull/2503)
-  - [#2432](https://github.com/coilhq/web-monetization-projects/pull/2432)
-  - [#2507](https://github.com/coilhq/web-monetization-projects/pull/2507)
-  - [#2508](https://github.com/coilhq/web-monetization-projects/pull/2508)
-  - [#2522](https://github.com/coilhq/web-monetization-projects/pull/2508)
-  - [#2551](https://github.com/coilhq/web-monetization-projects/pull/2551)
-  - [#2552](https://github.com/coilhq/web-monetization-projects/pull/2552)
-  - [#2535](https://github.com/coilhq/web-monetization-projects/pull/2535)
-  - [#2571](https://github.com/coilhq/web-monetization-projects/pull/2571)
-  - [#2568](https://github.com/coilhq/web-monetization-projects/pull/2568)
-  - [#2572](https://github.com/coilhq/web-monetization-projects/pull/2572)
-  - [#2578](https://github.com/coilhq/web-monetization-projects/pull/2578)
-  - [#2581](https://github.com/coilhq/web-monetization-projects/pull/2581)
-  - [#2582](https://github.com/coilhq/web-monetization-projects/pull/2582)
-
-- <a name="coil-extension@0.0.56"></a>
+<a name="coil-extension@0.0.56"></a>
 
 # [coil-extension@0.0.56](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.55...coil-extension@0.0.56) (2021-07-20)
 
