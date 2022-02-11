@@ -9,6 +9,7 @@ set -ex
 # export WEXT_SHIPIT_CHROME_EXTENSION_ID=iehmfkldnblennopinmmagfidpflefkp
 # export WEXT_MANIFEST_SUFFIX=Preview
 
+export COIL_DEV_ENV=${COIL_DEV_ENV:-'prod'}
 export WEXT_MANIFEST_VERSION="$COIL_DEV_VERSION"
 # shellcheck disable=SC2155
 export WEXT_MANIFEST_VERSION_NAME="$COIL_DEV_VERSION - $(git branch --show) - $(git show -s --pretty='%h - %ad' --date=short)"
@@ -16,7 +17,7 @@ export WEXT_MANIFEST_SUFFIX=${WEXT_MANIFEST_SUFFIX:-'Dev'}
 export WEXT_MANIFEST_SUFFIX_NO_DATE='true'
 # shellcheck disable=SC2155
 export WEXT_BUILD_CONFIG="{\"extensionBuildString\":\"$(git show --no-patch --no-notes --pretty='== %h == %cd == %s ==' )\"}"
-./build.sh prod chrome
+./build.sh $COIL_DEV_ENV chrome
 echo "using $(yarn bin shipit)"
 # https://github.com/LinusU/wext-shipit
 yarn shipit chrome dist

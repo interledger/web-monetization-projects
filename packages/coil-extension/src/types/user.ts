@@ -1,32 +1,18 @@
-export interface User {
-  newUi?: boolean // todo: remove this when testing the new ui is done
-  id: string
-  fullName: string
-  shortName?: string
-  email: string
-  profilePicture?: string
-  customerId?: string
-  canTip?: boolean
-  subscription?: {
-    active: boolean
-    endDate?: string
-    trialEndDate?: string
-  }
+import { CoilUser } from '@coil/client'
+
+export interface TipSettings {
+  totalTipCreditAmountUsd: number
+  minTipLimitAmountUsd: number
+  limitRemainingAmountUsd: number
+  lastTippedAmountUsd: number
+  hotkeyTipAmountsUsd: Array<number>
+}
+
+export interface User extends CoilUser {
   invitation?: {
     usedAt: string
   }
-  currencyPreferences?: {
-    code: string
-    scale: number
-  }
-  tipSettings?: {
-    totalTipCreditAmountUsd: number
-    minTipLimitAmountUsd: number
-    limitRemainingAmountUsd: number
-    lastTippedAmountUsd: number
-    hotkeyTipAmountsUsd: Array<number>
-  }
-  paymentMethods?: Array<IUserPaymentMethod>
+  tipSettings?: TipSettings
   tippingBetaFeatureFlag?: boolean
   extensionNewUiFeatureFlag?: boolean
 }

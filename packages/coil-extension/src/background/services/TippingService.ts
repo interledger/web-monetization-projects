@@ -7,11 +7,12 @@ import { LocalStorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
-import { convertCentsToDollars } from '../../util/convertUsdAmounts'
+import { TipAssets } from '../consts/AssetConstants'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
 import { BackgroundFramesService } from './BackgroundFramesService'
+import { formatTipSettings } from './formatTipSettings.util'
 
 @injectable()
 export class TippingService extends EventEmitter {
@@ -28,56 +29,22 @@ export class TippingService extends EventEmitter {
     super()
   }
 
-  async updateTipSettings(token: string): Promise<string | null> {
+  async updateTipSettings(token: string): Promise<void> {
     /*
       updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings
       after it fetches the data it then formats the values to make it easier for the views to consume
     */
-
     const resp = await this.client.tipSettings(token)
-
     this.log('updateTippingSettings', resp)
     if (resp.data?.whoami && resp.data?.minTipLimit) {
-      // destructuring response values and setting defaults
-      const {
-        whoami,
-        minTipLimit: { minTipLimitAmountCentsUsd = 100 },
-        tippingBetaFeatureFlag,
-        extensionNewUiFeatureFlag
-      } = resp.data ?? {}
-      const {
-        tipping: {
-          lastTippedAmountCentsUsd = 0,
-          limitRemainingAmountCentsUsd = 0,
-          totalTipCreditAmountCentsUsd = 0
-        } = {}
-      } = whoami ?? {}
-
-      const tipSettings = {
-        totalTipCreditAmountUsd: convertCentsToDollars(
-          totalTipCreditAmountCentsUsd
-        ),
-        minTipLimitAmountUsd: convertCentsToDollars(minTipLimitAmountCentsUsd),
-        limitRemainingAmountUsd: convertCentsToDollars(
-          limitRemainingAmountCentsUsd
-        ),
-        lastTippedAmountUsd: convertCentsToDollars(lastTippedAmountCentsUsd),
-        hotkeyTipAmountsUsd: [1, 2, 5] // not yet set by user
-      }
-
+      const formatted = formatTipSettings(resp.data)
       // update user object on local storage
       if (this.store.user) {
         this.store.user = {
           ...this.store.user,
-          tippingBetaFeatureFlag,
-          extensionNewUiFeatureFlag,
-          tipSettings
+          ...formatted
         }
       }
-
-      return token
-    } else {
-      return null
     }
   }
 
@@ -212,9 +179,9 @@ export class TippingService extends EventEmitter {
         command: 'tip',
         data: {
           paymentPointer: receiver,
-          amount: tipAmountNanoUSD,
-          assetCode,
-          assetScale
+          amount: tipAmountCents,
+          assetCode: TipAssets.assetCode,
+          assetScale: TipAssets.assetScale
         }
       }
       this.api.tabs.sendMessage(tabId, message, { frameId: 0 })

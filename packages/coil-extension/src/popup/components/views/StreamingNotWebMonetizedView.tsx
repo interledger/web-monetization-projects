@@ -39,7 +39,7 @@ export const StreamingNotWebMonetizedView = () => {
   }, [lottieAnchor])
 
   return (
-    <NewHeaderFooterLayout title='Streaming Payments'>
+    <NewHeaderFooterLayout title='Stream Payments'>
       <LottieWrapper ref={lottieAnchor} />
       <Typography
         variant='h6'
