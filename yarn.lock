@@ -1609,7 +1609,7 @@ __metadata:
     lint-staged: 12.3.3
     lottie-web: ^5.8.1
     prettier: 2.5.1
-    puppeteer: 13.3.0
+    puppeteer: 13.3.1
     react: ^17.0.0
     react-dom: ^17.0.0
     reduct: ^3.3.1
@@ -1736,7 +1736,7 @@ __metadata:
     lint-staged: 12.3.3
     node-fetch: ^2.6.1
     prettier: 2.5.1
-    puppeteer: 13.3.0
+    puppeteer: 13.3.1
     reduct: ^3.3.1
     rimraf: 3.0.2
     ts-jest: 27.1.3
@@ -18484,9 +18484,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:13.3.0, puppeteer@npm:^13.1.1":
-  version: 13.3.0
-  resolution: "puppeteer@npm:13.3.0"
+"puppeteer@npm:13.3.1, puppeteer@npm:^13.1.1":
+  version: 13.3.1
+  resolution: "puppeteer@npm:13.3.1"
   dependencies:
     cross-fetch: 3.1.5
     debug: 4.3.3
@@ -18500,7 +18500,7 @@ fsevents@^1.2.7:
     tar-fs: 2.1.1
     unbzip2-stream: 1.4.3
     ws: 8.5.0
-  checksum: 87ca7230f15d3040ba21c5d40cf0cc81cc2fe1f6e4e3998e5e4cb003d174db8109e8ddaf19caeda4cefe9f079ad88ac7e3923fdb22613ba5cf9e44f46e86b836
+  checksum: 166736ccb7a00a18896f162549dd92ca8c1b4b8b770b27d3a9254af00688a491174b80588725ef07750300c0cde658d754edc8dc752dc9fbb79fb6dc5bcd92ee
   languageName: node
   linkType: hard
 
