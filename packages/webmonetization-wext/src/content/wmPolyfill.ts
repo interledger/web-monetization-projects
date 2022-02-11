@@ -134,7 +134,7 @@ export const wmPolyFillMinimal = `
       dbg('onmonetization-attr-changed', event.detail.attribute)
       const { attribute } = event.detail
       if (attribute) {
-        // TODO: what are the CSP issues here?
+        // TODO:WM2 what are the CSP issues here?
         // is there any alternative ??
         event.target.onmonetization = new Function(attribute).bind(event.target)
       } else {
