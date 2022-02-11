@@ -9,7 +9,7 @@ describe('wmPolyfill', () => {
     const digest = createHash('sha256').update(data).digest()
     const rebuilt = `sha256-${digest.toString('base64')}`
     expect(rebuilt).toMatchInlineSnapshot(
-      `"sha256-cwCy97bimEtwiCcIdyU6vkPo1Ll1qwP/t40jpbYnNr0="`
+      `"sha256-EenoKthKZuLlpdTBFo34/tDxYn7H7qCXu462uRtFKTs="`
     )
   })
   it('should not support relList without polyfill', () => {
