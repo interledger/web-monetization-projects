@@ -432,6 +432,9 @@ export class BackgroundScript {
       case 'tip':
         sendResponse(await this.tip(request.data.amount))
         break
+      case 'updateTippingSettings':
+        sendResponse(await this.updateTippingSettings())
+        break
       case 'checkIFrameIsAllowedFromIFrameContentScript':
         sendResponse(
           await this.checkIFrameIsAllowedFromIFrameContentScript(sender)
@@ -847,6 +850,25 @@ export class BackgroundScript {
         return { success: false, message: 'Failed tip' }
       }
       return tipResult
+    } catch (e) {
+      return { success: false, message: e.message }
+    }
+  }
+
+  public async updateTippingSettings(): Promise<{
+    success: boolean
+    message: string
+  }> {
+    const tabId = this.activeTab
+    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
+
+    if (!streamId) return { success: false, message: 'No stream found' }
+
+    try {
+      const token = this.auth.getStoredToken()
+      if (!token) return { success: false, message: 'No token found' }
+      const updateResult = await this.tippingService.updateTipSettings(token)
+      return updateResult
     } catch (e) {
       return { success: false, message: e.message }
     }

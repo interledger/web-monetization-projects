@@ -29,22 +29,29 @@ export class TippingService extends EventEmitter {
     super()
   }
 
-  async updateTipSettings(token: string): Promise<void> {
+  async updateTipSettings(
+    token: string
+  ): Promise<{ success: boolean; message: string }> {
     /*
       updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings
       after it fetches the data it then formats the values to make it easier for the views to consume
     */
-    const resp = await this.client.tipSettings(token)
-    this.log('updateTippingSettings', resp)
-    if (resp.data?.whoami && resp.data?.minTipLimit) {
-      const formatted = formatTipSettings(resp.data)
-      // update user object on local storage
-      if (this.store.user) {
-        this.store.user = {
-          ...this.store.user,
-          ...formatted
+    try {
+      const resp = await this.client.tipSettings(token)
+      this.log('updateTippingSettings', resp)
+      if (resp.data?.whoami && resp.data?.minTipLimit) {
+        const formatted = formatTipSettings(resp.data)
+        // update user object on local storage
+        if (this.store.user) {
+          this.store.user = {
+            ...this.store.user,
+            ...formatted
+          }
         }
       }
+      return { success: true, message: '' }
+    } catch (e) {
+      return { success: false, message: e.message }
     }
   }
 
