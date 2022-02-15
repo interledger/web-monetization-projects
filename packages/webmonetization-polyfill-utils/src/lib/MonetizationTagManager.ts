@@ -410,7 +410,7 @@ export class MonetizationTagManager extends EventEmitter {
         const linkRef = new WeakRef(tag as HTMLLinkElement)
         this.linkTagsById.set(started.requestId, linkRef)
       } else {
-        this.emit('link-resolve-payment-endpoint-error', error)
+        this.emit('link-resolve-payment-endpoint-error', tag, error)
         // const event = new ErrorEvent('error', { error })
         const event = new Event('error')
         tag.dispatchEvent(event)

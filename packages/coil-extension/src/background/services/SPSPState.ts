@@ -48,6 +48,7 @@ export class SPSPState {
    *
    */
   handleEvent(event: SPSPRequestEvent['data']['event'], requestId: string) {
+    const frame = this.assoc.getStreamFrame(requestId)
     let dispatch = false
 
     const state = (this.streamState[requestId] ??= {
@@ -65,6 +66,9 @@ export class SPSPState {
         dispatch = true
         state.erred = true
       }
+    } else if (event === 'not-found') {
+      // const command = {}
+      // this.wext.tabs.sendMessage(frame.tabId, command, frame)
     }
 
     if (dispatch) {
@@ -76,7 +80,6 @@ export class SPSPState {
         }
       }
 
-      const frame = this.assoc.getStreamFrame(command.data.requestId)
       this.wext.tabs.sendMessage(frame.tabId, command, {
         frameId: frame.frameId
       })

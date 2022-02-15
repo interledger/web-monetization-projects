@@ -29,6 +29,7 @@ import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
 import { ContentAuthService } from './ContentAuthService'
+import { DebugService } from './DebugService'
 
 function startWebMonetizationMessage(request?: PaymentDetails) {
   if (!request) {
@@ -54,6 +55,7 @@ export class ContentScript {
     private adaptedContent: AdaptedContentService,
     private frames: Frames,
     private idle: IdleDetection,
+    private wmDebug: DebugService,
     private monetization: DocumentMonetization,
     private auth: ContentAuthService
   ) {}
@@ -99,6 +101,9 @@ export class ContentScript {
     )
 
     this.tagManager = tagManager
+    // Do this before we scan the document for tags in startWhenDocumentReady,
+    // so we can capture the events
+    this.wmDebug.init(tagManager)
     // // Scan for WM tags when page is interactive
     tagManager.startWhenDocumentReady()
   }

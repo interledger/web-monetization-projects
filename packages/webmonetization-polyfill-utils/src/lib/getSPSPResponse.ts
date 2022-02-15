@@ -4,6 +4,7 @@ import { CustomError } from './CustomError'
 export interface SPSPResponse {
   destinationAccount: string
   sharedSecret: Buffer
+  receiptsEnabled?: boolean
 }
 
 export class SPSPError extends CustomError {
@@ -14,12 +15,13 @@ export class SPSPError extends CustomError {
 
 export async function getSPSPResponse(
   spspUrl: string,
-  monetizationId: string
+  monetizationId: string,
+  fetchFunc = portableFetch
 ): Promise<SPSPResponse> {
   let response: Response
 
   try {
-    response = await portableFetch(spspUrl, {
+    response = await fetchFunc(spspUrl, {
       method: 'GET',
       // Do not send cookies or other tracking details
       credentials: 'omit',
@@ -45,6 +47,7 @@ export async function getSPSPResponse(
 
   return {
     destinationAccount: details.destination_account,
-    sharedSecret: Buffer.from(details.shared_secret, 'base64')
+    sharedSecret: Buffer.from(details.shared_secret, 'base64'),
+    receiptsEnabled: details.receipts_enabled
   }
 }
