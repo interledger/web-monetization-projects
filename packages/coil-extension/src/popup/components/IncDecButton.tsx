@@ -152,7 +152,7 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
     maxAllowableTipAmountUsd
   } = useTip()
 
-  const initialVelocity = 150
+  const initialVelocity = 600
   const [velocity, setVelocity] = useState<number>(initialVelocity)
   const [isRunning, setIsRunning] = useState<boolean>(false)
 
@@ -196,10 +196,16 @@ export const IncDecButton = (props: IIncDecButton): React.ReactElement => {
     () => {
       setVelocity((prev: number) => {
         let updatedVelocity = prev / 1.35
+
+        if (prev === initialVelocity) {
+          // this helps delay the first click
+          updatedVelocity = prev / 3
+        }
         if (updatedVelocity < 10) {
           // set the maximum velocity
           updatedVelocity = 10
         }
+
         return updatedVelocity
       })
     },
