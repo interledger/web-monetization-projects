@@ -1578,7 +1578,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
-    addons-linter: 4.10.0
+    addons-linter: 4.11.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -2494,7 +2494,7 @@ __metadata:
     "@webmonetization/wext": ^0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
-    addons-linter: 4.10.0
+    addons-linter: 4.11.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     css-loader: 6.6.0
@@ -5918,9 +5918,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:4.10.0":
-  version: 4.10.0
-  resolution: "addons-linter@npm:4.10.0"
+"addons-linter@npm:4.11.0":
+  version: 4.11.0
+  resolution: "addons-linter@npm:4.11.0"
   dependencies:
     "@mdn/browser-compat-data": 4.1.7
     addons-moz-compare: 1.2.0
@@ -5943,7 +5943,7 @@ __metadata:
     is-mergeable-object: 1.1.1
     jed: 1.1.1
     os-locale: 5.0.0
-    pino: 7.6.5
+    pino: 7.7.0
     postcss: 8.4.6
     relaxed-json: 1.0.3
     semver: 7.3.5
@@ -5955,7 +5955,7 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: 31ed91e3f27dec1ae283806c13a0d1da5a54ad05d00037ca0ab48981e3c5344440677c086fbfaa5c4f4c209b633a553f72caffe7bf73d408a1be2f303f8ae3af
+  checksum: 6836c0d3501351ced19f7542a8cb27419b167ca2d36b0a5bb79fa5c9d1edaf553119f0f5c6eb56459612231b478375a0a91f3266472f928291b85a9bbf89e163
   languageName: node
   linkType: hard
 
@@ -18132,6 +18132,26 @@ fsevents@^1.2.7:
   bin:
     pino: bin.js
   checksum: 57a3dedb2ecdf6c6fffe31b19349c2a5578c95aefb98c78f8cec54ede9fc7562fe3d2b6ca56017ef01b5e8f379df437a4dcac6844336293d09dbf94a61f87989
+  languageName: node
+  linkType: hard
+
+"pino@npm:7.7.0":
+  version: 7.7.0
+  resolution: "pino@npm:7.7.0"
+  dependencies:
+    fast-redact: ^3.0.0
+    on-exit-leak-free: ^0.2.0
+    pino-abstract-transport: v0.5.0
+    pino-std-serializers: ^4.0.0
+    process-warning: ^1.0.0
+    quick-format-unescaped: ^4.0.3
+    real-require: ^0.1.0
+    safe-stable-stringify: ^2.1.0
+    sonic-boom: ^2.2.1
+    thread-stream: ^0.13.0
+  bin:
+    pino: bin.js
+  checksum: b5c43d1d26ad22f3ed2d50728ce443520f284227df427b11cede83971ae257b35ce72bda05a318856f26c15c7f2b4c62465ede646e75aa757c14ad563bf9a1ab
   languageName: node
   linkType: hard
 
