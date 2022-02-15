@@ -95,8 +95,8 @@ function getTagAttrs(tag: MonetizationTag, tagType: TagType) {
 
 export class MonetizationTagManager extends EventEmitter {
   private affinity: TagType = 'meta'
-  private documentObserver!: MutationObserver
-  private monetizationTagAttrObserver!: MutationObserver
+  private documentObserver: MutationObserver
+  private monetizationTagAttrObserver: MutationObserver
 
   private monetizationTags = new Map<
     MonetizationTag,
