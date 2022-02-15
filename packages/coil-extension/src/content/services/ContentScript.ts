@@ -60,7 +60,7 @@ export class ContentScript {
 
   handleMonetizationTag() {
     const startMonetization = async (details: PaymentDetails) => {
-      // TODO: WM2
+      // TODO:WM2
       if (this.tagManager.atMostOneTagAndNoneInBody()) {
         this.monetization.setMonetizationRequest({ ...details })
       }
@@ -72,7 +72,7 @@ export class ContentScript {
         command: 'stopWebMonetization',
         data: details
       }
-      // TODO: WM2
+      // TODO:WM2
       if (this.tagManager.atMostOneTagAndNoneInBody()) {
         this.monetization.setState({
           requestId: details.requestId,

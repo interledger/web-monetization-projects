@@ -1,3 +1,5 @@
+import { EventEmitter } from 'events'
+
 import { v4 as uuidV4 } from 'uuid'
 
 import { whenDocumentReady } from './whenDocumentReady'
@@ -91,7 +93,7 @@ function getTagAttrs(tag: MonetizationTag, tagType: TagType) {
   )
 }
 
-export class MonetizationTagManager {
+export class MonetizationTagManager extends EventEmitter {
   private affinity: TagType = 'meta'
   private documentObserver!: MutationObserver
   private monetizationTagAttrObserver!: MutationObserver
@@ -131,6 +133,7 @@ export class MonetizationTagManager {
     private document: Document,
     private callback: PaymentDetailsChangeCallback
   ) {
+    super()
     this.documentObserver = new MutationObserver(records =>
       this._onWholeDocumentObserved(records)
     )
@@ -303,26 +306,34 @@ export class MonetizationTagManager {
           this._onRemovedTag(tag)
         }
       } else {
-        throw new DeprecatedMetaTagIgnoredError(metaDeprecatedMessage)
+        const error = new DeprecatedMetaTagIgnoredError(metaDeprecatedMessage)
+        this.emit('illegal-state-error', error)
+        throw error
       }
     }
 
     let started: PaymentDetails | null = this.getPaymentDetails(tag)
     if (started.fromBody && started.tagType === 'meta') {
-      throw new Error(
+      const error = new Error(
         'Web-Monetization Error: <meta name="monetization"> ' +
           'must be in the document head'
       )
+      this.emit('illegal-state-error', error)
+      throw error
     }
     if (
       started.tagType === 'meta' /*|| details.tagType === 'link'*/ &&
       this.monetizationTags.size + 1 > MAX_NUMBER_META_TAGS
     ) {
-      throw new Error(
+      const error = new Error(
         `Web-Monetization Error: Ignoring tag with ` +
           `paymentPointer=${started.paymentPointer}, only ${MAX_NUMBER_META_TAGS} ` +
           `monetization tag[s] supported at a time. `
       )
+
+      // TODO:WM2 just emit error, with existing EventEmitter semantics
+      this.emit('illegal-state-error', error)
+      throw error
     }
 
     if (started.tagType === 'link') {
@@ -399,6 +410,7 @@ export class MonetizationTagManager {
         const linkRef = new WeakRef(tag as HTMLLinkElement)
         this.linkTagsById.set(started.requestId, linkRef)
       } else {
+        this.emit('link-resolve-payment-endpoint-error', error)
         // const event = new ErrorEvent('error', { error })
         const event = new Event('error')
         tag.dispatchEvent(event)
