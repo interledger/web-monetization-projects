@@ -195,7 +195,10 @@ export const AmountInput = (): React.ReactElement => {
         <Amount
           size={displayFontSize}
           onClick={() => setIsUserInput(true)}
-          disabled={maxAllowableTipAmountUsd == 0}
+          disabled={
+            maxAllowableTipAmountUsd == 0 ||
+            maxAllowableTipAmountUsd < minTipLimitAmountUsd
+          }
         >
           $
           {Number.isInteger(currentTipAmountUsd)

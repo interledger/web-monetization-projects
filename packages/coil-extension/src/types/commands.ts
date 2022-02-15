@@ -191,6 +191,7 @@ export type ToBackgroundMessage =
   | SendTip
   | TipPreview
   | Tip
+  | UpdateTippingSettings
   | FrameStateChange
   | UnloadFrame
   | CheckIFrameIsAllowedFromIFrameContentScript
@@ -354,6 +355,23 @@ export interface Tip {
  * reply to browser.runtime.sendMessage
  */
 export interface TipResult {
+  success: boolean
+  message?: string
+}
+
+/**
+ * popup -> background
+ * browser.runtime.sendMessage
+ */
+export interface UpdateTippingSettings {
+  command: 'updateTippingSettings'
+}
+
+/**
+ * background -> popup
+ * reply to browser.runtime.sendMessage
+ */
+export interface UpdateTippingSettingsResult {
   success: boolean
   message?: string
 }

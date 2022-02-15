@@ -79,8 +79,12 @@ export const TipConfirmView = (): React.ReactElement => {
   }
   const getTipQuote = async (tipAmount: number) => {
     const tipQuote = await getTipQuotePromise(tipAmount)
-    setTipCreditCharge(Number(tipQuote.tipCreditCharge))
-    setCreditCardCharge(Number(tipQuote.creditCardCharge))
+    if (tipQuote.success) {
+      setTipCreditCharge(Number(tipQuote.tipCreditCharge))
+      setCreditCardCharge(Number(tipQuote.creditCardCharge))
+    } else {
+      router.to(ROUTES.tipping)
+    }
   }
 
   const sendTip = async (tipAmount: number) => {
