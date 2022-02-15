@@ -21,14 +21,15 @@ const ChargeAmount = styled('strong')(
 // Component
 //
 export const TipAmountFeedback = () => {
-  const { currentTipAmountUsd } = useTip()
+  const { currentTipAmountUsd, maxAllowableTipAmountUsd } = useTip()
   const { user } = useStore()
   const {
     tippingBetaFeatureFlag,
     paymentMethods,
     tipSettings: {
       limitRemainingAmountUsd = 0,
-      totalTipCreditAmountUsd = 0
+      totalTipCreditAmountUsd = 0,
+      minTipLimitAmountUsd = 1
     } = {}
   } = user ?? {}
   const {
@@ -39,9 +40,18 @@ export const TipAmountFeedback = () => {
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
   const getRestrictedMessage = () => {
-    let prompt = null
+    if (maxAllowableTipAmountUsd < minTipLimitAmountUsd) {
+      return (
+        <Typography variant='subtitle1'>
+          Limit below minimum tip.{' '}
+          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
+            Raise limit
+          </LinkUnderlined>
+        </Typography>
+      )
+    }
     if (currentTipAmountUsd >= limitRemainingAmountUsd) {
-      prompt = (
+      return (
         <Typography variant='subtitle1'>
           Daily limit reached.{' '}
           <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
@@ -55,7 +65,7 @@ export const TipAmountFeedback = () => {
       tippingBetaFeatureFlag &&
       !creditCard
     ) {
-      prompt = (
+      return (
         <Typography variant='subtitle1'>
           <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/billing`)}>
             Add credit card to tip more
@@ -63,7 +73,7 @@ export const TipAmountFeedback = () => {
         </Typography>
       )
     }
-    return prompt
+    return null
   }
 
   return (
