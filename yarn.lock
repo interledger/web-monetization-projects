@@ -1436,7 +1436,7 @@ __metadata:
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.8
     "@types/node": 14.18.12
-    "@types/node-fetch": 2.5.12
+    "@types/node-fetch": 2.6.0
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
@@ -1494,7 +1494,7 @@ __metadata:
     "@types/jest": 27.4.0
     "@types/jsonwebtoken": 8.5.8
     "@types/node": 14.18.12
-    "@types/node-fetch": 2.5.12
+    "@types/node-fetch": 2.6.0
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
     "@yarnpkg/pnpify": 3.1.0
@@ -1565,7 +1565,7 @@ __metadata:
     "@types/jsonwebtoken": 8.5.8
     "@types/long": 4.0.1
     "@types/node": 14.18.12
-    "@types/node-fetch": 2.5.12
+    "@types/node-fetch": 2.6.0
     "@types/react": 17.0.39
     "@types/react-dom": 17.0.11
     "@types/uuid": 8.3.4
@@ -1707,7 +1707,7 @@ __metadata:
     "@types/jest": 27.4.0
     "@types/long": 4.0.1
     "@types/node": 14.18.12
-    "@types/node-fetch": 2.5.12
+    "@types/node-fetch": 2.6.0
     "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
@@ -4500,13 +4500,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:2.5.12":
-  version: 2.5.12
-  resolution: "@types/node-fetch@npm:2.5.12"
+"@types/node-fetch@npm:2.6.0":
+  version: 2.6.0
+  resolution: "@types/node-fetch@npm:2.6.0"
   dependencies:
     "@types/node": "*"
-    form-data: ^3.0.0
-  checksum: ad63c85ba6a9477b8e057ec8682257738130d98e8ece4e31141789bd99df9d9147985cc8bc0cb5c8983ed5aa6bb95d46df23d1e055f4ad5cf8b82fc69cf626c7
+    form-data: ^2.3.3
+  checksum: 25fff9aa151e59fa6f66461fa5599e5d2a9a99e03a80dbbe8e991b2362b223d1635fc61e75128a1de91112ffc13c371212ea644cbc888d4b54662ea48ff3ff16
   languageName: node
   linkType: hard
 
@@ -5118,7 +5118,7 @@ __metadata:
     "@types/figlet": 1.5.4
     "@types/jest": 27.4.0
     "@types/node": 14.18.12
-    "@types/node-fetch": 2.5.12
+    "@types/node-fetch": 2.6.0
     "@types/react": 17.0.39
     "@types/react-dom": 17.0.11
     "@types/react-helmet": 6.1.5
@@ -5190,7 +5190,7 @@ __metadata:
     "@commitlint/config-conventional": 16.2.1
     "@types/jest": 27.4.0
     "@types/node": 14.18.12
-    "@types/node-fetch": 2.5.12
+    "@types/node-fetch": 2.6.0
     "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
@@ -11589,6 +11589,17 @@ __metadata:
   version: 0.6.1
   resolution: "forever-agent@npm:0.6.1"
   checksum: 766ae6e220f5fe23676bb4c6a99387cec5b7b62ceb99e10923376e27bfea72f3c3aeec2ba5f45f3f7ba65d6616965aa7c20b15002b6860833bb6e394dea546a8
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^2.3.3":
+  version: 2.5.1
+  resolution: "form-data@npm:2.5.1"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.6
+    mime-types: ^2.1.12
+  checksum: 5134ada56cc246b293a1ac7678dba6830000603a3979cf83ff7b2f21f2e3725202237cfb89e32bcb38a1d35727efbd3c3a22e65b42321e8ade8eec01ce755d08
   languageName: node
   linkType: hard
 
