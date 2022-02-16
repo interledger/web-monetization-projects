@@ -2893,7 +2893,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@wext/shipit", "patch:@wext/shipit@npm%3A0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515::version=0.2.1&hash=fbcdff&locator=web-monetization%40workspace%3A."],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
-            ["addons-linter", "npm:4.10.0"],
+            ["addons-linter", "npm:4.11.0"],
             ["copy-webpack-plugin", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.1.0"],
             ["crx-hotreload", "npm:1.0.6"],
             ["debug", "virtual:2ad756de169bf72aafda43d1e2327e0cf7bcb204e0a9798d149f3f82af2946c06104e76120b9f2fefe79c9a7f4dc97edc7d3dde4b1a890339a9f2f672bc5b209#npm:4.3.3"],
@@ -3877,7 +3877,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webmonetization/wext", "workspace:packages/webmonetization-wext"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
-            ["addons-linter", "npm:4.10.0"],
+            ["addons-linter", "npm:4.11.0"],
             ["copy-webpack-plugin", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:9.1.0"],
             ["crx-hotreload", "npm:1.0.6"],
             ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.6.0"],
@@ -8974,10 +8974,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.10.0", {
-          "packageLocation": "./.yarn/cache/addons-linter-npm-4.10.0-890d7e21c8-31ed91e3f2.zip/node_modules/addons-linter/",
+        ["npm:4.11.0", {
+          "packageLocation": "./.yarn/cache/addons-linter-npm-4.11.0-69f6bc8247-6836c0d350.zip/node_modules/addons-linter/",
           "packageDependencies": [
-            ["addons-linter", "npm:4.10.0"],
+            ["addons-linter", "npm:4.11.0"],
             ["@mdn/browser-compat-data", "npm:4.1.7"],
             ["addons-moz-compare", "npm:1.2.0"],
             ["addons-scanner-utils", "virtual:06d04455ea631424ec3bed4a3226660ad1e944502b45db23ec62aff9b2153262eb28d3e28b1da780f3d8d8b0ab6b1f6557adceb6970eacef5e7bfb4d96a42cb6#npm:6.3.0"],
@@ -8989,7 +8989,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["common-tags", "npm:1.8.2"],
             ["deepmerge", "npm:4.2.2"],
             ["eslint", "npm:8.9.0"],
-            ["eslint-plugin-no-unsanitized", "virtual:890d7e21c87ef4d21801bdf087836ec558bad9596d269e551e7957972e2d87f5bde0ccbcc7d153f6cfefbc9e5d6f585fb1f1aa47f066ce8840db96056db9420a#npm:4.0.1"],
+            ["eslint-plugin-no-unsanitized", "virtual:69f6bc82477382efcf60f77232cc17c9239224e161b3c23d0c909240fbaebd9ae8c8455c42c928d6324da3b8eba9b54c54bddbff8a0ee8679ff48c801b084369#npm:4.0.1"],
             ["eslint-visitor-keys", "npm:3.3.0"],
             ["espree", "npm:9.3.1"],
             ["esprima", "npm:4.0.1"],
@@ -8999,7 +8999,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-mergeable-object", "npm:1.1.1"],
             ["jed", "npm:1.1.1"],
             ["os-locale", "npm:5.0.0"],
-            ["pino", "npm:7.6.5"],
+            ["pino", "npm:7.7.0"],
             ["postcss", "npm:8.4.6"],
             ["relaxed-json", "npm:1.0.3"],
             ["semver", "npm:7.3.5"],
@@ -14687,10 +14687,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:890d7e21c87ef4d21801bdf087836ec558bad9596d269e551e7957972e2d87f5bde0ccbcc7d153f6cfefbc9e5d6f585fb1f1aa47f066ce8840db96056db9420a#npm:4.0.1", {
-          "packageLocation": "./.yarn/__virtual__/eslint-plugin-no-unsanitized-virtual-283c56feb8/0/cache/eslint-plugin-no-unsanitized-npm-4.0.1-6a00d58681-36ce4884c3.zip/node_modules/eslint-plugin-no-unsanitized/",
+        ["virtual:69f6bc82477382efcf60f77232cc17c9239224e161b3c23d0c909240fbaebd9ae8c8455c42c928d6324da3b8eba9b54c54bddbff8a0ee8679ff48c801b084369#npm:4.0.1", {
+          "packageLocation": "./.yarn/__virtual__/eslint-plugin-no-unsanitized-virtual-33fbb01b0d/0/cache/eslint-plugin-no-unsanitized-npm-4.0.1-6a00d58681-36ce4884c3.zip/node_modules/eslint-plugin-no-unsanitized/",
           "packageDependencies": [
-            ["eslint-plugin-no-unsanitized", "virtual:890d7e21c87ef4d21801bdf087836ec558bad9596d269e551e7957972e2d87f5bde0ccbcc7d153f6cfefbc9e5d6f585fb1f1aa47f066ce8840db96056db9420a#npm:4.0.1"],
+            ["eslint-plugin-no-unsanitized", "virtual:69f6bc82477382efcf60f77232cc17c9239224e161b3c23d0c909240fbaebd9ae8c8455c42c928d6324da3b8eba9b54c54bddbff8a0ee8679ff48c801b084369#npm:4.0.1"],
             ["@types/eslint", null],
             ["eslint", "npm:8.9.0"]
           ],
@@ -23074,6 +23074,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/pino-npm-7.6.5-9eaea6e55b-57a3dedb2e.zip/node_modules/pino/",
           "packageDependencies": [
             ["pino", "npm:7.6.5"],
+            ["fast-redact", "npm:3.0.0"],
+            ["on-exit-leak-free", "npm:0.2.0"],
+            ["pino-abstract-transport", "npm:0.5.0"],
+            ["pino-std-serializers", "npm:4.0.0"],
+            ["process-warning", "npm:1.0.0"],
+            ["quick-format-unescaped", "npm:4.0.3"],
+            ["real-require", "npm:0.1.0"],
+            ["safe-stable-stringify", "npm:2.2.0"],
+            ["sonic-boom", "npm:2.3.0"],
+            ["thread-stream", "npm:0.13.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:7.7.0", {
+          "packageLocation": "./.yarn/cache/pino-npm-7.7.0-d1f1f1b77f-b5c43d1d26.zip/node_modules/pino/",
+          "packageDependencies": [
+            ["pino", "npm:7.7.0"],
             ["fast-redact", "npm:3.0.0"],
             ["on-exit-leak-free", "npm:0.2.0"],
             ["pino-abstract-transport", "npm:0.5.0"],
