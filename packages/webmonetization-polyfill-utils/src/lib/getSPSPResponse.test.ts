@@ -67,6 +67,29 @@ describe('getSPSPResponse', () => {
     )
   })
 
+  it('should throw an error when the JSON is unparseable', async () => {
+    const mockFetch = makeMockFetch({
+      ok: true,
+      async text() {
+        // Object not encoded correctly as JSON
+        return `{
+          destinationAccount: '',
+          receiptsEnabled: false,
+          sharedSecret: ''
+        }`
+      },
+      status: 200
+    })
+    await expect(async () => await getSPSPResponse(TEST_PP, TEST_ID, mockFetch))
+      .rejects.toThrowErrorMatchingInlineSnapshot(`
+            "SPSP Response JSON unparseable (body={
+                      destinationAccount: '',
+                      receiptsEnabled: false,
+                      sharedSecret: ''
+                    })"
+          `)
+  })
+
   it('should throw an error when the JSON is parseable but malformed', async () => {
     const mockFetch = makeMockFetch({
       ok: true,
