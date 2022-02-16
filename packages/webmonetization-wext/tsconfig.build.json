@@ -21,10 +21,10 @@
       "path": "../dier-makr-annotations/tsconfig.build.json"
     },
     {
-      "path": "../webmonetization-polyfill-utils/tsconfig.build.json"
+      "path": "../webmonetization-types/tsconfig.build.json"
     },
     {
-      "path": "../webmonetization-types/tsconfig.build.json"
+      "path": "../webmonetization-polyfill-utils/tsconfig.build.json"
     }
   ]
 }

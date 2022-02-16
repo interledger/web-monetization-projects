@@ -15,5 +15,10 @@
   "exclude": [
     "src/**/*.test.ts",
     "src/**/*.test.tsx"
+  ],
+  "references": [
+    {
+      "path": "../webmonetization-types/tsconfig.build.json"
+    }
   ]
 }

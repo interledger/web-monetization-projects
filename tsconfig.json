@@ -24,9 +24,6 @@
       "@stacktracejs/stacktrace-js": [
         "packages/stacktracejs-stacktrace-js/src"
       ],
-      "@webmonetization/polyfill-utils": [
-        "packages/webmonetization-polyfill-utils/src"
-      ],
       "@webmonetization/types": [
         "packages/webmonetization-types/src"
       ],
@@ -42,11 +39,23 @@
       "@webexts/build-utils": [
         "packages/webexts-build-utils/src"
       ],
+      "@webmonetization/polyfill-utils": [
+        "packages/webmonetization-polyfill-utils/src"
+      ],
       "@webmonetization/react": [
         "packages/webmonetization-react/src"
       ],
       "@webmonetization/testing-utils": [
         "packages/webmonetization-testing-utils/src"
+      ],
+      "@coil/puppeteer-utils": [
+        "packages/coil-puppeteer-utils/src"
+      ],
+      "@coil/wm-utils": [
+        "packages/coil-wm-utils/src"
+      ],
+      "@webmonetization/demo": [
+        "packages/webmonetization-demo/src"
       ],
       "@webmonetization/wext": [
         "packages/webmonetization-wext/src"
@@ -63,23 +72,14 @@
       "@webmonetization/wext/content": [
         "packages/webmonetization-wext/src/content"
       ],
-      "@coil/puppeteer-utils": [
-        "packages/coil-puppeteer-utils/src"
-      ],
-      "@coil/wm-utils": [
-        "packages/coil-wm-utils/src"
-      ],
-      "@interledger/minute-extension": [
-        "packages/interledger-minute-extension/src"
-      ],
-      "@webmonetization/demo": [
-        "packages/webmonetization-demo/src"
-      ],
       "@coil/extension": [
         "packages/coil-extension/src"
       ],
       "@coil/oauth-scripts": [
         "packages/coil-oauth-scripts/src"
+      ],
+      "@interledger/minute-extension": [
+        "packages/interledger-minute-extension/src"
       ]
     }
   },

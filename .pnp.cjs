@@ -7321,6 +7321,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/uuid", "npm:8.3.4"],
             ["@typescript-eslint/eslint-plugin", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.11.0"],
             ["@typescript-eslint/parser", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.11.0"],
+            ["@webmonetization/types", "workspace:packages/webmonetization-types"],
             ["@yarnpkg/pnpify", "npm:3.1.0"],
             ["JSON2016", "npm:1.0.0"],
             ["babel-plugin-parameter-decorator", "npm:1.0.16"],
