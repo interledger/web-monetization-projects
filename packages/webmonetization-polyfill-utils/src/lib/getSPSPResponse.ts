@@ -37,6 +37,8 @@ export async function getSPSPResponse(
     response = await fetchFunc(spspUrl, {
       method: 'GET',
       // Do not send cookies or other tracking details
+      // TODO:WM2 how to set this in correspondence with the crossorigin
+      // setting on the link tag
       credentials: 'omit',
       cache: 'no-cache',
       headers: {
