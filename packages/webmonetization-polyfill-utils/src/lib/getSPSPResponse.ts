@@ -52,15 +52,17 @@ export async function getSPSPResponse(
     )
   }
 
+  const responseBody = await response.text()
+
   if (!response.ok) {
     throw new SPSPError(
-      `SPSP Response Bad (status=${response.status})`,
+      `SPSP Bad Response (status=${response.status}, ` +
+        `body=${JSON.stringify(responseBody)})`,
       ErrorType.BadResponse,
       response
     )
   }
 
-  const responseBody = await response.text()
   let details: SPSPResponseRaw
   try {
     details = JSON.parse(responseBody)

@@ -52,4 +52,37 @@ describe('getSPSPResponse', () => {
       `"No SPSP Response (bad or no network)"`
     )
   })
+  it('should throw a bad response error when status != 200', async () => {
+    const mockFetch = makeMockFetch({
+      ok: false,
+      async text() {
+        return 'not found'
+      },
+      status: 404
+    })
+    await expect(
+      async () => await getSPSPResponse(TEST_PP, TEST_ID, mockFetch)
+    ).rejects.toThrowErrorMatchingInlineSnapshot(
+      `"SPSP Bad Response (status=404, body=\\"not found\\")"`
+    )
+  })
+
+  it('should throw an error when the JSON is parseable but malformed', async () => {
+    const mockFetch = makeMockFetch({
+      ok: true,
+      async text() {
+        return JSON.stringify({
+          destinationAccount: '',
+          receiptsEnabled: false,
+          sharedSecret: ''
+        })
+      },
+      status: 200
+    })
+    await expect(
+      async () => await getSPSPResponse(TEST_PP, TEST_ID, mockFetch)
+    ).rejects.toThrowErrorMatchingInlineSnapshot(
+      `" SPSP response is malformed (body={\\"destinationAccount\\":\\"\\",\\"receiptsEnabled\\":false,\\"sharedSecret\\":\\"\\"})"`
+    )
+  })
 })
