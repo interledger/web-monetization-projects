@@ -7304,7 +7304,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.5.1"],
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.1.3"],
-            ["ts-json-schema-generator", "npm:0.97.0"],
+            ["ts-json-schema-generator", "npm:0.98.0"],
             ["ts-loader", "virtual:8348b562e12125a103e2a17bf51fac1497909bc5c983144d7ae12292f4079cac7669e2189e2ae42da0ad930b6278a3b13c4cc24c62408c32e3bb720d1a2045ec#npm:9.2.6"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.5.0"],
             ["ts-node-dev", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:1.1.8"],
@@ -11746,6 +11746,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/commander-npm-8.3.0-c0d18c66d5-0f82321821.zip/node_modules/commander/",
           "packageDependencies": [
             ["commander", "npm:8.3.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:9.0.0", {
+          "packageLocation": "./.yarn/cache/commander-npm-9.0.0-b4ddcedf46-15066e433d.zip/node_modules/commander/",
+          "packageDependencies": [
+            ["commander", "npm:9.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -23081,7 +23088,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["process-warning", "npm:1.0.0"],
             ["quick-format-unescaped", "npm:4.0.3"],
             ["real-require", "npm:0.1.0"],
-            ["safe-stable-stringify", "npm:2.2.0"],
+            ["safe-stable-stringify", "npm:2.3.1"],
             ["sonic-boom", "npm:2.3.0"],
             ["thread-stream", "npm:0.13.0"]
           ],
@@ -23098,7 +23105,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["process-warning", "npm:1.0.0"],
             ["quick-format-unescaped", "npm:4.0.3"],
             ["real-require", "npm:0.1.0"],
-            ["safe-stable-stringify", "npm:2.2.0"],
+            ["safe-stable-stringify", "npm:2.3.1"],
             ["sonic-boom", "npm:2.3.0"],
             ["thread-stream", "npm:0.13.0"]
           ],
@@ -25043,10 +25050,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["safe-stable-stringify", [
-        ["npm:2.2.0", {
-          "packageLocation": "./.yarn/cache/safe-stable-stringify-npm-2.2.0-336efeb371-09facfbc43.zip/node_modules/safe-stable-stringify/",
+        ["npm:2.3.1", {
+          "packageLocation": "./.yarn/cache/safe-stable-stringify-npm-2.3.1-5e1888c3a7-a0a0bad029.zip/node_modules/safe-stable-stringify/",
           "packageDependencies": [
-            ["safe-stable-stringify", "npm:2.2.0"]
+            ["safe-stable-stringify", "npm:2.3.1"]
           ],
           "linkType": "HARD",
         }]
@@ -27608,16 +27615,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ts-json-schema-generator", [
-        ["npm:0.97.0", {
-          "packageLocation": "./.yarn/cache/ts-json-schema-generator-npm-0.97.0-5b246ab2e0-99a3bff835.zip/node_modules/ts-json-schema-generator/",
+        ["npm:0.98.0", {
+          "packageLocation": "./.yarn/cache/ts-json-schema-generator-npm-0.98.0-1561b7262b-a00eef4a4a.zip/node_modules/ts-json-schema-generator/",
           "packageDependencies": [
-            ["ts-json-schema-generator", "npm:0.97.0"],
+            ["ts-json-schema-generator", "npm:0.98.0"],
             ["@types/json-schema", "npm:7.0.9"],
-            ["commander", "npm:8.3.0"],
+            ["commander", "npm:9.0.0"],
             ["glob", "npm:7.2.0"],
             ["json5", "npm:2.2.0"],
-            ["safe-stable-stringify", "npm:2.2.0"],
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
+            ["safe-stable-stringify", "npm:2.3.1"],
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
           ],
           "linkType": "HARD",
         }]
@@ -28507,13 +28514,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["typescript", [
-        ["patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53", {
-          "packageLocation": "./.yarn/cache/typescript-patch-7a081096b0-bd629ad0da.zip/node_modules/typescript/",
-          "packageDependencies": [
-            ["typescript", "patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=493e53"]
-          ],
-          "linkType": "HARD",
-        }],
         ["patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53", {
           "packageLocation": "./.yarn/cache/typescript-patch-3020d8933d-c05c318d79.zip/node_modules/typescript/",
           "packageDependencies": [
