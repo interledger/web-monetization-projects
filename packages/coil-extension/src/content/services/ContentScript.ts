@@ -199,9 +199,12 @@ export class ContentScript {
           debug('LOG FROM BG', request.data.log)
         } else if (request.command === 'spspRequestEvent') {
           const {
-            data: { requestId, event }
+            data: { requestId, event, message }
           } = request
           this.tagManager.dispatchEventByLinkId(requestId, new Event(event))
+          if (message) {
+            this.wmDebug.logSPSPEvent(request)
+          }
         } else if (request.command === 'setMonetizationState') {
           if (
             this.tagManager.atMostOneTagAndNoneInBody() ||

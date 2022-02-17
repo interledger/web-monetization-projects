@@ -1,7 +1,9 @@
 import { MonetizationTagManager } from '@webmonetization/polyfill-utils'
 import { injectable } from 'inversify'
 
-const COLOR_CSS = 'color: aqua; background-color: black'
+import { SPSPRequestEvent } from '../../types/commands'
+
+const COLOR_CSS = 'color: cyan; background-color: darkorange'
 
 @injectable()
 export class DebugService {
@@ -34,5 +36,15 @@ export class DebugService {
         }
       }
     )
+  }
+
+  logSPSPEvent(request: SPSPRequestEvent) {
+    if (this.storage.WM_DEBUG) {
+      this.log(
+        '%c WM2 simple payment setup protocol error:',
+        COLOR_CSS,
+        request.data.message
+      )
+    }
   }
 }

@@ -248,11 +248,7 @@ export class Stream extends EventEmitter {
     } catch (e) {
       if (e instanceof SPSPError) {
         const status = e.response?.status
-        if (status === 404) {
-          // this.emit('spsp-event', 'not-found', this._requestId, e.response?.text())
-        }
-
-        this.emit('spsp-event', 'error', this._requestId)
+        this.emit('spsp-event', 'error', this._requestId, e.message)
         // Abort on Bad Request 4XX
         if (!status || (status >= 400 && status < 500)) {
           this.emit('spsp-event', 'abort', this._requestId)

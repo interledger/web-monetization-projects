@@ -27,8 +27,8 @@ export class SPSPState {
   ) {}
 
   bindToStreamsEvents() {
-    this.streams.on('spsp-event', (event, requestId) => {
-      this.handleEvent(event, requestId)
+    this.streams.on('spsp-event', (event, requestId, message) => {
+      this.handleEvent(event, requestId, message)
     })
     this.streams.on('close', requestId => {
       delete this.streamState[requestId]
@@ -47,7 +47,11 @@ export class SPSPState {
    *  error
    *
    */
-  handleEvent(event: SPSPRequestEvent['data']['event'], requestId: string) {
+  handleEvent(
+    event: SPSPRequestEvent['data']['event'],
+    requestId: string,
+    message?: string
+  ) {
     const frame = this.assoc.getStreamFrame(requestId)
     let dispatch = false
 
@@ -75,8 +79,9 @@ export class SPSPState {
       const command: SPSPRequestEvent = {
         command: 'spspRequestEvent',
         data: {
-          event: event,
-          requestId
+          event,
+          requestId,
+          message
         }
       }
 

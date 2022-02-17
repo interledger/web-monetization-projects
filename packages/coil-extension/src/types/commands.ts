@@ -446,6 +446,7 @@ export interface SPSPRequestEvent {
   data: {
     requestId: string
     event: 'load' | 'error' | 'abort' | 'loadstart' | 'not-found'
+    message?: string
   }
 }
 
