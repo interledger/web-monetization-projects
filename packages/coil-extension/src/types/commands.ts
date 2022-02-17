@@ -175,6 +175,26 @@ export interface CheckIFrameIsAllowedFromIFrameContentScript extends Command {
   // }
 }
 
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface AssociatePaymentPointer extends Command {
+  command: 'associatePaymentPointer'
+  data: {
+    paymentPointer: string
+  }
+}
+
+/**
+ * content -> background
+ * browser.runtime.sendMessage
+ */
+export interface DissociatePaymentPointer extends Command {
+  command: 'dissociatePaymentPointer'
+  // tabId & frameId is retrieved via MessageSender
+}
+
 export type ToBackgroundMessage =
   | PauseWebMonetization
   | ResumeWebMonetization
@@ -198,6 +218,8 @@ export type ToBackgroundMessage =
   | ReportCorrelationIdFromIFrameContentScript
   | OnFrameAllowedChanged
   | AdaptedPageDetails
+  | AssociatePaymentPointer
+  | DissociatePaymentPointer
 
 export type IconState =
   | 'streaming-paused'

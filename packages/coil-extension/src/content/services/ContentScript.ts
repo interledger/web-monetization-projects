@@ -76,14 +76,31 @@ export class ContentScript {
       this.runtime.sendMessage(request)
     }
 
+    const associatePaymentPointer = (paymentPointer: string) => {
+      this.runtime.sendMessage({
+        command: 'associatePaymentPointer',
+        data: {
+          paymentPointer
+        }
+      })
+    }
+
+    const dissociatePaymentPointer = () => {
+      this.runtime.sendMessage({
+        command: 'dissociatePaymentPointer'
+      })
+    }
+
     const monitor = new MonetizationTagObserver(
       this.window,
       this.document,
       ({ started, stopped }) => {
         if (stopped) {
+          dissociatePaymentPointer()
           stopMonetization(stopped)
         }
         if (started) {
+          associatePaymentPointer(started.paymentPointer)
           void startMonetization(started)
         }
       }
