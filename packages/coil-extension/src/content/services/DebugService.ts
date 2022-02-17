@@ -11,16 +11,27 @@ export class DebugService {
   constructor(private storage: Storage) {}
 
   init(tm: MonetizationTagManager) {
-    console.log('DebugService init')
+    // TODO:WM2, log as errors ??
+    tm.on('illegal-state-error', (error: Error) => {
+      if (this.storage.WM_DEBUG) {
+        this.log(
+          '%c WM2 illegal tag state error:',
+          COLOR_CSS,
+          error.message.replace(/^Web-Monetization Error: /, '')
+        )
+      }
+    })
     tm.on(
       'link-resolve-payment-endpoint-error',
       (link: HTMLLinkElement, error: Error) => {
-        console.log(
-          '%c WM2 link paymentPointer malformed:',
-          COLOR_CSS,
-          link,
-          error.message
-        )
+        if (this.storage.WM_DEBUG) {
+          this.log(
+            '%c WM2 link paymentPointer malformed error:',
+            COLOR_CSS,
+            link,
+            error.message
+          )
+        }
       }
     )
   }

@@ -131,7 +131,8 @@ export class MonetizationTagManager extends EventEmitter {
   constructor(
     private window: Window,
     private document: Document,
-    private callback: PaymentDetailsChangeCallback
+    private callback: PaymentDetailsChangeCallback,
+    private throwOnIllegalState = true
   ) {
     super()
     this.documentObserver = new MutationObserver(records =>
@@ -308,7 +309,11 @@ export class MonetizationTagManager extends EventEmitter {
       } else {
         const error = new DeprecatedMetaTagIgnoredError(metaDeprecatedMessage)
         this.emit('illegal-state-error', error)
-        throw error
+        if (this.throwOnIllegalState) {
+          throw error
+        } else {
+          return
+        }
       }
     }
 
@@ -319,7 +324,11 @@ export class MonetizationTagManager extends EventEmitter {
           'must be in the document head'
       )
       this.emit('illegal-state-error', error)
-      throw error
+      if (this.throwOnIllegalState) {
+        throw error
+      } else {
+        return
+      }
     }
     if (
       started.tagType === 'meta' /*|| details.tagType === 'link'*/ &&
@@ -333,7 +342,13 @@ export class MonetizationTagManager extends EventEmitter {
 
       // TODO:WM2 just emit error, with existing EventEmitter semantics
       this.emit('illegal-state-error', error)
-      throw error
+      if (this.throwOnIllegalState) {
+        throw error
+      } else {
+        // this won't work, may need to halt completely all the way up
+        // the stack
+        return
+      }
     }
 
     if (started.tagType === 'link') {
@@ -357,6 +372,7 @@ export class MonetizationTagManager extends EventEmitter {
 
   _onRemovedTag(tag: MonetizationTag) {
     const entry = this.getEntry(tag, '_onRemovedTag')
+    console.log('onRemovedTag', tag)
     this.monetizationTags.delete(tag)
     this.clearLinkById(entry.details)
     this.callback({ started: null, stopped: entry.details })

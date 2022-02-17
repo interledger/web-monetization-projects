@@ -127,7 +127,10 @@ export class DocumentMonetization {
     detail: MonetizationStartEvent['detail']
   ) {
     // Indicate that payment has started.
-    const changed = this.setState({ state: 'started' })
+    const changed = this.setState({
+      state: 'started',
+      requestId: detail.requestId
+    })
     if (!changed) {
       throw new Error(`expecting state transition`)
     }

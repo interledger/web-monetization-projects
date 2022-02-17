@@ -20,6 +20,7 @@ import { BuildConfig } from '../../types/BuildConfig'
 import { AuthService } from './AuthService'
 import { PopupBrowserAction } from './PopupBrowserAction'
 import { Logger, logger } from './utils'
+import { ActiveTabLogger } from './ActiveTabLogger'
 
 @injectable()
 export class TabStates {
@@ -30,6 +31,7 @@ export class TabStates {
     @inject(tokens.LocalStorageProxy)
     private store: LocalStorageProxy,
     private auth: AuthService,
+    private activeTabLogger: ActiveTabLogger,
     @inject(tokens.BuildConfig)
     private buildConfig: BuildConfig,
     @inject(tokens.ActiveTab)
@@ -158,6 +160,7 @@ export class TabStates {
     command: MonetizationCommand,
     details: PaymentDetails | string
   ) {
+    const args = details
     if (typeof details === 'string') {
       const maybeNull =
         this.getFrameOrDefault(frame)[`monetization-state-${details}`]
@@ -167,14 +170,20 @@ export class TabStates {
     }
 
     const total = this.getTotal(frame, details)
+    const requestState = {
+      command,
+      details: details,
+      total: total,
+      // TODO
+      lastPacket: 0
+    }
+    this.activeTabLogger.log(
+      'logLastMonetizationCommand ' +
+        JSON.stringify({ command, frame, args, requestState }),
+      frame
+    )
     this.setFrame(frame, {
-      [`monetization-state-${details.requestId}`]: {
-        command,
-        details: details,
-        total: total,
-        // TODO
-        lastPacket: 0
-      }
+      [`monetization-state-${details.requestId}`]: requestState
     })
   }
 

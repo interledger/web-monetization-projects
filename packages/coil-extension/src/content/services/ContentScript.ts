@@ -97,7 +97,8 @@ export class ContentScript {
         if (started) {
           void startMonetization(started)
         }
-      }
+      },
+      false
     )
 
     this.tagManager = tagManager
@@ -202,7 +203,10 @@ export class ContentScript {
           } = request
           this.tagManager.dispatchEventByLinkId(requestId, new Event(event))
         } else if (request.command === 'setMonetizationState') {
-          if (this.tagManager.atMostOneTagAndNoneInBody()) {
+          if (
+            this.tagManager.atMostOneTagAndNoneInBody() ||
+            request.data.finalized
+          ) {
             this.monetization.setState(request.data)
           }
         } else if (request.command === 'monetizationStart') {

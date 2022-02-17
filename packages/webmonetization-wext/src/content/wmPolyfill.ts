@@ -5,7 +5,7 @@ const createBindingCode = (...events: string[]) => {
       e =>
         `document.monetization.addEventListener('${e}', ` +
         `(e) => console.log(
-           '%c Web-Monetization %s event:  %s',
+           '%c WM1 %s event:  %s',
            '${colorCode}',
            e.type,
            JSON.stringify(e.detail)) )

@@ -122,6 +122,7 @@ export class MonetizationService {
     const { tabId, frameId } = frame
     const { requestId } = request.data
 
+    this.assoc.addStreamId(frame, requestId)
     this.activeTabLogger.log(`startWM called with ${requestId}`, frame)
     this.tabStates.logLastMonetizationCommand(frame, 'start', request.data)
 
@@ -210,6 +211,11 @@ export class MonetizationService {
     // (which will update `whoami`) which takes longer than it does to switch
     // out a monetization tag.
 
+    this.activeTabLogger.log(
+      `lastCommand for requestId ${requestId} is ${lastCommand}`,
+      frame
+    )
+
     if (lastCommand === 'stop') {
       // The pending message (if sent) will have been ignored on the content
       // script side in this case too, so there's no need to send a stop, as
@@ -240,7 +246,6 @@ export class MonetizationService {
     this.log('starting stream', requestId)
     // We need to start this stream, even if we've already received a pause.
     // That way we can "resume" it later.
-    this.assoc.addStreamId(frame, requestId)
     this.streams.beginStream(requestId, {
       token,
       spspEndpoint,
@@ -362,10 +367,15 @@ export class MonetizationService {
   }
 
   stopWebMonetizationStream(requestId: string) {
-    this.streams.closeStream(requestId)
     const frame = this.assoc.getStreamFrame(requestId)
-    this.assoc.clearStreamFrameAndFromFrameSet(requestId)
+    this.activeTabLogger.log(
+      `stopWebMonetization called for ${requestId}`,
+      frame
+    )
     this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
+
+    this.streams.closeStream(requestId)
+    this.assoc.clearStreamFrameAndFromFrameSet(requestId)
     this.sendSetMonetizationStateMessage(frame, 'stopped', requestId)
     this.tabStates.reloadTabState({ from: 'stopWebMonetization' })
     return true
