@@ -44,9 +44,11 @@ const Input = styled('input')({
   fontFamily: 'CircularStd',
   fontWeight: 'bold',
   textAlign: 'center',
-  minWidth: '50px',
-  width: '50px',
+  minWidth: '38px',
+  width: '38px',
   maxWidth: '100%',
+  padding: '0px',
+  paddingBottom: '1px',
   transition: 'width 0s',
   color: Colors.Grey800,
   letterSpacing: '0px',
@@ -67,6 +69,7 @@ const Input = styled('input')({
 export const AmountInput = (): React.ReactElement => {
   const defaultFontSize = 64
   const characterSpacing = 0.6
+  const characterWidth = 40
   const maxAmountWidth = 160
   const [displayFontSize, setDisplayFontSize] =
     useState<number>(defaultFontSize)
@@ -94,9 +97,12 @@ export const AmountInput = (): React.ReactElement => {
       ''
     )
 
-    // set the value to min limit if input is less
-    if (Number(value) < minTipLimitAmountUsd) {
-      value = minTipLimitAmountUsd.toString()
+    // strip the values from the thousandths place if it exists
+    // doing this first so when the input display is set while typing it limits the user
+    if (value.includes('.')) {
+      if (value.split('.')[1].length > 2) {
+        value = value.slice(0, -1)
+      }
     }
 
     // set the value to max limit if input is greater
@@ -104,15 +110,13 @@ export const AmountInput = (): React.ReactElement => {
       value = maxAllowableTipAmountUsd.toString()
     }
 
-    // strip the values from the thousandths place if it exists
-    if (value.includes('.')) {
-      if (value.split('.')[1].length > 2) {
-        value = value.slice(0, -1)
-      }
+    // set the value to min limit if input is less
+    if (value !== '' && Number(value) < minTipLimitAmountUsd) {
+      value = minTipLimitAmountUsd.toString()
     }
 
     // Calculate and set the size of the input field based on the input
-    const newWidth = value.length * 40
+    const newWidth = value.length * characterWidth
     if (newWidth < maxAmountWidth) {
       e.target.style.width = `${newWidth}px`
     } else {
@@ -150,7 +154,7 @@ export const AmountInput = (): React.ReactElement => {
       inputRef.current.focus()
       // Make sure the input width is correct on focus.
       inputRef.current.style.width = `${
-        currentTipAmountUsd.toString().length * 40
+        currentTipAmountUsd.toString().length * characterWidth
       }px`
     }
   }, [isUserInput])
