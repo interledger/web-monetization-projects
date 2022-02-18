@@ -88,7 +88,7 @@ export const AmountInput = (): React.ReactElement => {
   // validates the manual input and updates the state with the current amount
   // Masks input value to ensure only value entries are displayed.
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value ?? ''
+    let value = e.target.value
 
     // ensure that the input is a valid number input
     // remove any alphabet, special characters, leading zero, leading decimal
@@ -112,7 +112,9 @@ export const AmountInput = (): React.ReactElement => {
 
     // set the display value on the input for while the user is typing
     // setting before the min limit so the user can clear out the first digit
-    inputRef.current.value = value
+    if (inputRef.current) {
+      inputRef.current.value = value
+    }
 
     // set the value to min limit if input is less
     if (Number(value) < minTipLimitAmountUsd) {
