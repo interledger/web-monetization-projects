@@ -38,9 +38,7 @@ export async function tip(
   const code = tip?.code
   if (!success) {
     const errorMsg =
-      tip.message && tip.message !== ''
-        ? tip.message
-        : `graphql query failed. status=${code} query=\`${tipQuery}\``
+      tip.message && tip.message !== '' ? tip.message : 'Something went wrong'
     throw new Error(errorMsg)
   }
 
