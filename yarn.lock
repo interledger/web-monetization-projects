@@ -46,9 +46,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.17.4, @babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0":
-  version: 7.17.4
-  resolution: "@babel/core@npm:7.17.4"
+"@babel/core@npm:7.17.5, @babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0":
+  version: 7.17.5
+  resolution: "@babel/core@npm:7.17.5"
   dependencies:
     "@ampproject/remapping": ^2.1.0
     "@babel/code-frame": ^7.16.7
@@ -65,7 +65,7 @@ __metadata:
     gensync: ^1.0.0-beta.2
     json5: ^2.1.2
     semver: ^6.3.0
-  checksum: d367259b188fde69493fea407a1c134d6bb7a0d859cbe2c0f0d1f2464143bdee0fdfd3c8d45a2cdabdf321b95dd392cbc4f55e2d0c41a842a581d37fee4cef64
+  checksum: c5e7dddb4feaacb91175d22a6edc8e93804242328a82b80732c6e84a0647bc0a9c9d5b05f3ce13138b8e59bf7aba4ff9f7b7446302f141f243ba51df02c318a5
   languageName: node
   linkType: hard
 
@@ -1424,7 +1424,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1482,7 +1482,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1539,7 +1539,7 @@ __metadata:
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
     "@abraham/reflection": ^0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1634,7 +1634,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1692,7 +1692,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1758,7 +1758,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1810,7 +1810,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1869,7 +1869,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1930,7 +1930,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1990,7 +1990,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -2279,7 +2279,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -2330,7 +2330,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -2469,7 +2469,7 @@ __metadata:
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
     "@abraham/reflection": ^0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -4020,7 +4020,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5040,7 +5040,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5103,7 +5103,7 @@ __metadata:
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
     "@abraham/reflection": ^0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5180,7 +5180,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5236,7 +5236,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5292,7 +5292,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5356,7 +5356,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5408,7 +5408,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -22749,7 +22749,7 @@ sjcl@sublimator/sjcl:
   version: 0.0.0-use.local
   resolution: "web-monetization@workspace:."
   dependencies:
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
