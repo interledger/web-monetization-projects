@@ -19,7 +19,8 @@ When releasing, we can copy this markdown into the PR for a release.
 - [ ] Update the [CHANGELOG.md](../CHANGELOG.md)
 
   - You can compare with latest commit before tagging via something like:
-    `https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.48...8f359e45f843a4f9a01c090a02e73519413d900b`
+    `https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.56...main`
+    (substitute release branch name for "main")
 
 ### Zipping Extension Source Files
 
@@ -131,7 +132,7 @@ make sense.
       starts. Should show 'setting up payment' then 'coil is paying creator'
       [#120][i120]
 
-- [ ] Open the [reloading-every-15s.html](../test/fixtures/reloading-every-15s.html) file:
+- [ ] Open the [reloading-every-15s.html](http://localhost:4000/reloading-every-15s.html) file:
 
   - Use a localhost server so WM works (e.g. with `yarn serve:fixtures`)
   - Open the developer tools console undocked so can view while **PAGE IS BACKGROUNDED**
