@@ -22,9 +22,7 @@ import {
   SetMonetizationState,
   SetStreamControls,
   StartWebMonetization,
-  TipSent,
-  ToBackgroundMessage,
-  AssociatePaymentPointer
+  ToBackgroundMessage
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
 import { TabState } from '../../types/TabState'
@@ -42,7 +40,6 @@ import { YoutubeService } from './YoutubeService'
 import { BackgroundFramesService } from './BackgroundFramesService'
 import { TippingService } from './TippingService'
 import { StreamAssociations } from './StreamAssociations'
-import { PaymentPointerAssociations } from './PaymentPointerAssociations'
 import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
@@ -51,8 +48,7 @@ import MessageSender = chrome.runtime.MessageSender
 export class BackgroundScript {
   constructor(
     private popup: PopupBrowserAction,
-    private streamAssoc: StreamAssociations,
-    private pointerAssoc: PaymentPointerAssociations,
+    private assoc: StreamAssociations,
     private streams: Streams,
     private tabStates: TabStates,
     private storage: StorageService,
@@ -216,7 +212,6 @@ export class BackgroundScript {
 
       // clean up the stream of that tab
       this._closeStreams(tabId)
-      this._clearPaymentPointers(tabId)
     })
 
     if (this.buildConfig.logTabsApiEvents) {
@@ -244,7 +239,6 @@ export class BackgroundScript {
     this.framesService.on('frameRemoved', event => {
       this.tabStates.clearFrame(event)
       this._closeStreams(event.tabId, event.frameId)
-      this._clearPaymentPointers(event.tabId, event.frameId)
     })
   }
 
@@ -295,7 +289,7 @@ export class BackgroundScript {
   private routeStreamsMoneyEventsToContentScript() {
     // pass stream monetization events to the correct tab
     this.streams.on('money', (details: StreamMoneyEvent) => {
-      const frame = this.streamAssoc.getFrame(details.requestId)
+      const frame = this.assoc.getFrame(details.requestId)
       const { tabId, frameId } = frame
       if (details.packetNumber === 0) {
         const message: MonetizationStart = {
@@ -455,14 +449,6 @@ export class BackgroundScript {
         break
       case 'adaptedPageDetails':
         sendResponse(await this.adaptedPageDetails(request.data))
-        break
-      case 'associatePaymentPointer':
-        this.associatePaymentPointer(request, sender)
-        sendResponse(true)
-        break
-      case 'dissociatePaymentPointer':
-        this.dissociatePaymentPointer(sender)
-        sendResponse(true)
         break
       default:
         sendResponse(false)
@@ -668,6 +654,9 @@ export class BackgroundScript {
     const { requestId } = request.data
 
     this.activeTabLogger.log(`startWM called with ${requestId}`, frame)
+    this.tabStates.setFrame(frame, {
+      paymentPointer: request.data.paymentPointer
+    })
     this.tabStates.logLastMonetizationCommand(frame, 'start', requestId)
 
     // This used to be sent from content script as a separate message
@@ -780,8 +769,8 @@ export class BackgroundScript {
     this.log('starting stream', requestId)
     // We need to start this stream, even if we've already received a pause.
     // That way we can "resume" it later.
-    this.streamAssoc.setStreamId(frame, requestId)
-    this.streamAssoc.setFrame(requestId, { tabId, frameId })
+    this.assoc.setStreamId(frame, requestId)
+    this.assoc.setFrame(requestId, { tabId, frameId })
     this.streams.beginStream(requestId, {
       token,
       spspEndpoint,
@@ -798,9 +787,13 @@ export class BackgroundScript {
     return true
   }
 
+  /**
+   * We can't allow these tip without an active stream because of the way
+   * the tip events are using the destination currency.
+   */
   async sendTip() {
     const tabId = this.activeTab
-    const streamId = this.streamAssoc.getStreamId({ tabId, frameId: 0 })
+    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
 
     if (!streamId) return { success: false }
 
@@ -843,21 +836,19 @@ export class BackgroundScript {
     tip: number
   ): Promise<{ success: boolean; message: string }> {
     const tabId = this.activeTab
-    const paymentPointer = this.pointerAssoc.getPaymentPointer({
-      tabId,
-      frameId: 0
-    })
+    const frame = { tabId, frameId: 0 }
+    const receiver = this.tabStates.getFrameOrDefault(frame).paymentPointer
 
-    if (!paymentPointer)
+    if (!receiver)
       return { success: false, message: 'No payment pointer found' }
 
     try {
       const token = this.auth.getStoredToken()
       if (!token) return { success: false, message: 'No token found' }
       const tipResult = await this.tippingService.tip(
-        tabId,
         tip,
-        paymentPointer,
+        tabId,
+        receiver,
         token
       )
       if (tipResult.success) {
@@ -877,22 +868,25 @@ export class BackgroundScript {
     message: string
   }> {
     const tabId = this.activeTab
-    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
+    const paymentPointer = this.tabStates.getFrameOrDefault({
+      tabId,
+      frameId: 0
+    }).paymentPointer
 
-    if (!streamId) return { success: false, message: 'No stream found' }
+    if (!paymentPointer)
+      return { success: false, message: 'No paymentPointer found' }
 
     try {
       const token = this.auth.getStoredToken()
       if (!token) return { success: false, message: 'No token found' }
-      const updateResult = await this.tippingService.updateTipSettings(token)
-      return updateResult
+      return await this.tippingService.updateTipSettings(token)
     } catch (e) {
       return { success: false, message: e.message }
     }
   }
 
   private doPauseWebMonetization(frame: FrameSpec, requestId?: string) {
-    const id = requestId ?? this.streamAssoc.getStreamId(frame)
+    const id = requestId ?? this.assoc.getStreamId(frame)
     if (id) {
       this.tabStates.logLastMonetizationCommand(frame, 'pause', id)
       this.log('pausing stream', id)
@@ -903,7 +897,7 @@ export class BackgroundScript {
   }
 
   private doResumeWebMonetization(frame: FrameSpec, requestId?: string) {
-    const id = requestId ?? this.streamAssoc.getStreamId(frame)
+    const id = requestId ?? this.assoc.getStreamId(frame)
     if (id) {
       this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
       this.log('resuming stream', id)
@@ -938,7 +932,7 @@ export class BackgroundScript {
   private handleStreamsAbortEvent() {
     this.streams.on('abort', requestId => {
       this.log('aborting monetization request', requestId)
-      const frame = this.streamAssoc.getFrame(requestId)
+      const frame = this.assoc.getFrame(requestId)
       if (frame) {
         this.doStopWebMonetization(frame)
       }
@@ -950,7 +944,9 @@ export class BackgroundScript {
   }
 
   private doStopWebMonetization(frame: FrameSpec) {
-    const requestId = this.streamAssoc.getStreamId(frame)
+    this.tabStates.setFrame(frame, { paymentPointer: undefined })
+
+    const requestId = this.assoc.getStreamId(frame)
     if (requestId) {
       this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
     }
@@ -976,8 +972,7 @@ export class BackgroundScript {
       command: 'setMonetizationState',
       data: {
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        requestId: (this.streamAssoc.getStreamId({ tabId, frameId }) ??
-          requestId)!,
+        requestId: (this.assoc.getStreamId({ tabId, frameId }) ?? requestId)!,
         state
       }
     }
@@ -985,7 +980,7 @@ export class BackgroundScript {
   }
 
   _closeStreams(tabId: number, frameId?: number) {
-    const streamIds = this.streamAssoc.getTabStreams(tabId)
+    const streamIds = this.assoc.getTabStreams(tabId)
     const haveFrameId = typeof frameId !== 'undefined'
 
     let closed = 0
@@ -997,28 +992,16 @@ export class BackgroundScript {
 
         this.log('closing stream with id', streamId)
         this.streams.closeStream(streamId)
-        this.streamAssoc.clearFrame(streamId)
+        this.assoc.clearFrame(streamId)
         closed++
       })
       if (haveFrameId) {
-        this.streamAssoc.clearStream({ tabId, frameId: frameId as number })
+        this.assoc.clearStream({ tabId, frameId: frameId as number })
       } else {
-        this.streamAssoc.clearTabStreams(tabId)
+        this.assoc.clearTabStreams(tabId)
       }
     }
     return !!closed
-  }
-
-  _clearPaymentPointers(tabId: number, frameId?: number) {
-    const haveFrameId = typeof frameId !== 'undefined'
-    if (haveFrameId) {
-      this.pointerAssoc.clearPaymentPointer({
-        tabId,
-        frameId: frameId as number
-      })
-    } else {
-      this.pointerAssoc.clearTabPaymentPointers(tabId)
-    }
   }
 
   // This feature is no longer used
@@ -1032,7 +1015,7 @@ export class BackgroundScript {
     for (const tabId of this.tabStates.tabKeys()) {
       // Make a copy as _closeStreams mutates and we want to actually close
       // the streams before we set the state to stopped.
-      const requestIds = { ...this.streamAssoc.getTabStreams(tabId) }
+      const requestIds = { ...this.assoc.getTabStreams(tabId) }
       this._closeStreams(tabId)
       this.tabStates.clear(tabId)
       Object.entries(requestIds).forEach(([frameId, requestId]) => {
@@ -1089,7 +1072,6 @@ export class BackgroundScript {
     // Content script used to send a stopWebMonetization message every time
     // it loaded. Noop if no stream for tab.
     this._closeStreams(tabId, frameId)
-    this._clearPaymentPointers(tabId, frameId)
     this.tabStates.clearFrame(spec)
     this.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
@@ -1121,24 +1103,5 @@ export class BackgroundScript {
         }
       })
     }
-  }
-
-  // Payment Pointer Management
-  associatePaymentPointer(
-    request: AssociatePaymentPointer,
-    sender: MessageSender
-  ) {
-    const { tabId, frameId } = getFrameSpec(sender)
-    this.pointerAssoc.setPaymentPointer(
-      { tabId, frameId },
-      request.data.paymentPointer
-    )
-    return true
-  }
-
-  dissociatePaymentPointer(sender: MessageSender) {
-    const { tabId, frameId } = getFrameSpec(sender)
-    this.pointerAssoc.clearPaymentPointer({ tabId, frameId })
-    return true
   }
 }

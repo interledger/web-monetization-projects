@@ -140,11 +140,16 @@ export class TippingService extends EventEmitter {
   }
 
   public async tip(
-    tabId: number,
     tip: number,
+    tabId: number,
     receiver: string,
     token: string
   ): Promise<{ code: string; message: string; success: boolean }> {
+    if (!receiver) {
+      this.log('can not find top frame for tabId=%d', tabId)
+      throw new Error('Stream was undefined')
+    }
+
     if (!token) {
       this.log('tip: no token. !!token', !!token)
       throw new Error('Token was undefined')
@@ -153,9 +158,6 @@ export class TippingService extends EventEmitter {
     // Set tip amount
     const CENTS = 100
     const tipAmountCents = Math.floor(tip * CENTS).toString()
-    const tipAmountNanoUSD = Math.floor(
-      Number(tipAmountCents) * 10 ** 7
-    ).toString()
 
     // Set active tab url
     const frameId = 0
