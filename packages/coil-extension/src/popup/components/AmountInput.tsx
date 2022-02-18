@@ -91,9 +91,9 @@ export const AmountInput = (): React.ReactElement => {
     let value = e.target.value ?? ''
 
     // ensure that the input is a valid number input
-    // remove any alphabet or special characters
+    // remove any alphabet, special characters, leading zero, leading decimal
     value = value.replace(
-      /(^\.)|([a-zA-Z\s])|([!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|(?<=\..*)\.|/gm,
+      /(^[0])|(^\.)|([a-zA-Z\s])|([!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|(?<=\..*)\.|/gm,
       ''
     )
 
@@ -110,8 +110,12 @@ export const AmountInput = (): React.ReactElement => {
       value = maxAllowableTipAmountUsd.toString()
     }
 
+    // set the display value on the input for while the user is typing
+    // setting before the min limit so the user can clear out the first digit
+    inputRef.current.value = value
+
     // set the value to min limit if input is less
-    if (value !== '' && Number(value) < minTipLimitAmountUsd) {
+    if (Number(value) < minTipLimitAmountUsd) {
       value = minTipLimitAmountUsd.toString()
     }
 
@@ -123,8 +127,6 @@ export const AmountInput = (): React.ReactElement => {
       e.target.style.width = `${maxAmountWidth}px`
     }
 
-    // set the display value on the input for while the user is typing
-    inputRef.current.value = value
     // update state for the actual current tip amount
     setCurrentTipAmountUsd(Number(value))
   }
