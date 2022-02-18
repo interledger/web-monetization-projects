@@ -22,7 +22,6 @@ import {
   SetMonetizationState,
   SetStreamControls,
   StartWebMonetization,
-  TipSent,
   ToBackgroundMessage
 } from '../../types/commands'
 import { LocalStorageProxy } from '../../types/storage'
@@ -655,6 +654,9 @@ export class BackgroundScript {
     const { requestId } = request.data
 
     this.activeTabLogger.log(`startWM called with ${requestId}`, frame)
+    this.tabStates.setFrame(frame, {
+      paymentPointer: request.data.paymentPointer
+    })
     this.tabStates.logLastMonetizationCommand(frame, 'start', requestId)
 
     // This used to be sent from content script as a separate message
@@ -785,6 +787,10 @@ export class BackgroundScript {
     return true
   }
 
+  /**
+   * We can't allow these tip without an active stream because of the way
+   * the tip events are using the destination currency.
+   */
   async sendTip() {
     const tabId = this.activeTab
     const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
@@ -830,9 +836,11 @@ export class BackgroundScript {
     tip: number
   ): Promise<{ success: boolean; message: string }> {
     const tabId = this.activeTab
-    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
+    const frame = { tabId, frameId: 0 }
+    const receiver = this.tabStates.getFrameOrDefault(frame).paymentPointer
 
-    if (!streamId) return { success: false, message: 'No stream found' }
+    if (!receiver)
+      return { success: false, message: 'No payment pointer found' }
 
     try {
       const token = this.auth.getStoredToken()
@@ -840,7 +848,7 @@ export class BackgroundScript {
       const tipResult = await this.tippingService.tip(
         tip,
         tabId,
-        this.streams.getStream(streamId),
+        receiver,
         token
       )
       if (tipResult.success) {
@@ -860,15 +868,18 @@ export class BackgroundScript {
     message: string
   }> {
     const tabId = this.activeTab
-    const streamId = this.assoc.getStreamId({ tabId, frameId: 0 })
+    const paymentPointer = this.tabStates.getFrameOrDefault({
+      tabId,
+      frameId: 0
+    }).paymentPointer
 
-    if (!streamId) return { success: false, message: 'No stream found' }
+    if (!paymentPointer)
+      return { success: false, message: 'No paymentPointer found' }
 
     try {
       const token = this.auth.getStoredToken()
       if (!token) return { success: false, message: 'No token found' }
-      const updateResult = await this.tippingService.updateTipSettings(token)
-      return updateResult
+      return await this.tippingService.updateTipSettings(token)
     } catch (e) {
       return { success: false, message: e.message }
     }
@@ -933,6 +944,8 @@ export class BackgroundScript {
   }
 
   private doStopWebMonetization(frame: FrameSpec) {
+    this.tabStates.setFrame(frame, { paymentPointer: undefined })
+
     const requestId = this.assoc.getStreamId(frame)
     if (requestId) {
       this.tabStates.logLastMonetizationCommand(frame, 'stop', requestId)
