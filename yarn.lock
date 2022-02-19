@@ -1444,7 +1444,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1501,7 +1501,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1583,7 +1583,7 @@ __metadata:
     crx-hotreload: 1.0.6
     debug: ^4.3.1
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1652,7 +1652,7 @@ __metadata:
     copy-webpack-plugin: 9.1.0
     deepmerge: ^4.2.2
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1717,7 +1717,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1774,7 +1774,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1831,7 +1831,7 @@ __metadata:
     btoa: ^1.2.1
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1891,7 +1891,7 @@ __metadata:
     copy-webpack-plugin: 9.1.0
     debug: ^4.3.1
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1949,7 +1949,7 @@ __metadata:
     copy-webpack-plugin: 9.1.0
     crypto-browserify: ^3.12.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -2007,7 +2007,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -2295,7 +2295,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -2347,7 +2347,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -2500,7 +2500,7 @@ __metadata:
     css-loader: 6.6.0
     debug: ^4.3.1
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -4036,7 +4036,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5061,7 +5061,7 @@ __metadata:
     crx-hotreload: ^1.0.6
     crypto-browserify: ^3.12.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5131,7 +5131,7 @@ __metadata:
     body-parser: ^1.19.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5198,7 +5198,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5255,7 +5255,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5316,7 +5316,7 @@ __metadata:
     ajv: ^8.6.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5372,7 +5372,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5427,7 +5427,7 @@ __metadata:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -10194,14 +10194,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:8.3.0":
-  version: 8.3.0
-  resolution: "eslint-config-prettier@npm:8.3.0"
+"eslint-config-prettier@npm:8.4.0":
+  version: 8.4.0
+  resolution: "eslint-config-prettier@npm:8.4.0"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
     eslint-config-prettier: bin/cli.js
-  checksum: df4cea3032671995bb5ab07e016169072f7fa59f44a53251664d9ca60951b66cdc872683b5c6a3729c91497c11490ca44a79654b395dd6756beb0c3903a37196
+  checksum: ee8dc343f1fed15dc0658e190a966cc23644477f2331a7f56ae2bb79dd74892e3cde8ea5c142e7a3329a8291a1de041e13ca96e54d0c85ff4a2aba13390c5f10
   languageName: node
   linkType: hard
 
@@ -22765,7 +22765,7 @@ sjcl@sublimator/sjcl:
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
