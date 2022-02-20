@@ -36,7 +36,7 @@
     "verifier:dev": "ts-node -r tsconfig-paths/register -P test/tsconfig.json --transpile-only src/verifier/main.ts"
   },
   "dependencies": {
-    "@abraham/reflection": "^0.8.0",
+    "@abraham/reflection": "^0.9.0",
     "@webmonetization/react": "0.0.12",
     "@webmonetization/types": "0.0.0",
     "body-parser": "^1.19.0",

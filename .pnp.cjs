@@ -189,10 +189,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@abraham/reflection", [
-        ["npm:0.8.0", {
-          "packageLocation": "./.yarn/cache/@abraham-reflection-npm-0.8.0-8244c45c6e-2e0de7da4a.zip/node_modules/@abraham/reflection/",
+        ["npm:0.9.1", {
+          "packageLocation": "./.yarn/cache/@abraham-reflection-npm-0.9.1-124bbf4149-589ae6a740.zip/node_modules/@abraham/reflection/",
           "packageDependencies": [
-            ["@abraham/reflection", "npm:0.8.0"]
+            ["@abraham/reflection", "npm:0.9.1"]
           ],
           "linkType": "HARD",
         }]
@@ -2853,7 +2853,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/coil-extension/",
           "packageDependencies": [
             ["@coil/extension", "workspace:packages/coil-extension"],
-            ["@abraham/reflection", "npm:0.8.0"],
+            ["@abraham/reflection", "npm:0.9.1"],
             ["@babel/core", "npm:7.17.5"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.7"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.17.2"],
@@ -3851,7 +3851,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/interledger-minute-extension/",
           "packageDependencies": [
             ["@interledger/minute-extension", "workspace:packages/interledger-minute-extension"],
-            ["@abraham/reflection", "npm:0.8.0"],
+            ["@abraham/reflection", "npm:0.9.1"],
             ["@babel/core", "npm:7.17.5"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.7"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.17.2"],
@@ -6951,7 +6951,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/webmonetization-demo/",
           "packageDependencies": [
             ["@webmonetization/demo", "workspace:packages/webmonetization-demo"],
-            ["@abraham/reflection", "npm:0.8.0"],
+            ["@abraham/reflection", "npm:0.9.1"],
             ["@babel/core", "npm:7.17.5"],
             ["@babel/plugin-proposal-class-properties", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.16.7"],
             ["@babel/plugin-proposal-decorators", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.17.2"],
