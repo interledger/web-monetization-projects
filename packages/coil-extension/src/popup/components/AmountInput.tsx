@@ -32,7 +32,6 @@ const InputWrapper = styled('div')(({ size }: { size: number }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-
   '& > *': {
     fontSize: `${size}px`,
     fontWeight: 'bold',
@@ -45,9 +44,11 @@ const Input = styled('input')({
   fontFamily: 'CircularStd',
   fontWeight: 'bold',
   textAlign: 'center',
-  minWidth: '50px',
-  width: '50px',
+  minWidth: '38px',
+  width: '38px',
   maxWidth: '100%',
+  padding: '0px',
+  paddingBottom: '1px',
   transition: 'width 0s',
   color: Colors.Grey800,
   letterSpacing: '0px',
@@ -68,6 +69,7 @@ const Input = styled('input')({
 export const AmountInput = (): React.ReactElement => {
   const defaultFontSize = 64
   const characterSpacing = 0.6
+  const characterWidth = 40
   const maxAmountWidth = 160
   const [displayFontSize, setDisplayFontSize] =
     useState<number>(defaultFontSize)
@@ -83,73 +85,52 @@ export const AmountInput = (): React.ReactElement => {
     maxAllowableTipAmountUsd
   } = useTip()
 
-  // set focus to the input field when it loads. Cannot use 'autoFocus' because eslint-plugin-jsx-a11y
-  useEffect(() => {
-    if (isUserInput && inputRef.current) {
-      inputRef.current.focus()
-      // Make sure the input width is correct on focus.
-      inputRef.current.style.width = `${
-        currentTipAmountUsd.toString().length * 40
-      }px`
-    }
-  }, [isUserInput])
-
-  // adjust the amount displayed font size
-  useEffect(() => {
-    handleAdjustFontSize(currentTipAmountUsd)
-  }, [currentTipAmountUsd])
-
   // validates the manual input and updates the state with the current amount
+  // Masks input value to ensure only value entries are displayed.
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // Mask input value to ensure only digits.
+    let value = e.target.value
+
     // ensure that the input is a valid number input
-    const re = new RegExp('^[0-9]*.?[0-9]{0,2}$')
-    if (re.test(e.target.value) == false) {
-      e.target.value = e.target.value.slice(0, -1)
-      return
-    }
+    // remove any alphabet, special characters, leading zero, leading decimal
+    value = value.replace(
+      /(^[0])|(^\.)|([a-zA-Z\s])|([!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|(?<=\..*)\.|/gm,
+      ''
+    )
 
-    // check to see if the current value ends with a decimal so we can calculate the container width including the decimal
-    // doing this here because once we change from string to number we lose the proper character count
-    // this is all done for the instances when someone is in the process of typing a fractional amount and the last character was the '.'
-    let containsDecimal = false
-    if (e.target.value.toString().includes('.')) {
-      containsDecimal = true
-    }
-
-    // handle if the value is below the minimum
-    let value = Number(e.target.value)
-    if (value < minTipLimitAmountUsd || isNaN(value)) {
-      value = minTipLimitAmountUsd
-    }
-
-    // handle if the input is higher than the remaining daily limit
-    if (value > maxAllowableTipAmountUsd) {
-      value = maxAllowableTipAmountUsd
-      if (isUserInput && inputRef.current) {
-        inputRef.current.value = value.toString()
+    // strip the values from the thousandths place if it exists
+    // doing this first so when the input display is set while typing it limits the user
+    if (value.includes('.')) {
+      if (value.split('.')[1].length > 2) {
+        value = value.slice(0, -1)
       }
     }
 
-    // set the value length if it is a demical number
-    // calculate with an additional characters if there is a trailing period
-    let valueLength: number
-    if (containsDecimal) {
-      valueLength = value.toFixed(2).length
-    } else {
-      valueLength = value.toString().length
+    // set the value to max limit if input is greater
+    if (Number(value) > maxAllowableTipAmountUsd) {
+      value = maxAllowableTipAmountUsd.toString()
     }
 
-    const newWidth = valueLength * 40
+    // set the display value on the input for while the user is typing
+    // setting before the min limit so the user can clear out the first digit
+    if (inputRef.current) {
+      inputRef.current.value = value
+    }
 
+    // set the value to min limit if input is less
+    if (Number(value) < minTipLimitAmountUsd) {
+      value = minTipLimitAmountUsd.toString()
+    }
+
+    // Calculate and set the size of the input field based on the input
+    const newWidth = value.length * characterWidth
     if (newWidth < maxAmountWidth) {
       e.target.style.width = `${newWidth}px`
     } else {
       e.target.style.width = `${maxAmountWidth}px`
     }
 
-    // update state
-    setCurrentTipAmountUsd(value)
+    // update state for the actual current tip amount
+    setCurrentTipAmountUsd(Number(value))
   }
 
   // updates the display font size in order to keep the font size within it's container
@@ -170,6 +151,22 @@ export const AmountInput = (): React.ReactElement => {
     }
     setDisplayFontSize(newFontSize)
   }
+
+  // set focus to the input field when it loads. Cannot use 'autoFocus' because eslint-plugin-jsx-a11y
+  useEffect(() => {
+    if (isUserInput && inputRef.current) {
+      inputRef.current.focus()
+      // Make sure the input width is correct on focus.
+      inputRef.current.style.width = `${
+        currentTipAmountUsd.toString().length * characterWidth
+      }px`
+    }
+  }, [isUserInput])
+
+  // adjust the amount displayed font size
+  useEffect(() => {
+    handleAdjustFontSize(currentTipAmountUsd)
+  }, [currentTipAmountUsd])
 
   return (
     <CurrentAmountWrapper>

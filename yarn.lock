@@ -46,9 +46,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.17.4, @babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0":
-  version: 7.17.4
-  resolution: "@babel/core@npm:7.17.4"
+"@babel/core@npm:7.17.5, @babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0":
+  version: 7.17.5
+  resolution: "@babel/core@npm:7.17.5"
   dependencies:
     "@ampproject/remapping": ^2.1.0
     "@babel/code-frame": ^7.16.7
@@ -65,7 +65,7 @@ __metadata:
     gensync: ^1.0.0-beta.2
     json5: ^2.1.2
     semver: ^6.3.0
-  checksum: d367259b188fde69493fea407a1c134d6bb7a0d859cbe2c0f0d1f2464143bdee0fdfd3c8d45a2cdabdf321b95dd392cbc4f55e2d0c41a842a581d37fee4cef64
+  checksum: c5e7dddb4feaacb91175d22a6edc8e93804242328a82b80732c6e84a0647bc0a9c9d5b05f3ce13138b8e59bf7aba4ff9f7b7446302f141f243ba51df02c318a5
   languageName: node
   linkType: hard
 
@@ -1425,7 +1425,7 @@ __metadata:
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1448,7 +1448,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1475,7 +1475,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -1488,7 +1488,7 @@ __metadata:
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1510,7 +1510,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1536,7 +1536,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -1549,7 +1549,7 @@ __metadata:
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1597,7 +1597,7 @@ __metadata:
     crx-hotreload: 1.0.6
     debug: ^4.3.1
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1637,7 +1637,7 @@ __metadata:
     typescript: 4.5.5
     uuid: ^8.3.2
     web-ext: 6.7.0
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -1650,7 +1650,7 @@ __metadata:
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1671,7 +1671,7 @@ __metadata:
     copy-webpack-plugin: 9.1.0
     deepmerge: ^4.2.2
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1699,7 +1699,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -1713,7 +1713,7 @@ __metadata:
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1741,7 +1741,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1771,7 +1771,7 @@ __metadata:
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
     uuid: ^8.3.2
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -1784,7 +1784,7 @@ __metadata:
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1803,7 +1803,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1828,7 +1828,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -1841,7 +1841,7 @@ __metadata:
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1865,7 +1865,7 @@ __metadata:
     btoa: ^1.2.1
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1892,7 +1892,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -1905,7 +1905,7 @@ __metadata:
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1930,7 +1930,7 @@ __metadata:
     copy-webpack-plugin: 9.1.0
     debug: ^4.3.1
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -1958,7 +1958,7 @@ __metadata:
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
     web-ext: ^6.1.0
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -1971,7 +1971,7 @@ __metadata:
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -1993,7 +1993,7 @@ __metadata:
     copy-webpack-plugin: 9.1.0
     crypto-browserify: ^3.12.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -2023,7 +2023,7 @@ __metadata:
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
     util: ^0.12.4
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -2036,7 +2036,7 @@ __metadata:
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -2056,7 +2056,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -2080,7 +2080,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -2330,7 +2330,7 @@ __metadata:
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -2349,7 +2349,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -2373,7 +2373,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -2386,7 +2386,7 @@ __metadata:
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -2406,7 +2406,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -2431,7 +2431,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -2529,7 +2529,7 @@ __metadata:
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -2563,7 +2563,7 @@ __metadata:
     css-loader: 6.6.0
     debug: ^4.3.1
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -2599,7 +2599,7 @@ __metadata:
     typescript: 4.5.5
     uuid: ^8.3.2
     web-ext: 6.7.0
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -4110,7 +4110,7 @@ __metadata:
   resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -4129,7 +4129,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -4154,7 +4154,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -5286,7 +5286,7 @@ __metadata:
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5310,7 +5310,7 @@ __metadata:
     crx-hotreload: ^1.0.6
     crypto-browserify: ^3.12.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5340,7 +5340,7 @@ __metadata:
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
     util: ^0.12.4
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -5353,7 +5353,7 @@ __metadata:
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5384,7 +5384,7 @@ __metadata:
     body-parser: ^1.19.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5422,7 +5422,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -5435,7 +5435,7 @@ __metadata:
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5457,7 +5457,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5484,7 +5484,7 @@ __metadata:
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
     uuid: ^8.3.2
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -5497,7 +5497,7 @@ __metadata:
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5519,7 +5519,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5543,7 +5543,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -5558,7 +5558,7 @@ __metadata:
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5585,7 +5585,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5614,7 +5614,7 @@ __metadata:
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
     uuid: ^8.3.2
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -5627,7 +5627,7 @@ __metadata:
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5646,7 +5646,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5671,7 +5671,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -5684,7 +5684,7 @@ __metadata:
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -5706,7 +5706,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -5730,7 +5730,7 @@ __metadata:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -10169,7 +10169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.9.0":
+"enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.8.3":
   version: 5.9.0
   resolution: "enhanced-resolve@npm:5.9.0"
   dependencies:
@@ -10490,14 +10490,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:8.3.0":
-  version: 8.3.0
-  resolution: "eslint-config-prettier@npm:8.3.0"
+"eslint-config-prettier@npm:8.4.0":
+  version: 8.4.0
+  resolution: "eslint-config-prettier@npm:8.4.0"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
     eslint-config-prettier: bin/cli.js
-  checksum: df4cea3032671995bb5ab07e016169072f7fa59f44a53251664d9ca60951b66cdc872683b5c6a3729c91497c11490ca44a79654b395dd6756beb0c3903a37196
+  checksum: ee8dc343f1fed15dc0658e190a966cc23644477f2331a7f56ae2bb79dd74892e3cde8ea5c142e7a3329a8291a1de041e13ca96e54d0c85ff4a2aba13390c5f10
   languageName: node
   linkType: hard
 
@@ -23053,7 +23053,7 @@ sjcl@sublimator/sjcl:
   resolution: "web-monetization@workspace:."
   dependencies:
     "@abraham/reflection": 0.8.0
-    "@babel/core": 7.17.4
+    "@babel/core": 7.17.5
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.2
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
@@ -23072,7 +23072,7 @@ sjcl@sublimator/sjcl:
     babel-plugin-transform-typescript-metadata: 0.3.2
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
-    eslint-config-prettier: 8.3.0
+    eslint-config-prettier: 8.4.0
     eslint-import-resolver-node: 0.3.6
     eslint-plugin-import: 2.25.4
     eslint-plugin-jest: 26.1.1
@@ -23096,7 +23096,7 @@ sjcl@sublimator/sjcl:
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.12.0
     typescript: 4.5.5
-    webpack: 5.69.0
+    webpack: 5.69.1
     webpack-bundle-analyzer: 4.5.0
     webpack-cli: 4.9.2
     webpack-dev-server: 4.7.4
@@ -23261,9 +23261,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.69.0":
-  version: 5.69.0
-  resolution: "webpack@npm:5.69.0"
+"webpack@npm:5.69.1":
+  version: 5.69.1
+  resolution: "webpack@npm:5.69.1"
   dependencies:
     "@types/eslint-scope": ^3.7.3
     "@types/estree": ^0.0.51
@@ -23274,7 +23274,7 @@ sjcl@sublimator/sjcl:
     acorn-import-assertions: ^1.7.6
     browserslist: ^4.14.5
     chrome-trace-event: ^1.0.2
-    enhanced-resolve: ^5.9.0
+    enhanced-resolve: ^5.8.3
     es-module-lexer: ^0.9.0
     eslint-scope: 5.1.1
     events: ^3.2.0
@@ -23294,7 +23294,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 0b0fc2ffcb926fc7506ec56901ae9a69f1ae969a6afc63395a3ed56f938d385c1d16d1dea39fd56dbb9362189c05da49174219904e5a337040aed5a46080e926
+  checksum: 490a6e9e4cd9d0ed3b6c7ca08015da2628919fda8fcf9c36f0f6c0e3ad71eaaaf4b0d12753109f22a4faf79fe9a9063552d9708e0ee2352cf8568433b8e296a7
   languageName: node
   linkType: hard
 

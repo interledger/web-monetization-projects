@@ -470,17 +470,10 @@ export class BackgroundScript {
     this.api.tabs.sendMessage(frame.tabId, message, { frameId: parentId })
   }
 
-  // private async sendTip(): Promise<{ success: boolean }> {
-  //   const tabId = this.activeTab
-  //   const streamId = this.assoc.getStreams({ tabId, frameId: 0 })
-  //   if (!streamId.length) {
-  //     this.log('can not find top frame for tabId=%d', tabId)
-  //     return { success: false }
-  //   }
-  //   const stream = this.streams.getStream(streamId[0])
-  //   const token = this.auth.getStoredToken()
-  //
-
+  /**
+   * We can't allow these tip without an active stream because of the way
+   * the tip events are using the destination currency.
+   */
   async sendTip() {
     const tabId = this.activeTab
     const streamIds = this.assoc.getStreams({ tabId, frameId: 0 })
@@ -528,13 +521,11 @@ export class BackgroundScript {
     tip: number
   ): Promise<{ success: boolean; message: string }> {
     const tabId = this.activeTab
-    const streamIds = this.assoc.getStreams({ tabId, frameId: 0 })
-    if (!streamIds.length) {
-      this.log('can not find top frame for tabId=%d', tabId)
-      return { success: false, message: 'No stream found' }
-    }
+    const frame = { tabId, frameId: 0 }
+    const receiver = this.tabStates.getFrameOrDefault(frame).paymentPointer
 
-    const streamId = streamIds[0]
+    if (!receiver)
+      return { success: false, message: 'No payment pointer found' }
 
     try {
       const token = this.auth.getStoredToken()
@@ -542,7 +533,7 @@ export class BackgroundScript {
       const tipResult = await this.tippingService.tip(
         tip,
         tabId,
-        this.streams.getStream(streamId),
+        receiver,
         token
       )
       if (tipResult.success) {
@@ -562,15 +553,18 @@ export class BackgroundScript {
     message: string
   }> {
     const tabId = this.activeTab
-    const streams = this.assoc.getStreams({ tabId, frameId: 0 })
+    const paymentPointer = this.tabStates.getFrameOrDefault({
+      tabId,
+      frameId: 0
+    }).paymentPointer
 
-    if (!streams.length) return { success: false, message: 'No stream found' }
+    if (!paymentPointer)
+      return { success: false, message: 'No paymentPointer found' }
 
     try {
       const token = this.auth.getStoredToken()
       if (!token) return { success: false, message: 'No token found' }
-      const updateResult = await this.tippingService.updateTipSettings(token)
-      return updateResult
+      return await this.tippingService.updateTipSettings(token)
     } catch (e) {
       return { success: false, message: e.message }
     }

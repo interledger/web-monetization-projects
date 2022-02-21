@@ -7,6 +7,7 @@ export const MonetizationStateKey = `monetization-state-` as const
 export type MonetizationStateKeyType = typeof MonetizationStateKey
 
 export interface FrameState {
+  paymentPointer?: string
   adapted: boolean
   // Tracks the total amount of `source` money sent (not was received)
   [x: `${MonetizationStateKeyType}${string}`]:
