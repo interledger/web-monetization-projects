@@ -31,6 +31,17 @@ import { AdaptedContentService } from './AdaptedContentService'
 import { ContentAuthService } from './ContentAuthService'
 import { DebugService } from './DebugService'
 
+type DefaultView = WindowProxy & typeof globalThis
+type CloneInto = (obj: unknown, window: DefaultView | null) => typeof obj
+declare const cloneInto: CloneInto | undefined
+
+let cloneIntoRef: CloneInto | undefined
+try {
+  cloneIntoRef = cloneInto
+} catch (e) {
+  cloneIntoRef = undefined
+}
+
 function startWebMonetizationMessage(request?: PaymentDetails) {
   if (!request) {
     throw new Error(`Expecting request to be set`)
@@ -159,18 +170,22 @@ export class ContentScript {
           }
           this.monetization.dispatchMonetizationProgressEvent(detail)
           const data = request.data
+          const eventDetail = {
+            paymentPointer: data.paymentPointer,
+            receipt: data.receipt,
+            assetScale: data.assetScale,
+            assetCode: data.assetCode,
+            amount: data.amount
+          }
+          const firefoxProof = cloneIntoRef
+            ? cloneIntoRef(eventDetail, this.document.defaultView)
+            : eventDetail
           this.tagManager.dispatchEventByLinkId(
             data.requestId,
             new CustomEvent('monetization-v2', {
               bubbles: true,
               cancelable: false,
-              detail: {
-                paymentPointer: data.paymentPointer,
-                receipt: data.receipt,
-                assetScale: data.assetScale,
-                assetCode: data.assetCode,
-                amount: data.amount
-              }
+              detail: firefoxProof
             })
           )
         } else if (request.command === 'checkIFrameIsAllowedFromBackground') {
