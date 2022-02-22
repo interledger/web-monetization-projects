@@ -107,6 +107,7 @@ export const wmPolyFillMinimal = `
     Object.defineProperty(HTMLLinkElement.prototype, 'relList', relList)
     Object.defineProperty(HTMLElement.prototype, 'onmonetization', attributes)
     Object.defineProperty(Window.prototype, 'onmonetization', attributes)
+    Object.defineProperty(Document.prototype, 'onmonetization', attributes)
     dbg('setonmonetization property end')
     dbg('add coil-onmonetization-v2-attr-changed handler start')
 
