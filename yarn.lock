@@ -21,12 +21,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@arcanis/slice-ansi@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@arcanis/slice-ansi@npm:1.0.2"
+"@arcanis/slice-ansi@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@arcanis/slice-ansi@npm:1.1.1"
   dependencies:
     grapheme-splitter: ^1.0.4
-  checksum: b66e05fa25e42172a4f32aa8a5372203227f1b0e1c5d7879f45217a0fd0a5506a0f53f677ee532b8c92e53ce8404fdd60ba4cd83cfb806a19ad6472e6b75170b
+  checksum: 14ed60cb45750d386c64229ac7bab20e10eedc193503fa4decff764162d329d6d3363ed2cd3debec833186ee54affe4f824f6e8eff531295117fd1ebda200270
   languageName: node
   linkType: hard
 
@@ -1440,7 +1440,7 @@ __metadata:
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -1497,7 +1497,7 @@ __metadata:
     "@types/node-fetch": 2.6.1
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -1576,7 +1576,7 @@ __metadata:
     "@webmonetization/types": ^0.0.0
     "@webmonetization/wext": ^0.0.0
     "@wext/shipit": 0.2.1
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     addons-linter: 4.11.0
     copy-webpack-plugin: 9.1.0
@@ -1646,7 +1646,7 @@ __metadata:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-dir: ^1.3.0
     copy-webpack-plugin: 9.1.0
@@ -1713,7 +1713,7 @@ __metadata:
     "@typescript-eslint/parser": 5.12.0
     "@webmonetization/polyfill-utils": 0.0.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -1770,7 +1770,7 @@ __metadata:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -1824,7 +1824,7 @@ __metadata:
     "@types/sjcl": 1.0.30
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     asn1-parser: ^1.1.8
     atob: ^2.1.2
@@ -1886,7 +1886,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     debug: ^4.3.1
@@ -1942,7 +1942,7 @@ __metadata:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     assert: ^2.0.0
     buffer: ^6.0.3
@@ -2003,7 +2003,7 @@ __metadata:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -2291,7 +2291,7 @@ __metadata:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -2343,7 +2343,7 @@ __metadata:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -2492,7 +2492,7 @@ __metadata:
     "@webmonetization/polyfill-utils": ^0.0.0
     "@webmonetization/types": ^0.0.0
     "@webmonetization/wext": ^0.0.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     addons-linter: 4.11.0
     copy-webpack-plugin: 9.1.0
@@ -4032,7 +4032,7 @@ __metadata:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -5053,7 +5053,7 @@ __metadata:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     assert: ^2.0.0
     buffer: ^6.0.3
@@ -5126,7 +5126,7 @@ __metadata:
     "@typescript-eslint/parser": 5.12.0
     "@webmonetization/react": 0.0.12
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     body-parser: ^1.19.0
     copy-webpack-plugin: 9.1.0
@@ -5194,7 +5194,7 @@ __metadata:
     "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -5251,7 +5251,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -5311,7 +5311,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     ajv: ^8.6.0
     copy-webpack-plugin: 9.1.0
@@ -5368,7 +5368,7 @@ __metadata:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -5423,7 +5423,7 @@ __metadata:
     "@typescript-eslint/parser": 5.12.0
     "@webmonetization/polyfill-utils": 0.0.0
     "@webmonetization/types": 0.0.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
@@ -5545,23 +5545,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@yarnpkg/core@npm:3.1.0"
+"@yarnpkg/core@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@yarnpkg/core@npm:3.2.0"
   dependencies:
-    "@arcanis/slice-ansi": ^1.0.2
+    "@arcanis/slice-ansi": ^1.1.1
     "@types/semver": ^7.1.0
     "@types/treeify": ^1.0.0
-    "@yarnpkg/fslib": ^2.6.0
+    "@yarnpkg/fslib": ^2.6.1
     "@yarnpkg/json-proxy": ^2.1.1
-    "@yarnpkg/libzip": ^2.2.2
-    "@yarnpkg/parsers": ^2.4.1
-    "@yarnpkg/pnp": ^3.1.0
-    "@yarnpkg/shell": ^3.1.0
+    "@yarnpkg/libzip": ^2.2.3
+    "@yarnpkg/parsers": ^2.5.0
+    "@yarnpkg/pnp": ^3.2.0
+    "@yarnpkg/shell": ^3.2.0
     camelcase: ^5.3.1
     chalk: ^3.0.0
     ci-info: ^3.2.0
-    clipanion: ^3.0.1
+    clipanion: ^3.2.0-rc.4
     cross-spawn: 7.0.3
     diff: ^4.0.1
     globby: ^11.0.1
@@ -5571,7 +5571,6 @@ __metadata:
     micromatch: ^4.0.2
     mkdirp: ^0.5.1
     p-limit: ^2.2.0
-    p-queue: ^6.0.0
     pluralize: ^7.0.0
     pretty-bytes: ^5.1.0
     semver: ^7.1.2
@@ -5582,17 +5581,17 @@ __metadata:
     treeify: ^1.1.0
     tslib: ^1.13.0
     tunnel: ^0.0.6
-  checksum: d608f3da5e1f164b147de129a091d1a78d221278af6bedae842aebd09a48ddb4349f0dd752a695704ca7fd404760b768945f3509cd190dd3a79fecded29b88c0
+  checksum: a56839f157dd8239ff61f72eb938d03981ceb74a651593a4f6a2df5176512308d65debf171c0883704952db6035482cec2d571abd23d05fbb60ff27c74220eac
   languageName: node
   linkType: hard
 
-"@yarnpkg/fslib@npm:^2.5.0, @yarnpkg/fslib@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "@yarnpkg/fslib@npm:2.6.0"
+"@yarnpkg/fslib@npm:^2.5.0, @yarnpkg/fslib@npm:^2.6.1":
+  version: 2.6.1
+  resolution: "@yarnpkg/fslib@npm:2.6.1"
   dependencies:
-    "@yarnpkg/libzip": ^2.2.2
+    "@yarnpkg/libzip": ^2.2.3
     tslib: ^1.13.0
-  checksum: 4affa8fbd48a91236708ea486bee78ec208cdcdca867fccdb55ead1a0791adb1405b798dc4c16a6accf71c83effaecfb06c7e869972dd900eb063d8660766709
+  checksum: e3bbd796a1c586372807da07207230c89901519e53a991b95c070cae59f570ac9617368713e9e83e77c4507d602e21ce026cc15fc70eb171d3477c5bcbbbf60e
   languageName: node
   linkType: hard
 
@@ -5606,72 +5605,70 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/libzip@npm:^2.2.2":
-  version: 2.2.2
-  resolution: "@yarnpkg/libzip@npm:2.2.2"
+"@yarnpkg/libzip@npm:^2.2.3":
+  version: 2.2.4
+  resolution: "@yarnpkg/libzip@npm:2.2.4"
   dependencies:
     "@types/emscripten": ^1.38.0
     tslib: ^1.13.0
-  checksum: 7c09b13fdea1aa35959f3d8a17341ea3abc7b9708b731cff126c361582148a97555cda865bf0aaaefafae22bfeb95df218bd20ad1565ced68cc95402e554659f
+  checksum: 974a286d4e7ff52bd924d56cb39492898a2306e95774362e4a3eb94690f180273a078243bf4044909e0fe29354552acc1cddd7d10d71ce332f7b1e1ff8eb54d9
   languageName: node
   linkType: hard
 
-"@yarnpkg/nm@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@yarnpkg/nm@npm:3.0.0"
+"@yarnpkg/nm@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@yarnpkg/nm@npm:3.0.1"
   dependencies:
-    "@yarnpkg/core": ^3.1.0
-    "@yarnpkg/fslib": ^2.6.0
-  checksum: f1c3ad2688b3b035fd37697faa17c4676372c6ba2c718fbd8c9f3c1679fe18adfb5e5b10dcc193b728c1c9f5b4251da76c89d0c1d1413d627c9de86a0c33c68b
+    "@yarnpkg/core": ^3.2.0
+    "@yarnpkg/fslib": ^2.6.1
+  checksum: bc39d07b4f2715bb114e3290d11cec71baadce2f2b4d0d0f3058eba154b62bf8a954fa57df4b9018dc5bdc12ab58e90822b6b67f8ed9fd13565b0b8acf56acd8
   languageName: node
   linkType: hard
 
-"@yarnpkg/parsers@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "@yarnpkg/parsers@npm:2.4.1"
+"@yarnpkg/parsers@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "@yarnpkg/parsers@npm:2.5.0"
   dependencies:
     js-yaml: ^3.10.0
     tslib: ^1.13.0
-  checksum: 935f36e9c911ae2d7376b4c231918c2ec0af511b835587967fe531034628d62ee7042360452e786049be7537652c8966da4986615c6629845e252476a4aeac23
+  checksum: 02678b7b910eb653c27f0043ac5295c96f2547164959a76e529cad628c2dd48748d1eec2e5d0ee77f79c7d0536549477f203274ca0533e1b478a7f1e0689bb75
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnp@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@yarnpkg/pnp@npm:3.1.0"
+"@yarnpkg/pnp@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@yarnpkg/pnp@npm:3.2.0"
   dependencies:
     "@types/node": ^13.7.0
-    "@yarnpkg/fslib": ^2.6.0
-    resolve.exports: ^1.1.0
-    tslib: ^1.13.0
-  checksum: 8f0099db01f8f6dfb999f04bbb6201fc26fa16d1aff006ec79ca988e569371d905f010b2ac6856b8f1907e7319130d4e6ebe6b0f1d54a1c3df6cb440cf9c3745
+    "@yarnpkg/fslib": ^2.6.1
+  checksum: 5b99f89e774a0e98f6e86b9bdcd36eee4f9dc00b9b5983e8f6df95c3ecc196f5a030616edaaad7648f548d5b06fd7b201226e1205d64e61fe02657fea3860410
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnpify@npm:3.1.0":
-  version: 3.1.0
-  resolution: "@yarnpkg/pnpify@npm:3.1.0"
+"@yarnpkg/pnpify@npm:3.1.1":
+  version: 3.1.1
+  resolution: "@yarnpkg/pnpify@npm:3.1.1"
   dependencies:
-    "@yarnpkg/core": ^3.1.0
-    "@yarnpkg/fslib": ^2.6.0
-    "@yarnpkg/nm": ^3.0.0
-    clipanion: ^3.0.1
+    "@yarnpkg/core": ^3.2.0
+    "@yarnpkg/fslib": ^2.6.1
+    "@yarnpkg/nm": ^3.0.1
+    clipanion: ^3.2.0-rc.4
     cross-spawn: 7.0.3
     tslib: ^1.13.0
   bin:
     pnpify: ./lib/cli.js
-  checksum: cf88928aa1f148030192add486e1f1ab6da986ae2207f1231d5e7beca82172dd85023513e3d32a10652d23944319a91ddf8d98819daec543f876004805dcc98b
+  checksum: 05a96f9299e77954a03ed9f69292d87416dd7a102a58b1ca9d245c6e7665c146e28054f79c8574172f0d94e94ba9295ae9fc15944be3883337e11508c1764eb2
   languageName: node
   linkType: hard
 
-"@yarnpkg/shell@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@yarnpkg/shell@npm:3.1.0"
+"@yarnpkg/shell@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@yarnpkg/shell@npm:3.2.0"
   dependencies:
-    "@yarnpkg/fslib": ^2.6.0
-    "@yarnpkg/parsers": ^2.4.1
+    "@yarnpkg/fslib": ^2.6.1
+    "@yarnpkg/parsers": ^2.5.0
     chalk: ^3.0.0
-    clipanion: ^3.0.1
+    clipanion: ^3.2.0-rc.4
     cross-spawn: 7.0.3
     fast-glob: ^3.2.2
     micromatch: ^4.0.2
@@ -5679,7 +5676,7 @@ __metadata:
     tslib: ^1.13.0
   bin:
     shell: ./lib/cli.js
-  checksum: d5d17525fea79a75a1687dd0b29041e6e26d51f47f08aeb27b2fc1ce1f8eb9b0498f0380b03a805e65ca5aec0684661c3a90f0cec71bfe7628da89119f45eb51
+  checksum: c1ec5f08a3512de538534492e895db631b4a92fdf907c605ba7c7ca60477a865ee796802b96de717fcdfa6ee820183f3d2bbd9962fe5ff302ab47b39fa93592f
   languageName: node
   linkType: hard
 
@@ -8100,14 +8097,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clipanion@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "clipanion@npm:3.0.1"
+"clipanion@npm:^3.2.0-rc.4":
+  version: 3.2.0-rc.9
+  resolution: "clipanion@npm:3.2.0-rc.9"
   dependencies:
     typanion: ^3.3.1
   peerDependencies:
     typanion: "*"
-  checksum: 3a4b0c1e7d29a0f3c41860323494114a3533298134761e564b9057fe26ceef929a06da73cc3dfc0000e02c89ad7222984109a60213a212c10ea71ac6cacabc89
+  checksum: 00690c6112649314ad7c57c7d310d6dca26691d2c473d2a3682394cd1ec056ef229fc2c12856dce48806a51d481d1153f4f50435675f2b252b0be80e5e7f22f8
   languageName: node
   linkType: hard
 
@@ -17618,7 +17615,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"p-queue@npm:^6.0.0, p-queue@npm:^6.6.2":
+"p-queue@npm:^6.6.2":
   version: 6.6.2
   resolution: "p-queue@npm:6.6.2"
   dependencies:
@@ -22761,7 +22758,7 @@ sjcl@sublimator/sjcl:
     "@types/node": 14.18.12
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    "@yarnpkg/pnpify": 3.1.0
+    "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
     copy-webpack-plugin: 9.1.0
     eslint: 8.9.0
