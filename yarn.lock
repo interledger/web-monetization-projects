@@ -1578,7 +1578,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
-    addons-linter: 4.11.0
+    addons-linter: 4.12.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -2494,7 +2494,7 @@ __metadata:
     "@webmonetization/wext": ^0.0.0
     "@yarnpkg/pnpify": 3.1.0
     JSON2016: 1.0.0
-    addons-linter: 4.11.0
+    addons-linter: 4.12.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     css-loader: 6.6.0
@@ -3704,10 +3704,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:4.1.7":
-  version: 4.1.7
-  resolution: "@mdn/browser-compat-data@npm:4.1.7"
-  checksum: b2d2efaaea1a3565e5e3645d7152351107dacd699464c57252799cc177d9fc20a348aa6bb9c4ecbd50ec46810d826db268a92029ce6a3984dab8ff760d1c67a5
+"@mdn/browser-compat-data@npm:4.1.8":
+  version: 4.1.8
+  resolution: "@mdn/browser-compat-data@npm:4.1.8"
+  checksum: d126f0b4aad9eca85e96235082b94e1292ebea6906ba7c13370590cb926c21b9fed5864e7a4cdf8dddc21560dfd5feb97371be37bcf5b095d6bbbd2736f9af51
   languageName: node
   linkType: hard
 
@@ -5918,11 +5918,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:4.11.0":
-  version: 4.11.0
-  resolution: "addons-linter@npm:4.11.0"
+"addons-linter@npm:4.12.0":
+  version: 4.12.0
+  resolution: "addons-linter@npm:4.12.0"
   dependencies:
-    "@mdn/browser-compat-data": 4.1.7
+    "@mdn/browser-compat-data": 4.1.8
     addons-moz-compare: 1.2.0
     addons-scanner-utils: 6.3.0
     ajv: 6.12.6
@@ -5943,7 +5943,7 @@ __metadata:
     is-mergeable-object: 1.1.1
     jed: 1.1.1
     os-locale: 5.0.0
-    pino: 7.7.0
+    pino: 7.8.0
     postcss: 8.4.6
     relaxed-json: 1.0.3
     semver: 7.3.5
@@ -5955,7 +5955,7 @@ __metadata:
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: 6836c0d3501351ced19f7542a8cb27419b167ca2d36b0a5bb79fa5c9d1edaf553119f0f5c6eb56459612231b478375a0a91f3266472f928291b85a9bbf89e163
+  checksum: 8794a7921a9d549303c5d4dc4e4e7e4ef7ebfe3f66e129c3e7b10fd9a2387296c32045faac33e716c36d1de7497d97c422695b918370aeaa480f5b9b095cf4dd
   languageName: node
   linkType: hard
 
@@ -18131,9 +18131,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"pino@npm:7.7.0":
-  version: 7.7.0
-  resolution: "pino@npm:7.7.0"
+"pino@npm:7.8.0":
+  version: 7.8.0
+  resolution: "pino@npm:7.8.0"
   dependencies:
     fast-redact: ^3.0.0
     on-exit-leak-free: ^0.2.0
@@ -18147,7 +18147,7 @@ fsevents@^1.2.7:
     thread-stream: ^0.13.0
   bin:
     pino: bin.js
-  checksum: b5c43d1d26ad22f3ed2d50728ce443520f284227df427b11cede83971ae257b35ce72bda05a318856f26c15c7f2b4c62465ede646e75aa757c14ad563bf9a1ab
+  checksum: 0be8a440f81e7e2f4a22156e5886d550c618d6609572f0f262ccbc15077b702ee56c17d8bff7779361a74e64e4257f533b6038f46845e583315895ac6babc753
   languageName: node
   linkType: hard
 
