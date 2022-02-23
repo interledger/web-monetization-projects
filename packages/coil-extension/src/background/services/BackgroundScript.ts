@@ -44,6 +44,8 @@ import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
 
+import { User } from '../../types/user'
+
 @injectable()
 export class BackgroundScript {
   constructor(
@@ -362,6 +364,18 @@ export class BackgroundScript {
                 ? 'streaming'
                 : 'streaming-paused'
             this.tabStates.setIcon(tabId, state)
+          } else {
+            // need to check if the user user is able to tip with the new ui
+            // this does require that the site is monetized and that the user meets certain criteria
+            const user: User | null = this?.store?.user ?? null
+            const userHasNewUi = user?.extensionNewUiFeatureFlag
+            const userInTippingBeta = user?.tippingBetaFeatureFlag
+            const userTipCreditBalance =
+              user?.tipSettings?.totalTipCreditAmountUsd ?? 0
+            const userHasTipCredits = userTipCreditBalance > 0
+            if (userHasNewUi && (userInTippingBeta || userHasTipCredits)) {
+              this.tabStates.setIcon(tabId, 'tipping')
+            }
           }
         } else {
           this.tabStates.setIcon(tabId, 'inactive')

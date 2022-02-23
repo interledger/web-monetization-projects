@@ -94,6 +94,13 @@ export class TabStates {
 
   setIcon(tab: number, state: IconState) {
     switch (state) {
+      case 'tipping':
+        this.set(tab, {
+          iconPrimary: 'tipping-only',
+          iconSecondary: null
+        })
+        break
+
       case 'inactive':
         this.set(tab, {
           iconPrimary: 'inactive',
