@@ -196,7 +196,7 @@ export class TippingService extends EventEmitter {
   }
 
   userCanTip() {
-    const user: User | null = this?.store?.user ?? null
+    const user: User | null = this.store?.user ?? null
     const userHasNewUi = user?.extensionNewUiFeatureFlag
     const userInTippingBeta = user?.tippingBetaFeatureFlag
     const userTipCreditBalance = user?.tipSettings?.totalTipCreditAmountUsd ?? 0
