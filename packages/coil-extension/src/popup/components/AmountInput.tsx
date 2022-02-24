@@ -92,9 +92,9 @@ export const AmountInput = (): React.ReactElement => {
 
     // ensure that the input is a valid number input
     // remove any alphabet, special characters, leading zero, leading decimal
-    // const fractionalAmountRegex = new RegExp(/(^[0])|(^\.)|([a-zA-Z\s])|([!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|(?<=\..*)\.|/gm)
+    // const fractionalAmountRegex = new RegExp(/(^[0])|(^\.)|([a-zA-Z\s])|([`!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|(?<=\..*)\.|/gm)
     const amountRegex = new RegExp(
-      /(^[0])|([a-zA-Z\s])|([.!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|/gm
+      /(^[0])|([a-zA-Z\s])|([`.!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|/gm
     )
     value = value.replace(amountRegex, '')
 
