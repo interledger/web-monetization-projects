@@ -29,6 +29,7 @@ import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
+import { User } from '../../types/user'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -43,8 +44,6 @@ import { StreamAssociations } from './StreamAssociations'
 import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
-
-import { User } from '../../types/user'
 
 @injectable()
 export class BackgroundScript {
@@ -365,15 +364,10 @@ export class BackgroundScript {
                 : 'streaming-paused'
             this.tabStates.setIcon(tabId, state)
           } else {
-            // need to check if the user user is able to tip with the new ui
-            // this does require that the site is monetized and that the user meets certain criteria
-            const user: User | null = this?.store?.user ?? null
-            const userHasNewUi = user?.extensionNewUiFeatureFlag
-            const userInTippingBeta = user?.tippingBetaFeatureFlag
-            const userTipCreditBalance =
-              user?.tipSettings?.totalTipCreditAmountUsd ?? 0
-            const userHasTipCredits = userTipCreditBalance > 0
-            if (userHasNewUi && (userInTippingBeta || userHasTipCredits)) {
+            // Need to check if the user is able to tip with the new ui.
+            // This assumes that the site is monetized and
+            // that the user meets certain criteria
+            if (this.tippingService.userCanTip()) {
               this.tabStates.setIcon(tabId, 'tipping')
             }
           }
