@@ -40,11 +40,11 @@ export const TipAmountFeedback = () => {
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
   const getRestrictedMessage = () => {
-    if (maxAllowableTipAmountUsd < minTipLimitAmountUsd) {
-      // happens if you have $0 dollars or less than $1 that you are allowed to spend based on your limit
+    // this handles the specific case of the daily limit remaining being zeroed out
+    if (limitRemainingAmountUsd == 0) {
       return (
         <Typography variant='subtitle1'>
-          Limit below minimum tip.{' '}
+          Daily limit reached.{' '}
           <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
             Raise limit
           </LinkUnderlined>
@@ -54,7 +54,7 @@ export const TipAmountFeedback = () => {
     if (currentTipAmountUsd >= limitRemainingAmountUsd) {
       return (
         <Typography variant='subtitle1'>
-          Daily limit reached.{' '}
+          Max tip amount.{' '}
           <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
             Raise limit
           </LinkUnderlined>
@@ -70,6 +70,18 @@ export const TipAmountFeedback = () => {
         <Typography variant='subtitle1'>
           <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/billing`)}>
             Add credit card to tip more
+          </LinkUnderlined>
+        </Typography>
+      )
+    }
+    // this should only hit if we are allowing fractional amounts and the max tip is less than $1 or the minimum
+    // TODO: need to segment if the max is due to tip credits or daily limit
+    if (maxAllowableTipAmountUsd < minTipLimitAmountUsd) {
+      return (
+        <Typography variant='subtitle1'>
+          Limit below minimum tip.{' '}
+          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
+            Raise limit
           </LinkUnderlined>
         </Typography>
       )
