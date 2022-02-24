@@ -77,6 +77,7 @@ export const TipAmountFeedback = () => {
     return null
   }
 
+  // This formatting is here in case we choose to start allowing fractional amounts later on
   const formattedTipCreditAmountUsd = Number.isInteger(totalTipCreditAmountUsd)
     ? totalTipCreditAmountUsd
     : totalTipCreditAmountUsd.toFixed(2)
