@@ -8,6 +8,7 @@ import * as tokens from '../../types/tokens'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
 import { TipAssets } from '../consts/AssetConstants'
+import { User } from '../../types/user'
 
 import { logger, Logger } from './utils'
 import { Stream } from './Stream'
@@ -192,5 +193,14 @@ export class TippingService extends EventEmitter {
       console.warn(`tip: error. msg=${e.message}`)
       throw new Error(e.message)
     }
+  }
+
+  userCanTip() {
+    const user: User | null = this.store?.user ?? null
+    const userHasNewUi = user?.extensionNewUiFeatureFlag
+    const userInTippingBeta = user?.tippingBetaFeatureFlag
+    const userTipCreditBalance = user?.tipSettings?.totalTipCreditAmountUsd ?? 0
+    const userHasTipCredits = userTipCreditBalance > 0
+    return userHasNewUi && (userInTippingBeta || userHasTipCredits)
   }
 }

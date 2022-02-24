@@ -29,6 +29,7 @@ import { TabState } from '../../types/TabState'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
+import { User } from '../../types/user'
 
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
@@ -362,6 +363,13 @@ export class BackgroundScript {
                 ? 'streaming'
                 : 'streaming-paused'
             this.tabStates.setIcon(tabId, state)
+          } else {
+            // Need to check if the user is able to tip with the new ui.
+            // This assumes that the site is monetized and
+            // that the user meets certain criteria
+            if (this.tippingService.userCanTip()) {
+              this.tabStates.setIcon(tabId, 'tipping')
+            }
           }
         } else {
           this.tabStates.setIcon(tabId, 'inactive')

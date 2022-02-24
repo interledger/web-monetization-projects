@@ -19,7 +19,7 @@ export interface TabState {
   coilSite?: string
   stickyState: StickyState
   playState: PlayOrPauseState
-  iconPrimary?: 'active' | 'inactive'
+  iconPrimary?: 'active' | 'inactive' | 'tipping-only'
   iconSecondary?: 'unavailable' | 'streaming' | 'streaming-paused' | null
   frameStates: Record<number, FrameState>
 }
