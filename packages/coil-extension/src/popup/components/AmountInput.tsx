@@ -105,12 +105,14 @@ export const normalizeAmountInput = (
     value = context.maxAllowableTipAmountUsd.toString()
   }
 
+  const displayValue = value
+
   // set the value to min limit if input is less
   if (Number(value) < minTipLimitAmountUsd) {
     value = minTipLimitAmountUsd.toString()
   }
 
-  return value
+  return { displayValue, value }
 }
 
 //
@@ -137,13 +139,14 @@ export const AmountInput = (): React.ReactElement => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value
 
+    const normed = normalizeAmountInput(value, tipContext, user)
+    value = normed.value
+
     // set the display value on the input for while the user is typing
     // setting before the min limit so the user can clear out the first digit
     if (inputRef.current) {
-      inputRef.current.value = value
+      inputRef.current.value = normed.displayValue
     }
-
-    value = normalizeAmountInput(value, tipContext, user)
 
     // Calculate and set the size of the input field based on the input
     e.target.style.width = calculateInputWidth(value)

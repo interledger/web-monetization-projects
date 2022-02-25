@@ -7,27 +7,27 @@ describe('handleAmountInputChange', () => {
   it('should normalize fractional inputs', () => {
     const input = '0.1'
     const normed = normalizeAmountInput(input, tipContext)
-    expect(normed).toBe('1')
+    expect(normed).toStrictEqual({ displayValue: '1', value: '1' })
   })
   it('should ignore alphas', () => {
     const input = 'a'
     const normed = normalizeAmountInput(input, tipContext)
-    expect(normed).toBe('1')
+    expect(normed).toStrictEqual({ displayValue: '', value: '1' })
   })
   it('should ignore spaces', () => {
     const input = ' '
     const normed = normalizeAmountInput(input, tipContext)
-    expect(normed).toBe('1')
+    expect(normed).toStrictEqual({ displayValue: '', value: '1' })
   })
   it('should normalize 1.0 to 10', () => {
     const input = '1.0'
     const normed = normalizeAmountInput(input, tipContext)
-    expect(normed).toBe('10')
+    expect(normed).toStrictEqual({ displayValue: '10', value: '10' })
   })
   it('should normalize 10.0 to 10', () => {
     const input = '10.0'
     const normed = normalizeAmountInput(input, tipContext)
-    expect(normed).toBe('20')
+    expect(normed).toStrictEqual({ displayValue: '20', value: '20' })
   })
 })
 
