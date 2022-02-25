@@ -3,7 +3,8 @@ import { styled } from '@material-ui/core'
 
 import { Colors } from '../../shared-theme/colors'
 import { useStore } from '../context/storeContext'
-import { useTip } from '../context/tipContext'
+import { ITipContext, useTip } from '../context/tipContext'
+import { User } from '../../types/user'
 
 import { IncDecButton, IncDec } from './IncDecButton'
 
@@ -63,14 +64,59 @@ const Input = styled('input')({
   }
 })
 
+const defaultFontSize = 64
+const characterSpacing = 0.6
+const characterWidth = 40
+const maxAmountWidth = 160
+
+export function calculateInputWidth(value: string) {
+  const newWidth = value.length * characterWidth
+  if (newWidth < maxAmountWidth) {
+    return `${newWidth}px`
+  } else {
+    return `${maxAmountWidth}px`
+  }
+}
+
+export const normalizeAmountInput = (
+  value: string,
+  context: Pick<ITipContext, 'maxAllowableTipAmountUsd'>,
+  user?: User | null
+) => {
+  const { minTipLimitAmountUsd = 1 } = user?.tipSettings || {}
+
+  // ensure that the input is a valid number input
+  // remove any alphabet, special characters, leading zero, leading decimal
+  const amountRegex = new RegExp(
+    /(^[0])|([a-zA-Z\s])|([`.!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|/gm
+  )
+  value = value.replace(amountRegex, '')
+
+  // strip the values from the thousandths place if it exists
+  // doing this first so when the input display is set while typing it limits the user
+  if (value.includes('.')) {
+    if (value.split('.')[1].length > 2) {
+      value = value.slice(0, -1)
+    }
+  }
+
+  // set the value to max limit if input is greater
+  if (Number(value) > context.maxAllowableTipAmountUsd) {
+    value = context.maxAllowableTipAmountUsd.toString()
+  }
+
+  // set the value to min limit if input is less
+  if (Number(value) < minTipLimitAmountUsd) {
+    value = minTipLimitAmountUsd.toString()
+  }
+
+  return value
+}
+
 //
 // Component
 //
 export const AmountInput = (): React.ReactElement => {
-  const defaultFontSize = 64
-  const characterSpacing = 0.6
-  const characterWidth = 40
-  const maxAmountWidth = 160
   const [displayFontSize, setDisplayFontSize] =
     useState<number>(defaultFontSize)
 
@@ -79,37 +125,17 @@ export const AmountInput = (): React.ReactElement => {
 
   const { user } = useStore()
   const { minTipLimitAmountUsd = 1 } = user?.tipSettings || {}
+  const tipContext = useTip()
   const {
     currentTipAmountUsd,
     setCurrentTipAmountUsd,
     maxAllowableTipAmountUsd
-  } = useTip()
+  } = tipContext
 
   // validates the manual input and updates the state with the current amount
   // Masks input value to ensure only value entries are displayed.
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value
-
-    // ensure that the input is a valid number input
-    // remove any alphabet, special characters, leading zero, leading decimal
-    // const fractionalAmountRegex = new RegExp(/(^[0])|(^\.)|([a-zA-Z\s])|([`!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|(?<=\..*)\.|/gm)
-    const amountRegex = new RegExp(
-      /(^[0])|([a-zA-Z\s])|([`.!@#$%^&*()_+\-=[\]{};':"\\|,<>/?])|/gm
-    )
-    value = value.replace(amountRegex, '')
-
-    // strip the values from the thousandths place if it exists
-    // doing this first so when the input display is set while typing it limits the user
-    if (value.includes('.')) {
-      if (value.split('.')[1].length > 2) {
-        value = value.slice(0, -1)
-      }
-    }
-
-    // set the value to max limit if input is greater
-    if (Number(value) > maxAllowableTipAmountUsd) {
-      value = maxAllowableTipAmountUsd.toString()
-    }
 
     // set the display value on the input for while the user is typing
     // setting before the min limit so the user can clear out the first digit
@@ -117,18 +143,10 @@ export const AmountInput = (): React.ReactElement => {
       inputRef.current.value = value
     }
 
-    // set the value to min limit if input is less
-    if (Number(value) < minTipLimitAmountUsd) {
-      value = minTipLimitAmountUsd.toString()
-    }
+    value = normalizeAmountInput(value, tipContext, user)
 
     // Calculate and set the size of the input field based on the input
-    const newWidth = value.length * characterWidth
-    if (newWidth < maxAmountWidth) {
-      e.target.style.width = `${newWidth}px`
-    } else {
-      e.target.style.width = `${maxAmountWidth}px`
-    }
+    e.target.style.width = calculateInputWidth(value)
 
     // update state for the actual current tip amount
     setCurrentTipAmountUsd(Number(value))
