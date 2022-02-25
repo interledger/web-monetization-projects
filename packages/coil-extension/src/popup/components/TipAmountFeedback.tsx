@@ -40,7 +40,7 @@ export const TipAmountFeedback = () => {
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
   const getRestrictedMessage = () => {
-    // this handles the specific case of the daily limit remaining being zeroed out
+    // handles the specific case of the daily limit being zeroed out on open
     if (limitRemainingAmountUsd == 0) {
       return (
         <Typography variant='subtitle1'>
@@ -51,6 +51,7 @@ export const TipAmountFeedback = () => {
         </Typography>
       )
     }
+    // handles the case where the user maxes out their daily limit during input
     if (currentTipAmountUsd >= limitRemainingAmountUsd) {
       return (
         <Typography variant='subtitle1'>
@@ -61,6 +62,7 @@ export const TipAmountFeedback = () => {
         </Typography>
       )
     }
+    // handles the case where the user has run out of tip credits but is allowed to add a credit card
     if (
       currentTipAmountUsd >= totalTipCreditAmountUsd &&
       tippingBetaFeatureFlag &&
@@ -74,18 +76,46 @@ export const TipAmountFeedback = () => {
         </Typography>
       )
     }
+    //
     // this should only hit if we are allowing fractional amounts and the max tip is less than $1 or the minimum
-    // TODO: need to segment if the max is due to tip credits or daily limit
+    //
     if (maxAllowableTipAmountUsd < minTipLimitAmountUsd) {
-      return (
-        <Typography variant='subtitle1'>
-          Limit below minimum tip.{' '}
-          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
-            Raise limit
-          </LinkUnderlined>
-        </Typography>
-      )
+      if (maxAllowableTipAmountUsd === limitRemainingAmountUsd) {
+        // max amount is set at the daily limit
+        return (
+          <Typography variant='subtitle1'>
+            Limit below minimum tip.{' '}
+            <LinkUnderlined
+              onClick={tabOpener(`${coilDomain}/settings/tipping`)}
+            >
+              Raise limit
+            </LinkUnderlined>
+          </Typography>
+        )
+      } else {
+        // max amount is set by tip credits
+        if (tippingBetaFeatureFlag && !creditCard) {
+          // user is in beta -> return add credit card
+          return (
+            <Typography variant='subtitle1'>
+              <LinkUnderlined
+                onClick={tabOpener(`${coilDomain}/settings/billing`)}
+              >
+                Add credit card to tip minimum amount.
+              </LinkUnderlined>
+            </Typography>
+          )
+        } else {
+          // user not in beta -> not enough credits  minimum
+          return (
+            <Typography variant='subtitle1'>
+              Credits below minimum tip amount.
+            </Typography>
+          )
+        }
+      }
     }
+    // don't show a message if the user has not input a min or max
     return null
   }
 
