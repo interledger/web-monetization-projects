@@ -1,7 +1,7 @@
 {
   "name": "Coil",
   "description": "Support websites and creators with Web Monetization",
-  "version": "0.0.57",
+  "version": "0.0.58",
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'sha256-ZB4S3fpmqhkYmY2fAkJhOuCiCW9xtnSo9QaJPSzPH7Q='; object-src 'self'",
   "browser_specific_settings": {
