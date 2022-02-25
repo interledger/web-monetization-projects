@@ -8,7 +8,7 @@ import { calculateMaxAllowableTip } from '../../util/calculateMaxAllowableTip'
 //
 // Models
 //
-interface ITipContext {
+export interface ITipContext {
   currentTipAmountUsd: number
   finalTipAmountUsd: number //* only used for the TipCompleteView so it renders the proper amount after local storage updates
   maxAllowableTipAmountUsd: number //* the maxAllowableTip is primarily responsible for disabling tipping inputs
