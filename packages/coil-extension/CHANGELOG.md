@@ -6,6 +6,7 @@
 
 - Update icon when only tipping is supported [#2635](https://github.com/coilhq/web-monetization-projects/pull/2635)
 - Disallow fractional inputs [#2636](https://github.com/coilhq/web-monetization-projects/pull/2636)
+- Updated messaging for limits [#2639](https://github.com/coilhq/web-monetization-projects/pull/2639)
 
 <a name="coil-extension@0.0.57"></a>
 
