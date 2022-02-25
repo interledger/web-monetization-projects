@@ -41,6 +41,7 @@ export const TipAmountFeedback = () => {
 
   const getRestrictedMessage = () => {
     if (maxAllowableTipAmountUsd < minTipLimitAmountUsd) {
+      // happens if you have $0 dollars or less than $1 that you are allowed to spend based on your limit
       return (
         <Typography variant='subtitle1'>
           Limit below minimum tip.{' '}
@@ -76,13 +77,18 @@ export const TipAmountFeedback = () => {
     return null
   }
 
+  // This formatting is here in case we choose to start allowing fractional amounts later on
+  const formattedTipCreditAmountUsd = Number.isInteger(totalTipCreditAmountUsd)
+    ? totalTipCreditAmountUsd
+    : totalTipCreditAmountUsd.toFixed(2)
+
   return (
     <Box textAlign='center'>
       <Box>
         <Typography variant='subtitle1'>
           Available tip credits:{' '}
           <ChargeAmount iszero={totalTipCreditAmountUsd == 0}>
-            ${totalTipCreditAmountUsd.toFixed(2)}
+            ${formattedTipCreditAmountUsd}
           </ChargeAmount>
         </Typography>
       </Box>
