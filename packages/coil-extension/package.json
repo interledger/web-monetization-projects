@@ -110,7 +110,7 @@
     "addons-linter": "4.12.0",
     "copy-webpack-plugin": "9.1.0",
     "crx-hotreload": "1.0.6",
-    "eslint": "8.9.0",
+    "eslint": "8.10.0",
     "eslint-config-prettier": "8.4.0",
     "eslint-import-resolver-node": "0.3.6",
     "eslint-plugin-import": "2.25.4",
