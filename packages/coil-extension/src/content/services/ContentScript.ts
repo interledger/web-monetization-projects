@@ -2,7 +2,8 @@ import { inject, injectable } from 'inversify'
 import {
   MonetizationTagManager,
   PaymentDetails,
-  whenDocumentReady
+  whenDocumentReady,
+  mozCloneInto
 } from '@webmonetization/polyfill-utils'
 import {
   DocumentMonetization,
@@ -30,17 +31,6 @@ import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
 import { ContentAuthService } from './ContentAuthService'
 import { DebugService } from './DebugService'
-
-type DefaultView = WindowProxy & typeof globalThis
-type CloneInto = (obj: unknown, window: DefaultView | null) => typeof obj
-declare const cloneInto: CloneInto | undefined
-
-let cloneIntoRef: CloneInto | undefined
-try {
-  cloneIntoRef = cloneInto
-} catch (e) {
-  cloneIntoRef = undefined
-}
 
 function startWebMonetizationMessage(request?: PaymentDetails) {
   if (!request) {
@@ -177,8 +167,8 @@ export class ContentScript {
             assetCode: data.assetCode,
             amount: BigInt(data.amount)
           }
-          const firefoxProof = cloneIntoRef
-            ? cloneIntoRef(eventDetail, this.document.defaultView)
+          const firefoxProof = mozCloneInto
+            ? mozCloneInto(eventDetail, this.document.defaultView)
             : eventDetail
           this.tagManager.dispatchEventByLinkId(
             data.requestId,

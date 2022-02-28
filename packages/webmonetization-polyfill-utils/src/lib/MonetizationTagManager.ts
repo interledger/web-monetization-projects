@@ -5,6 +5,7 @@ import { v4 as uuidV4 } from 'uuid'
 import { whenDocumentReady } from './whenDocumentReady'
 import { CustomError } from './CustomError'
 import { resolvePaymentEndpoint } from './resolvePaymentEndpoint'
+import { mozCloneInto } from './mozCloneInto'
 
 const debug =
   // console.log.bind(console, 'MonetizationTagManager')
@@ -372,7 +373,6 @@ export class MonetizationTagManager extends EventEmitter {
 
   _onRemovedTag(tag: MonetizationTag) {
     const entry = this.getEntry(tag, '_onRemovedTag')
-    console.log('onRemovedTag', tag)
     this.monetizationTags.delete(tag)
     this.clearLinkById(entry.details)
     this.callback({ started: null, stopped: entry.details })
@@ -483,11 +483,14 @@ export class MonetizationTagManager extends EventEmitter {
   }: FireOnMonetizationChangeIfHaveAttributeParams) {
     const attribute = node.getAttribute('onmonetization')
     if (attribute || changeDetected) {
+      const attributeDetail = {
+        attribute
+      }
       const customEvent = new CustomEvent('onmonetization-attr-changed', {
         bubbles: true,
-        detail: {
-          attribute
-        }
+        detail: mozCloneInto
+          ? mozCloneInto(attributeDetail, this.document.defaultView)
+          : attributeDetail
       })
       const result = node.dispatchEvent(customEvent)
       debug('dispatched onmonetization-attr-changed ev', result)
