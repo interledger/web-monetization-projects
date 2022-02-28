@@ -20,6 +20,7 @@ import { LocalStorageProxy } from '../../types/storage'
 import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
+import { User } from '../../types/user'
 
 import { AuthService } from './AuthService'
 import { TabStates } from './TabStates'

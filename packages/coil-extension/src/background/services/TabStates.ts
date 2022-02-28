@@ -21,6 +21,7 @@ import { AuthService } from './AuthService'
 import { PopupBrowserAction } from './PopupBrowserAction'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
+import { TippingService } from './TippingService'
 
 @injectable()
 export class TabStates {
@@ -32,6 +33,7 @@ export class TabStates {
     private store: LocalStorageProxy,
     private auth: AuthService,
     private activeTabLogger: ActiveTabLogger,
+    private tippingService: TippingService,
     @inject(tokens.BuildConfig)
     private buildConfig: BuildConfig,
     @inject(tokens.ActiveTab)
@@ -119,6 +121,13 @@ export class TabStates {
 
   setIcon(tab: number, state: IconState) {
     switch (state) {
+      case 'tipping':
+        this.set(tab, {
+          iconPrimary: 'tipping-only',
+          iconSecondary: null
+        })
+        break
+
       case 'inactive':
         this.set(tab, {
           iconPrimary: 'inactive',
@@ -253,6 +262,13 @@ export class TabStates {
                 ? 'streaming'
                 : 'streaming-paused'
             this.setIcon(tabId, state)
+          } else {
+            // Need to check if the user is able to tip with the new ui.
+            // This assumes that the site is monetized and
+            // that the user meets certain criteria
+            if (this.tippingService.userCanTip()) {
+              this.setIcon(tabId, 'tipping')
+            }
           }
         } else {
           this.setIcon(tabId, 'inactive')

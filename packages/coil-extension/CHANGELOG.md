@@ -1,3 +1,13 @@
+- <a name="coil-extension@0.0.58"></a>
+
+# [coil-extension@0.0.58](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.57...coil-extension@0.0.58) (2021-02-25)
+
+### Bug Fixes
+
+- Update icon when only tipping is supported [#2635](https://github.com/coilhq/web-monetization-projects/pull/2635)
+- Disallow fractional inputs [#2636](https://github.com/coilhq/web-monetization-projects/pull/2636)
+- Updated messaging for limits [#2639](https://github.com/coilhq/web-monetization-projects/pull/2639)
+
 <a name="coil-extension@0.0.57"></a>
 
 # [coil-extension@0.0.57](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.56...coil-extension@0.0.57) (2022-02-08)
