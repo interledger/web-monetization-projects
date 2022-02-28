@@ -175,7 +175,7 @@ export class ContentScript {
             receipt: data.receipt,
             assetScale: data.assetScale,
             assetCode: data.assetCode,
-            amount: data.amount
+            amount: BigInt(data.amount)
           }
           const firefoxProof = cloneIntoRef
             ? cloneIntoRef(eventDetail, this.document.defaultView)
