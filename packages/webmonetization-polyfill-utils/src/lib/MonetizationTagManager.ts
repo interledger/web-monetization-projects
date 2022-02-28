@@ -106,11 +106,10 @@ export class MonetizationTagManager extends EventEmitter {
     }
   >()
 
-  private linkTagsById = new Map<string, WeakRef<HTMLLinkElement>>()
+  private linkTagsById = new Map<string, HTMLLinkElement>()
 
   dispatchEventByLinkId(id: string, event: Event) {
-    const ref = this.linkTagsById.get(id)
-    const link = ref?.deref()
+    const link = this.linkTagsById.get(id)
     if (link) {
       debug('dispatchLinkEventByLinkId', id, event)
       link.dispatchEvent(event)
@@ -423,8 +422,7 @@ export class MonetizationTagManager extends EventEmitter {
         returnValue = null
       }
       if (!error && returnValue) {
-        const linkRef = new WeakRef(tag as HTMLLinkElement)
-        this.linkTagsById.set(started.requestId, linkRef)
+        this.linkTagsById.set(started.requestId, tag as HTMLLinkElement)
       } else {
         this.emit('link-resolve-payment-endpoint-error', tag, error)
         // const event = new ErrorEvent('error', { error })
