@@ -124,6 +124,9 @@ export class MonetizationService {
 
     this.assoc.addStreamId(frame, requestId)
     this.activeTabLogger.log(`startWM called with ${requestId}`, frame)
+    this.tabStates.setFrame(frame, {
+      paymentPointer: request.data.paymentPointer
+    })
     this.tabStates.logLastMonetizationCommand(frame, 'start', request.data)
 
     // This used to be sent from content script as a separate message
@@ -368,6 +371,7 @@ export class MonetizationService {
 
   stopWebMonetizationStream(requestId: string) {
     const frame = this.assoc.getStreamFrame(requestId)
+    this.tabStates.setFrame(frame, { paymentPointer: undefined })
     this.activeTabLogger.log(
       `stopWebMonetization called for ${requestId}`,
       frame
