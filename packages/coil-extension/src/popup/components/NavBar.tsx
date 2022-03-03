@@ -13,8 +13,10 @@ import { Gift } from './icons/Gift'
 // Styles
 //
 
-const NavButton = styled('div')(
+const NavButton = styled('button')(
   ({ theme, disabled }: { theme: Theme; disabled?: boolean }) => ({
+    background: 'transparent',
+    border: 'none',
     cursor: 'pointer',
     flex: '1',
     display: disabled ? 'none' : 'flex',

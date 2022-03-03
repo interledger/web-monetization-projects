@@ -39,7 +39,11 @@ export const RestrictedMessage = () => {
       return (
         <Typography variant='subtitle1'>
           Max tip amount.{' '}
-          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
+          <LinkUnderlined
+            tabIndex={0}
+            onKeyPress={tabOpener(`${coilDomain}/settings/tipping`)}
+            onClick={tabOpener(`${coilDomain}/settings/tipping`)}
+          >
             Raise limit
           </LinkUnderlined>
         </Typography>
@@ -53,7 +57,11 @@ export const RestrictedMessage = () => {
     ) {
       return (
         <Typography variant='subtitle1'>
-          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/billing`)}>
+          <LinkUnderlined
+            tabIndex='0'
+            onKeyPress={tabOpener(`${coilDomain}/settings/billing`)}
+            onClick={tabOpener(`${coilDomain}/settings/billing`)}
+          >
             Add credit card to tip more
           </LinkUnderlined>
         </Typography>
@@ -69,7 +77,11 @@ export const RestrictedMessage = () => {
       return (
         <Typography variant='subtitle1'>
           Daily limit reached.{' '}
-          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
+          <LinkUnderlined
+            tabIndex='0'
+            onKeyPress={tabOpener(`${coilDomain}/settings/tipping`)}
+            onClick={tabOpener(`${coilDomain}/settings/tipping`)}
+          >
             Raise limit
           </LinkUnderlined>
         </Typography>
@@ -81,7 +93,11 @@ export const RestrictedMessage = () => {
       return (
         <Typography variant='subtitle1'>
           Limit below minimum tip.{' '}
-          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
+          <LinkUnderlined
+            tabIndex='0'
+            onKeyPress={tabOpener(`${coilDomain}/settings/tipping`)}
+            onClick={tabOpener(`${coilDomain}/settings/tipping`)}
+          >
             Raise limit
           </LinkUnderlined>
         </Typography>
@@ -93,6 +109,8 @@ export const RestrictedMessage = () => {
         return (
           <Typography variant='subtitle1'>
             <LinkUnderlined
+              tabIndex='0'
+              onKeyPress={tabOpener(`${coilDomain}/settings/billing`)}
               onClick={tabOpener(`${coilDomain}/settings/billing`)}
             >
               Add credit card to tip minimum amount.
