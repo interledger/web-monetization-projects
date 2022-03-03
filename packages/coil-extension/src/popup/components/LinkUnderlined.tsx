@@ -7,10 +7,7 @@ import { useHost } from '../context/popupHostContext'
 // Styles
 //
 
-const ComponentWrapper = styled('button')(({ theme }) => ({
-  background: 'transparent',
-  border: 'none',
-  padding: 0,
+const ComponentWrapper = styled('a')(({ theme }) => ({
   textDecoration: 'underline',
   cursor: 'pointer',
   color: theme.palette.Blue400
@@ -35,7 +32,11 @@ export const LinkUnderlined = (
   } = useHost()
 
   return (
-    <ComponentWrapper role='link' onClick={tabOpener(props.to)}>
+    <ComponentWrapper
+      tabIndex={0}
+      onKeyPress={tabOpener(props.to)}
+      onClick={tabOpener(props.to)}
+    >
       {props.children}
     </ComponentWrapper>
   )

@@ -4,7 +4,8 @@ import lottie from 'lottie-web'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import streamingOffAnimation from '../lottie-animations/wm_streaming_off.json'
-
+import { useHost } from '../../context/popupHostContext'
+import { Link } from '../Link'
 //
 // Styles
 //
@@ -16,17 +17,13 @@ const LottieWrapper = styled('div')(({ theme }: { theme: Theme }) => ({
   marginRight: 'auto'
 }))
 
-const Link = styled('a')(({ theme }: { theme: Theme }) => ({
-  color: theme.palette.Green700,
-  cursor: 'pointer'
-}))
-
 //
 // Component
 //
 export const StreamingNotWebMonetizedView = () => {
   const theme = useTheme()
   const lottieAnchor = useRef(null)
+  const { coilDomain } = useHost()
 
   useEffect(() => {
     if (lottieAnchor.current) {
@@ -50,7 +47,7 @@ export const StreamingNotWebMonetizedView = () => {
       </Typography>
       <Typography variant='subtitle1' align='center'>
         Is this your site?{' '}
-        <Link>
+        <Link to={`${coilDomain}/learn-more`} color={theme.palette.Green700}>
           Learn how to
           <br />
           enable streaming payments
