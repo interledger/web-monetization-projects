@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from '@material-ui/core'
+import { AnimatePresence } from 'framer-motion'
 
 import { Router } from './components/views/Router'
 
@@ -24,7 +25,9 @@ const AppContainer = styled('div')({
 export const NewExtension = () => {
   return (
     <AppContainer>
-      <Router />
+      <AnimatePresence exitBeforeEnter initial={true}>
+        <Router />
+      </AnimatePresence>
     </AppContainer>
   )
 }

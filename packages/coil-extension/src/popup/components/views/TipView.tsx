@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { styled, Box } from '@material-ui/core'
+import { motion } from 'framer-motion'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { AmountInput } from '../AmountInput'
@@ -55,28 +56,58 @@ export const TipView: React.FC = () => {
     updateTipSettings()
   }, [])
 
+  const variants = {
+    initial: {
+      opacity: 0,
+      x: 50
+    },
+    enter: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.4,
+        ease: [0.61, 1, 0.88, 1]
+      }
+    },
+    exit: {
+      opacity: 1,
+      x: 500,
+      transition: {
+        duration: 0.4,
+        ease: [0.61, 1, 0.88, 1]
+      }
+    }
+  }
+
   // Render
   return (
     <NewHeaderFooterLayout title='Tip This Site'>
-      <ComponentWrapper>
-        <Box mt={6}>
-          <AmountInput />
-        </Box>
-        <Box mt={5}>
-          <HotkeyAmountButtons />
-        </Box>
-        <Box mt={4} mb={1} flex='1'>
-          <TipAmountFeedback />
-        </Box>
-        <Box mb={1}>
-          <CtaButton onClick={handleTip} disabled={buttonDisabled}>
-            Send $
-            {Number.isInteger(currentTipAmountUsd)
-              ? currentTipAmountUsd
-              : currentTipAmountUsd.toFixed(2)}
-          </CtaButton>
-        </Box>
-      </ComponentWrapper>
+      <motion.div
+        key='tip-view'
+        initial='initial'
+        animate='exit'
+        variants={variants}
+      >
+        <ComponentWrapper>
+          <Box mt={6}>
+            <AmountInput />
+          </Box>
+          <Box mt={5}>
+            <HotkeyAmountButtons />
+          </Box>
+          <Box mt={4} mb={1} flex='1'>
+            <TipAmountFeedback />
+          </Box>
+          <Box mb={1}>
+            <CtaButton onClick={handleTip} disabled={buttonDisabled}>
+              Send $
+              {Number.isInteger(currentTipAmountUsd)
+                ? currentTipAmountUsd
+                : currentTipAmountUsd.toFixed(2)}
+            </CtaButton>
+          </Box>
+        </ComponentWrapper>
+      </motion.div>
     </NewHeaderFooterLayout>
   )
 }

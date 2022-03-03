@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import lottie, { AnimationItem } from 'lottie-web'
 import { styled, Theme, Typography, useTheme } from '@material-ui/core'
+import { motion } from 'framer-motion'
 
 import { useStore } from '../../context/storeContext'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
@@ -92,19 +93,49 @@ export const StreamingWebMonetizedView = () => {
     </>
   )
 
+  const variants = {
+    initial: {
+      opacity: 0,
+      x: 50
+    },
+    enter: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.4,
+        ease: [0.61, 1, 0.88, 1]
+      }
+    },
+    exit: {
+      opacity: 1,
+      x: 500,
+      transition: {
+        duration: 0.4,
+        ease: [0.61, 1, 0.88, 1]
+      }
+    }
+  }
+
   return (
     <NewHeaderFooterLayout title='Stream Payments'>
-      <LottieWrapper ref={lottieAnchor} />
-      <Typography
-        variant='h6'
-        align='center'
-        style={{ marginBottom: theme.spacing(1) }}
+      <motion.div
+        key='streaming-web-monetized-view'
+        initial='initial'
+        animate='enter'
+        variants={variants}
       >
-        Thank You!
-      </Typography>
-      <Typography variant='subtitle1' align='center'>
-        {adapted ? contentMessage : siteMessage}
-      </Typography>
+        <LottieWrapper ref={lottieAnchor} />
+        <Typography
+          variant='h6'
+          align='center'
+          style={{ marginBottom: theme.spacing(1) }}
+        >
+          Thank You!
+        </Typography>
+        <Typography variant='subtitle1' align='center'>
+          {adapted ? contentMessage : siteMessage}
+        </Typography>
+      </motion.div>
     </NewHeaderFooterLayout>
   )
 }
