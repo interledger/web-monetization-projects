@@ -213,6 +213,7 @@ export const AmountInput = (): React.ReactElement => {
         // render tip display
         <Amount
           tabIndex={0}
+          role='button'
           size={displayFontSize}
           onKeyPress={() => setIsUserInput(true)}
           onClick={() => setIsUserInput(true)}

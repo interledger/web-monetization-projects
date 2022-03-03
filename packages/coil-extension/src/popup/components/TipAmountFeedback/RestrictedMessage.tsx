@@ -41,6 +41,7 @@ export const RestrictedMessage = () => {
           Max tip amount.{' '}
           <LinkUnderlined
             tabIndex={0}
+            role='link'
             onKeyPress={tabOpener(`${coilDomain}/settings/tipping`)}
             onClick={tabOpener(`${coilDomain}/settings/tipping`)}
           >
@@ -58,7 +59,8 @@ export const RestrictedMessage = () => {
       return (
         <Typography variant='subtitle1'>
           <LinkUnderlined
-            tabIndex='0'
+            tabIndex={0}
+            role='link'
             onKeyPress={tabOpener(`${coilDomain}/settings/billing`)}
             onClick={tabOpener(`${coilDomain}/settings/billing`)}
           >
@@ -78,7 +80,8 @@ export const RestrictedMessage = () => {
         <Typography variant='subtitle1'>
           Daily limit reached.{' '}
           <LinkUnderlined
-            tabIndex='0'
+            tabIndex={0}
+            role='link'
             onKeyPress={tabOpener(`${coilDomain}/settings/tipping`)}
             onClick={tabOpener(`${coilDomain}/settings/tipping`)}
           >
@@ -94,7 +97,8 @@ export const RestrictedMessage = () => {
         <Typography variant='subtitle1'>
           Limit below minimum tip.{' '}
           <LinkUnderlined
-            tabIndex='0'
+            tabIndex={0}
+            role='link'
             onKeyPress={tabOpener(`${coilDomain}/settings/tipping`)}
             onClick={tabOpener(`${coilDomain}/settings/tipping`)}
           >
@@ -109,7 +113,8 @@ export const RestrictedMessage = () => {
         return (
           <Typography variant='subtitle1'>
             <LinkUnderlined
-              tabIndex='0'
+              tabIndex={0}
+              role='link'
               onKeyPress={tabOpener(`${coilDomain}/settings/billing`)}
               onClick={tabOpener(`${coilDomain}/settings/billing`)}
             >
