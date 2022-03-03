@@ -102,7 +102,7 @@ export const StreamingWebMonetizedView = () => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.2,
         ease: [0.61, 1, 0.88, 1]
       }
     },
@@ -119,7 +119,7 @@ export const StreamingWebMonetizedView = () => {
   return (
     <NewHeaderFooterLayout title='Stream Payments'>
       <motion.div
-        key='streaming-web-monetized-view'
+        key='stream-web-monetized-view'
         initial='initial'
         animate='enter'
         exit='exit'

@@ -73,7 +73,7 @@ export const TipView: React.FC = () => {
       opacity: 0,
       x: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.2,
         ease: [0.61, 1, 0.88, 1]
       }
     }
@@ -89,7 +89,7 @@ export const TipView: React.FC = () => {
         exit='exit'
         variants={variants}
       >
-        <ComponentWrapper>
+        <ComponentWrapper key='comp-1'>
           <Box mt={6}>
             <AmountInput />
           </Box>

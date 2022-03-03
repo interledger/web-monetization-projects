@@ -29,7 +29,7 @@ export const NewExtension = () => {
   return (
     <AppContainer>
       <AnimatePresence exitBeforeEnter>
-        <Router key={path} />
+        <Router key={path} path={path} />
       </AnimatePresence>
     </AppContainer>
   )

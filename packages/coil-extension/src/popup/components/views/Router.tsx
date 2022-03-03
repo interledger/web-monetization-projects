@@ -20,11 +20,11 @@ import { TipNonMonetizedView } from './TipNonMonetizedView'
 //
 // Component
 //
-export const Router = () => {
+export const Router = ({ path }: { path: string }): React.ReactElement => {
   const router = useRouter()
   const { user, monetized, coilSite } = useStore()
 
-  switch (router.path) {
+  switch (path) {
     // /settings
     case ROUTES.settings: {
       return <SettingsView key='settings-view' />
