@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import lottie, { AnimationItem } from 'lottie-web'
 import { styled, Theme, Typography, useTheme } from '@material-ui/core'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import { useStore } from '../../context/storeContext'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
@@ -108,7 +108,7 @@ export const StreamingWebMonetizedView = () => {
     },
     exit: {
       opacity: 1,
-      x: 500,
+      x: -50,
       transition: {
         duration: 0.4,
         ease: [0.61, 1, 0.88, 1]
@@ -122,6 +122,7 @@ export const StreamingWebMonetizedView = () => {
         key='streaming-web-monetized-view'
         initial='initial'
         animate='enter'
+        exit='exit'
         variants={variants}
       >
         <LottieWrapper ref={lottieAnchor} />

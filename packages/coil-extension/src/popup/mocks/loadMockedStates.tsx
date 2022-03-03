@@ -226,7 +226,7 @@ const aliceUnsubscribed = mockState({
 
 const MOCK_STATES = [
   { name: 'New Extension UI', state: userCanTipNewUi },
-  { name: 'New Extension UI Compare', state: userCanTipNewUiCompare },
+  // { name: 'New Extension UI Compare', state: userCanTipNewUiCompare },
   { name: 'Paying Coil Article', state: payingCoilArticle },
   { name: 'Not Supported', state: notSupported },
   { name: 'Start Discovering', state: startDiscovering },
@@ -243,7 +243,7 @@ const argsLogger = (name: string) => {
 
 class MockRuntime extends EventEmitter implements PopupRuntime {
   tabOpener = ((...args: any) => {
-    console.log('tabOpener', ...args)
+    // console.log('tabOpener', ...args)
     return argsLogger('openTab: ' + args.join(' '))
   }) as any
 

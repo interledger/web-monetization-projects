@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { styled, Box } from '@material-ui/core'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { AmountInput } from '../AmountInput'
@@ -59,7 +59,7 @@ export const TipView: React.FC = () => {
   const variants = {
     initial: {
       opacity: 0,
-      x: 50
+      x: 0
     },
     enter: {
       opacity: 1,
@@ -70,8 +70,8 @@ export const TipView: React.FC = () => {
       }
     },
     exit: {
-      opacity: 1,
-      x: 500,
+      opacity: 0,
+      x: 0,
       transition: {
         duration: 0.4,
         ease: [0.61, 1, 0.88, 1]
@@ -85,7 +85,8 @@ export const TipView: React.FC = () => {
       <motion.div
         key='tip-view'
         initial='initial'
-        animate='exit'
+        animate='enter'
+        exit='exit'
         variants={variants}
       >
         <ComponentWrapper>

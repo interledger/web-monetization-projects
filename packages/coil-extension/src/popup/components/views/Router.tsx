@@ -27,7 +27,7 @@ export const Router = () => {
   switch (router.path) {
     // /settings
     case ROUTES.settings: {
-      return <SettingsView />
+      return <SettingsView key='settings-view' />
     }
     // /tipping
     case ROUTES.tipping: {
@@ -35,21 +35,21 @@ export const Router = () => {
 
       // Tipping - non monetized site | Coil site
       if (!monetized) {
-        return <TipNonMonetizedView />
+        return <TipNonMonetizedView key='tipping-non-monetized-view' />
       }
 
       // Tipping - monetized sites
-      return <TipView />
+      return <TipView key='tipping-view:' />
     }
     // /tipping/confirm
     case ROUTES.tippingConfirm: {
       // /tipping/confirm
-      return <TipConfirmView />
+      return <TipConfirmView key='tipping-confirm-view' />
     }
     // /tipping/complete
     case ROUTES.tippingComplete: {
       // /tipping/complete
-      return <TipCompleteView />
+      return <TipCompleteView key='tipping-complete-view' />
     }
     // /streaming
     case ROUTES.streaming:
@@ -58,7 +58,7 @@ export const Router = () => {
 
       // Streaming - No Membership
       if (monetized && !user?.subscription?.active) {
-        return <StreamingNoMembershipView />
+        return <StreamingNoMembershipView key='streaming-no-membership-view' />
       }
 
       // Streaming - Coil Site > Discover
@@ -66,18 +66,22 @@ export const Router = () => {
       if (coilSite && !monetized) {
         const { pathname } = new URL(coilSite)
         if (pathname === '/discover') {
-          return <StreamingCoilDiscoverView />
+          return (
+            <StreamingCoilDiscoverView key='streaming-coil-discover-view' />
+          )
         } else {
-          return <StreamingCoilView />
+          return <StreamingCoilView key='streaming-coil-view' />
         }
       }
 
       // Streaming - Web Monetized Site
       // Streaming - Not Web Monetized Site
       if (monetized) {
-        return <StreamingWebMonetizedView />
+        return <StreamingWebMonetizedView key='streaming-web-monetized-view' />
       } else {
-        return <StreamingNotWebMonetizedView />
+        return (
+          <StreamingNotWebMonetizedView key='streaming-not-web-monetized-view' />
+        )
       }
     }
   }
