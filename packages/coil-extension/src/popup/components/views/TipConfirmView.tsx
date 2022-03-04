@@ -155,34 +155,35 @@ export const TipConfirmView = (): React.ReactElement => {
           ? currentTipAmountUsd
           : currentTipAmountUsd.toFixed(2)}
       </FitTextWrapper>
-      <Box
-        mt={5}
-        textAlign='center'
-        color={Colors.Grey800}
-        fontWeight='normal'
-        fontSize='18px'
-      >
-        {/* animate for sub navigation */}
-        <AnimateTippingOpacityWrapper>Pay with</AnimateTippingOpacityWrapper>
-      </Box>
-      <Box mt={1} flex='1' display='flex'>
+      <Box flex='1' display='flex' flexDirection='column'>
         {/* animate for sub navigation */}
         <AnimateTippingOpacityWrapper>
-          {submitError ? (
-            <Box
-              width='100%'
-              textAlign='center'
-              color={Colors.Red400}
-              alignSelf='center'
-            >
-              {submitError}
-            </Box>
-          ) : (
-            <TipPaymentDebits
-              tipCreditCharge={tipCreditCharge}
-              creditCardCharge={creditCardCharge}
-            />
-          )}
+          <Box
+            mt={5}
+            textAlign='center'
+            color={Colors.Grey800}
+            fontWeight='normal'
+            fontSize='18px'
+          >
+            Pay with
+          </Box>
+          <Box mt={1} flex='1' display='flex'>
+            {submitError ? (
+              <Box
+                width='100%'
+                textAlign='center'
+                color={Colors.Red400}
+                alignSelf='center'
+              >
+                {submitError}
+              </Box>
+            ) : (
+              <TipPaymentDebits
+                tipCreditCharge={tipCreditCharge}
+                creditCardCharge={creditCardCharge}
+              />
+            )}
+          </Box>
         </AnimateTippingOpacityWrapper>
       </Box>
       <Box mt={1}>
