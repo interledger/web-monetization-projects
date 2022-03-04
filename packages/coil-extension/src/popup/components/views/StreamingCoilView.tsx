@@ -5,6 +5,7 @@ import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { CtaButton } from '../CtaButton'
 import { useHost } from '../../context/popupHostContext'
 import { useStore } from '../../context/storeContext'
+import { AnimatePageTransitionWrapper } from '../AnimatePageTransitionWrapper'
 
 //
 // Styles
@@ -33,26 +34,28 @@ export const StreamingCoilView = () => {
 
   return (
     <NewHeaderFooterLayout title='Stream Payments'>
-      <ImgWrapper>
-        <img src='/res/img-discover.svg' />
-      </ImgWrapper>
-      <Typography
-        variant='h6'
-        align='center'
-        style={{ marginBottom: theme.spacing(1) }}
-      >
-        Welcome{firstName ? `, ${firstName}` : ''}
-      </Typography>
-      <Box flex='1'>
-        <Typography variant='subtitle1' align='center'>
-          Explore the world of web monetized
-          <br />
-          content on our Discover page
+      <AnimatePageTransitionWrapper>
+        <ImgWrapper>
+          <img src='/res/img-discover.svg' />
+        </ImgWrapper>
+        <Typography
+          variant='h6'
+          align='center'
+          style={{ marginBottom: theme.spacing(1) }}
+        >
+          Welcome{firstName ? `, ${firstName}` : ''}
         </Typography>
-      </Box>
-      <Box mt={2} mb={1} px={3}>
-        <CtaButton onClick={onClick}>Discover now</CtaButton>
-      </Box>
+        <Box flex='1'>
+          <Typography variant='subtitle1' align='center'>
+            Explore the world of web monetized
+            <br />
+            content on our Discover page
+          </Typography>
+        </Box>
+        <Box mt={2} mb={1} px={3}>
+          <CtaButton onClick={onClick}>Discover now</CtaButton>
+        </Box>
+      </AnimatePageTransitionWrapper>
     </NewHeaderFooterLayout>
   )
 }

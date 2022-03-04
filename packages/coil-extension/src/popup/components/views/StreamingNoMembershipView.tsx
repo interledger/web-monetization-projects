@@ -6,6 +6,7 @@ import { useHost } from '../../context/popupHostContext'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { CtaButton } from '../CtaButton'
 import streamingOnAnimation from '../lottie-animations/wm_streaming_on.json'
+import { AnimatePageTransitionWrapper } from '../AnimatePageTransitionWrapper'
 
 //
 // Styles
@@ -43,24 +44,26 @@ export const StreamingNoMembershipView = () => {
 
   return (
     <NewHeaderFooterLayout title='Stream Payments'>
-      <LottieWrapper ref={lottieAnchor} />
-      <Typography
-        variant='h6'
-        align='center'
-        style={{ marginBottom: theme.spacing(1) }}
-      >
-        Support this content
-      </Typography>
-      <Box flex='1'>
-        <Typography variant='subtitle1' align='center'>
-          Get a $5/mo Coil membership to
-          <br />
-          support content and creators you love
+      <AnimatePageTransitionWrapper>
+        <LottieWrapper ref={lottieAnchor} />
+        <Typography
+          variant='h6'
+          align='center'
+          style={{ marginBottom: theme.spacing(1) }}
+        >
+          Support this content
         </Typography>
-      </Box>
-      <Box mt={2} mb={1} px={3}>
-        <CtaButton onClick={onClick}>Become a member</CtaButton>
-      </Box>
+        <Box flex='1'>
+          <Typography variant='subtitle1' align='center'>
+            Get a $5/mo Coil membership to
+            <br />
+            support content and creators you love
+          </Typography>
+        </Box>
+        <Box mt={2} mb={1} px={3}>
+          <CtaButton onClick={onClick}>Become a member</CtaButton>
+        </Box>
+      </AnimatePageTransitionWrapper>
     </NewHeaderFooterLayout>
   )
 }
