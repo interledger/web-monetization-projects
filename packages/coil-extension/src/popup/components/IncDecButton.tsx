@@ -19,7 +19,6 @@ const IncDecButtonWrapper = styled('button')({
   flexShrink: 0,
   display: 'flex',
   alignItems: 'center',
-  outline: 'none',
   justifyContent: 'center',
   '&:hover': {
     backgroundColor: Colors.Violet10,
