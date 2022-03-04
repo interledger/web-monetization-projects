@@ -15,6 +15,7 @@ import { useTip } from '../../context/tipContext'
 import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../constants'
 import { CtaButton } from '../CtaButton'
+import { AnimateOpacityWrapper } from '../AnimateOpacityWrapper'
 
 //
 // Style
@@ -143,7 +144,8 @@ export const TipConfirmView = (): React.ReactElement => {
         fontWeight='normal'
         fontSize='18px'
       >
-        You will send
+        {/* animate for sub navigation */}
+        <AnimateOpacityWrapper>You will send</AnimateOpacityWrapper>
       </Box>
       <FitTextWrapper defaultFontSize={64}>
         $
@@ -158,34 +160,44 @@ export const TipConfirmView = (): React.ReactElement => {
         fontWeight='normal'
         fontSize='18px'
       >
-        Pay with
+        {/* animate for sub navigation */}
+        <AnimateOpacityWrapper>Pay with</AnimateOpacityWrapper>
       </Box>
       <Box mt={1} flex='1' display='flex'>
-        {submitError ? (
-          <Box
-            width='100%'
-            textAlign='center'
-            color={Colors.Red400}
-            alignSelf='center'
-          >
-            {submitError}
-          </Box>
-        ) : (
-          <TipPaymentDebits
-            tipCreditCharge={tipCreditCharge}
-            creditCardCharge={creditCardCharge}
-          />
-        )}
+        {/* animate for sub navigation */}
+        <AnimateOpacityWrapper>
+          {submitError ? (
+            <Box
+              width='100%'
+              textAlign='center'
+              color={Colors.Red400}
+              alignSelf='center'
+            >
+              {submitError}
+            </Box>
+          ) : (
+            <TipPaymentDebits
+              tipCreditCharge={tipCreditCharge}
+              creditCardCharge={creditCardCharge}
+            />
+          )}
+        </AnimateOpacityWrapper>
       </Box>
       <Box mt={1}>
         <CtaButton onClick={handleSubmit} disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : submitError ? 'Retry' : 'Confirm'}
+          {/* animate for sub navigation */}
+          <AnimateOpacityWrapper>
+            {isSubmitting ? 'Sending...' : submitError ? 'Retry' : 'Confirm'}
+          </AnimateOpacityWrapper>
         </CtaButton>
       </Box>
       <Box mt={1} mb='14px'>
-        <CancelButton onClick={handleUndo} disabled={isSubmitting}>
-          Cancel
-        </CancelButton>
+        {/* animate for sub navigation */}
+        <AnimateOpacityWrapper>
+          <CancelButton onClick={handleUndo} disabled={isSubmitting}>
+            Cancel
+          </CancelButton>
+        </AnimateOpacityWrapper>
       </Box>
     </ComponentWrapper>
   )

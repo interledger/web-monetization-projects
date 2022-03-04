@@ -7,6 +7,7 @@ import { ITipContext, useTip } from '../context/tipContext'
 import { User } from '../../types/user'
 
 import { IncDecButton, IncDec } from './IncDecButton'
+import { AnimateOpacityWrapper } from './AnimateOpacityWrapper'
 
 //
 // Styles
@@ -192,7 +193,10 @@ export const AmountInput = (): React.ReactElement => {
 
   return (
     <CurrentAmountWrapper>
-      <IncDecButton type={IncDec.Dec} />
+      {/* animate for sub navigation */}
+      <AnimateOpacityWrapper>
+        <IncDecButton type={IncDec.Dec} />
+      </AnimateOpacityWrapper>
       {isUserInput ? (
         // render tip manual input
         <InputWrapper size={displayFontSize}>
@@ -228,7 +232,10 @@ export const AmountInput = (): React.ReactElement => {
             : currentTipAmountUsd.toFixed(2)}
         </Amount>
       )}
-      <IncDecButton type={IncDec.Inc} />
+      {/* animate for sub navigation */}
+      <AnimateOpacityWrapper>
+        <IncDecButton type={IncDec.Inc} />
+      </AnimateOpacityWrapper>
     </CurrentAmountWrapper>
   )
 }
