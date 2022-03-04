@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import { useRouter } from '../context/routerContext'
+import { ROUTES } from '../constants'
 
 //
 // Component
@@ -23,23 +24,26 @@ export const AnimateTipViewNavBarWrapper = (
   const isSubRoute =
     path.includes('tipping') && previousPath.includes('tipping')
 
+  // this is used to prevent animation when navigating back to TipView from TipCompleteView
+  const noAnimate = previousPath === ROUTES.tippingComplete
+
   const primaryVariants = {
     initial: {
       opacity: 1,
-      y: 62
+      y: noAnimate ? 0 : 62
     },
     enter: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: transitionDuration
+        duration: noAnimate ? 0 : transitionDuration
       }
     },
     exit: {
       opacity: 0,
       y: 62,
       transition: {
-        duration: transitionDuration
+        duration: noAnimate ? 0 : transitionDuration
       }
     }
   }

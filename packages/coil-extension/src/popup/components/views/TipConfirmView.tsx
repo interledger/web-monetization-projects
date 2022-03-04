@@ -104,7 +104,6 @@ export const TipConfirmView = (): React.ReactElement => {
   }
 
   const handleSubmit = async () => {
-    // router.to(ROUTES.tippingComplete)
     setSubmitError(null)
     setIsSubmitting(true)
     try {

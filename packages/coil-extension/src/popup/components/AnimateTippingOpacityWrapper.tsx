@@ -35,7 +35,7 @@ export const AnimateTippingOpacityWrapper = (
     enter: {
       opacity: 1,
       transition: {
-        duration: noAnimation ? 0 : transitionDuration
+        duration: transitionDuration
       }
     },
     exit: {
