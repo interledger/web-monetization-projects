@@ -7,7 +7,7 @@ import { ITipContext, useTip } from '../context/tipContext'
 import { User } from '../../types/user'
 
 import { IncDecButton, IncDec } from './IncDecButton'
-import { AnimateOpacityWrapper } from './AnimateOpacityWrapper'
+import { AnimateTippingOpacityWrapper } from './AnimateTippingOpacityWrapper'
 
 //
 // Styles
@@ -194,9 +194,9 @@ export const AmountInput = (): React.ReactElement => {
   return (
     <CurrentAmountWrapper>
       {/* animate for sub navigation */}
-      <AnimateOpacityWrapper>
+      <AnimateTippingOpacityWrapper>
         <IncDecButton type={IncDec.Dec} />
-      </AnimateOpacityWrapper>
+      </AnimateTippingOpacityWrapper>
       {isUserInput ? (
         // render tip manual input
         <InputWrapper size={displayFontSize}>
@@ -233,9 +233,9 @@ export const AmountInput = (): React.ReactElement => {
         </Amount>
       )}
       {/* animate for sub navigation */}
-      <AnimateOpacityWrapper>
+      <AnimateTippingOpacityWrapper>
         <IncDecButton type={IncDec.Inc} />
-      </AnimateOpacityWrapper>
+      </AnimateTippingOpacityWrapper>
     </CurrentAmountWrapper>
   )
 }

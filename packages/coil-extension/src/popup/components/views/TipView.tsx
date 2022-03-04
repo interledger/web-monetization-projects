@@ -14,7 +14,7 @@ import { UpdateTippingSettings } from '../../../types/commands'
 import { AnimatePageTransitionWrapper } from '../AnimatePageTransitionWrapper'
 import { AnimateTipViewHeaderWrapper } from '../AnimateTipViewHeaderWrapper'
 import { AnimateTipViewNavBarWrapper } from '../AnimateTipViewNavBarWrapper'
-import { AnimateOpacityWrapper } from '../AnimateOpacityWrapper'
+import { AnimateTippingOpacityWrapper } from '../AnimateTippingOpacityWrapper'
 import { Header } from '../Header'
 import { NavBar } from '../NavBar'
 
@@ -85,25 +85,25 @@ export const TipView: React.FC = () => {
           </Box>
           <Box mt={5}>
             {/* animate body for primary and sub navigation */}
-            <AnimateOpacityWrapper>
+            <AnimateTippingOpacityWrapper>
               <HotkeyAmountButtons />
-            </AnimateOpacityWrapper>
+            </AnimateTippingOpacityWrapper>
           </Box>
           <Box mt={4} mb={1} flex='1'>
             {/* animate body for primary and sub navigation */}
-            <AnimateOpacityWrapper>
+            <AnimateTippingOpacityWrapper>
               <TipAmountFeedback />
-            </AnimateOpacityWrapper>
+            </AnimateTippingOpacityWrapper>
           </Box>
           <Box mb={1}>
             <CtaButton onClick={handleTip} disabled={buttonDisabled}>
               {/* animate body for primary and sub navigation */}
-              <AnimateOpacityWrapper>
+              <AnimateTippingOpacityWrapper>
                 Send $
                 {Number.isInteger(currentTipAmountUsd)
                   ? currentTipAmountUsd
                   : currentTipAmountUsd.toFixed(2)}
-              </AnimateOpacityWrapper>
+              </AnimateTippingOpacityWrapper>
             </CtaButton>
           </Box>
         </ComponentWrapper>
