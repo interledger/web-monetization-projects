@@ -13,6 +13,7 @@ import { CtaButton } from '../CtaButton'
 import { useStore } from '../../context/storeContext'
 import { useHost } from '../../context/popupHostContext'
 import { UpdateTippingSettings } from '../../../types/commands'
+import { AnimatePageTransitionWrapper } from '../AnimatePageTransitionWrapper'
 
 //
 // Styles
@@ -56,40 +57,11 @@ export const TipView: React.FC = () => {
     updateTipSettings()
   }, [])
 
-  const variants = {
-    initial: {
-      opacity: 0,
-      x: 0
-    },
-    enter: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.4,
-        ease: [0.61, 1, 0.88, 1]
-      }
-    },
-    exit: {
-      opacity: 0,
-      x: 0,
-      transition: {
-        duration: 0.2,
-        ease: [0.61, 1, 0.88, 1]
-      }
-    }
-  }
-
   // Render
   return (
     <NewHeaderFooterLayout title='Tip This Site'>
-      <motion.div
-        key='tip-view'
-        initial='initial'
-        animate='enter'
-        exit='exit'
-        variants={variants}
-      >
-        <ComponentWrapper key='comp-1'>
+      <AnimatePageTransitionWrapper>
+        <ComponentWrapper>
           <Box mt={6}>
             <AmountInput />
           </Box>
@@ -108,7 +80,7 @@ export const TipView: React.FC = () => {
             </CtaButton>
           </Box>
         </ComponentWrapper>
-      </motion.div>
+      </AnimatePageTransitionWrapper>
     </NewHeaderFooterLayout>
   )
 }

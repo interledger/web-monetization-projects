@@ -25,10 +25,9 @@ const AppContainer = styled('div')({
 //
 export const NewExtension = () => {
   const { path } = useRouter()
-  console.log('-- new path: ', path)
   return (
     <AppContainer>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter initial={false}>
         <Router key={path} path={path} />
       </AnimatePresence>
     </AppContainer>
