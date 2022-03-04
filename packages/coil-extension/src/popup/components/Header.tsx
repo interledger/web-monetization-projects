@@ -35,7 +35,7 @@ export const Header: React.FC = props => {
     <HeaderContainer>
       <CoilLogo />
       <HeaderTitle>{props.children}</HeaderTitle>
-      <CloseButton onClick={() => window.close()}>
+      <CloseButton tabIndex={-1} onClick={() => window.close()}>
         <CloseRoundedIcon />
       </CloseButton>
     </HeaderContainer>

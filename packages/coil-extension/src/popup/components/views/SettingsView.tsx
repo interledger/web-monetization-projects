@@ -54,7 +54,11 @@ const ProfileIcon = styled('div')(({ theme }: { theme: Theme }) => ({
   }
 }))
 
-const SettingsButton = styled('div')(({ theme }: { theme: Theme }) => ({
+const SettingsButton = styled('button')(({ theme }: { theme: Theme }) => ({
+  background: 'transparent',
+  border: 'none',
+  font: 'inherit',
+  textAlign: 'inherit',
   cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',

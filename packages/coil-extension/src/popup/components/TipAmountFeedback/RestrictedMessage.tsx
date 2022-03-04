@@ -22,10 +22,7 @@ export const RestrictedMessage = () => {
       minTipLimitAmountUsd = 1
     } = {}
   } = user ?? {}
-  const {
-    coilDomain,
-    runtime: { tabOpener }
-  } = useHost()
+  const { coilDomain } = useHost()
 
   const creditCard = getCreditCardFromPaymentMethods(paymentMethods)
 
@@ -39,7 +36,7 @@ export const RestrictedMessage = () => {
       return (
         <Typography variant='subtitle1'>
           Max tip amount.{' '}
-          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
+          <LinkUnderlined to={`${coilDomain}/settings/tipping`}>
             Raise limit
           </LinkUnderlined>
         </Typography>
@@ -53,7 +50,7 @@ export const RestrictedMessage = () => {
     ) {
       return (
         <Typography variant='subtitle1'>
-          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/billing`)}>
+          <LinkUnderlined to={`${coilDomain}/settings/billing`}>
             Add credit card to tip more
           </LinkUnderlined>
         </Typography>
@@ -69,7 +66,7 @@ export const RestrictedMessage = () => {
       return (
         <Typography variant='subtitle1'>
           Daily limit reached.{' '}
-          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
+          <LinkUnderlined to={`${coilDomain}/settings/tipping`}>
             Raise limit
           </LinkUnderlined>
         </Typography>
@@ -81,7 +78,7 @@ export const RestrictedMessage = () => {
       return (
         <Typography variant='subtitle1'>
           Limit below minimum tip.{' '}
-          <LinkUnderlined onClick={tabOpener(`${coilDomain}/settings/tipping`)}>
+          <LinkUnderlined to={`${coilDomain}/settings/tipping`}>
             Raise limit
           </LinkUnderlined>
         </Typography>
@@ -92,9 +89,7 @@ export const RestrictedMessage = () => {
         // user is in beta -> return add credit card
         return (
           <Typography variant='subtitle1'>
-            <LinkUnderlined
-              onClick={tabOpener(`${coilDomain}/settings/billing`)}
-            >
+            <LinkUnderlined to={`${coilDomain}/settings/billing`}>
               Add credit card to tip minimum amount.
             </LinkUnderlined>
           </Typography>
