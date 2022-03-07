@@ -20,13 +20,12 @@ export const AnimateTippingOpacityWrapper = (
   const { path, previousPath } = useRouter()
   const transitionDuration = 0.1
 
-  console.log('- current: ', path)
-  console.log('-prev: ', previousPath)
   // not sure where to put this, using it to determine the direction
   const isSubRoute =
     path.includes('tipping') && previousPath.includes('tipping')
 
-  const noAnimation = path === ROUTES.tippingComplete
+  // this is used to prevent animation when navigating back to TipView from TipCompleteView
+  const preventAnimation = path === ROUTES.tippingComplete
 
   const primaryVariants = {
     initial: {
@@ -41,30 +40,26 @@ export const AnimateTippingOpacityWrapper = (
     exit: {
       opacity: 0,
       transition: {
-        duration: noAnimation ? 0 : transitionDuration
+        duration: preventAnimation ? 0 : transitionDuration
       }
     }
   }
 
-  // staticVariants is set to simply eliminate the animation if the navigation is for a primary route
-  const staticSettings = {
+  // notAnimated is set to simply eliminate the animation if the navigation is for a primary route
+  // the rules used in the variants need to be overridden in order to eliminate a jump if the animation should not run.
+  const notAnimated = {
     opacity: 1,
     transition: {
       duration: 0
     }
   }
-  const staticVariants = {
-    initial: staticSettings,
-    enter: staticSettings,
-    exit: staticSettings
-  }
 
   return (
     <motion.div
-      initial='initial'
-      animate='enter'
-      exit='exit'
-      variants={isSubRoute ? primaryVariants : staticVariants}
+      initial={isSubRoute ? 'initial' : notAnimated}
+      animate={isSubRoute ? 'enter' : notAnimated}
+      exit={isSubRoute ? 'exit' : notAnimated}
+      variants={primaryVariants}
     >
       {props.children}
     </motion.div>

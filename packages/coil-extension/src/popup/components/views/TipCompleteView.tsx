@@ -7,9 +7,9 @@ import { Colors } from '../../../shared-theme/colors'
 import { FitTextWrapper } from '../FitTextWrapper'
 import { RandomThankYouMessage } from '../RandomThankYouMessage'
 import { useTip } from '../../context/tipContext'
-import { AnimateTipViewHeaderWrapper } from '../AnimateTipViewHeaderWrapper'
+import { AnimateTippingHeaderWrapper } from '../AnimateTippingHeaderWrapper'
 import { AnimateTipCompleteViewMessageWrapper } from '../AnimateTipCompleteViewMessageWrapper'
-import { AnimateTipCompleteViewNavBarWrapper } from '../AnimateTipCompleteViewNavBarWrapper'
+import { AnimateTippingNavBarWrapper } from '../AnimateTippingNavBarWrapper'
 
 //
 // Styles
@@ -59,9 +59,9 @@ export const TipCompleteView = (): React.ReactElement => {
   return (
     <>
       <BodyWrapper url={getBackgroundImageUrl()}>
-        <AnimateTipViewHeaderWrapper>
+        <AnimateTippingHeaderWrapper>
           <Header />
-        </AnimateTipViewHeaderWrapper>
+        </AnimateTippingHeaderWrapper>
         <Box mt={5} mb={2} px={3}>
           <FitTextWrapper defaultFontSize={80}>
             $
@@ -76,9 +76,9 @@ export const TipCompleteView = (): React.ReactElement => {
           </AnimateTipCompleteViewMessageWrapper>
         </Box>
       </BodyWrapper>
-      <AnimateTipCompleteViewNavBarWrapper>
+      <AnimateTippingNavBarWrapper>
         <NavBar />
-      </AnimateTipCompleteViewNavBarWrapper>
+      </AnimateTippingNavBarWrapper>
     </>
   )
 }

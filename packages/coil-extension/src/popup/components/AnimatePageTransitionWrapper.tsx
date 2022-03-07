@@ -30,7 +30,6 @@ export const AnimatePageTransitionWrapper = (
   const transitionDuration = 0.1
   const xDistance = 100
 
-  // not sure where to put this, using it to determine the direction
   const primaryRouteOrder = ['streaming', 'tipping', 'settings']
   const previousPathIndex = primaryRouteOrder.findIndex(primaryRoute => {
     return previousPath.includes(primaryRoute)
@@ -62,18 +61,23 @@ export const AnimatePageTransitionWrapper = (
     }
   }
 
-  // staticVariants is set to simply eliminate the animation if the navigation is for a sub route
-  const staticSettings = {
+  // notAnimated is set to simply eliminate the animation if the navigation is for a sub route
+  // the rules used in the variants need to be overridden in order to eliminate a jump if the animation should not run.
+  const notAnimated = {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0
     }
   }
-  const staticVariants = {
-    initial: staticSettings,
-    enter: staticSettings,
-    exit: staticSettings
+
+  // using a variant in this instance instead of just inline rules
+  // because the header for page transitions somehow will still slide to the right
+  // on sub page navigations otherwise
+  const notAnimatedVariants = {
+    initial: notAnimated,
+    enter: notAnimated,
+    exit: notAnimated
   }
 
   return (
@@ -81,7 +85,7 @@ export const AnimatePageTransitionWrapper = (
       initial='initial'
       animate='enter'
       exit='exit'
-      variants={isSubRoute ? staticVariants : primaryVariants}
+      variants={isSubRoute ? notAnimatedVariants : primaryVariants}
     >
       {props.children}
     </MotionComponentWrapper>

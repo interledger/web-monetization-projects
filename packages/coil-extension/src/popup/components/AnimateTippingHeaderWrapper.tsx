@@ -14,7 +14,7 @@ import { ROUTES } from '../constants'
     This animation is only for primary navigation transitions. 
     This does not handle the sub route navigation transitions such as from TipView -> TipConfirmView -> TipCompleteView
 */
-export const AnimateTipViewHeaderWrapper = (
+export const AnimateTippingHeaderWrapper = (
   props: React.PropsWithChildren<any>
 ) => {
   const { path, previousPath } = useRouter()
@@ -25,49 +25,45 @@ export const AnimateTipViewHeaderWrapper = (
     path.includes('tipping') && previousPath.includes('tipping')
 
   // this is used to prevent animation when navigating back to TipView from TipCompleteView
-  const noAnimate = previousPath === ROUTES.tippingComplete
+  const preventAnimation = previousPath === ROUTES.tippingComplete
 
   const primaryVariants = {
     initial: {
       opacity: 1,
-      y: noAnimate ? 0 : -50
+      y: preventAnimation ? 0 : -50
     },
     enter: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: noAnimate ? 0 : transitionDuration
+        duration: preventAnimation ? 0 : transitionDuration
       }
     },
     exit: {
       opacity: 0,
       y: -50,
       transition: {
-        duration: noAnimate ? 0 : transitionDuration
+        duration: preventAnimation ? 0 : transitionDuration
       }
     }
   }
 
-  // staticVariants is set to simply eliminate the animation if the navigation is for a primary route
-  const staticSettings = {
+  // notAnimated is set to simply eliminate the animation if the navigation is for a primary route
+  // the rules used in the variants need to be overridden in order to eliminate a jump if the animation should not run.
+  const notAnimated = {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0
     }
   }
-  const staticVariants = {
-    initial: staticSettings,
-    enter: staticSettings,
-    exit: staticSettings
-  }
 
   return (
     <motion.div
-      initial='initial'
-      animate='enter'
-      exit='exit'
-      variants={isSubRoute ? primaryVariants : staticVariants}
+      initial={isSubRoute ? 'initial' : notAnimated}
+      animate={isSubRoute ? 'enter' : notAnimated}
+      exit={isSubRoute ? 'exit' : notAnimated}
+      variants={primaryVariants}
     >
       {props.children}
     </motion.div>

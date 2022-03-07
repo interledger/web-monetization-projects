@@ -12,8 +12,8 @@ import { useStore } from '../../context/storeContext'
 import { useHost } from '../../context/popupHostContext'
 import { UpdateTippingSettings } from '../../../types/commands'
 import { AnimatePageTransitionWrapper } from '../AnimatePageTransitionWrapper'
-import { AnimateTipViewHeaderWrapper } from '../AnimateTipViewHeaderWrapper'
-import { AnimateTipViewNavBarWrapper } from '../AnimateTipViewNavBarWrapper'
+import { AnimateTippingHeaderWrapper } from '../AnimateTippingHeaderWrapper'
+import { AnimateTippingNavBarWrapper } from '../AnimateTippingNavBarWrapper'
 import { AnimateTippingOpacityWrapper } from '../AnimateTippingOpacityWrapper'
 import { Header } from '../Header'
 import { NavBar } from '../NavBar'
@@ -70,13 +70,13 @@ export const TipView: React.FC = () => {
   return (
     <FlexContainer>
       {/* animating header for primary and sub navigation */}
-      <AnimateTipViewHeaderWrapper>
+      <AnimateTippingHeaderWrapper>
         <Header>
           <AnimatePageTransitionWrapper>
             Tip This Site
           </AnimatePageTransitionWrapper>
         </Header>
-      </AnimateTipViewHeaderWrapper>
+      </AnimateTippingHeaderWrapper>
       {/* animate body for primary and sub navigation */}
       <AnimatePageTransitionWrapper>
         <ComponentWrapper>
@@ -109,9 +109,9 @@ export const TipView: React.FC = () => {
         </ComponentWrapper>
       </AnimatePageTransitionWrapper>
       {/* animate navbar for sub navigation - does not need to animate for primary navigation */}
-      <AnimateTipViewNavBarWrapper>
+      <AnimateTippingNavBarWrapper>
         <NavBar />
-      </AnimateTipViewNavBarWrapper>
+      </AnimateTippingNavBarWrapper>
     </FlexContainer>
   )
 }
