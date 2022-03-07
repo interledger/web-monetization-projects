@@ -96,7 +96,7 @@ export class AuthService extends EventEmitter {
 
   async checkForSiteLogoutAssumeFalseOnTimeout(): Promise<boolean> {
     try {
-      const token = await this.siteToken.retrieve()
+      const token = await this.siteToken.retrieveTabs()
       return !token
     } catch (e) {
       if (e instanceof TimeoutError) {
@@ -137,7 +137,7 @@ export class AuthService extends EventEmitter {
     )
 
     if (this.tokenInvalid(token)) {
-      token = await this.siteToken.retrieve()
+      token = await this.siteToken.retrieveTabs()
       this.activeTabs.log(`siteToken: ${Boolean(token)}`)
     }
     this.trace('siteToken', token)
