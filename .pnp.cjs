@@ -2924,7 +2924,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.3.5"],
             ["lottie-web", "npm:5.8.1"],
             ["prettier", "npm:2.5.1"],
-            ["puppeteer", "npm:13.4.1"],
+            ["puppeteer", "npm:13.5.0"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:17.0.2"],
             ["reduct", "npm:3.3.1"],
@@ -3055,7 +3055,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.3.5"],
             ["node-fetch", "virtual:47e6e4e8739500cab0d33398974ffa4d7439d46d28a011617678fc84685ffbb35436f24f3e53b4d589582b83e2755d52d43e5b7431f78620304a4de8a788df1f#npm:2.6.7"],
             ["prettier", "npm:2.5.1"],
-            ["puppeteer", "npm:13.4.1"],
+            ["puppeteer", "npm:13.5.0"],
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.1.3"],
@@ -3233,7 +3233,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:12.3.5"],
             ["prettier", "npm:2.5.1"],
-            ["puppeteer", "npm:13.4.1"],
+            ["puppeteer", "npm:13.5.0"],
             ["rimraf", "npm:3.0.2"],
             ["tmp", "npm:0.2.1"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.1.3"],
@@ -13475,10 +13475,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["devtools-protocol", [
-        ["npm:0.0.960912", {
-          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.960912-49dae31b6d-e14bb94e2d.zip/node_modules/devtools-protocol/",
+        ["npm:0.0.969999", {
+          "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.969999-fa997d27f4-c67e2a4086.zip/node_modules/devtools-protocol/",
           "packageDependencies": [
-            ["devtools-protocol", "npm:0.0.960912"]
+            ["devtools-protocol", "npm:0.0.969999"]
           ],
           "linkType": "HARD",
         }]
@@ -23808,13 +23808,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:13.4.1", {
-          "packageLocation": "./.yarn/unplugged/puppeteer-npm-13.4.1-6e88e435df/node_modules/puppeteer/",
+        ["npm:13.5.0", {
+          "packageLocation": "./.yarn/unplugged/puppeteer-npm-13.5.0-32005c3d73/node_modules/puppeteer/",
           "packageDependencies": [
-            ["puppeteer", "npm:13.4.1"],
+            ["puppeteer", "npm:13.5.0"],
             ["cross-fetch", "npm:3.1.5"],
             ["debug", "virtual:c2bff3e67180802999655a22d390062982690e911b9d9225c258f3b25e7409f3867b2682c16232b77415f560a09d05a95042dc512a5b8c566c42bbbed88b0bbc#npm:4.3.3"],
-            ["devtools-protocol", "npm:0.0.960912"],
+            ["devtools-protocol", "npm:0.0.969999"],
             ["extract-zip", "npm:2.0.1"],
             ["https-proxy-agent", "npm:5.0.0"],
             ["pkg-dir", "npm:4.2.0"],
