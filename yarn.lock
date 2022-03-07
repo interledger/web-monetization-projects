@@ -1466,7 +1466,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -1522,7 +1522,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -1616,7 +1616,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -1675,7 +1675,7 @@ __metadata:
     sort-package-json: 1.54.0
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -1741,7 +1741,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -1794,7 +1794,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -1853,7 +1853,7 @@ __metadata:
     sjcl: sublimator/sjcl
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -1913,7 +1913,7 @@ __metadata:
     tmp: ^0.2.1
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -1973,7 +1973,7 @@ __metadata:
     string_decoder: ^1.3.0
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -2026,7 +2026,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -2314,7 +2314,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -2367,7 +2367,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -2528,7 +2528,7 @@ __metadata:
     style-loader: 3.3.1
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typeface-roboto: ^1.1.13
@@ -4056,7 +4056,7 @@ __metadata:
     source-map: 0.5.6
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -5085,7 +5085,7 @@ __metadata:
     string_decoder: ^1.3.0
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -5164,7 +5164,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -5219,7 +5219,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -5274,7 +5274,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -5339,7 +5339,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -5392,7 +5392,7 @@ __metadata:
     ts-jest: 27.1.3
     ts-json-schema-generator: 0.98.0
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -5446,7 +5446,7 @@ __metadata:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
@@ -21940,9 +21940,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node@npm:10.6.0, ts-node@npm:^10.4.0":
-  version: 10.6.0
-  resolution: "ts-node@npm:10.6.0"
+"ts-node@npm:10.7.0, ts-node@npm:^10.4.0":
+  version: 10.7.0
+  resolution: "ts-node@npm:10.7.0"
   dependencies:
     "@cspotcode/source-map-support": 0.7.0
     "@tsconfig/node10": ^1.0.7
@@ -21970,10 +21970,11 @@ sjcl@sublimator/sjcl:
   bin:
     ts-node: dist/bin.js
     ts-node-cwd: dist/bin-cwd.js
+    ts-node-esm: dist/bin-esm.js
     ts-node-script: dist/bin-script.js
     ts-node-transpile-only: dist/bin-transpile.js
     ts-script: dist/bin-script-deprecated.js
-  checksum: bc7589d8c38dc75a2a6f832ac43faaac7edd3d0ef4643f46a9deeaabcdd35722e8c89e729fcd39a16069b30d09e297c2fb3eec917a82dd3f1e7da8b352bbd447
+  checksum: 2a379e43f7478d0b79e1e63af91fe222d83857727957df4bd3bdf3c0a884de5097b12feb9bbf530074526b8874c0338b0e6328cf334f3a5e2c49c71e837273f7
   languageName: node
   linkType: hard
 
@@ -22846,7 +22847,7 @@ sjcl@sublimator/sjcl:
     rimraf: 3.0.2
     ts-jest: 27.1.3
     ts-loader: 9.2.7
-    ts-node: 10.6.0
+    ts-node: 10.7.0
     ts-node-dev: 1.1.8
     tsconfig-paths: 3.13.0
     typescript: 4.5.5
