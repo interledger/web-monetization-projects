@@ -9,7 +9,6 @@ import ChevronRightRoundedIcon from '@material-ui/icons/ChevronRightRounded'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { useStore } from '../../context/storeContext'
 import { useHost } from '../../context/popupHostContext'
-import { AnimatePageTransitionWrapper } from '../AnimatePageTransitionWrapper'
 
 //
 // Styles
@@ -122,60 +121,58 @@ export const SettingsView = () => {
 
   return (
     <NewHeaderFooterLayout title='Settings'>
-      <AnimatePageTransitionWrapper>
-        <SettingsPageContainer>
-          <ProfileContainer
-            style={{
-              flex: '1',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            <div>
-              {user?.profilePicture ? (
-                <ProfilePicture src={user.profilePicture} />
-              ) : (
-                <ProfileIcon>
-                  <AccountCircleIcon />
-                </ProfileIcon>
-              )}
-              {getPrimaryName() && (
-                <Typography variant='h6' align='center'>
-                  {getPrimaryName()}
-                </Typography>
-              )}
-              {getSecondaryName() && (
-                <Typography variant='subtitle1' align='center'>
-                  {getSecondaryName()}
-                </Typography>
-              )}
-            </div>
-          </ProfileContainer>
+      <SettingsPageContainer>
+        <ProfileContainer
+          style={{
+            flex: '1',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <div>
+            {user?.profilePicture ? (
+              <ProfilePicture src={user.profilePicture} />
+            ) : (
+              <ProfileIcon>
+                <AccountCircleIcon />
+              </ProfileIcon>
+            )}
+            {getPrimaryName() && (
+              <Typography variant='h6' align='center'>
+                {getPrimaryName()}
+              </Typography>
+            )}
+            {getSecondaryName() && (
+              <Typography variant='subtitle1' align='center'>
+                {getSecondaryName()}
+              </Typography>
+            )}
+          </div>
+        </ProfileContainer>
 
-          <SettingsButton onClick={tabOpener(`${coilDomain}/settings/acount`)}>
-            <PersonIcon />
-            <span className='title'>Account</span>
-            <span className='icon-open'>
-              <ChevronRightRoundedIcon />
-            </span>
-          </SettingsButton>
-          <SettingsButton onClick={tabOpener(`${coilDomain}/discover`)}>
-            <ExploreIcon />
-            <span className='title'>Discover</span>
-            <span className='icon-open'>
-              <ChevronRightRoundedIcon />
-            </span>
-          </SettingsButton>
-          <SettingsButton onClick={tabOpener(`${coilDomain}/about`)}>
-            <HelpOutlineIcon />
-            <span className='title'>About</span>
-            <span className='icon-open'>
-              <ChevronRightRoundedIcon />
-            </span>
-          </SettingsButton>
-        </SettingsPageContainer>
-      </AnimatePageTransitionWrapper>
+        <SettingsButton onClick={tabOpener(`${coilDomain}/settings/acount`)}>
+          <PersonIcon />
+          <span className='title'>Account</span>
+          <span className='icon-open'>
+            <ChevronRightRoundedIcon />
+          </span>
+        </SettingsButton>
+        <SettingsButton onClick={tabOpener(`${coilDomain}/discover`)}>
+          <ExploreIcon />
+          <span className='title'>Discover</span>
+          <span className='icon-open'>
+            <ChevronRightRoundedIcon />
+          </span>
+        </SettingsButton>
+        <SettingsButton onClick={tabOpener(`${coilDomain}/about`)}>
+          <HelpOutlineIcon />
+          <span className='title'>About</span>
+          <span className='icon-open'>
+            <ChevronRightRoundedIcon />
+          </span>
+        </SettingsButton>
+      </SettingsPageContainer>
     </NewHeaderFooterLayout>
   )
 }

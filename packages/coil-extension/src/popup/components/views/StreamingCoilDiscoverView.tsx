@@ -2,7 +2,6 @@ import React from 'react'
 import { Typography, styled, Theme, useTheme } from '@material-ui/core'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
-import { AnimatePageTransitionWrapper } from '../AnimatePageTransitionWrapper'
 
 //
 // Styles
@@ -23,23 +22,21 @@ export const StreamingCoilDiscoverView = () => {
 
   return (
     <NewHeaderFooterLayout title='Stream Payments'>
-      <AnimatePageTransitionWrapper>
-        <ImgWrapper>
-          <img src='/res/img-discover.svg' />
-        </ImgWrapper>
-        <Typography
-          variant='h6'
-          align='center'
-          style={{ marginBottom: theme.spacing(1) }}
-        >
-          Discover now
-        </Typography>
-        <Typography variant='subtitle1' align='center'>
-          Learn all about the creators and content
-          <br />
-          you can support using Web Monetization
-        </Typography>
-      </AnimatePageTransitionWrapper>
+      <ImgWrapper>
+        <img src='/res/img-discover.svg' />
+      </ImgWrapper>
+      <Typography
+        variant='h6'
+        align='center'
+        style={{ marginBottom: theme.spacing(1) }}
+      >
+        Discover now
+      </Typography>
+      <Typography variant='subtitle1' align='center'>
+        Learn all about the creators and content
+        <br />
+        you can support using Web Monetization
+      </Typography>
     </NewHeaderFooterLayout>
   )
 }

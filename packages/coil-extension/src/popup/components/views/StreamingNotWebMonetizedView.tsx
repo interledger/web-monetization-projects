@@ -6,7 +6,6 @@ import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import streamingOffAnimation from '../lottie-animations/wm_streaming_off.json'
 import { useHost } from '../../context/popupHostContext'
 import { Link } from '../Link'
-import { AnimatePageTransitionWrapper } from '../AnimatePageTransitionWrapper'
 
 //
 // Styles
@@ -39,24 +38,22 @@ export const StreamingNotWebMonetizedView = () => {
 
   return (
     <NewHeaderFooterLayout title='Stream Payments'>
-      <AnimatePageTransitionWrapper>
-        <LottieWrapper ref={lottieAnchor} />
-        <Typography
-          variant='h6'
-          align='center'
-          style={{ marginBottom: theme.spacing(1) }}
-        >
-          Streaming not enabled
-        </Typography>
-        <Typography variant='subtitle1' align='center'>
-          Is this your site?{' '}
-          <Link to={`${coilDomain}/learn-more`} color={theme.palette.Green700}>
-            Learn how to
-            <br />
-            enable streaming payments
-          </Link>
-        </Typography>
-      </AnimatePageTransitionWrapper>
+      <LottieWrapper ref={lottieAnchor} />
+      <Typography
+        variant='h6'
+        align='center'
+        style={{ marginBottom: theme.spacing(1) }}
+      >
+        Streaming not enabled
+      </Typography>
+      <Typography variant='subtitle1' align='center'>
+        Is this your site?{' '}
+        <Link to={`${coilDomain}/learn-more`} color={theme.palette.Green700}>
+          Learn how to
+          <br />
+          enable streaming payments
+        </Link>
+      </Typography>
     </NewHeaderFooterLayout>
   )
 }

@@ -104,24 +104,26 @@ export const TipConfirmView = (): React.ReactElement => {
   }
 
   const handleSubmit = async () => {
-    setSubmitError(null)
-    setIsSubmitting(true)
-    try {
-      // setting the final tip amount first
-      // this is done so that the tip context can properly update when storage is updated
-      setFinalTipAmountUsd(currentTipAmountUsd)
-      const { success, message } = await sendTip(currentTipAmountUsd)
+    setFinalTipAmountUsd(currentTipAmountUsd)
+    router.to(ROUTES.tippingComplete)
+    // setSubmitError(null)
+    // setIsSubmitting(true)
+    // try {
+    //   // setting the final tip amount first
+    //   // this is done so that the tip context can properly update when storage is updated
+    //   setFinalTipAmountUsd(currentTipAmountUsd)
+    //   const { success, message } = await sendTip(currentTipAmountUsd)
 
-      if (success) {
-        router.to(ROUTES.tippingComplete)
-      } else {
-        const errorMsg = message ? message : 'Something went wrong'
-        throw new Error(errorMsg)
-      }
-    } catch (error) {
-      setSubmitError(error.message)
-      setIsSubmitting(false)
-    }
+    //   if (success) {
+    //     router.to(ROUTES.tippingComplete)
+    //   } else {
+    //     const errorMsg = message ? message : 'Something went wrong'
+    //     throw new Error(errorMsg)
+    //   }
+    // } catch (error) {
+    //   setSubmitError(error.message)
+    //   setIsSubmitting(false)
+    // }
   }
 
   const handleUndo = () => {

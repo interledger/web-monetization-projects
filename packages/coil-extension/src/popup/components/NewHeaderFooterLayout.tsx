@@ -37,7 +37,9 @@ export const NewHeaderFooterLayout: React.FC<
           {props.title}
         </AnimatePageTransitionWrapper>
       </Header>
-      <BodyContainer>{props.children}</BodyContainer>
+      <AnimatePageTransitionWrapper>
+        <BodyContainer>{props.children}</BodyContainer>
+      </AnimatePageTransitionWrapper>
       <NavBar />
     </React.Fragment>
   )

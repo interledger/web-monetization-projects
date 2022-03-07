@@ -5,7 +5,6 @@ import { styled, Theme, Typography, useTheme } from '@material-ui/core'
 import { useStore } from '../../context/storeContext'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import streamingOnAnimation from '../lottie-animations/wm_streaming_on.json'
-import { AnimatePageTransitionWrapper } from '../AnimatePageTransitionWrapper'
 
 //
 // Styles
@@ -95,19 +94,17 @@ export const StreamingWebMonetizedView = () => {
 
   return (
     <NewHeaderFooterLayout title='Stream Payments'>
-      <AnimatePageTransitionWrapper>
-        <LottieWrapper ref={lottieAnchor} />
-        <Typography
-          variant='h6'
-          align='center'
-          style={{ marginBottom: theme.spacing(1) }}
-        >
-          Thank You!
-        </Typography>
-        <Typography variant='subtitle1' align='center'>
-          {adapted ? contentMessage : siteMessage}
-        </Typography>
-      </AnimatePageTransitionWrapper>
+      <LottieWrapper ref={lottieAnchor} />
+      <Typography
+        variant='h6'
+        align='center'
+        style={{ marginBottom: theme.spacing(1) }}
+      >
+        Thank You!
+      </Typography>
+      <Typography variant='subtitle1' align='center'>
+        {adapted ? contentMessage : siteMessage}
+      </Typography>
     </NewHeaderFooterLayout>
   )
 }
