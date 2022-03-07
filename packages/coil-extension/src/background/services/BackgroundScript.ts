@@ -104,6 +104,7 @@ export class BackgroundScript {
     this.popup.setDefaultInactive()
     this.framesService.monitor()
     this.bindOnInstalled()
+    this.initCommandsListener()
     void (await this.initAuth())
   }
 
@@ -1111,5 +1112,21 @@ export class BackgroundScript {
         }
       })
     }
+  }
+
+  private initCommandsListener() {
+    this.api.commands.onCommand.addListener(command => {
+      if (command === 'tip-one-dollar') {
+        // just send one cent for testing purposes
+        this.tip(0.01).then(() => {
+          this.api.notifications.create({
+            iconUrl: '/res/icn-coil-ext-alt@4x.png',
+            title: 'Tip Sent',
+            message: 'thanks for your lousy cent, cheapsk8!',
+            type: 'basic'
+          })
+        })
+      }
+    })
   }
 }

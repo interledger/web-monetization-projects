@@ -32,7 +32,16 @@
       "run_at": "document_start"
     }
   ],
-  "permissions": [ "webNavigation", "<all_urls>" ],
+  "commands": {
+    "tip-one-dollar": {
+      "suggested_key": {
+        "default" : "Shift+Ctrl+M",
+        "mac": "Command+MacCtrl+M"
+      },
+      "description": "Tip 1 USD"
+    }
+  },
+  "permissions": [ "webNavigation", "<all_urls>", "notifications" ],
   "$targets" : {
     "safari": {
       "permissions" : ["tabs"]
