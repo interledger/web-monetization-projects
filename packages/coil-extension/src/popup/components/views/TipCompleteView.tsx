@@ -7,9 +7,9 @@ import { Colors } from '../../../shared-theme/colors'
 import { FitTextWrapper } from '../FitTextWrapper'
 import { RandomThankYouMessage } from '../RandomThankYouMessage'
 import { useTip } from '../../context/tipContext'
-import { AnimateTippingHeaderWrapper } from '../AnimateTippingHeaderWrapper'
-import { AnimateTipCompleteViewMessageWrapper } from '../AnimateTipCompleteViewMessageWrapper'
-import { AnimateTippingNavBarWrapper } from '../AnimateTippingNavBarWrapper'
+import { AnimateTippingHeaderWrapper } from '../page-animation-wrappers/AnimateTippingHeaderWrapper'
+import { AnimateTipCompleteViewMessageWrapper } from '../page-animation-wrappers/AnimateTipCompleteViewMessageWrapper'
+import { AnimateTippingNavBarWrapper } from '../page-animation-wrappers/AnimateTippingNavBarWrapper'
 
 //
 // Styles

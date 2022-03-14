@@ -7,7 +7,7 @@ import { ITipContext, useTip } from '../context/tipContext'
 import { User } from '../../types/user'
 
 import { IncDecButton, IncDec } from './IncDecButton'
-import { AnimateTippingOpacityWrapper } from './AnimateTippingOpacityWrapper'
+import { AnimateTippingOpacityWrapper } from './page-animation-wrappers/AnimateTippingOpacityWrapper'
 
 //
 // Styles

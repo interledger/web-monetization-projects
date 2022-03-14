@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import { Header } from './Header'
 import { NavBar } from './NavBar'
-import { AnimatePageTransitionWrapper } from './AnimatePageTransitionWrapper'
+import { AnimatePageTransitionWrapper } from './page-animation-wrappers/AnimatePageTransitionWrapper'
 //
 // Styles
 //

@@ -4,7 +4,9 @@ import React from 'react'
 import { styled } from '@material-ui/core'
 import { motion } from 'framer-motion'
 
-import { useRouter } from '../context/routerContext'
+import { useRouter } from '../../context/routerContext'
+
+import { pageTransitionDuration } from './animation-constants'
 
 //
 // Styles
@@ -27,7 +29,6 @@ export const AnimatePageTransitionWrapper = (
   props: React.PropsWithChildren<any>
 ) => {
   const { path, previousPath } = useRouter()
-  const transitionDuration = 0.1
   const xDistance = 100
 
   const primaryRouteOrder = ['streaming', 'tipping', 'settings']
@@ -49,14 +50,14 @@ export const AnimatePageTransitionWrapper = (
       opacity: 1,
       x: 0,
       transition: {
-        duration: transitionDuration
+        duration: pageTransitionDuration
       }
     },
     exit: {
       opacity: 0,
       x: enterForward ? xDistance * -1 : xDistance,
       transition: {
-        duration: transitionDuration
+        duration: pageTransitionDuration
       }
     }
   }

@@ -15,7 +15,7 @@ import { useTip } from '../../context/tipContext'
 import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../constants'
 import { CtaButton } from '../CtaButton'
-import { AnimateTippingOpacityWrapper } from '../AnimateTippingOpacityWrapper'
+import { AnimateTippingOpacityWrapper } from '../page-animation-wrappers/AnimateTippingOpacityWrapper'
 
 //
 // Style

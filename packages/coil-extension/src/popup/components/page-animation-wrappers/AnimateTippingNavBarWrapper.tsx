@@ -3,8 +3,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import { useRouter } from '../context/routerContext'
-import { ROUTES } from '../constants'
+import { useRouter } from '../../context/routerContext'
+import { ROUTES } from '../../constants'
+
+import { pageTransitionDuration } from './animation-constants'
 
 //
 // Component
@@ -14,11 +16,10 @@ import { ROUTES } from '../constants'
     This animation is only for primary navigation transitions. 
     This does not handle the sub route navigation transitions such as from TipView -> TipConfirmView -> TipCompleteView
 */
-export const AnimateTippingHeaderWrapper = (
+export const AnimateTippingNavBarWrapper = (
   props: React.PropsWithChildren<any>
 ) => {
   const { path, previousPath } = useRouter()
-  const transitionDuration = 0.1
 
   // not sure where to put this, using it to determine the direction
   const isSubRoute =
@@ -30,20 +31,20 @@ export const AnimateTippingHeaderWrapper = (
   const primaryVariants = {
     initial: {
       opacity: 1,
-      y: preventAnimation ? 0 : -50
+      y: preventAnimation ? 0 : 62
     },
     enter: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: preventAnimation ? 0 : transitionDuration
+        duration: preventAnimation ? 0 : pageTransitionDuration
       }
     },
     exit: {
       opacity: 0,
-      y: -50,
+      y: 62,
       transition: {
-        duration: preventAnimation ? 0 : transitionDuration
+        duration: preventAnimation ? 0 : pageTransitionDuration
       }
     }
   }

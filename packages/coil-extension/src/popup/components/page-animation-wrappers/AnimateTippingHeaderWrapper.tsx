@@ -3,8 +3,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import { useRouter } from '../context/routerContext'
-import { ROUTES } from '../constants'
+import { useRouter } from '../../context/routerContext'
+import { ROUTES } from '../../constants'
+
+import { pageTransitionDuration } from './animation-constants'
 
 //
 // Component
@@ -14,33 +16,35 @@ import { ROUTES } from '../constants'
     This animation is only for primary navigation transitions. 
     This does not handle the sub route navigation transitions such as from TipView -> TipConfirmView -> TipCompleteView
 */
-export const AnimateTippingOpacityWrapper = (
+export const AnimateTippingHeaderWrapper = (
   props: React.PropsWithChildren<any>
 ) => {
   const { path, previousPath } = useRouter()
-  const transitionDuration = 0.1
 
   // not sure where to put this, using it to determine the direction
   const isSubRoute =
     path.includes('tipping') && previousPath.includes('tipping')
 
   // this is used to prevent animation when navigating back to TipView from TipCompleteView
-  const preventAnimation = path === ROUTES.tippingComplete
+  const preventAnimation = previousPath === ROUTES.tippingComplete
 
   const primaryVariants = {
     initial: {
-      opacity: 0
+      opacity: 1,
+      y: preventAnimation ? 0 : -50
     },
     enter: {
       opacity: 1,
+      y: 0,
       transition: {
-        duration: transitionDuration
+        duration: preventAnimation ? 0 : pageTransitionDuration
       }
     },
     exit: {
       opacity: 0,
+      y: -50,
       transition: {
-        duration: preventAnimation ? 0 : transitionDuration
+        duration: preventAnimation ? 0 : pageTransitionDuration
       }
     }
   }
@@ -49,6 +53,7 @@ export const AnimateTippingOpacityWrapper = (
   // the rules used in the variants need to be overridden in order to eliminate a jump if the animation should not run.
   const notAnimated = {
     opacity: 1,
+    y: 0,
     transition: {
       duration: 0
     }
