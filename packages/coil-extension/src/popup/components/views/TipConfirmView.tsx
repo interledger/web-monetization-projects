@@ -15,6 +15,7 @@ import { useTip } from '../../context/tipContext'
 import { useRouter } from '../../context/routerContext'
 import { ROUTES } from '../../constants'
 import { CtaButton } from '../CtaButton'
+import { AnimateTippingOpacityWrapper } from '../page-animation-wrappers/AnimateTippingOpacityWrapper'
 
 //
 // Style
@@ -143,7 +144,10 @@ export const TipConfirmView = (): React.ReactElement => {
         fontWeight='normal'
         fontSize='18px'
       >
-        You will send
+        {/* animate for sub navigation */}
+        <AnimateTippingOpacityWrapper>
+          You will send
+        </AnimateTippingOpacityWrapper>
       </Box>
       <FitTextWrapper defaultFontSize={64}>
         $
@@ -151,41 +155,52 @@ export const TipConfirmView = (): React.ReactElement => {
           ? currentTipAmountUsd
           : currentTipAmountUsd.toFixed(2)}
       </FitTextWrapper>
-      <Box
-        mt={5}
-        textAlign='center'
-        color={Colors.Grey800}
-        fontWeight='normal'
-        fontSize='18px'
-      >
-        Pay with
-      </Box>
-      <Box mt={1} flex='1' display='flex'>
-        {submitError ? (
+      <Box flex='1' display='flex' flexDirection='column'>
+        {/* animate for sub navigation */}
+        <AnimateTippingOpacityWrapper>
           <Box
-            width='100%'
+            mt={5}
             textAlign='center'
-            color={Colors.Red400}
-            alignSelf='center'
+            color={Colors.Grey800}
+            fontWeight='normal'
+            fontSize='18px'
           >
-            {submitError}
+            Pay with
           </Box>
-        ) : (
-          <TipPaymentDebits
-            tipCreditCharge={tipCreditCharge}
-            creditCardCharge={creditCardCharge}
-          />
-        )}
+          <Box mt={1} flex='1' display='flex'>
+            {submitError ? (
+              <Box
+                width='100%'
+                textAlign='center'
+                color={Colors.Red400}
+                alignSelf='center'
+              >
+                {submitError}
+              </Box>
+            ) : (
+              <TipPaymentDebits
+                tipCreditCharge={tipCreditCharge}
+                creditCardCharge={creditCardCharge}
+              />
+            )}
+          </Box>
+        </AnimateTippingOpacityWrapper>
       </Box>
       <Box mt={1}>
         <CtaButton onClick={handleSubmit} disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : submitError ? 'Retry' : 'Confirm'}
+          {/* animate for sub navigation */}
+          <AnimateTippingOpacityWrapper>
+            {isSubmitting ? 'Sending...' : submitError ? 'Retry' : 'Confirm'}
+          </AnimateTippingOpacityWrapper>
         </CtaButton>
       </Box>
       <Box mt={1} mb='14px'>
-        <CancelButton onClick={handleUndo} disabled={isSubmitting}>
-          Cancel
-        </CancelButton>
+        {/* animate for sub navigation */}
+        <AnimateTippingOpacityWrapper>
+          <CancelButton onClick={handleUndo} disabled={isSubmitting}>
+            Cancel
+          </CancelButton>
+        </AnimateTippingOpacityWrapper>
       </Box>
     </ComponentWrapper>
   )

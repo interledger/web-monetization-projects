@@ -1,6 +1,8 @@
 import React from 'react'
 import { styled } from '@material-ui/core'
+import { AnimatePresence } from 'framer-motion'
 
+import { useRouter } from './context/routerContext'
 import { Router } from './components/views/Router'
 
 //
@@ -22,9 +24,12 @@ const AppContainer = styled('div')({
 // Component
 //
 export const NewExtension = () => {
+  const { path } = useRouter()
   return (
     <AppContainer>
-      <Router />
+      <AnimatePresence exitBeforeEnter initial={false}>
+        <Router key={path} path={path} />
+      </AnimatePresence>
     </AppContainer>
   )
 }
