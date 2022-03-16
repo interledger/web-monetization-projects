@@ -9,7 +9,7 @@ describe('wmPolyfill', () => {
     const digest = createHash('sha256').update(data).digest()
     const rebuilt = `sha256-${digest.toString('base64')}`
     expect(rebuilt).toMatchInlineSnapshot(
-      `"sha256-RnioBDkqJGkqPhWyc91FmyQeNOQDC5nkSscdVXu1eAo="`
+      `"sha256-Bkl0LB4YtVIsdMmtwwCPE7oxkD9wCDyOTlXL7h4dkuc="`
     )
   })
   it('should not support relList without polyfill', () => {
@@ -75,6 +75,11 @@ describe('wmPolyfill jsdom', () => {
     window.onmonetization = null
     const event = new window.MonetizationEvent('monetization', {})
     window.dispatchEvent(event)
+  })
+  test('window.Monetization should not be defined', () => {
+    // Monetization is the impl for document.monetization
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    expect((window as any)['Monetization']).not.toBeDefined()
   })
   test(
     'window.onmonetization handler should be invoked ' +

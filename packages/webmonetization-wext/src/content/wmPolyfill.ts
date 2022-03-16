@@ -149,7 +149,10 @@ export const wmPolyFillMinimal = `
 
 // language=JavaScript
 export const wmPolyfill = `
-  ${wmPolyFillMinimal}
+  // Block scoped so vars will not be set on window unless explicitly done
+  {
+    ${wmPolyFillMinimal}
+  }
 
   if (localStorage.WM_DEBUG) {
     ${basicEventsLoggingCode}
