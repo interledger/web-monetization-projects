@@ -70,7 +70,7 @@
     "jest": "27.5.1",
     "jsonwebtoken": "8.5.1",
     "lerna": "4.0.0",
-    "lint-staged": "12.3.5",
+    "lint-staged": "12.3.6",
     "localforage": "1.10.0",
     "prettier": "2.6.0",
     "rimraf": "3.0.2",
