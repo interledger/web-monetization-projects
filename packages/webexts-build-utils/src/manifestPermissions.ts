@@ -2,9 +2,10 @@ export interface Manifest {
   permissions: string[]
 }
 
-export function applyManifestPermissions(manifest: Manifest): void {
-  const rules = process.env.WEXT_MANIFEST_PERMISSIONS
-  const parsedRules: string[] = rules ? JSON.parse(rules) : []
+export function applyManifestPermissions(
+  manifest: Manifest,
+  parsedRules: string[]
+): void {
   for (const rule of parsedRules) {
     if (rule.startsWith('-')) {
       const subtract = rule.substring(1)

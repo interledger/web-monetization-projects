@@ -81,8 +81,12 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
       to: 'manifest.json',
       transform: (content: Buffer) => {
         const manifest = JSON.parse(content.toString())
-        // TODO: expand based on build target
+
+        const targets = manifest['$targets']
         delete manifest['$targets']
+        if (targets[BROWSER]?.permissions) {
+          applyManifestPermissions(manifest, targets[BROWSER].permissions)
+        }
 
         if (WEXT_MANIFEST_SUFFIX) {
           manifest.name += WEXT_MANIFEST_SUFFIX
@@ -106,7 +110,9 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         } else {
           delete manifest['browser_specific_settings']
         }
-        applyManifestPermissions(manifest)
+        const rules = process.env.WEXT_MANIFEST_PERMISSIONS
+        const parsedRules: string[] = rules ? JSON.parse(rules) : []
+        applyManifestPermissions(manifest, parsedRules)
         return prettyJSON(manifest)
       }
     },
