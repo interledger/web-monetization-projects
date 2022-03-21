@@ -2989,7 +2989,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.6.0"],
             ["reduct", "npm:3.3.1"],
             ["rimraf", "npm:3.0.2"],
-            ["sort-package-json", "npm:1.54.0"],
+            ["sort-package-json", "npm:1.55.0"],
             ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.1.3"],
             ["ts-loader", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:9.2.8"],
             ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.7.0"],
@@ -25812,10 +25812,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sort-package-json", [
-        ["npm:1.54.0", {
-          "packageLocation": "./.yarn/cache/sort-package-json-npm-1.54.0-cd789e7109-042a6ce7a4.zip/node_modules/sort-package-json/",
+        ["npm:1.55.0", {
+          "packageLocation": "./.yarn/cache/sort-package-json-npm-1.55.0-50e7833623-221709f89a.zip/node_modules/sort-package-json/",
           "packageDependencies": [
-            ["sort-package-json", "npm:1.54.0"],
+            ["sort-package-json", "npm:1.55.0"],
             ["detect-indent", "npm:6.0.0"],
             ["detect-newline", "npm:3.1.0"],
             ["git-hooks-list", "npm:1.0.3"],
