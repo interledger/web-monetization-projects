@@ -5,10 +5,10 @@ __metadata:
   version: 5
   cacheKey: 8
 
-"@abraham/reflection@npm:^0.9.0":
-  version: 0.9.1
-  resolution: "@abraham/reflection@npm:0.9.1"
-  checksum: 589ae6a74023d2d493df3b7c7653058d0a8347b6023e2f6912d8bc246462a2b4c256ad88eff65df13aa724336fe62209e6a8047f9bc261e086aade4b9cef8e78
+"@abraham/reflection@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "@abraham/reflection@npm:0.10.0"
+  checksum: d50ca13ccc1305f288f39cf155a96483843746283c8233502c4d27ab999e36c16e1c0875095066c77d7436387b1ab561851f255926c55e5239751dd02d274288
   languageName: node
   linkType: hard
 
@@ -1538,7 +1538,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
-    "@abraham/reflection": ^0.9.0
+    "@abraham/reflection": ^0.10.0
     "@babel/core": 7.17.8
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.8
@@ -2468,7 +2468,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
-    "@abraham/reflection": ^0.9.0
+    "@abraham/reflection": ^0.10.0
     "@babel/core": 7.17.8
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.8
@@ -5102,7 +5102,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
-    "@abraham/reflection": ^0.9.0
+    "@abraham/reflection": ^0.10.0
     "@babel/core": 7.17.8
     "@babel/plugin-proposal-class-properties": 7.16.7
     "@babel/plugin-proposal-decorators": 7.17.8
