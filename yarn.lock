@@ -1578,7 +1578,7 @@ __metadata:
     "@wext/shipit": 0.2.1
     "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
-    addons-linter: 4.13.0
+    addons-linter: 4.14.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     debug: ^4.3.1
@@ -2494,7 +2494,7 @@ __metadata:
     "@webmonetization/wext": ^0.0.0
     "@yarnpkg/pnpify": 3.1.1
     JSON2016: 1.0.0
-    addons-linter: 4.13.0
+    addons-linter: 4.14.0
     copy-webpack-plugin: 9.1.0
     crx-hotreload: 1.0.6
     css-loader: 6.7.1
@@ -3697,10 +3697,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:4.1.11":
-  version: 4.1.11
-  resolution: "@mdn/browser-compat-data@npm:4.1.11"
-  checksum: 82a6585ad290cd92146ecdd9ee098adaeaf732fc631651947f4d4e7f35d0cc3d45750445a40ade8b091c9bf1a862aa8444df0a494814e62dc62a4d64e620266d
+"@mdn/browser-compat-data@npm:4.1.12":
+  version: 4.1.12
+  resolution: "@mdn/browser-compat-data@npm:4.1.12"
+  checksum: 6edef3fc981a96319f448a6b58a8994c31467b33e84fbfbcaa2d5ca37987ca9896bacee49e6bc0777e44d5ed4041cffaf37b10916d6f76f9f597df026bf08429
   languageName: node
   linkType: hard
 
@@ -5915,11 +5915,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:4.13.0":
-  version: 4.13.0
-  resolution: "addons-linter@npm:4.13.0"
+"addons-linter@npm:4.14.0":
+  version: 4.14.0
+  resolution: "addons-linter@npm:4.14.0"
   dependencies:
-    "@mdn/browser-compat-data": 4.1.11
+    "@mdn/browser-compat-data": 4.1.12
     addons-moz-compare: 1.2.0
     addons-scanner-utils: 6.3.0
     ajv: 6.12.6
@@ -5940,19 +5940,19 @@ __metadata:
     is-mergeable-object: 1.1.1
     jed: 1.1.1
     os-locale: 5.0.0
-    pino: 7.8.1
-    postcss: 8.4.8
+    pino: 7.9.1
+    postcss: 8.4.12
     relaxed-json: 1.0.3
     semver: 7.3.5
     sha.js: 2.4.11
     source-map-support: 0.5.21
     tosource: 1.0.0
     upath: 2.0.1
-    yargs: 17.3.1
+    yargs: 17.4.0
     yauzl: 2.10.0
   bin:
     addons-linter: bin/addons-linter
-  checksum: 1412bc0081d4b4cad09ce9f3c051575c565166508b69f72f3436346337567a4c341892805c103508fa8240e40853b8653638a759c85dd14f9aca04408e151381
+  checksum: a6d28f72641f7e49f53f1d8d357cf0598df1187b68d5db101ed7021e6d52deff1f76746ec818e91eb81b454ed3a3ecf3102a535c61a41c173c4495bb33d0c0e1
   languageName: node
   linkType: hard
 
@@ -18147,9 +18147,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"pino@npm:7.8.1":
-  version: 7.8.1
-  resolution: "pino@npm:7.8.1"
+"pino@npm:7.9.1":
+  version: 7.9.1
+  resolution: "pino@npm:7.9.1"
   dependencies:
     fast-redact: ^3.0.0
     on-exit-leak-free: ^0.2.0
@@ -18163,7 +18163,7 @@ fsevents@^1.2.7:
     thread-stream: ^0.13.0
   bin:
     pino: bin.js
-  checksum: 415ffd418bcc17fbd9c591f95ed9655e2af62b5e86a383ac936215334f032e6f1cf073ccdb71321a414f1f652e1388cf40bf2aabb6baf17d18df35eda88937c6
+  checksum: 08084c1d790bcfa89a7a1e7d2310a0a35883316d56744a33ff8e19cebd8e73d032b253078a3ca8ccd2d72b7d7948dac55dc55eff7478962e385a6a1b6e8087bf
   languageName: node
   linkType: hard
 
@@ -18336,6 +18336,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"postcss@npm:8.4.12, postcss@npm:^8.4.7":
+  version: 8.4.12
+  resolution: "postcss@npm:8.4.12"
+  dependencies:
+    nanoid: ^3.3.1
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: 248e3d0f9bbb8efaafcfda7f91627a29bdc9a19f456896886330beb28c5abea0e14c7901b35191928602e2eccbed496b1e94097d27a0b2a980854cd00c7a835f
+  languageName: node
+  linkType: hard
+
 "postcss@npm:8.4.6":
   version: 8.4.6
   resolution: "postcss@npm:8.4.6"
@@ -18344,17 +18355,6 @@ fsevents@^1.2.7:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: 60e7808f39c4a9d0fa067bfd5eb906168c4eb6d3ff0093f7d314d1979b001a16363deedccd368a7df869c63ad4ae350d27da439c94ff3fb0f8fc93d49fe38a90
-  languageName: node
-  linkType: hard
-
-"postcss@npm:8.4.8, postcss@npm:^8.4.7":
-  version: 8.4.8
-  resolution: "postcss@npm:8.4.8"
-  dependencies:
-    nanoid: ^3.3.1
-    picocolors: ^1.0.0
-    source-map-js: ^1.0.2
-  checksum: 8e42def1ea98a4ac800d2b8937b19c83c6722da6c39ded72b1877eb743922f51b6e93be3667284b685ac18e8b583f21d97f24e0a73161c70fe8dc6901e614b87
   languageName: node
   linkType: hard
 
@@ -23597,7 +23597,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"yargs@npm:17.3.1, yargs@npm:^17.0.0":
+"yargs@npm:17.3.1":
   version: 17.3.1
   resolution: "yargs@npm:17.3.1"
   dependencies:
@@ -23609,6 +23609,21 @@ sjcl@sublimator/sjcl:
     y18n: ^5.0.5
     yargs-parser: ^21.0.0
   checksum: 64fc2e32c56739f1d14d2d24acd17a6944c3c8e3e3558f09fc1953ac112e868cc16013d282886b9d5be22187f8b9ed4f60741a6b1011f595ce2718805a656852
+  languageName: node
+  linkType: hard
+
+"yargs@npm:17.4.0, yargs@npm:^17.0.0":
+  version: 17.4.0
+  resolution: "yargs@npm:17.4.0"
+  dependencies:
+    cliui: ^7.0.2
+    escalade: ^3.1.1
+    get-caller-file: ^2.0.5
+    require-directory: ^2.1.1
+    string-width: ^4.2.3
+    y18n: ^5.0.5
+    yargs-parser: ^21.0.0
+  checksum: 63985bddddf1fb6b9c98744591e8b70f99839591521cb84eea60903d52ec0da35ab46c42c325d151f3ab5c41935f976c10da096b5a7067c217714a91c0bd4be3
   languageName: node
   linkType: hard
 
