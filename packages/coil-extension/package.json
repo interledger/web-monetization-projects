@@ -51,7 +51,7 @@
     "web-ext-reload": "web-ext run --reload -s $PWD/dist -p default-release"
   },
   "dependencies": {
-    "@abraham/reflection": "^0.9.0",
+    "@abraham/reflection": "^0.10.0",
     "@coil/anonymous-tokens": "^0.0.0",
     "@coil/client": "^0.0.0",
     "@coil/polyfill-utils": "^0.0.0",
