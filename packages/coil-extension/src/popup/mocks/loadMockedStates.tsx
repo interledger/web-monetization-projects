@@ -243,7 +243,7 @@ const argsLogger = (name: string) => {
 
 class MockRuntime extends EventEmitter implements PopupRuntime {
   tabOpener = ((...args: any) => {
-    console.log('tabOpener', ...args)
+    // console.log('tabOpener', ...args)
     return argsLogger('openTab: ' + args.join(' '))
   }) as any
 

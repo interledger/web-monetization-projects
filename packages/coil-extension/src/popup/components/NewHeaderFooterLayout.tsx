@@ -2,14 +2,15 @@
 
 import React from 'react'
 import { styled } from '@material-ui/core'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import { Header } from './Header'
 import { NavBar } from './NavBar'
-
+import { AnimatePageTransitionWrapper } from './page-animation-wrappers/AnimatePageTransitionWrapper'
 //
 // Styles
 //
-const BodyContainer = styled('div')({
+const BodyContainer = styled(`div`)({
   flex: '1',
   display: 'flex',
   flexDirection: 'column'
@@ -31,8 +32,14 @@ export const NewHeaderFooterLayout: React.FC<
 > = props => {
   return (
     <React.Fragment>
-      <Header>{props.title}</Header>
-      <BodyContainer>{props.children}</BodyContainer>
+      <Header>
+        <AnimatePageTransitionWrapper>
+          {props.title}
+        </AnimatePageTransitionWrapper>
+      </Header>
+      <AnimatePageTransitionWrapper>
+        <BodyContainer>{props.children}</BodyContainer>
+      </AnimatePageTransitionWrapper>
       <NavBar />
     </React.Fragment>
   )

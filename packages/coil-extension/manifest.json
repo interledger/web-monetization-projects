@@ -34,6 +34,9 @@
   ],
   "permissions": [ "webNavigation", "<all_urls>", "notifications" ],
   "$targets" : {
+    "firefox": {
+      "permissions" : ["tabs"]
+    },
     "safari": {
       "permissions" : ["tabs"]
     }
