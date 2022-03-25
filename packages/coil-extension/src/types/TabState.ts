@@ -30,11 +30,13 @@ export function isFrameMonetized(frameState: FrameState) {
 }
 
 export function isFrameStreaming(frameState: FrameState) {
-  return Object.keys(frameState).some(
-    key =>
+  return Object.keys(frameState).some(key => {
+    const command = frameState[key as MonetizationStateKeyType]?.command
+    return (
       key.startsWith(MonetizationStateKey) &&
-      frameState[key as MonetizationStateKeyType]?.command === 'start'
-  )
+      (command === 'start' || command === 'resume')
+    )
+  })
 }
 
 export function getFrameTotal(frameState: FrameState) {
