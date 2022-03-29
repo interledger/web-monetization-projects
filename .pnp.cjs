@@ -2893,7 +2893,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@wext/shipit", "patch:@wext/shipit@npm%3A0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515::version=0.2.1&hash=fbcdff&locator=web-monetization%40workspace%3A."],
             ["@yarnpkg/pnpify", "npm:3.1.1"],
             ["JSON2016", "npm:1.0.0"],
-            ["addons-linter", "npm:4.15.0"],
+            ["addons-linter", "npm:5.0.0"],
             ["copy-webpack-plugin", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:9.1.0"],
             ["crx-hotreload", "npm:1.0.6"],
             ["debug", "virtual:c2bff3e67180802999655a22d390062982690e911b9d9225c258f3b25e7409f3867b2682c16232b77415f560a09d05a95042dc512a5b8c566c42bbbed88b0bbc#npm:4.3.3"],
@@ -3877,7 +3877,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webmonetization/wext", "workspace:packages/webmonetization-wext"],
             ["@yarnpkg/pnpify", "npm:3.1.1"],
             ["JSON2016", "npm:1.0.0"],
-            ["addons-linter", "npm:4.15.0"],
+            ["addons-linter", "npm:5.0.0"],
             ["copy-webpack-plugin", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:9.1.0"],
             ["crx-hotreload", "npm:1.0.6"],
             ["css-loader", "virtual:e7ed6c22193b34b7bd07920f1d9b94dcc34098095c3f29aaa95d61280a4b8babba0b5e40e6ec793315bc942527357b48a1da24fe6210c697159ff6bc1f1b7d56#npm:6.7.1"],
@@ -9009,13 +9009,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.15.0", {
-          "packageLocation": "./.yarn/cache/addons-linter-npm-4.15.0-fa8aefa124-b5d528b64a.zip/node_modules/addons-linter/",
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/addons-linter-npm-5.0.0-eae447331a-53c7c44a42.zip/node_modules/addons-linter/",
           "packageDependencies": [
-            ["addons-linter", "npm:4.15.0"],
+            ["addons-linter", "npm:5.0.0"],
             ["@mdn/browser-compat-data", "npm:4.1.13"],
             ["addons-moz-compare", "npm:1.2.0"],
-            ["addons-scanner-utils", "virtual:fa8aefa1245f5a21696fa448105420c67a5f731ac9cc42c6113b9698656a13b50d5729b5729fcaa74724025f347ef8625f7bb6cfc93dfea4ed1942597beb2484#npm:7.0.0"],
+            ["addons-scanner-utils", "virtual:eae447331a5120315585b645de8d5bc37cdf2784f1f91706a06ba50ce34ba719511b763f8727ac12d0bd951629fca3266306b8195b3973e09e1815602e7201dd#npm:7.0.0"],
             ["ajv", "npm:6.12.6"],
             ["ajv-merge-patch", "virtual:44ce8b0f2e89b4fa9ceef971f7eb2ae7843f6dee7b5faf7d0f5db8663afb9c438984eff4225510e13fc8e9898d6e9779a25c649ea7df46e00afb6d9eb2ebb957#npm:4.1.0"],
             ["chalk", "npm:4.1.2"],
@@ -9024,7 +9024,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["common-tags", "npm:1.8.2"],
             ["deepmerge", "npm:4.2.2"],
             ["eslint", "npm:8.12.0"],
-            ["eslint-plugin-no-unsanitized", "virtual:fa8aefa1245f5a21696fa448105420c67a5f731ac9cc42c6113b9698656a13b50d5729b5729fcaa74724025f347ef8625f7bb6cfc93dfea4ed1942597beb2484#npm:4.0.1"],
+            ["eslint-plugin-no-unsanitized", "virtual:eae447331a5120315585b645de8d5bc37cdf2784f1f91706a06ba50ce34ba719511b763f8727ac12d0bd951629fca3266306b8195b3973e09e1815602e7201dd#npm:4.0.1"],
             ["eslint-visitor-keys", "npm:3.3.0"],
             ["espree", "npm:9.3.1"],
             ["esprima", "npm:4.0.1"],
@@ -9103,10 +9103,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:fa8aefa1245f5a21696fa448105420c67a5f731ac9cc42c6113b9698656a13b50d5729b5729fcaa74724025f347ef8625f7bb6cfc93dfea4ed1942597beb2484#npm:7.0.0", {
-          "packageLocation": "./.yarn/__virtual__/addons-scanner-utils-virtual-cf5a731b80/0/cache/addons-scanner-utils-npm-7.0.0-a351b2599f-af52fd5b2d.zip/node_modules/addons-scanner-utils/",
+        ["virtual:eae447331a5120315585b645de8d5bc37cdf2784f1f91706a06ba50ce34ba719511b763f8727ac12d0bd951629fca3266306b8195b3973e09e1815602e7201dd#npm:7.0.0", {
+          "packageLocation": "./.yarn/__virtual__/addons-scanner-utils-virtual-3f8b1a0943/0/cache/addons-scanner-utils-npm-7.0.0-a351b2599f-af52fd5b2d.zip/node_modules/addons-scanner-utils/",
           "packageDependencies": [
-            ["addons-scanner-utils", "virtual:fa8aefa1245f5a21696fa448105420c67a5f731ac9cc42c6113b9698656a13b50d5729b5729fcaa74724025f347ef8625f7bb6cfc93dfea4ed1942597beb2484#npm:7.0.0"],
+            ["addons-scanner-utils", "virtual:eae447331a5120315585b645de8d5bc37cdf2784f1f91706a06ba50ce34ba719511b763f8727ac12d0bd951629fca3266306b8195b3973e09e1815602e7201dd#npm:7.0.0"],
             ["@types/body-parser", null],
             ["@types/download", null],
             ["@types/express", null],
@@ -14729,10 +14729,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:fa8aefa1245f5a21696fa448105420c67a5f731ac9cc42c6113b9698656a13b50d5729b5729fcaa74724025f347ef8625f7bb6cfc93dfea4ed1942597beb2484#npm:4.0.1", {
-          "packageLocation": "./.yarn/__virtual__/eslint-plugin-no-unsanitized-virtual-25f3c745c6/0/cache/eslint-plugin-no-unsanitized-npm-4.0.1-6a00d58681-36ce4884c3.zip/node_modules/eslint-plugin-no-unsanitized/",
+        ["virtual:eae447331a5120315585b645de8d5bc37cdf2784f1f91706a06ba50ce34ba719511b763f8727ac12d0bd951629fca3266306b8195b3973e09e1815602e7201dd#npm:4.0.1", {
+          "packageLocation": "./.yarn/__virtual__/eslint-plugin-no-unsanitized-virtual-2b73b1b3aa/0/cache/eslint-plugin-no-unsanitized-npm-4.0.1-6a00d58681-36ce4884c3.zip/node_modules/eslint-plugin-no-unsanitized/",
           "packageDependencies": [
-            ["eslint-plugin-no-unsanitized", "virtual:fa8aefa1245f5a21696fa448105420c67a5f731ac9cc42c6113b9698656a13b50d5729b5729fcaa74724025f347ef8625f7bb6cfc93dfea4ed1942597beb2484#npm:4.0.1"],
+            ["eslint-plugin-no-unsanitized", "virtual:eae447331a5120315585b645de8d5bc37cdf2784f1f91706a06ba50ce34ba719511b763f8727ac12d0bd951629fca3266306b8195b3973e09e1815602e7201dd#npm:4.0.1"],
             ["@types/eslint", null],
             ["eslint", "npm:8.12.0"]
           ],
