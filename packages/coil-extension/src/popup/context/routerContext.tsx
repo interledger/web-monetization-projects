@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
+import { StorageService } from '@webmonetization/wext/services'
 
 import { ROUTES } from '../constants'
 
@@ -12,12 +13,33 @@ interface IRouterContext {
   back: () => void
 }
 
+interface IRouterProvider {
+  storage: Pick<StorageService, 'get'>
+}
+
 // Context
 const RouterContext = createContext({} as IRouterContext)
 
 // Provider
-export const RouterProvider: React.FC = props => {
-  const [route, setRoute] = useState<string>(ROUTES.streaming)
+export const RouterProvider: React.FC<IRouterProvider> = props => {
+  const { storage } = props
+  const userObject = storage.get('user')
+
+  // Determine the default view based on if the user is allowed to tip
+  const {
+    tippingBetaFeatureFlag,
+    extensionNewUiFeatureFlag,
+    tipSettings: { totalTipCreditAmountUsd = 0 } = {}
+  } = userObject ?? {}
+
+  const allowTipping =
+    extensionNewUiFeatureFlag &&
+    ((!tippingBetaFeatureFlag && totalTipCreditAmountUsd > 0) ||
+      tippingBetaFeatureFlag)
+
+  const [route, setRoute] = useState<string>(
+    allowTipping ? ROUTES.tipping : ROUTES.streaming
+  )
   const [previousRoute, setPreviousRoute] = useState<string>('')
 
   const toRoute = (newRoute: string) => {
