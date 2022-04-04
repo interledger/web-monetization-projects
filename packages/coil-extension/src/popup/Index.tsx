@@ -19,7 +19,7 @@ export function Index(props: {
   return (
     <PopupHostContext.Provider value={props.host}>
       <StoreContext.Provider value={store}>
-        <RouterProvider>
+        <RouterProvider storage={props.storage}>
           <TipProvider storage={props.storage} host={props.host}>
             {/* should replace ViewRouter with  NewExtension when done -> rename the NewExtension to something like App */}
             <ViewRouter />
