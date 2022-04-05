@@ -2619,6 +2619,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["npm:7.17.8", {
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.17.8-4817ae02f7-68d195c163.zip/node_modules/@babel/runtime/",
+          "packageDependencies": [
+            ["@babel/runtime", "npm:7.17.8"],
+            ["regenerator-runtime", "npm:0.13.8"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:7.6.2", {
           "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.6.2-704040a113-ec4974948f.zip/node_modules/@babel/runtime/",
           "packageDependencies": [
@@ -2909,6 +2917,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:7.29.4"],
             ["eslint-plugin-react-hooks", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:4.4.0"],
             ["eslint-plugin-standard", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:5.0.0"],
+            ["foxr", "npm:0.10.1"],
             ["framer-motion", "virtual:eeb42fa90698772cadb8a45fd0dea025aa467506a3eb729c556b42356d05ca45fe5d465b35a65cb04d86190965996edac94c0fae67b61a0cbf5276f8a60f3117#npm:5.3.3"],
             ["get-port", "npm:5.1.1"],
             ["http-server", "npm:14.1.0"],
@@ -16029,6 +16038,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["foxr", [
+        ["npm:0.10.1", {
+          "packageLocation": "./.yarn/cache/foxr-npm-0.10.1-25f34bd0dd-f87dc6a73a.zip/node_modules/foxr/",
+          "packageDependencies": [
+            ["foxr", "npm:0.10.1"],
+            ["@babel/runtime", "npm:7.17.8"],
+            ["execa", "npm:1.0.0"],
+            ["signal-exit", "npm:3.0.3"],
+            ["typeon", "npm:0.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["fp-and-or", [
         ["npm:0.1.3", {
           "packageLocation": "./.yarn/cache/fp-and-or-npm-0.1.3-033d5c60bb-d556ad1fb0.zip/node_modules/fp-and-or/",
@@ -28563,6 +28585,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/typeface-roboto-npm-1.1.13-89a967d9e1-89e43bc445.zip/node_modules/typeface-roboto/",
           "packageDependencies": [
             ["typeface-roboto", "npm:1.1.13"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["typeon", [
+        ["npm:0.3.1", {
+          "packageLocation": "./.yarn/cache/typeon-npm-0.3.1-b757923a38-9157b3b263.zip/node_modules/typeon/",
+          "packageDependencies": [
+            ["typeon", "npm:0.3.1"]
           ],
           "linkType": "HARD",
         }]

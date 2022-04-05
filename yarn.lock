@@ -1340,6 +1340,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.4.5":
+  version: 7.17.8
+  resolution: "@babel/runtime@npm:7.17.8"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: 68d195c1630bb91ac20e86635d292a17ebab7f361cfe79406b3f5a6cc2e59fa283ae5006568899abf869312c2b35b744bd407aea8ffdb650f1a68d07785d47e9
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.16.7, @babel/template@npm:^7.3.3":
   version: 7.16.7
   resolution: "@babel/template@npm:7.16.7"
@@ -1594,6 +1603,7 @@ __metadata:
     eslint-plugin-react: 7.29.4
     eslint-plugin-react-hooks: 4.4.0
     eslint-plugin-standard: 5.0.0
+    foxr: ^0.10.1
     framer-motion: ^5.0.0
     get-port: ^5.1.1
     http-server: 14.1.0
@@ -11624,6 +11634,18 @@ __metadata:
   version: 0.1.2
   resolution: "forwarded@npm:0.1.2"
   checksum: 54695c574292f9bc6bfa52111844337bc2e61cfcc5ec82f16b816d721a67a0c76b4849a34b57e38e51d64ddbb81aef974f393579f610ed1b990470e75abad2e0
+  languageName: node
+  linkType: hard
+
+"foxr@npm:^0.10.1":
+  version: 0.10.1
+  resolution: "foxr@npm:0.10.1"
+  dependencies:
+    "@babel/runtime": ^7.4.5
+    execa: ^1.0.0
+    signal-exit: ^3.0.2
+    typeon: ^0.3.0
+  checksum: f87dc6a73a9e1f12664308a8859807ce01914e787b565bafc698e6a404d8668e0387036c995ad19d86c83d9c0a852906df89eafcd0bde312540263f7732573b7
   languageName: node
   linkType: hard
 
@@ -22169,6 +22191,13 @@ sjcl@sublimator/sjcl:
   version: 1.1.13
   resolution: "typeface-roboto@npm:1.1.13"
   checksum: 89e43bc445c4619c7d70f09c398423790a31905f103e82f730e6702d7e3677587bc83ea5fdcb5f420b3d80509966e4167e1927dcd8ff65ad721c73bfb56bcf1c
+  languageName: node
+  linkType: hard
+
+"typeon@npm:^0.3.0":
+  version: 0.3.1
+  resolution: "typeon@npm:0.3.1"
+  checksum: 9157b3b263c34f95b3699ee9741c11deaba1856804914b470cebc4b6ed0e517297fe1a0bb52ca4554960cf87439f3c6761827dc3dc1169ab01c7258dadc5d955
   languageName: node
   linkType: hard
 
