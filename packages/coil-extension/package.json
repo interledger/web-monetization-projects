@@ -74,8 +74,8 @@
     "jsonwebtoken": "^8.5.1",
     "jss": "^10.6.0",
     "lottie-web": "^5.8.1",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "reduct": "^3.3.1",
     "uuid": "^8.3.2"
   },
