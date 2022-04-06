@@ -3001,7 +3001,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack-cli", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.9.2"],
             ["webpack-dev-server", "virtual:f03e732fb30a12eb9855477ad14842421640b8cb5fd57fc2ecf0e0ab12f17712c0e065b674d430e5fedf88ee93ffe9f894d05c71d6dabbd81c57b3e1c5e26e28#npm:4.8.0"],
             ["webpack-merge", "npm:5.8.0"],
-            ["yaml", "npm:1.10.2"]
+            ["yaml", "npm:2.0.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -33191,6 +33191,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yaml-npm-1.10.2-0e780aebdf-ce4ada136e.zip/node_modules/yaml/",
           "packageDependencies": [
             ["yaml", "npm:1.10.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/yaml-npm-2.0.0-ac55c91e6a-6335cbead8.zip/node_modules/yaml/",
+          "packageDependencies": [
+            ["yaml", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
