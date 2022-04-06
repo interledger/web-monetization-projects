@@ -22,4 +22,4 @@ export {
 export { asyncUtils }
 export { getFarFutureExpiry } from './lib/getFarFutureExpiry'
 export { parsePolicyDirectives } from './lib/parsePolicyDirectives'
-export { mozCloneInto } from './lib/mozCloneInto'
+export { mozClone } from './lib/mozClone'

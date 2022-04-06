@@ -3,7 +3,7 @@ import {
   MonetizationTagManager,
   PaymentDetails,
   whenDocumentReady,
-  mozCloneInto
+  mozClone
 } from '@webmonetization/polyfill-utils'
 import {
   DocumentMonetization,
@@ -167,9 +167,7 @@ export class ContentScript {
             assetCode: data.assetCode,
             amount: BigInt(data.amount)
           }
-          const firefoxProof = mozCloneInto
-            ? mozCloneInto(eventDetail, this.document.defaultView)
-            : eventDetail
+          const firefoxProof = mozClone(eventDetail, this.document)
           this.tagManager.dispatchEventByLinkId(
             data.requestId,
             new CustomEvent('monetization-v2', {

@@ -11,6 +11,7 @@ import { PaymentDetails } from '@webmonetization/polyfill-utils'
 
 import { ScriptInjection } from './ScriptInjection'
 import { includePolyFillMessage, wmPolyfill } from './wmPolyfill'
+import { mozClone } from './mozClone'
 
 interface SetStateParams {
   state: MonetizationState
@@ -22,17 +23,6 @@ type MonetizationRequest = PaymentDetails
 
 // Name of event dispatched on document
 const MONETIZATION_DOCUMENT_EVENT_NAME = 'monetization-v1'
-
-type DefaultView = WindowProxy & typeof globalThis
-type CloneInto = (obj: unknown, window: DefaultView | null) => typeof obj
-declare const cloneInto: CloneInto | undefined
-
-let cloneIntoRef: CloneInto | undefined
-try {
-  cloneIntoRef = cloneInto
-} catch (e) {
-  cloneIntoRef = undefined
-}
 
 @injectable()
 export class DocumentMonetization {
@@ -118,7 +108,7 @@ export class DocumentMonetization {
     }
     this.doc.dispatchEvent(
       new CustomEvent(MONETIZATION_DOCUMENT_EVENT_NAME, {
-        detail: cloneIntoRef ? cloneIntoRef(obj, this.doc.defaultView) : obj
+        detail: mozClone(obj, this.doc)
       })
     )
   }

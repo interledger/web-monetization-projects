@@ -5,7 +5,7 @@ import { v4 as uuidV4 } from 'uuid'
 import { whenDocumentReady } from './whenDocumentReady'
 import { CustomError } from './CustomError'
 import { resolvePaymentEndpoint } from './resolvePaymentEndpoint'
-import { mozCloneInto } from './mozCloneInto'
+import { mozClone } from './mozClone'
 
 const debug =
   // console.log.bind(console, 'MonetizationTagManager')
@@ -486,9 +486,7 @@ export class MonetizationTagManager extends EventEmitter {
       }
       const customEvent = new CustomEvent('onmonetization-attr-changed', {
         bubbles: true,
-        detail: mozCloneInto
-          ? mozCloneInto(attributeDetail, this.document.defaultView)
-          : attributeDetail
+        detail: mozClone(attributeDetail, this.document)
       })
       const result = node.dispatchEvent(customEvent)
       debug('dispatched onmonetization-attr-changed ev', result)
