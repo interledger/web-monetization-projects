@@ -22,6 +22,7 @@ export interface FrameState {
 }
 
 export function isFrameMonetized(frameState: FrameState) {
+  console.log('isFrameMonetized', JSON.stringify(frameState, null, 2))
   return Object.keys(frameState).some(
     key =>
       key.startsWith(MonetizationStateKey) &&
@@ -30,6 +31,7 @@ export function isFrameMonetized(frameState: FrameState) {
 }
 
 export function isFrameStreaming(frameState: FrameState) {
+  console.log('isFrameStreaming', JSON.stringify(frameState, null, 2))
   return Object.keys(frameState).some(key => {
     const command = frameState[key as MonetizationStateKeyType]?.command
     return (

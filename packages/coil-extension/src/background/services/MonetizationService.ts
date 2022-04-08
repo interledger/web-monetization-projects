@@ -122,12 +122,19 @@ export class MonetizationService {
     const { tabId, frameId } = frame
     const { requestId } = request.data
 
+    if (request.data.tagType === 'link') {
+      // How do we know if the request is a wm2 request
+      // It could be a link tag in the head that is one of many
+      // Maybe we should check before emitting the start events??
+    }
+
     this.assoc.addStreamId(frame, requestId)
     this.activeTabLogger.log(`startWM called with ${requestId}`, frame)
     this.tabStates.setFrame(frame, {
       paymentPointer: request.data.paymentPointer
     })
     this.tabStates.logLastMonetizationCommand(frame, 'start', request.data)
+    this.tabStates.reloadTabState({ from: 'startWebMonetization' })
 
     // This used to be sent from content script as a separate message
     this.setFrameMonetized(frame, requestId, 0)

@@ -231,9 +231,9 @@ export class TabStates {
     if (tabId) {
       const tabState = this.getActiveOrDefault()
 
-      if (Object.values(tabState.frameStates).find(f => isFrameMonetized(f))) {
-        this.setIcon(tabId, 'monetized')
-      }
+      // if (Object.values(tabState.frameStates).find(f => isFrameMonetized(f))) {
+      //   this.setIcon(tabId, 'monetized')
+      // }
 
       if (token == null) {
         this.setIcon(tabId, 'unavailable')
@@ -243,6 +243,7 @@ export class TabStates {
         const tabState = this.getActiveOrDefault()
         const frameStates = Object.values(tabState.frameStates)
         const hasStream = Boolean(frameStates.find(f => isFrameMonetized(f)))
+
         const isStreaming: boolean =
           hasStream &&
           Boolean(

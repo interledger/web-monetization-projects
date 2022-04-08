@@ -15,6 +15,7 @@ import * as tokens from '../../types/tokens'
 import {
   CheckIFrameIsAllowedFromIFrameContentScript,
   ContentScriptInit,
+  ContentScriptInitResponse,
   OnFrameAllowedChanged,
   PauseWebMonetization,
   ReportCorrelationIdFromIFrameContentScript,
@@ -47,6 +48,7 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 export class ContentScript {
   private paused = false
   private tagManager!: MonetizationTagManager
+  private wm2Allowed = false
 
   constructor(
     private storage: Storage,
@@ -60,6 +62,8 @@ export class ContentScript {
     private monetization: DocumentMonetization,
     private auth: ContentAuthService
   ) {}
+
+  disallowed = new Set<string>()
 
   handleMonetizationTag() {
     const startMonetization = async (details: PaymentDetails) => {
@@ -93,9 +97,32 @@ export class ContentScript {
       this.document,
       ({ started, stopped }) => {
         if (stopped) {
-          stopMonetization(stopped)
+          if (!this.disallowed.has(stopped.requestId)) {
+            console.log(
+              'sending stopped request',
+              JSON.stringify(stopped, null, 2)
+            )
+            stopMonetization(stopped)
+          } else {
+            console.log(
+              'not propagating stop message to bg',
+              JSON.stringify(stopped, null, 2)
+            )
+          }
         }
         if (started) {
+          if (!this.tagManager.atMostOneTagAndNoneInBody()) {
+            // wm2 is required
+            if (!this.wm2Allowed) {
+              console.log(
+                'not allowing start request which requires wm2',
+                JSON.stringify(started, null, 2)
+              )
+              this.disallowed.add(started.requestId)
+              return
+            }
+          }
+          console.log('sending start request', JSON.stringify(started, null, 2))
           void startMonetization(started)
         }
       },
@@ -251,14 +278,25 @@ export class ContentScript {
     }
 
     if (this.frames.isMonetizableFrame) {
-      const message: ContentScriptInit = { command: 'contentScriptInit' }
-      this.runtime.sendMessage(message)
-      whenDocumentReady(this.document, () => {
-        this.handleMonetizationTag()
-        this.watchPageEventsToPauseOrResume()
-      })
-      this.setRuntimeMessageListener()
-      this.monetization.injectDocumentMonetization()
+      const message: ContentScriptInit = {
+        command: 'contentScriptInit',
+        data: {
+          origin: this.document.location.origin
+        }
+      }
+      this.runtime.sendMessage(
+        message,
+        (response: ContentScriptInitResponse) => {
+          this.wm2Allowed = response.wm2OriginalTrial
+
+          whenDocumentReady(this.document, () => {
+            this.handleMonetizationTag()
+            this.watchPageEventsToPauseOrResume()
+          })
+          this.setRuntimeMessageListener()
+          this.monetization.injectDocumentMonetization()
+        }
+      )
     }
 
     if (this.frames.isAnyCoilFrame) {
@@ -287,7 +325,9 @@ export class ContentScript {
       pause: (reason: string) => {
         debug(`pauseWebMonetization reason ${reason}`)
         this.paused = true
-        const requestIds = this.tagManager.requestIds()
+        const requestIds = this.filterDisallowedRequestIds(
+          this.tagManager.requestIds()
+        )
         if (requestIds.length) {
           const pause: PauseWebMonetization = {
             command: 'pauseWebMonetization',
@@ -301,7 +341,9 @@ export class ContentScript {
       resume: (reason: string) => {
         debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
-        const requestIds = this.tagManager.requestIds()
+        const requestIds = this.filterDisallowedRequestIds(
+          this.tagManager.requestIds()
+        )
         if (requestIds.length) {
           const resume: ResumeWebMonetization = {
             command: 'resumeWebMonetization',
@@ -315,10 +357,24 @@ export class ContentScript {
     })
   }
 
+  private filterDisallowedRequests(requests: PaymentDetails[]) {
+    return requests.filter(r => {
+      this.disallowed.has(r.requestId)
+    })
+  }
+
+  private filterDisallowedRequestIds(requests: string[]) {
+    return requests.filter(r => {
+      this.disallowed.has(r)
+    })
+  }
+
   private onFrameAllowedChanged(message: OnFrameAllowedChanged) {
     const allowed = message.data.allowed
     const monetizationRequest = this.monetization.getMonetizationRequest()
-    const requests = this.tagManager.linkRequests()
+    const requests = this.filterDisallowedRequests(
+      this.tagManager.linkRequests()
+    )
     if (allowed) {
       // TODO: WM2 how to do the state check on the link requests ?
       if (monetizationRequest && this.monetization.getState() === 'stopped') {
@@ -340,7 +396,9 @@ export class ContentScript {
         })
       }
     } else {
-      const requests = this.tagManager.linkRequests()
+      const requests = this.filterDisallowedRequests(
+        this.tagManager.linkRequests()
+      )
       if (monetizationRequest) {
         requests.push(monetizationRequest)
       }

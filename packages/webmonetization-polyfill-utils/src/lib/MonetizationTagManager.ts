@@ -345,6 +345,7 @@ export class MonetizationTagManager extends EventEmitter {
       if (this.throwOnIllegalState) {
         throw error
       } else {
+        // TODO:WM2, but this DOES work?
         // this won't work, may need to halt completely all the way up
         // the stack
         return

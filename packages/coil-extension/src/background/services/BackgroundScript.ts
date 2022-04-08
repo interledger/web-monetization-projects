@@ -37,6 +37,8 @@ import { MonetizationService } from './MonetizationService'
 
 import MessageSender = chrome.runtime.MessageSender
 
+import { WM2OriginTrial } from './WM2OriginTrial'
+
 @injectable()
 export class BackgroundScript {
   constructor(
@@ -52,6 +54,7 @@ export class BackgroundScript {
     private monetization: MonetizationService,
     private tippingService: TippingService,
     private youtube: YoutubeService,
+    private wm2OriginTrial: WM2OriginTrial,
     private activeTabLogger: ActiveTabLogger,
     private framesService: BackgroundFramesService,
     @inject(tokens.LoggingEnabled)
@@ -584,7 +587,7 @@ export class BackgroundScript {
 
   private logout() {
     for (const tabId of this.tabStates.tabKeys()) {
-      // Make a copy as _closeStreams mutates and we want to actually close
+      // Make a copy as _closeStreams mutates, and we want to actually close
       // the streams before we set the state to stopped.
       const requestIds = this.assoc.getTabStreams(tabId)
       this._closeStreams(tabId)
@@ -621,7 +624,8 @@ export class BackgroundScript {
     this.tabStates.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
-    return true
+    const originAllowed = this.wm2OriginTrial.checkOrigin(request.data.origin)
+    return { wm2OriginalTrial: originAllowed, request }
   }
 
   private async onFrameAllowedChanged(

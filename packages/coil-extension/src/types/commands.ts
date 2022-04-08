@@ -48,6 +48,16 @@ export interface Logout extends Command {
  */
 export interface ContentScriptInit extends Command {
   command: 'contentScriptInit'
+  data: {
+    origin: string
+  }
+}
+
+/**
+ * background -> content
+ */
+export interface ContentScriptInitResponse {
+  wm2OriginalTrial: boolean
 }
 
 /**
