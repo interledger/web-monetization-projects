@@ -611,7 +611,7 @@ export class BackgroundScript {
     )
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')
-    this.tabStates.reloadTabState({})
+    this.tabStates.reloadTabState({ from: 'logout' })
     return true
   }
 

@@ -57,12 +57,13 @@ export class MonetizationService {
   setFrameMonetized(
     { tabId, frameId }: FrameSpec,
     requestId: string,
-    total = 0
+    total = 0,
+    from = ''
   ) {
     this.tabStates.incrementTotal({ tabId, frameId }, requestId, total)
 
     if (this.activeTab === tabId) {
-      this.tabStates.reloadTabState()
+      this.tabStates.reloadTabState({ from: 'setFrameMonetized ' + from })
     }
   }
 
@@ -110,7 +111,8 @@ export class MonetizationService {
     this.setFrameMonetized(
       { tabId, frameId },
       details.requestId,
-      Number(details?.sentAmount ?? '0')
+      Number(details?.sentAmount ?? '0'),
+      'handleMonetizationProgress'
     )
   }
 
@@ -121,6 +123,8 @@ export class MonetizationService {
     const frame = getFrameSpec(sender)
     const { tabId, frameId } = frame
     const { requestId } = request.data
+
+    console.log('startWebMonetization setFrameMonetized', requestId)
 
     if (request.data.tagType === 'link') {
       // How do we know if the request is a wm2 request
@@ -134,10 +138,15 @@ export class MonetizationService {
       paymentPointer: request.data.paymentPointer
     })
     this.tabStates.logLastMonetizationCommand(frame, 'start', request.data)
-    this.tabStates.reloadTabState({ from: 'startWebMonetization' })
 
     // This used to be sent from content script as a separate message
-    this.setFrameMonetized(frame, requestId, 0)
+    this.setFrameMonetized(frame, requestId, 0, 'startWebMonetization')
+
+    setTimeout(() => {
+      this.tabStates.reloadTabState({
+        from: 'startWebMonetization timeout(ms=10)'
+      })
+    }, 10)
 
     // This may throw so do after mayMonetizeSite has had a chance to set
     // the page as being monetized (or attempted to be)
@@ -352,6 +361,7 @@ export class MonetizationService {
   }
 
   stopWebMonetization(request: StopWebMonetization, sender: MessageSender) {
+    console.log('stopWebMonetization ', request.data.requestId)
     return this.stopWebMonetizationStream(request.data.requestId)
   }
 

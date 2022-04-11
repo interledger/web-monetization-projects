@@ -23,6 +23,17 @@ import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { TippingService } from './TippingService'
 
+const startedAt = Date.now()
+let latest = startedAt
+const dbg = (...args: any[]) => {
+  const now = Date.now()
+  console.log(
+    `TabStates (t=${now - startedAt}ms, d=${now - latest}ms)`,
+    ...args
+  )
+  latest = now
+}
+
 @injectable()
 export class TabStates {
   private tabStates: { [tab: number]: TabState } = {}
@@ -52,12 +63,14 @@ export class TabStates {
     const frameStates = this.get(tabId).frameStates
     const existingFrameState =
       frameStates[frameId] ?? this.makeFrameStateDefault()
-    this.set(tabId, {
+    const newState = {
       frameStates: {
         ...frameStates,
         ...{ [frameId]: { ...existingFrameState, ...state } }
       }
-    })
+    }
+    this.set(tabId, newState)
+    return newState
   }
 
   clearFrame({ tabId, frameId }: FrameSpec) {
@@ -101,7 +114,7 @@ export class TabStates {
   }
 
   /**
-   * Returns a non authoritative reference. Do not update it and expect updates
+   * Returns a non-authoritative reference. Do not update it and expect updates
    * to be kept except by coincidence. Treat it as a copy.
    */
   get(tab: number, defaultValue = this.makeDefault()): TabState {
@@ -191,9 +204,10 @@ export class TabStates {
         JSON.stringify({ command, frame, args, requestState }),
       frame
     )
-    this.setFrame(frame, {
+    const newState = this.setFrame(frame, {
       [`monetization-state-${details.requestId}`]: requestState
     })
+    dbg(JSON.stringify({ frame, command, newState }, null, 2))
   }
 
   getTotal(frame: FrameSpec, details: PaymentDetails) {
@@ -203,11 +217,12 @@ export class TabStates {
 
   reloadTabState(opts: { from?: string } = {}) {
     const { from } = opts
+    dbg('reloadTabState', { from })
 
     const tab = this.activeTab
     const state = () => this.get(tab)
     this.setLocalStorageFromState(state())
-    this.setBrowserActionStateFromAuthAndTabState()
+    this.setBrowserActionStateFromAuthAndTabState(from)
     // Don't work off stale state, set(...) creates a copy ...
     this.popup.setBrowserAction(tab, state())
     if (from) {
@@ -219,7 +234,8 @@ export class TabStates {
     }
   }
 
-  private setBrowserActionStateFromAuthAndTabState() {
+  private setBrowserActionStateFromAuthAndTabState(from: string) {
+    dbg('setBrowserActionStateFromAuthAndTabState', { from })
     const token = this.auth.getStoredToken()
 
     if (!token || !this.store.validToken) {
@@ -243,6 +259,7 @@ export class TabStates {
         const tabState = this.getActiveOrDefault()
         const frameStates = Object.values(tabState.frameStates)
         const hasStream = Boolean(frameStates.find(f => isFrameMonetized(f)))
+        dbg({ from, hasStream })
 
         const isStreaming: boolean =
           hasStream &&

@@ -43,6 +43,7 @@ async function main() {
     wextApi: API,
     buildConfig: BUILD_CONFIG,
     storage: localStorage,
+    // TODO: In MV3 all listeners must be bound at the top level
     getActiveTab: async () => {
       // This query will not pick up dev tools tabs which may be currently active
       // so, we need to query for other active tabs in that case and select the
