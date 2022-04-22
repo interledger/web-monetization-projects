@@ -28,6 +28,7 @@ let config = {
   ],
   testEnvironment: 'jsdom',
   rootDir: '.',
+  maxWorkers: process.env.CI ? 1 : undefined,
   moduleNameMapper,
   moduleFileExtensions: ['js', 'ts', 'tsx', 'jsx', 'json'],
   globals: {
