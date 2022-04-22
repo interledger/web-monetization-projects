@@ -3465,7 +3465,7 @@ const RAW_RUNTIME_STATE =
           ["cosmiconfig-typescript-loader", "virtual:1c3f29ca0e624909331ea078edb3803c0cc0943bb1a188b37b4195fa9bd5db4ccc5b46dd1602b3fd7a1a1b93377a47cac14e8f25dab376ff7803882a6ceb0055#npm:1.0.2"],\
           ["lodash", "npm:4.17.21"],\
           ["resolve-from", "npm:5.0.0"],\
-          ["typescript", "patch:typescript@npm%3A4.6.2#optional!builtin<compat/typescript>::version=4.6.2&hash=7ad353"]\
+          ["typescript", "patch:typescript@npm%3A4.6.3#optional!builtin<compat/typescript>::version=4.6.3&hash=7ad353"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12671,7 +12671,7 @@ const RAW_RUNTIME_STATE =
           ["@types/typescript", null],\
           ["cosmiconfig", "npm:7.0.1"],\
           ["ts-node", "virtual:95f1f73be57f68668caeeaf86469613e517fba7294075ab0dcc0d41185607291ac520655b147ebb13ad4df8eea8ed681e0b2e328eb96a50592a1fbf54c09e4aa#npm:10.7.0"],\
-          ["typescript", "patch:typescript@npm%3A4.6.2#optional!builtin<compat/typescript>::version=4.6.2&hash=7ad353"]\
+          ["typescript", "patch:typescript@npm%3A4.6.3#optional!builtin<compat/typescript>::version=4.6.3&hash=7ad353"]\
         ],\
         "packagePeers": [\
           "@types/cosmiconfig",\
@@ -27712,7 +27712,7 @@ const RAW_RUNTIME_STATE =
           ["glob", "npm:7.2.0"],\
           ["json5", "npm:2.2.1"],\
           ["safe-stable-stringify", "npm:2.3.1"],\
-          ["typescript", "patch:typescript@npm%3A4.6.2#optional!builtin<compat/typescript>::version=4.6.2&hash=7ad353"]\
+          ["typescript", "patch:typescript@npm%3A4.6.3#optional!builtin<compat/typescript>::version=4.6.3&hash=7ad353"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -28245,7 +28245,7 @@ const RAW_RUNTIME_STATE =
           ["create-require", "npm:1.1.1"],\
           ["diff", "npm:4.0.2"],\
           ["make-error", "npm:1.3.6"],\
-          ["typescript", "patch:typescript@npm%3A4.6.2#optional!builtin<compat/typescript>::version=4.6.2&hash=7ad353"],\
+          ["typescript", "patch:typescript@npm%3A4.6.3#optional!builtin<compat/typescript>::version=4.6.3&hash=7ad353"],\
           ["v8-compile-cache-lib", "npm:3.0.0"],\
           ["yn", "npm:3.1.1"]\
         ],\
@@ -28602,13 +28602,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["typescript", [\
-      ["patch:typescript@npm%3A4.6.2#optional!builtin<compat/typescript>::version=4.6.2&hash=7ad353", {\
-        "packageLocation": "../../.yarn/berry/cache/typescript-patch-ebce3fa7ea-9.zip/node_modules/typescript/",\
-        "packageDependencies": [\
-          ["typescript", "patch:typescript@npm%3A4.6.2#optional!builtin<compat/typescript>::version=4.6.2&hash=7ad353"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["patch:typescript@npm%3A4.6.3#optional!builtin<compat/typescript>::version=4.6.3&hash=7ad353", {\
         "packageLocation": "../../.yarn/berry/cache/typescript-patch-a04b34aa74-9.zip/node_modules/typescript/",\
         "packageDependencies": [\
