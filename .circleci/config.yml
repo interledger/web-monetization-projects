@@ -377,7 +377,7 @@ workflows:
             parameters:
               # TODO: DRY it up
               node-version: [ "14", "16" ]
-              command: [ "test:coverage", "test:e2e:coverage" ]
+              command: [ "test:coverage --maxWorkers=1", "test:e2e:coverage --maxWorkers=1" ]
       - jest-lerna-all:
           context: web-monetization-tests
           filters:
@@ -387,7 +387,7 @@ workflows:
           matrix:
             parameters:
               node-version: [ "14", "16" ]
-              command: [ "test:coverage", "test:e2e:coverage" ]
+              command: [ "test:coverage --maxWorkers=1", "test:e2e:coverage --maxWorkers=1" ]
       - coil-extension-puppeteer:
           context: web-monetization-tests
           filters:
