@@ -4,6 +4,8 @@ import {
   IdleDetectionDocument
 } from '@webmonetization/wext/content'
 
+type VisibilityState = Document['visibilityState']
+
 class MockDocument implements IdleDetectionDocument {
   visibilityState: VisibilityState = 'hidden'
   listeners: Partial<Record<keyof DocumentEventMap, Function>> = {}
