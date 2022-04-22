@@ -7,7 +7,7 @@ parameters:
     enum: ["https://coil.com", "https://staging.coil.com"]
 
 commands:
-  gcloud-get-creds: 
+  gcloud-get-creds:
     description: 'Get deploy credentials to Google Cloud'
     steps:
       - run:
@@ -113,7 +113,7 @@ jobs:
             mkdir /tmp/coil-chrome-ext-e2e-staging
             tar -cvzf /tmp/coil-chrome-ext-e2e-staging/chromeext.tar dist
             gsutil cp /tmp/coil-chrome-ext-e2e-staging/chromeext.tar gs://web-monetization-projects/extension/latest.tar
-      
+
   publish-packages:
     docker:
       - image: circleci/node:14-buster-browsers
@@ -246,7 +246,10 @@ jobs:
     steps:
       - run:
           name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be masked
-          command: echo TESTING_ENV_VAR $TESTING_ENV_VAR
+          command: | 
+            echo TESTING_ENV_VAR $TESTING_ENV_VAR
+            # check the node version
+            node --version
       - checkout
       - *restore_cache
       - *yarn_install
