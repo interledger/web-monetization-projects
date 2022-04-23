@@ -30,7 +30,7 @@ references:
       node-version:
         type: string
     docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+      - image: cimg/node:<< parameters.node-version >>-browsers
   node-version-matrix: &node-version-matrix
     matrix:
       parameters:
@@ -100,7 +100,7 @@ jobs:
 
   build-extension-e2e-coil:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: cimg/node:16-browsers
     steps:
       - gcloud-get-creds
       - checkout
@@ -116,7 +116,7 @@ jobs:
 
   publish-packages:
     docker:
-      - image: circleci/node:14-buster-browsers
+      - image: cimg/node:14-browsers
     steps:
       - checkout
       - *restore_cache
@@ -241,7 +241,7 @@ jobs:
       node-version:
         type: string
     docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+      - image: cimg/node:<< parameters.node-version >>-browsers
     resource_class: large
     steps:
       - run:
@@ -277,7 +277,7 @@ jobs:
       node-version:
         type: string
     docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+      - image: cimg/node:<< parameters.node-version >>-browsers
     resource_class: xlarge
     steps:
       - checkout
