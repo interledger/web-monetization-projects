@@ -376,7 +376,7 @@ workflows:
           matrix:
             parameters:
               # TODO: DRY it up
-              node-version: [ "14", "16" ]
+              node-version: [ "16", "18" ]
               command: [ "test:coverage", "test:e2e:coverage" ]
       - jest-lerna-all:
           context: web-monetization-tests
@@ -386,7 +386,7 @@ workflows:
               ignore: /pull\/[0-9]+/
           matrix:
             parameters:
-              node-version: [ "14", "16" ]
+              node-version: [ "16", "18" ]
               command: [ "test:coverage", "test:e2e:coverage" ]
       - coil-extension-puppeteer:
           context: web-monetization-tests
