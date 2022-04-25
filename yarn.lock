@@ -1558,7 +1558,7 @@ __metadata:
     "@types/node": "npm:^16.0.0"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.44"
-    "@types/react-dom": "npm:17.0.15"
+    "@types/react-dom": "npm:17.0.16"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.20.0"
     "@typescript-eslint/parser": "npm:5.20.0"
@@ -2475,7 +2475,7 @@ __metadata:
     "@types/jest": "npm:27.4.1"
     "@types/node": "npm:^16.0.0"
     "@types/react": "npm:17.0.44"
-    "@types/react-dom": "npm:17.0.15"
+    "@types/react-dom": "npm:17.0.16"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.20.0"
     "@typescript-eslint/parser": "npm:5.20.0"
@@ -4577,12 +4577,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.15":
-  version: 17.0.15
-  resolution: "@types/react-dom@npm:17.0.15"
+"@types/react-dom@npm:17.0.16":
+  version: 17.0.16
+  resolution: "@types/react-dom@npm:17.0.16"
   dependencies:
     "@types/react": "npm:^17"
-  checksum: b31a859c0d6fbe428db6f2e8a486c229838e11dca306c139561de598501e880cb8c61e883b12fe05a970444e9a6a6de64f5c4bc22a57bb36c2c371b2a52c3d55
+  checksum: 860e33c57f939be1f39ba20dd2a23d589a63eec5dd407b1687e5312b5c94c284321bbdb4e0489985d05d9118e3b0fe8fabd11ca3d7f38750026990b555ad21c6
   languageName: node
   linkType: hard
 
@@ -5117,7 +5117,7 @@ __metadata:
     "@types/node": "npm:^16.0.0"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.44"
-    "@types/react-dom": "npm:17.0.15"
+    "@types/react-dom": "npm:17.0.16"
     "@types/react-helmet": "npm:6.1.5"
     "@typescript-eslint/eslint-plugin": "npm:5.20.0"
     "@typescript-eslint/parser": "npm:5.20.0"
@@ -5303,7 +5303,7 @@ __metadata:
     "@types/jest": "npm:27.4.1"
     "@types/node": "npm:^16.0.0"
     "@types/react": "npm:17.0.44"
-    "@types/react-dom": "npm:17.0.15"
+    "@types/react-dom": "npm:17.0.16"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.20.0"
     "@typescript-eslint/parser": "npm:5.20.0"
