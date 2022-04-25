@@ -5669,7 +5669,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:12.4.0"],\
           ["prettier", "npm:2.6.2"],\
           ["rimraf", "npm:3.0.2"],\
-          ["source-map", "npm:0.5.6"],\
+          ["source-map", "npm:0.7.3"],\
           ["ts-jest", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:27.1.4"],\
           ["ts-loader", "virtual:18ddc85e037ac9e99129055191d4c420db1be299f1c4d13b72482d54d8cd535cb896b9ce24b5d5156a1f5fde4c0d620a1d9d6638afaf8f1c46af1e6a1ff06508#npm:9.2.8"],\
           ["ts-node", "virtual:e0cd45c1a19ea8aa89ff35179dd8110081538629e89b121cb83c1fab78c0aab22afae02cd6e5ba8fc350eb38d36b2487d5869c2d2c43c2fbf770269d2f45568e#npm:10.7.0"],\
@@ -25872,13 +25872,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["source-map", [\
-      ["npm:0.5.6", {\
-        "packageLocation": "../../../../../tmp/renovate-cache/others/berry/cache/source-map-npm-0.5.6-ac261b6171-9.zip/node_modules/source-map/",\
-        "packageDependencies": [\
-          ["source-map", "npm:0.5.6"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:0.5.7", {\
         "packageLocation": "../../../../../tmp/renovate-cache/others/berry/cache/source-map-npm-0.5.7-7c3f035429-9.zip/node_modules/source-map/",\
         "packageDependencies": [\
