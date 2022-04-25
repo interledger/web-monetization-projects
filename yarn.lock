@@ -4470,10 +4470,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mime@npm:*":
-  version: 2.0.3
-  resolution: "@types/mime@npm:2.0.3"
-  checksum: 947688f1f1e89b4590f94a6a159d224fd834029a47764b68d52b9f27bb2fcb6e40cfe9028c37e32e782bb679198cdf5bdd04dfafcc6fde95ad6c1f2c8d4cd050
+"@types/mime@npm:^1":
+  version: 1.3.2
+  resolution: "@types/mime@npm:1.3.2"
+  checksum: 1f724ab3c619125bac1bb5890b42d6cdfeecc60207771b2ad861ec933931a5b0710023c49c181f728c4de4f4e026d3fa49dffddf31a0e3b7898ebd8b6da45f3d
   languageName: node
   linkType: hard
 
@@ -4655,13 +4655,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/serve-static@npm:*":
-  version: 1.13.5
-  resolution: "@types/serve-static@npm:1.13.5"
+"@types/serve-static@npm:1.13.10":
+  version: 1.13.10
+  resolution: "@types/serve-static@npm:1.13.10"
   dependencies:
-    "@types/express-serve-static-core": "npm:*"
-    "@types/mime": "npm:*"
-  checksum: 0cea94ee981146172906ddfd8d5cfd066cfe99b4e75f62fef2f18d826135551ffa2fbc5f9b7d7889c1559e2b899cac97c0a0f29a77172619ab3a7a50e2b904dd
+    "@types/mime": "npm:^1"
+    "@types/node": "npm:*"
+  checksum: 4d892d86ee878a796259fd391a443cdef8ef9edac06082a57cc4c4094ee1b44c178b446778bf8354f99fa03db36ffeceeadf2fce7ead0b8d57d7e7d4bf6d5b5b
   languageName: node
   linkType: hard
 
