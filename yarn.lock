@@ -4276,26 +4276,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-serve-static-core@npm:*":
-  version: 4.17.12
-  resolution: "@types/express-serve-static-core@npm:4.17.12"
+"@types/express-serve-static-core@npm:*, @types/express-serve-static-core@npm:^4.17.18":
+  version: 4.17.28
+  resolution: "@types/express-serve-static-core@npm:4.17.28"
   dependencies:
     "@types/node": "npm:*"
     "@types/qs": "npm:*"
     "@types/range-parser": "npm:*"
-  checksum: eb128ac8be36432901f8fb46e528148fe7e7917de6823a8e80e71dc6100f2e79bf56ce04df0c5d914839a37eca5e1c6602246aa9e5a2323fcb1211a91b48a89f
+  checksum: 643cae979477eccc5dcea481a0c4c891de01d58e01b4f33462e00a26b21b754ca6a31c54c88214ad0a8faf4df089a7af492b48807114438d0a668fd87345b1b9
   languageName: node
   linkType: hard
 
-"@types/express@npm:4.17.8":
-  version: 4.17.8
-  resolution: "@types/express@npm:4.17.8"
+"@types/express@npm:4.17.13":
+  version: 4.17.13
+  resolution: "@types/express@npm:4.17.13"
   dependencies:
     "@types/body-parser": "npm:*"
-    "@types/express-serve-static-core": "npm:*"
+    "@types/express-serve-static-core": "npm:^4.17.18"
     "@types/qs": "npm:*"
     "@types/serve-static": "npm:*"
-  checksum: da98024860b0fb798498e08f2abcf545f5011fff3cf4a1860fbff6611ba6c17a98188344ad4ad68f2849d5fedc4f3e3b23d17176f9ff454ac2498a1aaf25a0e5
+  checksum: 114a3b85cd27a5d7873321499d4af2e8964d4f1a6344b224555d356be2d90e8024cba0dcf1159c30a8d39d8cb8312dff85b1a79a23c139122879499c568ac06e
   languageName: node
   linkType: hard
 
@@ -5112,7 +5112,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:16.2.1"
     "@hot-loader/react-dom": "npm:17.0.2"
     "@types/body-parser": "npm:1.19.2"
-    "@types/express": "npm:4.17.12"
+    "@types/express": "npm:4.17.13"
     "@types/figlet": "npm:1.5.4"
     "@types/jest": "npm:27.4.1"
     "@types/node": "npm:14.18.13"
