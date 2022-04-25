@@ -24,6 +24,7 @@ jest.config.local.js
 packages/coil-extension/test/fixtures/coil-oauth-wm.js
 .yarn/cache
 .pnp.js
+.pnp.cjs
 .yarn/install-state.gz
 .yarn/unplugged
 .yarn/build-state.yml
