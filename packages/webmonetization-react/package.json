@@ -51,7 +51,7 @@
     "@commitlint/cli": "16.2.3",
     "@commitlint/config-conventional": "16.2.1",
     "@types/jest": "27.4.1",
-    "@types/node": "^16.0.0",
+    "@types/node": "16.11.29",
     "@types/react": "17.0.44",
     "@typescript-eslint/eslint-plugin": "5.20.0",
     "@typescript-eslint/parser": "5.20.0",

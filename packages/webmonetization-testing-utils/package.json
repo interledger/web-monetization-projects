@@ -54,7 +54,7 @@
     "@hot-loader/react-dom": "17.0.2",
     "@types/ajv": "1.0.0",
     "@types/jest": "27.4.1",
-    "@types/node": "^16.0.0",
+    "@types/node": "16.11.29",
     "@types/react": "17.0.44",
     "@types/react-dom": "17.0.16",
     "@types/uuid": "8.3.4",
