@@ -84,7 +84,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
 
         const targets = manifest['$targets']
         delete manifest['$targets']
-        if (targets[BROWSER]?.permissions) {
+        if (targets?.[BROWSER]?.permissions) {
           applyManifestPermissions(manifest, targets[BROWSER].permissions)
         }
 
