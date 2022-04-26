@@ -4287,7 +4287,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:*, @types/express@npm:^4.17.13":
+"@types/express@npm:*, @types/express@npm:4.17.13, @types/express@npm:^4.17.13":
   version: 4.17.13
   resolution: "@types/express@npm:4.17.13"
   dependencies:
@@ -5112,7 +5112,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:16.2.1"
     "@hot-loader/react-dom": "npm:17.0.2"
     "@types/body-parser": "npm:1.19.2"
-    "@types/express": "npm:^4.17.13"
+    "@types/express": "npm:4.17.13"
     "@types/figlet": "npm:1.5.4"
     "@types/jest": "npm:27.4.1"
     "@types/node": "npm:16.11.29"
