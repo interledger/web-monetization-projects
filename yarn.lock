@@ -1322,12 +1322,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
-  version: 7.16.3
-  resolution: "@babel/runtime@npm:7.16.3"
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.4.5, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
+  version: 7.17.9
+  resolution: "@babel/runtime@npm:7.17.9"
   dependencies:
     regenerator-runtime: "npm:^0.13.4"
-  checksum: e6f5ce41ae26a304738efc60e7869846f48f6dd8c68083a4855ad2a22e780b06e54e6897a2679bc5600e794b136c1834d10c431d259ebfce0297126c598d7329
+  checksum: 563a63b2b742f3b1558b99766f9179f28cee930e0114ff08e243ab74cb6cd9ed3693660dafc6bcfaf9a453a6cb5b94fd72ab5497166ac43ee92b18d723399a67
   languageName: node
   linkType: hard
 
@@ -1585,6 +1585,7 @@ __metadata:
     eslint-plugin-react: "npm:7.29.4"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
+    foxr: "npm:^0.10.1"
     framer-motion: "npm:^5.0.0"
     get-port: "npm:^5.1.1"
     http-server: "npm:14.1.0"
@@ -11639,6 +11640,18 @@ __metadata:
   version: 0.2.0
   resolution: "forwarded@npm:0.2.0"
   checksum: d1d18e065b310fb44e3190497119b810db59da95a8ac0ba186e94385484c72e189e9a5da404a209886fdcfaacc1efcb066e7d90c4281dfd7e3ce3ccd18a8dd32
+  languageName: node
+  linkType: hard
+
+"foxr@npm:^0.10.1":
+  version: 0.10.1
+  resolution: "foxr@npm:0.10.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.4.5"
+    execa: "npm:^1.0.0"
+    signal-exit: "npm:^3.0.2"
+    typeon: "npm:^0.3.0"
+  checksum: 76740c58772c23108fdfe81772ac41d4d2f79b7d13f9e8866a94564aedc3ec8f795d0b48672600611b3101ec9e74204fd6083530484593f0b3d5f2aad8054e25
   languageName: node
   linkType: hard
 
@@ -22194,6 +22207,13 @@ sjcl@sublimator/sjcl:
   version: 1.1.13
   resolution: "typeface-roboto@npm:1.1.13"
   checksum: 6c43da89823eb8788d204a0d08eca2a754716df5c033fb396615b9dc44f4eaee611dae38d84fdd8d83d7f256d748f49f8655545543e2866962667718e180e4b0
+  languageName: node
+  linkType: hard
+
+"typeon@npm:^0.3.0":
+  version: 0.3.1
+  resolution: "typeon@npm:0.3.1"
+  checksum: 979745f1c846d141e089074fd80ef180756dccc6ecb3d5d3ce1a4d7c21acc395976f1997317f0e749eb5b65ec4f8564b0b103083a0c08f3023a09f6f82864700
   languageName: node
   linkType: hard
 
