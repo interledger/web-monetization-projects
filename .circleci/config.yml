@@ -7,7 +7,7 @@ parameters:
     enum: ["https://coil.com", "https://staging.coil.com"]
 
 commands:
-  gcloud-get-creds: 
+  gcloud-get-creds:
     description: 'Get deploy credentials to Google Cloud'
     steps:
       - run:
@@ -30,15 +30,15 @@ references:
       node-version:
         type: string
     docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+      - image: cimg/node:<< parameters.node-version >>-browsers
   node-version-matrix: &node-version-matrix
     matrix:
       parameters:
-        node-version: [ "14", "16" ]
+        node-version: [ "16.14.2", "18.0.0" ]
   just-one-node-version-matrix: &just-latest-lts-node-version
     matrix:
       parameters:
-        node-version: [ "16" ]
+        node-version: [ "16.14.2" ]
 
 jobs:
   # Run Linting
@@ -100,7 +100,7 @@ jobs:
 
   build-extension-e2e-coil:
     docker:
-      - image: circleci/node:16-buster-browsers
+      - image: cimg/node:16.14.2-browsers
     steps:
       - gcloud-get-creds
       - checkout
@@ -113,10 +113,10 @@ jobs:
             mkdir /tmp/coil-chrome-ext-e2e-staging
             tar -cvzf /tmp/coil-chrome-ext-e2e-staging/chromeext.tar dist
             gsutil cp /tmp/coil-chrome-ext-e2e-staging/chromeext.tar gs://web-monetization-projects/extension/latest.tar
-      
+
   publish-packages:
     docker:
-      - image: circleci/node:14-buster-browsers
+      - image: cimg/node:14-browsers
     steps:
       - checkout
       - *restore_cache
@@ -239,12 +239,15 @@ jobs:
       node-version:
         type: string
     docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+      - image: cimg/node:<< parameters.node-version >>-browsers
     resource_class: large
     steps:
       - run:
           name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be masked
-          command: echo TESTING_ENV_VAR $TESTING_ENV_VAR
+          command: | 
+            echo TESTING_ENV_VAR $TESTING_ENV_VAR
+            # check the node version
+            node --version
       - checkout
       - *restore_cache
       - *yarn_install
@@ -279,7 +282,7 @@ jobs:
       node-version:
         type: string
     docker:
-      - image: circleci/node:<< parameters.node-version >>-buster-browsers
+      - image: cimg/node:<< parameters.node-version >>-browsers
     resource_class: xlarge
     steps:
       - checkout
@@ -378,7 +381,7 @@ workflows:
           matrix:
             parameters:
               # TODO: DRY it up
-              node-version: [ "14", "16" ]
+              node-version: [ "16.14.2", "18.0.0" ]
               command: [ "test:coverage", "test:e2e:coverage" ]
       - jest-lerna-all:
           context: web-monetization-tests
@@ -388,7 +391,7 @@ workflows:
               ignore: /pull\/[0-9]+/
           matrix:
             parameters:
-              node-version: [ "14", "16" ]
+              node-version: [ "16.14.2", "18.0.0" ]
               command: [ "test:coverage", "test:e2e:coverage" ]
       - coil-extension-puppeteer:
           context: web-monetization-tests
