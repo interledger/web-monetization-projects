@@ -25,8 +25,9 @@ import { TippingService } from './TippingService'
 
 const startedAt = Date.now()
 let latest = startedAt
-const dbg = (...args: any[]) => {
+const dbg = (...args: unknown[]) => {
   const now = Date.now()
+  // eslint-disable-next-line no-console
   console.log(
     `TabStates (t=${now - startedAt}ms, d=${now - latest}ms)`,
     ...args
@@ -234,7 +235,7 @@ export class TabStates {
     }
   }
 
-  private setBrowserActionStateFromAuthAndTabState(from: string) {
+  private setBrowserActionStateFromAuthAndTabState(from?: string) {
     dbg('setBrowserActionStateFromAuthAndTabState', { from })
     const token = this.auth.getStoredToken()
 
@@ -247,9 +248,9 @@ export class TabStates {
     if (tabId) {
       const tabState = this.getActiveOrDefault()
 
-      // if (Object.values(tabState.frameStates).find(f => isFrameMonetized(f))) {
-      //   this.setIcon(tabId, 'monetized')
-      // }
+      if (Object.values(tabState.frameStates).find(f => isFrameMonetized(f))) {
+        this.setIcon(tabId, 'monetized')
+      }
 
       if (token == null) {
         this.setIcon(tabId, 'unavailable')
