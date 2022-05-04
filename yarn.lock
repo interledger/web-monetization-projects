@@ -1554,7 +1554,7 @@ __metadata:
     "@types/har-format": "npm:1.2.8"
     "@types/jest": "npm:27.5.0"
     "@types/jsonwebtoken": "npm:8.5.8"
-    "@types/long": "npm:4.0.1"
+    "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.11.32"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.44"
@@ -1697,7 +1697,7 @@ __metadata:
     "@commitlint/cli": "npm:16.2.3"
     "@commitlint/config-conventional": "npm:16.2.1"
     "@types/jest": "npm:27.5.0"
-    "@types/long": "npm:4.0.1"
+    "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.11.32"
     "@types/node-fetch": "npm:2.6.1"
     "@types/uuid": "npm:8.3.4"
@@ -4464,7 +4464,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/long@npm:*, @types/long@npm:4.0.1":
+"@types/long@npm:*, @types/long@npm:4.0.2":
+  version: 4.0.2
+  resolution: "@types/long@npm:4.0.2"
+  checksum: b6e4c16ca43a11f229cf2d54697404e791f48ac9107fb1052b8dec92e730f54ebfe6773d68fe7d27531d9b75de1aafce0fbac206cea0ef13bb1b97f5436d90cf
+  languageName: node
+  linkType: hard
+
+"@types/long@npm:4.0.1":
   version: 4.0.1
   resolution: "@types/long@npm:4.0.1"
   checksum: fdb9c9fdc405bba28421d7d81bddeaea8a23a00ebe9fecbd56ae09c6fbda403413cafab97bb66876e4077db564c552733e6731e13afe235fc73bb0c87458b9dd
