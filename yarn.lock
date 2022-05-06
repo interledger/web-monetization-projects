@@ -23677,7 +23677,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ws@npm:8.5.0, ws@npm:^8.4.2":
+"ws@npm:8.5.0":
   version: 8.5.0
   resolution: "ws@npm:8.5.0"
   peerDependencies:
@@ -23701,7 +23701,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.2.3":
+"ws@npm:^8.2.3, ws@npm:^8.4.2":
   version: 8.6.0
   resolution: "ws@npm:8.6.0"
   peerDependencies:
