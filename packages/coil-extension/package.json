@@ -97,7 +97,7 @@
     "@types/har-format": "1.2.8",
     "@types/jest": "27.5.0",
     "@types/jsonwebtoken": "8.5.8",
-    "@types/long": "4.0.1",
+    "@types/long": "4.0.2",
     "@types/node": "16.11.32",
     "@types/node-fetch": "2.6.1",
     "@types/react": "17.0.44",
