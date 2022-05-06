@@ -1,6 +1,8 @@
-const { parse: parseJSON } = require('JSON2016/JSON2016.js')
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { readFileSync, existsSync } = require('fs')
 const { resolve } = require('path')
+
+const { parse: parseJSON } = require('JSON2016/JSON2016.js')
 const { pathsToModuleNameMapper } = require('ts-jest')
 
 const SKIP_LIB_CHECK = Boolean(
