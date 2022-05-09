@@ -1604,7 +1604,7 @@ __metadata:
     lint-staged: "npm:12.4.1"
     lottie-web: "npm:^5.8.1"
     prettier: "npm:2.6.2"
-    puppeteer: "npm:13.7.0"
+    puppeteer: "npm:14.0.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reduct: "npm:^3.3.1"
@@ -1733,7 +1733,7 @@ __metadata:
     lint-staged: "npm:12.4.1"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
-    puppeteer: "npm:13.7.0"
+    puppeteer: "npm:14.0.0"
     reduct: "npm:^3.3.1"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
@@ -1908,7 +1908,7 @@ __metadata:
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
     prettier: "npm:2.6.2"
-    puppeteer: "npm:^13.1.1"
+    puppeteer: "npm:^14.0.0"
     rimraf: "npm:3.0.2"
     tmp: "npm:^0.2.1"
     ts-jest: "npm:28.0.2"
@@ -9550,10 +9550,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devtools-protocol@npm:0.0.981744":
-  version: 0.0.981744
-  resolution: "devtools-protocol@npm:0.0.981744"
-  checksum: 0e87a30a45bd6d765c78d126479a15d74cbc7bf96fe9c0a675d15664df4ba179e96ac8e4eaf9f8af31334ec1e15844d52c27864d6dca53d88a2ca4dfc260809e
+"devtools-protocol@npm:0.0.982423":
+  version: 0.0.982423
+  resolution: "devtools-protocol@npm:0.0.982423"
+  checksum: b93ef8d6670943577c3c891029a8779061ad65277249f61262a77423ebf5d4a22be41d12e0794463534ef58334564e2e33f4d6d23217b93dfa4272d05193d1fe
   languageName: node
   linkType: hard
 
@@ -18903,13 +18903,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:13.7.0, puppeteer@npm:^13.1.1":
-  version: 13.7.0
-  resolution: "puppeteer@npm:13.7.0"
+"puppeteer@npm:14.0.0, puppeteer@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "puppeteer@npm:14.0.0"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
-    devtools-protocol: "npm:0.0.981744"
+    devtools-protocol: "npm:0.0.982423"
     extract-zip: "npm:2.0.1"
     https-proxy-agent: "npm:5.0.1"
     pkg-dir: "npm:4.2.0"
@@ -18918,8 +18918,8 @@ __metadata:
     rimraf: "npm:3.0.2"
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
-    ws: "npm:8.5.0"
-  checksum: 560caf73effea6758e5140584b8031c981a9126f0180eeb651e4c6b3d253f42d6a4dc2b3828dea439ad44ed03a9fe788c20b92c754a79ad04172910eb67d0e82
+    ws: "npm:8.6.0"
+  checksum: 374287e5688f3ba9744b5ba4028d08c7c0ae1e28d4457728e7a6b1bb310e759e3cc17fc93b26b5e76279663f23631dc7b26de287c4eb64874b7f51f006f065b1
   languageName: node
   linkType: hard
 
@@ -23706,31 +23706,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ws@npm:8.5.0":
-  version: 8.5.0
-  resolution: "ws@npm:8.5.0"
-  peerDependencies:
-    bufferutil: ^4.0.1
-    utf-8-validate: ^5.0.2
-  peerDependenciesMeta:
-    bufferutil:
-      optional: true
-    utf-8-validate:
-      optional: true
-  checksum: 9037dc064f5975a7d35fe95348d719cb20438c8d19c71341b5f94315627ea5edfea27242af3df9bde1e393ae39e672470bd937f4d04a820d4dee7d401deaaa97
-  languageName: node
-  linkType: hard
-
-"ws@npm:^6.0.0, ws@npm:^6.1.0":
-  version: 6.2.2
-  resolution: "ws@npm:6.2.2"
-  dependencies:
-    async-limiter: "npm:~1.0.0"
-  checksum: 3f4f610c99b1a5cc9be9db34bcb515a1901be04b467ddc85e30c92f0f410faac88822de0513ad44139ad94ad81c0fdd2a543cbf05bd26d0b3ca319b719da10c6
-  languageName: node
-  linkType: hard
-
-"ws@npm:^8.2.3, ws@npm:^8.4.2":
+"ws@npm:8.6.0, ws@npm:^8.2.3, ws@npm:^8.4.2":
   version: 8.6.0
   resolution: "ws@npm:8.6.0"
   peerDependencies:
@@ -23742,6 +23718,15 @@ sjcl@sublimator/sjcl:
     utf-8-validate:
       optional: true
   checksum: b0977a5ae5b2f6e741964325a41c1466a423aa1b7c2db5a4f62c76e4ede1262674436131f69d4584afb780bbed5ecf39389a345b72ee623f3931d72a0dd4db54
+  languageName: node
+  linkType: hard
+
+"ws@npm:^6.0.0, ws@npm:^6.1.0":
+  version: 6.2.2
+  resolution: "ws@npm:6.2.2"
+  dependencies:
+    async-limiter: "npm:~1.0.0"
+  checksum: 3f4f610c99b1a5cc9be9db34bcb515a1901be04b467ddc85e30c92f0f410faac88822de0513ad44139ad94ad81c0fdd2a543cbf05bd26d0b3ca319b719da10c6
   languageName: node
   linkType: hard
 
