@@ -141,6 +141,7 @@ jobs:
     <<: *parameterized-node-version
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
+    resource_class: xlarge
     steps:
       - checkout
       - *restore_cache
@@ -180,6 +181,7 @@ jobs:
     <<: *parameterized-node-version
     environment:
       COIL_DOMAIN: << pipeline.parameters.coil_domain >>
+    resource_class: xlarge
     steps:
       - checkout
       - *restore_cache
