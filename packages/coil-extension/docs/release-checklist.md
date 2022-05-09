@@ -35,7 +35,7 @@ When releasing, we can copy this markdown into the PR for a release.
 ## $Platform $Browser \$Version
 
 Copy below for each platform/browser/version tested, filtering steps where it
-make sense.
+makes sense.
 
 - [ ] Build for prod with release settings
 
@@ -57,34 +57,34 @@ make sense.
   - ![image](https://user-images.githubusercontent.com/525211/71150879-28d04300-2265-11ea-96da-7d720c101575.png)
     (or trial)
 
-- [ ] [example.com](http://example.com/) should say "This site isn't supported yet"
+- [ ] [example.com](http://example.com/) should say "Streaming not enabled"
 
-  - ![image](https://user-images.githubusercontent.com/525211/126276057-30b8285f-84a5-4e01-ae0e-85b7592883e6.png)
+  - ![image](https://user-images.githubusercontent.com/525211/154630950-e179eb7c-cf62-4a8c-b1b5-aa033f1ff57f.png)
 
 - [ ] [xrptipbot.com](https://www.xrptipbot.com/) should monetize
 
-  - ![image](https://user-images.githubusercontent.com/525211/126276225-62af2025-3f43-4a36-a3bc-e141c9a569de.png)
+  - ![image](https://user-images.githubusercontent.com/525211/154631133-1be5f080-858f-4984-9548-1b5b405471b7.png)
 
 -
 - [ ] [twitch.tv](https://twitch.tv/vinesauce) works
 
-  - ![image](https://user-images.githubusercontent.com/525211/126276355-63815894-47e6-4f69-8308-8ceeb43cb73b.png)
+  - <img width="355" alt="image" src="https://user-images.githubusercontent.com/525211/167336900-740809a6-4134-4f33-8f33-e3d45bd30f25.png">
 
-- [ ] [monetized youtube video](https://www.youtube.com/watch?v=-QMbZx_w2_Y)
+- [ ] [monetized youtube video](https://www.youtube.com/watch?v=8EKg_rBWZdc)
 
-  - ![image](https://user-images.githubusercontent.com/525211/126276573-a27425ab-884a-4612-99cb-ef12d452e75e.png)
+  - <img width="411" alt="image" src="https://user-images.githubusercontent.com/525211/167337147-6b8c430f-fbcc-4a34-ac42-550cb56b0632.png">
 
 - Coil welcome and welcome to explore pages
 
-  - [ ] Go to coil.com, the browser action popup should show welcome to coil
-    - ![image](https://user-images.githubusercontent.com/525211/126276719-692355e3-f571-4b08-8816-9b0715688d71.png)
+  - [ ] Go to coil.com, the browser action popup should show "Welcome, $username"
+    - <img width="336" alt="image" src="https://user-images.githubusercontent.com/525211/167337854-ba1dcb84-ec9d-434b-8e5e-1bb0b047efbc.png">
   - [ ] Should have a link to coil.com/discover page
-  - [ ] Once on explore page should show `Discover Now` with a rocket-ship graphic
+  - [ ] Once on discover page should show `Discover Now` with a rocket-ship graphic
     - ![image](https://user-images.githubusercontent.com/525211/126276807-f39ac03f-6c2b-419c-8a79-e2f2859b44a9.png)
 
 - [ ] Check the monetization animation works properly
 
-  - ![image](https://user-images.githubusercontent.com/525211/126277022-48e139b6-871a-4ed4-8d45-58e194855ff8.png)
+  - <img width="355" alt="image" src="https://user-images.githubusercontent.com/525211/167338973-a4726572-dca9-4c46-ac67-e5d8457c34f2.png">
   - Only required on desktop browsers
   - Should animate when monetized and packets received
   - Should stop animation when network disconnected
@@ -109,12 +109,6 @@ make sense.
   - Check that routed to login page
     - ![image](https://user-images.githubusercontent.com/525211/126277570-77da3644-9950-465d-bac0-4afbd33a70e4.png)
 
-- [ ] Popup icon should show if page is monetized even when logged out
-
-  - Log out from extension
-  - Go to a monetized page and check that the icon "monetized" black and in 'unavailable' state
-    - ![image](https://user-images.githubusercontent.com/525211/126277839-d482fea3-63bc-42d8-9dae-6eca318cdc63.png)
-
 - [ ] Run the puppeteer [tests](./test.sh) (look at the [circle jobs](../../../.circleci/config.yml))
 
   - export BROWSER_TYPE='chrome' # or 'firefox'
@@ -128,8 +122,9 @@ make sense.
 
 - [ ] Go to [xrptipbot.com](https://www.xrptipbot.com/) and as page
       is loading very quickly open the popup.
-      It should show "Thanks for your support" even before streaming
-      starts. Should show 'setting up payment' then 'coil is paying creator'
+      It should show "Thank you" even before streaming
+      starts. The animation should play when the streaming starts and
+      the outlined circle should become solid green in the toolbar icon.
       [#120][i120]
 
 - [ ] Open the [reloading-every-15s.html](http://localhost:4000/reloading-every-15s.html) file:
@@ -160,7 +155,7 @@ make sense.
 - [ ] Check stopped event fires with correct requestId
 
   - Open the [event-logger.html](../test/fixtures/event-logger.html) file
-  - Induce a stop/start in same js 'tick'
+  - Induce a stop/start in same js 'tick' (tack on #induce to end of url)
   - Check that the stopped event has the correct requestId
   - Issue: [#127][ni127]
   - Fix PR: [#128][np128]
@@ -168,10 +163,10 @@ make sense.
 - [ ] Check tip event fires when clicked on in the popup
 
   - Open the [event-logger.html](../test/fixtures/event-logger.html) file
-  - Open the extension popup and click on "Tip this creator \$1!"
+  - Open the extension popup and click on "Send \$1!" in the tipping tab
   - Check that the tip event occurs
 
-- [ ] Run a local web server (e.g. with `python -m http.server 4000`) serving
+- [ ] Run a local web server (with `yarn run serve:dist`) serving
       the dist folder, then open [static/popup.html](static/popup.html) in a
       normal tab and check the popup rendering in various states.
 
@@ -204,18 +199,6 @@ make sense.
   - Issue: [#313][i313]
   - Fix PR: [#332][p332]
 
-- [ ] Check SPA apps keep streaming when url changed, meta stays
-
-  - Go to e.g. https://www.wevolver.com/
-  - Change other pages which uses HTML5 history.pushState
-  - Check that streaming is maintained throughout
-
-    - if not, use browser devtools to check if meta exists
-      - `document.head.querySelector('meta[name="monetization"]')`
-
-  - Issue: [#507][i507]
-  - Fix PR: [#508][p508]
-
 - [ ] Check extension doesn't attempt to stream when unsubscribed
 
   - Log in with coil user that doesn't have active subscription
@@ -243,8 +226,8 @@ make sense.
 
 ### Iframe testing
 
-1. - [ ] Open a terminal and `cd packages/coil-extension/test/fixtures/iframes/`
-2. - [ ] Start a server (via `python -m http.server 4000` or equivalent)
+1. - [ ] Open a terminal
+2. - [ ] Start server (via `yarn serve:fixtures-iframes` )
 3. - [ ] Open http://localhost:4000/top-nested-allowed-iframe.html in browser
 4. Open developer tools and look at the structure of the dom
 
