@@ -1,4 +1,5 @@
 import { QueryResolvers } from '../generated/graphql'
+import { notNullOrUndef } from '../../utils/nullables'
 
 export const whoami: QueryResolvers['whoami'] = async (
   parent,
@@ -7,7 +8,8 @@ export const whoami: QueryResolvers['whoami'] = async (
   info
 ) => {
   return {
-    id: context.userId,
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    id: notNullOrUndef(context.userId, 'context.userId'),
     email: 'niq@coil.com',
     canTip: false,
     paymentMethods: [],
