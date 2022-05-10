@@ -1612,7 +1612,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@coil/client@npm:0.0.0, @coil/client@npm:^0.0.0, @coil/client@workspace:packages/coil-client":
+"@coil/client@npm:0.0.0, @coil/client@npm:^0.0.0, @coil/client@workspace:^, @coil/client@workspace:packages/coil-client":
   version: 0.0.0-use.local
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
@@ -1778,6 +1778,7 @@ __metadata:
     "@babel/plugin-proposal-object-rest-spread": "npm:7.17.3"
     "@babel/preset-env": "npm:7.17.10"
     "@babel/preset-typescript": "npm:7.16.7"
+    "@coil/client": "workspace:^"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@graphql-codegen/cli": "npm:2.6.2"
