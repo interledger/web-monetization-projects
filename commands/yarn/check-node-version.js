@@ -5,7 +5,7 @@ module.exports = {
   factory: require => {
     const version = process.version.replace(/[^0-9.]/g, '')
     const major = Number(version.split('.')[0])
-    if (major < 14) {
+    if (major < 16) {
       throw new Error(
         `node version ${process.version} < minimum node version: v14`
       )

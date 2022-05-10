@@ -39,9 +39,9 @@ git clone git@github.com:coilhq/web-monetization-projects.git
 yarn
 ```
 
-### Node >= 14
+### Node >= 16
 
-The TypeScript is compiled into es2020, so the minimum version of node required is v14 (currently the LTS)
+The TypeScript is compiled into es2020 and the CI only tests 16 (currently the LTS) and on.
 See [nvm](https://github.com/nvm-sh/nvm#install--update-script) for an easy way to manage multiple versions
 
 ### Visual Studio Code
