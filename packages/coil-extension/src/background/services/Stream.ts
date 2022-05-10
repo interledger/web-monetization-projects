@@ -91,7 +91,7 @@ export class Stream extends EventEmitter {
   private _looping: boolean
   private _attempt: StreamAttempt | null
   private _coilDomain: string
-  private _anonTokens: AnonymousTokens
+  private _anonTokens: Pick<AnonymousTokens, 'getToken' | 'removeToken'>
 
   private _assetCode: string
   private _assetScale: number
@@ -179,6 +179,7 @@ export class Stream extends EventEmitter {
       let plugin, attempt
       try {
         btpToken = await this._anonTokens.getToken(this._authToken)
+        console.log({ btpToken })
         plugin = await this._makePlugin(btpToken)
         const spspDetails = await this._getSPSPDetails()
         this.container

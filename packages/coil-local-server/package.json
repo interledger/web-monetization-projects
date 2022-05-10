@@ -1,29 +1,26 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
-  "$overRideUpKeep": {
-    "license": "BSD-3-Clause",
-    "author": "Alex Davidson <coela@alxdavids.xyz>",
-    "scripts": {}
-  },
-  "name": "@coil/privacypass-sjcl",
+  "name": "@coil/local-server",
   "version": "0.0.0",
   "keywords": [
     "ilp",
     "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/coil-privacypass-sjcl",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/coil-local-server",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
   },
-  "license": "BSD-3-Clause",
-  "author": "Alex Davidson <coela@alxdavids.xyz>",
+  "license": "Apache-2.0",
+  "author": "Coil Team <info@coil.com>",
   "main": "./build",
   "types": "./build",
   "scripts": {
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",
+    "dev:server": "nodemon src/index.ts",
+    "dev:graphql-watch": "yarn generate-graphql --watch",
     "clean:build": "rimraf build",
     "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
@@ -34,15 +31,8 @@
     "test:coverage": "yarn test --verbose --coverage",
     "test:e2e": "yarn test --config jest-e2e.config.js",
     "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.js",
-    "upkeep": "cd ../.. && yarn upkeep"
-  },
-  "dependencies": {
-    "asn1-parser": "^1.1.8",
-    "atob": "^2.1.2",
-    "btoa": "^1.2.1",
-    "keccak": "^3.0.1",
-    "node-fetch": "^2.6.1",
-    "sjcl": "sublimator/sjcl"
+    "upkeep": "cd ../.. && yarn upkeep",
+    "generate-graphql": "graphql-codegen --config codegen.yml"
   },
   "devDependencies": {
     "@babel/core": "7.17.10",
@@ -53,10 +43,13 @@
     "@babel/preset-typescript": "7.16.7",
     "@commitlint/cli": "16.2.4",
     "@commitlint/config-conventional": "16.2.4",
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typescript": "2.4.11",
+    "@graphql-codegen/typescript-resolvers": "2.6.4",
+    "@types/express": "^4.17.13",
     "@types/jest": "27.5.0",
-    "@types/keccak": "3.0.1",
     "@types/node": "16.11.33",
-    "@types/sjcl": "1.0.30",
     "@typescript-eslint/eslint-plugin": "5.22.0",
     "@typescript-eslint/parser": "5.22.0",
     "@yarnpkg/pnpify": "3.1.1",
@@ -79,6 +72,7 @@
     "jest-environment-jsdom": "28.1.0",
     "lerna": "4.0.0",
     "lint-staged": "12.4.1",
+    "nodemon": "^2.0.16",
     "prettier": "2.6.2",
     "rimraf": "3.0.2",
     "ts-jest": "28.0.2",
@@ -92,5 +86,17 @@
     "webpack-cli": "4.9.2",
     "webpack-dev-server": "4.9.0",
     "webpack-merge": "5.8.0"
+  },
+  "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.3.12",
+    "@graphql-tools/load": "^7.5.11",
+    "@graphql-tools/schema": "^8.3.11",
+    "@graphql-tools/utils": "^8.6.10",
+    "@interledger/stream-receiver": "^0.3.3-alpha.1",
+    "apollo-server-core": "^3.7.0",
+    "apollo-server-express": "^3.7.0",
+    "express": "^4.18.1",
+    "graphql": "^16.4.0",
+    "graphql-tools": "^8.2.9"
   }
 }

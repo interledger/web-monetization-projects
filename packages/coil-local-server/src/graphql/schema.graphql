@@ -1,0 +1,66 @@
+# This file is compiled from subsets of the types declared in bernie and coil-api
+# @see https://github.com/coilhq/coil/blob/main/services/coil-api/src/schema.graphql
+# @see https://github.com/coilhq/coil/blob/main/services/bernie/src/schema.graphql
+# It is intended to have just enough of the api for the extension to run
+
+type Query {
+  whoami: User
+}
+
+union PaymentMethodDetails = StripeCardDetails
+
+enum PaymentMethodType {
+  tipCredit
+  stripe
+}
+
+## https://github.com/coilhq/coil/blob/d75874d3254a5b4abcecd428581f1389b6c275c5/services/bernie/src/schema.graphql#L62
+type PaymentMethod {
+  id: String!
+  type: PaymentMethodType
+  details: PaymentMethodDetails
+}
+
+enum PaymentMethodStatus {
+  FailedUnknownReason
+  Expired
+  Invalid
+  Valid
+  Unknown
+}
+
+type StripeCardDetails {
+  brandCode: String!
+  last4: String!
+  expirationMonth: String!
+  expirationYear: String!
+  status: PaymentMethodStatus!
+  name: String!
+  funding: String!
+}
+
+type CurrencyPreferences {
+  code: String!
+  scale: Int!
+}
+
+type CoilSubscription {
+  active: Boolean!
+  endDate: String!
+  trialEndDate: String!
+}
+
+type User {
+  id: ID!
+  fullName: String
+  shortName: String
+  canTip: Boolean!
+  email: String!
+  profilePicture: String
+  customerId: String
+  subscription: CoilSubscription
+  currencyPreferences: CurrencyPreferences
+  paymentMethods: [PaymentMethod]!
+}
+
+

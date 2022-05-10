@@ -6,6 +6,9 @@
     "baseUrl": ".",
     "skipLibCheck": false,
     "paths": {
+      "@coil/local-server": [
+        "packages/coil-local-server/src"
+      ],
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
       ],

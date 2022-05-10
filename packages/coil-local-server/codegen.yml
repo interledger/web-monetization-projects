@@ -1,0 +1,16 @@
+overwrite: true
+schema: "src/graphql/schema.graphql"
+documents: null
+generates:
+  src/graphql/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      defaultMapper: Partial<{T}>
+      maybeValue: T | undefined
+      scalars:
+        UInt64: bigint
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
