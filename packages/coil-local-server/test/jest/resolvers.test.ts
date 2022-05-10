@@ -3,6 +3,7 @@ import { graphql } from 'graphql'
 import { whoamiQuery } from '@coil/client'
 
 import { resolversRoot } from '../../src/graphql/resolvers'
+import { Context } from '../../src/types/context'
 import { loadedSchemaString } from '../../src/graphql/loaded-schema-string'
 
 describe('Testing Graphql Functions', () => {
@@ -10,7 +11,8 @@ describe('Testing Graphql Functions', () => {
     const typeDefs = loadedSchemaString
     const args = { typeDefs, resolvers: resolversRoot }
     const schema = makeExecutableSchema(args)
-    const result = await graphql({ schema, source: whoamiQuery })
+    const contextValue: Context = { userId: '1' }
+    const result = await graphql({ schema, source: whoamiQuery, contextValue })
     expect(result).toMatchInlineSnapshot(`
       Object {
         "data": Object {

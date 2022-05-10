@@ -11,6 +11,7 @@ generates:
       maybeValue: T | undefined
       scalars:
         UInt64: bigint
+      contextType: "../../types/context#Context"
   ./graphql.schema.json:
     plugins:
       - "introspection"

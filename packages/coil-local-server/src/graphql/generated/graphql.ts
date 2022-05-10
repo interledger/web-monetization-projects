@@ -1,5 +1,7 @@
 import { GraphQLResolveInfo } from 'graphql'
 
+import { Context } from '../../types/context'
+
 export type Maybe<T> = T | undefined
 export type InputMaybe<T> = T | undefined
 export type Exact<T extends { [key: string]: unknown }> = {
@@ -234,7 +236,7 @@ export type ResolversParentTypes = {
 }
 
 export type CoilSubscriptionResolvers<
-  ContextType = any,
+  ContextType = Context,
   ParentType extends ResolversParentTypes['CoilSubscription'] = ResolversParentTypes['CoilSubscription']
 > = {
   active?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>
@@ -244,7 +246,7 @@ export type CoilSubscriptionResolvers<
 }
 
 export type CurrencyPreferencesResolvers<
-  ContextType = any,
+  ContextType = Context,
   ParentType extends ResolversParentTypes['CurrencyPreferences'] = ResolversParentTypes['CurrencyPreferences']
 > = {
   code?: Resolver<ResolversTypes['String'], ParentType, ContextType>
@@ -253,7 +255,7 @@ export type CurrencyPreferencesResolvers<
 }
 
 export type PaymentMethodResolvers<
-  ContextType = any,
+  ContextType = Context,
   ParentType extends ResolversParentTypes['PaymentMethod'] = ResolversParentTypes['PaymentMethod']
 > = {
   details?: Resolver<
@@ -271,21 +273,21 @@ export type PaymentMethodResolvers<
 }
 
 export type PaymentMethodDetailsResolvers<
-  ContextType = any,
+  ContextType = Context,
   ParentType extends ResolversParentTypes['PaymentMethodDetails'] = ResolversParentTypes['PaymentMethodDetails']
 > = {
   __resolveType: TypeResolveFn<'StripeCardDetails', ParentType, ContextType>
 }
 
 export type QueryResolvers<
-  ContextType = any,
+  ContextType = Context,
   ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']
 > = {
   whoami?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>
 }
 
 export type StripeCardDetailsResolvers<
-  ContextType = any,
+  ContextType = Context,
   ParentType extends ResolversParentTypes['StripeCardDetails'] = ResolversParentTypes['StripeCardDetails']
 > = {
   brandCode?: Resolver<ResolversTypes['String'], ParentType, ContextType>
@@ -303,7 +305,7 @@ export type StripeCardDetailsResolvers<
 }
 
 export type UserResolvers<
-  ContextType = any,
+  ContextType = Context,
   ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']
 > = {
   canTip?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>
@@ -339,7 +341,7 @@ export type UserResolvers<
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
-export type Resolvers<ContextType = any> = {
+export type Resolvers<ContextType = Context> = {
   CoilSubscription?: CoilSubscriptionResolvers<ContextType>
   CurrencyPreferences?: CurrencyPreferencesResolvers<ContextType>
   PaymentMethod?: PaymentMethodResolvers<ContextType>

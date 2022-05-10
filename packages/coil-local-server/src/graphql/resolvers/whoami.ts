@@ -7,7 +7,7 @@ export const whoami: QueryResolvers['whoami'] = async (
   info
 ) => {
   return {
-    id: '1',
+    id: context.userId,
     email: 'niq@coil.com',
     canTip: false,
     paymentMethods: [],

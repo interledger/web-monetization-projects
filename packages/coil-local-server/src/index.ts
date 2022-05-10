@@ -9,6 +9,7 @@ import { loadSchemaSync } from '@graphql-tools/load'
 import { addResolversToSchema } from '@graphql-tools/schema'
 
 import { resolversRoot } from './graphql/resolvers'
+import { Context } from './types/context'
 
 const schema = loadSchemaSync(join(__dirname, './graphql/schema.graphql'), {
   loaders: [new GraphQLFileLoader()]
@@ -25,6 +26,12 @@ async function startApolloServer() {
   const httpServer = http.createServer(app)
   const server = new ApolloServer({
     schema: schemaWithResolvers,
+    context: (expressContext): Context => {
+      return {
+        // TODO
+        userId: '1'
+      }
+    },
     csrfPrevention: true,
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
   })
