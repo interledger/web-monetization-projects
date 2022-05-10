@@ -12,10 +12,6 @@ export const whoami: QueryResolvers['whoami'] = async (
     canTip: false,
     paymentMethods: [],
     shortName: 'Niq',
-    currencyPreferences: {
-      code: 'USD',
-      scale: 1
-    },
     subscription: {
       active: true,
       endDate: '2022-05-10T03:57:26.230Z',
