@@ -289,14 +289,14 @@ jobs:
           name: Lerna run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            xvfb-run -a yarn lerna run --stream << parameters.command >>
+            xvfb-run -a yarn lerna run --concurrency=2 --stream << parameters.command >>
       - run:
           name: Lerna run jest from build
           command: |
             yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
-            xvfb-run -a yarn lerna run --stream << parameters.command >>
+            xvfb-run -a yarn lerna run --concurrency=2 --stream << parameters.command >>
       - *save_cache
 
   packages-build-scripts:
