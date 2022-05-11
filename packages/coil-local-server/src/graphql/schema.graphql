@@ -57,6 +57,32 @@ type Mutation {
   tip(input: TipInput!): TipResponse!
 }
 
+interface GraphQLResponse {
+  code: String!
+  success: Boolean!
+  message: String!
+}
+
+type Token {
+  token: String
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+  affiliateCount: Int
+}
+
+
+input LoginInput {
+  email: String!
+  password: String!
+  oAuthApp: String
+  oAuthScope: String
+  affiliateName: String
+  oAuthSessionId: String
+}
+
 type MinTipLimitResponse implements GraphQLResponse {
   code: String!
   message: String!
@@ -68,32 +94,6 @@ input TipInput {
   amountCentsUsd: String!
   destination: String!
   origin: String
-}
-
-type Token {
-  token: String
-}
-
-
-type AuthPayload {
-  token: String!
-  user: User!
-  affiliateCount: Int
-}
-
-interface GraphQLResponse {
-  code: String!
-  success: Boolean!
-  message: String!
-}
-
-input LoginInput {
-  email: String!
-  password: String!
-  oAuthApp: String
-  oAuthScope: String
-  affiliateName: String
-  oAuthSessionId: String
 }
 
 type TipCharges {
@@ -110,18 +110,20 @@ type TipResponse implements GraphQLResponse {
   charges: TipCharges
 }
 
-union PaymentMethodDetails = StripeCardDetails
-
-enum PaymentMethodType {
-  tipCredit
-  stripe
+# https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L113
+type UserTipping {
+  settings: UserTipSetting
+  limitUsedAmountCentsUsd: String
+  limitRemainingAmountCentsUsd: String
+  lastTippedAmountCentsUsd: String
+  totalTipCreditAmountCentsUsd: String!
+  totalCentsUsdTippedPast24Hours: String!
 }
 
-## https://github.com/coilhq/coil/blob/d75874d3254a5b4abcecd428581f1389b6c275c5/services/bernie/src/schema.graphql#L62
-type PaymentMethod {
+# https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L83
+type UserTipSetting {
   id: String!
-  type: PaymentMethodType
-  details: PaymentMethodDetails
+  dailyLimitAmountCentsUsd: String!
 }
 
 enum PaymentMethodStatus {
@@ -140,6 +142,21 @@ type StripeCardDetails {
   status: PaymentMethodStatus!
   name: String!
   funding: String!
+}
+
+
+union PaymentMethodDetails = StripeCardDetails
+
+enum PaymentMethodType {
+  tipCredit
+  stripe
+}
+
+## https://github.com/coilhq/coil/blob/d75874d3254a5b4abcecd428581f1389b6c275c5/services/bernie/src/schema.graphql#L62
+type PaymentMethod {
+  id: String!
+  type: PaymentMethodType
+  details: PaymentMethodDetails
 }
 
 type CurrencyPreferences {
@@ -170,20 +187,4 @@ type User {
 type AdaptedPagePayload {
   paymentPointer: String
   channelImage: String
-}
-
-# https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L113
-type UserTipping {
-  settings: UserTipSetting
-  limitUsedAmountCentsUsd: String
-  limitRemainingAmountCentsUsd: String
-  lastTippedAmountCentsUsd: String
-  totalTipCreditAmountCentsUsd: String!
-  totalCentsUsdTippedPast24Hours: String!
-}
-
-# https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L83
-type UserTipSetting {
-  id: String!
-  dailyLimitAmountCentsUsd: String!
 }

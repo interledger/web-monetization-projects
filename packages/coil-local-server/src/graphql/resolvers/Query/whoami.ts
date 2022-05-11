@@ -1,6 +1,6 @@
-import { QueryResolvers } from '../generated/graphql'
-import { notNullOrUndef } from '../../utils/nullables'
-import { Context } from '../../types/context'
+import { QueryResolvers } from '../../generated/graphql'
+import { notNullOrUndef } from '../../../utils/nullables'
+import { Context } from '../../../types/context'
 
 export function userFromContext(context: Context) {
   return {

@@ -8,7 +8,7 @@ import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader'
 import { loadSchemaSync } from '@graphql-tools/load'
 import { addResolversToSchema } from '@graphql-tools/schema'
 
-import { resolversRoot } from './graphql/resolvers'
+import { resolversRoot } from './graphql/resolvers/resolversRoot'
 import { Context } from './types/context'
 
 const schema = loadSchemaSync(join(__dirname, './graphql/schema.graphql'), {

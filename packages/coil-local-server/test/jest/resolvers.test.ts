@@ -12,9 +12,9 @@ import {
   whoamiQuery
 } from '@coil/client'
 
-import { resolversRoot } from '../../src/graphql/resolvers'
+import { resolversRoot } from '../../src/graphql/resolvers/resolversRoot'
 import { Context } from '../../src/types/context'
-import { loadedSchemaString } from '../../src/graphql/loaded-schema-string'
+import { loadedSchemaString } from '../../src/graphql/loadedSchemaString'
 
 describe('Testing Graphql Functions', () => {
   const typeDefs = loadedSchemaString

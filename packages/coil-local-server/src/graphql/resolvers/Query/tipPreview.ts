@@ -1,4 +1,4 @@
-import { QueryResolvers } from '../generated/graphql'
+import { QueryResolvers } from '../../generated/graphql'
 
 export const tipPreview: QueryResolvers['tipPreview'] = (
   parent,

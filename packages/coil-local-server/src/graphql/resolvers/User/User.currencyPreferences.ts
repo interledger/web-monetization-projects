@@ -1,4 +1,4 @@
-import { UserResolvers } from '../generated/graphql'
+import { UserResolvers } from '../../generated/graphql'
 
 export const User_CurrencyPreferences: UserResolvers['currencyPreferences'] = (
   parent,
