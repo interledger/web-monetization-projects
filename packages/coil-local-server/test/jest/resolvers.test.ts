@@ -4,6 +4,8 @@ import {
   adaptedPageQuery,
   featureEnabledQuery,
   loginMutation,
+  queryTokenQuery,
+  refreshBtpTokenQuery,
   whoamiQuery
 } from '@coil/client'
 
@@ -101,6 +103,59 @@ describe('Testing Graphql Functions', () => {
       Object {
         "data": Object {
           "auth": Object {
+            "token": "<JWT-TODO>",
+          },
+        },
+      }
+    `)
+  })
+
+  it('should execute the @coil/client queryToken query', async () => {
+    const result = await graphql({
+      schema,
+      source: queryTokenQuery,
+      contextValue
+    })
+    expect(result).toMatchInlineSnapshot(`
+      Object {
+        "data": Object {
+          "refreshToken": Object {
+            "token": "<JWT-TODO>",
+          },
+          "whoami": Object {
+            "canTip": false,
+            "currencyPreferences": Object {
+              "code": "USD",
+              "scale": 1,
+            },
+            "customerId": null,
+            "email": "niq@coil.com",
+            "fullName": null,
+            "id": "1",
+            "paymentMethods": Array [],
+            "profilePicture": null,
+            "shortName": "Niq",
+            "subscription": Object {
+              "active": true,
+              "endDate": "2022-05-10T03:57:26.230Z",
+              "trialEndDate": "2022-05-10T03:57:26.230Z",
+            },
+          },
+        },
+      }
+    `)
+  })
+
+  it('should execute the @coil/client refreshBtpToken query', async () => {
+    const result = await graphql({
+      schema,
+      source: refreshBtpTokenQuery,
+      contextValue
+    })
+    expect(result).toMatchInlineSnapshot(`
+      Object {
+        "data": Object {
+          "refreshBtpToken": Object {
             "token": "<JWT-TODO>",
           },
         },

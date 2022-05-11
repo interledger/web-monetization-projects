@@ -102,6 +102,8 @@ export type Query = {
   __typename?: 'Query'
   adaptedPage?: Maybe<AdaptedPagePayload>
   featureEnabled?: Maybe<Scalars['Boolean']>
+  refreshBtpToken?: Maybe<Token>
+  refreshToken?: Maybe<Token>
   tipPreview: TipResponse
   whoami?: Maybe<User>
 }
@@ -113,6 +115,10 @@ export type QueryAdaptedPageArgs = {
 
 export type QueryFeatureEnabledArgs = {
   key: Scalars['String']
+}
+
+export type QueryRefreshBtpTokenArgs = {
+  highBandwidth?: InputMaybe<Scalars['Boolean']>
 }
 
 export type QueryTipPreviewArgs = {
@@ -142,6 +148,11 @@ export type TipResponse = GraphQlResponse & {
   code: Scalars['String']
   message: Scalars['String']
   success: Scalars['Boolean']
+}
+
+export type Token = {
+  __typename?: 'Token'
+  token?: Maybe<Scalars['String']>
 }
 
 export type User = {
@@ -290,6 +301,7 @@ export type ResolversTypes = {
   StripeCardDetails: ResolverTypeWrapper<Partial<StripeCardDetails>>
   TipCharges: ResolverTypeWrapper<Partial<TipCharges>>
   TipResponse: ResolverTypeWrapper<Partial<TipResponse>>
+  Token: ResolverTypeWrapper<Partial<Token>>
   User: ResolverTypeWrapper<Partial<User>>
 }
 
@@ -316,6 +328,7 @@ export type ResolversParentTypes = {
   StripeCardDetails: Partial<StripeCardDetails>
   TipCharges: Partial<TipCharges>
   TipResponse: Partial<TipResponse>
+  Token: Partial<Token>
   User: Partial<User>
 }
 
@@ -432,6 +445,17 @@ export type QueryResolvers<
     ContextType,
     RequireFields<QueryFeatureEnabledArgs, 'key'>
   >
+  refreshBtpToken?: Resolver<
+    Maybe<ResolversTypes['Token']>,
+    ParentType,
+    ContextType,
+    Partial<QueryRefreshBtpTokenArgs>
+  >
+  refreshToken?: Resolver<
+    Maybe<ResolversTypes['Token']>,
+    ParentType,
+    ContextType
+  >
   tipPreview?: Resolver<
     ResolversTypes['TipResponse'],
     ParentType,
@@ -480,6 +504,14 @@ export type TipResponseResolvers<
   code?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   message?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
+}
+
+export type TokenResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['Token'] = ResolversParentTypes['Token']
+> = {
+  token?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
@@ -533,5 +565,6 @@ export type Resolvers<ContextType = Context> = {
   StripeCardDetails?: StripeCardDetailsResolvers<ContextType>
   TipCharges?: TipChargesResolvers<ContextType>
   TipResponse?: TipResponseResolvers<ContextType>
+  Token?: TokenResolvers<ContextType>
   User?: UserResolvers<ContextType>
 }
