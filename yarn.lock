@@ -1568,11 +1568,11 @@ __metadata:
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
     "@types/jsonwebtoken": "npm:8.5.8"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/node-fetch": "npm:2.6.1"
     "@types/sjcl": "npm:1.0.30"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -1604,7 +1604,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -1627,10 +1627,10 @@ __metadata:
     "@dier-makr/annotations": "npm:0.0.0"
     "@types/jest": "npm:27.5.0"
     "@types/jsonwebtoken": "npm:8.5.8"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/node-fetch": "npm:2.6.1"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -1661,7 +1661,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -1699,13 +1699,13 @@ __metadata:
     "@types/jest": "npm:27.5.0"
     "@types/jsonwebtoken": "npm:8.5.8"
     "@types/long": "npm:4.0.2"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.16"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@webexts/build-utils": "npm:^0.0.0"
     "@webmonetization/polyfill-utils": "npm:^0.0.0"
     "@webmonetization/types": "npm:^0.0.0"
@@ -1746,7 +1746,7 @@ __metadata:
     lint-staged: "npm:12.4.1"
     lottie-web: "npm:^5.8.1"
     prettier: "npm:2.6.2"
-    puppeteer: "npm:13.7.0"
+    puppeteer: "npm:14.0.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reduct: "npm:^3.3.1"
@@ -1759,7 +1759,7 @@ __metadata:
     typescript: "npm:4.6.4"
     uuid: "npm:^8.3.2"
     web-ext: "npm:6.8.0"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -1850,9 +1850,9 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-dir: "npm:^1.3.0"
@@ -1887,7 +1887,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -1914,11 +1914,11 @@ __metadata:
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
     "@types/long": "npm:4.0.2"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/node-fetch": "npm:2.6.1"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
@@ -1945,7 +1945,7 @@ __metadata:
     lint-staged: "npm:12.4.1"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
-    puppeteer: "npm:13.7.0"
+    puppeteer: "npm:14.0.0"
     reduct: "npm:^3.3.1"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
@@ -1955,7 +1955,7 @@ __metadata:
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     uuid: "npm:^8.3.2"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -1976,9 +1976,9 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -2008,7 +2008,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -2030,10 +2030,10 @@ __metadata:
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
     "@types/keccak": "npm:3.0.1"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/sjcl": "npm:1.0.30"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     asn1-parser: "npm:^1.1.8"
@@ -2068,7 +2068,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -2092,10 +2092,10 @@ __metadata:
     "@types/debug": "npm:4.1.7"
     "@types/get-port": "npm:4.2.0"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/tmp": "npm:0.2.3"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
@@ -2120,7 +2120,7 @@ __metadata:
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
     prettier: "npm:2.6.2"
-    puppeteer: "npm:^13.1.1"
+    puppeteer: "npm:^14.0.0"
     rimraf: "npm:3.0.2"
     tmp: "npm:^0.2.1"
     ts-jest: "npm:28.0.2"
@@ -2130,7 +2130,7 @@ __metadata:
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     web-ext: "npm:^6.1.0"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -2151,9 +2151,9 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
@@ -2191,7 +2191,7 @@ __metadata:
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     util: "npm:^0.12.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -2213,9 +2213,9 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -2244,7 +2244,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -2502,9 +2502,9 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -2533,7 +2533,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -2555,9 +2555,9 @@ __metadata:
     "@commitlint/config-conventional": "npm:16.2.4"
     "@dier-makr/annotations": "npm:0.0.0"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -2587,7 +2587,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -3232,12 +3232,12 @@ __metadata:
     "@material-ui/core": "npm:^4.11.4"
     "@material-ui/icons": "npm:^4.11.2"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.16"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@webexts/build-utils": "npm:0.0.0"
     "@webmonetization/polyfill-utils": "npm:^0.0.0"
     "@webmonetization/types": "npm:^0.0.0"
@@ -3286,7 +3286,7 @@ __metadata:
     typescript: "npm:4.6.4"
     uuid: "npm:^8.3.2"
     web-ext: "npm:6.8.0"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -4957,9 +4957,9 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -4989,7 +4989,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -5508,6 +5508,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:16.11.34":
+  version: 16.11.34
+  resolution: "@types/node@npm:16.11.34"
+  checksum: 663cf1904d751e819a8772e540a41887bd433285f9df52c4a7336980e7ce4790fb42e1731f6c29675d5783101995e848e994fe08e08763354bff73a5be4ca0ae
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^10.1.0, @types/node@npm:^10.14.22, @types/node@npm:^10.5.1, @types/node@npm:^10.7.1":
   version: 10.17.60
   resolution: "@types/node@npm:10.17.60"
@@ -5789,6 +5796,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/eslint-plugin@npm:5.23.0":
+  version: 5.23.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:5.23.0"
+  dependencies:
+    "@typescript-eslint/scope-manager": "npm:5.23.0"
+    "@typescript-eslint/type-utils": "npm:5.23.0"
+    "@typescript-eslint/utils": "npm:5.23.0"
+    debug: "npm:^4.3.2"
+    functional-red-black-tree: "npm:^1.0.1"
+    ignore: "npm:^5.1.8"
+    regexpp: "npm:^3.2.0"
+    semver: "npm:^7.3.5"
+    tsutils: "npm:^3.21.0"
+  peerDependencies:
+    "@typescript-eslint/parser": ^5.0.0
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 06278b08d1bf6afd567616e72cfa9857f8270596b3070b6e202a83eb5bd877933c0564e2d0b5c6ddf58485d866aa7d0d72247222950457277abcc757de8c353c
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/parser@npm:5.22.0":
   version: 5.22.0
   resolution: "@typescript-eslint/parser@npm:5.22.0"
@@ -5806,6 +5836,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/parser@npm:5.23.0":
+  version: 5.23.0
+  resolution: "@typescript-eslint/parser@npm:5.23.0"
+  dependencies:
+    "@typescript-eslint/scope-manager": "npm:5.23.0"
+    "@typescript-eslint/types": "npm:5.23.0"
+    "@typescript-eslint/typescript-estree": "npm:5.23.0"
+    debug: "npm:^4.3.2"
+  peerDependencies:
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: f4cac3ba788aed52a41ea9d49ed3afb3c3cef5520b32988d60dffa25f1860732a7b191fac82c6087c8cca53a81c6514ce733bce201532310b872a9edbcf031d5
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/scope-manager@npm:5.22.0":
   version: 5.22.0
   resolution: "@typescript-eslint/scope-manager@npm:5.22.0"
@@ -5813,6 +5860,16 @@ __metadata:
     "@typescript-eslint/types": "npm:5.22.0"
     "@typescript-eslint/visitor-keys": "npm:5.22.0"
   checksum: e10c607c57cfba77e260aceb72323340ad21b341a5d3d7551e8d85dfe30059787c3c5a124d05135a1e9848a6feff93e9858fec103163f2b04018515c50cb359c
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/scope-manager@npm:5.23.0":
+  version: 5.23.0
+  resolution: "@typescript-eslint/scope-manager@npm:5.23.0"
+  dependencies:
+    "@typescript-eslint/types": "npm:5.23.0"
+    "@typescript-eslint/visitor-keys": "npm:5.23.0"
+  checksum: f49bc0b57f52bd0031d442a7088684a04ea8349f5ec8366dd3a8aff8f155a1fddc266abf12bbdf1c39502f9090dd5a6da4d5d81ab370cf416380edc4754de03d
   languageName: node
   linkType: hard
 
@@ -5832,10 +5889,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/type-utils@npm:5.23.0":
+  version: 5.23.0
+  resolution: "@typescript-eslint/type-utils@npm:5.23.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:5.23.0"
+    debug: "npm:^4.3.2"
+    tsutils: "npm:^3.21.0"
+  peerDependencies:
+    eslint: "*"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 9f7836a731bc1c23cd6e7478ed8d44bcec6f3456c9e8cf01c920b5b90e0bd6b1433c8f8188d532743ac80c5516396103d59eae2a103f5103d0361e1327fd3a70
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/types@npm:5.22.0":
   version: 5.22.0
   resolution: "@typescript-eslint/types@npm:5.22.0"
   checksum: 511b009bdfefee890e969310f1b14344fe0754144c6398a1aefdb9c289f252828ce6140a89b25ec476f9bde24dc370111d789f582900d4ee93bd588173465e27
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/types@npm:5.23.0":
+  version: 5.23.0
+  resolution: "@typescript-eslint/types@npm:5.23.0"
+  checksum: 7febbfab3e1f33c2783909876cea0ba12df953017e84888ad24565748f097be7a2869ebcd6b329ff5354f397aa37354e64821c31cd7faba0c0cbd6e8c93de6d9
   languageName: node
   linkType: hard
 
@@ -5857,7 +5937,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:5.22.0, @typescript-eslint/utils@npm:^5.10.0":
+"@typescript-eslint/typescript-estree@npm:5.23.0":
+  version: 5.23.0
+  resolution: "@typescript-eslint/typescript-estree@npm:5.23.0"
+  dependencies:
+    "@typescript-eslint/types": "npm:5.23.0"
+    "@typescript-eslint/visitor-keys": "npm:5.23.0"
+    debug: "npm:^4.3.2"
+    globby: "npm:^11.0.4"
+    is-glob: "npm:^4.0.3"
+    semver: "npm:^7.3.5"
+    tsutils: "npm:^3.21.0"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 149ae6865da188fdc6eb65fb708f3a2e2271fe2e880670ddfde2f49beedf2ac36f6088d822d3bf63d473724e69e3b192ab9ece79e0526d9422ed1861ee60140b
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/utils@npm:5.22.0":
   version: 5.22.0
   resolution: "@typescript-eslint/utils@npm:5.22.0"
   dependencies:
@@ -5873,6 +5971,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/utils@npm:5.23.0, @typescript-eslint/utils@npm:^5.10.0":
+  version: 5.23.0
+  resolution: "@typescript-eslint/utils@npm:5.23.0"
+  dependencies:
+    "@types/json-schema": "npm:^7.0.9"
+    "@typescript-eslint/scope-manager": "npm:5.23.0"
+    "@typescript-eslint/types": "npm:5.23.0"
+    "@typescript-eslint/typescript-estree": "npm:5.23.0"
+    eslint-scope: "npm:^5.1.1"
+    eslint-utils: "npm:^3.0.0"
+  peerDependencies:
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  checksum: 5e03a9b227136d7bb3bc7bc21b0a0fad05c2e83ebd9b5b7d835a5a9e70bb24c380f7bfb44a8c6b3ca63cbbd200b2aec441a7aa8b3bcfaf8262bc2140c54af9f4
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/visitor-keys@npm:5.22.0":
   version: 5.22.0
   resolution: "@typescript-eslint/visitor-keys@npm:5.22.0"
@@ -5880,6 +5994,16 @@ __metadata:
     "@typescript-eslint/types": "npm:5.22.0"
     eslint-visitor-keys: "npm:^3.0.0"
   checksum: cc0d54dc3a36af1593f8c09f09a1040970c1675cfa099cddfbba1b93de615064d872b4494d87b9e5545cb9cf4ac381b0a5d650ca9f4aa419571402737eb2142d
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/visitor-keys@npm:5.23.0":
+  version: 5.23.0
+  resolution: "@typescript-eslint/visitor-keys@npm:5.23.0"
+  dependencies:
+    "@typescript-eslint/types": "npm:5.23.0"
+    eslint-visitor-keys: "npm:^3.0.0"
+  checksum: da4363b442e845a51a5044bbdd4c65fe4a267b42a312edee4afbd478146f95838d365f278496096702695c209138c860a02db96d0861f48cf776aa0fed9e984d
   languageName: node
   linkType: hard
 
@@ -6048,9 +6172,9 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
@@ -6089,7 +6213,7 @@ __metadata:
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     util: "npm:^0.12.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -6116,13 +6240,13 @@ __metadata:
     "@types/express": "npm:4.17.13"
     "@types/figlet": "npm:1.5.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.16"
     "@types/react-helmet": "npm:6.1.5"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@webmonetization/react": "npm:0.0.12"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
@@ -6168,7 +6292,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -6189,11 +6313,11 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/node-fetch": "npm:2.6.1"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -6225,7 +6349,7 @@ __metadata:
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     uuid: "npm:^8.3.2"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -6247,10 +6371,10 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/react": "npm:17.0.45"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
@@ -6280,7 +6404,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -6306,12 +6430,12 @@ __metadata:
     "@hot-loader/react-dom": "npm:17.0.2"
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
+    "@types/node": "npm:16.11.34"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.16"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
@@ -6347,7 +6471,7 @@ __metadata:
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     uuid: "npm:^8.3.2"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -6368,9 +6492,9 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -6400,7 +6524,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -6422,9 +6546,9 @@ __metadata:
     "@commitlint/config-conventional": "npm:16.2.4"
     "@dier-makr/annotations": "npm:0.0.0"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
@@ -6455,7 +6579,7 @@ __metadata:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -10845,10 +10969,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devtools-protocol@npm:0.0.981744":
-  version: 0.0.981744
-  resolution: "devtools-protocol@npm:0.0.981744"
-  checksum: 0e87a30a45bd6d765c78d126479a15d74cbc7bf96fe9c0a675d15664df4ba179e96ac8e4eaf9f8af31334ec1e15844d52c27864d6dca53d88a2ca4dfc260809e
+"devtools-protocol@npm:0.0.982423":
+  version: 0.0.982423
+  resolution: "devtools-protocol@npm:0.0.982423"
+  checksum: b93ef8d6670943577c3c891029a8779061ad65277249f61262a77423ebf5d4a22be41d12e0794463534ef58334564e2e33f4d6d23217b93dfa4272d05193d1fe
   languageName: node
   linkType: hard
 
@@ -11317,13 +11441,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.9.2":
-  version: 5.9.2
-  resolution: "enhanced-resolve@npm:5.9.2"
+"enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.9.2, enhanced-resolve@npm:^5.9.3":
+  version: 5.9.3
+  resolution: "enhanced-resolve@npm:5.9.3"
   dependencies:
     graceful-fs: "npm:^4.2.4"
     tapable: "npm:^2.2.0"
-  checksum: 4c421e68ea74c4f25fdfb5cbece7d9ef8ad3dbcdcf561bedd35c91400b76bccdc1cb680c5f2eb89ce16bad588815b7474812abcc9a983da168dbaa5222b12215
+  checksum: cecc1d044c3216df18cd2c64a897c1f91df76ef7be8d0c44c072e8c34e68aaed4c14f1046dc7f40fac59e2c52a205cae3131635bd726be751540237537730221
   languageName: node
   linkType: hard
 
@@ -16733,7 +16857,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-parse-even-better-errors@npm:^2.3.0":
+"json-parse-even-better-errors@npm:^2.3.0, json-parse-even-better-errors@npm:^2.3.1":
   version: 2.3.1
   resolution: "json-parse-even-better-errors@npm:2.3.1"
   checksum: ba9ec77806c99530719c8c2a26aa426f421dccd6faafb4ee32f2d71dff25aefe4d150fba814eb58be8b82e765af5e7dc8e88d1c38c7227a1304f4d20a405a67a
@@ -20840,13 +20964,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:13.7.0, puppeteer@npm:^13.1.1":
-  version: 13.7.0
-  resolution: "puppeteer@npm:13.7.0"
+"puppeteer@npm:14.0.0, puppeteer@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "puppeteer@npm:14.0.0"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
-    devtools-protocol: "npm:0.0.981744"
+    devtools-protocol: "npm:0.0.982423"
     extract-zip: "npm:2.0.1"
     https-proxy-agent: "npm:5.0.1"
     pkg-dir: "npm:4.2.0"
@@ -20855,8 +20979,8 @@ __metadata:
     rimraf: "npm:3.0.2"
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
-    ws: "npm:8.5.0"
-  checksum: 560caf73effea6758e5140584b8031c981a9126f0180eeb651e4c6b3d253f42d6a4dc2b3828dea439ad44ed03a9fe788c20b92c754a79ad04172910eb67d0e82
+    ws: "npm:8.6.0"
+  checksum: 374287e5688f3ba9744b5ba4028d08c7c0ae1e28d4457728e7a6b1bb310e759e3cc17fc93b26b5e76279663f23631dc7b26de287c4eb64874b7f51f006f065b1
   languageName: node
   linkType: hard
 
@@ -25308,9 +25432,9 @@ sjcl@sublimator/sjcl:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/jest": "npm:27.5.0"
-    "@types/node": "npm:16.11.33"
-    "@typescript-eslint/eslint-plugin": "npm:5.22.0"
-    "@typescript-eslint/parser": "npm:5.22.0"
+    "@types/node": "npm:16.11.34"
+    "@typescript-eslint/eslint-plugin": "npm:5.23.0"
+    "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     copy-webpack-plugin: "npm:10.2.4"
@@ -25339,7 +25463,7 @@ sjcl@sublimator/sjcl:
     ts-node-dev: "npm:^1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
-    webpack: "npm:5.72.0"
+    webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
     webpack-dev-server: "npm:4.9.0"
@@ -25550,6 +25674,43 @@ sjcl@sublimator/sjcl:
   bin:
     webpack: bin/webpack.js
   checksum: 221635816a6b3d9e868d725dcbbb572a2b3ccc0ace5bacdd2fc042c4ec4f780c53f9b0cde56b12fe98026635aa20fd909b779700447cc31f65c5832c4badd3d0
+  languageName: node
+  linkType: hard
+
+"webpack@npm:5.72.1":
+  version: 5.72.1
+  resolution: "webpack@npm:5.72.1"
+  dependencies:
+    "@types/eslint-scope": "npm:^3.7.3"
+    "@types/estree": "npm:^0.0.51"
+    "@webassemblyjs/ast": "npm:1.11.1"
+    "@webassemblyjs/wasm-edit": "npm:1.11.1"
+    "@webassemblyjs/wasm-parser": "npm:1.11.1"
+    acorn: "npm:^8.4.1"
+    acorn-import-assertions: "npm:^1.7.6"
+    browserslist: "npm:^4.14.5"
+    chrome-trace-event: "npm:^1.0.2"
+    enhanced-resolve: "npm:^5.9.3"
+    es-module-lexer: "npm:^0.9.0"
+    eslint-scope: "npm:5.1.1"
+    events: "npm:^3.2.0"
+    glob-to-regexp: "npm:^0.4.1"
+    graceful-fs: "npm:^4.2.9"
+    json-parse-even-better-errors: "npm:^2.3.1"
+    loader-runner: "npm:^4.2.0"
+    mime-types: "npm:^2.1.27"
+    neo-async: "npm:^2.6.2"
+    schema-utils: "npm:^3.1.0"
+    tapable: "npm:^2.1.1"
+    terser-webpack-plugin: "npm:^5.1.3"
+    watchpack: "npm:^2.3.1"
+    webpack-sources: "npm:^3.2.3"
+  peerDependenciesMeta:
+    webpack-cli:
+      optional: true
+  bin:
+    webpack: bin/webpack.js
+  checksum: 82ea1fdc8ec9cf8c5576ea2e9589aa46fa7e0e15e24bceb934cd5da137af6304639b240c4772fc2e75952a392fc80ac2bf7fbc87537420da0985696ab71d1935
   languageName: node
   linkType: hard
 
@@ -25940,31 +26101,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ws@npm:8.5.0":
-  version: 8.5.0
-  resolution: "ws@npm:8.5.0"
-  peerDependencies:
-    bufferutil: ^4.0.1
-    utf-8-validate: ^5.0.2
-  peerDependenciesMeta:
-    bufferutil:
-      optional: true
-    utf-8-validate:
-      optional: true
-  checksum: 9037dc064f5975a7d35fe95348d719cb20438c8d19c71341b5f94315627ea5edfea27242af3df9bde1e393ae39e672470bd937f4d04a820d4dee7d401deaaa97
-  languageName: node
-  linkType: hard
-
-"ws@npm:^6.0.0, ws@npm:^6.1.0":
-  version: 6.2.2
-  resolution: "ws@npm:6.2.2"
-  dependencies:
-    async-limiter: "npm:~1.0.0"
-  checksum: 3f4f610c99b1a5cc9be9db34bcb515a1901be04b467ddc85e30c92f0f410faac88822de0513ad44139ad94ad81c0fdd2a543cbf05bd26d0b3ca319b719da10c6
-  languageName: node
-  linkType: hard
-
-"ws@npm:^8.2.3, ws@npm:^8.3.0, ws@npm:^8.4.2":
+"ws@npm:8.6.0, ws@npm:^8.2.3, ws@npm:^8.3.0, ws@npm:^8.4.2":
   version: 8.6.0
   resolution: "ws@npm:8.6.0"
   peerDependencies:
@@ -25976,6 +26113,15 @@ sjcl@sublimator/sjcl:
     utf-8-validate:
       optional: true
   checksum: b0977a5ae5b2f6e741964325a41c1466a423aa1b7c2db5a4f62c76e4ede1262674436131f69d4584afb780bbed5ecf39389a345b72ee623f3931d72a0dd4db54
+  languageName: node
+  linkType: hard
+
+"ws@npm:^6.0.0, ws@npm:^6.1.0":
+  version: 6.2.2
+  resolution: "ws@npm:6.2.2"
+  dependencies:
+    async-limiter: "npm:~1.0.0"
+  checksum: 3f4f610c99b1a5cc9be9db34bcb515a1901be04b467ddc85e30c92f0f410faac88822de0513ad44139ad94ad81c0fdd2a543cbf05bd26d0b3ca319b719da10c6
   languageName: node
   linkType: hard
 
