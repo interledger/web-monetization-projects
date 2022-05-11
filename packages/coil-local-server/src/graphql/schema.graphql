@@ -3,8 +3,62 @@
 # @see https://github.com/coilhq/coil/blob/main/services/bernie/src/schema.graphql
 # It is intended to have just enough of the api for the extension to run
 
+# TODO:
+# whoAmI X
+# adaptedPage X
+# featureEnabled X
+# login X
+
+# queryToken
+# refreshBtpToken
+# tip
+# tipPreview
+# tipSettings
+
 type Query {
   whoami: User
+  adaptedPage(videoUrl: String, channelId: String): AdaptedPagePayload
+  featureEnabled(key: String!): Boolean
+  tipPreview(tipAmountCents: String!): TipResponse!
+}
+
+type Mutation {
+  login(input: LoginInput!): AuthPayload!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+  affiliateCount: Int
+}
+
+interface GraphQLResponse {
+  code: String!
+  success: Boolean!
+  message: String!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+  oAuthApp: String
+  oAuthScope: String
+  affiliateName: String
+  oAuthSessionId: String
+}
+
+type TipCharges {
+  # Cents
+  creditCardCharge: String!
+  # Cents
+  tipCreditCharge: String!
+}
+
+type TipResponse implements GraphQLResponse {
+  code: String!
+  message: String!
+  success: Boolean!
+  charges: TipCharges
 }
 
 union PaymentMethodDetails = StripeCardDetails
@@ -63,4 +117,7 @@ type User {
   paymentMethods: [PaymentMethod]!
 }
 
-
+type AdaptedPagePayload {
+  paymentPointer: String
+  channelImage: String
+}

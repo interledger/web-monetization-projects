@@ -14,6 +14,9 @@ export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
   [SubKey in K]: Maybe<T[SubKey]>
 }
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+export type RequireFields<T, K extends keyof T> = Omit<T, K> & {
+  [P in K]-?: NonNullable<T[P]>
+}
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string
@@ -21,6 +24,19 @@ export type Scalars = {
   Boolean: boolean
   Int: number
   Float: number
+}
+
+export type AdaptedPagePayload = {
+  __typename?: 'AdaptedPagePayload'
+  channelImage?: Maybe<Scalars['String']>
+  paymentPointer?: Maybe<Scalars['String']>
+}
+
+export type AuthPayload = {
+  __typename?: 'AuthPayload'
+  affiliateCount?: Maybe<Scalars['Int']>
+  token: Scalars['String']
+  user: User
 }
 
 export type CoilSubscription = {
@@ -34,6 +50,30 @@ export type CurrencyPreferences = {
   __typename?: 'CurrencyPreferences'
   code: Scalars['String']
   scale: Scalars['Int']
+}
+
+export type GraphQlResponse = {
+  code: Scalars['String']
+  message: Scalars['String']
+  success: Scalars['Boolean']
+}
+
+export type LoginInput = {
+  affiliateName?: InputMaybe<Scalars['String']>
+  email: Scalars['String']
+  oAuthApp?: InputMaybe<Scalars['String']>
+  oAuthScope?: InputMaybe<Scalars['String']>
+  oAuthSessionId?: InputMaybe<Scalars['String']>
+  password: Scalars['String']
+}
+
+export type Mutation = {
+  __typename?: 'Mutation'
+  login: AuthPayload
+}
+
+export type MutationLoginArgs = {
+  input: LoginInput
 }
 
 export type PaymentMethod = {
@@ -60,7 +100,23 @@ export enum PaymentMethodType {
 
 export type Query = {
   __typename?: 'Query'
+  adaptedPage?: Maybe<AdaptedPagePayload>
+  featureEnabled?: Maybe<Scalars['Boolean']>
+  tipPreview: TipResponse
   whoami?: Maybe<User>
+}
+
+export type QueryAdaptedPageArgs = {
+  channelId?: InputMaybe<Scalars['String']>
+  videoUrl?: InputMaybe<Scalars['String']>
+}
+
+export type QueryFeatureEnabledArgs = {
+  key: Scalars['String']
+}
+
+export type QueryTipPreviewArgs = {
+  tipAmountCents: Scalars['String']
 }
 
 export type StripeCardDetails = {
@@ -72,6 +128,20 @@ export type StripeCardDetails = {
   last4: Scalars['String']
   name: Scalars['String']
   status: PaymentMethodStatus
+}
+
+export type TipCharges = {
+  __typename?: 'TipCharges'
+  creditCardCharge: Scalars['String']
+  tipCreditCharge: Scalars['String']
+}
+
+export type TipResponse = GraphQlResponse & {
+  __typename?: 'TipResponse'
+  charges?: Maybe<TipCharges>
+  code: Scalars['String']
+  message: Scalars['String']
+  success: Scalars['Boolean']
 }
 
 export type User = {
@@ -195,11 +265,16 @@ export type DirectiveResolverFn<
 
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
+  AdaptedPagePayload: ResolverTypeWrapper<Partial<AdaptedPagePayload>>
+  AuthPayload: ResolverTypeWrapper<Partial<AuthPayload>>
   Boolean: ResolverTypeWrapper<Partial<Scalars['Boolean']>>
   CoilSubscription: ResolverTypeWrapper<Partial<CoilSubscription>>
   CurrencyPreferences: ResolverTypeWrapper<Partial<CurrencyPreferences>>
+  GraphQLResponse: ResolversTypes['TipResponse']
   ID: ResolverTypeWrapper<Partial<Scalars['ID']>>
   Int: ResolverTypeWrapper<Partial<Scalars['Int']>>
+  LoginInput: ResolverTypeWrapper<Partial<LoginInput>>
+  Mutation: ResolverTypeWrapper<{}>
   PaymentMethod: ResolverTypeWrapper<
     Partial<
       Omit<PaymentMethod, 'details'> & {
@@ -213,16 +288,23 @@ export type ResolversTypes = {
   Query: ResolverTypeWrapper<{}>
   String: ResolverTypeWrapper<Partial<Scalars['String']>>
   StripeCardDetails: ResolverTypeWrapper<Partial<StripeCardDetails>>
+  TipCharges: ResolverTypeWrapper<Partial<TipCharges>>
+  TipResponse: ResolverTypeWrapper<Partial<TipResponse>>
   User: ResolverTypeWrapper<Partial<User>>
 }
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
+  AdaptedPagePayload: Partial<AdaptedPagePayload>
+  AuthPayload: Partial<AuthPayload>
   Boolean: Partial<Scalars['Boolean']>
   CoilSubscription: Partial<CoilSubscription>
   CurrencyPreferences: Partial<CurrencyPreferences>
+  GraphQLResponse: ResolversParentTypes['TipResponse']
   ID: Partial<Scalars['ID']>
   Int: Partial<Scalars['Int']>
+  LoginInput: Partial<LoginInput>
+  Mutation: {}
   PaymentMethod: Partial<
     Omit<PaymentMethod, 'details'> & {
       details?: Maybe<ResolversParentTypes['PaymentMethodDetails']>
@@ -232,7 +314,40 @@ export type ResolversParentTypes = {
   Query: {}
   String: Partial<Scalars['String']>
   StripeCardDetails: Partial<StripeCardDetails>
+  TipCharges: Partial<TipCharges>
+  TipResponse: Partial<TipResponse>
   User: Partial<User>
+}
+
+export type AdaptedPagePayloadResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['AdaptedPagePayload'] = ResolversParentTypes['AdaptedPagePayload']
+> = {
+  channelImage?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >
+  paymentPointer?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
+}
+
+export type AuthPayloadResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['AuthPayload'] = ResolversParentTypes['AuthPayload']
+> = {
+  affiliateCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType
+  >
+  token?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  user?: Resolver<ResolversTypes['User'], ParentType, ContextType>
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
 export type CoilSubscriptionResolvers<
@@ -252,6 +367,28 @@ export type CurrencyPreferencesResolvers<
   code?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   scale?: Resolver<ResolversTypes['Int'], ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
+}
+
+export type GraphQlResponseResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['GraphQLResponse'] = ResolversParentTypes['GraphQLResponse']
+> = {
+  __resolveType: TypeResolveFn<'TipResponse', ParentType, ContextType>
+  code?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  message?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>
+}
+
+export type MutationResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']
+> = {
+  login?: Resolver<
+    ResolversTypes['AuthPayload'],
+    ParentType,
+    ContextType,
+    RequireFields<MutationLoginArgs, 'input'>
+  >
 }
 
 export type PaymentMethodResolvers<
@@ -283,6 +420,24 @@ export type QueryResolvers<
   ContextType = Context,
   ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']
 > = {
+  adaptedPage?: Resolver<
+    Maybe<ResolversTypes['AdaptedPagePayload']>,
+    ParentType,
+    ContextType,
+    Partial<QueryAdaptedPageArgs>
+  >
+  featureEnabled?: Resolver<
+    Maybe<ResolversTypes['Boolean']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryFeatureEnabledArgs, 'key'>
+  >
+  tipPreview?: Resolver<
+    ResolversTypes['TipResponse'],
+    ParentType,
+    ContextType,
+    RequireFields<QueryTipPreviewArgs, 'tipAmountCents'>
+  >
   whoami?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>
 }
 
@@ -301,6 +456,30 @@ export type StripeCardDetailsResolvers<
     ParentType,
     ContextType
   >
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
+}
+
+export type TipChargesResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['TipCharges'] = ResolversParentTypes['TipCharges']
+> = {
+  creditCardCharge?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  tipCreditCharge?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
+}
+
+export type TipResponseResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['TipResponse'] = ResolversParentTypes['TipResponse']
+> = {
+  charges?: Resolver<
+    Maybe<ResolversTypes['TipCharges']>,
+    ParentType,
+    ContextType
+  >
+  code?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  message?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
@@ -342,11 +521,17 @@ export type UserResolvers<
 }
 
 export type Resolvers<ContextType = Context> = {
+  AdaptedPagePayload?: AdaptedPagePayloadResolvers<ContextType>
+  AuthPayload?: AuthPayloadResolvers<ContextType>
   CoilSubscription?: CoilSubscriptionResolvers<ContextType>
   CurrencyPreferences?: CurrencyPreferencesResolvers<ContextType>
+  GraphQLResponse?: GraphQlResponseResolvers<ContextType>
+  Mutation?: MutationResolvers<ContextType>
   PaymentMethod?: PaymentMethodResolvers<ContextType>
   PaymentMethodDetails?: PaymentMethodDetailsResolvers<ContextType>
   Query?: QueryResolvers<ContextType>
   StripeCardDetails?: StripeCardDetailsResolvers<ContextType>
+  TipCharges?: TipChargesResolvers<ContextType>
+  TipResponse?: TipResponseResolvers<ContextType>
   User?: UserResolvers<ContextType>
 }
