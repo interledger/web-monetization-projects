@@ -1,54 +1,51 @@
 # Coil Local Server
 
+This implements the subset of coil.com that the extension requires to function
+
 Whenever the extension sees a payment pointer on a page, instead of doing a
 request to that URL, the extension creates a request to the local server,
 sending along the payment pointer.
 
-If the server's configuration
-(perhaps a json file checked on startup, probably easier than having a UI)
-listed that payment pointer for mocking, then it could mock the payment pointer
-and return the stream secrets.
+    e.g. http://localhost/spsp-rewriter/'%24uphold.com%2Fuser'
 
-If the server's config DOES NOT have the payment pointer configured, then
-perhaps it would just proxy to the actual payment pointer?
-What would the point of that be?
-Wouldn't it make things more complicated in terms of UI?
-Don't you want to be able to list payment pointer balances?
-Perhaps still could list them anyway,
-just the amounts sent
+This will require some modification of the extension, introducing an SPSPService
+to support the rewrites and a build time config.
 
-            How would it know ?
-                Would the mock server actually create a connection to coil?
-                    Would a btpToken be required?
-                    Stop/start functionality like is currently implemented?
+### Paths implemented
 
-                    Seems complicated
-                    Probably better to just mock out ALL the payment pointers
-                        and always connect to it via BTP too
-                        Then can track
+- /handler.html
 
-            How about this:
+  This is injected into the background page of the extension to retrieve
+  the token from localStorage
 
-            The extension queries the local server first
-            If it's configured to
+- /issuer
 
-            What is the scope of the local server?
-                everything?
-                    What are the endpoints that anon tokens uses?
-                    /redeemer
-                    /issuer
+  - Restricted by a Bearer token in the Authorization header
+  - Request:
+    ```typescript
+    export interface IssueRequest {
+      bl_sig_request: string
+    }
+    ```
+  - Response:
+    ```typescript
+    export interface IssueResponse {
+      sigs: string[]
+      proof: string
+      prng: string
+      version?: string
+    }
+    ```
 
-                    /gateway
-                        need a graphql server/resolver
+- /redeemer
 
-                    /btp
-                        need a btp server
-                        // https://snyk.io/advisor/npm-package/ilp-plugin-mini-balances
-                        // https://github.com/interledger-deprecated/ilp-plugin-mini-balances/blob/master/index.js
+- /gateway
+  need a graphql server/resolver
 
-                Is this a waste of effort?
-                    It would be useful but is it a priority?
-                Is time better spent on OP related?
+- /btp
+  need a btp server
+  // https://snyk.io/advisor/npm-package/ilp-plugin-mini-balances
+  // https://github.com/interledger-deprecated/ilp-plugin-mini-balances/blob/master/index.js
 
 Ideally this could work completely offline so would need to also provide mock
 anonymous token support.
@@ -60,8 +57,17 @@ BuilConfig.connectToMock
 
 Using:
 @interledger/stream-receiver
+was created by kinocaid before he left
+stateless
+says it's designed for OP server usage
 
-It could have a frontend, live updated with the live balances.
+### TODO:
 
-Question:
-Does TB support more than one currency ?
+- Create graphql schema and stub out the resolvers
+- Create frontend with custom webpack config, react 18, react-fast-refresh
+  - add proxy support to the server (/gateway etc)
+- Storage
+  - just create an interface and use a typescript config file to start with
+- privacypass tokens
+  - just "pretend", don't REALLY need blinded tokens
+  - see https://github.com/coilhq/web-monetization-projects/pull/645
