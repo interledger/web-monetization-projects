@@ -6,9 +6,6 @@
     "baseUrl": ".",
     "skipLibCheck": false,
     "paths": {
-      "@coil/local-server": [
-        "packages/coil-local-server/src"
-      ],
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
       ],
@@ -65,6 +62,9 @@
       ],
       "@webmonetization/wext/content": [
         "packages/webmonetization-wext/src/content"
+      ],
+      "@coil/local-server": [
+        "packages/coil-local-server/src"
       ],
       "@coil/puppeteer-utils": [
         "packages/coil-puppeteer-utils/src"
