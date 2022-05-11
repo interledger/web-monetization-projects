@@ -29,7 +29,8 @@ async function startApolloServer() {
     context: (expressContext): Context => {
       return {
         // TODO
-        userId: '1'
+        userId: '1',
+        log: console.log
       }
     },
     csrfPrevention: true,
