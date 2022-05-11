@@ -67,13 +67,26 @@ export type LoginInput = {
   password: Scalars['String']
 }
 
+export type MinTipLimitResponse = GraphQlResponse & {
+  __typename?: 'MinTipLimitResponse'
+  code: Scalars['String']
+  message: Scalars['String']
+  minTipLimitAmountCentsUsd: Scalars['String']
+  success: Scalars['Boolean']
+}
+
 export type Mutation = {
   __typename?: 'Mutation'
   login: AuthPayload
+  tip: TipResponse
 }
 
 export type MutationLoginArgs = {
   input: LoginInput
+}
+
+export type MutationTipArgs = {
+  input: TipInput
 }
 
 export type PaymentMethod = {
@@ -102,6 +115,7 @@ export type Query = {
   __typename?: 'Query'
   adaptedPage?: Maybe<AdaptedPagePayload>
   featureEnabled?: Maybe<Scalars['Boolean']>
+  minTipLimit: MinTipLimitResponse
   refreshBtpToken?: Maybe<Token>
   refreshToken?: Maybe<Token>
   tipPreview: TipResponse
@@ -142,6 +156,12 @@ export type TipCharges = {
   tipCreditCharge: Scalars['String']
 }
 
+export type TipInput = {
+  amountCentsUsd: Scalars['String']
+  destination: Scalars['String']
+  origin?: InputMaybe<Scalars['String']>
+}
+
 export type TipResponse = GraphQlResponse & {
   __typename?: 'TipResponse'
   charges?: Maybe<TipCharges>
@@ -167,6 +187,23 @@ export type User = {
   profilePicture?: Maybe<Scalars['String']>
   shortName?: Maybe<Scalars['String']>
   subscription?: Maybe<CoilSubscription>
+  tipping?: Maybe<UserTipping>
+}
+
+export type UserTipSetting = {
+  __typename?: 'UserTipSetting'
+  dailyLimitAmountCentsUsd: Scalars['String']
+  id: Scalars['String']
+}
+
+export type UserTipping = {
+  __typename?: 'UserTipping'
+  lastTippedAmountCentsUsd?: Maybe<Scalars['String']>
+  limitRemainingAmountCentsUsd?: Maybe<Scalars['String']>
+  limitUsedAmountCentsUsd?: Maybe<Scalars['String']>
+  settings?: Maybe<UserTipSetting>
+  totalCentsUsdTippedPast24Hours: Scalars['String']
+  totalTipCreditAmountCentsUsd: Scalars['String']
 }
 
 export type ResolverTypeWrapper<T> = Promise<T> | T
@@ -281,10 +318,13 @@ export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Partial<Scalars['Boolean']>>
   CoilSubscription: ResolverTypeWrapper<Partial<CoilSubscription>>
   CurrencyPreferences: ResolverTypeWrapper<Partial<CurrencyPreferences>>
-  GraphQLResponse: ResolversTypes['TipResponse']
+  GraphQLResponse:
+    | ResolversTypes['MinTipLimitResponse']
+    | ResolversTypes['TipResponse']
   ID: ResolverTypeWrapper<Partial<Scalars['ID']>>
   Int: ResolverTypeWrapper<Partial<Scalars['Int']>>
   LoginInput: ResolverTypeWrapper<Partial<LoginInput>>
+  MinTipLimitResponse: ResolverTypeWrapper<Partial<MinTipLimitResponse>>
   Mutation: ResolverTypeWrapper<{}>
   PaymentMethod: ResolverTypeWrapper<
     Partial<
@@ -300,9 +340,12 @@ export type ResolversTypes = {
   String: ResolverTypeWrapper<Partial<Scalars['String']>>
   StripeCardDetails: ResolverTypeWrapper<Partial<StripeCardDetails>>
   TipCharges: ResolverTypeWrapper<Partial<TipCharges>>
+  TipInput: ResolverTypeWrapper<Partial<TipInput>>
   TipResponse: ResolverTypeWrapper<Partial<TipResponse>>
   Token: ResolverTypeWrapper<Partial<Token>>
   User: ResolverTypeWrapper<Partial<User>>
+  UserTipSetting: ResolverTypeWrapper<Partial<UserTipSetting>>
+  UserTipping: ResolverTypeWrapper<Partial<UserTipping>>
 }
 
 /** Mapping between all available schema types and the resolvers parents */
@@ -312,10 +355,13 @@ export type ResolversParentTypes = {
   Boolean: Partial<Scalars['Boolean']>
   CoilSubscription: Partial<CoilSubscription>
   CurrencyPreferences: Partial<CurrencyPreferences>
-  GraphQLResponse: ResolversParentTypes['TipResponse']
+  GraphQLResponse:
+    | ResolversParentTypes['MinTipLimitResponse']
+    | ResolversParentTypes['TipResponse']
   ID: Partial<Scalars['ID']>
   Int: Partial<Scalars['Int']>
   LoginInput: Partial<LoginInput>
+  MinTipLimitResponse: Partial<MinTipLimitResponse>
   Mutation: {}
   PaymentMethod: Partial<
     Omit<PaymentMethod, 'details'> & {
@@ -327,9 +373,12 @@ export type ResolversParentTypes = {
   String: Partial<Scalars['String']>
   StripeCardDetails: Partial<StripeCardDetails>
   TipCharges: Partial<TipCharges>
+  TipInput: Partial<TipInput>
   TipResponse: Partial<TipResponse>
   Token: Partial<Token>
   User: Partial<User>
+  UserTipSetting: Partial<UserTipSetting>
+  UserTipping: Partial<UserTipping>
 }
 
 export type AdaptedPagePayloadResolvers<
@@ -386,10 +435,29 @@ export type GraphQlResponseResolvers<
   ContextType = Context,
   ParentType extends ResolversParentTypes['GraphQLResponse'] = ResolversParentTypes['GraphQLResponse']
 > = {
-  __resolveType: TypeResolveFn<'TipResponse', ParentType, ContextType>
+  __resolveType: TypeResolveFn<
+    'MinTipLimitResponse' | 'TipResponse',
+    ParentType,
+    ContextType
+  >
   code?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   message?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>
+}
+
+export type MinTipLimitResponseResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['MinTipLimitResponse'] = ResolversParentTypes['MinTipLimitResponse']
+> = {
+  code?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  message?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  minTipLimitAmountCentsUsd?: Resolver<
+    ResolversTypes['String'],
+    ParentType,
+    ContextType
+  >
+  success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
 export type MutationResolvers<
@@ -401,6 +469,12 @@ export type MutationResolvers<
     ParentType,
     ContextType,
     RequireFields<MutationLoginArgs, 'input'>
+  >
+  tip?: Resolver<
+    ResolversTypes['TipResponse'],
+    ParentType,
+    ContextType,
+    RequireFields<MutationTipArgs, 'input'>
   >
 }
 
@@ -444,6 +518,11 @@ export type QueryResolvers<
     ParentType,
     ContextType,
     RequireFields<QueryFeatureEnabledArgs, 'key'>
+  >
+  minTipLimit?: Resolver<
+    ResolversTypes['MinTipLimitResponse'],
+    ParentType,
+    ContextType
   >
   refreshBtpToken?: Resolver<
     Maybe<ResolversTypes['Token']>,
@@ -549,6 +628,61 @@ export type UserResolvers<
     ParentType,
     ContextType
   >
+  tipping?: Resolver<
+    Maybe<ResolversTypes['UserTipping']>,
+    ParentType,
+    ContextType
+  >
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
+}
+
+export type UserTipSettingResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['UserTipSetting'] = ResolversParentTypes['UserTipSetting']
+> = {
+  dailyLimitAmountCentsUsd?: Resolver<
+    ResolversTypes['String'],
+    ParentType,
+    ContextType
+  >
+  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
+}
+
+export type UserTippingResolvers<
+  ContextType = Context,
+  ParentType extends ResolversParentTypes['UserTipping'] = ResolversParentTypes['UserTipping']
+> = {
+  lastTippedAmountCentsUsd?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >
+  limitRemainingAmountCentsUsd?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >
+  limitUsedAmountCentsUsd?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >
+  settings?: Resolver<
+    Maybe<ResolversTypes['UserTipSetting']>,
+    ParentType,
+    ContextType
+  >
+  totalCentsUsdTippedPast24Hours?: Resolver<
+    ResolversTypes['String'],
+    ParentType,
+    ContextType
+  >
+  totalTipCreditAmountCentsUsd?: Resolver<
+    ResolversTypes['String'],
+    ParentType,
+    ContextType
+  >
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
@@ -558,6 +692,7 @@ export type Resolvers<ContextType = Context> = {
   CoilSubscription?: CoilSubscriptionResolvers<ContextType>
   CurrencyPreferences?: CurrencyPreferencesResolvers<ContextType>
   GraphQLResponse?: GraphQlResponseResolvers<ContextType>
+  MinTipLimitResponse?: MinTipLimitResponseResolvers<ContextType>
   Mutation?: MutationResolvers<ContextType>
   PaymentMethod?: PaymentMethodResolvers<ContextType>
   PaymentMethodDetails?: PaymentMethodDetailsResolvers<ContextType>
@@ -567,4 +702,6 @@ export type Resolvers<ContextType = Context> = {
   TipResponse?: TipResponseResolvers<ContextType>
   Token?: TokenResolvers<ContextType>
   User?: UserResolvers<ContextType>
+  UserTipSetting?: UserTipSettingResolvers<ContextType>
+  UserTipping?: UserTippingResolvers<ContextType>
 }

@@ -6,6 +6,9 @@ import {
   loginMutation,
   queryTokenQuery,
   refreshBtpTokenQuery,
+  tipPreviewQuery,
+  tipQuery,
+  tipSettingsQuery,
   whoamiQuery
 } from '@coil/client'
 
@@ -157,6 +160,84 @@ describe('Testing Graphql Functions', () => {
         "data": Object {
           "refreshBtpToken": Object {
             "token": "<JWT-TODO>",
+          },
+        },
+      }
+    `)
+  })
+
+  it('should execute the @coil/client tip mutation', async () => {
+    const result = await graphql({
+      schema,
+      source: tipQuery,
+      contextValue,
+      variableValues: {
+        input: {
+          amountCentsUsd: '1000',
+          destination: '$uphold.com/user/pp1',
+          origin: 'https://legit.site'
+        }
+      }
+    })
+    expect(result).toMatchInlineSnapshot(`
+      Object {
+        "data": Object {
+          "tip": Object {
+            "code": "200",
+            "message": "",
+            "success": true,
+          },
+        },
+      }
+    `)
+  })
+
+  it('should execute the @coil/client tipPreview query', async () => {
+    const result = await graphql({
+      schema,
+      source: tipPreviewQuery,
+      contextValue,
+      variableValues: {
+        tipAmountCents: '1001'
+      }
+    })
+    expect(result).toMatchInlineSnapshot(`
+      Object {
+        "data": Object {
+          "tipPreview": Object {
+            "charges": Object {
+              "creditCardCharge": "0",
+              "tipCreditCharge": "1001",
+            },
+            "code": "200",
+            "message": "",
+            "success": true,
+          },
+        },
+      }
+    `)
+  })
+
+  it('should execute the @coil/client tipSettings query', async () => {
+    const result = await graphql({
+      schema,
+      source: tipSettingsQuery,
+      contextValue
+    })
+    expect(result).toMatchInlineSnapshot(`
+      Object {
+        "data": Object {
+          "extensionNewUiFeatureFlag": true,
+          "minTipLimit": Object {
+            "minTipLimitAmountCentsUsd": "100",
+          },
+          "tippingBetaFeatureFlag": true,
+          "whoami": Object {
+            "tipping": Object {
+              "lastTippedAmountCentsUsd": "100",
+              "limitRemainingAmountCentsUsd": "1000",
+              "totalTipCreditAmountCentsUsd": "10000",
+            },
           },
         },
       }

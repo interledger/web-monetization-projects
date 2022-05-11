@@ -18,13 +18,28 @@
 
 # refreshBtpToken
   # schema X
-  # resolver
-  # add resolver to index
-  # test
+  # resolver X
+  # add resolver to index X
+  # test X
 
 # tip
+  # schema X mutation.tip X
+  # mutation.tip resolver X
+  # add resolver to index X
+  # test X
+
 # tipPreview
+  # schema X query.tipPreview X
+  # query.tipPreview resolver X
+  # add resolver to index X
+  # text X
+
 # tipSettings
+  # schema X  query.whoami.tipping, minTipLimit X
+  # User.tipping resolver X
+  # add User.tipping resolver to index X
+  # query.minTipLimit resolver X
+  # add query.minTipLimit resolver to index X
 
 type Query {
   whoami: User
@@ -33,15 +48,32 @@ type Query {
   tipPreview(tipAmountCents: String!): TipResponse!
   refreshToken: Token
   refreshBtpToken(highBandwidth: Boolean): Token
+  # https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L6
+  minTipLimit: MinTipLimitResponse!
 }
 
 type Mutation {
   login(input: LoginInput!): AuthPayload!
+  tip(input: TipInput!): TipResponse!
+}
+
+type MinTipLimitResponse implements GraphQLResponse {
+  code: String!
+  message: String!
+  success: Boolean!
+  minTipLimitAmountCentsUsd: String!
+}
+
+input TipInput {
+  amountCentsUsd: String!
+  destination: String!
+  origin: String
 }
 
 type Token {
   token: String
 }
+
 
 type AuthPayload {
   token: String!
@@ -132,9 +164,26 @@ type User {
   subscription: CoilSubscription
   currencyPreferences: CurrencyPreferences
   paymentMethods: [PaymentMethod]!
+  tipping: UserTipping
 }
 
 type AdaptedPagePayload {
   paymentPointer: String
   channelImage: String
+}
+
+# https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L113
+type UserTipping {
+  settings: UserTipSetting
+  limitUsedAmountCentsUsd: String
+  limitRemainingAmountCentsUsd: String
+  lastTippedAmountCentsUsd: String
+  totalTipCreditAmountCentsUsd: String!
+  totalCentsUsdTippedPast24Hours: String!
+}
+
+# https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L83
+type UserTipSetting {
+  id: String!
+  dailyLimitAmountCentsUsd: String!
 }
