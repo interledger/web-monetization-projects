@@ -24,20 +24,28 @@ export class StreamService {
         if (process.env.QUICK_STREAM) {
           stream.setReceiveMax(Infinity)
         } else {
-          let total = 20e3
-          while (stream.isOpen()) {
-            stream.setReceiveMax(total)
-            const timeout = 250 + Math.floor(Math.random() * 250)
-            await new Promise(resolve => setTimeout(resolve, timeout))
-            const extra = 10e3 + Math.floor(Math.random() * 20e3)
-            total += extra
-            dbg({ total })
-          }
+          await this.acceptMoneySlowly(stream)
         }
       })
     })
     this.streamServer.on('error', () => {
       dbg('streamServer error')
     })
+  }
+
+  /**
+   * We want to slow the STREAM down a bit, so we can see the packets
+   */
+  private async acceptMoneySlowly(stream: DataAndMoneyStream) {
+    let max = 20e3
+    while (stream.isOpen()) {
+      stream.setReceiveMax(max)
+      const rand = (n: number) => Math.floor(Math.random() * n)
+      const timeout = 250 + rand(250)
+      await new Promise(resolve => setTimeout(resolve, timeout))
+      const extra = 10e3 + rand(20e3)
+      max += extra
+      this.dbg({ total: max })
+    }
   }
 }
