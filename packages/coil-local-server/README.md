@@ -27,6 +27,7 @@ DI container.
     - as returned by the login mutation
   - Request:
     ```typescript
+    // @see https://github.com/privacypass/challenge-bypass-server#issuance-request
     export interface IssueRequest {
       bl_sig_request: string
     }
@@ -107,13 +108,16 @@ DI container.
 
 ### TODO:
 
-- Create graphql schema and stub out the resolvers
-- Create frontend with custom webpack config, react 18, react-fast-refresh
+- [x] Create graphql schema and stub out the resolvers
+- [ ] Create frontend with custom webpack config, react 18, react-fast-refresh
   - add proxy support to the server (/gateway etc)
-    - how to support websockets for /btp
-- Storage
+    - how to support websockets for /btp ?
+      - https://javascript.tutorialink.com/webpack-dev-server-and-websockets
+- [ ] DI System
+- [ ] Auth Service to sign tokens
+- [ ] Storage
   - just create an interface and use a typescript config file to start with
-- Privacy Pass tokens
+- [ ] Privacy Pass tokens
   - just "pretend", don't REALLY need blinded tokens
   - see https://github.com/coilhq/web-monetization-projects/pull/645
-  - can _probably_ just subclass AnonymousTokens in the extension and noop \_verifyProof
+  - [ ] can _probably_ just subclass AnonymousTokens in the extension and noop \_verifyProof

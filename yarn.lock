@@ -1575,6 +1575,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1633,6 +1635,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1714,6 +1718,8 @@ __metadata:
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     addons-linter: "npm:5.2.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     crx-hotreload: "npm:1.0.6"
     debug: "npm:^4.3.1"
@@ -1771,6 +1777,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/local-server@workspace:packages/coil-local-server"
   dependencies:
+    "@abraham/reflection": "npm:^0.10.0"
     "@apollo/utils.logger": "npm:^1.0.0"
     "@babel/core": "npm:7.17.10"
     "@babel/plugin-proposal-class-properties": "npm:7.16.7"
@@ -1792,6 +1799,7 @@ __metadata:
     "@interledger/stream-receiver": "npm:^0.3.3-alpha.1"
     "@types/express": "npm:^4.17.13"
     "@types/jest": "npm:27.5.0"
+    "@types/jsonwebtoken": "npm:^8.5.8"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
     "@typescript-eslint/parser": "npm:5.23.0"
@@ -1799,6 +1807,9 @@ __metadata:
     JSON2016: "npm:1.0.0"
     apollo-server-core: "npm:^3.7.0"
     apollo-server-express: "npm:^3.7.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    compose-middleware: "npm:^5.0.1"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1813,11 +1824,16 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     express: "npm:^4.18.1"
+    express-jwt: "npm:^7.7.0"
+    express-ws: "npm:^5.0.2"
     graphql: "npm:^16.4.0"
     graphql-tools: "npm:^8.2.9"
     husky: "npm:7.0.4"
+    inversify: "npm:^6.0.1"
+    inversify-express-utils: "npm:^6.4.3"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
+    jsonwebtoken: "npm:^8.5.1"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
     nodemon: "npm:^2.0.16"
@@ -1855,6 +1871,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-dir: "npm:^1.3.0"
     copy-webpack-plugin: "npm:10.2.4"
     deepmerge: "npm:^4.2.2"
@@ -1923,6 +1941,8 @@ __metadata:
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1981,6 +2001,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -2038,6 +2060,8 @@ __metadata:
     JSON2016: "npm:1.0.0"
     asn1-parser: "npm:^1.1.8"
     atob: "npm:^2.1.2"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     btoa: "npm:^1.2.1"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
@@ -2099,6 +2123,8 @@ __metadata:
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     debug: "npm:^4.3.1"
     eslint: "npm:8.15.0"
@@ -2157,6 +2183,8 @@ __metadata:
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     buffer: "npm:^6.0.3"
     copy-webpack-plugin: "npm:10.2.4"
     crypto-browserify: "npm:^3.12.0"
@@ -2218,6 +2246,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -2507,6 +2537,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -2560,6 +2592,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -3245,6 +3279,8 @@ __metadata:
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     addons-linter: "npm:5.2.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     crx-hotreload: "npm:1.0.6"
     css-loader: "npm:6.7.1"
@@ -4962,6 +4998,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -5184,6 +5222,13 @@ __metadata:
   version: 0.0.30
   resolution: "@types/debug@npm:0.0.30"
   checksum: e8c72a86db83b4b7e096c7ffce208376b4e3e85c5dbad35243f2a9edff75dbfe0675b1443130c28a9cd55418a356a80bae44522871f6a700101a5fa305b45384
+  languageName: node
+  linkType: hard
+
+"@types/debug@npm:0.0.31":
+  version: 0.0.31
+  resolution: "@types/debug@npm:0.0.31"
+  checksum: 89a71e3b3db01467d3ef3ce3f7785b441b9608bd005bcbe130898c7beca124544f317e8fddb328f094f14e995a97ae97eee319a008914b4baec6f74e540b8d70
   languageName: node
   linkType: hard
 
@@ -5415,7 +5460,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:8.5.8, @types/jsonwebtoken@npm:^8.5.0":
+"@types/jsonwebtoken@npm:8.5.8, @types/jsonwebtoken@npm:^8.5.0, @types/jsonwebtoken@npm:^8.5.8":
   version: 8.5.8
   resolution: "@types/jsonwebtoken@npm:8.5.8"
   dependencies:
@@ -6054,6 +6099,8 @@ __metadata:
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     buffer: "npm:^6.0.3"
     copy-webpack-plugin: "npm:10.2.4"
     crx-hotreload: "npm:^1.0.6"
@@ -6127,6 +6174,8 @@ __metadata:
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     body-parser: "npm:^1.19.0"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
@@ -6196,6 +6245,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -6254,6 +6305,8 @@ __metadata:
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -6316,6 +6369,8 @@ __metadata:
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     ajv: "npm:^8.6.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -6373,6 +6428,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -6429,6 +6486,8 @@ __metadata:
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -8072,6 +8131,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-parameter-decorator@npm:^1.0.16":
+  version: 1.0.16
+  resolution: "babel-plugin-parameter-decorator@npm:1.0.16"
+  checksum: 5737d6362cb9aefa2f32ceeb78c5968c909f04991ba5786544a05d52b8e3c78c2bea784f9b48a3f35d589588489ad3314870fbde01d600378306f43a311bda1e
+  languageName: node
+  linkType: hard
+
 "babel-plugin-polyfill-corejs2@npm:^0.3.0":
   version: 0.3.0
   resolution: "babel-plugin-polyfill-corejs2@npm:0.3.0"
@@ -8112,6 +8178,15 @@ __metadata:
   version: 7.0.0-beta.0
   resolution: "babel-plugin-syntax-trailing-function-commas@npm:7.0.0-beta.0"
   checksum: 3c95be04aadcc6626a9dfed3881c793392cfe27479d4c7a2fde522d3de270a392160c62895aa080efb88b369eb625ddbf6fda8ab8ee18cb26fef2d732c7aa88b
+  languageName: node
+  linkType: hard
+
+"babel-plugin-transform-typescript-metadata@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "babel-plugin-transform-typescript-metadata@npm:0.3.2"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.0.0"
+  checksum: b2383638a0710a37b01baf96e2334203edaca3bdaaaf8442dcadd4a98783c8c7ea780c666383713306c3533543a77be29b61d86ab0af73c45ca1141b2abbdcb9
   languageName: node
   linkType: hard
 
@@ -9709,6 +9784,17 @@ __metadata:
   version: 1.3.0
   resolution: "component-emitter@npm:1.3.0"
   checksum: e24c33abfa9686ae480530207bf4fe1f096f307f2ad9126500e6c460b76b9c7dd648bc2c7b9eb10d622db69ff53f6f7ee65823719e3d94de301c80e1e944288c
+  languageName: node
+  linkType: hard
+
+"compose-middleware@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "compose-middleware@npm:5.0.1"
+  dependencies:
+    "@types/debug": "npm:0.0.31"
+    array-flatten: "npm:^2.1.2"
+    debug: "npm:^4.1.0"
+  checksum: 6041d9298bbcaa860461a9eba5ae625b1b8a4b0c6ec36b0085981be311e692ccc483ca86f502f03cb36d3f431946280c4def83e6650384589bd31f02e1846099
   languageName: node
   linkType: hard
 
@@ -12428,6 +12514,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"express-jwt@npm:^7.7.0":
+  version: 7.7.0
+  resolution: "express-jwt@npm:7.7.0"
+  dependencies:
+    express-unless: "npm:^1.0.0"
+    jsonwebtoken: "npm:^8.5.1"
+  checksum: d6bba5dd4e969c678221f32d6617e64a8046a89031faa4f16327a0a5e4f9e9f7056c418ac270e4e174f624c0ef526f2b5778c5fccc5b35eeb468b2524c718f2e
+  languageName: node
+  linkType: hard
+
+"express-unless@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "express-unless@npm:1.0.0"
+  checksum: 83d999580b3706833ec1c4eb5f518fbb137b2770ec3fd6329faa23a4e27a94778651cfa0232f4a60c0b3d19239a77a1c06ca44da38051bc33f59b92a55ba2187
+  languageName: node
+  linkType: hard
+
+"express-ws@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "express-ws@npm:5.0.2"
+  dependencies:
+    ws: "npm:^7.4.6"
+  peerDependencies:
+    express: ^4.0.0 || ^5.0.0-alpha.1
+  checksum: b54e7d1fd88a7019d56c6277b801c3b653292afd1c77647d70c2c022d440e0160f473e223e2af832138da297cb659c1087ec5912afeebf7d0a644c131d0557d0
+  languageName: node
+  linkType: hard
+
 "express@npm:4.16.2":
   version: 4.16.2
   resolution: "express@npm:4.16.2"
@@ -14611,6 +14725,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"http-status-codes@npm:^2.1.4":
+  version: 2.2.0
+  resolution: "http-status-codes@npm:2.2.0"
+  checksum: a801f6122ead0a3a4d6a384e5464b2bb04debee1ac488566c6718893f3fc63288de3304b2d33d31212bb5a6008b108508f45881b04065d903654e1a7442c0fdf
+  languageName: node
+  linkType: hard
+
 "http2-wrapper@npm:^1.0.0-beta.5.0, http2-wrapper@npm:^1.0.0-beta.5.2":
   version: 1.0.3
   resolution: "http2-wrapper@npm:1.0.3"
@@ -15212,6 +15333,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"inversify-express-utils@npm:^6.4.3":
+  version: 6.4.3
+  resolution: "inversify-express-utils@npm:6.4.3"
+  dependencies:
+    express: "npm:^4.17.1"
+    http-status-codes: "npm:^2.1.4"
+    inversify: "npm:^6.0.1"
+  checksum: 80a968e4b872e0ca171c009289f89723b0f07370979b7aa676336fb55f8644e0e06d7ab4fd102917afc24649d8659cec24128d3e5998b78b8a64f30ae2fa9438
+  languageName: node
+  linkType: hard
+
 "inversify-logger-middleware@npm:^3.1.0":
   version: 3.1.0
   resolution: "inversify-logger-middleware@npm:3.1.0"
@@ -15221,7 +15353,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inversify@npm:*, inversify@npm:^6.0.0":
+"inversify@npm:*, inversify@npm:^6.0.0, inversify@npm:^6.0.1":
   version: 6.0.1
   resolution: "inversify@npm:6.0.1"
   checksum: 5baad79555cacd3378faa9cb07ad51a703415695af3d05f29fc853996b4ea79fc3536ccf06ccc11a96f5b6e69cac18ceab27b8d42975453c9a44de1c11bb3e9b
@@ -25313,6 +25445,8 @@ sjcl@sublimator/sjcl:
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -25961,6 +26095,21 @@ sjcl@sublimator/sjcl:
   dependencies:
     async-limiter: "npm:~1.0.0"
   checksum: 3f4f610c99b1a5cc9be9db34bcb515a1901be04b467ddc85e30c92f0f410faac88822de0513ad44139ad94ad81c0fdd2a543cbf05bd26d0b3ca319b719da10c6
+  languageName: node
+  linkType: hard
+
+"ws@npm:^7.4.6":
+  version: 7.5.7
+  resolution: "ws@npm:7.5.7"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ^5.0.2
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: d67af3da809fbc571486e5e25ed0be62b1d400b8136f4c9e0812c901377dbff5d7e75152c8b478a2ecce643318f3878d216aaa4c44e9e346efb83f609ff59293
   languageName: node
   linkType: hard
 

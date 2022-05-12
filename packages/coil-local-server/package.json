@@ -35,6 +35,7 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
+    "@abraham/reflection": "^0.10.0",
     "@apollo/utils.logger": "^1.0.0",
     "@graphql-tools/graphql-file-loader": "^7.3.12",
     "@graphql-tools/load": "^7.5.11",
@@ -43,9 +44,15 @@
     "@interledger/stream-receiver": "^0.3.3-alpha.1",
     "apollo-server-core": "^3.7.0",
     "apollo-server-express": "^3.7.0",
+    "compose-middleware": "^5.0.1",
     "express": "^4.18.1",
+    "express-jwt": "^7.7.0",
+    "express-ws": "^5.0.2",
     "graphql": "^16.4.0",
-    "graphql-tools": "^8.2.9"
+    "graphql-tools": "^8.2.9",
+    "inversify": "^6.0.1",
+    "inversify-express-utils": "^6.4.3",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "@babel/core": "7.17.10",
@@ -63,11 +70,14 @@
     "@graphql-codegen/typescript-resolvers": "2.6.4",
     "@types/express": "^4.17.13",
     "@types/jest": "27.5.0",
+    "@types/jsonwebtoken": "^8.5.8",
     "@types/node": "16.11.34",
     "@typescript-eslint/eslint-plugin": "5.23.0",
     "@typescript-eslint/parser": "5.23.0",
     "@yarnpkg/pnpify": "3.1.1",
     "JSON2016": "1.0.0",
+    "babel-plugin-parameter-decorator": "^1.0.16",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "copy-webpack-plugin": "10.2.4",
     "eslint": "8.15.0",
     "eslint-config-prettier": "8.5.0",
