@@ -50,8 +50,11 @@
     "express-ws": "^5.0.2",
     "graphql": "^16.4.0",
     "graphql-tools": "^8.2.9",
+    "ilp-plugin-mini-accounts": "^4.2.0",
+    "ilp-protocol-stream": "^2.7.2-alpha.0",
     "inversify": "^6.0.1",
     "inversify-express-utils": "^6.4.3",
+    "inversify-logger-middleware": "^3.1.0",
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {

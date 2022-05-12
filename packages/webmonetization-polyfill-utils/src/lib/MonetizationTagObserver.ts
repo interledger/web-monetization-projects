@@ -217,7 +217,9 @@ export class MonetizationTagObserver {
       meta instanceof HTMLMetaElement ? meta.content : meta.href
     return {
       requestId: this.getWebMonetizationId(),
-      paymentPointer: paymentPointer.trim(),
+      paymentPointer: `http://localhost:4000/spsp/${encodeURIComponent(
+        paymentPointer.trim()
+      )}`,
       initiatingUrl: this.window.location.href
     }
   }
