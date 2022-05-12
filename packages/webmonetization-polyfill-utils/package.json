@@ -47,7 +47,7 @@
     "@babel/preset-typescript": "7.16.7",
     "@commitlint/cli": "16.2.4",
     "@commitlint/config-conventional": "16.2.4",
-    "@types/jest": "27.5.0",
+    "@types/jest": "27.5.1",
     "@types/node": "16.11.34",
     "@types/node-fetch": "2.6.1",
     "@types/uuid": "8.3.4",
