@@ -1803,6 +1803,7 @@ __metadata:
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
     "@typescript-eslint/parser": "npm:5.23.0"
+    "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.1"
     JSON2016: "npm:1.0.0"
     apollo-server-core: "npm:^3.7.0"
