@@ -2,7 +2,7 @@ import '@abraham/reflection'
 
 import http from 'http'
 
-import { inject, injectable } from 'inversify'
+import { Container, inject, injectable } from 'inversify'
 import { ApolloServer, ExpressContext } from 'apollo-server-express'
 import express from 'express'
 import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
@@ -19,7 +19,8 @@ export class ApolloService {
     @inject(TExpressApp)
     private app: express.Application,
     @inject(THttpServer)
-    private httpServer: http.Server
+    private httpServer: http.Server,
+    private container: Container
   ) {
     this.server = new ApolloServer({
       schema: schemaWithResolvers,
@@ -44,6 +45,7 @@ export class ApolloService {
 
   async createContext(expressContext: ExpressContext): Promise<Context> {
     return {
+      container: this.container,
       // TODO
       userId: '2',
       log: console.log
