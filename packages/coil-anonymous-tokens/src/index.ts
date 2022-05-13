@@ -136,6 +136,7 @@ export class AnonymousTokens {
     const redeemRequest = BuildRedeemHeader(usableToken, '', '')
     const response = await portableFetch(this.redeemerUrl + '/redeem', {
       method: 'POST',
+      credentials: 'omit',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
         bl_sig_req: redeemRequest
@@ -192,6 +193,7 @@ export class AnonymousTokens {
   ): Promise<IssueResponse> {
     const signRes = await portableFetch(this.signerUrl + '/issue', {
       method: 'POST',
+      credentials: 'omit',
       headers: {
         authorization: `Bearer ${coilAuthToken}`,
         'content-type': 'application/json'
@@ -260,6 +262,7 @@ export class AnonymousTokens {
 
   private async _getCommitments(): Promise<Commitment[]> {
     const response = await portableFetch(this.redeemerUrl + '/commitments', {
+      credentials: 'omit',
       method: 'GET'
     })
     if (!response.ok || response.status !== 200) {
