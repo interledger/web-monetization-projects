@@ -113,8 +113,8 @@ DI container.
   - add proxy support to the server (/gateway etc)
     - how to support websockets for /btp ?
       - https://javascript.tutorialink.com/webpack-dev-server-and-websockets
-- [ ] DI System
-- [ ] Auth Service to sign tokens
+- [x] DI System
+- [x] Auth Service to sign tokens
 - [ ] Storage
   - just create an interface and use a typescript config file to start with
 - [ ] Privacy Pass tokens
