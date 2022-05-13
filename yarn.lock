@@ -1560,7 +1560,7 @@ __metadata:
     "@types/node": "npm:16.11.35"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.45"
-    "@types/react-dom": "npm:17.0.16"
+    "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
     "@typescript-eslint/parser": "npm:5.23.0"
@@ -2488,7 +2488,7 @@ __metadata:
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.35"
     "@types/react": "npm:17.0.45"
-    "@types/react-dom": "npm:17.0.16"
+    "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
     "@typescript-eslint/parser": "npm:5.23.0"
@@ -4678,12 +4678,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.16":
-  version: 17.0.16
-  resolution: "@types/react-dom@npm:17.0.16"
+"@types/react-dom@npm:17.0.17":
+  version: 17.0.17
+  resolution: "@types/react-dom@npm:17.0.17"
   dependencies:
     "@types/react": "npm:^17"
-  checksum: 860e33c57f939be1f39ba20dd2a23d589a63eec5dd407b1687e5312b5c94c284321bbdb4e0489985d05d9118e3b0fe8fabd11ca3d7f38750026990b555ad21c6
+  checksum: 71b755bbc253c77a5a9c1c79cde91a1fda8224e26f4be20e56b5ebd4cb700281f60255b08cbaaab4f92608af1642b5caa46193843deeed163d519e51e953747a
   languageName: node
   linkType: hard
 
@@ -5226,7 +5226,7 @@ __metadata:
     "@types/node": "npm:16.11.35"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.45"
-    "@types/react-dom": "npm:17.0.16"
+    "@types/react-dom": "npm:17.0.17"
     "@types/react-helmet": "npm:6.1.5"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
     "@typescript-eslint/parser": "npm:5.23.0"
@@ -5415,7 +5415,7 @@ __metadata:
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.35"
     "@types/react": "npm:17.0.45"
-    "@types/react-dom": "npm:17.0.16"
+    "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
     "@typescript-eslint/parser": "npm:5.23.0"
