@@ -10,7 +10,7 @@ describe('AuthService', () => {
     const payload = { userId: '1' }
     const signed = await auth.signJwt(payload)
     expect(typeof signed).toBe('string')
-    const verified = await auth.verifyJwt(signed)
+    const verified = await auth.assertJwtVerified(signed)
     expect(verified).toMatchObject(payload)
   })
 })

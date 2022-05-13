@@ -1566,6 +1566,8 @@ __metadata:
     "@coil/privacypass-sjcl": "npm:0.0.0"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/jsonwebtoken": "npm:8.5.8"
     "@types/node": "npm:16.11.34"
@@ -1591,7 +1593,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:8.5.1"
     lerna: "npm:4.0.0"
@@ -1627,6 +1629,8 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@dier-makr/annotations": "npm:0.0.0"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/jsonwebtoken": "npm:8.5.8"
     "@types/node": "npm:16.11.34"
@@ -1651,7 +1655,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
     lerna: "npm:4.0.0"
@@ -1695,6 +1699,8 @@ __metadata:
     "@material-ui/core": "npm:^4.11.4"
     "@material-ui/icons": "npm:^4.11.2"
     "@material-ui/styles": "npm:^4.11.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/debug": "npm:4.1.7"
     "@types/filesystem": "npm:0.0.32"
     "@types/firefox": "npm:0.0.31"
@@ -1744,7 +1750,7 @@ __metadata:
     ilp-protocol-stream: "npm:2.7.1"
     inversify: "npm:^6.0.0"
     inversify-logger-middleware: "npm:^3.1.0"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
     jss: "npm:^10.6.0"
@@ -1797,6 +1803,8 @@ __metadata:
     "@graphql-tools/schema": "npm:^8.3.11"
     "@graphql-tools/utils": "npm:^8.6.10"
     "@interledger/stream-receiver": "npm:^0.3.3-alpha.1"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/body-parser": "npm:^1.19.2"
     "@types/express": "npm:^4.17.13"
     "@types/jest": "npm:27.5.0"
@@ -1837,7 +1845,7 @@ __metadata:
     inversify: "npm:^6.0.1"
     inversify-express-utils: "npm:^6.4.3"
     inversify-logger-middleware: "npm:^3.1.0"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
     lerna: "npm:4.0.0"
@@ -1871,6 +1879,8 @@ __metadata:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -1895,7 +1905,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     json5: "npm:^2.2.0"
     lerna: "npm:4.0.0"
@@ -1936,6 +1946,8 @@ __metadata:
     "@coil/webpack-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.11.34"
@@ -1965,7 +1977,7 @@ __metadata:
     husky: "npm:7.0.4"
     ilp-plugin-btp: "npm:1.5.0"
     ilp-protocol-stream: "npm:2.7.1"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -2001,6 +2013,8 @@ __metadata:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -2023,7 +2037,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -2056,6 +2070,8 @@ __metadata:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/keccak": "npm:3.0.1"
     "@types/node": "npm:16.11.34"
@@ -2083,7 +2099,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     keccak: "npm:^3.0.1"
     lerna: "npm:4.0.0"
@@ -2119,6 +2135,8 @@ __metadata:
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/debug": "npm:4.1.7"
     "@types/get-port": "npm:4.2.0"
     "@types/jest": "npm:27.5.0"
@@ -2147,7 +2165,7 @@ __metadata:
     eslint-plugin-standard: "npm:5.0.0"
     get-port: "npm:^5.1.1"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -2182,6 +2200,8 @@ __metadata:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -2208,7 +2228,7 @@ __metadata:
     eslint-plugin-standard: "npm:5.0.0"
     events: "npm:^3.3.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -2246,6 +2266,8 @@ __metadata:
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -2268,7 +2290,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -2537,6 +2559,8 @@ __metadata:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -2559,7 +2583,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -2592,6 +2616,8 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@dier-makr/annotations": "npm:0.0.0"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -2615,7 +2641,7 @@ __metadata:
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
     inversify: "npm:^6.0.0"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -3271,6 +3297,8 @@ __metadata:
     "@dier-makr/inversify": "npm:^0.0.0"
     "@material-ui/core": "npm:^4.11.4"
     "@material-ui/icons": "npm:^4.11.2"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@types/react": "npm:17.0.45"
@@ -3309,7 +3337,7 @@ __metadata:
     ilp-protocol-stream: "npm:2.7.1"
     inversify: "npm:^6.0.0"
     inversify-logger-middleware: "npm:^3.1.0"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
     lerna: "npm:4.0.0"
@@ -3423,6 +3451,15 @@ __metadata:
     node-notifier:
       optional: true
   checksum: 8192000e843e1ae2f0cb46ab898872411c2e58e571e6d07aa9ed18ecbb40bf610260820617067a0a904da96276b6a846a35361d935fe089016cca9c1678317b8
+  languageName: node
+  linkType: hard
+
+"@jest/create-cache-key-function@npm:^27.4.2":
+  version: 27.5.1
+  resolution: "@jest/create-cache-key-function@npm:27.5.1"
+  dependencies:
+    "@jest/types": "npm:^27.5.1"
+  checksum: b0ced9f72b275b16e127b329b3af4b4c1abd7bcf715c7c96de12ff143abb8b512e171853d8a61ad27a447899fb82172c66c094870eba28707c108eed0ce88875
   languageName: node
   linkType: hard
 
@@ -3583,6 +3620,19 @@ __metadata:
     slash: "npm:^3.0.0"
     write-file-atomic: "npm:^4.0.1"
   checksum: 89d03318a1bbe06792b6d2b362ce2bc84ad8d4b6dda862ee6f895569b196b6ba8cd2d2d201c949b2144ffe94e9bc9bdcf66011d9a4af839dbcb61568a2196e4f
+  languageName: node
+  linkType: hard
+
+"@jest/types@npm:^27.5.1":
+  version: 27.5.1
+  resolution: "@jest/types@npm:27.5.1"
+  dependencies:
+    "@types/istanbul-lib-coverage": "npm:^2.0.0"
+    "@types/istanbul-reports": "npm:^3.0.0"
+    "@types/node": "npm:*"
+    "@types/yargs": "npm:^16.0.0"
+    chalk: "npm:^4.0.0"
+  checksum: 2208d49c3ad1da9178c77f30b84d2c1a8cfa1497b51e5eeabc535ba79d6bf0b9ead4e1f207b1546b99bf4f44026cb69494001f640f34ff3df33ba0aec28552ba
   languageName: node
   linkType: hard
 
@@ -4998,6 +5048,8 @@ __metadata:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -5020,7 +5072,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -5040,6 +5092,158 @@ __metadata:
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
+
+"@swc/core-android-arm-eabi@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-android-arm-eabi@npm:1.2.183"
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-android-arm64@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-android-arm64@npm:1.2.183"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-arm64@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-darwin-arm64@npm:1.2.183"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-darwin-x64@npm:1.2.183"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-freebsd-x64@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-freebsd-x64@npm:1.2.183"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm-gnueabihf@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.183"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-gnu@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.2.183"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-musl@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-linux-arm64-musl@npm:1.2.183"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-gnu@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-linux-x64-gnu@npm:1.2.183"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-musl@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-linux-x64-musl@npm:1.2.183"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-arm64-msvc@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.2.183"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-ia32-msvc@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.2.183"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-x64-msvc@npm:1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core-win32-x64-msvc@npm:1.2.183"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:^1.2.183":
+  version: 1.2.183
+  resolution: "@swc/core@npm:1.2.183"
+  dependencies:
+    "@swc/core-android-arm-eabi": "npm:1.2.183"
+    "@swc/core-android-arm64": "npm:1.2.183"
+    "@swc/core-darwin-arm64": "npm:1.2.183"
+    "@swc/core-darwin-x64": "npm:1.2.183"
+    "@swc/core-freebsd-x64": "npm:1.2.183"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.2.183"
+    "@swc/core-linux-arm64-gnu": "npm:1.2.183"
+    "@swc/core-linux-arm64-musl": "npm:1.2.183"
+    "@swc/core-linux-x64-gnu": "npm:1.2.183"
+    "@swc/core-linux-x64-musl": "npm:1.2.183"
+    "@swc/core-win32-arm64-msvc": "npm:1.2.183"
+    "@swc/core-win32-ia32-msvc": "npm:1.2.183"
+    "@swc/core-win32-x64-msvc": "npm:1.2.183"
+  dependenciesMeta:
+    "@swc/core-android-arm-eabi":
+      optional: true
+    "@swc/core-android-arm64":
+      optional: true
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-freebsd-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  bin:
+    swcx: run_swcx.js
+  checksum: dfae64959cdcb2d0375ab8d8ee34c77e2d831eb87b6ddf0fbd25ef215f8ad3db1eeb26fc77222ddb0cb4f9fa579a795cf3079cef9422f5fb3bc2bb32c454cb0d
+  languageName: node
+  linkType: hard
+
+"@swc/jest@npm:^0.2.21":
+  version: 0.2.21
+  resolution: "@swc/jest@npm:0.2.21"
+  dependencies:
+    "@jest/create-cache-key-function": "npm:^27.4.2"
+  peerDependencies:
+    "@swc/core": "*"
+  checksum: dd40806d12c12023162ecef35ce5c3b1cbbf79eebc0149e679e686bd621d94c1fc39c540d885545c78a30b7975900f4f2c0e9dd0e25557fca5cd992b8f687065
+  languageName: node
+  linkType: hard
 
 "@szmarczak/http-timer@npm:^1.1.2":
   version: 1.1.2
@@ -5799,6 +6003,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/yargs@npm:^16.0.0":
+  version: 16.0.4
+  resolution: "@types/yargs@npm:16.0.4"
+  dependencies:
+    "@types/yargs-parser": "npm:*"
+  checksum: ec6ebd4a69c802aaddba20bf20b3b5f6b51ef7f6e15e43fceeff774e790a1b5a6f731b89810496150c984ed439b1355f041f7542623620cd82d5a0f7d818c600
+  languageName: node
+  linkType: hard
+
 "@types/yargs@npm:^17.0.8":
   version: 17.0.10
   resolution: "@types/yargs@npm:17.0.10"
@@ -6098,6 +6311,8 @@ __metadata:
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -6125,7 +6340,7 @@ __metadata:
     eslint-plugin-standard: "npm:5.0.0"
     events: "npm:^3.3.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -6165,6 +6380,8 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@hot-loader/react-dom": "npm:17.0.2"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/body-parser": "npm:1.19.2"
     "@types/express": "npm:4.17.13"
     "@types/figlet": "npm:1.5.4"
@@ -6205,7 +6422,7 @@ __metadata:
     ilp-protocol-stream: "npm:^2.7.0"
     inversify: "npm:^6.0.0"
     inversify-express-utils: "npm:^6.3.2"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -6243,6 +6460,8 @@ __metadata:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@types/node-fetch": "npm:2.6.1"
@@ -6267,7 +6486,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -6303,6 +6522,8 @@ __metadata:
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@types/react": "npm:17.0.45"
@@ -6327,7 +6548,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -6363,6 +6584,8 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@hot-loader/react-dom": "npm:17.0.2"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
@@ -6392,7 +6615,7 @@ __metadata:
     eslint-plugin-standard: "npm:5.0.0"
     html-webpack-plugin: "npm:5.5.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -6428,6 +6651,8 @@ __metadata:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -6450,7 +6675,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -6484,6 +6709,8 @@ __metadata:
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@dier-makr/annotations": "npm:0.0.0"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -6508,7 +6735,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
@@ -16540,7 +16767,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:28.1.0":
+"jest@npm:^28.1.0":
   version: 28.1.0
   resolution: "jest@npm:28.1.0"
   dependencies:
@@ -21407,6 +21634,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:^0.13.9":
+  version: 0.13.9
+  resolution: "regenerator-runtime@npm:0.13.9"
+  checksum: db060af0b2ca8bb7f12aea9dcf7416ff80259b39c2ddd38e0bd705b0a7acd9f07be133e543bbf54af1e86253b6fd553e3050fd6b30c3282731dd27560427f065
+  languageName: node
+  linkType: hard
+
 "regenerator-runtime@npm:^0.9.5":
   version: 0.9.6
   resolution: "regenerator-runtime@npm:0.9.6"
@@ -25219,6 +25453,8 @@ sjcl@sublimator/sjcl:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
+    "@swc/core": "npm:^1.2.183"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.0"
     "@types/node": "npm:16.11.34"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
@@ -25241,11 +25477,12 @@ sjcl@sublimator/sjcl:
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:7.0.4"
-    jest: "npm:28.1.0"
+    jest: "npm:^28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
     prettier: "npm:2.6.2"
+    regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"

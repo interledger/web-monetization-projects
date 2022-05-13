@@ -219,7 +219,7 @@ export class MonetizationTagObserver {
     const proxied = `http://localhost:4000/spsp/${encodeURIComponent(trimmed)}`
     return {
       requestId: this.getWebMonetizationId(),
-      paymentPointer: trimmed,
+      paymentPointer: proxied,
       initiatingUrl: this.window.location.href
     }
   }

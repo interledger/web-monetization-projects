@@ -1,10 +1,18 @@
 import { MutationResolvers } from '../../generated/graphql'
-import { userFromContext } from '../Query/whoami'
+import { userFromContext } from '../../utils/userFromContext'
+import { tokenForContextUser } from '../../utils/tokenForContextUser'
 
-export const login: MutationResolvers['login'] = (parent, args, ctx, info) => {
-  ctx.log({ key: `${info.fieldName}@${info.path.key}`, args })
+export const login: MutationResolvers['login'] = async (
+  parent,
+  args,
+  ctx,
+  info
+) => {
+  // TODO, userId would not be set here so must be "looked up"
+  const user = userFromContext(ctx)
+  const token = await tokenForContextUser(ctx)
   return {
-    token: '<JWT-TODO>',
-    user: userFromContext(ctx)
+    token,
+    user
   }
 }
