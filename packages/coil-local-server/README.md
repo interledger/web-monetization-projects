@@ -21,7 +21,7 @@ DI container.
   - This is injected into the background page of the extension to retrieve
     the token from localStorage.
 
-- /issuer
+- /issuer/issue
 
   - Restricted by a Bearer token in the Authorization header.
     - as returned by the login mutation
@@ -29,7 +29,7 @@ DI container.
     ```typescript
     // @see https://github.com/privacypass/challenge-bypass-server#issuance-request
     export interface IssueRequest {
-      bl_sig_request: string
+      bl_sig_req: string
     }
     ```
   - Response:
@@ -44,9 +44,10 @@ DI container.
     }
     ```
 
-- /redeemer
+- /redeemer/redeem
 
-  - Exchange tokens received from /issuer for btpTokens.
+  - Exchange tokens received from /issue for btpTokens.
+  - See: https://github.com/coilhq/coil/commit/b448f54d82764a84cece74f04eba4ec0907365c8#diff-ab8fbb94acf197a90a8f37c3b1efa7c3af00eda46106d7fd6bb753a4a93424e7R5
   - Request:
 
     ```typescript
@@ -54,7 +55,7 @@ DI container.
       // See createRequestBinding
       // contents: [string, string] = [input_to_hash_to_curve, hash_request_binding]
       // btoa(JSON.stringify({ type: 'Redeem', contents: contents }))
-      bl_sig_request: string
+      bl_sig_req: string
     }
     ```
 

@@ -18,7 +18,7 @@ import { StreamService } from '../stream/StreamService'
 
 // Controllers
 import '../spsp/SPSPController'
-import '../issuer/AnonTokenIssuerController'
+import '../anon-tokens/AnonTokenIssuerController'
 
 @injectable()
 export class Server {
