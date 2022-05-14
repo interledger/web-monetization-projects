@@ -216,10 +216,9 @@ export class MonetizationTagObserver {
     const paymentPointer =
       meta instanceof HTMLMetaElement ? meta.content : meta.href
     const trimmed = paymentPointer.trim()
-    const proxied = `http://localhost:4000/spsp/${encodeURIComponent(trimmed)}`
     return {
       requestId: this.getWebMonetizationId(),
-      paymentPointer: proxied,
+      paymentPointer: trimmed,
       initiatingUrl: this.window.location.href
     }
   }

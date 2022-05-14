@@ -39,7 +39,9 @@ DI container.
       sigs: string[]
       // DLEQ
       proof: string
-      prng: string
+      // actually this is not set by the Coil servers
+      // https://github.com/cryptocoinjs/keccak
+      // prng: 'shake' | 'hkdf'
       version?: string
     }
     ```
@@ -54,7 +56,7 @@ DI container.
     export interface RedeemRequest {
       // See createRequestBinding
       // contents: [string, string] = [input_to_hash_to_curve, hash_request_binding]
-      // btoa(JSON.stringify({ type: 'Redeem', contents: contents }))
+      // base64(JSON.stringify({ type: 'Redeem', contents: contents }))
       bl_sig_req: string
     }
     ```
@@ -111,16 +113,24 @@ DI container.
 
 - [x] Create graphql schema and stub out the resolvers
 - [ ] Create frontend with custom webpack config, react 18, react-fast-refresh
+
+  - The frontend could show balances and could be running on a separate server as
+    the coil.com replica
   - add proxy support to the server (/gateway etc)
     - how to support websockets for /btp ?
       - https://javascript.tutorialink.com/webpack-dev-server-and-websockets
+
 - [x] DI System
+- [x] /handler.html
+- [x] /login
+- [x] /btp
+  - [ ] authentication
 - [x] Auth Service to sign tokens
   - login mutation
-  -
 - [ ] Storage
-  - just create an interface and use a typescript config file to start with
+  - [ ] just create an interface and use a typescript config file to start with
 - [ ] Privacy Pass tokens
   - just "pretend", don't REALLY need blinded tokens
   - see https://github.com/coilhq/web-monetization-projects/pull/645
   - [ ] can _probably_ just subclass AnonymousTokens in the extension and noop \_verifyProof
+    - [x] confirmed, just don't throw in \_verifyProof

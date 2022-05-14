@@ -1,11 +1,13 @@
 import * as path from 'path'
 import * as fs from 'fs'
 import * as cp from 'child_process'
+import * as process from 'process'
 
 import * as webpack from 'webpack'
 import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 
 import { applyManifestPermissions } from './manifestPermissions'
+import { WEXT_BUILD_CONFIG } from './buildConfig'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
@@ -59,13 +61,6 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
     : process.env.TSCONFIG_DEBUG
     ? TSCONFIG_DEBUG_JSON
     : TSCONFIG_BUILD_JSON
-
-  const WEXT_BUILD_CONFIG: Record<string, unknown> = process.env
-    .WEXT_BUILD_CONFIG
-    ? JSON.parse(process.env.WEXT_BUILD_CONFIG)
-    : {}
-
-  WEXT_BUILD_CONFIG.isCI = Boolean(process.env.CI)
 
   // Possible to override name/version so can publish as different extension
   const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
