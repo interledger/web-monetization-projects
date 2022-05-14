@@ -116,6 +116,8 @@ DI container.
       - https://javascript.tutorialink.com/webpack-dev-server-and-websockets
 - [x] DI System
 - [x] Auth Service to sign tokens
+  - login mutation
+  -
 - [ ] Storage
   - just create an interface and use a typescript config file to start with
 - [ ] Privacy Pass tokens

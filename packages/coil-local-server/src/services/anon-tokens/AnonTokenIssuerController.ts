@@ -20,7 +20,9 @@ export class AnonTokenIssuerController extends BaseHttpController {
 
   @httpPost('/issue')
   async issue(@requestBody() body: IssueRequest): Promise<IssueResponse> {
-    const inner: InnerIssueRequest = JSON.parse(body.bl_sig_req)
+    const inner: InnerIssueRequest = JSON.parse(
+      Buffer.from(body.bl_sig_req, 'base64').toString()
+    )
     return {
       // Just echo them back
       sigs: inner.contents,

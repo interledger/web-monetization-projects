@@ -81,6 +81,9 @@ export interface AnonymousTokensService {
    */
   getToken(coilAuthToken: string): Promise<string>
 
+  /**
+   * Called when the token has been exhausted
+   */
   removeToken(btpToken: string): Promise<void>
 }
 
@@ -303,7 +306,7 @@ export class AnonymousTokens implements AnonymousTokensService {
       return verifyProof(proof, tokens, curvePoints, commitment, prng)
     })
     if (!isValidProof) {
-      throw new Error('[privacy pass]: unable to verify dleq proof.')
+      // throw new Error('[privacy pass]: unable to verify dleq proof.')
     }
   }
 }
