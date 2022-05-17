@@ -1,12 +1,22 @@
 // babel.config.js
+const nodeMajorVersion = Number(process.versions.node.split('.')[0])
+
 module.exports = {
   presets: [
-    ['@babel/preset-env', { targets: { node: '12' } }],
-    '@babel/preset-typescript'
+    [
+      '@babel/preset-env',
+      { loose: false, targets: { node: nodeMajorVersion } }
+    ],
+    ['@babel/preset-typescript', { onlyRemoveTypeImports: true }]
   ],
   plugins: [
-    ['@babel/proposal-decorators', { legacy: true }],
-    '@babel/proposal-class-properties',
-    '@babel/proposal-object-rest-spread'
+    'babel-plugin-transform-typescript-metadata',
+    [
+      '@babel/plugin-proposal-decorators',
+      { legacy: true, decoratorsBeforeExport: undefined }
+    ],
+    'babel-plugin-parameter-decorator',
+    ['@babel/plugin-proposal-class-properties', { loose: false }],
+    '@babel/plugin-proposal-object-rest-spread'
   ]
 }
