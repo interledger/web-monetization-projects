@@ -2624,6 +2624,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jest/create-cache-key-function@npm:^27.4.2":
+  version: 27.5.1
+  resolution: "@jest/create-cache-key-function@npm:27.5.1"
+  dependencies:
+    "@jest/types": "npm:^27.5.1"
+  checksum: b0ced9f72b275b16e127b329b3af4b4c1abd7bcf715c7c96de12ff143abb8b512e171853d8a61ad27a447899fb82172c66c094870eba28707c108eed0ce88875
+  languageName: node
+  linkType: hard
+
 "@jest/environment@npm:^28.1.0":
   version: 28.1.0
   resolution: "@jest/environment@npm:28.1.0"
@@ -2781,6 +2790,19 @@ __metadata:
     slash: "npm:^3.0.0"
     write-file-atomic: "npm:^4.0.1"
   checksum: 89d03318a1bbe06792b6d2b362ce2bc84ad8d4b6dda862ee6f895569b196b6ba8cd2d2d201c949b2144ffe94e9bc9bdcf66011d9a4af839dbcb61568a2196e4f
+  languageName: node
+  linkType: hard
+
+"@jest/types@npm:^27.5.1":
+  version: 27.5.1
+  resolution: "@jest/types@npm:27.5.1"
+  dependencies:
+    "@types/istanbul-lib-coverage": "npm:^2.0.0"
+    "@types/istanbul-reports": "npm:^3.0.0"
+    "@types/node": "npm:*"
+    "@types/yargs": "npm:^16.0.0"
+    chalk: "npm:^4.0.0"
+  checksum: 2208d49c3ad1da9178c77f30b84d2c1a8cfa1497b51e5eeabc535ba79d6bf0b9ead4e1f207b1546b99bf4f44026cb69494001f640f34ff3df33ba0aec28552ba
   languageName: node
   linkType: hard
 
@@ -4199,6 +4221,158 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@swc/core-android-arm-eabi@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-android-arm-eabi@npm:1.2.185"
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-android-arm64@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-android-arm64@npm:1.2.185"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-arm64@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-darwin-arm64@npm:1.2.185"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-darwin-x64@npm:1.2.185"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-freebsd-x64@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-freebsd-x64@npm:1.2.185"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm-gnueabihf@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.185"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-gnu@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.2.185"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-musl@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-linux-arm64-musl@npm:1.2.185"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-gnu@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-linux-x64-gnu@npm:1.2.185"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-musl@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-linux-x64-musl@npm:1.2.185"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-arm64-msvc@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.2.185"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-ia32-msvc@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.2.185"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-x64-msvc@npm:1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core-win32-x64-msvc@npm:1.2.185"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:^1.2.185":
+  version: 1.2.185
+  resolution: "@swc/core@npm:1.2.185"
+  dependencies:
+    "@swc/core-android-arm-eabi": "npm:1.2.185"
+    "@swc/core-android-arm64": "npm:1.2.185"
+    "@swc/core-darwin-arm64": "npm:1.2.185"
+    "@swc/core-darwin-x64": "npm:1.2.185"
+    "@swc/core-freebsd-x64": "npm:1.2.185"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.2.185"
+    "@swc/core-linux-arm64-gnu": "npm:1.2.185"
+    "@swc/core-linux-arm64-musl": "npm:1.2.185"
+    "@swc/core-linux-x64-gnu": "npm:1.2.185"
+    "@swc/core-linux-x64-musl": "npm:1.2.185"
+    "@swc/core-win32-arm64-msvc": "npm:1.2.185"
+    "@swc/core-win32-ia32-msvc": "npm:1.2.185"
+    "@swc/core-win32-x64-msvc": "npm:1.2.185"
+  dependenciesMeta:
+    "@swc/core-android-arm-eabi":
+      optional: true
+    "@swc/core-android-arm64":
+      optional: true
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-freebsd-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  bin:
+    swcx: run_swcx.js
+  checksum: b348dee7fcb0c478664faa52da5dc25d9b60893b0d5faa7a5aa12fa44d0eef75ee912aa4b75d9d7c9466990249ba1ed832bec2ebd2341e4953cb333151358dca
+  languageName: node
+  linkType: hard
+
+"@swc/jest@npm:^0.2.21":
+  version: 0.2.21
+  resolution: "@swc/jest@npm:0.2.21"
+  dependencies:
+    "@jest/create-cache-key-function": "npm:^27.4.2"
+  peerDependencies:
+    "@swc/core": "*"
+  checksum: dd40806d12c12023162ecef35ce5c3b1cbbf79eebc0149e679e686bd621d94c1fc39c540d885545c78a30b7975900f4f2c0e9dd0e25557fca5cd992b8f687065
+  languageName: node
+  linkType: hard
+
 "@szmarczak/http-timer@npm:^1.1.2":
   version: 1.1.2
   resolution: "@szmarczak/http-timer@npm:1.1.2"
@@ -4917,6 +5091,15 @@ __metadata:
   version: 15.0.0
   resolution: "@types/yargs-parser@npm:15.0.0"
   checksum: 5235ba3b8b9a18bd572ba325e79929534357856e357f923e98f4c16450d874aa800997ca0519c5992042b99293559a68b2fbf6cfbde1c74db23d2bf7a31ff642
+  languageName: node
+  linkType: hard
+
+"@types/yargs@npm:^16.0.0":
+  version: 16.0.4
+  resolution: "@types/yargs@npm:16.0.4"
+  dependencies:
+    "@types/yargs-parser": "npm:*"
+  checksum: ec6ebd4a69c802aaddba20bf20b3b5f6b51ef7f6e15e43fceeff774e790a1b5a6f731b89810496150c984ed439b1355f041f7542623620cd82d5a0f7d818c600
   languageName: node
   linkType: hard
 
@@ -7071,6 +7254,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-parameter-decorator@npm:^1.0.16":
+  version: 1.0.16
+  resolution: "babel-plugin-parameter-decorator@npm:1.0.16"
+  checksum: 5737d6362cb9aefa2f32ceeb78c5968c909f04991ba5786544a05d52b8e3c78c2bea784f9b48a3f35d589588489ad3314870fbde01d600378306f43a311bda1e
+  languageName: node
+  linkType: hard
+
 "babel-plugin-polyfill-corejs2@npm:^0.3.0":
   version: 0.3.0
   resolution: "babel-plugin-polyfill-corejs2@npm:0.3.0"
@@ -7104,6 +7294,15 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: b781e3732e4f6592d707b0736f1e137125ec8c5424b54b4f20314b52a38068ce36236cfde4810c75e6873ade1b85143288df9bdfa9311c90b5009fdf49972420
+  languageName: node
+  linkType: hard
+
+"babel-plugin-transform-typescript-metadata@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "babel-plugin-transform-typescript-metadata@npm:0.3.2"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.0.0"
+  checksum: b2383638a0710a37b01baf96e2334203edaca3bdaaaf8442dcadd4a98783c8c7ea780c666383713306c3533543a77be29b61d86ab0af73c45ca1141b2abbdcb9
   languageName: node
   linkType: hard
 
@@ -19872,6 +20071,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:^0.13.9":
+  version: 0.13.9
+  resolution: "regenerator-runtime@npm:0.13.9"
+  checksum: db060af0b2ca8bb7f12aea9dcf7416ff80259b39c2ddd38e0bd705b0a7acd9f07be133e543bbf54af1e86253b6fd553e3050fd6b30c3282731dd27560427f065
+  languageName: node
+  linkType: hard
+
 "regenerator-runtime@npm:^0.9.5":
   version: 0.9.6
   resolution: "regenerator-runtime@npm:0.9.6"
@@ -23483,12 +23689,16 @@ sjcl@sublimator/sjcl:
     "@babel/preset-typescript": "npm:7.16.7"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
+    "@swc/core": "npm:^1.2.185"
+    "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
     "@typescript-eslint/eslint-plugin": "npm:5.23.0"
     "@typescript-eslint/parser": "npm:5.23.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
+    babel-plugin-parameter-decorator: "npm:^1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:10.2.4"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -23508,6 +23718,7 @@ sjcl@sublimator/sjcl:
     lerna: "npm:4.0.0"
     lint-staged: "npm:12.4.1"
     prettier: "npm:2.6.2"
+    regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
