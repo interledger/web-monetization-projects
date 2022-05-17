@@ -57,6 +57,7 @@
     "@coil/anonymous-tokens": "^0.0.0",
     "@coil/client": "^0.0.0",
     "@coil/polyfill-utils": "^0.0.0",
+    "@coil/privacypass-sjcl": "^0.0.0",
     "@coil/puppeteer-utils": "^0.0.0",
     "@dier-makr/annotations": "^0.0.0",
     "@dier-makr/inversify": "^0.0.0",

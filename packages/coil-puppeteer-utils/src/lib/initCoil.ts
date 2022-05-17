@@ -25,6 +25,12 @@ export async function injectCoilTokenFromEnv(page: Page): Promise<void> {
   await timeout(100)
 }
 
+export const initCoilSelectors = {
+  loginSelector: '[data-cy="login-email"]',
+  passwordSelector: '[data-cy="login-password"]',
+  nextSelector: '[data-cy="login-next"]'
+}
+
 export async function initCoil({
   context,
   user,
@@ -49,26 +55,16 @@ export async function initCoil({
     await page.goto(`${COIL_DOMAIN}/login`)
     await page.bringToFront()
 
-    await page.waitForSelector(initCoil.loginSelector)
-    await page.click(initCoil.loginSelector)
+    await page.waitForSelector(initCoilSelectors.loginSelector)
+    await page.click(initCoilSelectors.loginSelector)
     await page.keyboard.type(user)
-    await page.click(initCoil.nextSelector)
+    await page.click(initCoilSelectors.nextSelector)
 
-    await page.click(initCoil.passwordSelector)
+    await page.click(initCoilSelectors.passwordSelector)
     await page.keyboard.type(password)
-    await page.click(initCoil.nextSelector)
+    await page.click(initCoilSelectors.nextSelector)
     await page.waitForNavigation()
   }
 
   return { context, page }
 }
-
-export interface initCoil {
-  loginSelector: string
-  passwordSelector: string
-  nextSelector: string
-}
-
-initCoil.loginSelector = '[data-cy="login-email"]'
-initCoil.passwordSelector = '[data-cy="login-password"]'
-initCoil.nextSelector = '[data-cy="login-next"]'

@@ -4,7 +4,7 @@ import {
   httpGet
 } from 'inversify-express-utils'
 import { loginMutation } from '@coil/client'
-import { initCoil } from '@coil/puppeteer-utils'
+import { initCoilSelectors } from '@coil/puppeteer-utils'
 
 const attr = (a: string) => a.slice(1, a.length - 1)
 
@@ -79,12 +79,14 @@ export class LoginController extends BaseHttpController {
       <body>
       <form id="form">
         <input ${attr(
-          initCoil.loginSelector
+          initCoilSelectors.loginSelector
         )} id="email" type="email" placeholder="email">
         <input ${attr(
-          initCoil.passwordSelector
+          initCoilSelectors.passwordSelector
         )} id="password" type="password" placeholder="password">
-        <button ${attr(initCoil.nextSelector)} type="submit">Log in</button>
+        <button ${attr(
+          initCoilSelectors.nextSelector
+        )} type="submit">Log in</button>
       </form>
       <pre id="log"></pre>
       </body>

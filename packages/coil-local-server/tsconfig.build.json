@@ -18,6 +18,9 @@
   ],
   "references": [
     {
+      "path": "../coil-privacypass-sjcl/tsconfig.build.json"
+    },
+    {
       "path": "../dier-makr-annotations/tsconfig.build.json"
     },
     {
@@ -25,6 +28,9 @@
     },
     {
       "path": "../coil-client/tsconfig.build.json"
+    },
+    {
+      "path": "../coil-puppeteer-utils/tsconfig.build.json"
     }
   ]
 }

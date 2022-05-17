@@ -63,9 +63,6 @@
       "@webmonetization/wext/content": [
         "packages/webmonetization-wext/src/content"
       ],
-      "@coil/local-server": [
-        "packages/coil-local-server/src"
-      ],
       "@coil/puppeteer-utils": [
         "packages/coil-puppeteer-utils/src"
       ],
@@ -80,6 +77,9 @@
       ],
       "@coil/extension": [
         "packages/coil-extension/src"
+      ],
+      "@coil/local-server": [
+        "packages/coil-local-server/src"
       ],
       "@coil/oauth-scripts": [
         "packages/coil-oauth-scripts/src"
