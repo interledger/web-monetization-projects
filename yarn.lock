@@ -5,13 +5,6 @@ __metadata:
   version: 7
   cacheKey: 9
 
-"-@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "-@npm:0.0.1"
-  checksum: fccd2e5dd998f47b65d9e701f8b7069c9771be2c4c7a663719f038a686230f25cce3df6fdf54505bd738f47297b1edea850756a1221365ded9fcd61b3335b71d
-  languageName: node
-  linkType: hard
-
 "@abraham/reflection@npm:^0.10.0":
   version: 0.10.0
   resolution: "@abraham/reflection@npm:0.10.0"
@@ -6151,13 +6144,6 @@ __metadata:
   bin:
     shell: ./lib/cli.js
   checksum: bc5b237e50a3e1de215024d5eb1ceb13f545d85d102fe33a7ac6f5dec7b31de8646f3014160d4a5e1154fca4e786e8d244627562db629a5b1171a8f9cede7886
-  languageName: node
-  linkType: hard
-
-"D@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "D@npm:1.0.0"
-  checksum: 8e2baa98f4f910d3cd4ff93ed6a6de523689cad70790cd054741a7bb654d3691d6d081977f21a4c523732a4e6231d7128f7f80a7a2f8a97ca88e147b393568c8
   languageName: node
   linkType: hard
 
@@ -23743,7 +23729,6 @@ sjcl@sublimator/sjcl:
   version: 0.0.0-use.local
   resolution: "web-monetization@workspace:."
   dependencies:
-    "-": "npm:^0.0.1"
     "@babel/core": "npm:7.17.12"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
@@ -23759,7 +23744,6 @@ sjcl@sublimator/sjcl:
     "@typescript-eslint/eslint-plugin": "npm:5.24.0"
     "@typescript-eslint/parser": "npm:5.24.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
-    D: "npm:^1.0.0"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
