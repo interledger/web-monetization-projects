@@ -1693,6 +1693,7 @@ __metadata:
     "@coil/anonymous-tokens": "npm:^0.0.0"
     "@coil/client": "npm:^0.0.0"
     "@coil/polyfill-utils": "npm:^0.0.0"
+    "@coil/privacypass-sjcl": "npm:^0.0.0"
     "@coil/puppeteer-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:16.2.4"
     "@commitlint/config-conventional": "npm:16.2.4"
@@ -2067,7 +2068,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@coil/privacypass-sjcl@npm:0.0.0, @coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl":
+"@coil/privacypass-sjcl@npm:0.0.0, @coil/privacypass-sjcl@npm:^0.0.0, @coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl":
   version: 0.0.0-use.local
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
