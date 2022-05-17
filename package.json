@@ -102,5 +102,9 @@
   "engines": {
     "node": ">= 14.0.0"
   },
-  "packageManager": "yarn@4.0.0-rc.6"
+  "packageManager": "yarn@4.0.0-rc.6",
+  "dependencies": {
+    "-": "^0.0.1",
+    "D": "^1.0.0"
+  }
 }
