@@ -1438,7 +1438,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -1501,7 +1501,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -1587,7 +1587,7 @@ __metadata:
     addons-linter: "npm:5.4.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:1.0.6"
     debug: "npm:^4.3.1"
     eslint: "npm:8.15.0"
@@ -1664,7 +1664,7 @@ __metadata:
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-dir: "npm:^1.3.0"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     deepmerge: "npm:^4.2.2"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1736,7 +1736,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -1799,7 +1799,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -1862,7 +1862,7 @@ __metadata:
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     btoa: "npm:^1.2.1"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -1927,7 +1927,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     debug: "npm:^4.3.1"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1991,7 +1991,7 @@ __metadata:
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     buffer: "npm:^6.0.3"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     crypto-browserify: "npm:^3.12.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -2056,7 +2056,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -2350,7 +2350,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -2408,7 +2408,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -2564,7 +2564,7 @@ __metadata:
     addons-linter: "npm:5.4.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:1.0.6"
     css-loader: "npm:6.7.1"
     debug: "npm:^4.3.1"
@@ -4257,7 +4257,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -5486,7 +5486,7 @@ __metadata:
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     buffer: "npm:^6.0.3"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:^1.0.6"
     crypto-browserify: "npm:^3.12.0"
     eslint: "npm:8.15.0"
@@ -5564,7 +5564,7 @@ __metadata:
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     body-parser: "npm:^1.19.0"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -5637,7 +5637,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -5700,7 +5700,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -5767,7 +5767,7 @@ __metadata:
     ajv: "npm:^8.6.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -5829,7 +5829,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -5890,7 +5890,7 @@ __metadata:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -7037,13 +7037,6 @@ __metadata:
   version: 2.1.0
   resolution: "array-union@npm:2.1.0"
   checksum: 0644809ce6ada3bcf5d25379f3c96f0335dd45516da5303fcb9eb2477dc8ad222fe39be2d0b58a7bbc3207e68d714e5f592316b881e2b13a11cd705d11cc5d45
-  languageName: node
-  linkType: hard
-
-"array-union@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "array-union@npm:3.0.1"
-  checksum: 63dcf764f333ba76cfa6d9204ce82ce49a9fea1749074a53e2f243645bdbc07c1721348cd58380f4ae43f92155f90170459325fc53a5f796829019d796d29754
   languageName: node
   linkType: hard
 
@@ -9230,19 +9223,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-webpack-plugin@npm:10.2.4":
-  version: 10.2.4
-  resolution: "copy-webpack-plugin@npm:10.2.4"
+"copy-webpack-plugin@npm:11.0.0":
+  version: 11.0.0
+  resolution: "copy-webpack-plugin@npm:11.0.0"
   dependencies:
-    fast-glob: "npm:^3.2.7"
+    fast-glob: "npm:^3.2.11"
     glob-parent: "npm:^6.0.1"
-    globby: "npm:^12.0.2"
+    globby: "npm:^13.1.1"
     normalize-path: "npm:^3.0.0"
     schema-utils: "npm:^4.0.0"
     serialize-javascript: "npm:^6.0.0"
   peerDependencies:
     webpack: ^5.1.0
-  checksum: 9f761bedf18e0813f997bafff8c72a286ba12762690e5c5593bc0b0f7a11556581921fbe22d14d4f04edda5453439d5b547e3da7361f4575b4692044bddeebb3
+  checksum: 4a51ac9461187ff33855778a6f422e3e9c9145dec06f9bc666221816edb502f1f7437c33fa690c9a57783b8cdf80d5b4e0c6f851480d2eb580b332cdf06026b9
   languageName: node
   linkType: hard
 
@@ -11696,7 +11689,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.0.3, fast-glob@npm:^3.2.2, fast-glob@npm:^3.2.7, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.0.3, fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.2, fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
   dependencies:
@@ -12905,17 +12898,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^12.0.2":
-  version: 12.2.0
-  resolution: "globby@npm:12.2.0"
+"globby@npm:^13.1.1":
+  version: 13.1.1
+  resolution: "globby@npm:13.1.1"
   dependencies:
-    array-union: "npm:^3.0.1"
     dir-glob: "npm:^3.0.1"
-    fast-glob: "npm:^3.2.7"
-    ignore: "npm:^5.1.9"
+    fast-glob: "npm:^3.2.11"
+    ignore: "npm:^5.2.0"
     merge2: "npm:^1.4.1"
     slash: "npm:^4.0.0"
-  checksum: cc93d6188839ae4b0a59f7bc279a3076cb3352cce7e0717cdb5404eb46d80599707d51eda4dfe70cdec3a0fb4a2977c58dfce493a9d9353c27829a7b4129d9ec
+  checksum: 510ee19299588eeb109c2072619968e759aa6c46666c76dc2a2b4d41387726ce9841eca3d08755bd5b47266f3f88b60665810b7bd5fb7e4c1b1bf9add77c090a
   languageName: node
   linkType: hard
 
@@ -13677,7 +13669,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ignore@npm:^5.1.1, ignore@npm:^5.1.9, ignore@npm:^5.2.0":
+"ignore@npm:^5.1.1, ignore@npm:^5.2.0":
   version: 5.2.0
   resolution: "ignore@npm:5.2.0"
   checksum: 0086b6992b2e2c9ec23f009e5939022323f1b4ad291607507045cc67b0a3b5d9724fc425f5300b3ba6d10ef74311bdf71cd26040227c30a182cf1b2a5971226b
@@ -23740,7 +23732,7 @@ sjcl@sublimator/sjcl:
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    copy-webpack-plugin: "npm:10.2.4"
+    copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.15.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
