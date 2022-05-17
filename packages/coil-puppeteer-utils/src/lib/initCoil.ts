@@ -49,20 +49,26 @@ export async function initCoil({
     await page.goto(`${COIL_DOMAIN}/login`)
     await page.bringToFront()
 
-    const loginSelector = '[data-cy="login-email"]'
-    const passwordSelector = '[data-cy="login-password"]'
-    const nextSelector = '[data-cy="login-next"]'
-
-    await page.waitForSelector(loginSelector)
-    await page.click(loginSelector)
+    await page.waitForSelector(initCoil.loginSelector)
+    await page.click(initCoil.loginSelector)
     await page.keyboard.type(user)
-    await page.click(nextSelector)
+    await page.click(initCoil.nextSelector)
 
-    await page.click(passwordSelector)
+    await page.click(initCoil.passwordSelector)
     await page.keyboard.type(password)
-    await page.click(nextSelector)
+    await page.click(initCoil.nextSelector)
     await page.waitForNavigation()
   }
 
   return { context, page }
 }
+
+export interface initCoil {
+  loginSelector: string
+  passwordSelector: string
+  nextSelector: string
+}
+
+initCoil.loginSelector = '[data-cy="login-email"]'
+initCoil.passwordSelector = '[data-cy="login-password"]'
+initCoil.nextSelector = '[data-cy="login-next"]'

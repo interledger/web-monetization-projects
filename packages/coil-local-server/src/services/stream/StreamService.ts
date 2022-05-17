@@ -38,6 +38,7 @@ export class StreamService {
    */
   private async acceptMoneySlowly(stream: DataAndMoneyStream) {
     let max = 20e3
+    // TODO: seems stream isOpen when connection is closed ...
     while (stream.isOpen()) {
       stream.setReceiveMax(max)
       const rand = (n: number) => Math.floor(Math.random() * n)

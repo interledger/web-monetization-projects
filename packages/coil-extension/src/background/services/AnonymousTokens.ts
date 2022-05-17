@@ -1,7 +1,9 @@
 import { decorate, inject, injectable } from 'inversify'
 import * as anonymousTokens from '@coil/anonymous-tokens'
+import { BlindToken, CurvePoints } from '@coil/privacypass-sjcl'
 
 import * as tokens from '../../types/tokens'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { Logger, logger } from './utils'
 
@@ -48,6 +50,7 @@ class TokenStore {
 @injectable()
 export class AnonymousTokens extends anonymousTokens.AnonymousTokens {
   constructor(
+    @inject(tokens.BuildConfig) private buildConfig: BuildConfig,
     @inject(tokens.CoilDomain) coilHost: string,
     @inject(Storage) storage: Storage,
     @logger('AnonymousTokens') debug: Logger
@@ -59,5 +62,20 @@ export class AnonymousTokens extends anonymousTokens.AnonymousTokens {
       debug,
       batchSize: ANON_TOKEN_BATCH_SIZE
     })
+  }
+
+  protected async _verifyProof(
+    proof: string,
+    prng: string,
+    curvePoints: CurvePoints,
+    tokens: BlindToken[]
+  ): Promise<void> {
+    if (this.buildConfig.useLocalMockServer) {
+      // Don't check proof as the local mock server doesn't actually create any
+      // yet. We could use an elliptic impl that is 99% ready, but it's really
+      // slow.
+    } else {
+      return super._verifyProof(proof, prng, curvePoints, tokens)
+    }
   }
 }

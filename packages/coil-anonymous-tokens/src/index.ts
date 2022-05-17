@@ -295,7 +295,7 @@ export class AnonymousTokens implements AnonymousTokensService {
     return response.json()
   }
 
-  private async _verifyProof(
+  protected async _verifyProof(
     proof: string,
     prng: string,
     curvePoints: CurvePoints,
@@ -306,7 +306,7 @@ export class AnonymousTokens implements AnonymousTokensService {
       return verifyProof(proof, tokens, curvePoints, commitment, prng)
     })
     if (!isValidProof) {
-      // throw new Error('[privacy pass]: unable to verify dleq proof.')
+      throw new Error('[privacy pass]: unable to verify dleq proof.')
     }
   }
 }

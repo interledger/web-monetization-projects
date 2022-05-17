@@ -4,6 +4,9 @@ import {
   httpGet
 } from 'inversify-express-utils'
 import { loginMutation } from '@coil/client'
+import { initCoil } from '@coil/puppeteer-utils'
+
+const attr = (a: string) => a.slice(1, a.length - 1)
 
 @controller('/login')
 export class LoginController extends BaseHttpController {
@@ -44,6 +47,12 @@ export class LoginController extends BaseHttpController {
                   const parsed = JSON.parse(t)
                   document.getElementById('log').innerHTML = JSON.stringify(parsed, null, 2)
                   localStorage.token = parsed.data.auth.token
+                  window.dispatchEvent(new Event('coil_writeToken'))
+                  const domain = new URL(window.location.href)
+                  domain.pathname = '/handler.html'
+                  setTimeout(() => {
+                    window.location = domain.href
+                  }, 3e3)
                 })
               }).catch(e => {
                 console.error(e)
@@ -69,9 +78,13 @@ export class LoginController extends BaseHttpController {
       </head>
       <body>
       <form id="form">
-        <input id="email" type="email" placeholder="email">
-        <input id="password" type="password" placeholder="password">
-        <button type="submit">Log in</button>
+        <input ${attr(
+          initCoil.loginSelector
+        )} id="email" type="email" placeholder="email">
+        <input ${attr(
+          initCoil.passwordSelector
+        )} id="password" type="password" placeholder="password">
+        <button ${attr(initCoil.nextSelector)} type="submit">Log in</button>
       </form>
       <pre id="log"></pre>
       </body>

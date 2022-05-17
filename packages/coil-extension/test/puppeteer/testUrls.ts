@@ -2,7 +2,7 @@ type TestUrls = Record<string, string>
 
 type Domain = string
 
-const urls = {
+export const testUrls = {
   'https://coil.com': {
     twitchUrl: 'https://twitch.tv/vinesauce',
     youtubeUrl: 'https://www.youtube.com/watch?v=8EKg_rBWZdc',
@@ -15,4 +15,4 @@ const urls = {
   }
 } as Record<Domain, TestUrls>
 
-export const testUrls = urls
+testUrls['http://localhost:4000'] = testUrls['https://coil.com']
