@@ -3,12 +3,14 @@ const { resolve } = require('path')
 
 function sort(getter) {
   return function (a, b) {
+    // eslint-disable-next-line no-nested-ternary
     return getter(a) < getter(b) ? -1 : getter(a) > getter(b) ? 1 : 0
   }
 }
 
 module.exports = {
-  name: 'workspaces-lerna-list',
+  // Formats the workspaces in the same format as (abandon-ware) lerna --list did
+  name: 'workspaces-list-with-dependencies',
   factory: require => {
     const cli = require('@yarnpkg/cli')
     const {
@@ -17,7 +19,10 @@ module.exports = {
       structUtils,
       Configuration
     } = require('@yarnpkg/core')
-    const fromRoot = (...paths) => resolve(__dirname, '..', '..', ...paths)
+
+    function fromRoot(...paths) {
+      return resolve(__dirname, '..', '..', ...paths)
+    }
 
     function getRecordFromWorkspace(workspace) {
       const { manifest } = workspace
