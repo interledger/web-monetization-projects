@@ -24,6 +24,7 @@ const RouterContext = createContext({} as IRouterContext)
 export const RouterProvider: React.FC<IRouterProvider> = props => {
   const { storage } = props
   const userObject = storage.get('user')
+  const coilSite = storage.get('coilSite')
 
   // Determine the default view based on if the user is allowed to tip
   const {
@@ -37,8 +38,12 @@ export const RouterProvider: React.FC<IRouterProvider> = props => {
     ((!tippingBetaFeatureFlag && totalTipCreditAmountUsd > 0) ||
       tippingBetaFeatureFlag)
 
+  const isCoilSiteView =
+    typeof coilSite === 'string' &&
+    ['/', '/discover'].includes(new URL(coilSite).pathname)
+
   const [route, setRoute] = useState<string>(
-    allowTipping ? ROUTES.tipping : ROUTES.streaming
+    !isCoilSiteView && allowTipping ? ROUTES.tipping : ROUTES.streaming
   )
   const [previousRoute, setPreviousRoute] = useState<string>('')
 
