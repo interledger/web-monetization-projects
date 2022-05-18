@@ -105,33 +105,3 @@ reading the release logs while waiting for CI.
 
 Note that we run through the [release-checklist.md](packages/coil-extension/docs/release-checklist.md)
 before every release, and we catch bugs there as well as with CI.
-
-## Jest/Babel Usage For Speedier Tests
-
-TypeScript is great!
-
-But when the editor is already set up to check types and CI also it's not
-strictly necessary to do so when running tests. In fact, it can just get in the
-way of a productive edit/compile/test loop.
-
-You can create a file `./jest.config.local.js` file which will be read by the
-[default jest config](./jest.config.js)
-
-```javascript
-module.exports = function configure(config) {
-  // Don't use the ts-jest preset
-  delete config.preset
-  return config
-}
-```
-
-### But it's still slow!?
-
-At the time of writing, Jest 24 was struggling with mysterious
-performance issues, primarily showing up on MacOS
-
-Experiment with the jest `-i/--runInBand` option which will just run tests
-serially in a single worker. This can often make things drastically faster.
-
-Some editors offer the ability to run scoped tests which also seems to
-run everything in a single worker when only one file is in scope.
