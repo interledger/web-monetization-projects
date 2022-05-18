@@ -286,12 +286,12 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: Lerna run jest via dynamic compilation
+          name: Yarn workspaces foreach run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run << parameters.command >>
       - run:
-          name: Lerna run jest from build
+          name: Yarn workspaces foreach run jest from build
           command: |
             yarn clean:build || echo "already clean"
             yarn build:ts:verbose
