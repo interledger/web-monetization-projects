@@ -6,8 +6,20 @@
     "baseUrl": ".",
     "skipLibCheck": false,
     "paths": {
+      "@coil/anonymous-tokens": [
+        "packages/coil-anonymous-tokens/src"
+      ],
+      "@coil/client": [
+        "packages/coil-client/src"
+      ],
+      "@coil/extension": [
+        "packages/coil-extension/src"
+      ],
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
+      ],
+      "@coil/oauth-scripts": [
+        "packages/coil-oauth-scripts/src"
       ],
       "@coil/polyfill-utils": [
         "packages/coil-polyfill-utils/src"
@@ -15,38 +27,44 @@
       "@coil/privacypass-sjcl": [
         "packages/coil-privacypass-sjcl/src"
       ],
+      "@coil/puppeteer-utils": [
+        "packages/coil-puppeteer-utils/src"
+      ],
       "@coil/webpack-utils": [
         "packages/coil-webpack-utils/src"
+      ],
+      "@coil/wm-utils": [
+        "packages/coil-wm-utils/src"
       ],
       "@dier-makr/annotations": [
         "packages/dier-makr-annotations/src"
       ],
-      "@stacktracejs/stacktrace-js": [
-        "packages/stacktracejs-stacktrace-js/src"
-      ],
-      "@webmonetization/polyfill-utils": [
-        "packages/webmonetization-polyfill-utils/src"
-      ],
-      "@webmonetization/types": [
-        "packages/webmonetization-types/src"
-      ],
-      "@coil/anonymous-tokens": [
-        "packages/coil-anonymous-tokens/src"
-      ],
-      "@coil/client": [
-        "packages/coil-client/src"
-      ],
       "@dier-makr/inversify": [
         "packages/dier-makr-inversify/src"
       ],
+      "@interledger/minute-extension": [
+        "packages/interledger-minute-extension/src"
+      ],
+      "@stacktracejs/stacktrace-js": [
+        "packages/stacktracejs-stacktrace-js/src"
+      ],
       "@webexts/build-utils": [
         "packages/webexts-build-utils/src"
+      ],
+      "@webmonetization/demo": [
+        "packages/webmonetization-demo/src"
+      ],
+      "@webmonetization/polyfill-utils": [
+        "packages/webmonetization-polyfill-utils/src"
       ],
       "@webmonetization/react": [
         "packages/webmonetization-react/src"
       ],
       "@webmonetization/testing-utils": [
         "packages/webmonetization-testing-utils/src"
+      ],
+      "@webmonetization/types": [
+        "packages/webmonetization-types/src"
       ],
       "@webmonetization/wext": [
         "packages/webmonetization-wext/src"
@@ -62,24 +80,6 @@
       ],
       "@webmonetization/wext/content": [
         "packages/webmonetization-wext/src/content"
-      ],
-      "@coil/puppeteer-utils": [
-        "packages/coil-puppeteer-utils/src"
-      ],
-      "@coil/wm-utils": [
-        "packages/coil-wm-utils/src"
-      ],
-      "@interledger/minute-extension": [
-        "packages/interledger-minute-extension/src"
-      ],
-      "@webmonetization/demo": [
-        "packages/webmonetization-demo/src"
-      ],
-      "@coil/extension": [
-        "packages/coil-extension/src"
-      ],
-      "@coil/oauth-scripts": [
-        "packages/coil-oauth-scripts/src"
       ]
     }
   },
