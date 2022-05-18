@@ -49,7 +49,8 @@ export class LoginController extends BaseHttpController {
                   localStorage.token = parsed.data.auth.token
                   window.dispatchEvent(new Event('coil_writeToken'))
                   const domain = new URL(window.location.href)
-                  domain.pathname = '/handler.html'
+                  domain.pathname = '/settings'
+                  // This is for the puppeteer test that waits for navigation
                   setTimeout(() => {
                     window.location = domain.href
                   }, 3e3)
