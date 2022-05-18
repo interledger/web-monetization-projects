@@ -69,24 +69,7 @@ export function getPackages({
   withDependencies = true
 }: GetPackagesParameters = {}): LernaListItem[] {
   const opts = { cwd: fromRoot('.') }
-
-  const topPackages = cmd('npx lerna list -a --toposort --ndjson', opts)
+  return cmd('yarn workspaces list-with-dependencies', opts)
     .split('\n')
     .map(v => JSON.parse(v) as LernaListItem)
-
-  if (!withDependencies) {
-    return topPackages
-  }
-
-  return topPackages.map(li => {
-    const command = `npx lerna list -a --scope ${li.name} --toposort --include-dependencies --ndjson`
-    const deps = cmd(command, opts)
-      .split('\n')
-      .map(v => JSON.parse(v) as LernaListItem)
-
-    li.dependencies = topPackages.filter(
-      tp => tp.name !== li.name && deps.find(d => d.name === tp.name)
-    )
-    return li
-  })
 }
