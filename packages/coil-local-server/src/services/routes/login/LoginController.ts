@@ -24,6 +24,12 @@ export class LoginController extends BaseHttpController {
             loginMutation.replace('token', 'token\nuser {email, id}')
           )}
 
+          const log = (...args) => {
+            // noinspection UnnecessaryLocalVariableJS
+            const innerHTML = args.map(val => JSON.stringify(val)).join('')
+            document.getElementById('log').innerHTML = innerHTML
+          }
+
           function submit() {
             try {
               const variables = {
@@ -45,15 +51,18 @@ export class LoginController extends BaseHttpController {
               fetch(gateWayPath, init).then(result => {
                 return result.text().then(t => {
                   const parsed = JSON.parse(t)
-                  document.getElementById('log').innerHTML = JSON.stringify(parsed, null, 2)
-                  localStorage.token = parsed.data.auth.token
-                  window.dispatchEvent(new Event('coil_writeToken'))
-                  const domain = new URL(window.location.href)
-                  domain.pathname = '/settings'
-                  // This is for the puppeteer test that waits for navigation
-                  setTimeout(() => {
-                    window.location = domain.href
-                  }, 3e3)
+                  log(parsed)
+                  const token = parsed?.data?.auth?.token
+                  if (token) {
+                    localStorage.token = token
+                    window.dispatchEvent(new Event('coil_writeToken'))
+                    const domain = new URL(window.location.href)
+                    domain.pathname = '/settings'
+                    // This is for the puppeteer test that waits for navigation
+                    setTimeout(() => {
+                      window.location = domain.href
+                    }, 3e3)
+                  }
                 })
               }).catch(e => {
                 console.error(e)
@@ -85,9 +94,8 @@ export class LoginController extends BaseHttpController {
         <input ${attr(
           initCoilSelectors.passwordSelector
         )} id="password" type="password" placeholder="password">
-        <button ${attr(
-          initCoilSelectors.nextSelector
-        )} type="submit">Log in</button>
+        <button ${attr(initCoilSelectors.nextSelector)} type="submit">Log in
+        </button>
       </form>
       <pre id="log"></pre>
       </body>
