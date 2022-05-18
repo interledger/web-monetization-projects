@@ -53,7 +53,7 @@
     "@babel/preset-typescript": "7.17.12",
     "@commitlint/cli": "17.0.0",
     "@commitlint/config-conventional": "17.0.0",
-    "@swc/core": "^1.2.185",
+    "@swc/core": "1.2.186",
     "@swc/jest": "^0.2.21",
     "@types/jest": "27.5.1",
     "@types/keccak": "3.0.1",
