@@ -59,7 +59,6 @@ module.exports = {
       getDependencies(workspace, project) {
         const { manifest } = workspace
         const workspaceDependencies = new Set()
-        const mismatchedWorkspaceDependencies = new Set()
 
         for (const dependencyType of Manifest.hardDependencies) {
           for (const [identHash, descriptor] of manifest.getForScope(
@@ -68,11 +67,7 @@ module.exports = {
             const matchingWorkspace =
               project.tryWorkspaceByDescriptor(descriptor)
 
-            if (matchingWorkspace === null) {
-              if (project.workspacesByIdent.has(identHash)) {
-                mismatchedWorkspaceDependencies.add(descriptor)
-              }
-            } else {
+            if (matchingWorkspace !== null) {
               workspaceDependencies.add(matchingWorkspace)
             }
           }
