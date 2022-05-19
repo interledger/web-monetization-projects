@@ -1616,7 +1616,7 @@ __metadata:
     lint-staged: "npm:12.4.1"
     lottie-web: "npm:^5.8.1"
     prettier: "npm:2.6.2"
-    puppeteer: "npm:14.1.0"
+    puppeteer: "npm:14.1.1"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reduct: "npm:^3.3.1"
@@ -1753,7 +1753,7 @@ __metadata:
     lint-staged: "npm:12.4.1"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
-    puppeteer: "npm:14.1.0"
+    puppeteer: "npm:14.1.1"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -17542,9 +17542,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:14.1.0, puppeteer@npm:^14.0.0":
-  version: 14.1.0
-  resolution: "puppeteer@npm:14.1.0"
+"puppeteer@npm:14.1.1, puppeteer@npm:^14.0.0":
+  version: 14.1.1
+  resolution: "puppeteer@npm:14.1.1"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
@@ -17558,7 +17558,7 @@ __metadata:
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
     ws: "npm:8.6.0"
-  checksum: 4c953e3bd79793ad9857ab50e7ef7c28ce01661153e61d485109b36184bf5b836a1112e33b4102afb482eec75547ed17bbce3ca10f9797f747001860580775aa
+  checksum: 9ff3ec7cc991d0970421d27e4cb0cc60aee72684df32bf0b58830e20ed73c66a4b90c4a2847ad5b1c61b4963e425329ae69d673e00cc8441186b80856f92a698
   languageName: node
   linkType: hard
 
