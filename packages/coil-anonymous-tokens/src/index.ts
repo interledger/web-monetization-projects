@@ -193,7 +193,10 @@ export class AnonymousTokens {
   ): Promise<IssueResponse> {
     const signRes = await portableFetch(this.signerUrl + '/issue', {
       method: 'POST',
-      credentials: 'omit',
+      // We need this for staging due to cloudflare auth
+      credentials: this.signerUrl.includes('staging.coil.com')
+        ? 'include'
+        : 'omit',
       headers: {
         authorization: `Bearer ${coilAuthToken}`,
         'content-type': 'application/json'
