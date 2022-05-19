@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import { StorageService } from '@webmonetization/wext/services'
 
 import { ROUTES } from '../constants'
@@ -19,6 +19,9 @@ interface IRouterProvider {
 
 // Context
 const RouterContext = createContext({} as IRouterContext)
+
+const lastRoute = 'popup-route:last'
+const tippingShown = 'popup-route:tipping-shown'
 
 // Provider
 export const RouterProvider: React.FC<IRouterProvider> = props => {
@@ -42,10 +45,25 @@ export const RouterProvider: React.FC<IRouterProvider> = props => {
     typeof coilSite === 'string' &&
     ['/', '/discover'].includes(new URL(coilSite).pathname)
 
-  const [route, setRoute] = useState<string>(
-    !isCoilSiteView && allowTipping ? ROUTES.tipping : ROUTES.streaming
-  )
+  const showTipping = !isCoilSiteView && allowTipping
+  const defaultRoute = showTipping ? ROUTES.tipping : ROUTES.streaming
+
+  const lastOrDefaultRoute =
+    localStorage[lastRoute] && localStorage[tippingShown]
+      ? localStorage[lastRoute]
+      : defaultRoute
+
+  const [route, setRoute] = useState<string>(lastOrDefaultRoute)
   const [previousRoute, setPreviousRoute] = useState<string>('')
+
+  useEffect(() => {
+    if (!route.includes('/')) {
+      localStorage[lastRoute] = route
+      if (route === ROUTES.tipping) {
+        localStorage[tippingShown] = true
+      }
+    }
+  }, [route])
 
   const toRoute = (newRoute: string) => {
     setPreviousRoute(route)
