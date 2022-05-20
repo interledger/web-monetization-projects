@@ -21,10 +21,10 @@
       "path": "../coil-webpack-utils/tsconfig.build.json"
     },
     {
-      "path": "../webmonetization-types/tsconfig.build.json"
+      "path": "../webmonetization-react/tsconfig.build.json"
     },
     {
-      "path": "../webmonetization-react/tsconfig.build.json"
+      "path": "../webmonetization-types/tsconfig.build.json"
     }
   ]
 }

@@ -18,13 +18,10 @@
   ],
   "references": [
     {
-      "path": "../dier-makr-annotations/tsconfig.build.json"
+      "path": "../coil-client/tsconfig.build.json"
     },
     {
       "path": "../webmonetization-types/tsconfig.build.json"
-    },
-    {
-      "path": "../coil-client/tsconfig.build.json"
     }
   ]
 }

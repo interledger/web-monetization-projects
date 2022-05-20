@@ -271,7 +271,7 @@ jobs:
             xvfb-run -a yarn << parameters.command >>
       - *save_cache
 
-  jest-lerna-all:
+  jest-workspaces-foreach-all:
     parameters:
       command:
         type: string
@@ -286,17 +286,17 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
-          name: Lerna run jest via dynamic compilation
+          name: Yarn workspaces foreach run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            xvfb-run -a yarn lerna run --concurrency=2 --stream << parameters.command >>
+            xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run << parameters.command >>
       - run:
-          name: Lerna run jest from build
+          name: Yarn workspaces foreach run jest from build
           command: |
             yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
-            xvfb-run -a yarn lerna run --concurrency=2 --stream << parameters.command >>
+            xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run << parameters.command >>
       - *save_cache
 
   packages-build-scripts:
@@ -308,7 +308,7 @@ jobs:
       - run:
           name: Packages Build Scripts
           command: |
-            yarn lerna run --concurrency=1 --stream build
+            yarn workspaces foreach -v --exclude=web-monetization run build
       - *save_cache
 
   yarn-format-and-upkeep-diff-check:
@@ -380,7 +380,7 @@ workflows:
               # TODO: DRY it up
               node-version: [ "16.14.2", "18.1.0" ]
               command: [ "test:coverage", "test:e2e:coverage" ]
-      - jest-lerna-all:
+      - jest-workspaces-foreach-all:
           context: web-monetization-tests
           filters:
             branches:
@@ -407,7 +407,7 @@ workflows:
       - build-extension-e2e-coil:
           requires:
             - jest-all
-            - jest-lerna-all
+            - jest-workspaces-foreach-all
             - coil-extension-puppeteer
             - coil-extension-puppeteer-transpile-only
           filters:  # using regex filters requires the entire branch to match
