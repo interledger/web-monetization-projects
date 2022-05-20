@@ -1,7 +1,4 @@
-// TODO:swc
-require('@abraham/reflection')
-
 module.exports = config => {
-  config.setupFiles = [__filename]
+  delete config.preset
   return config
 }
