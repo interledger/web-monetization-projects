@@ -209,10 +209,8 @@ describe('MonetizationTagManager', () => {
     const message = metaDeprecatedMessage
     expect(error.error.message).toEqual(message)
     const callArg = spy.mock.calls[0][0]
-    // why is this a string ?
-    expect(typeof callArg).toBe('string')
-    const firstLine = callArg.split('\n')
-    expect(firstLine[0]).toBe(`Error: Uncaught [Error: ${message}]`)
+    const firstLine = callArg.message.split('\n')
+    expect(firstLine[0]).toBe(`Uncaught [Error: ${message}]`)
   })
 
   it('should throw an error when trying to use more than one meta', async () => {
