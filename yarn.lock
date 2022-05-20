@@ -127,7 +127,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.17.12, @babel/core@npm:^7.11.6, @babel/core@npm:^7.12.3, @babel/core@npm:^7.14.0":
+"@babel/core@npm:7.18.0":
+  version: 7.18.0
+  resolution: "@babel/core@npm:7.18.0"
+  dependencies:
+    "@ampproject/remapping": "npm:^2.1.0"
+    "@babel/code-frame": "npm:^7.16.7"
+    "@babel/generator": "npm:^7.18.0"
+    "@babel/helper-compilation-targets": "npm:^7.17.10"
+    "@babel/helper-module-transforms": "npm:^7.18.0"
+    "@babel/helpers": "npm:^7.18.0"
+    "@babel/parser": "npm:^7.18.0"
+    "@babel/template": "npm:^7.16.7"
+    "@babel/traverse": "npm:^7.18.0"
+    "@babel/types": "npm:^7.18.0"
+    convert-source-map: "npm:^1.7.0"
+    debug: "npm:^4.1.0"
+    gensync: "npm:^1.0.0-beta.2"
+    json5: "npm:^2.2.1"
+    semver: "npm:^6.3.0"
+  checksum: 5313eac77e0de99bb5e6ccd08d17868283f4bb54243008274b99a61136b4c7fb08b5632f4fc6a895e906d80bfd41e33d8baca8ec2d7a2d92993767adba2047f3
+  languageName: node
+  linkType: hard
+
+"@babel/core@npm:^7.11.6, @babel/core@npm:^7.12.3, @babel/core@npm:^7.14.0":
   version: 7.17.12
   resolution: "@babel/core@npm:7.17.12"
   dependencies:
@@ -158,6 +181,17 @@ __metadata:
     "@jridgewell/gen-mapping": "npm:^0.3.0"
     jsesc: "npm:^2.5.1"
   checksum: 2f46e939e9b2e7cb4863dc749643b5ed7e2682fe7e8235ad9d3a3b2d3ddc96ff70233f460a83cad328dc98fa36725037c206d5799943648f182c23db58ad93dd
+  languageName: node
+  linkType: hard
+
+"@babel/generator@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/generator@npm:7.18.0"
+  dependencies:
+    "@babel/types": "npm:^7.18.0"
+    "@jridgewell/gen-mapping": "npm:^0.3.0"
+    jsesc: "npm:^2.5.1"
+  checksum: 4be1df6bcb215666a2f6a44bacc2b3f26345d2acc03f628bb1e2049697d37810fc5cf7130dd12ad8d3ffec7e592d3909c1a3329e853160c00f86dee168969bf2
   languageName: node
   linkType: hard
 
@@ -208,6 +242,23 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: aa14e65b1ba3a340abe017d42f17d9287c486ee21761808dec8a47113e36c5e935191da17fff17a57c8abcb37ab80e51e71af5b32ff766cd10cb3f1dd950a2a2
+  languageName: node
+  linkType: hard
+
+"@babel/helper-create-class-features-plugin@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/helper-create-class-features-plugin@npm:7.18.0"
+  dependencies:
+    "@babel/helper-annotate-as-pure": "npm:^7.16.7"
+    "@babel/helper-environment-visitor": "npm:^7.16.7"
+    "@babel/helper-function-name": "npm:^7.17.9"
+    "@babel/helper-member-expression-to-functions": "npm:^7.17.7"
+    "@babel/helper-optimise-call-expression": "npm:^7.16.7"
+    "@babel/helper-replace-supers": "npm:^7.16.7"
+    "@babel/helper-split-export-declaration": "npm:^7.16.7"
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: 48b552935931578a4dec88257c895d4658f32fa41fe8ce87d20d3b270fd704e9f04924155db789d31b74a43cce53e1153494b4b1c11a30b7de5333698614ce48
   languageName: node
   linkType: hard
 
@@ -309,6 +360,22 @@ __metadata:
     "@babel/traverse": "npm:^7.17.12"
     "@babel/types": "npm:^7.17.12"
   checksum: 839ea9ded699ceb16454f98ae6e2f718924ec7ab2a582c25f84e858b022b6b0d6aba294ee5ddb78e76eeedde14f34a678ff930945e5cdfb536343a8a2a709b44
+  languageName: node
+  linkType: hard
+
+"@babel/helper-module-transforms@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/helper-module-transforms@npm:7.18.0"
+  dependencies:
+    "@babel/helper-environment-visitor": "npm:^7.16.7"
+    "@babel/helper-module-imports": "npm:^7.16.7"
+    "@babel/helper-simple-access": "npm:^7.17.7"
+    "@babel/helper-split-export-declaration": "npm:^7.16.7"
+    "@babel/helper-validator-identifier": "npm:^7.16.7"
+    "@babel/template": "npm:^7.16.7"
+    "@babel/traverse": "npm:^7.18.0"
+    "@babel/types": "npm:^7.18.0"
+  checksum: 2c2ddfb4aa92253cfbfde6dfdda766deb3455ba124427c0fef01c531ee09705fca531ac3097974ac2b929fb3fb52a6df2948f049078430fd15d17a627f209605
   languageName: node
   linkType: hard
 
@@ -416,6 +483,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helpers@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/helpers@npm:7.18.0"
+  dependencies:
+    "@babel/template": "npm:^7.16.7"
+    "@babel/traverse": "npm:^7.18.0"
+    "@babel/types": "npm:^7.18.0"
+  checksum: f7ff1b3fa3cf86404dd3cb69bb725f242b2e2eced1ae3e997ba9e1ef9f1bec3fde7a7553fdf99a02e1a8f2e78481948faccf827d89059ab0189624d6aa970576
+  languageName: node
+  linkType: hard
+
 "@babel/highlight@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/highlight@npm:7.16.7"
@@ -433,6 +511,15 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: a3aeb462e6b62d591dcac48a4b283e827a46ac1009e164fd0f1afe424e93284bc32f7f8f987caa6c11b524d625fbf17c59a9e082d16d99a75a57ced2b54cf7dd
+  languageName: node
+  linkType: hard
+
+"@babel/parser@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/parser@npm:7.18.0"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: 5d2edbf1d85124f2b21a1dfbbaec3bf8e6c5afd6d1390f566b2bbb81f3d06a6bc6d89ac673bd01cec069065645d6f7dea324895bfd6cae67b4eb93e9f56dc575
   languageName: node
   linkType: hard
 
@@ -485,16 +572,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-class-static-block@npm:^7.17.12":
-  version: 7.17.12
-  resolution: "@babel/plugin-proposal-class-static-block@npm:7.17.12"
+"@babel/plugin-proposal-class-static-block@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/plugin-proposal-class-static-block@npm:7.18.0"
   dependencies:
-    "@babel/helper-create-class-features-plugin": "npm:^7.17.12"
+    "@babel/helper-create-class-features-plugin": "npm:^7.18.0"
     "@babel/helper-plugin-utils": "npm:^7.17.12"
     "@babel/plugin-syntax-class-static-block": "npm:^7.14.5"
   peerDependencies:
     "@babel/core": ^7.12.0
-  checksum: 26ec7112fdd32cdbb36af332593e2f717e66a6e65cb9369186dc6765b1f0a220b5d2745a9e7aaf723273ef0c401c506a1cb9d5748206dc26ef2a1d972c97420e
+  checksum: ae79b51f069b4f0cea2e1d01b1ba0798a7a3ae0617f67303bd907f7ee8cc09bec6f48d8bdc4ba64b12eb286ea6ec79f8483b5fa5bb5c5ba4da1ccb9fd29dd6d3
   languageName: node
   linkType: hard
 
@@ -586,7 +673,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-object-rest-spread@npm:7.17.12, @babel/plugin-proposal-object-rest-spread@npm:^7.0.0, @babel/plugin-proposal-object-rest-spread@npm:^7.17.12":
+"@babel/plugin-proposal-object-rest-spread@npm:7.18.0, @babel/plugin-proposal-object-rest-spread@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/plugin-proposal-object-rest-spread@npm:7.18.0"
+  dependencies:
+    "@babel/compat-data": "npm:^7.17.10"
+    "@babel/helper-compilation-targets": "npm:^7.17.10"
+    "@babel/helper-plugin-utils": "npm:^7.17.12"
+    "@babel/plugin-syntax-object-rest-spread": "npm:^7.8.3"
+    "@babel/plugin-transform-parameters": "npm:^7.17.12"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 25f39e42215d94ebaf3ddcc414dde6b8a33be5c56d1c3b07c28f0757b50de8a4e8a3c073d7b4cf0bb91ee6f515398917a606f1c049a85cdc60a99294993ef58c
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-proposal-object-rest-spread@npm:^7.0.0":
   version: 7.17.12
   resolution: "@babel/plugin-proposal-object-rest-spread@npm:7.17.12"
   dependencies:
@@ -749,6 +851,17 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: def33e3c87e23b4f6b00f0056817d743b3618e6f78beb27d79ebadbaa3b1a845c1c16273fb06ba9c7ff35d5b8d7e8ce8c2460ada943a96e78155c5cb8eeff083
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-syntax-import-assertions@npm:^7.17.12":
+  version: 7.17.12
+  resolution: "@babel/plugin-syntax-import-assertions@npm:7.17.12"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.17.12"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 2cfa92a274da842382450017a33612857a18ba53b9a06294c0dceb9cc9e277d5a77ed46dd11647e40e6b13588c235a219814864a510728664901cb6488dcc50c
   languageName: node
   linkType: hard
 
@@ -959,7 +1072,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-destructuring@npm:^7.0.0, @babel/plugin-transform-destructuring@npm:^7.17.12":
+"@babel/plugin-transform-destructuring@npm:^7.0.0":
   version: 7.17.12
   resolution: "@babel/plugin-transform-destructuring@npm:7.17.12"
   dependencies:
@@ -967,6 +1080,17 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 94bb841b281148f0d53232e5274106756ac931d46ed7f64a47fee8dd8064a012ea9978a77c9143e31e1b10599d3612549550d8d23632c735f8a3e940c32d731b
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-destructuring@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/plugin-transform-destructuring@npm:7.18.0"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.17.12"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 481f45361ac433dbc526ea4dabb533cbd8415fba8d5fd4182aeabd11954fe66084b3b364a238e1710467d4ec1138b269042490e12ec0997503755999702239da
   languageName: node
   linkType: hard
 
@@ -1063,20 +1187,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-modules-amd@npm:^7.17.12":
-  version: 7.17.12
-  resolution: "@babel/plugin-transform-modules-amd@npm:7.17.12"
+"@babel/plugin-transform-modules-amd@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/plugin-transform-modules-amd@npm:7.18.0"
   dependencies:
-    "@babel/helper-module-transforms": "npm:^7.17.12"
+    "@babel/helper-module-transforms": "npm:^7.18.0"
     "@babel/helper-plugin-utils": "npm:^7.17.12"
     babel-plugin-dynamic-import-node: "npm:^2.3.3"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 435fc3eeed0c892c66543cf3988fd4766444f3d00ef6c2411cfbd9d13f4c2bcc52491930942340feaad0dbe76eda7ed3840fe79a5812b36f1c8e14274a45f687
+  checksum: 1e1677e83ac93f0fb9ad8c33ccf5256df7c18f4ac6d23f0e549b3716c89472bb13664cb7dec109026c76bc91158f7a9e41db220b78c97749db4a819d283c7d8e
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-modules-commonjs@npm:^7.0.0, @babel/plugin-transform-modules-commonjs@npm:^7.17.12":
+"@babel/plugin-transform-modules-commonjs@npm:^7.0.0":
   version: 7.17.12
   resolution: "@babel/plugin-transform-modules-commonjs@npm:7.17.12"
   dependencies:
@@ -1090,30 +1214,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-modules-systemjs@npm:^7.17.12":
-  version: 7.17.12
-  resolution: "@babel/plugin-transform-modules-systemjs@npm:7.17.12"
+"@babel/plugin-transform-modules-commonjs@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/plugin-transform-modules-commonjs@npm:7.18.0"
+  dependencies:
+    "@babel/helper-module-transforms": "npm:^7.18.0"
+    "@babel/helper-plugin-utils": "npm:^7.17.12"
+    "@babel/helper-simple-access": "npm:^7.17.7"
+    babel-plugin-dynamic-import-node: "npm:^2.3.3"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 9f52ad3ca99259cb545b801f9628abe033d54fd7d5d7fd65984bc05bb22e38d13960271c61ba960266b696848874228773ed06d9bc36c7c4656b5219ffcd8ec6
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-modules-systemjs@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/plugin-transform-modules-systemjs@npm:7.18.0"
   dependencies:
     "@babel/helper-hoist-variables": "npm:^7.16.7"
-    "@babel/helper-module-transforms": "npm:^7.17.12"
+    "@babel/helper-module-transforms": "npm:^7.18.0"
     "@babel/helper-plugin-utils": "npm:^7.17.12"
     "@babel/helper-validator-identifier": "npm:^7.16.7"
     babel-plugin-dynamic-import-node: "npm:^2.3.3"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: afd559a9876a8524da64a6dea8432e2313f57046baa91765ac3dc65984650bbf01d6997e7563b28c786408b77baa6746ecc107846e2f45bf397a2d1f978ff0f4
+  checksum: e45d198c0ea4d5b68fd51c1b0512a61823c5abcc94b57c92d2c9279516d3e36bc5aafe058d8bebe116608521f410c531fe49430a89f40f41c5120795e3499b63
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-modules-umd@npm:^7.17.12":
-  version: 7.17.12
-  resolution: "@babel/plugin-transform-modules-umd@npm:7.17.12"
+"@babel/plugin-transform-modules-umd@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/plugin-transform-modules-umd@npm:7.18.0"
   dependencies:
-    "@babel/helper-module-transforms": "npm:^7.17.12"
+    "@babel/helper-module-transforms": "npm:^7.18.0"
     "@babel/helper-plugin-utils": "npm:^7.17.12"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: dee4f99e8ceb5220bb2919886fe0186bb692667aa60ae131d8f13cb4b4ca319e9b9e672cf0a171c839f306720b2cf3de52b36046eb8610a50a5703101c384a87
+  checksum: 4f12e9735318ac5620e484f7b03a03be9ca8a261731c66330def87914114ae37cda3f9e46a58b3157c25b85f3b265e093dfa7e5cd5edebf171f8eadc15b7ef95
   languageName: node
   linkType: hard
 
@@ -1200,14 +1338,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-regenerator@npm:^7.17.9":
-  version: 7.17.9
-  resolution: "@babel/plugin-transform-regenerator@npm:7.17.9"
+"@babel/plugin-transform-regenerator@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/plugin-transform-regenerator@npm:7.18.0"
   dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.17.12"
     regenerator-transform: "npm:^0.15.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 6e9c403d024db700cbda3455dddcbda8064a35af83e371b5d627ca8b88f558e69976a7d1f5bcc1e7e7abd3d8625a71dac5600a6262dd973bbc46dc20de86d94b
+  checksum: fc87e92a684ec114298eadd078b027c8ce11fcefc47bb86305b67dcec43392ec5286775e80f84ae0c8857f2c91afb2f0962ed84c9d0fc9922adb14bcb7721f31
   languageName: node
   linkType: hard
 
@@ -1324,9 +1463,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:7.17.12":
-  version: 7.17.12
-  resolution: "@babel/preset-env@npm:7.17.12"
+"@babel/preset-env@npm:7.18.0":
+  version: 7.18.0
+  resolution: "@babel/preset-env@npm:7.18.0"
   dependencies:
     "@babel/compat-data": "npm:^7.17.10"
     "@babel/helper-compilation-targets": "npm:^7.17.10"
@@ -1336,14 +1475,14 @@ __metadata:
     "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": "npm:^7.17.12"
     "@babel/plugin-proposal-async-generator-functions": "npm:^7.17.12"
     "@babel/plugin-proposal-class-properties": "npm:^7.17.12"
-    "@babel/plugin-proposal-class-static-block": "npm:^7.17.12"
+    "@babel/plugin-proposal-class-static-block": "npm:^7.18.0"
     "@babel/plugin-proposal-dynamic-import": "npm:^7.16.7"
     "@babel/plugin-proposal-export-namespace-from": "npm:^7.17.12"
     "@babel/plugin-proposal-json-strings": "npm:^7.17.12"
     "@babel/plugin-proposal-logical-assignment-operators": "npm:^7.17.12"
     "@babel/plugin-proposal-nullish-coalescing-operator": "npm:^7.17.12"
     "@babel/plugin-proposal-numeric-separator": "npm:^7.16.7"
-    "@babel/plugin-proposal-object-rest-spread": "npm:^7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:^7.18.0"
     "@babel/plugin-proposal-optional-catch-binding": "npm:^7.16.7"
     "@babel/plugin-proposal-optional-chaining": "npm:^7.17.12"
     "@babel/plugin-proposal-private-methods": "npm:^7.17.12"
@@ -1354,6 +1493,7 @@ __metadata:
     "@babel/plugin-syntax-class-static-block": "npm:^7.14.5"
     "@babel/plugin-syntax-dynamic-import": "npm:^7.8.3"
     "@babel/plugin-syntax-export-namespace-from": "npm:^7.8.3"
+    "@babel/plugin-syntax-import-assertions": "npm:^7.17.12"
     "@babel/plugin-syntax-json-strings": "npm:^7.8.3"
     "@babel/plugin-syntax-logical-assignment-operators": "npm:^7.10.4"
     "@babel/plugin-syntax-nullish-coalescing-operator": "npm:^7.8.3"
@@ -1369,7 +1509,7 @@ __metadata:
     "@babel/plugin-transform-block-scoping": "npm:^7.17.12"
     "@babel/plugin-transform-classes": "npm:^7.17.12"
     "@babel/plugin-transform-computed-properties": "npm:^7.17.12"
-    "@babel/plugin-transform-destructuring": "npm:^7.17.12"
+    "@babel/plugin-transform-destructuring": "npm:^7.18.0"
     "@babel/plugin-transform-dotall-regex": "npm:^7.16.7"
     "@babel/plugin-transform-duplicate-keys": "npm:^7.17.12"
     "@babel/plugin-transform-exponentiation-operator": "npm:^7.16.7"
@@ -1377,16 +1517,16 @@ __metadata:
     "@babel/plugin-transform-function-name": "npm:^7.16.7"
     "@babel/plugin-transform-literals": "npm:^7.17.12"
     "@babel/plugin-transform-member-expression-literals": "npm:^7.16.7"
-    "@babel/plugin-transform-modules-amd": "npm:^7.17.12"
-    "@babel/plugin-transform-modules-commonjs": "npm:^7.17.12"
-    "@babel/plugin-transform-modules-systemjs": "npm:^7.17.12"
-    "@babel/plugin-transform-modules-umd": "npm:^7.17.12"
+    "@babel/plugin-transform-modules-amd": "npm:^7.18.0"
+    "@babel/plugin-transform-modules-commonjs": "npm:^7.18.0"
+    "@babel/plugin-transform-modules-systemjs": "npm:^7.18.0"
+    "@babel/plugin-transform-modules-umd": "npm:^7.18.0"
     "@babel/plugin-transform-named-capturing-groups-regex": "npm:^7.17.12"
     "@babel/plugin-transform-new-target": "npm:^7.17.12"
     "@babel/plugin-transform-object-super": "npm:^7.16.7"
     "@babel/plugin-transform-parameters": "npm:^7.17.12"
     "@babel/plugin-transform-property-literals": "npm:^7.16.7"
-    "@babel/plugin-transform-regenerator": "npm:^7.17.9"
+    "@babel/plugin-transform-regenerator": "npm:^7.18.0"
     "@babel/plugin-transform-reserved-words": "npm:^7.17.12"
     "@babel/plugin-transform-shorthand-properties": "npm:^7.16.7"
     "@babel/plugin-transform-spread": "npm:^7.17.12"
@@ -1396,7 +1536,7 @@ __metadata:
     "@babel/plugin-transform-unicode-escapes": "npm:^7.16.7"
     "@babel/plugin-transform-unicode-regex": "npm:^7.16.7"
     "@babel/preset-modules": "npm:^0.1.5"
-    "@babel/types": "npm:^7.17.12"
+    "@babel/types": "npm:^7.18.0"
     babel-plugin-polyfill-corejs2: "npm:^0.3.0"
     babel-plugin-polyfill-corejs3: "npm:^0.5.0"
     babel-plugin-polyfill-regenerator: "npm:^0.3.0"
@@ -1404,7 +1544,7 @@ __metadata:
     semver: "npm:^6.3.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 2a87dc42c617db156f97fc0dbaa61fc295fcab3594dde4024bb449600f91869ead75d73b3cf5610ff4b06de19ada56d257b86065182e9a2e48d0a953cc889b44
+  checksum: 1fbdae30ef476675cf0ee0c747ccc45805be1a64d9bcd06413d74e75e843282b522c65c0642e14165c773348836fcbb4ab0de9f8bc183b35c3b1f03f8788cc52
   languageName: node
   linkType: hard
 
@@ -1502,6 +1642,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/traverse@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/traverse@npm:7.18.0"
+  dependencies:
+    "@babel/code-frame": "npm:^7.16.7"
+    "@babel/generator": "npm:^7.18.0"
+    "@babel/helper-environment-visitor": "npm:^7.16.7"
+    "@babel/helper-function-name": "npm:^7.17.9"
+    "@babel/helper-hoist-variables": "npm:^7.16.7"
+    "@babel/helper-split-export-declaration": "npm:^7.16.7"
+    "@babel/parser": "npm:^7.18.0"
+    "@babel/types": "npm:^7.18.0"
+    debug: "npm:^4.1.0"
+    globals: "npm:^11.1.0"
+  checksum: 408480eea636c984e1d7affdcc11c2bbba1f62e6b2ba5fdf6bfa80baadcc0c628564961f0172717dea0cd9255be259fd9e21f9805e6eaf06e3bd09b5f0e3d4bf
+  languageName: node
+  linkType: hard
+
 "@babel/types@npm:^7.0.0, @babel/types@npm:^7.16.0, @babel/types@npm:^7.16.7, @babel/types@npm:^7.16.8, @babel/types@npm:^7.17.0, @babel/types@npm:^7.17.12, @babel/types@npm:^7.3.0, @babel/types@npm:^7.3.3, @babel/types@npm:^7.4.4, @babel/types@npm:^7.8.3":
   version: 7.17.12
   resolution: "@babel/types@npm:7.17.12"
@@ -1509,6 +1667,16 @@ __metadata:
     "@babel/helper-validator-identifier": "npm:^7.16.7"
     to-fast-properties: "npm:^2.0.0"
   checksum: ac16ed741a3ef69d42a1ee425e6b69f99c0effa2c65cb9795d1f26dda844188df59c414e6ad8a83a0644b9bc8513811dba79045263190aeb417e08a620beb188
+  languageName: node
+  linkType: hard
+
+"@babel/types@npm:^7.18.0":
+  version: 7.18.0
+  resolution: "@babel/types@npm:7.18.0"
+  dependencies:
+    "@babel/helper-validator-identifier": "npm:^7.16.7"
+    to-fast-properties: "npm:^2.0.0"
+  checksum: c41df85315750f2703be9ae1bd75bf698f8956b285bafaeeb964b70c0496dd36813b814fad56d31fd42bd28dce301a0a701498e3f66774b4c3b38a654141a134
   languageName: node
   linkType: hard
 
@@ -1557,11 +1725,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/privacypass-sjcl": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.0"
@@ -1589,7 +1757,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -1606,7 +1774,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -1621,11 +1789,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -1652,7 +1820,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -1668,7 +1836,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -1684,11 +1852,11 @@ __metadata:
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
     "@abraham/reflection": "npm:^0.10.0"
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/anonymous-tokens": "npm:^0.0.0"
     "@coil/client": "npm:^0.0.0"
@@ -1741,7 +1909,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     foxr: "npm:0.10.1"
@@ -1770,7 +1938,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     uuid: "npm:^8.3.2"
@@ -1789,11 +1957,11 @@ __metadata:
   dependencies:
     "@abraham/reflection": "npm:^0.10.0"
     "@apollo/utils.logger": "npm:^1.0.0"
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@coil/privacypass-sjcl": "npm:0.0.0"
@@ -1837,7 +2005,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     express: "npm:^4.18.1"
@@ -1863,7 +2031,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -1878,11 +2046,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -1908,7 +2076,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -1926,7 +2094,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -1942,11 +2110,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@coil/polyfill-utils": "npm:^0.0.0"
@@ -1979,7 +2147,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -1998,7 +2166,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     uuid: "npm:^8.3.2"
@@ -2014,11 +2182,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -2042,7 +2210,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -2057,7 +2225,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -2072,11 +2240,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -2105,7 +2273,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -2122,7 +2290,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -2137,11 +2305,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.0"
@@ -2171,7 +2339,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     get-port: "npm:^5.1.1"
@@ -2188,7 +2356,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     web-ext: "npm:^6.1.0"
@@ -2204,11 +2372,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -2235,7 +2403,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     events: "npm:^3.3.0"
@@ -2254,7 +2422,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     util: "npm:^0.12.4"
@@ -2270,11 +2438,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.0"
@@ -2299,7 +2467,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -2313,7 +2481,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -2565,11 +2733,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -2593,7 +2761,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -2607,7 +2775,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -2622,11 +2790,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -2651,7 +2819,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -2666,7 +2834,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -3264,11 +3432,11 @@ __metadata:
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
     "@abraham/reflection": "npm:^0.10.0"
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/polyfill-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.0"
@@ -3307,7 +3475,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     file-loader: "npm:6.2.0"
@@ -3330,7 +3498,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typeface-roboto: "npm:^1.1.13"
     typescript: "npm:4.6.4"
@@ -5086,11 +5254,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -5114,7 +5282,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -5129,7 +5297,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -6358,11 +6526,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.0"
@@ -6391,7 +6559,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     events: "npm:^3.3.0"
@@ -6410,7 +6578,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     util: "npm:^0.12.4"
@@ -6427,11 +6595,11 @@ __metadata:
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
     "@abraham/reflection": "npm:^0.10.0"
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.0"
@@ -6467,7 +6635,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     express: "npm:^4.17.1"
@@ -6495,7 +6663,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -6510,11 +6678,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -6540,7 +6708,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -6556,7 +6724,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     uuid: "npm:^8.3.2"
@@ -6572,11 +6740,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.0"
@@ -6603,7 +6771,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -6617,7 +6785,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -6634,11 +6802,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.0"
@@ -6670,7 +6838,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     html-webpack-plugin: "npm:5.5.0"
@@ -6688,7 +6856,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     uuid: "npm:^8.3.2"
@@ -6704,11 +6872,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -6732,7 +6900,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -6747,7 +6915,7 @@ __metadata:
     ts-json-schema-generator: "npm:1.0.0"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -6762,11 +6930,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -6793,7 +6961,7 @@ __metadata:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -6807,7 +6975,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
@@ -8079,6 +8247,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array-includes@npm:^3.1.5":
+  version: 3.1.5
+  resolution: "array-includes@npm:3.1.5"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+    define-properties: "npm:^1.1.4"
+    es-abstract: "npm:^1.19.5"
+    get-intrinsic: "npm:^1.1.1"
+    is-string: "npm:^1.0.7"
+  checksum: 179efa9a88d50c95d35af2cb269a41aee180217fe7a1de1a7992f512f53a677c235f14b2242dcf2550feac0cfac80e189cd8a8b8949f868dbe8da6f70ea771c7
+  languageName: node
+  linkType: hard
+
 "array-map@npm:~0.0.0":
   version: 0.0.0
   resolution: "array-map@npm:0.0.0"
@@ -8118,14 +8299,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array.prototype.flatmap@npm:^1.2.5":
-  version: 1.2.5
-  resolution: "array.prototype.flatmap@npm:1.2.5"
+"array.prototype.flatmap@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "array.prototype.flatmap@npm:1.3.0"
   dependencies:
-    call-bind: "npm:^1.0.0"
+    call-bind: "npm:^1.0.2"
     define-properties: "npm:^1.1.3"
-    es-abstract: "npm:^1.19.0"
-  checksum: 0716990b9be865373331b3dd7b4d559b02037cd89070cf33cfcb58a67cea32447fc58e89d1ba277b81e6740e8a4daed47daeb966f07bc0c8792bbe92c54b54c5
+    es-abstract: "npm:^1.19.2"
+    es-shim-unscopables: "npm:^1.0.0"
+  checksum: 4777a24151df492917e8f9c1de8f91a97feb9d967a1cb302cdde1cde09b73e1e1732345aaaef54945ae6ec375ade7746db6f4c2df24a89c9c27f0fc484211af5
   languageName: node
   linkType: hard
 
@@ -11106,6 +11288,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"define-properties@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "define-properties@npm:1.1.4"
+  dependencies:
+    has-property-descriptors: "npm:^1.0.0"
+    object-keys: "npm:^1.1.1"
+  checksum: 94a6a24f787300c11c53b76e207e53908c86fd508f0dacf0bab49afff62b20439513e14318cebdb3223eef7a49d572eaf7f069a21af80e3ca3f898bbf22c9c8e
+  languageName: node
+  linkType: hard
+
 "define-property@npm:^0.2.5":
   version: 0.2.5
   resolution: "define-property@npm:0.2.5"
@@ -11784,10 +11976,50 @@ __metadata:
   languageName: node
   linkType: hard
 
+"es-abstract@npm:^1.19.2, es-abstract@npm:^1.19.5":
+  version: 1.20.1
+  resolution: "es-abstract@npm:1.20.1"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+    es-to-primitive: "npm:^1.2.1"
+    function-bind: "npm:^1.1.1"
+    function.prototype.name: "npm:^1.1.5"
+    get-intrinsic: "npm:^1.1.1"
+    get-symbol-description: "npm:^1.0.0"
+    has: "npm:^1.0.3"
+    has-property-descriptors: "npm:^1.0.0"
+    has-symbols: "npm:^1.0.3"
+    internal-slot: "npm:^1.0.3"
+    is-callable: "npm:^1.2.4"
+    is-negative-zero: "npm:^2.0.2"
+    is-regex: "npm:^1.1.4"
+    is-shared-array-buffer: "npm:^1.0.2"
+    is-string: "npm:^1.0.7"
+    is-weakref: "npm:^1.0.2"
+    object-inspect: "npm:^1.12.0"
+    object-keys: "npm:^1.1.1"
+    object.assign: "npm:^4.1.2"
+    regexp.prototype.flags: "npm:^1.4.3"
+    string.prototype.trimend: "npm:^1.0.5"
+    string.prototype.trimstart: "npm:^1.0.5"
+    unbox-primitive: "npm:^1.0.2"
+  checksum: 9a42a343e1fcf4b0d872f03229bc420044dd9bcafb837a00be1f0b3f98fa458f74d60e2359842bfc76b3331eed5612e259e9f24b61195fa8fadbbbdcf8d5802d
+  languageName: node
+  linkType: hard
+
 "es-module-lexer@npm:^0.9.0":
   version: 0.9.2
   resolution: "es-module-lexer@npm:0.9.2"
   checksum: 9547bea09cd85c358ef4ea692d2a60b0347614b346bbc6ebb962a74096a3a21bf238e4dbcae23c1ae1c1ab831e3ca357a47f54efb225840c1378769d3aaea6e8
+  languageName: node
+  linkType: hard
+
+"es-shim-unscopables@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "es-shim-unscopables@npm:1.0.0"
+  dependencies:
+    has: "npm:^1.0.3"
+  checksum: d160870a41ecfb1a49e3921d1ca5c05c1fc6f54adafdc48ed98814e8ae3d7b98144ea3f864255f7165c7ba7e82209a6bdbf1c5ad2d84e0c37a9ab7fe79439a0a
   languageName: node
   linkType: hard
 
@@ -12186,27 +12418,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:7.29.4":
-  version: 7.29.4
-  resolution: "eslint-plugin-react@npm:7.29.4"
+"eslint-plugin-react@npm:7.30.0":
+  version: 7.30.0
+  resolution: "eslint-plugin-react@npm:7.30.0"
   dependencies:
-    array-includes: "npm:^3.1.4"
-    array.prototype.flatmap: "npm:^1.2.5"
+    array-includes: "npm:^3.1.5"
+    array.prototype.flatmap: "npm:^1.3.0"
     doctrine: "npm:^2.1.0"
     estraverse: "npm:^5.3.0"
     jsx-ast-utils: "npm:^2.4.1 || ^3.0.0"
     minimatch: "npm:^3.1.2"
     object.entries: "npm:^1.1.5"
     object.fromentries: "npm:^2.0.5"
-    object.hasown: "npm:^1.1.0"
+    object.hasown: "npm:^1.1.1"
     object.values: "npm:^1.1.5"
     prop-types: "npm:^15.8.1"
     resolve: "npm:^2.0.0-next.3"
     semver: "npm:^6.3.0"
-    string.prototype.matchall: "npm:^4.0.6"
+    string.prototype.matchall: "npm:^4.0.7"
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-  checksum: d7f0fcaa7ace3b5b7b11553f64a607fefe519a3b6419878ac1e581d38906c8d0f2f65ae127619e127e733d75ff03244a7efb76fe3c2d434bbc9ff908b8c6c6ee
+  checksum: b65554661aba886c1983d8751670dbf761dcd11bfd9e28af9d692564c786a27128f856cd6ee152eea0f2464980a212b1b2897e4d481ffff29de32698411a2112
   languageName: node
   linkType: hard
 
@@ -13724,10 +13956,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"function.prototype.name@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "function.prototype.name@npm:1.1.5"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+    define-properties: "npm:^1.1.3"
+    es-abstract: "npm:^1.19.0"
+    functions-have-names: "npm:^1.2.2"
+  checksum: 3c909b6d1d29db8d856e6816189ba46b117e85b00f8261f2dbad5975db20d9830a0484dc6d2a92034aa8dc1e84205de10dc830882e07c6b4a5cfe3e9aa72f5a7
+  languageName: node
+  linkType: hard
+
 "functional-red-black-tree@npm:^1.0.1":
   version: 1.0.1
   resolution: "functional-red-black-tree@npm:1.0.1"
   checksum: 275f10e8abe29375137a6dc662b54bf6452704560a4888dde5720b1901b5489703f45169a92e02c758dd0ebc4c6206e2cb57c326a9b9dd6e3992aeaf4038dddc
+  languageName: node
+  linkType: hard
+
+"functions-have-names@npm:^1.2.2":
+  version: 1.2.3
+  resolution: "functions-have-names@npm:1.2.3"
+  checksum: 2b58e5d607d7338c29e5ff8c285ddf09d79857b6d0ef9f781ee2e80cf666726d6909b5ab635e13d49ded9dcfd3c7abc01a22a52089bf23833848a6bfb6e8dac1
   languageName: node
   linkType: hard
 
@@ -14492,6 +14743,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"has-bigints@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "has-bigints@npm:1.0.2"
+  checksum: 2f15628a0353cfc818b8710f306ac3b7ea05ca36d469484d1b0b91337720844c83c7d71f7346fbfa61a12fc0e3a3c39a0b1b1b294735f4bd0049697314e18b8a
+  languageName: node
+  linkType: hard
+
 "has-color@npm:~0.1.0":
   version: 0.1.7
   resolution: "has-color@npm:0.1.7"
@@ -14520,10 +14778,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"has-property-descriptors@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "has-property-descriptors@npm:1.0.0"
+  dependencies:
+    get-intrinsic: "npm:^1.1.1"
+  checksum: 74813c8c23b7e2a8cb8253d77094347d2e0cc380e0475962815764f6b60e815290a7ce82bab1df78418e991f22289aa14151972b6bc66483ad22610ea8ab5c7e
+  languageName: node
+  linkType: hard
+
 "has-symbols@npm:^1.0.1, has-symbols@npm:^1.0.2":
   version: 1.0.2
   resolution: "has-symbols@npm:1.0.2"
   checksum: 2397fd4aaa90ca33ceba09c987eb3150209b5196ec984af418897870bc1e7d971c6b24e17aafe1532ff311aa8d46de0cb78ccee0fe785d30bd9ac4865511d6b2
+  languageName: node
+  linkType: hard
+
+"has-symbols@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "has-symbols@npm:1.0.3"
+  checksum: 2d0abb3382da2945b1b8d9a4afebc8a0770fe07198e727b4fbd7f616c70796f040bf2bd8d6db47e0c590507812a2680594fc77f871238289f6c7870318cf62c9
   languageName: node
   linkType: hard
 
@@ -15938,6 +16212,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-negative-zero@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "is-negative-zero@npm:2.0.2"
+  checksum: ce904d0d03bacd5393b3eba41321333169bd6fe8f87d1341016899e91c700f660e5e6b6dd3f3d9de5a12261cec207cf85914d1a89ad428e19c2983e451a8ac59
+  languageName: node
+  linkType: hard
+
 "is-npm@npm:^3.0.0":
   version: 3.0.0
   resolution: "is-npm@npm:3.0.0"
@@ -16112,6 +16393,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-shared-array-buffer@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "is-shared-array-buffer@npm:1.0.2"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+  checksum: 89167fd3a2768021900ea3e5d4d844127bffea24fa9f171e5e621cb454ffac2539e224ba95567f71154cf488eda4e995282491eb5863d312daa0f14eefa4346e
+  languageName: node
+  linkType: hard
+
 "is-ssh@npm:^1.3.0":
   version: 1.3.2
   resolution: "is-ssh@npm:1.3.2"
@@ -16219,6 +16509,15 @@ __metadata:
   dependencies:
     call-bind: "npm:^1.0.0"
   checksum: 517d762fa2d08aef77c70cf218d75c9085bdc267d12ecd4d5bc77d20667c371045afb7c83116b62e5747c27957f4c12e1674cbd4a5cd0a6ae23bb49d5390a735
+  languageName: node
+  linkType: hard
+
+"is-weakref@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "is-weakref@npm:1.0.2"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+  checksum: fdd5b2df8209f8387a86c8a504f6983fff0f90b46aabfe8d97ffbf34d2cbb6f64edbaec8da16deedd876c228b7b721ead65f42f20f1a0e7ebf294f669542c534
   languageName: node
   linkType: hard
 
@@ -19772,13 +20071,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object.hasown@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "object.hasown@npm:1.1.0"
+"object.hasown@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "object.hasown@npm:1.1.1"
   dependencies:
-    define-properties: "npm:^1.1.3"
-    es-abstract: "npm:^1.19.1"
-  checksum: 53ab22e20add42a57bfc722dca0ca7b1f36e59e8d4a0dc671031453a5751073bfe9bedfdb8971817d762c640d7baad3a2d8b31e97033062ecd2b6b2d111b0e8e
+    define-properties: "npm:^1.1.4"
+    es-abstract: "npm:^1.19.5"
+  checksum: 0f315c055c15890e14313be35420c62dc462efef012dd65b80393b23b9304af324f101de757620b0cc6566466be7f02c357cb08cd4b3843c270cf94168030a54
   languageName: node
   linkType: hard
 
@@ -21961,13 +22260,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regexp.prototype.flags@npm:^1.2.0, regexp.prototype.flags@npm:^1.3.1":
+"regexp.prototype.flags@npm:^1.2.0":
   version: 1.3.1
   resolution: "regexp.prototype.flags@npm:1.3.1"
   dependencies:
     call-bind: "npm:^1.0.2"
     define-properties: "npm:^1.1.3"
   checksum: 764bd6e49cc80e37d114b707d1907499ab2948cdd829c63d032d6fe1cff00293a0251a1a78fb28079c3d6d773454db9eace6ef7b3f43c3a3d896afb22461bda5
+  languageName: node
+  linkType: hard
+
+"regexp.prototype.flags@npm:^1.4.1, regexp.prototype.flags@npm:^1.4.3":
+  version: 1.4.3
+  resolution: "regexp.prototype.flags@npm:1.4.3"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+    define-properties: "npm:^1.1.3"
+    functions-have-names: "npm:^1.2.2"
+  checksum: 73e364f4cc03ed04f5f966300c6b9672c3bd049f2636db534b7e6f3e03575c178e04def3d73ac0e393bca3400b2acbee6c0609b89b93a51c83c56ed472de7739
   languageName: node
   linkType: hard
 
@@ -23768,19 +24078,19 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"string.prototype.matchall@npm:^4.0.6":
-  version: 4.0.6
-  resolution: "string.prototype.matchall@npm:4.0.6"
+"string.prototype.matchall@npm:^4.0.7":
+  version: 4.0.7
+  resolution: "string.prototype.matchall@npm:4.0.7"
   dependencies:
     call-bind: "npm:^1.0.2"
     define-properties: "npm:^1.1.3"
     es-abstract: "npm:^1.19.1"
     get-intrinsic: "npm:^1.1.1"
-    has-symbols: "npm:^1.0.2"
+    has-symbols: "npm:^1.0.3"
     internal-slot: "npm:^1.0.3"
-    regexp.prototype.flags: "npm:^1.3.1"
+    regexp.prototype.flags: "npm:^1.4.1"
     side-channel: "npm:^1.0.4"
-  checksum: 43ee31665e131abd7ff19ea1e603810fd382128920f7302fe3b8b827319626b7334e6a214fef98889682b89b22df51394182ae659da04a3a81fbdb4c3e4e54dd
+  checksum: 25347979dc8b8852ef270f2f070b5993d29300d92901bad00d7370f213f60cf2a2e419fc9320c28fbfbaecc9719deffed2834eafacb5595f888c01297b0d948e
   languageName: node
   linkType: hard
 
@@ -23794,6 +24104,17 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
+"string.prototype.trimend@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "string.prototype.trimend@npm:1.0.5"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+    define-properties: "npm:^1.1.4"
+    es-abstract: "npm:^1.19.5"
+  checksum: b09b83119d8fd21d5125be72bc7e2a117a6313e35ce1f39ace2e4ead574834699a48b24587a5e92f6059335178ca139debc755cb9ec68f39bc7a4a41d6eba024
+  languageName: node
+  linkType: hard
+
 "string.prototype.trimstart@npm:^1.0.4":
   version: 1.0.4
   resolution: "string.prototype.trimstart@npm:1.0.4"
@@ -23801,6 +24122,17 @@ sjcl@sublimator/sjcl:
     call-bind: "npm:^1.0.2"
     define-properties: "npm:^1.1.3"
   checksum: 598b45ed10fd0c6159be484337f3732901196afb7637a5e8fe98022083d6f6a8bf1eaa198a606fa7b3bb2e3f18c1b95e43fb72282aa0107d2d642da9b60868c2
+  languageName: node
+  linkType: hard
+
+"string.prototype.trimstart@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "string.prototype.trimstart@npm:1.0.5"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+    define-properties: "npm:^1.1.4"
+    es-abstract: "npm:^1.19.5"
+  checksum: 59b07da535af429b595a3a3e639dc6bc5b3022bd8e4b04a5f63e4845609e5ddf763477cc9bed1a856432bd30d89bd7faa734e6653fb4745a2d347815b103821f
   languageName: node
   linkType: hard
 
@@ -24739,7 +25071,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:^1.1.8":
+"ts-node-dev@npm:1.1.8":
   version: 1.1.8
   resolution: "ts-node-dev@npm:1.1.8"
   dependencies:
@@ -25109,6 +25441,18 @@ sjcl@sublimator/sjcl:
     has-symbols: "npm:^1.0.2"
     which-boxed-primitive: "npm:^1.0.2"
   checksum: 27939a4a0733c25d714571963009d211a46d0b8b1bb09525c3e7901ce5f832a1f37cace80c5081ef5f4800875f18df82568e4090515c3bce0c422332922bb1a6
+  languageName: node
+  linkType: hard
+
+"unbox-primitive@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "unbox-primitive@npm:1.0.2"
+  dependencies:
+    call-bind: "npm:^1.0.2"
+    has-bigints: "npm:^1.0.2"
+    has-symbols: "npm:^1.0.3"
+    which-boxed-primitive: "npm:^1.0.2"
+  checksum: de21ca5e49bb56d46c7d3672d3d2900b3859ee9541903993bca02a94a317ec1c720b316f025bf5c0f51f7ff9ad383782970acae0408b900ae0537727f614c4e1
   languageName: node
   linkType: hard
 
@@ -25741,11 +26085,11 @@ sjcl@sublimator/sjcl:
   version: 0.0.0-use.local
   resolution: "web-monetization@workspace:."
   dependencies:
-    "@babel/core": "npm:7.17.12"
+    "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.17.12"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.17.12"
-    "@babel/preset-env": "npm:7.17.12"
+    "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.0"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.0"
     "@commitlint/config-conventional": "npm:17.0.0"
@@ -25769,7 +26113,7 @@ sjcl@sublimator/sjcl:
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
     eslint-plugin-promise: "npm:6.0.0"
-    eslint-plugin-react: "npm:7.29.4"
+    eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.5.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
@@ -25783,7 +26127,7 @@ sjcl@sublimator/sjcl:
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.7.0"
-    ts-node-dev: "npm:^1.1.8"
+    ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
     webpack: "npm:5.72.1"
