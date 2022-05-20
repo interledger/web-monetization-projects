@@ -17,6 +17,7 @@
     "upkeep": "ts-node -T packages/coil-monorepo-upkeep/upkeep.ts",
     "upkeep:new-package": "ts-node -T packages/coil-monorepo-upkeep/new-package.ts",
     "upkeep:check-updates": "ts-node -T packages/coil-monorepo-upkeep/check-updates.ts",
+    "upkeep:get-main-devdeps": "ts-node -T packages/coil-monorepo-upkeep/get-main-devdeps.ts",
     "clean:build": "rimraf packages/*/build",
     "build:ts": "tsc --build tsconfig.references.json",
     "build:ts:verbose": "yarn build:ts --verbose",
