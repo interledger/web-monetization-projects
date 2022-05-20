@@ -31,6 +31,7 @@ let config = {
   testEnvironment: 'jsdom',
   rootDir: '.',
   moduleNameMapper,
+  resolver: `${__dirname}/commands/jest/resolver.js`,
   moduleFileExtensions: ['js', 'ts', 'tsx', 'jsx', 'json'],
   transform: {
     '^.+\\.(t|j)sx?$': ['@swc/jest']
