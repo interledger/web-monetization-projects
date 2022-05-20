@@ -44,7 +44,7 @@
     ]
   },
   "resolutions": {
-    "@types/react": "17.0.44",
+    "@types/react": "17.0.45",
     "@types/serve-static": "1.13.10",
     "inversify": "patch:inversify@npm:6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da",
     "@wext/shipit": "patch:@wext/shipit@npm:0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515"
@@ -85,7 +85,6 @@
     "husky": "8.0.1",
     "jest": "28.1.0",
     "jest-environment-jsdom": "28.1.0",
-    "lerna": "4.0.0",
     "lint-staged": "12.4.1",
     "prettier": "2.6.2",
     "regenerator-runtime": "^0.13.9",
@@ -105,5 +104,5 @@
   "engines": {
     "node": ">= 14.0.0"
   },
-  "packageManager": "yarn@4.0.0-rc.4"
+  "packageManager": "yarn@4.0.0-rc.6"
 }

@@ -12,18 +12,24 @@ declare global {
   interface Window {
     bg: BackgroundScript
     clearTokens: () => void
+    clearPopupRouteState: () => void
   }
 }
 
-window.clearTokens = function clearTokens() {
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i)
-    if (key?.startsWith('anonymous_token:')) {
-      console.log('deleting', key)
-      localStorage.removeItem(key)
+function prefixClearer(prefix: string) {
+  return () => {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i)
+      if (key?.startsWith(prefix)) {
+        console.log('deleting', key)
+        localStorage.removeItem(key)
+      }
     }
   }
 }
+
+window.clearPopupRouteState = prefixClearer('popup-route:')
+window.clearTokens = prefixClearer('anonymous_token:')
 
 async function main() {
   if (loggingEnabled) {

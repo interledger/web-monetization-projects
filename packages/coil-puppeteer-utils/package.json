@@ -36,7 +36,7 @@
     "@webmonetization/types": "0.0.0",
     "debug": "^4.3.1",
     "get-port": "^5.1.1",
-    "puppeteer": "^13.1.1",
+    "puppeteer": "^14.0.0",
     "tmp": "^0.2.1",
     "web-ext": "^6.1.0"
   },
@@ -79,7 +79,6 @@
     "husky": "8.0.1",
     "jest": "28.1.0",
     "jest-environment-jsdom": "28.1.0",
-    "lerna": "4.0.0",
     "lint-staged": "12.4.1",
     "prettier": "2.6.2",
     "regenerator-runtime": "^0.13.9",

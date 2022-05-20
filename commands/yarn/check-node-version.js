@@ -5,9 +5,10 @@ module.exports = {
   factory: require => {
     const version = process.version.replace(/[^0-9.]/g, '')
     const major = Number(version.split('.')[0])
-    if (major < 14) {
+    const minimum = 16
+    if (major < minimum && !process.env.VERCEL) {
       throw new Error(
-        `node version ${process.version} < minimum node version: v14`
+        `node version ${process.version} < minimum node version: v${minimum}`
       )
     }
     return {}

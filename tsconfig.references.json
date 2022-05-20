@@ -3,7 +3,19 @@
   "files": [],
   "references": [
     {
+      "path": "packages/coil-anonymous-tokens/tsconfig.build.json"
+    },
+    {
+      "path": "packages/coil-client/tsconfig.build.json"
+    },
+    {
+      "path": "packages/coil-extension/tsconfig.build.json"
+    },
+    {
       "path": "packages/coil-monorepo-upkeep/tsconfig.build.json"
+    },
+    {
+      "path": "packages/coil-oauth-scripts/tsconfig.build.json"
     },
     {
       "path": "packages/coil-polyfill-utils/tsconfig.build.json"
@@ -12,28 +24,31 @@
       "path": "packages/coil-privacypass-sjcl/tsconfig.build.json"
     },
     {
+      "path": "packages/coil-puppeteer-utils/tsconfig.build.json"
+    },
+    {
       "path": "packages/coil-webpack-utils/tsconfig.build.json"
+    },
+    {
+      "path": "packages/coil-wm-utils/tsconfig.build.json"
     },
     {
       "path": "packages/dier-makr-annotations/tsconfig.build.json"
     },
     {
-      "path": "packages/stacktracejs-stacktrace-js/tsconfig.build.json"
-    },
-    {
-      "path": "packages/webmonetization-types/tsconfig.build.json"
-    },
-    {
-      "path": "packages/coil-anonymous-tokens/tsconfig.build.json"
-    },
-    {
-      "path": "packages/coil-client/tsconfig.build.json"
-    },
-    {
       "path": "packages/dier-makr-inversify/tsconfig.build.json"
     },
     {
+      "path": "packages/interledger-minute-extension/tsconfig.build.json"
+    },
+    {
+      "path": "packages/stacktracejs-stacktrace-js/tsconfig.build.json"
+    },
+    {
       "path": "packages/webexts-build-utils/tsconfig.build.json"
+    },
+    {
+      "path": "packages/webmonetization-demo/tsconfig.build.json"
     },
     {
       "path": "packages/webmonetization-polyfill-utils/tsconfig.build.json"
@@ -45,25 +60,10 @@
       "path": "packages/webmonetization-testing-utils/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-puppeteer-utils/tsconfig.build.json"
-    },
-    {
-      "path": "packages/coil-wm-utils/tsconfig.build.json"
-    },
-    {
-      "path": "packages/webmonetization-demo/tsconfig.build.json"
+      "path": "packages/webmonetization-types/tsconfig.build.json"
     },
     {
       "path": "packages/webmonetization-wext/tsconfig.build.json"
-    },
-    {
-      "path": "packages/coil-extension/tsconfig.build.json"
-    },
-    {
-      "path": "packages/coil-oauth-scripts/tsconfig.build.json"
-    },
-    {
-      "path": "packages/interledger-minute-extension/tsconfig.build.json"
     }
   ]
 }

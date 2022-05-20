@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "jsc": {
         "parser": {
             "syntax": "typescript",
@@ -14,4 +15,21 @@
     "module": {
         "type": "commonjs"
     }
+=======
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true,
+      "decorators": true,
+      "dynamicImport": false
+    },
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": true
+    }
+  },
+  "module": {
+    "type": "commonjs"
+  }
+>>>>>>> origin/main
 }

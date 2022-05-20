@@ -33,7 +33,7 @@ let config = {
   moduleNameMapper,
   moduleFileExtensions: ['js', 'ts', 'tsx', 'jsx', 'json'],
   transform: {
-    '^.+\\.tsx?$': '@swc/jest'
+    '^.+\\.(t|j)sx?$': ['@swc/jest']
   },
   setupFiles: [__dirname + '/commands/jest/loadReflection.js'],
   globals: {

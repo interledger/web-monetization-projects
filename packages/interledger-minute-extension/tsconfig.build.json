@@ -21,15 +21,6 @@
       "path": "../coil-polyfill-utils/tsconfig.build.json"
     },
     {
-      "path": "../coil-webpack-utils/tsconfig.build.json"
-    },
-    {
-      "path": "../dier-makr-annotations/tsconfig.build.json"
-    },
-    {
-      "path": "../webmonetization-types/tsconfig.build.json"
-    },
-    {
       "path": "../dier-makr-inversify/tsconfig.build.json"
     },
     {
@@ -37,6 +28,9 @@
     },
     {
       "path": "../webmonetization-polyfill-utils/tsconfig.build.json"
+    },
+    {
+      "path": "../webmonetization-types/tsconfig.build.json"
     },
     {
       "path": "../webmonetization-wext/tsconfig.build.json"
