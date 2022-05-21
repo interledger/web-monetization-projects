@@ -1476,7 +1476,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -1537,7 +1537,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -1637,7 +1637,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -1701,7 +1701,7 @@ __metadata:
     sort-package-json: "npm:1.57.0"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -1772,7 +1772,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -1830,7 +1830,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -1894,7 +1894,7 @@ __metadata:
     sjcl: sublimator/sjcl
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -1959,7 +1959,7 @@ __metadata:
     tmp: "npm:^0.2.1"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -2024,7 +2024,7 @@ __metadata:
     string_decoder: "npm:^1.3.0"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -2082,7 +2082,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -2282,19 +2282,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cspotcode/source-map-consumer@npm:0.8.0":
-  version: 0.8.0
-  resolution: "@cspotcode/source-map-consumer@npm:0.8.0"
-  checksum: 9bc8e423662d1d4eaa318d0723fe5a164bb1a973704ff6629b8be8ffcb19f3790c75a85d63116b5fc26a5229d2b0bd22c6811949377c6f9ce0b821319b8b043b
-  languageName: node
-  linkType: hard
-
-"@cspotcode/source-map-support@npm:0.7.0":
-  version: 0.7.0
-  resolution: "@cspotcode/source-map-support@npm:0.7.0"
+"@cspotcode/source-map-support@npm:^0.8.0":
+  version: 0.8.1
+  resolution: "@cspotcode/source-map-support@npm:0.8.1"
   dependencies:
-    "@cspotcode/source-map-consumer": "npm:0.8.0"
-  checksum: 46579a17f5aa358ce47b42bb9f492d8604698630e358dd541dd733a3e6987d52cd2283c2197140f3d28abd6a5dc5c4bc95aed32231d301ca6f86581fca63c8d6
+    "@jridgewell/trace-mapping": "npm:0.3.9"
+  checksum: 4327d8e6e4347897f5baf265c43ff094260a3ad7b53920fa07472aa18699ba7d570e5171082e88d19e4b5cce6f35cc1666b1c8ccb8b74d67e4f482395b8c511d
   languageName: node
   linkType: hard
 
@@ -2375,7 +2368,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -2433,7 +2426,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -2599,7 +2592,7 @@ __metadata:
     style-loader: "npm:3.3.1"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typeface-roboto: "npm:^1.1.13"
@@ -2915,6 +2908,16 @@ __metadata:
   version: 1.4.10
   resolution: "@jridgewell/sourcemap-codec@npm:1.4.10"
   checksum: 2a1673bb353ec47cf902dd4bb2a0ac82ea7ce51950068aa0a80b445e5617663f0f15f1269a3ca23fe786e936c57e17627ed0d9de3df0559bbaa5b7479a259fbe
+  languageName: node
+  linkType: hard
+
+"@jridgewell/trace-mapping@npm:0.3.9":
+  version: 0.3.9
+  resolution: "@jridgewell/trace-mapping@npm:0.3.9"
+  dependencies:
+    "@jridgewell/resolve-uri": "npm:^3.0.3"
+    "@jridgewell/sourcemap-codec": "npm:^1.4.10"
+  checksum: 542c5f0f0ae874121e9de649581f9619cc0c65e33292e1285f1233f5ff3e41e6f4f216d69a4c3f800b4d6db208ff6c710307e19e1ff170ed5304807e346e6cf9
   languageName: node
   linkType: hard
 
@@ -3271,7 +3274,7 @@ __metadata:
     source-map: "npm:0.5.6"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -4498,7 +4501,7 @@ __metadata:
     string_decoder: "npm:^1.3.0"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -4582,7 +4585,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -4642,7 +4645,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -4702,7 +4705,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -4772,7 +4775,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -4830,7 +4833,7 @@ __metadata:
     ts-jest: "npm:28.0.2"
     ts-json-schema-generator: "npm:1.0.0"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -4889,7 +4892,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
@@ -20702,11 +20705,11 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node@npm:10.7.0, ts-node@npm:^10.7.0":
-  version: 10.7.0
-  resolution: "ts-node@npm:10.7.0"
+"ts-node@npm:10.8.0, ts-node@npm:^10.7.0":
+  version: 10.8.0
+  resolution: "ts-node@npm:10.8.0"
   dependencies:
-    "@cspotcode/source-map-support": "npm:0.7.0"
+    "@cspotcode/source-map-support": "npm:^0.8.0"
     "@tsconfig/node10": "npm:^1.0.7"
     "@tsconfig/node12": "npm:^1.0.7"
     "@tsconfig/node14": "npm:^1.0.0"
@@ -20717,7 +20720,7 @@ sjcl@sublimator/sjcl:
     create-require: "npm:^1.1.0"
     diff: "npm:^4.0.1"
     make-error: "npm:^1.1.1"
-    v8-compile-cache-lib: "npm:^3.0.0"
+    v8-compile-cache-lib: "npm:^3.0.1"
     yn: "npm:3.1.1"
   peerDependencies:
     "@swc/core": ">=1.2.50"
@@ -20736,7 +20739,7 @@ sjcl@sublimator/sjcl:
     ts-node-script: dist/bin-script.js
     ts-node-transpile-only: dist/bin-transpile.js
     ts-script: dist/bin-script-deprecated.js
-  checksum: f9b0b03068f3917015c016b95c98ace66c03ad98502b6996054b7b01bd308feeef03489509ca3ed71248ee7e85758e61ae72220288ff2ee10a048a07ccb80a6f
+  checksum: 23aa4d55a201a8536a457a8fcc09db40819922459f3c10a595eae93f72cac883d04452922641ddaa98d1aa66730d6d456511af87bbee7cef017892def30c17d5
   languageName: node
   linkType: hard
 
@@ -21320,10 +21323,10 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"v8-compile-cache-lib@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "v8-compile-cache-lib@npm:3.0.0"
-  checksum: 791a233e47e52fdc57325f909bd7a845d44fc0dece6d23e365b0a479249d841d34e6e2826d2f3b3ce3371d0b6168aba3289ebde99f2638bcdeb9856fd6514c79
+"v8-compile-cache-lib@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "v8-compile-cache-lib@npm:3.0.1"
+  checksum: 0ebe342e7f20816fd5d323affd77f60ea65810ef60beecafbb06397870b18b3d6cb76412721e23603f603fcf5b1f3b37e2844adf15e9b708dbd6404f01884b23
   languageName: node
   linkType: hard
 
@@ -21586,7 +21589,7 @@ sjcl@sublimator/sjcl:
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.2"
     ts-loader: "npm:9.3.0"
-    ts-node: "npm:10.7.0"
+    ts-node: "npm:10.8.0"
     ts-node-dev: "npm:1.1.8"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.6.4"
