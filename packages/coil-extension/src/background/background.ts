@@ -22,6 +22,7 @@ async function configureContainer(container: Container) {
   }
 
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
+  container.bind(tokens.UserAgent).toConstantValue(navigator.userAgent)
   container.bind(tokens.WextApi).toConstantValue(API)
   container.bind(tokens.BuildConfig).toConstantValue(BUILD_CONFIG)
   container.bind(tokens.LoggingEnabled).toConstantValue(loggingEnabled)
