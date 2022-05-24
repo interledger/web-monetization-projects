@@ -197,12 +197,23 @@ const payingTwitch = mockState({
   adapted: true
 })
 
-const payingFacebook = mockState({
+const lastTipping = mockState({
   'popup-route:last': ROUTES.tipping,
   'popup-route:tipping-shown': true,
   monetized: true,
   monetizedTotal: 5910000,
   playState: 'playing',
+  stickyState: 'auto',
+  user: user,
+  validToken: true,
+  adapted: true
+})
+
+const lastStreaming = mockState({
+  'popup-route:last': ROUTES.streaming,
+  'popup-route:tipping-shown': false,
+  monetized: true,
+  monetizedTotal: 5910000,
   stickyState: 'auto',
   user: user,
   validToken: true,
@@ -253,7 +264,8 @@ const MOCK_STATES = [
   { name: 'Alice Unsubscribed', state: aliceUnsubscribed },
   { name: 'Paying Youtube', state: payingYouTube },
   { name: 'Paying Twitch', state: payingTwitch },
-  { name: 'Paying Facebook', state: payingFacebook }
+  { name: 'Last Route Tipping', state: lastTipping },
+  { name: 'Last Route Streaming', state: lastStreaming }
 ]
 
 const argsLogger = (name: string) => {
