@@ -12,13 +12,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@abraham/reflection@npm:^0.10.0":
-  version: 0.10.0
-  resolution: "@abraham/reflection@npm:0.10.0"
-  checksum: ab9d08f6e4aeea6f4e1e83aacf1cd2c830561800a7b51ebf36ebba8586ed60885905d5dfe3b178faf3538585592d8d0dcac7e463cbcd189a3cb000d684e9b4c6
-  languageName: node
-  linkType: hard
-
 "@ampproject/remapping@npm:^2.1.0":
   version: 2.1.1
   resolution: "@ampproject/remapping@npm:2.1.1"
@@ -1870,7 +1863,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/local-server@workspace:packages/coil-local-server"
   dependencies:
-    "@abraham/reflection": "npm:^0.10.0"
+    "@abraham/reflection": "npm:0.8.0"
     "@apollo/utils.logger": "npm:^1.0.0"
     "@babel/core": "npm:7.18.0"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
