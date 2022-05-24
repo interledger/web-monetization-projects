@@ -1805,7 +1805,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:1.0.6"
-    debug: "patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch"
+    debug: "npm:^4.3.1"
     eslint: "npm:8.16.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -10972,13 +10972,13 @@ __metadata:
 
 "debug@patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch":
   version: 4.3.4
-  resolution: "debug@patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch::version=4.3.4&hash=4d4276"
+  resolution: "debug@patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch::version=4.3.4&hash=b9f770"
   dependencies:
     ms: "npm:2.1.2"
   peerDependenciesMeta:
     supports-color:
       optional: true
-  checksum: ac0459f4315408dfda8c3e1b44ac4fd648e9abf4d89ad18d3b377a5a8000c900a8b6244f392c392b797ea4f620a3edb3d3eb227320cd629f41ad7cec622cba50
+  checksum: 99f9676657085b336c0b098ce4a4fb8267aeb5cf35c27e48f34c06cc46a2a72b99115bdaaa87a3b9c1b8a6a2c6590d417f4241faed3c8fe8ac0542721fb1a599
   languageName: node
   linkType: hard
 
