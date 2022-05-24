@@ -44,7 +44,7 @@
     "@webmonetization/polyfill-utils": "^0.0.0",
     "@webmonetization/types": "^0.0.0",
     "@webmonetization/wext": "^0.0.0",
-    "debug": "patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch",
+    "debug": "^4.3.1",
     "ilp-plugin-btp": "1.5.0",
     "ilp-protocol-stream": "2.7.1",
     "inversify": "^6.0.0",
