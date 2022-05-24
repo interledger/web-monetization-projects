@@ -1,0 +1,70 @@
+diff --git a/src/browser.js b/src/browser.js
+index cd0fc35d1ee11e0d6e15421021a54c18958e04d9..ac3f7e1339b9852e42b502eb0c049a32c455c5b0 100644
+--- a/src/browser.js
++++ b/src/browser.js
+@@ -9,16 +9,6 @@ exports.save = save;
+ exports.load = load;
+ exports.useColors = useColors;
+ exports.storage = localstorage();
+-exports.destroy = (() => {
+-	let warned = false;
+-
+-	return () => {
+-		if (!warned) {
+-			warned = true;
+-			console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
+-		}
+-	};
+-})();
+ 
+ /**
+  * Colors.
+diff --git a/src/common.js b/src/common.js
+index e3291b20faa1a61fa5acff50d84dba10a97cc3b6..f030d243cf3e0281070721f8be8a6cab85ebf157 100644
+--- a/src/common.js
++++ b/src/common.js
+@@ -12,7 +12,6 @@ function setup(env) {
+ 	createDebug.enable = enable;
+ 	createDebug.enabled = enabled;
+ 	createDebug.humanize = require('ms');
+-	createDebug.destroy = destroy;
+ 
+ 	Object.keys(env).forEach(key => {
+ 		createDebug[key] = env[key];
+@@ -117,7 +116,6 @@ function setup(env) {
+ 		debug.useColors = createDebug.useColors();
+ 		debug.color = createDebug.selectColor(namespace);
+ 		debug.extend = extend;
+-		debug.destroy = createDebug.destroy; // XXX Temporary. Will be removed in the next major release.
+ 
+ 		Object.defineProperty(debug, 'enabled', {
+ 			enumerable: true,
+@@ -258,13 +256,6 @@ function setup(env) {
+ 		return val;
+ 	}
+ 
+-	/**
+-	* XXX DO NOT USE. This is a temporary stub function.
+-	* XXX It WILL be removed in the next major release.
+-	*/
+-	function destroy() {
+-		console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
+-	}
+ 
+ 	createDebug.enable(createDebug.load());
+ 
+diff --git a/src/node.js b/src/node.js
+index 79bc085cb0230c69aaeb76bbc1374f43ab6414f4..7d392f0717ed508ac2cceba36be9c7eb55c8f762 100644
+--- a/src/node.js
++++ b/src/node.js
+@@ -15,10 +15,6 @@ exports.formatArgs = formatArgs;
+ exports.save = save;
+ exports.load = load;
+ exports.useColors = useColors;
+-exports.destroy = util.deprecate(
+-	() => {},
+-	'Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.'
+-);
+ 
+ /**
+  * Colors.

@@ -34,7 +34,7 @@
   "dependencies": {
     "@coil/client": "0.0.0",
     "@webmonetization/types": "0.0.0",
-    "debug": "^4.3.1",
+    "debug": "patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch",
     "get-port": "^5.1.1",
     "puppeteer": "^14.0.0",
     "tmp": "^0.2.1",

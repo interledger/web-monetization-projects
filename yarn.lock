@@ -1805,7 +1805,7 @@ __metadata:
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:1.0.6"
-    debug: "npm:^4.3.1"
+    debug: "patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch"
     eslint: "npm:8.16.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -2230,7 +2230,7 @@ __metadata:
     babel-plugin-parameter-decorator: "npm:^1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
-    debug: "npm:^4.3.1"
+    debug: "patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch"
     eslint: "npm:8.16.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -3361,7 +3361,7 @@ __metadata:
     copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:1.0.6"
     css-loader: "npm:6.7.1"
-    debug: "npm:^4.3.1"
+    debug: "patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch"
     eslint: "npm:8.16.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
@@ -10958,16 +10958,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:2, debug@npm:2.6.9, debug@npm:^2.1.1, debug@npm:^2.2.0, debug@npm:^2.3.3, debug@npm:^2.6.8, debug@npm:^2.6.9, debug@npm:~2.6.3":
-  version: 2.6.9
-  resolution: "debug@npm:2.6.9"
-  dependencies:
-    ms: "npm:2.0.0"
-  checksum: 143f776060e764362b11d8788c6ef7b125fe930f0b5766559c11521af6dfc256979726167a66218249d8e2f99548c1a8bdb026aad577deecc86b56b4652d4626
-  languageName: node
-  linkType: hard
-
-"debug@npm:4, debug@npm:4.3.4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.0, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4":
+"debug@npm:4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -10979,12 +10970,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^3.1.0, debug@npm:^3.1.1, debug@npm:^3.2.7":
-  version: 3.2.7
-  resolution: "debug@npm:3.2.7"
+"debug@patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch":
+  version: 4.3.4
+  resolution: "debug@patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch::version=4.3.4&hash=4d4276"
   dependencies:
-    ms: "npm:^2.1.1"
-  checksum: b98f479c1004d349128ba45f38fb1af53fa3ab1a3614f27c56e2cfbee34b58cbf7dc060fead0882a5b64924e49d1dd59fb796a5d90ba7b1987d72d426e199253
+    ms: "npm:2.1.2"
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: ac0459f4315408dfda8c3e1b44ac4fd648e9abf4d89ad18d3b377a5a8000c900a8b6244f392c392b797ea4f620a3edb3d3eb227320cd629f41ad7cec622cba50
   languageName: node
   linkType: hard
 
@@ -18928,13 +18922,6 @@ __metadata:
   version: 2.29.1
   resolution: "moment@npm:2.29.1"
   checksum: d1c2574c2e37172d724f4409711079aee3047d434e405dd79c29cc908721049ed8f8ec2ddffb1cb002f8df30c6bb65867ee431e6af3267c43f92f73611da29c4
-  languageName: node
-  linkType: hard
-
-"ms@npm:2.0.0":
-  version: 2.0.0
-  resolution: "ms@npm:2.0.0"
-  checksum: de027828fc294bd9673f72caecf73f50eac7baf28a0dec371de03600a0aa5a891b0cb7f84a45071eac306c9dd260aed8e2174695cf3a99eaa37f663871241da9
   languageName: node
   linkType: hard
 
