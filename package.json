@@ -46,7 +46,8 @@
   "resolutions": {
     "@types/react": "17.0.45",
     "@types/serve-static": "1.13.10",
-    "@wext/shipit": "patch:@wext/shipit@npm:0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515"
+    "@wext/shipit": "patch:@wext/shipit@npm:0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515",
+    "debug": "patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch"
   },
   "devDependencies": {
     "@babel/core": "7.18.0",

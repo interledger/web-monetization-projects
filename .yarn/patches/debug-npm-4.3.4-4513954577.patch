@@ -1,0 +1,15 @@
+diff --git a/src/browser.js b/src/browser.js
+index cd0fc35d1ee11e0d6e15421021a54c18958e04d9..c0cfdf294fb0428c4d7f4c41ad641c8027e15197 100644
+--- a/src/browser.js
++++ b/src/browser.js
+@@ -11,7 +11,9 @@ exports.useColors = useColors;
+ exports.storage = localstorage();
+ exports.destroy = (() => {
+ 	let warned = false;
+-
++	if(!warned){
++		return () => {}
++	}
+ 	return () => {
+ 		if (!warned) {
+ 			warned = true;
