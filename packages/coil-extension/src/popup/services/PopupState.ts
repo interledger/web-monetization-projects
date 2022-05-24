@@ -10,7 +10,9 @@ export const STORAGE_KEYS = [
   'user',
   'validToken',
   'extensionBuildString',
-  'extensionPopupFooterString'
+  'extensionPopupFooterString',
+  'popup-route:last',
+  'popup-route:tipping-shown'
 ]
 
 export type PopupStateType = Omit<LocalStorageProxy, 'token'>

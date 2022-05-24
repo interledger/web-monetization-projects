@@ -13,6 +13,7 @@ import { User } from '../../types/user'
 import { defaultPopupHost } from '../context/popupHostContext'
 import { StorageEventPartial } from '../context/storeContext'
 import { Index } from '../Index'
+import { ROUTES } from '../constants'
 
 import { StatePanel } from './StatePanel'
 
@@ -125,7 +126,9 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
     stickyState: null,
     playState: null,
     monetizedTotal: null,
-    coilSite: null
+    coilSite: null,
+    'popup-route:last': null,
+    'popup-route:tipping-shown': null
   }
   return { ...ret, ...partial }
 }
@@ -195,11 +198,15 @@ const payingTwitch = mockState({
 })
 
 const payingFacebook = mockState({
+  'popup-route:last': ROUTES.tipping,
+  'popup-route:tipping-shown': true,
   monetized: true,
   monetizedTotal: 5910000,
+  playState: 'playing',
+  stickyState: 'auto',
   user: user,
-  validToken: false,
-  adapted: false
+  validToken: true,
+  adapted: true
 })
 
 const payingNonCoilSite = mockState({
