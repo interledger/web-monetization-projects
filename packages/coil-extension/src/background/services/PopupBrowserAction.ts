@@ -28,6 +28,7 @@ export class PopupBrowserAction {
     private icons: PopupIconService,
     @inject(tokens.BuildConfig)
     private buildConfig: BuildConfig,
+    @inject(tokens.UserAgent) private userAgent: string,
     @inject(tokens.CoilDomain) private coilDomain: string,
     @inject(tokens.WextApi) private api: typeof chrome
   ) {
@@ -41,7 +42,10 @@ export class PopupBrowserAction {
           }
         }
 
-        if (result?.os === 'android') {
+        if (
+          result?.os === 'android' &&
+          !this.userAgent.includes('SamsungBrowser')
+        ) {
           this.api.browserAction.setPopup({
             // See: https://bugzilla.mozilla.org/show_bug.cgi?id=1426484
             // Setting the popup to empty string which should allow onClicked

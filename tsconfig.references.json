@@ -12,6 +12,9 @@
       "path": "packages/coil-extension/tsconfig.build.json"
     },
     {
+      "path": "packages/coil-local-server/tsconfig.build.json"
+    },
+    {
       "path": "packages/coil-monorepo-upkeep/tsconfig.build.json"
     },
     {

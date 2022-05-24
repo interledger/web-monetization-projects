@@ -8,6 +8,7 @@ import {
 } from './crypto'
 
 export interface BlindToken {
+  // data fed into hash-to-curve function to create point
   data: number[]
   point: SjclEllipticalPoint
   blind: BigNumber

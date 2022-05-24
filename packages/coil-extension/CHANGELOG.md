@@ -1,4 +1,18 @@
+- <a name="coil-extension@0.0.59"></a>
+
+# [coil-extension@0.0.59](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.58...coil-extension@0.0.59) (2021-05-09)
+
+### New Features
+
+- Set default view to tipping where enabled [#2717](https://github.com/coilhq/web-monetization-projects/pull/2717) [#2836](https://github.com/coilhq/web-monetization-projects/pull/2836)
+- Keyboard accessible tipping buttons [#2652](https://github.com/coilhq/web-monetization-projects/pull/2652)
+
 - <a name="coil-extension@0.0.58"></a>
+
+### Fixes
+
+- Use tabs permission on Firefox to fix logout issues [#2679](https://github.com/coilhq/web-monetization-projects/pull/2679)
+- Omit Cookies at source as well as CF from anon tokens requests [#2814](https://github.com/coilhq/web-monetization-projects/pull/2814)[#2842](https://github.com/coilhq/web-monetization-projects/pull/2842)
 
 # [coil-extension@0.0.58](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.57...coil-extension@0.0.58) (2021-02-25)
 

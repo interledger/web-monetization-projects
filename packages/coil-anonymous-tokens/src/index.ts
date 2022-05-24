@@ -74,7 +74,31 @@ export interface AnonymousTokensOptions {
   batchSize: number
 }
 
-export class AnonymousTokens {
+export interface AnonymousTokensService {
+  /**
+   * Returns a BTP token
+   * @param coilAuthToken
+   */
+  getToken(coilAuthToken: string): Promise<string>
+
+  /**
+   * Called when the token has been exhausted
+   */
+  removeToken(btpToken: string): Promise<void>
+}
+
+export interface BTPTokenData {
+  userId: string // "anon:v/9Yq3ptxNJrxkwup6FjP3AL6Do8xGXPTeHa6tzhWas=",
+  throughput: number // 100000,
+  agg: number // 6000000,
+  currency: string // "USD",
+  scale: number // 9,
+  anon: boolean // true,
+  iat: number // 1652150952,
+  exp: number // 1652155152
+}
+
+export class AnonymousTokens implements AnonymousTokensService {
   private redeemerUrl: string
   private signerUrl: string
   private store: TokenStore
@@ -274,7 +298,7 @@ export class AnonymousTokens {
     return response.json()
   }
 
-  private async _verifyProof(
+  protected async _verifyProof(
     proof: string,
     prng: string,
     curvePoints: CurvePoints,
