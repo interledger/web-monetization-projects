@@ -14,7 +14,7 @@ interface IRouterContext {
 }
 
 interface IRouterProvider {
-  storage: Pick<StorageService, 'get'>
+  storage: Pick<StorageService, 'get' | 'set'>
 }
 
 // Context
@@ -49,8 +49,8 @@ export const RouterProvider: React.FC<IRouterProvider> = props => {
   const defaultRoute = showTipping ? ROUTES.tipping : ROUTES.streaming
 
   const lastOrDefaultRoute =
-    localStorage[lastRoute] && localStorage[tippingShown]
-      ? localStorage[lastRoute]
+    storage.get(lastRoute) && storage.get(tippingShown)
+      ? storage.get(lastRoute)
       : defaultRoute
 
   const [route, setRoute] = useState<string>(lastOrDefaultRoute)
@@ -58,9 +58,9 @@ export const RouterProvider: React.FC<IRouterProvider> = props => {
 
   useEffect(() => {
     if (!route.includes('/')) {
-      localStorage[lastRoute] = route
+      storage.set(lastRoute, route)
       if (route === ROUTES.tipping) {
-        localStorage[tippingShown] = true
+        storage.set(tippingShown, true)
       }
     }
   }, [route])

@@ -18,10 +18,13 @@ import { StatePanel } from './StatePanel'
 
 export const isExtension = Boolean(API && API.runtime && API.runtime.id)
 
-export function makeStorage(mock: any): Pick<StorageService, 'get'> {
+export function makeStorage(mock: any): Pick<StorageService, 'get' | 'set'> {
   return {
     get<T = any>(key: string): T | null {
       return mock[key] || null
+    },
+    set(key: string, value: any) {
+      mock[key] = value
     }
   }
 }
@@ -191,6 +194,14 @@ const payingTwitch = mockState({
   adapted: true
 })
 
+const payingFacebook = mockState({
+  monetized: true,
+  monetizedTotal: 5910000,
+  user: user,
+  validToken: false,
+  adapted: false
+})
+
 const payingNonCoilSite = mockState({
   monetized: true,
   monetizedTotal: 22817800,
@@ -234,7 +245,8 @@ const MOCK_STATES = [
   { name: 'Welcome To Coil', state: welcomeToCoil },
   { name: 'Alice Unsubscribed', state: aliceUnsubscribed },
   { name: 'Paying Youtube', state: payingYouTube },
-  { name: 'Paying Twitch', state: payingTwitch }
+  { name: 'Paying Twitch', state: payingTwitch },
+  { name: 'Paying Facebook', state: payingFacebook }
 ]
 
 const argsLogger = (name: string) => {
