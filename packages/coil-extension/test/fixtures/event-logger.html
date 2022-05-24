@@ -61,12 +61,18 @@
         // For testing checklist
         const removeThenAddQuicklyToCheckStoppedEventHasCorrectRequestId =
           () => {
+            log('SETTING induce stop timeout')
             setTimeout(() => {
+              log('REMOVING tag')
               remove()
+              log('ADDING back tag')
               add()
             }, 10000)
           }
-        // removeThenAddQuicklyToCheckStoppedEventHasCorrectRequestId()
+
+        if (window.location.hash === '#induce') {
+          removeThenAddQuicklyToCheckStoppedEventHasCorrectRequestId()
+        }
 
         document.getElementById('remove').addEventListener('click', remove)
         document.getElementById('add').addEventListener('click', add)
