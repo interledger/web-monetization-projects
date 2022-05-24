@@ -1,5 +1,6 @@
 import { GraphQlClient } from '../graphQlClient'
 
+// TODO: add charges
 export const tipQuery = `mutation tip($input: TipInput!) {
   tip(input: $input) {
     code

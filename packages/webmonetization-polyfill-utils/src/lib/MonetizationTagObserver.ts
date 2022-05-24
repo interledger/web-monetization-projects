@@ -215,9 +215,10 @@ export class MonetizationTagObserver {
   private getPaymentDetails(meta: MonetizationTag): PaymentDetails {
     const paymentPointer =
       meta instanceof HTMLMetaElement ? meta.content : meta.href
+    const trimmed = paymentPointer.trim()
     return {
       requestId: this.getWebMonetizationId(),
-      paymentPointer: paymentPointer.trim(),
+      paymentPointer: trimmed,
       initiatingUrl: this.window.location.href
     }
   }

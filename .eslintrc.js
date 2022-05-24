@@ -4,7 +4,7 @@ let config = {
   root: true,
   settings: {
     react: {
-      version: 'latest'
+      version: 'detect'
     }
   },
   extends: [

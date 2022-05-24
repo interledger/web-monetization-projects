@@ -22,6 +22,7 @@ import { BandwidthTiers } from '@coil/polyfill-utils'
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 import { BTP_ENDPOINT } from '../../webpackDefines'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { AnonymousTokens } from './AnonymousTokens'
 import { Logger, logger } from './utils'
@@ -91,13 +92,15 @@ export class Stream extends EventEmitter {
   private _looping: boolean
   private _attempt: StreamAttempt | null
   private _coilDomain: string
-  private _anonTokens: AnonymousTokens
+  private _anonTokens: Pick<AnonymousTokens, 'getToken' | 'removeToken'>
 
   private _assetCode: string
   private _assetScale: number
   private _exchangeRate: number
 
   constructor(
+    @inject(tokens.BuildConfig)
+    private buildConfig: BuildConfig,
     @logger('Stream')
     private readonly _debug: Logger,
     private container: Container,
@@ -237,10 +240,15 @@ export class Stream extends EventEmitter {
   }
 
   async _getSPSPDetails(): Promise<SPSPResponse> {
-    this._debug('fetching spsp details. url=', this._spspUrl)
+    const spspUrl = this.buildConfig.useLocalMockServer
+      ? // TODO
+        `http://localhost:4000/spsp/${encodeURIComponent(this._spspUrl)}`
+      : this._spspUrl
+
+    this._debug('fetching spsp details. url=', spspUrl)
     let details: SPSPResponse
     try {
-      details = await getSPSPResponse(this._spspUrl, this._requestId)
+      details = await getSPSPResponse(spspUrl, this._requestId)
     } catch (e) {
       if (e instanceof SPSPError) {
         const status = e.response?.status

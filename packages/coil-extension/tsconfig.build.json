@@ -27,6 +27,9 @@
       "path": "../coil-polyfill-utils/tsconfig.build.json"
     },
     {
+      "path": "../coil-privacypass-sjcl/tsconfig.build.json"
+    },
+    {
       "path": "../coil-puppeteer-utils/tsconfig.build.json"
     },
     {

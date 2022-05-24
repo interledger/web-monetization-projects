@@ -1,0 +1,190 @@
+# This file is compiled from subsets of the types declared in bernie and coil-api
+# @see https://github.com/coilhq/coil/blob/main/services/coil-api/src/schema.graphql
+# @see https://github.com/coilhq/coil/blob/main/services/bernie/src/schema.graphql
+# It is intended to have just enough of the api for the extension to run
+
+# TODO:
+# whoAmI X
+# adaptedPage X
+# featureEnabled X
+# login X
+# queryToken
+  # refreshToken
+    # schema X
+    # resolver X
+    # add resolver to index X
+    # test X
+  # whoami X
+
+# refreshBtpToken
+  # schema X
+  # resolver X
+  # add resolver to index X
+  # test X
+
+# tip
+  # schema X mutation.tip X
+  # mutation.tip resolver X
+  # add resolver to index X
+  # test X
+
+# tipPreview
+  # schema X query.tipPreview X
+  # query.tipPreview resolver X
+  # add resolver to index X
+  # text X
+
+# tipSettings
+  # schema X  query.whoami.tipping, minTipLimit X
+  # User.tipping resolver X
+  # add User.tipping resolver to index X
+  # query.minTipLimit resolver X
+  # add query.minTipLimit resolver to index X
+
+type Query {
+  whoami: User
+  adaptedPage(videoUrl: String, channelId: String): AdaptedPagePayload
+  featureEnabled(key: String!): Boolean
+  tipPreview(tipAmountCents: String!): TipResponse!
+  refreshToken: Token
+  refreshBtpToken(highBandwidth: Boolean): Token
+  # https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L6
+  minTipLimit: MinTipLimitResponse!
+}
+
+type Mutation {
+  login(input: LoginInput!): AuthPayload!
+  tip(input: TipInput!): TipResponse!
+}
+
+interface GraphQLResponse {
+  code: String!
+  success: Boolean!
+  message: String!
+}
+
+type Token {
+  token: String
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+  affiliateCount: Int
+}
+
+
+input LoginInput {
+  email: String!
+  password: String!
+  oAuthApp: String
+  oAuthScope: String
+  affiliateName: String
+  oAuthSessionId: String
+}
+
+type MinTipLimitResponse implements GraphQLResponse {
+  code: String!
+  message: String!
+  success: Boolean!
+  minTipLimitAmountCentsUsd: String!
+}
+
+input TipInput {
+  amountCentsUsd: String!
+  destination: String!
+  origin: String
+}
+
+type TipCharges {
+  # Cents
+  creditCardCharge: String!
+  # Cents
+  tipCreditCharge: String!
+}
+
+type TipResponse implements GraphQLResponse {
+  code: String!
+  message: String!
+  success: Boolean!
+  charges: TipCharges
+}
+
+# https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L113
+type UserTipping {
+  settings: UserTipSetting
+  limitUsedAmountCentsUsd: String
+  limitRemainingAmountCentsUsd: String
+  lastTippedAmountCentsUsd: String
+  totalTipCreditAmountCentsUsd: String!
+  totalCentsUsdTippedPast24Hours: String!
+}
+
+# https://github.com/coilhq/coil/blob/5d40d9b53de01b14412fc9babbdb131bfd3fac7f/services/bernie/src/schema.graphql#L83
+type UserTipSetting {
+  id: String!
+  dailyLimitAmountCentsUsd: String!
+}
+
+enum PaymentMethodStatus {
+  FailedUnknownReason
+  Expired
+  Invalid
+  Valid
+  Unknown
+}
+
+type StripeCardDetails {
+  brandCode: String!
+  last4: String!
+  expirationMonth: String!
+  expirationYear: String!
+  status: PaymentMethodStatus!
+  name: String!
+  funding: String!
+}
+
+
+union PaymentMethodDetails = StripeCardDetails
+
+enum PaymentMethodType {
+  tipCredit
+  stripe
+}
+
+## https://github.com/coilhq/coil/blob/d75874d3254a5b4abcecd428581f1389b6c275c5/services/bernie/src/schema.graphql#L62
+type PaymentMethod {
+  id: String!
+  type: PaymentMethodType
+  details: PaymentMethodDetails
+}
+
+type CurrencyPreferences {
+  code: String!
+  scale: Int!
+}
+
+type CoilSubscription {
+  active: Boolean!
+  endDate: String!
+  trialEndDate: String!
+}
+
+type User {
+  id: ID!
+  fullName: String
+  shortName: String
+  canTip: Boolean!
+  email: String!
+  profilePicture: String
+  customerId: String
+  subscription: CoilSubscription
+  currencyPreferences: CurrencyPreferences
+  paymentMethods: [PaymentMethod]!
+  tipping: UserTipping
+}
+
+type AdaptedPagePayload {
+  paymentPointer: String
+  channelImage: String
+}

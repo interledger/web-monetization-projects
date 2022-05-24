@@ -4,4 +4,5 @@ export interface BuildConfig {
   extensionPopupFooterString?: string
   isCI?: boolean
   isLoggingEnabled?: boolean
+  useLocalMockServer?: boolean
 }

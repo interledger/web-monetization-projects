@@ -1104,7 +1104,7 @@ export class BackgroundScript {
 
   private bindOnInstalled() {
     // This can mess up the puppeteer tests
-    if (!this.buildConfig.isCI) {
+    if (!this.buildConfig.isCI && !this.buildConfig.useLocalMockServer) {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
           this.api.tabs.create({ url: `${this.coilDomain}/signup` })
