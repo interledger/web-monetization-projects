@@ -59,7 +59,7 @@
     "@babel/preset-typescript": "7.17.12",
     "@coil/puppeteer-utils": "^0.0.0",
     "@coil/webpack-utils": "0.0.0",
-    "@commitlint/cli": "17.0.0",
+    "@commitlint/cli": "17.0.1",
     "@commitlint/config-conventional": "17.0.0",
     "@swc/core": "1.2.192",
     "@swc/jest": "^0.2.21",
