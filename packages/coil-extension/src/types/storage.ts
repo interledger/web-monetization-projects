@@ -43,4 +43,7 @@ export interface LocalStorageProxy {
 
   extensionBuildString?: string | null
   extensionPopupFooterString?: string | null
+
+  'popup-route:last'?: string | null
+  'popup-route:tipping-shown'?: boolean | null
 }
