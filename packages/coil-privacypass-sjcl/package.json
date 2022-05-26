@@ -51,7 +51,7 @@
     "@babel/plugin-proposal-object-rest-spread": "7.18.0",
     "@babel/preset-env": "7.18.0",
     "@babel/preset-typescript": "7.17.12",
-    "@commitlint/cli": "17.0.0",
+    "@commitlint/cli": "17.0.1",
     "@commitlint/config-conventional": "17.0.0",
     "@swc/core": "1.2.194",
     "@swc/jest": "^0.2.21",
