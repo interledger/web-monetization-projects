@@ -8,7 +8,7 @@ const fetchFn: typeof fetch = require('node-fetch')
  * settings.
  */
 export async function portableFetch(
-  input: RequestInfo,
+  input: RequestInfo | URL,
   init?: RequestInit
 ): Promise<Response> {
   return fetchFn(input, init)
