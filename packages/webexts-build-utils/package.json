@@ -45,11 +45,11 @@
     "util": "^0.12.4"
   },
   "devDependencies": {
-    "@babel/core": "7.18.0",
+    "@babel/core": "7.18.2",
     "@babel/plugin-proposal-class-properties": "7.17.12",
-    "@babel/plugin-proposal-decorators": "7.17.12",
+    "@babel/plugin-proposal-decorators": "7.18.2",
     "@babel/plugin-proposal-object-rest-spread": "7.18.0",
-    "@babel/preset-env": "7.18.0",
+    "@babel/preset-env": "7.18.2",
     "@babel/preset-typescript": "7.17.12",
     "@commitlint/cli": "17.0.1",
     "@commitlint/config-conventional": "17.0.0",
