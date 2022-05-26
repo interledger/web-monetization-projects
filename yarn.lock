@@ -1679,7 +1679,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -1740,7 +1740,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -1841,7 +1841,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
@@ -1933,7 +1933,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -1995,7 +1995,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2066,7 +2066,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
@@ -2124,7 +2124,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2188,7 +2188,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2253,7 +2253,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     web-ext: "npm:^6.1.0"
@@ -2318,7 +2318,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     util: "npm:^0.12.4"
@@ -2376,7 +2376,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2663,7 +2663,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2721,7 +2721,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -3384,7 +3384,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typeface-roboto: "npm:^1.1.13"
     typescript: "npm:^4.7.2"
@@ -4183,7 +4183,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -5456,7 +5456,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     util: "npm:^0.12.4"
@@ -5540,7 +5540,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -5600,7 +5600,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
@@ -5660,7 +5660,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -5730,7 +5730,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
@@ -5788,7 +5788,7 @@ __metadata:
     ts-json-schema-generator: "npm:1.0.0"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -5847,7 +5847,7 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -22663,19 +22663,19 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:1.1.8":
-  version: 1.1.8
-  resolution: "ts-node-dev@npm:1.1.8"
+"ts-node-dev@npm:2.0.0":
+  version: 2.0.0
+  resolution: "ts-node-dev@npm:2.0.0"
   dependencies:
     chokidar: "npm:^3.5.1"
     dynamic-dedupe: "npm:^0.3.0"
-    minimist: "npm:^1.2.5"
+    minimist: "npm:^1.2.6"
     mkdirp: "npm:^1.0.4"
     resolve: "npm:^1.0.0"
     rimraf: "npm:^2.6.1"
     source-map-support: "npm:^0.5.12"
     tree-kill: "npm:^1.2.2"
-    ts-node: "npm:^9.0.0"
+    ts-node: "npm:^10.4.0"
     tsconfig: "npm:^7.0.0"
   peerDependencies:
     node-notifier: "*"
@@ -22686,11 +22686,11 @@ sjcl@sublimator/sjcl:
   bin:
     ts-node-dev: lib/bin.js
     tsnd: lib/bin.js
-  checksum: 0a2d7fcb2cc4709b98c8c232b45b4ef98dc627c0e3c78fe454eac5243e5cd69f02ed2c459b92341be1571229410ebfa1c0d4ea26f7c8c135259c22094302fdc9
+  checksum: e22ecb903f51b3d1bd7d284ac94b7bb685ea948e45c9e740c1a26701058ee32e2f0ac3e5bd4735c3a0b455e9b3aabe74e915e337ebc62b25b2efd359129efcf8
   languageName: node
   linkType: hard
 
-"ts-node@npm:10.8.0, ts-node@npm:^10.7.0":
+"ts-node@npm:10.8.0, ts-node@npm:^10.4.0, ts-node@npm:^10.7.0":
   version: 10.8.0
   resolution: "ts-node@npm:10.8.0"
   dependencies:
@@ -22728,7 +22728,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^9, ts-node@npm:^9.0.0":
+"ts-node@npm:^9":
   version: 9.1.1
   resolution: "ts-node@npm:9.1.1"
   dependencies:
@@ -23671,7 +23671,7 @@ sjcl@sublimator/sjcl:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
