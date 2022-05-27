@@ -73,7 +73,7 @@ export async function initBrowser({
       slowMo: 0,
       executablePath: env.BROWSER_PATH,
       args,
-      ...viewOptions
+      defaultViewport: viewOptions.viewport
     })
     return launched.defaultBrowserContext()
   } else {

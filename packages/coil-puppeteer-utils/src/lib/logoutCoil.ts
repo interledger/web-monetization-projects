@@ -10,7 +10,7 @@ export async function logoutCoil(coilPage: Page): Promise<Page> {
   await timeout(2e3)
 
   const menuSelector = `svg[data-cy='hamburger-toggle']`
-  const signOutSelector = "//p[contains(., 'Sign out')]"
+  const signOutSelector = '//*[text()="Sign out"]'
 
   try {
     await coilPage.click(menuSelector, { delay: 5e3, clickCount: 1 })
