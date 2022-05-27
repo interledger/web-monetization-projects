@@ -13,15 +13,19 @@ import { User } from '../../types/user'
 import { defaultPopupHost } from '../context/popupHostContext'
 import { StorageEventPartial } from '../context/storeContext'
 import { Index } from '../Index'
+import { ROUTES } from '../constants'
 
 import { StatePanel } from './StatePanel'
 
 export const isExtension = Boolean(API && API.runtime && API.runtime.id)
 
-export function makeStorage(mock: any): Pick<StorageService, 'get'> {
+export function makeStorage(mock: any): Pick<StorageService, 'get' | 'set'> {
   return {
     get<T = any>(key: string): T | null {
       return mock[key] || null
+    },
+    set(key: string, value: any) {
+      mock[key] = value
     }
   }
 }
@@ -122,7 +126,9 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
     stickyState: null,
     playState: null,
     monetizedTotal: null,
-    coilSite: null
+    coilSite: null,
+    'popup-route:last': null,
+    'popup-route:tipping-shown': null
   }
   return { ...ret, ...partial }
 }
@@ -191,6 +197,40 @@ const payingTwitch = mockState({
   adapted: true
 })
 
+const lastTipping = mockState({
+  'popup-route:last': ROUTES.tipping,
+  'popup-route:tipping-shown': true,
+  monetized: true,
+  monetizedTotal: 5910000,
+  playState: 'playing',
+  stickyState: 'auto',
+  user: tipUserNewUi,
+  validToken: true,
+  adapted: true
+})
+
+const lastStreaming = mockState({
+  'popup-route:last': ROUTES.streaming,
+  'popup-route:tipping-shown': false,
+  monetized: true,
+  monetizedTotal: 5910000,
+  stickyState: 'auto',
+  user: tipUserNewUi,
+  validToken: true,
+  adapted: true
+})
+
+const lastStreamingWithTip = mockState({
+  'popup-route:last': ROUTES.streaming,
+  'popup-route:tipping-shown': true,
+  monetized: true,
+  monetizedTotal: 5910000,
+  stickyState: 'auto',
+  user: tipUserNewUi,
+  validToken: true,
+  adapted: true
+})
+
 const payingNonCoilSite = mockState({
   monetized: true,
   monetizedTotal: 22817800,
@@ -234,7 +274,10 @@ const MOCK_STATES = [
   { name: 'Welcome To Coil', state: welcomeToCoil },
   { name: 'Alice Unsubscribed', state: aliceUnsubscribed },
   { name: 'Paying Youtube', state: payingYouTube },
-  { name: 'Paying Twitch', state: payingTwitch }
+  { name: 'Paying Twitch', state: payingTwitch },
+  { name: 'Last Route Tipping', state: lastTipping },
+  { name: 'Last Route Streaming', state: lastStreaming },
+  { name: 'Last Route Streaming - Tipping', state: lastStreamingWithTip }
 ]
 
 const argsLogger = (name: string) => {

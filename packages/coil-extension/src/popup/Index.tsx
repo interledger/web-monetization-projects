@@ -11,7 +11,7 @@ import { RouterProvider } from './context/routerContext'
 import { TipProvider } from './context/tipContext'
 
 export function Index(props: {
-  storage: Pick<StorageService, 'get'>
+  storage: Pick<StorageService, 'get' | 'set'>
   host: PopupHost
 }) {
   const store = useStoreState(props.storage, props.host)
