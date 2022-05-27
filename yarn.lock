@@ -190,7 +190,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.18.0, @babel/core@npm:^7.11.6, @babel/core@npm:^7.12.3, @babel/core@npm:^7.14.0":
+"@babel/core@npm:7.18.2":
+  version: 7.18.2
+  resolution: "@babel/core@npm:7.18.2"
+  dependencies:
+    "@ampproject/remapping": "npm:^2.1.0"
+    "@babel/code-frame": "npm:^7.16.7"
+    "@babel/generator": "npm:^7.18.2"
+    "@babel/helper-compilation-targets": "npm:^7.18.2"
+    "@babel/helper-module-transforms": "npm:^7.18.0"
+    "@babel/helpers": "npm:^7.18.2"
+    "@babel/parser": "npm:^7.18.0"
+    "@babel/template": "npm:^7.16.7"
+    "@babel/traverse": "npm:^7.18.2"
+    "@babel/types": "npm:^7.18.2"
+    convert-source-map: "npm:^1.7.0"
+    debug: "npm:^4.1.0"
+    gensync: "npm:^1.0.0-beta.2"
+    json5: "npm:^2.2.1"
+    semver: "npm:^6.3.0"
+  checksum: aeaaeb77dc2f1a590b17703584b64eca7496a67a5b53d79276f2ae9643ae6b11dd2b1b198eb17449af20a65c2ad35738f85d378be4563a59358b5450ae57b003
+  languageName: node
+  linkType: hard
+
+"@babel/core@npm:^7.11.6, @babel/core@npm:^7.12.3, @babel/core@npm:^7.14.0":
   version: 7.18.0
   resolution: "@babel/core@npm:7.18.0"
   dependencies:
@@ -224,6 +247,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/generator@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/generator@npm:7.18.2"
+  dependencies:
+    "@babel/types": "npm:^7.18.2"
+    "@jridgewell/gen-mapping": "npm:^0.3.0"
+    jsesc: "npm:^2.5.1"
+  checksum: 2396f87eb0db79779379d00eb5ab6baac8d39be580fab456aa13d8ab76caff71ead1e073497fd1700a260f0165924fb73e66def98a27648124b2b857fd484648
+  languageName: node
+  linkType: hard
+
 "@babel/helper-annotate-as-pure@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/helper-annotate-as-pure@npm:7.16.7"
@@ -254,6 +288,20 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: 3508d05fc9e63c7284281ca7588c1ee477b6122a551ef13aa43969f5d29286ae959aaec0430077681aa6cdc795c94598e08cfff3477428f51f3d5e49221ab96b
+  languageName: node
+  linkType: hard
+
+"@babel/helper-compilation-targets@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/helper-compilation-targets@npm:7.18.2"
+  dependencies:
+    "@babel/compat-data": "npm:^7.17.10"
+    "@babel/helper-validator-option": "npm:^7.16.7"
+    browserslist: "npm:^4.20.2"
+    semver: "npm:^6.3.0"
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: 2d45d8955357c1c9891dc16763c366fb684b9d385fa7e9a5caad9c0f481667836a9b922359950529984e70523efe0a720a88ea9800f07ac889d8db1fcb319560
   languageName: node
   linkType: hard
 
@@ -310,6 +358,13 @@ __metadata:
   dependencies:
     "@babel/types": "npm:^7.16.7"
   checksum: 593983b8c5f1fbbd88500e2a9142210b6198100c07316d79cb0569cb64ee09137f5310922a5f5506a393d6f2aa5a2decaf34e84711c34a6815434eee8eeeb7e3
+  languageName: node
+  linkType: hard
+
+"@babel/helper-environment-visitor@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/helper-environment-visitor@npm:7.18.2"
+  checksum: 316a685c99af00a8a61f37dcb4c58a7aa0a20a68facc82ab5444edd0f43c208fdf8a0719855925764ef742e9e52382e761d9c7ff8e2574260ea317a5684f4573
   languageName: node
   linkType: hard
 
@@ -415,12 +470,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-replace-supers@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/helper-replace-supers@npm:7.18.2"
+  dependencies:
+    "@babel/helper-environment-visitor": "npm:^7.18.2"
+    "@babel/helper-member-expression-to-functions": "npm:^7.17.7"
+    "@babel/helper-optimise-call-expression": "npm:^7.16.7"
+    "@babel/traverse": "npm:^7.18.2"
+    "@babel/types": "npm:^7.18.2"
+  checksum: 0d0b40b712f74efd86894180edeaff00288bbc19177a97d6f7bf73a13e9fa21ede655b84ba4d300119d2c639e2fa8dcf0c7ce946c2b5ffe09562b4491303f834
+  languageName: node
+  linkType: hard
+
 "@babel/helper-simple-access@npm:^7.17.7":
   version: 7.17.7
   resolution: "@babel/helper-simple-access@npm:7.17.7"
   dependencies:
     "@babel/types": "npm:^7.17.0"
   checksum: 47ff3b83423778ae961637d54b8aa4a0946ac5caa4618bdeb4694dca7599c95c12199666c7c71e1e02e242a88ca0d52cb304094558c59f1888106f0642666af5
+  languageName: node
+  linkType: hard
+
+"@babel/helper-simple-access@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/helper-simple-access@npm:7.18.2"
+  dependencies:
+    "@babel/types": "npm:^7.18.2"
+  checksum: 37c8acc03f9e84bd8d9d6b56509862f132416259500a48eb4530e6af40eecd9ee0b20246078784881294b1cf03679a8519f76a4b654769be636b9dbafa9c42b4
   languageName: node
   linkType: hard
 
@@ -476,6 +553,17 @@ __metadata:
     "@babel/traverse": "npm:^7.18.0"
     "@babel/types": "npm:^7.18.0"
   checksum: f7ff1b3fa3cf86404dd3cb69bb725f242b2e2eced1ae3e997ba9e1ef9f1bec3fde7a7553fdf99a02e1a8f2e78481948faccf827d89059ab0189624d6aa970576
+  languageName: node
+  linkType: hard
+
+"@babel/helpers@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/helpers@npm:7.18.2"
+  dependencies:
+    "@babel/template": "npm:^7.16.7"
+    "@babel/traverse": "npm:^7.18.2"
+    "@babel/types": "npm:^7.18.2"
+  checksum: 36063cff50cd14f7e6abde6d290efcc832bb6c0ca88cd50b72c3c62c04d70b146c118a3f26a52c3707c87a07b9dca152298019d0d6d96d3501d6446a3bbcab18
   languageName: node
   linkType: hard
 
@@ -561,19 +649,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-decorators@npm:7.17.12":
-  version: 7.17.12
-  resolution: "@babel/plugin-proposal-decorators@npm:7.17.12"
+"@babel/plugin-proposal-decorators@npm:7.18.2":
+  version: 7.18.2
+  resolution: "@babel/plugin-proposal-decorators@npm:7.18.2"
   dependencies:
-    "@babel/helper-create-class-features-plugin": "npm:^7.17.12"
+    "@babel/helper-create-class-features-plugin": "npm:^7.18.0"
     "@babel/helper-plugin-utils": "npm:^7.17.12"
-    "@babel/helper-replace-supers": "npm:^7.16.7"
+    "@babel/helper-replace-supers": "npm:^7.18.2"
     "@babel/helper-split-export-declaration": "npm:^7.16.7"
     "@babel/plugin-syntax-decorators": "npm:^7.17.12"
     charcodes: "npm:^0.2.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 37a335308fe8c9b85cb9131d915fc18df9c15b4d83d4e5db4ca17ff8361a5e03b4197ec2bc591b941931775e3c297af9465e7a4595153c8b235e7e416098a052
+  checksum: bd57a0b7f81244ead722468a523222b42b55bc939507fc50c8dfe309aba5115dc087783458a2f3639f0bcb996880779b3ee7cc6f63e8163c718561b321b2d004
   languageName: node
   linkType: hard
 
@@ -1091,7 +1179,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-for-of@npm:^7.0.0, @babel/plugin-transform-for-of@npm:^7.17.12":
+"@babel/plugin-transform-for-of@npm:^7.0.0, @babel/plugin-transform-for-of@npm:^7.18.1":
   version: 7.18.1
   resolution: "@babel/plugin-transform-for-of@npm:7.18.1"
   dependencies:
@@ -1150,7 +1238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-modules-commonjs@npm:^7.0.0, @babel/plugin-transform-modules-commonjs@npm:^7.16.8, @babel/plugin-transform-modules-commonjs@npm:^7.18.0":
+"@babel/plugin-transform-modules-commonjs@npm:^7.0.0, @babel/plugin-transform-modules-commonjs@npm:^7.16.8":
   version: 7.18.0
   resolution: "@babel/plugin-transform-modules-commonjs@npm:7.18.0"
   dependencies:
@@ -1161,6 +1249,20 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 9f52ad3ca99259cb545b801f9628abe033d54fd7d5d7fd65984bc05bb22e38d13960271c61ba960266b696848874228773ed06d9bc36c7c4656b5219ffcd8ec6
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-modules-commonjs@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/plugin-transform-modules-commonjs@npm:7.18.2"
+  dependencies:
+    "@babel/helper-module-transforms": "npm:^7.18.0"
+    "@babel/helper-plugin-utils": "npm:^7.17.12"
+    "@babel/helper-simple-access": "npm:^7.18.2"
+    babel-plugin-dynamic-import-node: "npm:^2.3.3"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: ff017f16800ce16c5d5d0c9a1821d2b2f654758f5f1f1282f6b3807cc2e74e1895583310df50241b3c24949a44160688fde4a087105ec927e81067614cf95a0b
   languageName: node
   linkType: hard
 
@@ -1331,7 +1433,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-template-literals@npm:^7.0.0, @babel/plugin-transform-template-literals@npm:^7.17.12":
+"@babel/plugin-transform-template-literals@npm:^7.0.0":
   version: 7.17.12
   resolution: "@babel/plugin-transform-template-literals@npm:7.17.12"
   dependencies:
@@ -1339,6 +1441,17 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 927cc2585a2239149d4db78364fc6e20f3a14cd8ab9dfc547cd0448c7de82d31cad3bcdbb4ec6fe61fef476f48c479f3cc673a1cf8573a72ddba3f185d918b8d
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-template-literals@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/plugin-transform-template-literals@npm:7.18.2"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.17.12"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 33605b5794f520f5f95bb31f6c60c304fdc358c586b2b2e6e4f5e4d9a0b184299d37c562d0eabdd5db2cf42a1709419377d5eeb655ba261c0d3f49edcc83f6d6
   languageName: node
   linkType: hard
 
@@ -1399,12 +1512,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:7.18.0":
-  version: 7.18.0
-  resolution: "@babel/preset-env@npm:7.18.0"
+"@babel/preset-env@npm:7.18.2":
+  version: 7.18.2
+  resolution: "@babel/preset-env@npm:7.18.2"
   dependencies:
     "@babel/compat-data": "npm:^7.17.10"
-    "@babel/helper-compilation-targets": "npm:^7.17.10"
+    "@babel/helper-compilation-targets": "npm:^7.18.2"
     "@babel/helper-plugin-utils": "npm:^7.17.12"
     "@babel/helper-validator-option": "npm:^7.16.7"
     "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression": "npm:^7.17.12"
@@ -1449,12 +1562,12 @@ __metadata:
     "@babel/plugin-transform-dotall-regex": "npm:^7.16.7"
     "@babel/plugin-transform-duplicate-keys": "npm:^7.17.12"
     "@babel/plugin-transform-exponentiation-operator": "npm:^7.16.7"
-    "@babel/plugin-transform-for-of": "npm:^7.17.12"
+    "@babel/plugin-transform-for-of": "npm:^7.18.1"
     "@babel/plugin-transform-function-name": "npm:^7.16.7"
     "@babel/plugin-transform-literals": "npm:^7.17.12"
     "@babel/plugin-transform-member-expression-literals": "npm:^7.16.7"
     "@babel/plugin-transform-modules-amd": "npm:^7.18.0"
-    "@babel/plugin-transform-modules-commonjs": "npm:^7.18.0"
+    "@babel/plugin-transform-modules-commonjs": "npm:^7.18.2"
     "@babel/plugin-transform-modules-systemjs": "npm:^7.18.0"
     "@babel/plugin-transform-modules-umd": "npm:^7.18.0"
     "@babel/plugin-transform-named-capturing-groups-regex": "npm:^7.17.12"
@@ -1467,12 +1580,12 @@ __metadata:
     "@babel/plugin-transform-shorthand-properties": "npm:^7.16.7"
     "@babel/plugin-transform-spread": "npm:^7.17.12"
     "@babel/plugin-transform-sticky-regex": "npm:^7.16.7"
-    "@babel/plugin-transform-template-literals": "npm:^7.17.12"
+    "@babel/plugin-transform-template-literals": "npm:^7.18.2"
     "@babel/plugin-transform-typeof-symbol": "npm:^7.17.12"
     "@babel/plugin-transform-unicode-escapes": "npm:^7.16.7"
     "@babel/plugin-transform-unicode-regex": "npm:^7.16.7"
     "@babel/preset-modules": "npm:^0.1.5"
-    "@babel/types": "npm:^7.18.0"
+    "@babel/types": "npm:^7.18.2"
     babel-plugin-polyfill-corejs2: "npm:^0.3.0"
     babel-plugin-polyfill-corejs3: "npm:^0.5.0"
     babel-plugin-polyfill-regenerator: "npm:^0.3.0"
@@ -1480,7 +1593,7 @@ __metadata:
     semver: "npm:^6.3.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 1fbdae30ef476675cf0ee0c747ccc45805be1a64d9bcd06413d74e75e843282b522c65c0642e14165c773348836fcbb4ab0de9f8bc183b35c3b1f03f8788cc52
+  checksum: 03627eb46fc63d177cbe94321846e5c6feaee92ec03ef6b5d5f775a6b7960bae571acb4094b9ac97c48faf677071031b12568dd78fc77bc747b7e6ef2d76da2c
   languageName: node
   linkType: hard
 
@@ -1578,6 +1691,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/traverse@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/traverse@npm:7.18.2"
+  dependencies:
+    "@babel/code-frame": "npm:^7.16.7"
+    "@babel/generator": "npm:^7.18.2"
+    "@babel/helper-environment-visitor": "npm:^7.18.2"
+    "@babel/helper-function-name": "npm:^7.17.9"
+    "@babel/helper-hoist-variables": "npm:^7.16.7"
+    "@babel/helper-split-export-declaration": "npm:^7.16.7"
+    "@babel/parser": "npm:^7.18.0"
+    "@babel/types": "npm:^7.18.2"
+    debug: "npm:^4.1.0"
+    globals: "npm:^11.1.0"
+  checksum: 8a586d88fd7276289733a7491967a489865b637335974dadbd6602b1babec44672242d6ba89744948d94f92e63bf5340180976e92a10b0066617bf6cb6b51e62
+  languageName: node
+  linkType: hard
+
 "@babel/types@npm:^7.0.0, @babel/types@npm:^7.16.0, @babel/types@npm:^7.16.7, @babel/types@npm:^7.16.8, @babel/types@npm:^7.17.0, @babel/types@npm:^7.17.12, @babel/types@npm:^7.18.0, @babel/types@npm:^7.3.0, @babel/types@npm:^7.3.3, @babel/types@npm:^7.4.4, @babel/types@npm:^7.8.3":
   version: 7.18.0
   resolution: "@babel/types@npm:7.18.0"
@@ -1585,6 +1716,16 @@ __metadata:
     "@babel/helper-validator-identifier": "npm:^7.16.7"
     to-fast-properties: "npm:^2.0.0"
   checksum: c41df85315750f2703be9ae1bd75bf698f8956b285bafaeeb964b70c0496dd36813b814fad56d31fd42bd28dce301a0a701498e3f66774b4c3b38a654141a134
+  languageName: node
+  linkType: hard
+
+"@babel/types@npm:^7.18.2":
+  version: 7.18.2
+  resolution: "@babel/types@npm:7.18.2"
+  dependencies:
+    "@babel/helper-validator-identifier": "npm:^7.16.7"
+    to-fast-properties: "npm:^2.0.0"
+  checksum: 09e52b0e7502e6284710ddcf6e8e8e9ac0f7c559ac311d474e7d1cc93a22cf3a39adba7d105060edac12edcbf837f5dc78f7fabc7bbc35fbefe92e7130228066
   languageName: node
   linkType: hard
 
@@ -1634,16 +1775,16 @@ __metadata:
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/privacypass-sjcl": "npm:0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/jsonwebtoken": "npm:8.5.8"
@@ -1673,18 +1814,18 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:8.5.1"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     localforage: "npm:1.10.0"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -1698,16 +1839,16 @@ __metadata:
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/jsonwebtoken": "npm:8.5.8"
@@ -1736,17 +1877,17 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -1760,26 +1901,26 @@ __metadata:
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/plugin-transform-modules-commonjs": "npm:^7.16.8"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/anonymous-tokens": "npm:^0.0.0"
     "@coil/client": "npm:^0.0.0"
     "@coil/polyfill-utils": "npm:^0.0.0"
     "@coil/privacypass-sjcl": "npm:^0.0.0"
     "@coil/puppeteer-utils": "npm:^0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
     "@dier-makr/annotations": "npm:^0.0.0"
     "@dier-makr/inversify": "npm:^0.0.0"
     "@material-ui/core": "npm:^4.11.4"
     "@material-ui/icons": "npm:^4.11.2"
     "@material-ui/styles": "npm:^4.11.4"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/debug": "npm:4.1.7"
     "@types/filesystem": "npm:0.0.32"
@@ -1834,7 +1975,7 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
     jss: "npm:^10.6.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     lottie-web: "npm:^5.8.1"
     prettier: "npm:2.6.2"
     puppeteer: "npm:14.1.1"
@@ -1843,12 +1984,12 @@ __metadata:
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
     web-ext: "npm:6.8.0"
     webpack: "npm:5.72.1"
@@ -1865,16 +2006,16 @@ __metadata:
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
     "@apollo/utils.logger": "npm:^1.0.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@coil/privacypass-sjcl": "npm:0.0.0"
     "@coil/puppeteer-utils": "npm:0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
     "@graphql-codegen/cli": "npm:2.6.2"
     "@graphql-codegen/introspection": "npm:2.1.1"
@@ -1885,7 +2026,7 @@ __metadata:
     "@graphql-tools/schema": "npm:^8.3.11"
     "@graphql-tools/utils": "npm:^8.6.10"
     "@interledger/stream-receiver": "npm:^0.3.3-alpha.1"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/body-parser": "npm:^1.19.2"
     "@types/express": "npm:^4.17.13"
@@ -1931,17 +2072,17 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
     lerna: "npm:4.0.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -1955,15 +2096,15 @@ __metadata:
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -1992,19 +2133,19 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     json5: "npm:^2.2.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     npm-check-updates: "npm:^13.0.0"
     prettier: "npm:2.6.2"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     sort-package-json: "npm:1.57.0"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -2019,19 +2160,19 @@ __metadata:
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@coil/polyfill-utils": "npm:^0.0.0"
     "@coil/puppeteer-utils": "npm:^0.0.0"
     "@coil/webpack-utils": "npm:0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/long": "npm:4.0.2"
@@ -2064,19 +2205,19 @@ __metadata:
     ilp-protocol-stream: "npm:2.7.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     puppeteer: "npm:14.1.1"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
@@ -2091,15 +2232,15 @@ __metadata:
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -2125,17 +2266,17 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -2149,15 +2290,15 @@ __metadata:
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/keccak": "npm:3.0.1"
@@ -2189,18 +2330,18 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     keccak: "npm:^3.0.1"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     sjcl: sublimator/sjcl
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -2214,16 +2355,16 @@ __metadata:
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/debug": "npm:4.1.7"
     "@types/get-port": "npm:4.2.0"
@@ -2255,18 +2396,18 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     puppeteer: "npm:^14.0.0"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     tmp: "npm:^0.2.1"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     web-ext: "npm:^6.1.0"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
@@ -2281,15 +2422,15 @@ __metadata:
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -2319,7 +2460,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     process: "npm:^0.11.10"
     regenerator-runtime: "npm:^0.13.9"
@@ -2327,12 +2468,12 @@ __metadata:
     setimmediate: "npm:^1.0.5"
     stream-browserify: "npm:^3.0.0"
     string_decoder: "npm:^1.3.0"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     util: "npm:^0.12.4"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
@@ -2347,16 +2488,16 @@ __metadata:
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -2382,16 +2523,16 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -2400,22 +2541,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@commitlint/cli@npm:17.0.0":
-  version: 17.0.0
-  resolution: "@commitlint/cli@npm:17.0.0"
+"@commitlint/cli@npm:17.0.1":
+  version: 17.0.1
+  resolution: "@commitlint/cli@npm:17.0.1"
   dependencies:
     "@commitlint/format": "npm:^17.0.0"
     "@commitlint/lint": "npm:^17.0.0"
     "@commitlint/load": "npm:^17.0.0"
     "@commitlint/read": "npm:^17.0.0"
     "@commitlint/types": "npm:^17.0.0"
+    execa: "npm:^5.0.0"
     lodash: "npm:^4.17.19"
     resolve-from: "npm:5.0.0"
     resolve-global: "npm:1.0.0"
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: f4ac3f0ed7466afec24f6dbe28f0a0639a8fb74f34e45205e49ce63c26d7c2a82564ed75c79aa01b4f719b8c42882e492aad232d6f7be99cc441fbd643a5ea57
+  checksum: 9467fe3c4a1db544ef0a0ae32f99cf8a875da3c9b8c4a6a983feeadb64c8a589664f3d628e8d5e74954e9d9aee83821362bc4b075e58399b914e20cf7e86ad01
   languageName: node
   linkType: hard
 
@@ -2635,15 +2777,15 @@ __metadata:
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -2669,16 +2811,16 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -2692,16 +2834,16 @@ __metadata:
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -2728,16 +2870,16 @@ __metadata:
     inversify: "npm:^6.0.0"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -3340,19 +3482,19 @@ __metadata:
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/polyfill-utils": "npm:^0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
     "@dier-makr/inversify": "npm:^0.0.0"
     "@material-ui/core": "npm:^4.11.4"
     "@material-ui/icons": "npm:^4.11.2"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -3395,20 +3537,20 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     style-loader: "npm:3.3.1"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typeface-roboto: "npm:^1.1.13"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
     web-ext: "npm:6.8.0"
     webpack: "npm:5.72.1"
@@ -5161,15 +5303,15 @@ __metadata:
   resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -5195,17 +5337,17 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     source-map: "npm:0.5.6"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -5221,9 +5363,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-android-arm-eabi@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-android-arm-eabi@npm:1.2.194"
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
 "@swc/core-android-arm64@npm:1.2.189":
   version: 1.2.189
   resolution: "@swc/core-android-arm64@npm:1.2.189"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-android-arm64@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-android-arm64@npm:1.2.194"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
@@ -5235,9 +5391,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-darwin-arm64@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-darwin-arm64@npm:1.2.194"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@swc/core-darwin-x64@npm:1.2.189":
   version: 1.2.189
   resolution: "@swc/core-darwin-x64@npm:1.2.189"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-darwin-x64@npm:1.2.194"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -5249,9 +5419,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-freebsd-x64@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-freebsd-x64@npm:1.2.194"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-arm-gnueabihf@npm:1.2.189":
   version: 1.2.189
   resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.189"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm-gnueabihf@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.194"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
@@ -5263,9 +5447,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-arm64-gnu@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.2.194"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-arm64-musl@npm:1.2.189":
   version: 1.2.189
   resolution: "@swc/core-linux-arm64-musl@npm:1.2.189"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-musl@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-linux-arm64-musl@npm:1.2.194"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
@@ -5277,9 +5475,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-x64-gnu@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-linux-x64-gnu@npm:1.2.194"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-x64-musl@npm:1.2.189":
   version: 1.2.189
   resolution: "@swc/core-linux-x64-musl@npm:1.2.189"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-musl@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-linux-x64-musl@npm:1.2.194"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
@@ -5291,9 +5503,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-win32-arm64-msvc@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.2.194"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@swc/core-win32-ia32-msvc@npm:1.2.189":
   version: 1.2.189
   resolution: "@swc/core-win32-ia32-msvc@npm:1.2.189"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-ia32-msvc@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.2.194"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
@@ -5305,7 +5531,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core@npm:*, @swc/core@npm:1.2.189":
+"@swc/core-win32-x64-msvc@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core-win32-x64-msvc@npm:1.2.194"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:*":
   version: 1.2.189
   resolution: "@swc/core@npm:1.2.189"
   dependencies:
@@ -5352,6 +5585,56 @@ __metadata:
   bin:
     swcx: run_swcx.js
   checksum: 4ee3354dc04860538afa655487b6f890cd9161ab535e0115ea91dfb9e39d660360927eef9ed4ae1a2cdd7a62bb3e6f77ba6a01d242c592ba3191e263bd8bafa1
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:1.2.194":
+  version: 1.2.194
+  resolution: "@swc/core@npm:1.2.194"
+  dependencies:
+    "@swc/core-android-arm-eabi": "npm:1.2.194"
+    "@swc/core-android-arm64": "npm:1.2.194"
+    "@swc/core-darwin-arm64": "npm:1.2.194"
+    "@swc/core-darwin-x64": "npm:1.2.194"
+    "@swc/core-freebsd-x64": "npm:1.2.194"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.2.194"
+    "@swc/core-linux-arm64-gnu": "npm:1.2.194"
+    "@swc/core-linux-arm64-musl": "npm:1.2.194"
+    "@swc/core-linux-x64-gnu": "npm:1.2.194"
+    "@swc/core-linux-x64-musl": "npm:1.2.194"
+    "@swc/core-win32-arm64-msvc": "npm:1.2.194"
+    "@swc/core-win32-ia32-msvc": "npm:1.2.194"
+    "@swc/core-win32-x64-msvc": "npm:1.2.194"
+  dependenciesMeta:
+    "@swc/core-android-arm-eabi":
+      optional: true
+    "@swc/core-android-arm64":
+      optional: true
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-freebsd-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  bin:
+    swcx: run_swcx.js
+  checksum: 1956ccb4802f7fb51288d4273c8cf0f91886ffb3bd545ed8950bdb47dae7568cb3b4ff10401c6cacccbe1dd72dd212d0d974f2432a980760eeb70b495820450b
   languageName: node
   linkType: hard
 
@@ -6433,16 +6716,16 @@ __metadata:
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -6473,7 +6756,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     process: "npm:^0.11.10"
     regenerator-runtime: "npm:^0.13.9"
@@ -6481,12 +6764,12 @@ __metadata:
     setimmediate: "npm:^1.0.5"
     stream-browserify: "npm:^3.0.0"
     string_decoder: "npm:^1.3.0"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     util: "npm:^0.12.4"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
@@ -6501,17 +6784,17 @@ __metadata:
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
     "@hot-loader/react-dom": "npm:17.0.2"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/body-parser": "npm:1.19.2"
     "@types/express": "npm:4.17.13"
@@ -6555,7 +6838,7 @@ __metadata:
     inversify-express-utils: "npm:^6.3.2"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     node-fetch: "npm:^2.6.1"
     oer-utils: "npm:^5.1.2"
     prettier: "npm:2.6.2"
@@ -6565,12 +6848,12 @@ __metadata:
     react-hot-loader: "npm:^4.13.0"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -6584,15 +6867,15 @@ __metadata:
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -6621,18 +6904,18 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
@@ -6647,16 +6930,16 @@ __metadata:
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -6684,16 +6967,16 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -6709,17 +6992,17 @@ __metadata:
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
     "@hot-loader/react-dom": "npm:17.0.2"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:27.5.1"
@@ -6752,19 +7035,19 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     react-hot-loader: "npm:^4.13.0"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
@@ -6779,15 +7062,15 @@ __metadata:
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -6813,17 +7096,17 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-json-schema-generator: "npm:1.0.0"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -6837,16 +7120,16 @@ __metadata:
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -6874,16 +7157,16 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
@@ -17279,15 +17562,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:2.x, json5@npm:^2.1.2, json5@npm:^2.2.0, json5@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "json5@npm:2.2.1"
-  bin:
-    json5: lib/cli.js
-  checksum: 8bb433c397375ec5b9150e08d1a323acf5258d51126c55e11e838136f201c197e1589cba42559c97d39bac54ed1293de1e5caff17ce0dc624bfd845c10d9eaba
-  languageName: node
-  linkType: hard
-
 "json5@npm:^1.0.1":
   version: 1.0.1
   resolution: "json5@npm:1.0.1"
@@ -17296,6 +17570,15 @@ __metadata:
   bin:
     json5: lib/cli.js
   checksum: fd9492140ea8a1ec338c96e8527e940c9464ca3c7ef8fbf00b8bbbac1c6e60d612bf6640885e8a9108c3b71dc913f9a07a628df36f462853ea8c59bbce192e32
+  languageName: node
+  linkType: hard
+
+"json5@npm:^2.1.2, json5@npm:^2.2.0, json5@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "json5@npm:2.2.1"
+  bin:
+    json5: lib/cli.js
+  checksum: 8bb433c397375ec5b9150e08d1a323acf5258d51126c55e11e838136f201c197e1589cba42559c97d39bac54ed1293de1e5caff17ce0dc624bfd845c10d9eaba
   languageName: node
   linkType: hard
 
@@ -17803,9 +18086,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.4.1":
-  version: 12.4.1
-  resolution: "lint-staged@npm:12.4.1"
+"lint-staged@npm:12.4.2":
+  version: 12.4.2
+  resolution: "lint-staged@npm:12.4.2"
   dependencies:
     cli-truncate: "npm:^3.1.0"
     colorette: "npm:^2.0.16"
@@ -17823,7 +18106,7 @@ __metadata:
     yaml: "npm:^1.10.2"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: da2612b2c7a4eaf6ce172172c7231a3a2ca4b1d72ca710880b7be0bc20f0be172e014af8fc1b18be5212d5499810692fcb0769abaa398742b72ae2acf1a0ac9a
+  checksum: f2af5065df27088555058c712237e8b11bebbaea80adaddf31b67c0224f459a783f43716df9541a7501d3074363d755065e105e5fd7ea167617c557e7c76692f
   languageName: node
   linkType: hard
 
@@ -24816,14 +25099,14 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:28.0.2":
-  version: 28.0.2
-  resolution: "ts-jest@npm:28.0.2"
+"ts-jest@npm:28.0.3":
+  version: 28.0.3
+  resolution: "ts-jest@npm:28.0.3"
   dependencies:
     bs-logger: "npm:0.x"
     fast-json-stable-stringify: "npm:2.x"
     jest-util: "npm:^28.0.0"
-    json5: "npm:2.x"
+    json5: "npm:^2.2.1"
     lodash.memoize: "npm:4.x"
     make-error: "npm:1.x"
     semver: "npm:7.x"
@@ -24845,7 +25128,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 67c78ccd425a0fc756f47f377793b42a2c16442c6eebbf56c83711dbde7929b4bbff675b2aad72a050e457ab4cbc23ecc5df8d2e659cb9a1d6daf83748568bc1
+  checksum: a5193930d05552ebaf80541917bf92a397c696aa23eeac0d526d434e89d4b6a05f9ad9694f6fe672d4a3b737e36dba487d790ddeb8b3f6ef638379311e69858a
   languageName: node
   linkType: hard
 
@@ -24887,19 +25170,19 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:1.1.8":
-  version: 1.1.8
-  resolution: "ts-node-dev@npm:1.1.8"
+"ts-node-dev@npm:2.0.0":
+  version: 2.0.0
+  resolution: "ts-node-dev@npm:2.0.0"
   dependencies:
     chokidar: "npm:^3.5.1"
     dynamic-dedupe: "npm:^0.3.0"
-    minimist: "npm:^1.2.5"
+    minimist: "npm:^1.2.6"
     mkdirp: "npm:^1.0.4"
     resolve: "npm:^1.0.0"
     rimraf: "npm:^2.6.1"
     source-map-support: "npm:^0.5.12"
     tree-kill: "npm:^1.2.2"
-    ts-node: "npm:^9.0.0"
+    ts-node: "npm:^10.4.0"
     tsconfig: "npm:^7.0.0"
   peerDependencies:
     node-notifier: "*"
@@ -24910,11 +25193,11 @@ sjcl@sublimator/sjcl:
   bin:
     ts-node-dev: lib/bin.js
     tsnd: lib/bin.js
-  checksum: 0a2d7fcb2cc4709b98c8c232b45b4ef98dc627c0e3c78fe454eac5243e5cd69f02ed2c459b92341be1571229410ebfa1c0d4ea26f7c8c135259c22094302fdc9
+  checksum: e22ecb903f51b3d1bd7d284ac94b7bb685ea948e45c9e740c1a26701058ee32e2f0ac3e5bd4735c3a0b455e9b3aabe74e915e337ebc62b25b2efd359129efcf8
   languageName: node
   linkType: hard
 
-"ts-node@npm:10.8.0, ts-node@npm:^10.7.0":
+"ts-node@npm:10.8.0, ts-node@npm:^10.4.0, ts-node@npm:^10.7.0":
   version: 10.8.0
   resolution: "ts-node@npm:10.8.0"
   dependencies:
@@ -24952,7 +25235,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^9, ts-node@npm:^9.0.0":
+"ts-node@npm:^9":
   version: 9.1.1
   resolution: "ts-node@npm:9.1.1"
   dependencies:
@@ -25198,7 +25481,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.6.4, typescript@npm:^4.6.4, typescript@npm:~4.6.2":
+"typescript@npm:^4.6.4, typescript@npm:~4.6.2":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
   bin:
@@ -25208,13 +25491,33 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^4.6.4#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A~4.6.2#optional!builtin<compat/typescript>":
+"typescript@npm:^4.7.2":
+  version: 4.7.2
+  resolution: "typescript@npm:4.7.2"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: f841f230723cda583d1a564fb38fa85abfc28e534d7db933329ee06047a8b4cee84697e2e01f348aff760f6d18da753063c51f4d80763c7b284e78abe8569d82
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^4.6.4#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A~4.6.2#optional!builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=7ad353"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 0ee0e98dae9f55e67ce31749066b581698b563d2b6edc89430f5203ad770d51c43068ee00970df24b078c359dd6a8eb82da55a45b3e0ac2c61a0cf13f15c050a
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^4.7.2#optional!builtin<compat/typescript>":
+  version: 4.7.2
+  resolution: "typescript@patch:typescript@npm%3A4.7.2#optional!builtin<compat/typescript>::version=4.7.2&hash=7ad353"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: ff28751fd5ca4c0741d73e00513799fb58bce01b69e5e701caf9f8e0245687cd1e7c966479d6af321fba162bb4edc02924ed7dd7f847e633925605659e6510dc
   languageName: node
   linkType: hard
 
@@ -25890,15 +26193,15 @@ sjcl@sublimator/sjcl:
   resolution: "web-monetization@workspace:."
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.0"
+    "@babel/core": "npm:7.18.2"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
-    "@babel/plugin-proposal-decorators": "npm:7.17.12"
+    "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
-    "@babel/preset-env": "npm:7.18.0"
+    "@babel/preset-env": "npm:7.18.2"
     "@babel/preset-typescript": "npm:7.17.12"
-    "@commitlint/cli": "npm:17.0.0"
+    "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@swc/core": "npm:1.2.189"
+    "@swc/core": "npm:1.2.194"
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
@@ -25924,16 +26227,16 @@ sjcl@sublimator/sjcl:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.1"
+    lint-staged: "npm:12.4.2"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.2"
+    ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:1.1.8"
+    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
-    typescript: "npm:4.6.4"
+    typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
