@@ -36,7 +36,7 @@ function retry() {
 if [[ ${DEV} = 'false' ]]; then
   COMMAND="ts-node -r tsconfig-paths/register -T -P test/tsconfig.json"
 else
-  COMMAND="nodemon -r tsconfig-paths/register -P test/tsconfig.json --respawn --transpile-only"
+  COMMAND="nodemon -r tsconfig-paths/register -P test/tsconfig.json"
 fi
 
 export DEBUG='coil*'
