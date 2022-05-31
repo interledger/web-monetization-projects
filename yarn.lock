@@ -1648,8 +1648,8 @@ __metadata:
     "@types/node": "npm:16.11.36"
     "@types/node-fetch": "npm:2.6.1"
     "@types/sjcl": "npm:1.0.30"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -1659,7 +1659,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -1671,7 +1671,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:8.5.1"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     localforage: "npm:1.10.0"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
@@ -1711,8 +1711,8 @@ __metadata:
     "@types/jsonwebtoken": "npm:8.5.8"
     "@types/node": "npm:16.11.36"
     "@types/node-fetch": "npm:2.6.1"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -1722,7 +1722,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -1734,7 +1734,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
@@ -1792,8 +1792,8 @@ __metadata:
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webexts/build-utils": "npm:^0.0.0"
     "@webmonetization/polyfill-utils": "npm:^0.0.0"
     "@webmonetization/types": "npm:^0.0.0"
@@ -1811,7 +1811,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -1832,7 +1832,7 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
     jss: "npm:^10.6.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     lottie-web: "npm:^5.8.1"
     prettier: "npm:2.6.2"
     puppeteer: "npm:14.1.1"
@@ -1890,8 +1890,8 @@ __metadata:
     "@types/jest": "npm:27.5.1"
     "@types/jsonwebtoken": "npm:^8.5.8"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
@@ -1906,7 +1906,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -1928,7 +1928,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
@@ -1964,8 +1964,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -1977,7 +1977,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -1989,7 +1989,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     json5: "npm:^2.2.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     npm-check-updates: "npm:^13.0.0"
     prettier: "npm:2.6.2"
     reduct: "npm:^3.3.1"
@@ -2035,8 +2035,8 @@ __metadata:
     "@types/node": "npm:16.11.36"
     "@types/node-fetch": "npm:2.6.1"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
@@ -2048,7 +2048,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -2061,7 +2061,7 @@ __metadata:
     ilp-protocol-stream: "npm:2.7.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     puppeteer: "npm:14.1.1"
@@ -2100,8 +2100,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -2111,7 +2111,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -2122,7 +2122,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
@@ -2160,8 +2160,8 @@ __metadata:
     "@types/keccak": "npm:3.0.1"
     "@types/node": "npm:16.11.36"
     "@types/sjcl": "npm:1.0.30"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     asn1-parser: "npm:^1.1.8"
@@ -2174,7 +2174,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -2186,7 +2186,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     keccak: "npm:^3.0.1"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
@@ -2227,8 +2227,8 @@ __metadata:
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
     "@types/tmp": "npm:0.2.3"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
@@ -2240,7 +2240,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -2252,7 +2252,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     puppeteer: "npm:^14.0.0"
     regenerator-runtime: "npm:^0.13.9"
@@ -2290,8 +2290,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
@@ -2304,7 +2304,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -2316,7 +2316,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     process: "npm:^0.11.10"
     regenerator-runtime: "npm:^0.13.9"
@@ -2357,8 +2357,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -2368,7 +2368,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -2379,7 +2379,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -2645,8 +2645,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -2656,7 +2656,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -2667,7 +2667,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -2703,8 +2703,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -2714,7 +2714,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -2726,7 +2726,7 @@ __metadata:
     inversify: "npm:^6.0.0"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -3350,8 +3350,8 @@ __metadata:
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webexts/build-utils": "npm:0.0.0"
     "@webmonetization/polyfill-utils": "npm:^0.0.0"
     "@webmonetization/types": "npm:^0.0.0"
@@ -3369,7 +3369,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -3386,7 +3386,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
@@ -4166,8 +4166,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -4177,7 +4177,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -4188,7 +4188,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -5146,13 +5146,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:5.26.0":
-  version: 5.26.0
-  resolution: "@typescript-eslint/eslint-plugin@npm:5.26.0"
+"@typescript-eslint/eslint-plugin@npm:5.27.0":
+  version: 5.27.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:5.27.0"
   dependencies:
-    "@typescript-eslint/scope-manager": "npm:5.26.0"
-    "@typescript-eslint/type-utils": "npm:5.26.0"
-    "@typescript-eslint/utils": "npm:5.26.0"
+    "@typescript-eslint/scope-manager": "npm:5.27.0"
+    "@typescript-eslint/type-utils": "npm:5.27.0"
+    "@typescript-eslint/utils": "npm:5.27.0"
     debug: "npm:^4.3.4"
     functional-red-black-tree: "npm:^1.0.1"
     ignore: "npm:^5.2.0"
@@ -5165,42 +5165,42 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: e4d726fc05b34fbaee34fc2b42827893fa5cbfb115a35b85408ba9d2ef8f213086e17a569e59671938b490c05b44e4a9768f043127b3d46020670c62cf864a74
+  checksum: 6a68d3001ba45cd0b93fb6760730846fe2809c29e62d85e1754333ebd679164cfaf915247dbf6050fac3b10db4fcca9fd314323b5594263bbe6dcc6c5bcc9cc0
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:5.26.0":
-  version: 5.26.0
-  resolution: "@typescript-eslint/parser@npm:5.26.0"
+"@typescript-eslint/parser@npm:5.27.0":
+  version: 5.27.0
+  resolution: "@typescript-eslint/parser@npm:5.27.0"
   dependencies:
-    "@typescript-eslint/scope-manager": "npm:5.26.0"
-    "@typescript-eslint/types": "npm:5.26.0"
-    "@typescript-eslint/typescript-estree": "npm:5.26.0"
+    "@typescript-eslint/scope-manager": "npm:5.27.0"
+    "@typescript-eslint/types": "npm:5.27.0"
+    "@typescript-eslint/typescript-estree": "npm:5.27.0"
     debug: "npm:^4.3.4"
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 5f98e802b269a2c72289b2b900450fbbc5e5de5b8bcf3f9d6a26f49098d6478d2554a8848970b24e28058390cde3e66bb25c9d95c9106e62145dc674fd1d84ff
+  checksum: b99237c72487098724c5863ec592dd4d8d7569ea5825e1968369853ffdbbcc7f22ca8e3608887d7c0a5d99b59f8ddb89fff5ae31bee82bbf83fbe75188beb7b7
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:5.26.0":
-  version: 5.26.0
-  resolution: "@typescript-eslint/scope-manager@npm:5.26.0"
+"@typescript-eslint/scope-manager@npm:5.27.0":
+  version: 5.27.0
+  resolution: "@typescript-eslint/scope-manager@npm:5.27.0"
   dependencies:
-    "@typescript-eslint/types": "npm:5.26.0"
-    "@typescript-eslint/visitor-keys": "npm:5.26.0"
-  checksum: eb48c82c99b0aa276896245d2c4bc89a5e4c8dcca2467f8dd3b081b9cf0ff58464a4c88836a5ff0640d948a25df427e317e7ffb19dcb7e57fc10e72149a18319
+    "@typescript-eslint/types": "npm:5.27.0"
+    "@typescript-eslint/visitor-keys": "npm:5.27.0"
+  checksum: 6da774e188a8e7baafeaeea9b96fcae3c9349b180c7e83ffba056bd82c5575d821d5aa5821a14173967dcc00f8343f716b569dbd7ab2634c33c31c97db0287c2
   languageName: node
   linkType: hard
 
-"@typescript-eslint/type-utils@npm:5.26.0":
-  version: 5.26.0
-  resolution: "@typescript-eslint/type-utils@npm:5.26.0"
+"@typescript-eslint/type-utils@npm:5.27.0":
+  version: 5.27.0
+  resolution: "@typescript-eslint/type-utils@npm:5.27.0"
   dependencies:
-    "@typescript-eslint/utils": "npm:5.26.0"
+    "@typescript-eslint/utils": "npm:5.27.0"
     debug: "npm:^4.3.4"
     tsutils: "npm:^3.21.0"
   peerDependencies:
@@ -5208,23 +5208,23 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 7ee25a242026d327e8133d515d35e48243d2ded08341d3fac3707a84745f8cde49a2c33b50233e681f5f1773fa07e74596a26fe844181f7347fbdd5a4f0f7625
+  checksum: f03cb0858738c8101d1f3f44c7f18fb791f97569733abc12307e90e87cca35000c05733d8d92729e7efb2c42b94d1005ba127079dccb27f8cb3620a93440da45
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:5.26.0":
-  version: 5.26.0
-  resolution: "@typescript-eslint/types@npm:5.26.0"
-  checksum: 47f0a848676c6888e9ba354b8be6b102f08f26c9265a3763e22097cda9b2c85cf344fab398c5816eb0f4a68c3c9d04634594637df93a0e2d19130e262378cfd8
+"@typescript-eslint/types@npm:5.27.0":
+  version: 5.27.0
+  resolution: "@typescript-eslint/types@npm:5.27.0"
+  checksum: ae2b56e9bf282f0f8b70207fe93998fe9995b6dbd915a751652344c955cb0790965d37ee0f93cc2bfdd59f1b089251ece795692801634f80bca12212ea912b89
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:5.26.0":
-  version: 5.26.0
-  resolution: "@typescript-eslint/typescript-estree@npm:5.26.0"
+"@typescript-eslint/typescript-estree@npm:5.27.0":
+  version: 5.27.0
+  resolution: "@typescript-eslint/typescript-estree@npm:5.27.0"
   dependencies:
-    "@typescript-eslint/types": "npm:5.26.0"
-    "@typescript-eslint/visitor-keys": "npm:5.26.0"
+    "@typescript-eslint/types": "npm:5.27.0"
+    "@typescript-eslint/visitor-keys": "npm:5.27.0"
     debug: "npm:^4.3.4"
     globby: "npm:^11.1.0"
     is-glob: "npm:^4.0.3"
@@ -5233,33 +5233,33 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 4f2c5da75599cb7fa2819521b479f28c200d7267356c5c7bde53df6bebc728eb91855eff07f8f75e0ff3793e3baa8cf72b7726b41bd6dca0e9b94caa5e77fb9e
+  checksum: 95417972273523c5eece4a9a089707f48f954280a3b08e7f725ef1b0e3b7587228ca8de46f9f2e6c87753b91e8d59656d609e7df7c818cefad25a15bd8baffc1
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:5.26.0, @typescript-eslint/utils@npm:^5.10.0":
-  version: 5.26.0
-  resolution: "@typescript-eslint/utils@npm:5.26.0"
+"@typescript-eslint/utils@npm:5.27.0, @typescript-eslint/utils@npm:^5.10.0":
+  version: 5.27.0
+  resolution: "@typescript-eslint/utils@npm:5.27.0"
   dependencies:
     "@types/json-schema": "npm:^7.0.9"
-    "@typescript-eslint/scope-manager": "npm:5.26.0"
-    "@typescript-eslint/types": "npm:5.26.0"
-    "@typescript-eslint/typescript-estree": "npm:5.26.0"
+    "@typescript-eslint/scope-manager": "npm:5.27.0"
+    "@typescript-eslint/types": "npm:5.27.0"
+    "@typescript-eslint/typescript-estree": "npm:5.27.0"
     eslint-scope: "npm:^5.1.1"
     eslint-utils: "npm:^3.0.0"
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-  checksum: 04f03415293c3366d4650a25489bc53bbce0b7ae270883f55545eb14ec54d16c65b18d6de9a9fb5efa6affbe90939515547a7aea05dd83fc6b9554cc9e836759
+  checksum: 6558841ff20dc253d2e4f7dabd6c6b511b06830a8753cb1f22b8e0e2d8cbd876b0a72c414e37468bcb64fd4019154131639ede16ad60bef7857f1c1511af17c7
   languageName: node
   linkType: hard
 
-"@typescript-eslint/visitor-keys@npm:5.26.0":
-  version: 5.26.0
-  resolution: "@typescript-eslint/visitor-keys@npm:5.26.0"
+"@typescript-eslint/visitor-keys@npm:5.27.0":
+  version: 5.27.0
+  resolution: "@typescript-eslint/visitor-keys@npm:5.27.0"
   dependencies:
-    "@typescript-eslint/types": "npm:5.26.0"
+    "@typescript-eslint/types": "npm:5.27.0"
     eslint-visitor-keys: "npm:^3.3.0"
-  checksum: 57c1f1bc10bfe84303e229e3572e41d151c47635904fe297051af211c34de4dd1317bfeb9e8c55b578af9160db6459f488e4cc1b845ca72365f2a63d368952f5
+  checksum: 500ebedb9ef26bc3133b6ca12e717244ec44aebaddf1684751691de5e518ab4d1a13a69c98455098f6d8b52ff2676e9361bbcb91abb1225cb29fa956222ba95f
   languageName: node
   linkType: hard
 
@@ -5432,8 +5432,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
@@ -5447,7 +5447,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -5459,7 +5459,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     process: "npm:^0.11.10"
     regenerator-runtime: "npm:^0.13.9"
@@ -5508,8 +5508,8 @@ __metadata:
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
     "@types/react-helmet": "npm:6.1.5"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webmonetization/react": "npm:0.0.12"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
@@ -5522,7 +5522,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -5541,7 +5541,7 @@ __metadata:
     inversify-express-utils: "npm:^6.3.2"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
     oer-utils: "npm:^5.1.2"
     prettier: "npm:2.6.2"
@@ -5584,8 +5584,8 @@ __metadata:
     "@types/node": "npm:16.11.36"
     "@types/node-fetch": "npm:2.6.1"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
@@ -5596,7 +5596,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -5607,7 +5607,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
     prettier: "npm:2.6.2"
     reduct: "npm:^3.3.1"
@@ -5647,8 +5647,8 @@ __metadata:
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
     "@types/react": "npm:17.0.45"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
@@ -5659,7 +5659,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -5670,7 +5670,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -5713,8 +5713,8 @@ __metadata:
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
@@ -5726,7 +5726,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -5738,7 +5738,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
@@ -5777,8 +5777,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -5788,7 +5788,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -5799,7 +5799,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -5836,8 +5836,8 @@ __metadata:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
@@ -5849,7 +5849,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -5860,7 +5860,7 @@ __metadata:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -7879,7 +7879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"braces@npm:^3.0.1, braces@npm:~3.0.2":
+"braces@npm:^3.0.2, braces@npm:~3.0.2":
   version: 3.0.2
   resolution: "braces@npm:3.0.2"
   dependencies:
@@ -9082,17 +9082,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^8.1.0, commander@npm:^8.3.0":
+"commander@npm:^8.1.0":
   version: 8.3.0
   resolution: "commander@npm:8.3.0"
   checksum: 94dba589da4444bc07d60537438ce36bbf78b52b18bb720fb3727a3b589cb27b53171065742e6e442962e273976f034ca7475cc5517d92c7033fae2f6ed50e76
   languageName: node
   linkType: hard
 
-"commander@npm:^9.0.0, commander@npm:^9.2.0":
-  version: 9.2.0
-  resolution: "commander@npm:9.2.0"
-  checksum: 9e4e3d7834badb74a77d61a8da32c11f0ed2ff63da51ec3076e18fee7eea3b6963b512f218a3905d11cf5172de6ff332cbb1ef45d98bb4532ffed60fe25008f0
+"commander@npm:^9.0.0, commander@npm:^9.2.0, commander@npm:^9.3.0":
+  version: 9.3.0
+  resolution: "commander@npm:9.3.0"
+  checksum: 110e8e7a5476adfc7d76a2cc4928077dd094053d4387213db5f343327f4f7ef242d13d123788aacf172706264b184b5fa94b29556d9506493ca3325f31782f54
   languageName: node
   linkType: hard
 
@@ -11020,9 +11020,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:26.4.5":
-  version: 26.4.5
-  resolution: "eslint-plugin-jest@npm:26.4.5"
+"eslint-plugin-jest@npm:26.4.6":
+  version: 26.4.6
+  resolution: "eslint-plugin-jest@npm:26.4.6"
   dependencies:
     "@typescript-eslint/utils": "npm:^5.10.0"
   peerDependencies:
@@ -11033,7 +11033,7 @@ __metadata:
       optional: true
     jest:
       optional: true
-  checksum: 717718a4eb31de80a0fb363e0a57d7bae0df680a680d060460a8499be45017ca233e8a886c50fa0117d4d426c298c226efe106c3229051dc269cd084755da2cc
+  checksum: b7715219aebac7fd049ab35966d954f880000031cee62df39a9327826b3318bcdad956ad5dceb0344b0b322105a47095cf470b46bdeca1d89d53f8105da7840d
   languageName: node
   linkType: hard
 
@@ -16418,10 +16418,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lilconfig@npm:2.0.4":
-  version: 2.0.4
-  resolution: "lilconfig@npm:2.0.4"
-  checksum: adb6ba6fbcf037bb06ff6c8b198261e4a2e4dd19d117be171396b5df3d0090cc7d8b3343c5ea60b72de8efa42160d6ee3c3e42d115aa189b44aa5c5e7ae42937
+"lilconfig@npm:2.0.5":
+  version: 2.0.5
+  resolution: "lilconfig@npm:2.0.5"
+  checksum: f058235fe59cf0560c5b57fd908c71ab28a37187ff6676df6782c91910138405b5d4af22f8edfcf25ae6e4388037399a8941357543457a6f1c495b0667f718cb
   languageName: node
   linkType: hard
 
@@ -16432,27 +16432,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.4.2":
-  version: 12.4.2
-  resolution: "lint-staged@npm:12.4.2"
+"lint-staged@npm:12.4.3":
+  version: 12.4.3
+  resolution: "lint-staged@npm:12.4.3"
   dependencies:
     cli-truncate: "npm:^3.1.0"
     colorette: "npm:^2.0.16"
-    commander: "npm:^8.3.0"
-    debug: "npm:^4.3.3"
+    commander: "npm:^9.3.0"
+    debug: "npm:^4.3.4"
     execa: "npm:^5.1.1"
-    lilconfig: "npm:2.0.4"
-    listr2: "npm:^4.0.1"
-    micromatch: "npm:^4.0.4"
+    lilconfig: "npm:2.0.5"
+    listr2: "npm:^4.0.5"
+    micromatch: "npm:^4.0.5"
     normalize-path: "npm:^3.0.0"
-    object-inspect: "npm:^1.12.0"
+    object-inspect: "npm:^1.12.2"
     pidtree: "npm:^0.5.0"
     string-argv: "npm:^0.3.1"
-    supports-color: "npm:^9.2.1"
+    supports-color: "npm:^9.2.2"
     yaml: "npm:^1.10.2"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: f2af5065df27088555058c712237e8b11bebbaea80adaddf31b67c0224f459a783f43716df9541a7501d3074363d755065e105e5fd7ea167617c557e7c76692f
+  checksum: e46f5c2f7b7cbd77cf122971c2a2fda8102bb264dd4f996c33405a4eaa5974dfd0bde0356ab4f3908886693d51194186736555b09c0bb59ccc7801772a89be2a
   languageName: node
   linkType: hard
 
@@ -16493,16 +16493,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"listr2@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "listr2@npm:4.0.1"
+"listr2@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "listr2@npm:4.0.5"
   dependencies:
     cli-truncate: "npm:^2.1.0"
     colorette: "npm:^2.0.16"
     log-update: "npm:^4.0.0"
     p-map: "npm:^4.0.0"
     rfdc: "npm:^1.3.0"
-    rxjs: "npm:^7.5.2"
+    rxjs: "npm:^7.5.5"
     through: "npm:^2.3.8"
     wrap-ansi: "npm:^7.0.0"
   peerDependencies:
@@ -16510,7 +16510,7 @@ __metadata:
   peerDependenciesMeta:
     enquirer:
       optional: true
-  checksum: 95b27dcd5bd3db4fd1d67ab38db957b2b0642abe0b37da7d6b10db2f7328ad9851ff7f45ccabca5837d420b8d6ab6e7a5ea8d153502f2c5f3f9200da1b7386cb
+  checksum: 427d859774390feb77ef44770f1d17308d9d7b304ee3566435b4d1a40c79401e07f4ea5dcf6bd4797926ff7679e299db4dded24707ca335da3a3e89e74dcf9d4
   languageName: node
   linkType: hard
 
@@ -17111,13 +17111,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.0, micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
-  version: 4.0.4
-  resolution: "micromatch@npm:4.0.4"
+"micromatch@npm:^4.0.0, micromatch@npm:^4.0.2, micromatch@npm:^4.0.4, micromatch@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "micromatch@npm:4.0.5"
   dependencies:
-    braces: "npm:^3.0.1"
-    picomatch: "npm:^2.2.3"
-  checksum: 0332768395694607a9d0eae1e7124208d3fc7c4842b5b1bd2e1721ec6e996e1a9ee2ab5eac77e50b654b88b5787a51ccbffaf568d96b44cfbc198cef16c73220
+    braces: "npm:^3.0.2"
+    picomatch: "npm:^2.3.1"
+  checksum: 260305ba8cb1f073a39bbaa31edc93f7587399a094417541dc771402f83c78819ed76743c810c9fcf1c449f09bfb4de263dad8507d532e4e86063a87158a2ad6
   languageName: node
   linkType: hard
 
@@ -18158,10 +18158,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-inspect@npm:^1.12.0, object-inspect@npm:^1.9.0":
-  version: 1.12.0
-  resolution: "object-inspect@npm:1.12.0"
-  checksum: 841b5b480e36dc94d1c764dc85e1752bb01a0d7eccf366bacb4731877a29fa8196118c8b58b7a4e4961f0447f9dac97950e6f04eca259fb02a325fd90066173d
+"object-inspect@npm:^1.12.0, object-inspect@npm:^1.12.2, object-inspect@npm:^1.9.0":
+  version: 1.12.2
+  resolution: "object-inspect@npm:1.12.2"
+  checksum: 46e3fc4cb6a51a37c21c68bdf682befc2e50a0d1643d1f7cbdce9a5fd13e9d44ae8cbbf1b05f0c8daf739c02eb9044d825544e25c3aef2a7d315980c8c7ccb71
   languageName: node
   linkType: hard
 
@@ -19014,10 +19014,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.2.3":
-  version: 2.2.3
-  resolution: "picomatch@npm:2.2.3"
-  checksum: ef66ad8f02ebf72b6899e0d743f4a8bffcce0067be1c011b8582fbba463a9ece256fa398e11679cf2c647b690810167e2bfed189a264e7ec3ab95e5d9d925851
+"picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.2.3, picomatch@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "picomatch@npm:2.3.1"
+  checksum: 6ba5938c24af2c5918e94b39aa0ad48d71f2c30634de69d46e0bd32feb666de4e909406db6ffb78f98d39ef450d6a41b6fa3954dc3659d7b2b750766c1261e5e
   languageName: node
   linkType: hard
 
@@ -20750,7 +20750,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.5.2, rxjs@npm:^7.5.5":
+"rxjs@npm:^7.5.5":
   version: 7.5.5
   resolution: "rxjs@npm:7.5.5"
   dependencies:
@@ -22181,10 +22181,10 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^9.2.1":
-  version: 9.2.1
-  resolution: "supports-color@npm:9.2.1"
-  checksum: 522a1f86470c6ad556d036748cfd88e44204b49b64b7491b570526db6097aecb7d3e139d33448b7e20dce05bebb3f41ff9662bbc30133510fdb920a10080c866
+"supports-color@npm:^9.2.2":
+  version: 9.2.2
+  resolution: "supports-color@npm:9.2.2"
+  checksum: 19d162c9d98d2c040770d8aad14566dd0fcc2f6e0524d3d9cbe1fdbead10bed683d45dab8f34d9e51bc64b336b00ceb5992b6619c78fc4e5a911802538468264
   languageName: node
   linkType: hard
 
@@ -23789,8 +23789,8 @@ sjcl@sublimator/sjcl:
     "@swc/jest": "npm:^0.2.21"
     "@types/jest": "npm:27.5.1"
     "@types/node": "npm:16.11.36"
-    "@typescript-eslint/eslint-plugin": "npm:5.26.0"
-    "@typescript-eslint/parser": "npm:5.26.0"
+    "@typescript-eslint/eslint-plugin": "npm:5.27.0"
+    "@typescript-eslint/parser": "npm:5.27.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:^1.0.16"
@@ -23800,7 +23800,7 @@ sjcl@sublimator/sjcl:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-node: "npm:0.3.6"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.4.5"
+    eslint-plugin-jest: "npm:26.4.6"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-node: "npm:11.1.0"
     eslint-plugin-prettier: "npm:4.0.0"
@@ -23811,7 +23811,7 @@ sjcl@sublimator/sjcl:
     husky: "npm:8.0.1"
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
-    lint-staged: "npm:12.4.2"
+    lint-staged: "npm:12.4.3"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
