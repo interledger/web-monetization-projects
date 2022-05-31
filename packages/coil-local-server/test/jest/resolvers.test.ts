@@ -38,7 +38,9 @@ describe('Testing Graphql Functions', () => {
 
   // TODO
   const req = {} as express.Request
-  const res = {} as express.Response
+  const res = {
+    cookie: jest.fn() as express.Response['cookie']
+  } as express.Response
 
   const contextValue: Context = {
     res,
