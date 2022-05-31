@@ -62,6 +62,11 @@ jobs:
             yarn --immutable
             export PUPPETEER_PRODUCT='firefox'
             yarn rebuild puppeteer
+      # Run another step, the same as above; note that you can
+      # invoke environment variable without curly braces.
+      - run:
+          name: "What env vars are available"
+          command: env
       - run:
           name: Lint Project
           command: |
