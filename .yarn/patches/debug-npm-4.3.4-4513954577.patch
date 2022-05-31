@@ -1,15 +1,38 @@
 diff --git a/src/browser.js b/src/browser.js
-index cd0fc35d1ee11e0d6e15421021a54c18958e04d9..c0cfdf294fb0428c4d7f4c41ad641c8027e15197 100644
+index cd0fc35d1ee11e0d6e15421021a54c18958e04d9..6acfe26f3871bf4381c700b43fd6b82b178e447f 100644
 --- a/src/browser.js
 +++ b/src/browser.js
-@@ -11,7 +11,9 @@ exports.useColors = useColors;
+@@ -9,16 +9,7 @@ exports.save = save;
+ exports.load = load;
+ exports.useColors = useColors;
  exports.storage = localstorage();
- exports.destroy = (() => {
- 	let warned = false;
+-exports.destroy = (() => {
+-	let warned = false;
 -
-+	if(!warned){
-+		return () => {}
-+	}
- 	return () => {
- 		if (!warned) {
- 			warned = true;
+-	return () => {
+-		if (!warned) {
+-			warned = true;
+-			console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
+-		}
+-	};
+-})();
++exports.destroy = () => {};
+ 
+ /**
+  * Colors.
+diff --git a/src/node.js b/src/node.js
+index 79bc085cb0230c69aaeb76bbc1374f43ab6414f4..880bdcc71e094531e35e85c92a0b5b13d6370ee6 100644
+--- a/src/node.js
++++ b/src/node.js
+@@ -15,10 +15,7 @@ exports.formatArgs = formatArgs;
+ exports.save = save;
+ exports.load = load;
+ exports.useColors = useColors;
+-exports.destroy = util.deprecate(
+-	() => {},
+-	'Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.'
+-);
++exports.destroy = () => {};
+ 
+ /**
+  * Colors.

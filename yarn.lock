@@ -9812,13 +9812,13 @@ __metadata:
 
 "debug@patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch":
   version: 4.3.4
-  resolution: "debug@patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch::version=4.3.4&hash=b9f770"
+  resolution: "debug@patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch::version=4.3.4&hash=217e38"
   dependencies:
     ms: "npm:2.1.2"
   peerDependenciesMeta:
     supports-color:
       optional: true
-  checksum: 99f9676657085b336c0b098ce4a4fb8267aeb5cf35c27e48f34c06cc46a2a72b99115bdaaa87a3b9c1b8a6a2c6590d417f4241faed3c8fe8ac0542721fb1a599
+  checksum: 805b3d29f6e9d9cda0da5e8f5beb5bb3c4d0e0d69a7596dfc4711db78668b69dd8ed72ccd09b038b6716c34cb83f9bd8b1da9aeb9483fcff27c1cbf3d52921ba
   languageName: node
   linkType: hard
 
