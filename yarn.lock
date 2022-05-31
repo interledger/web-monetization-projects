@@ -1673,13 +1673,13 @@ __metadata:
     lint-staged: "npm:12.4.3"
     localforage: "npm:1.10.0"
     node-fetch: "npm:^2.6.1"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -1734,13 +1734,13 @@ __metadata:
     jsonwebtoken: "npm:^8.5.1"
     lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -1831,6 +1831,7 @@ __metadata:
     jss: "npm:^10.6.0"
     lint-staged: "npm:12.4.3"
     lottie-web: "npm:^5.8.1"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     puppeteer: "npm:14.1.2"
     react: "npm:^17.0.0"
@@ -1841,7 +1842,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
@@ -1933,7 +1933,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -1986,6 +1985,7 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.0"
     json5: "npm:^2.2.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     npm-check-updates: "npm:^13.0.0"
     prettier: "npm:2.6.2"
     reduct: "npm:^3.3.1"
@@ -1995,7 +1995,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2058,6 +2057,7 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     puppeteer: "npm:14.1.2"
     reduct: "npm:^3.3.1"
@@ -2066,7 +2066,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
@@ -2118,13 +2117,13 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2181,6 +2180,7 @@ __metadata:
     keccak: "npm:^3.0.1"
     lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -2188,7 +2188,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2245,6 +2244,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     puppeteer: "npm:^14.0.0"
     regenerator-runtime: "npm:^0.13.9"
@@ -2253,7 +2253,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     web-ext: "npm:^6.1.0"
@@ -2308,6 +2307,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     process: "npm:^0.11.10"
     regenerator-runtime: "npm:^0.13.9"
@@ -2318,7 +2318,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     util: "npm:^0.12.4"
@@ -2370,13 +2369,13 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2657,13 +2656,13 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -2715,13 +2714,13 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -3375,6 +3374,7 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.0"
     jsonwebtoken: "npm:^8.5.1"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
@@ -3384,7 +3384,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typeface-roboto: "npm:^1.1.13"
     typescript: "npm:^4.7.2"
@@ -4176,6 +4175,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -4183,7 +4183,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -5039,20 +5038,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/strip-bom@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@types/strip-bom@npm:3.0.0"
-  checksum: 7272d143628c22028202fb01ce68efd131a45350935e9eddcf968c66bc242e36a55c2dab1bd682fd107c4054b444e1054919f661b7d4c2542fe5e5dcafc5f0a4
-  languageName: node
-  linkType: hard
-
-"@types/strip-json-comments@npm:0.0.30":
-  version: 0.0.30
-  resolution: "@types/strip-json-comments@npm:0.0.30"
-  checksum: 8b6fcd285f791760acdcd4ae4e14961eef48ad73f09903f171acc92a53f71068d1b9f75ab9490a7dabe3e0dfd4fb6c33f9558b29c98a61a5303e22cf8d7e8d38
-  languageName: node
-  linkType: hard
-
 "@types/tmp@npm:0.2.3":
   version: 0.2.3
   resolution: "@types/tmp@npm:0.2.3"
@@ -5446,6 +5431,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     process: "npm:^0.11.10"
     regenerator-runtime: "npm:^0.13.9"
@@ -5456,7 +5442,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     util: "npm:^0.12.4"
@@ -5529,6 +5514,7 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
+    nodemon: "npm:^2.0.16"
     oer-utils: "npm:^5.1.2"
     prettier: "npm:2.6.2"
     react: "npm:^17.0.0"
@@ -5540,7 +5526,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -5593,6 +5578,7 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
     node-fetch: "npm:^2.6.1"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:^0.13.9"
@@ -5600,7 +5586,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
@@ -5654,13 +5639,13 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -5721,6 +5706,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
@@ -5730,7 +5716,6 @@ __metadata:
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     uuid: "npm:^8.3.2"
@@ -5781,6 +5766,7 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
@@ -5788,7 +5774,6 @@ __metadata:
     ts-json-schema-generator: "npm:1.0.0"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -5841,13 +5826,13 @@ __metadata:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
@@ -8569,7 +8554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:^3.5.1, chokidar@npm:^3.5.2, chokidar@npm:^3.5.3":
+"chokidar@npm:^3.5.2, chokidar@npm:^3.5.3":
   version: 3.5.3
   resolution: "chokidar@npm:3.5.3"
   dependencies:
@@ -10458,15 +10443,6 @@ __metadata:
     readable-stream: "npm:^3.1.1"
     stream-shift: "npm:^1.0.0"
   checksum: a06fa1a41c0034524b37437c83598bd7261187298369202928f24f66ff46b6ba0e134e475488c019a8d37e04332b22fd3708c6ea852d2a57ea0ebd488c880712
-  languageName: node
-  linkType: hard
-
-"dynamic-dedupe@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "dynamic-dedupe@npm:0.3.0"
-  dependencies:
-    xtend: "npm:^4.0.0"
-  checksum: a264daae9cdc1787f0f2548a829908b851c0be598fc151f946c54660ba3370b3cb5a22ff0d6d2079584dde29cb11bc7f9609803e1745a17fe2f691835f5f45bb
   languageName: node
   linkType: hard
 
@@ -20501,7 +20477,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.0.0, resolve@npm:^1.1.6, resolve@npm:^1.10.0, resolve@npm:^1.10.1, resolve@npm:^1.14.2, resolve@npm:^1.20.0, resolve@npm:^1.22.0, resolve@npm:^1.9.0":
+"resolve@npm:^1.1.6, resolve@npm:^1.10.0, resolve@npm:^1.10.1, resolve@npm:^1.14.2, resolve@npm:^1.20.0, resolve@npm:^1.22.0, resolve@npm:^1.9.0":
   version: 1.22.0
   resolution: "resolve@npm:1.22.0"
   dependencies:
@@ -20524,7 +20500,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^1.0.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.1.6#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.14.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.9.0#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A^1.1.6#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.14.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.9.0#optional!builtin<compat/resolve>":
   version: 1.22.0
   resolution: "resolve@patch:resolve@npm%3A1.22.0#optional!builtin<compat/resolve>::version=1.22.0&hash=07638b"
   dependencies:
@@ -21491,7 +21467,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:0.5.21, source-map-support@npm:^0.5.12, source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.21, source-map-support@npm:~0.5.20, source-map-support@npm:~0.5.4":
+"source-map-support@npm:0.5.21, source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.21, source-map-support@npm:~0.5.20, source-map-support@npm:~0.5.4":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
@@ -22076,7 +22052,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"strip-json-comments@npm:^2.0.0, strip-json-comments@npm:^2.0.1, strip-json-comments@npm:~2.0.1":
+"strip-json-comments@npm:^2.0.1, strip-json-comments@npm:~2.0.1":
   version: 2.0.1
   resolution: "strip-json-comments@npm:2.0.1"
   checksum: 4c86af52d848e6cddafdf933702453a3ab3210e9a014c882ce7e271a7d09d413642b796b07c9b597bc0ea5b93d5aab71756cf3d4b2a5ca2d9db2a7be84ae49d9
@@ -22672,15 +22648,6 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"tree-kill@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "tree-kill@npm:1.2.2"
-  bin:
-    tree-kill: cli.js
-  checksum: e1c77812496ec255402297a3494acc4cda93d532ebefb1c6704b38d2a8eb6b9ed03d5f0b088a13341705f2923e52a73c3c2bb87a30ea890095cc51fb7a4ce6e0
-  languageName: node
-  linkType: hard
-
 "treeify@npm:^1.1.0":
   version: 1.1.0
   resolution: "treeify@npm:1.1.0"
@@ -22782,34 +22749,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:2.0.0":
-  version: 2.0.0
-  resolution: "ts-node-dev@npm:2.0.0"
-  dependencies:
-    chokidar: "npm:^3.5.1"
-    dynamic-dedupe: "npm:^0.3.0"
-    minimist: "npm:^1.2.6"
-    mkdirp: "npm:^1.0.4"
-    resolve: "npm:^1.0.0"
-    rimraf: "npm:^2.6.1"
-    source-map-support: "npm:^0.5.12"
-    tree-kill: "npm:^1.2.2"
-    ts-node: "npm:^10.4.0"
-    tsconfig: "npm:^7.0.0"
-  peerDependencies:
-    node-notifier: "*"
-    typescript: "*"
-  peerDependenciesMeta:
-    node-notifier:
-      optional: true
-  bin:
-    ts-node-dev: lib/bin.js
-    tsnd: lib/bin.js
-  checksum: e22ecb903f51b3d1bd7d284ac94b7bb685ea948e45c9e740c1a26701058ee32e2f0ac3e5bd4735c3a0b455e9b3aabe74e915e337ebc62b25b2efd359129efcf8
-  languageName: node
-  linkType: hard
-
-"ts-node@npm:10.8.0, ts-node@npm:^10.4.0, ts-node@npm:^10.7.0":
+"ts-node@npm:10.8.0, ts-node@npm:^10.7.0":
   version: 10.8.0
   resolution: "ts-node@npm:10.8.0"
   dependencies:
@@ -22888,18 +22828,6 @@ sjcl@sublimator/sjcl:
     minimist: "npm:^1.2.6"
     strip-bom: "npm:^3.0.0"
   checksum: 7f856252e523597e8fc3234b2f992d6d76a807793cb59bd2d924db9beb2594bfe7a18ee93898088733cb55b1cce4be306924a5da5f760eff137d4c2d7bf85fad
-  languageName: node
-  linkType: hard
-
-"tsconfig@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "tsconfig@npm:7.0.0"
-  dependencies:
-    "@types/strip-bom": "npm:^3.0.0"
-    "@types/strip-json-comments": "npm:0.0.30"
-    strip-bom: "npm:^3.0.0"
-    strip-json-comments: "npm:^2.0.0"
-  checksum: df9b694c6415ac46b4e8da807277896eb7a916866ee7202893dce332222858d4a48a57fbc1f501b41932d7e845aeae7b20b9bd2184a193588d2d1fd96dffd07c
   languageName: node
   linkType: hard
 
@@ -23784,13 +23712,13 @@ sjcl@sublimator/sjcl:
     jest: "npm:28.1.0"
     jest-environment-jsdom: "npm:28.1.0"
     lint-staged: "npm:12.4.3"
+    nodemon: "npm:^2.0.16"
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
-    ts-node-dev: "npm:2.0.0"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:^4.7.2"
     webpack: "npm:5.72.1"
