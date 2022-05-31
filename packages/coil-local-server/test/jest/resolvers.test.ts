@@ -93,7 +93,7 @@ describe('Testing Graphql Functions', () => {
         "data": Object {
           "adaptedPage": Object {
             "channelImage": null,
-            "paymentPointer": "$ilp.uphold.com/gRa4mXFEMYrL",
+            "paymentPointer": null,
           },
         },
       }
