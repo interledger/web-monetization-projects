@@ -98,7 +98,7 @@
     "@types/firefox": "0.0.31",
     "@types/get-port": "4.2.0",
     "@types/har-format": "1.2.8",
-    "@types/jest": "27.5.1",
+    "@types/jest": "27.5.2",
     "@types/jsonwebtoken": "8.5.8",
     "@types/long": "4.0.2",
     "@types/node": "16.11.38",
