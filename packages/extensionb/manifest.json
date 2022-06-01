@@ -1,0 +1,21 @@
+{
+    "name": "Extension B",
+    "description": "This is the secondary extension that is going to send the data from the second extension",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "res/icon38.png"   
+    },
+    "permissions": ["webNavigation", "tabs"],
+    "content_scripts": [
+        {
+            "matches": ["https://*/*", "http://*/*"],
+            "js": ["content.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    "background": {
+        "page": "static/background.html"
+    }
+}

@@ -25,6 +25,7 @@ import {
 import { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
+import { detectExtensionById } from '../util/detectExtensions'
 
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
@@ -182,6 +183,11 @@ export class ContentScript {
   }
 
   init() {
+    // detect other extensions
+    detectExtensionById(
+      'bc4c538e550a98c53a6ef78d1dd9fd89c31f8596@temporary-addon',
+      this.runtime
+    )
     if (this.frames.isMonetizableFrame) {
       this.frames.monitor()
     }
