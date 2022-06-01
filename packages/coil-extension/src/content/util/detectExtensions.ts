@@ -1,4 +1,7 @@
-export function detectExtensionById(extensionId: string, runtime: any) {
+export function detectExtensionById(
+  extensionId: string,
+  runtime: typeof chrome.runtime
+) {
   console.log('sending message to extension....')
   runtime.sendMessage(
     extensionId,
