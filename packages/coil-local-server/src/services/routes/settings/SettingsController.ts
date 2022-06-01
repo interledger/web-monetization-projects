@@ -18,7 +18,7 @@ export class SettingsController {
 </head>
 <body>
 <svg data-cy='hamburger-toggle'></svg>
-<button><p onclick="">Log Out</p></button>  
+<button><p data-testid="signout-nav-button" onclick="logout()">Sign Out</p></button>  
 </body>
 </html>
     `

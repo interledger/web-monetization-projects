@@ -6,6 +6,5 @@ export const featureEnabled: QueryResolvers['featureEnabled'] = (
   ctxt,
   info
 ) => {
-  ctxt.log({ key: info.path.key, args })
   return true
 }

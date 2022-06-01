@@ -45,6 +45,7 @@ export class ApolloService {
 
   async createContext(expressContext: ExpressContext): Promise<Context> {
     return {
+      ...expressContext,
       container: this.container,
       // TODO
       userId: '2',
