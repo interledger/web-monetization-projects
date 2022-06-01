@@ -1819,7 +1819,7 @@ __metadata:
     foxr: "npm:0.10.1"
     framer-motion: "npm:^5.0.0"
     get-port: "npm:^5.1.1"
-    http-server: "npm:14.1.0"
+    http-server: "npm:14.1.1"
     husky: "npm:8.0.1"
     ilp-plugin-btp: "npm:1.5.0"
     ilp-protocol-stream: "npm:2.7.1"
@@ -13727,9 +13727,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-server@npm:14.1.0":
-  version: 14.1.0
-  resolution: "http-server@npm:14.1.0"
+"http-server@npm:14.1.1":
+  version: 14.1.1
+  resolution: "http-server@npm:14.1.1"
   dependencies:
     basic-auth: "npm:^2.0.1"
     chalk: "npm:^4.1.2"
@@ -13738,7 +13738,7 @@ __metadata:
     html-encoding-sniffer: "npm:^3.0.0"
     http-proxy: "npm:^1.18.1"
     mime: "npm:^1.6.0"
-    minimist: "npm:^1.2.5"
+    minimist: "npm:^1.2.6"
     opener: "npm:^1.5.1"
     portfinder: "npm:^1.0.28"
     secure-compare: "npm:3.0.1"
@@ -13746,7 +13746,7 @@ __metadata:
     url-join: "npm:^4.0.1"
   bin:
     http-server: bin/http-server
-  checksum: 2e0320092d2469a99d043bd7d55702f0b1cb13726a71cf1902f24abc75d58ab2c6b37597d134388c13b235b99ad312152f77860103e47aae0c89ae8316de17c8
+  checksum: 21b521b9642a2518fa54c5812ec4487b040d8da1ef0a3e3a1c053f83c38d454d8dfd5a9e867dc29523d3d4b476856dcd62764b83bcd7f14820a1fdd747867003
   languageName: node
   linkType: hard
 
