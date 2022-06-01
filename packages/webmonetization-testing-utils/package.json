@@ -56,7 +56,7 @@
     "@swc/jest": "^0.2.21",
     "@types/ajv": "1.0.0",
     "@types/jest": "27.5.1",
-    "@types/node": "16.11.36",
+    "@types/node": "16.11.38",
     "@types/react": "17.0.45",
     "@types/react-dom": "17.0.17",
     "@types/uuid": "8.3.4",
