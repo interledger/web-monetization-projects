@@ -17,6 +17,7 @@ packages/*/build
 packages/*/coverage
 packages/*/results
 packages/*/dist
+packages/*/dist2
 
 .eslintrc.local.js
 jest.config.local.js
