@@ -184,10 +184,7 @@ export class ContentScript {
 
   init() {
     // detect other extensions
-    detectExtensionById(
-      'bc4c538e550a98c53a6ef78d1dd9fd89c31f8596@temporary-addon',
-      this.runtime
-    )
+    detectExtensionById('aaepchbipgcldoekbdgfilihmejochia', chrome.runtime)
     if (this.frames.isMonetizableFrame) {
       this.frames.monitor()
     }
