@@ -32,7 +32,7 @@
       "run_at": "document_start"
     }
   ],
-  "permissions": [ "webNavigation", "<all_urls>", "tabs" ],
+  "permissions": [ "webNavigation", "<all_urls>"],
   "$targets" : {
     "firefox": {
       "permissions" : ["tabs"]

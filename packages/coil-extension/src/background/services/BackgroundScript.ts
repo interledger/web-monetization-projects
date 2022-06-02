@@ -45,6 +45,11 @@ import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
 
+import { externalMessageListener } from './ExtensionListener'
+import { detectExtensionsById } from './detectExtensions'
+
+import { EXTENSION_IDS } from '../consts/ExtensionIds'
+
 @injectable()
 export class BackgroundScript {
   constructor(
@@ -92,6 +97,7 @@ export class BackgroundScript {
   }
 
   async run() {
+    externalMessageListener()
     this.initializeActiveTab()
     this.setRuntimeMessageListener()
     this.setTabsOnActivatedListener()
@@ -1108,6 +1114,7 @@ export class BackgroundScript {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
           this.api.tabs.create({ url: `${this.coilDomain}/signup` })
+          detectExtensionsById(EXTENSION_IDS, this.api.runtime)
         }
       })
     }

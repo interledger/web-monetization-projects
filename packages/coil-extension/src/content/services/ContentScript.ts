@@ -25,7 +25,6 @@ import {
 import { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
-import { detectExtensionById } from '../util/detectExtensions'
 
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
@@ -183,8 +182,6 @@ export class ContentScript {
   }
 
   init() {
-    // detect other extensions
-    detectExtensionById('aaepchbipgcldoekbdgfilihmejochia', chrome.runtime)
     if (this.frames.isMonetizableFrame) {
       this.frames.monitor()
     }
