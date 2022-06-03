@@ -1,5 +1,6 @@
 import { EventEmitter } from 'events'
 
+import SuperTokens from 'supertokens-website'
 import { GraphQlClient, tokenUtils } from '@coil/client'
 import { inject, injectable } from 'inversify'
 
@@ -76,7 +77,7 @@ export class AuthService extends EventEmitter {
     super()
   }
 
-  private _op: Promise<string | null> | null = null
+  private _op: Promise<void> | null = null
 
   /*
   TODO: manifest version 3 and background workers ?
@@ -94,6 +95,28 @@ export class AuthService extends EventEmitter {
     }, twelveHours + randomness)
   }
 
+  async isAuthenticated(): Promise<boolean> {
+    let loggedIn = false
+    try {
+      const [resp, tipResp] = await Promise.all([
+        this.client.whoAmI(),
+        this.client.tipSettings()
+      ])
+
+      this.log('updateWhoAmi resp', resp.data)
+      if (resp.data?.whoami && tipResp.data?.whoami) {
+        this.store.user = {
+          ...resp.data.whoami,
+          ...formatTipSettings(tipResp.data)
+        }
+        loggedIn = true
+      }
+    } catch (e) {
+      this.log('whoAmI failed', e.message)
+    }
+    return loggedIn
+  }
+
   async checkForSiteLogoutAssumeFalseOnTimeout(): Promise<boolean> {
     try {
       const token = await this.siteToken.retrieve()
@@ -107,7 +130,7 @@ export class AuthService extends EventEmitter {
     }
   }
 
-  async getTokenMaybeRefreshAndStoreState(): Promise<string | null> {
+  async getTokenMaybeRefreshAndStoreState(): Promise<void> {
     this.activeTabs.log(`getTokenMaybeRefreshAndStoreState ${Date.now()}`)
     if (!this._op) {
       this._op = this.doGetTokenMaybeRefreshAndStoreState()
@@ -125,7 +148,23 @@ export class AuthService extends EventEmitter {
     return !token || tokenUtils.isExpired({ token })
   }
 
-  async doGetTokenMaybeRefreshAndStoreState(): Promise<string | null> {
+  initialize() {
+    SuperTokens.init({
+      apiDomain: this.domain,
+      apiBasePath: '/api/auth'
+    })
+  }
+
+  async logout(): Promise<void> {
+    return SuperTokens.signOut()
+  }
+
+  async doGetTokenMaybeRefreshAndStoreState(): Promise<void> {
+    this.activeTabs.log(`doGetTokenMaybeRefreshAndStoreState ${Date.now()}`)
+    await this.isAuthenticated()
+  }
+
+  async legacyDoGetTokenMaybeRefreshAndStoreState(): Promise<string | null> {
     this.activeTabs.log(`doGetTokenMaybeRefreshAndStoreState ${Date.now()}`)
     let token = this.getStoredToken()
     this.trace('storedToken', { domain: this.domain, token })
@@ -140,6 +179,7 @@ export class AuthService extends EventEmitter {
       token = await this.siteToken.retrieve()
       this.activeTabs.log(`siteToken: ${Boolean(token)}`)
     }
+
     this.trace('siteToken', token)
 
     if (this.tokenInvalid(token) || !token /* Satisfy TypeScript */) {
@@ -165,7 +205,7 @@ export class AuthService extends EventEmitter {
       // changes to other fields (e.g. canTip)
       // Query could fail if token is invalid
       this.trace('before updateWhoAmI token=%s user=%s', token, this.store.user)
-      token = await this.updateWhoAmi(token)
+      token = await this.updateWhoAmi()
       this.activeTabs.log(`after updateWhoAmi token=${Boolean(token)}`)
       this.trace('after updateWhoAmI token=%s user=%s', token, this.store.user)
     }
@@ -181,10 +221,10 @@ export class AuthService extends EventEmitter {
     return token
   }
 
-  private async updateWhoAmi(token: string): Promise<string | null> {
+  private async updateWhoAmi(): Promise<string | null> {
     const [resp, tipResp] = await Promise.all([
-      this.client.whoAmI(token),
-      this.client.tipSettings(token)
+      this.client.whoAmI(),
+      this.client.tipSettings()
     ])
 
     this.log('updateWhoAmi resp', resp.data)
@@ -194,7 +234,7 @@ export class AuthService extends EventEmitter {
         ...formatTipSettings(tipResp.data)
       }
 
-      return token
+      return 'removeThis'
     } else {
       return null
     }
@@ -202,8 +242,8 @@ export class AuthService extends EventEmitter {
 
   private async refreshTokenAndUpdateWhoAmi(token: string) {
     const [resp, tipResp] = await Promise.all([
-      this.client.queryToken(token),
-      this.client.tipSettings(token)
+      this.client.queryToken(),
+      this.client.tipSettings()
     ])
 
     if (

@@ -108,14 +108,11 @@ export class BackgroundScript {
   }
 
   private async initAuth() {
-    this.auth.checkForSiteLogoutAssumeFalseOnTimeout().then(loggedOut => {
-      if (loggedOut) {
-        this.logout()
-      } else {
-        void this.auth.getTokenMaybeRefreshAndStoreState()
-      }
-    })
-    this.auth.queueTokenRefreshCheck()
+    this.auth.initialize()
+    const isLoggedIn = await this.auth.isAuthenticated()
+    if (!isLoggedIn) {
+      this.logout()
+    }
   }
 
   private setTabsOnActivatedListener() {
@@ -329,10 +326,10 @@ export class BackgroundScript {
     return this.client.adaptedPage(variables.url, variables.channelId)
   }
 
-  private setBrowserActionStateFromAuthAndTabState() {
-    const token = this.auth.getStoredToken()
+  private async setBrowserActionStateFromAuthAndTabState() {
+    const isAuthenticated = await this.auth.isAuthenticated()
 
-    if (!token || !this.store.validToken) {
+    if (!isAuthenticated) {
       this.popup.disable()
     }
 
@@ -345,9 +342,9 @@ export class BackgroundScript {
         this.tabStates.setIcon(tabId, 'monetized')
       }
 
-      if (token == null) {
+      if (!isAuthenticated) {
         this.tabStates.setIcon(tabId, 'unavailable')
-      } else if (token) {
+      } else {
         this.popup.enable()
 
         const tabState = this.tabStates.getActiveOrDefault()
@@ -537,13 +534,13 @@ export class BackgroundScript {
     })
   }
 
-  reloadTabState(opts: { from?: string } = {}) {
+  async reloadTabState(opts: { from?: string } = {}) {
     const { from } = opts
 
     const tab = this.activeTab
     const state = () => this.tabStates.get(tab)
     this.setLocalStorageFromState(state())
-    this.setBrowserActionStateFromAuthAndTabState()
+    await this.setBrowserActionStateFromAuthAndTabState()
     // Don't work off stale state, set(...) creates a copy ...
     this.popup.setBrowserAction(tab, state())
     if (from) {
@@ -704,14 +701,16 @@ export class BackgroundScript {
     this.log('startWebMonetization, request', request)
 
     this.log('loading token for monetization', requestId)
-    const token = await this.auth.getTokenMaybeRefreshAndStoreState()
-    if (!token) {
+    const isAuthenticated = await this.auth.isAuthenticated()
+    if (!isAuthenticated) {
       // not signed in.
       // eslint-disable-next-line no-console
       if (this.loggingEnabled) {
-        console.warn('startWebMonetization cancelled; no token')
+        console.warn('startWebMonetization cancelled; not authenticated')
       }
-      this.activeTabLogger.log('startWebMonetization cancelled; no token')
+      this.activeTabLogger.log(
+        'startWebMonetization cancelled; not authenticated'
+      )
       this.sendSetMonetizationStateMessage(
         frame,
         'stopped',
@@ -780,7 +779,7 @@ export class BackgroundScript {
     this.assoc.setStreamId(frame, requestId)
     this.assoc.setFrame(requestId, { tabId, frameId })
     this.streams.beginStream(requestId, {
-      token,
+      token: 'removeThis',
       spspEndpoint,
       ...request.data,
       initiatingUrl: request.data.initiatingUrl
@@ -806,17 +805,12 @@ export class BackgroundScript {
     if (!streamId) return { success: false }
 
     try {
-      const token = this.auth.getStoredToken()
-      if (!token) {
-        return { success: false }
-      }
       const message = await this.tippingService.sendTip(
         tabId,
         streamId,
-        this.streams.getStream(streamId),
-        token
+        this.streams.getStream(streamId)
       )
-      await this.tippingService.updateTipSettings(token)
+      await this.tippingService.updateTipSettings()
       this.api.tabs.sendMessage(tabId, message, { frameId: 0 })
       return { success: true }
     } catch (e) {
@@ -832,9 +826,7 @@ export class BackgroundScript {
     tipCreditCharge?: string
   }> {
     try {
-      const token = this.auth.getStoredToken()
-      if (!token) return { success: false, message: 'No token found' }
-      return await this.tippingService.tipPreview(amount, token)
+      return await this.tippingService.tipPreview(amount)
     } catch (e) {
       return { success: false, message: e.message }
     }
@@ -851,17 +843,10 @@ export class BackgroundScript {
       return { success: false, message: 'No payment pointer found' }
 
     try {
-      const token = this.auth.getStoredToken()
-      if (!token) return { success: false, message: 'No token found' }
-      const tipResult = await this.tippingService.tip(
-        tip,
-        tabId,
-        receiver,
-        token
-      )
+      const tipResult = await this.tippingService.tip(tip, tabId, receiver)
       if (tipResult.success) {
         // if succeeded, refresh tip settings
-        await this.tippingService.updateTipSettings(token)
+        await this.tippingService.updateTipSettings()
       } else {
         return { success: false, message: 'Failed tip' }
       }
@@ -885,9 +870,7 @@ export class BackgroundScript {
       return { success: false, message: 'No paymentPointer found' }
 
     try {
-      const token = this.auth.getStoredToken()
-      if (!token) return { success: false, message: 'No token found' }
-      return await this.tippingService.updateTipSettings(token)
+      return await this.tippingService.updateTipSettings()
     } catch (e) {
       return { success: false, message: e.message }
     }
@@ -1043,6 +1026,9 @@ export class BackgroundScript {
       { command: 'clearToken' },
       frame => Boolean(frame.href?.startsWith(this.coilDomain))
     )
+    this.auth.logout().catch(e => {
+      this.log('unable to log out. error=', e.message)
+    })
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')
     this.reloadTabState()
@@ -1107,7 +1093,7 @@ export class BackgroundScript {
     if (!this.buildConfig.isCI && !this.buildConfig.useLocalMockServer) {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
-          this.api.tabs.create({ url: `${this.coilDomain}/signup` })
+          this.api.tabs.create({ url: `${this.coilDomain}/auth/signup` })
         }
       })
     }

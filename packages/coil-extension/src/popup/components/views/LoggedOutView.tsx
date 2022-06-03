@@ -35,7 +35,7 @@ export const LoggedOutView = (): React.ReactElement => {
           />
           <StatusTypography variant='subtitle1' align='inherit'>
             {footerString}{' '}
-            <Link href={coilDomain + '/signup'} target='_blank'>
+            <Link href={coilDomain + '/auth/signup'} target='_blank'>
               Sign up
             </Link>
           </StatusTypography>

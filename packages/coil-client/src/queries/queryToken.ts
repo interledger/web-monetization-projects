@@ -18,6 +18,6 @@ export const queryTokenQuery = `{
   }
 }`
 
-export async function queryToken(this: GraphQlClient, token: string) {
-  return this.query<QueryTokenData>({ query: queryTokenQuery, token })
+export async function queryToken(this: GraphQlClient) {
+  return this.query<QueryTokenData>({ query: queryTokenQuery })
 }

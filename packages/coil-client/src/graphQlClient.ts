@@ -34,6 +34,11 @@ export class GraphQlClient {
   public static Options = GraphQlClientOptions
   protected readonly fetch: typeof fetch
 
+  // If not instantiated in a browser-based environment, we'll
+  // have to store the auth cookies and supply them manually.
+  private readonly inBrowser: boolean
+  private loginCookies = ''
+
   public login = login
   public refreshBtpToken = refreshBtpToken
   public queryToken = queryToken
@@ -48,13 +53,47 @@ export class GraphQlClient {
     @inject(GraphQlClientOptions)
     private config: GraphQlClientOptions
   ) {
-    this.fetch = this.config.fetch
+    this.inBrowser = typeof window !== 'undefined'
+    this.fetch = this.inBrowser
+      ? this.config.fetch.bind(window)
+      : this.config.fetch
+  }
+
+  public async authenticate(email: string, password: string): Promise<void> {
+    const response = await this.fetch(
+      `${this.config.coilDomain}/api/auth/signin`,
+      {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+          apiBasePath: this.config.coilDomain,
+          rid: 'thirdpartyemailpassword',
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          formFields: [
+            {
+              id: 'email',
+              value: email
+            },
+            {
+              id: 'password',
+              value: password
+            }
+          ]
+        })
+      }
+    )
+    const data = await response.json()
+    if (data.status.toUpperCase() !== 'OK') {
+      throw new Error('Unable to authenticate with the provided credentials')
+    }
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public async query<T = any>({
     query,
-    token = null,
     variables = {}
   }: GraphQlQueryParameters): Promise<GraphQlResponse<T>> {
     const init: RequestInit = {
@@ -62,9 +101,9 @@ export class GraphQlClient {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: token ? `Bearer ${token}` : '',
         ...this.config.extraHeaders
       },
+      credentials: 'include',
       body: JSON.stringify({ query, variables })
     }
     if (this.config.log) {
@@ -73,10 +112,7 @@ export class GraphQlClient {
         null,
         2
       )
-      const redacted = token
-        ? serialized.replace(token, '<redacted>')
-        : serialized
-      this.config.log('Domain:', this.config.coilDomain, 'Url:', redacted)
+      this.config.log('Domain:', this.config.coilDomain, 'Url:', serialized)
     }
     const res = await this.fetch(`${this.config.coilDomain}/gateway`, init)
     if (!res.ok) {

@@ -30,15 +30,13 @@ export class TippingService extends EventEmitter {
     super()
   }
 
-  async updateTipSettings(
-    token: string
-  ): Promise<{ success: boolean; message: string }> {
+  async updateTipSettings(): Promise<{ success: boolean; message: string }> {
     /*
       updateTipSettings is responsible for fetching the data needed for the tipping views -> tipSettings
       after it fetches the data it then formats the values to make it easier for the views to consume
     */
     try {
-      const resp = await this.client.tipSettings(token)
+      const resp = await this.client.tipSettings()
       this.log('updateTippingSettings', resp)
       if (resp.data?.whoami && resp.data?.minTipLimit) {
         const formatted = formatTipSettings(resp.data)
@@ -59,21 +57,16 @@ export class TippingService extends EventEmitter {
   async sendTip(
     tabId: number,
     streamId: string,
-    stream: Stream,
-    token: string | null
+    stream: Stream
   ): Promise<TipSent> {
     if (!streamId) {
       this.log('can not find top frame for tabId=%d', tabId)
       throw new Error(`Can not find top frame for tabId ${tabId}`)
     }
 
-    if (!stream || !token) {
-      this.log(
-        'sendTip: no stream | token. !!stream !!token ',
-        !!stream,
-        !!token
-      )
-      throw new Error('Either one or both of stream and token were undefined')
+    if (!stream) {
+      this.log('sendTip: no stream. !!stream ', !!stream)
+      throw new Error('The stream was undefined')
     }
 
     const receiver = stream.getPaymentPointer()
@@ -89,7 +82,6 @@ export class TippingService extends EventEmitter {
           }
         }
       `,
-      token,
       variables: {
         receiver
       }
@@ -106,20 +98,12 @@ export class TippingService extends EventEmitter {
     }
   }
 
-  public async tipPreview(
-    tip: number,
-    token: string
-  ): Promise<{
+  public async tipPreview(tip: number): Promise<{
     success: boolean
     message?: string
     creditCardCharge?: string
     tipCreditCharge?: string
   }> {
-    if (!token) {
-      this.log('tipPreview: token. !!token ', !!token)
-      throw new Error('Token was undefined')
-    }
-
     // Set tip amount
     const CENTS = 100
     const tipAmountCents = Math.floor(tip * CENTS).toString()
@@ -127,7 +111,7 @@ export class TippingService extends EventEmitter {
     try {
       this.log('tipPreview: requesting tip preview')
 
-      const result = await this.client.tipPreview(token, tipAmountCents)
+      const result = await this.client.tipPreview(tipAmountCents)
 
       return {
         success: true,
@@ -143,17 +127,11 @@ export class TippingService extends EventEmitter {
   public async tip(
     tip: number,
     tabId: number,
-    receiver: string,
-    token: string
+    receiver: string
   ): Promise<{ code: string; message: string; success: boolean }> {
     if (!receiver) {
       this.log('can not find top frame for tabId=%d', tabId)
       throw new Error('Stream was undefined')
-    }
-
-    if (!token) {
-      this.log('tip: no token. !!token', !!token)
-      throw new Error('Token was undefined')
     }
 
     // Set tip amount
@@ -170,7 +148,7 @@ export class TippingService extends EventEmitter {
     try {
       this.log(`tip: sending tip to ${receiver}`)
 
-      const result = await this.client.tip(token, {
+      const result = await this.client.tip({
         amountCentsUsd: tipAmountCents,
         destination: receiver,
         origin: activeTabUrl

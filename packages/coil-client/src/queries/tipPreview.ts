@@ -28,12 +28,10 @@ export interface TipPreviewData {
 
 export async function tipPreview(
   this: GraphQlClient,
-  token: string,
   tipAmountCents: string
 ): Promise<TipPreviewData['tipPreview']> {
   const message = await this.query<TipPreviewData>({
     query: tipPreviewQuery,
-    token,
     variables: { tipAmountCents }
   })
 

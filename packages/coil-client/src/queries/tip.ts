@@ -25,12 +25,10 @@ export interface TipInput {
 
 export async function tip(
   this: GraphQlClient,
-  token: string,
   input: TipInput
 ): Promise<TipData['tip']> {
   const message = await this.query<TipData>({
     query: tipQuery,
-    token,
     variables: { input }
   })
 
