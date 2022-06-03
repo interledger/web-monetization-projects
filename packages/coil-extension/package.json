@@ -50,7 +50,7 @@
     "test:e2e": "yarn test --config jest-e2e.config.js",
     "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.js",
     "upkeep": "cd ../.. && yarn upkeep",
-    "build-detect-dev": "WEXT_MANIFEST_KEY=jhdeekdlodhlbgaofoaecikndhjncfpj OUTPUT_TO=dist2 ./build.sh dev",
+    "build-detect-devdist2": "EXPECTED_ID=deofcdfbmgdlnbdhpdmmegpokkaoadam TS_LOADER_TRANSPILE_ONLY=true WEXT_MANIFEST_KEY=DevDist2 WEXT_MANIFEST_SUFFIX=DevDist2 OUTPUT_TO=dist2 ./build.sh prod",
     "web-ext-reload": "web-ext run --reload -s $PWD/dist -p default-release"
   },
   "dependencies": {

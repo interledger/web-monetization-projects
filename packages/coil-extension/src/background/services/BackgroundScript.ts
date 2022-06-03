@@ -45,7 +45,7 @@ import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
 
-import { externalMessageListener } from './ExtensionListener'
+import { externalMessageListener } from './externalMessageListener'
 import { detectExtensionsById } from './detectExtensions'
 
 import { EXTENSION_IDS } from '../consts/ExtensionIds'
@@ -97,7 +97,9 @@ export class BackgroundScript {
   }
 
   async run() {
-    externalMessageListener()
+    // You'll notice the pattern of everything else uses the DI injected
+    // `api`
+    externalMessageListener(this.api.runtime)
     this.initializeActiveTab()
     this.setRuntimeMessageListener()
     this.setTabsOnActivatedListener()
@@ -1113,8 +1115,8 @@ export class BackgroundScript {
     if (!this.buildConfig.isCI && !this.buildConfig.useLocalMockServer) {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
-          this.api.tabs.create({ url: `${this.coilDomain}/signup` })
-          detectExtensionsById(EXTENSION_IDS.chrome, this.api.runtime)
+          void this.api.tabs.create({ url: `${this.coilDomain}/signup` })
+          void detectExtensionsById(EXTENSION_IDS.chrome, this.api)
         }
       })
     }
