@@ -12,7 +12,7 @@ export function detectExtensionsById(
         }
         // creates chrome tab
         if (response.active) {
-          // display a notification if necessary
+          // display a notification if necessary (add notification api to manifest first)
           // chrome.notifications.create(
           //   Date.now().toString(),
           //   {
