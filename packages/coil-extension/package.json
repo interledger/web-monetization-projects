@@ -20,6 +20,7 @@
   "types": "./build",
   "scripts": {
     "build": "./build.sh dev",
+    "build-detect-dev": "WEXT_MANIFEST_KEY=jhdeekdlodhlbgaofoaecikndhjncfpj OUTPUT_TO=dist2 ./build.sh dev",
     "build-prod": "./build.sh prod",
     "build-staging": "./build.sh staging",
     "build:ts": "tsc --build tsconfig.build.json",
@@ -50,7 +51,6 @@
     "test:e2e": "yarn test --config jest-e2e.config.js",
     "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.js",
     "upkeep": "cd ../.. && yarn upkeep",
-    "build-detect-dev": "WEXT_MANIFEST_KEY=jhdeekdlodhlbgaofoaecikndhjncfpj OUTPUT_TO=dist2 ./build.sh dev",
     "web-ext-reload": "web-ext run --reload -s $PWD/dist -p default-release"
   },
   "dependencies": {
