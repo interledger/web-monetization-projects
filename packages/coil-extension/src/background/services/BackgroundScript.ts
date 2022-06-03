@@ -1114,7 +1114,7 @@ export class BackgroundScript {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
           this.api.tabs.create({ url: `${this.coilDomain}/signup` })
-          detectExtensionsById(EXTENSION_IDS, this.api.runtime)
+          detectExtensionsById(EXTENSION_IDS.chrome, this.api.runtime)
         }
       })
     }
