@@ -4181,7 +4181,7 @@ __metadata:
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    source-map: "npm:0.5.6"
+    source-map: "npm:0.7.4"
     ts-jest: "npm:28.0.3"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.0"
@@ -21574,10 +21574,10 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"source-map@npm:0.5.6":
-  version: 0.5.6
-  resolution: "source-map@npm:0.5.6"
-  checksum: ba1e28e8f369cc92ec922e1d97a66cd3523176fab1a91343105caa06c58272302d0b39e2a7368a9f796e6e68c45228d0e0e38f9fab15952f1ecf94ada898d0d5
+"source-map@npm:0.7.4, source-map@npm:^0.7.3, source-map@npm:~0.7.2":
+  version: 0.7.4
+  resolution: "source-map@npm:0.7.4"
+  checksum: 97353dd6ffe747221f810400254a2c0110d745758aa094d3efe697d15c7697bb9bf49fea7028e88e97f973af53ac98cf69522ced606a4b46428fdd3e0d759280
   languageName: node
   linkType: hard
 
@@ -21592,13 +21592,6 @@ sjcl@sublimator/sjcl:
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: cba9f44c3a4a0485f44a7760ebe427eecdd3b58011ae0459c05506b54f898835b2302073d6afa563a19b60ee9e54c82e33bc4a032e28bebacdfc635f1d0bf7e0
-  languageName: node
-  linkType: hard
-
-"source-map@npm:^0.7.3, source-map@npm:~0.7.2":
-  version: 0.7.3
-  resolution: "source-map@npm:0.7.3"
-  checksum: 5a00dce8ee0de43b5218608798422304d30f86ee551d8896b638606ceea90712323af12c52b6728e72214be8548c5c4bf230dca85bbbd03756b038b91c992d3e
   languageName: node
   linkType: hard
 
