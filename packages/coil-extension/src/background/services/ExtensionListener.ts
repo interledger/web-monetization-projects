@@ -1,6 +1,12 @@
-export function externalMessageListener() {
-  chrome.runtime.onMessageExternal.addListener(function (_, __, sendResponse) {
+export function externalMessageListener(runtime: typeof chrome.runtime) {
+  runtime.onMessageExternal.addListener(function (
+    message,
+    sender,
+    sendResponse
+  ) {
     // sends a response back to state its active
-    sendResponse({ active: true })
+    if (message.command === 'checkActive') {
+      sendResponse({ active: true })
+    }
   })
 }

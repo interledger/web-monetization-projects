@@ -20,7 +20,7 @@
   "types": "./build",
   "scripts": {
     "build": "./build.sh dev",
-    "build-detect-dev": "WEXT_MANIFEST_KEY=jhdeekdlodhlbgaofoaecikndhjncfpj OUTPUT_TO=dist2 ./build.sh dev",
+    "build-detect-devdist2": "EXPECTED_ID=deofcdfbmgdlnbdhpdmmegpokkaoadam WEXT_MANIFEST_KEY=DevDist2 WEXT_MANIFEST_SUFFIX=DevDist2 OUTPUT_TO=dist2 ./build.sh prod",
     "build-prod": "./build.sh prod",
     "build-staging": "./build.sh staging",
     "build:ts": "tsc --build tsconfig.build.json",

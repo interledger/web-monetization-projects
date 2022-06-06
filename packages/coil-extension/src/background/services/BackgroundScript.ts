@@ -97,7 +97,7 @@ export class BackgroundScript {
   }
 
   async run() {
-    externalMessageListener()
+    externalMessageListener(this.api.runtime)
     this.initializeActiveTab()
     this.setRuntimeMessageListener()
     this.setTabsOnActivatedListener()
@@ -1113,8 +1113,8 @@ export class BackgroundScript {
     if (!this.buildConfig.isCI && !this.buildConfig.useLocalMockServer) {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
-          this.api.tabs.create({ url: `${this.coilDomain}/signup` })
-          detectExtensionsById(EXTENSION_IDS.chrome, this.api.runtime)
+          void this.api.tabs.create({ url: `${this.coilDomain}/signup` })
+          void detectExtensionsById(EXTENSION_IDS.chrome, this.api)
         }
       })
     }
