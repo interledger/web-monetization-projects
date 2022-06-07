@@ -75,7 +75,7 @@
     "@graphql-codegen/introspection": "2.1.1",
     "@graphql-codegen/typescript": "2.4.11",
     "@graphql-codegen/typescript-resolvers": "2.6.4",
-    "@swc/core": "1.2.196",
+    "@swc/core": "1.2.197",
     "@swc/jest": "^0.2.21",
     "@types/body-parser": "^1.19.2",
     "@types/cookie-parser": "^1.4.3",
