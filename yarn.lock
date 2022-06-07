@@ -1685,7 +1685,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -1746,7 +1746,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -1849,7 +1849,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -1940,7 +1940,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -2002,7 +2002,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
     yaml: "npm:^2.0.0"
   languageName: unknown
@@ -2074,7 +2074,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -2131,7 +2131,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -2195,7 +2195,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -2261,7 +2261,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -2326,7 +2326,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -2383,7 +2383,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -2670,7 +2670,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -2728,7 +2728,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -3394,7 +3394,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -4190,7 +4190,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -5459,7 +5459,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -5542,7 +5542,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -5603,7 +5603,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -5662,7 +5662,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   peerDependencies:
     react: ^16.13.1 || ^17.0.0
@@ -5733,7 +5733,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -5790,7 +5790,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -5849,7 +5849,7 @@ __metadata:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -23811,7 +23811,7 @@ sjcl@sublimator/sjcl:
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
     webpack-cli: "npm:4.9.2"
-    webpack-dev-server: "npm:4.9.1"
+    webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
@@ -23918,14 +23918,15 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:4.9.1":
-  version: 4.9.1
-  resolution: "webpack-dev-server@npm:4.9.1"
+"webpack-dev-server@npm:4.9.2":
+  version: 4.9.2
+  resolution: "webpack-dev-server@npm:4.9.2"
   dependencies:
     "@types/bonjour": "npm:^3.5.9"
     "@types/connect-history-api-fallback": "npm:^1.3.5"
     "@types/express": "npm:^4.17.13"
     "@types/serve-index": "npm:^1.9.1"
+    "@types/serve-static": "npm:^1.13.10"
     "@types/sockjs": "npm:^0.3.33"
     "@types/ws": "npm:^8.5.1"
     ansi-html-community: "npm:^0.0.8"
@@ -23957,7 +23958,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: a3306f0b1843d953e8b811654d7f36cb12afb34d021892ba831dc3a1e80bee9a376dfa4d6e15f665943981e68fc314a91d972e51ef2368dfbc47df1475465477
+  checksum: 7ecf5dd0cc3c7ebe0c5f6bad52d3ec00dc3e30ba070a3af0e1386b094eadd25e88549d8df660ca2c0a5b74ac69ffce8f7a6094b434130f160c7b1b993a78250a
   languageName: node
   linkType: hard
 
