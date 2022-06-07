@@ -14,6 +14,7 @@ import {
   whoamiQuery
 } from '@coil/client'
 import { Container } from 'inversify'
+import express from 'express'
 
 import { resolversRoot } from '../../src/graphql/resolvers/resolversRoot'
 import { Context } from '../../src/types/context'
@@ -34,8 +35,18 @@ describe('Testing Graphql Functions', () => {
   })
   container.bind(Env).toSelf()
   container.bind(AuthService).toSelf()
+
+  // TODO
+  const req = {} as express.Request
+  const res = {
+    cookie: jest.fn() as express.Response['cookie']
+  } as express.Response
+
   const contextValue: Context = {
+    res,
+    req,
     container,
+    // TODO
     userId: '1',
     log: console.log.bind(console)
   }
@@ -84,7 +95,7 @@ describe('Testing Graphql Functions', () => {
         "data": Object {
           "adaptedPage": Object {
             "channelImage": null,
-            "paymentPointer": "$ilp.uphold.com/gRa4mXFEMYrL",
+            "paymentPointer": null,
           },
         },
       }

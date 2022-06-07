@@ -100,7 +100,7 @@ jobs:
 
   build-extension-e2e-coil:
     docker:
-      - image: cimg/node:16.15.0-browsers
+      - image: cimg/node:16.15.1-browsers
     steps:
       - gcloud-get-creds
       - checkout

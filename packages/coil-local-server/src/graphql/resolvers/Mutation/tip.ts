@@ -1,7 +1,6 @@
 import { MutationResolvers } from '../../generated/graphql'
 
 export const tip: MutationResolvers['tip'] = (parent, args, ctx, info) => {
-  ctx.log({ field: info.fieldName, args })
   return {
     charges: {
       creditCardCharge: '0',

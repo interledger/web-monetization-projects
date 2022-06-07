@@ -22,7 +22,6 @@ export const adaptedPage: QueryResolvers['adaptedPage'] = (
   ctx,
   info
 ) => {
-  ctx.log({ key: info.path.key, args })
   if (args.videoUrl) {
     const normed = new URL(args.videoUrl).href
     const entry = mapping[normed]
@@ -32,6 +31,6 @@ export const adaptedPage: QueryResolvers['adaptedPage'] = (
   }
   return {
     channelImage: undefined,
-    paymentPointer: '$ilp.uphold.com/gRa4mXFEMYrL'
+    paymentPointer: undefined
   }
 }
