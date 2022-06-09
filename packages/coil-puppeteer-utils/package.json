@@ -38,7 +38,7 @@
     "get-port": "^5.1.1",
     "puppeteer": "^14.0.0",
     "tmp": "^0.2.1",
-    "web-ext": "^6.1.0"
+    "web-ext": "^7.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.18.2",
