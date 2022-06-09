@@ -323,10 +323,15 @@ export class ContentScript {
     const runtime = this.runtime
     setWatch({
       pause: (reason: string) => {
-        debug(`pauseWebMonetization reason ${reason}`)
         this.paused = true
-        const requestIds = this.filterDisallowedRequestIds(
-          this.tagManager.requestIds()
+        const unfiltered = this.tagManager.requestIds()
+        const requestIds = this.filterDisallowedRequestIds(unfiltered)
+        debug(
+          `pauseWebMonetization reason ${reason} disallowed=${JSON.stringify(
+            this.disallowed
+          )} unfiltered=${JSON.stringify(
+            unfiltered
+          )} requestIds=${JSON.stringify(requestIds)}`
         )
         if (requestIds.length) {
           const pause: PauseWebMonetization = {
@@ -358,15 +363,11 @@ export class ContentScript {
   }
 
   private filterDisallowedRequests(requests: PaymentDetails[]) {
-    return requests.filter(r => {
-      this.disallowed.has(r.requestId)
-    })
+    return requests.filter(r => !this.disallowed.has(r.requestId))
   }
 
   private filterDisallowedRequestIds(requests: string[]) {
-    return requests.filter(r => {
-      this.disallowed.has(r)
-    })
+    return requests.filter(r => !this.disallowed.has(r))
   }
 
   private onFrameAllowedChanged(message: OnFrameAllowedChanged) {

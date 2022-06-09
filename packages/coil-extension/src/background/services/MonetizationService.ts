@@ -142,6 +142,7 @@ export class MonetizationService {
     // This used to be sent from content script as a separate message
     this.setFrameMonetized(frame, requestId, 0, 'startWebMonetization')
 
+    // TODO:WM2
     setTimeout(() => {
       this.tabStates.reloadTabState({
         from: 'startWebMonetization timeout(ms=10)'
