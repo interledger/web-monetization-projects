@@ -1,4 +1,5 @@
 console.log('background.ts')
+export {}
 
 // // import '@abraham/reflection'
 // // import { Container } from 'inversify'

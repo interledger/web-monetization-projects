@@ -40,3 +40,4 @@
 // main()
 
 console.log('content.ts')
+export {}

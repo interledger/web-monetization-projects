@@ -5,6 +5,7 @@ import ws from 'ws'
 
 // eslint-disable-next-line no-console
 const dbg = console.log.bind(console, 'ReloadServerPlugin: ')
+const port = 4444
 
 export class WebSocketServer extends ws.WebSocketServer {
   shouldHandle(request: IncomingMessage): boolean | Promise<boolean> {
@@ -14,11 +15,13 @@ export class WebSocketServer extends ws.WebSocketServer {
 }
 
 export class ReloadServerPlugin {
-  apply(compilation: webpack.Compilation) {
-    const port = 4444
+  apply(compiler: webpack.Compiler) {
+    if (!compiler.options.watch) {
+      return
+    }
     dbg(`Starting server on port ${port}`)
     const server = new WebSocketServer({ port: port })
-    ;(compilation.hooks as any).afterEmit.tap('ReloadServerPlugin', () => {
+    compiler.hooks.afterEmit.tap('ReloadServerPlugin', () => {
       dbg('after emit')
       server.clients.forEach(ws => {
         if (ws.readyState === ws.OPEN) {
