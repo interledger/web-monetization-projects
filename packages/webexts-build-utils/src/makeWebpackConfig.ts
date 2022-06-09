@@ -8,6 +8,7 @@ import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 
 import { applyManifestPermissions } from './manifestPermissions'
 import { WEXT_BUILD_CONFIG } from './buildConfig'
+import { ReloadServerPlugin } from './reloadServer'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
@@ -219,7 +220,8 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
             })
           )
         }
-      }
+      },
+      new ReloadServerPlugin()
     ],
 
     output: {
