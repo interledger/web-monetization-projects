@@ -1114,7 +1114,12 @@ export class BackgroundScript {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
           void this.api.tabs.create({ url: `${this.coilDomain}/signup` })
-          void detectExtensionsById(EXTENSION_IDS.chrome, this.api)
+          let checkFor = EXTENSION_IDS.chrome
+          if (navigator.userAgent.includes('Firefox')) {
+            // firefox id's
+            checkFor = EXTENSION_IDS.firefox
+          }
+          void detectExtensionsById(checkFor, this.api)
         }
       })
     }

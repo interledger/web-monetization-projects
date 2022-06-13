@@ -1,11 +1,14 @@
+import { ExtensionData } from '../consts/ExtensionIds'
+
 export async function detectExtensionsById(
-  extensionIds: Array<string>,
+  extensions: Array<ExtensionData>,
   wextApi: typeof chrome
 ) {
-  for (const id of extensionIds) {
+  if (extensions.length <= 0) return
+  for (const extensionData of extensions) {
     const active = await new Promise(resolve => {
       wextApi.runtime.sendMessage(
-        id,
+        extensionData.extensionId,
         { command: 'checkActive' },
         function (response: { active: boolean }) {
           if (wextApi.runtime.lastError) {
@@ -16,7 +19,6 @@ export async function detectExtensionsById(
         }
       )
     })
-    // We don't want to search for ALL active extensions, just one
     if (active) {
       wextApi.permissions.contains(
         {
@@ -32,7 +34,7 @@ export async function detectExtensionsById(
                 type: 'basic',
                 iconUrl: 'https://tinypng.com/images/example-shrunk.png',
                 title: 'Extension detected',
-                message: 'Active coil extension detected'
+                message: `${extensionData.extensionName} is active`
               },
               function () {}
             )
@@ -41,8 +43,14 @@ export async function detectExtensionsById(
           }
         }
       )
-      // We need to detect what platform we are on before we can do this
-      wextApi.tabs.create({ url: 'chrome://extensions' })
+      // open tab based on platform
+      if (navigator.userAgent.includes('Firefox')) {
+        // firefox
+        wextApi.tabs.create({ url: 'about:debugging' })
+      } else {
+        // edge or chrome
+        wextApi.tabs.create({ url: 'chrome://extensions' })
+      }
       break
     }
   }
