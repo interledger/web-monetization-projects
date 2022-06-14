@@ -74,7 +74,7 @@
     "@types/node": "16.11.39",
     "@types/node-fetch": "2.6.1",
     "@types/react": "17.0.45",
-    "@types/react-dom": "17.0.17",
+    "@types/react-dom": "18.0.5",
     "@types/react-helmet": "6.1.5",
     "@typescript-eslint/eslint-plugin": "5.27.1",
     "@typescript-eslint/parser": "5.27.1",

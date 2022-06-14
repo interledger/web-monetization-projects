@@ -1816,7 +1816,7 @@ __metadata:
     "@types/node": "npm:16.11.39"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.45"
-    "@types/react-dom": "npm:17.0.17"
+    "@types/react-dom": "npm:18.0.5"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.27.1"
     "@typescript-eslint/parser": "npm:5.27.1"
@@ -3377,7 +3377,7 @@ __metadata:
     "@types/jest": "npm:28.1.1"
     "@types/node": "npm:16.11.39"
     "@types/react": "npm:17.0.45"
-    "@types/react-dom": "npm:17.0.17"
+    "@types/react-dom": "npm:18.0.5"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.27.1"
     "@typescript-eslint/parser": "npm:5.27.1"
@@ -4980,12 +4980,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.17":
-  version: 17.0.17
-  resolution: "@types/react-dom@npm:17.0.17"
+"@types/react-dom@npm:18.0.5":
+  version: 18.0.5
+  resolution: "@types/react-dom@npm:18.0.5"
   dependencies:
-    "@types/react": "npm:^17"
-  checksum: 71b755bbc253c77a5a9c1c79cde91a1fda8224e26f4be20e56b5ebd4cb700281f60255b08cbaaab4f92608af1642b5caa46193843deeed163d519e51e953747a
+    "@types/react": "npm:*"
+  checksum: ec0ed6965cd21e78be6111c1ec0090e3be31d81a54aff392f3a2cec3c0b730a7fca21fc1109e92eb8260849f9e3d4ea01f4a9f0e0793a85883b533a8b71a317d
   languageName: node
   linkType: hard
 
@@ -5529,7 +5529,7 @@ __metadata:
     "@types/node": "npm:16.11.39"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.45"
-    "@types/react-dom": "npm:17.0.17"
+    "@types/react-dom": "npm:18.0.5"
     "@types/react-helmet": "npm:6.1.5"
     "@typescript-eslint/eslint-plugin": "npm:5.27.1"
     "@typescript-eslint/parser": "npm:5.27.1"
@@ -5730,7 +5730,7 @@ __metadata:
     "@types/jest": "npm:28.1.1"
     "@types/node": "npm:16.11.39"
     "@types/react": "npm:17.0.45"
-    "@types/react-dom": "npm:17.0.17"
+    "@types/react-dom": "npm:18.0.5"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.27.1"
     "@typescript-eslint/parser": "npm:5.27.1"
