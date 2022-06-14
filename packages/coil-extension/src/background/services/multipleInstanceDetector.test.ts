@@ -1,6 +1,6 @@
 import '@abraham/reflection'
 
-import { EXTENSIONS } from '../consts/ExtensionIds'
+import { EXTENSION_IDS } from '../consts/ExtensionIds'
 
 import {
   CheckActiveResponse,
@@ -64,7 +64,7 @@ describe('DetectExtensions', () => {
 
       const sendMessageCalls = mockApi.runtime.sendMessage.mock.calls
       expect(sendMessageCalls[0]).toMatchObject([
-        EXTENSIONS.chrome[0].extensionId,
+        EXTENSION_IDS.chrome[0].extensionId,
         { command: 'checkActive' },
         expect.any(Function)
       ])

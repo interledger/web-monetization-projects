@@ -2,8 +2,8 @@ import { inject, injectable } from 'inversify'
 
 import {
   BrowserType,
-  EXTENSIONS,
-  ExtensionInstance
+  ExtensionInstance,
+  EXTENSION_IDS
 } from '../consts/ExtensionIds'
 import * as tokens from '../../types/tokens'
 
@@ -54,7 +54,7 @@ export class MultipleInstanceDetector {
       return
     }
 
-    const extensions = EXTENSIONS[browserType]
+    const extensions = EXTENSION_IDS[browserType]
     if (extensions.length <= 0) return
 
     for (const extension of extensions) {
