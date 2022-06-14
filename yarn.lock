@@ -2215,7 +2215,7 @@ __metadata:
     prettier: "npm:2.6.2"
     regenerator-runtime: "npm:^0.13.9"
     rimraf: "npm:3.0.2"
-    sjcl: sublimator/sjcl
+    sjcl: "https://github.com/sublimator/sjcl.git#commit=4457eb3a84cfde1e7ea01b241d9d47a7a80969cc"
     ts-jest: "npm:28.0.4"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
@@ -21323,7 +21323,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-sjcl@sublimator/sjcl:
+"sjcl@https://github.com/sublimator/sjcl.git#commit=4457eb3a84cfde1e7ea01b241d9d47a7a80969cc":
   version: 1.0.8
   resolution: "sjcl@https://github.com/sublimator/sjcl.git#commit=4457eb3a84cfde1e7ea01b241d9d47a7a80969cc"
   checksum: 09434dbf90f9a9a43f9984b6617bd20e6ead4386b3521582d51f10d322db642a28b7ebb1547f452ad6b9651f5af94f3f4c215dbf482e7a7116efa73211bbe4ad
