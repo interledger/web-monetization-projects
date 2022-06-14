@@ -30,8 +30,8 @@ async function configureContainer(container: Container) {
   container.bind(Storage).toConstantValue(localStorage)
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
-
   container.bind(Stream).toSelf().inTransientScope()
+  container.bind(Navigator).toConstantValue(navigator)
 
   container
     .bind(tokens.NoContextLoggerName)
