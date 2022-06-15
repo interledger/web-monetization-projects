@@ -190,7 +190,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.18.2, @babel/core@npm:^7.11.6, @babel/core@npm:^7.12.3, @babel/core@npm:^7.14.0":
+"@babel/core@npm:7.18.5":
+  version: 7.18.5
+  resolution: "@babel/core@npm:7.18.5"
+  dependencies:
+    "@ampproject/remapping": "npm:^2.1.0"
+    "@babel/code-frame": "npm:^7.16.7"
+    "@babel/generator": "npm:^7.18.2"
+    "@babel/helper-compilation-targets": "npm:^7.18.2"
+    "@babel/helper-module-transforms": "npm:^7.18.0"
+    "@babel/helpers": "npm:^7.18.2"
+    "@babel/parser": "npm:^7.18.5"
+    "@babel/template": "npm:^7.16.7"
+    "@babel/traverse": "npm:^7.18.5"
+    "@babel/types": "npm:^7.18.4"
+    convert-source-map: "npm:^1.7.0"
+    debug: "npm:^4.1.0"
+    gensync: "npm:^1.0.0-beta.2"
+    json5: "npm:^2.2.1"
+    semver: "npm:^6.3.0"
+  checksum: feb4844190a60ceb8b111c00d761dd0c44344a85b5189fcb7229293eea7433ede295cc99a7ab73b40b4ae6bec49243886f53957b0e41878dd47939d0d59b6fcf
+  languageName: node
+  linkType: hard
+
+"@babel/core@npm:^7.11.6, @babel/core@npm:^7.12.3, @babel/core@npm:^7.14.0":
   version: 7.18.2
   resolution: "@babel/core@npm:7.18.2"
   dependencies:
@@ -494,6 +517,15 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: 5d2edbf1d85124f2b21a1dfbbaec3bf8e6c5afd6d1390f566b2bbb81f3d06a6bc6d89ac673bd01cec069065645d6f7dea324895bfd6cae67b4eb93e9f56dc575
+  languageName: node
+  linkType: hard
+
+"@babel/parser@npm:^7.18.5":
+  version: 7.18.5
+  resolution: "@babel/parser@npm:7.18.5"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: a46f05684b175ba57e9878c313cd000b277fe40acda0d023e95d65ed041731c1123365ce7406b4c2f57fd0fc0a9e302acab619c4f9fbcd39ebb7faa4f81d93bf
   languageName: node
   linkType: hard
 
@@ -1576,6 +1608,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/traverse@npm:^7.18.5":
+  version: 7.18.5
+  resolution: "@babel/traverse@npm:7.18.5"
+  dependencies:
+    "@babel/code-frame": "npm:^7.16.7"
+    "@babel/generator": "npm:^7.18.2"
+    "@babel/helper-environment-visitor": "npm:^7.18.2"
+    "@babel/helper-function-name": "npm:^7.17.9"
+    "@babel/helper-hoist-variables": "npm:^7.16.7"
+    "@babel/helper-split-export-declaration": "npm:^7.16.7"
+    "@babel/parser": "npm:^7.18.5"
+    "@babel/types": "npm:^7.18.4"
+    debug: "npm:^4.1.0"
+    globals: "npm:^11.1.0"
+  checksum: 020d00e807f2e91e01098dde9405b433156f36fca937cc54cecc6f6f217e7031688557d8830a127fd92df5888f2265de7f5f16f460b4f972d87daf3187ce482a
+  languageName: node
+  linkType: hard
+
 "@babel/types@npm:^7.0.0, @babel/types@npm:^7.16.0, @babel/types@npm:^7.16.7, @babel/types@npm:^7.16.8, @babel/types@npm:^7.17.0, @babel/types@npm:^7.17.12, @babel/types@npm:^7.18.0, @babel/types@npm:^7.18.2, @babel/types@npm:^7.3.0, @babel/types@npm:^7.3.3, @babel/types@npm:^7.4.4, @babel/types@npm:^7.8.3":
   version: 7.18.2
   resolution: "@babel/types@npm:7.18.2"
@@ -1583,6 +1633,16 @@ __metadata:
     "@babel/helper-validator-identifier": "npm:^7.16.7"
     to-fast-properties: "npm:^2.0.0"
   checksum: 09e52b0e7502e6284710ddcf6e8e8e9ac0f7c559ac311d474e7d1cc93a22cf3a39adba7d105060edac12edcbf837f5dc78f7fabc7bbc35fbefe92e7130228066
+  languageName: node
+  linkType: hard
+
+"@babel/types@npm:^7.18.4":
+  version: 7.18.4
+  resolution: "@babel/types@npm:7.18.4"
+  dependencies:
+    "@babel/helper-validator-identifier": "npm:^7.16.7"
+    to-fast-properties: "npm:^2.0.0"
+  checksum: 1a7f014d486a90b597c6e29c763658c3a4753b75b1dc75151067af2f310f2bba48a8890c7058faee8e1d54f8eb12a55354e3ce6333efb41b32ada1b884160e2b
   languageName: node
   linkType: hard
 
@@ -1632,7 +1692,7 @@ __metadata:
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -1641,19 +1701,19 @@ __metadata:
     "@coil/privacypass-sjcl": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
     "@types/jsonwebtoken": "npm:8.5.8"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/node-fetch": "npm:2.6.1"
     "@types/sjcl": "npm:1.0.30"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1674,18 +1734,18 @@ __metadata:
     lint-staged: "npm:13.0.1"
     localforage: "npm:1.10.0"
     node-fetch: "npm:^2.6.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -1696,7 +1756,7 @@ __metadata:
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -1705,18 +1765,18 @@ __metadata:
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
     "@types/jsonwebtoken": "npm:8.5.8"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/node-fetch": "npm:2.6.1"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1736,18 +1796,18 @@ __metadata:
     jsonwebtoken: "npm:^8.5.1"
     lint-staged: "npm:13.0.1"
     node-fetch: "npm:^2.6.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -1758,7 +1818,7 @@ __metadata:
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -1777,8 +1837,8 @@ __metadata:
     "@material-ui/core": "npm:^4.11.4"
     "@material-ui/icons": "npm:^4.11.2"
     "@material-ui/styles": "npm:^4.11.4"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/debug": "npm:4.1.7"
     "@types/filesystem": "npm:0.0.32"
     "@types/firefox": "npm:0.0.31"
@@ -1787,13 +1847,13 @@ __metadata:
     "@types/jest": "npm:28.1.1"
     "@types/jsonwebtoken": "npm:8.5.8"
     "@types/long": "npm:4.0.2"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webexts/build-utils": "npm:^0.0.0"
     "@webmonetization/polyfill-utils": "npm:^0.0.0"
     "@webmonetization/types": "npm:^0.0.0"
@@ -1802,8 +1862,8 @@ __metadata:
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     addons-linter: "npm:5.7.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:1.0.6"
     debug: "npm:^4.3.1"
@@ -1834,15 +1894,15 @@ __metadata:
     jss: "npm:^10.6.0"
     lint-staged: "npm:13.0.1"
     lottie-web: "npm:^5.8.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
     puppeteer: "npm:14.3.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reduct: "npm:^3.3.1"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
@@ -1851,7 +1911,7 @@ __metadata:
     web-ext: "npm:6.8.0"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -1863,7 +1923,7 @@ __metadata:
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
     "@apollo/utils.logger": "npm:^1.0.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -1883,23 +1943,23 @@ __metadata:
     "@graphql-tools/schema": "npm:^8.3.11"
     "@graphql-tools/utils": "npm:^8.6.10"
     "@interledger/stream-receiver": "npm:^0.3.3-alpha.1"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/body-parser": "npm:^1.19.2"
     "@types/cookie-parser": "npm:^1.4.3"
     "@types/express": "npm:^4.17.13"
     "@types/jest": "npm:28.1.1"
     "@types/jsonwebtoken": "npm:^8.5.8"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     apollo-server-core: "npm:^3.7.0"
     apollo-server-express: "npm:^3.7.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     body-parser: "npm:^1.20.0"
     compose-middleware: "npm:^5.0.1"
     cookie-parser: "npm:^1.4.6"
@@ -1931,18 +1991,18 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.1"
     jsonwebtoken: "npm:^8.5.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -1953,7 +2013,7 @@ __metadata:
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -1961,16 +2021,16 @@ __metadata:
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-dir: "npm:^1.3.0"
     copy-webpack-plugin: "npm:11.0.0"
     deepmerge: "npm:^4.2.2"
@@ -1991,21 +2051,21 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.1"
     json5: "npm:^2.2.0"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
+    nodemon: "npm:2.0.16"
     npm-check-updates: "npm:^13.0.0"
-    prettier: "npm:2.6.2"
+    prettier: "npm:2.7.0"
     reduct: "npm:^3.3.1"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     sort-package-json: "npm:1.57.0"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
     yaml: "npm:^2.0.0"
@@ -2017,7 +2077,7 @@ __metadata:
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -2029,21 +2089,21 @@ __metadata:
     "@coil/webpack-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
     "@types/long": "npm:4.0.2"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/node-fetch": "npm:2.6.1"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -2064,13 +2124,13 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
     node-fetch: "npm:^2.6.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
     puppeteer: "npm:14.3.0"
     reduct: "npm:^3.3.1"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
@@ -2078,7 +2138,7 @@ __metadata:
     uuid: "npm:^8.3.2"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2089,7 +2149,7 @@ __metadata:
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -2097,16 +2157,16 @@ __metadata:
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -2125,18 +2185,18 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
     node-fetch: "npm:^2.6.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2147,7 +2207,7 @@ __metadata:
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -2155,20 +2215,20 @@ __metadata:
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
     "@types/keccak": "npm:3.0.1"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/sjcl": "npm:1.0.30"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     asn1-parser: "npm:^1.1.8"
     atob: "npm:^2.1.2"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     btoa: "npm:^1.2.1"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
@@ -2189,19 +2249,19 @@ __metadata:
     keccak: "npm:^3.0.1"
     lint-staged: "npm:13.0.1"
     node-fetch: "npm:^2.6.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     sjcl: sublimator/sjcl
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2212,7 +2272,7 @@ __metadata:
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -2221,20 +2281,20 @@ __metadata:
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/debug": "npm:4.1.7"
     "@types/get-port": "npm:4.2.0"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/tmp": "npm:0.2.3"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     debug: "npm:^4.3.1"
     eslint: "npm:8.17.0"
@@ -2254,13 +2314,13 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
     puppeteer: "npm:^14.0.0"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     tmp: "npm:^0.2.1"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
@@ -2268,7 +2328,7 @@ __metadata:
     web-ext: "npm:^6.1.0"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2279,7 +2339,7 @@ __metadata:
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -2287,17 +2347,17 @@ __metadata:
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     buffer: "npm:^6.0.3"
     copy-webpack-plugin: "npm:11.0.0"
     crypto-browserify: "npm:^3.12.0"
@@ -2318,15 +2378,15 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
     process: "npm:^0.11.10"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     setimmediate: "npm:^1.0.5"
     stream-browserify: "npm:^3.0.0"
     string_decoder: "npm:^1.3.0"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
@@ -2334,7 +2394,7 @@ __metadata:
     util: "npm:^0.12.4"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2345,7 +2405,7 @@ __metadata:
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -2354,16 +2414,16 @@ __metadata:
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -2381,18 +2441,18 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2634,7 +2694,7 @@ __metadata:
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -2642,16 +2702,16 @@ __metadata:
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -2669,18 +2729,18 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2691,7 +2751,7 @@ __metadata:
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -2700,16 +2760,16 @@ __metadata:
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -2728,18 +2788,18 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -3332,7 +3392,7 @@ __metadata:
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -3344,15 +3404,15 @@ __metadata:
     "@dier-makr/inversify": "npm:^0.0.0"
     "@material-ui/core": "npm:^4.11.4"
     "@material-ui/icons": "npm:^4.11.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webexts/build-utils": "npm:0.0.0"
     "@webmonetization/polyfill-utils": "npm:^0.0.0"
     "@webmonetization/types": "npm:^0.0.0"
@@ -3360,8 +3420,8 @@ __metadata:
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     addons-linter: "npm:5.7.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:1.0.6"
     css-loader: "npm:6.7.1"
@@ -3388,14 +3448,14 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.1"
     jsonwebtoken: "npm:^8.5.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     style-loader: "npm:3.3.1"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
@@ -3405,7 +3465,7 @@ __metadata:
     web-ext: "npm:6.8.0"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -4156,7 +4216,7 @@ __metadata:
   resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -4164,16 +4224,16 @@ __metadata:
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -4191,19 +4251,19 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     source-map: "npm:0.5.6"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -4216,9 +4276,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-android-arm-eabi@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-android-arm-eabi@npm:1.2.203"
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
 "@swc/core-android-arm64@npm:1.2.197":
   version: 1.2.197
   resolution: "@swc/core-android-arm64@npm:1.2.197"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-android-arm64@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-android-arm64@npm:1.2.203"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
@@ -4230,9 +4304,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-darwin-arm64@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-darwin-arm64@npm:1.2.203"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@swc/core-darwin-x64@npm:1.2.197":
   version: 1.2.197
   resolution: "@swc/core-darwin-x64@npm:1.2.197"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-darwin-x64@npm:1.2.203"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -4244,9 +4332,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-freebsd-x64@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-freebsd-x64@npm:1.2.203"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-arm-gnueabihf@npm:1.2.197":
   version: 1.2.197
   resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.197"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm-gnueabihf@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.203"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
@@ -4258,9 +4360,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-arm64-gnu@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.2.203"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-arm64-musl@npm:1.2.197":
   version: 1.2.197
   resolution: "@swc/core-linux-arm64-musl@npm:1.2.197"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-musl@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-linux-arm64-musl@npm:1.2.203"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
@@ -4272,9 +4388,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-x64-gnu@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-linux-x64-gnu@npm:1.2.203"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-x64-musl@npm:1.2.197":
   version: 1.2.197
   resolution: "@swc/core-linux-x64-musl@npm:1.2.197"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-musl@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-linux-x64-musl@npm:1.2.203"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
@@ -4286,9 +4416,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-win32-arm64-msvc@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.2.203"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@swc/core-win32-ia32-msvc@npm:1.2.197":
   version: 1.2.197
   resolution: "@swc/core-win32-ia32-msvc@npm:1.2.197"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-ia32-msvc@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.2.203"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
@@ -4300,7 +4444,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core@npm:*, @swc/core@npm:1.2.197":
+"@swc/core-win32-x64-msvc@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core-win32-x64-msvc@npm:1.2.203"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:*":
   version: 1.2.197
   resolution: "@swc/core@npm:1.2.197"
   dependencies:
@@ -4350,7 +4501,57 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/jest@npm:^0.2.21":
+"@swc/core@npm:1.2.203":
+  version: 1.2.203
+  resolution: "@swc/core@npm:1.2.203"
+  dependencies:
+    "@swc/core-android-arm-eabi": "npm:1.2.203"
+    "@swc/core-android-arm64": "npm:1.2.203"
+    "@swc/core-darwin-arm64": "npm:1.2.203"
+    "@swc/core-darwin-x64": "npm:1.2.203"
+    "@swc/core-freebsd-x64": "npm:1.2.203"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.2.203"
+    "@swc/core-linux-arm64-gnu": "npm:1.2.203"
+    "@swc/core-linux-arm64-musl": "npm:1.2.203"
+    "@swc/core-linux-x64-gnu": "npm:1.2.203"
+    "@swc/core-linux-x64-musl": "npm:1.2.203"
+    "@swc/core-win32-arm64-msvc": "npm:1.2.203"
+    "@swc/core-win32-ia32-msvc": "npm:1.2.203"
+    "@swc/core-win32-x64-msvc": "npm:1.2.203"
+  dependenciesMeta:
+    "@swc/core-android-arm-eabi":
+      optional: true
+    "@swc/core-android-arm64":
+      optional: true
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-freebsd-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  bin:
+    swcx: run_swcx.js
+  checksum: a412b27b8501aecc3a370546939f7d6a450c9e2c2eb40bd0b9e7ec436890c9585b80e41853081e847337d5bbce72e6dda7e7de0954dab774e7feaddacf77637a
+  languageName: node
+  linkType: hard
+
+"@swc/jest@npm:0.2.21":
   version: 0.2.21
   resolution: "@swc/jest@npm:0.2.21"
   dependencies:
@@ -4883,10 +5084,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.11.39":
-  version: 16.11.39
-  resolution: "@types/node@npm:16.11.39"
-  checksum: 88e741e13a168024547bb0e90d53667793f35e7e13ab0f5f3dfca45eaa4722b7c51c8eb963255f7a415bcbd1d6369f2ba0765dab0a573d9859e169850bf9f9a8
+"@types/node@npm:16.11.40":
+  version: 16.11.40
+  resolution: "@types/node@npm:16.11.40"
+  checksum: 5cf49188ee370017aa4488012e81b61c9317c2a1c92e914026d43a5dd866ed75d10520bdb016333a0fc7453d15b0751da2b0b6c9c7fe85cb4a380a90169ddd96
   languageName: node
   linkType: hard
 
@@ -5143,13 +5344,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:5.27.1":
-  version: 5.27.1
-  resolution: "@typescript-eslint/eslint-plugin@npm:5.27.1"
+"@typescript-eslint/eslint-plugin@npm:5.28.0":
+  version: 5.28.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:5.28.0"
   dependencies:
-    "@typescript-eslint/scope-manager": "npm:5.27.1"
-    "@typescript-eslint/type-utils": "npm:5.27.1"
-    "@typescript-eslint/utils": "npm:5.27.1"
+    "@typescript-eslint/scope-manager": "npm:5.28.0"
+    "@typescript-eslint/type-utils": "npm:5.28.0"
+    "@typescript-eslint/utils": "npm:5.28.0"
     debug: "npm:^4.3.4"
     functional-red-black-tree: "npm:^1.0.1"
     ignore: "npm:^5.2.0"
@@ -5162,24 +5363,24 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 401d8ff2b5c20fa1bf193b44eaa816be0d0f527a770db2ee24d3bb700d57f0980a29a613c1289c9b45ff1f9e2c1050fc4eea5fe991263e7b6489a4743757ba91
+  checksum: 89c0129e638aae7d6dec1c17113ad4e05e3c042fe83792433440c64ce2f6d662655bd2cdcfb2436453bcd3d6efc9b40d7f059b7138f6737e65fe66a4af0bc995
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:5.27.1":
-  version: 5.27.1
-  resolution: "@typescript-eslint/parser@npm:5.27.1"
+"@typescript-eslint/parser@npm:5.28.0":
+  version: 5.28.0
+  resolution: "@typescript-eslint/parser@npm:5.28.0"
   dependencies:
-    "@typescript-eslint/scope-manager": "npm:5.27.1"
-    "@typescript-eslint/types": "npm:5.27.1"
-    "@typescript-eslint/typescript-estree": "npm:5.27.1"
+    "@typescript-eslint/scope-manager": "npm:5.28.0"
+    "@typescript-eslint/types": "npm:5.28.0"
+    "@typescript-eslint/typescript-estree": "npm:5.28.0"
     debug: "npm:^4.3.4"
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: e5b0caa1fc7dd82fe60dfedd513b7d92f802320e419a0df569e2d0fe1b19d200636364d97d5b18d7cb656e3b9a3b82d2895241878845a7342f1350aaf7703e81
+  checksum: 475a0d10c5e5d53fcdc0f6d0ab8ae395c91f77e33a36cc5e954c3236dbb215d6686afe75ff3a7f48c524fc2d07dc58883a74cbe045f2c4acdd0b3eaf2d323532
   languageName: node
   linkType: hard
 
@@ -5193,11 +5394,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/type-utils@npm:5.27.1":
-  version: 5.27.1
-  resolution: "@typescript-eslint/type-utils@npm:5.27.1"
+"@typescript-eslint/scope-manager@npm:5.28.0":
+  version: 5.28.0
+  resolution: "@typescript-eslint/scope-manager@npm:5.28.0"
   dependencies:
-    "@typescript-eslint/utils": "npm:5.27.1"
+    "@typescript-eslint/types": "npm:5.28.0"
+    "@typescript-eslint/visitor-keys": "npm:5.28.0"
+  checksum: 03fa2de0ad2345873fcabaa703eb5965d463787d85e77ae5ca1787be81f1d59a37122b3ac370306fe6e82a6cd93384aeaf9007f0f0c78f696e89b4134b4212da
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/type-utils@npm:5.28.0":
+  version: 5.28.0
+  resolution: "@typescript-eslint/type-utils@npm:5.28.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:5.28.0"
     debug: "npm:^4.3.4"
     tsutils: "npm:^3.21.0"
   peerDependencies:
@@ -5205,7 +5416,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 8cf797ffa59d187738c6abbfb611633d19e1e18a645f05fcaade623c47de04f1f03db8f15de795880c0fcf9745ef80f317e189d57edcf87b81b968d5e2b6d848
+  checksum: 6efdd7b31d95db641f692a455679867b229e9bbe52f76b6ec0e613342e61ded994d505d4f8d97de02eefb658783b51b95613389f9f0689261824c75f962f9689
   languageName: node
   linkType: hard
 
@@ -5213,6 +5424,13 @@ __metadata:
   version: 5.27.1
   resolution: "@typescript-eslint/types@npm:5.27.1"
   checksum: 25133b5a4210bf9d33ebf9bdcef626bbc5177f2a0941116b5155b7f18efb2295ae2fedc6534117983ab851ac7f8b9542bfe115e8d16c49bc4b924e017b81eff8
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/types@npm:5.28.0":
+  version: 5.28.0
+  resolution: "@typescript-eslint/types@npm:5.28.0"
+  checksum: eb680bba63434e2ffae46257a4365a4ad496dae4a7d2b9babbea0bfab63dcdc46b3fcd9c51782e530bf2b117969abffff86d6a5f86a62ca1b5602a65e4c1f675
   languageName: node
   linkType: hard
 
@@ -5234,7 +5452,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:5.27.1, @typescript-eslint/utils@npm:^5.10.0":
+"@typescript-eslint/typescript-estree@npm:5.28.0":
+  version: 5.28.0
+  resolution: "@typescript-eslint/typescript-estree@npm:5.28.0"
+  dependencies:
+    "@typescript-eslint/types": "npm:5.28.0"
+    "@typescript-eslint/visitor-keys": "npm:5.28.0"
+    debug: "npm:^4.3.4"
+    globby: "npm:^11.1.0"
+    is-glob: "npm:^4.0.3"
+    semver: "npm:^7.3.7"
+    tsutils: "npm:^3.21.0"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 59cbb5053e1a35220d32d33a2deea64c07f1226b3b1a63517888d8402c7ddb91aa8779109739a7452d0a86e948974e16c93b98b1be9d5d1cc503056794bb93b3
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/utils@npm:5.28.0":
+  version: 5.28.0
+  resolution: "@typescript-eslint/utils@npm:5.28.0"
+  dependencies:
+    "@types/json-schema": "npm:^7.0.9"
+    "@typescript-eslint/scope-manager": "npm:5.28.0"
+    "@typescript-eslint/types": "npm:5.28.0"
+    "@typescript-eslint/typescript-estree": "npm:5.28.0"
+    eslint-scope: "npm:^5.1.1"
+    eslint-utils: "npm:^3.0.0"
+  peerDependencies:
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  checksum: d5aa6dea6057d2d6d5791bb9311c9d537ddbe391f1d3c2c4a768bb55af4a8d85b9fd990aa9b304aa0ffffadc834d920a839ffd33727d8ce5ae3f1ccde4de6d12
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/utils@npm:^5.10.0":
   version: 5.27.1
   resolution: "@typescript-eslint/utils@npm:5.27.1"
   dependencies:
@@ -5257,6 +5509,16 @@ __metadata:
     "@typescript-eslint/types": "npm:5.27.1"
     eslint-visitor-keys: "npm:^3.3.0"
   checksum: 1aaae857a6674d60c0592a465a47ff4a1bd922a4258e14a6ad80a76e67213d523bc929477f0a2919083d037453ee6c1a373904711c297e289f6df1cf40cc8a18
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/visitor-keys@npm:5.28.0":
+  version: 5.28.0
+  resolution: "@typescript-eslint/visitor-keys@npm:5.28.0"
+  dependencies:
+    "@typescript-eslint/types": "npm:5.28.0"
+    eslint-visitor-keys: "npm:^3.3.0"
+  checksum: 4f81650a9637b59e43cbbae12f1766def6dc571091bd1a30dc8e691c0d19b18f70f59d8fb66b90efedb597d2583c17e7e5f968f62c4c18ad49f73d1c21ef98ba
   languageName: node
   linkType: hard
 
@@ -5416,7 +5678,7 @@ __metadata:
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -5425,17 +5687,17 @@ __metadata:
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     buffer: "npm:^6.0.3"
     copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:^1.0.6"
@@ -5457,15 +5719,15 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
     process: "npm:^0.11.10"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     setimmediate: "npm:^1.0.5"
     stream-browserify: "npm:^3.0.0"
     string_decoder: "npm:^1.3.0"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
@@ -5473,7 +5735,7 @@ __metadata:
     util: "npm:^0.12.4"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -5484,7 +5746,7 @@ __metadata:
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -5494,25 +5756,25 @@ __metadata:
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
     "@hot-loader/react-dom": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/body-parser": "npm:1.19.2"
     "@types/express": "npm:4.17.13"
     "@types/figlet": "npm:1.5.4"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/node-fetch": "npm:2.6.1"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
     "@types/react-helmet": "npm:6.1.5"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webmonetization/react": "npm:0.0.12"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     body-parser: "npm:^1.19.0"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
@@ -5540,23 +5802,23 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
     node-fetch: "npm:^2.6.1"
-    nodemon: "npm:^2.0.16"
+    nodemon: "npm:2.0.16"
     oer-utils: "npm:^5.1.2"
-    prettier: "npm:2.6.2"
+    prettier: "npm:2.7.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     react-helmet: "npm:^6.1.0"
     react-hot-loader: "npm:^4.13.0"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -5567,7 +5829,7 @@ __metadata:
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -5575,19 +5837,19 @@ __metadata:
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/node-fetch": "npm:2.6.1"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -5606,12 +5868,12 @@ __metadata:
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
     node-fetch: "npm:^2.6.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
     reduct: "npm:^3.3.1"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
@@ -5619,7 +5881,7 @@ __metadata:
     uuid: "npm:^8.3.2"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -5630,7 +5892,7 @@ __metadata:
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -5639,18 +5901,18 @@ __metadata:
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/react": "npm:17.0.45"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -5668,18 +5930,18 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   peerDependencies:
@@ -5692,7 +5954,7 @@ __metadata:
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -5702,22 +5964,22 @@ __metadata:
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
     "@hot-loader/react-dom": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
+    "@types/node": "npm:16.11.40"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
     ajv: "npm:^8.6.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -5736,14 +5998,14 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     react-hot-loader: "npm:^4.13.0"
-    regenerator-runtime: "npm:^0.13.9"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
@@ -5751,7 +6013,7 @@ __metadata:
     uuid: "npm:^8.3.2"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -5762,7 +6024,7 @@ __metadata:
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -5770,16 +6032,16 @@ __metadata:
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -5797,11 +6059,11 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-json-schema-generator: "npm:1.0.0"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
@@ -5809,7 +6071,7 @@ __metadata:
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -5820,7 +6082,7 @@ __metadata:
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -5829,18 +6091,18 @@ __metadata:
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
     "@webmonetization/types": "npm:0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -5858,53 +6120,53 @@ __metadata:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
 
-"@webpack-cli/configtest@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@webpack-cli/configtest@npm:1.1.1"
+"@webpack-cli/configtest@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@webpack-cli/configtest@npm:1.2.0"
   peerDependencies:
     webpack: 4.x.x || 5.x.x
     webpack-cli: 4.x.x
-  checksum: 80738c2d44e2b7db467d6025bcd1d3f4b748ea26ebf7f19150a74c519e0b7f5a93470cc782dd0d410458afb7c7caa7f88f1605149edd179f0f0dc95bcba0a72b
+  checksum: 6b60a3a16c98eecdd1a131141038ceba13d49676a138f2858e7b5609106b47e4be1c8beaa5abf1828a8b51a4691fb93df0b91740f91e7d48bb62a67d21f5d8fa
   languageName: node
   linkType: hard
 
-"@webpack-cli/info@npm:^1.4.1":
-  version: 1.4.1
-  resolution: "@webpack-cli/info@npm:1.4.1"
+"@webpack-cli/info@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@webpack-cli/info@npm:1.5.0"
   dependencies:
     envinfo: "npm:^7.7.3"
   peerDependencies:
     webpack-cli: 4.x.x
-  checksum: 89660a9e0fcbe5afcd4b16ed3786bc047856ecafd54659ff82f8110637220f8f41ac14d2d397b100aad2c28697591059146b05b06fd96661f9cfe572656f84f4
+  checksum: b674858a8c863b069dda56305f8e07c1e736fccc8f52d765d7ddea44456aef9130cd2ce1946bd5d8163bfadf61494bc7c579711f0eeb855be6cf8b6cc150c9d0
   languageName: node
   linkType: hard
 
-"@webpack-cli/serve@npm:^1.6.1":
-  version: 1.6.1
-  resolution: "@webpack-cli/serve@npm:1.6.1"
+"@webpack-cli/serve@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "@webpack-cli/serve@npm:1.7.0"
   peerDependencies:
     webpack-cli: 4.x.x
   peerDependenciesMeta:
     webpack-dev-server:
       optional: true
-  checksum: 67ce0528374155a973d68dca9cc22531c2d42a2290921690ce2a5e1f7cc81c486c7b6b299d3ee38237789060e57c585c0b918eed559d407f7944033096116329
+  checksum: fc10d33e518870469bbf3813f2a104d6058d80541af68f069e873de5ee67acd0cedbbec75092fb3d33d1c73f5227dc444730bd1da9b9e46dd4d751ca2b5fb946
   languageName: node
   linkType: hard
 
@@ -7482,7 +7744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-parameter-decorator@npm:^1.0.16":
+"babel-plugin-parameter-decorator@npm:1.0.16":
   version: 1.0.16
   resolution: "babel-plugin-parameter-decorator@npm:1.0.16"
   checksum: 5737d6362cb9aefa2f32ceeb78c5968c909f04991ba5786544a05d52b8e3c78c2bea784f9b48a3f35d589588489ad3314870fbde01d600378306f43a311bda1e
@@ -7532,7 +7794,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-transform-typescript-metadata@npm:^0.3.2":
+"babel-plugin-transform-typescript-metadata@npm:0.3.2":
   version: 0.3.2
   resolution: "babel-plugin-transform-typescript-metadata@npm:0.3.2"
   dependencies:
@@ -17848,7 +18110,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemon@npm:^2.0.16":
+"nodemon@npm:2.0.16":
   version: 2.0.16
   resolution: "nodemon@npm:2.0.16"
   dependencies:
@@ -19430,12 +19692,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.6.2":
-  version: 2.6.2
-  resolution: "prettier@npm:2.6.2"
+"prettier@npm:2.7.0":
+  version: 2.7.0
+  resolution: "prettier@npm:2.7.0"
   bin:
     prettier: bin-prettier.js
-  checksum: ca32544e761860cb04d4fdc84e5772972ef727b0ed802f543bf6a47b1794599048e082e4085a5a3688d2caa2f7ce6331f21c6c2cd7f3d97cddaf2625a4ed3458
+  checksum: a325056460177731710a0e954eff4b57819c883f3bee34150765495d04b6b3ada8c76cac31c71862880141c165727fcd51ae76755246e3b6e64cbc2600bdee60
   languageName: node
   linkType: hard
 
@@ -20190,17 +20452,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:0.13.9, regenerator-runtime@npm:^0.13.2, regenerator-runtime@npm:^0.13.4":
+  version: 0.13.9
+  resolution: "regenerator-runtime@npm:0.13.9"
+  checksum: db060af0b2ca8bb7f12aea9dcf7416ff80259b39c2ddd38e0bd705b0a7acd9f07be133e543bbf54af1e86253b6fd553e3050fd6b30c3282731dd27560427f065
+  languageName: node
+  linkType: hard
+
 "regenerator-runtime@npm:^0.11.0":
   version: 0.11.1
   resolution: "regenerator-runtime@npm:0.11.1"
   checksum: 14664043fb2f0f41fa9349df06e962fc888657ea05ece28df05729fba0b9ea626e75547e317452454b80ef182bfe69b7c14d6717b0f7eb1c23d4d74aad9e186c
-  languageName: node
-  linkType: hard
-
-"regenerator-runtime@npm:^0.13.2, regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.9":
-  version: 0.13.9
-  resolution: "regenerator-runtime@npm:0.13.9"
-  checksum: db060af0b2ca8bb7f12aea9dcf7416ff80259b39c2ddd38e0bd705b0a7acd9f07be133e543bbf54af1e86253b6fd553e3050fd6b30c3282731dd27560427f065
   languageName: node
   linkType: hard
 
@@ -22797,9 +23059,9 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:28.0.4":
-  version: 28.0.4
-  resolution: "ts-jest@npm:28.0.4"
+"ts-jest@npm:28.0.5":
+  version: 28.0.5
+  resolution: "ts-jest@npm:28.0.5"
   dependencies:
     bs-logger: "npm:0.x"
     fast-json-stable-stringify: "npm:2.x"
@@ -22808,7 +23070,7 @@ sjcl@sublimator/sjcl:
     lodash.memoize: "npm:4.x"
     make-error: "npm:1.x"
     semver: "npm:7.x"
-    yargs-parser: "npm:^20.x"
+    yargs-parser: "npm:^21.0.1"
   peerDependencies:
     "@babel/core": ">=7.0.0-beta.0 <8"
     babel-jest: ^28.0.0
@@ -22823,7 +23085,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 69cbc575b11614aaf678e62de1c0a679b7d57658c66bfa684e4ec300d31b6aba0c2663c4af02ce12639f87f9172a6076648431dd0fe93c4d3ebcdf376ba2e53e
+  checksum: 01e791ac51af5cab3cfa0162e827de8a22db1b08fa56cb2cfc8bdfedf0c04a5a8f5316c8efc247ca3c064e0eec64f2722552e8b98bceef00d51b217a7f47ad9c
   languageName: node
   linkType: hard
 
@@ -23794,7 +24056,7 @@ sjcl@sublimator/sjcl:
   resolution: "web-monetization@workspace:."
   dependencies:
     "@abraham/reflection": "npm:0.8.0"
-    "@babel/core": "npm:7.18.2"
+    "@babel/core": "npm:7.18.5"
     "@babel/plugin-proposal-class-properties": "npm:7.17.12"
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
@@ -23802,16 +24064,16 @@ sjcl@sublimator/sjcl:
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
-    "@swc/core": "npm:1.2.197"
-    "@swc/jest": "npm:^0.2.21"
+    "@swc/core": "npm:1.2.203"
+    "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:16.11.39"
-    "@typescript-eslint/eslint-plugin": "npm:5.27.1"
-    "@typescript-eslint/parser": "npm:5.27.1"
+    "@types/node": "npm:16.11.40"
+    "@typescript-eslint/eslint-plugin": "npm:5.28.0"
+    "@typescript-eslint/parser": "npm:5.28.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:^1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
+    babel-plugin-parameter-decorator: "npm:1.0.16"
+    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
     eslint: "npm:8.17.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -23829,18 +24091,18 @@ sjcl@sublimator/sjcl:
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.1"
-    nodemon: "npm:^2.0.16"
-    prettier: "npm:2.6.2"
-    regenerator-runtime: "npm:^0.13.9"
+    nodemon: "npm:2.0.16"
+    prettier: "npm:2.7.0"
+    regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.4"
+    ts-jest: "npm:28.0.5"
     ts-loader: "npm:9.3.0"
     ts-node: "npm:10.8.1"
     tsconfig-paths: "npm:4.0.0"
     typescript: "npm:4.7.3"
     webpack: "npm:5.73.0"
     webpack-bundle-analyzer: "npm:4.5.0"
-    webpack-cli: "npm:4.9.2"
+    webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.2"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -23900,17 +24162,17 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:4.9.2":
-  version: 4.9.2
-  resolution: "webpack-cli@npm:4.9.2"
+"webpack-cli@npm:4.10.0":
+  version: 4.10.0
+  resolution: "webpack-cli@npm:4.10.0"
   dependencies:
     "@discoveryjs/json-ext": "npm:^0.5.0"
-    "@webpack-cli/configtest": "npm:^1.1.1"
-    "@webpack-cli/info": "npm:^1.4.1"
-    "@webpack-cli/serve": "npm:^1.6.1"
+    "@webpack-cli/configtest": "npm:^1.2.0"
+    "@webpack-cli/info": "npm:^1.5.0"
+    "@webpack-cli/serve": "npm:^1.7.0"
     colorette: "npm:^2.0.14"
     commander: "npm:^7.0.0"
-    execa: "npm:^5.0.0"
+    cross-spawn: "npm:^7.0.3"
     fastest-levenshtein: "npm:^1.0.12"
     import-local: "npm:^3.0.2"
     interpret: "npm:^2.2.0"
@@ -23929,7 +24191,7 @@ sjcl@sublimator/sjcl:
       optional: true
   bin:
     webpack-cli: bin/cli.js
-  checksum: 38d670edc3bf0e72e96b6ea78d3143488e1d35f9790478bfe302a15399e8a9b49ee6b4f8a9aa7cdd2fe7bc53ff62ee8121e13213a34509cb0b6b820fd9f13585
+  checksum: 994ff43b25f27ea132e470e6d469b17b351cba463aa76cbac34885ce50ea1eb17a8edbd60b6398370c47b30ae4ff2c67fc222fb2f0fecfc2941ea04dc741a842
   languageName: node
   linkType: hard
 
@@ -24557,7 +24819,7 @@ sjcl@sublimator/sjcl:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:^20.2.2, yargs-parser@npm:^20.2.3, yargs-parser@npm:^20.x":
+"yargs-parser@npm:^20.2.2, yargs-parser@npm:^20.2.3":
   version: 20.2.9
   resolution: "yargs-parser@npm:20.2.9"
   checksum: fd739a429b7cde755b8e9d28520619fb8adb94c686b2d75d3c93a6ec199fbc8bf120af6d2be144f8d3075f3d675b09893f8894a362548107aa90bb97ad662c7a
@@ -24568,6 +24830,13 @@ sjcl@sublimator/sjcl:
   version: 21.0.0
   resolution: "yargs-parser@npm:21.0.0"
   checksum: 57bc0d0c2f6b30e672ada0bcc4aee629d09d0a38a0e2c5cdb43944b2bce9f2444f14f251be0ccddef4d630eed760926c44df579fc586f4ba893e98f61e53e5ae
+  languageName: node
+  linkType: hard
+
+"yargs-parser@npm:^21.0.1":
+  version: 21.0.1
+  resolution: "yargs-parser@npm:21.0.1"
+  checksum: acaedd6c21306da55dfabb5ea5967012a322bb103eab6034cee3ace61cefda1faaac89ea10bdee3bdfed2904f43cf71f346ccecf72e85b5005e6b2b2d17201d5
   languageName: node
   linkType: hard
 
