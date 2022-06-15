@@ -27,6 +27,14 @@ export interface CheckActiveResponse {
   active: boolean
 }
 
+export interface ExtensionMessage {
+  command: string
+}
+
+interface ResponseFunc<T, TResult> {
+  (item: T): TResult
+}
+
 @injectable()
 export class MultipleInstanceDetector {
   constructor(
@@ -97,6 +105,19 @@ export class MultipleInstanceDetector {
         }
       }
     )
+  }
+
+  externalMessageListener() {
+    this.wextApi.runtime.onMessageExternal.addListener(function (
+      message: ExtensionMessage,
+      sender: any,
+      sendResponse: ResponseFunc<CheckActiveResponse, null>
+    ) {
+      // sends a response back to state its active
+      if (message.command === 'checkActive') {
+        sendResponse({ active: true })
+      }
+    })
   }
 
   private async checkExtensionIsActive(extensionData: ExtensionInstance) {

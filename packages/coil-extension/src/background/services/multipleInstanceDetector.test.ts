@@ -44,13 +44,13 @@ describe('DetectExtensions', () => {
         create: jest.fn()
       }
     }
-    const navigatorFF = {
+    const navigatorCH = {
       userAgent: CHROME_UA
     } as Navigator
 
     it('should send a cross extension message', async () => {
       const detector = new MultipleInstanceDetector(
-        navigatorFF,
+        navigatorCH,
         mockApi as WextApiSubset
       )
       const showNotificationSpy = jest.spyOn(
@@ -69,7 +69,6 @@ describe('DetectExtensions', () => {
         expect.any(Function)
       ])
       const callback = sendMessageCalls[0][2]
-      expect(typeof callback).toBe('function')
 
       const reply: CheckActiveResponse = {
         active: true

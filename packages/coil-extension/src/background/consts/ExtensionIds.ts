@@ -13,8 +13,12 @@ export const EXTENSION_IDS: Record<BrowserType, Array<ExtensionInstance>> = {
       extensionId: 'deofcdfbmgdlnbdhpdmmegpokkaoadam'
     },
     {
-      extensionName: 'Extensionb',
-      extensionId: 'aaepchbipgcldoekbdgfilihmejochia'
+      extensionName: 'CoilDev',
+      extensionId: 'hcohoecolgmlofifjaobjhidpoaciknp'
+    },
+    {
+      extensionName: 'CoilPreview',
+      extensionId: 'iehmfkldnblennopinmmagfidpflefkp'
     }
   ],
   firefox: [],

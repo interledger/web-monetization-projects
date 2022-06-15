@@ -46,7 +46,6 @@ import { ActiveTabLogger } from './ActiveTabLogger'
 import MessageSender = chrome.runtime.MessageSender
 
 // eslint-disable-next-line import/order
-import { externalMessageListener } from './ExtensionListener'
 import { MultipleInstanceDetector } from './multipleInstanceDetector'
 
 @injectable()
@@ -68,7 +67,7 @@ export class BackgroundScript {
     private loggingEnabled: boolean,
     @logger('BackgroundScript')
     private log: Logger,
-    private detectMultipleInstances: MultipleInstanceDetector,
+    private multipleInstanceDetector: MultipleInstanceDetector,
     private client: GraphQlClient,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
@@ -97,7 +96,7 @@ export class BackgroundScript {
   }
 
   async run() {
-    externalMessageListener(this.api.runtime)
+    this.multipleInstanceDetector.externalMessageListener()
     this.initializeActiveTab()
     this.setRuntimeMessageListener()
     this.setTabsOnActivatedListener()
@@ -1114,7 +1113,7 @@ export class BackgroundScript {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
           void this.api.tabs.create({ url: `${this.coilDomain}/signup` })
-          void this.detectMultipleInstances.detectOtherInstances()
+          void this.multipleInstanceDetector.detectOtherInstances()
         }
       })
     }
