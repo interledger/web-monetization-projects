@@ -96,7 +96,7 @@ export class BackgroundScript {
   }
 
   async run() {
-    this.multipleInstanceDetector.externalMessageListener()
+    this.multipleInstanceDetector.addExternalMessageListener()
     this.initializeActiveTab()
     this.setRuntimeMessageListener()
     this.setTabsOnActivatedListener()

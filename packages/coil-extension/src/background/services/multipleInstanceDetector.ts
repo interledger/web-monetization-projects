@@ -3,7 +3,7 @@ import { inject, injectable } from 'inversify'
 import {
   BrowserType,
   ExtensionInstance,
-  EXTENSION_IDS
+  EXTENSIONS
 } from '../consts/ExtensionIds'
 import * as tokens from '../../types/tokens'
 
@@ -18,6 +18,7 @@ export type WextApiSubset = {
     create: typeof chrome.tabs.create
   }
   runtime: {
+    onMessageExternal: typeof chrome.runtime.onMessageExternal
     lastError: typeof chrome.runtime.lastError
     sendMessage: typeof chrome.runtime.sendMessage
   }
@@ -29,10 +30,6 @@ export interface CheckActiveResponse {
 
 export interface ExtensionMessage {
   command: string
-}
-
-interface ResponseFunc<T, TResult> {
-  (item: T): TResult
 }
 
 @injectable()
@@ -62,7 +59,7 @@ export class MultipleInstanceDetector {
       return
     }
 
-    const extensions = EXTENSION_IDS[browserType]
+    const extensions = EXTENSIONS[browserType]
     if (extensions.length <= 0) return
 
     for (const extension of extensions) {
@@ -107,17 +104,15 @@ export class MultipleInstanceDetector {
     )
   }
 
-  externalMessageListener() {
-    this.wextApi.runtime.onMessageExternal.addListener(function (
-      message: ExtensionMessage,
-      sender: any,
-      sendResponse: ResponseFunc<CheckActiveResponse, null>
-    ) {
-      // sends a response back to state its active
-      if (message.command === 'checkActive') {
-        sendResponse({ active: true })
+  addExternalMessageListener() {
+    this.wextApi.runtime.onMessageExternal.addListener(
+      (message: ExtensionMessage, sender, sendResponse) => {
+        // sends a response back to state its active
+        if (message.command === 'checkActive') {
+          sendResponse({ active: true })
+        }
       }
-    })
+    )
   }
 
   private async checkExtensionIsActive(extensionData: ExtensionInstance) {

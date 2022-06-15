@@ -6,7 +6,7 @@ export interface ExtensionInstance {
 
 export type BrowserType = 'chrome' | 'firefox' | 'edge'
 
-export const EXTENSION_IDS: Record<BrowserType, Array<ExtensionInstance>> = {
+export const EXTENSIONS: Record<BrowserType, Array<ExtensionInstance>> = {
   chrome: [
     {
       extensionName: 'CoilDevDist2',

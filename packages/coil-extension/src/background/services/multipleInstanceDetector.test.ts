@@ -1,6 +1,6 @@
 import '@abraham/reflection'
 
-import { EXTENSION_IDS } from '../consts/ExtensionIds'
+import { EXTENSIONS } from '../consts/ExtensionIds'
 
 import {
   CheckActiveResponse,
@@ -44,13 +44,13 @@ describe('DetectExtensions', () => {
         create: jest.fn()
       }
     }
-    const navigatorCH = {
+    const chromeNavigator = {
       userAgent: CHROME_UA
     } as Navigator
 
     it('should send a cross extension message', async () => {
       const detector = new MultipleInstanceDetector(
-        navigatorCH,
+        chromeNavigator,
         mockApi as WextApiSubset
       )
       const showNotificationSpy = jest.spyOn(
@@ -64,7 +64,7 @@ describe('DetectExtensions', () => {
 
       const sendMessageCalls = mockApi.runtime.sendMessage.mock.calls
       expect(sendMessageCalls[0]).toMatchObject([
-        EXTENSION_IDS.chrome[0].extensionId,
+        EXTENSIONS.chrome[0].extensionId,
         { command: 'checkActive' },
         expect.any(Function)
       ])
