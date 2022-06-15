@@ -37,7 +37,9 @@ describe('DetectExtensions', () => {
         contains: jest.fn()
       },
       runtime: {
-        onMessageExternal: jest.fn(),
+        onMessageExternal: {
+          addListener: jest.fn()
+        },
         sendMessage: jest.fn(),
         lastError: undefined
       },
