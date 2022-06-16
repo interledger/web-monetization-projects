@@ -53,7 +53,7 @@
     "@swc/core": "1.2.203",
     "@swc/jest": "0.2.21",
     "@types/jest": "28.1.1",
-    "@types/node": "16.11.40",
+    "@types/node": "16.11.41",
     "@types/react": "17.0.45",
     "@typescript-eslint/eslint-plugin": "5.28.0",
     "@typescript-eslint/parser": "5.28.0",
