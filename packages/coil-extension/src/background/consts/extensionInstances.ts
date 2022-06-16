@@ -1,7 +1,7 @@
 // add the id's of the extensions to check their active states
 export interface ExtensionInstance {
-  extensionName: string
-  extensionId: string
+  name: string
+  id: string
 }
 
 export type BrowserType = 'chrome' | 'firefox' | 'edge'
@@ -9,18 +9,28 @@ export type BrowserType = 'chrome' | 'firefox' | 'edge'
 export const EXTENSIONS: Record<BrowserType, Array<ExtensionInstance>> = {
   chrome: [
     {
-      extensionName: 'CoilDevDist2',
-      extensionId: 'deofcdfbmgdlnbdhpdmmegpokkaoadam'
+      name: 'CoilDevDist2',
+      id: 'deofcdfbmgdlnbdhpdmmegpokkaoadam'
     },
     {
-      extensionName: 'CoilDev',
-      extensionId: 'hcohoecolgmlofifjaobjhidpoaciknp'
+      name: 'CoilDev',
+      id: 'hcohoecolgmlofifjaobjhidpoaciknp'
     },
     {
-      extensionName: 'CoilPreview',
-      extensionId: 'iehmfkldnblennopinmmagfidpflefkp'
+      name: 'CoilPreview',
+      id: 'iehmfkldnblennopinmmagfidpflefkp'
     }
   ],
-  firefox: [],
-  edge: []
+  firefox: [
+    {
+      name: 'Coil',
+      id: 'coilfirefoxextension@coil.com'
+    }
+  ],
+  edge: [
+    {
+      name: 'Coil',
+      id: 'ljionajlbinlfkdnpkloejeoogfgkojm'
+    }
+  ]
 }

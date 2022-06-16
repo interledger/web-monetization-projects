@@ -45,6 +45,9 @@ describe('DetectExtensions', () => {
       },
       tabs: {
         create: jest.fn()
+      },
+      extension: {
+        getURL: jest.fn()
       }
     }
     const chromeNavigator = {
@@ -67,7 +70,7 @@ describe('DetectExtensions', () => {
 
       const sendMessageCalls = mockApi.runtime.sendMessage.mock.calls
       expect(sendMessageCalls[0]).toMatchObject([
-        EXTENSIONS.chrome[0].extensionId,
+        EXTENSIONS.chrome[0].id,
         { command: 'checkActive' },
         expect.any(Function)
       ])

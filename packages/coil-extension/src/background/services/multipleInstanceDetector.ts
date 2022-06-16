@@ -24,6 +24,9 @@ export type WextApiSubset = {
     lastError: typeof chrome.runtime.lastError
     sendMessage: typeof chrome.runtime.sendMessage
   }
+  extension: {
+    getURL: typeof chrome.extension.getURL
+  }
 }
 
 export interface CheckActiveResponse {
@@ -62,8 +65,6 @@ export class MultipleInstanceDetector {
     }
 
     const extensions = EXTENSIONS[browserType]
-    if (extensions.length <= 0) return
-
     for (const extension of extensions) {
       const active = await this.checkExtensionIsActive(extension)
       if (active) {
@@ -96,9 +97,9 @@ export class MultipleInstanceDetector {
             contextMessage: 'There is already an active coil extension',
             isClickable: false,
             type: 'basic',
-            iconUrl: 'https://tinypng.com/images/example-shrunk.png',
+            iconUrl: this.wextApi.extension.getURL('res/icn-coil-ext@4x.png'),
             title: 'Extension detected',
-            message: `${extensionData.extensionName} is active`
+            message: `${extensionData.name} is active`
           }
           this.wextApi.notifications.create(notificationId, notification)
         }
@@ -109,7 +110,7 @@ export class MultipleInstanceDetector {
   addExternalMessageListener() {
     this.wextApi.runtime.onMessageExternal.addListener(
       (message: ExtensionMessage, sender, sendResponse) => {
-        // sends a response back to state its active
+        // sends a response back to state it's active
         if (message.command === 'checkActive') {
           sendResponse({ active: true })
         }
@@ -120,14 +121,10 @@ export class MultipleInstanceDetector {
   private async checkExtensionIsActive(extensionData: ExtensionInstance) {
     return await new Promise(resolve => {
       this.wextApi.runtime.sendMessage(
-        extensionData.extensionId,
+        extensionData.id,
         { command: 'checkActive' },
         (response: CheckActiveResponse) => {
-          if (this.wextApi.runtime.lastError) {
-            resolve(false)
-            return
-          }
-          resolve(response.active)
+          resolve(!this.wextApi.runtime.lastError ? response.active : false)
         }
       )
     })
