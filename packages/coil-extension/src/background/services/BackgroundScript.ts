@@ -31,6 +31,7 @@ import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
 import { User } from '../../types/user'
 
+import { MultipleInstanceDetector } from './multipleInstanceDetector'
 import { StreamMoneyEvent } from './Stream'
 import { AuthService } from './AuthService'
 import { TabStates } from './TabStates'
@@ -44,9 +45,6 @@ import { StreamAssociations } from './StreamAssociations'
 import { ActiveTabLogger } from './ActiveTabLogger'
 
 import MessageSender = chrome.runtime.MessageSender
-
-// eslint-disable-next-line import/order
-import { MultipleInstanceDetector } from './multipleInstanceDetector'
 
 @injectable()
 export class BackgroundScript {
