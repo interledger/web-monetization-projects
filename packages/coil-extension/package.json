@@ -102,7 +102,7 @@
     "@types/jsonwebtoken": "8.5.8",
     "@types/long": "4.0.2",
     "@types/node": "16.11.40",
-    "@types/node-fetch": "2.6.1",
+    "@types/node-fetch": "2.6.2",
     "@types/react": "17.0.45",
     "@types/react-dom": "17.0.17",
     "@types/uuid": "8.3.4",
