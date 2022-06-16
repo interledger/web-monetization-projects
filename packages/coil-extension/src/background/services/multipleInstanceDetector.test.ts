@@ -1,6 +1,6 @@
 import '@abraham/reflection'
 
-import { EXTENSIONS } from '../consts/ExtensionIds'
+import { EXTENSIONS } from '../consts/extensionInstances'
 
 import {
   CheckActiveResponse,
@@ -38,13 +38,7 @@ describe('DetectExtensions', () => {
       },
       runtime: {
         onMessageExternal: {
-          addListener: jest.fn(),
-          getRules: jest.fn(),
-          addRules: jest.fn(),
-          removeRules: jest.fn(),
-          hasListeners: jest.fn(),
-          hasListener: jest.fn(),
-          removeListener: jest.fn()
+          addListener: jest.fn()
         },
         sendMessage: jest.fn(),
         lastError: undefined

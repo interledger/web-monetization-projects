@@ -4,7 +4,7 @@ import {
   BrowserType,
   ExtensionInstance,
   EXTENSIONS
-} from '../consts/ExtensionIds'
+} from '../consts/extensionInstances'
 import * as tokens from '../../types/tokens'
 
 export type WextApiSubset = {
@@ -18,7 +18,9 @@ export type WextApiSubset = {
     create: typeof chrome.tabs.create
   }
   runtime: {
-    onMessageExternal: typeof chrome.runtime.onMessageExternal
+    onMessageExternal: {
+      addListener: typeof chrome.runtime.onMessageExternal.addListener
+    }
     lastError: typeof chrome.runtime.lastError
     sendMessage: typeof chrome.runtime.sendMessage
   }
