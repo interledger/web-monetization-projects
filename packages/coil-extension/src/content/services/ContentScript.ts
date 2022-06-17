@@ -294,7 +294,9 @@ export class ContentScript {
             this.watchPageEventsToPauseOrResume()
           })
           this.setRuntimeMessageListener()
-          this.monetization.injectDocumentMonetization()
+          this.monetization.injectDocumentMonetization({
+            wm2Allowed: this.wm2Allowed
+          })
         }
       )
     }

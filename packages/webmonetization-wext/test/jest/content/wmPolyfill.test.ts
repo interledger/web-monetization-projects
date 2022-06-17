@@ -9,7 +9,7 @@ describe('wmPolyfill', () => {
     const digest = createHash('sha256').update(data).digest()
     const rebuilt = `sha256-${digest.toString('base64')}`
     expect(rebuilt).toMatchInlineSnapshot(
-      `"sha256-Bkl0LB4YtVIsdMmtwwCPE7oxkD9wCDyOTlXL7h4dkuc="`
+      `"sha256-M+ZeqQ8v+VoN4SB3RJ4Q4AFixNaELiVSAD5kDHG864w="`
     )
   })
   it('should not support relList without polyfill', () => {
@@ -40,6 +40,7 @@ describe('wmPolyfill jsdom', () => {
     const script = document.createElement('script')
     script.type = 'application/javascript'
     script.innerHTML = wmPolyfill
+    document.head.dataset['wm2Allowed'] = 'true'
     document.head.appendChild(script)
   })
   it('should support link.relList.supports("monetization")', () => {

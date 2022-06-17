@@ -8,9 +8,9 @@ export class WM2OriginTrial {
    * Check if in the allowed list (TODO)
    */
   checkOrigin(url: string) {
-    return (
+    return Boolean(
       this.allowedList.has(new URL(url).origin) ||
-      url.match(/https?:\/\/localhost\b/)
+        url.match(/https?:\/\/localhost\b/)
     )
   }
 }
