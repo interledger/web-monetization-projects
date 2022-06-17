@@ -99,7 +99,7 @@
     "jest-environment-jsdom": "28.1.1",
     "lint-staged": "13.0.1",
     "nodemon": "2.0.16",
-    "prettier": "2.7.0",
+    "prettier": "2.7.1",
     "regenerator-runtime": "0.13.9",
     "rimraf": "3.0.2",
     "style-loader": "3.3.1",
