@@ -20,8 +20,8 @@ import { LocalStorageProxy } from '../../types/storage'
 import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
-import { User } from '../../types/user'
 
+import { MultipleInstanceDetector } from './multipleInstanceDetector'
 import { AuthService } from './AuthService'
 import { TabStates } from './TabStates'
 import { Streams } from './Streams'
@@ -61,6 +61,7 @@ export class BackgroundScript {
     private loggingEnabled: boolean,
     @logger('BackgroundScript')
     private log: Logger,
+    private multipleInstanceDetector: MultipleInstanceDetector,
     private client: GraphQlClient,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
@@ -89,6 +90,7 @@ export class BackgroundScript {
   }
 
   async run() {
+    this.multipleInstanceDetector.addExternalMessageListener()
     this.initializeActiveTab()
     this.setRuntimeMessageListener()
     this.setTabsOnActivatedListener()
@@ -648,7 +650,8 @@ export class BackgroundScript {
     if (!this.buildConfig.isCI && !this.buildConfig.useLocalMockServer) {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
-          this.api.tabs.create({ url: `${this.coilDomain}/signup` })
+          void this.api.tabs.create({ url: `${this.coilDomain}/signup` })
+          void this.multipleInstanceDetector.detectOtherInstances()
         }
       })
     }

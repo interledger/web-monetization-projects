@@ -49,6 +49,7 @@ export function configureContainer({
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
   container.bind(tokens.ActiveTab).toDynamicValue(getActiveTab)
+  container.bind(Navigator).toConstantValue(navigator)
 
   container.bind(Stream).toSelf().inTransientScope()
 
