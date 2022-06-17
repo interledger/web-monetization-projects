@@ -69,6 +69,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   const WEXT_MANIFEST_VERSION_NAME = process.env.WEXT_MANIFEST_VERSION_NAME
   const WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID =
     process.env.WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
+  const WEXT_MANIFEST_KEY = process.env.WEXT_MANIFEST_KEY
 
   const copyToDist = [
     {
@@ -95,6 +96,10 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         }
         if (WEXT_MANIFEST_VERSION_NAME) {
           manifest.version_name = WEXT_MANIFEST_VERSION_NAME
+        }
+
+        if (WEXT_MANIFEST_KEY) {
+          manifest.key = WEXT_MANIFEST_KEY
         }
 
         if (BROWSER === 'firefox') {
@@ -224,7 +229,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
 
     output: {
       filename: '[name].js',
-      path: path.join(rootDir, 'dist'),
+      path: path.join(rootDir, process.env.OUTPUT_TO || 'dist'),
       libraryTarget: 'umd'
     },
 
