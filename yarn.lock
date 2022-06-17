@@ -1847,7 +1847,7 @@ __metadata:
     eslint-plugin-standard: "npm:5.0.0"
     foxr: "npm:0.10.1"
     framer-motion: "npm:^5.0.0"
-    get-port: "npm:^5.1.1"
+    get-port: "npm:^6.0.0"
     http-server: "npm:14.1.1"
     husky: "npm:8.0.1"
     ilp-plugin-btp: "npm:1.5.0"
@@ -2270,7 +2270,7 @@ __metadata:
     eslint-plugin-react: "npm:7.30.0"
     eslint-plugin-react-hooks: "npm:4.6.0"
     eslint-plugin-standard: "npm:5.0.0"
-    get-port: "npm:^5.1.1"
+    get-port: "npm:^6.0.0"
     husky: "npm:8.0.1"
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
@@ -12837,10 +12837,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-port@npm:*, get-port@npm:^5.1.1":
-  version: 5.1.1
-  resolution: "get-port@npm:5.1.1"
-  checksum: 93afec66950abbe4a7a004543c5d94dbf22c2649598482c8064acfceae7663cae62c7aaef448f7ec6744b37286e89eed2bada01726a6ca4e09e3809d92e4fccc
+"get-port@npm:*, get-port@npm:^6.0.0":
+  version: 6.1.2
+  resolution: "get-port@npm:6.1.2"
+  checksum: b3458247e1c6ed079cbf0f7b57bd2ba3db5b0108bc8f8061c0e0817237234ce2cfbb42dffe5ced6bc74d3410f913d5e56ad966fe7c35003db845ead70c7c3bf6
   languageName: node
   linkType: hard
 
