@@ -9,6 +9,10 @@ export type BrowserType = 'chrome' | 'firefox' | 'edge'
 export const EXTENSIONS: Record<BrowserType, Array<ExtensionInstance>> = {
   chrome: [
     {
+      name: 'Coil',
+      id: 'locbifcbeldmnphbgkdigjmkbfkhbnca'
+    },
+    {
       name: 'CoilDevDist2',
       id: 'deofcdfbmgdlnbdhpdmmegpokkaoadam'
     },
@@ -25,6 +29,10 @@ export const EXTENSIONS: Record<BrowserType, Array<ExtensionInstance>> = {
     {
       name: 'Coil',
       id: 'coilfirefoxextension@coil.com'
+    },
+    {
+      name: 'CoilWM2Preview',
+      id: 'coilwm2previewfirefoxextension@niq.coil.com.xpi'
     }
   ],
   edge: [
