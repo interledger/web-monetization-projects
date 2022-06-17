@@ -1815,7 +1815,7 @@ __metadata:
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.11.41"
     "@types/node-fetch": "npm:2.6.2"
-    "@types/react": "npm:17.0.45"
+    "@types/react": "npm:17.0.47"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.28.0"
@@ -3376,7 +3376,7 @@ __metadata:
     "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
     "@types/node": "npm:16.11.41"
-    "@types/react": "npm:17.0.45"
+    "@types/react": "npm:17.0.47"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.28.0"
@@ -5007,14 +5007,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.45":
-  version: 17.0.45
-  resolution: "@types/react@npm:17.0.45"
+"@types/react@npm:17.0.47":
+  version: 17.0.47
+  resolution: "@types/react@npm:17.0.47"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 2f547e7bf7377747c72e77f7c444a309ade1cd0b1a9ec6404e5677d18e4765163881c70c673db1c08abc29cb98c8ba81b655e74980726258056badfa72ff1372
+  checksum: 9f9b6b73890e83407686d10a28251cf23d71a4c6ba21295e9701194ed58c94895dc2eac19303b419a294c4c4aff0d7d4e5eb458270ee0fa90dbb0b5a37ec3b88
   languageName: node
   linkType: hard
 
@@ -5528,7 +5528,7 @@ __metadata:
     "@types/jest": "npm:28.1.1"
     "@types/node": "npm:16.11.41"
     "@types/node-fetch": "npm:2.6.2"
-    "@types/react": "npm:17.0.45"
+    "@types/react": "npm:17.0.47"
     "@types/react-dom": "npm:17.0.17"
     "@types/react-helmet": "npm:6.1.5"
     "@typescript-eslint/eslint-plugin": "npm:5.28.0"
@@ -5666,7 +5666,7 @@ __metadata:
     "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.1"
     "@types/node": "npm:16.11.41"
-    "@types/react": "npm:17.0.45"
+    "@types/react": "npm:17.0.47"
     "@typescript-eslint/eslint-plugin": "npm:5.28.0"
     "@typescript-eslint/parser": "npm:5.28.0"
     "@webmonetization/types": "npm:0.0.0"
@@ -5729,7 +5729,7 @@ __metadata:
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:28.1.1"
     "@types/node": "npm:16.11.41"
-    "@types/react": "npm:17.0.45"
+    "@types/react": "npm:17.0.47"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.28.0"
