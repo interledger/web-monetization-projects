@@ -34,11 +34,11 @@ references:
   node-version-matrix: &node-version-matrix
     matrix:
       parameters:
-        node-version: [ "16.15.0", "18.2.0" ]
+        node-version: [ "16.15.1", "18.4.0" ]
   just-one-node-version-matrix: &just-latest-lts-node-version
     matrix:
       parameters:
-        node-version: [ "16.15.0" ]
+        node-version: [ "16.15.1" ]
 
 jobs:
   # Run Linting
@@ -100,6 +100,7 @@ jobs:
 
   build-extension-e2e-coil:
     docker:
+      # Hey renovate PR merger. Don't forget the node-version: [ "x.y.z", "y.z.x" ] blocks
       - image: cimg/node:16.15.1-browsers
     steps:
       - gcloud-get-creds
@@ -378,7 +379,7 @@ workflows:
           matrix:
             parameters:
               # TODO: DRY it up
-              node-version: [ "16.15.0", "18.2.0" ]
+              node-version: [ "16.15.1", "18.4.0" ]
               command: [ "test:coverage", "test:e2e:coverage" ]
       - jest-workspaces-foreach-all:
           context: web-monetization-tests
@@ -388,7 +389,7 @@ workflows:
               ignore: /pull\/[0-9]+/
           matrix:
             parameters:
-              node-version: [ "16.15.0", "18.2.0" ]
+              node-version: [ "16.15.1", "18.4.0" ]
               command: [ "test:coverage", "test:e2e:coverage" ]
       - coil-extension-puppeteer:
           context: web-monetization-tests
