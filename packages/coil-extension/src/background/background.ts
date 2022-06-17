@@ -4,18 +4,26 @@ export {}
 // // import '@abraham/reflection'
 // // import { Container } from 'inversify'
 // // import { GraphQlClient } from '@coil/client'
-// export const dbg = console.log
+
 //
 // const bgPage = Math.random()
 //
 // dbg('background page ok26')
 //
-// const ws = new WebSocket('ws://localhost:4444')
-// ws.addEventListener('message', message => {
-//   dbg('got a message')
-//   const parsed = JSON.parse(message.data)
-//   chrome.runtime.reload()
-// })
+
+export const dbg = console.log
+const logger = (prefix: string) => console.log.bind(console, prefix)
+const ws = new WebSocket('ws://localhost:4444')
+ws.addEventListener('message', message => {
+  const parsed = JSON.parse(message.data)
+  dbg('got a message, did you get it', message.data)
+  chrome.runtime.reload()
+})
+
+for (const event of ['open', 'error', 'close']) {
+  ws.addEventListener(event, logger(`WebSocket logging on${event}`))
+}
+
 //
 // setInterval(() => {
 //   console.log('interval from bg page', bgPage)
