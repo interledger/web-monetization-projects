@@ -4,6 +4,7 @@ import { Container, inject, injectable } from 'inversify'
 import { InversifyExpressServer } from 'inversify-express-utils'
 import express from 'express'
 import * as bodyParser from 'body-parser'
+import cookieParser from 'cookie-parser'
 
 import { ApolloService } from '../apollo/ApolloService'
 import {
@@ -75,6 +76,7 @@ export class Server {
     )
     app.use(bodyParser.json())
     app.use(bodyParser.text())
+    app.use(cookieParser(this.env.APP_SECRET))
     app.use('*', (req, res, next) => {
       res.set('Access-Control-Allow-Origin', '*')
       res.set('Access-Control-Allow-Headers', '*')
