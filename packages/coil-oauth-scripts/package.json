@@ -46,7 +46,7 @@
     "@webmonetization/types": "0.0.0",
     "ilp-plugin-btp": "1.5.0",
     "ilp-protocol-stream": "2.7.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.0.0",
     "reduct": "^3.3.1",
     "uuid": "^8.3.2"
   },
