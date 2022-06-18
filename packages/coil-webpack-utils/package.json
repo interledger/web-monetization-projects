@@ -51,7 +51,7 @@
     "@babel/preset-typescript": "7.17.12",
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
-    "@swc/core": "1.2.203",
+    "@swc/core": "1.2.204",
     "@swc/jest": "0.2.21",
     "@types/jest": "28.1.1",
     "@types/node": "16.11.41",
