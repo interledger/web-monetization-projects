@@ -1,8 +1,18 @@
 import { injectable } from 'inversify'
 
+/*
+ * Tests
+ *   [x] must work after initial [re]load of background page
+ * Thoughts
+ *   What happens when you load 30 tabs in a row?
+ *     Ideally only one fetch would occur, but there may be a handful
+ * */
 class ResourcePoller<T> {
-  interval = 10e3 // milliseconds
-  handle: ReturnType<typeof setTimeout> | null = null
+  // This is far too frequent
+  // The bigger it stretches, the closer to "well just refresh the page until
+  // it works" means that it's pointless. If the fetch is done whenever a
+  // content script is loaded it will be faster to just rely upon that.
+  // interval = 10e3 // milliseconds
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fetchOp: Promise<any> | null = null
   cachedVal: T | null = null
@@ -11,23 +21,32 @@ class ResourcePoller<T> {
   constructor(private resourceUrl: string, private format: (v: any) => T) {}
 
   start() {
-    this.fetchOp = this.doFetch()
-    setInterval(() => {
-      this.fetchOp = this.doFetch()
-    }, this.interval)
+    // This is worthwhile doing to "prime the cache" so to speak, upon startup
+    this.fetchIfIdle()
+    // setInterval(() => {
+    //   this.fetchIfIdle()
+    // }, this.interval)
   }
 
   private async doFetch() {
-    const response = await fetch(this.resourceUrl)
-    if (response.ok) {
-      return response
-        .json()
-        .then(this.format)
-        .then(val => {
-          this.cachedVal = val
-        })
-    } else {
-      throw new Error()
+    try {
+      const response = await fetch(this.resourceUrl)
+      if (response.ok) {
+        const json = await response.json()
+        this.cachedVal = this.format(json)
+      } else {
+        throw new Error(
+          `bad response ${response.status} ${response.statusText}`
+        )
+      }
+    } finally {
+      this.fetchOp = null
+    }
+  }
+
+  fetchIfIdle() {
+    if (!this.fetchOp) {
+      this.fetchOp = this.doFetch()
     }
   }
 
@@ -35,22 +54,28 @@ class ResourcePoller<T> {
    * We don't want to have concurrent requests due to the content script
    * being requested many times at once
    *
-   * TODO: is this even needed?
-   * if I did a fetch to a resource like every time a content script is loaded,
+   * Is this even needed?
+   *
+   * If I did a fetch to a resource like every time a content script is loaded,
    * the browsers are clever enough to dedupe the requests and use cached
    * results right, or will they trigger a tonne of requests?
-   * I did
+   *
+   * I did check and the browser doesn't seem to cache, at least as is required
+   * here.
    */
-  get(): T | null {
+  triggerAndGetCachedOrNull(): T | null {
+    this.fetchIfIdle()
     return this.cachedVal
   }
 }
 
 @injectable()
 export class WM2OriginTrial {
-  allowedListUrl = 'http://localhost:4000'
-  allowedList = new Set(['https://quirksmode.org'])
-  poller = new ResourcePoller(this.allowedListUrl, val => new Set<string>(val))
+  hardCodedAllowList = new Set(['https://quirksmode.org'])
+  poller = new ResourcePoller(
+    'http://localhost:8080/wm2-allowed-list.json',
+    val => new Set<string>(val)
+  )
 
   constructor(private storage: Storage) {}
 
@@ -64,11 +89,11 @@ export class WM2OriginTrial {
   // 10 minutes, with refreshes everytime a content script is init, then it
   // should be pretty fresh.
   async checkOrigin(url: string) {
-    const dynamic = this.poller.get()
+    const dynamic = this.poller.triggerAndGetCachedOrNull()
     const origin = new URL(url).origin
     return Boolean(
-      (dynamic && dynamic.has(origin)) ||
-        this.allowedList.has(origin) ||
+      dynamic?.has(origin) ||
+        this.hardCodedAllowList.has(origin) ||
         url.match(/https?:\/\/localhost\b/)
     )
   }
