@@ -336,7 +336,7 @@ export class BackgroundScript {
         sendResponse(this.monetization.setStreamControls(request, sender))
         break
       case 'contentScriptInit':
-        sendResponse(this.contentScriptInit(request, sender))
+        sendResponse(await this.contentScriptInit(request, sender))
         break
       case 'fetchYoutubeChannelId':
         sendResponse(await this.youtube.fetchChannelId(request.data.youtubeUrl))
@@ -617,7 +617,10 @@ export class BackgroundScript {
     return true
   }
 
-  private contentScriptInit(request: ContentScriptInit, sender: MessageSender) {
+  private async contentScriptInit(
+    request: ContentScriptInit,
+    sender: MessageSender
+  ) {
     const { tabId, frameId, spec } = getFrameSpec(sender)
     // Content script used to send a stopWebMonetization message every time
     // it loaded. Noop if no stream for tab.
@@ -626,7 +629,9 @@ export class BackgroundScript {
     this.tabStates.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
-    const originAllowed = this.wm2OriginTrial.checkOrigin(request.data.origin)
+    const originAllowed = await this.wm2OriginTrial.checkOrigin(
+      request.data.origin
+    )
     return { wm2OriginalTrial: originAllowed, request }
   }
 
