@@ -2017,7 +2017,7 @@ __metadata:
     json5: "npm:^2.2.0"
     lint-staged: "npm:13.0.2"
     nodemon: "npm:2.0.16"
-    npm-check-updates: "npm:^13.0.0"
+    npm-check-updates: "npm:^14.0.0"
     prettier: "npm:2.7.1"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.9"
@@ -9106,7 +9106,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^9.0.0, commander@npm:^9.2.0, commander@npm:^9.3.0":
+"commander@npm:^9.0.0, commander@npm:^9.3.0":
   version: 9.3.0
   resolution: "commander@npm:9.3.0"
   checksum: 110e8e7a5476adfc7d76a2cc4928077dd094053d4387213db5f343327f4f7ef242d13d123788aacf172706264b184b5fa94b29556d9506493ca3325f31782f54
@@ -12140,13 +12140,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"figgy-pudding@npm:^3.5.1":
-  version: 3.5.2
-  resolution: "figgy-pudding@npm:3.5.2"
-  checksum: f4b8a84c3ef60a351fd7874b21e379ffbfe8be2f5da290b9db59c8a939e633e515e01ff999b57049924acfb251ea1c5c4554cc52271969e628047a576a19f056
-  languageName: node
-  linkType: hard
-
 "figlet@npm:^1.5.0":
   version: 1.5.0
   resolution: "figlet@npm:1.5.0"
@@ -14333,7 +14326,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ini@npm:^1.3.4, ini@npm:^1.3.5, ini@npm:~1.3.0, ini@npm:~1.3.3":
+"ini@npm:^1.3.4, ini@npm:~1.3.0, ini@npm:~1.3.3":
   version: 1.3.8
   resolution: "ini@npm:1.3.8"
   checksum: 37fad549288bc1d016dce7360166c87d28cd1e3ca4077bd30a1bd648285b9a4f6212062a121bec0f06673687a23642b1f945e940998055427c8c15fead710c3a
@@ -16436,17 +16429,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"libnpmconfig@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "libnpmconfig@npm:1.2.1"
-  dependencies:
-    figgy-pudding: "npm:^3.5.1"
-    find-up: "npm:^3.0.0"
-    ini: "npm:^1.3.5"
-  checksum: 78b0b949ef258ea81bb3537e620db094171cac6501c111a71c75770ce957c2b0028731926ed6bce5ecb1b5a6dea0fafc9379da48cd0fc28e58f21e65abc60617
-  languageName: node
-  linkType: hard
-
 "lie@npm:3.1.1":
   version: 3.1.1
   resolution: "lie@npm:3.1.1"
@@ -17315,12 +17297,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "minimatch@npm:5.0.1"
+"minimatch@npm:^5.0.1, minimatch@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "minimatch@npm:5.1.0"
   dependencies:
     brace-expansion: "npm:^2.0.1"
-  checksum: 1c768f6bf115a214eec61cfa4bed358568fa97747f876e5c2fb291880022f8defd3cbdfb5b73dbebad518b4bd88419b3f82f9f680fa3aa814c1aa632ddc55cc0
+  checksum: cf8124b47d19be2d6a4b2cab80114999239ab6a01062e2f0abe666b779de120b6f85ed9a73e3a27b61fa088fb45957929a8fcc727bd20de829d3e4e659ad01ff
   languageName: node
   linkType: hard
 
@@ -18000,14 +17982,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^13.0.0":
-  version: 13.0.0
-  resolution: "npm-check-updates@npm:13.0.0"
+"npm-check-updates@npm:^14.0.0":
+  version: 14.0.1
+  resolution: "npm-check-updates@npm:14.0.1"
   dependencies:
     chalk: "npm:^4.1.2"
     cint: "npm:^8.2.1"
     cli-table: "npm:^0.3.11"
-    commander: "npm:^9.2.0"
+    commander: "npm:^9.3.0"
     fast-memoize: "npm:^2.5.2"
     find-up: "npm:5.0.0"
     fp-and-or: "npm:^0.1.3"
@@ -18016,11 +17998,10 @@ __metadata:
     hosted-git-info: "npm:^5.0.0"
     json-parse-helpfulerror: "npm:^1.0.3"
     jsonlines: "npm:^0.1.1"
-    libnpmconfig: "npm:^1.2.1"
     lodash: "npm:^4.17.21"
-    minimatch: "npm:^5.0.1"
+    minimatch: "npm:^5.1.0"
     p-map: "npm:^4.0.0"
-    pacote: "npm:^13.3.0"
+    pacote: "npm:^13.6.0"
     parse-github-url: "npm:^1.0.2"
     progress: "npm:^2.0.3"
     prompts: "npm:^2.4.2"
@@ -18032,11 +18013,11 @@ __metadata:
     source-map-support: "npm:^0.5.21"
     spawn-please: "npm:^1.0.0"
     update-notifier: "npm:^5.1.0"
-    yaml: "npm:^2.1.0"
+    yaml: "npm:^2.1.1"
   bin:
     ncu: build/src/bin/cli.js
     npm-check-updates: build/src/bin/cli.js
-  checksum: 8780f7f6da755b891e7b2338867242933d0bc5bd7799dda4b3d35fb0dd9a2334d2d7cfa8e99b6308670bd5a885630a7e2ac3a1abd2435beccb14ac80b145b072
+  checksum: 82620774316c2925acaf50b8b093f9562420c1fa320288941685936350ea3b9016bf2dbdb1d10ef7d3faae63e6e70153bed68fbd0d023a7357615347eab06482
   languageName: node
   linkType: hard
 
@@ -18067,9 +18048,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-packlist@npm:^5.0.0":
-  version: 5.0.3
-  resolution: "npm-packlist@npm:5.0.3"
+"npm-packlist@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "npm-packlist@npm:5.1.0"
   dependencies:
     glob: "npm:^8.0.1"
     ignore-walk: "npm:^5.0.1"
@@ -18077,7 +18058,7 @@ __metadata:
     npm-normalize-package-bin: "npm:^1.0.1"
   bin:
     npm-packlist: bin/index.js
-  checksum: 4bae06415bfa320d16e86578b4c80a63a83c1646780bf577972a95a0a9fc62ddf2ef8694f17396262c27f4cfceee83845fb930cf6bf4f62ee50edf30866eb449
+  checksum: 979b2a7d3caab177ec9b19b4b05ed8fd904ffa3a486b7ef49a8751afe8040a1a6080a9a0b0ab3858ec8eea523eb909fcfc35f55d477816cdc7e8098f92990293
   languageName: node
   linkType: hard
 
@@ -18754,9 +18735,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pacote@npm:^13.3.0":
-  version: 13.3.0
-  resolution: "pacote@npm:13.3.0"
+"pacote@npm:^13.6.0":
+  version: 13.6.0
+  resolution: "pacote@npm:13.6.0"
   dependencies:
     "@npmcli/git": "npm:^3.0.0"
     "@npmcli/installed-package-contents": "npm:^1.0.7"
@@ -18769,7 +18750,7 @@ __metadata:
     minipass: "npm:^3.1.6"
     mkdirp: "npm:^1.0.4"
     npm-package-arg: "npm:^9.0.0"
-    npm-packlist: "npm:^5.0.0"
+    npm-packlist: "npm:^5.1.0"
     npm-pick-manifest: "npm:^7.0.0"
     npm-registry-fetch: "npm:^13.0.1"
     proc-log: "npm:^2.0.0"
@@ -18781,7 +18762,7 @@ __metadata:
     tar: "npm:^6.1.11"
   bin:
     pacote: lib/bin.js
-  checksum: 8348b61d88e7a7a2426ffdd77f0ac37e2a23b8295951a911674a648948790de5da73ed81d5c798dcd4a79019bcaf47a4b1bb40e3d481e6ed054b312f9973e5f0
+  checksum: 8469670765ea433af6241a14c52db3ce88d8f525924f4700f4f12094076e0153a1970690113e6c8bdd7e4f024e71000cdba0aa51113fb6cbff2d5c1551964999
   languageName: node
   linkType: hard
 
@@ -24509,7 +24490,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.0.0, yaml@npm:^2.1.0, yaml@npm:^2.1.1":
+"yaml@npm:^2.0.0, yaml@npm:^2.1.1":
   version: 2.1.1
   resolution: "yaml@npm:2.1.1"
   checksum: 550ea265eeb88a057f230337f88ce1459563ce749ff574c282a9ca98178394be1d6f47b6edb721523512d8c45e3cd004ff9ea93a1ddeb20c7c658a63ee4ca9b5
