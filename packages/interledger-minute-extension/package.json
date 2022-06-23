@@ -50,8 +50,8 @@
     "inversify": "^6.0.0",
     "inversify-logger-middleware": "^3.1.0",
     "jsonwebtoken": "^8.5.1",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "typeface-roboto": "^1.1.13",
     "uuid": "^8.3.2"
   },
