@@ -1,9 +1,21 @@
 {
-  "extends": [
-    "config:base",
-    ":rebaseStalePrs"
-  ],
-  "postUpdateOptions": [
-    "yarnDedupeHighest"
+  "extends": ["config:base", ":rebaseStalePrs"],
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "@types/react-dom",
+        "@types/react"
+      ],
+      "allowedVersions": ">=17 <18"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["cimg/node"],
+      "allowedVersions": ">=16 <17"
+    }
   ]
 }
