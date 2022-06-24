@@ -21,6 +21,9 @@ export const LIVE_RELOAD =
 export const TS_LOADER_TRANSPILE_ONLY = Boolean(
   process.env.TS_LOADER_TRANSPILE_ONLY
 )
+
+export const TSCONFIG_DEBUG = process.env.TSCONFIG_DEBUG
+
 export const PRODUCTION = process.env.NODE_ENV === 'production'
 
 const buildConfigKey = 'WEXT_BUILD_CONFIG_'

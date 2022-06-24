@@ -1,7 +1,6 @@
 import path from 'path'
-import process from 'process'
 
-import { TS_LOADER_TRANSPILE_ONLY } from './env'
+import { TS_LOADER_TRANSPILE_ONLY, TSCONFIG_DEBUG } from './env'
 
 export function getPaths(rootDir: string) {
   const paths = {
@@ -14,7 +13,7 @@ export function getPaths(rootDir: string) {
   // eslint-disable-next-line no-nested-ternary
   const TSCONFIG = TS_LOADER_TRANSPILE_ONLY
     ? paths.TEST_TSCONFIG
-    : process.env.TSCONFIG_DEBUG
+    : TSCONFIG_DEBUG
     ? paths.TSCONFIG_DEBUG_JSON
     : paths.TSCONFIG_BUILD_JSON
 
