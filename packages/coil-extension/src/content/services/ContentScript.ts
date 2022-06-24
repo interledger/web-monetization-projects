@@ -98,13 +98,10 @@ export class ContentScript {
       ({ started, stopped }) => {
         if (stopped) {
           if (!this.disallowed.has(stopped.requestId)) {
-            console.log(
-              'sending stopped request',
-              JSON.stringify(stopped, null, 2)
-            )
+            debug('sending stopped request', JSON.stringify(stopped, null, 2))
             stopMonetization(stopped)
           } else {
-            console.log(
+            debug(
               'not propagating stop message to bg',
               JSON.stringify(stopped, null, 2)
             )
@@ -114,7 +111,7 @@ export class ContentScript {
           if (!this.tagManager.atMostOneTagAndNoneInBody()) {
             // wm2 is required
             if (!this.wm2Allowed) {
-              console.log(
+              debug(
                 'not allowing start request which requires wm2',
                 JSON.stringify(started, null, 2)
               )
@@ -122,7 +119,7 @@ export class ContentScript {
               return
             }
           }
-          console.log('sending start request', JSON.stringify(started, null, 2))
+          debug('sending start request', JSON.stringify(started, null, 2))
           void startMonetization(started)
         }
       },
