@@ -24,7 +24,6 @@ export interface FrameState {
 }
 
 export function isFrameMonetized(frameState: FrameState, log = '') {
-  console.log('isFrameMonetized', frameState, log)
   return Object.keys(frameState).some(
     key =>
       key.startsWith(MonetizationStateKey) &&

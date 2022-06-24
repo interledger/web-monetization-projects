@@ -124,8 +124,6 @@ export class MonetizationService {
     const { tabId, frameId } = frame
     const { requestId } = request.data
 
-    console.log('startWebMonetization setFrameMonetized', requestId)
-
     if (request.data.tagType === 'link') {
       // How do we know if the request is a wm2 request
       // It could be a link tag in the head that is one of many
@@ -362,7 +360,6 @@ export class MonetizationService {
   }
 
   stopWebMonetization(request: StopWebMonetization, sender: MessageSender) {
-    console.log('stopWebMonetization ', request.data.requestId)
     return this.stopWebMonetizationStream(request.data.requestId)
   }
 

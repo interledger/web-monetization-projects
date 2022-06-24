@@ -286,7 +286,6 @@ const argsLogger = (name: string) => {
 
 class MockRuntime extends EventEmitter implements PopupRuntime {
   tabOpener = ((...args: any) => {
-    // console.log('tabOpener', ...args)
     return argsLogger('openTab: ' + args.join(' '))
   }) as any
 
@@ -313,8 +312,6 @@ const embossedBorder = {
 }
 
 const useStyles = makeStyles(theme => {
-  console.log('breakpoint: ', [theme.breakpoints.up('md')])
-
   return {
     root: {
       background: '#DDD',
