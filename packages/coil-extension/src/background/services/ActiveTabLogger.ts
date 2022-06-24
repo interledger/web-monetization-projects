@@ -9,24 +9,34 @@ export class ActiveTabLogger {
 
   constructor(
     @inject(tokens.WextApi)
-    private api = chrome
+    private api: typeof chrome
   ) {}
 
-  log(log: string, frame?: FrameSpec) {
+  async log(log: string, frame?: FrameSpec) {
     if (!this.sendLogs) {
       return
     }
-    this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
-      const tab = tabs[0]
-      if (tab?.id != null) {
-        const message = {
-          command: 'logInActiveTab',
-          data: {
-            log: log
-          }
+    const activeTab = await this.getActiveTab()
+    if (typeof activeTab === 'number') {
+      const message = {
+        command: 'logInActiveTab',
+        data: {
+          log: log
         }
-        this.api.tabs.sendMessage(frame?.tabId ?? tab.id, message)
       }
+      this.api.tabs.sendMessage(frame?.tabId ?? activeTab, message, {
+        frameId: frame?.frameId ?? 0
+      })
+    }
+  }
+
+  async getActiveTab() {
+    return new Promise((resolve, reject) => {
+      this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
+        const tab = tabs[0]
+        const id = tab?.id
+        resolve(id)
+      })
     })
   }
 }

@@ -11,6 +11,7 @@ import { PaymentDetails } from '@webmonetization/polyfill-utils'
 
 import { ScriptInjection } from './ScriptInjection'
 import { includePolyFillMessage, wmPolyfill } from './wmPolyfill'
+import { mozClone } from './mozClone'
 
 interface SetStateParams {
   state: MonetizationState
@@ -23,17 +24,6 @@ type MonetizationRequest = PaymentDetails
 // Name of event dispatched on document
 const MONETIZATION_DOCUMENT_EVENT_NAME = 'monetization-v1'
 
-type DefaultView = WindowProxy & typeof globalThis
-type CloneInto = (obj: unknown, window: DefaultView | null) => typeof obj
-declare const cloneInto: CloneInto | undefined
-
-let cloneIntoRef: CloneInto | undefined
-try {
-  cloneIntoRef = cloneInto
-} catch (e) {
-  cloneIntoRef = undefined
-}
-
 @injectable()
 export class DocumentMonetization {
   private finalized = true
@@ -42,8 +32,9 @@ export class DocumentMonetization {
 
   constructor(private doc: Document, private scripts: ScriptInjection) {}
 
-  injectDocumentMonetization() {
+  injectDocumentMonetization(opts: { wm2Allowed: boolean }) {
     try {
+      this.doc.head.dataset['wm2Allowed'] = JSON.stringify(opts.wm2Allowed)
       this.scripts.inject(wmPolyfill)
     } catch (e) {
       console.warn(includePolyFillMessage)
@@ -118,7 +109,7 @@ export class DocumentMonetization {
     }
     this.doc.dispatchEvent(
       new CustomEvent(MONETIZATION_DOCUMENT_EVENT_NAME, {
-        detail: cloneIntoRef ? cloneIntoRef(obj, this.doc.defaultView) : obj
+        detail: mozClone(obj, this.doc)
       })
     )
   }
@@ -127,7 +118,10 @@ export class DocumentMonetization {
     detail: MonetizationStartEvent['detail']
   ) {
     // Indicate that payment has started.
-    const changed = this.setState({ state: 'started' })
+    const changed = this.setState({
+      state: 'started',
+      requestId: detail.requestId
+    })
     if (!changed) {
       throw new Error(`expecting state transition`)
     }

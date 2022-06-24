@@ -1,17 +1,66 @@
+import { PaymentDetails } from '@webmonetization/polyfill-utils'
+
 import { PlayOrPauseState, StickyState } from './streamControls'
 
 export type MonetizationCommand = 'pause' | 'stop' | 'start' | 'resume'
+export const MonetizationStateKey = `monetization-state-` as const
+export type MonetizationStateKeyType = typeof MonetizationStateKey
+
+export type MonetizationRequestState = {
+  command: MonetizationCommand
+  details: PaymentDetails
+  total: number
+  lastPacketTime: number
+}
 
 export interface FrameState {
   paymentPointer?: string
   adapted: boolean
-  monetized: boolean
   // Tracks the total amount of `source` money sent (not was received)
-  total: number
-  lastMonetization: {
-    requestId: string | null
-    command: MonetizationCommand | null
-  }
+  [x: `${MonetizationStateKeyType}${string}`]:
+    | MonetizationRequestState
+    | undefined
+    | null
+}
+
+export function isFrameMonetized(frameState: FrameState, log = '') {
+  return Object.keys(frameState).some(
+    key =>
+      key.startsWith(MonetizationStateKey) &&
+      frameState[key as MonetizationStateKeyType]?.command !== 'stop'
+  )
+}
+
+export function isFrameStreaming(frameState: FrameState) {
+  return Object.keys(frameState).some(key => {
+    const command = frameState[key as MonetizationStateKeyType]?.command
+    return (
+      key.startsWith(MonetizationStateKey) &&
+      (command === 'start' || command === 'resume')
+    )
+  })
+}
+
+export function getFrameTotal(frameState: FrameState) {
+  return getFrameRequestStates(frameState).reduce((acc, val) => {
+    return acc + val.total
+  }, 0)
+}
+
+export function getFrameRequestStates(frame: FrameState) {
+  return Object.keys(frame)
+    .filter(key => key.startsWith(MonetizationStateKey))
+    .map(
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      k => frame[k as MonetizationStateKeyType]!
+    )
+}
+
+export function frameHasRecentPacket(frameState: FrameState) {
+  const now = Date.now()
+  return getFrameRequestStates(frameState).some(s => {
+    return s.lastPacketTime != 0 && now - s.lastPacketTime <= 5e3
+  })
 }
 
 export interface TabState {

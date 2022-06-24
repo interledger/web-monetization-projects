@@ -1,10 +1,12 @@
 export * from '@webmonetization/wext/tokens'
 export const CoilDomain = Symbol('CoilDomain')
+export const BtpEndpoint = Symbol('BtpEndpoint')
 export const LocalStorageProxy = Symbol('LocalStorageProxy')
 export const ContentRuntime = Symbol('ContentRuntime')
 export const Logger = Symbol('Logger')
 export const NoContextLoggerName = Symbol('Logger')
-export const StreamDetails = Symbol('StreamDetails')
+export const CreateStreamDetails = Symbol('CreateStreamDetails')
 export const BuildConfig = Symbol('BuildConfig')
+export const ActiveTab = Symbol('ActiveTab')
 export const LoggingEnabled = Symbol('LoggingEnabled')
 export const UserAgent = Symbol('UserAgent')

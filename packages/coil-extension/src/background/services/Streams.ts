@@ -34,13 +34,16 @@ export class Streams extends EventEmitter {
     }
   ) {
     const child = this.container.createChild()
-    child.bind(tokens.StreamDetails).toConstantValue({ ...options })
+    child.bind(tokens.CreateStreamDetails).toConstantValue({ ...options })
     this._streams[id] = child.get(Stream)
     this._streams[id].on('money', details => {
       this.emit('money', { url: options.initiatingUrl, id, ...details })
     })
-    this._streams[id].on('abort', requestId => {
-      this.emit('abort', requestId)
+    const events = ['abort', 'spsp-event']
+    events.forEach(ev => {
+      this._streams[id].on(ev, (...args: unknown[]) => {
+        this.emit(ev, ...args)
+      })
     })
     void this._streams[id].start()
   }
@@ -60,6 +63,7 @@ export class Streams extends EventEmitter {
   closeStream(id: string) {
     if (this._streams[id]) {
       void this._streams[id].stop()
+      this.emit('close', id)
       this._streams[id].removeAllListeners()
       delete this._streams[id]
     }

@@ -1,8 +1,9 @@
 import { inject, injectable } from 'inversify'
 import {
-  MonetizationTagObserver,
+  MonetizationTagManager,
   PaymentDetails,
-  whenDocumentReady
+  whenDocumentReady,
+  mozClone
 } from '@webmonetization/polyfill-utils'
 import {
   DocumentMonetization,
@@ -14,6 +15,7 @@ import * as tokens from '../../types/tokens'
 import {
   CheckIFrameIsAllowedFromIFrameContentScript,
   ContentScriptInit,
+  ContentScriptInitResponse,
   OnFrameAllowedChanged,
   PauseWebMonetization,
   ReportCorrelationIdFromIFrameContentScript,
@@ -29,6 +31,7 @@ import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
 import { ContentAuthService } from './ContentAuthService'
+import { DebugService } from './DebugService'
 
 function startWebMonetizationMessage(request?: PaymentDetails) {
   if (!request) {
@@ -44,6 +47,9 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 @injectable()
 export class ContentScript {
   private paused = false
+  private tagManager!: MonetizationTagManager
+  private wm2Allowed = false
+
   constructor(
     private storage: Storage,
     private window: Window,
@@ -52,14 +58,20 @@ export class ContentScript {
     private adaptedContent: AdaptedContentService,
     private frames: Frames,
     private idle: IdleDetection,
+    private wmDebug: DebugService,
     private monetization: DocumentMonetization,
     private auth: ContentAuthService
   ) {}
 
+  disallowed = new Set<string>()
+
   handleMonetizationTag() {
     const startMonetization = async (details: PaymentDetails) => {
-      this.monetization.setMonetizationRequest({ ...details })
-      await this.doStartMonetization()
+      // TODO:WM2
+      if (this.tagManager.atMostOneTagAndNoneInBody()) {
+        this.monetization.setMonetizationRequest({ ...details })
+      }
+      await this.doStartMonetization(details)
     }
 
     const stopMonetization = (details: PaymentDetails) => {
@@ -67,33 +79,63 @@ export class ContentScript {
         command: 'stopWebMonetization',
         data: details
       }
-      this.monetization.setState({
-        requestId: details.requestId,
-        state: 'stopped',
-        finalized: true
-      })
-      this.monetization.setMonetizationRequest(undefined)
+      // TODO:WM2
+      if (this.tagManager.atMostOneTagAndNoneInBody()) {
+        this.monetization.setState({
+          requestId: details.requestId,
+          state: 'stopped',
+          finalized: true
+        })
+        this.monetization.setMonetizationRequest(undefined)
+      }
       this.runtime.sendMessage(request)
     }
 
-    const monitor = new MonetizationTagObserver(
+    //TODO:WM2 move this out of this damn closure
+    const tagManager = new MonetizationTagManager(
       this.window,
       this.document,
       ({ started, stopped }) => {
         if (stopped) {
-          stopMonetization(stopped)
+          if (!this.disallowed.has(stopped.requestId)) {
+            debug('sending stopped request', JSON.stringify(stopped, null, 2))
+            stopMonetization(stopped)
+          } else {
+            debug(
+              'not propagating stop message to bg',
+              JSON.stringify(stopped, null, 2)
+            )
+          }
         }
         if (started) {
+          if (!this.tagManager.atMostOneTagAndNoneInBody()) {
+            // wm2 is required
+            if (!this.wm2Allowed) {
+              debug(
+                'not allowing start request which requires wm2',
+                JSON.stringify(started, null, 2)
+              )
+              this.disallowed.add(started.requestId)
+              return
+            }
+          }
+          debug('sending start request', JSON.stringify(started, null, 2))
           void startMonetization(started)
         }
-      }
+      },
+      false
     )
 
-    // // Scan for WM meta tags when page is interactive
-    monitor.startWhenDocumentReady()
+    this.tagManager = tagManager
+    // Do this before we scan the document for tags in startWhenDocumentReady,
+    // so we can capture the events
+    this.wmDebug.init(tagManager)
+    // // Scan for WM tags when page is interactive
+    tagManager.startWhenDocumentReady()
   }
 
-  private async doStartMonetization() {
+  // TODO: WM2
+  private async doStartMonetization(request: PaymentDetails) {
     if (this.frames.isIFrame) {
       const allowed = await new Promise<boolean>(resolve => {
         const message: CheckIFrameIsAllowedFromIFrameContentScript = {
@@ -113,9 +155,7 @@ export class ContentScript {
         return
       }
     }
-    this.runtime.sendMessage(
-      startWebMonetizationMessage(this.monetization.getMonetizationRequest())
-    )
+    this.runtime.sendMessage(startWebMonetizationMessage(request))
   }
 
   setRuntimeMessageListener() {
@@ -133,8 +173,6 @@ export class ContentScript {
             debug('checkAdaptedContent without from')
           }
           void this.adaptedContent.checkAdaptedContent()
-        } else if (request.command === 'setMonetizationState') {
-          this.monetization.setState(request.data)
         } else if (request.command === 'monetizationProgress') {
           const detail: MonetizationProgressEvent['detail'] = {
             amount: request.data.amount,
@@ -145,10 +183,22 @@ export class ContentScript {
             requestId: request.data.requestId
           }
           this.monetization.dispatchMonetizationProgressEvent(detail)
-        } else if (request.command === 'monetizationStart') {
-          debug('monetizationStart event')
-          this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
-            request.data
+          const data = request.data
+          const eventDetail = {
+            paymentPointer: data.paymentPointer,
+            receipt: data.receipt,
+            assetScale: data.assetScale,
+            assetCode: data.assetCode,
+            amount: BigInt(data.amount)
+          }
+          const firefoxProof = mozClone(eventDetail, this.document)
+          this.tagManager.dispatchEventByLinkId(
+            data.requestId,
+            new CustomEvent('monetization-v2', {
+              bubbles: true,
+              cancelable: false,
+              detail: firefoxProof
+            })
           )
         } else if (request.command === 'checkIFrameIsAllowedFromBackground') {
           this.frames
@@ -174,7 +224,30 @@ export class ContentScript {
           this.storage.removeItem('token')
         } else if (request.command === 'logInActiveTab') {
           debug('LOG FROM BG', request.data.log)
+        } else if (request.command === 'spspRequestEvent') {
+          const {
+            data: { requestId, event, message }
+          } = request
+          this.tagManager.dispatchEventByLinkId(requestId, new Event(event))
+          if (message) {
+            this.wmDebug.logSPSPEvent(request)
+          }
+        } else if (request.command === 'setMonetizationState') {
+          if (
+            this.tagManager.atMostOneTagAndNoneInBody() ||
+            request.data.finalized
+          ) {
+            this.monetization.setState(request.data)
+          }
+        } else if (request.command === 'monetizationStart') {
+          debug('monetizationStart event')
+          if (this.tagManager.atMostOneTagAndNoneInBody()) {
+            this.monetization.dispatchMonetizationStartEventAndSetMonetizationState(
+              request.data
+            )
+          }
         }
+
         // Don't need to return true here, not using sendResponse
         // https://developer.chrome.com/apps/runtime#event-onMessage
       }
@@ -202,14 +275,27 @@ export class ContentScript {
     }
 
     if (this.frames.isMonetizableFrame) {
-      const message: ContentScriptInit = { command: 'contentScriptInit' }
-      this.runtime.sendMessage(message)
-      whenDocumentReady(this.document, () => {
-        this.handleMonetizationTag()
-        this.watchPageEventsToPauseOrResume()
-      })
-      this.setRuntimeMessageListener()
-      this.monetization.injectDocumentMonetization()
+      const message: ContentScriptInit = {
+        command: 'contentScriptInit',
+        data: {
+          origin: this.document.location.origin
+        }
+      }
+      this.runtime.sendMessage(
+        message,
+        (response: ContentScriptInitResponse) => {
+          this.wm2Allowed = response.wm2Allowed
+
+          whenDocumentReady(this.document, () => {
+            this.handleMonetizationTag()
+            this.watchPageEventsToPauseOrResume()
+          })
+          this.setRuntimeMessageListener()
+          this.monetization.injectDocumentMonetization({
+            wm2Allowed: this.wm2Allowed
+          })
+        }
+      )
     }
 
     if (this.frames.isAnyCoilFrame) {
@@ -237,40 +323,72 @@ export class ContentScript {
     setWatch({
       pause: (reason: string) => {
         this.paused = true
-        const pause: PauseWebMonetization = {
-          command: 'pauseWebMonetization',
-          data: {
-            requestId: this.monetization.getMonetizationRequest()?.requestId
+        const unfiltered = this.tagManager.requestIds()
+        const requestIds = this.filterDisallowedRequestIds(unfiltered)
+        debug(
+          `pauseWebMonetization reason ${reason} disallowed=${JSON.stringify(
+            this.disallowed
+          )} unfiltered=${JSON.stringify(
+            unfiltered
+          )} requestIds=${JSON.stringify(requestIds)}`
+        )
+        if (requestIds.length) {
+          const pause: PauseWebMonetization = {
+            command: 'pauseWebMonetization',
+            data: {
+              requestIds
+            }
           }
+          runtime.sendMessage(pause)
         }
-        runtime.sendMessage(pause)
       },
       resume: (reason: string) => {
         debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
-        const resume: ResumeWebMonetization = {
-          command: 'resumeWebMonetization',
-          data: {
-            requestId: this.monetization.getMonetizationRequest()?.requestId
+        const requestIds = this.filterDisallowedRequestIds(
+          this.tagManager.requestIds()
+        )
+        if (requestIds.length) {
+          const resume: ResumeWebMonetization = {
+            command: 'resumeWebMonetization',
+            data: {
+              requestIds
+            }
           }
+          runtime.sendMessage(resume)
         }
-        runtime.sendMessage(resume)
       }
     })
   }
 
-  private onFrameAllowedChanged(request: OnFrameAllowedChanged) {
-    const allowed = request.data.allowed
+  private filterDisallowedRequests(requests: PaymentDetails[]) {
+    return requests.filter(r => !this.disallowed.has(r.requestId))
+  }
+
+  private filterDisallowedRequestIds(requests: string[]) {
+    return requests.filter(r => !this.disallowed.has(r))
+  }
+
+  private onFrameAllowedChanged(message: OnFrameAllowedChanged) {
+    const allowed = message.data.allowed
     const monetizationRequest = this.monetization.getMonetizationRequest()
+    const requests = this.filterDisallowedRequests(
+      this.tagManager.linkRequests()
+    )
     if (allowed) {
+      // TODO: WM2 how to do the state check on the link requests ?
       if (monetizationRequest && this.monetization.getState() === 'stopped') {
+        requests.push(monetizationRequest)
         // The pause needs to be done after the async allow checks and start
-        this.doStartMonetization().then(() => {
+      }
+      for (const request of requests) {
+        this.doStartMonetization(request).then(() => {
           if (this.paused) {
             const pause: PauseWebMonetization = {
               command: 'pauseWebMonetization',
               data: {
-                requestId: monetizationRequest.requestId
+                // TODO:WM2
+                requestIds: [request.requestId]
               }
             }
             this.runtime.sendMessage(pause)
@@ -278,10 +396,16 @@ export class ContentScript {
         })
       }
     } else {
+      const requests = this.filterDisallowedRequests(
+        this.tagManager.linkRequests()
+      )
       if (monetizationRequest) {
+        requests.push(monetizationRequest)
+      }
+      for (const request of requests) {
         const message: StopWebMonetization = {
           command: 'stopWebMonetization',
-          data: monetizationRequest
+          data: request
         }
         this.runtime.sendMessage(message)
       }

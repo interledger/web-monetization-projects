@@ -1,48 +1,12 @@
 import '@abraham/reflection'
 import { Container } from 'inversify'
-import { GraphQlClient } from '@coil/client'
-import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 
 import { API, BUILD_CONFIG, COIL_DOMAIN, VERSION } from '../webpackDefines'
-import { StorageService } from '../services/storage'
-import * as tokens from '../types/tokens'
-import { ClientOptions } from '../services/ClientOptions'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
 import { loggingEnabled } from '../util/isLoggingEnabled'
 
 import { BackgroundScript } from './services/BackgroundScript'
-import { BackgroundStorageService } from './services/BackgroundStorageService'
-import { Stream } from './services/Stream'
-import { createLogger } from './services/utils'
-
-async function configureContainer(container: Container) {
-  if (loggingEnabled) {
-    const logger = makeLoggerMiddleware()
-    container.applyMiddleware(logger)
-  }
-
-  container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
-  container.bind(tokens.UserAgent).toConstantValue(navigator.userAgent)
-  container.bind(tokens.WextApi).toConstantValue(API)
-  container.bind(tokens.BuildConfig).toConstantValue(BUILD_CONFIG)
-  container.bind(tokens.LoggingEnabled).toConstantValue(loggingEnabled)
-  container.bind(GraphQlClient.Options).to(ClientOptions)
-  container.bind(Storage).toConstantValue(localStorage)
-  container.bind(StorageService).to(BackgroundStorageService)
-  container.bind(Container).toConstantValue(container)
-  container.bind(Stream).toSelf().inTransientScope()
-  container.bind(Navigator).toConstantValue(navigator)
-
-  container
-    .bind(tokens.NoContextLoggerName)
-    .toConstantValue('tokens.NoContextLoggerName')
-
-  container.bind(tokens.Logger).toDynamicValue(createLogger).inTransientScope()
-
-  container.bind(tokens.LocalStorageProxy).toDynamicValue(context => {
-    return context.container.get(StorageService).makeProxy(['token'])
-  })
-}
+import { configureContainer } from './configureContainer'
 
 declare global {
   interface Window {
@@ -78,8 +42,32 @@ async function main() {
     autoBindInjectable: true
   })
 
-  await configureContainer(container)
-  window.bg = container.get(BackgroundScript)
+  await configureContainer({
+    container: container,
+    loggingEnabled,
+    coilDomain: COIL_DOMAIN,
+    wextApi: API,
+    buildConfig: BUILD_CONFIG,
+    storage: localStorage,
+    // TODO: In MV3 all listeners must be bound at the top level
+    getActiveTab: async () => {
+      // This query will not pick up dev tools tabs which may be currently active
+      // so, we need to query for other active tabs in that case and select the
+      // first. It's possible that this may also result in an empty response set,
+      // however hopefully this state will be very transient.
+      for (const currentWindow of [true, false]) {
+        const tabs = await new Promise<chrome.tabs.Tab[]>(resolve => {
+          chrome.tabs.query({ active: true, currentWindow }, tabs => {
+            resolve(tabs)
+          })
+        })
+        if (tabs.length) {
+          return tabs[0].id
+        }
+      }
+    }
+  })
+  window.bg = await container.getAsync(BackgroundScript)
   void window.bg.run()
 }
 

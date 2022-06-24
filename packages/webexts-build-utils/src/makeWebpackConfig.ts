@@ -107,6 +107,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
             manifest.browser_specific_settings.gecko.id =
               WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
           }
+          manifest.applications = manifest.browser_specific_settings
         } else {
           delete manifest['browser_specific_settings']
         }

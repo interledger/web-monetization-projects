@@ -8,7 +8,6 @@ export async function startApolloServer() {
   const container = makeDefaultContainer()
   const server = await container.getAsync(Server)
   await server.start()
-  console.log(container.get(SPSPService).getResponse({}))
 }
 
 if (!module.parent) {

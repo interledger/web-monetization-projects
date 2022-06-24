@@ -6,7 +6,8 @@ module.exports = {
       '@babel/preset-env',
       { loose: false, targets: { node: nodeMajorVersion } }
     ],
-    ['@babel/preset-typescript', { onlyRemoveTypeImports: true }]
+    ['@babel/preset-typescript', { onlyRemoveTypeImports: true }],
+    ['@babel/preset-react', {}]
   ],
   plugins: [
     'babel-plugin-transform-typescript-metadata',

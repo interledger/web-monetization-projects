@@ -156,7 +156,6 @@ jobs:
             yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
             xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
-      # Firefox puppeteer was not working at one point and it's on the TODO to reinstate
       # - run:
       #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
       #     command: |
@@ -195,7 +194,6 @@ jobs:
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
-            xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
 
       # - run:
       #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
@@ -261,6 +259,13 @@ jobs:
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
+            xvfb-run -a yarn << parameters.command >>
+      - run:
+          name: Run jest via babel
+          command: |
+            export DEBUG='coil*'
+            export TS_JEST_MAP_PATHS_TO_MODULES=true
+            cp jest.config.local.example.js jest.config.local.js 
             xvfb-run -a yarn << parameters.command >>
       - run:
           name: Run jest from build

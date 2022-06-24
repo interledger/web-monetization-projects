@@ -51,11 +51,13 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@abraham/reflection": "^0.10.0",
     "@babel/core": "7.18.5",
     "@babel/plugin-proposal-class-properties": "7.17.12",
     "@babel/plugin-proposal-decorators": "7.18.2",
     "@babel/plugin-proposal-object-rest-spread": "7.18.0",
     "@babel/preset-env": "7.18.2",
+    "@babel/preset-react": "7.17.12",
     "@babel/preset-typescript": "7.17.12",
     "@coil/puppeteer-utils": "^0.0.0",
     "@coil/webpack-utils": "0.0.0",

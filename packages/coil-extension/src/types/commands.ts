@@ -48,6 +48,16 @@ export interface Logout extends Command {
  */
 export interface ContentScriptInit extends Command {
   command: 'contentScriptInit'
+  data: {
+    origin: string
+  }
+}
+
+/**
+ * background -> content
+ */
+export interface ContentScriptInitResponse {
+  wm2Allowed: boolean
 }
 
 /**
@@ -66,7 +76,7 @@ export interface AdaptedPageDetails extends Command {
 export interface PauseWebMonetization extends Command {
   command: 'pauseWebMonetization'
   data: {
-    requestId?: string
+    requestIds: string[]
   }
 }
 
@@ -77,7 +87,7 @@ export interface PauseWebMonetization extends Command {
 export interface ResumeWebMonetization extends Command {
   command: 'resumeWebMonetization'
   data: {
-    requestId?: string
+    requestIds: string[]
   }
 }
 
@@ -438,6 +448,19 @@ export interface LogInActiveTab {
   }
 }
 
+/**
+ *  background -> content
+ *  browser.tabs.sendMessage
+ */
+export interface SPSPRequestEvent {
+  command: 'spspRequestEvent'
+  data: {
+    requestId: string
+    event: 'load' | 'error' | 'abort' | 'loadstart' | 'not-found'
+    message?: string
+  }
+}
+
 export type ToContentMessage =
   | CheckAdaptedContent
   | MonetizationProgress
@@ -449,5 +472,6 @@ export type ToContentMessage =
   | TipSent
   | ClearToken
   | LogInActiveTab
+  | SPSPRequestEvent
 
 export type ToPopupMessage = LocalStorageUpdate | ClosePopup

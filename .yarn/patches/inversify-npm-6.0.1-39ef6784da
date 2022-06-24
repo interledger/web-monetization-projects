@@ -1,0 +1,16 @@
+diff --git a/lib/planning/reflection_utils.js b/lib/planning/reflection_utils.js
+index 24c605ecb041f434bbddea7f7abc3d6c774ddc3e..13bedfa1f81eed39aefa848a08c453a5b24ae6d0 100644
+--- a/lib/planning/reflection_utils.js
++++ b/lib/planning/reflection_utils.js
+@@ -118,8 +118,9 @@ function getClassPropsAsTargets(metadataReader, constructorFunc, constructorName
+         target.metadata = targetMetadata;
+         targets.push(target);
+     }
+-    var baseConstructor = Object.getPrototypeOf(constructorFunc.prototype).constructor;
+-    if (baseConstructor !== Object) {
++    var proto = Object.getPrototypeOf(constructorFunc.prototype)
++    var baseConstructor = proto ? proto.constructor : null;
++    if (baseConstructor && baseConstructor !== Object) {
+         var baseTargets = getClassPropsAsTargets(metadataReader, baseConstructor, constructorName);
+         targets = __spreadArray(__spreadArray([], targets, true), baseTargets, true);
+     }
