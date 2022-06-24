@@ -34,7 +34,7 @@ export class Streams extends EventEmitter {
     }
   ) {
     const child = this.container.createChild()
-    child.bind(tokens.StreamDetails).toConstantValue({ ...options })
+    child.bind(tokens.CreateStreamDetails).toConstantValue({ ...options })
     this._streams[id] = child.get(Stream)
     this._streams[id].on('money', details => {
       this.emit('money', { url: options.initiatingUrl, id, ...details })

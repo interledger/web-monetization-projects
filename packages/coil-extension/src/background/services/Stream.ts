@@ -73,7 +73,7 @@ type OnMoneyEvent = {
   receipt?: string
 }
 
-interface Created extends PaymentDetails {
+interface CreateStreamDetails extends PaymentDetails {
   token: string
   spspEndpoint: string
   initiatingUrl: string
@@ -109,8 +109,8 @@ export class Stream extends EventEmitter {
     @logger('Stream')
     private readonly _debug: Logger,
     private container: Container,
-    @inject(tokens.StreamDetails)
-    create: Created,
+    @inject(tokens.CreateStreamDetails)
+    details: CreateStreamDetails,
     @inject(tokens.BtpEndpoint)
     @optional()
     private btpEndpoint?: string
@@ -118,7 +118,7 @@ export class Stream extends EventEmitter {
     super()
 
     const { requestId, spspEndpoint, paymentPointer, token, initiatingUrl } =
-      create
+      details
 
     this._paymentPointer = paymentPointer
     this._requestId = requestId
