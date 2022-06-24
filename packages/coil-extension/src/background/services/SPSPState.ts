@@ -71,8 +71,7 @@ export class SPSPState {
         state.erred = true
       }
     } else if (event === 'not-found') {
-      // const command = {}
-      // this.wext.tabs.sendMessage(frame.tabId, command, frame)
+      //
     }
 
     if (dispatch) {

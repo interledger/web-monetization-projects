@@ -16,6 +16,7 @@ import { FrameSpec } from '../../types/FrameSpec'
 import * as tokens from '../../types/tokens'
 import { LocalStorageProxy } from '../../types/storage'
 import { BuildConfig } from '../../types/BuildConfig'
+import { noop } from '../util/dbg'
 
 import { AuthService } from './AuthService'
 import { PopupBrowserAction } from './PopupBrowserAction'
@@ -23,17 +24,7 @@ import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { TippingService } from './TippingService'
 
-const startedAt = Date.now()
-let latest = startedAt
-const dbg = (...args: unknown[]) => {
-  const now = Date.now()
-  // eslint-disable-next-line no-console
-  console.log(
-    `TabStates (t=${now - startedAt}ms, d=${now - latest}ms)`,
-    ...args
-  )
-  latest = now
-}
+const dbg = noop
 
 @injectable()
 export class TabStates {
@@ -200,7 +191,7 @@ export class TabStates {
       // TODO
       lastPacket: 0
     }
-    this.activeTabLogger.log(
+    void this.activeTabLogger.log(
       'logLastMonetizationCommand ' +
         JSON.stringify({ command, frame, args, requestState }),
       frame
