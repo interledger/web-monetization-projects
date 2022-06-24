@@ -6,17 +6,19 @@ export type MonetizationCommand = 'pause' | 'stop' | 'start' | 'resume'
 export const MonetizationStateKey = `monetization-state-` as const
 export type MonetizationStateKeyType = typeof MonetizationStateKey
 
+export type MonetizationRequestState = {
+  command: MonetizationCommand
+  details: PaymentDetails
+  total: number
+  lastPacketTime: number
+}
+
 export interface FrameState {
   paymentPointer?: string
   adapted: boolean
   // Tracks the total amount of `source` money sent (not was received)
   [x: `${MonetizationStateKeyType}${string}`]:
-    | {
-        command: MonetizationCommand
-        details: PaymentDetails
-        total: number
-        lastPacketTime: number
-      }
+    | MonetizationRequestState
     | undefined
     | null
 }

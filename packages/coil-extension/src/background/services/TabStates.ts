@@ -9,6 +9,7 @@ import {
   isFrameMonetized,
   isFrameStreaming,
   MonetizationCommand,
+  MonetizationRequestState,
   TabState
 } from '../../types/TabState'
 import { IconState } from '../../types/commands'
@@ -184,12 +185,11 @@ export class TabStates {
     }
 
     const total = this.getTotal(frame, details)
-    const requestState = {
+    const requestState: MonetizationRequestState = {
       command,
       details: details,
       total: total,
-      // TODO
-      lastPacket: 0
+      lastPacketTime: 0
     }
     void this.activeTabLogger.log(
       'logLastMonetizationCommand ' +
