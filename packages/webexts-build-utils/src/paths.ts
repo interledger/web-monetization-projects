@@ -5,6 +5,7 @@ import { TS_LOADER_TRANSPILE_ONLY, TSCONFIG_DEBUG } from './env'
 export function getPaths(rootDir: string) {
   const paths = {
     TEST_TSCONFIG: path.join(rootDir, '/test/tsconfig.json'),
+    // This is extended from the root IDE config
     TSCONFIG_DEBUG_JSON: path.join(rootDir, 'tsconfig.debug.json'),
     TSCONFIG_BUILD_JSON: path.join(rootDir, 'tsconfig.build.json'),
     PACKAGE_JSON: path.join(rootDir, 'package.json')

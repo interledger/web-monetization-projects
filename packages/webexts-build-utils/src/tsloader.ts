@@ -2,8 +2,6 @@ import { TS_LOADER_TRANSPILE_ONLY, TSCONFIG_DEBUG } from './env'
 import { Paths } from './paths'
 
 export function makeTsLoader(paths: Paths) {
-  // This is extended from the root IDE config
-
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const required = require(paths.TSCONFIG_DEBUG_JSON)
   const DEBUG_COMPILER_OPTIONS = required.compilerOptions
