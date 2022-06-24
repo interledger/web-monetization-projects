@@ -284,7 +284,7 @@ export class ContentScript {
       this.runtime.sendMessage(
         message,
         (response: ContentScriptInitResponse) => {
-          this.wm2Allowed = response.wm2OriginalTrial
+          this.wm2Allowed = response.wm2Allowed
 
           whenDocumentReady(this.document, () => {
             this.handleMonetizationTag()

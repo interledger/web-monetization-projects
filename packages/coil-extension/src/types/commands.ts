@@ -57,7 +57,7 @@ export interface ContentScriptInit extends Command {
  * background -> content
  */
 export interface ContentScriptInitResponse {
-  wm2OriginalTrial: boolean
+  wm2Allowed: boolean
 }
 
 /**

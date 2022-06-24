@@ -10,6 +10,7 @@ import {
   CheckIFrameIsAllowedFromBackground,
   ClosePopup,
   ContentScriptInit,
+  ContentScriptInitResponse,
   OnFrameAllowedChanged,
   ReportCorrelationIdFromIFrameContentScript,
   ReportCorrelationIdToParentContentScript,
@@ -620,7 +621,7 @@ export class BackgroundScript {
   private async contentScriptInit(
     request: ContentScriptInit,
     sender: MessageSender
-  ) {
+  ): Promise<ContentScriptInitResponse> {
     const { tabId, frameId, spec } = getFrameSpec(sender)
     // Content script used to send a stopWebMonetization message every time
     // it loaded. Noop if no stream for tab.
@@ -629,10 +630,10 @@ export class BackgroundScript {
     this.tabStates.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
-    const originAllowed = await this.wm2OriginTrial.checkOrigin(
+    const wm2Allowed = await this.wm2OriginTrial.checkOrigin(
       request.data.origin
     )
-    return { wm2OriginalTrial: originAllowed, request }
+    return { wm2Allowed }
   }
 
   private async onFrameAllowedChanged(
