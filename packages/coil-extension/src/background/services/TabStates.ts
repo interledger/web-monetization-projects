@@ -330,7 +330,7 @@ export class TabStates {
     const state = this.getFrameOrDefault(frame)[key]
     if (state != null) {
       state.total += incr
-      state.lastPacket = Date.now()
+      state.lastPacketTime = Date.now()
       this.setFrame(frame, { [key]: { ...state } })
     }
   }

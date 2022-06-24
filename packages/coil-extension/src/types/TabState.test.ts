@@ -7,7 +7,7 @@ describe('isFrameStateMonetized', () => {
       ['monetization-state-a']: {
         command: 'start',
         total: 0,
-        lastPacket: 0,
+        lastPacketTime: 0,
         details: {
           requestId: 'a',
           paymentPointer: '',

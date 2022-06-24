@@ -15,7 +15,7 @@ export interface FrameState {
         command: MonetizationCommand
         details: PaymentDetails
         total: number
-        lastPacket: number
+        lastPacketTime: number
       }
     | undefined
     | null
@@ -58,7 +58,7 @@ export function getRequestStates(frame: FrameState) {
 export function hasRecentPacket(frameState: FrameState) {
   const now = Date.now()
   return getRequestStates(frameState).some(s => {
-    return now - s.lastPacket <= 5e3
+    return s.lastPacketTime != 0 && now - s.lastPacketTime <= 5e3
   })
 }
 
