@@ -1,4 +1,4 @@
-import { calculateInputWidth, normalizeAmountInput } from './AmountInput'
+import { calculateInputWidth, normalizeAmountInput } from './AmountInput.utils'
 
 describe('handleAmountInputChange', () => {
   const tipContext = {
