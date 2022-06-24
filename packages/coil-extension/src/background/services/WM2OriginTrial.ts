@@ -80,6 +80,8 @@ class ResourceFetcher<T> {
 
 @injectable()
 export class WM2OriginTrial {
+  alexAllowed = true
+
   hardCodedAllowList = new Set(['https://quirksmode.org'])
   fetcher = new ResourceFetcher(
     'https://raw.githubusercontent.com/WICG/webmonetization/nd-wm2-allowed-origins-2022-06-22/wm2-allowed-origins.json',
@@ -88,7 +90,9 @@ export class WM2OriginTrial {
   )
 
   constructor(private storage: Storage) {
-    this.fetcher.start()
+    if (!this.alexAllowed) {
+      this.fetcher.start()
+    }
   }
 
   // We don't want this to be too slow as it could delay the progress (e.g. init
@@ -101,6 +105,9 @@ export class WM2OriginTrial {
   // 10 minutes, with refreshes everytime a content script is init, then it
   // should be pretty fresh.
   async checkOrigin(url: string) {
+    if (this.alexAllowed) {
+      return true
+    }
     if (this.storage['WM2_ALLOW']) {
       return true
     } else {
