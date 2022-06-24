@@ -5,7 +5,7 @@ import { StorageService } from '@webmonetization/wext/services'
 import {
   FrameState,
   getFrameTotal,
-  hasRecentPacket,
+  frameHasRecentPacket,
   isFrameMonetized,
   isFrameStreaming,
   MonetizationCommand,
@@ -260,7 +260,7 @@ export class TabStates {
               f =>
                 isFrameStreaming(f) &&
                 getFrameTotal(f) > 0 &&
-                hasRecentPacket(f)
+                frameHasRecentPacket(f)
             )
           )
 

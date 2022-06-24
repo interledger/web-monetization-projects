@@ -43,12 +43,12 @@ export function isFrameStreaming(frameState: FrameState) {
 }
 
 export function getFrameTotal(frameState: FrameState) {
-  return getRequestStates(frameState).reduce((acc, val) => {
+  return getFrameRequestStates(frameState).reduce((acc, val) => {
     return acc + val.total
   }, 0)
 }
 
-export function getRequestStates(frame: FrameState) {
+export function getFrameRequestStates(frame: FrameState) {
   return Object.keys(frame)
     .filter(key => key.startsWith(MonetizationStateKey))
     .map(
@@ -57,9 +57,9 @@ export function getRequestStates(frame: FrameState) {
     )
 }
 
-export function hasRecentPacket(frameState: FrameState) {
+export function frameHasRecentPacket(frameState: FrameState) {
   const now = Date.now()
-  return getRequestStates(frameState).some(s => {
+  return getFrameRequestStates(frameState).some(s => {
     return s.lastPacketTime != 0 && now - s.lastPacketTime <= 5e3
   })
 }
