@@ -1275,7 +1275,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-display-name@npm:^7.0.0":
+"@babel/plugin-transform-react-display-name@npm:^7.0.0, @babel/plugin-transform-react-display-name@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/plugin-transform-react-display-name@npm:7.16.7"
   dependencies:
@@ -1286,7 +1286,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-jsx@npm:^7.0.0":
+"@babel/plugin-transform-react-jsx-development@npm:^7.16.7":
+  version: 7.16.7
+  resolution: "@babel/plugin-transform-react-jsx-development@npm:7.16.7"
+  dependencies:
+    "@babel/plugin-transform-react-jsx": "npm:^7.16.7"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: b6653d575ec38f5002b570604ad5dec4eec119fdb0c1dab177622b45f072e17791ca2f443626506947a32cb146e778500b595cb270e386b886d7bdd65b86d9e5
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-react-jsx@npm:^7.0.0, @babel/plugin-transform-react-jsx@npm:^7.16.7, @babel/plugin-transform-react-jsx@npm:^7.17.12":
   version: 7.17.12
   resolution: "@babel/plugin-transform-react-jsx@npm:7.17.12"
   dependencies:
@@ -1298,6 +1309,18 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: e68e69542dd9ac314539b7a5d36a0f10590b88cd5d9f3fa46ece2a86ee0d76d386998194a2ae2cbfdd230c962994f359ef1e34e4fba37b5c8deab8afedfbcfdb
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-react-pure-annotations@npm:^7.16.7":
+  version: 7.18.0
+  resolution: "@babel/plugin-transform-react-pure-annotations@npm:7.18.0"
+  dependencies:
+    "@babel/helper-annotate-as-pure": "npm:^7.16.7"
+    "@babel/helper-plugin-utils": "npm:^7.17.12"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: efb26f02804e5f005f3f7599f1de450e9ae7ee04b381e555c4d2f198b5ea0b6cf9a2a3c7ed9c8cb33f5ee3aa4103b0aa4257728bb8879fe3fd721641aeb7c4ab
   languageName: node
   linkType: hard
 
@@ -1526,6 +1549,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/preset-react@npm:7.17.12":
+  version: 7.17.12
+  resolution: "@babel/preset-react@npm:7.17.12"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.17.12"
+    "@babel/helper-validator-option": "npm:^7.16.7"
+    "@babel/plugin-transform-react-display-name": "npm:^7.16.7"
+    "@babel/plugin-transform-react-jsx": "npm:^7.17.12"
+    "@babel/plugin-transform-react-jsx-development": "npm:^7.16.7"
+    "@babel/plugin-transform-react-pure-annotations": "npm:^7.16.7"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 4c7770264304088bc54cb87dd4f1bcae17930ca2ed77fa96db893322fdb7317fe4c10dc44352a0e806fe39f8d2d04d7b59ee8b61f6080845c9626d98a6ade70f
+  languageName: node
+  linkType: hard
+
 "@babel/preset-typescript@npm:7.17.12":
   version: 7.17.12
   resolution: "@babel/preset-typescript@npm:7.17.12"
@@ -1666,6 +1705,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/privacypass-sjcl": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.2"
@@ -1730,6 +1770,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -1792,6 +1833,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/anonymous-tokens": "npm:^0.0.0"
     "@coil/client": "npm:^0.0.0"
@@ -1896,6 +1938,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@coil/privacypass-sjcl": "npm:0.0.0"
@@ -1986,6 +2029,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -2050,6 +2094,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@coil/polyfill-utils": "npm:^0.0.0"
@@ -2122,6 +2167,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -2180,6 +2226,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -2245,6 +2292,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.2"
@@ -2312,6 +2360,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -2378,6 +2427,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.2"
@@ -2667,6 +2717,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -2724,6 +2775,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -3376,6 +3428,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/polyfill-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.2"
@@ -4200,6 +4253,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -5460,6 +5514,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.2"
@@ -5528,6 +5583,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.2"
@@ -5611,6 +5667,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -5674,6 +5731,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.2"
@@ -5736,6 +5794,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.2"
@@ -5806,6 +5865,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -5864,6 +5924,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
@@ -23771,6 +23832,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": "npm:7.18.2"
     "@babel/plugin-proposal-object-rest-spread": "npm:7.18.0"
     "@babel/preset-env": "npm:7.18.2"
+    "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@commitlint/cli": "npm:17.0.2"
     "@commitlint/config-conventional": "npm:17.0.2"
