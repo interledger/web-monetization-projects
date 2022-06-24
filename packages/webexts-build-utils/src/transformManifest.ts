@@ -2,6 +2,7 @@ import { applyManifestPermissions } from './manifestPermissions'
 import {
   WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID,
   WEXT_MANIFEST_KEY,
+  WEXT_MANIFEST_PERMISSIONS,
   WEXT_MANIFEST_SUFFIX,
   WEXT_MANIFEST_SUFFIX_NO_DATE,
   WEXT_MANIFEST_VERSION,
@@ -47,7 +48,7 @@ export function transformManifest(manifest: any, browser: string) {
   } else {
     delete manifest['browser_specific_settings']
   }
-  const rules = process.env.WEXT_MANIFEST_PERMISSIONS
+  const rules = WEXT_MANIFEST_PERMISSIONS
   const parsedRules: string[] = rules ? JSON.parse(rules) : []
   applyManifestPermissions(manifest, parsedRules)
 }

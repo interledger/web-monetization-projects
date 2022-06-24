@@ -11,6 +11,7 @@ export const WEXT_MANIFEST_VERSION_NAME = process.env.WEXT_MANIFEST_VERSION_NAME
 export const WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID =
   process.env.WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
 export const WEXT_MANIFEST_KEY = process.env.WEXT_MANIFEST_KEY
+export const WEXT_MANIFEST_PERMISSIONS = process.env.WEXT_MANIFEST_PERMISSIONS
 
 export const API = process.env.API || 'chrome'
 export const BROWSER = process.env.BROWSER || 'chrome'

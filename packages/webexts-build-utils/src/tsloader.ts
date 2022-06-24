@@ -1,4 +1,4 @@
-import { TS_LOADER_TRANSPILE_ONLY } from './env'
+import { TS_LOADER_TRANSPILE_ONLY, TSCONFIG_DEBUG } from './env'
 import { Paths } from './paths'
 
 export function makeTsLoader(paths: Paths) {
@@ -17,7 +17,7 @@ export function makeTsLoader(paths: Paths) {
           configFile: paths.TSCONFIG,
           projectReferences: false,
           transpileOnly: true,
-          compilerOptions: process.env.TSCONFIG_DEBUG
+          compilerOptions: TSCONFIG_DEBUG
             ? { sourceMap: true } // , ...DEBUG_COMPILER_OPTIONS }
             : { sourceMap: true }
         }
