@@ -1,5 +1,5 @@
 import { transformManifest } from './transformManifest'
-import { BROWSER } from './env'
+import { BROWSER, LIVE_RELOAD } from './env'
 import { transformStatic } from './transformStatic'
 
 export const prettyJSON = (obj: unknown) => JSON.stringify(obj, null, 2)
@@ -22,3 +22,10 @@ export const copyToDist = [
   },
   { from: 'res', to: 'res' }
 ]
+
+if (LIVE_RELOAD) {
+  copyToDist.push({
+    from: require.resolve('crx-hotreload'),
+    to: 'hot-reload.js'
+  })
+}

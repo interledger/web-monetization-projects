@@ -15,13 +15,6 @@ import { copyToDist } from './copyToDist'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
 
-if (LIVE_RELOAD) {
-  copyToDist.push({
-    from: require.resolve('crx-hotreload'),
-    to: 'hot-reload.js'
-  })
-}
-
 export function makeWebpackConfig(rootDir: string): webpack.Configuration {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const paths = getPaths(rootDir)
