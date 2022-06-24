@@ -3,14 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Link Tag</title>
-    <script>
-      window.onload = function () {
-        console.log('window.onload function 1')
-      }
-      window.onload = function () {
-        console.log('window.onload function 2')
-      }
-    </script>
+    <link rel="monetization" href="https://ilp.uphold.com/gRa4mXFEMYrL" />
+    <meta name="monetization" content="$ilp.uphold.com/gRa4mXFEMYrL" />
   </head>
   <body>
     <p>Page includes a link THEN a meta tag</p>
@@ -18,15 +12,5 @@
       The meta tag should ignored (and an error logged) as affinity with link
       established
     </p>
-    <video id="1">
-      <link
-        onload="console.log('onload', this, event)"
-        onmonetization="console.log('monetization', this, event)"
-        onerror="console.log('error', this, event)"
-        rel="monetization"
-        href="http://ilp.uphold.com/gRa4mXFEMYrL"
-      />
-    </video>
-    <video id="2"></video>
   </body>
 </html>
