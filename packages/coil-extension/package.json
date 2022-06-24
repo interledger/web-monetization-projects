@@ -140,7 +140,7 @@
     "lint-staged": "13.0.2",
     "nodemon": "2.0.16",
     "prettier": "2.7.1",
-    "puppeteer": "14.4.1",
+    "puppeteer": "15.0.1",
     "regenerator-runtime": "0.13.9",
     "rimraf": "3.0.2",
     "ts-jest": "28.0.5",
