@@ -5,7 +5,8 @@ export function makeTsLoader(paths: Paths) {
   // This is extended from the root IDE config
 
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  // const DEBUG_COMPILER_OPTIONS = require(paths.TSCONFIG_DEBUG_JSON).compilerOptions
+  const required = require(paths.TSCONFIG_DEBUG_JSON)
+  const DEBUG_COMPILER_OPTIONS = required.compilerOptions
 
   return {
     // We must use require.resolve in the mono repo with
@@ -18,7 +19,7 @@ export function makeTsLoader(paths: Paths) {
           projectReferences: false,
           transpileOnly: true,
           compilerOptions: TSCONFIG_DEBUG
-            ? { sourceMap: true } // , ...DEBUG_COMPILER_OPTIONS }
+            ? { sourceMap: true, ...DEBUG_COMPILER_OPTIONS }
             : { sourceMap: true }
         }
       : {
