@@ -101,9 +101,8 @@ export class WM2OriginTrial {
   // Therefor we must always respond immediately, using an already in-memory
   // store of allowed urls.
   // What is a tolerable wait time for a result?
-  // If the origin list is configured once at startup, then requested every
-  // 10 minutes, with refreshes everytime a content script is init, then it
-  // should be pretty fresh.
+  // If the origin list is configured once at startup, with refreshes everytime
+  // a content script is init, then it should stay pretty fresh.
   async checkOrigin(url: string) {
     if (this.alexAllowed) {
       return true
