@@ -51,7 +51,7 @@
     "debug": "patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch"
   },
   "devDependencies": {
-    "@abraham/reflection": "^0.10.0",
+    "@abraham/reflection": "0.10.0",
     "@babel/core": "7.18.5",
     "@babel/plugin-proposal-class-properties": "7.17.12",
     "@babel/plugin-proposal-decorators": "7.18.2",
