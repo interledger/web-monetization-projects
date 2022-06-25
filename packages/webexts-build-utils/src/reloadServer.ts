@@ -50,10 +50,7 @@ export class ReloadServerPlugin {
       this.hashes.set(asset, hash)
       dbg(`asset emitted`, asset, hash)
     })
-    compiler.hooks.done.tap(name, stats => {
-      console.log(
-        stats.toJson()?.assets?.find(asset => asset.name === 'backgroundMV3.js')
-      )
+    compiler.hooks.done.tap(name, _ => {
       const changed = Array.from(this.changed.values())
       this.changed.clear()
       server.clients.forEach(ws => {
