@@ -76,7 +76,7 @@
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "jsonwebtoken": "8.5.1",
-    "lint-staged": "13.0.2",
+    "lint-staged": "13.0.3",
     "localforage": "1.10.0",
     "nodemon": "2.0.18",
     "prettier": "2.7.1",
