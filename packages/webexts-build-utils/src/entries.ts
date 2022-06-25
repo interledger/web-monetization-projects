@@ -6,7 +6,8 @@ export const makeEntry = (rootDir: string) => {
     content: './src/content/content.ts',
     popup: './src/popup/popup.tsx',
     options: './src/options/options.tsx',
-    background: './src/background/background.ts'
+    background: './src/background/background.ts',
+    backgroundMV3: './src/background/backgroundMV3.ts'
   }
 
   Object.keys(entry).forEach(k => {
