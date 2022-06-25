@@ -4,13 +4,14 @@ import * as process from 'process'
 import * as webpack from 'webpack'
 import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 
-import { PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
+import { MV3, PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
 import { makeDefinePlugin } from './defines'
 import { getPaths } from './paths'
-import { afterDoneShellCommandPlugin } from './afterDoneShellCommandPlugin'
+import { AfterDoneShellCommandPlugin } from './afterDoneShellCommandPlugin'
 import { makeEntry } from './entries'
 import { makeTsLoader } from './tsloader'
 import { copyToDist } from './copyToDist'
+import { ReloadServerPlugin } from './reloadServer'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
@@ -51,7 +52,7 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
     plugins: [
       makeDefinePlugin(packageVersion),
       new CopyPlugin({ patterns: copyToDist }),
-      afterDoneShellCommandPlugin
+      new AfterDoneShellCommandPlugin()
     ],
 
     output: {
@@ -70,6 +71,10 @@ export function makeWebpackConfig(rootDir: string): webpack.Configuration {
         }
       ]
     }
+  }
+
+  if (MV3) {
+    config.plugins?.unshift(new ReloadServerPlugin())
   }
 
   return configureNodePolyfills(config)

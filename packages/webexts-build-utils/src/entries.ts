@@ -13,6 +13,7 @@ export const makeEntry = (rootDir: string) => {
   Object.keys(entry).forEach(k => {
     const entryPath = path.join(rootDir, entry[k])
     if (!fs.existsSync(entryPath)) {
+      console.log('entry does not exist', entryPath)
       delete entry[k]
     }
   })

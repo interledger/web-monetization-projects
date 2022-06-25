@@ -6,7 +6,7 @@ import {
   resolvePaymentEndpoint
 } from '@webmonetization/polyfill-utils'
 
-import { configureContainer } from '../configureContainer'
+import { configureContainer } from '../di/configureContainer'
 import { decorateThirdPartyClasses } from '../../services/decorateThirdPartyClasses'
 
 type MessageSender = chrome.runtime.MessageSender
