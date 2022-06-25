@@ -1906,7 +1906,7 @@ __metadata:
     lottie-web: "npm:^5.8.1"
     nodemon: "npm:2.0.18"
     prettier: "npm:2.7.1"
-    puppeteer: "npm:15.0.1"
+    puppeteer: "npm:15.1.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reduct: "npm:^3.3.1"
@@ -2139,7 +2139,7 @@ __metadata:
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.18"
     prettier: "npm:2.7.1"
-    puppeteer: "npm:15.0.1"
+    puppeteer: "npm:15.1.0"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
@@ -10251,10 +10251,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devtools-protocol@npm:0.0.1001819":
-  version: 0.0.1001819
-  resolution: "devtools-protocol@npm:0.0.1001819"
-  checksum: d591affd69b6d5ad86d9fc08727e5a76df4ce4dafb7b4fb120f0f25f998bf0cd33f3c6f8d164ded51f67c36f21a29d9bee971776998e098963ca7797aab539f6
+"devtools-protocol@npm:0.0.1011705":
+  version: 0.0.1011705
+  resolution: "devtools-protocol@npm:0.0.1011705"
+  checksum: c6ba3a4105ca6fac70145a346ac041845e255b4cd66e20a102f51ebc1096f7fa3918589107770255cce99cf5da748f75f322cd5243a917d9860bf014e5aeaeb8
   languageName: node
   linkType: hard
 
@@ -19747,13 +19747,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:15.0.1, puppeteer@npm:^15.0.0":
-  version: 15.0.1
-  resolution: "puppeteer@npm:15.0.1"
+"puppeteer@npm:15.1.0, puppeteer@npm:^15.0.0":
+  version: 15.1.0
+  resolution: "puppeteer@npm:15.1.0"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
-    devtools-protocol: "npm:0.0.1001819"
+    devtools-protocol: "npm:0.0.1011705"
     extract-zip: "npm:2.0.1"
     https-proxy-agent: "npm:5.0.1"
     pkg-dir: "npm:4.2.0"
@@ -19763,7 +19763,7 @@ __metadata:
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
     ws: "npm:8.8.0"
-  checksum: 487d087855fd7015deaec963a806e1904272ec1102fe31989193b9e36ad939414a6fd66f5bf0906aed528f61c4d69fd2d14e2988418db7256e6e04e4047ba2c4
+  checksum: e3a32fca3613a41d3493f393d7d3a35b44ddb8b75dc7fd7e57b04c7ed91ae3e550dee0fff2ad25ef3541bec6b67985cc070b7bd83301a6408f1f28968fc02f8b
   languageName: node
   linkType: hard
 
