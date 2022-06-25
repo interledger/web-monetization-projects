@@ -6,7 +6,7 @@ import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses
 import { loggingEnabled } from '../util/isLoggingEnabled'
 
 import { BackgroundScript } from './services/BackgroundScript'
-import { configureContainer } from './configureContainer'
+import { configureContainer } from './di/configureContainer'
 
 declare global {
   interface Window {

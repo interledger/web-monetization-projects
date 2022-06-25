@@ -27,6 +27,8 @@ export const TS_LOADER_TRANSPILE_ONLY = Boolean(
 
 export const TSCONFIG_DEBUG = process.env.TSCONFIG_DEBUG
 
+export const RELOAD_SERVER_PORT = Number(process.env.RELOAD_SERVER_PORT ?? 4444)
+
 export const PRODUCTION = process.env.NODE_ENV === 'production'
 
 const buildConfigKey = 'WEXT_BUILD_CONFIG_'

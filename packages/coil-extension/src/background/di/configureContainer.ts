@@ -3,12 +3,11 @@ import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 import { GraphQlClient } from '@coil/client'
 import { StorageService } from '@webmonetization/wext/services'
 
-import * as tokens from '../types/tokens'
-import { ClientOptions } from '../services/ClientOptions'
-
-import { BackgroundStorageService } from './services/BackgroundStorageService'
-import { Stream } from './services/Stream'
-import { createLogger } from './services/utils'
+import * as tokens from '../../types/tokens'
+import { ClientOptions } from '../../services/ClientOptions'
+import { BackgroundStorageService } from '../services/BackgroundStorageService'
+import { Stream } from '../services/Stream'
+import { createLogger } from '../services/utils'
 
 interface ConfigureContainerParams {
   container: Container
