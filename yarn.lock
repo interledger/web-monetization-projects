@@ -5185,21 +5185,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/ws@npm:8.5.3, @types/ws@npm:^8.0.0, @types/ws@npm:^8.5.1":
+  version: 8.5.3
+  resolution: "@types/ws@npm:8.5.3"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 079fdee163d7cb86d59e5379d2ea6511ba6a46210af420320a4bd52b04b06f86d2c3acc89289f5eae16c8815a562faada8c717fd55a4888c8a5a5f8ce1420112
+  languageName: node
+  linkType: hard
+
 "@types/ws@npm:^6.0.0":
   version: 6.0.4
   resolution: "@types/ws@npm:6.0.4"
   dependencies:
     "@types/node": "npm:*"
   checksum: b3bc24472c51c9c4101585476f61464942d8f66094473783f7a275e50f1e951d9fb917dcdee7a0b93b2bc726a0d37dc06beea76adb53b07da302bc80942b703a
-  languageName: node
-  linkType: hard
-
-"@types/ws@npm:^8.0.0, @types/ws@npm:^8.5.1, @types/ws@npm:^8.5.3":
-  version: 8.5.3
-  resolution: "@types/ws@npm:8.5.3"
-  dependencies:
-    "@types/node": "npm:*"
-  checksum: 079fdee163d7cb86d59e5379d2ea6511ba6a46210af420320a4bd52b04b06f86d2c3acc89289f5eae16c8815a562faada8c717fd55a4888c8a5a5f8ce1420112
   languageName: node
   linkType: hard
 
@@ -5524,7 +5524,7 @@ __metadata:
     "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.3"
     "@types/node": "npm:16.11.41"
-    "@types/ws": "npm:^8.5.3"
+    "@types/ws": "npm:8.5.3"
     "@typescript-eslint/eslint-plugin": "npm:5.29.0"
     "@typescript-eslint/parser": "npm:5.29.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
