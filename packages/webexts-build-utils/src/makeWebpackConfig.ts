@@ -4,7 +4,7 @@ import * as process from 'process'
 import * as webpack from 'webpack'
 import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 
-import { LIVE_RELOAD, PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
+import { PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
 import { makeDefinePlugin } from './defines'
 import { getPaths } from './paths'
 import { afterDoneShellCommandPlugin } from './afterDoneShellCommandPlugin'

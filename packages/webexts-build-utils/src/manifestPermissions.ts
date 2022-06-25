@@ -1,9 +1,7 @@
-export interface Manifest {
-  permissions: string[]
-}
+import { ManifestV2 } from './types/manifest'
 
 export function applyManifestPermissions(
-  manifest: Manifest,
+  manifest: ManifestV2,
   parsedRules: string[]
 ): void {
   for (const rule of parsedRules) {

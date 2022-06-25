@@ -3,6 +3,8 @@ import process from 'process'
 
 export const AFTER_DONE_SHELL_CMD = process.env.AFTER_DONE_SHELL_CMD
 
+export const MV3 = Boolean(process.env.MV3 ?? false)
+
 export const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
 export const WEXT_MANIFEST_SUFFIX_NO_DATE =
   process.env.WEXT_MANIFEST_SUFFIX_NO_DATE

@@ -10,8 +10,8 @@ export const copyToDist = [
     from: 'manifest.json',
     to: 'manifest.json',
     transform: (content: Buffer) => {
-      const manifest = JSON.parse(content.toString())
-      transformManifest(manifest, BROWSER)
+      let manifest = JSON.parse(content.toString())
+      manifest = transformManifest(manifest, BROWSER)
       return prettyJSON(manifest)
     }
   },
