@@ -28,7 +28,7 @@ bug in early implementations of Web Extensions in Safari).
 | Edge             |        Unknown |                |                                                                                     |
 | Opera            |        Unknown |                |                                                                                     |
 | Firefox          |    Not Working |      June 27th | https://blog.mozilla.org/addons/2022/05/18/manifest-v3-in-firefox-recap-next-steps/ |
-| Firefox Nightly  |        Unknown |                |                                                                                     |
+| Firefox Nightly  |        Working | June 27th 2022 |                                                                                     |
 
 ### Development notes
 
