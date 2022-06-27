@@ -45,6 +45,8 @@
 		A688ECD1268EF55100128FDF /* static in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC1268EF55100128FDF /* static */; };
 		A688ECD2268EF55100128FDF /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC2268EF55100128FDF /* manifest.json */; };
 		A688ECD3268EF55100128FDF /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC3268EF55100128FDF /* content.js */; };
+		BC66005528698C760076CDF7 /* backgroundMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = BC66005428698C760076CDF7 /* backgroundMV3.js */; };
+		BC66005628698C760076CDF7 /* backgroundMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = BC66005428698C760076CDF7 /* backgroundMV3.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,7 @@
 		A688ECC1268EF55100128FDF /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; name = static; path = ../../../dist/static; sourceTree = "<group>"; };
 		A688ECC2268EF55100128FDF /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../dist/manifest.json; sourceTree = "<group>"; };
 		A688ECC3268EF55100128FDF /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../dist/content.js; sourceTree = "<group>"; };
+		BC66005428698C760076CDF7 /* backgroundMV3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = backgroundMV3.js; path = ../../../dist/backgroundMV3.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,7 @@
 			children = (
 				A688ECBC268EF55100128FDF /* res */,
 				A688ECBD268EF55100128FDF /* popup.js */,
+				BC66005428698C760076CDF7 /* backgroundMV3.js */,
 				A688ECBE268EF55100128FDF /* background.js */,
 				A688ECBF268EF55100128FDF /* options.js */,
 				A688ECC0268EF55100128FDF /* hot-reload.js */,
@@ -346,7 +350,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					A688EC6D268EF55100128FDF = {
 						CreatedOnToolsVersion = 13.0;
@@ -417,6 +421,7 @@
 			files = (
 				A688ECD3268EF55100128FDF /* content.js in Resources */,
 				A688ECCC268EF55100128FDF /* res in Resources */,
+				BC66005528698C760076CDF7 /* backgroundMV3.js in Resources */,
 				A688ECD2268EF55100128FDF /* manifest.json in Resources */,
 				A688ECCF268EF55100128FDF /* options.js in Resources */,
 				A688ECD0268EF55100128FDF /* hot-reload.js in Resources */,
@@ -432,6 +437,7 @@
 			files = (
 				A688ECCB268EF55100128FDF /* content.js in Resources */,
 				A688ECC4268EF55100128FDF /* res in Resources */,
+				BC66005628698C760076CDF7 /* backgroundMV3.js in Resources */,
 				A688ECCA268EF55100128FDF /* manifest.json in Resources */,
 				A688ECC7268EF55100128FDF /* options.js in Resources */,
 				A688ECC8268EF55100128FDF /* hot-reload.js in Resources */,
@@ -646,7 +652,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LGK2XW2SF3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
@@ -673,7 +679,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LGK2XW2SF3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
@@ -704,7 +710,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LGK2XW2SF3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Coil;
@@ -740,7 +746,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W9X45A2YV5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Coil;
@@ -772,6 +778,7 @@
 		A688ECB5268EF55100128FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
@@ -800,6 +807,7 @@
 		A688ECB6268EF55100128FDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
@@ -832,6 +840,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Coil.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
@@ -867,6 +876,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Coil.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
