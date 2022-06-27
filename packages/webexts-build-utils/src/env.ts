@@ -25,6 +25,8 @@ export const TS_LOADER_TRANSPILE_ONLY = Boolean(
   process.env.TS_LOADER_TRANSPILE_ONLY
 )
 
+export const DBG_RELOAD_SERVER = process.env.DBG_RELOAD_SERVER
+
 export const TSCONFIG_DEBUG = process.env.TSCONFIG_DEBUG
 
 export const RELOAD_SERVER_PORT = Number(process.env.RELOAD_SERVER_PORT ?? 4444)
