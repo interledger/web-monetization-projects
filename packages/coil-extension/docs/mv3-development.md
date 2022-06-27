@@ -20,15 +20,15 @@ bug in Safari cross component messaging (since fixed)).
 
 ### Browser Compatibility
 
-| Browser          |  Compatibility |   Last Checked |                                                                          Link/Notes |
-| :--------------- | -------------: | -------------: | ----------------------------------------------------------------------------------: |
-| Chrome           |          Works |                |                                                                                     |
-| Samsung Internet | September 2022 | June 13th 2022 |                                                                                     |
-| Safari           |        Unknown |                |                                                                                     |
-| Edge             |        Unknown |                |                                                                                     |
-| Opera            |        Unknown |                |                                                                                     |
-| Firefox          |    Not Working |      June 27th | https://blog.mozilla.org/addons/2022/05/18/manifest-v3-in-firefox-recap-next-steps/ |
-| Firefox Nightly  |        Working | June 27th 2022 |                                                                                     |
+| Browser          |      Compatibility |   Last Checked |                                                                          Link/Notes |
+| :--------------- | -----------------: | -------------: | ----------------------------------------------------------------------------------: |
+| Chrome           |            Working |                |                                                                                     |
+| Samsung Internet | ETA September 2022 | June 13th 2022 |                                                                                     |
+| Safari           |            Working |                |                                                                                     |
+| Edge             |            Unknown |                |                                                                                     |
+| Opera            |            Unknown |                |                                                                                     |
+| Firefox          |        Not Working |      June 27th | https://blog.mozilla.org/addons/2022/05/18/manifest-v3-in-firefox-recap-next-steps/ |
+| Firefox Nightly  |            Working | June 27th 2022 |                                                                                     |
 
 ### Development notes
 
@@ -36,6 +36,15 @@ To build for MV3, just export a truthy `MV3` env value and build the extension a
 
 ```bash
 MV3=1 yarn dev-chrome-prod # or yarn dev-firefox-prod
+```
+
+#### Safari notes
+
+The reloader is not needed and will not work because `chrome.runtime.reload` will just reload from the shell app.
+To get reload on save working with safari:
+
+```bash
+AFTER_DONE_SHELL_CMD="./scripts/build-safari.sh" MV3=true yarn dev-chrome-prod
 ```
 
 #### Firefox notes
