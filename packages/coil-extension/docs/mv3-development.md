@@ -52,6 +52,9 @@ There are 2 settings that must be configured in `about:config` first:
 You must check the id of the loaded extension and then look in the service workers section to `inspect`
 ![mv3-firefox-service-workers.png](images/mv3-firefox-service-workers.png)
 
+The reloader doesn't seem to work with Firefox because each time the extension is reloaded a new service
+worker id is assigned in the debugger, e.g. `about:devtools-toolbox?id=b8f92339-f8c3-40cc-b551-cb2705e7ebce&type=worker`
+
 #### Starting/Stopping service workers in Chrome
 
 Check the id of the extension and look for it in the list of service workers
