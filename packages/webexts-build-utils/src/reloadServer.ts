@@ -4,9 +4,9 @@ import * as crypto from 'crypto'
 import * as webpack from 'webpack'
 import ws from 'ws'
 
-import { RELOAD_SERVER_PORT } from './env'
+import { DBG_RELOAD_SERVER, RELOAD_SERVER_PORT } from './env'
 
-const dbg = process.env.DBG_RELOAD_SERVER
+const dbg = DBG_RELOAD_SERVER
   ? // eslint-disable-next-line no-console
     console.log.bind(console, 'ReloadServerPlugin: ')
   : // eslint-disable-next-line @typescript-eslint/no-empty-function

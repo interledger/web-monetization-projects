@@ -15,8 +15,8 @@ background pages)
 In Google's version of MV3 (likely to win out), the background page is replaced
 with a [service worker](https://w3c.github.io/ServiceWorker/) which no longer includes
 localStorage which the coil extension makes extensive use of, for persisting state
-and communicating between components (using storage event, a workaround for a a bug in
-early implementations of Web Extensions in safari).
+and communicating between components (using the `storage` event, a workaround for a
+bug in early implementations of Web Extensions in Safari).
 
 ### Browser Compatibility
 
@@ -35,10 +35,24 @@ early implementations of Web Extensions in safari).
 To build for MV3, just export a truthy `MV3` env value and build the extension as normal:
 
 ```bash
-MV3=1 yarn dev-chrome-prod
+MV3=1 yarn dev-chrome-prod # or yarn dev-firefox-prod
 ```
 
-#### Starting/Stopping service workers
+#### Firefox notes
+
+As of the time of writing, I could only get MV3 to work in FF nightly (103.0a1 (2022-06-26) (64-bit)
+
+There are 2 settings that must be configured in `about:config` first:
+
+- `extensions.manifestV3.enabled`
+  - ![images/mv3-about-config-extensions-mv3-enabled.png](images/mv3-about-config-extensions-mv3-enabled.png)
+- `extensions.backgroundServiceWorker.enabled`
+  - ![mv3-extensions-background-service-worker-enabled.png](images/mv3-extensions-background-service-worker-enabled.png)
+
+You must check the id of the loaded extension and then look in the service workers section to `inspect`
+![mv3-firefox-service-workers.png](images/mv3-firefox-service-workers.png)
+
+#### Starting/Stopping service workers in Chrome
 
 Check the id of the extension and look for it in the list of service workers
 at `chrome://serviceworker-internals/`. From there you can see the status/logs
