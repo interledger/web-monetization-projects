@@ -14,9 +14,9 @@ background pages)
 
 In Google's version of MV3 (likely to win out), the background page is replaced
 with a [service worker](https://w3c.github.io/ServiceWorker/) which no longer includes
-localStorage which the coil extension makes extensive use of, for persisting state
-and communicating between components (using the `storage` event, a workaround for a
-bug in early implementations of Web Extensions in Safari).
+localStorage. The coil extension makes extensive use of it, for persisting state
+and communicating between components (via the `storage` event, a workaround for a
+bug in Safari cross component messaging (since fixed)).
 
 ### Browser Compatibility
 
