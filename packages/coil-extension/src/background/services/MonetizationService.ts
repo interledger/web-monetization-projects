@@ -9,7 +9,6 @@ import {
   PauseWebMonetization,
   ResumeWebMonetization,
   SetMonetizationState,
-  SetStreamControls,
   StartWebMonetization,
   StopWebMonetization
 } from '../../types/commands'

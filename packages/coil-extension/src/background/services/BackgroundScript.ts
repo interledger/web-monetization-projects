@@ -331,9 +331,6 @@ export class BackgroundScript {
       case 'isRateLimited':
         sendResponse(await this.isRateLimited())
         break
-      case 'setStreamControls':
-        sendResponse(this.monetization.setStreamControls(request, sender))
-        break
       case 'contentScriptInit':
         sendResponse(await this.contentScriptInit(request, sender))
         break
