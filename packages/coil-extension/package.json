@@ -27,7 +27,7 @@
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",
     "clean:build": "rimraf build",
-    "dev": "WEXT_BUILD_CONFIG_IS_LOGGING_ENABLED=true WEXT_MANIFEST_SUFFIX=Dev TSCONFIG_DEBUG=true TS_LOADER_TRANSPILE_ONLY=true LIVE_RELOAD=true yarn",
+    "dev": "WEXT_BUILD_CONFIG_LOGGING_ENABLED=true WEXT_MANIFEST_SUFFIX=Dev TSCONFIG_DEBUG=true TS_LOADER_TRANSPILE_ONLY=true LIVE_RELOAD=true yarn",
     "dev-chrome-prod": "yarn dev build-prod chrome --watch",
     "dev-chrome-staging": "yarn dev build-staging chrome --watch",
     "dev-edge-prod": "yarn dev build-prod edge --watch",

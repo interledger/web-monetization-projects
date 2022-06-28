@@ -3,6 +3,6 @@ export interface BuildConfig extends Record<string, unknown> {
   extensionBuildString?: string
   extensionPopupFooterString?: string
   isCI?: boolean
-  isLoggingEnabled?: boolean
+  loggingEnabled?: boolean
   useLocalMockServer?: boolean
 }

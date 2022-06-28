@@ -3,7 +3,7 @@ import { Container } from 'inversify'
 
 import { API, BUILD_CONFIG, COIL_DOMAIN, VERSION } from '../webpackDefines'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
-import { loggingEnabled } from '../util/isLoggingEnabled'
+import { isLoggingEnabled } from '../util/isLoggingEnabled'
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { configureContainer } from './di/configureContainer'
@@ -32,6 +32,7 @@ window.clearPopupRouteState = prefixClearer('popup-route:')
 window.clearTokens = prefixClearer('anonymous_token:')
 
 async function main() {
+  const loggingEnabled = await isLoggingEnabled(BUILD_CONFIG)
   if (loggingEnabled) {
     console.log('Loading Coil extension:', JSON.stringify(VERSION))
   }
