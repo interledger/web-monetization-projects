@@ -287,7 +287,9 @@ class MockRuntime extends EventEmitter implements PopupRuntime {
     this.removeListener('message', func)
   }
 
-  sendMessage = argsLogger('sendMessage stub: ')
+  sendMessage = async (...args: unknown[]) => {
+    console.log('sendMessage stub', ...args)
+  }
 
   triggerOnMessage(message: any) {
     this.emit('message', message)
