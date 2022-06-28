@@ -49,8 +49,6 @@ export class BackgroundScript {
     private spspState: SPSPState,
     private tabStates: TabStates,
     private storage: StorageService,
-    @inject(tokens.LocalStorageProxy)
-    private store: LocalStorageProxy,
     private auth: AuthService,
     private monetization: MonetizationService,
     private tippingService: TippingService,
@@ -332,9 +330,6 @@ export class BackgroundScript {
         break
       case 'isRateLimited':
         sendResponse(await this.isRateLimited())
-        break
-      case 'setStreamControls':
-        sendResponse(this.monetization.setStreamControls(request, sender))
         break
       case 'contentScriptInit':
         sendResponse(await this.contentScriptInit(request, sender))

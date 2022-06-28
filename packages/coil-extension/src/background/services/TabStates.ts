@@ -91,8 +91,6 @@ export class TabStates {
 
   private makeDefault() {
     const state: TabState = {
-      playState: 'playing',
-      stickyState: 'auto',
       frameStates: {
         [0]: this.makeFrameStateDefault()
       }
@@ -267,11 +265,7 @@ export class TabStates {
         if (hasStream) {
           this.setIcon(tabId, 'monetized')
           if (isStreaming) {
-            const state =
-              tabState.playState === 'playing'
-                ? 'streaming'
-                : 'streaming-paused'
-            this.setIcon(tabId, state)
+            this.setIcon(tabId, 'streaming')
           } else {
             // Need to check if the user is able to tip with the new ui.
             // This assumes that the site is monetized and
@@ -299,14 +293,6 @@ export class TabStates {
     state && frameStates.find(f => isFrameMonetized(f))
       ? this.storage.set('monetized', true)
       : this.storage.remove('monetized')
-
-    if (state && state.playState && state.stickyState) {
-      this.store.playState = state.playState
-      this.store.stickyState = state.stickyState
-    } else if (state) {
-      delete this.store.playState
-      delete this.store.stickyState
-    }
 
     if (this.buildConfig.extensionBuildString) {
       this.store.extensionBuildString = this.buildConfig.extensionBuildString

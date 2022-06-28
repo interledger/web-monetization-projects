@@ -123,8 +123,6 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
     user: null,
     adapted: null,
     monetized: null,
-    stickyState: null,
-    playState: null,
     monetizedTotal: null,
     coilSite: null,
     'popup-route:last': null,
@@ -180,8 +178,6 @@ const startDiscovering = mockState({
 const payingYouTube = mockState({
   monetized: true,
   monetizedTotal: 2326667,
-  playState: 'playing',
-  stickyState: 'auto',
   user: user,
   validToken: true,
   adapted: true
@@ -190,8 +186,6 @@ const payingYouTube = mockState({
 const payingTwitch = mockState({
   monetized: true,
   monetizedTotal: 5910000,
-  playState: 'playing',
-  stickyState: 'auto',
   user: user,
   validToken: true,
   adapted: true
@@ -202,8 +196,6 @@ const lastTipping = mockState({
   'popup-route:tipping-shown': true,
   monetized: true,
   monetizedTotal: 5910000,
-  playState: 'playing',
-  stickyState: 'auto',
   user: tipUserNewUi,
   validToken: true,
   adapted: true
@@ -214,7 +206,6 @@ const lastStreaming = mockState({
   'popup-route:tipping-shown': false,
   monetized: true,
   monetizedTotal: 5910000,
-  stickyState: 'auto',
   user: tipUserNewUi,
   validToken: true,
   adapted: true
@@ -225,7 +216,6 @@ const lastStreamingWithTip = mockState({
   'popup-route:tipping-shown': true,
   monetized: true,
   monetizedTotal: 5910000,
-  stickyState: 'auto',
   user: tipUserNewUi,
   validToken: true,
   adapted: true
