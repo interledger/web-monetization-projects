@@ -21,6 +21,15 @@ export interface ManifestV2 extends Manifest {
   background?: {
     page?: string
   }
+  content_scripts?: [
+    {
+      matches: string[]
+      js: string[]
+      match_about_blank: boolean
+      all_frames: boolean
+      run_at: 'document_start' | string
+    }
+  ]
   browser_action: {
     default_icon: string
     default_popup: string

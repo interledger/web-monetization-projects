@@ -11,7 +11,6 @@ import { ContentRuntime } from '../types/ContentRunTime'
 import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { isMonetizationAllowed } from '../util/isMonetizationAllowed'
 import { notNullOrUndef } from '../../util/nullables'
-import { loggingEnabled } from '../../util/isLoggingEnabled'
 
 @injectable()
 export class Frames {
@@ -28,6 +27,8 @@ export class Frames {
     private window: Window,
     @inject(tokens.ContentRuntime)
     private runtime: ContentRuntime,
+    @inject(tokens.LoggingEnabled)
+    private loggingEnabled: boolean,
     @inject(tokens.CoilDomain) private coilDomain: string
   ) {
     this.isTopFrame = window === window.top
@@ -182,7 +183,7 @@ export class Frames {
       queued.resolve(data.frame)
     } else {
       // eslint-disable-next-line no-console
-      if (loggingEnabled) {
+      if (this.loggingEnabled) {
         console.warn('unknown correlation id/frame', data)
       }
     }
