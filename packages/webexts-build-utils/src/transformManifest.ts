@@ -43,6 +43,17 @@ function convertToMV3(v2: ManifestV2) {
     host_permissions.push('*://*/*')
   }
 
+  // Add storage permission
+  if (!v3.permissions.includes('storage')) {
+    v3.permissions.push('storage')
+  }
+
+  // Replace content.js with contentMV3.js
+  assert.ok(v3.content_scripts)
+  const cs = v3.content_scripts.find(cs => cs.js.includes('content.js'))
+  assert.ok(cs)
+  cs.js = cs.js.map(fn => (fn === 'content.js' ? 'contentMV3.js' : fn))
+
   return v3
 }
 
