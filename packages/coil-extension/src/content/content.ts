@@ -12,10 +12,10 @@ import { isLoggingEnabled } from '../util/isLoggingEnabled'
 
 import { ContentScript } from './services/ContentScript'
 
-function configureContainer(container: Container) {
-  container
-    .bind(tokens.LoggingEnabled)
-    .toConstantValue(isLoggingEnabled(BUILD_CONFIG))
+async function configureContainer(container: Container) {
+  container.bind(tokens.LoggingEnabled).toDynamicValue(async () => {
+    return isLoggingEnabled(BUILD_CONFIG)
+  })
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -30,13 +30,16 @@ function configureContainer(container: Container) {
   container.bind(Document).toConstantValue(document)
 }
 
-function main() {
+async function main() {
   const container = new Container({
     defaultScope: 'Singleton',
     autoBindInjectable: true
   })
   inversifyModule(GlobalModule)
-  configureContainer(container)
-  container.get(ContentScript).init()
+  await configureContainer(container)
+  const contentScript = await container.getAsync(ContentScript)
+  contentScript.init()
 }
-main()
+
+// eslint-disable-next-line no-console
+main().catch(console.error)
