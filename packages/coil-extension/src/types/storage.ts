@@ -1,5 +1,4 @@
 import { User } from './user'
-import { PlayOrPauseState, StickyState } from './streamControls'
 
 export const STORAGE_KEY = {
   // BACKGROUND/POPUP
@@ -35,9 +34,6 @@ export interface LocalStorageProxy {
   adapted?: boolean | null
   monetized?: boolean | null
   coilSite?: string | null
-
-  stickyState?: StickyState | null
-  playState?: PlayOrPauseState | null
 
   monetizedTotal?: number | null
 

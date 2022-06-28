@@ -296,32 +296,6 @@ export class MonetizationService {
     return true
   }
 
-  setStreamControls(request: SetStreamControls, _: MessageSender) {
-    const tabId = this.activeTab
-    this.log('setStreamControls', request)
-
-    this.tabStates.set(tabId, {
-      stickyState: request.data.sticky,
-      playState: request.data.play
-    })
-    if (request.data.action === 'togglePlayOrPause') {
-      const tabState = this.tabStates.get(tabId)
-      const framesForTab = Object.keys(tabState.frameStates).map(Number)
-      this.log({ framesForTab })
-      if (request.data.play === 'paused') {
-        framesForTab.forEach(frameId => {
-          this.doPauseWebMonetization({ frameId, tabId })
-        })
-      } else if (request.data.play === 'playing') {
-        framesForTab.forEach(frameId => {
-          this.doResumeWebMonetization({ frameId, tabId })
-        })
-      }
-    }
-    this.tabStates.reloadTabState({ from: request.command })
-    return true
-  }
-
   private doResumeWebMonetization(frame: FrameSpec, requestIds?: string[]) {
     this.activeTabLogger.log(
       'doResume ' + JSON.stringify({ frame, requestIds }),
@@ -338,9 +312,6 @@ export class MonetizationService {
   }
 
   pauseWebMonetization(request: PauseWebMonetization, sender: MessageSender) {
-    if (this.tabStates.get(getTab(sender)).stickyState === 'sticky') {
-      return
-    }
     return this.doPauseWebMonetization(
       getFrameSpec(sender),
       request.data.requestIds
@@ -350,9 +321,6 @@ export class MonetizationService {
   resumeWebMonetization(request: ResumeWebMonetization, sender: MessageSender) {
     // Note that this gets sent regardless of whether actually monetized or not
     // it's more like 'set tab interactive'
-    if (this.tabStates.get(getTab(sender)).playState === 'paused') {
-      return
-    }
     return this.doResumeWebMonetization(
       getFrameSpec(sender),
       request.data.requestIds

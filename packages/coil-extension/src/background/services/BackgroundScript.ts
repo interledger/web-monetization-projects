@@ -49,8 +49,6 @@ export class BackgroundScript {
     private spspState: SPSPState,
     private tabStates: TabStates,
     private storage: StorageService,
-    @inject(tokens.LocalStorageProxy)
-    private store: LocalStorageProxy,
     private auth: AuthService,
     private monetization: MonetizationService,
     private tippingService: TippingService,

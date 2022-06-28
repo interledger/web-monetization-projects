@@ -1,5 +1,10 @@
 import { injectable, unmanaged } from '@dier-makr/annotations'
 
+export type SyncStorage = Pick<
+  Storage,
+  'getItem' | 'setItem' | 'removeItem' | 'clear'
+>
+
 @injectable()
 export class StorageService {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -7,10 +12,7 @@ export class StorageService {
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
     @unmanaged()
-    private storage: Pick<
-      Storage,
-      'getItem' | 'setItem' | 'removeItem' | 'clear'
-    >,
+    private storage: SyncStorage,
     @unmanaged()
     private onChanged?: (key: string) => void
   ) {

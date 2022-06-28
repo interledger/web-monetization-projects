@@ -1,11 +1,6 @@
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
 import { MonetizationState } from '@webmonetization/types'
 
-import {
-  PlayOrPauseState,
-  StickyState,
-  ToggleControlsAction
-} from './streamControls'
 import { FrameSpec } from './FrameSpec'
 
 /**
@@ -19,19 +14,6 @@ export interface LocalStorageUpdate extends Command {
 export interface Command<T = any> {
   command: string
   data?: T
-}
-
-/**
- * popup -> background
- * browser.runtime.sendMessage
- */
-export interface SetStreamControls extends Command {
-  command: 'setStreamControls'
-  data: {
-    sticky: StickyState
-    play: PlayOrPauseState
-    action: ToggleControlsAction
-  }
 }
 
 /**
@@ -189,7 +171,6 @@ export type ToBackgroundMessage =
   | PauseWebMonetization
   | ResumeWebMonetization
   | StopWebMonetization
-  | SetStreamControls
   | LogCommand
   | Logout
   | AdaptedSite

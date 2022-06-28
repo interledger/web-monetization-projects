@@ -1,7 +1,5 @@
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
 
-import { PlayOrPauseState, StickyState } from './streamControls'
-
 export type MonetizationCommand = 'pause' | 'stop' | 'start' | 'resume'
 export const MonetizationStateKey = `monetization-state-` as const
 export type MonetizationStateKeyType = typeof MonetizationStateKey
@@ -66,8 +64,6 @@ export function frameHasRecentPacket(frameState: FrameState) {
 export interface TabState {
   favicon?: string
   coilSite?: string
-  stickyState: StickyState
-  playState: PlayOrPauseState
   iconPrimary?: 'active' | 'inactive' | 'tipping-only'
   iconSecondary?: 'unavailable' | 'streaming' | 'streaming-paused' | null
   frameStates: Record<number, FrameState>
