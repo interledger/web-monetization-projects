@@ -20,7 +20,7 @@ export class MockStore implements TokenStore {
   async iterate(
     fn: (key: string, value: string) => StorableBlindToken | undefined
   ) {
-    for (const key in this.store) {
+    for (const key of Object.keys(this.store)) {
       const result = fn(key, this.store[key])
       if (result) {
         return result
