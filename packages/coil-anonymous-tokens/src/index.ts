@@ -201,8 +201,9 @@ export class AnonymousTokens implements AnonymousTokensService {
   async removeToken(btpToken: string): Promise<void> {
     const anonUserId = this.tokenMap.get(btpToken)
     this.tokenMap.delete(btpToken)
-    if (anonUserId) return this._removeSignedToken(anonUserId)
-    else return Promise.resolve()
+    if (anonUserId) {
+      return this._removeSignedToken(anonUserId)
+    }
   }
 
   private async _removeSignedToken(anonUserId: string): Promise<void> {
