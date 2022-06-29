@@ -49,7 +49,7 @@ export const RouterProvider: React.FC<IRouterProvider> = props => {
   const defaultRoute = showTipping ? ROUTES.tipping : ROUTES.streaming
 
   const lastOrDefaultRoute =
-    storage.get(lastRoute) && storage.get(tippingShown)
+    storage.get(lastRoute) && (storage.get(tippingShown) || !allowTipping)
       ? storage.get(lastRoute)
       : defaultRoute
 
