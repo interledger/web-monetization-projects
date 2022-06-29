@@ -95,15 +95,15 @@ export interface BTPTokenData {
 }
 
 export class AnonymousTokens implements AnonymousTokensService {
-  private redeemerUrl: string
-  private signerUrl: string
+  private readonly redeemerUrl: string
+  private readonly signerUrl: string
   private store: TokenStore
   // Maps btpToken => SignedToken.message
   private tokenMap: Map<string, string> = new Map()
-  private debug: typeof console.log
-  private batchSize: number
+  private readonly debug: typeof console.log
+  private readonly batchSize: number
 
-  private storedTokenCount: number
+  private storedTokenCount = 0
   private _populateTokensPromise: Promise<void> | null = null
 
   constructor({
@@ -118,22 +118,26 @@ export class AnonymousTokens implements AnonymousTokensService {
     this.store = store
     this.debug = debug || function () {}
     this.batchSize = batchSize
-
-    let count = 0
-    this.store.iterate((name: string, _blob: string) => {
-      if (name.startsWith(TOKEN_PREFIX)) count++
-      return undefined
-    })
-    this.storedTokenCount = count
+    void this.getStoredTokenCount()
 
     // TODO: better config management
     initECSettings(h2cParams())
   }
 
+  private async getStoredTokenCount() {
+    let count = 0
+    await this.store.iterate((name: string) => {
+      if (name.startsWith(TOKEN_PREFIX)) count++
+      return undefined
+    })
+    this.storedTokenCount = count
+  }
+
   async getToken(coilAuthToken: string): Promise<string> {
     // When there is only 1 token left, fetch some more in the background.
     if (this.storedTokenCount === 1) {
-      this.populateTokens(coilAuthToken)
+      // noinspection ES6MissingAwait
+      void this.populateTokens(coilAuthToken)
     }
 
     // eslint-disable-next-line no-constant-condition
@@ -275,7 +279,7 @@ export class AnonymousTokens implements AnonymousTokensService {
   ) {
     for (let i = 0; i < tokens.length; ++i) {
       const encoded = getTokenEncoding(tokens[i], signedPoints[i])
-      this.store.setItem(
+      void this.store.setItem(
         TOKEN_PREFIX + tokenName(tokens[i]),
         JSON.stringify(encoded)
       )
