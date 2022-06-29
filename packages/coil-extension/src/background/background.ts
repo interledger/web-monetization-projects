@@ -1,9 +1,11 @@
 import '@abraham/reflection'
 import { Container } from 'inversify'
+import { TokenStore } from '@coil/anonymous-tokens'
 
 import { API, BUILD_CONFIG, COIL_DOMAIN, VERSION } from '../webpackDefines'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
 import { isLoggingEnabled } from '../util/isLoggingEnabled'
+import * as tokens from '../types/tokens'
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { configureContainer } from './di/configureContainer'
@@ -29,11 +31,11 @@ function prefixClearer(prefix: string) {
 }
 
 window.clearPopupRouteState = prefixClearer('popup-route:')
-window.clearTokens = prefixClearer('anonymous_token:')
 
 async function main() {
   const loggingEnabled = await isLoggingEnabled(BUILD_CONFIG)
   if (loggingEnabled) {
+    // eslint-disable-next-line no-console
     console.log('Loading Coil extension:', JSON.stringify(VERSION))
   }
   decorateThirdPartyClasses()
@@ -69,7 +71,13 @@ async function main() {
     }
   })
   window.bg = await container.getAsync(BackgroundScript)
+  window.clearTokens = () => {
+    const store = container.get<TokenStore>(tokens.TokenStore)
+    store.clear()
+  }
+  // noinspection ES6MissingAwait
   void window.bg.run()
 }
 
+// eslint-disable-next-line no-console
 main().catch(console.error)

@@ -1,30 +1,27 @@
 import { StorableBlindToken } from '@coil/privacypass-sjcl'
 
-interface StringMap {
-  [key: string]: string
-}
+import { TokenStore } from '../../src'
 
-export class MockStore {
-  public store: StringMap = {}
+export class MockStore implements TokenStore {
+  private store: Record<string, string> = {}
 
-  public async setItem(key: string, value: string) {
+  async clear() {
+    this.store = {}
+  }
+
+  async setItem(key: string, value: string) {
     return (this.store[key] = value)
   }
 
-  public async removeItem(key: string) {
+  async removeItem(key: string) {
     delete this.store[key]
   }
 
-  public async iterate(
-    fn: (
-      value: string,
-      key: string,
-      i: number
-    ) => StorableBlindToken | undefined
+  async iterate(
+    fn: (key: string, value: string) => StorableBlindToken | undefined
   ) {
-    let i = 0
-    for (const key in this.store) {
-      const result = fn(this.store[key], key, i++)
+    for (const key of Object.keys(this.store)) {
+      const result = fn(key, this.store[key])
       if (result) {
         return result
       }

@@ -1897,6 +1897,7 @@ __metadata:
     get-port: "npm:^5.1.1"
     http-server: "npm:14.1.1"
     husky: "npm:8.0.1"
+    idb-keyval: "npm:^6.2.0"
     ilp-plugin-btp: "npm:1.5.0"
     ilp-protocol-stream: "npm:2.7.1"
     inversify: "npm:^6.0.0"
@@ -14041,6 +14042,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"idb-keyval@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "idb-keyval@npm:6.2.0"
+  dependencies:
+    safari-14-idb-fix: "npm:^3.0.0"
+  checksum: 3de7d66fc79c0c62a778d3f1f6a0af06e9b1a04fd3cc120a0f2cc06a74bb6a2adfe7e484e01d778df5c92e7a00dea37a3bb9d2c6894426b97f7da02b63946e4a
+  languageName: node
+  linkType: hard
+
 "ieee754@npm:^1.1.13, ieee754@npm:^1.2.1":
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
@@ -20892,6 +20902,13 @@ __metadata:
   dependencies:
     tslib: "npm:^2.1.0"
   checksum: dcb9d0e21cd80ff48b8bb105819aa1f6860943c92023e46c14437c28c18734aa8bfa7019d0cf70731dfe34ea103a8496daf1df5a25d86f56fc69eca29776e542
+  languageName: node
+  linkType: hard
+
+"safari-14-idb-fix@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "safari-14-idb-fix@npm:3.0.0"
+  checksum: 5f1167e068216dc385563c60528dfc3f0790691f33ead4dbc58a7b366f516eaad0fd953b7607b1073e8a11b352cafb94cdcbc9721613a5cbd7121108d7a45e09
   languageName: node
   linkType: hard
 
