@@ -154,13 +154,7 @@ export class BackgroundScript {
         const close: ClosePopup = {
           command: 'closePopup'
         }
-        // Storage events are only fired if the value actually changes, not
-        // on every localStorage `setItem` call. So we set the first 16
-        // characters of the stored value to the current time.
-        this.storage.setRaw(
-          '$$popupCommand',
-          Date.now().toString().padStart(16, '0') + JSON.stringify(close)
-        )
+        void this.api.runtime.sendMessage(close)
         this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
           if (this.api.runtime.lastError) {
             // In this case we clicked on a non-active tab as the focusing
