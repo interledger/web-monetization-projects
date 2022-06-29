@@ -1874,7 +1874,7 @@ __metadata:
     "@wext/shipit": "npm:0.2.1"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    addons-linter: "npm:5.9.0"
+    addons-linter: "npm:5.10.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
@@ -3455,7 +3455,7 @@ __metadata:
     "@webmonetization/wext": "npm:^0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.3"
     JSON2016: "npm:1.0.0"
-    addons-linter: "npm:5.9.0"
+    addons-linter: "npm:5.10.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
@@ -3987,10 +3987,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:5.1.1":
-  version: 5.1.1
-  resolution: "@mdn/browser-compat-data@npm:5.1.1"
-  checksum: 15d9950af0e10231811f374087dc78fa75096601ad8f0d9db635b0085bf10daa4b87bff62f3a290d4525c7bf661eb1e069f18fce19454b5d55b97a6911ce5cab
+"@mdn/browser-compat-data@npm:5.1.2":
+  version: 5.1.2
+  resolution: "@mdn/browser-compat-data@npm:5.1.2"
+  checksum: da02680557f26f6858995ab1dcab9e1545f233246b6d55f070c066788c434e099f10ce725d57ddd21494094e4dfb73354981283a31694767dff68d7751067286
   languageName: node
   linkType: hard
 
@@ -5231,7 +5231,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/yauzl@npm:2.9.2, @types/yauzl@npm:^2.9.1":
+"@types/yauzl@npm:2.10.0, @types/yauzl@npm:^2.9.1":
+  version: 2.10.0
+  resolution: "@types/yauzl@npm:2.10.0"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 1ffd30f5095d901c8f9145398b9a26483b71fac13b49c887a5366063a91acf644bc92c83a5b832c3ec7393020df9af076b621c02cb7526e47ffe07ed50a45bf6
+  languageName: node
+  linkType: hard
+
+"@types/yauzl@npm:2.9.2":
   version: 2.9.2
   resolution: "@types/yauzl@npm:2.9.2"
   dependencies:
@@ -6508,17 +6517,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:5.9.0":
-  version: 5.9.0
-  resolution: "addons-linter@npm:5.9.0"
+"addons-linter@npm:5.10.0":
+  version: 5.10.0
+  resolution: "addons-linter@npm:5.10.0"
   dependencies:
-    "@mdn/browser-compat-data": "npm:5.1.1"
+    "@mdn/browser-compat-data": "npm:5.1.2"
     addons-moz-compare: "npm:1.2.0"
-    addons-scanner-utils: "npm:7.0.0"
+    addons-scanner-utils: "npm:7.1.0"
     ajv: "npm:8.11.0"
     ajv-merge-patch: "npm:5.0.1"
     chalk: "npm:4.1.2"
-    cheerio: "npm:1.0.0-rc.11"
+    cheerio: "npm:1.0.0-rc.12"
     columnify: "npm:1.6.0"
     common-tags: "npm:1.8.2"
     deepmerge: "npm:4.2.2"
@@ -6533,7 +6542,7 @@ __metadata:
     is-mergeable-object: "npm:1.1.1"
     jed: "npm:1.1.1"
     os-locale: "npm:5.0.0"
-    pino: "npm:8.0.0"
+    pino: "npm:8.1.0"
     postcss: "npm:8.4.14"
     relaxed-json: "npm:1.0.3"
     semver: "npm:7.3.7"
@@ -6545,7 +6554,7 @@ __metadata:
     yauzl: "npm:2.10.0"
   bin:
     addons-linter: bin/addons-linter
-  checksum: 18a7e8fd68c6d8ddaed9e39665bb1ed0a5d820481edcfe442e19c1e66ea850594f08dfbf0f9b2087161b64e7955621b98bbdd0a5cedb57c92565eca8a04cdb8e
+  checksum: a9dfa291df5649ba464acafb18e3eed6d5c5ffa250c013bff4d7844806a9de725e853b8676f442cfd3800101ff2c23afe40e96f3f97a0cc3c86ecf3aa41c49df
   languageName: node
   linkType: hard
 
@@ -6576,11 +6585,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-scanner-utils@npm:7.0.0":
-  version: 7.0.0
-  resolution: "addons-scanner-utils@npm:7.0.0"
+"addons-scanner-utils@npm:7.1.0":
+  version: 7.1.0
+  resolution: "addons-scanner-utils@npm:7.1.0"
   dependencies:
-    "@types/yauzl": "npm:2.9.2"
+    "@types/yauzl": "npm:2.10.0"
     common-tags: "npm:1.8.2"
     first-chunk-stream: "npm:3.0.0"
     strip-bom-stream: "npm:4.0.0"
@@ -6588,11 +6597,22 @@ __metadata:
     yauzl: "npm:2.10.0"
   peerDependencies:
     "@types/download": 8.0.1
-    body-parser: 1.19.2
+    body-parser: 1.20.0
     download: 8.0.0
-    express: 4.17.3
+    express: 4.18.1
     safe-compare: 1.1.4
-  checksum: 595e1ac74a4be1ce7c233fa506a3057114a60daeafaed2923fd251de91a47031b6679ef49744884de697c3403ec7a5da7eda06f0d559ff5ba1f47bfadda036af
+  peerDependenciesMeta:
+    "@types/download":
+      optional: true
+    body-parser:
+      optional: true
+    download:
+      optional: true
+    express:
+      optional: true
+    safe-compare:
+      optional: true
+  checksum: 803fdd52de084aec6eed6e79d66b6368bd65254d94c940f6d3dc712644c0634fb265dcdbc04913ee722ded6e6ead023b7c9ccd8b5d32e6f3eb2d62167031fa4f
   languageName: node
   linkType: hard
 
@@ -8620,9 +8640,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cheerio@npm:1.0.0-rc.11":
-  version: 1.0.0-rc.11
-  resolution: "cheerio@npm:1.0.0-rc.11"
+"cheerio@npm:1.0.0-rc.12":
+  version: 1.0.0-rc.12
+  resolution: "cheerio@npm:1.0.0-rc.12"
   dependencies:
     cheerio-select: "npm:^2.1.0"
     dom-serializer: "npm:^2.0.0"
@@ -8631,8 +8651,7 @@ __metadata:
     htmlparser2: "npm:^8.0.1"
     parse5: "npm:^7.0.0"
     parse5-htmlparser2-tree-adapter: "npm:^7.0.0"
-    tslib: "npm:^2.4.0"
-  checksum: 2e437e8320077df9c533e08ebe4aa120a6b15fdaef8651bbdb70539855497f53e7d61a379cf12db004927b53f7993d29ae3a69113e4136e435d9129f26019859
+  checksum: 6a6915b707ff93c911584998aa8ffc0a5ce1d6156d4ce8229e1fee5891263de1af75ac7daf3c0bbda79492297cfbb39a72a98af6226dfed3d69420a64a48e1b1
   languageName: node
   linkType: hard
 
@@ -12095,10 +12114,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-redact@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "fast-redact@npm:3.0.0"
-  checksum: 23b3b116a78d777e5383a35e206be56b573071f826b95cdaeccd84bcb9dcb767c4d3a90f2adf1e6f80a65df2b577bf67d9d5e48cabf16703b8d85df231cfce4d
+"fast-redact@npm:^3.0.0, fast-redact@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "fast-redact@npm:3.1.1"
+  checksum: 7c02583bb603988b26438649672f32aede025d29e242b5a5df44b9121c82a7925058c664ba42a06a108c69f5be2a74641c90c401cc892be5e317b34a9e03c6ca
   languageName: node
   linkType: hard
 
@@ -18383,10 +18402,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"on-exit-leak-free@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "on-exit-leak-free@npm:1.0.0"
-  checksum: 627b70e3f1af8c207ce25919e55c9ddaa5cfb4c0fcf59eae8719380ad034bc8c1252c52f0acbfcc2edf73f6e052dd976ca9e01435ca413d76624ec9cb0626ef7
+"on-exit-leak-free@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "on-exit-leak-free@npm:2.1.0"
+  checksum: b564f515f00c591ad7fa2afeabf57dd1ab9f27c0b9e5a523ed206dc3e2404f615516d7575cb187ade0cebd8409ce00c2046ad6755c6ad42f892d222bb1cc9fbe
   languageName: node
   linkType: hard
 
@@ -19187,6 +19206,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pino-abstract-transport@npm:v1.0.0":
+  version: 1.0.0
+  resolution: "pino-abstract-transport@npm:1.0.0"
+  dependencies:
+    readable-stream: "npm:^4.0.0"
+    split2: "npm:^4.0.0"
+  checksum: f6437abcc28f4d6f6e2c82361f50393c73c568647d591abfbbfb5eacc408f7a983425e4250edf7459790ef941409e19fcad7e2d10a914f3d28a13f68223fc26a
+  languageName: node
+  linkType: hard
+
 "pino-std-serializers@npm:^2.3.0, pino-std-serializers@npm:^2.4.2":
   version: 2.5.0
   resolution: "pino-std-serializers@npm:2.5.0"
@@ -19244,24 +19273,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino@npm:8.0.0":
-  version: 8.0.0
-  resolution: "pino@npm:8.0.0"
+"pino@npm:8.1.0":
+  version: 8.1.0
+  resolution: "pino@npm:8.1.0"
   dependencies:
     atomic-sleep: "npm:^1.0.0"
-    fast-redact: "npm:^3.0.0"
-    on-exit-leak-free: "npm:^1.0.0"
-    pino-abstract-transport: "npm:v0.5.0"
+    fast-redact: "npm:^3.1.1"
+    on-exit-leak-free: "npm:^2.1.0"
+    pino-abstract-transport: "npm:v1.0.0"
     pino-std-serializers: "npm:^5.0.0"
     process-warning: "npm:^2.0.0"
     quick-format-unescaped: "npm:^4.0.3"
     real-require: "npm:^0.1.0"
-    safe-stable-stringify: "npm:^2.1.0"
+    safe-stable-stringify: "npm:^2.3.1"
     sonic-boom: "npm:^3.0.0"
     thread-stream: "npm:^1.0.0"
   bin:
     pino: bin.js
-  checksum: e0404938a4dc1ead75a7926d5c98ca0231fa03e969d2045b15edbcb36d32a8514aaf4a794b6819663ee9d27f1044e9bbb64208fd3cf6c6d25cd921771e283a85
+  checksum: 6fa99db59f25ac9f5c408ddfff65d0d76594c4d58371d91d8737a463258d6632cf2cafe1ea810cec8365db6403ef0b0c5983c84ff281b2785a78d52e372baf7c
   languageName: node
   linkType: hard
 
@@ -20124,6 +20153,15 @@ __metadata:
     string_decoder: "npm:~1.1.1"
     util-deprecate: "npm:~1.0.1"
   checksum: 23c757366d6e0dd9115660c7313d10fc6a57fa50f5a62d1fde329cee13d4bc0de7f3db6d2f25722b1bd98171abe3d4bea626545556b4684864e20ecc70a2a57d
+  languageName: node
+  linkType: hard
+
+"readable-stream@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "readable-stream@npm:4.0.0"
+  dependencies:
+    abort-controller: "npm:^3.0.0"
+  checksum: a8588d611032f95f001aef2d937ce13895ba9def7ca4fb5cf984ac5a8915665b10553b92a6f3f3851c01823564dc8b9a4d8a2cc9c3842e33c8ecd6fa0f077fb5
   languageName: node
   linkType: hard
 
