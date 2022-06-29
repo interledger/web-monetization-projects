@@ -14,7 +14,11 @@ export class StorageService {
     @unmanaged()
     private storage: SyncStorage,
     @unmanaged()
-    private onChanged?: (key: string) => void
+    private onChanged?: (
+      key: string,
+      value: string | null,
+      encoded: string | null
+    ) => void
   ) {
     this.cache = new Map()
   }
@@ -23,13 +27,17 @@ export class StorageService {
   set(key: string, value: any) {
     const encoded = JSON.stringify(value)
     this.storage.setItem(key, encoded)
-    this.notifyChanged(key, value)
+    this.notifyChanged(key, value, encoded)
     this.cache.set(key, value)
   }
 
-  private notifyChanged(key: string, value: string | null) {
+  private notifyChanged(
+    key: string,
+    value: string | null,
+    encoded: string | null
+  ) {
     if (this.onChanged && (!value || value !== this.cache.get(key))) {
-      this.onChanged(key)
+      this.onChanged(key, value, encoded)
     }
   }
 
@@ -49,7 +57,7 @@ export class StorageService {
 
   setRaw(key: string, value: string) {
     this.storage.setItem(key, value)
-    this.notifyChanged(key, value)
+    this.notifyChanged(key, value, value)
     this.cache.set(key, value)
   }
 
@@ -59,7 +67,7 @@ export class StorageService {
 
   remove(key: string) {
     this.storage.removeItem(key)
-    this.notifyChanged(key, null)
+    this.notifyChanged(key, null, null)
     this.cache.delete(key)
   }
 

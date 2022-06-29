@@ -6,9 +6,13 @@ import { FrameSpec } from './FrameSpec'
 /**
  * browser.runtime.sendMessage
  */
-export interface LocalStorageUpdate extends Command {
-  command: 'localStorageUpdate'
-  key: string
+export interface StoreUpdate extends Command {
+  command: 'storeUpdate'
+  data: {
+    key: string
+    valueUnencoded: unknown
+    value: string | null
+  }
 }
 
 export interface Command<T = any> {
@@ -455,4 +459,4 @@ export type ToContentMessage =
   | LogInActiveTab
   | SPSPRequestEvent
 
-export type ToPopupMessage = LocalStorageUpdate | ClosePopup
+export type ToPopupMessage = StoreUpdate | ClosePopup

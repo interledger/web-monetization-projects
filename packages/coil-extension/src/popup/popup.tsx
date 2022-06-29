@@ -17,11 +17,6 @@ export function run() {
   const rootEl = document.getElementById('root')
 
   if (isExtension) {
-    API.runtime.onMessage.addListener((message: ToPopupMessage) => {
-      if (message.command === 'closePopup') {
-        window.close()
-      }
-    })
     const host: PopupHost = {
       ...defaultPopupHost,
       runtime: {
@@ -29,12 +24,16 @@ export function run() {
         sendMessage: API.runtime.sendMessage.bind(API.runtime)
       }
     }
-    window.addEventListener('storage', e => {
-      const event: StorageEventPartial = {
-        key: e.key,
-        newValue: e.newValue
+    API.runtime.onMessage.addListener((message: ToPopupMessage) => {
+      if (message.command === 'closePopup') {
+        window.close()
+      } else if (message.command === 'storeUpdate') {
+        const event: StorageEventPartial = {
+          key: message.data.key,
+          newValue: message.data.value
+        }
+        host.events.emit('storage', event)
       }
-      host.events.emit('storage', event)
     })
     ReactDOM.render(
       <IndexWithRoot storage={new StorageService(localStorage)} host={host} />,

@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify'
 
 import { StorageService } from '../../services/storage'
 import * as tokens from '../../types/tokens'
-import { LocalStorageUpdate } from '../../types/commands'
+import { StoreUpdate } from '../../types/commands'
 
 @injectable()
 export class BackgroundStorageService extends StorageService {
@@ -10,10 +10,14 @@ export class BackgroundStorageService extends StorageService {
     storage: Storage,
     @inject(tokens.WextApi) private api: typeof window.chrome
   ) {
-    super(storage, (key: string) => {
-      const message: LocalStorageUpdate = {
-        command: 'localStorageUpdate',
-        key
+    super(storage, (key, value, encoded) => {
+      const message: StoreUpdate = {
+        command: 'storeUpdate',
+        data: {
+          key,
+          value: encoded,
+          valueUnencoded: value
+        }
       }
       this.api.runtime.sendMessage(message, () => {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
