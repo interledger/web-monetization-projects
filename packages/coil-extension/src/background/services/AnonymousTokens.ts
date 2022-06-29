@@ -13,16 +13,18 @@ decorate(injectable(), anonymousTokens.AnonymousTokens)
 
 const ANON_TOKEN_BATCH_SIZE = 10
 
+@injectable()
 export class IDBTokenStore implements anonymousTokens.TokenStore {
-  static store = idbKv.createStore('anonTokens', 'anonTokens')
-  static async clear() {
+  private store = idbKv.createStore('anonTokens', 'anonTokens')
+
+  async clear() {
     return idbKv.clear(this.store)
   }
 
   async iterate(
     fn: (key: string, value: string) => StorableBlindToken | undefined
   ): Promise<StorableBlindToken | undefined> {
-    const entries = await idbKv.entries<string, string>(IDBTokenStore.store)
+    const entries = await idbKv.entries<string, string>(this.store)
     for (const [key, val] of entries) {
       const token = fn(key, val)
       if (token) {
@@ -32,11 +34,11 @@ export class IDBTokenStore implements anonymousTokens.TokenStore {
   }
 
   async removeItem(key: string): Promise<void> {
-    return idbKv.del(key, IDBTokenStore.store)
+    return idbKv.del(key, this.store)
   }
 
   async setItem(key: string, value: string): Promise<string> {
-    await idbKv.set(key, value, IDBTokenStore.store)
+    await idbKv.set(key, value, this.store)
     return value
   }
 }
@@ -46,12 +48,13 @@ export class AnonymousTokens extends anonymousTokens.AnonymousTokens {
   constructor(
     @inject(tokens.BuildConfig) private buildConfig: BuildConfig,
     @inject(tokens.CoilDomain) coilHost: string,
+    @inject(tokens.TokenStore) store: anonymousTokens.TokenStore,
     @logger('AnonymousTokens') debug: Logger
   ) {
     super({
       redeemerUrl: coilHost + '/redeemer',
       signerUrl: coilHost + '/issuer',
-      store: new IDBTokenStore(),
+      store,
       debug,
       batchSize: ANON_TOKEN_BATCH_SIZE
     })

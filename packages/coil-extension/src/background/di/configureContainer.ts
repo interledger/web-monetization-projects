@@ -8,6 +8,7 @@ import { ClientOptions } from '../../services/ClientOptions'
 import { BackgroundStorageService } from '../services/BackgroundStorageService'
 import { Stream } from '../services/Stream'
 import { createLogger } from '../services/utils'
+import { IDBTokenStore } from '../services/AnonymousTokens'
 
 interface ConfigureContainerParams {
   container: Container
@@ -51,6 +52,8 @@ export function configureContainer({
   container.bind(Navigator).toConstantValue(navigator)
 
   container.bind(Stream).toSelf().inTransientScope()
+
+  container.bind(tokens.TokenStore).to(IDBTokenStore)
 
   container
     .bind(tokens.NoContextLoggerName)

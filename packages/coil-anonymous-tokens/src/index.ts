@@ -48,10 +48,8 @@ export interface Token {
   blindingFactor: string
 }
 
-// TODO: should these be allowed to be async?
-// TODO: went for localforage-like, could chang
 export interface TokenStore {
-  //getItem: (key: string) => Promise<string>
+  clear(): Promise<void>
   setItem: (key: string, value: string) => Promise<string>
   removeItem: (key: string) => Promise<void>
   iterate: (
