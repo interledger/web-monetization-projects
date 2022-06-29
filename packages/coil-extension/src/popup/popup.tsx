@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
+import { StoragePersistence } from '@webmonetization/wext/services'
 
 import { API } from '../webpackDefines'
 import { StorageService } from '../services/storage'
@@ -36,8 +37,19 @@ export function run() {
       }
       host.events.emit('storage', event)
     })
+    const extensionStore: StoragePersistence = {
+      clear(): void {},
+      async primeCache(): Promise<Record<string, unknown>> {
+        return {}
+      },
+      removeItem(key: string): void {},
+      setItem(key: string, value: string): void {}
+    }
     ReactDOM.render(
-      <IndexWithRoot storage={new StorageService(localStorage)} host={host} />,
+      <IndexWithRoot
+        storage={new StorageService(extensionStore)}
+        host={host}
+      />,
       rootEl
     )
   } else {

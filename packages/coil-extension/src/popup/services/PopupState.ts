@@ -1,14 +1,17 @@
 import { LocalStorageProxy } from '../../types/storage'
 
 export const STORAGE_KEYS = [
+  'user',
+  'validToken',
+
   'adapted',
   'coilSite',
   'monetized',
   'monetizedTotal',
-  'user',
-  'validToken',
+
   'extensionBuildString',
   'extensionPopupFooterString',
+
   'popup-route:last',
   'popup-route:tipping-shown'
 ]

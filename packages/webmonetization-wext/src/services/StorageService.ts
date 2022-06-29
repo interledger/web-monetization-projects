@@ -1,28 +1,34 @@
 import { injectable, unmanaged } from '@dier-makr/annotations'
 
-export type SyncStorage = Pick<
-  Storage,
-  'getItem' | 'setItem' | 'removeItem' | 'clear'
->
+type Value = string | number | boolean | object
+
+export interface StoragePersistence {
+  cache: Map<string, Value>
+
+  setItem(key: string, value: Value): void
+
+  removeItem(key: string): void
+
+  clear(): void
+}
 
 @injectable()
 export class StorageService {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private cache: Map<string, string>
+  private get cache(): Map<string, Value> {
+    return this.storage.cache
+  }
+
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
     @unmanaged()
-    private storage: SyncStorage,
+    private storage: StoragePersistence,
     @unmanaged()
     private onChanged?: (key: string) => void
-  ) {
-    this.cache = new Map()
-  }
+  ) {}
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   set(key: string, value: any) {
-    const encoded = JSON.stringify(value)
-    this.storage.setItem(key, encoded)
+    this.storage.setItem(key, value)
     this.notifyChanged(key, value)
     this.cache.set(key, value)
   }
@@ -34,23 +40,13 @@ export class StorageService {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  get<T = any>(key: string): T | null {
-    const val = this.storage.getItem(key)
+  get<T extends Value>(key: string): T | null {
+    const val = this.cache.get(key)
     if (val === null) {
       return null
     } else {
-      return JSON.parse(val) as T
+      return val as T
     }
-  }
-
-  getRaw(key: string) {
-    return this.storage.getItem(key)
-  }
-
-  setRaw(key: string, value: string) {
-    this.storage.setItem(key, value)
-    this.notifyChanged(key, value)
-    this.cache.set(key, value)
   }
 
   getBoolean(key: string) {
@@ -68,20 +64,13 @@ export class StorageService {
     this.storage.clear()
   }
 
-  makeProxy<T>(rawKeysList: string[] = []) {
-    const rawKeys = new Set(rawKeysList)
+  makeProxy<T>() {
     const handler: ProxyHandler<StorageService> = {
       get: (target, property: string) => {
-        return rawKeys.has(property)
-          ? target.getRaw(property)
-          : target.get(property)
+        return target.get(property)
       },
       set: (target, property: string, value) => {
-        if (rawKeys.has(property)) {
-          target.setRaw(property, value)
-        } else {
-          target.set(property, value)
-        }
+        target.set(property, value)
         return true
       },
       deleteProperty(target: StorageService, property: string): boolean {
