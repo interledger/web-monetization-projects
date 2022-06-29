@@ -55,11 +55,7 @@ export interface TokenStore {
   setItem: (key: string, value: string) => Promise<string>
   removeItem: (key: string) => Promise<void>
   iterate: (
-    fn: (
-      value: string,
-      key: string,
-      iterationNumber: number
-    ) => StorableBlindToken | undefined
+    fn: (key: string, value: string) => StorableBlindToken | undefined
   ) => Promise<StorableBlindToken | undefined>
 }
 
@@ -124,7 +120,7 @@ export class AnonymousTokens implements AnonymousTokensService {
     this.batchSize = batchSize
 
     let count = 0
-    this.store.iterate((_blob: string, name: string) => {
+    this.store.iterate((name: string, _blob: string) => {
       if (name.startsWith(TOKEN_PREFIX)) count++
       return undefined
     })
@@ -191,7 +187,7 @@ export class AnonymousTokens implements AnonymousTokensService {
   }
 
   private async _getSignedToken(): Promise<StorableBlindToken | undefined> {
-    return this.store.iterate((blob: string, name: string) => {
+    return this.store.iterate((name: string, blob: string) => {
       if (name.startsWith(TOKEN_PREFIX)) {
         return JSON.parse(blob) as StorableBlindToken
       }

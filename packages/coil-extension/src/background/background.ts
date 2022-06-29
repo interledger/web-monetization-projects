@@ -7,6 +7,7 @@ import { isLoggingEnabled } from '../util/isLoggingEnabled'
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { configureContainer } from './di/configureContainer'
+import { IDBTokenStore } from './services/AnonymousTokens'
 
 declare global {
   interface Window {
@@ -29,7 +30,9 @@ function prefixClearer(prefix: string) {
 }
 
 window.clearPopupRouteState = prefixClearer('popup-route:')
-window.clearTokens = prefixClearer('anonymous_token:')
+window.clearTokens = () => {
+  void IDBTokenStore.clear()
+}
 
 async function main() {
   const loggingEnabled = await isLoggingEnabled(BUILD_CONFIG)
