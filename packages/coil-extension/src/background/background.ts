@@ -70,7 +70,7 @@ async function main() {
     const keys = service.keys()
     for (const key of keys) {
       if (key.startsWith('popup-route:')) {
-        service.remove('popup-route:')
+        service.remove(key)
       }
     }
   }
