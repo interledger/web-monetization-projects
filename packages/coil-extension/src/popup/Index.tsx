@@ -1,5 +1,5 @@
 import React from 'react'
-import { StorageService } from '@webmonetization/wext/services'
+import { StoreService } from '@webmonetization/wext/services'
 
 import { withSharedTheme } from '../shared-theme/withSharedTheme'
 
@@ -11,7 +11,7 @@ import { RouterProvider } from './context/routerContext'
 import { TipProvider } from './context/tipContext'
 
 export function Index(props: {
-  storage: Pick<StorageService, 'get' | 'set'>
+  storage: Pick<StoreService, 'get' | 'set'>
   host: PopupHost
 }) {
   const store = useStoreState(props.storage, props.host)

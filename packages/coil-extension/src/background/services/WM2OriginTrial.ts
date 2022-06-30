@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify'
 
-import { StorageProxy } from '../../types/storage'
+import { StoreProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 
 /*
@@ -93,8 +93,8 @@ export class WM2OriginTrial {
   )
 
   constructor(
-    @inject(tokens.StorageProxy)
-    private storage: StorageProxy
+    @inject(tokens.StoreProxy)
+    private storage: StoreProxy
   ) {
     if (!this.alexAllowed) {
       this.fetcher.start()

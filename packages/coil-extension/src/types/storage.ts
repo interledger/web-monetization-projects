@@ -11,7 +11,7 @@ export const STORAGE_KEY = {
   monetizedTotal: 'monetizedTotal'
 }
 
-export interface StorageProxy {
+export interface StoreProxy {
   // Auth State
   /**
    * The refresh token for authenticating to the coil site

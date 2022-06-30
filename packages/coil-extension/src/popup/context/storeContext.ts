@@ -1,12 +1,12 @@
 import { createContext, useContext, useEffect, useState } from 'react'
-import { StorageService } from '@webmonetization/wext/services'
+import { StoreService } from '@webmonetization/wext/services'
 
 import { PopupStateType, STORAGE_KEYS } from '../services/PopupState'
 import { PopupHost } from '../types'
 import { StoreUpdate } from '../../types/commands'
 
 export const useStoreState = (
-  storage: Pick<StorageService, 'get'>,
+  storage: Pick<StoreService, 'get'>,
   host: PopupHost
 ): PopupStateType => {
   const [store, setStore] = useState<PopupStateType>({} as PopupStateType)

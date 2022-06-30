@@ -1,1 +1,1 @@
-export { StorageService } from '@webmonetization/wext/undecorated'
+export { StoreService } from '@webmonetization/wext/undecorated'

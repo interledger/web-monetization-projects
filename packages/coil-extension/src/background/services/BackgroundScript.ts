@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 
 import { notNullOrUndef } from '../../util/nullables'
-import { StorageService } from '../../services/storage'
+import { StoreService } from '../../services/storage'
 import * as tokens from '../../types/tokens'
 import {
   AdaptedSite,
@@ -47,7 +47,7 @@ export class BackgroundScript {
     private streams: Streams,
     private spspState: SPSPState,
     private tabStates: TabStates,
-    private storage: StorageService,
+    private storage: StoreService,
     private auth: AuthService,
     private monetization: MonetizationService,
     private tippingService: TippingService,

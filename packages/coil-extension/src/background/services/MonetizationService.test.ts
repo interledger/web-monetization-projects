@@ -5,7 +5,7 @@ import {
   PaymentDetails,
   resolvePaymentEndpoint
 } from '@webmonetization/polyfill-utils'
-import { StoragePersistence, StoreValue } from '@webmonetization/wext/services'
+import { StorePersistence, StoreValue } from '@webmonetization/wext/services'
 
 import { configureContainer } from '../di/configureContainer'
 import { decorateThirdPartyClasses } from '../../services/decorateThirdPartyClasses'
@@ -14,7 +14,7 @@ type MessageSender = chrome.runtime.MessageSender
 
 import { StartWebMonetization } from '../../types/commands'
 import * as tokens from '../../types/tokens'
-import { StorageProxy } from '../../types/storage'
+import { StoreProxy } from '../../types/storage'
 import { User } from '../../types/user'
 import { FrameSpec } from '../../types/FrameSpec'
 import { timeout } from '../../content/util/timeout'
@@ -86,7 +86,7 @@ describe('MonetizationService', () => {
     })
 
     container
-      .rebind<StoragePersistence>(tokens.StoragePersistence)
+      .rebind<StorePersistence>(tokens.StorePersistence)
       .toConstantValue({
         cache: new Map(),
         clear(): void {
@@ -113,7 +113,7 @@ describe('MonetizationService', () => {
     const auth = await container.getAsync(AuthService)
     const getToken = jest.spyOn(auth, 'getTokenMaybeRefreshAndStoreState')
     const token = '<JWT>'
-    const store = await container.getAsync<StorageProxy>(tokens.StorageProxy)
+    const store = await container.getAsync<StoreProxy>(tokens.StoreProxy)
 
     getToken.mockImplementation(async () => {
       await timeout(100)

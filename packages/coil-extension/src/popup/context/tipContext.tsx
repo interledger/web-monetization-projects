@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { StorageService } from '@webmonetization/wext/services'
+import { StoreService } from '@webmonetization/wext/services'
 
 import { PopupHost } from '../types'
 import { getCreditCardFromPaymentMethods } from '../../util/getCreditCardFromPaymentMethods'
@@ -9,7 +9,7 @@ import { StoreUpdate } from '../../types/commands'
 import { ITipContext } from './iTipContext'
 
 interface ITipProvider {
-  storage: Pick<StorageService, 'get'>
+  storage: Pick<StoreService, 'get'>
   host: PopupHost
 }
 

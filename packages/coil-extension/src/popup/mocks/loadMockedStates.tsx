@@ -8,7 +8,7 @@ import { Typography } from '@material-ui/core'
 import { PopupStateType } from '../services/PopupState'
 import { PopupHost, PopupRuntime } from '../types'
 import { API } from '../../webpackDefines'
-import { StorageService } from '../../services/storage'
+import { StoreService } from '../../services/storage'
 import { User } from '../../types/user'
 import { defaultPopupHost } from '../context/popupHostContext'
 import { Index } from '../Index'
@@ -19,7 +19,7 @@ import { StatePanel } from './StatePanel'
 
 export const isExtension = Boolean(API && API.runtime && API.runtime.id)
 
-export function makeStorage(mock: any): Pick<StorageService, 'get' | 'set'> {
+export function makeStorage(mock: any): Pick<StoreService, 'get' | 'set'> {
   return {
     get<T = any>(key: string): T | null {
       return mock[key] || null

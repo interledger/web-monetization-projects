@@ -1,12 +1,12 @@
 import { inject, injectable } from 'inversify'
-import { StoragePersistence, StoreValue } from '@webmonetization/wext/services'
+import { StorePersistence, StoreValue } from '@webmonetization/wext/services'
 import * as idbKv from 'idb-keyval'
 
-import { StorageService } from '../../services/storage'
+import { StoreService } from '../../services/storage'
 import * as tokens from '../../types/tokens'
 import { StoreUpdate } from '../../types/commands'
 
-export class IDBPersistence implements StoragePersistence {
+export class IDBPersistence implements StorePersistence {
   store = idbKv.createStore('backgroundStore', 'backgroundStore')
   cache = new Map()
 
@@ -30,9 +30,9 @@ export class IDBPersistence implements StoragePersistence {
 }
 
 @injectable()
-export class BackgroundStorageService extends StorageService {
+export class BackgroundStoreService extends StoreService {
   constructor(
-    @inject(tokens.StoragePersistence) storage: StoragePersistence,
+    @inject(tokens.StorePersistence) storage: StorePersistence,
     @inject(tokens.WextApi) private api: typeof window.chrome
   ) {
     super(storage, (key: string, value) => {

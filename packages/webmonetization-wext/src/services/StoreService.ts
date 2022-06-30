@@ -2,7 +2,7 @@ import { injectable, unmanaged } from '@dier-makr/annotations'
 
 export type StoreValue = string | number | boolean | object
 
-export interface StoragePersistence {
+export interface StorePersistence {
   cache: Map<string, StoreValue>
 
   setItem(key: string, value: StoreValue): void
@@ -13,7 +13,7 @@ export interface StoragePersistence {
 }
 
 @injectable()
-export class StorageService {
+export class StoreService {
   private get cache(): Map<string, StoreValue> {
     return this.storage.cache
   }
@@ -29,7 +29,7 @@ export class StorageService {
   // noinspection TypeScriptFieldCanBeMadeReadonly
   constructor(
     @unmanaged()
-    private storage: StoragePersistence,
+    private storage: StorePersistence,
     @unmanaged()
     private onChanged?: (key: string, value: StoreValue | null) => void
   ) {}
@@ -73,7 +73,7 @@ export class StorageService {
   }
 
   makeProxy<T>() {
-    const handler: ProxyHandler<StorageService> = {
+    const handler: ProxyHandler<StoreService> = {
       get: (target, property: string) => {
         return target.get(property)
       },
@@ -81,7 +81,7 @@ export class StorageService {
         target.set(property, value)
         return true
       },
-      deleteProperty(target: StorageService, property: string): boolean {
+      deleteProperty(target: StoreService, property: string): boolean {
         target.remove(property)
         return true
       }

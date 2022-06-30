@@ -1,14 +1,14 @@
 import { Container } from 'inversify'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 import { GraphQlClient } from '@coil/client'
-import { StorageService } from '@webmonetization/wext/services'
+import { StoreService } from '@webmonetization/wext/services'
 
 import * as tokens from '../../types/tokens'
 import { ClientOptions } from '../../services/ClientOptions'
 import {
-  BackgroundStorageService,
+  BackgroundStoreService,
   IDBPersistence
-} from '../services/BackgroundStorageService'
+} from '../services/BackgroundStoreService'
 import { Stream } from '../services/Stream'
 import { createLogger } from '../services/utils'
 import { IDBTokenStore } from '../services/AnonymousTokens'
@@ -46,14 +46,14 @@ export function configureContainer({
   if (btpEndpoint) {
     container.bind(tokens.BtpEndpoint).toConstantValue(btpEndpoint)
   }
-  container.bind(StorageService).to(BackgroundStorageService)
+  container.bind(StoreService).to(BackgroundStoreService)
   container.bind(Container).toConstantValue(container)
   container.bind(tokens.ActiveTab).toDynamicValue(getActiveTab)
   container.bind(Navigator).toConstantValue(navigator)
 
   container.bind(Stream).toSelf().inTransientScope()
 
-  container.bind(tokens.StoragePersistence).toDynamicValue(async () => {
+  container.bind(tokens.StorePersistence).toDynamicValue(async () => {
     const persistence = new IDBPersistence()
     return persistence.primeCache().then(() => persistence)
   })
@@ -66,9 +66,9 @@ export function configureContainer({
 
   container.bind(tokens.Logger).toDynamicValue(createLogger).inTransientScope()
 
-  container.bind(tokens.StorageProxy).toDynamicValue(async context => {
+  container.bind(tokens.StoreProxy).toDynamicValue(async context => {
     return context.container
-      .getAsync(StorageService)
+      .getAsync(StoreService)
       .then(service => service.makeProxy())
   })
 }

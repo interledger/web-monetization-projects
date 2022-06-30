@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify'
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
-import { StorageService } from '@webmonetization/wext/services'
+import { StoreService } from '@webmonetization/wext/services'
 
 import {
   FrameState,
@@ -15,7 +15,7 @@ import {
 import { IconState } from '../../types/commands'
 import { FrameSpec } from '../../types/FrameSpec'
 import * as tokens from '../../types/tokens'
-import { StorageProxy } from '../../types/storage'
+import { StoreProxy } from '../../types/storage'
 import { BuildConfig } from '../../types/BuildConfig'
 import { noop } from '../util/dbg'
 
@@ -32,9 +32,9 @@ export class TabStates {
   private tabStates: { [tab: number]: TabState } = {}
 
   constructor(
-    private storage: StorageService,
-    @inject(tokens.StorageProxy)
-    private store: StorageProxy,
+    private storage: StoreService,
+    @inject(tokens.StoreProxy)
+    private store: StoreProxy,
     private auth: AuthService,
     private activeTabLogger: ActiveTabLogger,
     private tippingService: TippingService,

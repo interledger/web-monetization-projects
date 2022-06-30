@@ -6,20 +6,16 @@ import { API, BUILD_CONFIG, COIL_DOMAIN, VERSION } from '../webpackDefines'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
 import { isLoggingEnabled } from '../util/isLoggingEnabled'
 import * as tokens from '../types/tokens'
-import { StorageProxy } from '../types/storage'
-import { StorageService } from '../services/storage'
+import { StoreProxy } from '../types/storage'
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { configureContainer } from './di/configureContainer'
-import {
-  BackgroundStorageService,
-  IDBPersistence
-} from './services/BackgroundStorageService'
+import { BackgroundStoreService } from './services/BackgroundStoreService'
 
 declare global {
   interface Window {
     bg: BackgroundScript
-    store: StorageProxy
+    store: StoreProxy
     clearTokens: () => void
     clearPopupRouteState: () => void
   }
@@ -64,13 +60,13 @@ async function main() {
   })
 
   window.bg = await container.getAsync(BackgroundScript)
-  window.store = await container.getAsync(tokens.StorageProxy)
+  window.store = await container.getAsync(tokens.StoreProxy)
   window.clearTokens = () => {
     const store = container.get<TokenStore>(tokens.TokenStore)
     store.clear()
   }
   window.clearPopupRouteState = async () => {
-    const service = await container.getAsync(BackgroundStorageService)
+    const service = await container.getAsync(BackgroundStoreService)
     const keys = service.keys()
     for (const key of keys) {
       if (key.startsWith('popup-route:')) {

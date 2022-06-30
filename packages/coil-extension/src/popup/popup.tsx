@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import { StoragePersistence } from '@webmonetization/wext/services'
+import { StorePersistence } from '@webmonetization/wext/services'
 
 import { API } from '../webpackDefines'
-import { StorageService } from '../services/storage'
+import { StoreService } from '../services/storage'
 import { ToPopupMessage } from '../types/commands'
 import { withSharedTheme } from '../shared-theme/withSharedTheme'
 import { openTab } from '../util/openTab'
@@ -17,7 +17,7 @@ export function run() {
   const rootEl = document.getElementById('root')
 
   if (isExtension) {
-    const backgroundStore: StoragePersistence = {
+    const backgroundStore: StorePersistence = {
       cache: new Map(),
       clear(): void {
         // noop, method never called popup side
@@ -64,7 +64,7 @@ export function run() {
 
         ReactDOM.render(
           <IndexWithRoot
-            storage={new StorageService(backgroundStore)}
+            storage={new StoreService(backgroundStore)}
             host={host}
           />,
           rootEl
