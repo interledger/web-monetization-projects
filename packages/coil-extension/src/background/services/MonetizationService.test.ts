@@ -86,7 +86,7 @@ describe('MonetizationService', () => {
     })
 
     container
-      .bind<StoragePersistence>(tokens.StoragePersistence)
+      .rebind<StoragePersistence>(tokens.StoragePersistence)
       .toConstantValue({
         cache: new Map(),
         clear(): void {

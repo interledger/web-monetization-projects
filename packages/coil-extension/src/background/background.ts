@@ -63,13 +63,6 @@ async function main() {
     }
   })
 
-  // TODO:ls can we just rebind this in tests, or actually have to keep it
-  // separate.
-  container.bind(tokens.StoragePersistence).toDynamicValue(async () => {
-    const persistence = new IDBPersistence()
-    return persistence.primeCache().then(() => persistence)
-  })
-
   window.bg = await container.getAsync(BackgroundScript)
   window.store = await container.getAsync(tokens.StorageProxy)
   window.clearTokens = () => {

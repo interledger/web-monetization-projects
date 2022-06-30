@@ -5,7 +5,10 @@ import { StorageService } from '@webmonetization/wext/services'
 
 import * as tokens from '../../types/tokens'
 import { ClientOptions } from '../../services/ClientOptions'
-import { BackgroundStorageService } from '../services/BackgroundStorageService'
+import {
+  BackgroundStorageService,
+  IDBPersistence
+} from '../services/BackgroundStorageService'
 import { Stream } from '../services/Stream'
 import { createLogger } from '../services/utils'
 import { IDBTokenStore } from '../services/AnonymousTokens'
@@ -50,6 +53,11 @@ export function configureContainer({
 
   container.bind(Stream).toSelf().inTransientScope()
 
+  container.bind(tokens.StoragePersistence).toDynamicValue(async () => {
+    const persistence = new IDBPersistence()
+    return persistence.primeCache().then(() => persistence)
+  })
+
   container.bind(tokens.TokenStore).to(IDBTokenStore)
 
   container
@@ -61,6 +69,6 @@ export function configureContainer({
   container.bind(tokens.StorageProxy).toDynamicValue(async context => {
     return context.container
       .getAsync(StorageService)
-      .then(service => service.makeProxy(/* TODO:ls ['token']*/))
+      .then(service => service.makeProxy())
   })
 }
