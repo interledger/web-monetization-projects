@@ -47,6 +47,10 @@
 		A688ECD3268EF55100128FDF /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC3268EF55100128FDF /* content.js */; };
 		BC66005528698C760076CDF7 /* backgroundMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = BC66005428698C760076CDF7 /* backgroundMV3.js */; };
 		BC66005628698C760076CDF7 /* backgroundMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = BC66005428698C760076CDF7 /* backgroundMV3.js */; };
+		FF9A6BCA286CCEAA001B0DA3 /* contentMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = FF9A6BC9286CCEAA001B0DA3 /* contentMV3.js */; };
+		FF9A6BCB286CCEAA001B0DA3 /* contentMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = FF9A6BC9286CCEAA001B0DA3 /* contentMV3.js */; };
+		FF9A6BCD286CCEB5001B0DA3 /* popupMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = FF9A6BCC286CCEB5001B0DA3 /* popupMV3.js */; };
+		FF9A6BCE286CCEB5001B0DA3 /* popupMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = FF9A6BCC286CCEB5001B0DA3 /* popupMV3.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +127,8 @@
 		A688ECC2268EF55100128FDF /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../dist/manifest.json; sourceTree = "<group>"; };
 		A688ECC3268EF55100128FDF /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../dist/content.js; sourceTree = "<group>"; };
 		BC66005428698C760076CDF7 /* backgroundMV3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = backgroundMV3.js; path = ../../../dist/backgroundMV3.js; sourceTree = "<group>"; };
+		FF9A6BC9286CCEAA001B0DA3 /* contentMV3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = contentMV3.js; path = ../../../dist/contentMV3.js; sourceTree = "<group>"; };
+		FF9A6BCC286CCEB5001B0DA3 /* popupMV3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = popupMV3.js; path = ../../../dist/popupMV3.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +261,8 @@
 			children = (
 				A688ECBC268EF55100128FDF /* res */,
 				A688ECBD268EF55100128FDF /* popup.js */,
+				FF9A6BCC286CCEB5001B0DA3 /* popupMV3.js */,
+				FF9A6BC9286CCEAA001B0DA3 /* contentMV3.js */,
 				BC66005428698C760076CDF7 /* backgroundMV3.js */,
 				A688ECBE268EF55100128FDF /* background.js */,
 				A688ECBF268EF55100128FDF /* options.js */,
@@ -422,10 +430,12 @@
 				A688ECD3268EF55100128FDF /* content.js in Resources */,
 				A688ECCC268EF55100128FDF /* res in Resources */,
 				BC66005528698C760076CDF7 /* backgroundMV3.js in Resources */,
+				FF9A6BCA286CCEAA001B0DA3 /* contentMV3.js in Resources */,
 				A688ECD2268EF55100128FDF /* manifest.json in Resources */,
 				A688ECCF268EF55100128FDF /* options.js in Resources */,
 				A688ECD0268EF55100128FDF /* hot-reload.js in Resources */,
 				A688ECCE268EF55100128FDF /* background.js in Resources */,
+				FF9A6BCD286CCEB5001B0DA3 /* popupMV3.js in Resources */,
 				A688ECD1268EF55100128FDF /* static in Resources */,
 				A688ECCD268EF55100128FDF /* popup.js in Resources */,
 			);
@@ -438,10 +448,12 @@
 				A688ECCB268EF55100128FDF /* content.js in Resources */,
 				A688ECC4268EF55100128FDF /* res in Resources */,
 				BC66005628698C760076CDF7 /* backgroundMV3.js in Resources */,
+				FF9A6BCB286CCEAA001B0DA3 /* contentMV3.js in Resources */,
 				A688ECCA268EF55100128FDF /* manifest.json in Resources */,
 				A688ECC7268EF55100128FDF /* options.js in Resources */,
 				A688ECC8268EF55100128FDF /* hot-reload.js in Resources */,
 				A688ECC6268EF55100128FDF /* background.js in Resources */,
+				FF9A6BCE286CCEB5001B0DA3 /* popupMV3.js in Resources */,
 				A688ECC9268EF55100128FDF /* static in Resources */,
 				A688ECC5268EF55100128FDF /* popup.js in Resources */,
 			);
