@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { StorageService } from '@webmonetization/wext/services'
+import { StoreService } from '@webmonetization/wext/services'
 
 import { ROUTES } from '../constants'
 
@@ -14,7 +14,7 @@ interface IRouterContext {
 }
 
 interface IRouterProvider {
-  storage: Pick<StorageService, 'get' | 'set'>
+  storage: Pick<StoreService, 'get' | 'set'>
 }
 
 // Context

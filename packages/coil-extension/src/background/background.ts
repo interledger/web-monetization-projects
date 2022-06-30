@@ -6,31 +6,20 @@ import { API, BUILD_CONFIG, COIL_DOMAIN, VERSION } from '../webpackDefines'
 import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
 import { isLoggingEnabled } from '../util/isLoggingEnabled'
 import * as tokens from '../types/tokens'
+import { StoreProxy } from '../types/storage'
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { configureContainer } from './di/configureContainer'
+import { BackgroundStoreService } from './services/BackgroundStoreService'
 
 declare global {
   interface Window {
     bg: BackgroundScript
+    store: StoreProxy
     clearTokens: () => void
     clearPopupRouteState: () => void
   }
 }
-
-function prefixClearer(prefix: string) {
-  return () => {
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i)
-      if (key?.startsWith(prefix)) {
-        console.log('deleting', key)
-        localStorage.removeItem(key)
-      }
-    }
-  }
-}
-
-window.clearPopupRouteState = prefixClearer('popup-route:')
 
 async function main() {
   const loggingEnabled = await isLoggingEnabled(BUILD_CONFIG)
@@ -51,7 +40,6 @@ async function main() {
     coilDomain: COIL_DOMAIN,
     wextApi: API,
     buildConfig: BUILD_CONFIG,
-    storage: localStorage,
     // TODO: In MV3 all listeners must be bound at the top level
     getActiveTab: async () => {
       // This query will not pick up dev tools tabs which may be currently active
@@ -70,10 +58,21 @@ async function main() {
       }
     }
   })
+
   window.bg = await container.getAsync(BackgroundScript)
+  window.store = await container.getAsync(tokens.StoreProxy)
   window.clearTokens = () => {
     const store = container.get<TokenStore>(tokens.TokenStore)
     store.clear()
+  }
+  window.clearPopupRouteState = async () => {
+    const service = await container.getAsync(BackgroundStoreService)
+    const keys = service.keys()
+    for (const key of keys) {
+      if (key.startsWith('popup-route:')) {
+        service.remove(key)
+      }
+    }
   }
   // noinspection ES6MissingAwait
   void window.bg.run()

@@ -1,14 +1,49 @@
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
 import { MonetizationState } from '@webmonetization/types'
+import { StoreValue } from '@webmonetization/wext/services'
 
 import { FrameSpec } from './FrameSpec'
 
 /**
  * browser.runtime.sendMessage
  */
-export interface LocalStorageUpdate extends Command {
-  command: 'localStorageUpdate'
-  key: string
+export interface StoreUpdate extends Command {
+  command: 'storeUpdate'
+  data: {
+    key: string
+    value: StoreValue | null
+  }
+}
+
+/**
+ * popup -> background
+ * browser.runtime.sendMessage
+ */
+export interface StoreGetItems extends Command {
+  command: 'storeGetItems'
+}
+
+/**
+ * popup -> background
+ * browser.runtime.sendMessage
+ */
+export interface StoreSetItem extends Command {
+  command: 'storeSetItem'
+  data: {
+    key: string
+    value: StoreValue
+  }
+}
+
+/**
+ * popup -> background
+ * browser.runtime.sendMessage
+ */
+export interface StoreRemoveItem extends Command {
+  command: 'storeRemoveItem'
+  data: {
+    key: string
+  }
 }
 
 export interface Command<T = any> {
@@ -189,6 +224,9 @@ export type ToBackgroundMessage =
   | ReportCorrelationIdFromIFrameContentScript
   | OnFrameAllowedChanged
   | AdaptedPageDetails
+  | StoreGetItems
+  | StoreSetItem
+  | StoreRemoveItem
 
 export type IconState =
   | 'streaming-paused'
@@ -455,4 +493,4 @@ export type ToContentMessage =
   | LogInActiveTab
   | SPSPRequestEvent
 
-export type ToPopupMessage = LocalStorageUpdate | ClosePopup
+export type ToPopupMessage = StoreUpdate | ClosePopup

@@ -1,1 +1,1 @@
-export * from './StorageService'
+export * from './StoreService'

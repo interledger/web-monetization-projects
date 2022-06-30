@@ -12,7 +12,7 @@ import {
   StartWebMonetization,
   StopWebMonetization
 } from '../../types/commands'
-import { LocalStorageProxy } from '../../types/storage'
+import { StoreProxy } from '../../types/storage'
 import { getFrameSpec, getTab } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 
@@ -35,8 +35,8 @@ export class MonetizationService {
     private assoc: StreamAssociations,
     private streams: Streams,
     private tabStates: TabStates,
-    @inject(tokens.LocalStorageProxy)
-    private store: LocalStorageProxy,
+    @inject(tokens.StoreProxy)
+    private store: StoreProxy,
     private auth: AuthService,
     private spspState: SPSPState,
     private activeTabLogger: ActiveTabLogger,

@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 
 import { notNullOrUndef } from '../../util/nullables'
-import { StorageService } from '../../services/storage'
+import { StoreService } from '../../services/storage'
 import * as tokens from '../../types/tokens'
 import {
   AdaptedSite,
@@ -17,7 +17,6 @@ import {
   SetMonetizationState,
   ToBackgroundMessage
 } from '../../types/commands'
-import { LocalStorageProxy } from '../../types/storage'
 import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
@@ -48,7 +47,7 @@ export class BackgroundScript {
     private streams: Streams,
     private spspState: SPSPState,
     private tabStates: TabStates,
-    private storage: StorageService,
+    private storage: StoreService,
     private auth: AuthService,
     private monetization: MonetizationService,
     private tippingService: TippingService,
@@ -287,6 +286,15 @@ export class BackgroundScript {
     sendResponse: (response: any) => any
   ) {
     switch (request.command) {
+      case 'storeGetItems':
+        sendResponse({ items: this.storage.items() })
+        break
+      case 'storeSetItem':
+        this.storage.set(request.data.key, request.data.value)
+        break
+      case 'storeRemoveItem':
+        this.storage.remove(request.data.key)
+        break
       case 'log':
         this.log('log command:', request.data)
         sendResponse(true)

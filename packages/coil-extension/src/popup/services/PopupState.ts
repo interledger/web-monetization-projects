@@ -1,16 +1,19 @@
-import { LocalStorageProxy } from '../../types/storage'
+import { StoreProxy } from '../../types/storage'
 
 export const STORAGE_KEYS = [
+  'user',
+  'validToken',
+
   'adapted',
   'coilSite',
   'monetized',
   'monetizedTotal',
-  'user',
-  'validToken',
+
   'extensionBuildString',
   'extensionPopupFooterString',
+
   'popup-route:last',
   'popup-route:tipping-shown'
 ]
 
-export type PopupStateType = Omit<LocalStorageProxy, 'token'>
+export type PopupStateType = Omit<StoreProxy, 'token'>

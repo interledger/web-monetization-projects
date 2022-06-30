@@ -1,11 +1,14 @@
 import { Container } from 'inversify'
 import { makeLoggerMiddleware } from 'inversify-logger-middleware'
 import { GraphQlClient } from '@coil/client'
-import { StorageService } from '@webmonetization/wext/services'
+import { StoreService } from '@webmonetization/wext/services'
 
 import * as tokens from '../../types/tokens'
 import { ClientOptions } from '../../services/ClientOptions'
-import { BackgroundStorageService } from '../services/BackgroundStorageService'
+import {
+  BackgroundStoreService,
+  IDBPersistence
+} from '../services/BackgroundStoreService'
 import { Stream } from '../services/Stream'
 import { createLogger } from '../services/utils'
 import { IDBTokenStore } from '../services/AnonymousTokens'
@@ -17,7 +20,6 @@ interface ConfigureContainerParams {
   btpEndpoint?: string
   wextApi: any
   buildConfig: Record<string, unknown>
-  storage: Storage
   getActiveTab: () => Promise<any>
 }
 
@@ -28,7 +30,6 @@ export function configureContainer({
   wextApi,
   buildConfig,
   btpEndpoint,
-  storage,
   getActiveTab
 }: ConfigureContainerParams) {
   if (loggingEnabled) {
@@ -45,13 +46,17 @@ export function configureContainer({
   if (btpEndpoint) {
     container.bind(tokens.BtpEndpoint).toConstantValue(btpEndpoint)
   }
-  container.bind(Storage).toConstantValue(storage)
-  container.bind(StorageService).to(BackgroundStorageService)
+  container.bind(StoreService).to(BackgroundStoreService)
   container.bind(Container).toConstantValue(container)
   container.bind(tokens.ActiveTab).toDynamicValue(getActiveTab)
   container.bind(Navigator).toConstantValue(navigator)
 
   container.bind(Stream).toSelf().inTransientScope()
+
+  container.bind(tokens.StorePersistence).toDynamicValue(async () => {
+    const persistence = new IDBPersistence()
+    return persistence.primeCache().then(() => persistence)
+  })
 
   container.bind(tokens.TokenStore).to(IDBTokenStore)
 
@@ -61,7 +66,9 @@ export function configureContainer({
 
   container.bind(tokens.Logger).toDynamicValue(createLogger).inTransientScope()
 
-  container.bind(tokens.LocalStorageProxy).toDynamicValue(context => {
-    return context.container.get(StorageService).makeProxy(['token'])
+  container.bind(tokens.StoreProxy).toDynamicValue(async context => {
+    return context.container
+      .getAsync(StoreService)
+      .then(service => service.makeProxy())
   })
 }

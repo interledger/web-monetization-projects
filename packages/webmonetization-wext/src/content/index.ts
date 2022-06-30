@@ -1,5 +1,5 @@
 export * from './ScriptInjection'
 export * from './DocumentMonetization'
 export * from './IdleDetection'
-export * from '../services/StorageService'
+export * from '../services/StoreService'
 export { wmPolyfill } from './wmPolyfill'

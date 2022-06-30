@@ -1,4 +1,7 @@
-import { injectable } from 'inversify'
+import { inject, injectable } from 'inversify'
+
+import { StoreProxy } from '../../types/storage'
+import * as tokens from '../../types/tokens'
 
 /*
  * Tests
@@ -89,7 +92,10 @@ export class WM2OriginTrial {
     val => new Set<string>(val)
   )
 
-  constructor(private storage: Storage) {
+  constructor(
+    @inject(tokens.StoreProxy)
+    private storage: StoreProxy
+  ) {
     if (!this.alexAllowed) {
       this.fetcher.start()
     }
@@ -107,7 +113,7 @@ export class WM2OriginTrial {
     if (this.alexAllowed) {
       return true
     }
-    if (this.storage['WM2_ALLOW']) {
+    if (this.storage.WM2_ALLOWED) {
       return true
     } else {
       const dynamic = this.fetcher.triggerAndGetCachedOrNull()

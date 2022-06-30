@@ -5,6 +5,7 @@ import {
   PaymentDetails,
   resolvePaymentEndpoint
 } from '@webmonetization/polyfill-utils'
+import { StorePersistence, StoreValue } from '@webmonetization/wext/services'
 
 import { configureContainer } from '../di/configureContainer'
 import { decorateThirdPartyClasses } from '../../services/decorateThirdPartyClasses'
@@ -13,7 +14,7 @@ type MessageSender = chrome.runtime.MessageSender
 
 import { StartWebMonetization } from '../../types/commands'
 import * as tokens from '../../types/tokens'
-import { LocalStorageProxy } from '../../types/storage'
+import { StoreProxy } from '../../types/storage'
 import { User } from '../../types/user'
 import { FrameSpec } from '../../types/FrameSpec'
 import { timeout } from '../../content/util/timeout'
@@ -80,10 +81,24 @@ describe('MonetizationService', () => {
       buildConfig: {},
       coilDomain: 'https://coil.com',
       wextApi: api,
-      storage: localStorage,
       getActiveTab: async () => 0,
       loggingEnabled: true
     })
+
+    container
+      .rebind<StorePersistence>(tokens.StorePersistence)
+      .toConstantValue({
+        cache: new Map(),
+        clear(): void {
+          // noop
+        },
+        removeItem(): void {
+          // noop
+        },
+        setItem(): void {
+          // noop
+        }
+      })
 
     const streams = container.get(Streams)
 
@@ -95,10 +110,10 @@ describe('MonetizationService', () => {
     closeStream.mockReturnValue(undefined)
     pauseStream.mockReturnValue(undefined)
 
-    const auth = container.get(AuthService)
+    const auth = await container.getAsync(AuthService)
     const getToken = jest.spyOn(auth, 'getTokenMaybeRefreshAndStoreState')
     const token = '<JWT>'
-    const store = container.get<LocalStorageProxy>(tokens.LocalStorageProxy)
+    const store = await container.getAsync<StoreProxy>(tokens.StoreProxy)
 
     getToken.mockImplementation(async () => {
       await timeout(100)
