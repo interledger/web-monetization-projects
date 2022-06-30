@@ -11,9 +11,9 @@ import { API } from '../../webpackDefines'
 import { StorageService } from '../../services/storage'
 import { User } from '../../types/user'
 import { defaultPopupHost } from '../context/popupHostContext'
-import { StorageEvent } from '../context/storeContext'
 import { Index } from '../Index'
 import { ROUTES } from '../constants'
+import { StoreUpdate } from '../../types/commands'
 
 import { StatePanel } from './StatePanel'
 
@@ -395,11 +395,11 @@ export const mockPopupsPage = () => {
           const newValue = (value += 10)
           state.monetizedTotal = newValue
 
-          const message: StorageEvent = {
+          const message: StoreUpdate['data'] = {
             key: 'monetizedTotal',
-            newValue: newValue
+            value: newValue
           }
-          mockHost.events.emit('storage', message)
+          mockHost.events.emit('storeUpdate', message)
         }, 1500)
         setInitiated(true)
       }

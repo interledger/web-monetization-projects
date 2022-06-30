@@ -1,13 +1,9 @@
 import { createContext, useContext, useEffect, useState } from 'react'
-import { StorageService, StoreValue } from '@webmonetization/wext/services'
+import { StorageService } from '@webmonetization/wext/services'
 
 import { PopupStateType, STORAGE_KEYS } from '../services/PopupState'
 import { PopupHost } from '../types'
-
-export interface StorageEvent {
-  key: string
-  newValue: StoreValue | null
-}
+import { StoreUpdate } from '../../types/commands'
 
 export const useStoreState = (
   storage: Pick<StorageService, 'get'>,
@@ -25,8 +21,8 @@ export const useStoreState = (
   }
   useEffect(() => {
     const events = host.events
-    events.on('storage', (evt: StorageEvent) => {
-      if (evt.key && evt.newValue) {
+    events.on('storeUpdate', (evt: StoreUpdate['data']) => {
+      if (evt.key && evt.value) {
         const key = evt.key
         setStore(old => ({
           ...old,

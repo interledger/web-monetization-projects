@@ -50,11 +50,7 @@ export function run() {
         } else {
           backgroundStore.cache.delete(message.data.key)
         }
-        const event = {
-          key: message.data.key,
-          newValue: message.data.value
-        }
-        host.events.emit('storage', event)
+        host.events.emit('storeUpdate', message.data)
       }
     })
 
