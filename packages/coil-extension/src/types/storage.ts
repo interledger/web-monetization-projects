@@ -11,20 +11,14 @@ export const STORAGE_KEY = {
   monetizedTotal: 'monetizedTotal'
 }
 
-/**
- * All values are JSON encoded unless as stored
- * unless stated otherwise
- */
-export interface LocalStorageProxy {
+export interface StorageProxy {
   // Auth State
   /**
    * The refresh token for authenticating to the coil site
-   * NOT JSON encoded
    */
   token?: string | null
 
   /**
-   * JSON serialized {@link User}
    */
   user?: User | null
   /**
@@ -45,4 +39,7 @@ export interface LocalStorageProxy {
   // Popup state
   'popup-route:last'?: string | null
   'popup-route:tipping-shown'?: boolean | null
+
+  // Config
+  WM2_ALLOWED?: boolean | null
 }

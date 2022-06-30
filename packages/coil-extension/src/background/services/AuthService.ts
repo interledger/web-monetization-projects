@@ -3,7 +3,7 @@ import { EventEmitter } from 'events'
 import { GraphQlClient, tokenUtils } from '@coil/client'
 import { inject, injectable } from 'inversify'
 
-import { LocalStorageProxy } from '../../types/storage'
+import { StorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { TimeoutError } from '../../util/timeout'
 import { User } from '../../types/user'
@@ -66,8 +66,8 @@ export class AuthService extends EventEmitter {
     private domain: string,
     @logger('AuthService')
     private log: Logger,
-    @inject(tokens.LocalStorageProxy)
-    private store: LocalStorageProxy,
+    @inject(tokens.StorageProxy)
+    private store: StorageProxy,
     private client: GraphQlClient,
     private siteToken: SiteToken,
     private activeTabs: ActiveTabLogger,

@@ -11,7 +11,7 @@ import { API } from '../../webpackDefines'
 import { StorageService } from '../../services/storage'
 import { User } from '../../types/user'
 import { defaultPopupHost } from '../context/popupHostContext'
-import { StorageEventPartial } from '../context/storeContext'
+import { StorageEvent } from '../context/storeContext'
 import { Index } from '../Index'
 import { ROUTES } from '../constants'
 
@@ -395,9 +395,9 @@ export const mockPopupsPage = () => {
           const newValue = (value += 10)
           state.monetizedTotal = newValue
 
-          const message: StorageEventPartial = {
+          const message: StorageEvent = {
             key: 'monetizedTotal',
-            newValue: JSON.stringify(newValue)
+            newValue: newValue
           }
           mockHost.events.emit('storage', message)
         }, 1500)

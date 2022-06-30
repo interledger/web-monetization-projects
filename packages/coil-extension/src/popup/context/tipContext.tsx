@@ -76,7 +76,7 @@ export const TipProvider: React.FC<ITipProvider> = props => {
 
     // need to update the values whenever the store user object is updated
     const events = host.events
-    events.on('storage', (evt: StorageEventPartial) => {
+    events.on('storage', (evt: { key: string }) => {
       if (evt.key === 'user') {
         setValuesFromStorage()
       }

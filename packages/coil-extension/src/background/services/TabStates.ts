@@ -15,7 +15,7 @@ import {
 import { IconState } from '../../types/commands'
 import { FrameSpec } from '../../types/FrameSpec'
 import * as tokens from '../../types/tokens'
-import { LocalStorageProxy } from '../../types/storage'
+import { StorageProxy } from '../../types/storage'
 import { BuildConfig } from '../../types/BuildConfig'
 import { noop } from '../util/dbg'
 
@@ -33,8 +33,8 @@ export class TabStates {
 
   constructor(
     private storage: StorageService,
-    @inject(tokens.LocalStorageProxy)
-    private store: LocalStorageProxy,
+    @inject(tokens.StorageProxy)
+    private store: StorageProxy,
     private auth: AuthService,
     private activeTabLogger: ActiveTabLogger,
     private tippingService: TippingService,

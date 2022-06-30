@@ -17,7 +17,6 @@ interface ConfigureContainerParams {
   btpEndpoint?: string
   wextApi: any
   buildConfig: Record<string, unknown>
-  storage: Storage
   getActiveTab: () => Promise<any>
 }
 
@@ -28,7 +27,6 @@ export function configureContainer({
   wextApi,
   buildConfig,
   btpEndpoint,
-  storage,
   getActiveTab
 }: ConfigureContainerParams) {
   if (loggingEnabled) {
@@ -45,7 +43,6 @@ export function configureContainer({
   if (btpEndpoint) {
     container.bind(tokens.BtpEndpoint).toConstantValue(btpEndpoint)
   }
-  container.bind(Storage).toConstantValue(storage)
   container.bind(StorageService).to(BackgroundStorageService)
   container.bind(Container).toConstantValue(container)
   container.bind(tokens.ActiveTab).toDynamicValue(getActiveTab)
@@ -61,7 +58,9 @@ export function configureContainer({
 
   container.bind(tokens.Logger).toDynamicValue(createLogger).inTransientScope()
 
-  container.bind(tokens.LocalStorageProxy).toDynamicValue(context => {
-    return context.container.get(StorageService).makeProxy(['token'])
+  container.bind(tokens.StorageProxy).toDynamicValue(async context => {
+    return context.container
+      .getAsync(StorageService)
+      .then(service => service.makeProxy(/* TODO:ls ['token']*/))
   })
 }

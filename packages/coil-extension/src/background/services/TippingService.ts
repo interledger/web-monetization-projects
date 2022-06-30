@@ -3,7 +3,7 @@ import { EventEmitter } from 'events'
 import { GraphQlClient } from '@coil/client'
 import { inject, injectable } from 'inversify'
 
-import { LocalStorageProxy } from '../../types/storage'
+import { StorageProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { TipSent } from '../../types/commands'
 import { notNullOrUndef } from '../../util/nullables'
@@ -18,8 +18,8 @@ import { formatTipSettings } from './formatTipSettings.util'
 @injectable()
 export class TippingService extends EventEmitter {
   constructor(
-    @inject(tokens.LocalStorageProxy)
-    private store: LocalStorageProxy,
+    @inject(tokens.StorageProxy)
+    private store: StorageProxy,
     private client: GraphQlClient,
     @logger('TippingService')
     private log: Logger,
