@@ -1950,7 +1950,7 @@ __metadata:
     "@coil/puppeteer-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@graphql-codegen/cli": "npm:2.6.3"
+    "@graphql-codegen/cli": "npm:2.6.4"
     "@graphql-codegen/introspection": "npm:2.1.1"
     "@graphql-codegen/typescript": "npm:2.5.1"
     "@graphql-codegen/typescript-resolvers": "npm:2.6.6"
@@ -2898,9 +2898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.6.3":
-  version: 2.6.3
-  resolution: "@graphql-codegen/cli@npm:2.6.3"
+"@graphql-codegen/cli@npm:2.6.4":
+  version: 2.6.4
+  resolution: "@graphql-codegen/cli@npm:2.6.4"
   dependencies:
     "@graphql-codegen/core": "npm:2.5.1"
     "@graphql-codegen/plugin-helpers": "npm:^2.4.1"
@@ -2926,7 +2926,7 @@ __metadata:
     inquirer: "npm:^8.0.0"
     is-glob: "npm:^4.0.1"
     json-to-pretty-yaml: "npm:^1.2.2"
-    latest-version: "npm:^6.0.0"
+    latest-version: "npm:5.1.0"
     listr: "npm:^0.14.3"
     listr-update-renderer: "npm:^0.5.0"
     log-symbols: "npm:^4.0.0"
@@ -2942,7 +2942,7 @@ __metadata:
     gql-gen: bin.js
     graphql-code-generator: bin.js
     graphql-codegen: bin.js
-  checksum: efa30fb2034ca30d9f1377ec1d4ff0243866992733a31bdad19b58759d16ad14078a3f15cf88a4022c4b5e289efdac39f992e187798bbeb73d156c53e55f1608
+  checksum: c9d1b04f4e0235234a1bb493af1511dc93d2682759f4bba2b09455aa3818b8435555dfe9dbd9152785ff79e5e90bd4fdb8d1717770bc35333e2dc65f76c7a3e2
   languageName: node
   linkType: hard
 
@@ -13269,7 +13269,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"got@npm:^11.7.0, got@npm:^11.8.2":
+"got@npm:^11.7.0":
   version: 11.8.5
   resolution: "got@npm:11.8.5"
   dependencies:
@@ -16439,21 +16439,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"latest-version@npm:^5.0.0, latest-version@npm:^5.1.0":
+"latest-version@npm:5.1.0, latest-version@npm:^5.0.0, latest-version@npm:^5.1.0":
   version: 5.1.0
   resolution: "latest-version@npm:5.1.0"
   dependencies:
     package-json: "npm:^6.3.0"
   checksum: 212765a6cc0f19dd0e56957046edc5df33bce7eadf3fcdb0aef079f15c838a645a7ea09064fc9be8a43888a91dfa90f9dfd9adeb658c2635cce70cc9a7c4991a
-  languageName: node
-  linkType: hard
-
-"latest-version@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "latest-version@npm:6.0.0"
-  dependencies:
-    package-json: "npm:^7.0.0"
-  checksum: 3c97bf9e657ae2e2ccbf875198810e957d7e33fabcaa1cc7fba4160e3138483aee19d96828f5b8e23afcc50a324897d6cf9cf9a6db295f224e867ba79dc4cf82
   languageName: node
   linkType: hard
 
@@ -18819,18 +18810,6 @@ __metadata:
     registry-url: "npm:^5.0.0"
     semver: "npm:^6.2.0"
   checksum: e98b44a5bee306aa1834eca25555b3e59a3e1eb5e0ce0b1a1b33cb908e1feb0184b4de9dcd8903c59e9c4c4ed4e5f9c4bd59691306417ae8d9d016a68a10b449
-  languageName: node
-  linkType: hard
-
-"package-json@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "package-json@npm:7.0.0"
-  dependencies:
-    got: "npm:^11.8.2"
-    registry-auth-token: "npm:^4.0.0"
-    registry-url: "npm:^5.0.0"
-    semver: "npm:^7.3.5"
-  checksum: e94a78e59f9cedcf794bc2819fa37bef15469e64244fabbb086f16214e90bcd58fdfb4e520d7b5492f0d41d62b01ba03ea05344ec3bde04770bfa3842803fd64
   languageName: node
   linkType: hard
 
