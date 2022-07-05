@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { StorageService } from '@webmonetization/wext/services'
+import { StoreService } from '@webmonetization/wext/services'
 
 import { ROUTES } from '../constants'
 
@@ -14,7 +14,7 @@ interface IRouterContext {
 }
 
 interface IRouterProvider {
-  storage: Pick<StorageService, 'get' | 'set'>
+  storage: Pick<StoreService, 'get' | 'set'>
 }
 
 // Context
@@ -49,7 +49,7 @@ export const RouterProvider: React.FC<IRouterProvider> = props => {
   const defaultRoute = showTipping ? ROUTES.tipping : ROUTES.streaming
 
   const lastOrDefaultRoute =
-    storage.get(lastRoute) && storage.get(tippingShown)
+    storage.get(lastRoute) && (storage.get(tippingShown) || !allowTipping)
       ? storage.get(lastRoute)
       : defaultRoute
 

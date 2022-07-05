@@ -15,7 +15,7 @@ import {
   StorableBlindToken,
   verifyProof
 } from '@coil/privacypass-sjcl'
-import { SjclEllipticalPoint } from 'sjcl'
+import type { SjclEllipticalPoint } from 'sjcl'
 
 import { portableFetch } from './portableFetch'
 
@@ -48,18 +48,12 @@ export interface Token {
   blindingFactor: string
 }
 
-// TODO: should these be allowed to be async?
-// TODO: went for localforage-like, could chang
 export interface TokenStore {
-  //getItem: (key: string) => Promise<string>
+  clear(): Promise<void>
   setItem: (key: string, value: string) => Promise<string>
   removeItem: (key: string) => Promise<void>
   iterate: (
-    fn: (
-      value: string,
-      key: string,
-      iterationNumber: number
-    ) => StorableBlindToken | undefined
+    fn: (key: string, value: string) => StorableBlindToken | undefined
   ) => Promise<StorableBlindToken | undefined>
 }
 
@@ -99,15 +93,15 @@ export interface BTPTokenData {
 }
 
 export class AnonymousTokens implements AnonymousTokensService {
-  private redeemerUrl: string
-  private signerUrl: string
+  private readonly redeemerUrl: string
+  private readonly signerUrl: string
   private store: TokenStore
   // Maps btpToken => SignedToken.message
   private tokenMap: Map<string, string> = new Map()
-  private debug: typeof console.log
-  private batchSize: number
+  private readonly debug: typeof console.log
+  private readonly batchSize: number
 
-  private storedTokenCount: number
+  private storedTokenCount = 0
   private _populateTokensPromise: Promise<void> | null = null
 
   constructor({
@@ -122,22 +116,26 @@ export class AnonymousTokens implements AnonymousTokensService {
     this.store = store
     this.debug = debug || function () {}
     this.batchSize = batchSize
-
-    let count = 0
-    this.store.iterate((_blob: string, name: string) => {
-      if (name.startsWith(TOKEN_PREFIX)) count++
-      return undefined
-    })
-    this.storedTokenCount = count
+    void this.getStoredTokenCount()
 
     // TODO: better config management
     initECSettings(h2cParams())
   }
 
+  private async getStoredTokenCount() {
+    let count = 0
+    await this.store.iterate((name: string) => {
+      if (name.startsWith(TOKEN_PREFIX)) count++
+      return undefined
+    })
+    this.storedTokenCount = count
+  }
+
   async getToken(coilAuthToken: string): Promise<string> {
     // When there is only 1 token left, fetch some more in the background.
     if (this.storedTokenCount === 1) {
-      this.populateTokens(coilAuthToken)
+      // noinspection ES6MissingAwait
+      void this.populateTokens(coilAuthToken)
     }
 
     // eslint-disable-next-line no-constant-condition
@@ -191,7 +189,7 @@ export class AnonymousTokens implements AnonymousTokensService {
   }
 
   private async _getSignedToken(): Promise<StorableBlindToken | undefined> {
-    return this.store.iterate((blob: string, name: string) => {
+    return this.store.iterate((name: string, blob: string) => {
       if (name.startsWith(TOKEN_PREFIX)) {
         return JSON.parse(blob) as StorableBlindToken
       }
@@ -201,8 +199,9 @@ export class AnonymousTokens implements AnonymousTokensService {
   async removeToken(btpToken: string): Promise<void> {
     const anonUserId = this.tokenMap.get(btpToken)
     this.tokenMap.delete(btpToken)
-    if (anonUserId) return this._removeSignedToken(anonUserId)
-    else return Promise.resolve()
+    if (anonUserId) {
+      return this._removeSignedToken(anonUserId)
+    }
   }
 
   private async _removeSignedToken(anonUserId: string): Promise<void> {
@@ -279,7 +278,7 @@ export class AnonymousTokens implements AnonymousTokensService {
   ) {
     for (let i = 0; i < tokens.length; ++i) {
       const encoded = getTokenEncoding(tokens[i], signedPoints[i])
-      this.store.setItem(
+      void this.store.setItem(
         TOKEN_PREFIX + tokenName(tokens[i]),
         JSON.stringify(encoded)
       )

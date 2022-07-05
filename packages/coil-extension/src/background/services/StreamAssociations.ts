@@ -6,7 +6,7 @@ import { FrameSpec } from '../../types/FrameSpec'
 export class StreamAssociations {
   private tabsToFramesToStreams: {
     [tabId: number]: {
-      [frameId: number]: string
+      [frameId: number]: Set<string>
     }
   } = {}
 
@@ -14,42 +14,61 @@ export class StreamAssociations {
     [streamId: string]: FrameSpec
   } = {}
 
-  getTabStreams(tabId: number) {
-    return this.tabsToFramesToStreams[tabId]
+  getTabStreams(tabId: number): ReadonlyArray<[string, FrameSpec]> {
+    return Object.values(this.tabsToFramesToStreams[tabId] ?? {}).reduce(
+      (accum, set) => {
+        set.forEach(v => accum.push([v, this.getStreamFrame(v)]))
+        return accum
+      },
+      [] as Array<[string, FrameSpec]>
+    )
   }
 
-  clearTabStreams(tabId: number) {
+  clearTabStreams(tabId: number): void {
+    this.getTabStreams(tabId).forEach(([streamId]) => {
+      this.clearStreamFrame(streamId)
+    })
     delete this.tabsToFramesToStreams[tabId]
   }
 
-  clearFrame(streamId: string) {
+  clearStreamFrame(streamId: string): void {
     delete this.streamsToFrames[streamId]
   }
 
-  getFrame(streamId: string) {
+  clearStreamFrameAndFromFrameSet(streamId: string) {
+    const { tabId, frameId } = this.getStreamFrame(streamId)
+    this.clearStreamFrame(streamId)
+    this.tabsToFramesToStreams[tabId]?.[frameId]?.delete(streamId)
+  }
+
+  getStreamFrame(streamId: string): FrameSpec {
     return this.streamsToFrames[streamId]
   }
 
-  setFrame(streamId: string, frame: FrameSpec) {
+  setStreamFrame(streamId: string, frame: FrameSpec): void {
     this.streamsToFrames[streamId] = frame
   }
 
-  clearStream({ tabId, frameId }: FrameSpec) {
+  clearStreams({ tabId, frameId }: FrameSpec): void {
+    this.getStreams({ tabId, frameId }).forEach(
+      this.clearStreamFrame.bind(this)
+    )
     const tabsToFramesToStream = this.tabsToFramesToStreams[tabId]
     if (tabsToFramesToStream) {
       delete tabsToFramesToStream[frameId]
     }
   }
 
-  getStreamId({ tabId, frameId }: FrameSpec) {
-    return this.tabsToFramesToStreams[tabId]
-      ? this.tabsToFramesToStreams[tabId][frameId]
-      : undefined
+  getStreams({ tabId, frameId }: FrameSpec): ReadonlyArray<string> {
+    return Array.from(
+      this.tabsToFramesToStreams[tabId]?.[frameId]?.values() ?? []
+    )
   }
 
-  setStreamId({ tabId, frameId }: FrameSpec, streamId: string) {
-    const ensured = (this.tabsToFramesToStreams[tabId] =
-      this.tabsToFramesToStreams[tabId] ?? {})
-    ensured[frameId] = streamId
+  addStreamId({ tabId, frameId }: FrameSpec, streamId: string): void {
+    const ensured = (this.tabsToFramesToStreams[tabId] ??= {})
+    ensured[frameId] ??= new Set<string>()
+    ensured[frameId].add(streamId)
+    this.setStreamFrame(streamId, { tabId, frameId })
   }
 }

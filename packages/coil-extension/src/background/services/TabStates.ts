@@ -1,15 +1,51 @@
-import { injectable } from 'inversify'
+import { inject, injectable } from 'inversify'
+import { PaymentDetails } from '@webmonetization/polyfill-utils'
+import { StoreService } from '@webmonetization/wext/services'
 
-import { FrameState, MonetizationCommand, TabState } from '../../types/TabState'
+import {
+  FrameState,
+  getFrameTotal,
+  frameHasRecentPacket,
+  isFrameMonetized,
+  isFrameStreaming,
+  MonetizationCommand,
+  MonetizationRequestState,
+  TabState
+} from '../../types/TabState'
 import { IconState } from '../../types/commands'
 import { FrameSpec } from '../../types/FrameSpec'
+import * as tokens from '../../types/tokens'
+import { StoreProxy } from '../../types/storage'
+import { BuildConfig } from '../../types/BuildConfig'
+import { noop } from '../util/dbg'
+
+import { AuthService } from './AuthService'
+import { PopupBrowserAction } from './PopupBrowserAction'
+import { Logger, logger } from './utils'
+import { ActiveTabLogger } from './ActiveTabLogger'
+import { TippingService } from './TippingService'
+
+const dbg = noop
 
 @injectable()
 export class TabStates {
-  activeTab: number | null = null
   private tabStates: { [tab: number]: TabState } = {}
 
-  constructor() {}
+  constructor(
+    private storage: StoreService,
+    @inject(tokens.StoreProxy)
+    private store: StoreProxy,
+    private auth: AuthService,
+    private activeTabLogger: ActiveTabLogger,
+    private tippingService: TippingService,
+    @inject(tokens.BuildConfig)
+    private buildConfig: BuildConfig,
+    @inject(tokens.ActiveTab)
+    public activeTab: number,
+    private popup: PopupBrowserAction,
+    @logger('TabStates')
+    private log: Logger
+  ) {}
 
   set(tab: number, state: Partial<TabState> = {}) {
     const existingState = this.get(tab)
@@ -20,12 +56,14 @@ export class TabStates {
     const frameStates = this.get(tabId).frameStates
     const existingFrameState =
       frameStates[frameId] ?? this.makeFrameStateDefault()
-    this.set(tabId, {
+    const newState = {
       frameStates: {
         ...frameStates,
         ...{ [frameId]: { ...existingFrameState, ...state } }
       }
-    })
+    }
+    this.set(tabId, newState)
+    return newState
   }
 
   clearFrame({ tabId, frameId }: FrameSpec) {
@@ -53,8 +91,6 @@ export class TabStates {
 
   private makeDefault() {
     const state: TabState = {
-      playState: 'playing',
-      stickyState: 'auto',
       frameStates: {
         [0]: this.makeFrameStateDefault()
       }
@@ -64,18 +100,12 @@ export class TabStates {
 
   private makeFrameStateDefault(): FrameState {
     return {
-      monetized: false,
-      adapted: false,
-      total: 0,
-      lastMonetization: {
-        requestId: null,
-        command: null
-      }
+      adapted: false
     }
   }
 
   /**
-   * Returns a non authoritative reference. Do not update it and expect updates
+   * Returns a non-authoritative reference. Do not update it and expect updates
    * to be kept except by coincidence. Treat it as a copy.
    */
   get(tab: number, defaultValue = this.makeDefault()): TabState {
@@ -84,7 +114,8 @@ export class TabStates {
 
   getFrameOrDefault({ tabId, frameId }: FrameSpec) {
     return (
-      this.tabStates[tabId].frameStates[frameId] ?? this.makeFrameStateDefault()
+      this.tabStates[tabId]?.frameStates?.[frameId] ??
+      this.makeFrameStateDefault()
     )
   }
 
@@ -140,13 +171,153 @@ export class TabStates {
   logLastMonetizationCommand(
     frame: FrameSpec,
     command: MonetizationCommand,
-    requestId?: string
+    details: PaymentDetails | string
   ) {
-    this.setFrame(frame, {
-      lastMonetization: {
-        requestId: requestId || null,
-        command
-      }
+    const args = details
+    if (typeof details === 'string') {
+      const maybeNull =
+        this.getFrameOrDefault(frame)[`monetization-state-${details}`]
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      const last = maybeNull!
+      details = last?.details ?? { requestId: details }
+    }
+
+    const total = this.getTotal(frame, details)
+    const requestState: MonetizationRequestState = {
+      command,
+      details: details,
+      total: total,
+      lastPacketTime: 0
+    }
+    void this.activeTabLogger.log(
+      'logLastMonetizationCommand ' +
+        JSON.stringify({ command, frame, args, requestState }),
+      frame
+    )
+    const newState = this.setFrame(frame, {
+      [`monetization-state-${details.requestId}`]: requestState
     })
+    dbg(JSON.stringify({ frame, command, newState }, null, 2))
+  }
+
+  getTotal(frame: FrameSpec, details: PaymentDetails) {
+    const frameOrDefault = this.getFrameOrDefault(frame)
+    return frameOrDefault[`monetization-state-${details.requestId}`]?.total ?? 0
+  }
+
+  reloadTabState(opts: { from?: string } = {}) {
+    const { from } = opts
+    dbg('reloadTabState', { from })
+
+    const tab = this.activeTab
+    const state = () => this.get(tab)
+    this.setLocalStorageFromState(state())
+    this.setBrowserActionStateFromAuthAndTabState(from)
+    // Don't work off stale state, set(...) creates a copy ...
+    this.popup.setBrowserAction(tab, state())
+    if (from) {
+      this.log(
+        `reloadTabState tab=${tab}`,
+        `from=${from}`,
+        JSON.stringify(state(), null, 2)
+      )
+    }
+  }
+
+  private setBrowserActionStateFromAuthAndTabState(from?: string) {
+    dbg('setBrowserActionStateFromAuthAndTabState', { from })
+    const token = this.auth.getStoredToken()
+
+    if (!token || !this.store.validToken) {
+      this.popup.disable()
+    }
+
+    const tabId = this.activeTab
+
+    if (tabId) {
+      const tabState = this.getActiveOrDefault()
+
+      if (Object.values(tabState.frameStates).find(f => isFrameMonetized(f))) {
+        this.setIcon(tabId, 'monetized')
+      }
+
+      if (token == null) {
+        this.setIcon(tabId, 'unavailable')
+      } else if (token) {
+        this.popup.enable()
+
+        const tabState = this.getActiveOrDefault()
+        const frameStates = Object.values(tabState.frameStates)
+        const hasStream = Boolean(frameStates.find(f => isFrameMonetized(f)))
+        dbg({ from, hasStream })
+
+        const isStreaming: boolean =
+          hasStream &&
+          Boolean(
+            frameStates.find(
+              f =>
+                isFrameStreaming(f) &&
+                getFrameTotal(f) > 0 &&
+                frameHasRecentPacket(f)
+            )
+          )
+
+        if (hasStream) {
+          this.setIcon(tabId, 'monetized')
+          if (isStreaming) {
+            this.setIcon(tabId, 'streaming')
+          } else {
+            // Need to check if the user is able to tip with the new ui.
+            // This assumes that the site is monetized and
+            // that the user meets certain criteria
+            if (this.tippingService.userCanTip()) {
+              this.setIcon(tabId, 'tipping')
+            }
+          }
+        } else {
+          this.setIcon(tabId, 'inactive')
+        }
+      }
+    }
+  }
+
+  private setLocalStorageFromState(state: TabState) {
+    const frameStates = Object.values(state.frameStates)
+
+    state && state.coilSite
+      ? this.storage.set('coilSite', state.coilSite)
+      : this.storage.remove('coilSite')
+    // TODO: Another valid case might be a singular adapted iframe inside a non
+    // monetized top page.
+    this.storage.set('adapted', Boolean(state?.frameStates[0]?.adapted))
+    state && frameStates.find(f => isFrameMonetized(f))
+      ? this.storage.set('monetized', true)
+      : this.storage.remove('monetized')
+
+    if (this.buildConfig.extensionBuildString) {
+      this.store.extensionBuildString = this.buildConfig.extensionBuildString
+    }
+    if (this.buildConfig.extensionPopupFooterString) {
+      this.store.extensionPopupFooterString =
+        this.buildConfig.extensionPopupFooterString
+    }
+
+    if (state) {
+      const total = frameStates.reduce(
+        (acc, val) => acc + getFrameTotal(val),
+        0
+      )
+      this.storage.set('monetizedTotal', total)
+    }
+  }
+
+  incrementTotal(frame: FrameSpec, requestId: string, incr: number) {
+    const key = `monetization-state-${requestId}` as const
+    const state = this.getFrameOrDefault(frame)[key]
+    if (state != null) {
+      state.total += incr
+      state.lastPacketTime = Date.now()
+      this.setFrame(frame, { [key]: { ...state } })
+    }
   }
 }

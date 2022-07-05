@@ -8,18 +8,18 @@ import { Typography } from '@material-ui/core'
 import { PopupStateType } from '../services/PopupState'
 import { PopupHost, PopupRuntime } from '../types'
 import { API } from '../../webpackDefines'
-import { StorageService } from '../../services/storage'
+import { StoreService } from '../../services/storage'
 import { User } from '../../types/user'
 import { defaultPopupHost } from '../context/popupHostContext'
-import { StorageEventPartial } from '../context/storeContext'
 import { Index } from '../Index'
 import { ROUTES } from '../constants'
+import { StoreUpdate } from '../../types/commands'
 
 import { StatePanel } from './StatePanel'
 
 export const isExtension = Boolean(API && API.runtime && API.runtime.id)
 
-export function makeStorage(mock: any): Pick<StorageService, 'get' | 'set'> {
+export function makeStorage(mock: any): Pick<StoreService, 'get' | 'set'> {
   return {
     get<T = any>(key: string): T | null {
       return mock[key] || null
@@ -123,8 +123,6 @@ function mockState(partial: Partial<PopupStateType>): PopupStateType {
     user: null,
     adapted: null,
     monetized: null,
-    stickyState: null,
-    playState: null,
     monetizedTotal: null,
     coilSite: null,
     'popup-route:last': null,
@@ -180,8 +178,6 @@ const startDiscovering = mockState({
 const payingYouTube = mockState({
   monetized: true,
   monetizedTotal: 2326667,
-  playState: 'playing',
-  stickyState: 'auto',
   user: user,
   validToken: true,
   adapted: true
@@ -190,8 +186,6 @@ const payingYouTube = mockState({
 const payingTwitch = mockState({
   monetized: true,
   monetizedTotal: 5910000,
-  playState: 'playing',
-  stickyState: 'auto',
   user: user,
   validToken: true,
   adapted: true
@@ -202,8 +196,6 @@ const lastTipping = mockState({
   'popup-route:tipping-shown': true,
   monetized: true,
   monetizedTotal: 5910000,
-  playState: 'playing',
-  stickyState: 'auto',
   user: tipUserNewUi,
   validToken: true,
   adapted: true
@@ -214,7 +206,6 @@ const lastStreaming = mockState({
   'popup-route:tipping-shown': false,
   monetized: true,
   monetizedTotal: 5910000,
-  stickyState: 'auto',
   user: tipUserNewUi,
   validToken: true,
   adapted: true
@@ -225,7 +216,6 @@ const lastStreamingWithTip = mockState({
   'popup-route:tipping-shown': true,
   monetized: true,
   monetizedTotal: 5910000,
-  stickyState: 'auto',
   user: tipUserNewUi,
   validToken: true,
   adapted: true
@@ -286,7 +276,6 @@ const argsLogger = (name: string) => {
 
 class MockRuntime extends EventEmitter implements PopupRuntime {
   tabOpener = ((...args: any) => {
-    // console.log('tabOpener', ...args)
     return argsLogger('openTab: ' + args.join(' '))
   }) as any
 
@@ -298,7 +287,9 @@ class MockRuntime extends EventEmitter implements PopupRuntime {
     this.removeListener('message', func)
   }
 
-  sendMessage = argsLogger('sendMessage stub: ')
+  sendMessage = async (...args: unknown[]) => {
+    console.log('sendMessage stub', ...args)
+  }
 
   triggerOnMessage(message: any) {
     this.emit('message', message)
@@ -313,8 +304,6 @@ const embossedBorder = {
 }
 
 const useStyles = makeStyles(theme => {
-  console.log('breakpoint: ', [theme.breakpoints.up('md')])
-
   return {
     root: {
       background: '#DDD',
@@ -406,11 +395,11 @@ export const mockPopupsPage = () => {
           const newValue = (value += 10)
           state.monetizedTotal = newValue
 
-          const message: StorageEventPartial = {
+          const message: StoreUpdate['data'] = {
             key: 'monetizedTotal',
-            newValue: JSON.stringify(newValue)
+            value: newValue
           }
-          mockHost.events.emit('storage', message)
+          mockHost.events.emit('storeUpdate', message)
         }, 1500)
         setInitiated(true)
       }

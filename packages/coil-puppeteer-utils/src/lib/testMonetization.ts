@@ -125,13 +125,14 @@ export async function testMonetization({
   })
 
   async function listenFor(type: string) {
-    return page.evaluateOnNewDocument((type: MonetizationEventType) => {
+    return page.evaluateOnNewDocument((type: string) => {
       const setListener = () => {
         const winAny = window as any
         const docAny: MonetizationExtendedDocument = document as any
         const monetization = docAny.monetization
         if (monetization) {
-          monetization.addEventListener(type, (event: any) => {
+          const typedType = type as MonetizationEventType
+          monetization.addEventListener(typedType, (event: any) => {
             winAny.onCustomEvent(
               { type, detail: event.detail },
               monetization.state

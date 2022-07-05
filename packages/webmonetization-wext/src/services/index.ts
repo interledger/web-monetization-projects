@@ -1,2 +1,1 @@
-export * from './HistoryDb'
-export * from './StorageService'
+export * from './StoreService'

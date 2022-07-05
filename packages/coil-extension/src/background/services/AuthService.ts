@@ -4,10 +4,9 @@ import SuperTokens from 'supertokens-website'
 import { GraphQlClient, tokenUtils } from '@coil/client'
 import { inject, injectable } from 'inversify'
 
-import { LocalStorageProxy } from '../../types/storage'
+import { StoreProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { TimeoutError } from '../../util/timeout'
-import { User } from '../../types/user'
 
 import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
@@ -27,8 +26,8 @@ import { formatTipSettings } from './formatTipSettings.util'
 
  ### Incognito Notes
  The manifest declares "incognito":"spanning" with ONE background page instance
- shared between contexts. If you log in in one context, you'll be logged in
- everywhere. If you logout from one context, you'll be logged out everywhere.
+ shared between contexts. If you log in,in one context, you'll be logged in
+ everywhere. If you log out from one context, you'll be logged out everywhere.
 
  ### Site <-> Extension token synchronization
  - Every time you land on a coil.com frame the content script will send the
@@ -45,7 +44,7 @@ import { formatTipSettings } from './formatTipSettings.util'
  site. This supports convenient use of incognito contexts.
 
  We could do this only for incognito contexts and instead logout in normal
- contexts, but it's possible you could login via an incognito context first,
+ contexts, but it's possible you could log in via an incognito context first,
  then see no token in a normal context, infer that the user had logged out, then
  very confusingly propagate this logged out state to the incognito context.
 
@@ -63,13 +62,13 @@ export class AuthService extends EventEmitter {
   private trace = (..._: unknown[]) => {}
 
   constructor(
-    @inject(tokens.LocalStorageProxy)
-    private store: LocalStorageProxy,
-    private client: GraphQlClient,
     @inject(tokens.CoilDomain)
     private domain: string,
     @logger('AuthService')
     private log: Logger,
+    @inject(tokens.StoreProxy)
+    private store: StoreProxy,
+    private client: GraphQlClient,
     private siteToken: SiteToken,
     private activeTabs: ActiveTabLogger,
     private tippingService: TippingService

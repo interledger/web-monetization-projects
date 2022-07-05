@@ -1,6 +1,6 @@
 import { Injector } from 'reduct'
 import {
-  MonetizationTagObserver,
+  MonetizationTagManager,
   resolvePaymentEndpoint,
   StreamControl,
   watchPageEvents
@@ -84,7 +84,7 @@ export class MonetizationPolyfill {
     // stop/resume based on page events
     const { clearWatch, setWatch } = watchPageEvents()
 
-    const monitor = new MonetizationTagObserver(
+    const monitor = new MonetizationTagManager(
       window,
       document,
       async ({ started, stopped }) => {

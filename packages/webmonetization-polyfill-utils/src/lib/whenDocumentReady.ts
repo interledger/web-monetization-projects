@@ -1,4 +1,4 @@
-export function whenDocumentReady(document: HTMLDocument, start: Function) {
+export function whenDocumentReady(document: Document, start: Function) {
   if (
     document.readyState === 'interactive' ||
     document.readyState === 'complete'

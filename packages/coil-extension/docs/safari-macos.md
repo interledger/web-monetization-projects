@@ -3,7 +3,7 @@
 ### Build safari project after webpack
 
 ```
-export AFTER_EMIT_SHELL_CMD="./scripts/build-safari.sh"
+export AFTER_DONE_SHELL_CMD="./scripts/build-safari.sh"
 yarn dev-chrome-prod
 ```
 
@@ -22,5 +22,5 @@ yarn dev-chrome-prod
 ### Debugging
 
 - Enable debugging:
-  Develop -> Web Extension Background Pages 
+  Develop -> Web Extension Background Pages
   ![image](https://user-images.githubusercontent.com/525211/93846107-54d59480-fccd-11ea-9d81-121ebbc02d3c.png)

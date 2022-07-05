@@ -4,7 +4,7 @@ parameters:
   coil_domain:
     type: enum
     default: "https://coil.com"
-    enum: ["https://coil.com", "https://staging.coil.com"]
+    enum: [ "https://coil.com", "https://staging.coil.com" ]
 
 commands:
   gcloud-get-creds:
@@ -34,11 +34,11 @@ references:
   node-version-matrix: &node-version-matrix
     matrix:
       parameters:
-        node-version: [ "16.15.0", "18.2.0" ]
+        node-version: &node-versions [ "16.15.1", "18.4.0" ]
   just-one-node-version-matrix: &just-latest-lts-node-version
     matrix:
       parameters:
-        node-version: [ "16.15.0" ]
+        node-version: [ "16.15.1" ]
 
 jobs:
   # Run Linting
@@ -48,10 +48,10 @@ jobs:
       - checkout
       # Download and cache dependencies
       - &restore_cache
-#        run:
-#         name: Restore Cache Dummy
-#         command: |
-#           echo Restore Cache Dummy!
+        #        run:
+        #         name: Restore Cache Dummy
+        #         command: |
+        #           echo Restore Cache Dummy!
         restore_cache:
           keys:
             - v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
@@ -70,9 +70,9 @@ jobs:
       - &save_cache
         save_cache:
           paths:
-          - node_modules
-          - .yarn
-          - pw-browsers
+            - node_modules
+            - .yarn
+            - pw-browsers
           key: v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
 
   coil-extension-package:
@@ -100,6 +100,7 @@ jobs:
 
   build-extension-e2e-coil:
     docker:
+      # Hey renovate PR merger. Don't forget the node-version: [ "x.y.z", "y.z.x" ] blocks
       - image: cimg/node:16.15.1-browsers
     steps:
       - gcloud-get-creds
@@ -155,7 +156,6 @@ jobs:
             yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
             xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
-     # Firefox puppeteer was not working at one point and it's on the TODO to reinstate
       # - run:
       #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
       #     command: |
@@ -194,7 +194,6 @@ jobs:
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
-            xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
 
       # - run:
       #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
@@ -248,7 +247,7 @@ jobs:
     steps:
       - run:
           name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be masked
-          command: | 
+          command: |
             echo TESTING_ENV_VAR $TESTING_ENV_VAR
             # check the node version
             node --version
@@ -260,6 +259,13 @@ jobs:
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
+            xvfb-run -a yarn << parameters.command >>
+      - run:
+          name: Run jest via babel
+          command: |
+            export DEBUG='coil*'
+            export TS_JEST_MAP_PATHS_TO_MODULES=true
+            cp jest.config.local.example.js jest.config.local.js 
             xvfb-run -a yarn << parameters.command >>
       - run:
           name: Run jest from build
@@ -377,8 +383,7 @@ workflows:
               ignore: /pull\/[0-9]+/
           matrix:
             parameters:
-              # TODO: DRY it up
-              node-version: [ "16.15.0", "18.2.0" ]
+              node-version: *node-versions
               command: [ "test:coverage", "test:e2e:coverage" ]
       - jest-workspaces-foreach-all:
           context: web-monetization-tests
@@ -388,7 +393,7 @@ workflows:
               ignore: /pull\/[0-9]+/
           matrix:
             parameters:
-              node-version: [ "16.15.0", "18.2.0" ]
+              node-version: *node-versions
               command: [ "test:coverage", "test:e2e:coverage" ]
       - coil-extension-puppeteer:
           context: web-monetization-tests
@@ -410,7 +415,7 @@ workflows:
             - jest-workspaces-foreach-all
             - coil-extension-puppeteer
             - coil-extension-puppeteer-transpile-only
-          filters:  # using regex filters requires the entire branch to match
+          filters: # using regex filters requires the entire branch to match
             branches:
-              only:  # only branches matching the below regex filters will run
+              only: # only branches matching the below regex filters will run
                 - main

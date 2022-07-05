@@ -96,7 +96,7 @@ export class MultipleInstanceDetector {
           const notification = {
             contextMessage: 'There is already an active coil extension',
             isClickable: false,
-            type: 'basic',
+            type: 'basic' as const,
             iconUrl: this.wextApi.extension.getURL('res/icn-coil-ext@4x.png'),
             title: 'Extension detected',
             message: `${extensionData.name} is active`
