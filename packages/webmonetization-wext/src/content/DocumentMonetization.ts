@@ -33,11 +33,7 @@ export class DocumentMonetization {
   constructor(private doc: Document, private scripts: ScriptInjection) {}
 
   injectMonetizationPolyfill(opts: { wm2Allowed: boolean }) {
-    console.log('injectMonetizationPolyfill', this.doc.head?.outerHTML)
-    // The content script is injected at document_start and head may not
-    // be ready at that point
     try {
-      // this.doc.head.dataset['wm2Allowed'] = JSON.stringify(opts.wm2Allowed)
       this.scripts.inject(wmPolyfill)
     } catch (e) {
       console.error(e)
