@@ -69,7 +69,7 @@ export const wmPolyfill = `
   // when the requests will be blocked due to not being part of the origin
   // trial.
   // Block scoped so vars will not be set on window unless explicitly done
-  // noinspection JSUnresolvedVariable
+  // noinspection PointlessBooleanExpressionJS
   if (true) {
     ${wm2Polyfill}
   }
