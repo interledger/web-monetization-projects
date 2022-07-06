@@ -27,6 +27,7 @@ import {
 import { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
@@ -48,13 +49,14 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 export class ContentScript {
   private paused = false
   private tagManager!: MonetizationTagManager
-  private wm2Allowed = false
+  private wm2Allowed = this.buildConfig.wm2Always
 
   constructor(
     private storage: Storage,
     private window: Window,
     private document: Document,
     @inject(tokens.ContentRuntime) private runtime: ContentRuntime,
+    @inject(tokens.BuildConfig) private buildConfig: BuildConfig,
     private adaptedContent: AdaptedContentService,
     private frames: Frames,
     private idle: IdleDetection,
@@ -88,7 +90,7 @@ export class ContentScript {
         })
         this.monetization.setMonetizationRequest(undefined)
       }
-      this.runtime.sendMessage(request)
+      void this.runtime.sendMessage(request)
     }
 
     //TODO:WM2 move this out of this damn closure
@@ -155,7 +157,8 @@ export class ContentScript {
         return
       }
     }
-    this.runtime.sendMessage(startWebMonetizationMessage(request))
+    // noinspection ES6MissingAwait
+    void this.runtime.sendMessage(startWebMonetizationMessage(request))
   }
 
   setRuntimeMessageListener() {
@@ -269,7 +272,7 @@ export class ContentScript {
               correlationId: data.wmIFrameCorrelationId
             }
           }
-          this.runtime.sendMessage(message)
+          void this.runtime.sendMessage(message)
         }
       })
     }
@@ -281,21 +284,20 @@ export class ContentScript {
           origin: this.document.location.origin
         }
       }
-      this.runtime.sendMessage(
-        message,
-        (response: ContentScriptInitResponse) => {
-          this.wm2Allowed = response.wm2Allowed
 
-          whenDocumentReady(this.document, () => {
-            this.handleMonetizationTag()
-            this.watchPageEventsToPauseOrResume()
-          })
-          this.setRuntimeMessageListener()
-          this.monetization.injectDocumentMonetization({
-            wm2Allowed: this.wm2Allowed
-          })
-        }
-      )
+      if (typeof this.wm2Allowed !== 'undefined') {
+        // We have a build time setting
+        this.injectPolyfillsAndWatchTags()
+      } else {
+        // Wait to inject polyfill until we know if WM2 is allowed
+        this.runtime.sendMessage(
+          message,
+          (response: ContentScriptInitResponse) => {
+            this.wm2Allowed = response.wm2Allowed
+            this.injectPolyfillsAndWatchTags()
+          }
+        )
+      }
     }
 
     if (this.frames.isAnyCoilFrame) {
@@ -310,6 +312,17 @@ export class ContentScript {
         addCoilExtensionInstalledMarker(this.document)
       }
     }
+  }
+
+  private injectPolyfillsAndWatchTags() {
+    whenDocumentReady(this.document, () => {
+      this.handleMonetizationTag()
+      this.watchPageEventsToPauseOrResume()
+    })
+    this.setRuntimeMessageListener()
+    this.monetization.injectMonetizationPolyfill({
+      wm2Allowed: Boolean(this.wm2Allowed)
+    })
   }
 
   /**
@@ -339,7 +352,7 @@ export class ContentScript {
               requestIds
             }
           }
-          runtime.sendMessage(pause)
+          void runtime.sendMessage(pause)
         }
       },
       resume: (reason: string) => {
@@ -355,7 +368,7 @@ export class ContentScript {
               requestIds
             }
           }
-          runtime.sendMessage(resume)
+          void runtime.sendMessage(resume)
         }
       }
     })
