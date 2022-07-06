@@ -3,13 +3,15 @@ import {
   MonetizationTagManager,
   PaymentDetails,
   whenDocumentReady,
-  mozClone
+  mozClone,
+  PaymentDetailsChangeArguments
 } from '@webmonetization/polyfill-utils'
 import {
   DocumentMonetization,
   IdleDetection
 } from '@webmonetization/wext/content'
 import { MonetizationProgressEvent, TipEvent } from '@webmonetization/types'
+import { EventEmitter } from 'puppeteer'
 
 import * as tokens from '../../types/tokens'
 import {
@@ -48,8 +50,9 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 @injectable()
 export class ContentScript {
   private paused = false
-  private tagManager!: MonetizationTagManager
+  private readonly tagManager: MonetizationTagManager
   private wm2Allowed = this.buildConfig.wm2Always
+  private events = new EventEmitter()
 
   constructor(
     private storage: Storage,
@@ -63,77 +66,86 @@ export class ContentScript {
     private wmDebug: DebugService,
     private monetization: DocumentMonetization,
     private auth: ContentAuthService
-  ) {}
-
-  disallowed = new Set<string>()
-
-  handleMonetizationTag() {
-    const startMonetization = async (details: PaymentDetails) => {
-      // TODO:WM2
-      if (this.tagManager.atMostOneTagAndNoneInBody()) {
-        this.monetization.setMonetizationRequest({ ...details })
-      }
-      await this.doStartMonetization(details)
-    }
-
-    const stopMonetization = (details: PaymentDetails) => {
-      const request: StopWebMonetization = {
-        command: 'stopWebMonetization',
-        data: details
-      }
-      // TODO:WM2
-      if (this.tagManager.atMostOneTagAndNoneInBody()) {
-        this.monetization.setState({
-          requestId: details.requestId,
-          state: 'stopped',
-          finalized: true
-        })
-        this.monetization.setMonetizationRequest(undefined)
-      }
-      void this.runtime.sendMessage(request)
-    }
-
-    //TODO:WM2 move this out of this damn closure
-    const tagManager = new MonetizationTagManager(
+  ) {
+    this.tagManager = new MonetizationTagManager(
       this.window,
       this.document,
-      ({ started, stopped }) => {
-        if (stopped) {
-          if (!this.disallowed.has(stopped.requestId)) {
-            debug('sending stopped request', JSON.stringify(stopped, null, 2))
-            stopMonetization(stopped)
-          } else {
-            debug(
-              'not propagating stop message to bg',
-              JSON.stringify(stopped, null, 2)
-            )
-          }
-        }
-        if (started) {
-          if (!this.tagManager.atMostOneTagAndNoneInBody()) {
-            // wm2 is required
-            if (!this.wm2Allowed) {
-              debug(
-                'not allowing start request which requires wm2',
-                JSON.stringify(started, null, 2)
-              )
-              this.disallowed.add(started.requestId)
-              return
-            }
-          }
-          debug('sending start request', JSON.stringify(started, null, 2))
-          void startMonetization(started)
-        }
+      details => {
+        this.onPaymentDetailsChange(details)
       },
       false
     )
-
-    this.tagManager = tagManager
     // Do this before we scan the document for tags in startWhenDocumentReady,
     // so we can capture the events
-    this.wmDebug.init(tagManager)
+    this.wmDebug.init(this.tagManager)
+  }
+
+  disallowed = new Set<string>()
+
+  async startMonetization(details: PaymentDetails) {
+    // TODO:WM2
+    if (this.tagManager.atMostOneTagAndNoneInBody()) {
+      this.monetization.setMonetizationRequest({ ...details })
+    }
+    await this.doStartMonetization(details)
+  }
+
+  stopMonetization(details: PaymentDetails) {
+    const request: StopWebMonetization = {
+      command: 'stopWebMonetization',
+      data: details
+    }
+    // TODO:WM2
+    if (this.tagManager.atMostOneTagAndNoneInBody()) {
+      this.monetization.setState({
+        requestId: details.requestId,
+        state: 'stopped',
+        finalized: true
+      })
+      this.monetization.setMonetizationRequest(undefined)
+    }
+    void this.runtime.sendMessage(request)
+  }
+
+  startTagManager() {
     // // Scan for WM tags when page is interactive
-    tagManager.startWhenDocumentReady()
+    this.tagManager.startWhenDocumentReady()
+  }
+
+  private onPaymentDetailsChange(details: PaymentDetailsChangeArguments) {
+    // Queue up until init done
+    if (typeof this.wm2Allowed === 'undefined') {
+      this.events.once('initDone', () => this.onPaymentDetailsChange(details))
+      return
+    }
+
+    const { started, stopped } = details
+    if (stopped) {
+      if (!this.disallowed.has(stopped.requestId)) {
+        debug('sending stopped request', JSON.stringify(stopped, null, 2))
+        this.stopMonetization(stopped)
+      } else {
+        debug(
+          'not propagating stop message to bg',
+          JSON.stringify(stopped, null, 2)
+        )
+      }
+    }
+    if (started) {
+      if (!this.tagManager.atMostOneTagAndNoneInBody()) {
+        // wm2 is required
+        if (!this.wm2Allowed) {
+          debug(
+            'not allowing start request which requires wm2',
+            JSON.stringify(started, null, 2)
+          )
+          this.disallowed.add(started.requestId)
+          return
+        }
+      }
+      debug('sending start request', JSON.stringify(started, null, 2))
+      void this.startMonetization(started)
+    }
   }
 
   // TODO: WM2
@@ -284,8 +296,17 @@ export class ContentScript {
           origin: this.document.location.origin
         }
       }
-      void this.runtime.sendMessage(message)
-      // We have a build time setting
+
+      this.runtime.sendMessage(
+        message,
+        (response: ContentScriptInitResponse) => {
+          if (typeof this.wm2Allowed === 'undefined') {
+            this.wm2Allowed = response.wm2Allowed
+            this.events.emit('initDone')
+          }
+        }
+      )
+
       this.injectPolyfillsAndWatchTags()
     }
     if (this.frames.isAnyCoilFrame) {
@@ -303,7 +324,7 @@ export class ContentScript {
 
   private injectPolyfillsAndWatchTags() {
     whenDocumentReady(this.document, () => {
-      this.handleMonetizationTag()
+      this.startTagManager()
       this.watchPageEventsToPauseOrResume()
     })
     this.setRuntimeMessageListener()
