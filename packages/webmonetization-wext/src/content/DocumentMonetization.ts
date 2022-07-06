@@ -32,7 +32,7 @@ export class DocumentMonetization {
 
   constructor(private doc: Document, private scripts: ScriptInjection) {}
 
-  injectMonetizationPolyfill(opts: { wm2Allowed: boolean }) {
+  injectMonetizationPolyfill() {
     try {
       this.scripts.inject(wmPolyfill)
     } catch (e) {

@@ -307,9 +307,7 @@ export class ContentScript {
       this.watchPageEventsToPauseOrResume()
     })
     this.setRuntimeMessageListener()
-    this.monetization.injectMonetizationPolyfill({
-      wm2Allowed: Boolean(this.wm2Allowed)
-    })
+    this.monetization.injectMonetizationPolyfill()
   }
 
   /**
