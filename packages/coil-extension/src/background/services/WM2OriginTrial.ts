@@ -83,7 +83,7 @@ class ResourceFetcher<T> {
 
 @injectable()
 export class WM2OriginTrial {
-  alexAllowed = true
+  buildAllowed = true
 
   hardCodedAllowList = new Set(['https://quirksmode.org'])
   fetcher = new ResourceFetcher(
@@ -96,7 +96,7 @@ export class WM2OriginTrial {
     @inject(tokens.StoreProxy)
     private storage: StoreProxy
   ) {
-    if (!this.alexAllowed) {
+    if (!this.buildAllowed) {
       this.fetcher.start()
     }
   }
@@ -110,7 +110,7 @@ export class WM2OriginTrial {
   // If the origin list is configured once at startup, with refreshes everytime
   // a content script is init, then it should stay pretty fresh.
   async checkOrigin(url: string) {
-    if (this.alexAllowed) {
+    if (this.buildAllowed) {
       return true
     }
     if (this.storage.WM2_ALLOWED) {
