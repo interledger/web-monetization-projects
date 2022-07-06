@@ -6,7 +6,7 @@ export const prettyJSON = (obj: unknown) => JSON.stringify(obj, null, 2)
 
 export function makeCopyToDistPattern(polyfillHash?: string) {
   // Patterns for webpack-copy-plugin
-  return [
+  const copyToDist = [
     {
       from: 'manifest.json',
       to: 'manifest.json',
@@ -30,4 +30,6 @@ export function makeCopyToDistPattern(polyfillHash?: string) {
       to: 'hot-reload.js'
     })
   }
+
+  return copyToDist
 }
