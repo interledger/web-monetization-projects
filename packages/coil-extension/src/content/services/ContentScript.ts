@@ -1,3 +1,5 @@
+import { EventEmitter } from 'events'
+
 import { inject, injectable } from 'inversify'
 import {
   MonetizationTagManager,
@@ -11,7 +13,6 @@ import {
   IdleDetection
 } from '@webmonetization/wext/content'
 import { MonetizationProgressEvent, TipEvent } from '@webmonetization/types'
-import { EventEmitter } from 'puppeteer'
 
 import * as tokens from '../../types/tokens'
 import {
