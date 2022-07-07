@@ -4,36 +4,53 @@ import { EventEmitter } from 'events'
 import { inject, injectable } from 'inversify'
 import { WextApi } from '@webmonetization/wext/tokens'
 
-const EVENTS = {
-  'tabs.onRemoved': chrome.tabs.onRemoved,
-  'tabs.onReplaced': chrome.tabs.onReplaced,
-  'tabs.onActivated': chrome.tabs.onActivated,
-  'tabs.onActiveChanged': chrome.tabs.onActiveChanged,
-  'tabs.onSelectionChanged': chrome.tabs.onSelectionChanged,
-  'tabs.onCreated': chrome.tabs.onCreated,
-  'tabs.onAttached': chrome.tabs.onAttached,
-  'tabs.onDetached': chrome.tabs.onDetached,
+/**
+ * Not all events are defined in all implementations, so we wrap the declaration
+ * in a getter function, which will return undefined when there is a reference
+ * error.
+ */
+const get = <T>(getter: () => T) => {
+  try {
+    return getter()
+  } catch {
+    return undefined
+  }
+}
 
-  'windows.onFocusChanged': chrome.windows.onFocusChanged,
+const EVENTS = {
+  'tabs.onRemoved': get(() => chrome.tabs.onRemoved),
+  'tabs.onReplaced': get(() => chrome.tabs.onReplaced),
+  'tabs.onActivated': get(() => chrome.tabs.onActivated),
+  'tabs.onActiveChanged': get(() => chrome.tabs.onActiveChanged),
+  'tabs.onSelectionChanged': get(() => chrome.tabs.onSelectionChanged),
+  'tabs.onCreated': get(() => chrome.tabs.onCreated),
+  'tabs.onAttached': get(() => chrome.tabs.onAttached),
+  'tabs.onDetached': get(() => chrome.tabs.onDetached),
+
+  'windows.onFocusChanged': get(() => chrome.windows.onFocusChanged),
 
   // Not available on Safari, last checked version 15.5
-  'webNavigation.onHistoryStateUpdated':
-    chrome.webNavigation.onHistoryStateUpdated,
-  'webNavigation.onReferenceFragmentUpdated':
-    chrome.webNavigation.onReferenceFragmentUpdated,
-  'webNavigation.onCommitted': chrome.webNavigation.onCommitted,
-  'webNavigation.onCompleted': chrome.webNavigation.onCompleted,
-  'webNavigation.onBeforeNavigate': chrome.webNavigation.onBeforeNavigate,
+  'webNavigation.onHistoryStateUpdated': get(
+    () => chrome.webNavigation.onHistoryStateUpdated
+  ),
+  'webNavigation.onReferenceFragmentUpdated': get(
+    () => chrome.webNavigation.onReferenceFragmentUpdated
+  ),
+  'webNavigation.onCommitted': get(() => chrome.webNavigation.onCommitted),
+  'webNavigation.onCompleted': get(() => chrome.webNavigation.onCompleted),
+  'webNavigation.onBeforeNavigate': get(
+    () => chrome.webNavigation.onBeforeNavigate
+  ),
 
   // TODO: this will need special handling ...
   // need to return true here?  using sendResponse ?
-  // https://developer.chrome.com/apps/runtime#event-onMessage
+  // https://developer.get(() => chrome.com/apps/runtime#event-onMessag)e
   // Important: On Firefox, don't return a Promise directly (e.g. async
   // function) else other listeners do not get run!!
   // See: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
-  'runtime.onMessage': chrome.runtime.onMessage,
+  'runtime.onMessage': get(() => chrome.runtime.onMessage),
 
-  'runtime.onInstalled': chrome.runtime.onInstalled
+  'runtime.onInstalled': get(() => chrome.runtime.onInstalled)
 }
 
 type EventsType = typeof EVENTS
@@ -112,6 +129,9 @@ export class BackgroundEvents extends EventEmitter {
 
   bindBufferingListeners() {
     this.events.forEach(({ key, event }) => {
+      if (!event) {
+        return
+      }
       const bufferingListener = (...params: unknown[]) => {
         this.buffered.push({ key, params })
       }
@@ -130,7 +150,7 @@ export class BackgroundEvents extends EventEmitter {
 
     // Bind proxying listeners
     this.events.forEach(({ key, event }) => {
-      event.addListener((...params: unknown[]) => {
+      event?.addListener((...params: unknown[]) => {
         this.emit(key, ...params)
       })
     })
