@@ -4,55 +4,62 @@ import { EventEmitter } from 'events'
 import { inject, injectable } from 'inversify'
 import { WextApi } from '@webmonetization/wext/tokens'
 
-export interface EventsType {
-  'tabs.onRemoved': typeof chrome.tabs.onRemoved
-  'tabs.onReplaced': typeof chrome.tabs.onReplaced
-  'tabs.onActivated': typeof chrome.tabs.onActivated
-  'tabs.onActiveChanged': typeof chrome.tabs.onActiveChanged
-  'tabs.onSelectionChanged': typeof chrome.tabs.onSelectionChanged
-  'tabs.onCreated': typeof chrome.tabs.onCreated
-  'tabs.onAttached': typeof chrome.tabs.onAttached
-  'tabs.onDetached': typeof chrome.tabs.onDetached
+/**
+ * Not all events are defined in all implementations, so we wrap the declaration
+ * in a getter function, which will return undefined when there is a reference
+ * error.
+ *
+ * Mostly this is just so we don't have to maintain a separate list of events
+ * and a separate interface.
+ *
+ * When running this code in jest-dom, chrome will not be defined.
+ */
+const get = <T>(getter: () => T) => {
+  try {
+    return getter()
+  } catch {
+    return undefined
+  }
+}
 
-  'windows.onFocusChanged': typeof chrome.windows.onFocusChanged
+const EVENTS = {
+  'tabs.onRemoved': get(() => chrome.tabs.onRemoved),
+  'tabs.onReplaced': get(() => chrome.tabs.onReplaced),
+  'tabs.onActivated': get(() => chrome.tabs.onActivated),
+  'tabs.onActiveChanged': get(() => chrome.tabs.onActiveChanged),
+  'tabs.onSelectionChanged': get(() => chrome.tabs.onSelectionChanged),
+  'tabs.onCreated': get(() => chrome.tabs.onCreated),
+  'tabs.onAttached': get(() => chrome.tabs.onAttached),
+  'tabs.onDetached': get(() => chrome.tabs.onDetached),
+
+  'windows.onFocusChanged': get(() => chrome.windows.onFocusChanged),
 
   // Not available on Safari, last checked version 15.5
-  'webNavigation.onHistoryStateUpdated': typeof chrome.webNavigation.onHistoryStateUpdated
-  'webNavigation.onReferenceFragmentUpdated': typeof chrome.webNavigation.onReferenceFragmentUpdated
-  'webNavigation.onCommitted': typeof chrome.webNavigation.onCommitted
-  'webNavigation.onCompleted': typeof chrome.webNavigation.onCompleted
-  'webNavigation.onBeforeNavigate': typeof chrome.webNavigation.onBeforeNavigate
+  'webNavigation.onHistoryStateUpdated': get(
+    () => chrome.webNavigation.onHistoryStateUpdated
+  ),
+  'webNavigation.onReferenceFragmentUpdated': get(
+    () => chrome.webNavigation.onReferenceFragmentUpdated
+  ),
+  'webNavigation.onCommitted': get(() => chrome.webNavigation.onCommitted),
+  'webNavigation.onCompleted': get(() => chrome.webNavigation.onCompleted),
+  'webNavigation.onBeforeNavigate': get(
+    () => chrome.webNavigation.onBeforeNavigate
+  ),
 
   // TODO: this will need special handling ...
   // need to return true here?  using sendResponse ?
-  // see: https://developer.chrome.com/apps/runtime#event-onMessage
+  // https://developer.get(() => chrome.com/apps/runtime#event-onMessag)e
   // Important: On Firefox, don't return a Promise directly (e.g. async
   // function) else other listeners do not get run!!
   // See: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
-  'runtime.onMessage': typeof chrome.runtime.onMessage
+  'runtime.onMessage': get(() => chrome.runtime.onMessage),
 
-  'runtime.onInstalled': typeof chrome.runtime.onInstalled
+  'runtime.onInstalled': get(() => chrome.runtime.onInstalled)
 }
-type EventsKey = keyof EventsType
 
-const EVENTS = [
-  'tabs.onRemoved',
-  'tabs.onReplaced',
-  'tabs.onActivated',
-  'tabs.onActiveChanged',
-  'tabs.onSelectionChanged',
-  'tabs.onCreated',
-  'tabs.onAttached',
-  'tabs.onDetached',
-  'windows.onFocusChanged',
-  'webNavigation.onHistoryStateUpdated',
-  'webNavigation.onReferenceFragmentUpdated',
-  'webNavigation.onCommitted',
-  'webNavigation.onCompleted',
-  'webNavigation.onBeforeNavigate',
-  'runtime.onMessage',
-  'runtime.onInstalled'
-] as const
+type EventsType = typeof EVENTS
+type EventsKey = keyof EventsType
 
 type ChromeEvent<T> = T extends chrome.events.Event<infer P>
   ? P extends (...args: any) => any
