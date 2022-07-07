@@ -14,6 +14,8 @@ const EVENTS = {
   'tabs.onAttached': chrome.tabs.onAttached,
   'tabs.onDetached': chrome.tabs.onDetached,
 
+  'windows.onFocusChanged': chrome.windows.onFocusChanged,
+
   // Not available on Safari, last checked version 15.5
   'webNavigation.onHistoryStateUpdated':
     chrome.webNavigation.onHistoryStateUpdated,
@@ -118,7 +120,7 @@ export class BackgroundEvents extends EventEmitter {
     })
   }
 
-  emitBuffered() {
+  emitBufferedAndStopBuffering() {
     // Unbind buffering listeners
     this.bufferingCleanup.forEach(c => c())
 
@@ -140,14 +142,14 @@ export class BackgroundEvents extends EventEmitter {
   }
 
   on<T extends EventsKey>(
-    event: EventsKey,
+    event: T,
     listener: (...args: EventParams<T>) => void
   ): this {
     return super.on(event, listener as Func)
   }
 
   once<T extends EventsKey>(
-    event: EventsKey,
+    event: T,
     listener: (...args: EventParams<T>) => void
   ): this {
     return super.once(event, listener as Func)

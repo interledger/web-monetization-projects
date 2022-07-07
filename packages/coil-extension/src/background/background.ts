@@ -11,6 +11,7 @@ import { StoreProxy } from '../types/storage'
 import { BackgroundScript } from './services/BackgroundScript'
 import { configureContainer } from './di/configureContainer'
 import { BackgroundStoreService } from './services/BackgroundStoreService'
+import { BackgroundEvents } from './services/BackgroundEvents'
 
 declare global {
   interface Window {
@@ -33,6 +34,9 @@ async function main() {
     defaultScope: 'Singleton',
     autoBindInjectable: true
   })
+
+  const topLevelListeners = new BackgroundEvents(API)
+  topLevelListeners.bindBufferingListeners()
 
   await configureContainer({
     container: container,
