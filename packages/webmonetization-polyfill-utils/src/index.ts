@@ -1,6 +1,7 @@
 import * as asyncUtils from './lib/asyncUtils'
 
 export { MonetizationTagManager } from './lib/MonetizationTagManager'
+export type { PaymentDetailsChangeArguments } from './lib/MonetizationTagManager'
 
 export type { PaymentDetails } from './lib/MonetizationTagManager'
 

@@ -14,7 +14,7 @@ export type IdleDetectionDocument = Pick<
 
 @injectable()
 export class IdleDetection {
-  constructor(@inject(Document) private document: IdleDetectionDocument) {}
+  constructor(private document: Document) {}
 
   getNow() {
     return Date.now()

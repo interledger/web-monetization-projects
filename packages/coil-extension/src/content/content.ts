@@ -16,6 +16,7 @@ async function configureContainer(container: Container) {
   container.bind(tokens.LoggingEnabled).toDynamicValue(async () => {
     return isLoggingEnabled(BUILD_CONFIG)
   })
+  container.bind(tokens.BuildConfig).toConstantValue(BUILD_CONFIG)
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

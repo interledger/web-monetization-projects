@@ -1,9 +1,12 @@
+import { EventEmitter } from 'events'
+
 import { inject, injectable } from 'inversify'
 import {
   MonetizationTagManager,
   PaymentDetails,
   whenDocumentReady,
-  mozClone
+  mozClone,
+  PaymentDetailsChangeArguments
 } from '@webmonetization/polyfill-utils'
 import {
   DocumentMonetization,
@@ -27,6 +30,7 @@ import {
 import { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
@@ -47,91 +51,102 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 @injectable()
 export class ContentScript {
   private paused = false
-  private tagManager!: MonetizationTagManager
-  private wm2Allowed = false
+  private readonly tagManager: MonetizationTagManager
+  private wm2Allowed = this.buildConfig.wm2Always
+  private events = new EventEmitter()
 
   constructor(
     private storage: Storage,
     private window: Window,
     private document: Document,
     @inject(tokens.ContentRuntime) private runtime: ContentRuntime,
+    @inject(tokens.BuildConfig) private buildConfig: BuildConfig,
     private adaptedContent: AdaptedContentService,
     private frames: Frames,
     private idle: IdleDetection,
     private wmDebug: DebugService,
     private monetization: DocumentMonetization,
     private auth: ContentAuthService
-  ) {}
-
-  disallowed = new Set<string>()
-
-  handleMonetizationTag() {
-    const startMonetization = async (details: PaymentDetails) => {
-      // TODO:WM2
-      if (this.tagManager.atMostOneTagAndNoneInBody()) {
-        this.monetization.setMonetizationRequest({ ...details })
-      }
-      await this.doStartMonetization(details)
-    }
-
-    const stopMonetization = (details: PaymentDetails) => {
-      const request: StopWebMonetization = {
-        command: 'stopWebMonetization',
-        data: details
-      }
-      // TODO:WM2
-      if (this.tagManager.atMostOneTagAndNoneInBody()) {
-        this.monetization.setState({
-          requestId: details.requestId,
-          state: 'stopped',
-          finalized: true
-        })
-        this.monetization.setMonetizationRequest(undefined)
-      }
-      this.runtime.sendMessage(request)
-    }
-
-    //TODO:WM2 move this out of this damn closure
-    const tagManager = new MonetizationTagManager(
+  ) {
+    this.tagManager = new MonetizationTagManager(
       this.window,
       this.document,
-      ({ started, stopped }) => {
-        if (stopped) {
-          if (!this.disallowed.has(stopped.requestId)) {
-            debug('sending stopped request', JSON.stringify(stopped, null, 2))
-            stopMonetization(stopped)
-          } else {
-            debug(
-              'not propagating stop message to bg',
-              JSON.stringify(stopped, null, 2)
-            )
-          }
-        }
-        if (started) {
-          if (!this.tagManager.atMostOneTagAndNoneInBody()) {
-            // wm2 is required
-            if (!this.wm2Allowed) {
-              debug(
-                'not allowing start request which requires wm2',
-                JSON.stringify(started, null, 2)
-              )
-              this.disallowed.add(started.requestId)
-              return
-            }
-          }
-          debug('sending start request', JSON.stringify(started, null, 2))
-          void startMonetization(started)
-        }
+      details => {
+        this.onPaymentDetailsChange(details)
       },
       false
     )
-
-    this.tagManager = tagManager
     // Do this before we scan the document for tags in startWhenDocumentReady,
     // so we can capture the events
-    this.wmDebug.init(tagManager)
+    this.wmDebug.init(this.tagManager)
+  }
+
+  disallowed = new Set<string>()
+
+  async startMonetization(details: PaymentDetails) {
+    // TODO:WM2
+    if (this.tagManager.atMostOneTagAndNoneInBody()) {
+      this.monetization.setMonetizationRequest({ ...details })
+    }
+    await this.doStartMonetization(details)
+  }
+
+  stopMonetization(details: PaymentDetails) {
+    const request: StopWebMonetization = {
+      command: 'stopWebMonetization',
+      data: details
+    }
+    // TODO:WM2
+    if (this.tagManager.atMostOneTagAndNoneInBody()) {
+      this.monetization.setState({
+        requestId: details.requestId,
+        state: 'stopped',
+        finalized: true
+      })
+      this.monetization.setMonetizationRequest(undefined)
+    }
+    void this.runtime.sendMessage(request)
+  }
+
+  startTagManager() {
     // // Scan for WM tags when page is interactive
-    tagManager.startWhenDocumentReady()
+    this.tagManager.startWhenDocumentReady()
+  }
+
+  private onPaymentDetailsChange(details: PaymentDetailsChangeArguments) {
+    // Queue up until init done
+    if (typeof this.wm2Allowed === 'undefined') {
+      this.events.once('initDone', () => this.onPaymentDetailsChange(details))
+      return
+    }
+
+    const { started, stopped } = details
+    if (stopped) {
+      if (!this.disallowed.has(stopped.requestId)) {
+        debug('sending stopped request', JSON.stringify(stopped, null, 2))
+        this.stopMonetization(stopped)
+      } else {
+        debug(
+          'not propagating stop message to bg',
+          JSON.stringify(stopped, null, 2)
+        )
+      }
+    }
+    if (started) {
+      if (!this.tagManager.atMostOneTagAndNoneInBody()) {
+        // wm2 is required
+        if (!this.wm2Allowed) {
+          debug(
+            'not allowing start request which requires wm2',
+            JSON.stringify(started, null, 2)
+          )
+          this.disallowed.add(started.requestId)
+          return
+        }
+      }
+      debug('sending start request', JSON.stringify(started, null, 2))
+      void this.startMonetization(started)
+    }
   }
 
   // TODO: WM2
@@ -155,7 +170,8 @@ export class ContentScript {
         return
       }
     }
-    this.runtime.sendMessage(startWebMonetizationMessage(request))
+    // noinspection ES6MissingAwait
+    void this.runtime.sendMessage(startWebMonetizationMessage(request))
   }
 
   setRuntimeMessageListener() {
@@ -269,7 +285,7 @@ export class ContentScript {
               correlationId: data.wmIFrameCorrelationId
             }
           }
-          this.runtime.sendMessage(message)
+          void this.runtime.sendMessage(message)
         }
       })
     }
@@ -281,35 +297,39 @@ export class ContentScript {
           origin: this.document.location.origin
         }
       }
+
       this.runtime.sendMessage(
         message,
         (response: ContentScriptInitResponse) => {
-          this.wm2Allowed = response.wm2Allowed
-
-          whenDocumentReady(this.document, () => {
-            this.handleMonetizationTag()
-            this.watchPageEventsToPauseOrResume()
-          })
-          this.setRuntimeMessageListener()
-          this.monetization.injectDocumentMonetization({
-            wm2Allowed: this.wm2Allowed
-          })
+          if (typeof this.wm2Allowed === 'undefined') {
+            this.wm2Allowed = response.wm2Allowed
+            this.events.emit('initDone')
+          }
         }
       )
-    }
 
+      this.injectPolyfillsAndWatchTags()
+    }
     if (this.frames.isAnyCoilFrame) {
       if (this.frames.isIFrame) {
         this.auth.handleCoilTokenMessage()
       } else {
         this.auth.syncViaInjectToken()
       }
-
       if (this.frames.isCoilTopFrame) {
         this.auth.handleCoilWriteTokenWindowEvent()
         addCoilExtensionInstalledMarker(this.document)
       }
     }
+  }
+
+  private injectPolyfillsAndWatchTags() {
+    whenDocumentReady(this.document, () => {
+      this.startTagManager()
+      this.watchPageEventsToPauseOrResume()
+    })
+    this.setRuntimeMessageListener()
+    this.monetization.injectMonetizationPolyfill()
   }
 
   /**
@@ -339,7 +359,7 @@ export class ContentScript {
               requestIds
             }
           }
-          runtime.sendMessage(pause)
+          void runtime.sendMessage(pause)
         }
       },
       resume: (reason: string) => {
@@ -355,7 +375,7 @@ export class ContentScript {
               requestIds
             }
           }
-          runtime.sendMessage(resume)
+          void runtime.sendMessage(resume)
         }
       }
     })

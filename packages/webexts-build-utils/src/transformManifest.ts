@@ -58,11 +58,23 @@ function convertToMV3(v2: ManifestV2) {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function transformManifest(manifest: ManifestV2, browser: string) {
+export function transformManifest(
+  manifest: ManifestV2,
+  browser: string,
+  polyfillHash?: string
+) {
   const targets = manifest['$targets']
   delete manifest['$targets']
   if (targets?.[browser]?.permissions) {
     applyManifestPermissions(manifest, targets[browser].permissions)
+  }
+
+  if (polyfillHash) {
+    assert.ok(manifest.content_security_policy)
+    manifest.content_security_policy = manifest.content_security_policy.replace(
+      'sha256-POLYFILL-HASH=',
+      polyfillHash
+    )
   }
 
   if (WEXT_MANIFEST_SUFFIX) {
