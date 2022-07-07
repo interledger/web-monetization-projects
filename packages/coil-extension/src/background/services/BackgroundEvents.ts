@@ -137,6 +137,10 @@ export class BackgroundEvents extends EventEmitter {
 
     // Emit the buffered events
     buffered.forEach(event => {
+      // Hopefully we can get away with emitting them synchronously like this.
+      // If we have to queue each emission as a micro task, then it's possible
+      // that other (non-buffered) events would come in, and then the events
+      // would be handled out of order.
       this.emit(event.key, ...event.params)
     })
   }

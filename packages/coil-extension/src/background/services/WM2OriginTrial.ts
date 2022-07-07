@@ -2,6 +2,7 @@ import { inject, injectable } from 'inversify'
 
 import { StoreProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
+import { BuildConfig } from '../../types/BuildConfig'
 
 /*
  * Tests
@@ -83,8 +84,6 @@ class ResourceFetcher<T> {
 
 @injectable()
 export class WM2OriginTrial {
-  buildAllowed = true
-
   hardCodedAllowList = new Set(['https://quirksmode.org'])
   fetcher = new ResourceFetcher(
     'https://raw.githubusercontent.com/WICG/webmonetization/nd-wm2-allowed-origins-2022-06-22/wm2-allowed-origins.json',
@@ -94,9 +93,11 @@ export class WM2OriginTrial {
 
   constructor(
     @inject(tokens.StoreProxy)
-    private storage: StoreProxy
+    private storage: StoreProxy,
+    @inject(tokens.BuildConfig)
+    private buildConfig: BuildConfig
   ) {
-    if (!this.buildAllowed) {
+    if (!this.buildConfig.wm2Always) {
       this.fetcher.start()
     }
   }
@@ -110,7 +111,7 @@ export class WM2OriginTrial {
   // If the origin list is configured once at startup, with refreshes everytime
   // a content script is init, then it should stay pretty fresh.
   async checkOrigin(url: string) {
-    if (this.buildAllowed) {
+    if (this.buildConfig.wm2Always) {
       return true
     }
     if (this.storage.WM2_ALLOWED) {
