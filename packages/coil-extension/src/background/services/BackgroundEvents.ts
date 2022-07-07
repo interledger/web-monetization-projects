@@ -7,12 +7,10 @@ import { WextApi } from '@webmonetization/wext/tokens'
 /**
  * Not all events are defined in all implementations, so we wrap the declaration
  * in a getter function, which will return undefined when there is a reference
- * error.
+ * error. When running this code in jest-dom, chrome will not be defined.
  *
- * Mostly this is just so we don't have to maintain a separate list of events
- * and a separate interface.
- *
- * When running this code in jest-dom, chrome will not be defined.
+ * Mostly this is just so we don't have to maintain a list of events
+ * separate to the interface.
  */
 const get = <T>(getter: () => T) => {
   try {
