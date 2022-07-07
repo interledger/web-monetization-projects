@@ -4,7 +4,7 @@ import { EventEmitter } from 'events'
 import { inject, injectable } from 'inversify'
 import { WextApi } from '@webmonetization/wext/tokens'
 
-const events = {
+const EVENTS = {
   'tabs.onRemoved': chrome.tabs.onRemoved,
   'tabs.onReplaced': chrome.tabs.onReplaced,
   'tabs.onActivated': chrome.tabs.onActivated,
@@ -14,12 +14,27 @@ const events = {
   'tabs.onAttached': chrome.tabs.onAttached,
   'tabs.onDetached': chrome.tabs.onDetached,
 
+  // Not available on Safari, last checked version 15.5
+  'webNavigation.onHistoryStateUpdated':
+    chrome.webNavigation.onHistoryStateUpdated,
+  'webNavigation.onReferenceFragmentUpdated':
+    chrome.webNavigation.onReferenceFragmentUpdated,
+  'webNavigation.onCommitted': chrome.webNavigation.onCommitted,
+  'webNavigation.onCompleted': chrome.webNavigation.onCompleted,
+  'webNavigation.onBeforeNavigate': chrome.webNavigation.onBeforeNavigate,
+
   // TODO: this will need special handling ...
+  // need to return true here?  using sendResponse ?
+  // https://developer.chrome.com/apps/runtime#event-onMessage
+  // Important: On Firefox, don't return a Promise directly (e.g. async
+  // function) else other listeners do not get run!!
+  // See: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
   'runtime.onMessage': chrome.runtime.onMessage,
+
   'runtime.onInstalled': chrome.runtime.onInstalled
 }
 
-type EventsType = typeof events
+type EventsType = typeof EVENTS
 type EventsKey = keyof EventsType
 
 type ChromeEvent<T> = T extends chrome.events.Event<infer P>
@@ -69,12 +84,22 @@ export class BackgroundEvents extends EventEmitter {
    *     upon binding.
    */
 
-  buffering = true
   /**
    * Buffer all events together in order, with a key.
    */
   buffered: Array<{ key: string; params: unknown[] }> = []
-  cleanup: Array<Func> = []
+  /**
+   * Remove all the buffering listeners before emitting the buffered events
+   */
+  bufferingCleanup: Array<Func> = []
+
+  /**
+   *
+   */
+  events = Object.keys(EVENTS).map(key => ({
+    key,
+    event: EVENTS[key as EventsKey]
+  }))
 
   constructor(
     @inject(WextApi)
@@ -83,23 +108,34 @@ export class BackgroundEvents extends EventEmitter {
     super()
   }
 
-  bufferEvents() {
-    Object.keys(events).forEach(key => {
-      const api = this.apiForKey(key as EventsKey)
-      const listener = (...params: unknown[]) => {
+  bindBufferingListeners() {
+    this.events.forEach(({ key, event }) => {
+      const bufferingListener = (...params: unknown[]) => {
         this.buffered.push({ key, params })
       }
-      api.addListener(listener)
-      this.cleanup.push(() => api.removeListener(listener))
+      event.addListener(bufferingListener)
+      this.bufferingCleanup.push(() => event.removeListener(bufferingListener))
     })
   }
 
   emitBuffered() {
-    this.cleanup.forEach(c => c())
-    const buffered = this.buffered.slice()
+    // Unbind buffering listeners
+    this.bufferingCleanup.forEach(c => c())
+
+    const buffered = this.buffered
+    // Clean up references
     this.buffered = []
-    buffered.forEach(e => {
-      this.emit(e.key, ...e.params)
+
+    // Bind proxying listeners
+    this.events.forEach(({ key, event }) => {
+      event.addListener((...params: unknown[]) => {
+        this.emit(key, ...params)
+      })
+    })
+
+    // Emit the buffered events
+    buffered.forEach(event => {
+      this.emit(event.key, ...event.params)
     })
   }
 
@@ -115,16 +151,5 @@ export class BackgroundEvents extends EventEmitter {
     listener: (...args: EventParams<T>) => void
   ): this {
     return super.once(event, listener as Func)
-  }
-
-  private apiForKey<T extends EventsKey>(key: T) {
-    const keys = key.split('.')
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let api: any = this.api
-    while (keys.length) {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      api = api[keys.shift()!]
-    }
-    return api
   }
 }
