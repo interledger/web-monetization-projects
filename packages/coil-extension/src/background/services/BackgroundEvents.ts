@@ -8,6 +8,11 @@ import { WextApi } from '@webmonetization/wext/tokens'
  * Not all events are defined in all implementations, so we wrap the declaration
  * in a getter function, which will return undefined when there is a reference
  * error.
+ *
+ * Mostly this is just so we don't have to maintain a separate list of events
+ * and a separate interface.
+ *
+ * When running this code in jest-dom, chrome will not be defined.
  */
 const get = <T>(getter: () => T) => {
   try {
@@ -117,7 +122,7 @@ export class BackgroundEvents extends EventEmitter {
    */
   events = Object.keys(EVENTS).map(key => ({
     key,
-    event: EVENTS[key as EventsKey]
+    event: this.lookupEventFromInjectedApi(key as EventsKey)
   }))
 
   constructor(
@@ -177,5 +182,20 @@ export class BackgroundEvents extends EventEmitter {
     listener: (...args: EventParams<T>) => void
   ): this {
     return super.once(event, listener as Func)
+  }
+
+  private lookupEventFromInjectedApi(
+    key: EventsKey
+  ): chrome.events.Event<any> | undefined {
+    let api = this.api as any
+    const split = key.split('.')
+    while (split.length) {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      api = api[split.shift()!]
+      if (api === undefined) {
+        break
+      }
+    }
+    return api
   }
 }
