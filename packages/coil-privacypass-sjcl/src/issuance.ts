@@ -5,9 +5,7 @@
 import { sec1EncodeToBase64 } from './crypto'
 import { IssueResponse } from './interfaces'
 import { BlindToken } from './tokens'
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const btoa: (s: string) => string = require('btoa')
+import { binToAscii } from './base64'
 
 export const CACHED_COMMITMENTS_STRING = 'cached-commitments'
 
@@ -47,5 +45,5 @@ export function BuildIssueRequest(tokens: Array<BlindToken>) {
     const encodedPoint = sec1EncodeToBase64(tokens[i].point, true)
     contents.push(encodedPoint)
   }
-  return btoa(JSON.stringify({ type: 'Issue', contents: contents }))
+  return binToAscii(JSON.stringify({ type: 'Issue', contents: contents }))
 }

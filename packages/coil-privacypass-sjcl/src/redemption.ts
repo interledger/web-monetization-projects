@@ -7,9 +7,7 @@ import sjcl from 'sjcl'
 import { getActiveECSettings, sec1Encode, unblindPoint } from './crypto'
 import { h2cParams, sendH2CParams } from './config'
 import { BlindToken } from './tokens'
-
-const btoa: (s: string) => string = (s: string) =>
-  Buffer.from(s, 'binary').toString('base64')
+import { binToAscii } from './base64'
 
 /**
  * Constructs the header 'challenge-bypass-token' for redeeming a token with the
@@ -49,7 +47,7 @@ export function BuildRedeemHeader(
     contents.push(h2cB64)
   }
 
-  return btoa(JSON.stringify({ type: 'Redeem', contents: contents }))
+  return binToAscii(JSON.stringify({ type: 'Redeem', contents: contents }))
 }
 
 /**
