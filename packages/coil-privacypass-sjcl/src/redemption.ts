@@ -8,8 +8,8 @@ import { getActiveECSettings, sec1Encode, unblindPoint } from './crypto'
 import { h2cParams, sendH2CParams } from './config'
 import { BlindToken } from './tokens'
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const btoa: (s: string) => string = require('btoa')
+const btoa: (s: string) => string = (s: string) =>
+  Buffer.from(s, 'binary').toString('base64')
 
 /**
  * Constructs the header 'challenge-bypass-token' for redeeming a token with the

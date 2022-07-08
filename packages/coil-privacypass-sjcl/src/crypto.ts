@@ -12,8 +12,8 @@ import { H2CParams } from './config'
 import { BlindToken } from './tokens'
 import { Commitment, SjclHashable } from './interfaces'
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const atob: (s: string) => string = require('atob')
+const atob: (s: string) => string = (s: string) =>
+  Buffer.from(s, 'base64').toString('binary')
 
 export interface CurvePoints {
   points: sjcl.SjclEllipticalPoint[]
