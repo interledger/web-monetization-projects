@@ -86,4 +86,4 @@ async function main(patchableWindow: PatchableWindow) {
 }
 
 // eslint-disable-next-line no-console
-main(window).catch(console.error)
+main(self).catch(console.error)

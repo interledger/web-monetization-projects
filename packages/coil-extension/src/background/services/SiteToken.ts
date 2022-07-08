@@ -26,7 +26,7 @@ export class SiteToken {
   /**
    * Note: this requires the "tabs" permission listed in the manifest
    */
-  async retrieveTabs(): Promise<string | null> {
+  async retrieve(): Promise<string | null> {
     return new Promise(resolve => {
       this.api.tabs.create(
         {
@@ -35,20 +35,22 @@ export class SiteToken {
         },
         tab => {
           const code = `localStorage.token`
-          this.api.tabs.executeScript(
-            notNullOrUndef(tab.id),
-            { code, frameId: 0 },
-            ([result]) => {
-              this.api.tabs.remove(notNullOrUndef(tab.id))
-              resolve(result)
-            }
-          )
+          if (this.api.tabs.executeScript) {
+            this.api.tabs.executeScript(
+              notNullOrUndef(tab.id),
+              { code, frameId: 0 },
+              ([result]) => {
+                this.api.tabs.remove(notNullOrUndef(tab.id))
+                resolve(result)
+              }
+            )
+          }
         }
       )
     })
   }
 
-  async retrieve(): Promise<string | null> {
+  async retrieveBalls(): Promise<string | null> {
     const path = '/handler.html'
     const coilDomain = this.coilDomain
     const coilFrame = document.createElement('iframe')

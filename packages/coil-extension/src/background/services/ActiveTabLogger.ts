@@ -5,7 +5,7 @@ import { FrameSpec } from '../../types/FrameSpec'
 
 @injectable()
 export class ActiveTabLogger {
-  sendLogs = Boolean(localStorage.ACTIVE_TAB_LOGGING)
+  sendLogs = Boolean(self.localStorage?.ACTIVE_TAB_LOGGING)
 
   constructor(
     @inject(tokens.WextApi)

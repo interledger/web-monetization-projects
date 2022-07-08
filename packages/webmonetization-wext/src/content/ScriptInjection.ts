@@ -1,4 +1,8 @@
+import { createHash } from 'crypto'
+
 import { injectable } from '@dier-makr/annotations'
+
+import { wmPolyfill } from './wmPolyfill'
 
 @injectable()
 export class ScriptInjection {
@@ -19,12 +23,20 @@ export class ScriptInjection {
    * @param code - to run in a page's normal JS context
    */
   inject(code: string) {
-    const document = this.document
-    const script = document.createElement('script')
-    script.innerHTML = code
-    document.documentElement.appendChild(script)
-
+    const data = Buffer.from(code, 'utf-8')
+    const digest = createHash('sha256').update(data).digest()
+    const polyfillHash = `sha256-${digest.toString('base64')}`
+    const script = this.document.createElement('script')
+    script.src = chrome.runtime.getURL(`${polyfillHash}.js`)
+    this.document.documentElement.appendChild(script)
     // clean it up afterwards
-    document.documentElement.removeChild(script)
+    this.document.documentElement.removeChild(script)
+    // const document = this.document
+    // const script = document.createElement('script')
+    // script.innerHTML = code
+    // document.documentElement.appendChild(script)
+    //
+    // // clean it up afterwards
+    // document.documentElement.removeChild(script)
   }
 }

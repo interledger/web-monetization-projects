@@ -498,29 +498,31 @@ export class BackgroundFramesService extends EventEmitter {
    * is invalidated.
    */
   private requestFrameState({ tabId, frameId }: FrameSpec) {
-    this.api.tabs.executeScript(
-      tabId,
-      {
-        frameId: frameId,
-        // language=JavaScript
-        code: `
-          (function sendMessage() {
-            const frameStateChange = {
-              command: 'frameStateChange',
-              data: {
-                state: document.readyState,
-                href: window.location.href
+    if (this.api.tabs.executeScript) {
+      this.api.tabs.executeScript(
+        tabId,
+        {
+          frameId: frameId,
+          // language=JavaScript
+          code: `
+            (function sendMessage() {
+              const frameStateChange = {
+                command: 'frameStateChange',
+                data: {
+                  state: document.readyState,
+                  href: window.location.href
+                }
               }
-            }
-            chrome.runtime.sendMessage(frameStateChange)
-          })()
-        `
-      },
-      () => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const ignored = this.api.runtime.lastError
-      }
-    )
+              chrome.runtime.sendMessage(frameStateChange)
+            })()
+          `
+        },
+        () => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const ignored = this.api.runtime.lastError
+        }
+      )
+    }
   }
 
   private logTabs() {

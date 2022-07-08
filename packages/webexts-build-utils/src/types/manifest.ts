@@ -16,6 +16,8 @@ export interface Manifest {
 }
 
 export interface ManifestV2 extends Manifest {
+  web_accessible_resources?: string[]
+
   manifest_version: 2
   content_security_policy?: string
   background?: {
@@ -37,6 +39,7 @@ export interface ManifestV2 extends Manifest {
 }
 
 export interface ManifestV3 extends Manifest {
+  web_accessible_resources?: { resources: string[]; matches: string[] }[]
   host_permissions: string[]
   content_security_policy?: {
     extension_pages: string

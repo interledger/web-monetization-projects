@@ -41,6 +41,7 @@ export class ContentAuthService {
   }
 
   syncViaInjectToken() {
+    console.log('syncViaInjectToken')
     this.contentRuntime.sendMessage(
       {
         command: 'injectToken',
