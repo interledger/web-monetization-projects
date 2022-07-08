@@ -1898,8 +1898,8 @@ __metadata:
     http-server: "npm:14.1.1"
     husky: "npm:8.0.1"
     idb-keyval: "npm:^6.2.0"
-    ilp-plugin-btp: "npm:1.5.0"
-    ilp-protocol-stream: "npm:2.7.1"
+    ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
+    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
     inversify: "npm:^6.0.0"
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:28.1.1"
@@ -1999,7 +1999,7 @@ __metadata:
     graphql-tools: "npm:^8.2.9"
     husky: "npm:8.0.1"
     ilp-plugin-mini-accounts: "npm:^4.2.0"
-    ilp-protocol-stream: "npm:^2.7.2-alpha.0"
+    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
     inversify: "npm:^6.0.1"
     inversify-express-utils: "npm:^6.4.3"
     inversify-logger-middleware: "npm:^3.1.0"
@@ -2136,8 +2136,8 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.6.0"
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.1"
-    ilp-plugin-btp: "npm:1.5.0"
-    ilp-protocol-stream: "npm:2.7.1"
+    ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
+    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
     jest: "npm:28.1.1"
     jest-environment-jsdom: "npm:28.1.1"
     lint-staged: "npm:13.0.3"
@@ -3471,8 +3471,8 @@ __metadata:
     eslint-plugin-standard: "npm:5.0.0"
     file-loader: "npm:6.2.0"
     husky: "npm:8.0.1"
-    ilp-plugin-btp: "npm:1.5.0"
-    ilp-protocol-stream: "npm:2.7.1"
+    ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
+    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
     inversify: "npm:^6.0.0"
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:28.1.1"
@@ -5665,9 +5665,9 @@ __metadata:
     figlet: "npm:^1.5.0"
     html-webpack-plugin: "npm:5.5.0"
     husky: "npm:8.0.1"
-    ilp-plugin-btp: "npm:^1.5.0"
+    ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
     ilp-plugin-mini-accounts: "npm:^4.2.0"
-    ilp-protocol-stream: "npm:^2.7.0"
+    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
     inversify: "npm:^6.0.0"
     inversify-express-utils: "npm:^6.3.2"
     jest: "npm:28.1.1"
@@ -14349,7 +14349,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ilp-plugin-btp@npm:1.5.0, ilp-plugin-btp@npm:^1.3.5, ilp-plugin-btp@npm:^1.5.0":
+"ilp-plugin-btp@npm:1.5.0":
   version: 1.5.0
   resolution: "ilp-plugin-btp@npm:1.5.0"
   dependencies:
@@ -14362,6 +14362,22 @@ __metadata:
     ilp-logger: "npm:^1.1.3"
     ws: "npm:^6.0.0"
   checksum: 3a047fe449c1afeb7ba640804dea747200dda15a7cc49dd777a2b799f45edfc288cba5dc64a3344921c213d7459fe55290d29afacef1dc9ddecb2d40c1e5fc8c
+  languageName: node
+  linkType: hard
+
+"ilp-plugin-btp@patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch":
+  version: 1.5.0
+  resolution: "ilp-plugin-btp@patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch::version=1.5.0&hash=d42046"
+  dependencies:
+    "@types/debug": "npm:0.0.30"
+    "@types/node": "npm:^10.7.1"
+    "@types/ws": "npm:^6.0.0"
+    btp-packet: "npm:^2.2.0"
+    debug: "npm:^3.1.0"
+    eventemitter2: "npm:^5.0.0"
+    ilp-logger: "npm:^1.1.3"
+    ws: "npm:^6.0.0"
+  checksum: 42d2807181b3e0d56329aaa0160dbeaab56be55fdaebb3dbf2ec9ee659c4a0cd836f4f29efa48112226e3f3b4bcecc899edcbfd1ca2d0f8bd637a7af5c7f87a8
   languageName: node
   linkType: hard
 
@@ -14395,22 +14411,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ilp-protocol-stream@npm:2.7.1, ilp-protocol-stream@npm:^2.7.0":
-  version: 2.7.1
-  resolution: "ilp-protocol-stream@npm:2.7.1"
-  dependencies:
-    "@types/node": "npm:^10.14.22"
-    ilp-logger: "npm:^1.3.1"
-    ilp-packet: "npm:^3.0.9"
-    ilp-protocol-ildcp: "npm:^2.1.4"
-    long: "npm:^4.0.0"
-    oer-utils: "npm:^5.0.1"
-    uuid: "npm:^3.4.0"
-  checksum: b181e10539d037706d46e705b002e474efdbac2f3964284ee825c6d203d828dbe9b80bc0f80458c5f2e3f1c2dd4c0ae094480889ed52b0ef54eaa5fe1ad1fd76
-  languageName: node
-  linkType: hard
-
-"ilp-protocol-stream@npm:^2.7.2-alpha.0":
+"ilp-protocol-stream@npm:2.7.2-alpha.0":
   version: 2.7.2-alpha.0
   resolution: "ilp-protocol-stream@npm:2.7.2-alpha.0"
   dependencies:
@@ -14422,6 +14423,21 @@ __metadata:
     oer-utils: "npm:^5.0.1"
     uuid: "npm:^3.4.0"
   checksum: d1669ddcc372b1c4cb092e156ff7cc415b02d386287a7ba742b3847f79d6efc7e6a5163dd1f7bf9a823c8a4da0d3f2c0996acad81c84c4c3d16cef75c4ae40ae
+  languageName: node
+  linkType: hard
+
+"ilp-protocol-stream@patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch":
+  version: 2.7.2-alpha.0
+  resolution: "ilp-protocol-stream@patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch::version=2.7.2-alpha.0&hash=bb03fc"
+  dependencies:
+    "@types/node": "npm:^10.14.22"
+    ilp-logger: "npm:^1.3.1"
+    ilp-packet: "npm:^3.0.9"
+    ilp-protocol-ildcp: "npm:^2.1.4"
+    long: "npm:^4.0.0"
+    oer-utils: "npm:^5.0.1"
+    uuid: "npm:^3.4.0"
+  checksum: fdcd5a320430de8b63c5337d406a93911b62ab169e2ae8d519f15489cc89ae7500c42c6ab3ad7956f438c3d438b8b252ad0495ae7f67177885660fc30c98374f
   languageName: node
   linkType: hard
 
