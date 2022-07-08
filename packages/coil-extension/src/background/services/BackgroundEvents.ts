@@ -7,10 +7,11 @@ import { WextApi } from '@webmonetization/wext/tokens'
 /**
  * Not all events are defined in all implementations, so we wrap the declaration
  * in a getter function, which will return undefined when there is a reference
- * error. When running this code in jest-dom, chrome will not be defined.
+ * error. When running this code in jest-environment-dom, chrome will not
+ * be defined.
  *
  * Mostly this is just so we don't have to maintain a list of events
- * separate to the interface.
+ * separate to an interface.
  */
 const get = <T>(getter: () => T) => {
   try {
@@ -74,19 +75,20 @@ export class BackgroundEvents extends EventEmitter {
   /**
    * Problem
    *
-   * In manifest version 3, service workers require all event listeners to be bound
+   * In manifest version 3, ServiceWorkers require all event listeners to be bound
    * in the same "tick" when the background page module is instantiated. Top level
    * here is in the same sense as `async await` top level functions.
    *
    * Why do they do this? It's because they (I assume synchronously??) start a worker
    * if none is already active and then dispatch it an event. If you construct the
    * object graph of your background page service asynchronously and some listeners
-   * are bound too late they will not catch the event that was dispatched.
+   * are bound too late they will not catch the event that was dispatched (the
+   * reason for which the worker was [re]started)
    *
-   * Above I parenthetically pointed out my assumption that the workers are
+   * Above, I parenthetically pointed out my assumption that the workers are
    * synchronously started and then an event is dispatched. Is this really the case?
    * Wouldn't loading the background script from a crx or cache be an operation that
-   * is done asynchronously. If so, why not add an api to mark the background as
+   * is done asynchronously? If so, why not add an api to mark the background as
    * ready to service events?
    *
    * What about runtime.oninstall ?
@@ -99,11 +101,11 @@ export class BackgroundEvents extends EventEmitter {
    *
    * 1. Buffer the events
    *
-   *     A potential problem with this though is that you would need to keep track
-   *     of the listeners so if you had say, 3, buffered events (unlikely but
-   *     perhaps possible) that you emitted the events in order and loop through
-   *     the listeners for each event. It wouldn't do to just execute the listener
-   *     upon binding.
+   *    It wouldn't do to just execute a listener right upon binding, one
+   *    buffered event after another.  You would need to keep track of the
+   *    listeners in case you had, say, 3,buffered events (unlikely but perhaps
+   *    possible). The events must be emitted in order, looping through the
+   *    listeners for each.
    */
 
   /**
