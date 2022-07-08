@@ -44,8 +44,8 @@
     "@coil/polyfill-utils": "^0.0.0",
     "@webmonetization/polyfill-utils": "0.0.0",
     "@webmonetization/types": "0.0.0",
-    "ilp-plugin-btp": "1.5.0",
-    "ilp-protocol-stream": "2.7.1",
+    "ilp-plugin-btp": "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch",
+    "ilp-protocol-stream": "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch",
     "node-fetch": "^2.6.1",
     "reduct": "^3.3.1",
     "uuid": "^8.3.2"

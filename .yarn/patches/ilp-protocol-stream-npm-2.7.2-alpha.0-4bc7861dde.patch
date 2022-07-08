@@ -1,0 +1,13 @@
+diff --git a/dist/src/util/crypto-browser.js b/dist/src/util/crypto-browser.js
+index 18bc9eab1254fcbecb3194aa2af652f376f410e7..930f7e5392622ff25e305391b69141c2384789e6 100644
+--- a/dist/src/util/crypto-browser.js
++++ b/dist/src/util/crypto-browser.js
+@@ -1,7 +1,7 @@
+ "use strict";
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.decryptConnectionAddressToken = exports.encryptConnectionAddressToken = exports.generateReceiptHMAC = exports.generateSharedSecretFromToken = exports.randomBytes = exports.hmac = exports.decrypt = exports.encrypt = exports.hash = void 0;
+-const { crypto } = window;
++const { crypto } = self;
+ const HASH_ALGORITHM = 'SHA-256';
+ const ENCRYPTION_ALGORITHM = 'AES-GCM';
+ const IV_LENGTH = 12;

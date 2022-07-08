@@ -1,0 +1,12 @@
+diff --git a/build/browser/crypto.js b/build/browser/crypto.js
+index 6824177224f1673102acde3383561a7a14032d9e..3c23245fc1dd1e65143379e7793c89535e3643e9 100644
+--- a/build/browser/crypto.js
++++ b/build/browser/crypto.js
+@@ -1,6 +1,6 @@
+ "use strict";
+ Object.defineProperty(exports, "__esModule", { value: true });
+-const { crypto } = window;
++const { crypto } = self;
+ function randomBytes(size, callback) {
+     const randArray = new Uint8Array(size);
+     const randValues = crypto.getRandomValues(randArray);
