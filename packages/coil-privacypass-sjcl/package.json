@@ -38,8 +38,6 @@
   },
   "dependencies": {
     "asn1-parser": "^1.1.8",
-    "atob": "^2.1.2",
-    "btoa": "^1.2.1",
     "keccak": "^3.0.1",
     "node-fetch": "^2.6.1",
     "sjcl": "https://github.com/sublimator/sjcl.git#commit=4457eb3a84cfde1e7ea01b241d9d47a7a80969cc"
