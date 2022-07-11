@@ -23,10 +23,14 @@ function makeDateSuffix() {
 function convertToMV3(v2: ManifestV2) {
   assert.ok(v2.manifest_version === 2)
 
-  const v3: Partial<Omit<ManifestV2, 'manifest_version'>> & ManifestV3 = {
+  const v3: Partial<
+    Omit<ManifestV2, 'manifest_version' | 'web_accessible_resources'>
+  > &
+    ManifestV3 = {
     ...v2,
     manifest_version: 3,
     browser_action: undefined,
+    web_accessible_resources: undefined,
     action: v2.browser_action,
 
     content_security_policy: undefined,
@@ -43,9 +47,20 @@ function convertToMV3(v2: ManifestV2) {
     host_permissions.push('*://*/*')
   }
 
+  if (v2.web_accessible_resources) {
+    v3.web_accessible_resources = v2.web_accessible_resources.map(fn => ({
+      matches: ['<all_urls>'],
+      resources: [fn]
+    }))
+  }
+
   // Add storage permission
   if (!v3.permissions.includes('storage')) {
     v3.permissions.push('storage')
+  }
+  // Add scripting permission
+  if (!v3.permissions.includes('scripting')) {
+    v3.permissions.push('scripting')
   }
 
   // Replace content.js with contentMV3.js
@@ -71,10 +86,12 @@ export function transformManifest(
 
   if (polyfillHash) {
     assert.ok(manifest.content_security_policy)
+    assert.ok(manifest.web_accessible_resources)
     manifest.content_security_policy = manifest.content_security_policy.replace(
       'sha256-POLYFILL-HASH=',
       polyfillHash
     )
+    manifest.web_accessible_resources.push(`${polyfillHash}.js`)
   }
 
   if (WEXT_MANIFEST_SUFFIX) {

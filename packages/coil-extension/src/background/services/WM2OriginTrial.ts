@@ -93,7 +93,7 @@ export class WM2OriginTrial {
 
   constructor(
     @inject(tokens.StoreProxy)
-    private storage: StoreProxy,
+    private store: StoreProxy,
     @inject(tokens.BuildConfig)
     private buildConfig: BuildConfig
   ) {
@@ -114,7 +114,7 @@ export class WM2OriginTrial {
     if (this.buildConfig.wm2Always) {
       return true
     }
-    if (this.storage.WM2_ALLOWED) {
+    if (this.store.WM2_ALLOWED) {
       return true
     } else {
       const dynamic = this.fetcher.triggerAndGetCachedOrNull()

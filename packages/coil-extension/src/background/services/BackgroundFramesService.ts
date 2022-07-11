@@ -7,6 +7,7 @@ import { flatMapSlow } from '../util/flatMapSlow'
 import { getFrameSpec } from '../../util/tabs'
 import {
   Command,
+  FrameStateChange,
   ToBackgroundMessage,
   ToContentMessage
 } from '../../types/commands'
@@ -498,29 +499,53 @@ export class BackgroundFramesService extends EventEmitter {
    * is invalidated.
    */
   private requestFrameState({ tabId, frameId }: FrameSpec) {
-    this.api.tabs.executeScript(
-      tabId,
-      {
-        frameId: frameId,
-        // language=JavaScript
-        code: `
-          (function sendMessage() {
-            const frameStateChange = {
+    if (this.api.tabs.executeScript) {
+      this.api.tabs.executeScript(
+        tabId,
+        {
+          frameId: frameId,
+          // language=JavaScript
+          code: `
+            (function sendMessage() {
+              const frameStateChange = {
+                command: 'frameStateChange',
+                data: {
+                  state: document.readyState,
+                  href: window.location.href
+                }
+              }
+              chrome.runtime.sendMessage(frameStateChange)
+            })()
+          `
+        },
+        () => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const ignored = this.api.runtime.lastError
+        }
+      )
+    } else if (this.api.scripting) {
+      const target = { tabId, frameIds: [frameId] }
+      void this.api.scripting.executeScript({
+        target,
+        func: () => {
+          ;(function sendMessage() {
+            const frameStateChange: FrameStateChange = {
               command: 'frameStateChange',
               data: {
                 state: document.readyState,
                 href: window.location.href
               }
             }
-            chrome.runtime.sendMessage(frameStateChange)
+            void chrome.runtime.sendMessage(frameStateChange)
           })()
-        `
-      },
-      () => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const ignored = this.api.runtime.lastError
-      }
-    )
+        }
+      })
+    } else {
+      throw new Error(
+        'no way of executing script, tabs.executeScript and ' +
+          'scripting.executeScript not available'
+      )
+    }
   }
 
   private logTabs() {
@@ -540,14 +565,17 @@ export interface FramesEventMap extends Record<FramesEventType, FrameEvents> {
   frameRemoved: FrameRemovedEvent
   frameChanged: FrameChangedEvent
 }
+
 export interface BackgroundFramesService extends EventEmitter {
   on<T extends FramesEventType>(
     event: T,
     listener: (ev: FramesEventMap[T]) => void
   ): this
+
   once<T extends FramesEventType>(
     event: T,
     listener: (ev: FramesEventMap[T]) => void
   ): this
+
   emit<T extends FramesEventType>(event: T, ev: FramesEventMap[T]): boolean
 }
