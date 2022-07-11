@@ -46,8 +46,13 @@ export function getPackageVersion(packageJSONPath: string): PackageVersion {
   const parsed = JSON.parse(json.toString())
   const version = parsed.version as string
   const cwd = pathMod.dirname(packageJSONPath)
-  const hash = childProcess.execSync('git rev-parse --short HEAD', { cwd })
-  const status = childProcess.execSync('git status -s', { cwd })
+  const gitExists = fs.existsSync(`${cwd}/.git/`)
+  const hash = gitExists
+    ? childProcess.execSync('git rev-parse --short HEAD', { cwd })
+    : ''
+  const status = gitExists
+    ? childProcess.execSync('git status -s', { cwd })
+    : ''
   const date = new Date()
 
   return {
