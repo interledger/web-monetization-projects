@@ -1,0 +1,62 @@
+name: Archive Extension Build And Source Code
+
+on:
+  push:
+    tags:
+      - coil-extension@*
+
+jobs:
+  save-chrome-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}/packages/coil-extension
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Step 1 - Package the extension for chrome
+        run: sh ./package.sh chrome
+    
+      - name: Step 2 - Use the Upload Artifact GitHub Action to upload the extension build
+        uses: actions/upload-artifact@v2
+        with: 
+          name: chrome-${{env.RELEASE_VERSION}}
+          path: ${{ github.workspace }}/packages/coil-extension/dist
+          
+  save-firefox-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}/packages/coil-extension
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Step 1 - Package the extension for firefox
+        run: sh ./package.sh firefox
+    
+      - name: Step 2 - Use the Upload Artifact GitHub Action to upload the extension build
+        uses: actions/upload-artifact@v2
+        with: 
+          name: firefox-${{env.RELEASE_VERSION}}
+          path: ${{ github.workspace }}/packages/coil-extension/dist
+
+  save-mono-repo-source-code:
+    runs-on: ubuntu-latest
+   
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Step 1 - Use the Upload Artifact GitHub Action to upload the mono repo
+        uses: actions/upload-artifact@v2
+        with: 
+          name: source-${{env.RELEASE_VERSION}}
+          path: ${{ github.workspace }}
