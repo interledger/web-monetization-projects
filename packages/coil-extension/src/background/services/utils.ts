@@ -53,7 +53,7 @@ export function createLogger(context: Context) {
   }
   const namespace = `background${name ? `:${name}` : ''}`
   // eslint-disable-next-line no-console
-  if (localStorage.debug) {
+  if (self.localStorage?.debug) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     return require('debug')(`coil-extension:${namespace}`)
   }
