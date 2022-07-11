@@ -7,6 +7,7 @@ import { flatMapSlow } from '../util/flatMapSlow'
 import { getFrameSpec } from '../../util/tabs'
 import {
   Command,
+  FrameStateChange,
   ToBackgroundMessage,
   ToContentMessage
 } from '../../types/commands'
@@ -522,6 +523,28 @@ export class BackgroundFramesService extends EventEmitter {
           const ignored = this.api.runtime.lastError
         }
       )
+    } else if (this.api.scripting) {
+      const target = { tabId, frameIds: [frameId] }
+      void this.api.scripting.executeScript({
+        target,
+        func: () => {
+          ;(function sendMessage() {
+            const frameStateChange: FrameStateChange = {
+              command: 'frameStateChange',
+              data: {
+                state: document.readyState,
+                href: window.location.href
+              }
+            }
+            void chrome.runtime.sendMessage(frameStateChange)
+          })()
+        }
+      })
+    } else {
+      throw new Error(
+        'no way of executing script, tabs.executeScript and ' +
+          'scripting.executeScript not available'
+      )
     }
   }
 
@@ -542,14 +565,17 @@ export interface FramesEventMap extends Record<FramesEventType, FrameEvents> {
   frameRemoved: FrameRemovedEvent
   frameChanged: FrameChangedEvent
 }
+
 export interface BackgroundFramesService extends EventEmitter {
   on<T extends FramesEventType>(
     event: T,
     listener: (ev: FramesEventMap[T]) => void
   ): this
+
   once<T extends FramesEventType>(
     event: T,
     listener: (ev: FramesEventMap[T]) => void
   ): this
+
   emit<T extends FramesEventType>(event: T, ev: FramesEventMap[T]): boolean
 }

@@ -1,12 +1,12 @@
 import { Reloader } from './mv3/reloader'
-
-console.clear()
-
 // // These required "yarn patch"ing in order to work
 // // The crypto object simply needs to be retrieved from "self" rather
 // // than "window".
 import 'ilp-protocol-stream'
 import 'ilp-plugin-btp'
+
+console.clear()
+
 //
 // export const dbg = console.log.bind('ServiceWorker')
 // dbg('backgroundMV3.ts')

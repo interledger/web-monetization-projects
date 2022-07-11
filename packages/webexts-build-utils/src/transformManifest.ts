@@ -58,6 +58,10 @@ function convertToMV3(v2: ManifestV2) {
   if (!v3.permissions.includes('storage')) {
     v3.permissions.push('storage')
   }
+  // Add scripting permission
+  if (!v3.permissions.includes('scripting')) {
+    v3.permissions.push('scripting')
+  }
 
   // Replace content.js with contentMV3.js
   assert.ok(v3.content_scripts)
