@@ -41,5 +41,8 @@ export interface StoreProxy {
   'popup-route:tipping-shown'?: boolean | null
 
   // Config
+  // Note that the build time config takes precedence over this
   WM2_ALLOWED?: boolean | null
+  // Sends (some) logs to the content script to be logged for ease of viewing
+  ACTIVE_TAB_LOGGING?: boolean | null
 }

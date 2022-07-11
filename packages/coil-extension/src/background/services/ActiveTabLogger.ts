@@ -2,12 +2,15 @@ import { inject, injectable } from 'inversify'
 
 import * as tokens from '../../types/tokens'
 import { FrameSpec } from '../../types/FrameSpec'
+import { StoreProxy } from '../../types/storage'
 
 @injectable()
 export class ActiveTabLogger {
-  sendLogs = Boolean(self.localStorage?.ACTIVE_TAB_LOGGING)
+  sendLogs = Boolean(this.store.ACTIVE_TAB_LOGGING)
 
   constructor(
+    @inject(tokens.StoreProxy)
+    private store: StoreProxy,
     @inject(tokens.WextApi)
     private api: typeof chrome
   ) {}
@@ -21,7 +24,7 @@ export class ActiveTabLogger {
       const message = {
         command: 'logInActiveTab',
         data: {
-          log: log
+          log
         }
       }
       this.api.tabs.sendMessage(frame?.tabId ?? activeTab, message, {
@@ -31,7 +34,7 @@ export class ActiveTabLogger {
   }
 
   async getActiveTab() {
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       this.api.tabs.query({ active: true, currentWindow: true }, tabs => {
         const tab = tabs[0]
         const id = tab?.id
