@@ -56,7 +56,7 @@ describe('DetectExtensions', () => {
 
     it('should send a cross extension message', async () => {
       const detector = new MultipleInstanceDetector(
-        chromeNavigator,
+        chromeNavigator.userAgent,
         mockApi as WextApiSubset
       )
       const showNotificationSpy = jest.spyOn(
