@@ -17,7 +17,12 @@ async function configureContainer(container: Container) {
     return isLoggingEnabled(BUILD_CONFIG)
   })
   container.bind(tokens.BuildConfig).toConstantValue(BUILD_CONFIG)
+  // Over provisioned
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
+  // Over provisioned
+  container.bind(tokens.WextApiRuntimeGetUrl).toConstantValue(API)
+  // TODO
+  container.bind(tokens.WextApi).toConstantValue(API)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const noop = (..._: unknown[]) => undefined
