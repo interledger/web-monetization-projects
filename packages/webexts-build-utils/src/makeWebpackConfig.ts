@@ -18,15 +18,17 @@ import { ReloadServerPlugin } from './reloadServer'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
 
-interface MakeWebpackConfigParams {
+export interface MakeWebpackConfigParams {
   rootDir: string
-  polyfillHash?: string
-  polyfill?: string
+  polyfill: {
+    content: string
+    name: string
+    hash: string
+  }
 }
 
 export function makeWebpackConfig({
   rootDir,
-  polyfillHash,
   polyfill
 }: MakeWebpackConfigParams): Configuration {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -63,7 +65,7 @@ export function makeWebpackConfig({
 
     plugins: [
       makeDefinePlugin(packageVersion),
-      new CopyPlugin({ patterns: makeCopyToDistPattern(polyfillHash) }),
+      new CopyPlugin({ patterns: makeCopyToDistPattern(polyfill.hash) }),
       new AfterDoneShellCommandPlugin()
     ],
 
@@ -85,15 +87,15 @@ export function makeWebpackConfig({
     }
   }
 
-  if (polyfill && polyfillHash) {
-    const polyfillJs = `./${polyfillHash}.js`
+  if (polyfill) {
+    const polyfillJs = `./${polyfill.hash}.js`
     config.plugins?.push(
       new VWM({
-        [polyfillJs]: polyfill
+        [polyfillJs]: polyfill.content
       })
     )
     const entry = config.entry as Record<string, string>
-    entry['wm-polyfill'] = polyfillJs
+    entry[polyfill.name] = polyfillJs
   }
 
   if (MV3) {
