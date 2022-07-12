@@ -62,7 +62,7 @@ export function makeWebpackConfig({
     entry: makeEntry(rootDir),
 
     plugins: [
-      makeDefinePlugin(packageVersion, polyfillHash),
+      makeDefinePlugin(packageVersion),
       new CopyPlugin({ patterns: makeCopyToDistPattern(polyfillHash) }),
       new AfterDoneShellCommandPlugin()
     ],
@@ -93,7 +93,7 @@ export function makeWebpackConfig({
       })
     )
     const entry = config.entry as Record<string, string>
-    entry[polyfillHash] = polyfillJs
+    entry['wm-polyfill'] = polyfillJs
   }
 
   if (MV3) {

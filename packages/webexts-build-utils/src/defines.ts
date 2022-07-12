@@ -3,16 +3,12 @@ import { PackageVersion } from '@coil/webpack-utils'
 
 import { API, BROWSER, MV3, WEXT_BUILD_CONFIG } from './env'
 
-export const makeDefinePlugin = (
-  version: PackageVersion,
-  polyfillHash: string | undefined
-) => {
+export const makeDefinePlugin = (version: PackageVersion) => {
   return new webpack.DefinePlugin({
     WEBPACK_DEFINE_API: API,
     WEBPACK_DEFINE_VERSION: JSON.stringify(version),
     WEBPACK_DEFINE_BROWSER: JSON.stringify(BROWSER),
     WEBPACK_DEFINE_BUILD_CONFIG: JSON.stringify(WEXT_BUILD_CONFIG),
-    WEBPACK_DEFINE_POLYFILL_HASH: JSON.stringify(polyfillHash),
     WEBPACK_DEFINE_MV3: JSON.stringify(MV3)
   })
 }
