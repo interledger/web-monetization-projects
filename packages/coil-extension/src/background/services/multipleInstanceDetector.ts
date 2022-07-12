@@ -40,7 +40,8 @@ export interface ExtensionMessage {
 @injectable()
 export class MultipleInstanceDetector {
   constructor(
-    private navigator: Navigator,
+    @inject(tokens.Navigator)
+    private navigator: Pick<Navigator, 'userAgent'>,
     @inject(tokens.WextApi) private wextApi: WextApiSubset
   ) {}
 
