@@ -34,11 +34,11 @@ references:
   node-version-matrix: &node-version-matrix
     matrix:
       parameters:
-        node-version: &node-versions [ "16.15.1", "18.4.0" ]
+        node-version: &node-versions [ "16.16.0", "18.4.0" ]
   just-one-node-version-matrix: &just-latest-lts-node-version
     matrix:
       parameters:
-        node-version: [ "16.15.1" ]
+        node-version: [ "16.16.0" ]
 
 jobs:
   # Run Linting
