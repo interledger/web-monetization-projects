@@ -2,8 +2,7 @@ name: Archive Extension Build And Source Code
 
 on:
   push:
-    tags:
-      - coil-extension@*
+    branches: [ github-workflows ]
 
 jobs:
   save-monorepo-source-code:
@@ -40,7 +39,7 @@ jobs:
 
       - name: Step 1 - Package the extension for chrome
         run: |
-          ls
+          ls ${{ github.workspace }}
           ./package.sh chrome
         shell: bash
         working-directory: ${{ github.workspace }}/packages/coil-extension
