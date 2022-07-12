@@ -1,8 +1,20 @@
-import { injectable } from '@dier-makr/annotations'
+import { createHash } from 'crypto'
+
+import { injectable, inject } from '@dier-makr/annotations'
+
+import * as tokens from '../tokens'
 
 @injectable()
 export class ScriptInjection {
-  constructor(private document: Document) {}
+  constructor(
+    private document: Document,
+    @inject(tokens.WextApiRuntimeGetUrl)
+    private wextApi: {
+      runtime: {
+        getURL: (path: string) => string
+      }
+    }
+  ) {}
 
   /**
    * Content scripts run in a separate javascript context to the page.
@@ -19,12 +31,13 @@ export class ScriptInjection {
    * @param code - to run in a page's normal JS context
    */
   inject(code: string) {
-    const document = this.document
-    const script = document.createElement('script')
-    script.innerHTML = code
-    document.documentElement.appendChild(script)
-
+    const data = Buffer.from(code, 'utf-8')
+    const digest = createHash('sha256').update(data).digest()
+    const codeHash = `sha256-${digest.toString('base64')}`
+    const script = this.document.createElement('script')
+    script.src = this.wextApi.runtime.getURL(`${codeHash}.js`)
+    this.document.documentElement.appendChild(script)
     // clean it up afterwards
-    document.documentElement.removeChild(script)
+    this.document.documentElement.removeChild(script)
   }
 }

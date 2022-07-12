@@ -40,7 +40,7 @@ export interface ExtensionMessage {
 @injectable()
 export class MultipleInstanceDetector {
   constructor(
-    private navigator: Navigator,
+    @inject(tokens.UserAgent) private userAgent: string,
     @inject(tokens.WextApi) private wextApi: WextApiSubset
   ) {}
 
@@ -57,9 +57,7 @@ export class MultipleInstanceDetector {
   }
 
   async detectOtherInstances() {
-    const browserType = MultipleInstanceDetector.getBrowserType(
-      this.navigator.userAgent
-    )
+    const browserType = MultipleInstanceDetector.getBrowserType(this.userAgent)
     if (!browserType) {
       return
     }

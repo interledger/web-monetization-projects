@@ -4,6 +4,7 @@ import * as process from 'process'
 import * as webpack from 'webpack'
 import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 import { Configuration } from 'webpack'
+import VWM from 'webpack-virtual-modules'
 
 import { MV3, PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
 import { makeDefinePlugin } from './defines'
@@ -20,9 +21,11 @@ const CopyPlugin = require('copy-webpack-plugin')
 interface MakeWebpackConfigParams {
   rootDir: string
   polyfillHash?: string
+  polyfill?: string
 }
 
 export function makeWebpackConfig({
+  polyfill,
   rootDir,
   polyfillHash
 }: MakeWebpackConfigParams): Configuration {
@@ -80,6 +83,36 @@ export function makeWebpackConfig({
         }
       ]
     }
+  }
+
+  if (polyfill && config.entry) {
+    config.plugins?.push(
+      new VWM({
+        './wm-polyfill.js': polyfill
+      })
+    )
+    const entry = config.entry as Record<string, string>
+    entry['wm-polyfill'] = './wm-polyfill.js'
+
+    // config.plugins?.push(new webpack.EntryPlugin(rootDir, 'polyfill2', {name: 'polyfill'}))
+
+    // config.plugins?.push({
+    //   apply(compiler: webpack.Compiler) {
+    //     compiler.hooks.entryOption.tap('polyfill', (context, entry) => {
+    //       console.log('POLYFILL PLUGIN', {context, entry})
+    //       return false
+    //     })
+    //
+    //     compiler.hooks.emit.tap('polyfill', (compilation: webpack.Compilation) => {
+    //       const dependency = webpack.EntryPlugin.createDependency('polyfill.js', {})
+    //       compilation.addEntry(compiler.context, dependency, 'polyfill.js', (err, result) => {
+    //         if (err) {
+    //           console.log({err})
+    //         }
+    //       })
+    //     })
+    //   }
+    // })
   }
 
   if (MV3) {

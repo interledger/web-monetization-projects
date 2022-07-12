@@ -38,7 +38,7 @@ export function configureContainer({
   }
 
   container.bind(tokens.CoilDomain).toConstantValue(coilDomain)
-  container.bind(tokens.UserAgent).toConstantValue(navigator.userAgent)
+  container.bind(tokens.UserAgent).toConstantValue(self.navigator.userAgent)
   container.bind(tokens.WextApi).toConstantValue(wextApi)
   container.bind(tokens.BuildConfig).toConstantValue(buildConfig)
   container.bind(tokens.LoggingEnabled).toConstantValue(loggingEnabled)
@@ -49,7 +49,6 @@ export function configureContainer({
   container.bind(StoreService).to(BackgroundStoreService)
   container.bind(Container).toConstantValue(container)
   container.bind(tokens.ActiveTab).toDynamicValue(getActiveTab)
-  container.bind(Navigator).toConstantValue(navigator)
 
   container.bind(Stream).toSelf().inTransientScope()
 

@@ -108,5 +108,10 @@
   "engines": {
     "node": ">= 14.0.0"
   },
-  "packageManager": "yarn@4.0.0-rc.11"
+  "packageManager": "yarn@4.0.0-rc.11",
+  "dependenciesMeta": {
+    "webpack@5.73.0": {
+      "unplugged": true
+    }
+  }
 }
