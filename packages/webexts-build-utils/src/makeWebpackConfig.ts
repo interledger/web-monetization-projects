@@ -65,7 +65,7 @@ export function makeWebpackConfig({
 
     plugins: [
       makeDefinePlugin(packageVersion),
-      new CopyPlugin({ patterns: makeCopyToDistPattern(polyfill.hash) }),
+      new CopyPlugin({ patterns: makeCopyToDistPattern(polyfill?.hash) }),
       new AfterDoneShellCommandPlugin()
     ],
 
