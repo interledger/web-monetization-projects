@@ -20,7 +20,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 export interface MakeWebpackConfigParams {
   rootDir: string
-  polyfill: {
+  polyfill?: {
     content: string
     name: string
     hash: string
