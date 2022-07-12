@@ -22,7 +22,7 @@ jobs:
         with: 
           name: source-${{env.RELEASE_VERSION}}
           path: |
-            ${{ github.workspace }}.tar
+            web-monetization-projects.tar
             !${{ github.workspace }}/.git
             !${{ github.workspace }}/*.gitignore
 
@@ -40,7 +40,7 @@ jobs:
       - name: Step 1 - Package the extension for chrome
         run: |
           ls ${{ github.workspace }}
-          tar -x ${{ github.workspace }}
+          tar -x web-monetization-projects
           ${{ github.workspace }}/packages/coil-extension/package.sh chrome
         shell: bash
     
