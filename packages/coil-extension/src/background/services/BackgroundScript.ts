@@ -38,6 +38,7 @@ import { MonetizationService } from './MonetizationService'
 import MessageSender = chrome.runtime.MessageSender
 
 import { WM2OriginTrial } from './WM2OriginTrial'
+import { BackgroundEvents } from './BackgroundEvents'
 
 @injectable()
 export class BackgroundScript {
@@ -49,6 +50,7 @@ export class BackgroundScript {
     private tabStates: TabStates,
     private storage: StoreService,
     private auth: AuthService,
+    private events: BackgroundEvents,
     private monetization: MonetizationService,
     private tippingService: TippingService,
     private youtube: YoutubeService,
@@ -91,17 +93,21 @@ export class BackgroundScript {
     this.multipleInstanceDetector.addExternalMessageListener()
     this.initializeActiveTab()
     this.setRuntimeMessageListener()
+
     this.setTabsOnActivatedListener()
     this.setWindowsOnFocusedListener()
     this.setTabsOnRemovedListener()
+
     this.setFramesOnChangedListener()
     this.setFramesOnRemovedListener()
+    this.bindOnInstalled()
+    this.framesService.monitor()
+
+    this.events.emitBufferedAndStopBuffering()
 
     this.monetization.init()
 
     this.popup.setDefaultInactive()
-    this.framesService.monitor()
-    this.bindOnInstalled()
     void (await this.initAuth())
   }
 
@@ -118,13 +124,16 @@ export class BackgroundScript {
 
   private setTabsOnActivatedListener() {
     // The active tab has been changed
-    this.api.tabs.onActivated.addListener(activeInfo => {
+
+    // this.api.tabs.onActivated.addListener
+    this.events.on('tabs.onActivated', activeInfo => {
       if (this.buildConfig.logTabsApiEvents) {
         this.log('tabs.onActivated %o', activeInfo)
       }
       this.activeTab = activeInfo.tabId
       this.tabStates.reloadTabState({ from: 'onActivated' })
     })
+
     if (this.buildConfig.logTabsApiEvents) {
       if (this.api.tabs.onActiveChanged) {
         this.api.tabs.onActiveChanged.addListener((tabId, selectInfo) => {
@@ -145,7 +154,8 @@ export class BackgroundScript {
   private setWindowsOnFocusedListener() {
     if (this.api.windows) {
       // The active window (and therefore active tab) has changed
-      this.api.windows.onFocusChanged.addListener(windowId => {
+      // this.api.windows.onFocusChanged.addListener
+      this.events.on('windows.onFocusChanged', windowId => {
         // We've focused a special window, e.g. inspector
         if (windowId < 0) return
 
