@@ -19,7 +19,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with: 
           name: source-${{env.RELEASE_VERSION}}
-          path: ${{ github.workspace }}
+          path: |
+            ${{ github.workspace }}
+            !${{ github.workspace }}/.git
+            !${{ github.workspace }}/*.gitignore
 
   save-chrome-build:
     runs-on: ubuntu-latest
