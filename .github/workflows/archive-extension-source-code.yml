@@ -15,14 +15,14 @@ jobs:
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
       - name: Step 1 - Tar files
-        run: tar -cvf monorepo-source.tar ${{ github.workspace }}
+        run: tar -cvf ${{ github.workspace }}.tar ${{ github.workspace }}
 
       - name: Step 2 - Use the Upload Artifact GitHub Action to upload the monorepo
         uses: actions/upload-artifact@v3
         with: 
           name: source-${{env.RELEASE_VERSION}}
           path: |
-            monorepo-source.tar
+            ${{ github.workspace }}.tar
             !${{ github.workspace }}/.git
             !${{ github.workspace }}/*.gitignore
 
@@ -40,7 +40,7 @@ jobs:
       - name: Step 1 - Package the extension for chrome
         run: |
           ls ${{ github.workspace }}
-          tar -x monorepo-source
+          tar -x web-monetization-project.tar
           ${{ github.workspace }}/packages/coil-extension/package.sh chrome
         shell: bash
     
