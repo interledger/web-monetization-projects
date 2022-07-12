@@ -4,6 +4,7 @@ import * as process from 'process'
 import * as webpack from 'webpack'
 import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 import { Configuration } from 'webpack'
+import VWM from 'webpack-virtual-modules'
 
 import { MV3, PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
 import { makeDefinePlugin } from './defines'
@@ -20,11 +21,13 @@ const CopyPlugin = require('copy-webpack-plugin')
 interface MakeWebpackConfigParams {
   rootDir: string
   polyfillHash?: string
+  polyfill?: string
 }
 
 export function makeWebpackConfig({
   rootDir,
-  polyfillHash
+  polyfillHash,
+  polyfill
 }: MakeWebpackConfigParams): Configuration {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const paths = getPaths(rootDir)
@@ -59,7 +62,7 @@ export function makeWebpackConfig({
     entry: makeEntry(rootDir),
 
     plugins: [
-      makeDefinePlugin(packageVersion),
+      makeDefinePlugin(packageVersion, polyfillHash),
       new CopyPlugin({ patterns: makeCopyToDistPattern(polyfillHash) }),
       new AfterDoneShellCommandPlugin()
     ],
@@ -80,6 +83,17 @@ export function makeWebpackConfig({
         }
       ]
     }
+  }
+
+  if (polyfill && polyfillHash) {
+    const polyfillJs = `./${polyfillHash}.js`
+    config.plugins?.push(
+      new VWM({
+        [polyfillJs]: polyfill
+      })
+    )
+    const entry = config.entry as Record<string, string>
+    entry[polyfillHash] = polyfillJs
   }
 
   if (MV3) {

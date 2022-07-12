@@ -18,10 +18,18 @@ export class ScriptInjection {
    *
    * @param code - to run in a page's normal JS context
    */
-  inject(code: string) {
+  injectCode(code: string) {
+    this.inject(script => (script.innerHTML = code))
+  }
+
+  injectScript(src: string) {
+    this.inject(script => (script.src = src))
+  }
+
+  inject(configure: (script: HTMLScriptElement) => void) {
     const document = this.document
     const script = document.createElement('script')
-    script.innerHTML = code
+    configure(script)
     document.documentElement.appendChild(script)
 
     // clean it up afterwards

@@ -5184,10 +5184,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/source-list-map@npm:*":
+  version: 0.1.2
+  resolution: "@types/source-list-map@npm:0.1.2"
+  checksum: e966d2fc8b845ac0f2d9898087e5313801ef6cdf7be6e7c906b78652c1b75f4b5b83a7ab1c30587c18327ebec50fad04700d81e763ac0e3dd674173d40e429d7
+  languageName: node
+  linkType: hard
+
 "@types/stack-utils@npm:^2.0.0":
   version: 2.0.0
   resolution: "@types/stack-utils@npm:2.0.0"
   checksum: 2b8b30cdf0a78ac97f3c7feac765d809c068ad56c2b88952a24c9d2dc5043243131d128e11e2385279e1cfe85ea0eceed7b05abd8543d130676e712d31f2f1b1
+  languageName: node
+  linkType: hard
+
+"@types/tapable@npm:^1":
+  version: 1.0.8
+  resolution: "@types/tapable@npm:1.0.8"
+  checksum: fee4703164b230e22bedb876ed77b4208bf3fe7878fe01d2aecd9d5bc51ca2c0887cb264af734b736de4b4d1e848f1f5d1eaa56b5722d8ee7625a5f9a78e3b1f
   languageName: node
   linkType: hard
 
@@ -5212,10 +5226,53 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uglify-js@npm:*":
+  version: 3.16.0
+  resolution: "@types/uglify-js@npm:3.16.0"
+  dependencies:
+    source-map: "npm:^0.6.1"
+  checksum: 5e24922fd68071b69515f1d602922dad0c0b55d194b253bbc9df37405e1fef22d73c681dc33b0f4901d789c41a8810535e8e7c1281ca079279eab816dd339647
+  languageName: node
+  linkType: hard
+
 "@types/uuid@npm:8.3.4":
   version: 8.3.4
   resolution: "@types/uuid@npm:8.3.4"
   checksum: 42fa6d1868c459444c257fe418f624067aabfbe550ce97d9c124c5759a16f03bc475dc82086eefee807571608830b2f955e688c0e63e40aad5eb29b573471492
+  languageName: node
+  linkType: hard
+
+"@types/webpack-sources@npm:*":
+  version: 3.2.0
+  resolution: "@types/webpack-sources@npm:3.2.0"
+  dependencies:
+    "@types/node": "npm:*"
+    "@types/source-list-map": "npm:*"
+    source-map: "npm:^0.7.3"
+  checksum: 7ab51f331c35901b9fec579e6065a4d989ba5a4b16b667f0642900a338070479e59e9664c31886a46b22712200d5ecbb494b6a8ffbdf8508b35e71da3ce51b3f
+  languageName: node
+  linkType: hard
+
+"@types/webpack-virtual-modules@npm:^0":
+  version: 0.1.1
+  resolution: "@types/webpack-virtual-modules@npm:0.1.1"
+  dependencies:
+    "@types/webpack": "npm:^4"
+  checksum: 7d5cff571501810f87635154667223863a947ba5f15c1521f8913968e8742c84bb16f9ccd80c181f4019e7e60dcb26d17815098b2d88fcebcd123fab789158b9
+  languageName: node
+  linkType: hard
+
+"@types/webpack@npm:^4":
+  version: 4.41.32
+  resolution: "@types/webpack@npm:4.41.32"
+  dependencies:
+    "@types/node": "npm:*"
+    "@types/tapable": "npm:^1"
+    "@types/uglify-js": "npm:*"
+    "@types/webpack-sources": "npm:*"
+    anymatch: "npm:^3.0.0"
+    source-map: "npm:^0.6.0"
+  checksum: f507ba834868a0ff7e282cb4fcfa7409b2777445fbcc0af65bb048c282a7b49fd35d1020328cc8879f69e7194f43ed8be9317d62ceb0a84700a3f83e582482fe
   languageName: node
   linkType: hard
 
@@ -5567,6 +5624,7 @@ __metadata:
     "@swc/jest": "npm:0.2.21"
     "@types/jest": "npm:28.1.4"
     "@types/node": "npm:16.11.43"
+    "@types/webpack-virtual-modules": "npm:^0"
     "@types/ws": "npm:8.5.3"
     "@typescript-eslint/eslint-plugin": "npm:5.30.6"
     "@typescript-eslint/parser": "npm:5.30.6"
@@ -5615,6 +5673,7 @@ __metadata:
     webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.3"
     webpack-merge: "npm:5.8.0"
+    webpack-virtual-modules: "npm:^0.4.4"
     ws: "npm:^8.8.0"
   languageName: unknown
   linkType: soft
@@ -6965,7 +7024,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"anymatch@npm:^3.0.3, anymatch@npm:~3.1.2":
+"anymatch@npm:^3.0.0, anymatch@npm:^3.0.3, anymatch@npm:~3.1.2":
   version: 3.1.2
   resolution: "anymatch@npm:3.1.2"
   dependencies:
@@ -24371,6 +24430,13 @@ __metadata:
   version: 3.2.3
   resolution: "webpack-sources@npm:3.2.3"
   checksum: aaccb99ee23afcfa1ebddbd7101f7cf15cdc3d72afe37258cf6d852eb6cfedf540086fae3a53b2c65412040eb2e1a3e7b1bff077b09eaf4f82f032a8211d6a6f
+  languageName: node
+  linkType: hard
+
+"webpack-virtual-modules@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "webpack-virtual-modules@npm:0.4.4"
+  checksum: b0a5cfdaaf4cbef77f886e01159c85c8b95c1469fc94d9a824e4a82cde23c4902a8bc09c14450ee689f912772b50fdcbab4e3fb1812683d2c34cf26a2101314f
   languageName: node
   linkType: hard
 

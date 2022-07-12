@@ -6,19 +6,27 @@ import { inversifyModule } from '@dier-makr/inversify'
 import { GlobalModule } from '@dier-makr/annotations'
 
 import * as tokens from '../types/tokens'
-import { API, BUILD_CONFIG, COIL_DOMAIN } from '../webpackDefines'
+import {
+  API,
+  BUILD_CONFIG,
+  COIL_DOMAIN,
+  POLYFILL_HASH
+} from '../webpackDefines'
 import { ClientOptions } from '../services/ClientOptions'
 import { isLoggingEnabled } from '../util/isLoggingEnabled'
 
 import { ContentScript } from './services/ContentScript'
 
 async function configureContainer(container: Container) {
+  const polyfillPath = API.runtime.getURL(`${POLYFILL_HASH}.js`)
+
   container.bind(tokens.LoggingEnabled).toDynamicValue(async () => {
     return isLoggingEnabled(BUILD_CONFIG)
   })
   container.bind(tokens.BuildConfig).toConstantValue(BUILD_CONFIG)
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
+  container.bind(tokens.PolyfillPath).toConstantValue(polyfillPath)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const noop = (..._: unknown[]) => undefined
   container

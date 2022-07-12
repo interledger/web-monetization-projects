@@ -74,59 +74,59 @@ function convertToMV3(v2: ManifestV2) {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function transformManifest(
-  manifest: ManifestV2,
+  v2: ManifestV2,
   browser: string,
   polyfillHash?: string
 ) {
-  const targets = manifest['$targets']
-  delete manifest['$targets']
+  const targets = v2['$targets']
+  delete v2['$targets']
   if (targets?.[browser]?.permissions) {
-    applyManifestPermissions(manifest, targets[browser].permissions)
+    applyManifestPermissions(v2, targets[browser].permissions)
   }
 
   if (polyfillHash) {
-    assert.ok(manifest.content_security_policy)
-    assert.ok(manifest.web_accessible_resources)
-    manifest.content_security_policy = manifest.content_security_policy.replace(
+    assert.ok(v2.content_security_policy)
+    assert.ok(v2.web_accessible_resources)
+    v2.content_security_policy = v2.content_security_policy.replace(
       'sha256-POLYFILL-HASH=',
       polyfillHash
     )
-    manifest.web_accessible_resources.push(`${polyfillHash}.js`)
+    v2.web_accessible_resources.push(`${polyfillHash}.js`)
   }
 
   if (WEXT_MANIFEST_SUFFIX) {
-    manifest.name += WEXT_MANIFEST_SUFFIX
+    v2.name += WEXT_MANIFEST_SUFFIX
     if (!WEXT_MANIFEST_SUFFIX_NO_DATE) {
-      manifest.name += makeDateSuffix()
+      v2.name += makeDateSuffix()
     }
   }
   if (WEXT_MANIFEST_VERSION) {
-    manifest.version = WEXT_MANIFEST_VERSION
+    v2.version = WEXT_MANIFEST_VERSION
   }
   if (WEXT_MANIFEST_VERSION_NAME) {
-    manifest.version_name = WEXT_MANIFEST_VERSION_NAME
+    v2.version_name = WEXT_MANIFEST_VERSION_NAME
   }
 
   if (WEXT_MANIFEST_KEY) {
-    manifest.key = WEXT_MANIFEST_KEY
+    v2.key = WEXT_MANIFEST_KEY
   }
 
   if (browser === 'firefox') {
     if (WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID) {
-      assert.ok(manifest.browser_specific_settings?.gecko)
-      manifest.browser_specific_settings.gecko.id =
+      assert.ok(v2.browser_specific_settings?.gecko)
+      v2.browser_specific_settings.gecko.id =
         WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
     }
-    manifest.applications = manifest.browser_specific_settings
+    v2.applications = v2.browser_specific_settings
   } else {
-    delete manifest['browser_specific_settings']
+    delete v2['browser_specific_settings']
   }
   const rules = WEXT_MANIFEST_PERMISSIONS
   const parsedRules: string[] = rules ? JSON.parse(rules) : []
-  applyManifestPermissions(manifest, parsedRules)
+  applyManifestPermissions(v2, parsedRules)
 
   if (MV3) {
-    return convertToMV3(manifest)
+    return convertToMV3(v2)
   }
-  return manifest
+  return v2
 }

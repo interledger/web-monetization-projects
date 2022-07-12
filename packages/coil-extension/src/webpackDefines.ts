@@ -6,6 +6,7 @@ declare const WEBPACK_DEFINE_VERSION: any
 declare const WEBPACK_DEFINE_COIL_DOMAIN: any
 declare const WEBPACK_DEFINE_BTP_ENDPOINT: any
 declare const WEBPACK_DEFINE_BUILD_CONFIG: any
+declare const WEBPACK_DEFINE_POLYFILL_HASH: any
 
 // This is to support opening the popup.html page in a normal browser tab
 // so that can look at it in various states. An undefined error will be thrown
@@ -28,3 +29,4 @@ export const COIL_DOMAIN: string = BUILD_CONFIG.useLocalMockServer
   : coilDomain
 export const VERSION: string = WEBPACK_DEFINE_VERSION
 export const MV3: boolean = WEBPACK_DEFINE_MV3
+export const POLYFILL_HASH: string = WEBPACK_DEFINE_POLYFILL_HASH
