@@ -101,7 +101,7 @@ jobs:
   build-extension-e2e-coil:
     docker:
       # Hey renovate PR merger. Don't forget the node-version: [ "x.y.z", "y.z.x" ] blocks
-      - image: cimg/node:16.15.1-browsers
+      - image: cimg/node:16.16.0-browsers
     steps:
       - gcloud-get-creds
       - checkout
