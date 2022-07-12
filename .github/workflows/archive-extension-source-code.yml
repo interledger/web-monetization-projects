@@ -32,12 +32,14 @@ jobs:
         with:
           name: source-${{env.RELEASE_VERSION}}
 
-      - name: Step 1 - Package the extension for chrome
-        run: |
-          cd ${{ github.workspace }}/packages/coil-extension
-          sh package.sh chrome
+      - name: Step 1 - Set the working directory to the coil-extension directory
+        run: echo changed working directory
+        working-directory: ${{ github.workspace }}/packages/coil-extension
+
+      - name: Step 2 - Package the extension for chrome
+        run: sh package.sh chrome
     
-      - name: Step 2 - Use the Upload Artifact GitHub Action to upload the extension build
+      - name: Step 3 - Use the Upload Artifact GitHub Action to upload the extension build
         uses: actions/upload-artifact@v2
         with: 
           name: chrome-${{env.RELEASE_VERSION}}
@@ -54,12 +56,14 @@ jobs:
         with:
           name: source-${{env.RELEASE_VERSION}}
 
-      - name: Step 1 - Package the extension for firefox
-        run: |
-          cd ${{ github.workspace }}/packages/coil-extension
-          sh package.sh firefox
+      - name: Step 1 - Set the working directory to the coil-extension directory
+        run: echo changed working directory
+        working-directory: ${{ github.workspace }}/packages/coil-extension
+
+      - name: Step 2 - Package the extension for firefox
+        run: sh package.sh firefox
     
-      - name: Step 2 - Use the Upload Artifact GitHub Action to upload the extension build
+      - name: Step 3 - Use the Upload Artifact GitHub Action to upload the extension build
         uses: actions/upload-artifact@v2
         with: 
           name: firefox-${{env.RELEASE_VERSION}}
