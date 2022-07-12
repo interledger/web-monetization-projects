@@ -18,9 +18,9 @@ interface ConfigureContainerParams {
   loggingEnabled: boolean
   coilDomain: string
   btpEndpoint?: string
-  wextApi: any
+  wextApi: typeof chrome
   buildConfig: Record<string, unknown>
-  getActiveTab: () => Promise<any>
+  getActiveTab: () => Promise<number>
 }
 
 export function configureContainer({
@@ -49,7 +49,7 @@ export function configureContainer({
   container.bind(StoreService).to(BackgroundStoreService)
   container.bind(Container).toConstantValue(container)
   container.bind(tokens.ActiveTab).toDynamicValue(getActiveTab)
-  container.bind(Navigator).toConstantValue(navigator)
+  container.bind(tokens.Navigator).toConstantValue(navigator)
 
   container.bind(Stream).toSelf().inTransientScope()
 
