@@ -31,13 +31,13 @@ jobs:
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: source-${{env.RELEASE_VERSION}}
 
       - name: Step 1 - Package the extension for chrome
         run: |
-          ls
+          ls -lah ./package.sh
           ./package.sh chrome
         shell: bash
         working-directory: ${{ github.workspace }}/packages/coil-extension
