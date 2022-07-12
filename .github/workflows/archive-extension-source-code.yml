@@ -23,8 +23,6 @@ jobs:
           name: source-${{env.RELEASE_VERSION}}
           path: |
             ${{ github.workspace }}.tar
-            !${{ github.workspace }}/.git
-            !${{ github.workspace }}/*.gitignore
 
   save-chrome-build:
     runs-on: ubuntu-latest
@@ -40,7 +38,7 @@ jobs:
       - name: Step 1 - Package the extension for chrome
         run: |
           ls ${{ github.workspace }}
-          tar -x web-monetization-projects.tar
+          tar -xvf web-monetization-projects.tar
           ${{ github.workspace }}/packages/coil-extension/package.sh chrome
         shell: bash
     
