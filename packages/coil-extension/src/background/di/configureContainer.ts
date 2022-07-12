@@ -20,7 +20,7 @@ interface ConfigureContainerParams {
   btpEndpoint?: string
   wextApi: typeof chrome
   buildConfig: Record<string, unknown>
-  getActiveTab: () => Promise<number>
+  getActiveTab: () => Promise<number | undefined>
 }
 
 export function configureContainer({
