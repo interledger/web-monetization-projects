@@ -41,8 +41,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
           tar -x ${{ github.workspace }}
-          ./package.sh chrome
-        working-directory: ${{ github.workspace }}/packages/coil-extension
+          ${{ github.workspace }}/packages/coil-extension/package.sh chrome
+        shell: bash
     
       - name: Step 2 - Use the Upload Artifact GitHub Action to upload the extension build
         uses: actions/upload-artifact@v3
@@ -63,7 +63,6 @@ jobs:
 
       - name: Step 1 - Package the extension for firefox
         run: sh ./package.sh firefox
-        working-directory: ${{ github.workspace }}/packages/coil-extension
 
       - name: Step 2 - Use the Upload Artifact GitHub Action to upload the extension build
         uses: actions/upload-artifact@v3
