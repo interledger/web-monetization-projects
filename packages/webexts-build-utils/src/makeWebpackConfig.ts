@@ -2,8 +2,8 @@ import * as path from 'path'
 import * as process from 'process'
 
 import * as webpack from 'webpack'
-import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 import { Configuration } from 'webpack'
+import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 import VWM from 'webpack-virtual-modules'
 
 import { MV3, PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
@@ -14,18 +14,10 @@ import { makeEntry } from './entries'
 import { makeTsLoader } from './tsloader'
 import { makeCopyToDistPattern } from './copyToDist'
 import { ReloadServerPlugin } from './reloadServer'
+import { MakeWebpackConfigParams } from './types'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
-
-export interface MakeWebpackConfigParams {
-  rootDir: string
-  polyfill?: {
-    content: string
-    name: string
-    hash: string
-  }
-}
 
 export function makeWebpackConfig({
   rootDir,
@@ -65,7 +57,7 @@ export function makeWebpackConfig({
 
     plugins: [
       makeDefinePlugin(packageVersion),
-      new CopyPlugin({ patterns: makeCopyToDistPattern(polyfill?.hash) }),
+      new CopyPlugin({ patterns: makeCopyToDistPattern(polyfill) }),
       new AfterDoneShellCommandPlugin()
     ],
 

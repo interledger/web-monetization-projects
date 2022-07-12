@@ -12,6 +12,7 @@ import {
   WEXT_MANIFEST_VERSION_NAME
 } from './env'
 import { ManifestV2, ManifestV3 } from './types/manifest'
+import { Polyfill } from './types'
 
 const ALL_URLS = '<all_urls>'
 
@@ -49,7 +50,7 @@ function convertToMV3(v2: ManifestV2) {
 
   if (v2.web_accessible_resources) {
     v3.web_accessible_resources = v2.web_accessible_resources.map(fn => ({
-      matches: ['<all_urls>'],
+      matches: ['*://*/*'],
       resources: [fn]
     }))
   }
@@ -76,7 +77,7 @@ function convertToMV3(v2: ManifestV2) {
 export function transformManifest(
   v2: ManifestV2,
   browser: string,
-  polyfillHash?: string
+  polyfill?: Polyfill
 ) {
   const targets = v2['$targets']
   delete v2['$targets']
@@ -84,14 +85,14 @@ export function transformManifest(
     applyManifestPermissions(v2, targets[browser].permissions)
   }
 
-  if (polyfillHash) {
+  if (polyfill?.hash) {
     assert.ok(v2.content_security_policy)
     assert.ok(v2.web_accessible_resources)
     v2.content_security_policy = v2.content_security_policy.replace(
       'sha256-POLYFILL-HASH=',
-      polyfillHash
+      polyfill.hash
     )
-    v2.web_accessible_resources.push(`${polyfillHash}.js`)
+    v2.web_accessible_resources.push(`${polyfill.name}.js`)
   }
 
   if (WEXT_MANIFEST_SUFFIX) {

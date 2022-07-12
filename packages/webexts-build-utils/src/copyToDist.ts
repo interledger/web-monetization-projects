@@ -1,10 +1,11 @@
 import { transformManifest } from './transformManifest'
 import { BROWSER, LIVE_RELOAD } from './env'
 import { transformStatic } from './transformStatic'
+import { Polyfill } from './types'
 
 export const prettyJSON = (obj: unknown) => JSON.stringify(obj, null, 2)
 
-export function makeCopyToDistPattern(polyfillHash?: string) {
+export function makeCopyToDistPattern(polyfill?: Polyfill) {
   // Patterns for webpack-copy-plugin
   const copyToDist = [
     {
@@ -12,7 +13,7 @@ export function makeCopyToDistPattern(polyfillHash?: string) {
       to: 'manifest.json',
       transform: (content: Buffer) => {
         let manifest = JSON.parse(content.toString())
-        manifest = transformManifest(manifest, BROWSER, polyfillHash)
+        manifest = transformManifest(manifest, BROWSER, polyfill)
         return prettyJSON(manifest)
       }
     },
