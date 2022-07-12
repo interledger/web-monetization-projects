@@ -40,7 +40,7 @@ jobs:
 
       - name: Step 1 - Package the extension for chrome
         run: |
-          ls -lah ./package.sh
+          ls
           ./package.sh chrome
         shell: bash
         working-directory: ${{ github.workspace }}/packages/coil-extension
