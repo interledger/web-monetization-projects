@@ -69,10 +69,10 @@ export function getPackageVersion(packageJSONPath: string): PackageVersion {
   const execOpts = { cwd: packageDir }
 
   const withoutGit = {
-    haveGitFolder: false,
+    haveGitFolder: false as const,
     version: parsed.version as string,
     buildDateISO: date.toISOString()
-  } as const
+  }
 
   if (inGitWorkingTree(packageDir)) {
     const hash = childProcess.execSync('git rev-parse --short HEAD', execOpts)
