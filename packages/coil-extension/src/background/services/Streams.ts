@@ -29,7 +29,6 @@ export class Streams extends EventEmitter {
     id: string,
     options: PaymentDetails & {
       spspEndpoint: string
-      token: string
       initiatingUrl: string
     }
   ) {

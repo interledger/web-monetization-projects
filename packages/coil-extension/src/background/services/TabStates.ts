@@ -226,9 +226,9 @@ export class TabStates {
 
   private setBrowserActionStateFromAuthAndTabState(from?: string) {
     dbg('setBrowserActionStateFromAuthAndTabState', { from })
-    const token = this.auth.getStoredToken()
+    const isAuthenticated = this.auth.isAuthenticated()
 
-    if (!token || !this.store.validToken) {
+    if (!isAuthenticated) {
       this.popup.disable()
     }
 
@@ -241,9 +241,9 @@ export class TabStates {
         this.setIcon(tabId, 'monetized')
       }
 
-      if (token == null) {
+      if (!isAuthenticated) {
         this.setIcon(tabId, 'unavailable')
-      } else if (token) {
+      } else {
         this.popup.enable()
 
         const tabState = this.getActiveOrDefault()

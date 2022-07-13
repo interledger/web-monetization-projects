@@ -180,13 +180,13 @@ export class MonetizationService {
     this.log('startWebMonetization, request', request)
 
     this.log('loading token for monetization', requestId)
-    let token: string | null
+    let isAuthenticated: boolean
     try {
-      token = await this.auth.getTokenMaybeRefreshAndStoreState()
+      isAuthenticated = await this.auth.maybeRefreshAndStoreState()
     } catch (e) {
-      token = null
+      isAuthenticated = false
     }
-    if (!token) {
+    if (!isAuthenticated) {
       // not signed in.
       // eslint-disable-next-line no-console
       if (this.loggingEnabled) {
@@ -224,7 +224,7 @@ export class MonetizationService {
 
     // Check that this startWebMonetization invocation is still valid before
     // we go ahead. Any operation that we `await`d on could have potentially
-    // masked state changes. e.g. `getTokenMaybeRefreshAndStoreState`
+    // masked state changes. e.g. `maybeRefreshAndStoreState`
     // (which will update `whoami`) which takes longer than it does to switch
     // out a monetization tag.
 

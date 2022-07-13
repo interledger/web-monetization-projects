@@ -30,6 +30,15 @@ import { formatTipSettings } from './formatTipSettings.util'
  everywhere. If you log out from one context, you'll be logged out everywhere.
 
  ### Site <-> Extension token synchronization
+ - NOTE: With cookie-based auth and SuperTokens handling access token
+ refreshes, it may not be necessary to have any of these interactions between
+ the site and extension. This is because both the site and extension have
+ logic to refresh the user's access token cookie, so any request to the
+ Coil API should be authenticated.
+
+ - TODO: However, we should confirm that the "incognito":"spanning" declaration
+ in the manifest allows the extension to send stored cookies with API requests.
+
  - Every time you land on a coil.com frame the content script will send the
  coil.com token to the background page, which it will compare against its
  token, sending back the newest one to store on the site.
@@ -76,25 +85,25 @@ export class AuthService extends EventEmitter {
     super()
   }
 
-  private _op: Promise<void> | null = null
+  private _op: Promise<boolean> | null = null
 
   /*
   TODO: manifest version 3 and background workers ?
   If the token is issued more than one day ago, refresh it, such that the
   token is always valid for at least 26-28 days.
    */
-  queueTokenRefreshCheck() {
+  queueAuthRefreshCheck() {
     const twelveHours = 12 * 60 * 60 * 1e3
     // Add some randomness to the interval so we
     // can't correlate when a user is active/inactive quite as easily
     const randomness = Math.random() * twelveHours
     setTimeout(() => {
-      void this.getTokenMaybeRefreshAndStoreState()
-      this.queueTokenRefreshCheck()
+      void this.maybeRefreshAndStoreState()
+      this.queueAuthRefreshCheck()
     }, twelveHours + randomness)
   }
 
-  async isAuthenticated(): Promise<boolean> {
+  async refreshAuthentication(): Promise<boolean> {
     let loggedIn = false
     try {
       const [resp, tipResp] = await Promise.all([
@@ -129,10 +138,10 @@ export class AuthService extends EventEmitter {
     }
   }
 
-  async getTokenMaybeRefreshAndStoreState(): Promise<void> {
-    this.activeTabs.log(`getTokenMaybeRefreshAndStoreState ${Date.now()}`)
+  async maybeRefreshAndStoreState(): Promise<boolean> {
+    this.activeTabs.log(`maybeRefreshAndStoreState ${Date.now()}`)
     if (!this._op) {
-      this._op = this.doGetTokenMaybeRefreshAndStoreState()
+      this._op = this.refreshAuthentication()
       this._op.catch(() => {
         this._op = null
       })
@@ -141,10 +150,6 @@ export class AuthService extends EventEmitter {
       })
     }
     return this._op
-  }
-
-  tokenInvalid(token: string | null) {
-    return !token || tokenUtils.isExpired({ token })
   }
 
   initialize() {
@@ -158,13 +163,8 @@ export class AuthService extends EventEmitter {
     return SuperTokens.signOut()
   }
 
-  async doGetTokenMaybeRefreshAndStoreState(): Promise<void> {
-    this.activeTabs.log(`doGetTokenMaybeRefreshAndStoreState ${Date.now()}`)
-    await this.isAuthenticated()
-  }
-
-  getStoredToken() {
-    return this.store.token || null
+  isAuthenticated() {
+    return !!this.store.user
   }
 
   syncSiteToken(site: string | null): string | null {

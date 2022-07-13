@@ -111,7 +111,7 @@ describe('MonetizationService', () => {
     pauseStream.mockReturnValue(undefined)
 
     const auth = await container.getAsync(AuthService)
-    const getToken = jest.spyOn(auth, 'getTokenMaybeRefreshAndStoreState')
+    const getToken = jest.spyOn(auth, 'maybeRefreshAndStoreState')
     const token = '<JWT>'
     const store = await container.getAsync<StoreProxy>(tokens.StoreProxy)
 

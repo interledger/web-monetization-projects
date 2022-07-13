@@ -74,7 +74,6 @@ type OnMoneyEvent = {
 }
 
 interface CreateStreamDetails extends PaymentDetails {
-  token: string
   spspEndpoint: string
   initiatingUrl: string
 }
@@ -84,7 +83,6 @@ export class Stream extends EventEmitter {
   private readonly _requestId: string
   private readonly _spspUrl: string
   private readonly _paymentPointer: string
-  private _authToken: string
 
   private readonly _server: string
   private readonly _tiers: BandwidthTiers
@@ -117,13 +115,11 @@ export class Stream extends EventEmitter {
   ) {
     super()
 
-    const { requestId, spspEndpoint, paymentPointer, token, initiatingUrl } =
-      details
+    const { requestId, spspEndpoint, paymentPointer, initiatingUrl } = details
 
     this._paymentPointer = paymentPointer
     this._requestId = requestId
     this._spspUrl = spspEndpoint
-    this._authToken = token
     this._tiers = container.get(BandwidthTiers)
     this._coilDomain = container.get(tokens.CoilDomain)
     this._anonTokens = container.get(AnonymousTokens)
@@ -183,7 +179,7 @@ export class Stream extends EventEmitter {
       let plugin, attempt
       try {
         const spspDetailsPromise = await this._getSPSPDetails()
-        btpToken = await this._anonTokens.getToken(this._authToken)
+        btpToken = await this._anonTokens.getToken()
         plugin = await this._makePlugin(btpToken)
         const spspDetails = await spspDetailsPromise
         this.container

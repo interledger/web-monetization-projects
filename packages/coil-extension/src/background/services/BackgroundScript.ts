@@ -107,7 +107,7 @@ export class BackgroundScript {
 
   private async initAuth() {
     this.auth.initialize()
-    const isLoggedIn = await this.auth.isAuthenticated()
+    const isLoggedIn = await this.auth.refreshAuthentication()
     if (!isLoggedIn) {
       this.logout()
     }
@@ -303,15 +303,6 @@ export class BackgroundScript {
         this.adaptedSite(request.data, sender)
         sendResponse(true)
         break
-      case 'injectToken':
-        sendResponse(
-          await this.injectToken(
-            request.data.token,
-            notNullOrUndef(sender.url),
-            notNullOrUndef(sender.tab)
-          )
-        )
-        break
       case 'startWebMonetization':
         this.log('got startwebmonetization')
         sendResponse(
@@ -381,24 +372,6 @@ export class BackgroundScript {
     if (url) {
       this.tabStates.reloadTabState({ from: 'setCoilUrlForPopupIfNeeded' })
     }
-  }
-
-  async injectToken(
-    siteToken: string | null,
-    url: string,
-    tab: chrome.tabs.Tab
-  ) {
-    const { origin } = new URL(url)
-    if (origin !== this.coilDomain) {
-      return null
-    }
-
-    // When logged out siteToken will be an empty string so normalize it to
-    // null
-    const newest = this.auth.syncSiteToken(siteToken || null)
-    this.activeTabLogger.log(`injectToken: ${Date.now()}`)
-    void this.auth.getTokenMaybeRefreshAndStoreState()
-    return newest
   }
 
   adaptedSite(data: AdaptedSite['data'], sender: MessageSender) {

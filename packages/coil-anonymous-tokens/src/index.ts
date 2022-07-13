@@ -73,7 +73,7 @@ export interface AnonymousTokensService {
    * Returns a BTP token
    * @param coilAuthToken
    */
-  getToken(coilAuthToken: string): Promise<string>
+  getToken(coilAuthToken?: string): Promise<string>
 
   /**
    * Called when the token has been exhausted
@@ -131,7 +131,7 @@ export class AnonymousTokens implements AnonymousTokensService {
     this.storedTokenCount = count
   }
 
-  async getToken(coilAuthToken: string): Promise<string> {
+  async getToken(coilAuthToken?: string): Promise<string> {
     // When there is only 1 token left, fetch some more in the background.
     if (this.storedTokenCount === 1) {
       // noinspection ES6MissingAwait
@@ -211,19 +211,20 @@ export class AnonymousTokens implements AnonymousTokensService {
   }
 
   private async _signToken(
-    coilAuthToken: string,
-    request: string
+    request: string,
+    coilAuthToken?: string
   ): Promise<IssueResponse> {
+    const headers: Record<string, string> = {
+      'content-type': 'application/json'
+    }
+    if (coilAuthToken) {
+      headers.authorization = `Bearer ${coilAuthToken}`
+    }
     const signRes = await portableFetch(this.signerUrl + '/issue', {
       method: 'POST',
-      // We need this for staging due to cloudflare auth
-      credentials: this.signerUrl.includes('staging.coil.com')
-        ? 'include'
-        : 'omit',
-      headers: {
-        authorization: `Bearer ${coilAuthToken}`,
-        'content-type': 'application/json'
-      },
+      // We need this for SuperTokens and staging Cloudflare auth
+      credentials: 'include',
+      headers,
       body: JSON.stringify({
         bl_sig_req: request
       })
@@ -238,7 +239,7 @@ export class AnonymousTokens implements AnonymousTokensService {
     return parseIssueResp(body) as IssueResponse
   }
 
-  private async populateTokens(coilAuthToken: string): Promise<void> {
+  private async populateTokens(coilAuthToken?: string): Promise<void> {
     // Ensure that at most one `_populateTokens` call runs simultaneously.
     if (this._populateTokensPromise) return this._populateTokensPromise
     this._populateTokensPromise = this._populateTokensNow(coilAuthToken)
@@ -249,13 +250,13 @@ export class AnonymousTokens implements AnonymousTokensService {
     }
   }
 
-  private async _populateTokensNow(coilAuthToken: string): Promise<void> {
+  private async _populateTokensNow(coilAuthToken?: string): Promise<void> {
     // Generate all tokens first so the timing in between tokens can't be used
     // to learn anything about the token or blinding factor.
     const tokens = GenerateNewTokens(this.batchSize)
     const issueRequest = BuildIssueRequest(tokens)
 
-    const signPromise = this._signToken(coilAuthToken, issueRequest).then(
+    const signPromise = this._signToken(issueRequest, coilAuthToken).then(
       async (issueResp: IssueResponse) => {
         const curvePoints = getCurvePoints(issueResp.sigs)
 
