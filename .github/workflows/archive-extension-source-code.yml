@@ -15,7 +15,7 @@ jobs:
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
-        # Opting for .tar over .zip due to an issue where .zip contents lose all permissions, see https://github.com/actions/upload-artifact#maintaining-file-permissions-and-case-sensitive-files
+        # Opting for .tar over simply creating an artifact from the whole repo due to an issue where .zip contents lose all permissions, see https://github.com/actions/upload-artifact#maintaining-file-permissions-and-case-sensitive-files
       - name: Step 1 - Tar files
         run: tar --exclude='.git' --exclude='.gitignore' -cf monorepo.tar -C ${{ github.workspace }} .
 
