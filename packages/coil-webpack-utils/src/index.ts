@@ -53,7 +53,8 @@ function inGitWorkingTree(cwd: string) {
     return (
       childProcess
         .execSync('git rev-parse --is-inside-work-tree', { cwd })
-        .toString('utf8') === 'true'
+        .toString('utf8')
+        .trim() === 'true'
     )
   } catch (e) {
     return false
