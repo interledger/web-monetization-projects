@@ -5615,6 +5615,7 @@ __metadata:
     webpack-cli: "npm:4.10.0"
     webpack-dev-server: "npm:4.9.3"
     webpack-merge: "npm:5.8.0"
+    webpack-virtual-modules: "npm:^0.4.4"
     ws: "npm:^8.8.0"
   languageName: unknown
   linkType: soft
@@ -24371,6 +24372,13 @@ __metadata:
   version: 3.2.3
   resolution: "webpack-sources@npm:3.2.3"
   checksum: aaccb99ee23afcfa1ebddbd7101f7cf15cdc3d72afe37258cf6d852eb6cfedf540086fae3a53b2c65412040eb2e1a3e7b1bff077b09eaf4f82f032a8211d6a6f
+  languageName: node
+  linkType: hard
+
+"webpack-virtual-modules@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "webpack-virtual-modules@npm:0.4.4"
+  checksum: b0a5cfdaaf4cbef77f886e01159c85c8b95c1469fc94d9a824e4a82cde23c4902a8bc09c14450ee689f912772b50fdcbab4e3fb1812683d2c34cf26a2101314f
   languageName: node
   linkType: hard
 

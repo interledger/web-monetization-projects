@@ -2,8 +2,8 @@ import * as path from 'path'
 import * as process from 'process'
 
 import * as webpack from 'webpack'
-import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 import { Configuration } from 'webpack'
+import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
 
 import { MV3, PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
 import { makeDefinePlugin } from './defines'
@@ -13,18 +13,16 @@ import { makeEntry } from './entries'
 import { makeTsLoader } from './tsloader'
 import { makeCopyToDistPattern } from './copyToDist'
 import { ReloadServerPlugin } from './reloadServer'
+import { MakeWebpackConfigParams } from './types'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
-
-interface MakeWebpackConfigParams {
-  rootDir: string
-  polyfillHash?: string
-}
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const VWM = require('webpack-virtual-modules')
 
 export function makeWebpackConfig({
   rootDir,
-  polyfillHash
+  polyfill
 }: MakeWebpackConfigParams): Configuration {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const paths = getPaths(rootDir)
@@ -60,7 +58,7 @@ export function makeWebpackConfig({
 
     plugins: [
       makeDefinePlugin(packageVersion),
-      new CopyPlugin({ patterns: makeCopyToDistPattern(polyfillHash) }),
+      new CopyPlugin({ patterns: makeCopyToDistPattern(polyfill) }),
       new AfterDoneShellCommandPlugin()
     ],
 
@@ -80,6 +78,17 @@ export function makeWebpackConfig({
         }
       ]
     }
+  }
+
+  if (polyfill) {
+    const polyfillJs = `./${polyfill.hash}.js`
+    config.plugins?.push(
+      new VWM({
+        [polyfillJs]: polyfill.content
+      })
+    )
+    const entry = config.entry as Record<string, string>
+    entry[polyfill.name] = polyfillJs
   }
 
   if (MV3) {

@@ -1,6 +1,4 @@
 // Possible to override name/version so can publish as different extension
-import process from 'process'
-
 export const AFTER_DONE_SHELL_CMD = process.env.AFTER_DONE_SHELL_CMD
 
 export const MV3 = Boolean(process.env.MV3 ?? false)
@@ -54,3 +52,4 @@ Object.keys(process.env).forEach(key => {
 })
 
 WEXT_BUILD_CONFIG.isCI = Boolean(process.env.CI)
+WEXT_BUILD_CONFIG.isMV3 = MV3

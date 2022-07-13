@@ -12,3 +12,5 @@ dbg('typeof self.localStorage', self.localStorage)
 
 const reloader = new Reloader(chrome, console.log.bind(console, 'Reloader: '))
 reloader.connect()
+
+import './background'

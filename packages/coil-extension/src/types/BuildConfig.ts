@@ -7,7 +7,10 @@ export interface BuildConfig extends Record<string, unknown> {
   logTabsApiEvents?: boolean
   extensionBuildString?: string
   extensionPopupFooterString?: string
-  isCI?: boolean
+
+  isCI: boolean
+  isMV3: boolean
+
   // Bypass origin trial machinery and always allow wm2 requests
   wm2Always?: boolean
   loggingEnabled?: boolean
