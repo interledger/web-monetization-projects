@@ -34,31 +34,46 @@ export const configureNodePolyfills = (wpConf: webpack.Configuration) => {
   return wpConf
 }
 
-export interface PackageVersion {
-  dirty: boolean
-  commit: string
+export type PackageVersion = {
   version: string
   buildDateISO: string
-}
+} & (
+  | {
+      haveGitFolder: true
+      dirty: boolean
+      commit: string
+    }
+  | {
+      haveGitFolder: false
+    }
+)
 
 export function getPackageVersion(packageJSONPath: string): PackageVersion {
   const json = fs.readFileSync(packageJSONPath)
   const parsed = JSON.parse(json.toString())
-  const version = parsed.version as string
-  const cwd = pathMod.dirname(packageJSONPath)
-  const gitExists = fs.existsSync(`${cwd}/.git/`)
-  const hash = gitExists
-    ? childProcess.execSync('git rev-parse --short HEAD', { cwd })
-    : ''
-  const status = gitExists
-    ? childProcess.execSync('git status -s', { cwd })
-    : ''
-  const date = new Date()
 
-  return {
-    version,
-    commit: hash.toString().trim(),
-    dirty: status.toString().trim().length > 0,
+  const date = new Date()
+  const packageDir = pathMod.dirname(packageJSONPath)
+  const gitPath = pathMod.join(packageDir, '.git')
+
+  const withoutGit = {
+    haveGitFolder: false,
+    version: parsed.version as string,
     buildDateISO: date.toISOString()
+  } as const
+
+  if (fs.existsSync(gitPath)) {
+    const opts = { cwd: packageDir }
+    const hash = childProcess.execSync('git rev-parse --short HEAD', opts)
+    const status = childProcess.execSync('git status -s', opts)
+
+    return {
+      ...withoutGit,
+      haveGitFolder: true,
+      commit: hash.toString().trim(),
+      dirty: status.toString().trim().length > 0
+    }
+  } else {
+    return withoutGit
   }
 }
