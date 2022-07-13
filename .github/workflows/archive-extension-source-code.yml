@@ -1,0 +1,77 @@
+name: Archive Extension Build And Source Code
+
+on:
+  push:
+    tags:
+      - coil-extension@*
+
+jobs:
+  save-monorepo-source-code:
+    runs-on: ubuntu-latest
+   
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Step 1 - Tar files
+        run: tar -cf mono_repo.tar ${{ github.workspace }}
+
+      - name: Step 2 - Use the Upload Artifact GitHub Action to upload the monorepo
+        uses: actions/upload-artifact@v3
+        with: 
+          name: source-${{env.RELEASE_VERSION}}
+          path: |
+            mono_repo.tar
+
+  save-chrome-build:
+    runs-on: ubuntu-latest
+    needs: [ save-monorepo-source-code ]
+    steps:
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: source-${{env.RELEASE_VERSION}}
+
+      - name: Step 1 - Extract tar archive
+        run: tar -xf mono_repo.tar
+
+      - name: Step 2 - Package the extension for chrome
+        run: ./package.sh chrome  
+        working-directory: ${{ github.workspace }}/${{ github.workspace }}/packages/coil-extension/
+        shell: bash
+
+      - name: Step 3 - Use the Upload Artifact GitHub Action to upload the extension build
+        uses: actions/upload-artifact@v3
+        with: 
+          name: chrome-${{env.RELEASE_VERSION}}
+          path: ${{ github.workspace }}/${{ github.workspace }}/packages/coil-extension/dist
+          
+  save-firefox-build:
+    runs-on: ubuntu-latest
+    needs: [ save-monorepo-source-code ]
+    steps:
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: source-${{env.RELEASE_VERSION}}
+
+      - name: Step 1 - Extract tar archive
+        run: tar -xf mono_repo.tar
+
+      - name: Step 2 - Package the extension for firefox
+        run: ./package.sh firefox  
+        working-directory: ${{ github.workspace }}/${{ github.workspace }}/packages/coil-extension/
+        shell: bash
+
+      - name: Step 3 - Use the Upload Artifact GitHub Action to upload the extension build
+        uses: actions/upload-artifact@v3
+        with: 
+          name: firefox-${{env.RELEASE_VERSION}}
+          path: ${{ github.workspace }}/${{ github.workspace }}/packages/coil-extension/dist
+
