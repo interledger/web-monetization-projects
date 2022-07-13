@@ -4,7 +4,6 @@ import * as process from 'process'
 import * as webpack from 'webpack'
 import { Configuration } from 'webpack'
 import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
-import VWM from 'webpack-virtual-modules'
 
 import { MV3, PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
 import { makeDefinePlugin } from './defines'
@@ -18,6 +17,8 @@ import { MakeWebpackConfigParams } from './types'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const VWM = require('webpack-virtual-modules')
 
 export function makeWebpackConfig({
   rootDir,
