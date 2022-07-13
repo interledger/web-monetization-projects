@@ -16,7 +16,7 @@ jobs:
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
       - name: Step 1 - Tar files
-        run: tar -cf monorepo.tar ${{ github.workspace }}
+        run: tar -cf monorepo.tar ${{ github.workspace }} --exclude='.git'
 
       - name: Step 2 - Use the Upload Artifact GitHub Action to upload the monorepo
         uses: actions/upload-artifact@v3
@@ -37,7 +37,7 @@ jobs:
           name: source-${{env.RELEASE_VERSION}}
 
       - name: Step 1 - Extract tar archive
-        run: tar -xf monorepo.tar --exclude=${{ github.workspace }}/.git
+        run: tar -xf monorepo.tar
 
       - name: Step 2 - Package the extension for chrome
         run: ./package.sh chrome  
