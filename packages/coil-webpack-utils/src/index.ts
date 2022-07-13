@@ -62,7 +62,7 @@ function inGitWorkingTree(cwd: string) {
 
 export function getPackageVersion(packageJSONPath: string): PackageVersion {
   const json = fs.readFileSync(packageJSONPath)
-  const parsed = JSON.parse(json.toString())
+  const pkg = JSON.parse(json.toString())
 
   const date = new Date()
   const packageDir = pathMod.dirname(packageJSONPath)
@@ -70,7 +70,7 @@ export function getPackageVersion(packageJSONPath: string): PackageVersion {
 
   const withoutGit = {
     haveGitFolder: false as const,
-    version: parsed.version as string,
+    version: pkg.version as string,
     buildDateISO: date.toISOString()
   }
 
