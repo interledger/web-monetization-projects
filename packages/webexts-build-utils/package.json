@@ -61,7 +61,6 @@
     "@swc/jest": "0.2.21",
     "@types/jest": "28.1.4",
     "@types/node": "16.11.43",
-    "@types/webpack-virtual-modules": "^0",
     "@types/ws": "8.5.3",
     "@typescript-eslint/eslint-plugin": "5.30.6",
     "@typescript-eslint/parser": "5.30.6",
