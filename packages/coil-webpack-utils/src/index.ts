@@ -48,13 +48,25 @@ export type PackageVersion = {
     }
 )
 
+function inGitWorkingTree(cwd: string) {
+  try {
+    return (
+      childProcess
+        .execSync('git rev-parse --is-inside-work-tree', { cwd })
+        .toString('utf8') === 'true'
+    )
+  } catch (e) {
+    return false
+  }
+}
+
 export function getPackageVersion(packageJSONPath: string): PackageVersion {
   const json = fs.readFileSync(packageJSONPath)
   const parsed = JSON.parse(json.toString())
 
   const date = new Date()
   const packageDir = pathMod.dirname(packageJSONPath)
-  const gitPath = pathMod.join(packageDir, '.git')
+  const execOpts = { cwd: packageDir }
 
   const withoutGit = {
     haveGitFolder: false,
@@ -62,10 +74,9 @@ export function getPackageVersion(packageJSONPath: string): PackageVersion {
     buildDateISO: date.toISOString()
   } as const
 
-  if (fs.existsSync(gitPath)) {
-    const opts = { cwd: packageDir }
-    const hash = childProcess.execSync('git rev-parse --short HEAD', opts)
-    const status = childProcess.execSync('git status -s', opts)
+  if (inGitWorkingTree(packageDir)) {
+    const hash = childProcess.execSync('git rev-parse --short HEAD', execOpts)
+    const status = childProcess.execSync('git status -s', execOpts)
 
     return {
       ...withoutGit,
