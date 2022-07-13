@@ -62,7 +62,7 @@ function mockWextApi() {
       sendMessage: jest.fn(),
       query: jest.fn()
     }
-  }
+  } as unknown as typeof chrome
 }
 
 describe('MonetizationService', () => {

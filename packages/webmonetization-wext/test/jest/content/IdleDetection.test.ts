@@ -60,7 +60,7 @@ describe('IdleDetection', () => {
     }
 
     doc.visibilityState = 'visible'
-    const idle = new IdleDetection(doc)
+    const idle = new IdleDetection(doc as unknown as Document)
     jest.spyOn(idle, 'getNow').mockImplementation(() => now + passed)
     const { setWatch, clearWatch } = idle.watchPageEvents()
     const watch = { pause: jest.fn(), resume: jest.fn() }

@@ -13,11 +13,15 @@ import { isLoggingEnabled } from '../util/isLoggingEnabled'
 import { ContentScript } from './services/ContentScript'
 
 async function configureContainer(container: Container) {
+  const polyfillPath = API.runtime.getURL('wm-polyfill.js')
+
   container.bind(tokens.LoggingEnabled).toDynamicValue(async () => {
     return isLoggingEnabled(BUILD_CONFIG)
   })
+  container.bind(tokens.BuildConfig).toConstantValue(BUILD_CONFIG)
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
+  container.bind(tokens.PolyfillPath).toConstantValue(polyfillPath)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const noop = (..._: unknown[]) => undefined
   container

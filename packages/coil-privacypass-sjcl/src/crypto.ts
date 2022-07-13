@@ -11,9 +11,7 @@ import { h2Curve } from './hashToCurve'
 import { H2CParams } from './config'
 import { BlindToken } from './tokens'
 import { Commitment, SjclHashable } from './interfaces'
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const atob: (s: string) => string = require('atob')
+import { asciiToBin } from './base64'
 
 export interface CurvePoints {
   points: sjcl.SjclEllipticalPoint[]
@@ -661,7 +659,7 @@ export function evaluateHkdf(
 export function retrieveProof(bp: { P: string }) {
   let dleqProof
   try {
-    dleqProof = parseDleqProof(atob(bp.P))
+    dleqProof = parseDleqProof(asciiToBin(bp.P))
   } catch (e) {
     console.error(`${PARSE_ERR}: ${e}`)
     return
@@ -675,7 +673,7 @@ export function retrieveProof(bp: { P: string }) {
  * @return {Object} JSON batched DLEQ proof
  */
 export function getMarshaledBatchProof(proof: string) {
-  let proofStr = atob(proof)
+  let proofStr = asciiToBin(proof)
   if (proofStr.indexOf(BATCH_PROOF_PREFIX) === 0) {
     proofStr = proofStr.substring(BATCH_PROOF_PREFIX.length)
   }

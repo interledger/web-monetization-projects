@@ -11,17 +11,20 @@ import { StoreProxy } from '../types/storage'
 import { BackgroundScript } from './services/BackgroundScript'
 import { configureContainer } from './di/configureContainer'
 import { BackgroundStoreService } from './services/BackgroundStoreService'
+import { BackgroundEvents } from './services/BackgroundEvents'
 
-declare global {
-  interface Window {
-    bg: BackgroundScript
-    store: StoreProxy
-    clearTokens: () => void
-    clearPopupRouteState: () => void
-  }
+/**
+ * We patch the window object so can access objects and utils from the devtools
+ * console.
+ */
+interface PatchableWindow extends Window {
+  bg?: BackgroundScript
+  store?: StoreProxy
+  clearTokens?: () => void
+  clearPopupRouteState?: () => void
 }
 
-async function main() {
+async function main(patchableWindow: PatchableWindow) {
   const loggingEnabled = await isLoggingEnabled(BUILD_CONFIG)
   if (loggingEnabled) {
     // eslint-disable-next-line no-console
@@ -34,6 +37,9 @@ async function main() {
     autoBindInjectable: true
   })
 
+  const topLevelListeners = new BackgroundEvents(API)
+  topLevelListeners.bindBufferingListeners()
+
   await configureContainer({
     container: container,
     loggingEnabled,
@@ -41,6 +47,7 @@ async function main() {
     wextApi: API,
     buildConfig: BUILD_CONFIG,
     // TODO: In MV3 all listeners must be bound at the top level
+    // This causes the object graph be instantiated late.
     getActiveTab: async () => {
       // This query will not pick up dev tools tabs which may be currently active
       // so, we need to query for other active tabs in that case and select the
@@ -59,13 +66,13 @@ async function main() {
     }
   })
 
-  window.bg = await container.getAsync(BackgroundScript)
-  window.store = await container.getAsync(tokens.StoreProxy)
-  window.clearTokens = () => {
+  patchableWindow.bg = await container.getAsync(BackgroundScript)
+  patchableWindow.store = await container.getAsync(tokens.StoreProxy)
+  patchableWindow.clearTokens = () => {
     const store = container.get<TokenStore>(tokens.TokenStore)
     store.clear()
   }
-  window.clearPopupRouteState = async () => {
+  patchableWindow.clearPopupRouteState = async () => {
     const service = await container.getAsync(BackgroundStoreService)
     const keys = service.keys()
     for (const key of keys) {
@@ -75,8 +82,8 @@ async function main() {
     }
   }
   // noinspection ES6MissingAwait
-  void window.bg.run()
+  void patchableWindow.bg.run()
 }
 
 // eslint-disable-next-line no-console
-main().catch(console.error)
+main(self).catch(console.error)

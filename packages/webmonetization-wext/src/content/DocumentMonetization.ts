@@ -6,11 +6,13 @@ import {
   MonetizationStopEvent,
   TipEvent
 } from '@webmonetization/types'
-import { injectable } from '@dier-makr/annotations'
+import { inject, injectable } from '@dier-makr/annotations'
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
 
+import * as tokens from '../tokens'
+
 import { ScriptInjection } from './ScriptInjection'
-import { includePolyFillMessage, wmPolyfill } from './wmPolyfill'
+import { includePolyFillMessage } from './wmPolyfill'
 import { mozClone } from './mozClone'
 
 interface SetStateParams {
@@ -30,13 +32,18 @@ export class DocumentMonetization {
   private state: MonetizationState = 'stopped'
   private request?: MonetizationRequest
 
-  constructor(private doc: Document, private scripts: ScriptInjection) {}
+  constructor(
+    private doc: Document,
+    private scripts: ScriptInjection,
+    @inject(tokens.PolyfillPath)
+    private polyfillPath: string
+  ) {}
 
-  injectDocumentMonetization(opts: { wm2Allowed: boolean }) {
+  injectMonetizationPolyfill() {
     try {
-      this.doc.head.dataset['wm2Allowed'] = JSON.stringify(opts.wm2Allowed)
-      this.scripts.inject(wmPolyfill)
+      this.scripts.injectScript(this.polyfillPath)
     } catch (e) {
+      console.error(e)
       console.warn(includePolyFillMessage)
     }
   }

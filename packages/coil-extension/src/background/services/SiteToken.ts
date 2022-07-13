@@ -23,10 +23,19 @@ export class SiteToken {
     private api: typeof chrome
   ) {}
 
+  async retrieve(): Promise<string | null> {
+    if (self.document) {
+      return this.retrieveViaIframeInjection()
+    } else {
+      return this.retrieveViaOpenTabAndExecuteScript()
+    }
+  }
+
   /**
    * Note: this requires the "tabs" permission listed in the manifest
+   *       for MV3, it requires the "scripting" permission
    */
-  async retrieveTabs(): Promise<string | null> {
+  async retrieveViaOpenTabAndExecuteScript(): Promise<string | null> {
     return new Promise(resolve => {
       this.api.tabs.create(
         {
@@ -35,20 +44,34 @@ export class SiteToken {
         },
         tab => {
           const code = `localStorage.token`
-          this.api.tabs.executeScript(
-            notNullOrUndef(tab.id),
-            { code, frameId: 0 },
-            ([result]) => {
-              this.api.tabs.remove(notNullOrUndef(tab.id))
-              resolve(result)
-            }
-          )
+          // Not available in MV3
+          if (this.api.tabs.executeScript) {
+            this.api.tabs.executeScript(
+              notNullOrUndef(tab.id),
+              { code, frameId: 0 },
+              ([result]) => {
+                this.api.tabs.remove(notNullOrUndef(tab.id))
+                resolve(result)
+              }
+            )
+          } else if (this.api.scripting) {
+            this.api.scripting
+              .executeScript({
+                target: { tabId: notNullOrUndef(tab.id), allFrames: false },
+                func: () => {
+                  return localStorage.token
+                }
+              })
+              .then(([result]) => {
+                resolve(result.result)
+              })
+          }
         }
       )
     })
   }
 
-  async retrieve(): Promise<string | null> {
+  async retrieveViaIframeInjection(): Promise<string | null> {
     const path = '/handler.html'
     const coilDomain = this.coilDomain
     const coilFrame = document.createElement('iframe')

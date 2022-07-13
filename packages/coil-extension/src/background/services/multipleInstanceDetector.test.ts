@@ -52,7 +52,7 @@ describe('DetectExtensions', () => {
     }
     const chromeNavigator = {
       userAgent: CHROME_UA
-    } as Navigator
+    }
 
     it('should send a cross extension message', async () => {
       const detector = new MultipleInstanceDetector(

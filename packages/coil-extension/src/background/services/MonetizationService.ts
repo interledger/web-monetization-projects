@@ -1,3 +1,5 @@
+// noinspection ES6MissingAwait
+
 import { inject, injectable } from 'inversify'
 import { MonetizationState } from '@webmonetization/types'
 import { resolvePaymentEndpoint } from '@webmonetization/polyfill-utils'

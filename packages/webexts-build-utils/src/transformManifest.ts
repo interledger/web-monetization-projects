@@ -12,6 +12,7 @@ import {
   WEXT_MANIFEST_VERSION_NAME
 } from './env'
 import { ManifestV2, ManifestV3 } from './types/manifest'
+import { Polyfill } from './types'
 
 const ALL_URLS = '<all_urls>'
 
@@ -23,10 +24,14 @@ function makeDateSuffix() {
 function convertToMV3(v2: ManifestV2) {
   assert.ok(v2.manifest_version === 2)
 
-  const v3: Partial<Omit<ManifestV2, 'manifest_version'>> & ManifestV3 = {
+  const v3: Partial<
+    Omit<ManifestV2, 'manifest_version' | 'web_accessible_resources'>
+  > &
+    ManifestV3 = {
     ...v2,
     manifest_version: 3,
     browser_action: undefined,
+    web_accessible_resources: undefined,
     action: v2.browser_action,
 
     content_security_policy: undefined,
@@ -43,9 +48,20 @@ function convertToMV3(v2: ManifestV2) {
     host_permissions.push('*://*/*')
   }
 
+  if (v2.web_accessible_resources) {
+    v3.web_accessible_resources = v2.web_accessible_resources.map(fn => ({
+      matches: ['*://*/*'],
+      resources: [fn]
+    }))
+  }
+
   // Add storage permission
   if (!v3.permissions.includes('storage')) {
     v3.permissions.push('storage')
+  }
+  // Add scripting permission
+  if (!v3.permissions.includes('scripting')) {
+    v3.permissions.push('scripting')
   }
 
   // Replace content.js with contentMV3.js
@@ -58,46 +74,60 @@ function convertToMV3(v2: ManifestV2) {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function transformManifest(manifest: ManifestV2, browser: string) {
-  const targets = manifest['$targets']
-  delete manifest['$targets']
+export function transformManifest(
+  v2: ManifestV2,
+  browser: string,
+  polyfill?: Polyfill
+) {
+  const targets = v2['$targets']
+  delete v2['$targets']
   if (targets?.[browser]?.permissions) {
-    applyManifestPermissions(manifest, targets[browser].permissions)
+    applyManifestPermissions(v2, targets[browser].permissions)
+  }
+
+  if (polyfill?.hash) {
+    assert.ok(v2.content_security_policy)
+    assert.ok(v2.web_accessible_resources)
+    v2.content_security_policy = v2.content_security_policy.replace(
+      'sha256-POLYFILL-HASH=',
+      polyfill.hash
+    )
+    v2.web_accessible_resources.push(`${polyfill.name}.js`)
   }
 
   if (WEXT_MANIFEST_SUFFIX) {
-    manifest.name += WEXT_MANIFEST_SUFFIX
+    v2.name += WEXT_MANIFEST_SUFFIX
     if (!WEXT_MANIFEST_SUFFIX_NO_DATE) {
-      manifest.name += makeDateSuffix()
+      v2.name += makeDateSuffix()
     }
   }
   if (WEXT_MANIFEST_VERSION) {
-    manifest.version = WEXT_MANIFEST_VERSION
+    v2.version = WEXT_MANIFEST_VERSION
   }
   if (WEXT_MANIFEST_VERSION_NAME) {
-    manifest.version_name = WEXT_MANIFEST_VERSION_NAME
+    v2.version_name = WEXT_MANIFEST_VERSION_NAME
   }
 
   if (WEXT_MANIFEST_KEY) {
-    manifest.key = WEXT_MANIFEST_KEY
+    v2.key = WEXT_MANIFEST_KEY
   }
 
   if (browser === 'firefox') {
     if (WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID) {
-      assert.ok(manifest.browser_specific_settings?.gecko)
-      manifest.browser_specific_settings.gecko.id =
+      assert.ok(v2.browser_specific_settings?.gecko)
+      v2.browser_specific_settings.gecko.id =
         WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
     }
-    manifest.applications = manifest.browser_specific_settings
+    v2.applications = v2.browser_specific_settings
   } else {
-    delete manifest['browser_specific_settings']
+    delete v2['browser_specific_settings']
   }
   const rules = WEXT_MANIFEST_PERMISSIONS
   const parsedRules: string[] = rules ? JSON.parse(rules) : []
-  applyManifestPermissions(manifest, parsedRules)
+  applyManifestPermissions(v2, parsedRules)
 
   if (MV3) {
-    return convertToMV3(manifest)
+    return convertToMV3(v2)
   }
-  return manifest
+  return v2
 }

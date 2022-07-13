@@ -1,7 +1,7 @@
 import merge from 'webpack-merge'
 import { makeWebpackConfig } from '@webexts/build-utils'
 
-module.exports = merge(makeWebpackConfig(__dirname), {
+module.exports = merge(makeWebpackConfig({ rootDir: __dirname }), {
   module: {
     rules: [
       {

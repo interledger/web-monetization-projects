@@ -1,6 +1,4 @@
 // Possible to override name/version so can publish as different extension
-import process from 'process'
-
 export const AFTER_DONE_SHELL_CMD = process.env.AFTER_DONE_SHELL_CMD
 
 export const MV3 = Boolean(process.env.MV3 ?? false)
@@ -33,7 +31,7 @@ export const RELOAD_SERVER_PORT = Number(process.env.RELOAD_SERVER_PORT ?? 4444)
 
 export const PRODUCTION = process.env.NODE_ENV === 'production'
 
-const buildConfigKey = 'WEXT_BUILD_CONFIG_'
+const WEXT_BUILD_CONFIG_KEY = 'WEXT_BUILD_CONFIG_'
 const title = (w: string) => w[0].toUpperCase() + w.slice(1).toLowerCase()
 
 export const WEXT_BUILD_CONFIG: Record<string, unknown> = process.env
@@ -42,8 +40,8 @@ export const WEXT_BUILD_CONFIG: Record<string, unknown> = process.env
   : {}
 
 Object.keys(process.env).forEach(key => {
-  if (key.startsWith(buildConfigKey)) {
-    const prefixRemoved = key.slice(buildConfigKey.length)
+  if (key.startsWith(WEXT_BUILD_CONFIG_KEY)) {
+    const prefixRemoved = key.slice(WEXT_BUILD_CONFIG_KEY.length)
     const split = prefixRemoved.split('_')
     const first = split.shift()?.toLowerCase()
     const rest = split.map(title).join('')
@@ -54,3 +52,4 @@ Object.keys(process.env).forEach(key => {
 })
 
 WEXT_BUILD_CONFIG.isCI = Boolean(process.env.CI)
+WEXT_BUILD_CONFIG.isMV3 = MV3
