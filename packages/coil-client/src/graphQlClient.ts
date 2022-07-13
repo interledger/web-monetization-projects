@@ -37,7 +37,6 @@ export class GraphQlClient {
   // If not instantiated in a browser-based environment, we'll
   // have to store the auth cookies and supply them manually.
   private readonly inBrowser: boolean
-  private loginCookies = ''
 
   public login = login
   public refreshBtpToken = refreshBtpToken
