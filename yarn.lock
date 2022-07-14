@@ -1950,7 +1950,7 @@ __metadata:
     "@coil/puppeteer-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@graphql-codegen/cli": "npm:2.8.0"
+    "@graphql-codegen/cli": "npm:2.8.1"
     "@graphql-codegen/introspection": "npm:2.2.0"
     "@graphql-codegen/typescript": "npm:2.7.1"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.1"
@@ -2896,9 +2896,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.8.0":
-  version: 2.8.0
-  resolution: "@graphql-codegen/cli@npm:2.8.0"
+"@graphql-codegen/cli@npm:2.8.1":
+  version: 2.8.1
+  resolution: "@graphql-codegen/cli@npm:2.8.1"
   dependencies:
     "@graphql-codegen/core": "npm:2.6.0"
     "@graphql-codegen/plugin-helpers": "npm:^2.5.0"
@@ -2928,6 +2928,7 @@ __metadata:
     mkdirp: "npm:^1.0.4"
     string-env-interpolation: "npm:^1.0.1"
     ts-log: "npm:^2.2.3"
+    tslib: "npm:^2.4.0"
     yaml: "npm:^1.10.0"
     yargs: "npm:^17.0.0"
   peerDependencies:
@@ -2937,7 +2938,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: 69578b41fb85923daefd5a3d9c686e34402b664730540649ef1a3808b5a3d4cbefc24e72e7fff72aca28a0dffddb22ef47b7c3e5cfa39286c46c1deb30a41b44
+  checksum: a89ed205d6d501466ae73e3a7706ab21ff9064d8d0b30a9599c0f0bd10098d01233f140eadf295503da680303a7c61bbd8490fe56b33d790e4da86d26598b5fa
   languageName: node
   linkType: hard
 
