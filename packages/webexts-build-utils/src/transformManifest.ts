@@ -3,6 +3,7 @@ import assert from 'assert'
 import { applyManifestPermissions } from './manifestPermissions'
 import {
   MV3,
+  MV3_BACKGROUND_TYPE,
   WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID,
   WEXT_MANIFEST_KEY,
   WEXT_MANIFEST_PERMISSIONS,
@@ -24,6 +25,16 @@ function makeDateSuffix() {
 function convertToMV3(v2: ManifestV2) {
   assert.ok(v2.manifest_version === 2)
 
+  const background = {
+    serviceworker: {
+      service_worker: 'backgroundMV3.js'
+    },
+    eventspage: {
+      page: 'static/background.html',
+      persistent: false
+    }
+  }[MV3_BACKGROUND_TYPE]
+
   const v3: Partial<
     Omit<ManifestV2, 'manifest_version' | 'web_accessible_resources'>
   > &
@@ -37,9 +48,7 @@ function convertToMV3(v2: ManifestV2) {
     content_security_policy: undefined,
     host_permissions: [],
 
-    background: {
-      service_worker: 'backgroundMV3.js'
-    }
+    background
   }
 
   if (v2.permissions.find(p => p === ALL_URLS)) {
