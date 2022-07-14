@@ -32,9 +32,10 @@ export interface TipSettingsData {
   extensionNewUiFeatureFlag: boolean
 }
 
-export async function tipSettings(this: GraphQlClient) {
+export async function tipSettings(this: GraphQlClient, token?: string) {
   const message = await this.query<TipSettingsData>({
-    query: tipSettingsQuery
+    query: tipSettingsQuery,
+    token
   })
   return message
 }

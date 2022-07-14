@@ -37,6 +37,7 @@ export class GraphQlClient {
   // If not instantiated in a browser-based environment, we'll
   // have to store the auth cookies and supply them manually.
   private readonly inBrowser: boolean
+  private authCookies?: string
 
   public login = login
   public refreshBtpToken = refreshBtpToken
@@ -53,9 +54,7 @@ export class GraphQlClient {
     private config: GraphQlClientOptions
   ) {
     this.inBrowser = typeof window !== 'undefined'
-    this.fetch = this.inBrowser
-      ? this.config.fetch.bind(window)
-      : this.config.fetch
+    this.fetch = this.config.fetch
   }
 
   public async authenticate(email: string, password: string): Promise<void> {
@@ -84,6 +83,15 @@ export class GraphQlClient {
         })
       }
     )
+    if (!response.ok) {
+      throw new Error('Unable to authenticate with the provided credentials')
+    }
+    if (!this.inBrowser) {
+      const authCookies = response.headers.get('Set-Cookie')
+      if (authCookies) {
+        this.authCookies = authCookies
+      }
+    }
     const data = await response.json()
     if (data.status.toUpperCase() !== 'OK') {
       throw new Error('Unable to authenticate with the provided credentials')
@@ -93,17 +101,26 @@ export class GraphQlClient {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public async query<T = any>({
     query,
+    token = null,
     variables = {}
   }: GraphQlQueryParameters): Promise<GraphQlResponse<T>> {
+    const headers: Record<string, string> = {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      ...this.config.extraHeaders
+    }
+    if (token) {
+      headers.Authorization = `Bearer ${token}`
+    } else if (this.authCookies) {
+      headers.Cookie = this.authCookies
+    }
     const init: RequestInit = {
       method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-        ...this.config.extraHeaders
-      },
-      credentials: 'include',
+      headers,
       body: JSON.stringify({ query, variables })
+    }
+    if (this.inBrowser || this.authCookies) {
+      init.credentials = 'include'
     }
     if (this.config.log) {
       const serialized = JSON.stringify(

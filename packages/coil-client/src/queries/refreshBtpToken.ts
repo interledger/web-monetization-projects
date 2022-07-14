@@ -11,9 +11,10 @@ export interface RefreshBtpTokenData {
   refreshBtpToken: { token: string }
 }
 
-export async function refreshBtpToken(this: GraphQlClient) {
+export async function refreshBtpToken(this: GraphQlClient, token?: string) {
   const response = await this.query<RefreshBtpTokenData>({
-    query: refreshBtpTokenQuery
+    query: refreshBtpTokenQuery,
+    token
   })
   if (response.data.refreshBtpToken && response.data.refreshBtpToken.token) {
     return response.data.refreshBtpToken.token

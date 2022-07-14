@@ -45,6 +45,6 @@ export const whoamiQuery = `{
   }
 }`
 
-export async function whoAmI(this: GraphQlClient) {
-  return this.query<WhoAmIData>({ query: whoamiQuery })
+export async function whoAmI(this: GraphQlClient, token?: string) {
+  return this.query<WhoAmIData>({ query: whoamiQuery, token })
 }
