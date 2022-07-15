@@ -314,7 +314,7 @@ export class ContentScript {
       if (this.frames.isIFrame) {
         this.auth.handleCoilTokenMessage()
       } else {
-        this.auth.syncViaInjectToken()
+        this.auth.refreshUser()
       }
       if (this.frames.isCoilTopFrame) {
         this.auth.handleCoilWriteTokenWindowEvent()

@@ -313,6 +313,9 @@ export class BackgroundScript {
         this.adaptedSite(request.data, sender)
         sendResponse(true)
         break
+      case 'refreshUser':
+        sendResponse(await this.auth.refreshAuthentication())
+        break
       case 'startWebMonetization':
         this.log('got startwebmonetization')
         sendResponse(
@@ -573,9 +576,7 @@ export class BackgroundScript {
       { command: 'clearToken' },
       frame => Boolean(frame.href?.startsWith(this.coilDomain))
     )
-    this.auth.logout().catch(e => {
-      this.log('unable to log out. error=', e.message)
-    })
+    this.storage.remove('user') // This is not getting fully removed on .clear()
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')
     this.tabStates.reloadTabState({ from: 'logout' })

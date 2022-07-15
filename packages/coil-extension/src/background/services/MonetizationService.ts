@@ -266,7 +266,6 @@ export class MonetizationService {
     // We need to start this stream, even if we've already received a pause.
     // That way we can "resume" it later.
     this.streams.beginStream(requestId, {
-      token,
       spspEndpoint,
       ...request.data,
       initiatingUrl: request.data.initiatingUrl

@@ -137,26 +137,15 @@ export class AuthService extends EventEmitter {
   }
 
   initialize() {
+    // Initializing the SuperTokens library wraps the native fetch and
+    // automates refreshing the user's access token after it's expired.
     SuperTokens.init({
       apiDomain: this.domain,
       apiBasePath: '/api/auth'
     })
   }
 
-  async logout(): Promise<void> {
-    return SuperTokens.signOut()
-  }
-
   isAuthenticated() {
     return !!this.store.user
-  }
-
-  syncSiteToken(site: string | null): string | null {
-    const ext = this.getStoredToken()
-    const newest = tokenUtils.newestToken({ ext, site })
-    if (newest.which === 'site') {
-      this.store.token = newest.token
-    }
-    return newest.token
   }
 }

@@ -209,7 +209,7 @@ export type ToBackgroundMessage =
   | LogCommand
   | Logout
   | AdaptedSite
-  | InjectToken
+  | RefreshUser
   | StartWebMonetization
   | IsRateLimited
   | ContentScriptInit
@@ -244,11 +244,8 @@ export interface AdaptedSite {
   }
 }
 
-export interface InjectToken extends Command {
-  command: 'injectToken'
-  data: {
-    token: string
-  }
+export interface RefreshUser extends Command {
+  command: 'refreshUser'
 }
 
 /**

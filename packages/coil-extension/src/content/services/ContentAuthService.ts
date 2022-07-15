@@ -33,24 +33,14 @@ export class ContentAuthService {
     this.window.addEventListener('coil_writeToken', event => {
       const token = this.storage.getItem('token')
       if (token) {
-        this.syncViaInjectToken()
+        this.refreshUser()
       } else {
         this.contentRuntime.sendMessage({ command: 'logout' })
       }
     })
   }
 
-  syncViaInjectToken() {
-    this.contentRuntime.sendMessage(
-      {
-        command: 'injectToken',
-        data: { token: this.storage.getItem(STORAGE_KEY.token) }
-      },
-      result => {
-        if (result) {
-          this.storage.setItem(STORAGE_KEY.token, result)
-        }
-      }
-    )
+  refreshUser() {
+    this.contentRuntime.sendMessage({ command: 'refreshUser' })
   }
 }
