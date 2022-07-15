@@ -52,7 +52,7 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 export class ContentScript {
   private paused = false
   private readonly tagManager: MonetizationTagManager
-  private wm2Allowed = this.buildConfig.wm2Always
+  private wm2Allowed = this.buildConfig.wm2Always ? true : undefined
   private events = new EventEmitter()
 
   constructor(
