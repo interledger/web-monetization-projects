@@ -50,7 +50,7 @@
     "@swc/jest": "0.2.21",
     "@types/jest": "28.1.5",
     "@types/jsonwebtoken": "8.5.8",
-    "@types/node": "16.11.44",
+    "@types/node": "16.11.45",
     "@types/node-fetch": "2.6.2",
     "@types/sjcl": "1.0.30",
     "@typescript-eslint/eslint-plugin": "5.30.6",
