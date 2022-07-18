@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  Coil
+//
+//  Created by Nicholas  Dudfield on 18/7/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+BUNDLE_ID_PREFIX=com.coil.ndudfield.safari
+DEVELOPMENT_TEAM=344JWDH2AE
