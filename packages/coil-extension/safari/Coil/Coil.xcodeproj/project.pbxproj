@@ -47,6 +47,10 @@
 		A688ECD3268EF55100128FDF /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC3268EF55100128FDF /* content.js */; };
 		BC66005528698C760076CDF7 /* backgroundMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = BC66005428698C760076CDF7 /* backgroundMV3.js */; };
 		BC66005628698C760076CDF7 /* backgroundMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = BC66005428698C760076CDF7 /* backgroundMV3.js */; };
+		BC9B75BD288564A4003AFE9F /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BC9B75BC288564A4003AFE9F /* Config.xcconfig */; };
+		BC9B75BE288564A4003AFE9F /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BC9B75BC288564A4003AFE9F /* Config.xcconfig */; };
+		BC9B75BF288564A4003AFE9F /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BC9B75BC288564A4003AFE9F /* Config.xcconfig */; };
+		BC9B75C0288564A4003AFE9F /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BC9B75BC288564A4003AFE9F /* Config.xcconfig */; };
 		FF9A6BCA286CCEAA001B0DA3 /* contentMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = FF9A6BC9286CCEAA001B0DA3 /* contentMV3.js */; };
 		FF9A6BCB286CCEAA001B0DA3 /* contentMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = FF9A6BC9286CCEAA001B0DA3 /* contentMV3.js */; };
 		FF9A6BCD286CCEB5001B0DA3 /* popupMV3.js in Resources */ = {isa = PBXBuildFile; fileRef = FF9A6BCC286CCEB5001B0DA3 /* popupMV3.js */; };
@@ -127,6 +131,7 @@
 		A688ECC2268EF55100128FDF /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../dist/manifest.json; sourceTree = "<group>"; };
 		A688ECC3268EF55100128FDF /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../dist/content.js; sourceTree = "<group>"; };
 		BC66005428698C760076CDF7 /* backgroundMV3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = backgroundMV3.js; path = ../../../dist/backgroundMV3.js; sourceTree = "<group>"; };
+		BC9B75BC288564A4003AFE9F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		FF9A6BC9286CCEAA001B0DA3 /* contentMV3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = contentMV3.js; path = ../../../dist/contentMV3.js; sourceTree = "<group>"; };
 		FF9A6BCC286CCEB5001B0DA3 /* popupMV3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = popupMV3.js; path = ../../../dist/popupMV3.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +171,7 @@
 		A688EC5A268EF55000128FDF = {
 			isa = PBXGroup;
 			children = (
+				BC9B75BB28856487003AFE9F /* configs */,
 				A688EC5F268EF55000128FDF /* Shared (App) */,
 				A688EC68268EF55100128FDF /* Shared (Extension) */,
 				A688EC70268EF55100128FDF /* iOS (App) */,
@@ -274,6 +280,14 @@
 			name = Resources;
 			path = "Shared (Extension)";
 			sourceTree = SOURCE_ROOT;
+		};
+		BC9B75BB28856487003AFE9F /* configs */ = {
+			isa = PBXGroup;
+			children = (
+				BC9B75BC288564A4003AFE9F /* Config.xcconfig */,
+			);
+			path = configs;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -404,6 +418,7 @@
 				A688EC77268EF55100128FDF /* LaunchScreen.storyboard in Resources */,
 				A688EC9D268EF55100128FDF /* Main.html in Resources */,
 				A688ECA3268EF55100128FDF /* Script.js in Resources */,
+				BC9B75BD288564A4003AFE9F /* Config.xcconfig in Resources */,
 				A688ECA7268EF55100128FDF /* Assets.xcassets in Resources */,
 				A688EC7A268EF55100128FDF /* Main.storyboard in Resources */,
 				A688ECA1268EF55100128FDF /* Style.css in Resources */,
@@ -419,6 +434,7 @@
 				A688EC86268EF55100128FDF /* Main.storyboard in Resources */,
 				A688ECA4268EF55100128FDF /* Script.js in Resources */,
 				A688ECA8268EF55100128FDF /* Assets.xcassets in Resources */,
+				BC9B75BE288564A4003AFE9F /* Config.xcconfig in Resources */,
 				A688EC9E268EF55100128FDF /* Main.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +447,7 @@
 				A688ECCC268EF55100128FDF /* res in Resources */,
 				BC66005528698C760076CDF7 /* backgroundMV3.js in Resources */,
 				FF9A6BCA286CCEAA001B0DA3 /* contentMV3.js in Resources */,
+				BC9B75BF288564A4003AFE9F /* Config.xcconfig in Resources */,
 				A688ECD2268EF55100128FDF /* manifest.json in Resources */,
 				A688ECCF268EF55100128FDF /* options.js in Resources */,
 				A688ECD0268EF55100128FDF /* hot-reload.js in Resources */,
@@ -449,6 +466,7 @@
 				A688ECC4268EF55100128FDF /* res in Resources */,
 				BC66005628698C760076CDF7 /* backgroundMV3.js in Resources */,
 				FF9A6BCB286CCEAA001B0DA3 /* contentMV3.js in Resources */,
+				BC9B75C0288564A4003AFE9F /* Config.xcconfig in Resources */,
 				A688ECCA268EF55100128FDF /* manifest.json in Resources */,
 				A688ECC7268EF55100128FDF /* options.js in Resources */,
 				A688ECC8268EF55100128FDF /* hot-reload.js in Resources */,
@@ -550,6 +568,7 @@
 /* Begin XCBuildConfiguration section */
 		A688ECAB268EF55100128FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -609,6 +628,7 @@
 		};
 		A688ECAC268EF55100128FDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -661,10 +681,10 @@
 		};
 		A688ECAE268EF55100128FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
@@ -676,7 +696,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).ios.Coil.Extension";
 				PRODUCT_NAME = "Coil Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -688,10 +708,11 @@
 		};
 		A688ECAF268EF55100128FDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Coil Extension";
@@ -703,8 +724,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).ios.Coil.Extension";
 				PRODUCT_NAME = "Coil Extension";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -716,13 +738,13 @@
 		};
 		A688ECB2268EF55100128FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Coil;
@@ -741,7 +763,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).ios.Coil";
 				PRODUCT_NAME = Coil;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -752,13 +774,14 @@
 		};
 		A688ECB3268EF55100128FDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Coil;
@@ -777,8 +800,9 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.ios.Coil;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).ios.Coil";
 				PRODUCT_NAME = Coil;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -789,6 +813,7 @@
 		};
 		A688ECB5268EF55100128FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -807,7 +832,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.Coil.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).Coil.Extension";
 				PRODUCT_NAME = "Coil Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -818,8 +843,9 @@
 		};
 		A688ECB6268EF55100128FDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
@@ -836,8 +862,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.Coil.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).Coil.Extension";
 				PRODUCT_NAME = "Coil Extension";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -847,6 +874,7 @@
 		};
 		A688ECB9268EF55100128FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -873,7 +901,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.Coil;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).Coil";
 				PRODUCT_NAME = Coil;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -883,12 +911,13 @@
 		};
 		A688ECBA268EF55100128FDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9B75BC288564A4003AFE9F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Coil.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
@@ -909,8 +938,9 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coil.safari.Coil;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).Coil";
 				PRODUCT_NAME = Coil;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -9,5 +9,6 @@ six-apktool-decoded/build
 safari/Coil/Coil.xcodeproj/project.xcworkspace/
 safari/Coil/build
 safari/Coil/Coil.xcodeproj/xcuserdata/
+safari/Coil/configs/Local.xcconfig
 safari-local
 six-apktool-decoded-local
