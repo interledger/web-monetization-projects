@@ -90,7 +90,7 @@ jobs:
           command: |
             cd packages/coil-extension
             yarn build-prod chrome
-            scripts/build-safari
+            scripts/build-safari.sh
       - save_cache:
           paths:
             - node_modules
