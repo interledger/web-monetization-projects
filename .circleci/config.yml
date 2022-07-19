@@ -362,6 +362,9 @@ workflows:
   version: 2
   build:
     jobs:
+      - build-safari:
+          requires:
+            - lint-all
       - lint-all:
           <<: *node-version-matrix
       - yarn-format-and-upkeep-diff-check:
@@ -380,13 +383,13 @@ workflows:
             branches:
               only:
                 - main
-      - publish-packages:
-          requires:
-            - hold-publish-packages
-          filters:
-            branches:
-              only:
-                - main
+#      - publish-packages:
+#          requires:
+#            - hold-publish-packages
+#          filters:
+#            branches:
+#              only:
+#                - main
       - jest-all:
           context: web-monetization-tests
           filters:
