@@ -33,7 +33,6 @@
 		A688ECC5268EF55100128FDF /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBD268EF55100128FDF /* popup.js */; };
 		A688ECC6268EF55100128FDF /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBE268EF55100128FDF /* background.js */; };
 		A688ECC7268EF55100128FDF /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBF268EF55100128FDF /* options.js */; };
-		A688ECC8268EF55100128FDF /* hot-reload.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC0268EF55100128FDF /* hot-reload.js */; };
 		A688ECC9268EF55100128FDF /* static in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC1268EF55100128FDF /* static */; };
 		A688ECCA268EF55100128FDF /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC2268EF55100128FDF /* manifest.json */; };
 		A688ECCB268EF55100128FDF /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC3268EF55100128FDF /* content.js */; };
@@ -41,7 +40,6 @@
 		A688ECCD268EF55100128FDF /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBD268EF55100128FDF /* popup.js */; };
 		A688ECCE268EF55100128FDF /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBE268EF55100128FDF /* background.js */; };
 		A688ECCF268EF55100128FDF /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECBF268EF55100128FDF /* options.js */; };
-		A688ECD0268EF55100128FDF /* hot-reload.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC0268EF55100128FDF /* hot-reload.js */; };
 		A688ECD1268EF55100128FDF /* static in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC1268EF55100128FDF /* static */; };
 		A688ECD2268EF55100128FDF /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC2268EF55100128FDF /* manifest.json */; };
 		A688ECD3268EF55100128FDF /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = A688ECC3268EF55100128FDF /* content.js */; };
@@ -126,7 +124,6 @@
 		A688ECBD268EF55100128FDF /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = ../../../dist/popup.js; sourceTree = "<group>"; };
 		A688ECBE268EF55100128FDF /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = ../../../dist/background.js; sourceTree = "<group>"; };
 		A688ECBF268EF55100128FDF /* options.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = options.js; path = ../../../dist/options.js; sourceTree = "<group>"; };
-		A688ECC0268EF55100128FDF /* hot-reload.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "hot-reload.js"; path = "../../../dist/hot-reload.js"; sourceTree = "<group>"; };
 		A688ECC1268EF55100128FDF /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; name = static; path = ../../../dist/static; sourceTree = "<group>"; };
 		A688ECC2268EF55100128FDF /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../dist/manifest.json; sourceTree = "<group>"; };
 		A688ECC3268EF55100128FDF /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../dist/content.js; sourceTree = "<group>"; };
@@ -272,7 +269,6 @@
 				BC66005428698C760076CDF7 /* backgroundMV3.js */,
 				A688ECBE268EF55100128FDF /* background.js */,
 				A688ECBF268EF55100128FDF /* options.js */,
-				A688ECC0268EF55100128FDF /* hot-reload.js */,
 				A688ECC1268EF55100128FDF /* static */,
 				A688ECC2268EF55100128FDF /* manifest.json */,
 				A688ECC3268EF55100128FDF /* content.js */,
@@ -450,7 +446,6 @@
 				BC9B75BF288564A4003AFE9F /* Config.xcconfig in Resources */,
 				A688ECD2268EF55100128FDF /* manifest.json in Resources */,
 				A688ECCF268EF55100128FDF /* options.js in Resources */,
-				A688ECD0268EF55100128FDF /* hot-reload.js in Resources */,
 				A688ECCE268EF55100128FDF /* background.js in Resources */,
 				FF9A6BCD286CCEB5001B0DA3 /* popupMV3.js in Resources */,
 				A688ECD1268EF55100128FDF /* static in Resources */,
@@ -469,7 +464,6 @@
 				BC9B75C0288564A4003AFE9F /* Config.xcconfig in Resources */,
 				A688ECCA268EF55100128FDF /* manifest.json in Resources */,
 				A688ECC7268EF55100128FDF /* options.js in Resources */,
-				A688ECC8268EF55100128FDF /* hot-reload.js in Resources */,
 				A688ECC6268EF55100128FDF /* background.js in Resources */,
 				FF9A6BCE286CCEB5001B0DA3 /* popupMV3.js in Resources */,
 				A688ECC9268EF55100128FDF /* static in Resources */,
