@@ -41,6 +41,18 @@ references:
         node-version: [ "16.16.0" ]
 
 jobs:
+  # Build Safari
+  build-safari:
+    macos:
+      xcode: 13.4.1
+    steps:
+      - run:
+          name: Build Safari
+          command: |
+            cd packages/coil-extension
+            yarn build-prod chrome
+            scripts/build-safari
+
   # Run Linting
   lint-all:
     <<: *parameterized-node-version
