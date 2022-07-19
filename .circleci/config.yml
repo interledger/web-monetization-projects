@@ -41,18 +41,6 @@ references:
         node-version: [ "16.16.0" ]
 
 jobs:
-  # Build Safari
-  build-safari:
-    macos:
-      xcode: 13.4.1
-    steps:
-      - run:
-          name: Build Safari
-          command: |
-            cd packages/coil-extension
-            yarn build-prod chrome
-            scripts/build-safari
-
   # Run Linting
   lint-all:
     <<: *parameterized-node-version
@@ -86,6 +74,22 @@ jobs:
             - .yarn
             - pw-browsers
           key: v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+
+  # Build Safari
+  build-safari:
+    macos:
+      xcode: 13.4.1
+    steps:
+      - checkout
+      - *restore_cache
+      - *yarn_install
+      - run:
+          name: Build Safari
+          command: |
+            cd packages/coil-extension
+            yarn build-prod chrome
+            scripts/build-safari
+      - *save_cache
 
   coil-extension-package:
     <<: *parameterized-node-version
@@ -362,9 +366,9 @@ workflows:
   version: 2
   build:
     jobs:
-      - build-safari:
-          requires:
-            - lint-all
+      - build-safari
+#          requires:
+##            - lint-all
       - lint-all:
           <<: *node-version-matrix
       - yarn-format-and-upkeep-diff-check:
