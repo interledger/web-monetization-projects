@@ -97,7 +97,7 @@
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
     "@swc/core": "1.2.218",
-    "@swc/jest": "0.2.21",
+    "@swc/jest": "0.2.22",
     "@types/debug": "4.1.7",
     "@types/filesystem": "0.0.32",
     "@types/firefox": "0.0.31",
