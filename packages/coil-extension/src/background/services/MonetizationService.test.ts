@@ -158,8 +158,7 @@ describe('MonetizationService', () => {
 
     const beginStreamArgs = {
       ...details,
-      spspEndpoint: resolvePaymentEndpoint(details.paymentPointer),
-      token
+      spspEndpoint: resolvePaymentEndpoint(details.paymentPointer)
     }
     expect(beginStream).toHaveBeenCalledWith(details.requestId, beginStreamArgs)
     expect(pauseStream).toHaveBeenCalledWith(details.requestId)
