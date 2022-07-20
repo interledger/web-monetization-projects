@@ -111,11 +111,11 @@ describe('MonetizationService', () => {
     pauseStream.mockReturnValue(undefined)
 
     const auth = await container.getAsync(AuthService)
-    const getToken = jest.spyOn(auth, 'maybeRefreshAndStoreState')
+    const refreshAndStoreState = jest.spyOn(auth, 'maybeRefreshAndStoreState')
     const token = '<JWT>'
     const store = await container.getAsync<StoreProxy>(tokens.StoreProxy)
 
-    getToken.mockImplementation(async () => {
+    refreshAndStoreState.mockImplementation(async () => {
       await timeout(100)
 
       // Set the user to have a valid subscription
@@ -124,7 +124,7 @@ describe('MonetizationService', () => {
           active: true
         }
       } as User
-      return token
+      return true
     })
 
     const tabStates = await container.getAsync(TabStates)
