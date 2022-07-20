@@ -21,11 +21,11 @@ export class IDBPersistence implements StorePersistence {
   }
 
   removeItem(key: string): void {
-    void idbKv.del(key)
+    void idbKv.del(key, this.store)
   }
 
   setItem(key: string, value: StoreValue): void {
-    void idbKv.set(key, value)
+    void idbKv.set(key, value, this.store)
   }
 }
 
