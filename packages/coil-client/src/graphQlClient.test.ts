@@ -34,8 +34,7 @@ describe('GraphQlClient#login', () => {
         method: 'POST',
         headers: {
           Accept: 'application/json',
-          'Content-Type': 'application/json',
-          Authorization: ''
+          'Content-Type': 'application/json'
         },
         body:
           `{"query":${JSON.stringify(loginMutation)},` +
