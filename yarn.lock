@@ -2069,7 +2069,7 @@ __metadata:
     json5: "npm:^2.2.0"
     lint-staged: "npm:13.0.3"
     nodemon: "npm:2.0.19"
-    npm-check-updates: "npm:^15.0.0"
+    npm-check-updates: "npm:^16.0.0"
     prettier: "npm:2.7.1"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.9"
@@ -8864,13 +8864,6 @@ __metadata:
   version: 3.2.0
   resolution: "ci-info@npm:3.2.0"
   checksum: b8b51c46a2e0d2625d6f2ac75fa936238cc25c8b83efc23baa62fd4691d0741ed88e989a325f0f3b8aa5902fdb9d72c796d6a4632a82e8ecb74bc0aa2b524ad5
-  languageName: node
-  linkType: hard
-
-"cint@npm:^8.2.1":
-  version: 8.2.1
-  resolution: "cint@npm:8.2.1"
-  checksum: 325ceed9a977db16d7d21b70e3e6c4b86b74f99f8cb87e60d4a4bf7b10eeba98a56eebedd234c2004edd24246870841bd066acc3c06c79b18fc3c8777b509dba
   languageName: node
   linkType: hard
 
@@ -18178,12 +18171,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^15.0.0":
-  version: 15.0.2
-  resolution: "npm-check-updates@npm:15.0.2"
+"npm-check-updates@npm:^16.0.0":
+  version: 16.0.0
+  resolution: "npm-check-updates@npm:16.0.0"
   dependencies:
-    chalk: "npm:^4.1.2"
-    cint: "npm:^8.2.1"
+    chalk: "npm:^5.0.1"
     cli-table: "npm:^0.3.11"
     commander: "npm:^9.3.0"
     fast-memoize: "npm:^2.5.2"
@@ -18200,7 +18192,7 @@ __metadata:
     pacote: "npm:^13.6.1"
     parse-github-url: "npm:^1.0.2"
     progress: "npm:^2.0.3"
-    prompts-ncu: "npm:^2.5.0"
+    prompts-ncu: "npm:^2.5.1"
     rc-config-loader: "npm:^4.1.0"
     remote-git-tags: "npm:^3.0.0"
     rimraf: "npm:^3.0.2"
@@ -18213,7 +18205,7 @@ __metadata:
   bin:
     ncu: build/src/bin/cli.js
     npm-check-updates: build/src/bin/cli.js
-  checksum: a01c39a1e1fc4dcd7376382804778acd0e33febe78fe8d0dd4ebf9cd21e9195eda38065816ca5100812300796dec7e764478e157a4bd8fcb8b76a24b63beda1b
+  checksum: eeb7ace3c4698d3d68542c44e9e3942a7213511cf4ee1e4ccbb62c9bc320a6f35166f5d832dbf93d17f7d7ac0b0180961181881e6f7c2d47206dca4e8150896c
   languageName: node
   linkType: hard
 
@@ -19817,13 +19809,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prompts-ncu@npm:^2.5.0":
-  version: 2.5.0
-  resolution: "prompts-ncu@npm:2.5.0"
+"prompts-ncu@npm:^2.5.1":
+  version: 2.5.1
+  resolution: "prompts-ncu@npm:2.5.1"
   dependencies:
     kleur: "npm:^4.0.1"
     sisteransi: "npm:^1.0.5"
-  checksum: 39c789a22c3c45720f19885df649b9112edc7a5d65d1c5cdc4f6548538f5282a5bca0f9620624ef72f2e1d9f1b28b57bb87938022a78e95ce1c87761a6c42edc
+  checksum: d58ec0fc4b0a473e3a9ea011d6aa9984212c9ddfc65a3ac2a37ce917c9802d71416a6583a44107ddf820d9c509db2cd0786fc1750b0205f5278d96b0a1dcfdd0
   languageName: node
   linkType: hard
 
