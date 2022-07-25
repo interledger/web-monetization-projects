@@ -1874,7 +1874,7 @@ __metadata:
     "@wext/shipit": "npm:0.2.1"
     "@yarnpkg/pnpify": "npm:3.1.4"
     JSON2016: "npm:1.0.0"
-    addons-linter: "npm:5.12.0"
+    addons-linter: "npm:5.13.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
@@ -3472,7 +3472,7 @@ __metadata:
     "@webmonetization/wext": "npm:^0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
     JSON2016: "npm:1.0.0"
-    addons-linter: "npm:5.12.0"
+    addons-linter: "npm:5.13.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
@@ -4004,10 +4004,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdn/browser-compat-data@npm:5.1.4":
-  version: 5.1.4
-  resolution: "@mdn/browser-compat-data@npm:5.1.4"
-  checksum: 001eacf5457775fa7412adac39f0a83e06f607d95e5481bd947e740ec553bdde0cfc3c1b4492391dd6d5b0f66384ecb235ec7efc4acae8fb70d6bb969387a6af
+"@mdn/browser-compat-data@npm:5.1.5":
+  version: 5.1.5
+  resolution: "@mdn/browser-compat-data@npm:5.1.5"
+  checksum: ed47c6755e95721f72aaf8a56fbd7cbaff929d367ced736b23482a0ed6bf91c97cefdfb67b5798fc71f81fce70618cdb0c9b208e839f9b738e33b1359d4b6833
   languageName: node
   linkType: hard
 
@@ -6550,11 +6550,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"addons-linter@npm:5.12.0":
-  version: 5.12.0
-  resolution: "addons-linter@npm:5.12.0"
+"addons-linter@npm:5.13.0":
+  version: 5.13.0
+  resolution: "addons-linter@npm:5.13.0"
   dependencies:
-    "@mdn/browser-compat-data": "npm:5.1.4"
+    "@mdn/browser-compat-data": "npm:5.1.5"
     addons-moz-compare: "npm:1.2.0"
     addons-scanner-utils: "npm:7.1.0"
     ajv: "npm:8.11.0"
@@ -6575,7 +6575,7 @@ __metadata:
     is-mergeable-object: "npm:1.1.1"
     jed: "npm:1.1.1"
     os-locale: "npm:5.0.0"
-    pino: "npm:8.1.0"
+    pino: "npm:8.3.0"
     postcss: "npm:8.4.14"
     relaxed-json: "npm:1.0.3"
     semver: "npm:7.3.7"
@@ -6587,7 +6587,7 @@ __metadata:
     yauzl: "npm:2.10.0"
   bin:
     addons-linter: bin/addons-linter
-  checksum: 5e81a8fecbe6bd058a053cb870d8caa5592c3b6ea3852f7d3b9c62b169b65a779882732fefc295c49da9da53a08ce3e3e1711d77e8a32423545e5878368d8536
+  checksum: 9c43c731908b29f18d0a822910dff027634dc63856059b09563384290c38a03cc0632257384c627d386c24d3430b7fb973067bd082ee1f1c7c065313d0c8d01f
   languageName: node
   linkType: hard
 
@@ -19370,10 +19370,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino-std-serializers@npm:^5.0.0":
-  version: 5.6.0
-  resolution: "pino-std-serializers@npm:5.6.0"
-  checksum: ad098b1e21a27cf397878fdeebc0052422b581fb6b89365b7963f360508cd76e1ec321c78128fb4f795bbd1ff285988535cb03d3ee321772f0b7172fd2a2ad58
+"pino-std-serializers@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "pino-std-serializers@npm:6.0.0"
+  checksum: bf1e2b887cce17b4805205b10951aa6ac71a05595e4e88cc917bfeab23c3d2def540ae93d0906e8b1511ad59f51be3b3ace692d9c8e5eb7a47d92e99a08393ea
   languageName: node
   linkType: hard
 
@@ -19413,24 +19413,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino@npm:8.1.0":
-  version: 8.1.0
-  resolution: "pino@npm:8.1.0"
+"pino@npm:8.3.0":
+  version: 8.3.0
+  resolution: "pino@npm:8.3.0"
   dependencies:
     atomic-sleep: "npm:^1.0.0"
     fast-redact: "npm:^3.1.1"
     on-exit-leak-free: "npm:^2.1.0"
     pino-abstract-transport: "npm:v1.0.0"
-    pino-std-serializers: "npm:^5.0.0"
+    pino-std-serializers: "npm:^6.0.0"
     process-warning: "npm:^2.0.0"
     quick-format-unescaped: "npm:^4.0.3"
     real-require: "npm:^0.1.0"
     safe-stable-stringify: "npm:^2.3.1"
-    sonic-boom: "npm:^3.0.0"
-    thread-stream: "npm:^1.0.0"
+    sonic-boom: "npm:^3.1.0"
+    thread-stream: "npm:^2.0.0"
   bin:
     pino: bin.js
-  checksum: 6fa99db59f25ac9f5c408ddfff65d0d76594c4d58371d91d8737a463258d6632cf2cafe1ea810cec8365db6403ef0b0c5983c84ff281b2785a78d52e372baf7c
+  checksum: 5e51784ec4023d6e70ffe1490fa3af16a1dbef675b44bc6e22b70ad06bb51b49052a098c48411fa61395a39176e4aa600f8be932a75ef33e4eb8fe4325f04d13
   languageName: node
   linkType: hard
 
@@ -21791,12 +21791,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sonic-boom@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "sonic-boom@npm:3.0.0"
+"sonic-boom@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "sonic-boom@npm:3.1.0"
   dependencies:
     atomic-sleep: "npm:^1.0.0"
-  checksum: b5bab7a09067c8e216f2a0a618b512409c21a912be4f5b3d35091effa9767769813c827e7f3c9c4a8d508a175d60306ad430df3af7d4a7ff4e12a9c6b5a12312
+  checksum: 7498a0fe9c1b443bdcafbf2d95397cff99be9e8a80df82318e0647574801b29a02539706fc075546cadc85cbd3b6047948513f5e7dde8e8ed9d6064de6f436e5
   languageName: node
   linkType: hard
 
@@ -22793,12 +22793,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"thread-stream@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "thread-stream@npm:1.0.0"
+"thread-stream@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "thread-stream@npm:2.0.0"
   dependencies:
     real-require: "npm:^0.1.0"
-  checksum: ed9aa3bb8c510195349fe830222a14a95ba16f6e69696f001d80f0ba94ee7955bff8a5cb8eb3c6c9183370f58871afe840012d93b96179d94ff973137bdf25ec
+  checksum: 20c7e678d64917a25a215c5a68a8549ffcaa3628d293da1dfd6ab86cd17be2cb8084f7b788cf676722f8450f318a1bcc2f84adccbbce5478d007c304be406b48
   languageName: node
   linkType: hard
 
