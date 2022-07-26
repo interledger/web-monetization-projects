@@ -3,8 +3,16 @@
  * [ Adapted from the original by Coil for use in Typescript ]
  * https://github.com/privacypass/challenge-bypass-extension/blob/master/src/crypto/local.js
  */
-// eslint-disable-next-line import/order
+
 import sjcl from 'sjcl'
+import keccak, { Shake } from 'keccak'
+import { ASN1, PEM } from 'asn1-parser'
+
+import { h2Curve } from './hashToCurve'
+import { H2CParams } from './config'
+import { BlindToken } from './tokens'
+import { Commitment, SjclHashable } from './interfaces'
+import { asciiToBin } from './base64'
 
 if (typeof window === 'undefined' && self?.crypto) {
   // Seed inside a worker
@@ -16,15 +24,6 @@ if (typeof window === 'undefined' && self?.crypto) {
     'crypto.getRandomValues'
   )
 }
-
-import keccak, { Shake } from 'keccak'
-import { ASN1, PEM } from 'asn1-parser'
-
-import { h2Curve } from './hashToCurve'
-import { H2CParams } from './config'
-import { BlindToken } from './tokens'
-import { Commitment, SjclHashable } from './interfaces'
-import { asciiToBin } from './base64'
 
 export interface CurvePoints {
   points: sjcl.SjclEllipticalPoint[]
