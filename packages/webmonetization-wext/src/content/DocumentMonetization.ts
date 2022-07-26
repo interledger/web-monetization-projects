@@ -35,13 +35,13 @@ export class DocumentMonetization {
   constructor(
     private doc: Document,
     private scripts: ScriptInjection,
-    @inject(tokens.PolyfillPath)
-    private polyfillPath: string
+    @inject(tokens.PolyfillCode)
+    private polyfillCode: string
   ) {}
 
   injectMonetizationPolyfill() {
     try {
-      this.scripts.injectScript(this.polyfillPath)
+      this.scripts.injectCode(this.polyfillCode)
     } catch (e) {
       console.error(e)
       console.warn(includePolyFillMessage)

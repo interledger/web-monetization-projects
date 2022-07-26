@@ -329,7 +329,9 @@ export class ContentScript {
       this.watchPageEventsToPauseOrResume()
     })
     this.setRuntimeMessageListener()
-    this.monetization.injectMonetizationPolyfill()
+    if (!this.buildConfig.isMV3) {
+      this.monetization.injectMonetizationPolyfill()
+    }
   }
 
   /**

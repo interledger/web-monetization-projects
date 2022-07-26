@@ -22,8 +22,21 @@ export class ScriptInjection {
     this.inject(script => (script.innerHTML = code))
   }
 
+  /**
+   * Unfortunately, even when configure-ing the script tag to load sync
+   * via `script.async = false`, the polyfill still won't be reliably injected
+   * until the window load event.
+   *
+   * This means that injecting code via web_accessible_resources is not going
+   * to work for polyfills.
+   *
+   * @param src
+   */
   injectScript(src: string) {
-    this.inject(script => (script.src = src))
+    this.inject(script => {
+      script.src = src
+      script.async = false
+    })
   }
 
   inject(configure: (script: HTMLScriptElement) => void) {
