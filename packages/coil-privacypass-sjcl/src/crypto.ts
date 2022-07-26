@@ -3,6 +3,7 @@
  * [ Adapted from the original by Coil for use in Typescript ]
  * https://github.com/privacypass/challenge-bypass-extension/blob/master/src/crypto/local.js
  */
+
 import sjcl from 'sjcl'
 import keccak, { Shake } from 'keccak'
 import { ASN1, PEM } from 'asn1-parser'
@@ -12,6 +13,17 @@ import { H2CParams } from './config'
 import { BlindToken } from './tokens'
 import { Commitment, SjclHashable } from './interfaces'
 import { asciiToBin } from './base64'
+
+if (typeof window === 'undefined' && self?.crypto) {
+  // Seed inside a worker
+  const ab = new Uint32Array(32)
+  self.crypto.getRandomValues(ab)
+  sjcl.random.addEntropy(
+    ab as unknown as number[],
+    1024,
+    'crypto.getRandomValues'
+  )
+}
 
 export interface CurvePoints {
   points: sjcl.SjclEllipticalPoint[]

@@ -1,10 +1,7 @@
-import { Reloader } from './mv3/reloader'
+import { API } from '../webpackDefines'
+import { ChromeScripting } from '../types/chrome/chromeScripting'
 
-// These required "yarn patch"ing in order to work
-// The crypto object simply needs to be retrieved from "self" rather
-// than "window".
-import 'ilp-protocol-stream'
-import 'ilp-plugin-btp'
+import { Reloader } from './mv3/reloader'
 
 export const dbg = console.log.bind('ServiceWorker')
 dbg('backgroundMV3.ts')
@@ -12,5 +9,20 @@ dbg('typeof self.localStorage', self.localStorage)
 
 const reloader = new Reloader(chrome, console.log.bind(console, 'Reloader: '))
 reloader.connect()
+
+const scripting = API.scripting as unknown as ChromeScripting
+
+scripting
+  .registerContentScripts([
+    {
+      matches: ['https://*/*', 'http://*/*'],
+      id: 'wm-polyfill.js',
+      world: 'MAIN',
+      js: ['wm-polyfill.js'],
+      runAt: 'document_start'
+    }
+  ])
+  // eslint-disable-next-line no-console
+  .catch(console.error)
 
 import './background'
