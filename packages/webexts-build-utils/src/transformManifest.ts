@@ -96,12 +96,11 @@ export function transformManifest(
 
   if (polyfill?.hash) {
     assert.ok(v2.content_security_policy)
-    assert.ok(v2.web_accessible_resources)
+
     v2.content_security_policy = v2.content_security_policy.replace(
       'sha256-POLYFILL-HASH=',
       polyfill.hash
     )
-    v2.web_accessible_resources.push(`${polyfill.name}.js`)
   }
 
   if (WEXT_MANIFEST_SUFFIX) {
