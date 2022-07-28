@@ -40,7 +40,7 @@
     "asn1-parser": "^1.1.8",
     "keccak": "^3.0.1",
     "node-fetch": "^2.6.1",
-    "sjcl": "https://github.com/sublimator/sjcl.git#commit=4457eb3a84cfde1e7ea01b241d9d47a7a80969cc"
+    "sjcl": "https://github.com/sublimator/sjcl.git#commit=6d8756dcf7d04ffc854d61d81b9781a37a82d500"
   },
   "devDependencies": {
     "@abraham/reflection": "0.10.0",
