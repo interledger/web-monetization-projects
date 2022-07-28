@@ -9,9 +9,6 @@ export const STORAGE_KEYS = [
   'monetized',
   'monetizedTotal',
 
-  'extensionBuildString',
-  'extensionPopupFooterString',
-
   'popup-route:last',
   'popup-route:tipping-shown'
 ]

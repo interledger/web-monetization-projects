@@ -16,7 +16,6 @@ export WEXT_MANIFEST_VERSION_NAME="$COIL_DEV_VERSION - $(git branch --show) - $(
 export WEXT_MANIFEST_SUFFIX=${WEXT_MANIFEST_SUFFIX:-'Dev'}
 export WEXT_MANIFEST_SUFFIX_NO_DATE='true'
 # shellcheck disable=SC2155
-export WEXT_BUILD_CONFIG="{\"extensionBuildString\":\"$(git show --no-patch --no-notes --pretty='== %h == %cd == %s ==' )\"}"
 ./build.sh $COIL_DEV_ENV chrome
 echo "using $(yarn bin shipit)"
 # https://github.com/LinusU/wext-shipit
