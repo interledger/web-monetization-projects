@@ -32,10 +32,6 @@ export interface StoreProxy {
   coilSite?: string | null
   monetizedTotal?: number | null
 
-  // State for popup builds
-  extensionBuildString?: string | null
-  extensionPopupFooterString?: string | null
-
   // Popup state
   'popup-route:last'?: string | null
   'popup-route:tipping-shown'?: boolean | null

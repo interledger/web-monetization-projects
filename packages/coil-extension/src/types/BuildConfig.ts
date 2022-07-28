@@ -5,8 +5,6 @@ $ WEXT_BUILD_CONFIG_WM2_ALWAYS=true yarn dev-chrome-prod
  */
 export interface BuildConfig extends Record<string, unknown> {
   logTabsApiEvents?: boolean
-  extensionBuildString?: string
-  extensionPopupFooterString?: string
 
   isCI: boolean
   isMV3: boolean
