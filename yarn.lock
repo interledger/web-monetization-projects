@@ -4967,10 +4967,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mime@npm:^1":
-  version: 1.3.2
-  resolution: "@types/mime@npm:1.3.2"
-  checksum: 1f724ab3c619125bac1bb5890b42d6cdfeecc60207771b2ad861ec933931a5b0710023c49c181f728c4de4f4e026d3fa49dffddf31a0e3b7898ebd8b6da45f3d
+"@types/mime@npm:*":
+  version: 3.0.0
+  resolution: "@types/mime@npm:3.0.0"
+  checksum: f1877c28a2e8216a52cbc17a9cc8f845df6284b053fd0335c23f2548caa9c17aee969d0850ff8ff3c155774a0325d531198522c93728c20f77182f2350e46812
   languageName: node
   linkType: hard
 
@@ -5159,13 +5159,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/serve-static@npm:1.13.10":
-  version: 1.13.10
-  resolution: "@types/serve-static@npm:1.13.10"
+"@types/serve-static@npm:1.15.0":
+  version: 1.15.0
+  resolution: "@types/serve-static@npm:1.15.0"
   dependencies:
-    "@types/mime": "npm:^1"
+    "@types/mime": "npm:*"
     "@types/node": "npm:*"
-  checksum: 4d892d86ee878a796259fd391a443cdef8ef9edac06082a57cc4c4094ee1b44c178b446778bf8354f99fa03db36ffeceeadf2fce7ead0b8d57d7e7d4bf6d5b5b
+  checksum: 7db8fd127cfdfdb161922fb9a6fcb2022418755c375ae8550b8d53a4fcd686af1b71fb35c81c4e223a16b74bbfadfc810de06172eef7ee3394d94294fc3536f1
   languageName: node
   linkType: hard
 
