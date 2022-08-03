@@ -1925,7 +1925,7 @@ __metadata:
     lottie-web: "npm:^5.8.1"
     nodemon: "npm:2.0.19"
     prettier: "npm:2.7.1"
-    puppeteer: "npm:15.5.0"
+    puppeteer: "npm:16.0.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reconnecting-websocket: "npm:^4.4.0"
@@ -2159,7 +2159,7 @@ __metadata:
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.19"
     prettier: "npm:2.7.1"
-    puppeteer: "npm:15.5.0"
+    puppeteer: "npm:16.0.0"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
@@ -2350,7 +2350,7 @@ __metadata:
     lint-staged: "npm:13.0.3"
     nodemon: "npm:2.0.19"
     prettier: "npm:2.7.1"
-    puppeteer: "npm:^15.0.0"
+    puppeteer: "npm:^16.0.0"
     regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     tmp: "npm:^0.2.1"
@@ -20045,9 +20045,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:15.5.0, puppeteer@npm:^15.0.0":
-  version: 15.5.0
-  resolution: "puppeteer@npm:15.5.0"
+"puppeteer@npm:16.0.0, puppeteer@npm:^16.0.0":
+  version: 16.0.0
+  resolution: "puppeteer@npm:16.0.0"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
@@ -20060,8 +20060,8 @@ __metadata:
     rimraf: "npm:3.0.2"
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
-    ws: "npm:8.8.0"
-  checksum: a50871ced466065d57bf1ed521bd5f1c118b0ffaf76c4efb826f7713ddad0b7fda88b8a29cd35e1f0af30f26c3c67a23b9bc05cce6ab26716c617260611a5d0c
+    ws: "npm:8.8.1"
+  checksum: fa5f247e0d4162cf2b43201d55d5849b7d416d31c9c3cd0639c693a5d784bc4773c0fc7de982b41a407dac4ffa778aa96ace64130ba116e75b9db64af8201918
   languageName: node
   linkType: hard
 
@@ -24837,9 +24837,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:8.8.0, ws@npm:^8.2.3, ws@npm:^8.3.0, ws@npm:^8.4.2, ws@npm:^8.8.0":
-  version: 8.8.0
-  resolution: "ws@npm:8.8.0"
+"ws@npm:8.8.1, ws@npm:^8.2.3, ws@npm:^8.3.0, ws@npm:^8.4.2, ws@npm:^8.8.0":
+  version: 8.8.1
+  resolution: "ws@npm:8.8.1"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ^5.0.2
@@ -24848,7 +24848,7 @@ __metadata:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: ed142e0e5055b75e32ed87d6cc4d4501a8549b94d5a18f0cb8b6673939acb974962f4f721b9c57aa276db3a862f28356cc2146b03a6ecff9caa6197d64a4ff36
+  checksum: 807217fa26495f179b03c1160bacaee829234b66f4d22b6df00dc335268e92b537add73edb84046827aadd858c997213d1c78743c571339fe25cc6d51d3e5dea
   languageName: node
   linkType: hard
 
