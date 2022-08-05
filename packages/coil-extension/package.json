@@ -69,7 +69,7 @@
     "@webmonetization/types": "^0.0.0",
     "@webmonetization/wext": "^0.0.0",
     "debug": "^4.3.1",
-    "framer-motion": "^5.0.0",
+    "framer-motion": "^7.0.0",
     "get-port": "^5.1.1",
     "idb-keyval": "^6.2.0",
     "ilp-plugin-btp": "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch",
