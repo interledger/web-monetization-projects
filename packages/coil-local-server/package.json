@@ -41,7 +41,7 @@
     "@coil/puppeteer-utils": "0.0.0",
     "@graphql-tools/graphql-file-loader": "^7.3.12",
     "@graphql-tools/load": "^7.5.11",
-    "@graphql-tools/schema": "^8.3.11",
+    "@graphql-tools/schema": "^9.0.0",
     "@graphql-tools/utils": "^8.6.10",
     "@interledger/stream-receiver": "^0.3.3-alpha.1",
     "apollo-server-core": "^3.7.0",
