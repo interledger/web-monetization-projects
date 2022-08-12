@@ -20,6 +20,7 @@ import {
 import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
+import { openTab } from '../../util/openTab'
 
 import { MultipleInstanceDetector } from './multipleInstanceDetector'
 import { AuthService } from './AuthService'
@@ -663,7 +664,7 @@ export class BackgroundScript {
     if (!this.buildConfig.isCI && !this.buildConfig.useLocalMockServer) {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
-          void this.api.tabs.create({ url: `${this.coilDomain}/signup` })
+          openTab(this.api, `${this.coilDomain}/signup`)
           void this.multipleInstanceDetector.detectOtherInstances()
         }
       })

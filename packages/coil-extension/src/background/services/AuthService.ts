@@ -1,3 +1,5 @@
+// noinspection ES6MissingAwait
+
 import { EventEmitter } from 'events'
 
 import { GraphQlClient, tokenUtils } from '@coil/client'

@@ -24,6 +24,7 @@ export class SiteToken {
   ) {}
 
   async retrieve(): Promise<string | null> {
+    console.log('retrieve', new Error().stack)
     if (self.document) {
       return this.retrieveViaIframeInjection()
     } else {
@@ -63,6 +64,7 @@ export class SiteToken {
                 }
               })
               .then(([result]) => {
+                this.api.tabs.remove(notNullOrUndef(tab.id))
                 resolve(result.result)
               })
           }

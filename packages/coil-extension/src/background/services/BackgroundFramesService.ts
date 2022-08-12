@@ -387,9 +387,13 @@ export class BackgroundFramesService extends EventEmitter {
     for (const [tabId, framesList] of Object.entries(this.tabs)) {
       for (const frame of framesList) {
         if (matcher(frame)) {
-          this.api.tabs.sendMessage(Number(tabId), cmd, {
-            frameId: frame.frameId
-          })
+          this.sendCommand(
+            { tabId: Number(tabId), frameId: frame.frameId },
+            cmd
+          ).catch(() => {})
+          // this.api.tabs.sendMessage(Number(tabId), cmd, {
+          //   frameId: frame.frameId
+          // })
         }
       }
     }
@@ -525,21 +529,25 @@ export class BackgroundFramesService extends EventEmitter {
       )
     } else if (this.api.scripting) {
       const target = { tabId, frameIds: [frameId] }
-      void this.api.scripting.executeScript({
-        target,
-        func: () => {
-          ;(function sendMessage() {
-            const frameStateChange: FrameStateChange = {
-              command: 'frameStateChange',
-              data: {
-                state: document.readyState,
-                href: window.location.href
+      this.api.scripting
+        .executeScript({
+          target,
+          func: () => {
+            ;(function sendMessage() {
+              const frameStateChange: FrameStateChange = {
+                command: 'frameStateChange',
+                data: {
+                  state: document.readyState,
+                  href: window.location.href
+                }
               }
-            }
-            void chrome.runtime.sendMessage(frameStateChange)
-          })()
-        }
-      })
+              void chrome.runtime.sendMessage(frameStateChange)
+            })()
+          }
+        })
+        .catch(error => {
+          console.log('executeScript error', error)
+        })
     } else {
       throw new Error(
         'no way of executing script, tabs.executeScript and ' +
