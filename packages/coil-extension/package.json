@@ -1,10 +1,10 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
   "$overRideUpKeep": {
-    "version": "0.0.59"
+    "version": "0.0.60"
   },
   "name": "@coil/extension",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "keywords": [
     "ilp",
     "web-monetization"
