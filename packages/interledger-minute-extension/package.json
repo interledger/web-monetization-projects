@@ -69,7 +69,7 @@
     "@swc/core": "1.2.239",
     "@swc/jest": "0.2.22",
     "@types/jest": "28.1.7",
-    "@types/node": "16.11.49",
+    "@types/node": "16.11.52",
     "@types/react": "17.0.48",
     "@types/react-dom": "17.0.17",
     "@types/uuid": "8.3.4",
