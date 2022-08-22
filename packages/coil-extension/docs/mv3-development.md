@@ -20,15 +20,15 @@ bug in Safari cross component messaging (since fixed)).
 
 ### Browser Compatibility
 
-| Browser          |      Compatibility |   Last Checked |                                                                          Link/Notes |
-| :--------------- | -----------------: | -------------: | ----------------------------------------------------------------------------------: |
-| Chrome           |            Working |                |                                                                                     |
-| Samsung Internet | ETA September 2022 | June 13th 2022 |                                                                                     |
-| Safari           |            Working |                |                                                                                     |
-| Edge             |            Unknown |                |                                                                                     |
-| Opera            |            Unknown |                |                                                                                     |
-| Firefox          |        Not Working |      June 27th | https://blog.mozilla.org/addons/2022/05/18/manifest-v3-in-firefox-recap-next-steps/ |
-| Firefox Nightly  |            Working | June 27th 2022 |                                                                                     |
+| Browser          |                         Compatibility |   Last Checked |                                                                          Link/Notes |
+| :--------------- | ------------------------------------: | -------------: | ----------------------------------------------------------------------------------: |
+| Chrome           |                               Working |                |                                                                                     |
+| Samsung Internet |                    ETA September 2022 | June 13th 2022 |                                                                                     |
+| Safari           |                               Working |                |                                                                                     |
+| Edge             |                               Unknown |                |                                                                                     |
+| Opera            |                               Unknown |                |                                                                                     |
+| Firefox          |                           Not working |      June 27th | https://blog.mozilla.org/addons/2022/05/18/manifest-v3-in-firefox-recap-next-steps/ |
+| Firefox Nightly  | Event pages work, not service workers | June 27th 2022 |                                                                                     |
 
 ### Development notes
 
@@ -72,18 +72,23 @@ and have the ability to start/stop the worker.
 
 ### TODO
 
+- [ ] MV3 seems to throw more (hard to trace) errors which need cleaning up so console isn't littered with errors
+  - chrome.runtime.sendMessage
+    - Could not establish connection. Receiving end does not exist
+  - chrome.tabs.sendMessage
+    - Could not establish connection. Receiving end does not exist
 - [x] Support MV3 in main by modifying webpack config to output MV3 manifest
       and include a backgroundMV3.ts in the `entry`.
 - [x] Add a websocket server to webpack plugin that extension can receive
-      reload commands from.
-- [ ] Use chrome.action instead of chrome.browserAction
-- [ ] move listeners to top level
-  - [ ] async BackgroundScript is going to be hard
-- [ ] Replace `<script>` injection with another method
+      reload commands from the extension
+- [x] Use chrome.action instead of chrome.browserAction
+- [x] move listeners to top level
+  - [x] async BackgroundScript is going to be hard
+- [x] Replace `<script>` injection with another method
   - [x] research alternatives
     - see: https://developer.chrome.com/docs/extensions/reference/scripting/#type-ExecutionWorld
     - see: https://github.com/Danisco212/InjectionMV3
-- [ ] Replace localStorage
+- [x] Replace localStorage
   - the popup is actually already factored well with storage access
     encapsulated
   - the background/contents scripts are likewise in somewhat decent shape
@@ -93,16 +98,19 @@ and have the ability to start/stop the worker.
     - anonymous tokens
     - tokens
     - monetization state for the popup
-- [ ] ilp-plugin-btp
+- [x] ilp-plugin-btp
   - References window.crypto
   - [x] ready [pull request](https://github.com/interledgerjs/ilp-plugin-btp/pull/72)
-  - [ ] merge
+  - [x] use yarn patch while waiting for publish
+  - [x] use yarn patch while waiting for publish
+  - [ ] merge fix
   - [ ] publish
-- [ ] ilp-protocol-stream
+- [x] ilp-protocol-stream
   - References window.crypto
   - [x] ready [pull request](https://github.com/interledgerjs/interledgerjs/pull/291)
+  - [x] use yarn patch while waiting for publish
   - [x] merge fix
   - [ ] publish
-- [ ] Workaround inability inject handler.html as iframe into background page
+- [x] Workaround inability to inject handler.html as iframe into background page
   - SuperTokens cookie auth should solve this
   - Can also open a tab to coil.com to steal the token
