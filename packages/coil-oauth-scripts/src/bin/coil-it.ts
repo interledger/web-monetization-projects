@@ -5,10 +5,18 @@ import IlpPluginBtp from 'ilp-plugin-btp'
 import * as IlpStream from 'ilp-protocol-stream'
 import * as uuid from 'uuid'
 
-import { COIL_DOMAIN, COIL_PASSWORD, COIL_USER, login } from './env'
+import {
+  COIL_DOMAIN,
+  COIL_PASSWORD,
+  COIL_USER,
+  login,
+  loginWithCookies
+} from './env'
 
+// eslint-disable-next-line no-console
 const dbg = console.log
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function pretty(val: any): string {
   return inspect(val, { depth: Infinity })
 }
@@ -98,14 +106,15 @@ async function main(): Promise<void> {
   let latest = startedAt
   const dbg = (...args: any[]) => {
     const now = Date.now()
+    // eslint-disable-next-line no-console
     console.log(`(t=${now - startedAt}ms, d=${now - latest}ms)`, ...args)
     latest = now
   }
 
   const argv = process.argv.slice(2)
   const paymentPointer = argv[0] || '$twitter.xrptipbot.com/nfcpasses'
-  const { token, btpToken } = await login(dbg, true)
-  dbg({ token, btpToken })
+  const { btpToken } = await loginWithCookies(dbg, true)
+  dbg({ btpToken })
 
   const spspUrl = pointerToUrl(paymentPointer)
   dbg({ spspUrl })
@@ -147,5 +156,6 @@ async function main(): Promise<void> {
 }
 
 if (require.main === module) {
+  // eslint-disable-next-line no-console
   main().catch(console.error)
 }

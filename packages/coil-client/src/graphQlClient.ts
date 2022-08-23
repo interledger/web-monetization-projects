@@ -4,14 +4,14 @@ import { portableFetch } from './utils/portableFetch'
 import { GraphQlResponse } from './types'
 import {
   adaptedPage,
+  featureEnabled,
   login,
   queryToken,
   refreshBtpToken,
-  whoAmI,
-  featureEnabled,
-  tipPreview,
   tip,
-  tipSettings
+  tipPreview,
+  tipSettings,
+  whoAmI
 } from './queries'
 
 // Reference class for DI/reduct
@@ -89,7 +89,8 @@ export class GraphQlClient {
     if (!this.inBrowser) {
       const authCookies = response.headers.get('Set-Cookie')
       if (authCookies) {
-        this.authCookies = authCookies
+        const matcher = /(sAccessToken|sIdRefreshToken|sRefreshToken)=([^;]+);/g
+        this.authCookies = (authCookies.match(matcher) ?? []).join('')
       }
     }
     const data = await response.json()

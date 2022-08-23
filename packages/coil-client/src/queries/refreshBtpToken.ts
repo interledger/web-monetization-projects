@@ -19,6 +19,6 @@ export async function refreshBtpToken(this: GraphQlClient, token?: string) {
   if (response.data.refreshBtpToken && response.data.refreshBtpToken.token) {
     return response.data.refreshBtpToken.token
   } else {
-    throw new Error(`error getting btpToken ${response}`)
+    throw new Error(`error getting btpToken ${JSON.stringify(response)}`)
   }
 }
