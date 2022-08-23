@@ -314,7 +314,7 @@ export class BackgroundScript {
         sendResponse(true)
         break
       case 'refreshUser':
-        sendResponse(await this.auth.refreshAuthentication())
+        sendResponse(await this.refreshUser())
         break
       case 'startWebMonetization':
         this.log('got startwebmonetization')
@@ -372,6 +372,11 @@ export class BackgroundScript {
         sendResponse(false)
         break
     }
+  }
+
+  private async refreshUser() {
+    await this.auth.refreshAuthentication()
+    this.tabStates.reloadTabState({ from: 'refreshUser' })
   }
 
   setCoilUrlForPopupIfNeeded(tab: number, url: string | undefined) {
