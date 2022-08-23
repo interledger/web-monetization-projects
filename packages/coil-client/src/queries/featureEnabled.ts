@@ -10,13 +10,9 @@ export const featureEnabledQuery = `query getFeatureFlag($key: String!){
 
 export async function featureEnabled(
   this: GraphQlClient,
-  token?: string,
-  key?: string
+  key: string,
+  token?: string
 ) {
-  if (!key) {
-    key = token
-    token = undefined
-  }
   return this.query<FeatureEnabledData>({
     query: featureEnabledQuery,
     token,

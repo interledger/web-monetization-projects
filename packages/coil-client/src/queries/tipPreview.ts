@@ -28,13 +28,9 @@ export interface TipPreviewData {
 
 export async function tipPreview(
   this: GraphQlClient,
-  token?: string,
-  tipAmountCents?: string
+  tipAmountCents: string,
+  token?: string
 ): Promise<TipPreviewData['tipPreview']> {
-  if (!tipAmountCents) {
-    tipAmountCents = token
-    token = undefined
-  }
   const message = await this.query<TipPreviewData>({
     query: tipPreviewQuery,
     token,
@@ -44,6 +40,7 @@ export async function tipPreview(
   const tipPreview = message.data?.tipPreview
   const success = tipPreview?.success
   const code = tipPreview?.code
+
   if (!success) {
     throw new Error(
       `graphql query failed. status=${code} query=\`${tipPreviewQuery}\``
