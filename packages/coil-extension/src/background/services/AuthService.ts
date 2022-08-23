@@ -6,6 +6,7 @@ import { inject, injectable } from 'inversify'
 
 import { StoreProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
+import { BuildConfig } from '../../types/BuildConfig'
 
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
@@ -75,6 +76,8 @@ export class AuthService extends EventEmitter {
     private log: Logger,
     @inject(tokens.StoreProxy)
     private store: StoreProxy,
+    @inject(tokens.BuildConfig)
+    private buildConfig: BuildConfig,
     private client: GraphQlClient,
     private activeTabs: ActiveTabLogger,
     private tippingService: TippingService
@@ -121,15 +124,17 @@ export class AuthService extends EventEmitter {
   }
 
   initialize() {
-    // Initializing the SuperTokens library wraps the native fetch and
-    // automates refreshing the user's access token after it's expired.
-    SuperTokens.init({
-      apiDomain: this.domain,
-      apiBasePath: '/api/auth'
-    })
+    if (!this.buildConfig.isMV3) {
+      // Initializing the SuperTokens library wraps the native fetch and
+      // automates refreshing the user's access token after it's expired.
+      SuperTokens.init({
+        apiDomain: this.domain,
+        apiBasePath: '/api/auth'
+      })
+    }
   }
 
   isAuthenticated() {
-    return !!this.store.user
+    return Boolean(this.store.user)
   }
 }
