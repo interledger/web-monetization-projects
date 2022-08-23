@@ -26,9 +26,9 @@ export async function injectCoilTokenFromEnv(page: Page): Promise<void> {
 }
 
 export const initCoilSelectors = {
-  loginSelector: '[data-cy="login-email"]',
-  passwordSelector: '[data-cy="login-password"]',
-  nextSelector: '[data-cy="login-next"]'
+  loginSelector: '[data-testid="login-email"]',
+  passwordSelector: '[data-testid="login-password"]',
+  nextSelector: '[data-testid="login-submit-button"]'
 }
 
 export async function initCoil({
@@ -52,7 +52,7 @@ export async function initCoil({
     await injectCoilTokenFromEnv(page)
     await timeout(100)
   } else {
-    await page.goto(`${COIL_DOMAIN}/login`)
+    await page.goto(`${COIL_DOMAIN}/auth/login`)
     await page.bringToFront()
 
     await page.waitForSelector(initCoilSelectors.loginSelector)
