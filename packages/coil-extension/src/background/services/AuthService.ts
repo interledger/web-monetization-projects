@@ -6,9 +6,7 @@ import { inject, injectable } from 'inversify'
 
 import { StoreProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
-import { TimeoutError } from '../../util/timeout'
 
-import { SiteToken } from './SiteToken'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { TippingService } from './TippingService'
@@ -78,7 +76,6 @@ export class AuthService extends EventEmitter {
     @inject(tokens.StoreProxy)
     private store: StoreProxy,
     private client: GraphQlClient,
-    private siteToken: SiteToken,
     private activeTabs: ActiveTabLogger,
     private tippingService: TippingService
   ) {
@@ -107,19 +104,6 @@ export class AuthService extends EventEmitter {
       this.log('whoAmI failed', e.message)
     }
     return loggedIn
-  }
-
-  async checkForSiteLogoutAssumeFalseOnTimeout(): Promise<boolean> {
-    try {
-      const token = await this.siteToken.retrieve()
-      return !token
-    } catch (e) {
-      if (e instanceof TimeoutError) {
-        return false
-      } else {
-        throw e
-      }
-    }
   }
 
   async maybeRefreshAndStoreState(): Promise<boolean> {
