@@ -34,11 +34,11 @@ references:
   node-version-matrix: &node-version-matrix
     matrix:
       parameters:
-        node-version: &node-versions [ "16.16.0", "18.4.0" ]
+        node-version: &node-versions [ "16.17.0", "18.4.0" ]
   just-one-node-version-matrix: &just-latest-lts-node-version
     matrix:
       parameters:
-        node-version: [ "16.16.0" ]
+        node-version: [ "16.17.0" ]
 
 jobs:
   # Run Linting
@@ -75,6 +75,29 @@ jobs:
             - pw-browsers
           key: v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
 
+  # Build Safari
+  build-safari:
+    macos:
+      xcode: 13.4.1
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - safari-build-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      - *yarn_install
+      - run:
+          name: Build Safari
+          command: |
+            cd packages/coil-extension
+            yarn build-prod chrome
+            scripts/build-safari.sh
+      - save_cache:
+          paths:
+            - node_modules
+            - .yarn
+            - pw-browsers
+          key: safari-build-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+
   coil-extension-package:
     <<: *parameterized-node-version
     steps:
@@ -101,7 +124,7 @@ jobs:
   build-extension-e2e-coil:
     docker:
       # Hey renovate PR merger. Don't forget the node-version: [ "x.y.z", "y.z.x" ] blocks
-      - image: cimg/node:16.16.0-browsers
+      - image: cimg/node:16.17.0-browsers
     steps:
       - gcloud-get-creds
       - checkout
@@ -350,6 +373,9 @@ workflows:
   version: 2
   build:
     jobs:
+      - build-safari
+#          requires:
+##            - lint-all
       - lint-all:
           <<: *node-version-matrix
       - yarn-format-and-upkeep-diff-check:
@@ -368,13 +394,13 @@ workflows:
             branches:
               only:
                 - main
-      - publish-packages:
-          requires:
-            - hold-publish-packages
-          filters:
-            branches:
-              only:
-                - main
+#      - publish-packages:
+#          requires:
+#            - hold-publish-packages
+#          filters:
+#            branches:
+#              only:
+#                - main
       - jest-all:
           context: web-monetization-tests
           filters:

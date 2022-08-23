@@ -8,6 +8,5 @@ set -ex
 export WEXT_MANIFEST_VERSION="$COIL_DEV_VERSION"
 export WEXT_MANIFEST_SUFFIX='Dev'
 export WEXT_MANIFEST_SUFFIX_NO_DATE='true'
-export WEXT_BUILD_CONFIG="{\"extensionPopupFooterString\": \"$(git branch --show-current) - $(git show --no-patch --no-notes --pretty='%h')\",  \"extensionBuildString\":\"$(git show --no-patch --no-notes --pretty='== %h == %cd == %s ==' )\"}"
 ./build.sh prod chrome
 yarn dlx shipit chrome dist
