@@ -3,6 +3,7 @@ import { ChromeScripting } from '../types/chrome/chromeScripting'
 
 import { Reloader } from './mv3/reloader'
 
+// eslint-disable-next-line no-console
 export const dbg = console.log.bind('ServiceWorker')
 dbg('backgroundMV3.ts')
 dbg('typeof self.localStorage', self.localStorage)
@@ -22,7 +23,13 @@ scripting
       runAt: 'document_start'
     }
   ])
-  // eslint-disable-next-line no-console
-  .catch(console.error)
+  .catch((err: Error) => {
+    // The lifecycle of registered scripts can outlast that of the
+    // background SW
+    if (!err.message.startsWith('Duplicate script ID')) {
+      // eslint-disable-next-line no-console
+      console.error(err)
+    }
+  })
 
 import './background'
