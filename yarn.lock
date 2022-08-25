@@ -1728,11 +1728,11 @@ __metadata:
     "@coil/privacypass-sjcl": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
     "@types/jsonwebtoken": "npm:8.5.8"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
     "@types/sjcl": "npm:1.0.30"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
@@ -1793,11 +1793,11 @@ __metadata:
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
     "@types/jsonwebtoken": "npm:8.5.8"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
@@ -1865,7 +1865,7 @@ __metadata:
     "@material-ui/core": "npm:^4.11.4"
     "@material-ui/icons": "npm:^4.11.2"
     "@material-ui/styles": "npm:^4.11.4"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/debug": "npm:4.1.7"
     "@types/filesystem": "npm:0.0.32"
@@ -1875,7 +1875,7 @@ __metadata:
     "@types/jest": "npm:28.1.7"
     "@types/jsonwebtoken": "npm:8.5.8"
     "@types/long": "npm:4.0.2"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
     "@types/react": "npm:17.0.48"
     "@types/react-dom": "npm:17.0.17"
@@ -1975,14 +1975,14 @@ __metadata:
     "@graphql-tools/schema": "npm:^9.0.0"
     "@graphql-tools/utils": "npm:^8.6.10"
     "@interledger/stream-receiver": "npm:^0.3.3-alpha.1"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/body-parser": "npm:1.19.2"
     "@types/cookie-parser": "npm:1.4.3"
     "@types/express": "npm:4.17.13"
     "@types/jest": "npm:28.1.7"
     "@types/jsonwebtoken": "npm:8.5.8"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@webmonetization/types": "npm:0.0.0"
@@ -2054,10 +2054,10 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
@@ -2123,11 +2123,11 @@ __metadata:
     "@coil/webpack-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
     "@types/long": "npm:4.0.2"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
@@ -2192,10 +2192,10 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
@@ -2251,11 +2251,11 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
     "@types/keccak": "npm:3.0.1"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/sjcl": "npm:1.0.30"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
@@ -2316,12 +2316,12 @@ __metadata:
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/debug": "npm:4.1.7"
     "@types/get-port": "npm:4.2.0"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/tmp": "npm:0.2.3"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
@@ -2383,10 +2383,10 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
@@ -2451,10 +2451,10 @@ __metadata:
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
@@ -2740,10 +2740,10 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
@@ -2799,10 +2799,10 @@ __metadata:
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
@@ -3538,10 +3538,10 @@ __metadata:
     "@dier-makr/inversify": "npm:^0.0.0"
     "@material-ui/core": "npm:^4.11.4"
     "@material-ui/icons": "npm:^4.11.2"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/react": "npm:17.0.48"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
@@ -4398,10 +4398,10 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
@@ -4443,126 +4443,126 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@swc/core-android-arm-eabi@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-android-arm-eabi@npm:1.2.241"
+"@swc/core-android-arm-eabi@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-android-arm-eabi@npm:1.2.242"
   dependencies:
     "@swc/wasm": "npm:1.2.122"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-android-arm64@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-android-arm64@npm:1.2.241"
+"@swc/core-android-arm64@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-android-arm64@npm:1.2.242"
   dependencies:
     "@swc/wasm": "npm:1.2.130"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-arm64@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-darwin-arm64@npm:1.2.241"
+"@swc/core-darwin-arm64@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-darwin-arm64@npm:1.2.242"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-x64@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-darwin-x64@npm:1.2.241"
+"@swc/core-darwin-x64@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-darwin-x64@npm:1.2.242"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-freebsd-x64@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-freebsd-x64@npm:1.2.241"
+"@swc/core-freebsd-x64@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-freebsd-x64@npm:1.2.242"
   dependencies:
     "@swc/wasm": "npm:1.2.130"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm-gnueabihf@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.241"
+"@swc/core-linux-arm-gnueabihf@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.242"
   dependencies:
     "@swc/wasm": "npm:1.2.130"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-gnu@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.2.241"
+"@swc/core-linux-arm64-gnu@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.2.242"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-musl@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-linux-arm64-musl@npm:1.2.241"
+"@swc/core-linux-arm64-musl@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-linux-arm64-musl@npm:1.2.242"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-gnu@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-linux-x64-gnu@npm:1.2.241"
+"@swc/core-linux-x64-gnu@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-linux-x64-gnu@npm:1.2.242"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-musl@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-linux-x64-musl@npm:1.2.241"
+"@swc/core-linux-x64-musl@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-linux-x64-musl@npm:1.2.242"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-win32-arm64-msvc@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.2.241"
+"@swc/core-win32-arm64-msvc@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.2.242"
   dependencies:
     "@swc/wasm": "npm:1.2.130"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-ia32-msvc@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.2.241"
+"@swc/core-win32-ia32-msvc@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.2.242"
   dependencies:
     "@swc/wasm": "npm:1.2.130"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@swc/core-win32-x64-msvc@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core-win32-x64-msvc@npm:1.2.241"
+"@swc/core-win32-x64-msvc@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core-win32-x64-msvc@npm:1.2.242"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core@npm:*, @swc/core@npm:1.2.241":
-  version: 1.2.241
-  resolution: "@swc/core@npm:1.2.241"
+"@swc/core@npm:*, @swc/core@npm:1.2.242":
+  version: 1.2.242
+  resolution: "@swc/core@npm:1.2.242"
   dependencies:
-    "@swc/core-android-arm-eabi": "npm:1.2.241"
-    "@swc/core-android-arm64": "npm:1.2.241"
-    "@swc/core-darwin-arm64": "npm:1.2.241"
-    "@swc/core-darwin-x64": "npm:1.2.241"
-    "@swc/core-freebsd-x64": "npm:1.2.241"
-    "@swc/core-linux-arm-gnueabihf": "npm:1.2.241"
-    "@swc/core-linux-arm64-gnu": "npm:1.2.241"
-    "@swc/core-linux-arm64-musl": "npm:1.2.241"
-    "@swc/core-linux-x64-gnu": "npm:1.2.241"
-    "@swc/core-linux-x64-musl": "npm:1.2.241"
-    "@swc/core-win32-arm64-msvc": "npm:1.2.241"
-    "@swc/core-win32-ia32-msvc": "npm:1.2.241"
-    "@swc/core-win32-x64-msvc": "npm:1.2.241"
+    "@swc/core-android-arm-eabi": "npm:1.2.242"
+    "@swc/core-android-arm64": "npm:1.2.242"
+    "@swc/core-darwin-arm64": "npm:1.2.242"
+    "@swc/core-darwin-x64": "npm:1.2.242"
+    "@swc/core-freebsd-x64": "npm:1.2.242"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.2.242"
+    "@swc/core-linux-arm64-gnu": "npm:1.2.242"
+    "@swc/core-linux-arm64-musl": "npm:1.2.242"
+    "@swc/core-linux-x64-gnu": "npm:1.2.242"
+    "@swc/core-linux-x64-musl": "npm:1.2.242"
+    "@swc/core-win32-arm64-msvc": "npm:1.2.242"
+    "@swc/core-win32-ia32-msvc": "npm:1.2.242"
+    "@swc/core-win32-x64-msvc": "npm:1.2.242"
   dependenciesMeta:
     "@swc/core-android-arm-eabi":
       optional: true
@@ -4592,7 +4592,7 @@ __metadata:
       optional: true
   bin:
     swcx: run_swcx.js
-  checksum: d806695254f0989169d22c950ddb908c3a094568c66ca506a8ed534daf08539a343e0cbc63fd8cd72e0fe9517d0dc4529812ace7fe1be87ae4610d509fd4b76b
+  checksum: 907d0e44ff1eb4fdc4e3b34acbfe9b7d7b71cf0ab514d0ebadce674f54c056cb1a06de42f7e2d96aa961b01d613ef3ffc48b1105f243bd33f6125851438b2c38
   languageName: node
   linkType: hard
 
@@ -5152,10 +5152,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.11.52":
-  version: 16.11.52
-  resolution: "@types/node@npm:16.11.52"
-  checksum: defe19b523d5145aaf759b51306669a5358fa1285c63650debec680148f18a5aaa2f8cace1c56b88c63bd9fa2e7018b077ffb587a9224e8986b1919f7482f4e5
+"@types/node@npm:16.11.56":
+  version: 16.11.56
+  resolution: "@types/node@npm:16.11.56"
+  checksum: 592bdb53dc3c2ea3548a4d93038a4132890e889d34ce62ce1ad7ebad6d96e49c016a82002077540e31cf94cddc24549c19a0f13e5098965732c6edf6820e3906
   languageName: node
   linkType: hard
 
@@ -5704,10 +5704,10 @@ __metadata:
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/ws": "npm:8.5.3"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
@@ -5777,13 +5777,13 @@ __metadata:
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
     "@hot-loader/react-dom": "npm:17.0.2"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/body-parser": "npm:1.19.2"
     "@types/express": "npm:4.17.13"
     "@types/figlet": "npm:1.5.4"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
     "@types/react": "npm:17.0.48"
     "@types/react-dom": "npm:17.0.17"
@@ -5859,10 +5859,10 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
@@ -5924,10 +5924,10 @@ __metadata:
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/react": "npm:17.0.48"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
@@ -5988,11 +5988,11 @@ __metadata:
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
     "@hot-loader/react-dom": "npm:17.0.2"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@types/react": "npm:17.0.48"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
@@ -6057,10 +6057,10 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
@@ -6117,10 +6117,10 @@ __metadata:
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
@@ -24374,10 +24374,10 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@swc/core": "npm:1.2.241"
+    "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.7"
-    "@types/node": "npm:16.11.52"
+    "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.34.0"
     "@typescript-eslint/parser": "npm:5.34.0"
     "@yarnpkg/pnpify": "npm:3.1.4"
