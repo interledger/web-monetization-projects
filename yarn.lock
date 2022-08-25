@@ -4903,10 +4903,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/figlet@npm:1.5.4":
-  version: 1.5.4
-  resolution: "@types/figlet@npm:1.5.4"
-  checksum: a5e2a91838943e5f205e9562478d5c86071215dc10470f8526a0e2121ca1a1f50d2f77810291d51d9de55028fe3950b7f31f66e21048b5cb2ac8fecd7f4ae19e
+"@types/figlet@npm:1.5.5":
+  version: 1.5.5
+  resolution: "@types/figlet@npm:1.5.5"
+  checksum: e378d1b6a7b5219c70036996fbb20ec1dc3fec7eaf59a98c4fc21fee26fcb62ff1213040672bfaa726420d07fe9dbe6c4594c66f08541722feec11838bce1e72
   languageName: node
   linkType: hard
 
@@ -5780,7 +5780,7 @@ __metadata:
     "@swc/jest": "npm:0.2.22"
     "@types/body-parser": "npm:1.19.2"
     "@types/express": "npm:4.17.13"
-    "@types/figlet": "npm:1.5.4"
+    "@types/figlet": "npm:1.5.5"
     "@types/jest": "npm:28.1.8"
     "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
