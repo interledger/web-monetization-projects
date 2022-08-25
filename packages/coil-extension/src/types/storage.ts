@@ -32,6 +32,8 @@ export interface StoreProxy {
   coilSite?: string | null
   monetizedTotal?: number | null
 
+  superTokensCookie?: string | null
+
   // Popup state
   'popup-route:last'?: string | null
   'popup-route:tipping-shown'?: boolean | null

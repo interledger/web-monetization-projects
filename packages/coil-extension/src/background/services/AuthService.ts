@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events'
 
 import SuperTokens from 'supertokens-website'
-import { GraphQlClient, tokenUtils } from '@coil/client'
+import { GraphQlClient } from '@coil/client'
 import { inject, injectable } from 'inversify'
 
 import { StoreProxy } from '../../types/storage'
@@ -10,8 +10,8 @@ import { BuildConfig } from '../../types/BuildConfig'
 
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
-import { TippingService } from './TippingService'
 import { formatTipSettings } from './formatTipSettings.util'
+import { SuperTokensService } from './SuperTokensService'
 
 /**
  ## Extension Authentication
@@ -80,7 +80,7 @@ export class AuthService extends EventEmitter {
     private buildConfig: BuildConfig,
     private client: GraphQlClient,
     private activeTabs: ActiveTabLogger,
-    private tippingService: TippingService
+    private superTokens: SuperTokensService
   ) {
     super()
   }
@@ -124,14 +124,7 @@ export class AuthService extends EventEmitter {
   }
 
   initialize() {
-    if (!this.buildConfig.isMV3) {
-      // Initializing the SuperTokens library wraps the native fetch and
-      // automates refreshing the user's access token after it's expired.
-      SuperTokens.init({
-        apiDomain: this.domain,
-        apiBasePath: '/api/auth'
-      })
-    }
+    this.superTokens.init()
   }
 
   isAuthenticated() {

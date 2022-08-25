@@ -5,8 +5,8 @@ import * as tokens from '../../types/tokens'
 type Context = interfaces.Context
 
 export function logger(name?: string) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return function decorator(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     target: any,
     targetKey: string,
     index?: number | undefined
