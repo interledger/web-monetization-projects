@@ -27,6 +27,7 @@ export interface GraphQlQueryParameters {
   query: string
   token?: string | null
   variables?: Record<string, unknown>
+  noCredentials?: boolean
 }
 
 @injectable()
@@ -103,7 +104,8 @@ export class GraphQlClient {
   public async query<T = any>({
     query,
     token = null,
-    variables = {}
+    variables = {},
+    noCredentials = false
   }: GraphQlQueryParameters): Promise<GraphQlResponse<T>> {
     const headers: Record<string, string> = {
       Accept: 'application/json',
@@ -123,6 +125,10 @@ export class GraphQlClient {
     if (this.inBrowser || this.authCookies) {
       init.credentials = 'include'
     }
+    if (noCredentials) {
+      init.credentials = 'omit'
+    }
+
     if (this.config.log) {
       const serialized = JSON.stringify(
         { ...init, body: { query, variables } },

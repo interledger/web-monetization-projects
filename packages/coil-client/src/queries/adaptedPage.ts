@@ -21,7 +21,8 @@ export async function adaptedPage(
 ): Promise<GetPageData['adaptedPage']> {
   const message = await this.query<GetPageData>({
     query: adaptedPageQuery,
-    variables: { url, channelId }
+    variables: { url, channelId },
+    noCredentials: true
   })
   const data = message.data
   const adaptedPage = data?.adaptedPage
