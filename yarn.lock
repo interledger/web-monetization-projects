@@ -1731,7 +1731,7 @@ __metadata:
     "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.8"
-    "@types/jsonwebtoken": "npm:8.5.8"
+    "@types/jsonwebtoken": "npm:8.5.9"
     "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
     "@types/sjcl": "npm:1.0.30"
@@ -1796,7 +1796,7 @@ __metadata:
     "@swc/core": "npm:1.2.242"
     "@swc/jest": "npm:0.2.22"
     "@types/jest": "npm:28.1.8"
-    "@types/jsonwebtoken": "npm:8.5.8"
+    "@types/jsonwebtoken": "npm:8.5.9"
     "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
     "@typescript-eslint/eslint-plugin": "npm:5.35.1"
@@ -1873,7 +1873,7 @@ __metadata:
     "@types/get-port": "npm:4.2.0"
     "@types/har-format": "npm:1.2.8"
     "@types/jest": "npm:28.1.8"
-    "@types/jsonwebtoken": "npm:8.5.8"
+    "@types/jsonwebtoken": "npm:8.5.9"
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.11.56"
     "@types/node-fetch": "npm:2.6.2"
@@ -1980,7 +1980,7 @@ __metadata:
     "@types/cookie-parser": "npm:1.4.3"
     "@types/express": "npm:4.17.13"
     "@types/jest": "npm:28.1.8"
-    "@types/jsonwebtoken": "npm:8.5.8"
+    "@types/jsonwebtoken": "npm:8.5.9"
     "@types/node": "npm:16.11.56"
     "@typescript-eslint/eslint-plugin": "npm:5.35.1"
     "@typescript-eslint/parser": "npm:5.35.1"
@@ -5065,12 +5065,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:8.5.8, @types/jsonwebtoken@npm:^8.5.0, @types/jsonwebtoken@npm:^8.5.8":
-  version: 8.5.8
-  resolution: "@types/jsonwebtoken@npm:8.5.8"
+"@types/jsonwebtoken@npm:8.5.9, @types/jsonwebtoken@npm:^8.5.0, @types/jsonwebtoken@npm:^8.5.8":
+  version: 8.5.9
+  resolution: "@types/jsonwebtoken@npm:8.5.9"
   dependencies:
     "@types/node": "npm:*"
-  checksum: 0e76e1e626ac9ca1e09c68531315c9c4befa3f4e2a06647a95dbb58d244f810cf181478c365946545541611e4cd5b12e6e5e5e6495de426c57287e0f7d6cea95
+  checksum: 3f15a76cd58fb56272cdcb1cf475e8f03b3127000ed9c49670b7be450a24460edeef6fa69837bb7feee554c1ead7d9ff4584eef0ea48d810282872dcfa03508e
   languageName: node
   linkType: hard
 
