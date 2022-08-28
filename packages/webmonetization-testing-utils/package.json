@@ -54,7 +54,7 @@
     "@commitlint/cli": "17.1.1",
     "@commitlint/config-conventional": "17.1.0",
     "@hot-loader/react-dom": "17.0.2",
-    "@swc/core": "1.2.242",
+    "@swc/core": "1.2.244",
     "@swc/jest": "0.2.22",
     "@types/ajv": "1.0.0",
     "@types/jest": "28.1.8",
