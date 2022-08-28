@@ -15,21 +15,21 @@ describe('Ajv Schemas', () => {
       false
     )
     expect(ajv.errors).toMatchInlineSnapshot(`
-      Array [
-        Object {
+      [
+        {
           "instancePath": "",
           "keyword": "required",
           "message": "must have required property 'type'",
-          "params": Object {
+          "params": {
             "missingProperty": "type",
           },
           "schemaPath": "#/required",
         },
-        Object {
+        {
           "instancePath": "",
           "keyword": "required",
           "message": "must have required property 'detail'",
-          "params": Object {
+          "params": {
             "missingProperty": "detail",
           },
           "schemaPath": "#/required",

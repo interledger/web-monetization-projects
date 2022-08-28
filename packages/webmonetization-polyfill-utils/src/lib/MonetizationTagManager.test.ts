@@ -235,7 +235,7 @@ describe('MonetizationTagManager', () => {
     document.body.appendChild(ppa)
     const errorEvent = await captureOneWindowError()
     expect(errorEvent.message).toMatchInlineSnapshot(
-      `"Web-Monetization Error: <meta name=\\"monetization\\"> must be in the document head"`
+      `"Web-Monetization Error: <meta name="monetization"> must be in the document head"`
     )
   })
 
@@ -345,8 +345,8 @@ describe('MonetizationTagManager', () => {
       />
     `)
     expect(endpoint.mock.calls).toMatchInlineSnapshot(`
-      Array [
-        Array [
+      [
+        [
           <link
             disabled="true"
             href="https://ilp.uphold.com/toBeDisabled"
@@ -377,7 +377,7 @@ describe('MonetizationTagManager', () => {
     expect(link.disabled).toBeUndefined()
     // Disabled attr is definitely set
     expect(link.getAttributeNames()).toMatchInlineSnapshot(`
-      Array [
+      [
         "rel",
         "href",
         "disabled",
