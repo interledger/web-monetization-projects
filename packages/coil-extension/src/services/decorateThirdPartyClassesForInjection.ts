@@ -6,7 +6,7 @@ import { BandwidthTiers } from '@coil/polyfill-utils'
 import { inversifyModule } from '@dier-makr/inversify'
 import { GlobalModule } from '@dier-makr/annotations'
 
-export function decorateThirdPartyClasses() {
+export function decorateThirdPartyClassesForInjection() {
   inversifyModule(GlobalModule)
   decorate(injectable(), EventEmitter)
   decorate(injectable(), BandwidthTiers)
