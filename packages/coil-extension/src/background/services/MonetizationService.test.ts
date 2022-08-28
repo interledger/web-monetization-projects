@@ -8,7 +8,7 @@ import {
 import { StorePersistence, StoreValue } from '@webmonetization/wext/services'
 
 import { configureContainer } from '../di/configureContainer'
-import { decorateThirdPartyClasses } from '../../services/decorateThirdPartyClasses'
+import { decorateThirdPartyClassesForInjection } from '../../services/decorateThirdPartyClassesForInjection'
 
 type MessageSender = chrome.runtime.MessageSender
 
@@ -67,7 +67,7 @@ function mockWextApi() {
 
 describe('MonetizationService', () => {
   it('should be instantiable in tests via container construction', async () => {
-    decorateThirdPartyClasses()
+    decorateThirdPartyClassesForInjection()
 
     const container = new Container({
       defaultScope: 'Singleton',
