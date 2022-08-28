@@ -1965,7 +1965,7 @@ __metadata:
     "@coil/puppeteer-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.1.1"
     "@commitlint/config-conventional": "npm:17.1.0"
-    "@graphql-codegen/cli": "npm:2.11.6"
+    "@graphql-codegen/cli": "npm:2.11.8"
     "@graphql-codegen/introspection": "npm:2.2.1"
     "@graphql-codegen/typescript": "npm:2.7.3"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.3"
@@ -2876,20 +2876,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@endemolshinegroup/cosmiconfig-typescript-loader@npm:3.0.2":
-  version: 3.0.2
-  resolution: "@endemolshinegroup/cosmiconfig-typescript-loader@npm:3.0.2"
-  dependencies:
-    lodash.get: "npm:^4"
-    make-error: "npm:^1"
-    ts-node: "npm:^9"
-    tslib: "npm:^2"
-  peerDependencies:
-    cosmiconfig: ">=6"
-  checksum: 3ec6861e1ffb0219b395bc740b82a2d0ff914ad6e61e1ada2b4ad319c242b1b1b14ab0dd59e40cd8874a2a92a5f88b37e71a29660a6fa4c7f383f213485f35e6
-  languageName: node
-  linkType: hard
-
 "@eslint/eslintrc@npm:^1.2.1, @eslint/eslintrc@npm:^1.3.0, @eslint/eslintrc@npm:^1.3.1":
   version: 1.3.1
   resolution: "@eslint/eslintrc@npm:1.3.1"
@@ -2914,9 +2900,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.11.6":
-  version: 2.11.6
-  resolution: "@graphql-codegen/cli@npm:2.11.6"
+"@graphql-codegen/cli@npm:2.11.8":
+  version: 2.11.8
+  resolution: "@graphql-codegen/cli@npm:2.11.8"
   dependencies:
     "@graphql-codegen/core": "npm:2.6.2"
     "@graphql-codegen/plugin-helpers": "npm:^2.6.2"
@@ -2930,14 +2916,14 @@ __metadata:
     "@graphql-tools/prisma-loader": "npm:^7.2.7"
     "@graphql-tools/url-loader": "npm:^7.13.2"
     "@graphql-tools/utils": "npm:^8.9.0"
-    "@whatwg-node/fetch": "npm:^0.2.3"
+    "@whatwg-node/fetch": "npm:^0.3.0"
     ansi-escapes: "npm:^4.3.1"
     chalk: "npm:^4.1.0"
     chokidar: "npm:^3.5.2"
     cosmiconfig: "npm:^7.0.0"
     debounce: "npm:^1.2.0"
     detect-indent: "npm:^6.0.0"
-    graphql-config: "npm:^4.3.1"
+    graphql-config: "npm:^4.3.4"
     inquirer: "npm:^8.0.0"
     is-glob: "npm:^4.0.1"
     json-to-pretty-yaml: "npm:^1.2.2"
@@ -2956,7 +2942,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: 24f77471e0a362e14999eed63338c322075afb00d082a39a4510b3b86a3041c946d50008bd9bb72430f72850403c15f01c2dc57eed997dafc97862b6fc2cffb4
+  checksum: a02bc725558d73f3b7687a0cc339af804668e7ba7e21e94517bb762e76e853f366913c4f6720199656c810993df7a9c32afdd2ec93f7da42fe79841a4717a052
   languageName: node
   linkType: hard
 
@@ -6252,7 +6238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@whatwg-node/fetch@npm:^0.2.3, @whatwg-node/fetch@npm:^0.2.4":
+"@whatwg-node/fetch@npm:^0.2.4":
   version: 0.2.6
   resolution: "@whatwg-node/fetch@npm:0.2.6"
   dependencies:
@@ -6266,6 +6252,23 @@ __metadata:
     undici: "npm:^5.8.0"
     web-streams-polyfill: "npm:^3.2.0"
   checksum: 798fdf22555bf122b9a0de5c56d6ce99e59c1e4b10fa3b722ea5881594c713e40dceccbf3607c80f9cc7a8783b190527990bfab0a77972ea3899111ab5d1ca4e
+  languageName: node
+  linkType: hard
+
+"@whatwg-node/fetch@npm:^0.3.0":
+  version: 0.3.2
+  resolution: "@whatwg-node/fetch@npm:0.3.2"
+  dependencies:
+    "@peculiar/webcrypto": "npm:^1.4.0"
+    abort-controller: "npm:^3.0.0"
+    busboy: "npm:^1.6.0"
+    event-target-polyfill: "npm:^0.0.3"
+    form-data-encoder: "npm:^1.7.1"
+    formdata-node: "npm:^4.3.1"
+    node-fetch: "npm:^2.6.7"
+    undici: "npm:^5.8.0"
+    web-streams-polyfill: "npm:^3.2.0"
+  checksum: 403db1c300cb146f91ebc35b96d9cc2b4828623e8f73009c2112eae6a78829be6a0cf48c3f1ec8fab5411660d74d2ae14d8a452348db76d43dee8837059e270e
   languageName: node
   linkType: hard
 
@@ -9807,6 +9810,18 @@ __metadata:
     ts-node: ">=10"
     typescript: ">=3"
   checksum: 192761f5d899c6e14dfd1b64fdee653c18cab0309e228660ec216c42819e5153ae65dfd0798dc42683f07495b208eb513cb99a3dae0f8fa67463e6a765a09f82
+  languageName: node
+  linkType: hard
+
+"cosmiconfig-typescript-loader@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "cosmiconfig-typescript-loader@npm:4.0.0"
+  peerDependencies:
+    "@types/node": "*"
+    cosmiconfig: ">=7"
+    ts-node: ">=10"
+    typescript: ">=3"
+  checksum: 435a4bdfa3c8282edc5190eb96712d5b02f0e24c752f279026eff2903f960fa151e421a21c9272d34425c3dab4e5e2b76392ce4110160c28de1846870cd69453
   languageName: node
   linkType: hard
 
@@ -13698,11 +13713,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-config@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "graphql-config@npm:4.3.1"
+"graphql-config@npm:^4.3.4":
+  version: 4.3.5
+  resolution: "graphql-config@npm:4.3.5"
   dependencies:
-    "@endemolshinegroup/cosmiconfig-typescript-loader": "npm:3.0.2"
     "@graphql-tools/graphql-file-loader": "npm:^7.3.7"
     "@graphql-tools/json-file-loader": "npm:^7.3.7"
     "@graphql-tools/load": "npm:^7.5.5"
@@ -13711,11 +13725,14 @@ __metadata:
     "@graphql-tools/utils": "npm:^8.6.5"
     cosmiconfig: "npm:7.0.1"
     cosmiconfig-toml-loader: "npm:1.0.0"
+    cosmiconfig-typescript-loader: "npm:^4.0.0"
     minimatch: "npm:4.2.1"
     string-env-interpolation: "npm:1.0.1"
+    ts-node: "npm:^10.8.1"
+    tslib: "npm:^2.4.0"
   peerDependencies:
     graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: aa3d38cb91d0ccfeb963c537ac9b0a1a88721d7de4971ba1a13f9801e3484b4bfe2c30252e6cee10d200169341d63147f8f6f66d93b8c9cc8acd3731ae6477c8
+  checksum: 05defd986eda31e9c079ee9627f5c118beafa24dba707056837cd3ea78cf619ce67bf7ef6406375ed8324ba4dbe37697e023aa40a7e3c57359b2baed1abd65cc
   languageName: node
   linkType: hard
 
@@ -17098,13 +17115,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.get@npm:^4":
-  version: 4.4.2
-  resolution: "lodash.get@npm:4.4.2"
-  checksum: 779e6f3d2c59b82cfee2407abe0fb7f2cefb6eda9a23ffd7caa1390ebcd40697a03a46622294a10f99e9fc0197fb844f3c433400d67584d722aa46b606c43590
-  languageName: node
-  linkType: hard
-
 "lodash.includes@npm:^4.3.0":
   version: 4.3.0
   resolution: "lodash.includes@npm:4.3.0"
@@ -17338,7 +17348,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-error@npm:1.x, make-error@npm:^1, make-error@npm:^1.1.1, make-error@npm:^1.3.2":
+"make-error@npm:1.x, make-error@npm:^1.1.1, make-error@npm:^1.3.2":
   version: 1.3.6
   resolution: "make-error@npm:1.3.6"
   checksum: 4b81ce1392495d554ce5fd28c8de95066642e5e1a5efd395e3b3413bc75068a025d8a567aefb0738ba6da18e73323ffde17794780f632fe4395e009aa9ebcc8a
@@ -22125,7 +22135,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:0.5.21, source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.21, source-map-support@npm:~0.5.20, source-map-support@npm:~0.5.4":
+"source-map-support@npm:0.5.21, source-map-support@npm:^0.5.21, source-map-support@npm:~0.5.20, source-map-support@npm:~0.5.4":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
@@ -23390,7 +23400,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:10.9.1":
+"ts-node@npm:10.9.1, ts-node@npm:^10.8.1":
   version: 10.9.1
   resolution: "ts-node@npm:10.9.1"
   dependencies:
@@ -23428,27 +23438,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^9":
-  version: 9.1.1
-  resolution: "ts-node@npm:9.1.1"
-  dependencies:
-    arg: "npm:^4.1.0"
-    create-require: "npm:^1.1.0"
-    diff: "npm:^4.0.1"
-    make-error: "npm:^1.1.1"
-    source-map-support: "npm:^0.5.17"
-    yn: "npm:3.1.1"
-  peerDependencies:
-    typescript: ">=2.7"
-  bin:
-    ts-node: dist/bin.js
-    ts-node-script: dist/bin-script.js
-    ts-node-transpile-only: dist/bin-transpile.js
-    ts-script: dist/bin-script-deprecated.js
-  checksum: 3031986c63f031813318b548b801106dcf44ceb08e3784cff816f87b13eb7983995f0c33d2d5497769d87a0c0a50afb78848633ffdae274c645e0b731e31bfba
-  languageName: node
-  linkType: hard
-
 "tsconfig-paths@npm:4.1.0":
   version: 4.1.0
   resolution: "tsconfig-paths@npm:4.1.0"
@@ -23479,7 +23468,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2, tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.2.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:~2.4.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.2.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:~2.4.0":
   version: 2.4.0
   resolution: "tslib@npm:2.4.0"
   checksum: 022a70708abbc3491734959effd9a87e6e0af5932b61d0c9f1d07b8b80cabbbfc9fc9e9c0fe86e5ab2d32d766ae30117edf00b02d170ff255ab7e60361a4b711
