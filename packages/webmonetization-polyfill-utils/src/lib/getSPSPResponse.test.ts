@@ -63,7 +63,7 @@ describe('getSPSPResponse', () => {
     await expect(
       async () => await getSPSPResponse(TEST_PP, TEST_ID, mockFetch)
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"SPSP Bad Response (status=404, body=\\"not found\\")"`
+      `"SPSP Bad Response (status=404, body="not found")"`
     )
   })
 
@@ -105,7 +105,7 @@ describe('getSPSPResponse', () => {
     await expect(
       async () => await getSPSPResponse(TEST_PP, TEST_ID, mockFetch)
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      `" SPSP response is malformed (body={\\"destinationAccount\\":\\"\\",\\"receiptsEnabled\\":false,\\"sharedSecret\\":\\"\\"})"`
+      `" SPSP response is malformed (body={"destinationAccount":"","receiptsEnabled":false,"sharedSecret":""})"`
     )
   })
 })

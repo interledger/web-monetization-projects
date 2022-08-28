@@ -22,12 +22,12 @@ describe('CoilTokenUtils', () => {
     it('should decode a token', () => {
       const decoded = decodeToken(testToken)
       expect(decoded).toMatchInlineSnapshot(`
-      Object {
-        "exp": 1567039068,
-        "iat": 1564619868,
-        "userId": "cjyf1on2b8bs40706kfgy5wq2",
-      }
-    `)
+        {
+          "exp": 1567039068,
+          "iat": 1564619868,
+          "userId": "cjyf1on2b8bs40706kfgy5wq2",
+        }
+      `)
     })
   })
 
