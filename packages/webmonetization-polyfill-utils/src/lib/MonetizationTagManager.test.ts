@@ -478,7 +478,7 @@ describe('MonetizationTagManager', () => {
     const removed = jest.spyOn(manager, '_onRemovedTag')
 
     manager.startWhenDocumentReady()
-    expect(callback).toBeCalledTimes(2)
+    expect(callback).toHaveBeenCalledTimes(2)
     link1.rel = 'bitcoin'
     link2.rel = 'bitcoin'
     await timeout()
