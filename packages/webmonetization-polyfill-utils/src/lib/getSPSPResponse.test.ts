@@ -30,7 +30,7 @@ describe('getSPSPResponse', () => {
       status: 200
     })
     const response = await getSPSPResponse(TEST_PP, TEST_ID, mockFetch)
-    expect(mockFetch).toBeCalledWith(TEST_PP, {
+    expect(mockFetch).toHaveBeenCalledWith(TEST_PP, {
       cache: 'no-cache',
       credentials: 'omit',
       headers: {
