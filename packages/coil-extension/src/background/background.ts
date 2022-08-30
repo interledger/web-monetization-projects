@@ -3,42 +3,44 @@ import { Container } from 'inversify'
 import { TokenStore } from '@coil/anonymous-tokens'
 
 import { API, BUILD_CONFIG, COIL_DOMAIN, VERSION } from '../webpackDefines'
-import { decorateThirdPartyClasses } from '../services/decorateThirdPartyClasses'
+import { decorateThirdPartyClassesForInjection } from '../services/decorateThirdPartyClassesForInjection'
 import { isLoggingEnabled } from '../util/isLoggingEnabled'
 import * as tokens from '../types/tokens'
 import { StoreProxy } from '../types/storage'
 
 import { BackgroundScript } from './services/BackgroundScript'
-import { configureContainer } from './di/configureContainer'
 import { BackgroundStoreService } from './services/BackgroundStoreService'
 import { BackgroundEvents } from './services/BackgroundEvents'
+import { configureContainer } from './di/configureContainer'
 
 /**
- * We patch the window object so can access objects and utils from the devtools
- * console.
+ * We patch the window/self object so can access objects and utils from the
+ * devtools console.
  */
-interface PatchableWindow extends Window {
+interface Environment {
   bg?: BackgroundScript
   store?: StoreProxy
   clearTokens?: () => void
   clearPopupRouteState?: () => void
 }
 
-async function main(patchableWindow: PatchableWindow) {
+async function main(env: Environment) {
+  // In MV3, event listeners should be bound at the top level.
+  // Do this before async BackgroundScript object graph creation.
+  const topLevelListeners = new BackgroundEvents(API)
+  topLevelListeners.bindBufferingListeners()
+
   const loggingEnabled = await isLoggingEnabled(BUILD_CONFIG)
   if (loggingEnabled) {
     // eslint-disable-next-line no-console
     console.log('Loading Coil extension:', JSON.stringify(VERSION))
   }
-  decorateThirdPartyClasses()
+  decorateThirdPartyClassesForInjection()
 
   const container = new Container({
     defaultScope: 'Singleton',
     autoBindInjectable: true
   })
-
-  const topLevelListeners = new BackgroundEvents(API)
-  topLevelListeners.bindBufferingListeners()
 
   await configureContainer({
     container: container,
@@ -46,12 +48,11 @@ async function main(patchableWindow: PatchableWindow) {
     coilDomain: COIL_DOMAIN,
     wextApi: API,
     buildConfig: BUILD_CONFIG,
-    // TODO: In MV3 all listeners must be bound at the top level
-    // This causes the object graph be instantiated late.
     getActiveTab: async () => {
-      // This query will not pick up dev tools tabs which may be currently active
-      // so, we need to query for other active tabs in that case and select the
-      // first. It's possible that this may also result in an empty response set,
+      // This query will not pick up dev tools tabs which may be currently
+      // active, so we need to query for other active tabs in that case
+      // and select the first.
+      // It's possible that this may also result in an empty response set,
       // however hopefully this state will be very transient.
       for (const currentWindow of [true, false]) {
         const tabs = await new Promise<chrome.tabs.Tab[]>(resolve => {
@@ -66,13 +67,13 @@ async function main(patchableWindow: PatchableWindow) {
     }
   })
 
-  patchableWindow.bg = await container.getAsync(BackgroundScript)
-  patchableWindow.store = await container.getAsync(tokens.StoreProxy)
-  patchableWindow.clearTokens = () => {
+  env.bg = await container.getAsync(BackgroundScript)
+  env.store = await container.getAsync(tokens.StoreProxy)
+  env.clearTokens = () => {
     const store = container.get<TokenStore>(tokens.TokenStore)
     store.clear()
   }
-  patchableWindow.clearPopupRouteState = async () => {
+  env.clearPopupRouteState = async () => {
     const service = await container.getAsync(BackgroundStoreService)
     const keys = service.keys()
     for (const key of keys) {
@@ -82,8 +83,8 @@ async function main(patchableWindow: PatchableWindow) {
     }
   }
   // noinspection ES6MissingAwait
-  void patchableWindow.bg.run()
+  void env.bg.run()
 }
 
 // eslint-disable-next-line no-console
-main(self).catch(console.error)
+main(self as Environment).catch(console.error)

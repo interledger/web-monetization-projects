@@ -55,11 +55,11 @@ describe('Testing Graphql Functions', () => {
     const result = await graphql({ schema, source: whoamiQuery, contextValue })
 
     expect(result).toMatchInlineSnapshot(`
-      Object {
-        "data": Object {
-          "whoami": Object {
+      {
+        "data": {
+          "whoami": {
             "canTip": false,
-            "currencyPreferences": Object {
+            "currencyPreferences": {
               "code": "USD",
               "scale": 1,
             },
@@ -67,10 +67,10 @@ describe('Testing Graphql Functions', () => {
             "email": "niq@coil.com",
             "fullName": null,
             "id": "1",
-            "paymentMethods": Array [],
+            "paymentMethods": [],
             "profilePicture": null,
             "shortName": "Niq",
-            "subscription": Object {
+            "subscription": {
               "active": true,
               "endDate": "2022-05-10T03:57:26.230Z",
               "trialEndDate": "2022-05-10T03:57:26.230Z",
@@ -91,9 +91,9 @@ describe('Testing Graphql Functions', () => {
       }
     })
     expect(result).toMatchInlineSnapshot(`
-      Object {
-        "data": Object {
-          "adaptedPage": Object {
+      {
+        "data": {
+          "adaptedPage": {
             "channelImage": null,
             "paymentPointer": null,
           },
@@ -111,8 +111,8 @@ describe('Testing Graphql Functions', () => {
       }
     })
     expect(result).toMatchInlineSnapshot(`
-      Object {
-        "data": Object {
+      {
+        "data": {
           "featureEnabled": true,
         },
       }
@@ -182,9 +182,9 @@ describe('Testing Graphql Functions', () => {
       contextValue
     })
     expect(result).toMatchInlineSnapshot(`
-      Object {
-        "data": Object {
-          "refreshBtpToken": Object {
+      {
+        "data": {
+          "refreshBtpToken": {
             "token": "<JWT-TODO>",
           },
         },
@@ -206,9 +206,9 @@ describe('Testing Graphql Functions', () => {
       }
     })
     expect(result).toMatchInlineSnapshot(`
-      Object {
-        "data": Object {
-          "tip": Object {
+      {
+        "data": {
+          "tip": {
             "code": "200",
             "message": "",
             "success": true,
@@ -228,10 +228,10 @@ describe('Testing Graphql Functions', () => {
       }
     })
     expect(result).toMatchInlineSnapshot(`
-      Object {
-        "data": Object {
-          "tipPreview": Object {
-            "charges": Object {
+      {
+        "data": {
+          "tipPreview": {
+            "charges": {
               "creditCardCharge": "0",
               "tipCreditCharge": "1001",
             },
@@ -251,15 +251,15 @@ describe('Testing Graphql Functions', () => {
       contextValue
     })
     expect(result).toMatchInlineSnapshot(`
-      Object {
-        "data": Object {
+      {
+        "data": {
           "extensionNewUiFeatureFlag": true,
-          "minTipLimit": Object {
+          "minTipLimit": {
             "minTipLimitAmountCentsUsd": "100",
           },
           "tippingBetaFeatureFlag": true,
-          "whoami": Object {
-            "tipping": Object {
+          "whoami": {
+            "tipping": {
               "lastTippedAmountCentsUsd": "100",
               "limitRemainingAmountCentsUsd": "1000",
               "totalTipCreditAmountCentsUsd": "10000",
