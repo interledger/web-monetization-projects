@@ -71,13 +71,6 @@ export interface ContentScriptInit extends Command {
 }
 
 /**
- * background -> content
- */
-export interface ContentScriptInitResponse {
-  wm2Allowed: boolean
-}
-
-/**
  * content -> background
  * browser.runtime.sendMessage
  */

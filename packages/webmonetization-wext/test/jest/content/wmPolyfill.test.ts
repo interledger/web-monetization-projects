@@ -30,7 +30,6 @@ describe('wmPolyfill jsdom', () => {
     const script = document.createElement('script')
     script.type = 'application/javascript'
     script.innerHTML = wmPolyfill
-    document.head.dataset['wm2Allowed'] = 'true'
     document.head.appendChild(script)
   })
   it('should support link.relList.supports("monetization")', () => {
