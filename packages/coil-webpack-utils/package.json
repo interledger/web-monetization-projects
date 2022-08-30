@@ -55,7 +55,7 @@
     "@commitlint/config-conventional": "17.1.0",
     "@swc/core": "1.2.244",
     "@swc/jest": "0.2.22",
-    "@types/jest": "28.1.8",
+    "@types/jest": "29.0.0",
     "@types/node": "16.11.56",
     "@typescript-eslint/eslint-plugin": "5.36.0",
     "@typescript-eslint/parser": "5.36.0",
