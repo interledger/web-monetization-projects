@@ -18,7 +18,6 @@ import * as tokens from '../../types/tokens'
 import {
   CheckIFrameIsAllowedFromIFrameContentScript,
   ContentScriptInit,
-  ContentScriptInitResponse,
   OnFrameAllowedChanged,
   PauseWebMonetization,
   ReportCorrelationIdFromIFrameContentScript,
@@ -52,8 +51,6 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 export class ContentScript {
   private paused = false
   private readonly tagManager: MonetizationTagManager
-  private wm2Allowed = this.buildConfig.wm2Always ? true : undefined
-  private events = new EventEmitter()
 
   constructor(
     private storage: Storage,
@@ -80,8 +77,6 @@ export class ContentScript {
     // so we can capture the events
     this.wmDebug.init(this.tagManager)
   }
-
-  disallowed = new Set<string>()
 
   async startMonetization(details: PaymentDetails) {
     // TODO:WM2
@@ -114,36 +109,12 @@ export class ContentScript {
   }
 
   private onPaymentDetailsChange(details: PaymentDetailsChangeArguments) {
-    // Queue up until init done
-    if (typeof this.wm2Allowed === 'undefined') {
-      this.events.once('initDone', () => this.onPaymentDetailsChange(details))
-      return
-    }
-
     const { started, stopped } = details
     if (stopped) {
-      if (!this.disallowed.has(stopped.requestId)) {
-        debug('sending stopped request', JSON.stringify(stopped, null, 2))
-        this.stopMonetization(stopped)
-      } else {
-        debug(
-          'not propagating stop message to bg',
-          JSON.stringify(stopped, null, 2)
-        )
-      }
+      debug('sending stopped request', JSON.stringify(stopped, null, 2))
+      this.stopMonetization(stopped)
     }
     if (started) {
-      if (!this.tagManager.atMostOneTagAndNoneInBody()) {
-        // wm2 is required
-        if (!this.wm2Allowed) {
-          debug(
-            'not allowing start request which requires wm2',
-            JSON.stringify(started, null, 2)
-          )
-          this.disallowed.add(started.requestId)
-          return
-        }
-      }
       debug('sending start request', JSON.stringify(started, null, 2))
       void this.startMonetization(started)
     }
@@ -298,15 +269,7 @@ export class ContentScript {
         }
       }
 
-      this.runtime.sendMessage(
-        message,
-        (response: ContentScriptInitResponse) => {
-          if (typeof this.wm2Allowed === 'undefined') {
-            this.wm2Allowed = response.wm2Allowed
-            this.events.emit('initDone')
-          }
-        }
-      )
+      this.runtime.sendMessage(message)
 
       this.injectPolyfillsAndWatchTags()
     }
@@ -345,14 +308,11 @@ export class ContentScript {
     setWatch({
       pause: (reason: string) => {
         this.paused = true
-        const unfiltered = this.tagManager.requestIds()
-        const requestIds = this.filterDisallowedRequestIds(unfiltered)
+        const requestIds = this.tagManager.requestIds()
         debug(
-          `pauseWebMonetization reason ${reason} disallowed=${JSON.stringify(
-            this.disallowed
-          )} unfiltered=${JSON.stringify(
-            unfiltered
-          )} requestIds=${JSON.stringify(requestIds)}`
+          `pauseWebMonetization reason ${reason} requestIds=${JSON.stringify(
+            requestIds
+          )}`
         )
         if (requestIds.length) {
           const pause: PauseWebMonetization = {
@@ -367,9 +327,7 @@ export class ContentScript {
       resume: (reason: string) => {
         debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
-        const requestIds = this.filterDisallowedRequestIds(
-          this.tagManager.requestIds()
-        )
+        const requestIds = this.tagManager.requestIds()
         if (requestIds.length) {
           const resume: ResumeWebMonetization = {
             command: 'resumeWebMonetization',
@@ -383,20 +341,10 @@ export class ContentScript {
     })
   }
 
-  private filterDisallowedRequests(requests: PaymentDetails[]) {
-    return requests.filter(r => !this.disallowed.has(r.requestId))
-  }
-
-  private filterDisallowedRequestIds(requests: string[]) {
-    return requests.filter(r => !this.disallowed.has(r))
-  }
-
   private onFrameAllowedChanged(message: OnFrameAllowedChanged) {
     const allowed = message.data.allowed
     const monetizationRequest = this.monetization.getMonetizationRequest()
-    const requests = this.filterDisallowedRequests(
-      this.tagManager.linkRequests()
-    )
+    const requests = this.tagManager.linkRequests()
     if (allowed) {
       // TODO: WM2 how to do the state check on the link requests ?
       if (monetizationRequest && this.monetization.getState() === 'stopped') {
@@ -418,9 +366,7 @@ export class ContentScript {
         })
       }
     } else {
-      const requests = this.filterDisallowedRequests(
-        this.tagManager.linkRequests()
-      )
+      const requests = this.tagManager.linkRequests()
       if (monetizationRequest) {
         requests.push(monetizationRequest)
       }

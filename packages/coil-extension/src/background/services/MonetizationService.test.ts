@@ -5,13 +5,10 @@ import {
   PaymentDetails,
   resolvePaymentEndpoint
 } from '@webmonetization/polyfill-utils'
-import { StorePersistence, StoreValue } from '@webmonetization/wext/services'
+import { StorePersistence } from '@webmonetization/wext/services'
 
 import { configureContainer } from '../di/configureContainer'
 import { decorateThirdPartyClassesForInjection } from '../../services/decorateThirdPartyClassesForInjection'
-
-type MessageSender = chrome.runtime.MessageSender
-
 import { StartWebMonetization } from '../../types/commands'
 import * as tokens from '../../types/tokens'
 import { StoreProxy } from '../../types/storage'
@@ -25,6 +22,8 @@ import { AuthService } from './AuthService'
 import { Streams } from './Streams'
 import { MonetizationService } from './MonetizationService'
 import { TabStates } from './TabStates'
+
+type MessageSender = chrome.runtime.MessageSender
 
 function mockMessageSender({ tabId, frameId }: FrameSpec) {
   return {
