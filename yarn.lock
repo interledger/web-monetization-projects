@@ -1965,7 +1965,7 @@ __metadata:
     "@coil/puppeteer-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
-    "@graphql-codegen/cli": "npm:2.11.8"
+    "@graphql-codegen/cli": "npm:2.12.0"
     "@graphql-codegen/introspection": "npm:2.2.1"
     "@graphql-codegen/typescript": "npm:2.7.3"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.3"
@@ -2899,12 +2899,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.11.8":
-  version: 2.11.8
-  resolution: "@graphql-codegen/cli@npm:2.11.8"
+"@graphql-codegen/cli@npm:2.12.0":
+  version: 2.12.0
+  resolution: "@graphql-codegen/cli@npm:2.12.0"
   dependencies:
     "@graphql-codegen/core": "npm:2.6.2"
-    "@graphql-codegen/plugin-helpers": "npm:^2.6.2"
+    "@graphql-codegen/plugin-helpers": "npm:^2.7.0"
     "@graphql-tools/apollo-engine-loader": "npm:^7.3.6"
     "@graphql-tools/code-file-loader": "npm:^7.3.1"
     "@graphql-tools/git-loader": "npm:^7.2.1"
@@ -2920,9 +2920,10 @@ __metadata:
     chalk: "npm:^4.1.0"
     chokidar: "npm:^3.5.2"
     cosmiconfig: "npm:^7.0.0"
+    cosmiconfig-typescript-loader: "npm:^4.0.0"
     debounce: "npm:^1.2.0"
     detect-indent: "npm:^6.0.0"
-    graphql-config: "npm:^4.3.4"
+    graphql-config: "npm:^4.3.5"
     inquirer: "npm:^8.0.0"
     is-glob: "npm:^4.0.1"
     json-to-pretty-yaml: "npm:^1.2.2"
@@ -2941,7 +2942,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: a02bc725558d73f3b7687a0cc339af804668e7ba7e21e94517bb762e76e853f366913c4f6720199656c810993df7a9c32afdd2ec93f7da42fe79841a4717a052
+  checksum: 98fe74b79e4b305c8a46d2220d9eb0c284ef37ae7b2f99a4909b08465527ec0baa64ef6f48f8af32b033c145a8cd0e0cfb289fa43044fdec506ec400fb69ae7a
   languageName: node
   linkType: hard
 
@@ -2972,9 +2973,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/plugin-helpers@npm:^2.6.2":
-  version: 2.6.2
-  resolution: "@graphql-codegen/plugin-helpers@npm:2.6.2"
+"@graphql-codegen/plugin-helpers@npm:^2.6.2, @graphql-codegen/plugin-helpers@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "@graphql-codegen/plugin-helpers@npm:2.7.0"
   dependencies:
     "@graphql-tools/utils": "npm:^8.8.0"
     change-case-all: "npm:1.0.14"
@@ -2984,7 +2985,7 @@ __metadata:
     tslib: "npm:~2.4.0"
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 083345e07474cd66b1b3c935497eaca6430b1850bdbaa71e233a2d2029f97cea9ef0dd351c2ff264725e996c0dc37f8d4b181d9083e05c3540f0aa974f55e685
+  checksum: 705faf0fac691abd3af3028edc34eff9dae441c2b22145deb17590a81cfa1bdd69adb225cc3d76656ec289db16957609490e5c84a4f3874a4653cad927b633cb
   languageName: node
   linkType: hard
 
@@ -13717,7 +13718,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-config@npm:^4.3.4":
+"graphql-config@npm:^4.3.5":
   version: 4.3.5
   resolution: "graphql-config@npm:4.3.5"
   dependencies:
