@@ -14,9 +14,6 @@ jobs:
 
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-        # Opting for .tar over simply creating an artifact from the whole repo due to an issue where
-        # .zip contents lose all permissions.
-        # see https://github.com/actions/upload-artifact#maintaining-file-permissions-and-case-sensitive-files
 
       - name: Step 0 - Strip git
         run: |
@@ -27,6 +24,9 @@ jobs:
           git config user.name "Coil Team" 
           git commit --allow-empty -m ".git folder has been stripped to its smallest size and is only present to support npm dependencies that reference it, original commit was $original" 
 
+        # Opting for .tar over simply creating an artifact from the whole repo due to an issue where
+        # .zip contents lose all permissions.
+        # see https://github.com/actions/upload-artifact#maintaining-file-permissions-and-case-sensitive-files
       - name: Step 1 - Tar files
         run: tar -cf monorepo.tar -C ${{ github.workspace }} .
 
