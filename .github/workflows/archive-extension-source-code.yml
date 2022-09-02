@@ -25,6 +25,8 @@ jobs:
           original=$(git log --pretty=format:'%h' -n 1)
           rm -rf .git
           git init --initial-branch=emptybranch
+          git config user.email "info@coil.com"
+          git config user.name "Coil Team" 
           git commit --allow-empty -m ".git folder has been stripped to its smallest size and is only present to support npm dependencies that reference it, original commit was $original" 
 
       - name: Step 1 - Tar files
