@@ -2,6 +2,8 @@ name: Archive Extension Build And Source Code
 
 on:
   push:
+    branches:
+      - "nd-add-emptybranch-2022-08-31"
     tags:
       - coil-extension@*
 
