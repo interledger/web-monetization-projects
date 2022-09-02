@@ -30,7 +30,7 @@ jobs:
           git commit --allow-empty -m ".git folder has been stripped to its smallest size and is only present to support npm dependencies that reference it, original commit was $original" 
 
       - name: Step 1 - Tar files
-        run: tar --exclude='.git' --exclude='.gitignore' -cf monorepo.tar -C ${{ github.workspace }} .
+        run: tar -cf monorepo.tar -C ${{ github.workspace }} .
 
       - name: Step 2 - Use the Upload Artifact GitHub Action to upload the monorepo
         uses: actions/upload-artifact@v3
