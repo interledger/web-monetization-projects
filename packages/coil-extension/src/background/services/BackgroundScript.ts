@@ -1,7 +1,6 @@
 import { inject, injectable } from 'inversify'
 import { GraphQlClient } from '@coil/client'
 
-import { notNullOrUndef } from '../../util/nullables'
 import { StoreService } from '../../services/storage'
 import * as tokens from '../../types/tokens'
 import {
@@ -19,6 +18,8 @@ import {
 import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
+import { getAdaptedSite } from '../../content/util/getAdaptedSite'
+import { notNullOrUndef } from '../../util/nullables'
 
 import { MultipleInstanceDetector } from './multipleInstanceDetector'
 import { AuthService } from './AuthService'
@@ -27,16 +28,18 @@ import { Streams } from './Streams'
 import { PopupBrowserAction } from './PopupBrowserAction'
 import { Logger, logger } from './utils'
 import { YoutubeService } from './YoutubeService'
-import { BackgroundFramesService } from './BackgroundFramesService'
+import {
+  BackgroundFramesService,
+  FrameChangedEvent
+} from './BackgroundFramesService'
 import { TippingService } from './TippingService'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { StreamAssociations } from './StreamAssociations'
 import { SPSPState } from './SPSPState'
 import { MonetizationService } from './MonetizationService'
+import { BackgroundEvents } from './BackgroundEvents'
 
 import MessageSender = chrome.runtime.MessageSender
-
-import { BackgroundEvents } from './BackgroundEvents'
 
 @injectable()
 export class BackgroundScript {
@@ -260,26 +263,31 @@ export class BackgroundScript {
       if (becameComplete || (isComplete && changedUrl)) {
         if (event.frame.top) {
           this.setCoilUrlForPopupIfNeeded(tabId, url)
-          const from = `onFrameChanged directly, event=${JSON.stringify(
-            event
-          )}, `
-          const message: CheckAdaptedContent = {
-            command: 'checkAdaptedContent',
-            data: { from }
+          if (getAdaptedSite(url)) {
+            const frame = { tabId, frameId: event.frameId }
+            this.checkAdaptedContent(frame, event)
           }
-          this.log('sending checkAdaptedContent message', message)
-          this.api.tabs.sendMessage(
-            tabId,
-            message,
-            { frameId: event.frameId },
-            () => {
-              // eslint-disable-next-line @typescript-eslint/no-unused-vars
-              const ignored = this.api.runtime.lastError
-            }
-          )
         }
       }
     })
+  }
+
+  private checkAdaptedContent(frame: FrameSpec, event: FrameChangedEvent) {
+    const from = `onFrameChanged directly, event=${JSON.stringify(event)}, `
+    const message: CheckAdaptedContent = {
+      command: 'checkAdaptedContent',
+      data: { from }
+    }
+    this.log('sending checkAdaptedContent message', message)
+    this.api.tabs.sendMessage(
+      frame.tabId,
+      message,
+      { frameId: frame.frameId },
+      () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const ignored = this.api.runtime.lastError
+      }
+    )
   }
 
   async adaptedPageDetails(variables: { url: string; channelId?: string }) {
