@@ -64,13 +64,9 @@ export const wmPolyfill = `
     ${progressLoggingCode}
   }
 
-  // The extension tests origin of requests from content scripts, this is just
-  // so that people do not get confused by the presence of WM2 polyfill objects
-  // when the requests will be blocked due to not being part of the origin
-  // trial.
   // Block scoped so vars will not be set on window unless explicitly done
   // noinspection PointlessBooleanExpressionJS
-  if (true) {
+  {
     ${wm2Polyfill}
   }
 `

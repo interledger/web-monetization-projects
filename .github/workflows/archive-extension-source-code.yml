@@ -8,25 +8,36 @@ on:
 jobs:
   save-monorepo-source-code:
     runs-on: ubuntu-latest
-   
+
     steps:
       - uses: actions/checkout@v3
 
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
-        # Opting for .tar over simply creating an artifact from the whole repo due to an issue where .zip contents lose all permissions, see https://github.com/actions/upload-artifact#maintaining-file-permissions-and-case-sensitive-files
+      - name: Step 0 - Strip git
+        run: |
+          original=$(git log --pretty=format:'%h' -n 1)
+          rm -rf .git
+          git init --initial-branch=emptybranch
+          git config user.email "info@coil.com"
+          git config user.name "Coil Team" 
+          git commit --allow-empty -m ".git folder has been stripped to its smallest size and is only present to support npm dependencies that reference it, original commit was $original" 
+
+        # Opting for .tar over simply creating an artifact from the whole repo due to an issue where
+        # .zip contents lose all permissions.
+        # see https://github.com/actions/upload-artifact#maintaining-file-permissions-and-case-sensitive-files
       - name: Step 1 - Tar files
-        run: tar --exclude='.git' --exclude='.gitignore' -cf monorepo.tar -C ${{ github.workspace }} .
+        run: tar -cf monorepo.tar -C ${{ github.workspace }} .
 
       - name: Step 2 - Use the Upload Artifact GitHub Action to upload the monorepo
         uses: actions/upload-artifact@v3
-        with: 
+        with:
           name: source-${{env.RELEASE_VERSION}}
           path: |
             monorepo.tar
 
-  save-chrome-build:
+  save-chromium-build:
     runs-on: ubuntu-latest
     needs: [ save-monorepo-source-code ]
     steps:
@@ -40,17 +51,17 @@ jobs:
       - name: Step 1 - Extract tar archive
         run: tar -xf monorepo.tar
 
-      - name: Step 2 - Package the extension for chrome
-        run: ./package.sh chrome  
+      - name: Step 2 - Package the extension for chromium
+        run: ./package.sh chrome
         working-directory: ${{ github.workspace }}/packages/coil-extension/
         shell: bash
 
       - name: Step 3 - Use the Upload Artifact GitHub Action to upload the extension build
         uses: actions/upload-artifact@v3
-        with: 
-          name: chrome-${{env.RELEASE_VERSION}}
+        with:
+          name: chromium-${{env.RELEASE_VERSION}}
           path: ${{ github.workspace }}/packages/coil-extension/dist
-          
+
   save-firefox-build:
     runs-on: ubuntu-latest
     needs: [ save-monorepo-source-code ]
@@ -66,13 +77,13 @@ jobs:
         run: tar -xf monorepo.tar
 
       - name: Step 2 - Package the extension for firefox
-        run: ./package.sh firefox  
+        run: ./package.sh firefox
         working-directory: ${{ github.workspace }}/packages/coil-extension/
         shell: bash
 
       - name: Step 3 - Use the Upload Artifact GitHub Action to upload the extension build
         uses: actions/upload-artifact@v3
-        with: 
+        with:
           name: firefox-${{env.RELEASE_VERSION}}
           path: ${{ github.workspace }}/packages/coil-extension/dist
 

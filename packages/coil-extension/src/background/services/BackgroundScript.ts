@@ -10,7 +10,6 @@ import {
   CheckIFrameIsAllowedFromBackground,
   ClosePopup,
   ContentScriptInit,
-  ContentScriptInitResponse,
   OnFrameAllowedChanged,
   ReportCorrelationIdFromIFrameContentScript,
   ReportCorrelationIdToParentContentScript,
@@ -37,7 +36,6 @@ import { MonetizationService } from './MonetizationService'
 
 import MessageSender = chrome.runtime.MessageSender
 
-import { WM2OriginTrial } from './WM2OriginTrial'
 import { BackgroundEvents } from './BackgroundEvents'
 
 @injectable()
@@ -54,7 +52,6 @@ export class BackgroundScript {
     private monetization: MonetizationService,
     private tippingService: TippingService,
     private youtube: YoutubeService,
-    private wm2OriginTrial: WM2OriginTrial,
     private activeTabLogger: ActiveTabLogger,
     private framesService: BackgroundFramesService,
     @inject(tokens.LoggingEnabled)
@@ -591,7 +588,7 @@ export class BackgroundScript {
   private async contentScriptInit(
     request: ContentScriptInit,
     sender: MessageSender
-  ): Promise<ContentScriptInitResponse> {
+  ) {
     const { tabId, frameId, spec } = getFrameSpec(sender)
     // Content script used to send a stopWebMonetization message every time
     // it loaded. Noop if no stream for tab.
@@ -600,10 +597,6 @@ export class BackgroundScript {
     this.tabStates.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
-    const wm2Allowed = await this.wm2OriginTrial.checkOrigin(
-      request.data.origin
-    )
-    return { wm2Allowed }
   }
 
   private async onFrameAllowedChanged(
