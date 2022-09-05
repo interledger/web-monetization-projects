@@ -19,6 +19,7 @@ import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
 import { getAdaptedSite } from '../../content/util/getAdaptedSite'
+import { notNullOrUndef } from '../../util/nullables'
 
 import { MultipleInstanceDetector } from './multipleInstanceDetector'
 import { AuthService } from './AuthService'
