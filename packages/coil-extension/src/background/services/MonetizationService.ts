@@ -203,7 +203,12 @@ export class MonetizationService {
       setUnavailable('token')
       return false
     }
-    if (!this.store.user?.subscription?.active) {
+
+    const trialEndDate = this.store.user?.subscription?.trialEndDate
+    const haveTrial =
+      trialEndDate && new Date(trialEndDate).getTime() > Date.now()
+
+    if (!this.store.user?.subscription?.active && !haveTrial) {
       if (this.loggingEnabled) {
         console.warn('startWebMonetization cancelled; no active subscription')
       }
