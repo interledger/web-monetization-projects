@@ -7,8 +7,6 @@ import { BuildConfig } from '../../types/BuildConfig'
 import { TabOpener } from './TabOpener'
 import { PopupIconService } from './PopupIconService'
 
-type TabIconDetails = chrome.browserAction.TabIconDetails
-
 type Action = (tab: chrome.tabs.Tab) => void
 
 @injectable()
@@ -17,9 +15,6 @@ export class PopupBrowserAction {
   private disabled = false
   private ignoreDefaultToggling = false
   private action: Action | null = null
-  // Just cache the last call, including the tab id, rather than a map of
-  // {$tabId: $path} which would require bookkeeping. This does "enough"
-  private lastSetIconCallArgs: TabIconDetails & { calls: number } = { calls: 0 }
 
   constructor(
     private tabOpener: TabOpener,
@@ -108,28 +103,11 @@ export class PopupBrowserAction {
       const path = this.icons.forTabState(state)
       const args = {
         tabId,
-        path: path
+        path
       }
-      const changed =
-        this.lastSetIconCallArgs.path !== args.path ||
-        this.lastSetIconCallArgs.tabId !== args.tabId
-      if (changed) {
-        // Reset number of calls
-        this.lastSetIconCallArgs.calls = 0
-      }
-      // It seems in some cases that are hard to determine, setIcon calls are
-      // ignored, so the manifest declared default icon is seen instead.
-      // Stop calling after the 10th call with the same tabId/path so the
-      // network tab of devtools isn't littered with (*unworkable* amounts of)
-      // related entries.
-      if (changed || this.lastSetIconCallArgs.calls <= 10) {
-        actionApi.setIcon(args)
-        // We must ++prefix increment because we are copying
-        this.lastSetIconCallArgs = {
-          ...args,
-          calls: ++this.lastSetIconCallArgs.calls
-        }
-      }
+
+      // You may want to disable this at times when debugging the network tab
+      actionApi.setIcon(args)
     }
   }
 

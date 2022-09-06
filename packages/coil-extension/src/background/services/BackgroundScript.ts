@@ -122,8 +122,6 @@ export class BackgroundScript {
   }
 
   private setTabsOnActivatedListener() {
-    // The active tab has been changed
-
     // this.api.tabs.onActivated.addListener
     this.events.on('tabs.onActivated', activeInfo => {
       if (this.buildConfig.logTabsApiEvents) {
@@ -186,7 +184,7 @@ export class BackgroundScript {
     this.api.runtime.onMessage.addListener((request, sender, sendResponse) => {
       const serialized = JSON.stringify(request)
       const redacted = serialized.replace(/"token":\s*".*"/, '<redacted>')
-      this.log('received message. request=', redacted)
+      // this.log('received message. request=', redacted)
 
       void this.handleMessage(request, sender, sendResponse)
 
