@@ -39,7 +39,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-hot-loader": "^4.13.0",
-    "uuid": "^8.3.2"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@abraham/reflection": "0.10.0",

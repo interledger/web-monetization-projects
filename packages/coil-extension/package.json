@@ -83,7 +83,7 @@
     "react-dom": "^17.0.0",
     "reconnecting-websocket": "^4.4.0",
     "reduct": "^3.3.1",
-    "uuid": "^8.3.2"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@abraham/reflection": "0.10.0",
