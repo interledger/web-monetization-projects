@@ -1937,7 +1937,7 @@ __metadata:
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.1.0"
     typescript: "npm:4.7.4"
-    uuid: "npm:^8.3.2"
+    uuid: "npm:^9.0.0"
     web-ext: "npm:6.8.0"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
@@ -2168,7 +2168,7 @@ __metadata:
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.1.0"
     typescript: "npm:4.7.4"
-    uuid: "npm:^8.3.2"
+    uuid: "npm:^9.0.0"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
     webpack-cli: "npm:4.10.0"
@@ -3590,7 +3590,7 @@ __metadata:
     tsconfig-paths: "npm:4.1.0"
     typeface-roboto: "npm:^1.1.13"
     typescript: "npm:4.7.4"
-    uuid: "npm:^8.3.2"
+    uuid: "npm:^9.0.0"
     web-ext: "npm:6.8.0"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
@@ -5919,7 +5919,7 @@ __metadata:
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.1.0"
     typescript: "npm:4.7.4"
-    uuid: "npm:^8.3.2"
+    uuid: "npm:^9.0.0"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
     webpack-cli: "npm:4.10.0"
@@ -6053,7 +6053,7 @@ __metadata:
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.1.0"
     typescript: "npm:4.7.4"
-    uuid: "npm:^8.3.2"
+    uuid: "npm:^9.0.0"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
     webpack-cli: "npm:4.10.0"
@@ -24135,6 +24135,15 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: 236a12282c6fa32f326aa1b6d5699a843572e9ab7de84a1507a6b7c315fdcf55bf6ed333fd37d35c5c656f4cb96af998844e1c8cae281c442a1ec3b66df62962
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "uuid@npm:9.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: e1f76aff372e430bb129157360fd4cd3b393411b245604ea78e178a822ab7874ec2ebecec03ce94422b0b80bbd24733c6fa1df166c9cbad5086ef4b4843140bb
   languageName: node
   linkType: hard
 

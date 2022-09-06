@@ -48,7 +48,7 @@
     "ilp-protocol-stream": "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch",
     "node-fetch": "^2.6.1",
     "reduct": "^3.3.1",
-    "uuid": "^8.3.2"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@abraham/reflection": "0.10.0",
