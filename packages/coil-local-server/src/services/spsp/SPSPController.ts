@@ -3,6 +3,7 @@ import {
   controller,
   httpGet,
   requestHeaders,
+  requestParam,
   response
 } from 'inversify-express-utils'
 import * as express from 'express'
@@ -25,11 +26,13 @@ export class SPSPController extends BaseHttpController {
 
   @httpGet('spsp/:pointer')
   async spspGET(
+    @requestParam('pointer') pointer: string,
     @requestHeaders('receipt-nonce') receiptNonce: string,
     @requestHeaders('receipt-secret') receiptSecret: string,
     @response() resp: express.Response
   ) {
     const body = this.spsp.getResponse({
+      connectionTag: pointer,
       receiptNonce,
       receiptSecret
     })
