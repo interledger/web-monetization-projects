@@ -116,6 +116,8 @@ export class BackgroundScript {
     const isLoggedIn = await this.auth.refreshAuthentication()
     if (!isLoggedIn) {
       this.logout()
+    } else {
+      this.tabStates.reloadTabState({ from: 'initAuth' })
     }
   }
 
