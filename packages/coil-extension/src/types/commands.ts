@@ -97,7 +97,7 @@ export interface PauseWebMonetization extends Command {
 export interface ResumeWebMonetization extends Command {
   command: 'resumeWebMonetization'
   data: {
-    requestIds: string[]
+    requests: PaymentDetails[]
   }
 }
 

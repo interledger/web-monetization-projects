@@ -2,7 +2,10 @@
 
 import { inject, injectable } from 'inversify'
 import { MonetizationState } from '@webmonetization/types'
-import { resolvePaymentEndpoint } from '@webmonetization/polyfill-utils'
+import {
+  PaymentDetails,
+  resolvePaymentEndpoint
+} from '@webmonetization/polyfill-utils'
 
 import * as tokens from '../../types/tokens'
 import {
@@ -117,26 +120,16 @@ export class MonetizationService {
     )
   }
 
-  async startWebMonetization(
-    request: StartWebMonetization,
-    sender: MessageSender
-  ) {
-    const frame = getFrameSpec(sender)
-    const { tabId, frameId } = frame
-    const { requestId } = request.data
-
-    if (request.data.tagType === 'link') {
-      // How do we know if the request is a wm2 request
-      // It could be a link tag in the head that is one of many
-      // Maybe we should check before emitting the start events??
-    }
+  async startWebMonetization(details: PaymentDetails, frame: FrameSpec) {
+    const { tabId } = frame
+    const { requestId } = details
 
     this.assoc.addStreamId(frame, requestId)
     this.activeTabLogger.log(`startWM called with ${requestId}`, frame)
     this.tabStates.setFrame(frame, {
-      paymentPointer: request.data.paymentPointer
+      paymentPointer: details.paymentPointer
     })
-    this.tabStates.logLastMonetizationCommand(frame, 'start', request.data)
+    this.tabStates.logLastMonetizationCommand(frame, 'start', details)
 
     // This used to be sent from content script as a separate message
     this.setFrameMonetized(frame, requestId, 0, 'startWebMonetization')
@@ -150,18 +143,14 @@ export class MonetizationService {
 
     // This may throw so do after mayMonetizeSite has had a chance to set
     // the page as being monetized (or attempted to be)
-    const spspEndpoint = resolvePaymentEndpoint(request.data.paymentPointer)
+    const spspEndpoint = resolvePaymentEndpoint(details.paymentPointer)
 
     const userBeforeReAuth = this.store.user
     let emittedPending = false
     const emitPending = () => {
       // Set the requestId so that DocumentMonetization#setState will ignore
       // this message if tags are added and removed extremely fast.
-      this.sendSetMonetizationStateMessage(
-        frame,
-        'pending',
-        request.data.requestId
-      )
+      this.sendSetMonetizationStateMessage(frame, 'pending', details.requestId)
       emittedPending = true
     }
 
@@ -179,7 +168,7 @@ export class MonetizationService {
       setUnavailable('subscription')
     }
 
-    this.log('startWebMonetization, request', request)
+    this.log('startWebMonetization, request', details)
 
     this.log('loading token for monetization', requestId)
     let isAuthenticated: boolean
@@ -195,11 +184,7 @@ export class MonetizationService {
         console.warn('startWebMonetization cancelled; no token')
       }
       this.activeTabLogger.log('startWebMonetization cancelled; no token')
-      this.sendSetMonetizationStateMessage(
-        frame,
-        'stopped',
-        request.data.requestId
-      )
+      this.sendSetMonetizationStateMessage(frame, 'stopped', details.requestId)
       setUnavailable('token')
       return false
     }
@@ -211,11 +196,7 @@ export class MonetizationService {
         'startWebMonetization cancelled; no active subscription',
         frame
       )
-      this.sendSetMonetizationStateMessage(
-        frame,
-        'stopped',
-        request.data.requestId
-      )
+      this.sendSetMonetizationStateMessage(frame, 'stopped', details.requestId)
       setUnavailable('subscription')
       return false
     }
@@ -267,8 +248,8 @@ export class MonetizationService {
     // That way we can "resume" it later.
     this.streams.beginStream(requestId, {
       spspEndpoint,
-      ...request.data,
-      initiatingUrl: request.data.initiatingUrl
+      ...details,
+      initiatingUrl: details.initiatingUrl
     })
 
     if (lastCommand === 'pause') {
@@ -296,17 +277,23 @@ export class MonetizationService {
     return true
   }
 
-  private doResumeWebMonetization(frame: FrameSpec, requestIds?: string[]) {
+  private doResumeWebMonetization(frame: FrameSpec, details: PaymentDetails[]) {
     this.activeTabLogger.log(
-      'doResume ' + JSON.stringify({ frame, requestIds }),
+      'doResume ' + JSON.stringify({ frame, details }),
       frame
     )
-    const ids = requestIds ?? this.assoc.getStreams(frame)
-    ids.forEach(id => {
-      this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
-      this.log('resuming stream', ids)
-      this.sendSetMonetizationStateMessage(frame, 'pending', id)
-      this.streams.resumeStream(id)
+
+    details.forEach(detail => {
+      const id = detail.requestId
+      // Maybe you just logged in, or maybe the service worker has restarted
+      if (!this.streams.getStream(id)) {
+        void this.startWebMonetization(detail, frame)
+      } else {
+        this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
+        this.log('resuming stream', id)
+        this.sendSetMonetizationStateMessage(frame, 'pending', id)
+        this.streams.resumeStream(id)
+      }
     })
     return true
   }
@@ -323,7 +310,7 @@ export class MonetizationService {
     // it's more like 'set tab interactive'
     return this.doResumeWebMonetization(
       getFrameSpec(sender),
-      request.data.requestIds
+      request.data.requests
     )
   }
 

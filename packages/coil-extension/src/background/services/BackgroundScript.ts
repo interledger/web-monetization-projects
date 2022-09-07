@@ -324,7 +324,10 @@ export class BackgroundScript {
       case 'startWebMonetization':
         this.log('got startwebmonetization')
         sendResponse(
-          await this.monetization.startWebMonetization(request, sender)
+          await this.monetization.startWebMonetization(
+            request.data,
+            getFrameSpec(sender)
+          )
         )
         break
       case 'pauseWebMonetization':
