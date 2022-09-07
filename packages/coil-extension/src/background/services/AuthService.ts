@@ -58,7 +58,7 @@ import { formatTipSettings } from './formatTipSettings.util'
 @injectable()
 export class AuthService extends EventEmitter {
   // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
-  private trace = (..._: unknown[]) => {}
+  private trace = console.log.bind(console, 'AuthTrace') // (..._: unknown[]) => {}
 
   constructor(
     @inject(tokens.CoilDomain)

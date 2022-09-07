@@ -327,12 +327,12 @@ export class ContentScript {
       resume: (reason: string) => {
         debug(`resumeWebMonetization reason ${reason}`)
         this.paused = false
-        const requestIds = this.tagManager.requestIds()
-        if (requestIds.length) {
+        const requests = this.tagManager.requests()
+        if (requests.length) {
           const resume: ResumeWebMonetization = {
             command: 'resumeWebMonetization',
             data: {
-              requestIds
+              requests
             }
           }
           void runtime.sendMessage(resume)

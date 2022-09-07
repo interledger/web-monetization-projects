@@ -140,7 +140,7 @@ describe('MonetizationService', () => {
     }
 
     expect(tabStates.activeTab).toBe(0)
-    const startPromise = service.startWebMonetization(startRequest, sender)
+    const startPromise = service.startWebMonetization(startRequest.data, frame)
 
     service.pauseWebMonetization(
       {
