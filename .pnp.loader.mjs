@@ -3,12 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import moduleExports, { Module } from 'module';
 
-var PathType;
-(function(PathType2) {
-  PathType2[PathType2["File"] = 0] = "File";
-  PathType2[PathType2["Portable"] = 1] = "Portable";
-  PathType2[PathType2["Native"] = 2] = "Native";
-})(PathType || (PathType = {}));
 const npath = Object.create(path);
 const ppath = Object.create(path.posix);
 npath.cwd = () => process.cwd();
@@ -118,7 +112,6 @@ function setEntrypointPath(file) {
   entrypointPath = file;
 }
 function getFileFormat(filepath) {
-  var _a, _b;
   const ext = path.extname(filepath);
   switch (ext) {
     case `.mjs`: {
@@ -128,18 +121,22 @@ function getFileFormat(filepath) {
       return `commonjs`;
     }
     case `.wasm`: {
-      throw new Error(`Unknown file extension ".wasm" for ${filepath}`);
+      throw new Error(
+        `Unknown file extension ".wasm" for ${filepath}`
+      );
     }
     case `.json`: {
       if (HAS_UNFLAGGED_JSON_MODULES)
         return `json`;
-      throw new Error(`Unknown file extension ".json" for ${filepath}`);
+      throw new Error(
+        `Unknown file extension ".json" for ${filepath}`
+      );
     }
     case `.js`: {
       const pkg = readPackageScope(filepath);
       if (!pkg)
         return `commonjs`;
-      return (_a = pkg.data.type) != null ? _a : `commonjs`;
+      return pkg.data.type ?? `commonjs`;
     }
     default: {
       if (entrypointPath !== filepath)
@@ -149,7 +146,7 @@ function getFileFormat(filepath) {
         return `commonjs`;
       if (pkg.data.type === `module`)
         return null;
-      return (_b = pkg.data.type) != null ? _b : `commonjs`;
+      return pkg.data.type ?? `commonjs`;
     }
   }
 }
@@ -200,8 +197,7 @@ async function load$1(urlString, context, nextLoad) {
 const pathRegExp = /^(?![a-zA-Z]:[\\/]|\\\\|\.{0,2}(?:\/|$))((?:node:)?(?:@[^/]+\/)?[^/]+)\/*(.*|)$/;
 const isRelativeRegexp = /^\.{0,2}\//;
 async function resolve$1(originalSpecifier, context, nextResolve) {
-  var _a;
-  const {findPnpApi} = moduleExports;
+  const { findPnpApi } = moduleExports;
   if (!findPnpApi || isBuiltinModule(originalSpecifier))
     return nextResolve(originalSpecifier, context, nextResolve);
   let specifier = originalSpecifier;
@@ -211,9 +207,9 @@ async function resolve$1(originalSpecifier, context, nextResolve) {
       return nextResolve(originalSpecifier, context, nextResolve);
     specifier = fileURLToPath(url);
   }
-  const {parentURL, conditions = []} = context;
+  const { parentURL, conditions = [] } = context;
   const issuer = parentURL ? fileURLToPath(parentURL) : process.cwd();
-  const pnpapi = (_a = findPnpApi(issuer)) != null ? _a : url ? findPnpApi(specifier) : null;
+  const pnpapi = findPnpApi(issuer) ?? (url ? findPnpApi(specifier) : null);
   if (!pnpapi)
     return nextResolve(originalSpecifier, context, nextResolve);
   const dependencyNameMatch = specifier.match(pathRegExp);
