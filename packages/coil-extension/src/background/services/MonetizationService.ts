@@ -284,11 +284,11 @@ export class MonetizationService {
       frame
     )
 
-    details.forEach(details => {
-      const id = details.requestId
+    details.forEach(detail => {
+      const id = detail.requestId
       // Maybe you just logged in, or maybe the service worker has restarted
       if (!this.streams.getStream(id)) {
-        void this.startWebMonetization(details, frame)
+        void this.startWebMonetization(detail, frame)
       } else {
         this.tabStates.logLastMonetizationCommand(frame, 'resume', id)
         this.log('resuming stream', id)

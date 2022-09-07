@@ -9,8 +9,7 @@ export interface BuildConfig extends Record<string, unknown> {
   isCI: boolean
   isMV3: boolean
 
-  // Bypass origin trial machinery and always allow wm2 requests
-  wm2Always?: boolean
+  dev?: true
   loggingEnabled?: boolean
   useLocalMockServer?: boolean
 }
