@@ -123,9 +123,11 @@ export class MonetizationTagManager extends EventEmitter {
   }
 
   linkRequests(): PaymentDetails[] {
-    return Array.from(this.monetizationTags.values())
-      .map(e => e.details)
-      .filter(d => d.tagType === 'link')
+    return this.requests().filter(d => d.tagType === 'link')
+  }
+
+  requests(): PaymentDetails[] {
+    return Array.from(this.monetizationTags.values()).map(e => e.details)
   }
 
   constructor(

@@ -15,10 +15,14 @@ export class ActiveTabLogger {
     private api: typeof chrome
   ) {}
 
-  async log(log: string, frame?: FrameSpec) {
+  log(log: string, frame?: FrameSpec) {
     if (!this.sendLogs) {
       return
     }
+    void this.doLog(log, frame)
+  }
+
+  private async doLog(log: string, frame?: FrameSpec) {
     const activeTab = await this.getActiveTab()
     if (typeof activeTab === 'number') {
       const message = {

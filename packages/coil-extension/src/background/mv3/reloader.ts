@@ -41,6 +41,7 @@ export class Reloader {
       this.wextApi.tabs.reload()
     }
     // Reload the service worker
+    console.clear()
     this.wextApi.runtime.reload()
   }
 
