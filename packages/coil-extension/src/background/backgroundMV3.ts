@@ -4,6 +4,7 @@ import { ChromeScripting } from '../types/chrome/chromeScripting'
 
 import { Reloader } from './mv3/reloader'
 import { BackgroundEvents } from './services/BackgroundEvents'
+import { main, Environment } from './backgroundMain'
 
 console.clear()
 export const dbg = console.log.bind('ServiceWorker')
@@ -44,4 +45,4 @@ scripting
     }
   })
 
-import './background'
+main({ env: self as Environment, topLevelListeners }).catch(console.error)
