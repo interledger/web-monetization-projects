@@ -107,6 +107,11 @@ export class AuthService extends EventEmitter {
     } catch (e) {
       this.log('whoAmI failed', e.message)
     }
+
+    if (!loggedIn) {
+      // Then the popup browser icon will be set accordingly
+      delete this.store.user
+    }
     return loggedIn
   }
 

@@ -2,7 +2,6 @@ import { StoreProxy } from '../../types/storage'
 
 export const STORAGE_KEYS = [
   'user',
-  'validToken',
 
   'adapted',
   'coilSite',
@@ -13,4 +12,4 @@ export const STORAGE_KEYS = [
   'popup-route:tipping-shown'
 ]
 
-export type PopupStateType = Omit<StoreProxy, 'token'>
+export type PopupStateType = StoreProxy

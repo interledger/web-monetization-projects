@@ -4,7 +4,6 @@ export const STORAGE_KEY = {
   // BACKGROUND/POPUP
   token: 'token',
   user: 'user',
-  validToken: 'validToken',
   adapted: 'adapted',
   monetized: 'monetized',
   coilSite: 'coilSite',
@@ -13,18 +12,10 @@ export const STORAGE_KEY = {
 
 export interface StoreProxy {
   // Auth State
-  /**
-   * The refresh token for authenticating to the coil site
-   */
-  token?: string | null
 
   /**
    */
   user?: User | null
-  /**
-   * Boolean
-   */
-  validToken?: boolean | null
 
   // Active Tab Monetization state
   adapted?: boolean | null

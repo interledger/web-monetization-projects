@@ -119,7 +119,6 @@ const tipUserNewUiCompare = {
 
 function mockState(partial: Partial<PopupStateType>): PopupStateType {
   const ret: PopupStateType = {
-    validToken: null,
     user: null,
     adapted: null,
     monetized: null,
@@ -137,7 +136,6 @@ const userCanTipNewUi = mockState({
   // coilSite: 'https://coil.com/discover',
   monetizedTotal: 0,
   user: tipUserNewUi,
-  validToken: true,
   adapted: false
 })
 
@@ -147,14 +145,12 @@ const userCanTipNewUiCompare = mockState({
   // coilSite: 'https://coil.com/discover',
   monetizedTotal: 10854,
   user: tipUserNewUiCompare,
-  validToken: true,
   adapted: false
 })
 
 const notSupported = mockState({
   monetizedTotal: 0,
   user: user,
-  validToken: true,
   adapted: false
 })
 
@@ -163,7 +159,6 @@ const payingCoilArticle = mockState({
   coilSite: 'https://coil.com/p/mirrae/Letter-to-my-Daughter/-ZInTJqN-',
   monetizedTotal: 10854,
   user: user,
-  validToken: true,
   adapted: false
 })
 
@@ -171,7 +166,6 @@ const startDiscovering = mockState({
   coilSite: 'https://coil.com/discover',
   monetizedTotal: 0,
   user: user,
-  validToken: true,
   adapted: false
 })
 
@@ -179,7 +173,6 @@ const payingYouTube = mockState({
   monetized: true,
   monetizedTotal: 2326667,
   user: user,
-  validToken: true,
   adapted: true
 })
 
@@ -187,7 +180,6 @@ const payingTwitch = mockState({
   monetized: true,
   monetizedTotal: 5910000,
   user: user,
-  validToken: true,
   adapted: true
 })
 
@@ -197,7 +189,6 @@ const lastTipping = mockState({
   monetized: true,
   monetizedTotal: 5910000,
   user: tipUserNewUi,
-  validToken: true,
   adapted: true
 })
 
@@ -207,7 +198,6 @@ const lastStreaming = mockState({
   monetized: true,
   monetizedTotal: 5910000,
   user: tipUserNewUi,
-  validToken: true,
   adapted: true
 })
 
@@ -217,7 +207,6 @@ const lastStreamingWithTip = mockState({
   monetized: true,
   monetizedTotal: 5910000,
   user: tipUserNewUi,
-  validToken: true,
   adapted: true
 })
 
@@ -225,7 +214,6 @@ const payingNonCoilSite = mockState({
   monetized: true,
   monetizedTotal: 22817800,
   user: user,
-  validToken: true,
   adapted: false
 })
 
@@ -233,7 +221,6 @@ const welcomeToCoil = mockState({
   coilSite: 'https://coil.com/',
   monetizedTotal: 0,
   user: user,
-  validToken: true,
   adapted: false
 })
 
@@ -250,7 +237,6 @@ const aliceUser: User = {
 const aliceUnsubscribed = mockState({
   monetizedTotal: 0,
   user: aliceUser,
-  validToken: true,
   adapted: false
 })
 
