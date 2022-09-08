@@ -139,6 +139,10 @@ export class BackgroundEvents extends EventEmitter {
       }
       const bufferingListener = (...params: unknown[]) => {
         this.buffered.push({ key, params })
+        if (key === 'runtime.onMessage') {
+          console.log('runtime.onMessage bufferingListener')
+          return true
+        }
       }
       event.addListener(bufferingListener)
       this.bufferingCleanup.push(() => event.removeListener(bufferingListener))
@@ -157,6 +161,13 @@ export class BackgroundEvents extends EventEmitter {
     this.events.forEach(({ key, event }) => {
       event?.addListener((...params: unknown[]) => {
         this.emit(key, ...params)
+        if (key === 'runtime.onMessage') {
+          console.log('runtime.onMessage proxyingListener')
+          // important: this tells chrome to expect an async response.
+          // if `true` is not returned here then async messages don't make it back
+          // see: https://developer.chrome.com/apps/runtime#event-onMessage
+          return true
+        }
       })
     })
 
@@ -166,6 +177,7 @@ export class BackgroundEvents extends EventEmitter {
       // If we have to queue each emission as a micro task, then it's possible
       // that other (non-buffered) events would come in, and then the events
       // would be handled out of order.
+      console.log('emitting buffered', event.key)
       this.emit(event.key, ...event.params)
     })
   }

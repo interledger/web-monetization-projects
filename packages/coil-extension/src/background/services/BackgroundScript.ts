@@ -101,8 +101,8 @@ export class BackgroundScript {
     this.setFramesOnChangedListener()
     this.setFramesOnRemovedListener()
     this.bindOnInstalled()
-    this.framesService.monitor()
 
+    this.framesService.monitor()
     this.events.emitBufferedAndStopBuffering()
 
     this.monetization.init()
@@ -184,17 +184,12 @@ export class BackgroundScript {
 
   private setRuntimeMessageListener() {
     // A tab wants to change its state
-    this.api.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    // this.api.runtime.onMessage.addListener
+    this.events.on('runtime.onMessage', (request, sender, sendResponse) => {
       const serialized = JSON.stringify(request)
       const redacted = serialized.replace(/"token":\s*".*"/, '<redacted>')
       this.log('received message. request=', redacted)
-
       void this.handleMessage(request, sender, sendResponse)
-
-      // important: this tells chrome to expect an async response.
-      // if `true` is not returned here then async messages don't make it back
-      // see: https://developer.chrome.com/apps/runtime#event-onMessage
-      return true
     })
   }
 

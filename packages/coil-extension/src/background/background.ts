@@ -10,8 +10,8 @@ import { StoreProxy } from '../types/storage'
 
 import { BackgroundScript } from './services/BackgroundScript'
 import { BackgroundStoreService } from './services/BackgroundStoreService'
-import { BackgroundEvents } from './services/BackgroundEvents'
 import { configureContainer } from './di/configureContainer'
+import { BackgroundEvents } from './services/BackgroundEvents'
 
 /**
  * We patch the window/self object so can access objects and utils from the
@@ -22,14 +22,10 @@ interface Environment {
   store?: StoreProxy
   clearTokens?: () => void
   clearPopupRouteState?: () => void
+  topLevelListeners?: BackgroundEvents
 }
 
 async function main(env: Environment) {
-  // In MV3, event listeners should be bound at the top level.
-  // Do this before async BackgroundScript object graph creation.
-  const topLevelListeners = new BackgroundEvents(API)
-  topLevelListeners.bindBufferingListeners()
-
   const loggingEnabled = await isLoggingEnabled(BUILD_CONFIG)
   if (loggingEnabled) {
     // eslint-disable-next-line no-console
@@ -41,6 +37,11 @@ async function main(env: Environment) {
     defaultScope: 'Singleton',
     autoBindInjectable: true
   })
+
+  container
+    .bind(BackgroundEvents)
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    .toConstantValue(env.topLevelListeners ?? new BackgroundEvents(API))
 
   await configureContainer({
     container: container,
@@ -66,7 +67,6 @@ async function main(env: Environment) {
       }
     }
   })
-
   env.bg = await container.getAsync(BackgroundScript)
   env.store = await container.getAsync(tokens.StoreProxy)
   env.clearTokens = () => {
