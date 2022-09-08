@@ -54,7 +54,8 @@ export class GraphQlClient {
     @inject(GraphQlClientOptions)
     private config: GraphQlClientOptions
   ) {
-    this.inBrowser = typeof window !== 'undefined'
+    // navigator will be set inside a  page or a ServiceWorker
+    this.inBrowser = typeof navigator !== 'undefined'
     this.fetch = this.config.fetch
   }
 
