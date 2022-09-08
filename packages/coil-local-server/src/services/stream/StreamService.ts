@@ -7,6 +7,7 @@ import {
 
 import { TLogger, TStreamServer } from '../../di/tokens'
 import { Logger } from '../../utils/logger'
+import { BalancesService } from '../balances/BalancesService'
 
 @injectable()
 export class StreamService {
@@ -14,13 +15,17 @@ export class StreamService {
     @inject(TStreamServer)
     private streamServer: StreamServer,
     @inject(TLogger)
-    private dbg: Logger
+    private dbg: Logger,
+    private balances: BalancesService
   ) {
     this.streamServer.on('connection', (connection: Connection) => {
       this.dbg('connection tag', connection.connectionTag)
       connection.on('stream', async (stream: DataAndMoneyStream) => {
         stream.on('money', amount => {
           dbg('incoming_money', amount)
+          if (connection.connectionTag) {
+            this.balances.addPacket(connection.connectionTag, amount)
+          }
         })
         if (process.env.QUICK_STREAM) {
           stream.setReceiveMax(Infinity)

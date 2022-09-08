@@ -1,8 +1,14 @@
 import '@abraham/reflection'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+;
+
+(BigInt as any).prototype.toJSON = function () {
+  return this.toString()
+}
+
 import { makeDefaultContainer } from './di/container'
 import { Server } from './services/server/Server'
-import { SPSPService } from './services/spsp/SPSPService'
 
 export async function startApolloServer() {
   const container = makeDefaultContainer()

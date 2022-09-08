@@ -24,6 +24,7 @@ import '../anon-tokens/AnonTokenRedeemerController'
 import '../routes/handler/HandlerController'
 import '../routes/login/LoginController'
 import '../routes/settings/SettingsController'
+import '../routes/balances/BalancesController'
 
 @injectable()
 export class Server {
