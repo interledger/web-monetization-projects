@@ -101,7 +101,6 @@ export class BackgroundScript {
     this.setFramesOnChangedListener()
     this.setFramesOnRemovedListener()
     this.bindOnInstalled()
-
     this.framesService.monitor()
     this.events.emitBufferedAndStopBuffering()
 

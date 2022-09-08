@@ -16,9 +16,6 @@ dbg('backgroundMV3.ts')
 const topLevelListeners = new BackgroundEvents(API)
 topLevelListeners.bindBufferingListeners()
 
-// eslint-disable-next-line
-;(self as any).topLevelListeners = topLevelListeners
-
 if (BUILD_CONFIG.dev) {
   const reloader = new Reloader(chrome, console.log.bind(console, 'Reloader: '))
   reloader.connect()
