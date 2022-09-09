@@ -224,6 +224,9 @@ makes sense.
   - Issue: [#1947][ni1947]
   - Fix PR: [#1964][np1964]
 
+- [ ] When built for mv3, check that resumeWebMonetization works after killing worker
+  - Fix PR: [#3286][np3286]
+
 ### Iframe testing
 
 1. - [ ] Open a terminal
@@ -300,3 +303,4 @@ makes sense.
 [np242]: https://github.com/coilhq/web-monetization-projects/pull/242
 [np1964]: https://github.com/coilhq/web-monetization-projects/pull/1964
 [ni1947]: https://github.com/coilhq/web-monetization-projects/issue/1947
+[p3286]: https://github.com/coilhq/web-monetization/pull/3286
