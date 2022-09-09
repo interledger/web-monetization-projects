@@ -95,6 +95,7 @@ export class PopupBrowserAction {
       nextMidnight.setHours(24, 0, 0, 0)
       const msToNextMidnight = nextMidnight.getTime() - now.getTime()
       const andChange = 10
+      // TODO:MV3
       setTimeout(() => {
         this.setDefaultInactive()
       }, msToNextMidnight + andChange)
