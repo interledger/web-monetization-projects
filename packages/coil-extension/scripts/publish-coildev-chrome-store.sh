@@ -15,6 +15,8 @@ export WEXT_MANIFEST_VERSION="$COIL_DEV_VERSION"
 export WEXT_MANIFEST_VERSION_NAME="$COIL_DEV_VERSION - $(git branch --show) - $(git show -s --pretty='%h - %ad' --date=short)"
 export WEXT_MANIFEST_SUFFIX=${WEXT_MANIFEST_SUFFIX:-'Dev'}
 export WEXT_MANIFEST_SUFFIX_NO_DATE='true'
+export WEXT_BUILD_CONFIG_LOGGING_ENABLED='true'
+
 # shellcheck disable=SC2155
 ./build.sh $COIL_DEV_ENV chrome
 echo "using $(yarn bin shipit)"
