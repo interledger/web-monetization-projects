@@ -277,6 +277,7 @@ export class ContentScript {
       if (this.frames.isIFrame) {
         this.auth.handleCoilTokenMessage()
       } else {
+        // TODO: this happens on every coil page, does that make sense?
         this.auth.refreshUser()
       }
       if (this.frames.isCoilTopFrame) {

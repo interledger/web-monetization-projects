@@ -88,6 +88,7 @@ export class AuthService extends EventEmitter {
 
   private _op: Promise<boolean> | null = null
 
+  // TODO: what if the reason for failure is bad net ?
   async refreshAuthentication(): Promise<boolean> {
     let loggedIn = false
     try {
