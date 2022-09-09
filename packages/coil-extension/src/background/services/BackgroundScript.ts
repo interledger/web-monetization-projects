@@ -582,7 +582,7 @@ export class BackgroundScript {
       { command: 'clearToken' },
       frame => Boolean(frame.href?.startsWith(this.coilDomain))
     )
-    this.storage.remove('user') // This is not getting fully removed on .clear()
+    this.storage.remove('user')
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')
     this.tabStates.reloadTabState({ from: 'logout' })
@@ -623,6 +623,7 @@ export class BackgroundScript {
     if (!this.buildConfig.isCI && !this.buildConfig.useLocalMockServer) {
       this.api.runtime.onInstalled.addListener(details => {
         if (details.reason === 'install') {
+          // TODO: only if not authenticated?
           void this.api.tabs.create({ url: `${this.coilDomain}/auth/signup` })
           void this.multipleInstanceDetector.detectOtherInstances()
         }
