@@ -224,7 +224,7 @@ makes sense.
   - Issue: [#1947][ni1947]
   - Fix PR: [#1964][np1964]
 
-- [ ] When built for mv3, check that resumeWebMonetization works after killing worker
+- [ ] When built for mv3, check that resumeWebMonetization works after killing worker (use chrome://serviceworker-internals)
   - Fix PR: [#3286][np3286]
 
 ### Iframe testing
