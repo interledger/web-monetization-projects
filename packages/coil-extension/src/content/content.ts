@@ -1,3 +1,7 @@
+// This is done first thing at `document_start` so that the token will be
+// unavailable to coil.com, which will then allow login with cookies to proceed.
+import './util/clearCoilAuthToken'
+
 import '@abraham/reflection'
 
 import { Container } from 'inversify'

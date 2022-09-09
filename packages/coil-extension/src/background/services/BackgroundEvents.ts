@@ -139,6 +139,9 @@ export class BackgroundEvents extends EventEmitter {
       }
       const bufferingListener = (...params: unknown[]) => {
         this.buffered.push({ key, params })
+        if (key === 'runtime.onMessage') {
+          return true
+        }
       }
       event.addListener(bufferingListener)
       this.bufferingCleanup.push(() => event.removeListener(bufferingListener))
@@ -157,6 +160,12 @@ export class BackgroundEvents extends EventEmitter {
     this.events.forEach(({ key, event }) => {
       event?.addListener((...params: unknown[]) => {
         this.emit(key, ...params)
+        if (key === 'runtime.onMessage') {
+          // important: this tells chrome to expect an async response.
+          // if `true` is not returned here then async messages don't make it back
+          // see: https://developer.chrome.com/apps/runtime#event-onMessage
+          return true
+        }
       })
     })
 

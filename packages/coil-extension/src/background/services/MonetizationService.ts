@@ -181,9 +181,11 @@ export class MonetizationService {
       // not signed in.
       // eslint-disable-next-line no-console
       if (this.loggingEnabled) {
-        console.warn('startWebMonetization cancelled; no token')
+        console.warn('startWebMonetization cancelled; not authenticated')
       }
-      this.activeTabLogger.log('startWebMonetization cancelled; no token')
+      this.activeTabLogger.log(
+        'startWebMonetization cancelled; not authenticated'
+      )
       this.sendSetMonetizationStateMessage(frame, 'stopped', details.requestId)
       setUnavailable('token')
       return false
