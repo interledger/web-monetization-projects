@@ -4,8 +4,8 @@ import { CssBaseline } from '@material-ui/core'
 
 import { theme } from './theme'
 
-export function withSharedTheme<P extends JSX.IntrinsicAttributes>(
-  Component: React.ComponentType<P>
+export function withSharedTheme<P extends object>(
+  Component: React.ComponentType<React.PropsWithChildren<P>>
 ) {
   return function WithTheme(props: P) {
     return (
