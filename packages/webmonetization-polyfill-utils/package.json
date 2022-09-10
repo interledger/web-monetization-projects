@@ -52,7 +52,7 @@
     "@swc/core": "1.2.249",
     "@swc/jest": "0.2.22",
     "@types/jest": "29.0.0",
-    "@types/node": "16.11.57",
+    "@types/node": "16.11.58",
     "@types/node-fetch": "2.6.2",
     "@types/uuid": "8.3.4",
     "@typescript-eslint/eslint-plugin": "5.36.2",
