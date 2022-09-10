@@ -52,7 +52,7 @@
     "@coil/webpack-utils": "^0.0.0",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
-    "@swc/core": "1.2.248",
+    "@swc/core": "1.2.249",
     "@swc/jest": "0.2.22",
     "@types/jest": "29.0.0",
     "@types/node": "16.11.57",
