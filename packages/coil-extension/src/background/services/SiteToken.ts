@@ -37,10 +37,12 @@ export class SiteToken {
    */
   async retrieveViaOpenTabAndExecuteScript(): Promise<string | null> {
     const tabId = await new Promise<number | null>(resolve => {
-      this.api.tabs.query({ url: this.coilDomain }, tabs => {
-        resolve(tabs[0]?.id ?? null)
+      this.api.tabs.query({}, tabs => {
+        const tab = tabs.find(t => t.url?.startsWith(this.coilDomain))?.id
+        resolve(tab ?? null)
       })
     })
+
     return new Promise(resolve => {
       if (tabId != null) {
         this.retrieveToken(tabId, resolve)
