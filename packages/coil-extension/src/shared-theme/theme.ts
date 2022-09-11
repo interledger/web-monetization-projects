@@ -1,4 +1,4 @@
-import { createMuiTheme, ThemeOptions, Theme } from '@material-ui/core/styles'
+import { createTheme, ThemeOptions, Theme } from '@material-ui/core/styles'
 
 import { Colors } from './colors'
 
@@ -28,7 +28,7 @@ const body = {
 
 // wrapper allows us to add custom props to the theme
 const createMuiThemeWrapper = (options: ThemeOptions): Theme => {
-  return createMuiTheme({
+  return createTheme({
     ...options
   })
 }
