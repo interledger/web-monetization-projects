@@ -36,39 +36,55 @@ export class SiteToken {
    *       for MV3, it requires the "scripting" permission
    */
   async retrieveViaOpenTabAndExecuteScript(): Promise<string | null> {
+    const tabId = await new Promise<number | null>(resolve => {
+      this.api.tabs.query({ url: this.coilDomain }, tabs => {
+        resolve(tabs[0]?.id ?? null)
+      })
+    })
     return new Promise(resolve => {
-      this.api.tabs.create(
-        {
-          active: false,
-          url: this.coilDomain
-        },
-        tab => {
-          const code = `localStorage.token`
-          // Not available in MV3
-          if (this.api.tabs.executeScript) {
-            this.api.tabs.executeScript(
-              notNullOrUndef(tab.id),
-              { code, frameId: 0 },
-              ([result]) => {
-                this.api.tabs.remove(notNullOrUndef(tab.id))
-                resolve(result)
-              }
-            )
-          } else if (this.api.scripting) {
-            this.api.scripting
-              .executeScript({
-                target: { tabId: notNullOrUndef(tab.id), allFrames: false },
-                func: () => {
-                  return localStorage.token
-                }
-              })
-              .then(([result]) => {
-                resolve(result.result)
-              })
+      if (tabId != null) {
+        this.retrieveToken(tabId, resolve)
+      } else {
+        this.api.tabs.create(
+          {
+            active: false,
+            url: this.coilDomain
+          },
+          tab => {
+            const tabId = notNullOrUndef(tab.id)
+            this.retrieveToken(tabId, resolve)
           }
+        )
+      }
+    })
+  }
+
+  private retrieveToken(
+    tabId: number,
+    callback: (value: Promise<string>) => void
+  ) {
+    // Not available in MV3
+    if (this.api.tabs.executeScript) {
+      this.api.tabs.executeScript(
+        tabId,
+        { code: `localStorage.token`, frameId: 0 },
+        ([result]) => {
+          this.api.tabs.remove(tabId)
+          callback(result)
         }
       )
-    })
+    } else if (this.api.scripting) {
+      this.api.scripting
+        .executeScript({
+          target: { tabId: tabId, allFrames: false },
+          func: () => {
+            return localStorage.token
+          }
+        })
+        .then(([result]) => {
+          callback(result.result)
+        })
+    }
   }
 
   async retrieveViaIframeInjection(): Promise<string | null> {
