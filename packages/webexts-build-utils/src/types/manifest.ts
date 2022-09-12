@@ -21,6 +21,7 @@ export interface ManifestV2 extends Manifest {
   manifest_version: 2
   content_security_policy?: string
   background?: {
+    persistent?: boolean
     page?: string
   }
   content_scripts?: [

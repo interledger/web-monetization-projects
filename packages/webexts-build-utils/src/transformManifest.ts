@@ -2,6 +2,7 @@ import assert from 'assert'
 
 import { applyManifestPermissions } from './manifestPermissions'
 import {
+  MV2_BACKGROUND_TYPE,
   MV3,
   MV3_BACKGROUND_TYPE,
   WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID,
@@ -133,6 +134,11 @@ export function transformManifest(
   const rules = WEXT_MANIFEST_PERMISSIONS
   const parsedRules: string[] = rules ? JSON.parse(rules) : []
   applyManifestPermissions(v2, parsedRules)
+
+  if (MV2_BACKGROUND_TYPE === 'eventspage' && v2.background) {
+    assert.ok(v2.background.page)
+    v2.background.persistent = false
+  }
 
   if (MV3) {
     return convertToMV3(v2)
