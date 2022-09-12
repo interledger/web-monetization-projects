@@ -36,7 +36,7 @@ export class SiteToken {
    *       for MV3, it requires the "scripting" permission
    */
   async retrieveViaOpenTabAndExecuteScript(): Promise<string | null> {
-    const tabId = await new Promise<number | null>(resolve => {
+    const existing = await new Promise<number | null>(resolve => {
       this.api.tabs.query({}, tabs => {
         const tab = tabs.find(t => t.url?.startsWith(this.coilDomain))?.id
         resolve(tab ?? null)
@@ -44,8 +44,8 @@ export class SiteToken {
     })
 
     return new Promise(resolve => {
-      if (tabId != null) {
-        this.retrieveToken(tabId, resolve)
+      if (existing != null) {
+        this.retrieveToken(existing, resolve)
       } else {
         this.api.tabs.create(
           {
@@ -55,6 +55,8 @@ export class SiteToken {
           tab => {
             const tabId = notNullOrUndef(tab.id)
             this.retrieveToken(tabId, resolve)
+            // remove opened tab
+            this.api.tabs.remove(tabId)
           }
         )
       }
