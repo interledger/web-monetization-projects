@@ -54,9 +54,11 @@ export class SiteToken {
           },
           tab => {
             const tabId = notNullOrUndef(tab.id)
-            this.retrieveToken(tabId, resolve)
-            // remove opened tab
-            this.api.tabs.remove(tabId)
+            this.retrieveToken(tabId, token => {
+              // remove opened tab
+              this.api.tabs.remove(tabId)
+              resolve(token)
+            })
           }
         )
       }
