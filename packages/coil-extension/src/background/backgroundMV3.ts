@@ -24,13 +24,18 @@ if (BUILD_CONFIG.dev) {
 // TODO: make a PR for @types/chrome
 const scripting = API.scripting as unknown as ChromeScripting
 
+// TODO:MV3 not working in incognito tabs: https://bugs.chromium.org/p/chromium/issues/detail?id=1363001
 scripting
   .registerContentScripts([
     {
-      matches: ['https://*/*', 'http://*/*'],
       id: 'wm-polyfill.js',
-      world: 'MAIN',
+      matches: ['https://*/*', 'http://*/*'],
+
       js: ['wm-polyfill.js'],
+      allFrames: true,
+      world: 'MAIN',
+
+      persistAcrossSessions: true,
       runAt: 'document_start'
     }
   ])
