@@ -6,7 +6,7 @@ function enu<T extends string>(
   defaultValue: T
 ) {
   const value = process.env[name]
-  if (typeof value === undefined) {
+  if (typeof value === 'undefined') {
     return defaultValue
   } else if (value && possibleValues.includes(value as T)) {
     return value as T
