@@ -686,7 +686,7 @@ export class BackgroundScript {
             if (chrome.runtime.id === id) {
               const url = `chrome://extensions/?id=${id}`
               this.log(`opening tab to ${url}`)
-              chrome.tabs.create({ url })
+              chrome.tabs.create({ url }, tab => {})
             }
           }
         }
