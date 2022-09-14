@@ -676,6 +676,19 @@ export class BackgroundScript {
   private requestUpdateCheck() {
     if (this.api.runtime.getManifest().name !== 'Coil') {
       this.api.runtime.requestUpdateCheck((status, details) => {
+        if (status === 'update_available') {
+          const ids = {
+            coildev: 'iehmfkldnblennopinmmagfidpflefkp',
+            coilpreview: 'hcohoecolgmlofifjaobjhidpoaciknp'
+          }
+          for (const [_, id] of Object.entries(ids)) {
+            if (chrome.runtime.id === id) {
+              const url = `chrome://extensions/?id=${id}`
+              this.log(`opening tab to ${url}`)
+              chrome.tabs.create({ url })
+            }
+          }
+        }
         this.log('requestUpdateCheck', status, details)
       })
     }
