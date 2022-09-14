@@ -11,9 +11,12 @@ const options: MakeWebpackConfigParams = {
   polyfill: {
     content: wmPolyfill,
     name: 'wm-polyfill',
-    patch: (manifest, polyfill) => {
+    patch: (manifest, polyfill, packageVersion, buildConfig) => {
       // language=JavaScript
       const coilExtension = {
+        manifest,
+        packageVersion,
+        buildConfig,
         version: manifest.version,
         name: manifest.name
       }

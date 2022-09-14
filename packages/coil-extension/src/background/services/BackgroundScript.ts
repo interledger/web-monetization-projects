@@ -107,7 +107,8 @@ export class BackgroundScript {
     this.monetization.init()
 
     this.popup.setDefaultInactive()
-    void (await this.initAuth())
+    this.requestUpdateCheck()
+    void this.initAuth()
   }
 
   private async initAuth() {
@@ -668,6 +669,14 @@ export class BackgroundScript {
           void this.api.tabs.create({ url: `${this.coilDomain}/signup` })
           void this.multipleInstanceDetector.detectOtherInstances()
         }
+      })
+    }
+  }
+
+  private requestUpdateCheck() {
+    if (this.api.runtime.getManifest().name !== 'Coil') {
+      this.api.runtime.requestUpdateCheck((status, details) => {
+        this.log('requestUpdateCheck', status, details)
       })
     }
   }

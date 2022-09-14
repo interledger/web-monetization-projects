@@ -5,9 +5,18 @@ import fs from 'fs'
 
 import * as webpack from 'webpack'
 import { Configuration } from 'webpack'
-import { configureNodePolyfills, getPackageVersion } from '@coil/webpack-utils'
+import {
+  configureNodePolyfills,
+  getPackageVersion,
+  PackageVersion
+} from '@coil/webpack-utils'
 
-import { MV3, PRODUCTION, TS_LOADER_TRANSPILE_ONLY } from './env'
+import {
+  MV3,
+  PRODUCTION,
+  TS_LOADER_TRANSPILE_ONLY,
+  WEXT_BUILD_CONFIG
+} from './env'
 import { makeDefinePlugin } from './defines'
 import { getPaths } from './paths'
 import { AfterDoneShellCommandPlugin } from './afterDoneShellCommandPlugin'
@@ -24,13 +33,19 @@ const CopyPlugin = require('copy-webpack-plugin')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const VWM = require('webpack-virtual-modules')
 
-function hashPolyFill(
+function patchAndHashPolyFill(
   manifest: ManifestAny,
+  packageVersion: PackageVersion,
   polyfill?: MakeWebpackConfigParams['polyfill']
 ): Polyfill | undefined {
   if (polyfill) {
     if (polyfill.patch) {
-      polyfill = polyfill.patch(manifest, polyfill)
+      polyfill = polyfill.patch(
+        manifest,
+        polyfill,
+        packageVersion,
+        WEXT_BUILD_CONFIG
+      )
     }
     const data = Buffer.from(polyfill.content, 'utf-8')
     const digest = createHash('sha256').update(data).digest()
@@ -55,7 +70,11 @@ export function makeWebpackConfig({
   const manifest = transformManifest(
     JSON.parse(fs.readFileSync(rootDir + '/manifest.json').toString())
   )
-  const polyfill = hashPolyFill(manifest, polyfillOption)
+  const polyfill = patchAndHashPolyFill(
+    manifest,
+    packageVersion,
+    polyfillOption
+  )
   const mode = PRODUCTION ? 'production' : 'development'
 
   const config: webpack.Configuration = {
