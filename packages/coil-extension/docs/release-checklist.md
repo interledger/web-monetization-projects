@@ -225,7 +225,10 @@ makes sense.
   - Fix PR: [#1964][np1964]
 
 - [ ] When built for mv3, check that resumeWebMonetization works after killing worker (use chrome://serviceworker-internals)
+
   - Fix PR: [#3286][np3286]
+
+- [ ] Check that the polyfill is injected properly in incognito tabs
 
 ### Iframe testing
 

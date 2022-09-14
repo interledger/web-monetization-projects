@@ -111,14 +111,18 @@ export class BackgroundScript {
   }
 
   private async initAuth() {
-    this.auth.checkForSiteLogoutAssumeFalseOnTimeout().then(loggedOut => {
-      if (loggedOut) {
-        this.logout()
-      } else {
-        void this.auth.getTokenMaybeRefreshAndStoreState()
-      }
-    })
-    this.auth.queueTokenRefreshCheck()
+    if (this.buildConfig.isMV3) {
+      void this.auth.getTokenMaybeRefreshAndStoreState()
+    } else {
+      this.auth.checkForSiteLogoutAssumeFalseOnTimeout().then(loggedOut => {
+        if (loggedOut) {
+          this.logout()
+        } else {
+          void this.auth.getTokenMaybeRefreshAndStoreState()
+        }
+      })
+      this.auth.queueTokenRefreshCheck()
+    }
   }
 
   private setTabsOnActivatedListener() {

@@ -70,8 +70,7 @@ export class AuthService extends EventEmitter {
     private store: StoreProxy,
     private client: GraphQlClient,
     private siteToken: SiteToken,
-    private activeTabs: ActiveTabLogger,
-    private tippingService: TippingService
+    private activeTabs: ActiveTabLogger
   ) {
     super()
   }
@@ -79,7 +78,6 @@ export class AuthService extends EventEmitter {
   private _op: Promise<string | null> | null = null
 
   /*
-  TODO: manifest version 3 and background workers ?
   If the token is issued more than one day ago, refresh it, such that the
   token is always valid for at least 26-28 days.
    */
