@@ -35,7 +35,7 @@ export const TS_LOADER_TRANSPILE_ONLY = Boolean(
   process.env.TS_LOADER_TRANSPILE_ONLY
 )
 
-export const MV3_DBG_RELOAD_SERVER = process.env.MV3_DBG_RELOAD_SERVER
+export const MV3_RELOAD_SERVER_DEBUG = process.env.MV3_RELOAD_SERVER_DEBUG
 
 export const TSCONFIG_DEBUG = process.env.TSCONFIG_DEBUG
 
