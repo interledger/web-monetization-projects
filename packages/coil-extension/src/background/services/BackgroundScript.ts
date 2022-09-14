@@ -678,13 +678,24 @@ export class BackgroundScript {
       coildev: 'iehmfkldnblennopinmmagfidpflefkp',
       coilpreview: 'hcohoecolgmlofifjaobjhidpoaciknp'
     }
+    // to test this code
+    const force = false
     const ids = Object.values(devExtensions)
-    if (ids.includes(this.api.runtime.id)) {
+    const thisId = this.api.runtime.id
+    if (force) {
+      ids.push(thisId)
+    }
+
+    if (ids.includes(thisId) || force) {
       this.api.runtime.requestUpdateCheck((status, details) => {
-        if (status === 'update_available') {
+        if (status === 'update_available' || force) {
           for (const id of ids) {
-            if (chrome.runtime.id === id) {
-              const url = `chrome://extensions/?id=${id}`
+            if (thisId === id) {
+              const attention = 'ATTENTION_'.repeat(4)
+              const version = details?.version || 'unknown_version'
+              const enableAndDisable = '_ENABLE_AND_DISABLE_EXTENSION'
+              const msg = `${attention}UPDATE_${version}_IS_AVAILABLE${enableAndDisable}`
+              const url = `chrome://extensions/?id=${id}#${msg}`
               this.log(`opening tab to ${url}`)
               chrome.tabs.create({ url }, tab => {})
             }
