@@ -1,6 +1,6 @@
 // Possible to override name/version so can publish as different extension
 
-function enu<T extends string>(
+function oneOf<T extends string>(
   name: string,
   possibleValues: T[],
   defaultValue: T
@@ -19,19 +19,19 @@ export const AFTER_DONE_SHELL_CMD = process.env.AFTER_DONE_SHELL_CMD
 
 export const MV3 = Boolean(process.env.MV3 ?? false)
 
-export const MV3_BACKGROUND_TYPE = enu(
+export const MV3_BACKGROUND_TYPE = oneOf(
   'MV3',
   ['serviceworker', 'eventspage'],
   'serviceworker'
 )
 
-export const MV2_BACKGROUND_TYPE = enu(
+export const MV2_BACKGROUND_TYPE = oneOf(
   'MV2',
   ['backgroundpage', 'eventspage'],
   'backgroundpage'
 )
 
-export const WEXT_MANIFEST_INCOGNITO = enu(
+export const WEXT_MANIFEST_INCOGNITO = oneOf(
   'WEXT_MANIFEST_INCOGNITO',
   ['not_allowed', 'spanning', 'split'],
   'spanning'
@@ -47,9 +47,9 @@ export const WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID =
 export const WEXT_MANIFEST_KEY = process.env.WEXT_MANIFEST_KEY
 export const WEXT_MANIFEST_PERMISSIONS = process.env.WEXT_MANIFEST_PERMISSIONS
 
-export const API = enu('API', ['chrome', 'browser'], 'chrome')
+export const API = oneOf('API', ['chrome', 'browser'], 'chrome')
 
-export const BROWSER = enu(
+export const BROWSER = oneOf(
   'BROWSER',
   ['chrome', 'safari', 'edge', 'firefox', 'samsung-internet'],
   'chrome'
