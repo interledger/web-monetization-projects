@@ -4,15 +4,15 @@ import * as crypto from 'crypto'
 import * as webpack from 'webpack'
 import ws from 'ws'
 
-import { DBG_RELOAD_SERVER, RELOAD_SERVER_PORT } from './env'
+import { MV3_DBG_RELOAD_SERVER, MV3_RELOAD_SERVER_PORT } from './env'
 
-const dbg = DBG_RELOAD_SERVER
+const dbg = MV3_DBG_RELOAD_SERVER
   ? // eslint-disable-next-line no-console
     console.log.bind(console, 'ReloadServerPlugin: ')
   : // eslint-disable-next-line @typescript-eslint/no-empty-function
     () => {}
 
-const port = RELOAD_SERVER_PORT
+const port = MV3_RELOAD_SERVER_PORT
 
 const sha1 = (image: Buffer) => {
   return crypto.createHash('sha1').update(image).digest().toString('hex')

@@ -1,4 +1,6 @@
 // Possible to override name/version so can publish as different extension
+import { ManifestV2 } from './types/manifest'
+
 export const AFTER_DONE_SHELL_CMD = process.env.AFTER_DONE_SHELL_CMD
 
 export const MV3 = Boolean(process.env.MV3 ?? false)
@@ -8,6 +10,10 @@ export const MV3_BACKGROUND_TYPE: 'serviceworker' | 'eventspage' =
 
 export const MV2_BACKGROUND_TYPE: 'backgroundpage' | 'eventspage' =
   process.env.MV2 === 'eventspage' ? 'eventspage' : 'backgroundpage'
+
+export const WEXT_MANIFEST_INCOGNITO =
+  (process.env.WEXT_MANIFEST_INCOGNITO as ManifestV2['incognito']) ??
+  (MV3 ? 'not_allowed' : 'spanning')
 
 export const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
 export const WEXT_MANIFEST_SUFFIX_NO_DATE =
@@ -29,11 +35,13 @@ export const TS_LOADER_TRANSPILE_ONLY = Boolean(
   process.env.TS_LOADER_TRANSPILE_ONLY
 )
 
-export const DBG_RELOAD_SERVER = process.env.DBG_RELOAD_SERVER
+export const MV3_DBG_RELOAD_SERVER = process.env.MV3_DBG_RELOAD_SERVER
 
 export const TSCONFIG_DEBUG = process.env.TSCONFIG_DEBUG
 
-export const RELOAD_SERVER_PORT = Number(process.env.RELOAD_SERVER_PORT ?? 4444)
+export const MV3_RELOAD_SERVER_PORT = Number(
+  process.env.MV3_RELOAD_SERVER_PORT ?? 4444
+)
 
 export const PRODUCTION = process.env.NODE_ENV === 'production'
 

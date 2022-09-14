@@ -17,7 +17,7 @@ export interface Manifest {
 
 export interface ManifestV2 extends Manifest {
   web_accessible_resources?: string[]
-
+  incognito?: 'spanning' | 'split' | 'not_allowed'
   manifest_version: 2
   content_security_policy?: string
   background?: {
