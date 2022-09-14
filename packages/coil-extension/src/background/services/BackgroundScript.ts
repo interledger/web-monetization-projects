@@ -107,7 +107,7 @@ export class BackgroundScript {
     this.monetization.init()
 
     this.popup.setDefaultInactive()
-    this.requestUpdateCheck()
+    this.requestDevExtensionUpdateCheck()
     void this.initAuth()
   }
 
@@ -673,15 +673,16 @@ export class BackgroundScript {
     }
   }
 
-  private requestUpdateCheck() {
-    if (this.api.runtime.getManifest().name !== 'Coil') {
+  private requestDevExtensionUpdateCheck() {
+    const devExtensions = {
+      coildev: 'iehmfkldnblennopinmmagfidpflefkp',
+      coilpreview: 'hcohoecolgmlofifjaobjhidpoaciknp'
+    }
+    const ids = Object.values(devExtensions)
+    if (ids.includes(this.api.runtime.id)) {
       this.api.runtime.requestUpdateCheck((status, details) => {
         if (status === 'update_available') {
-          const ids = {
-            coildev: 'iehmfkldnblennopinmmagfidpflefkp',
-            coilpreview: 'hcohoecolgmlofifjaobjhidpoaciknp'
-          }
-          for (const [_, id] of Object.entries(ids)) {
+          for (const id of ids) {
             if (chrome.runtime.id === id) {
               const url = `chrome://extensions/?id=${id}`
               this.log(`opening tab to ${url}`)
