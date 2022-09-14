@@ -89,7 +89,7 @@ jobs:
           name: Build Safari
           command: |
             cd packages/coil-extension
-            yarn build-prod chrome
+            yarn build-prod safari
             scripts/build-safari.sh
       - save_cache:
           paths:

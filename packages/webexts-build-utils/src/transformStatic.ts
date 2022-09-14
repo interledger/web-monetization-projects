@@ -1,11 +1,11 @@
 import { BROWSER, LIVE_RELOAD, MV3 } from './env'
 
-const CHROMIUM_BASED_BROWSER = /chrome|edge/
+const LIVE_RELOAD_BROWSERS = /chrome|edge/
 
 export function transformStatic(content: Buffer, path: string) {
   if (
     LIVE_RELOAD &&
-    BROWSER.match(CHROMIUM_BASED_BROWSER) &&
+    BROWSER.match(LIVE_RELOAD_BROWSERS) &&
     path.endsWith('background.html')
   ) {
     return content
@@ -16,7 +16,7 @@ export function transformStatic(content: Buffer, path: string) {
       )
   } else if (path.endsWith('popup.html')) {
     let returnVal: Buffer | string = content
-    if (BROWSER.match(CHROMIUM_BASED_BROWSER)) {
+    if (BROWSER.match(LIVE_RELOAD_BROWSERS)) {
       returnVal = content
         .toString()
         .replace(
