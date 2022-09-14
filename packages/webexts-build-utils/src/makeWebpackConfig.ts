@@ -84,7 +84,7 @@ export function makeWebpackConfig({
     entry: makeEntry(rootDir),
 
     plugins: [
-      makeDefinePlugin(packageVersion),
+      makeDefinePlugin(packageVersion, polyfill),
       new CopyPlugin({ patterns: makeCopyToDistPattern(polyfill) }),
       new AfterDoneShellCommandPlugin()
     ],
