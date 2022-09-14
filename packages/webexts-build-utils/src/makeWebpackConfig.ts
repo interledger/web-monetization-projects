@@ -1,5 +1,7 @@
 import * as path from 'path'
 import * as process from 'process'
+import { createHash } from 'crypto'
+import fs from 'fs'
 
 import * as webpack from 'webpack'
 import { Configuration } from 'webpack'
@@ -13,22 +15,47 @@ import { makeEntry } from './entries'
 import { makeTsLoader } from './tsloader'
 import { makeCopyToDistPattern } from './copyToDist'
 import { ReloadServerPlugin } from './reloadServer'
-import { MakeWebpackConfigParams } from './types'
+import { MakeWebpackConfigParams, Polyfill } from './types'
+import { transformManifest } from './transformManifest'
+import { ManifestAny } from './types/manifest'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require('copy-webpack-plugin')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const VWM = require('webpack-virtual-modules')
 
+function hashPolyFill(
+  manifest: ManifestAny,
+  polyfill?: MakeWebpackConfigParams['polyfill']
+): Polyfill | undefined {
+  if (polyfill) {
+    if (polyfill.patch) {
+      polyfill = polyfill.patch(manifest, polyfill)
+    }
+    const data = Buffer.from(polyfill.content, 'utf-8')
+    const digest = createHash('sha256').update(data).digest()
+    const polyfillHash = `sha256-${digest.toString('base64')}`
+    return {
+      name: polyfill.name,
+      content: polyfill.content,
+      hash: polyfillHash
+    }
+  } else {
+    return undefined
+  }
+}
+
 export function makeWebpackConfig({
   rootDir,
-  polyfill
+  polyfill: polyfillOption
 }: MakeWebpackConfigParams): Configuration {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const paths = getPaths(rootDir)
-
   const packageVersion = getPackageVersion(paths.PACKAGE_JSON)
-
+  const manifest = transformManifest(
+    JSON.parse(fs.readFileSync(rootDir + '/manifest.json').toString())
+  )
+  const polyfill = hashPolyFill(manifest, polyfillOption)
   const mode = PRODUCTION ? 'production' : 'development'
 
   const config: webpack.Configuration = {

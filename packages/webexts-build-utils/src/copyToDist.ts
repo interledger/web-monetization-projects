@@ -13,7 +13,7 @@ export function makeCopyToDistPattern(polyfill?: Polyfill) {
       to: 'manifest.json',
       transform: (content: Buffer) => {
         let manifest = JSON.parse(content.toString())
-        manifest = transformManifest(manifest, BROWSER, polyfill)
+        manifest = transformManifest(manifest, polyfill)
         return prettyJSON(manifest)
       }
     },
