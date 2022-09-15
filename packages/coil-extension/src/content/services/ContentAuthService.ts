@@ -1,6 +1,5 @@
 import { inject, injectable } from 'inversify'
 
-import { STORAGE_KEY } from '../../types/storage'
 import { ContentRuntime } from '../types/ContentRunTime'
 import * as tokens from '../../types/tokens'
 import { BuildConfig } from '../../types/BuildConfig'
@@ -44,25 +43,25 @@ export class ContentAuthService {
   }
 
   syncViaInjectToken() {
-    const existingToken = this.storage.getItem(STORAGE_KEY.token)
-    this.contentRuntime.sendMessage(
-      {
-        command: 'injectToken',
-        data: { token: existingToken }
-      },
-      result => {
-        if (result) {
-          // We don't want to automatically  login in mv3, only refresh the
-          // page's token with a newer one from the extension. Because in MV3
-          // we are not checking for sign-out on startup.
-          if (this.buildConfig.isMV3 && !existingToken) {
-            this.sendLogoutMessage()
-          } else {
-            this.storage.setItem(STORAGE_KEY.token, result)
+    // We don't want to automatically  login in mv3, only refresh the
+    // page's token with a newer one from the extension. Because in MV3
+    // we are not checking for sign-out on startup.
+    const existingToken = this.storage.getItem('token')
+    if (this.buildConfig.isMV3 && !existingToken) {
+      this.sendLogoutMessage()
+    } else {
+      this.contentRuntime.sendMessage(
+        {
+          command: 'injectToken',
+          data: { token: existingToken }
+        },
+        result => {
+          if (result) {
+            this.storage.setItem('token', result)
           }
         }
-      }
-    )
+      )
+    }
   }
 
   private sendLogoutMessage() {

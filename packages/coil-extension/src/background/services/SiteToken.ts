@@ -4,6 +4,14 @@ import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 import { timeoutRejecting } from '../../util/timeout'
 
+interface RetrieveParams {
+  existingTabOnly?: boolean
+}
+
+interface RetrieveViaOpenTabAndExecuteScriptParams {
+  existingTabOnly?: boolean
+}
+
 /**
  * See {@link ContentAuthService#handleCoilTokenMessage}
  *
@@ -23,11 +31,13 @@ export class SiteToken {
     private api: typeof chrome
   ) {}
 
-  async retrieve(): Promise<string | null> {
+  async retrieve({
+    existingTabOnly = false
+  }: RetrieveParams): Promise<string | null> {
     if (self.document) {
       return this.retrieveViaIframeInjection()
     } else {
-      return this.retrieveViaOpenTabAndExecuteScript()
+      return this.retrieveViaOpenTabAndExecuteScript({ existingTabOnly })
     }
   }
 
@@ -35,7 +45,9 @@ export class SiteToken {
    * Note: this requires the "tabs" permission listed in the manifest
    *       for MV3, it requires the "scripting" permission
    */
-  async retrieveViaOpenTabAndExecuteScript(): Promise<string | null> {
+  async retrieveViaOpenTabAndExecuteScript({
+    existingTabOnly = false
+  }: RetrieveViaOpenTabAndExecuteScriptParams): Promise<string | null> {
     const existing = await new Promise<number | null>(resolve => {
       this.api.tabs.query({}, tabs => {
         const tab = tabs.find(t => t.url?.startsWith(this.coilDomain))?.id
@@ -43,9 +55,11 @@ export class SiteToken {
       })
     })
 
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       if (existing != null) {
         this.retrieveToken(existing, resolve)
+      } else if (existingTabOnly) {
+        reject(new Error('no_existing_tab'))
       } else {
         this.api.tabs.create(
           {

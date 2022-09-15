@@ -92,12 +92,18 @@ export class AuthService extends EventEmitter {
     }, twelveHours + randomness)
   }
 
-  async checkForSiteLogoutAssumeFalseOnTimeout(): Promise<boolean> {
+  async checkForSiteLogoutAssumeFalseOnTimeout({
+    isMv3 = false
+  }: {
+    isMv3?: boolean
+  }): Promise<boolean> {
     try {
-      const token = await this.siteToken.retrieve()
+      const token = await this.siteToken.retrieve({ existingTabOnly: isMv3 })
       return !token
     } catch (e) {
       if (e instanceof TimeoutError) {
+        return false
+      } else if (e.message.startsWith('no_existing_tab')) {
         return false
       } else {
         throw e
@@ -135,7 +141,7 @@ export class AuthService extends EventEmitter {
     )
 
     if (this.tokenInvalid(token)) {
-      token = await this.siteToken.retrieve()
+      token = await this.siteToken.retrieve({ existingTabOnly: false })
       this.activeTabs.log(`siteToken: ${Boolean(token)}`)
     }
     this.trace('siteToken', token)
