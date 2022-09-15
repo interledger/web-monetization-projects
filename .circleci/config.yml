@@ -193,7 +193,7 @@ jobs:
 
   # There have been and likely will be again issues that only surface in transpileOnly mode,
   # so we test this specifically and separately.
-  coil-extension-puppeteer-transpile-only:
+  coil-extension-puppeteer-transpile-only-mv3:
     # It may be overkill, but the jobs are run in parallel, so it doesn't generally slow
     # anyone down and sometimes provides extra data points. There have been regressions
     # introduced in dependencies that only show up on particular versions of node.
@@ -214,6 +214,7 @@ jobs:
           command: |
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
+            export MV3=serviceworker
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
             BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
             xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
@@ -428,7 +429,7 @@ workflows:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
               ignore: /pull\/[0-9]+/
           <<: *node-version-matrix
-      - coil-extension-puppeteer-transpile-only:
+      - coil-extension-puppeteer-transpile-only-mv3:
           context: web-monetization-tests
           filters:
             branches:
@@ -440,7 +441,7 @@ workflows:
             - jest-all
             - jest-workspaces-foreach-all
             - coil-extension-puppeteer
-            - coil-extension-puppeteer-transpile-only
+            - coil-extension-puppeteer-transpile-only-mv3
           filters: # using regex filters requires the entire branch to match
             branches:
               only: # only branches matching the below regex filters will run

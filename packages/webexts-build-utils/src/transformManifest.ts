@@ -67,10 +67,6 @@ function convertToMV3(v2: ManifestV2) {
     }))
   }
 
-  // Add storage permission
-  if (!v3.permissions.includes('storage')) {
-    v3.permissions.push('storage')
-  }
   // Add scripting permission
   if (!v3.permissions.includes('scripting')) {
     v3.permissions.push('scripting')
