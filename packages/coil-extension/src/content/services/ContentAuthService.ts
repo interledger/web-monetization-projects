@@ -1,12 +1,14 @@
 import { inject, injectable } from 'inversify'
 
-import { STORAGE_KEY } from '../../types/storage'
 import { ContentRuntime } from '../types/ContentRunTime'
 import * as tokens from '../../types/tokens'
+import { BuildConfig } from '../../types/BuildConfig'
 
 @injectable()
 export class ContentAuthService {
   constructor(
+    @inject(tokens.BuildConfig)
+    private buildConfig: BuildConfig,
     private window: Window,
     private storage: Storage,
     @inject(tokens.ContentRuntime) private contentRuntime: ContentRuntime
@@ -33,24 +35,36 @@ export class ContentAuthService {
     this.window.addEventListener('coil_writeToken', event => {
       const token = this.storage.getItem('token')
       if (token) {
+        // Note, this is invoked elsewhere too
         this.syncViaInjectToken()
       } else {
-        this.contentRuntime.sendMessage({ command: 'logout' })
+        this.sendLogoutMessage()
       }
     })
   }
 
   syncViaInjectToken() {
-    this.contentRuntime.sendMessage(
-      {
-        command: 'injectToken',
-        data: { token: this.storage.getItem(STORAGE_KEY.token) }
-      },
-      result => {
-        if (result) {
-          this.storage.setItem(STORAGE_KEY.token, result)
+    // We don't want to automatically  login in mv3, only refresh the
+    // page's token with a newer one from the extension.
+    const existingToken = this.storage.getItem('token')
+    if (this.buildConfig.isMV3 && !existingToken) {
+      this.sendLogoutMessage()
+    } else {
+      this.contentRuntime.sendMessage(
+        {
+          command: 'injectToken',
+          data: { token: existingToken }
+        },
+        result => {
+          if (result) {
+            this.storage.setItem('token', result)
+          }
         }
-      }
-    )
+      )
+    }
+  }
+
+  private sendLogoutMessage() {
+    this.contentRuntime.sendMessage({ command: 'logout' })
   }
 }

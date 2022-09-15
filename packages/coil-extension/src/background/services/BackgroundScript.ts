@@ -112,16 +112,17 @@ export class BackgroundScript {
   }
 
   private async initAuth() {
-    if (this.buildConfig.isMV3) {
-      void this.auth.getTokenMaybeRefreshAndStoreState()
-    } else {
-      this.auth.checkForSiteLogoutAssumeFalseOnTimeout().then(loggedOut => {
+    const isMV3 = this.buildConfig.isMV3
+    this.auth
+      .checkForSiteLogoutAssumeFalseOnTimeout({ isMv3: isMV3 })
+      .then(loggedOut => {
         if (loggedOut) {
           this.logout()
         } else {
           void this.auth.getTokenMaybeRefreshAndStoreState()
         }
       })
+    if (!isMV3) {
       this.auth.queueTokenRefreshCheck()
     }
   }
