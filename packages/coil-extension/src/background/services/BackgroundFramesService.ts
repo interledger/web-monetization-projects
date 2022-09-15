@@ -393,10 +393,9 @@ export class BackgroundFramesService extends EventEmitter {
             {
               frameId: frame.frameId
             },
-            response => {
-              if (this.api.runtime.lastError) {
-                console.log('error', this.api.runtime.lastError)
-              }
+            () => {
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars
+              const ignored = this.api.runtime.lastError
             }
           )
         }
