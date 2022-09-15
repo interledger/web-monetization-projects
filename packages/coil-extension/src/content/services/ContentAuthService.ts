@@ -35,6 +35,7 @@ export class ContentAuthService {
     this.window.addEventListener('coil_writeToken', event => {
       const token = this.storage.getItem('token')
       if (token) {
+        // Note, this is invoked elsewhere too
         this.syncViaInjectToken()
       } else {
         this.sendLogoutMessage()
@@ -44,8 +45,7 @@ export class ContentAuthService {
 
   syncViaInjectToken() {
     // We don't want to automatically  login in mv3, only refresh the
-    // page's token with a newer one from the extension. Because in MV3
-    // we are not checking for sign-out on startup.
+    // page's token with a newer one from the extension.
     const existingToken = this.storage.getItem('token')
     if (this.buildConfig.isMV3 && !existingToken) {
       this.sendLogoutMessage()
