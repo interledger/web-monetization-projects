@@ -78,8 +78,11 @@ jobs:
       - name: Step 1 - Extract tar archive
         run: tar -xf monorepo.tar
 
-      - name: Step 2 - Package the extension for chromium
-        run: WEXT_MANIFEST_INCOGNITO=not_allowed MV3=serviceworker ./package.sh chrome
+      - name: Step 2 - Package the extension for chromium mv3, incognito disabled
+        env:
+          WEXT_MANIFEST_INCOGNITO: not_allowed
+          MV3: serviceworker
+        run:  ./package.sh chrome
         working-directory: ${{ github.workspace }}/packages/coil-extension/
         shell: bash
 
