@@ -1,4 +1,26 @@
-- <a name="coil-extension@0.0.59"></a>
+- <a name="coil-extension@0.0.61"></a>
+
+# [coil-extension@0.0.61](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.60...coil-extension@0.0.61) (2021-09-15)
+
+### New Features
+
+- Added window.coilExtension [#3319](https://github.com/coilhq/web-monetization-projects/pull/3319)
+- Enable logging by default for for CoilDev/CoilPreview [#3288](https://github.com/coilhq/web-monetization-projects/pull/3288)
+- Change auth handling for MV3, no incognito [#3301](https://github.com/coilhq/web-monetization-projects/pull/3301) [#3302](https://github.com/coilhq/web-monetization-projects/pull/3302) [#3305](https://github.com/coilhq/web-monetization-projects/pull/3305) [#3324](https://github.com/coilhq/web-monetization-projects/pull/3324)
+
+### Bug Fixes / Enhancements
+
+- Do not log routine duplicate script error [#3231](https://github.com/coilhq/web-monetization-projects/pull/3231)
+- Excise WM2 original trial so WM2 is on by default [#3257](https://github.com/coilhq/web-monetization-projects/pull/3257)
+- restore localStorage.COIL_LOGGING_ENABLED for MV2 bg page [#3271](https://github.com/coilhq/web-monetization-projects/pull/3271)
+- Reduce unnecessary adapted content messaging [#3270](https://github.com/coilhq/web-monetization-projects/pull/3270)
+- Send start details in resume message, for new worker, or after login [#3283](https://github.com/coilhq/web-monetization-projects/pull/3283) [#3286](https://github.com/coilhq/web-monetization-projects/pull/3286)
+- Only restart MV3 in dev mode [#3284](https://github.com/coilhq/web-monetization-projects/pull/3284)
+- Remove storage permission for MV3 [#3325](https://github.com/coilhq/web-monetization-projects/pull/3325)
+- Inject polyfill in iframes for MV3 [#3312](https://github.com/coilhq/web-monetization-projects/pull/3312)3 [#3312](https://github.com/coilhq/web-monetization-projects/pull/3312)
+- Fix iframes impl in MV3 (replace tabs.onRemoved with frameRemoved) [#3328](https://github.com/coilhq/web-monetization-projects/pull/3328)
+
+- <a name="coil-extension@0.0.60"></a>
 
 # [coil-extension@0.0.60](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.59...coil-extension@0.0.60) (2021-08-11)
 
@@ -24,7 +46,7 @@
   - [#3168](https://github.com/coilhq/web-monetization-projects/pull/3168)
   - [#3170](https://github.com/coilhq/web-monetization-projects/pull/3170)
 
-### Fixes
+### Bug Fixes
 
 - Support building without git folder [#3117](https://github.com/coilhq/web-monetization-projects/pull/3117) [#3128](https://github.com/coilhq/web-monetization-projects/pull/3128)
 - Revert workarounds for early buggy versions of Safari [#3075](https://github.com/coilhq/web-monetization-projects/pull/3075)

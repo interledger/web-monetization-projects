@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - '*trigger-github-actions-build-*'
+      - 'nd-bump-version-*'
     tags:
       - coil-extension@*
 
