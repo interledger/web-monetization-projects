@@ -205,7 +205,7 @@ export class BackgroundScript {
 
   private setTabsOnRemovedListener() {
     // Remove tab state when the tab is closed to prevent memory leak
-    this.api.tabs.onRemoved.addListener(tabId => {
+    this.events.on('tabs.onRemoved', tabId => {
       this.log('removing tab with id', tabId)
       this.tabStates.clear(tabId)
 
@@ -236,8 +236,15 @@ export class BackgroundScript {
 
   private setFramesOnRemovedListener() {
     this.framesService.on('frameRemoved', event => {
-      this.tabStates.clearFrame(event)
-      this._closeStreams(event.tabId, event.frameId)
+      // Top level frame
+      // tabs.onRemoved does not seem to work
+      if (this.buildConfig.isMV3 && event.frameId === 0) {
+        this.tabStates.clear(event.tabId)
+        this._closeStreams(event.tabId)
+      } else {
+        this.tabStates.clearFrame(event)
+        this._closeStreams(event.tabId, event.frameId)
+      }
     })
   }
 
@@ -413,11 +420,18 @@ export class BackgroundScript {
     if (origin !== this.coilDomain) {
       return null
     }
+    const loggedInPrior = Boolean(this.auth.getStoredToken())
 
     // When logged out siteToken will be an empty string so normalize it to
     // null
     const newest = this.auth.syncSiteToken(siteToken || null)
     this.activeTabLogger.log(`injectToken: ${Date.now()}`)
+
+    if (this.auth.getStoredToken() && !loggedInPrior) {
+      this.tabStates.clearSecondaryState()
+      this.tabStates.reloadTabState({ from: 'injectToken' })
+    }
+
     void this.auth.getTokenMaybeRefreshAndStoreState()
     return newest
   }
