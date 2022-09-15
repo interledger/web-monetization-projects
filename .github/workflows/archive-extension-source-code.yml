@@ -3,7 +3,7 @@ name: Archive Extension Build And Source Code
 on:
   push:
     branches:
-      - nd-*trigger-github-actions-build-*
+      - '*trigger-github-actions-build-*'
     tags:
       - coil-extension@*
 
