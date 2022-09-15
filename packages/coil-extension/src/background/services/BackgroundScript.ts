@@ -112,8 +112,9 @@ export class BackgroundScript {
   }
 
   private async initAuth() {
+    const isMV3 = this.buildConfig.isMV3
     this.auth
-      .checkForSiteLogoutAssumeFalseOnTimeout({ isMv3: this.buildConfig.isMV3 })
+      .checkForSiteLogoutAssumeFalseOnTimeout({ isMv3: isMV3 })
       .then(loggedOut => {
         if (loggedOut) {
           this.logout()
@@ -121,7 +122,9 @@ export class BackgroundScript {
           void this.auth.getTokenMaybeRefreshAndStoreState()
         }
       })
-    this.auth.queueTokenRefreshCheck()
+    if (!isMV3) {
+      this.auth.queueTokenRefreshCheck()
+    }
   }
 
   private setTabsOnActivatedListener() {
