@@ -24,14 +24,14 @@ export class IdleDetection {
     const document = this.document
     // Immediately pause the stream if the page loads while hidden
     if (document.visibilityState === 'hidden') {
-      pause("visibilityState === 'hidden'")
+      pause("document.visibilityState === 'hidden'")
     }
 
     const listener = () => {
       if (document.visibilityState === 'visible') {
         resume("document.visibilityState === 'visible'")
       } else {
-        pause()
+        pause(`document.visibilityState === '${document.visibilityState}'`)
       }
     }
     document.addEventListener('visibilitychange', listener)
@@ -54,7 +54,7 @@ export class IdleDetection {
         handle = window.setTimeout(idleTimerReached, idleTimeLeft)
       } else {
         idle = true
-        pause()
+        pause('mousemove idle=true')
       }
     }
 
@@ -66,7 +66,7 @@ export class IdleDetection {
       if (idle) {
         idle = false
         handle = window.setTimeout(idleTimerReached, IDLE_TIMEOUT)
-        resume('mousemove idle')
+        resume('mousemove idle=false')
       }
     }
 

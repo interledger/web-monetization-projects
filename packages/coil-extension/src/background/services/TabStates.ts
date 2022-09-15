@@ -312,4 +312,10 @@ export class TabStates {
       this.setFrame(frame, { [key]: { ...state } })
     }
   }
+
+  clearSecondaryState() {
+    Object.values(this.tabStates).forEach(ts => {
+      ts.iconSecondary = null
+    })
+  }
 }
