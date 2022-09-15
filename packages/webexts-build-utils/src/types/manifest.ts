@@ -51,3 +51,5 @@ export interface ManifestV3 extends Manifest {
     service_worker?: string
   }
 }
+
+export type ManifestAny = ManifestV2 | ManifestV3

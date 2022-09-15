@@ -2,6 +2,7 @@ import assert from 'assert'
 
 import { applyManifestPermissions } from './manifestPermissions'
 import {
+  BROWSER,
   MV2_BACKGROUND_TYPE,
   MV3,
   MV3_BACKGROUND_TYPE,
@@ -121,11 +122,8 @@ function applyEnvVarSettings(v2: ManifestV2, browser: string) {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function transformManifest(
-  v2: ManifestV2,
-  browser: string,
-  polyfill?: Polyfill
-) {
+export function transformManifest(v2: ManifestV2, polyfill?: Polyfill) {
+  const browser = BROWSER
   const targets = v2['$targets']
   delete v2['$targets']
   if (targets?.[browser]?.permissions) {
