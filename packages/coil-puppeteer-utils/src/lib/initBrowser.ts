@@ -5,7 +5,7 @@ import * as fs from 'fs'
 import * as os from 'os'
 
 import getPort from 'get-port'
-import webExt, { RunOptions } from 'web-ext'
+import { RunOptions } from 'web-ext'
 import { BrowserContext, default as puppeteer } from 'puppeteer'
 
 import * as env from './env'
@@ -17,6 +17,10 @@ export interface InitBrowserOptions {
   loadExtension?: boolean
   browser?: 'chrome' | 'firefox'
 }
+
+// TODO: jest can't
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const webExt: any
 
 function jugglerEndpointWatcher() {
   // Enable logging
