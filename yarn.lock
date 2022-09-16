@@ -5102,14 +5102,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/minimatch@npm:*, @types/minimatch@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@types/minimatch@npm:3.0.3"
-  checksum: db528d3558d53f1df29f46f6f94afcbddd7c8dbf90f4b563849d798c595bd09a216285be43610ae7b833fde9b3b0785f55b5ba2f42f00602fcf8d3509a9cdb9b
-  languageName: node
-  linkType: hard
-
-"@types/minimatch@npm:^3.0.5":
+"@types/minimatch@npm:*, @types/minimatch@npm:^3.0.3, @types/minimatch@npm:^3.0.5":
   version: 3.0.5
   resolution: "@types/minimatch@npm:3.0.5"
   checksum: 1e3ad77c3a101452cb52919d33e5f47f13b4fe66a6566409e1b555b975831cf127fb9ee347d6d9d1648784dac816dc955f8766991de9c3de80a80cc15890c5f1
@@ -9369,14 +9362,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^9.0.0, commander@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "commander@npm:9.3.0"
-  checksum: 110e8e7a5476adfc7d76a2cc4928077dd094053d4387213db5f343327f4f7ef242d13d123788aacf172706264b184b5fa94b29556d9506493ca3325f31782f54
-  languageName: node
-  linkType: hard
-
-"commander@npm:^9.1.0":
+"commander@npm:^9.0.0, commander@npm:^9.1.0, commander@npm:^9.3.0":
   version: 9.4.0
   resolution: "commander@npm:9.4.0"
   checksum: b1a41144b2e6875163df93dee54c446f2c086d7c8176febaca87ee2b4b177398de3e7b5297e0e70fb2d7ad835398b05c90bc218683daeeece5cef65f9a3a1202
@@ -12872,7 +12858,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:10.1.0":
+"fs-extra@npm:10.1.0, fs-extra@npm:^10.0.0":
   version: 10.1.0
   resolution: "fs-extra@npm:10.1.0"
   dependencies:
@@ -12880,17 +12866,6 @@ __metadata:
     jsonfile: "npm:^6.0.1"
     universalify: "npm:^2.0.0"
   checksum: c397c1bfbb8976afb6758a96b9d5781c179b01ec843caa9f6613b8d95d95e17229d1ba7132dd811e112df5f2537bce1f68a3c0a722decc345947f133921fa3b3
-  languageName: node
-  linkType: hard
-
-"fs-extra@npm:^10.0.0":
-  version: 10.0.0
-  resolution: "fs-extra@npm:10.0.0"
-  dependencies:
-    graceful-fs: "npm:^4.2.0"
-    jsonfile: "npm:^6.0.1"
-    universalify: "npm:^2.0.0"
-  checksum: 768d137af1a607d59985b063b632031406a40d3ea528e7e720a9f36ed8f48c951aad025b03f491074869d25f53c2a56a4b331b1fe49519b40154228553abc7eb
   languageName: node
   linkType: hard
 
