@@ -18,7 +18,7 @@ export interface InitBrowserOptions {
   browser?: 'chrome' | 'firefox'
 }
 
-// TODO: jest can't
+// TODO: jest can't consume web-ext esm source as configured at time of comment
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const webExt: any
 
@@ -31,7 +31,9 @@ function jugglerEndpointWatcher() {
   return () => {
     // Parse firefox logs and extract juggler endpoint.
     const captured = webExt.util.logger.consoleStream.capturedMessages
-    const message = captured.find(msg => msg.includes(JUGGLER_MESSAGE))
+    const message = captured.find((msg: string) =>
+      msg.includes(JUGGLER_MESSAGE)
+    )
     if (!message) {
       throw new Error(`Can not find Juggler endpoint:\n ${captured.join('\n')}`)
     }
