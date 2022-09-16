@@ -13,6 +13,6 @@ export WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID="coilwm2previewfirefoxex
 NODE_ENV=production yarn build-prod firefox
 
 # See: https://github.com/mozilla/web-ext/issues/1773 re: ETIMEOUT
-yarn web-ext sign --timeout 300000 --source-dir dist \
+yarn web-ext sign --timeout 3600000 --source-dir dist \
     --api-key $WEXT_SHIPIT_FIREFOX_JWT_ISSUER \
     --api-secret $WEXT_SHIPIT_FIREFOX_JWT_SECRET
