@@ -1944,7 +1944,7 @@ __metadata:
     tsconfig-paths: "npm:4.1.0"
     typescript: "npm:4.8.3"
     uuid: "npm:^9.0.0"
-    web-ext: "npm:^7.2.0"
+    web-ext: "npm:7.2.0"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
     webpack-cli: "npm:4.10.0"
@@ -3584,7 +3584,7 @@ __metadata:
     typeface-roboto: "npm:^1.1.13"
     typescript: "npm:4.8.3"
     uuid: "npm:^9.0.0"
-    web-ext: "npm:^7.2.0"
+    web-ext: "npm:7.2.0"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
     webpack-cli: "npm:4.10.0"
@@ -23967,6 +23967,46 @@ __metadata:
   languageName: node
   linkType: hard
 
+"web-ext@npm:7.2.0, web-ext@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "web-ext@npm:7.2.0"
+  dependencies:
+    "@babel/runtime": "npm:7.18.9"
+    "@devicefarmer/adbkit": "npm:3.2.3"
+    addons-linter: "npm:5.14.0"
+    bunyan: "npm:1.8.15"
+    camelcase: "npm:7.0.0"
+    chrome-launcher: "npm:0.15.1"
+    debounce: "npm:1.2.1"
+    decamelize: "npm:6.0.0"
+    es6-error: "npm:4.1.1"
+    firefox-profile: "npm:4.2.2"
+    fs-extra: "npm:10.1.0"
+    fx-runner: "npm:1.3.0"
+    import-fresh: "npm:3.3.0"
+    mkdirp: "npm:1.0.4"
+    multimatch: "npm:6.0.0"
+    mz: "npm:2.7.0"
+    node-notifier: "npm:10.0.1"
+    open: "npm:8.4.0"
+    parse-json: "npm:6.0.2"
+    promise-toolbox: "npm:0.21.0"
+    sign-addon: "npm:5.0.0"
+    source-map-support: "npm:0.5.21"
+    strip-bom: "npm:5.0.0"
+    strip-json-comments: "npm:5.0.0"
+    tmp: "npm:0.2.1"
+    update-notifier: "npm:6.0.2"
+    watchpack: "npm:2.4.0"
+    ws: "npm:8.8.1"
+    yargs: "npm:17.5.1"
+    zip-dir: "npm:2.0.0"
+  bin:
+    web-ext: bin/web-ext.js
+  checksum: ab8e84e4277e905470be7944317cd6606658ebcab235bd95b7958065d6668a7d2d0ac7bc18be560dc92c421c068346a032e84a5a835354f4fa0de823716aba12
+  languageName: node
+  linkType: hard
+
 "web-ext@npm:^3.2.0":
   version: 3.2.1
   resolution: "web-ext@npm:3.2.1"
@@ -24008,46 +24048,6 @@ __metadata:
   bin:
     web-ext: bin/web-ext
   checksum: eed53335018c6c596481d26419f15afb88d49c0ebbdcda97e722f840654140b347ba0d672015da04b188bf4c9ae630fcda3572f299c8e9dab6a996373a989209
-  languageName: node
-  linkType: hard
-
-"web-ext@npm:^7.2.0":
-  version: 7.2.0
-  resolution: "web-ext@npm:7.2.0"
-  dependencies:
-    "@babel/runtime": "npm:7.18.9"
-    "@devicefarmer/adbkit": "npm:3.2.3"
-    addons-linter: "npm:5.14.0"
-    bunyan: "npm:1.8.15"
-    camelcase: "npm:7.0.0"
-    chrome-launcher: "npm:0.15.1"
-    debounce: "npm:1.2.1"
-    decamelize: "npm:6.0.0"
-    es6-error: "npm:4.1.1"
-    firefox-profile: "npm:4.2.2"
-    fs-extra: "npm:10.1.0"
-    fx-runner: "npm:1.3.0"
-    import-fresh: "npm:3.3.0"
-    mkdirp: "npm:1.0.4"
-    multimatch: "npm:6.0.0"
-    mz: "npm:2.7.0"
-    node-notifier: "npm:10.0.1"
-    open: "npm:8.4.0"
-    parse-json: "npm:6.0.2"
-    promise-toolbox: "npm:0.21.0"
-    sign-addon: "npm:5.0.0"
-    source-map-support: "npm:0.5.21"
-    strip-bom: "npm:5.0.0"
-    strip-json-comments: "npm:5.0.0"
-    tmp: "npm:0.2.1"
-    update-notifier: "npm:6.0.2"
-    watchpack: "npm:2.4.0"
-    ws: "npm:8.8.1"
-    yargs: "npm:17.5.1"
-    zip-dir: "npm:2.0.0"
-  bin:
-    web-ext: bin/web-ext.js
-  checksum: ab8e84e4277e905470be7944317cd6606658ebcab235bd95b7958065d6668a7d2d0ac7bc18be560dc92c421c068346a032e84a5a835354f4fa0de823716aba12
   languageName: node
   linkType: hard
 
