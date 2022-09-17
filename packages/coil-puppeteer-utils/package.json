@@ -55,7 +55,7 @@
     "@swc/jest": "0.2.22",
     "@types/debug": "4.1.7",
     "@types/get-port": "4.2.0",
-    "@types/jest": "29.0.1",
+    "@types/jest": "29.0.3",
     "@types/node": "16.11.58",
     "@types/tmp": "0.2.3",
     "@typescript-eslint/eslint-plugin": "5.37.0",
