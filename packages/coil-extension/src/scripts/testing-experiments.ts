@@ -4,7 +4,9 @@ import * as nodeWindowManager from 'node-window-manager'
 import * as nutTree from '@nut-tree/nut-js'
 import { centerOf, straightTo } from '@nut-tree/nut-js'
 
-import '@nut-tree/template-matcher'
+// import '@nut-tree/template-matcher'
+// "@u4/opencv-build": "^0.5.6",
+// "@u4/opencv4nodejs": "^6.2.4",
 
 const wm = nodeWindowManager.windowManager
 const log = console.log.bind(console)
