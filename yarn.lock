@@ -1880,7 +1880,7 @@ __metadata:
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.3"
     "@material-ui/styles": "npm:^4.11.5"
-    "@nut-tree/nut-js": "npm:^2.2.2-next.20220915212335"
+    "@nut-tree/nut-js": "npm:2.2.2-next.20220920200626"
     "@swc/core": "npm:1.3.1"
     "@swc/jest": "npm:0.2.22"
     "@types/debug": "npm:4.1.7"
@@ -4629,62 +4629,62 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nut-tree/libnut-darwin@npm:^2.2.1-next.20220822192236":
-  version: 2.2.1-next.20220822192236
-  resolution: "@nut-tree/libnut-darwin@npm:2.2.1-next.20220822192236"
+"@nut-tree/libnut-darwin@npm:^2.2.1-next.20220920195125":
+  version: 2.2.1-next.20220920195125
+  resolution: "@nut-tree/libnut-darwin@npm:2.2.1-next.20220920195125"
   dependencies:
     bindings: "npm:1.5.0"
     cmake-js: "npm:6.1.0"
     node-addon-api: "npm:3.0.0"
-  checksum: 926d9b31e252323d1044c1a5e7e4e51d3bfec10dafc669bc519e2a5b51ae95db4b020b7b2ebd7fccc1f819fa4b75e0aa24280734c3f379892e0f83b7b6de4440
+  checksum: 2ad2db993a25ca0c699475a222d50ecac7cb61ed08cdc91bd24e265e73c755652c2eb8b7806017909a9f1780f92b3cf56efd839ebf2f268e09fe13a4794f2dc5
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
 
-"@nut-tree/libnut-linux@npm:^2.2.1-next.20220822192231":
-  version: 2.2.1-next.20220822192231
-  resolution: "@nut-tree/libnut-linux@npm:2.2.1-next.20220822192231"
+"@nut-tree/libnut-linux@npm:^2.2.1-next.20220920195123":
+  version: 2.2.1-next.20220920195123
+  resolution: "@nut-tree/libnut-linux@npm:2.2.1-next.20220920195123"
   dependencies:
     bindings: "npm:1.5.0"
     cmake-js: "npm:6.1.0"
     node-addon-api: "npm:3.0.0"
-  checksum: 7fab228f6552687cd924f6fa086149cd54c99be0a25c315c0e621427b39b04b2693f84678183167c0fbe69cfd0ffa0771e87329a51a1e4a178efef963594cfa4
+  checksum: d23bbae0a56f1d3ac142cfc35f018fda99b165dd6a3a14fc8c6ba0dfb48c5f312bbdd64aa7907dad3e06122c71be3e953e0e099490d37da56e8c261422043321
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
 
-"@nut-tree/libnut-win32@npm:^2.2.1-next.20220822072317":
-  version: 2.2.1-next.20220822072317
-  resolution: "@nut-tree/libnut-win32@npm:2.2.1-next.20220822072317"
+"@nut-tree/libnut-win32@npm:^2.2.1-next.20220920075218":
+  version: 2.2.1-next.20220920075218
+  resolution: "@nut-tree/libnut-win32@npm:2.2.1-next.20220920075218"
   dependencies:
     bindings: "npm:1.5.0"
     cmake-js: "npm:6.1.0"
     node-addon-api: "npm:3.0.0"
-  checksum: 4fc5f9c6dcb1d9dd03e243feb86aa21a4c956193caab7cc996680058b313349479279eb405b3a35693e1c20c935affcef08c19584f8918496ca0826cc07ef126
+  checksum: 4578e001812394362bed4589abc7c4f8195e1f8cec8240a87a96cc839083af65069edcde991a3e3e8e96552e5140a52a276eb827c909018f23bee52464a0dfaa
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
 
-"@nut-tree/libnut@npm:^2.2.1-next.20220822193401":
-  version: 2.2.1-next.20220822193401
-  resolution: "@nut-tree/libnut@npm:2.2.1-next.20220822193401"
+"@nut-tree/libnut@npm:^2.2.1-next.20220920195816":
+  version: 2.2.1-next.20220920195816
+  resolution: "@nut-tree/libnut@npm:2.2.1-next.20220920195816"
   dependencies:
-    "@nut-tree/libnut-darwin": "npm:^2.2.1-next.20220822192236"
-    "@nut-tree/libnut-linux": "npm:^2.2.1-next.20220822192231"
-    "@nut-tree/libnut-win32": "npm:^2.2.1-next.20220822072317"
-  checksum: 854d042be8e4fb42d4ce082c638433c2c8d82124a52f42ee7d958145d6de0d83c8cdb8a046f72125e5424ec68580c9e86c8642af52cb53935d4745af2dce067d
+    "@nut-tree/libnut-darwin": "npm:^2.2.1-next.20220920195125"
+    "@nut-tree/libnut-linux": "npm:^2.2.1-next.20220920195123"
+    "@nut-tree/libnut-win32": "npm:^2.2.1-next.20220920075218"
+  checksum: ae279991789762be240b7e08f92448e2c0b5fa86b4c95a7c63cc0b1f75e871c7ba93933290eea624f798e7ee590e84870b2cb73d4cda02de7588c84c6671b14f
   languageName: node
   linkType: hard
 
-"@nut-tree/nut-js@npm:^2.2.2-next.20220915212335":
-  version: 2.2.2-next.20220915212335
-  resolution: "@nut-tree/nut-js@npm:2.2.2-next.20220915212335"
+"@nut-tree/nut-js@npm:2.2.2-next.20220920200626":
+  version: 2.2.2-next.20220920200626
+  resolution: "@nut-tree/nut-js@npm:2.2.2-next.20220920200626"
   dependencies:
-    "@nut-tree/libnut": "npm:^2.2.1-next.20220822193401"
+    "@nut-tree/libnut": "npm:^2.2.1-next.20220920195816"
     clipboardy: "npm:2.3.0"
     jimp: "npm:0.16.2"
     node-abort-controller: "npm:2.0.0"
-  checksum: 58153dd7f287a14089dcc5ac6409f2ad468c29bcf109c7d9e9f5cd2261998f1ef7ebc890bbf9e9ab23b4cc3cd5b15ab369e0af38121d9989554ba3ebc69cf0ca
+  checksum: fbe751e95495996eea5d9795a0301e6191388759be43d5ef8a6553a526ec635d885a8908731cc4e1303a28dbb664068994070c496e4e8ca75d95d2831029ccc9
   conditions: (os=linux | os=darwin | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
