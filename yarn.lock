@@ -1982,7 +1982,7 @@ __metadata:
     "@coil/puppeteer-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
-    "@graphql-codegen/cli": "npm:2.12.0"
+    "@graphql-codegen/cli": "npm:2.12.1"
     "@graphql-codegen/introspection": "npm:2.2.1"
     "@graphql-codegen/typescript": "npm:2.7.3"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.3"
@@ -2914,12 +2914,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.12.0":
-  version: 2.12.0
-  resolution: "@graphql-codegen/cli@npm:2.12.0"
+"@graphql-codegen/cli@npm:2.12.1":
+  version: 2.12.1
+  resolution: "@graphql-codegen/cli@npm:2.12.1"
   dependencies:
     "@graphql-codegen/core": "npm:2.6.2"
-    "@graphql-codegen/plugin-helpers": "npm:^2.7.0"
+    "@graphql-codegen/plugin-helpers": "npm:^2.7.1"
     "@graphql-tools/apollo-engine-loader": "npm:^7.3.6"
     "@graphql-tools/code-file-loader": "npm:^7.3.1"
     "@graphql-tools/git-loader": "npm:^7.2.1"
@@ -2930,7 +2930,7 @@ __metadata:
     "@graphql-tools/prisma-loader": "npm:^7.2.7"
     "@graphql-tools/url-loader": "npm:^7.13.2"
     "@graphql-tools/utils": "npm:^8.9.0"
-    "@whatwg-node/fetch": "npm:^0.3.0"
+    "@whatwg-node/fetch": "npm:^0.4.0"
     ansi-escapes: "npm:^4.3.1"
     chalk: "npm:^4.1.0"
     chokidar: "npm:^3.5.2"
@@ -2957,7 +2957,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: 98fe74b79e4b305c8a46d2220d9eb0c284ef37ae7b2f99a4909b08465527ec0baa64ef6f48f8af32b033c145a8cd0e0cfb289fa43044fdec506ec400fb69ae7a
+  checksum: b87e18e736a051db89e3b7c0585db99597bba29ac2271484492d501370a302450cc9b05f7bb81640ac3318d0cfc534650894ccf30069bd23ec1ac86476923300
   languageName: node
   linkType: hard
 
@@ -2988,9 +2988,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/plugin-helpers@npm:^2.6.2, @graphql-codegen/plugin-helpers@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "@graphql-codegen/plugin-helpers@npm:2.7.0"
+"@graphql-codegen/plugin-helpers@npm:^2.6.2, @graphql-codegen/plugin-helpers@npm:^2.7.1":
+  version: 2.7.1
+  resolution: "@graphql-codegen/plugin-helpers@npm:2.7.1"
   dependencies:
     "@graphql-tools/utils": "npm:^8.8.0"
     change-case-all: "npm:1.0.14"
@@ -3000,7 +3000,7 @@ __metadata:
     tslib: "npm:~2.4.0"
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 705faf0fac691abd3af3028edc34eff9dae441c2b22145deb17590a81cfa1bdd69adb225cc3d76656ec289db16957609490e5c84a4f3874a4653cad927b633cb
+  checksum: 172709ce2af5fd93f56f9c1751004b95ea74658ea98375c86e4916a52787397f15e666321ee4a8eb2056983313911acac9eb932c6bf9c004cf9407ee24d8fe1b
   languageName: node
   linkType: hard
 
@@ -6747,20 +6747,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@whatwg-node/fetch@npm:^0.3.0":
-  version: 0.3.2
-  resolution: "@whatwg-node/fetch@npm:0.3.2"
+"@whatwg-node/fetch@npm:^0.4.0":
+  version: 0.4.4
+  resolution: "@whatwg-node/fetch@npm:0.4.4"
   dependencies:
     "@peculiar/webcrypto": "npm:^1.4.0"
     abort-controller: "npm:^3.0.0"
     busboy: "npm:^1.6.0"
-    event-target-polyfill: "npm:^0.0.3"
     form-data-encoder: "npm:^1.7.1"
     formdata-node: "npm:^4.3.1"
     node-fetch: "npm:^2.6.7"
     undici: "npm:^5.8.0"
     web-streams-polyfill: "npm:^3.2.0"
-  checksum: 403db1c300cb146f91ebc35b96d9cc2b4828623e8f73009c2112eae6a78829be6a0cf48c3f1ec8fab5411660d74d2ae14d8a452348db76d43dee8837059e270e
+  checksum: 96e8d8a5670ce1b4c05733ccd4672a4ff8795799151af65b9b8469cbefcf48d74a5e2784a97c198e94b6cd097801a6912db7e359eb65989c915b398f19df77d5
   languageName: node
   linkType: hard
 
