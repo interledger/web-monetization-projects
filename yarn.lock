@@ -5540,10 +5540,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.8, @types/json-schema@npm:^7.0.9":
-  version: 7.0.9
-  resolution: "@types/json-schema@npm:7.0.9"
-  checksum: 495381a033f0549e9a1d58000d4999bc60e8a3892f80f0b8618c94275d910dfae72ffca3119b0151a8e8ddcdc705fb74625450e500a39dfb1af79ff7aa4b6ab4
+"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.11, @types/json-schema@npm:^7.0.8, @types/json-schema@npm:^7.0.9":
+  version: 7.0.11
+  resolution: "@types/json-schema@npm:7.0.11"
+  checksum: 8e5c6dd393411418e3d803ab0a09862b4ed47f73e7ed990f3b907dd41cc4d2f2b4f7aed9a39c7fd2acaa80314ac1397a5e2e5e6c25a338f01bbfba708cc70d8e
   languageName: node
   linkType: hard
 
@@ -6582,7 +6582,7 @@ __metadata:
     regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:29.0.1"
-    ts-json-schema-generator: "npm:1.0.0"
+    ts-json-schema-generator: "npm:1.1.0"
     ts-loader: "npm:9.4.1"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.1.0"
@@ -10020,7 +10020,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^9.0.0, commander@npm:^9.1.0, commander@npm:^9.3.0":
+"commander@npm:^9.1.0, commander@npm:^9.3.0, commander@npm:^9.4.0":
   version: 9.4.0
   resolution: "commander@npm:9.4.0"
   checksum: b1a41144b2e6875163df93dee54c446f2c086d7c8176febaca87ee2b4b177398de3e7b5297e0e70fb2d7ad835398b05c90bc218683daeeece5cef65f9a3a1202
@@ -13996,7 +13996,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:8.0.3, glob@npm:^8.0.1":
+"glob@npm:8.0.3, glob@npm:^8.0.1, glob@npm:^8.0.3":
   version: 8.0.3
   resolution: "glob@npm:8.0.3"
   dependencies:
@@ -14022,7 +14022,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.0, glob@npm:^7.0.3, glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.2.0":
+"glob@npm:^7.0.0, glob@npm:^7.0.3, glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4":
   version: 7.2.3
   resolution: "glob@npm:7.2.3"
   dependencies:
@@ -22143,10 +22143,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-stable-stringify@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "safe-stable-stringify@npm:2.3.1"
-  checksum: a796c980e9fcb32651f15d4546af63834bd2b3c0c2724a5978c280891815234b37e1381bad00221b395102c2068d97013c5856288aaeec91b92e748865e27a50
+"safe-stable-stringify@npm:^2.3.1, safe-stable-stringify@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "safe-stable-stringify@npm:2.4.0"
+  checksum: c66327dc0f7c938890edd55d5c12deef2229cb8bd46d9701ae2275dd1e86fa1003a90221208c5897666b1f2ed697dd57ef30843031ab2cf0f6f1b0a7098e65c4
   languageName: node
   linkType: hard
 
@@ -24144,19 +24144,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:1.0.0":
-  version: 1.0.0
-  resolution: "ts-json-schema-generator@npm:1.0.0"
+"ts-json-schema-generator@npm:1.1.0":
+  version: 1.1.0
+  resolution: "ts-json-schema-generator@npm:1.1.0"
   dependencies:
-    "@types/json-schema": "npm:^7.0.9"
-    commander: "npm:^9.0.0"
-    glob: "npm:^7.2.0"
-    json5: "npm:^2.2.0"
-    safe-stable-stringify: "npm:^2.3.1"
-    typescript: "npm:~4.6.2"
+    "@types/json-schema": "npm:^7.0.11"
+    commander: "npm:^9.4.0"
+    glob: "npm:^8.0.3"
+    json5: "npm:^2.2.1"
+    normalize-path: "npm:^3.0.0"
+    safe-stable-stringify: "npm:^2.4.0"
+    typescript: "npm:~4.8.3"
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: 3cb70f7781be960c7ce690195715332146044b2377e0b6b914cad8b479ab6f2044f031a83174f560cc89210e95173b0d33a6ae8892b6ba1bd14588a277c023e9
+  checksum: 28b31d8ddfbfe818d8d7f510357f33359aefbbb4f6685d781985c6ea7542da21dd02eb3c06377f28781330adc361e2c17891b2da9824e549c27494d0a5a7bcb3
   languageName: node
   linkType: hard
 
@@ -24433,7 +24434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.8.3, typescript@npm:^4.6.4":
+"typescript@npm:4.8.3, typescript@npm:^4.6.4, typescript@npm:~4.8.3":
   version: 4.8.3
   resolution: "typescript@npm:4.8.3"
   bin:
@@ -24443,33 +24444,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:~4.6.2":
-  version: 4.6.4
-  resolution: "typescript@npm:4.6.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 6ed92bade9f1ba834733df9c932f42710381b4a3351369102ec99ad3bfa36b9bf2e57a639bff3ada2ab81dd3d97b1b14908601285fcbafed03a52da12adaaa98
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3A4.8.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^4.6.4#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A4.8.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^4.6.4#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A~4.8.3#optional!builtin<compat/typescript>":
   version: 4.8.3
   resolution: "typescript@patch:typescript@npm%3A4.8.3#optional!builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 39c0dac8f415b62d5f8234dc285ae22b790f48c3c5c1ebfb34de56871bf0089fcaa92930dddced9e0345beb9b1e812607e81181cabd4ee1f942fd31c6c6a9097
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3A~4.6.2#optional!builtin<compat/typescript>":
-  version: 4.6.4
-  resolution: "typescript@patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=a1c5e5"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 0ee0e98dae9f55e67ce31749066b581698b563d2b6edc89430f5203ad770d51c43068ee00970df24b078c359dd6a8eb82da55a45b3e0ac2c61a0cf13f15c050a
   languageName: node
   linkType: hard
 
