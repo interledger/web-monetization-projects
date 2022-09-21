@@ -1,3 +1,14 @@
+- <a name="coil-extension@0.0.62"></a>
+
+# [coil-extension@0.0.61](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.61...coil-extension@0.0.62) (2021-09-21)
+
+### New Features
+
+### Bug Fixes / Enhancements
+
+- Fix /settings/account typo [#3344](https://github.com/coilhq/web-monetization-projects/pull/3344)
+- Use string for MonetizationEvent#amount field (WM2) [#3331](https://github.com/coilhq/web-monetization-projects/pull/3331)
+
 - <a name="coil-extension@0.0.61"></a>
 
 # [coil-extension@0.0.61](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.60...coil-extension@0.0.61) (2021-09-15)
