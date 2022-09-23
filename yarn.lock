@@ -1880,7 +1880,7 @@ __metadata:
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.3"
     "@material-ui/styles": "npm:^4.11.5"
-    "@nut-tree/nut-js": "npm:2.2.2-next.20220920200626"
+    "@nut-tree/nut-js": "npm:2.3.0"
     "@swc/core": "npm:1.3.2"
     "@swc/jest": "npm:0.2.22"
     "@types/debug": "npm:4.1.7"
@@ -4629,62 +4629,62 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nut-tree/libnut-darwin@npm:^2.2.1-next.20220920195125":
-  version: 2.2.1-next.20220920195125
-  resolution: "@nut-tree/libnut-darwin@npm:2.2.1-next.20220920195125"
+"@nut-tree/libnut-darwin@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@nut-tree/libnut-darwin@npm:2.3.0"
   dependencies:
     bindings: "npm:1.5.0"
     cmake-js: "npm:6.1.0"
     node-addon-api: "npm:3.0.0"
-  checksum: 2ad2db993a25ca0c699475a222d50ecac7cb61ed08cdc91bd24e265e73c755652c2eb8b7806017909a9f1780f92b3cf56efd839ebf2f268e09fe13a4794f2dc5
+  checksum: b7ca0ba351ded0c1edf3efd37623f7d5bed43a38ba124a8683142f97f7426f1d517deea223297e635a189871a1d84824e31eec54ef21c15b42a8f571849f3ad2
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
 
-"@nut-tree/libnut-linux@npm:^2.2.1-next.20220920195123":
-  version: 2.2.1-next.20220920195123
-  resolution: "@nut-tree/libnut-linux@npm:2.2.1-next.20220920195123"
+"@nut-tree/libnut-linux@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@nut-tree/libnut-linux@npm:2.3.0"
   dependencies:
     bindings: "npm:1.5.0"
     cmake-js: "npm:6.1.0"
     node-addon-api: "npm:3.0.0"
-  checksum: d23bbae0a56f1d3ac142cfc35f018fda99b165dd6a3a14fc8c6ba0dfb48c5f312bbdd64aa7907dad3e06122c71be3e953e0e099490d37da56e8c261422043321
+  checksum: a1ced95a2637773786676935fa9082e214e4a5dbb92eaf67ab4d693e2abafa1af00af09f9f78ee430868e10e0d3baa8fd8953d549c03a90521b5beb6ddb4034b
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
 
-"@nut-tree/libnut-win32@npm:^2.2.1-next.20220920075218":
-  version: 2.2.1-next.20220920075218
-  resolution: "@nut-tree/libnut-win32@npm:2.2.1-next.20220920075218"
+"@nut-tree/libnut-win32@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@nut-tree/libnut-win32@npm:2.3.0"
   dependencies:
     bindings: "npm:1.5.0"
     cmake-js: "npm:6.1.0"
     node-addon-api: "npm:3.0.0"
-  checksum: 4578e001812394362bed4589abc7c4f8195e1f8cec8240a87a96cc839083af65069edcde991a3e3e8e96552e5140a52a276eb827c909018f23bee52464a0dfaa
+  checksum: 79ae9d7eba170beaf9101e7ece8509e19f720cdb7babf2fa20862d17dee0be4f0932326802c6e15e0b92b25692c3bf6343a11b034272b31719b4856961bf2c1c
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
 
-"@nut-tree/libnut@npm:^2.2.1-next.20220920195816":
-  version: 2.2.1-next.20220920195816
-  resolution: "@nut-tree/libnut@npm:2.2.1-next.20220920195816"
+"@nut-tree/libnut@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@nut-tree/libnut@npm:2.3.0"
   dependencies:
-    "@nut-tree/libnut-darwin": "npm:^2.2.1-next.20220920195125"
-    "@nut-tree/libnut-linux": "npm:^2.2.1-next.20220920195123"
-    "@nut-tree/libnut-win32": "npm:^2.2.1-next.20220920075218"
-  checksum: ae279991789762be240b7e08f92448e2c0b5fa86b4c95a7c63cc0b1f75e871c7ba93933290eea624f798e7ee590e84870b2cb73d4cda02de7588c84c6671b14f
+    "@nut-tree/libnut-darwin": "npm:2.3.0"
+    "@nut-tree/libnut-linux": "npm:2.3.0"
+    "@nut-tree/libnut-win32": "npm:2.3.0"
+  checksum: 39aee7371952cd8705004b9ef6f6aceddcf0f180c2ead967a7d7a67a30a0fbed038aee0ac53d943a21fa3de13ef257889d1b259909d54a4b29b9bf052af0e48a
   languageName: node
   linkType: hard
 
-"@nut-tree/nut-js@npm:2.2.2-next.20220920200626":
-  version: 2.2.2-next.20220920200626
-  resolution: "@nut-tree/nut-js@npm:2.2.2-next.20220920200626"
+"@nut-tree/nut-js@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@nut-tree/nut-js@npm:2.3.0"
   dependencies:
-    "@nut-tree/libnut": "npm:^2.2.1-next.20220920195816"
+    "@nut-tree/libnut": "npm:2.3.0"
     clipboardy: "npm:2.3.0"
     jimp: "npm:0.16.2"
     node-abort-controller: "npm:2.0.0"
-  checksum: fbe751e95495996eea5d9795a0301e6191388759be43d5ef8a6553a526ec635d885a8908731cc4e1303a28dbb664068994070c496e4e8ca75d95d2831029ccc9
+  checksum: 568ce768b9349494b3935111e0d76118d495249ae9dd48a205b76e72b6bb83b209806072d0cc5690bc6c96aa0447ab90bafc3028209d7bf3c8e032b826464bff
   conditions: (os=linux | os=darwin | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
