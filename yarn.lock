@@ -1744,7 +1744,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/jsonwebtoken": "npm:8.5.9"
     "@types/node": "npm:16.11.59"
@@ -1809,7 +1809,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.1.0"
     "@dier-makr/annotations": "npm:0.0.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/jsonwebtoken": "npm:8.5.9"
     "@types/node": "npm:16.11.59"
@@ -1882,7 +1882,7 @@ __metadata:
     "@material-ui/styles": "npm:^4.11.5"
     "@nut-tree/nut-js": "npm:2.3.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/debug": "npm:4.1.7"
     "@types/filesystem": "npm:0.0.32"
     "@types/firefox": "npm:0.0.31"
@@ -1992,7 +1992,7 @@ __metadata:
     "@graphql-tools/utils": "npm:^8.6.10"
     "@interledger/stream-receiver": "npm:^0.3.3-alpha.1"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/body-parser": "npm:1.19.2"
     "@types/cookie-parser": "npm:1.4.3"
     "@types/express": "npm:4.17.14"
@@ -2071,7 +2071,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
@@ -2140,7 +2140,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.11.59"
@@ -2209,7 +2209,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
@@ -2268,7 +2268,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/keccak": "npm:3.0.1"
     "@types/node": "npm:16.11.59"
@@ -2333,7 +2333,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/debug": "npm:4.1.7"
     "@types/get-port": "npm:4.2.0"
     "@types/jest": "npm:29.0.3"
@@ -2400,7 +2400,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
@@ -2468,7 +2468,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
@@ -2757,7 +2757,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
@@ -2816,7 +2816,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.1.0"
     "@dier-makr/annotations": "npm:0.0.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
@@ -3538,7 +3538,7 @@ __metadata:
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.3"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@types/react": "npm:17.0.50"
@@ -4882,7 +4882,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
@@ -5079,14 +5079,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/jest@npm:0.2.22":
-  version: 0.2.22
-  resolution: "@swc/jest@npm:0.2.22"
+"@swc/jest@npm:0.2.23":
+  version: 0.2.23
+  resolution: "@swc/jest@npm:0.2.23"
   dependencies:
     "@jest/create-cache-key-function": "npm:^27.4.2"
+    jsonc-parser: "npm:^3.2.0"
   peerDependencies:
     "@swc/core": "*"
-  checksum: c90e1d8d522132ba5311d9b9ccc429061f4f1e68077c040ad8f4438b1386c7ca7948e938b60c33f2dbf0a512041654b46671bd4e337c97e2e76188e8609b2dd4
+  checksum: d5cd8c3aebb924ae7403fb1a9e366f744e50cc5b762562acff7221855aa8b09a98656c6b2215a544524cee4bbfb91ee995891df8a4685b0e630dba66c585bebd
   languageName: node
   linkType: hard
 
@@ -6198,7 +6199,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@types/ws": "npm:8.5.3"
@@ -6271,7 +6272,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.1.0"
     "@hot-loader/react-dom": "npm:17.0.2"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/body-parser": "npm:1.19.2"
     "@types/express": "npm:4.17.14"
     "@types/figlet": "npm:1.5.5"
@@ -6353,7 +6354,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@types/node-fetch": "npm:2.6.2"
@@ -6418,7 +6419,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@types/react": "npm:17.0.50"
@@ -6482,7 +6483,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.1.0"
     "@hot-loader/react-dom": "npm:17.0.2"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
@@ -6551,7 +6552,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
@@ -6611,7 +6612,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.1.0"
     "@dier-makr/annotations": "npm:0.0.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
@@ -17105,6 +17106,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonc-parser@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "jsonc-parser@npm:3.2.0"
+  checksum: dffa53dd8b8aa897575bcd31b767f1a5c90a0229902e4fcf7aaae73d11a2a343eee6f852d432f7f9328b14520f487805014c2284fbe358e904c41f004964b54a
+  languageName: node
+  linkType: hard
+
 "jsonfile@npm:^4.0.0":
   version: 4.0.0
   resolution: "jsonfile@npm:4.0.0"
@@ -25127,7 +25135,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@swc/core": "npm:1.3.2"
-    "@swc/jest": "npm:0.2.22"
+    "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.0.3"
     "@types/node": "npm:16.11.59"
     "@typescript-eslint/eslint-plugin": "npm:5.38.1"
