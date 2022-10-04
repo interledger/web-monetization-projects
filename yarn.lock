@@ -6586,7 +6586,7 @@ __metadata:
     regenerator-runtime: "npm:0.13.9"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:29.0.3"
-    ts-json-schema-generator: "npm:1.1.1"
+    ts-json-schema-generator: "npm:1.1.2"
     ts-loader: "npm:9.4.1"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.1.0"
@@ -24158,9 +24158,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:1.1.1":
-  version: 1.1.1
-  resolution: "ts-json-schema-generator@npm:1.1.1"
+"ts-json-schema-generator@npm:1.1.2":
+  version: 1.1.2
+  resolution: "ts-json-schema-generator@npm:1.1.2"
   dependencies:
     "@types/json-schema": "npm:^7.0.11"
     commander: "npm:^9.4.0"
@@ -24171,7 +24171,7 @@ __metadata:
     typescript: "npm:~4.8.3"
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: 6379b8ef20ff2c166c975d2094b305bd8033eae13503467c27dcaa6743d281e7afc8609864addfdfda7ca66bf1dd8de570261059223fd1aadb08bc70d9376268
+  checksum: 29fd3224c852d0225a01020ca6d6a7067cdb0a31c124a6841686f63bab71769231753f6f01192fd85203a9acc7e1d3797f94fcbc5be9077a0e6846feaec227f4
   languageName: node
   linkType: hard
 
