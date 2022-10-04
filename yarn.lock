@@ -265,7 +265,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^7.14.0, @babel/generator@npm:^7.19.3, @babel/generator@npm:^7.7.2":
+"@babel/generator@npm:^7.14.0, @babel/generator@npm:^7.18.13, @babel/generator@npm:^7.19.3, @babel/generator@npm:^7.7.2":
   version: 7.19.3
   resolution: "@babel/generator@npm:7.19.3"
   dependencies:
@@ -1676,7 +1676,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.0.0, @babel/types@npm:^7.16.8, @babel/types@npm:^7.18.10, @babel/types@npm:^7.18.6, @babel/types@npm:^7.18.9, @babel/types@npm:^7.19.0, @babel/types@npm:^7.19.3, @babel/types@npm:^7.3.0, @babel/types@npm:^7.3.3, @babel/types@npm:^7.4.4, @babel/types@npm:^7.8.3":
+"@babel/types@npm:^7.0.0, @babel/types@npm:^7.16.8, @babel/types@npm:^7.18.10, @babel/types@npm:^7.18.13, @babel/types@npm:^7.18.6, @babel/types@npm:^7.18.9, @babel/types@npm:^7.19.0, @babel/types@npm:^7.19.3, @babel/types@npm:^7.3.0, @babel/types@npm:^7.3.3, @babel/types@npm:^7.4.4, @babel/types@npm:^7.8.3":
   version: 7.19.3
   resolution: "@babel/types@npm:7.19.3"
   dependencies:
@@ -1982,7 +1982,7 @@ __metadata:
     "@coil/puppeteer-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
-    "@graphql-codegen/cli": "npm:2.12.1"
+    "@graphql-codegen/cli": "npm:2.13.2"
     "@graphql-codegen/introspection": "npm:2.2.1"
     "@graphql-codegen/typescript": "npm:2.7.3"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.3"
@@ -2914,12 +2914,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.12.1":
-  version: 2.12.1
-  resolution: "@graphql-codegen/cli@npm:2.12.1"
+"@graphql-codegen/cli@npm:2.13.2":
+  version: 2.13.2
+  resolution: "@graphql-codegen/cli@npm:2.13.2"
   dependencies:
+    "@babel/generator": "npm:^7.18.13"
+    "@babel/template": "npm:^7.18.10"
+    "@babel/types": "npm:^7.18.13"
     "@graphql-codegen/core": "npm:2.6.2"
-    "@graphql-codegen/plugin-helpers": "npm:^2.7.1"
+    "@graphql-codegen/plugin-helpers": "npm:^2.6.2"
     "@graphql-tools/apollo-engine-loader": "npm:^7.3.6"
     "@graphql-tools/code-file-loader": "npm:^7.3.1"
     "@graphql-tools/git-loader": "npm:^7.2.1"
@@ -2930,12 +2933,12 @@ __metadata:
     "@graphql-tools/prisma-loader": "npm:^7.2.7"
     "@graphql-tools/url-loader": "npm:^7.13.2"
     "@graphql-tools/utils": "npm:^8.9.0"
-    "@whatwg-node/fetch": "npm:^0.4.0"
+    "@whatwg-node/fetch": "npm:^0.3.0"
     ansi-escapes: "npm:^4.3.1"
     chalk: "npm:^4.1.0"
     chokidar: "npm:^3.5.2"
     cosmiconfig: "npm:^7.0.0"
-    cosmiconfig-typescript-loader: "npm:^4.0.0"
+    cosmiconfig-typescript-loader: "npm:4.0.0"
     debounce: "npm:^1.2.0"
     detect-indent: "npm:^6.0.0"
     graphql-config: "npm:^4.3.5"
@@ -2957,7 +2960,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: b87e18e736a051db89e3b7c0585db99597bba29ac2271484492d501370a302450cc9b05f7bb81640ac3318d0cfc534650894ccf30069bd23ec1ac86476923300
+  checksum: 3af3cc11e08119c96a9ede3472da029d679a44a94bbc6cb795273ff9a5f97dd8cafd3fa73553a4411fefdb102178ce6a4e20fe8c3694a210333edf7e5c455b01
   languageName: node
   linkType: hard
 
@@ -2988,7 +2991,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/plugin-helpers@npm:^2.6.2, @graphql-codegen/plugin-helpers@npm:^2.7.1":
+"@graphql-codegen/plugin-helpers@npm:^2.6.2":
   version: 2.7.1
   resolution: "@graphql-codegen/plugin-helpers@npm:2.7.1"
   dependencies:
@@ -6747,19 +6750,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@whatwg-node/fetch@npm:^0.4.0":
-  version: 0.4.4
-  resolution: "@whatwg-node/fetch@npm:0.4.4"
+"@whatwg-node/fetch@npm:^0.3.0":
+  version: 0.3.2
+  resolution: "@whatwg-node/fetch@npm:0.3.2"
   dependencies:
     "@peculiar/webcrypto": "npm:^1.4.0"
     abort-controller: "npm:^3.0.0"
     busboy: "npm:^1.6.0"
+    event-target-polyfill: "npm:^0.0.3"
     form-data-encoder: "npm:^1.7.1"
     formdata-node: "npm:^4.3.1"
     node-fetch: "npm:^2.6.7"
     undici: "npm:^5.8.0"
     web-streams-polyfill: "npm:^3.2.0"
-  checksum: 96e8d8a5670ce1b4c05733ccd4672a4ff8795799151af65b9b8469cbefcf48d74a5e2784a97c198e94b6cd097801a6912db7e359eb65989c915b398f19df77d5
+  checksum: 403db1c300cb146f91ebc35b96d9cc2b4828623e8f73009c2112eae6a78829be6a0cf48c3f1ec8fab5411660d74d2ae14d8a452348db76d43dee8837059e270e
   languageName: node
   linkType: hard
 
@@ -10373,7 +10377,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig-typescript-loader@npm:^4.0.0":
+"cosmiconfig-typescript-loader@npm:4.0.0, cosmiconfig-typescript-loader@npm:^4.0.0":
   version: 4.0.0
   resolution: "cosmiconfig-typescript-loader@npm:4.0.0"
   peerDependencies:
