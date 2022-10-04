@@ -1,8 +1,14 @@
+- <a name="coil-extension@0.0.63"></a>
+
+# [coil-extension@0.0.63](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.62...coil-extension@0.0.63) (2021-10-04)
+
+### Bug Fixes / Enhancements
+
+- Disable Twitch.tv integration [#3379](https://github.com/coilhq/web-monetization-projects/pull/3379)
+- Remove workaround for popup not animating on non-primary monitors [#3380](https://github.com/coilhq/web-monetization-projects/pull/3380)
 - <a name="coil-extension@0.0.62"></a>
 
-# [coil-extension@0.0.61](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.61...coil-extension@0.0.62) (2021-09-21)
-
-### New Features
+# [coil-extension@0.0.62](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.61...coil-extension@0.0.62) (2021-09-21)
 
 ### Bug Fixes / Enhancements
 
