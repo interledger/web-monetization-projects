@@ -18,6 +18,7 @@ export function run() {
 
   if (isExtension) {
     const backgroundStore: StorePersistence = {
+      // TODO: this reference is not used, overwritten in storeGetItems
       cache: new Map(),
       clear(): void {
         // noop, method never called popup side

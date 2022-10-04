@@ -64,6 +64,8 @@ export function frameHasRecentPacket(frameState: FrameState) {
 export interface TabState {
   favicon?: string
   coilSite?: string
+  topFrameHref?: string
+
   iconPrimary?: 'active' | 'inactive' | 'tipping-only'
   iconSecondary?: 'unavailable' | 'streaming' | 'streaming-paused' | null
   frameStates: Record<number, FrameState>
