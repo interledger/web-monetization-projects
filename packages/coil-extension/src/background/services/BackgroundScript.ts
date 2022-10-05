@@ -264,12 +264,12 @@ export class BackgroundScript {
       // Always get the url from the tab
       const url = event.frame.href
       if (status === 'loading' && event.frame.top) {
-        this.setCoilUrlForPopupIfNeeded(tabId, url)
+        this.setTabStateUrlData(tabId, url)
       }
 
       if (becameComplete || (isComplete && changedUrl)) {
         if (event.frame.top) {
-          this.setCoilUrlForPopupIfNeeded(tabId, url)
+          this.setTabStateUrlData(tabId, url)
           if (getAdaptedSite(url)) {
             const frame = { tabId, frameId: event.frameId }
             this.checkAdaptedContent(frame, event)
@@ -398,17 +398,14 @@ export class BackgroundScript {
     }
   }
 
-  setCoilUrlForPopupIfNeeded(tab: number, url: string | undefined) {
-    this.log('setting coil url for popup', url)
-    if (url && !url.startsWith(this.coilDomain)) {
-      url = undefined
-    }
+  setTabStateUrlData(tab: number, url: string | undefined) {
+    this.log('setTabStateUrlData', tab, url)
+    const coilSite = url?.startsWith(this.coilDomain) ? url : undefined
     this.tabStates.set(tab, {
-      coilSite: url
+      coilSite,
+      topFrameHref: url
     })
-    if (url) {
-      this.tabStates.reloadTabState({ from: 'setCoilUrlForPopupIfNeeded' })
-    }
+    this.tabStates.reloadTabState({ from: 'setTabStateUrlData' })
   }
 
   async injectToken(
