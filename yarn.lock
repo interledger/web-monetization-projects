@@ -1752,7 +1752,7 @@ __metadata:
     "@types/sjcl": "npm:1.0.30"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -1816,7 +1816,7 @@ __metadata:
     "@types/node-fetch": "npm:2.6.2"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -1903,7 +1903,7 @@ __metadata:
     "@webmonetization/types": "npm:^0.0.0"
     "@webmonetization/wext": "npm:^0.0.0"
     "@wext/shipit": "npm:0.2.1"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     addons-linter: "npm:5.16.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
@@ -2002,7 +2002,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
     "@webmonetization/types": "npm:0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     apollo-server-core: "npm:^3.7.0"
     apollo-server-express: "npm:^3.7.0"
@@ -2076,7 +2076,7 @@ __metadata:
     "@types/node": "npm:16.11.64"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -2150,7 +2150,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.39.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
     "@webmonetization/types": "npm:0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -2214,7 +2214,7 @@ __metadata:
     "@types/node": "npm:16.11.64"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -2275,7 +2275,7 @@ __metadata:
     "@types/sjcl": "npm:1.0.30"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     asn1-parser: "npm:^1.1.8"
     babel-plugin-parameter-decorator: "npm:1.0.16"
@@ -2342,7 +2342,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
     "@webmonetization/types": "npm:0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -2405,7 +2405,7 @@ __metadata:
     "@types/node": "npm:16.11.64"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
@@ -2473,7 +2473,7 @@ __metadata:
     "@types/node": "npm:16.11.64"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -2762,7 +2762,7 @@ __metadata:
     "@types/node": "npm:16.11.64"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -2821,7 +2821,7 @@ __metadata:
     "@types/node": "npm:16.11.64"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -3553,7 +3553,7 @@ __metadata:
     "@webmonetization/polyfill-utils": "npm:^0.0.0"
     "@webmonetization/types": "npm:^0.0.0"
     "@webmonetization/wext": "npm:^0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     addons-linter: "npm:5.16.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
@@ -4890,7 +4890,7 @@ __metadata:
     "@types/node": "npm:16.11.64"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -6208,7 +6208,7 @@ __metadata:
     "@types/ws": "npm:8.5.3"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     assert: "npm:^2.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
@@ -6289,7 +6289,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.39.0"
     "@webmonetization/react": "npm:0.0.12"
     "@webmonetization/types": "npm:0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -6365,7 +6365,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
     "@webmonetization/types": "npm:0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -6429,7 +6429,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
     "@webmonetization/types": "npm:0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -6496,7 +6496,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
     "@webmonetization/types": "npm:0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     ajv: "npm:^8.6.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
@@ -6560,7 +6560,7 @@ __metadata:
     "@types/node": "npm:16.11.64"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -6622,7 +6622,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.39.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
     "@webmonetization/types": "npm:0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
@@ -6808,18 +6808,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:^3.2.2, @yarnpkg/core@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "@yarnpkg/core@npm:3.2.4"
+"@yarnpkg/core@npm:^3.2.2, @yarnpkg/core@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "@yarnpkg/core@npm:3.2.5"
   dependencies:
     "@arcanis/slice-ansi": "npm:^1.1.1"
     "@types/semver": "npm:^7.1.0"
     "@types/treeify": "npm:^1.0.0"
-    "@yarnpkg/fslib": "npm:^2.7.1"
+    "@yarnpkg/fslib": "npm:^2.8.0"
     "@yarnpkg/json-proxy": "npm:^2.1.1"
     "@yarnpkg/libzip": "npm:^2.2.4"
     "@yarnpkg/parsers": "npm:^2.5.1"
-    "@yarnpkg/pnp": "npm:^3.2.3"
+    "@yarnpkg/pnp": "npm:^3.2.4"
     "@yarnpkg/shell": "npm:^3.2.4"
     camelcase: "npm:^5.3.1"
     chalk: "npm:^3.0.0"
@@ -6844,17 +6844,17 @@ __metadata:
     treeify: "npm:^1.1.0"
     tslib: "npm:^1.13.0"
     tunnel: "npm:^0.0.6"
-  checksum: 1cb04802c203b4215bbaededd49bd5432c6a94d124c3a06679ff70485ecc35f493bb4bc63e900c5da1fe01282d1154ccd23676328a7a62fcf8e635bd9ab4e1f0
+  checksum: b417a5f19cea0887849ab2a32f383acd55e18579b10773826754f6610636ae02fe8ff46759433f3334ed623ddfc1078323797370eea3529412cb0f4f22fc7cbe
   languageName: node
   linkType: hard
 
-"@yarnpkg/fslib@npm:^2.5.0, @yarnpkg/fslib@npm:^2.6.2, @yarnpkg/fslib@npm:^2.7.1":
-  version: 2.7.1
-  resolution: "@yarnpkg/fslib@npm:2.7.1"
+"@yarnpkg/fslib@npm:^2.5.0, @yarnpkg/fslib@npm:^2.6.2, @yarnpkg/fslib@npm:^2.7.1, @yarnpkg/fslib@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "@yarnpkg/fslib@npm:2.8.0"
   dependencies:
     "@yarnpkg/libzip": "npm:^2.2.4"
     tslib: "npm:^1.13.0"
-  checksum: 4708548085ec7b120daba72e181ead0bf4b93eedcda891232f62fdecbb0ea4fe3201b1811486c114ab1254f7755f155f149e37778cdbbde7bc2107f176b8d4a1
+  checksum: 7f4704d4b72f8d00da46777892e5f94cd9ecab25c7f934007d8ff1d7d3c058c8aeb9032468a94c510d8ab25e857b4701acc97e6342e30c47d0e34155f4303696
   languageName: node
   linkType: hard
 
@@ -6898,29 +6898,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnp@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "@yarnpkg/pnp@npm:3.2.3"
+"@yarnpkg/pnp@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "@yarnpkg/pnp@npm:3.2.4"
   dependencies:
     "@types/node": "npm:^13.7.0"
-    "@yarnpkg/fslib": "npm:^2.7.1"
-  checksum: 287af8ca689cd34e9bf5eddcae73f1e89a62ead4765b8f52058d241f6636c959e9ca1c8d78bcd7e9206579f17d249455cdc8aca5935180e3ef7216273884830b
+    "@yarnpkg/fslib": "npm:^2.8.0"
+  checksum: a44d9f7dce519e660943c6f3e67dff747441db6f5b9ee79b7b7567d8e59ea5f135fb9c56ebcdf5aa5072fd41ab1ad473ca5d9c21866753753b919a4512d5e234
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnpify@npm:3.1.5":
-  version: 3.1.5
-  resolution: "@yarnpkg/pnpify@npm:3.1.5"
+"@yarnpkg/pnpify@npm:3.1.6":
+  version: 3.1.6
+  resolution: "@yarnpkg/pnpify@npm:3.1.6"
   dependencies:
-    "@yarnpkg/core": "npm:^3.2.4"
-    "@yarnpkg/fslib": "npm:^2.7.1"
+    "@yarnpkg/core": "npm:^3.2.5"
+    "@yarnpkg/fslib": "npm:^2.8.0"
     "@yarnpkg/nm": "npm:^3.0.3"
     clipanion: "npm:3.2.0-rc.4"
     cross-spawn: "npm:7.0.3"
     tslib: "npm:^1.13.0"
   bin:
     pnpify: ./lib/cli.js
-  checksum: ca8bee12b317c60588a2d849ccb9fc8bb1daafa6d1b416a66ab5f0ae32f081bd3071ac351ab641e2aa673bb76a9b353af55d46418e3ed45a5225ce4d69a74d26
+  checksum: a3290e82f9f36a05dfba03aaf5f5f71807d038055492170a9aa2e7c0a5fc9189a6a7cae19f9eb1dfe2b479bff9fd36d79bb9f26a3e30bbe261e8dd08b6e0250f
   languageName: node
   linkType: hard
 
@@ -25146,7 +25146,7 @@ __metadata:
     "@types/node": "npm:16.11.64"
     "@typescript-eslint/eslint-plugin": "npm:5.39.0"
     "@typescript-eslint/parser": "npm:5.39.0"
-    "@yarnpkg/pnpify": "npm:3.1.5"
+    "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
