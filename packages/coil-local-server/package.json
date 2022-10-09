@@ -35,7 +35,7 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
-    "@abraham/reflection": "^0.10.0",
+    "@abraham/reflection": "^0.11.0",
     "@apollo/utils.logger": "^1.0.0",
     "@coil/privacypass-sjcl": "0.0.0",
     "@coil/puppeteer-utils": "0.0.0",
@@ -62,7 +62,7 @@
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
-    "@abraham/reflection": "0.10.0",
+    "@abraham/reflection": "0.11.0",
     "@babel/core": "7.19.3",
     "@babel/plugin-proposal-class-properties": "7.18.6",
     "@babel/plugin-proposal-decorators": "7.19.3",
