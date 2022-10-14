@@ -1982,7 +1982,7 @@ __metadata:
     "@coil/puppeteer-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
-    "@graphql-codegen/cli": "npm:2.13.6"
+    "@graphql-codegen/cli": "npm:2.13.7"
     "@graphql-codegen/introspection": "npm:2.2.1"
     "@graphql-codegen/typescript": "npm:2.7.4"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.4"
@@ -2914,9 +2914,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.13.6":
-  version: 2.13.6
-  resolution: "@graphql-codegen/cli@npm:2.13.6"
+"@graphql-codegen/cli@npm:2.13.7":
+  version: 2.13.7
+  resolution: "@graphql-codegen/cli@npm:2.13.7"
   dependencies:
     "@babel/generator": "npm:^7.18.13"
     "@babel/template": "npm:^7.18.10"
@@ -2961,7 +2961,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: 67bcc311ae749f41471c5689f84a3f1fb28a540558453e043525841246f9e7dcdd50be3444f3c7644e479fbaac726485c35a114dbb603e6fb18fc919c168733f
+  checksum: ac447d2cd5e637f1287732675d2327505730760d78d767cc6aaa383df695eb58b81672d5647bc1e29e786a8705f4849628cb1682e3c243618c2594072ec023dd
   languageName: node
   linkType: hard
 
