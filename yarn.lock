@@ -1942,7 +1942,7 @@ __metadata:
     node-window-manager: "npm:2.2.4"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.7.1"
-    puppeteer: "npm:18.0.5"
+    puppeteer: "npm:18.2.1"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reconnecting-websocket: "npm:^4.4.0"
@@ -2176,7 +2176,7 @@ __metadata:
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.7.1"
-    puppeteer: "npm:18.0.5"
+    puppeteer: "npm:18.2.1"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.10"
     rimraf: "npm:3.0.2"
@@ -11116,10 +11116,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devtools-protocol@npm:0.0.1036444":
-  version: 0.0.1036444
-  resolution: "devtools-protocol@npm:0.0.1036444"
-  checksum: 49cf757b9a0c39f0d90ad18aa34b19e8610d380eb39dde7255650f752cd612e960720fef7012c9fff347b0de425ae7ee454a486e48b87c2fc4cd5ddb1f9ad697
+"devtools-protocol@npm:0.0.1045489":
+  version: 0.0.1045489
+  resolution: "devtools-protocol@npm:0.0.1045489"
+  checksum: be92577a2d91c8f25ebc2bae1d0c8607e0e8ba7ce43bfdde6d257774d680cb9f66a873ce4fe8d0d5838c14966b6abbb43e8c42ddbfbb5785ec54cd817dc58052
   languageName: node
   linkType: hard
 
@@ -20995,22 +20995,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:18.0.5, puppeteer@npm:^18.0.0":
-  version: 18.0.5
-  resolution: "puppeteer@npm:18.0.5"
+"puppeteer-core@npm:18.2.1":
+  version: 18.2.1
+  resolution: "puppeteer-core@npm:18.2.1"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
-    devtools-protocol: "npm:0.0.1036444"
+    devtools-protocol: "npm:0.0.1045489"
     extract-zip: "npm:2.0.1"
     https-proxy-agent: "npm:5.0.1"
-    progress: "npm:2.0.3"
     proxy-from-env: "npm:1.1.0"
     rimraf: "npm:3.0.2"
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
-    ws: "npm:8.8.1"
-  checksum: 569c3dc0b9de084ac3eb9e1c1c317e8afabe7c3d22f36bd46c001232959831fe09bd09e4d69f6675f9638c706fc1be8d797aa5fdbf9328c7517a43dfd453fcd9
+    ws: "npm:8.9.0"
+  checksum: 5308c8ee39e2e8120e71659d3dd250ffee6db32c5817b2b9fe2f4a8830f7b3bae55913dd131ef18920360f228e83afb83088a79b363076ed52bfc78f67b884e1
+  languageName: node
+  linkType: hard
+
+"puppeteer@npm:18.2.1, puppeteer@npm:^18.0.0":
+  version: 18.2.1
+  resolution: "puppeteer@npm:18.2.1"
+  dependencies:
+    https-proxy-agent: "npm:5.0.1"
+    progress: "npm:2.0.3"
+    proxy-from-env: "npm:1.1.0"
+    puppeteer-core: "npm:18.2.1"
+  checksum: 035c395cbc0581894a3b962131d76b1e078b734997a44a2f57fdce5652bac71d8f94646fb79914d67873f80f31fa867ebb4dff4633f7dbdb14d160a123a964b9
   languageName: node
   linkType: hard
 
@@ -25775,7 +25786,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:8.8.1, ws@npm:^8.3.0, ws@npm:^8.4.2, ws@npm:^8.8.0":
+"ws@npm:8.8.1":
   version: 8.8.1
   resolution: "ws@npm:8.8.1"
   peerDependencies:
@@ -25787,6 +25798,21 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: 807217fa26495f179b03c1160bacaee829234b66f4d22b6df00dc335268e92b537add73edb84046827aadd858c997213d1c78743c571339fe25cc6d51d3e5dea
+  languageName: node
+  linkType: hard
+
+"ws@npm:8.9.0, ws@npm:^8.3.0, ws@npm:^8.4.2, ws@npm:^8.8.0":
+  version: 8.9.0
+  resolution: "ws@npm:8.9.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ^5.0.2
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 681a378593686892f4472f5367c0a607482e77d52e4d9ef99fa1137451662639d249ebc55997983829499dadd34dbc28c4e047da6d5fd443f7ad49517d5077b0
   languageName: node
   linkType: hard
 
