@@ -80,7 +80,7 @@
     "localforage": "1.10.0",
     "nodemon": "2.0.20",
     "prettier": "2.7.1",
-    "regenerator-runtime": "0.13.9",
+    "regenerator-runtime": "0.13.10",
     "rimraf": "3.0.2",
     "ts-jest": "29.0.3",
     "ts-loader": "9.4.1",
