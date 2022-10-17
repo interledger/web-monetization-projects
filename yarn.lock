@@ -11116,6 +11116,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"devtools-protocol@npm:*":
+  version: 0.0.1059612
+  resolution: "devtools-protocol@npm:0.0.1059612"
+  checksum: 04ba5db05486057b41eade9161d51c7c80407bf220f081e64b7b5f79311ea42e75fbba98c64c5915fd0bb26917a70e63c1f938f8e906bd1ae0af706772cc2b8c
+  languageName: node
+  linkType: hard
+
 "devtools-protocol@npm:0.0.1045489":
   version: 0.0.1045489
   resolution: "devtools-protocol@npm:0.0.1045489"
