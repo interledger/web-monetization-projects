@@ -41,6 +41,8 @@ import { BackgroundEvents } from './BackgroundEvents'
 
 import MessageSender = chrome.runtime.MessageSender
 
+import { HeaderLinks } from './HeaderLinks'
+
 @injectable()
 export class BackgroundScript {
   constructor(
@@ -63,6 +65,7 @@ export class BackgroundScript {
     private log: Logger,
     private multipleInstanceDetector: MultipleInstanceDetector,
     private client: GraphQlClient,
+    private headerLinks: HeaderLinks,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
     @inject(tokens.BuildConfig)
@@ -105,6 +108,7 @@ export class BackgroundScript {
     this.events.emitBufferedAndStopBuffering()
 
     this.monetization.init()
+    this.headerLinks.init()
 
     this.popup.setDefaultInactive()
     this.requestDevExtensionUpdateCheck()

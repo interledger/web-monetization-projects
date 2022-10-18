@@ -1884,6 +1884,7 @@ __metadata:
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.11.66"
     "@types/node-fetch": "npm:2.6.2"
+    "@types/parse-link-header": "npm:^2.0.0"
     "@types/react": "npm:17.0.50"
     "@types/react-dom": "npm:17.0.17"
     "@types/uuid": "npm:8.3.4"
@@ -1932,6 +1933,7 @@ __metadata:
     lottie-web: "npm:^5.8.1"
     node-window-manager: "npm:2.2.4"
     nodemon: "npm:2.0.20"
+    parse-link-header: "npm:^2.0.0"
     prettier: "npm:2.7.1"
     puppeteer: "npm:19.0.0"
     react: "npm:^17.0.0"
@@ -2424,6 +2426,7 @@ __metadata:
     nodemon: "npm:2.0.20"
     prettier: "npm:2.7.1"
     process: "npm:^0.11.10"
+    querystring-es3: "npm:0.2.1"
     regenerator-runtime: "npm:0.13.10"
     rimraf: "npm:3.0.2"
     setimmediate: "npm:^1.0.5"
@@ -2434,6 +2437,7 @@ __metadata:
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.1.0"
     typescript: "npm:4.8.4"
+    url: "npm:^0.11.0"
     util: "npm:^0.12.4"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
@@ -5674,6 +5678,13 @@ __metadata:
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
   checksum: bea37b307bdeb352d27a4467cac738387641c4f9dfe6c8bf559d474a036952f7b998f0ac54290f9d8765fb79e154f3941dfefbb47296a987fb55ccedf344a0e6
+  languageName: node
+  linkType: hard
+
+"@types/parse-link-header@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@types/parse-link-header@npm:2.0.0"
+  checksum: 7a26727fe3d04dbdb9446fb69dac70e2113e502b2c90b48712827e4f7d24686d6af68a4c99491364b21c245150da9e19f48562beee22c0fdf301b8f840172a73
   languageName: node
   linkType: hard
 
@@ -20022,6 +20033,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parse-link-header@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "parse-link-header@npm:2.0.0"
+  dependencies:
+    xtend: "npm:~4.0.1"
+  checksum: 29bc8e22e7fb71319d31d1a7380551af2e297b0450e1b32b3c7e830d1b97b3276fe1897b6b9953695f53dda2ce5557eeb58eb40d3b0e033ffab794caf4a863db
+  languageName: node
+  linkType: hard
+
 "parse5-htmlparser2-tree-adapter@npm:^7.0.0":
   version: 7.0.0
   resolution: "parse5-htmlparser2-tree-adapter@npm:7.0.0"
@@ -20826,6 +20846,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"punycode@npm:1.3.2":
+  version: 1.3.2
+  resolution: "punycode@npm:1.3.2"
+  checksum: 55b7339478c7e0debfd563c404beb7c9af30f24e191bd728688523cf1dd901977acdb8bd9c6e1005d3d2fc0f40c7f907006735b139ad1cf595c16e071a1fd65a
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^1.4.1":
   version: 1.4.1
   resolution: "punycode@npm:1.4.1"
@@ -20931,6 +20958,20 @@ __metadata:
   version: 6.5.2
   resolution: "qs@npm:6.5.2"
   checksum: e996d1229afeab8ddf0c1dba9a08214891688160251b0b30168a2ab8845eedf6af8ea2201a81938d14af7df2bc84aaa561c1949bd2a1f62edb86af38ec731110
+  languageName: node
+  linkType: hard
+
+"querystring-es3@npm:0.2.1":
+  version: 0.2.1
+  resolution: "querystring-es3@npm:0.2.1"
+  checksum: 7f5aaca4c82244148c157b4bf5ecc5e1471c936e0825e06eb8df45fce96f85fc9eb72fd3a76af077260db4b492e2199016d71b9a96e883854439d217019031e6
+  languageName: node
+  linkType: hard
+
+"querystring@npm:0.2.0":
+  version: 0.2.0
+  resolution: "querystring@npm:0.2.0"
+  checksum: 5804c20d7ebf914b26b9fe3c9a4b4b3104d7ee803106ac7bd35b9edffdcd844ca3d4aceaf5e0b39654b6939ceeadebafb3a3975346cf98f7accea19aa97f04fa
   languageName: node
   linkType: hard
 
@@ -24731,6 +24772,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"url@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "url@npm:0.11.0"
+  dependencies:
+    punycode: "npm:1.3.2"
+    querystring: "npm:0.2.0"
+  checksum: faa2280706858e1223e032eee89a43c832fe95803d9917f5b48a82a92fb8eec5556811fc6acb6d7c90ced0adb36d59331a55df86a27320c21bddd24f24600d3b
+  languageName: node
+  linkType: hard
+
 "use@npm:^3.1.0":
   version: 3.1.1
   resolution: "use@npm:3.1.1"
@@ -25759,7 +25810,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xtend@npm:^4.0.0, xtend@npm:^4.0.1":
+"xtend@npm:^4.0.0, xtend@npm:^4.0.1, xtend@npm:~4.0.1":
   version: 4.0.2
   resolution: "xtend@npm:4.0.2"
   checksum: 3d5d245e44d76b4eaf8a357199541347da8ce522bc0573fdb89b01ff6594b33364569d1dba02ccfe3ee86b384c0d61c06fda1b0cff71f382029e2a18e2f592f7
