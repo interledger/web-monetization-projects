@@ -16,7 +16,9 @@ export class HeaderLinks {
   ) {}
 
   init() {
-    // You must use onResponseStarted
+    // You must use onResponseStarted rather than onHeadersReceived if
+    // you need a guarantee the headers haven't been modified by another
+    // extension.
     this.api.webRequest.onResponseStarted.addListener(
       details => {
         const responseHeaders = details.responseHeaders ?? []
@@ -41,16 +43,24 @@ export class HeaderLinks {
 
   private onPaymentPointer(paymentPointer: string, frame: FrameSpec) {
     const requestId = uuid.v4()
-    void this.monetization.startWebMonetization(
-      {
-        paymentPointer,
-        requestId,
-        attrs: {},
-        fromBody: false,
-        initiatingUrl: paymentPointer,
-        tagType: 'link'
-      },
-      frame
-    )
+    // Start the monetization ASAP
+    const request = {
+      paymentPointer,
+      requestId,
+      attrs: {},
+      fromBody: false,
+      fromHTTPHeader: true,
+      initiatingUrl: paymentPointer,
+      tagType: 'link' as const
+    }
+    void this.monetization.startWebMonetization(request, frame)
+    // Need to send the request to the MonetizationRequestManager somehow
+    // When built for MV3, the state in the SW is transient, so it's helpful to
+    // store tab related state in the content script.
+
+    // When the content script registers, it should be given the request
+    // At this point, the content script /may/ not even be running, so simply
+    // sending the request via api.tabs.sendMessage may not work, though it
+    // could be done with retries and a backoff delay.
   }
 }

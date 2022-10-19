@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events'
 
-import { PaymentDetails } from '@webmonetization/polyfill-utils'
+import { MonetizationRequest } from '@webmonetization/polyfill-utils'
 import { Container, injectable } from 'inversify'
 import { BandwidthTiers } from '@coil/polyfill-utils'
 
@@ -27,7 +27,7 @@ export class Streams extends EventEmitter {
    */
   beginStream(
     id: string,
-    options: PaymentDetails & {
+    options: MonetizationRequest & {
       spspEndpoint: string
       token: string
       initiatingUrl: string

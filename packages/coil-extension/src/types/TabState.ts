@@ -1,4 +1,4 @@
-import { PaymentDetails } from '@webmonetization/polyfill-utils'
+import { MonetizationRequest } from '@webmonetization/polyfill-utils'
 
 export type MonetizationCommand = 'pause' | 'stop' | 'start' | 'resume'
 export const MonetizationStateKey = `monetization-state-` as const
@@ -6,7 +6,7 @@ export type MonetizationStateKeyType = typeof MonetizationStateKey
 
 export type MonetizationRequestState = {
   command: MonetizationCommand
-  details: PaymentDetails
+  details: MonetizationRequest
   total: number
   lastPacketTime: number
 }

@@ -12,7 +12,7 @@ const debug =
   // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/no-empty-function
   (..._: unknown[]) => {}
 
-export interface PaymentDetails {
+export interface MonetizationRequest {
   /**
    * This doesn't map 1 to 1 with a monetization tag, rather with a
    * configuration of a tag. e.g. a new href on a link will mean a new
@@ -22,6 +22,7 @@ export interface PaymentDetails {
   paymentPointer: string
   initiatingUrl: string
   fromBody: boolean
+  fromHTTPHeader: boolean
   tagType: TagType
   attrs: Record<string, string | null>
 }
@@ -31,13 +32,13 @@ export interface PaymentDetails {
  * On a tag added started will be set
  * On a tag[content|href] changed, both will be set
  */
-export interface PaymentDetailsChangeArguments {
-  started: PaymentDetails | null
-  stopped: PaymentDetails | null
+export interface MonetizationRequestChangeArguments {
+  started: MonetizationRequest | null
+  stopped: MonetizationRequest | null
 }
 
-export type PaymentDetailsChangeCallback = (
-  args: PaymentDetailsChangeArguments
+export type MonetizationRequestChangeCallback = (
+  args: MonetizationRequestChangeArguments
 ) => void
 
 export type MonetizationTag = HTMLMetaElement | HTMLLinkElement
@@ -94,7 +95,7 @@ function getTagAttrs(tag: MonetizationTag, tagType: TagType) {
   )
 }
 
-export class MonetizationTagManager extends EventEmitter {
+export class MonetizationRequestManager extends EventEmitter {
   private affinity: TagType = 'meta'
   private documentObserver: MutationObserver
   private monetizationTagAttrObserver: MutationObserver
@@ -102,7 +103,7 @@ export class MonetizationTagManager extends EventEmitter {
   private monetizationTags = new Map<
     MonetizationTag,
     {
-      details: PaymentDetails
+      details: MonetizationRequest
     }
   >()
 
@@ -122,18 +123,18 @@ export class MonetizationTagManager extends EventEmitter {
     )
   }
 
-  linkRequests(): PaymentDetails[] {
+  linkRequests(): MonetizationRequest[] {
     return this.requests().filter(d => d.tagType === 'link')
   }
 
-  requests(): PaymentDetails[] {
+  requests(): MonetizationRequest[] {
     return Array.from(this.monetizationTags.values()).map(e => e.details)
   }
 
   constructor(
     private window: Window,
     private document: Document,
-    private callback: PaymentDetailsChangeCallback,
+    private callback: MonetizationRequestChangeCallback,
     private throwOnIllegalState = true
   ) {
     super()
@@ -319,7 +320,7 @@ export class MonetizationTagManager extends EventEmitter {
       }
     }
 
-    let started: PaymentDetails | null = this.getPaymentDetails(tag)
+    let started: MonetizationRequest | null = this.getPaymentDetails(tag)
     if (started.fromBody && started.tagType === 'meta') {
       const error = new Error(
         'Web-Monetization Error: <meta name="monetization"> ' +
@@ -398,7 +399,7 @@ export class MonetizationTagManager extends EventEmitter {
     const entry = this.getEntry(tag, '_onChangedPaymentEndpoint')
     const stopped = wasDisabled ? null : entry.details
     this.clearLinkById(entry.details)
-    let started: PaymentDetails | null = null
+    let started: MonetizationRequest | null = null
     if (!disabled) {
       started = this.getPaymentDetails(tag)
       started = this.checkStartedLinkForWellFormedness(started, tag)
@@ -412,10 +413,10 @@ export class MonetizationTagManager extends EventEmitter {
   }
 
   private checkStartedLinkForWellFormedness(
-    started: PaymentDetails,
+    started: MonetizationRequest,
     tag: MonetizationTag
   ) {
-    let returnValue: PaymentDetails | null = started
+    let returnValue: MonetizationRequest | null = started
     if (started.tagType === 'link') {
       let error: Error | null = null
       try {
@@ -436,13 +437,13 @@ export class MonetizationTagManager extends EventEmitter {
     return returnValue
   }
 
-  private clearLinkById(stopped: PaymentDetails) {
+  private clearLinkById(stopped: MonetizationRequest) {
     if (stopped.tagType === 'link') {
       this.linkTagsById.delete(stopped.requestId)
     }
   }
 
-  private getPaymentDetails(tag: MonetizationTag): PaymentDetails {
+  private getPaymentDetails(tag: MonetizationTag): MonetizationRequest {
     const tagType = getTagType(tag)
     const paymentPointer =
       tag instanceof HTMLMetaElement ? tag.content : tag.href
@@ -454,7 +455,8 @@ export class MonetizationTagManager extends EventEmitter {
       paymentPointer: paymentPointer.trim(),
       initiatingUrl: this.window.location.href,
       tagType: getTagType(tag),
-      fromBody: tag.parentElement != this.document.head
+      fromBody: tag.parentElement != this.document.head,
+      fromHTTPHeader: false
     }
   }
 

@@ -1,5 +1,5 @@
 import { inject, injectable } from 'inversify'
-import { PaymentDetails } from '@webmonetization/polyfill-utils'
+import { MonetizationRequest } from '@webmonetization/polyfill-utils'
 import { StoreService } from '@webmonetization/wext/services'
 
 import {
@@ -171,7 +171,7 @@ export class TabStates {
   logLastMonetizationCommand(
     frame: FrameSpec,
     command: MonetizationCommand,
-    details: PaymentDetails | string
+    details: MonetizationRequest | string
   ) {
     const args = details
     if (typeof details === 'string') {
@@ -200,7 +200,7 @@ export class TabStates {
     dbg(JSON.stringify({ frame, command, newState }, null, 2))
   }
 
-  getTotal(frame: FrameSpec, details: PaymentDetails) {
+  getTotal(frame: FrameSpec, details: MonetizationRequest) {
     const frameOrDefault = this.getFrameOrDefault(frame)
     return frameOrDefault[`monetization-state-${details.requestId}`]?.total ?? 0
   }

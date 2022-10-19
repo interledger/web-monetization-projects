@@ -2,7 +2,7 @@ import '@abraham/reflection'
 
 import { Container } from 'inversify'
 import {
-  PaymentDetails,
+  MonetizationRequest,
   resolvePaymentEndpoint
 } from '@webmonetization/polyfill-utils'
 import { StorePersistence } from '@webmonetization/wext/services'
@@ -133,7 +133,7 @@ describe('MonetizationService', () => {
     frame = getFrameSpec(sender)
 
     const paymentPointer = '$b.tags.com/ok'
-    const details: PaymentDetails = mockPaymentDetails(paymentPointer)
+    const details: MonetizationRequest = mockPaymentDetails(paymentPointer)
     const startRequest: StartWebMonetization = {
       command: 'startWebMonetization',
       data: details

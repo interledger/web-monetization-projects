@@ -7,7 +7,7 @@ import {
   TipEvent
 } from '@webmonetization/types'
 import { inject, injectable } from '@dier-makr/annotations'
-import { PaymentDetails } from '@webmonetization/polyfill-utils'
+import { MonetizationRequest } from '@webmonetization/polyfill-utils'
 
 import * as tokens from '../tokens'
 
@@ -20,8 +20,6 @@ interface SetStateParams {
   requestId?: string
   finalized?: boolean
 }
-
-type MonetizationRequest = PaymentDetails
 
 // Name of event dispatched on document
 const MONETIZATION_DOCUMENT_EVENT_NAME = 'monetization-v1'

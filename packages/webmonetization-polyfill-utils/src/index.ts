@@ -1,9 +1,9 @@
 import * as asyncUtils from './lib/asyncUtils'
 
-export { MonetizationTagManager } from './lib/MonetizationTagManager'
-export type { PaymentDetailsChangeArguments } from './lib/MonetizationTagManager'
+export { MonetizationRequestManager } from './lib/MonetizationRequestManager'
+export type { MonetizationRequestChangeArguments } from './lib/MonetizationRequestManager'
 
-export type { PaymentDetails } from './lib/MonetizationTagManager'
+export type { MonetizationRequest } from './lib/MonetizationRequestManager'
 
 export { watchMouseMovement, watchVisibility } from './lib/idle'
 export { whenDocumentReady } from './lib/whenDocumentReady'
