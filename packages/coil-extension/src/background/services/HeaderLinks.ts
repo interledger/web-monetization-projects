@@ -19,6 +19,10 @@ export class HeaderLinks {
     // You must use onResponseStarted rather than onHeadersReceived if
     // you need a guarantee the headers haven't been modified by another
     // extension.
+    // TODO: when does this happen in relation to tab removed?
+    // When you refresh a tab, does the new request start before removing the
+    // old tab? In such a way that onResponseStarted fires before tab removed
+    // or frame removed for the old tab.
     this.api.webRequest.onResponseStarted.addListener(
       details => {
         const responseHeaders = details.responseHeaders ?? []
@@ -54,7 +58,7 @@ export class HeaderLinks {
       tagType: 'link' as const
     }
     void this.monetization.startWebMonetization(request, frame)
-    // Need to send the request to the MonetizationRequestManager somehow
+    // Need to send the request to the MonetizationRequestManager somehow.
     // When built for MV3, the state in the SW is transient, so it's helpful to
     // store tab related state in the content script.
 
