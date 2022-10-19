@@ -1946,7 +1946,7 @@ __metadata:
     tsconfig-paths: "npm:4.1.0"
     typescript: "npm:4.8.4"
     uuid: "npm:^9.0.0"
-    web-ext: "npm:7.3.0"
+    web-ext: "npm:7.3.1"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
     webpack-cli: "npm:4.10.0"
@@ -3583,7 +3583,7 @@ __metadata:
     typeface-roboto: "npm:^1.1.13"
     typescript: "npm:4.8.4"
     uuid: "npm:^9.0.0"
-    web-ext: "npm:7.3.0"
+    web-ext: "npm:7.3.1"
     webpack: "npm:5.74.0"
     webpack-bundle-analyzer: "npm:4.6.1"
     webpack-cli: "npm:4.10.0"
@@ -24946,9 +24946,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-ext@npm:7.3.0, web-ext@npm:^7.2.0":
-  version: 7.3.0
-  resolution: "web-ext@npm:7.3.0"
+"web-ext@npm:7.3.1, web-ext@npm:^7.2.0":
+  version: 7.3.1
+  resolution: "web-ext@npm:7.3.1"
   dependencies:
     "@babel/runtime": "npm:7.19.4"
     "@devicefarmer/adbkit": "npm:3.2.3"
@@ -24984,7 +24984,7 @@ __metadata:
     zip-dir: "npm:2.0.0"
   bin:
     web-ext: bin/web-ext.js
-  checksum: 06c90e394b33960de2637fbdf179a6df379cb03f8f36807414f684d675a1d30a47f0042a3005771128f6eecd6b11a2cff260e48b8b0d9a9e4ec79806b0b89a66
+  checksum: e8d6723cd1dc2487d71722bab5c74d4b3e92a576e604544a0c0dfdef75ff20cce47c870ac61c234d6b6f58bb72332d571bf633bb66367b60fd949c9e49fc22c4
   languageName: node
   linkType: hard
 
