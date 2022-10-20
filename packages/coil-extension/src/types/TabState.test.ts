@@ -14,7 +14,8 @@ describe('isFrameStateMonetized', () => {
           initiatingUrl: '',
           attrs: {},
           tagType: 'meta',
-          fromBody: false
+          fromBody: false,
+          fromHTTPHeader: false
         }
       }
     }
