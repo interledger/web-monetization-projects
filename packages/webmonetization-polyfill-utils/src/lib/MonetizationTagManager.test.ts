@@ -103,7 +103,8 @@ describe('MonetizationTagManager', () => {
       paymentPointer: 'https://ilp.uphold.com/gRa4mXFEMYrL',
       initiatingUrl: 'http://localhost/',
       tagType: 'link',
-      fromBody: false
+      fromBody: false,
+      fromHTTPHeader: false
     })
   })
   it(
@@ -124,7 +125,8 @@ describe('MonetizationTagManager', () => {
         paymentPointer: 'https://ilp.uphold.com/already',
         initiatingUrl: 'http://localhost/',
         tagType: 'link',
-        fromBody: false
+        fromBody: false,
+        fromHTTPHeader: false
       })
     }
   )
@@ -143,7 +145,8 @@ describe('MonetizationTagManager', () => {
       paymentPointer: 'https://ilp.uphold.com/inBody',
       initiatingUrl: 'http://localhost/',
       tagType: 'link',
-      fromBody: true
+      fromBody: true,
+      fromHTTPHeader: false
     })
   })
 
@@ -197,7 +200,8 @@ describe('MonetizationTagManager', () => {
       paymentPointer: 'https://ilp.uphold.com/linkBeforeMeta',
       initiatingUrl: 'http://localhost/',
       tagType: 'link',
-      fromBody: true
+      fromBody: true,
+      fromHTTPHeader: false
     })
     const meta = makeMeta('$ilp.uphold.com/meta')
     document.head.appendChild(meta)
@@ -257,6 +261,7 @@ describe('MonetizationTagManager', () => {
     const started = {
       attrs: makeMetaAttrs(metaPp),
       fromBody: false,
+      fromHTTPHeader: false,
       initiatingUrl: 'http://localhost/',
       paymentPointer: meta.content,
       requestId: expectUuid4,
@@ -274,6 +279,7 @@ describe('MonetizationTagManager', () => {
       started: {
         attrs: makeLinkAttrs(linkPp),
         fromBody: false,
+        fromHTTPHeader: false,
         initiatingUrl: 'http://localhost/',
         paymentPointer: link.href,
         requestId: expectUuid4,
