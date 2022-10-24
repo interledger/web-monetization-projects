@@ -159,6 +159,7 @@ export class MonetizationRequestManager extends EventEmitter {
   _start() {
     const monetizationTags: MonetizationTagList =
       this.document.querySelectorAll('meta,link')
+
     monetizationTags.forEach(tag => {
       try {
         this._observeMonetizationTagAttrs(tag)
@@ -512,5 +513,12 @@ export class MonetizationRequestManager extends EventEmitter {
       }
     }
     return this.monetizationTags.size <= 1 && !fromBody
+  }
+
+  addHttpHeaderLink(request: MonetizationRequest) {
+    const link = this.document.createElement('link')
+    link.rel = 'monetization'
+    link.href = request.paymentPointer
+    this.onAddedTag(link)
   }
 }

@@ -667,7 +667,7 @@ export class BackgroundScript {
     )
 
     if (requestIx != -1) {
-      return
+      return { headerRequests: [this.headerLinks.requests[requestIx][0]] }
     }
   }
 

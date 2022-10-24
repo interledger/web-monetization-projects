@@ -30,6 +30,7 @@ import { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
 import { BuildConfig } from '../../types/BuildConfig'
+import { FrameSpec } from '../../types/FrameSpec'
 
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
@@ -269,7 +270,16 @@ export class ContentScript {
         }
       }
 
-      this.runtime.sendMessage(message)
+      this.runtime.sendMessage(
+        message,
+        (response: { headerRequests: Array<MonetizationRequest> }) => {
+          if (response) {
+            response.headerRequests.forEach(hr => {
+              this.tagManager.addHttpHeaderLink(hr)
+            })
+          }
+        }
+      )
 
       this.injectPolyfillsAndWatchTags()
     }
