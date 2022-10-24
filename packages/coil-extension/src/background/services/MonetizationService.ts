@@ -323,7 +323,7 @@ export class MonetizationService {
   }
 
   _closeStreams(tabId: number, frameId?: number) {
-    this.log('DEBUG _closeStreams', tabId, frameId)
+    this.log('DEBUG _closeStreams', tabId, frameId, Date.now())
     const streamIds = this.assoc.getTabStreams(tabId)
     const haveFrameId = typeof frameId !== 'undefined'
 

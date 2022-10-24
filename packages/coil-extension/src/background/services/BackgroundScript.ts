@@ -16,7 +16,7 @@ import {
   ToBackgroundMessage
 } from '../../types/commands'
 import { getFrameSpec } from '../../util/tabs'
-import { FrameSpec } from '../../types/FrameSpec'
+import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
 import { getAdaptedSite } from '../../content/util/getAdaptedSite'
 import { notNullOrUndef } from '../../util/nullables'
@@ -660,6 +660,15 @@ export class BackgroundScript {
     this.tabStates.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
+
+    // TODO: more than one
+    const requestIx = this.headerLinks.requests.findIndex(req =>
+      sameFrame(req[1], spec)
+    )
+
+    if (requestIx != -1) {
+      return
+    }
   }
 
   private async onFrameAllowedChanged(

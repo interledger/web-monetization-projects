@@ -1,18 +1,23 @@
 import { inject, injectable } from 'inversify'
 import parseLink from 'parse-link-header'
 import * as uuid from 'uuid'
+import { MonetizationRequest } from '@webmonetization/polyfill-utils'
 
 import * as tokens from '../../types/tokens'
 import { FrameSpec } from '../../types/FrameSpec'
 
 import { MonetizationService } from './MonetizationService'
 import { logger, Logger } from './utils'
+import { BackgroundFramesService } from './BackgroundFramesService'
 
 @injectable()
 export class HeaderLinks {
+  requests: [MonetizationRequest, FrameSpec][] = []
+
   constructor(
     @inject(tokens.WextApi)
     private api: typeof chrome,
+    private frameService: BackgroundFramesService,
     private monetization: MonetizationService,
     @logger('HeaderLinks')
     private log: Logger
@@ -27,7 +32,7 @@ export class HeaderLinks {
     // old tab? In such a way that onResponseStarted fires before tab removed
     // or frame removed for the old tab.
     // Answer: webRequest.onResponseStarted, THEN tabs.onRemoved when using
-    // cmd + r to refresh
+    // cmd + r to refresh. About 2ms between it.
     const haveWebRequest = await this.havePermission('webRequest')
 
     if (haveWebRequest) {
@@ -43,7 +48,7 @@ export class HeaderLinks {
           const responseHeaders = details.responseHeaders ?? []
           const links = responseHeaders.filter(h => h.name === 'link')
           this.onLinks(links, frame)
-          this.log('DEBUG received headers for', frame)
+          this.log('DEBUG received headers for', frame, Date.now())
         },
         { urls: ['<all_urls>'] },
         ['responseHeaders']
@@ -65,12 +70,12 @@ export class HeaderLinks {
       const link = obj ? obj['monetization'] : null
       if (link?.rel === 'monetization') {
         const paymentPointer = link.url
-        this.onPaymentPointer(paymentPointer, frame)
+        void this.onPaymentPointer(paymentPointer, frame)
       }
     }
   }
 
-  private onPaymentPointer(paymentPointer: string, frame: FrameSpec) {
+  private async onPaymentPointer(paymentPointer: string, frame: FrameSpec) {
     const requestId = uuid.v4()
     // Start the monetization ASAP
     const request = {
@@ -82,6 +87,8 @@ export class HeaderLinks {
       initiatingUrl: paymentPointer,
       tagType: 'link' as const
     }
+
+    this.requests.push([request, frame])
 
     /**
      * There seems to be a problem with the monetization stopping immediately
@@ -96,7 +103,22 @@ export class HeaderLinks {
      *    One off the latter ticks checks the state
      */
 
-    void this.monetization.startWebMonetization(request, frame)
+    // const already = this.frameService.getFrame(frame)
+    // if (already) {
+    //   // Wait for the frame to be removed, so it isn't just stumped
+    //   // on immediately.
+    //   await new Promise(resolve => {
+    //     this.frameService.on('frameRemoved', (event) => {
+    //       if (sameFrame(event, frame)) {
+    //         resolve(null)
+    //       }
+    //     })
+    //   })
+    //   void this.monetization.startWebMonetization(request, frame)
+    // } else {
+    //   throw new Error('unexpected state')
+    // }
+
     // Need to send the request to the MonetizationRequestManager somehow.
     // When built for MV3, the state in the SW is transient, so it's helpful to
     // store tab related state in the content script.
