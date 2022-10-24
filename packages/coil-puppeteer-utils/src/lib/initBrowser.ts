@@ -71,6 +71,8 @@ export async function initBrowser({
       args.push('--no-sandbox')
     }
 
+    console.log('executablePath', puppeteer.executablePath())
+
     const launched = await puppeteer.launch({
       headless: headless1,
       // chromiumSandbox: false,
