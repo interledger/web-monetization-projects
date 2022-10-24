@@ -54,7 +54,7 @@ jobs:
         #           echo Restore Cache Dummy!
         restore_cache:
           keys:
-            - v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
+            - v6-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
       - &yarn_install
         run:
           name: Yarn Install
@@ -74,7 +74,7 @@ jobs:
             - node_modules
             - .yarn
             - puppeteer-cache
-          key: v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
+          key: v6-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
 
   # Build Safari
   build-safari:
@@ -96,7 +96,7 @@ jobs:
           paths:
             - node_modules
             - .yarn
-            - pw-browsers
+            - puppeteer-cache
           key: safari-build-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
 
   coil-extension-package:
