@@ -175,7 +175,6 @@ jobs:
           name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            ls -lahR $PUPPETEER_CACHE_DIR
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
@@ -216,7 +215,6 @@ jobs:
           name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            ls -lahR $PUPPETEER_CACHE_DIR
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             export MV3=serviceworker
@@ -324,6 +322,7 @@ jobs:
           name: Yarn workspaces foreach run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
+            export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
             xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run << parameters.command >>
       - run:
           name: Yarn workspaces foreach run jest from build
@@ -331,6 +330,7 @@ jobs:
             yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
+            export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
             xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run << parameters.command >>
       - *save_cache
 
