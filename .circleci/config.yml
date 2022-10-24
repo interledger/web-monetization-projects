@@ -59,6 +59,7 @@ jobs:
         run:
           name: Yarn Install
           command: |
+            export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
             yarn --immutable
             export PUPPETEER_PRODUCT='firefox'
             yarn rebuild puppeteer
@@ -72,7 +73,7 @@ jobs:
           paths:
             - node_modules
             - .yarn
-            - pw-browsers
+            - puppeteer-cache
           key: v5-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
 
   # Build Safari
@@ -173,6 +174,7 @@ jobs:
       - run:
           name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
+            export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
@@ -212,6 +214,7 @@ jobs:
       - run:
           name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
+            export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             export MV3=serviceworker
