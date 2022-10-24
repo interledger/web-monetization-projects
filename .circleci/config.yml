@@ -175,6 +175,7 @@ jobs:
           name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+            ls -lahR $PUPPETEER_CACHE_DIR
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
@@ -215,6 +216,7 @@ jobs:
           name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+            ls -lahR $PUPPETEER_CACHE_DIR
             cd packages/coil-extension
             export BROWSER_TYPE=chrome
             export MV3=serviceworker
