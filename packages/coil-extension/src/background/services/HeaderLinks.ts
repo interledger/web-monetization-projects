@@ -15,7 +15,7 @@ export class HeaderLinks {
     private monetization: MonetizationService
   ) {}
 
-  init() {
+  async init() {
     // You must use onResponseStarted rather than onHeadersReceived if
     // you need a guarantee the headers haven't been modified by another
     // extension.
@@ -23,15 +23,47 @@ export class HeaderLinks {
     // When you refresh a tab, does the new request start before removing the
     // old tab? In such a way that onResponseStarted fires before tab removed
     // or frame removed for the old tab.
-    this.api.webRequest.onResponseStarted.addListener(
-      details => {
-        const responseHeaders = details.responseHeaders ?? []
-        const links = responseHeaders.filter(h => h.name === 'link')
-        this.onLinks(links, { tabId: details.tabId, frameId: details.frameId })
-      },
-      { urls: ['<all_urls>'] },
-      ['responseHeaders']
-    )
+    const haveWebRequest = await this.havePermission('webRequest')
+
+    if (haveWebRequest) {
+      this.api.webRequest.onResponseStarted.addListener(
+        details => {
+          const responseHeaders = details.responseHeaders ?? []
+          const links = responseHeaders.filter(h => h.name === 'link')
+          this.onLinks(links, {
+            tabId: details.tabId,
+            frameId: details.frameId
+          })
+        },
+        { urls: ['<all_urls>'] },
+        ['responseHeaders']
+      )
+    }
+  }
+
+  private async havePermission(permission: string) {
+    return new Promise(resolve => {
+      this.api.permissions.contains({ permissions: [permission] }, contains => {
+        resolve(contains)
+      })
+    })
+  }
+
+  private async sendMessage(msg: unknown, frame: FrameSpec) {
+    return new Promise((resolve, reject) => {
+      this.api.tabs.sendMessage(
+        frame.tabId,
+        msg,
+        { frameId: frame.frameId },
+        response => {
+          if (this.api.runtime.lastError) {
+            reject(this.api.runtime.lastError)
+          } else {
+            resolve(response)
+          }
+        }
+      )
+    })
   }
 
   onLinks(headers: chrome.webRequest.HttpHeader[], frame: FrameSpec) {
