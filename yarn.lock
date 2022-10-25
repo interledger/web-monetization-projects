@@ -1933,7 +1933,7 @@ __metadata:
     node-window-manager: "npm:2.2.4"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.7.1"
-    puppeteer: "npm:19.1.0"
+    puppeteer: "npm:19.1.1"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reconnecting-websocket: "npm:^4.4.0"
@@ -2167,7 +2167,7 @@ __metadata:
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.7.1"
-    puppeteer: "npm:19.1.0"
+    puppeteer: "npm:19.1.1"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.10"
     rimraf: "npm:3.0.2"
@@ -20909,9 +20909,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:19.1.0":
-  version: 19.1.0
-  resolution: "puppeteer-core@npm:19.1.0"
+"puppeteer-core@npm:19.1.1":
+  version: 19.1.1
+  resolution: "puppeteer-core@npm:19.1.1"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
@@ -20923,20 +20923,20 @@ __metadata:
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
     ws: "npm:8.9.0"
-  checksum: dc972af1e544d3c58bb32c727b6fb8eaf3b2d021da385c48110a0de1e29f17ab5fb72987f2823a22853d0e46be784f07333632b8c2bac40f94970cba0653ce81
+  checksum: 83745f9fd0643a259a95fca2cb12d7f8d6d6f9c98d80cadde1e114d4c0e40c36d2c9ef79392cfb9d994c0af9e76abb7fadbb69f429c407b815f16d51e35161b9
   languageName: node
   linkType: hard
 
-"puppeteer@npm:19.1.0, puppeteer@npm:^19.0.0":
-  version: 19.1.0
-  resolution: "puppeteer@npm:19.1.0"
+"puppeteer@npm:19.1.1, puppeteer@npm:^19.0.0":
+  version: 19.1.1
+  resolution: "puppeteer@npm:19.1.1"
   dependencies:
     cosmiconfig: "npm:7.0.1"
     https-proxy-agent: "npm:5.0.1"
     progress: "npm:2.0.3"
     proxy-from-env: "npm:1.1.0"
-    puppeteer-core: "npm:19.1.0"
-  checksum: 1985b895159a488af16aafbd4b266502a4b2f524da88dfbf4a8d5afcbe9225d0bf776cea529c83dd73fcd25ba2db725a26bd4fb34929123ac4725a126f3d720e
+    puppeteer-core: "npm:19.1.1"
+  checksum: 9b04873429b83a1b25e2e2f9b21e2d3783a8889acd7a120dfb0fcb4b87b3f895c4cf822d1928bca7ce0489ebe3d624a0ba6c6e2bcdd3b2f2be040095ef595d08
   languageName: node
   linkType: hard
 
