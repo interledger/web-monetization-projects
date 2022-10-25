@@ -1975,7 +1975,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.1.0"
     "@graphql-codegen/cli": "npm:2.13.7"
     "@graphql-codegen/introspection": "npm:2.2.1"
-    "@graphql-codegen/typescript": "npm:2.7.5"
+    "@graphql-codegen/typescript": "npm:2.8.0"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.5"
     "@graphql-tools/graphql-file-loader": "npm:^7.3.12"
     "@graphql-tools/load": "npm:^7.5.11"
@@ -3028,9 +3028,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/typescript@npm:2.7.5, @graphql-codegen/typescript@npm:^2.7.5":
-  version: 2.7.5
-  resolution: "@graphql-codegen/typescript@npm:2.7.5"
+"@graphql-codegen/typescript@npm:2.8.0, @graphql-codegen/typescript@npm:^2.7.5":
+  version: 2.8.0
+  resolution: "@graphql-codegen/typescript@npm:2.8.0"
   dependencies:
     "@graphql-codegen/plugin-helpers": "npm:^2.6.2"
     "@graphql-codegen/schema-ast": "npm:^2.5.1"
@@ -3039,7 +3039,7 @@ __metadata:
     tslib: "npm:~2.4.0"
   peerDependencies:
     graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 9083832e9307c4d6a2c896f538d34c168944512ac581a8427e9b09528857890cb2076962ed946a1a659e5e4c55cf0a35cb2b53a423178621148e391f7b69be2f
+  checksum: 1d1095a588f15e28138d89abebca89fdb6ace35475754069bdea7a678106733db2a7194507691416e48d6b88c2e01a6726fb66226b70c609c5f539dd5c4d8914
   languageName: node
   linkType: hard
 
