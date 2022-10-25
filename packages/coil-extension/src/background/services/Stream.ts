@@ -12,7 +12,7 @@ import {
   asyncUtils,
   getFarFutureExpiry,
   getSPSPResponse,
-  PaymentDetails,
+  MonetizationRequest,
   SPSPError,
   SPSPResponse
 } from '@webmonetization/polyfill-utils'
@@ -73,7 +73,7 @@ type OnMoneyEvent = {
   receipt?: string
 }
 
-interface CreateStreamDetails extends PaymentDetails {
+interface CreateStreamDetails extends MonetizationRequest {
   token: string
   spspEndpoint: string
   initiatingUrl: string

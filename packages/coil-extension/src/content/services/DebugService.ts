@@ -1,4 +1,4 @@
-import { MonetizationTagManager } from '@webmonetization/polyfill-utils'
+import { MonetizationRequestManager } from '@webmonetization/polyfill-utils'
 import { injectable } from 'inversify'
 
 import { SPSPRequestEvent } from '../../types/commands'
@@ -12,7 +12,7 @@ export class DebugService {
 
   constructor(private storage: Storage) {}
 
-  init(tm: MonetizationTagManager) {
+  init(tm: MonetizationRequestManager) {
     // TODO:WM2, log as errors ??
     tm.on('illegal-state-error', (error: Error) => {
       if (this.storage.WM_DEBUG) {

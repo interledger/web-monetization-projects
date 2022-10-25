@@ -2,11 +2,11 @@ import { EventEmitter } from 'events'
 
 import { inject, injectable } from 'inversify'
 import {
-  MonetizationTagManager,
-  PaymentDetails,
+  MonetizationRequestManager,
+  MonetizationRequest,
   whenDocumentReady,
   mozClone,
-  PaymentDetailsChangeArguments
+  MonetizationRequestChangeArguments
 } from '@webmonetization/polyfill-utils'
 import {
   DocumentMonetization,
@@ -30,13 +30,14 @@ import { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
 import { BuildConfig } from '../../types/BuildConfig'
+import { FrameSpec } from '../../types/FrameSpec'
 
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
 import { ContentAuthService } from './ContentAuthService'
 import { DebugService } from './DebugService'
 
-function startWebMonetizationMessage(request?: PaymentDetails) {
+function startWebMonetizationMessage(request?: MonetizationRequest) {
   if (!request) {
     throw new Error(`Expecting request to be set`)
   }
@@ -50,7 +51,7 @@ function startWebMonetizationMessage(request?: PaymentDetails) {
 @injectable()
 export class ContentScript {
   private paused = false
-  private readonly tagManager: MonetizationTagManager
+  private readonly tagManager: MonetizationRequestManager
 
   constructor(
     private storage: Storage,
@@ -65,7 +66,7 @@ export class ContentScript {
     private monetization: DocumentMonetization,
     private auth: ContentAuthService
   ) {
-    this.tagManager = new MonetizationTagManager(
+    this.tagManager = new MonetizationRequestManager(
       this.window,
       this.document,
       details => {
@@ -78,7 +79,7 @@ export class ContentScript {
     this.wmDebug.init(this.tagManager)
   }
 
-  async startMonetization(details: PaymentDetails) {
+  async startMonetization(details: MonetizationRequest) {
     // TODO:WM2
     if (this.tagManager.atMostOneTagAndNoneInBody()) {
       this.monetization.setMonetizationRequest({ ...details })
@@ -86,7 +87,7 @@ export class ContentScript {
     await this.doStartMonetization(details)
   }
 
-  stopMonetization(details: PaymentDetails) {
+  stopMonetization(details: MonetizationRequest) {
     const request: StopWebMonetization = {
       command: 'stopWebMonetization',
       data: details
@@ -108,7 +109,7 @@ export class ContentScript {
     this.tagManager.startWhenDocumentReady()
   }
 
-  private onPaymentDetailsChange(details: PaymentDetailsChangeArguments) {
+  private onPaymentDetailsChange(details: MonetizationRequestChangeArguments) {
     const { started, stopped } = details
     if (stopped) {
       debug('sending stopped request', JSON.stringify(stopped, null, 2))
@@ -121,7 +122,7 @@ export class ContentScript {
   }
 
   // TODO: WM2
-  private async doStartMonetization(request: PaymentDetails) {
+  private async doStartMonetization(request: MonetizationRequest) {
     if (this.frames.isIFrame) {
       const allowed = await new Promise<boolean>(resolve => {
         const message: CheckIFrameIsAllowedFromIFrameContentScript = {
@@ -269,7 +270,16 @@ export class ContentScript {
         }
       }
 
-      this.runtime.sendMessage(message)
+      this.runtime.sendMessage(
+        message,
+        (response: { headerRequests: Array<MonetizationRequest> }) => {
+          if (response) {
+            response.headerRequests.forEach(hr => {
+              this.tagManager.addHttpHeaderLink(hr)
+            })
+          }
+        }
+      )
 
       this.injectPolyfillsAndWatchTags()
     }

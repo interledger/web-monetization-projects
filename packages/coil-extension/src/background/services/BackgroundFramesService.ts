@@ -103,7 +103,7 @@ export interface FrameChangedEvent extends FrameEventWithFrame {
 export class BackgroundFramesService extends EventEmitter {
   tabs: Record<number, Array<Frame>> = {}
   traceLogging = false
-  logEvents = false
+  logEvents = true
   logTabsInterval = 0
 
   // noinspection TypeScriptFieldCanBeMadeReadonly
@@ -251,7 +251,7 @@ export class BackgroundFramesService extends EventEmitter {
     if (this.logEvents) {
       events.forEach(e => {
         this.on(e, (event: FrameEvent) => {
-          this.log(e, JSON.stringify(event, null, 2))
+          this.log('DEBUG', e, JSON.stringify(event, null, 2))
         })
       })
     }

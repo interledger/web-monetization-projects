@@ -2,7 +2,7 @@ import '@abraham/reflection'
 
 import { Container } from 'inversify'
 import {
-  PaymentDetails,
+  MonetizationRequest,
   resolvePaymentEndpoint
 } from '@webmonetization/polyfill-utils'
 import { StorePersistence } from '@webmonetization/wext/services'
@@ -34,13 +34,14 @@ function mockMessageSender({ tabId, frameId }: FrameSpec) {
   } as MessageSender
 }
 
-function mockPaymentDetails(paymentPointer: string) {
+function mockMonetizationRequest(paymentPointer: string): MonetizationRequest {
   return {
+    attrs: {},
     fromBody: false,
+    fromHTTPHeader: false,
     tagType: 'meta' as const,
     requestId: 'a',
     paymentPointer: paymentPointer,
-    attrs: {},
     initiatingUrl: 'https://coil.com'
   }
 }
@@ -133,7 +134,7 @@ describe('MonetizationService', () => {
     frame = getFrameSpec(sender)
 
     const paymentPointer = '$b.tags.com/ok'
-    const details: PaymentDetails = mockPaymentDetails(paymentPointer)
+    const details: MonetizationRequest = mockMonetizationRequest(paymentPointer)
     const startRequest: StartWebMonetization = {
       command: 'startWebMonetization',
       data: details

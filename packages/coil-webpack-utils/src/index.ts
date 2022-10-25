@@ -17,6 +17,8 @@ export const configureNodePolyfills = (wpConf: webpack.Configuration) => {
     events: require.resolve('events/'),
     crypto: require.resolve('crypto-browserify/'),
     util: require.resolve('util/'),
+    url: require.resolve('url/'),
+    querystring: require.resolve('querystring-es3/'),
     buffer: require.resolve('buffer/'),
     stream: require.resolve('stream-browserify/')
   }

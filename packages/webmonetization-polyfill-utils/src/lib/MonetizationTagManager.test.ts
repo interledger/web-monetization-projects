@@ -5,10 +5,10 @@ import {
 
 import {
   metaDeprecatedMessage,
-  MonetizationTagManager,
-  PaymentDetailsChangeArguments,
-  PaymentDetailsChangeCallback
-} from './MonetizationTagManager'
+  MonetizationRequestManager,
+  MonetizationRequestChangeArguments,
+  MonetizationRequestChangeCallback
+} from './MonetizationRequestManager'
 
 const timeout = async (ms = 0) =>
   new Promise(resolve => setTimeout(resolve, ms))
@@ -40,8 +40,8 @@ const captureOneWindowError = async (timeout = 10e3): Promise<ErrorEvent> => {
   ])
 }
 
-const makeManager = (cb: PaymentDetailsChangeCallback) => {
-  return new MonetizationTagManager(window, document, cb)
+const makeManager = (cb: MonetizationRequestChangeCallback) => {
+  return new MonetizationRequestManager(window, document, cb)
 }
 
 const makeLinkAttrs = (pp: string) => {
@@ -62,8 +62,8 @@ const makeMetaAttrs = (pp: string) => {
 }
 
 const makeChangesCallback = (): [
-  PaymentDetailsChangeArguments,
-  PaymentDetailsChangeCallback
+  MonetizationRequestChangeArguments,
+  MonetizationRequestChangeCallback
 ] => {
   const reference = {
     started: null,
@@ -73,7 +73,7 @@ const makeChangesCallback = (): [
 }
 
 describe('MonetizationTagManager', () => {
-  let manager: MonetizationTagManager
+  let manager: MonetizationRequestManager
   afterEach(() => {
     manager?.stop()
     document.head.innerHTML = ''
@@ -103,7 +103,8 @@ describe('MonetizationTagManager', () => {
       paymentPointer: 'https://ilp.uphold.com/gRa4mXFEMYrL',
       initiatingUrl: 'http://localhost/',
       tagType: 'link',
-      fromBody: false
+      fromBody: false,
+      fromHTTPHeader: false
     })
   })
   it(
@@ -124,7 +125,8 @@ describe('MonetizationTagManager', () => {
         paymentPointer: 'https://ilp.uphold.com/already',
         initiatingUrl: 'http://localhost/',
         tagType: 'link',
-        fromBody: false
+        fromBody: false,
+        fromHTTPHeader: false
       })
     }
   )
@@ -143,7 +145,8 @@ describe('MonetizationTagManager', () => {
       paymentPointer: 'https://ilp.uphold.com/inBody',
       initiatingUrl: 'http://localhost/',
       tagType: 'link',
-      fromBody: true
+      fromBody: true,
+      fromHTTPHeader: false
     })
   })
 
@@ -197,7 +200,8 @@ describe('MonetizationTagManager', () => {
       paymentPointer: 'https://ilp.uphold.com/linkBeforeMeta',
       initiatingUrl: 'http://localhost/',
       tagType: 'link',
-      fromBody: true
+      fromBody: true,
+      fromHTTPHeader: false
     })
     const meta = makeMeta('$ilp.uphold.com/meta')
     document.head.appendChild(meta)
@@ -257,6 +261,7 @@ describe('MonetizationTagManager', () => {
     const started = {
       attrs: makeMetaAttrs(metaPp),
       fromBody: false,
+      fromHTTPHeader: false,
       initiatingUrl: 'http://localhost/',
       paymentPointer: meta.content,
       requestId: expectUuid4,
@@ -274,6 +279,7 @@ describe('MonetizationTagManager', () => {
       started: {
         attrs: makeLinkAttrs(linkPp),
         fromBody: false,
+        fromHTTPHeader: false,
         initiatingUrl: 'http://localhost/',
         paymentPointer: link.href,
         requestId: expectUuid4,

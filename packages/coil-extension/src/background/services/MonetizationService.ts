@@ -3,7 +3,7 @@
 import { inject, injectable } from 'inversify'
 import { MonetizationState } from '@webmonetization/types'
 import {
-  PaymentDetails,
+  MonetizationRequest,
   resolvePaymentEndpoint
 } from '@webmonetization/polyfill-utils'
 
@@ -120,7 +120,7 @@ export class MonetizationService {
     )
   }
 
-  async startWebMonetization(details: PaymentDetails, frame: FrameSpec) {
+  async startWebMonetization(details: MonetizationRequest, frame: FrameSpec) {
     const { tabId } = frame
     const { requestId } = details
 
@@ -278,7 +278,10 @@ export class MonetizationService {
     return true
   }
 
-  private doResumeWebMonetization(frame: FrameSpec, details: PaymentDetails[]) {
+  private doResumeWebMonetization(
+    frame: FrameSpec,
+    details: MonetizationRequest[]
+  ) {
     this.activeTabLogger.log(
       'doResume ' + JSON.stringify({ frame, details }),
       frame
@@ -320,6 +323,7 @@ export class MonetizationService {
   }
 
   _closeStreams(tabId: number, frameId?: number) {
+    this.log('DEBUG _closeStreams', tabId, frameId, Date.now())
     const streamIds = this.assoc.getTabStreams(tabId)
     const haveFrameId = typeof frameId !== 'undefined'
 

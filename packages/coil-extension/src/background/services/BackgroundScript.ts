@@ -16,7 +16,7 @@ import {
   ToBackgroundMessage
 } from '../../types/commands'
 import { getFrameSpec } from '../../util/tabs'
-import { FrameSpec } from '../../types/FrameSpec'
+import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { BuildConfig } from '../../types/BuildConfig'
 import { getAdaptedSite } from '../../content/util/getAdaptedSite'
 import { notNullOrUndef } from '../../util/nullables'
@@ -41,6 +41,8 @@ import { BackgroundEvents } from './BackgroundEvents'
 
 import MessageSender = chrome.runtime.MessageSender
 
+import { HeaderLinks } from './HeaderLinks'
+
 @injectable()
 export class BackgroundScript {
   constructor(
@@ -63,6 +65,7 @@ export class BackgroundScript {
     private log: Logger,
     private multipleInstanceDetector: MultipleInstanceDetector,
     private client: GraphQlClient,
+    private headerLinks: HeaderLinks,
     @inject(tokens.CoilDomain)
     private coilDomain: string,
     @inject(tokens.BuildConfig)
@@ -105,6 +108,7 @@ export class BackgroundScript {
     this.events.emitBufferedAndStopBuffering()
 
     this.monetization.init()
+    this.headerLinks.init()
 
     this.popup.setDefaultInactive()
     this.requestDevExtensionUpdateCheck()
@@ -206,7 +210,7 @@ export class BackgroundScript {
   private setTabsOnRemovedListener() {
     // Remove tab state when the tab is closed to prevent memory leak
     this.events.on('tabs.onRemoved', tabId => {
-      this.log('removing tab with id', tabId)
+      this.log('DEBUG removing tab with id', tabId)
       this.tabStates.clear(tabId)
 
       // clean up the stream of that tab
@@ -656,6 +660,15 @@ export class BackgroundScript {
     this.tabStates.reloadTabState({
       from: 'onTabsUpdated status === contentScriptInit'
     })
+
+    // TODO: more than one
+    const requestIx = this.headerLinks.requests.findIndex(req =>
+      sameFrame(req[1], spec)
+    )
+
+    if (requestIx != -1) {
+      return { headerRequests: [this.headerLinks.requests[requestIx][0]] }
+    }
   }
 
   private async onFrameAllowedChanged(

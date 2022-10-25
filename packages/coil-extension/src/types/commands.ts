@@ -1,4 +1,4 @@
-import { PaymentDetails } from '@webmonetization/polyfill-utils'
+import { MonetizationRequest } from '@webmonetization/polyfill-utils'
 import { MonetizationState } from '@webmonetization/types'
 import { StoreValue } from '@webmonetization/wext/services'
 
@@ -97,7 +97,7 @@ export interface PauseWebMonetization extends Command {
 export interface ResumeWebMonetization extends Command {
   command: 'resumeWebMonetization'
   data: {
-    requests: PaymentDetails[]
+    requests: MonetizationRequest[]
   }
 }
 
@@ -107,7 +107,7 @@ export interface ResumeWebMonetization extends Command {
  */
 export interface StartWebMonetization extends Command {
   command: 'startWebMonetization'
-  data: PaymentDetails
+  data: MonetizationRequest
 }
 
 /**
@@ -116,7 +116,7 @@ export interface StartWebMonetization extends Command {
  */
 export interface StopWebMonetization extends Command {
   command: 'stopWebMonetization'
-  data: PaymentDetails
+  data: MonetizationRequest
 }
 
 /**
