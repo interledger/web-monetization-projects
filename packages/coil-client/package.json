@@ -51,7 +51,7 @@
     "@swc/jest": "0.2.23",
     "@types/jest": "29.2.0",
     "@types/jsonwebtoken": "8.5.9",
-    "@types/node": "16.18.0",
+    "@types/node": "16.18.3",
     "@types/node-fetch": "2.6.2",
     "@typescript-eslint/eslint-plugin": "5.41.0",
     "@typescript-eslint/parser": "5.41.0",
