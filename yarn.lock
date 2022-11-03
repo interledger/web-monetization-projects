@@ -1734,7 +1734,7 @@ __metadata:
     "@coil/privacypass-sjcl": "npm:0.0.0"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/jsonwebtoken": "npm:8.5.9"
@@ -1799,7 +1799,7 @@ __metadata:
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/jsonwebtoken": "npm:8.5.9"
@@ -1872,7 +1872,7 @@ __metadata:
     "@material-ui/icons": "npm:^4.11.3"
     "@material-ui/styles": "npm:^4.11.5"
     "@nut-tree/nut-js": "npm:2.3.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/debug": "npm:4.1.7"
     "@types/filesystem": "npm:0.0.32"
@@ -1982,7 +1982,7 @@ __metadata:
     "@graphql-tools/schema": "npm:^9.0.0"
     "@graphql-tools/utils": "npm:^8.6.10"
     "@interledger/stream-receiver": "npm:^0.3.3-alpha.1"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/body-parser": "npm:1.19.2"
     "@types/cookie-parser": "npm:1.4.3"
@@ -2061,7 +2061,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -2130,7 +2130,7 @@ __metadata:
     "@coil/webpack-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/long": "npm:4.0.2"
@@ -2199,7 +2199,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -2258,7 +2258,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/keccak": "npm:3.0.1"
@@ -2323,7 +2323,7 @@ __metadata:
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/debug": "npm:4.1.7"
     "@types/get-port": "npm:4.2.0"
@@ -2390,7 +2390,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -2458,7 +2458,7 @@ __metadata:
     "@coil/client": "npm:0.0.0"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -2747,7 +2747,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -2806,7 +2806,7 @@ __metadata:
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -3536,7 +3536,7 @@ __metadata:
     "@dier-makr/inversify": "npm:^0.0.0"
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.3"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -4879,7 +4879,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -4924,136 +4924,94 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@swc/core-android-arm-eabi@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-android-arm-eabi@npm:1.3.11"
-  dependencies:
-    "@swc/wasm": "npm:1.2.122"
-  conditions: os=android & cpu=arm
-  languageName: node
-  linkType: hard
-
-"@swc/core-android-arm64@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-android-arm64@npm:1.3.11"
-  dependencies:
-    "@swc/wasm": "npm:1.2.130"
-  conditions: os=android & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@swc/core-darwin-arm64@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-darwin-arm64@npm:1.3.11"
+"@swc/core-darwin-arm64@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-darwin-arm64@npm:1.3.14"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-x64@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-darwin-x64@npm:1.3.11"
+"@swc/core-darwin-x64@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-darwin-x64@npm:1.3.14"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-freebsd-x64@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-freebsd-x64@npm:1.3.11"
-  dependencies:
-    "@swc/wasm": "npm:1.2.130"
-  conditions: os=freebsd & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@swc/core-linux-arm-gnueabihf@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.11"
-  dependencies:
-    "@swc/wasm": "npm:1.2.130"
+"@swc/core-linux-arm-gnueabihf@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.14"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-gnu@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.11"
+"@swc/core-linux-arm64-gnu@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.14"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-musl@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-linux-arm64-musl@npm:1.3.11"
+"@swc/core-linux-arm64-musl@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-linux-arm64-musl@npm:1.3.14"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-gnu@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-linux-x64-gnu@npm:1.3.11"
+"@swc/core-linux-x64-gnu@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-linux-x64-gnu@npm:1.3.14"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-musl@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-linux-x64-musl@npm:1.3.11"
+"@swc/core-linux-x64-musl@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-linux-x64-musl@npm:1.3.14"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-win32-arm64-msvc@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.11"
-  dependencies:
-    "@swc/wasm": "npm:1.2.130"
+"@swc/core-win32-arm64-msvc@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.14"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-ia32-msvc@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.11"
-  dependencies:
-    "@swc/wasm": "npm:1.2.130"
+"@swc/core-win32-ia32-msvc@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.14"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@swc/core-win32-x64-msvc@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core-win32-x64-msvc@npm:1.3.11"
+"@swc/core-win32-x64-msvc@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core-win32-x64-msvc@npm:1.3.14"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core@npm:*, @swc/core@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@swc/core@npm:1.3.11"
+"@swc/core@npm:*, @swc/core@npm:1.3.14":
+  version: 1.3.14
+  resolution: "@swc/core@npm:1.3.14"
   dependencies:
-    "@swc/core-android-arm-eabi": "npm:1.3.11"
-    "@swc/core-android-arm64": "npm:1.3.11"
-    "@swc/core-darwin-arm64": "npm:1.3.11"
-    "@swc/core-darwin-x64": "npm:1.3.11"
-    "@swc/core-freebsd-x64": "npm:1.3.11"
-    "@swc/core-linux-arm-gnueabihf": "npm:1.3.11"
-    "@swc/core-linux-arm64-gnu": "npm:1.3.11"
-    "@swc/core-linux-arm64-musl": "npm:1.3.11"
-    "@swc/core-linux-x64-gnu": "npm:1.3.11"
-    "@swc/core-linux-x64-musl": "npm:1.3.11"
-    "@swc/core-win32-arm64-msvc": "npm:1.3.11"
-    "@swc/core-win32-ia32-msvc": "npm:1.3.11"
-    "@swc/core-win32-x64-msvc": "npm:1.3.11"
+    "@swc/core-darwin-arm64": "npm:1.3.14"
+    "@swc/core-darwin-x64": "npm:1.3.14"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.3.14"
+    "@swc/core-linux-arm64-gnu": "npm:1.3.14"
+    "@swc/core-linux-arm64-musl": "npm:1.3.14"
+    "@swc/core-linux-x64-gnu": "npm:1.3.14"
+    "@swc/core-linux-x64-musl": "npm:1.3.14"
+    "@swc/core-win32-arm64-msvc": "npm:1.3.14"
+    "@swc/core-win32-ia32-msvc": "npm:1.3.14"
+    "@swc/core-win32-x64-msvc": "npm:1.3.14"
   dependenciesMeta:
-    "@swc/core-android-arm-eabi":
-      optional: true
-    "@swc/core-android-arm64":
-      optional: true
     "@swc/core-darwin-arm64":
       optional: true
     "@swc/core-darwin-x64":
-      optional: true
-    "@swc/core-freebsd-x64":
       optional: true
     "@swc/core-linux-arm-gnueabihf":
       optional: true
@@ -5073,7 +5031,7 @@ __metadata:
       optional: true
   bin:
     swcx: run_swcx.js
-  checksum: 8927d3c81072af83b3b3eb5e66c4b077c74a16eeccdb9fd2f79335cadeca181da96f5224acb0d94933a48893bb1f60349a927670722a1512dac269e682a42040
+  checksum: 8cbd4f9406d6b8aa82d9b3c19ae882bdfaa0f754e2baed342c9eeab0fb727b86cbc8dd645be3b11c3f6fb9f45a3038001849f6594e8133722c6a82268dbff2f0
   languageName: node
   linkType: hard
 
@@ -5086,20 +5044,6 @@ __metadata:
   peerDependencies:
     "@swc/core": "*"
   checksum: d5cd8c3aebb924ae7403fb1a9e366f744e50cc5b762562acff7221855aa8b09a98656c6b2215a544524cee4bbfb91ee995891df8a4685b0e630dba66c585bebd
-  languageName: node
-  linkType: hard
-
-"@swc/wasm@npm:1.2.122":
-  version: 1.2.122
-  resolution: "@swc/wasm@npm:1.2.122"
-  checksum: 9c9896e62921925d469d9a7ec01331f2e11c452d56b080a1dd0b4569dcd69a5ba244b0a21c5688b71dfd3de780a1cbb3b204144026954fa55a4c451a29e2b18a
-  languageName: node
-  linkType: hard
-
-"@swc/wasm@npm:1.2.130":
-  version: 1.2.130
-  resolution: "@swc/wasm@npm:1.2.130"
-  checksum: ff270fbb0a77d1e697a98209f180cea0c85c6c6e91df20361d8318d9d13749a0f2c23d0a20e78079e7d721ce7e203e91f2fff62f614d1635a73c5fb0f2ad897e
   languageName: node
   linkType: hard
 
@@ -6199,7 +6143,7 @@ __metadata:
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -6272,7 +6216,7 @@ __metadata:
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
     "@hot-loader/react-dom": "npm:17.0.2"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/body-parser": "npm:1.19.2"
     "@types/express": "npm:4.17.14"
@@ -6354,7 +6298,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -6419,7 +6363,7 @@ __metadata:
     "@coil/webpack-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -6483,7 +6427,7 @@ __metadata:
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
     "@hot-loader/react-dom": "npm:17.0.2"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:29.2.1"
@@ -6552,7 +6496,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -6612,7 +6556,7 @@ __metadata:
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
     "@dier-makr/annotations": "npm:0.0.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
@@ -25178,7 +25122,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.18.6"
     "@commitlint/cli": "npm:17.2.0"
     "@commitlint/config-conventional": "npm:17.2.0"
-    "@swc/core": "npm:1.3.11"
+    "@swc/core": "npm:1.3.14"
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
