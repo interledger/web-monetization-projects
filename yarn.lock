@@ -1884,7 +1884,7 @@ __metadata:
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.18.3"
     "@types/node-fetch": "npm:2.6.2"
-    "@types/react": "npm:17.0.50"
+    "@types/react": "npm:17.0.52"
     "@types/react-dom": "npm:17.0.18"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.42.0"
@@ -3540,7 +3540,7 @@ __metadata:
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
-    "@types/react": "npm:17.0.50"
+    "@types/react": "npm:17.0.52"
     "@types/react-dom": "npm:17.0.18"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.42.0"
@@ -5750,14 +5750,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.50":
-  version: 17.0.50
-  resolution: "@types/react@npm:17.0.50"
+"@types/react@npm:17.0.52":
+  version: 17.0.52
+  resolution: "@types/react@npm:17.0.52"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: f87d355314b4414307fb57000a576b13388c786b9af85ba0dfcfadf665e6f986a2ae6e5fea8a9837b6e764989b800957f298004f4d5bbfc0b512a6b2df7cc098
+  checksum: e3de443f6cc70a6b5a6bbc54c42106c264cd902995d5731ce37457e0abb49af3d4858d29dc46ecaeb63f4f5879792f02c68781ad3d83a1c294ad2c58cd67536a
   languageName: node
   linkType: hard
 
@@ -6280,7 +6280,7 @@ __metadata:
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
     "@types/node-fetch": "npm:2.6.2"
-    "@types/react": "npm:17.0.50"
+    "@types/react": "npm:17.0.52"
     "@types/react-dom": "npm:17.0.18"
     "@types/react-helmet": "npm:6.1.5"
     "@typescript-eslint/eslint-plugin": "npm:5.42.0"
@@ -6423,7 +6423,7 @@ __metadata:
     "@swc/jest": "npm:0.2.23"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
-    "@types/react": "npm:17.0.50"
+    "@types/react": "npm:17.0.52"
     "@typescript-eslint/eslint-plugin": "npm:5.42.0"
     "@typescript-eslint/parser": "npm:5.42.0"
     "@webmonetization/types": "npm:0.0.0"
@@ -6488,7 +6488,7 @@ __metadata:
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:29.2.1"
     "@types/node": "npm:16.18.3"
-    "@types/react": "npm:17.0.50"
+    "@types/react": "npm:17.0.52"
     "@types/react-dom": "npm:17.0.18"
     "@types/uuid": "npm:8.3.4"
     "@typescript-eslint/eslint-plugin": "npm:5.42.0"
