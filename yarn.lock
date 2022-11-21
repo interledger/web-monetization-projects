@@ -17303,11 +17303,11 @@ __metadata:
   linkType: hard
 
 "jszip@npm:^2.4.0":
-  version: 2.6.1
-  resolution: "jszip@npm:2.6.1"
+  version: 2.7.0
+  resolution: "jszip@npm:2.7.0"
   dependencies:
     pako: "npm:~1.0.2"
-  checksum: 857debc22449293bde9cadd7c86d531be7ad6c9e8eb19676694a6029147b9bab9b2dae6917dd9c8a3192d9f7fb65cffeed6967fe0038bec8979ef5cc53c58275
+  checksum: 3fe257ddd0bb252a0672df6c379bb43bf002a0841ff7695fd2d187e38d917e0e80644865d6aac57436bcae37e5dca3fc02cfc7da650df20fa3b499bc457b32b7
   languageName: node
   linkType: hard
 
