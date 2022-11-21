@@ -34,11 +34,11 @@ references:
   node-version-matrix: &node-version-matrix
     matrix:
       parameters:
-        node-version: &node-versions [ "16.18.0", "18.4.0" ]
+        node-version: &node-versions [ "16.18.1", "18.4.0" ]
   just-one-node-version-matrix: &just-latest-lts-node-version
     matrix:
       parameters:
-        node-version: [ "16.18.0" ]
+        node-version: [ "16.18.1" ]
 
 jobs:
   # Run Linting
@@ -125,7 +125,7 @@ jobs:
   build-extension-e2e-coil:
     docker:
       # Hey renovate PR merger. Don't forget the node-version: [ "x.y.z", "y.z.x" ] blocks
-      - image: cimg/node:16.18.0-browsers
+      - image: cimg/node:16.18.1-browsers
     steps:
       - gcloud-get-creds
       - checkout
