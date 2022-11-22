@@ -1,0 +1,17 @@
+diff --git a/package.json b/package.json
+index e001771f59a7694224e29b9d49b6fed7c3c62cab..da58f0b837b45326e92a3c594d86261b60a00929 100644
+--- a/package.json
++++ b/package.json
+@@ -4,8 +4,10 @@
+   "description": "Lightweight ES Module implementation of reflect-metadata",
+   "type": "module",
+   "exports": {
+-    "import": "./dist/index.js",
+-    "require": "./dist/index.umd.js"
++    "." : {
++      "import": "./dist/index.js",
++      "require": "./dist/index.umd.js"
++    }
+   },
+   "main": "./dist/index.umd.js",
+   "module": "./dist/index.js",
