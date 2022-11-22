@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch",
-    "@apollo/utils.logger": "^1.0.0",
+    "@apollo/utils.logger": "^2.0.0",
     "@coil/privacypass-sjcl": "0.0.0",
     "@coil/puppeteer-utils": "0.0.0",
     "@graphql-tools/graphql-file-loader": "^7.3.12",

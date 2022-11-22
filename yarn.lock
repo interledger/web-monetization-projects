@@ -114,6 +114,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@apollo/utils.logger@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@apollo/utils.logger@npm:2.0.0"
+  checksum: bdd5f7c7259affdb0bea1f53652644a6b68ab7c8732ebee968ad29d973750215e03a2e160989a40c6df3d38f65f481d36080569530582d3715877fbf8ce8c3fb
+  languageName: node
+  linkType: hard
+
 "@apollo/utils.printwithreducedwhitespace@npm:^1.1.0":
   version: 1.1.0
   resolution: "@apollo/utils.printwithreducedwhitespace@npm:1.1.0"
@@ -1964,7 +1971,7 @@ __metadata:
   resolution: "@coil/local-server@workspace:packages/coil-local-server"
   dependencies:
     "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
-    "@apollo/utils.logger": "npm:^1.0.0"
+    "@apollo/utils.logger": "npm:^2.0.0"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
