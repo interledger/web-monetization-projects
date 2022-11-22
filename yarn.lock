@@ -26,6 +26,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@abraham/reflection@patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch":
+  version: 0.11.0
+  resolution: "@abraham/reflection@patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch::version=0.11.0&hash=d5e462"
+  checksum: 8719e4483c5a464dfe99bbe069d1164a1150a0f89388846dec62d47e6ad9a86d28a28c1948a4cd01ddfc3d1a847dc6de25c02ac35a56a9dc6216576183db50d5
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:^2.1.0":
   version: 2.1.1
   resolution: "@ampproject/remapping@npm:2.1.1"
@@ -1720,7 +1727,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -1785,7 +1792,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -1848,7 +1855,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -1956,7 +1963,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/local-server@workspace:packages/coil-local-server"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@apollo/utils.logger": "npm:^1.0.0"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
@@ -2048,7 +2055,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -2113,7 +2120,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -2186,7 +2193,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -2245,7 +2252,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -2309,7 +2316,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -2377,7 +2384,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -2444,7 +2451,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -2734,7 +2741,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -2792,7 +2799,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -3530,7 +3537,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -4877,7 +4884,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -6140,7 +6147,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -6212,7 +6219,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -6296,7 +6303,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -6360,7 +6367,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -6423,7 +6430,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -6494,7 +6501,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -6553,7 +6560,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
@@ -25222,7 +25229,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web-monetization@workspace:."
   dependencies:
-    "@abraham/reflection": "npm:0.11.0"
+    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch"
     "@babel/core": "npm:7.20.2"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.2"
