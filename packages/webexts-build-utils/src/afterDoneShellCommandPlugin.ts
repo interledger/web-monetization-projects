@@ -6,7 +6,7 @@ import { AFTER_DONE_SHELL_CMD } from './env'
 
 type Func = { (...args: unknown[]): void }
 
-const IGNORE_INVOCATIONS = 1
+const IGNORE_INVOCATIONS = 0
 
 function ignoreInvocations(name: string, ignore: number, func: Func) {
   let n = 0
