@@ -1944,7 +1944,7 @@ __metadata:
     node-window-manager: "npm:2.2.4"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.0"
-    puppeteer: "npm:19.2.2"
+    puppeteer: "npm:19.3.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reconnecting-websocket: "npm:^4.4.0"
@@ -2178,7 +2178,7 @@ __metadata:
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.0"
-    puppeteer: "npm:19.2.2"
+    puppeteer: "npm:19.3.0"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:3.0.2"
@@ -21061,9 +21061,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:19.2.2":
-  version: 19.2.2
-  resolution: "puppeteer-core@npm:19.2.2"
+"puppeteer-core@npm:19.3.0":
+  version: 19.3.0
+  resolution: "puppeteer-core@npm:19.3.0"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
@@ -21075,21 +21075,21 @@ __metadata:
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
     ws: "npm:8.10.0"
-  checksum: 8dd9cdf167dcedc16f6a277061d0a6caacf5b27124d6ec9648030a9967d596b37c6f0f23148a22330f56823cac12affabd1971d35f5e5d504911c6e4fdcd3a4e
+  checksum: 2264e11bdcbee17b2ac883ea3955ee89632ce8c636b895bf1244557d3544681f8b020c0653e9d2e265fb4ca432546c7dcf3e119fa809545ea0f7e42468bf7ef2
   languageName: node
   linkType: hard
 
-"puppeteer@npm:19.2.2, puppeteer@npm:^19.0.0":
-  version: 19.2.2
-  resolution: "puppeteer@npm:19.2.2"
+"puppeteer@npm:19.3.0, puppeteer@npm:^19.0.0":
+  version: 19.3.0
+  resolution: "puppeteer@npm:19.3.0"
   dependencies:
     cosmiconfig: "npm:7.0.1"
     devtools-protocol: "npm:0.0.1056733"
     https-proxy-agent: "npm:5.0.1"
     progress: "npm:2.0.3"
     proxy-from-env: "npm:1.1.0"
-    puppeteer-core: "npm:19.2.2"
-  checksum: f67a15b2b047bc3b10227df801ef1050221bafa560bfa5eeb45160ef8a461d5cdd106d0d5c9da4dd1c98497b9298edd9d611f0fa1bbb56d84db4f362f7f5831a
+    puppeteer-core: "npm:19.3.0"
+  checksum: d4ea66a4863f8ff7e66298f7609b6b85b0c7c8e3581b48fdcc5ff86e62095bda4cc1c74ffd4bf080f0f223793a5ec1be5a53b7be91faaadd040bc84314d04dbf
   languageName: node
   linkType: hard
 
