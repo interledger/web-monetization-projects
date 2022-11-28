@@ -73,7 +73,7 @@
     "@coil/client": "0.0.0",
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
-    "@graphql-codegen/cli": "2.14.0",
+    "@graphql-codegen/cli": "2.14.1",
     "@graphql-codegen/introspection": "2.2.1",
     "@graphql-codegen/typescript": "2.8.2",
     "@graphql-codegen/typescript-resolvers": "2.7.7",
