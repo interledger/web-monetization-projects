@@ -5686,12 +5686,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-helmet@npm:6.1.5":
-  version: 6.1.5
-  resolution: "@types/react-helmet@npm:6.1.5"
+"@types/react-helmet@npm:6.1.6":
+  version: 6.1.6
+  resolution: "@types/react-helmet@npm:6.1.6"
   dependencies:
     "@types/react": "npm:*"
-  checksum: ffd9d68659972633e8773229eb7de8808086d247e1b78ee0710783d27d73629c24d9eccdd71f8d40a6bc1f937394b48e4881a247f4cfbb798dd5403caace6d48
+  checksum: cc2d444a0c50ca83a62785ec5aa36ddb31ebd88c0f07d414c8390e7e5f1af27fdbc31e245b28b9c8f7ab4cdc2d20c313d1acef45e4525bf9c2323c2bd2df35ab
   languageName: node
   linkType: hard
 
@@ -6236,7 +6236,7 @@ __metadata:
     "@types/node-fetch": "npm:2.6.2"
     "@types/react": "npm:17.0.52"
     "@types/react-dom": "npm:17.0.18"
-    "@types/react-helmet": "npm:6.1.5"
+    "@types/react-helmet": "npm:6.1.6"
     "@typescript-eslint/eslint-plugin": "npm:5.44.0"
     "@typescript-eslint/parser": "npm:5.44.0"
     "@webmonetization/react": "npm:0.0.12"
