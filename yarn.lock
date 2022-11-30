@@ -1897,7 +1897,7 @@ __metadata:
     "@types/node-fetch": "npm:2.6.2"
     "@types/react": "npm:17.0.52"
     "@types/react-dom": "npm:17.0.18"
-    "@types/uuid": "npm:8.3.4"
+    "@types/uuid": "npm:9.0.0"
     "@typescript-eslint/eslint-plugin": "npm:5.44.0"
     "@typescript-eslint/parser": "npm:5.44.0"
     "@webexts/build-utils": "npm:^0.0.0"
@@ -2147,7 +2147,7 @@ __metadata:
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.18.3"
     "@types/node-fetch": "npm:2.6.2"
-    "@types/uuid": "npm:8.3.4"
+    "@types/uuid": "npm:9.0.0"
     "@typescript-eslint/eslint-plugin": "npm:5.44.0"
     "@typescript-eslint/parser": "npm:5.44.0"
     "@webmonetization/polyfill-utils": "npm:0.0.0"
@@ -3559,7 +3559,7 @@ __metadata:
     "@types/node": "npm:16.18.3"
     "@types/react": "npm:17.0.52"
     "@types/react-dom": "npm:17.0.18"
-    "@types/uuid": "npm:8.3.4"
+    "@types/uuid": "npm:9.0.0"
     "@typescript-eslint/eslint-plugin": "npm:5.44.0"
     "@typescript-eslint/parser": "npm:5.44.0"
     "@webexts/build-utils": "npm:0.0.0"
@@ -5808,10 +5808,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/uuid@npm:8.3.4":
-  version: 8.3.4
-  resolution: "@types/uuid@npm:8.3.4"
-  checksum: 42fa6d1868c459444c257fe418f624067aabfbe550ce97d9c124c5759a16f03bc475dc82086eefee807571608830b2f955e688c0e63e40aad5eb29b573471492
+"@types/uuid@npm:9.0.0":
+  version: 9.0.0
+  resolution: "@types/uuid@npm:9.0.0"
+  checksum: f834b8b23d48e80d79aad515934815b720e5d1646742804af99afad1df406467d4f5089893bca06ef67d41ebb58edfeb583dae47211b8d7eefdb666cf7ae93a7
   languageName: node
   linkType: hard
 
@@ -6313,7 +6313,7 @@ __metadata:
     "@types/jest": "npm:29.2.3"
     "@types/node": "npm:16.18.3"
     "@types/node-fetch": "npm:2.6.2"
-    "@types/uuid": "npm:8.3.4"
+    "@types/uuid": "npm:9.0.0"
     "@typescript-eslint/eslint-plugin": "npm:5.44.0"
     "@typescript-eslint/parser": "npm:5.44.0"
     "@webmonetization/types": "npm:0.0.0"
@@ -6444,7 +6444,7 @@ __metadata:
     "@types/node": "npm:16.18.3"
     "@types/react": "npm:17.0.52"
     "@types/react-dom": "npm:17.0.18"
-    "@types/uuid": "npm:8.3.4"
+    "@types/uuid": "npm:9.0.0"
     "@typescript-eslint/eslint-plugin": "npm:5.44.0"
     "@typescript-eslint/parser": "npm:5.44.0"
     "@webmonetization/types": "npm:0.0.0"
