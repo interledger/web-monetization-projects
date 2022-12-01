@@ -57,7 +57,7 @@
     "@swc/jest": "0.2.23",
     "@types/jest": "29.2.3",
     "@types/keccak": "3.0.1",
-    "@types/node": "16.18.3",
+    "@types/node": "16.18.4",
     "@types/sjcl": "1.0.30",
     "@typescript-eslint/eslint-plugin": "5.45.0",
     "@typescript-eslint/parser": "5.45.0",
