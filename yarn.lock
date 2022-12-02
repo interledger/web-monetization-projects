@@ -1986,8 +1986,8 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.3.0"
     "@graphql-codegen/cli": "npm:2.15.0"
     "@graphql-codegen/introspection": "npm:2.2.1"
-    "@graphql-codegen/typescript": "npm:2.8.2"
-    "@graphql-codegen/typescript-resolvers": "npm:2.7.7"
+    "@graphql-codegen/typescript": "npm:2.8.3"
+    "@graphql-codegen/typescript-resolvers": "npm:2.7.8"
     "@graphql-tools/graphql-file-loader": "npm:^7.3.12"
     "@graphql-tools/load": "npm:^7.5.11"
     "@graphql-tools/schema": "npm:^9.0.0"
@@ -3028,40 +3028,40 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/typescript-resolvers@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@graphql-codegen/typescript-resolvers@npm:2.7.7"
+"@graphql-codegen/typescript-resolvers@npm:2.7.8":
+  version: 2.7.8
+  resolution: "@graphql-codegen/typescript-resolvers@npm:2.7.8"
   dependencies:
     "@graphql-codegen/plugin-helpers": "npm:^2.7.2"
-    "@graphql-codegen/typescript": "npm:^2.8.2"
-    "@graphql-codegen/visitor-plugin-common": "npm:2.13.2"
+    "@graphql-codegen/typescript": "npm:^2.8.3"
+    "@graphql-codegen/visitor-plugin-common": "npm:2.13.3"
     "@graphql-tools/utils": "npm:^8.8.0"
     auto-bind: "npm:~4.0.0"
     tslib: "npm:~2.4.0"
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 40fdf62220f405ad6b1e35404e3833aee07462f827429a38a55f88c69b02e5eb3a7a1d67b951cf310e045d87aeeb8b7492d1385758144f753cc0c3b58965f92b
+  checksum: c4e6338ae0aa7a8a3e775fb07b8b589cdcbe719b0dbb03905204391c4c212c430e2186c9384d9c7bf8ba549776e511f5101cc7f7f1b478160643bf9baf3f538d
   languageName: node
   linkType: hard
 
-"@graphql-codegen/typescript@npm:2.8.2, @graphql-codegen/typescript@npm:^2.8.2":
-  version: 2.8.2
-  resolution: "@graphql-codegen/typescript@npm:2.8.2"
+"@graphql-codegen/typescript@npm:2.8.3, @graphql-codegen/typescript@npm:^2.8.3":
+  version: 2.8.3
+  resolution: "@graphql-codegen/typescript@npm:2.8.3"
   dependencies:
     "@graphql-codegen/plugin-helpers": "npm:^2.7.2"
     "@graphql-codegen/schema-ast": "npm:^2.5.1"
-    "@graphql-codegen/visitor-plugin-common": "npm:2.13.2"
+    "@graphql-codegen/visitor-plugin-common": "npm:2.13.3"
     auto-bind: "npm:~4.0.0"
     tslib: "npm:~2.4.0"
   peerDependencies:
     graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: a8e04e44f44839f3928a9b26217b2be821eac43f933834a618bc33ae382f80e1c1b059a5e47e64de5f4f736b3626fc3eba69a37e07e1522b5a06081ae6973337
+  checksum: b8d19a35c85b103ee8c28c2aa8dcfd489c76f834bb75aaea3cd4ea96158265a0e001ab235a5460bc47eb6a0d24b43e5774046ff563733a71e4828c27cd628154
   languageName: node
   linkType: hard
 
-"@graphql-codegen/visitor-plugin-common@npm:2.13.2, @graphql-codegen/visitor-plugin-common@npm:^2.12.1":
-  version: 2.13.2
-  resolution: "@graphql-codegen/visitor-plugin-common@npm:2.13.2"
+"@graphql-codegen/visitor-plugin-common@npm:2.13.3, @graphql-codegen/visitor-plugin-common@npm:^2.12.1":
+  version: 2.13.3
+  resolution: "@graphql-codegen/visitor-plugin-common@npm:2.13.3"
   dependencies:
     "@graphql-codegen/plugin-helpers": "npm:^2.7.2"
     "@graphql-tools/optimize": "npm:^1.3.0"
@@ -3075,7 +3075,7 @@ __metadata:
     tslib: "npm:~2.4.0"
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 1055d67750ab7f23c3f7fb5928acf4f9283f6672e63b4e1f26739f227fcb35cd13c33afb3e0c013f825c9893f0887564cd958632197d358b0cb3e05c037556e4
+  checksum: 94174a689d5386b052ae8a9586fc6c6bdefed7b4aa228df72aba48b7e401f4997c21ae3950b4cf82ef6ab897946196bf54a42af4f7cc5404c1bac4f8fa1594f0
   languageName: node
   linkType: hard
 
