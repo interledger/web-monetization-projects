@@ -222,13 +222,18 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
     // Handle any @ns/package/derp redirects
     if (subPackageJSON.subpackages) {
       delete subPackageJSON.exports
+      const makeEl = (n: string) => ({
+        default: n,
+        types: n
+      })
+
       const exports = (subPackageJSON.exports = {
-        '.': './build'
-      } as Record<string, string>)
+        '.': makeEl('./build')
+      } as Record<string, any>)
 
       subPackageJSON.subpackages.forEach(name => {
         const subpackageName = `${li.name}/${name}`
-        exports[`./${name}`] = `./build/${name}`
+        exports[`./${name}`] = makeEl(`./build/${name}`)
 
         const folderPath = pathModule.join(fromRoot(path), name)
         const tsPath = pathModule.join(fromRoot(path), `${name}.ts`)
