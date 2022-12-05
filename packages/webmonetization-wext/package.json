@@ -11,15 +11,15 @@
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
   },
+  "license": "Apache-2.0",
+  "author": "Coil Team <info@coil.com>",
   "exports": {
     ".": "./build",
     "./undecorated": "./build/undecorated",
     "./services": "./build/services",
-    "./content":  "./build/content",
-    "./tokens":  "./build/tokens"
+    "./content": "./build/content",
+    "./tokens": "./build/tokens"
   },
-  "license": "Apache-2.0",
-  "author": "Coil Team <info@coil.com>",
   "main": "./build",
   "types": "./build",
   "scripts": {
