@@ -218,34 +218,6 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
     const packagePath = `packages/${getPackageFolder(li)}`
     const path = `${packagePath}/src`
     paths[li.name] = [path]
-    const subPackageJSON = readPackageJSON(`${li.location}/package.json`)
-    // Handle any @ns/package/derp redirects
-    if (subPackageJSON.subpackages) {
-      subPackageJSON.subpackages.forEach(name => {
-        const folderPath = pathModule.join(fromRoot(path), name)
-        const tsPath = pathModule.join(fromRoot(path), `${name}.ts`)
-        let isFolder = true
-        if (existsSync(folderPath)) {
-          // folder
-          paths[`${li.name}/${name}`] = [`${path}/${name}`]
-        } else if (existsSync(tsPath)) {
-          isFolder = false
-          paths[`${li.name}/${name}`] = [`${path}/${name}.ts`]
-        } else {
-          throw new Error()
-        }
-        cmd(`rm -rf ${packagePath}/${name}`, { cwd: fromRoot('.') })
-        cmd(`mkdir ${packagePath}/${name}`, { cwd: fromRoot('.') })
-
-        writeFileJSON(`${packagePath}/${name}/package.json`, {
-          name: `${li.name}/${name}`,
-          private: true,
-          version: '0.0.0',
-          main: `../build/${isFolder ? name : `${name}.js`}`,
-          types: `../build/${isFolder ? name : `${name}.d.ts`}`
-        })
-      })
-    }
   })
   tsconfig.compilerOptions.paths = paths
   writeFileJSON(path, tsconfig, UPKEEP_JSON_OPTS)
