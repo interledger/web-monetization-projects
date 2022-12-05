@@ -16,6 +16,7 @@ export interface PackageJSON extends Record<string, string | any> {
   types?: string
   main?: string
   subpackages?: string[]
+  exports?: Record<string, string | object>
   resolutions?: StringMap
   upkeep?: {
     privatePackages?: boolean

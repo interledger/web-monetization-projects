@@ -13,7 +13,7 @@
 
     "jsx": "react",
     "downlevelIteration": true,
-    "moduleResolution": "node16",
+    "moduleResolution": "node",
 
     "isolatedModules": true,
 

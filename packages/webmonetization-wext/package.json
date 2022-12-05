@@ -22,6 +22,12 @@
   },
   "main": "./build",
   "types": "./build",
+  "subpackages": [
+    "undecorated",
+    "services",
+    "content",
+    "tokens"
+  ],
   "scripts": {
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
