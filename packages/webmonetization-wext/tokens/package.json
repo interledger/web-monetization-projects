@@ -1,7 +1,0 @@
-{
-  "name": "@webmonetization/wext/tokens",
-  "private": true,
-  "version": "0.0.0",
-  "main": "../build/tokens.js",
-  "types": "../build/tokens.d.ts"
-}
