@@ -1789,7 +1789,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -1852,7 +1852,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -1960,7 +1960,7 @@ __metadata:
     web-ext: "npm:7.4.0"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2052,7 +2052,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2116,7 +2116,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
     yaml: "npm:^2.0.0"
@@ -2190,7 +2190,7 @@ __metadata:
     uuid: "npm:^9.0.0"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2249,7 +2249,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2313,7 +2313,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2381,7 +2381,7 @@ __metadata:
     web-ext: "npm:^7.2.0"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2448,7 +2448,7 @@ __metadata:
     util: "npm:^0.12.4"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2507,7 +2507,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2802,7 +2802,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -2862,7 +2862,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -3614,7 +3614,7 @@ __metadata:
     web-ext: "npm:7.4.0"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -4928,7 +4928,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -6202,7 +6202,7 @@ __metadata:
     util: "npm:^0.12.4"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
     webpack-virtual-modules: "npm:^0.4.4"
@@ -6288,7 +6288,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -6352,7 +6352,7 @@ __metadata:
     uuid: "npm:^9.0.0"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -6413,7 +6413,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   peerDependencies:
@@ -6486,7 +6486,7 @@ __metadata:
     uuid: "npm:^9.0.0"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -6545,7 +6545,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -6606,42 +6606,42 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
   linkType: soft
 
-"@webpack-cli/configtest@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@webpack-cli/configtest@npm:2.0.0"
+"@webpack-cli/configtest@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@webpack-cli/configtest@npm:2.0.1"
   peerDependencies:
     webpack: 5.x.x
     webpack-cli: 5.x.x
-  checksum: f89365f70e5a526470488e8050d6309158c7999c5b3d4532ef257cd5a9d03f6e7ceeef22371ba320c878955a33892563f4f95d87a26e6d90df7299c4755ae9dc
+  checksum: 041d0fad6e9b296ceabeba3d4a9074937dcd6172ecc2470f3f8e4f3412b0c30e81e39cf7e2514dcb8551f28e79eef75b8bde9728a5dfb0133a4d32bd4b1ec42a
   languageName: node
   linkType: hard
 
-"@webpack-cli/info@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@webpack-cli/info@npm:2.0.0"
+"@webpack-cli/info@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@webpack-cli/info@npm:2.0.1"
   peerDependencies:
     webpack: 5.x.x
     webpack-cli: 5.x.x
-  checksum: 184f6801c284a61ad9a4c4a5fb8094a33651e1789d2cdaa09e4b522ab0fc0b7aae270f05f210c923219e86b24d32af501f6f46547c4f0c5408c62322ecbf3a76
+  checksum: 773e0212ee14059edc67896dffaf56c307bf3c2365b606dc314142be0b02c4da64c29a2b48b99b715513f8d896b282898ad24200a9b6eced2a3a6f032f5520a0
   languageName: node
   linkType: hard
 
-"@webpack-cli/serve@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@webpack-cli/serve@npm:2.0.0"
+"@webpack-cli/serve@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@webpack-cli/serve@npm:2.0.1"
   peerDependencies:
     webpack: 5.x.x
     webpack-cli: 5.x.x
   peerDependenciesMeta:
     webpack-dev-server:
       optional: true
-  checksum: 567199d19d67b4ec8e99a8d206af31bf82c91ca55c758fad7aff724a09e99e3e01156c4f9fd0fcce34c7032daa67605b1daf6c1c06ce51de68a4c289cc662d58
+  checksum: 1e2ddd0e6f35be8222c0cd3ccf1acd89684638dea03dddf139d5990afb614b5810720930c21d4c28b2b63ba1a8d14b22fecc6d0026f2c259c7b9663aa8bc3a66
   languageName: node
   linkType: hard
 
@@ -25248,7 +25248,7 @@ __metadata:
     typescript: "npm:4.9.3"
     webpack: "npm:5.75.0"
     webpack-bundle-analyzer: "npm:4.7.0"
-    webpack-cli: "npm:5.0.0"
+    webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
   languageName: unknown
@@ -25321,14 +25321,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:5.0.0":
-  version: 5.0.0
-  resolution: "webpack-cli@npm:5.0.0"
+"webpack-cli@npm:5.0.1":
+  version: 5.0.1
+  resolution: "webpack-cli@npm:5.0.1"
   dependencies:
     "@discoveryjs/json-ext": "npm:^0.5.0"
-    "@webpack-cli/configtest": "npm:^2.0.0"
-    "@webpack-cli/info": "npm:^2.0.0"
-    "@webpack-cli/serve": "npm:^2.0.0"
+    "@webpack-cli/configtest": "npm:^2.0.1"
+    "@webpack-cli/info": "npm:^2.0.1"
+    "@webpack-cli/serve": "npm:^2.0.1"
     colorette: "npm:^2.0.14"
     commander: "npm:^9.4.1"
     cross-spawn: "npm:^7.0.3"
@@ -25349,7 +25349,7 @@ __metadata:
       optional: true
   bin:
     webpack-cli: bin/cli.js
-  checksum: fc76ecf9be645b2058c8b933f43dd660589bf16dae845e609f0c76ac665300621df23ed5e5350dfb6dbccf5570f6549ce9c226db0bca46b966155bc19a8f5ead
+  checksum: d8b36fcf7d3e39963fdeddc0de5566839fc5b524176f34a3dfe7bbf346e8deb5b9bc46785a75f9eb905916bb97a4a19da20dbe3aabdd74cf304d771070f322dc
   languageName: node
   linkType: hard
 
