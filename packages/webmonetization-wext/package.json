@@ -14,11 +14,26 @@
   "license": "Apache-2.0",
   "author": "Coil Team <info@coil.com>",
   "exports": {
-    ".": "./build",
-    "./undecorated": "./build/undecorated",
-    "./services": "./build/services",
-    "./content": "./build/content",
-    "./tokens": "./build/tokens"
+    ".": {
+      "default": "./build",
+      "types": "./build"
+    },
+    "./undecorated": {
+      "default": "./build/undecorated",
+      "types": "./build/undecorated"
+    },
+    "./services": {
+      "default": "./build/services",
+      "types": "./build/services"
+    },
+    "./content": {
+      "default": "./build/content",
+      "types": "./build/content"
+    },
+    "./tokens": {
+      "default": "./build/tokens",
+      "types": "./build/tokens"
+    }
   },
   "main": "./build",
   "types": "./build",

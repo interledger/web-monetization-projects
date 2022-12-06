@@ -218,13 +218,14 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
     const packagePath = `packages/${getPackageFolder(li)}`
     const path = `${packagePath}/src`
     paths[li.name] = [path]
-    const subPackageJSON = readPackageJSON(`${li.location}/package.json`)
+    const subPackageJSONPath = `${li.location}/package.json`
+    const subPackageJSON = readPackageJSON(subPackageJSONPath)
     // Handle any @ns/package/derp redirects
     if (subPackageJSON.subpackages) {
       delete subPackageJSON.exports
       const makeEl = (n: string) => ({
         default: n,
-        types: n
+        types: `${n}`
       })
 
       const exports = (subPackageJSON.exports = {
@@ -233,6 +234,7 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
 
       subPackageJSON.subpackages.forEach(name => {
         const subpackageName = `${li.name}/${name}`
+        console.log(subpackageName, exports)
         exports[`./${name}`] = makeEl(`./build/${name}`)
 
         const folderPath = pathModule.join(fromRoot(path), name)
@@ -246,6 +248,7 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
           throw new Error()
         }
       })
+      writePackageJSON(subPackageJSONPath, subPackageJSON)
     }
   })
   tsconfig.compilerOptions.paths = paths
