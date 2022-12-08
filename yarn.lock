@@ -1944,7 +1944,7 @@ __metadata:
     node-window-manager: "npm:2.2.4"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.0"
-    puppeteer: "npm:19.3.0"
+    puppeteer: "npm:19.4.0"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reconnecting-websocket: "npm:^4.4.0"
@@ -2178,7 +2178,7 @@ __metadata:
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.0"
-    puppeteer: "npm:19.3.0"
+    puppeteer: "npm:19.4.0"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:3.0.2"
@@ -10337,6 +10337,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cosmiconfig@npm:8.0.0":
+  version: 8.0.0
+  resolution: "cosmiconfig@npm:8.0.0"
+  dependencies:
+    import-fresh: "npm:^3.2.1"
+    js-yaml: "npm:^4.1.0"
+    parse-json: "npm:^5.0.0"
+    path-type: "npm:^4.0.0"
+  checksum: 436a849ca0a434b4a7344e9213db6314512c6af23c0b187728d21b0292736eec8c2df046a95b8c796a9304afbd9d154bf5e9aeeae535e6303d835d44835cad6d
+  languageName: node
+  linkType: hard
+
 "crc32-stream@npm:^2.0.0":
   version: 2.0.0
   resolution: "crc32-stream@npm:2.0.0"
@@ -11018,17 +11030,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devtools-protocol@npm:*":
-  version: 0.0.1059612
-  resolution: "devtools-protocol@npm:0.0.1059612"
-  checksum: 04ba5db05486057b41eade9161d51c7c80407bf220f081e64b7b5f79311ea42e75fbba98c64c5915fd0bb26917a70e63c1f938f8e906bd1ae0af706772cc2b8c
-  languageName: node
-  linkType: hard
-
-"devtools-protocol@npm:0.0.1056733":
-  version: 0.0.1056733
-  resolution: "devtools-protocol@npm:0.0.1056733"
-  checksum: 5b09eee61be6680490f71a2f91533e7554f52aeb4b4cd42e33e72aa2a692ec6dd7d3947ca1b054ee025b5e93988ba3347570aad95380c39f01f5dbe7c075a418
+"devtools-protocol@npm:*, devtools-protocol@npm:0.0.1068969":
+  version: 0.0.1068969
+  resolution: "devtools-protocol@npm:0.0.1068969"
+  checksum: 7549e3e14869f726ce38a3ae2df31b90882a7044144f3bfac6f02987660526139afb4cdbbfc39ca8bb83fa3dd221989f351022bb5eed7feecc82507c3b2205bc
   languageName: node
   linkType: hard
 
@@ -20978,13 +20983,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:19.3.0":
-  version: 19.3.0
-  resolution: "puppeteer-core@npm:19.3.0"
+"puppeteer-core@npm:19.4.0":
+  version: 19.4.0
+  resolution: "puppeteer-core@npm:19.4.0"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
-    devtools-protocol: "npm:0.0.1056733"
+    devtools-protocol: "npm:0.0.1068969"
     extract-zip: "npm:2.0.1"
     https-proxy-agent: "npm:5.0.1"
     proxy-from-env: "npm:1.1.0"
@@ -20992,21 +20997,21 @@ __metadata:
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
     ws: "npm:8.10.0"
-  checksum: 2264e11bdcbee17b2ac883ea3955ee89632ce8c636b895bf1244557d3544681f8b020c0653e9d2e265fb4ca432546c7dcf3e119fa809545ea0f7e42468bf7ef2
+  checksum: 6d39ab3073d4bb43d0c2f45ddbda99ce52ef143dacff5b2a6ab5dc2ccf96e71abca5608d277ca485598dcef50099f22572f38f9d6a34bdbf118ee8aafe64c8fb
   languageName: node
   linkType: hard
 
-"puppeteer@npm:19.3.0, puppeteer@npm:^19.0.0":
-  version: 19.3.0
-  resolution: "puppeteer@npm:19.3.0"
+"puppeteer@npm:19.4.0, puppeteer@npm:^19.0.0":
+  version: 19.4.0
+  resolution: "puppeteer@npm:19.4.0"
   dependencies:
-    cosmiconfig: "npm:7.0.1"
-    devtools-protocol: "npm:0.0.1056733"
+    cosmiconfig: "npm:8.0.0"
+    devtools-protocol: "npm:0.0.1068969"
     https-proxy-agent: "npm:5.0.1"
     progress: "npm:2.0.3"
     proxy-from-env: "npm:1.1.0"
-    puppeteer-core: "npm:19.3.0"
-  checksum: d4ea66a4863f8ff7e66298f7609b6b85b0c7c8e3581b48fdcc5ff86e62095bda4cc1c74ffd4bf080f0f223793a5ec1be5a53b7be91faaadd040bc84314d04dbf
+    puppeteer-core: "npm:19.4.0"
+  checksum: a123c3c56e6fd584d0317cc41f4649bd448eb0fb9779b84e223ba7a2525a70d66c9a274d53531c823678a787529dc8c9303c74eb75ce47fa894950f6faad831e
   languageName: node
   linkType: hard
 
