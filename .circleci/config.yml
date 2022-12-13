@@ -373,6 +373,11 @@ jobs:
             # perhaps different versions of yarn ??
             # we don't *really* care so exclude it from the diff check
             git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+      - run:
+          name: Build generated code git diff --exit-code
+          command: |
+            yarn workspaces foreach -v --exclude=web-monetization run generate-code
+            git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
       - *save_cache
 
 workflows:
