@@ -23,6 +23,7 @@
     "dev:graphql-watch": "yarn generate-graphql --watch",
     "dev:server": "nodemon src/index.ts",
     "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",
+    "generate-code": "yarn generate-graphql && yarn format",
     "generate-graphql": "graphql-codegen --config codegen.yml",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
