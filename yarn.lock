@@ -1997,7 +1997,7 @@ __metadata:
     "@swc/jest": "npm:0.2.24"
     "@types/body-parser": "npm:1.19.2"
     "@types/cookie-parser": "npm:1.4.3"
-    "@types/express": "npm:4.17.14"
+    "@types/express": "npm:4.17.15"
     "@types/jest": "npm:29.2.4"
     "@types/jsonwebtoken": "npm:8.5.9"
     "@types/node": "npm:16.18.8"
@@ -5314,7 +5314,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-serve-static-core@npm:*, @types/express-serve-static-core@npm:4.17.28, @types/express-serve-static-core@npm:^4.17.18":
+"@types/express-serve-static-core@npm:*, @types/express-serve-static-core@npm:^4.17.18, @types/express-serve-static-core@npm:^4.17.31":
+  version: 4.17.31
+  resolution: "@types/express-serve-static-core@npm:4.17.31"
+  dependencies:
+    "@types/node": "npm:*"
+    "@types/qs": "npm:*"
+    "@types/range-parser": "npm:*"
+  checksum: 88c17414b7d6d41b705463c002565a694d8f05f1417c3ba2e7523d9dcda4e2c591b8f56e480e144efaf43f6aad98446745a0c3b84174e498577763fe58ac5423
+  languageName: node
+  linkType: hard
+
+"@types/express-serve-static-core@npm:4.17.28":
   version: 4.17.28
   resolution: "@types/express-serve-static-core@npm:4.17.28"
   dependencies:
@@ -5334,15 +5345,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:*, @types/express@npm:4.17.14, @types/express@npm:^4.17.13":
-  version: 4.17.14
-  resolution: "@types/express@npm:4.17.14"
+"@types/express@npm:*, @types/express@npm:4.17.15, @types/express@npm:^4.17.13":
+  version: 4.17.15
+  resolution: "@types/express@npm:4.17.15"
   dependencies:
     "@types/body-parser": "npm:*"
-    "@types/express-serve-static-core": "npm:^4.17.18"
+    "@types/express-serve-static-core": "npm:^4.17.31"
     "@types/qs": "npm:*"
     "@types/serve-static": "npm:*"
-  checksum: 7e2d23081f1aa8d8e4218fba4e305f2a52e221a99340ecc4694482cd2878cbb344deae1b8899e7682a05cf95c9a130e97534bf0e22d983c45d25a8788351803d
+  checksum: 24fd75dbb8eb9b134bb3acf4b2e87a04402a3bdb4200dd3e9a477153a61a4d027f9b237510f1d48628965884e7f7ebf9fdfd54818683c8d7e2b3074d86d462ae
   languageName: node
   linkType: hard
 
@@ -6235,7 +6246,7 @@ __metadata:
     "@swc/core": "npm:1.3.22"
     "@swc/jest": "npm:0.2.24"
     "@types/body-parser": "npm:1.19.2"
-    "@types/express": "npm:4.17.14"
+    "@types/express": "npm:4.17.15"
     "@types/figlet": "npm:1.5.5"
     "@types/jest": "npm:29.2.4"
     "@types/node": "npm:16.18.8"
