@@ -30,6 +30,9 @@
       "path": "packages/coil-puppeteer-utils/tsconfig.build.json"
     },
     {
+      "path": "packages/coil-rust-wasm-crypto-routines/tsconfig.build.json"
+    },
+    {
       "path": "packages/coil-webpack-utils/tsconfig.build.json"
     },
     {

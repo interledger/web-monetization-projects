@@ -60,6 +60,7 @@
     "@coil/polyfill-utils": "^0.0.0",
     "@coil/privacypass-sjcl": "^0.0.0",
     "@coil/puppeteer-utils": "^0.0.0",
+    "@coil/rust-wasm-crypto-routines": "^0.0.0",
     "@dier-makr/annotations": "^0.0.0",
     "@dier-makr/inversify": "^0.0.0",
     "@material-ui/core": "^4.12.4",

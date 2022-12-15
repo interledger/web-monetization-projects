@@ -33,6 +33,9 @@
       "@coil/puppeteer-utils": [
         "packages/coil-puppeteer-utils/src"
       ],
+      "@coil/rust-wasm-crypto-routines": [
+        "packages/coil-rust-wasm-crypto-routines/src"
+      ],
       "@coil/webpack-utils": [
         "packages/coil-webpack-utils/src"
       ],

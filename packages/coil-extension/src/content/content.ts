@@ -45,3 +45,9 @@ async function main() {
 
 // eslint-disable-next-line no-console
 main().catch(console.error)
+
+import('@coil/rust-wasm-crypto-routines').then(module => {
+  setTimeout(() => {
+    module.greet()
+  }, 5e3)
+})

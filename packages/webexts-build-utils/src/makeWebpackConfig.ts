@@ -79,6 +79,10 @@ export function makeWebpackConfig({
 
   const config: webpack.Configuration = {
     mode: mode,
+    experiments: {
+      // asyncWebAssembly: true,
+      syncWebAssembly: true
+    },
     optimization: {
       minimize: PRODUCTION
     },
@@ -111,6 +115,7 @@ export function makeWebpackConfig({
     output: {
       filename: '[name].js',
       path: path.join(rootDir, process.env.OUTPUT_TO || 'dist'),
+      publicPath: '',
       libraryTarget: 'umd'
     },
 
