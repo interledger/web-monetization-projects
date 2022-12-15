@@ -176,7 +176,7 @@ export class ContentScript {
             receipt: data.receipt,
             assetScale: data.assetScale,
             assetCode: data.assetCode,
-            amount: BigInt(data.amount)
+            amount: /*BigInt*/ data.amount
           }
           const firefoxProof = mozClone(eventDetail, this.document)
           this.tagManager.dispatchEventByLinkId(

@@ -1,5 +1,3 @@
-import { createHash } from 'crypto'
-
 import {
   makeWebpackConfig,
   MakeWebpackConfigParams
@@ -8,16 +6,25 @@ import { wmPolyfill } from '@webmonetization/wext/content'
 import merge from 'webpack-merge'
 import * as webpack from 'webpack'
 
-const data = Buffer.from(wmPolyfill, 'utf-8')
-const digest = createHash('sha256').update(data).digest()
-const polyfillHash = `sha256-${digest.toString('base64')}`
-
 const options: MakeWebpackConfigParams = {
   rootDir: __dirname,
   polyfill: {
     content: wmPolyfill,
     name: 'wm-polyfill',
-    hash: polyfillHash
+    patch: (manifest, polyfill, packageVersion, buildConfig) => {
+      // language=JavaScript
+      const coilExtension = {
+        manifest,
+        packageVersion,
+        buildConfig,
+        version: manifest.version,
+        name: manifest.name
+      }
+      polyfill.content += `
+        window.coilExtension = ${JSON.stringify(coilExtension)}
+`
+      return polyfill
+    }
   }
 }
 

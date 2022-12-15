@@ -287,6 +287,11 @@ export class TabStates {
     state && state.coilSite
       ? this.storage.set('coilSite', state.coilSite)
       : this.storage.remove('coilSite')
+
+    state && state.topFrameHref
+      ? this.storage.set('topFrameHref', state.topFrameHref)
+      : this.storage.remove('topFrameHref')
+
     // TODO: Another valid case might be a singular adapted iframe inside a non
     // monetized top page.
     this.storage.set('adapted', Boolean(state?.frameStates[0]?.adapted))
@@ -311,5 +316,11 @@ export class TabStates {
       state.lastPacketTime = Date.now()
       this.setFrame(frame, { [key]: { ...state } })
     }
+  }
+
+  clearSecondaryState() {
+    Object.values(this.tabStates).forEach(ts => {
+      ts.iconSecondary = null
+    })
   }
 }

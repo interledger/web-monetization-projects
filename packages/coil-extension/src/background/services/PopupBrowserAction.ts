@@ -33,6 +33,7 @@ export class PopupBrowserAction {
       this.api.runtime.getPlatformInfo(result => {
         if (this.api.runtime.lastError) {
           if (this.loggingEnabled) {
+            // eslint-disable-next-line no-console
             console.error(this.api.runtime.lastError)
           }
         }
@@ -85,15 +86,6 @@ export class PopupBrowserAction {
       actionApi.setIcon({
         path: this.icons.forTabState({ iconPrimary: 'inactive' })
       })
-      const now = new Date()
-      const nextMidnight = new Date()
-      nextMidnight.setHours(24, 0, 0, 0)
-      const msToNextMidnight = nextMidnight.getTime() - now.getTime()
-      const andChange = 10
-      // TODO:MV3
-      setTimeout(() => {
-        this.setDefaultInactive()
-      }, msToNextMidnight + andChange)
     }
   }
 
@@ -104,10 +96,8 @@ export class PopupBrowserAction {
       const path = this.icons.forTabState(state)
       const args = {
         tabId,
-        path
+        path: path
       }
-
-      // You may want to disable this at times when debugging the network tab
       actionApi.setIcon(args)
     }
   }

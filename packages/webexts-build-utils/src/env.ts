@@ -1,10 +1,41 @@
 // Possible to override name/version so can publish as different extension
+
+function oneOf<T extends string>(
+  name: string,
+  possibleValues: T[],
+  defaultValue: T
+) {
+  const value = process.env[name]
+  if (typeof value === 'undefined') {
+    return defaultValue
+  } else if (value && possibleValues.includes(value as T)) {
+    return value as T
+  } else {
+    throw new Error(`${name} must be one of ${possibleValues.join(', ')}`)
+  }
+}
+
 export const AFTER_DONE_SHELL_CMD = process.env.AFTER_DONE_SHELL_CMD
 
 export const MV3 = Boolean(process.env.MV3 ?? false)
 
-export const MV3_BACKGROUND_TYPE: 'serviceworker' | 'eventspage' =
-  process.env.MV3 === 'eventspage' ? 'eventspage' : 'serviceworker'
+export const MV3_BACKGROUND_TYPE = oneOf(
+  'MV3',
+  ['serviceworker', 'eventspage'],
+  'serviceworker'
+)
+
+export const MV2_BACKGROUND_TYPE = oneOf(
+  'MV2',
+  ['backgroundpage', 'eventspage'],
+  'backgroundpage'
+)
+
+export const WEXT_MANIFEST_INCOGNITO = oneOf(
+  'WEXT_MANIFEST_INCOGNITO',
+  ['not_allowed', 'spanning', 'split'],
+  'spanning'
+)
 
 export const WEXT_MANIFEST_SUFFIX = process.env.WEXT_MANIFEST_SUFFIX
 export const WEXT_MANIFEST_SUFFIX_NO_DATE =
@@ -16,8 +47,14 @@ export const WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID =
 export const WEXT_MANIFEST_KEY = process.env.WEXT_MANIFEST_KEY
 export const WEXT_MANIFEST_PERMISSIONS = process.env.WEXT_MANIFEST_PERMISSIONS
 
-export const API = process.env.API || 'chrome'
-export const BROWSER = process.env.BROWSER || 'chrome'
+export const API = oneOf('API', ['chrome', 'browser'], 'chrome')
+
+export const BROWSER = oneOf(
+  'BROWSER',
+  ['chrome', 'safari', 'edge', 'firefox', 'samsung-internet'],
+  'chrome'
+)
+
 export const LIVE_RELOAD =
   Boolean(process.env.LIVE_RELOAD) && !process.env.NO_LIVE_RELOAD
 
@@ -26,11 +63,13 @@ export const TS_LOADER_TRANSPILE_ONLY = Boolean(
   process.env.TS_LOADER_TRANSPILE_ONLY
 )
 
-export const DBG_RELOAD_SERVER = process.env.DBG_RELOAD_SERVER
+export const MV3_RELOAD_SERVER_DEBUG = process.env.MV3_RELOAD_SERVER_DEBUG
 
 export const TSCONFIG_DEBUG = process.env.TSCONFIG_DEBUG
 
-export const RELOAD_SERVER_PORT = Number(process.env.RELOAD_SERVER_PORT ?? 4444)
+export const MV3_RELOAD_SERVER_PORT = Number(
+  process.env.MV3_RELOAD_SERVER_PORT ?? 4444
+)
 
 export const PRODUCTION = process.env.NODE_ENV === 'production'
 

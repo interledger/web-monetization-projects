@@ -1,6 +1,8 @@
 import path from 'path'
 import fs from 'fs'
 
+import { BROWSER, MV3 } from './env'
+
 export const makeEntry = (rootDir: string) => {
   const entry: Record<string, string> = {
     content: './src/content/content.ts',
@@ -15,7 +17,11 @@ export const makeEntry = (rootDir: string) => {
 
   Object.keys(entry).forEach(k => {
     const entryPath = path.join(rootDir, entry[k])
-    if (!fs.existsSync(entryPath)) {
+    const isMV3 = k.endsWith('MV3')
+    const notMVSpecific = (isMV3 && !MV3) || (!isMV3 && MV3)
+    // TODO: The safari project resources assume all entries are available
+    // the build will fail if the files are missing.
+    if (!fs.existsSync(entryPath) || (notMVSpecific && BROWSER !== 'safari')) {
       delete entry[k]
     }
   })

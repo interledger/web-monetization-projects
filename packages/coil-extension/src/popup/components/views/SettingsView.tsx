@@ -151,7 +151,7 @@ export const SettingsView = () => {
           </div>
         </ProfileContainer>
 
-        <SettingsButton onClick={tabOpener(`${coilDomain}/settings/acount`)}>
+        <SettingsButton onClick={tabOpener(`${coilDomain}/settings/account`)}>
           <PersonIcon />
           <span className='title'>Account</span>
           <span className='icon-open'>

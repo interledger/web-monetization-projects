@@ -7,6 +7,7 @@ export const STORAGE_KEYS = [
   'coilSite',
   'monetized',
   'monetizedTotal',
+  'topFrameHref',
 
   'popup-route:last',
   'popup-route:tipping-shown'

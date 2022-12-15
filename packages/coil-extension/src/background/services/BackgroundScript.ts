@@ -106,7 +106,8 @@ export class BackgroundScript {
     this.monetization.init()
 
     this.popup.setDefaultInactive()
-    void (await this.initAuth())
+    this.requestDevExtensionUpdateCheck()
+    void this.initAuth()
   }
 
   private async initAuth() {
@@ -120,6 +121,8 @@ export class BackgroundScript {
   }
 
   private setTabsOnActivatedListener() {
+    // The active tab has been changed
+
     // this.api.tabs.onActivated.addListener
     this.events.on('tabs.onActivated', activeInfo => {
       if (this.buildConfig.logTabsApiEvents) {
@@ -195,7 +198,7 @@ export class BackgroundScript {
 
   private setTabsOnRemovedListener() {
     // Remove tab state when the tab is closed to prevent memory leak
-    this.api.tabs.onRemoved.addListener(tabId => {
+    this.events.on('tabs.onRemoved', tabId => {
       this.log('removing tab with id', tabId)
       this.tabStates.clear(tabId)
 
@@ -226,8 +229,15 @@ export class BackgroundScript {
 
   private setFramesOnRemovedListener() {
     this.framesService.on('frameRemoved', event => {
-      this.tabStates.clearFrame(event)
-      this._closeStreams(event.tabId, event.frameId)
+      // Top level frame
+      // tabs.onRemoved does not seem to work
+      if (this.buildConfig.isMV3 && event.frameId === 0) {
+        this.tabStates.clear(event.tabId)
+        this._closeStreams(event.tabId)
+      } else {
+        this.tabStates.clearFrame(event)
+        this._closeStreams(event.tabId, event.frameId)
+      }
     })
   }
 
@@ -247,12 +257,12 @@ export class BackgroundScript {
       // Always get the url from the tab
       const url = event.frame.href
       if (status === 'loading' && event.frame.top) {
-        this.setCoilUrlForPopupIfNeeded(tabId, url)
+        this.setTabStateUrlData(tabId, url)
       }
 
       if (becameComplete || (isComplete && changedUrl)) {
         if (event.frame.top) {
-          this.setCoilUrlForPopupIfNeeded(tabId, url)
+          this.setTabStateUrlData(tabId, url)
           if (getAdaptedSite(url)) {
             const frame = { tabId, frameId: event.frameId }
             this.checkAdaptedContent(frame, event)
@@ -380,17 +390,14 @@ export class BackgroundScript {
     this.tabStates.reloadTabState({ from: 'refreshUser' })
   }
 
-  setCoilUrlForPopupIfNeeded(tab: number, url: string | undefined) {
-    this.log('setting coil url for popup', url)
-    if (url && !url.startsWith(this.coilDomain)) {
-      url = undefined
-    }
+  setTabStateUrlData(tab: number, url: string | undefined) {
+    this.log('setTabStateUrlData', tab, url)
+    const coilSite = url?.startsWith(this.coilDomain) ? url : undefined
     this.tabStates.set(tab, {
-      coilSite: url
+      coilSite,
+      topFrameHref: url
     })
-    if (url) {
-      this.tabStates.reloadTabState({ from: 'setCoilUrlForPopupIfNeeded' })
-    }
+    this.tabStates.reloadTabState({ from: 'setTabStateUrlData' })
   }
 
   adaptedSite(data: AdaptedSite['data'], sender: MessageSender) {
@@ -582,7 +589,6 @@ export class BackgroundScript {
       { command: 'clearToken' },
       frame => Boolean(frame.href?.startsWith(this.coilDomain))
     )
-    this.storage.remove('user')
     this.storage.clear()
     this.tabStates.setIcon(this.activeTab, 'unavailable')
     this.tabStates.reloadTabState({ from: 'logout' })
@@ -627,6 +633,39 @@ export class BackgroundScript {
           void this.api.tabs.create({ url: `${this.coilDomain}/auth/signup` })
           void this.multipleInstanceDetector.detectOtherInstances()
         }
+      })
+    }
+  }
+
+  private requestDevExtensionUpdateCheck() {
+    const devExtensions = {
+      coildev: 'iehmfkldnblennopinmmagfidpflefkp',
+      coilpreview: 'hcohoecolgmlofifjaobjhidpoaciknp'
+    }
+    // to test this code
+    const force = false
+    const ids = Object.values(devExtensions)
+    const thisId = this.api.runtime.id
+    if (force) {
+      ids.push(thisId)
+    }
+
+    if (ids.includes(thisId) || force) {
+      this.api.runtime.requestUpdateCheck((status, details) => {
+        if (status === 'update_available' || force) {
+          for (const id of ids) {
+            if (thisId === id) {
+              const attention = 'ATTENTION_'.repeat(4)
+              const version = details?.version || 'unknown_version'
+              const enableAndDisable = '_ENABLE_AND_DISABLE_EXTENSION'
+              const msg = `${attention}UPDATE_${version}_IS_AVAILABLE${enableAndDisable}`
+              const url = `chrome://extensions/?id=${id}#${msg}`
+              this.log(`opening tab to ${url}`)
+              chrome.tabs.create({ url }, tab => {})
+            }
+          }
+        }
+        this.log('requestUpdateCheck', status, details)
       })
     }
   }

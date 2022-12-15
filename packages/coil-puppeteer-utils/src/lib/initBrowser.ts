@@ -5,7 +5,7 @@ import * as fs from 'fs'
 import * as os from 'os'
 
 import getPort from 'get-port'
-import webExt, { RunOptions } from 'web-ext'
+import { RunOptions } from 'web-ext'
 import { BrowserContext, default as puppeteer } from 'puppeteer'
 
 import * as env from './env'
@@ -18,6 +18,10 @@ export interface InitBrowserOptions {
   browser?: 'chrome' | 'firefox'
 }
 
+// TODO: jest can't consume web-ext esm source as configured at time of comment
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const webExt: any
+
 function jugglerEndpointWatcher() {
   // Enable logging
   webExt.util.logger.consoleStream.makeVerbose()
@@ -27,7 +31,9 @@ function jugglerEndpointWatcher() {
   return () => {
     // Parse firefox logs and extract juggler endpoint.
     const captured = webExt.util.logger.consoleStream.capturedMessages
-    const message = captured.find(msg => msg.includes(JUGGLER_MESSAGE))
+    const message = captured.find((msg: string) =>
+      msg.includes(JUGGLER_MESSAGE)
+    )
     if (!message) {
       throw new Error(`Can not find Juggler endpoint:\n ${captured.join('\n')}`)
     }

@@ -1,5 +1,4 @@
 export const ADAPTED_REGEX: Record<string, RegExp> = {
-  twitch: /https?:\/\/((www|m)\.)?twitch\.tv(\/.*)?/i,
   youtube: /https?:\/\/((www|m)\.)?youtube\.com\/(watch|channel)(.*)/i
 }
 

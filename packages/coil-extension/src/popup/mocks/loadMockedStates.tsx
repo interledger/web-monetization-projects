@@ -176,11 +176,14 @@ const payingYouTube = mockState({
   adapted: true
 })
 
-const payingTwitch = mockState({
-  monetized: true,
-  monetizedTotal: 5910000,
+const twitchIsDisabled = mockState({
+  monetized: false,
+  monetizedTotal: 0,
   user: user,
-  adapted: true
+  topFrameHref: 'https://www.twitch.tv/vinesauce',
+  validToken: true,
+  // TODO
+  adapted: false
 })
 
 const lastTipping = mockState({
@@ -250,7 +253,7 @@ const MOCK_STATES = [
   { name: 'Welcome To Coil', state: welcomeToCoil },
   { name: 'Alice Unsubscribed', state: aliceUnsubscribed },
   { name: 'Paying Youtube', state: payingYouTube },
-  { name: 'Paying Twitch', state: payingTwitch },
+  { name: 'Twitch Is Disabled', state: twitchIsDisabled },
   { name: 'Last Route Tipping', state: lastTipping },
   { name: 'Last Route Streaming', state: lastStreaming },
   { name: 'Last Route Streaming - Tipping', state: lastStreamingWithTip }

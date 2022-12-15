@@ -2,9 +2,12 @@ import assert from 'assert'
 
 import { applyManifestPermissions } from './manifestPermissions'
 import {
+  BROWSER,
+  MV2_BACKGROUND_TYPE,
   MV3,
   MV3_BACKGROUND_TYPE,
   WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID,
+  WEXT_MANIFEST_INCOGNITO,
   WEXT_MANIFEST_KEY,
   WEXT_MANIFEST_PERMISSIONS,
   WEXT_MANIFEST_SUFFIX,
@@ -64,10 +67,6 @@ function convertToMV3(v2: ManifestV2) {
     }))
   }
 
-  // Add storage permission
-  if (!v3.permissions.includes('storage')) {
-    v3.permissions.push('storage')
-  }
   // Add scripting permission
   if (!v3.permissions.includes('scripting')) {
     v3.permissions.push('scripting')
@@ -82,12 +81,45 @@ function convertToMV3(v2: ManifestV2) {
   return v3
 }
 
+function applyEnvVarSettings(v2: ManifestV2, browser: string) {
+  if (WEXT_MANIFEST_SUFFIX) {
+    v2.name += WEXT_MANIFEST_SUFFIX
+    if (!WEXT_MANIFEST_SUFFIX_NO_DATE) {
+      v2.name += makeDateSuffix()
+    }
+  }
+  if (WEXT_MANIFEST_VERSION) {
+    v2.version = WEXT_MANIFEST_VERSION
+  }
+  if (WEXT_MANIFEST_VERSION_NAME) {
+    v2.version_name = WEXT_MANIFEST_VERSION_NAME
+  }
+  if (WEXT_MANIFEST_KEY) {
+    v2.key = WEXT_MANIFEST_KEY
+  }
+
+  v2.incognito = WEXT_MANIFEST_INCOGNITO
+
+  if (browser === 'firefox') {
+    if (WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID) {
+      assert.ok(v2.browser_specific_settings?.gecko)
+      v2.browser_specific_settings.gecko.id =
+        WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
+    }
+    v2.applications = v2.browser_specific_settings
+  } else {
+    delete v2['browser_specific_settings']
+  }
+
+  if (MV2_BACKGROUND_TYPE === 'eventspage' && v2.background) {
+    assert.ok(v2.background.page)
+    v2.background.persistent = false
+  }
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function transformManifest(
-  v2: ManifestV2,
-  browser: string,
-  polyfill?: Polyfill
-) {
+export function transformManifest(v2: ManifestV2, polyfill?: Polyfill) {
+  const browser = BROWSER
   const targets = v2['$targets']
   delete v2['$targets']
   if (targets?.[browser]?.permissions) {
@@ -103,33 +135,7 @@ export function transformManifest(
     )
   }
 
-  if (WEXT_MANIFEST_SUFFIX) {
-    v2.name += WEXT_MANIFEST_SUFFIX
-    if (!WEXT_MANIFEST_SUFFIX_NO_DATE) {
-      v2.name += makeDateSuffix()
-    }
-  }
-  if (WEXT_MANIFEST_VERSION) {
-    v2.version = WEXT_MANIFEST_VERSION
-  }
-  if (WEXT_MANIFEST_VERSION_NAME) {
-    v2.version_name = WEXT_MANIFEST_VERSION_NAME
-  }
-
-  if (WEXT_MANIFEST_KEY) {
-    v2.key = WEXT_MANIFEST_KEY
-  }
-
-  if (browser === 'firefox') {
-    if (WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID) {
-      assert.ok(v2.browser_specific_settings?.gecko)
-      v2.browser_specific_settings.gecko.id =
-        WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID
-    }
-    v2.applications = v2.browser_specific_settings
-  } else {
-    delete v2['browser_specific_settings']
-  }
+  applyEnvVarSettings(v2, browser)
   const rules = WEXT_MANIFEST_PERMISSIONS
   const parsedRules: string[] = rules ? JSON.parse(rules) : []
   applyManifestPermissions(v2, parsedRules)

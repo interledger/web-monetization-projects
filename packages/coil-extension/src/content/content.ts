@@ -8,10 +8,9 @@ import { Container } from 'inversify'
 import { GraphQlClientOptions } from '@coil/client'
 import { inversifyModule } from '@dier-makr/inversify'
 import { GlobalModule } from '@dier-makr/annotations'
-import { wmPolyfill } from '@webmonetization/wext/content'
 
 import * as tokens from '../types/tokens'
-import { API, BUILD_CONFIG, COIL_DOMAIN } from '../webpackDefines'
+import { API, BUILD_CONFIG, COIL_DOMAIN, WM_POLYFILL } from '../webpackDefines'
 import { ClientOptions } from '../services/ClientOptions'
 import { isLoggingEnabled } from '../util/isLoggingEnabled'
 
@@ -24,7 +23,7 @@ async function configureContainer(container: Container) {
   container.bind(tokens.BuildConfig).toConstantValue(BUILD_CONFIG)
   container.bind(tokens.ContentRuntime).toConstantValue(API.runtime)
   container.bind(tokens.CoilDomain).toConstantValue(COIL_DOMAIN)
-  container.bind(tokens.PolyfillCode).toConstantValue(wmPolyfill)
+  container.bind(tokens.PolyfillCode).toConstantValue(WM_POLYFILL)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const noop = (..._: unknown[]) => undefined
   container

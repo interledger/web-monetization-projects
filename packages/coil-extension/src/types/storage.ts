@@ -13,8 +13,6 @@ export const STORAGE_KEY = {
 export interface StoreProxy {
   // Auth State
 
-  /**
-   */
   user?: User | null
 
   // Active Tab Monetization state
@@ -22,6 +20,7 @@ export interface StoreProxy {
   monetized?: boolean | null
   coilSite?: string | null
   monetizedTotal?: number | null
+  topFrameHref?: string | null
 
   superTokensCookie?: string | null
 
@@ -29,6 +28,6 @@ export interface StoreProxy {
   'popup-route:last'?: string | null
   'popup-route:tipping-shown'?: boolean | null
 
-  // Sends (some) logs to the content script to be logged for ease of viewing
+  // Sends (some) logs to the content script for ease of viewing
   ACTIVE_TAB_LOGGING?: boolean | null
 }

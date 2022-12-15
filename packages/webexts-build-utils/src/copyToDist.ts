@@ -1,5 +1,5 @@
 import { transformManifest } from './transformManifest'
-import { BROWSER, LIVE_RELOAD } from './env'
+import { BROWSER, LIVE_RELOAD, MV3 } from './env'
 import { transformStatic } from './transformStatic'
 import { Polyfill } from './types'
 
@@ -13,7 +13,7 @@ export function makeCopyToDistPattern(polyfill?: Polyfill) {
       to: 'manifest.json',
       transform: (content: Buffer) => {
         let manifest = JSON.parse(content.toString())
-        manifest = transformManifest(manifest, BROWSER, polyfill)
+        manifest = transformManifest(manifest, polyfill)
         return prettyJSON(manifest)
       }
     },
@@ -25,7 +25,7 @@ export function makeCopyToDistPattern(polyfill?: Polyfill) {
     { from: 'res', to: 'res' }
   ]
 
-  if (LIVE_RELOAD) {
+  if (LIVE_RELOAD && !MV3) {
     copyToDist.push({
       from: require.resolve('crx-hotreload'),
       to: 'hot-reload.js'

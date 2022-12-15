@@ -1,6 +1,5 @@
 import { inject, injectable } from 'inversify'
 
-import { STORAGE_KEY } from '../../types/storage'
 import { ContentRuntime } from '../types/ContentRunTime'
 import * as tokens from '../../types/tokens'
 
@@ -9,7 +8,8 @@ export class ContentAuthService {
   constructor(
     private window: Window,
     private storage: Storage,
-    @inject(tokens.ContentRuntime) private contentRuntime: ContentRuntime
+    @inject(tokens.ContentRuntime)
+    private contentRuntime: ContentRuntime
   ) {}
 
   handleCoilTokenMessage() {
@@ -35,12 +35,16 @@ export class ContentAuthService {
       if (token) {
         this.refreshUser()
       } else {
-        this.contentRuntime.sendMessage({ command: 'logout' })
+        this.sendLogoutMessage()
       }
     })
   }
 
   refreshUser() {
     this.contentRuntime.sendMessage({ command: 'refreshUser' })
+  }
+
+  private sendLogoutMessage() {
+    this.contentRuntime.sendMessage({ command: 'logout' })
   }
 }

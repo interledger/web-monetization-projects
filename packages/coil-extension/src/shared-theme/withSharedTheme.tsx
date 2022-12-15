@@ -4,7 +4,9 @@ import { CssBaseline } from '@material-ui/core'
 
 import { theme } from './theme'
 
-export function withSharedTheme<P>(Component: React.ComponentType<P>) {
+export function withSharedTheme<P extends object>(
+  Component: React.ComponentType<React.PropsWithChildren<P>>
+) {
   return function WithTheme(props: P) {
     return (
       <MuiThemeProvider theme={theme}>
