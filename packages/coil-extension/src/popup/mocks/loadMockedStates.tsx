@@ -181,7 +181,6 @@ const twitchIsDisabled = mockState({
   monetizedTotal: 0,
   user: user,
   topFrameHref: 'https://www.twitch.tv/vinesauce',
-  validToken: true,
   // TODO
   adapted: false
 })
