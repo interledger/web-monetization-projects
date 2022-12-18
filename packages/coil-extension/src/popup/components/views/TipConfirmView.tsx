@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { styled, Box } from '@material-ui/core'
+import { styled, Box } from '@mui/material'
 
 import { FitTextWrapper } from '../FitTextWrapper'
 import { Colors } from '../../../shared-theme/colors'

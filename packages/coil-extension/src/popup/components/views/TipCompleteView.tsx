@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, Box } from '@material-ui/core'
+import { styled, Box } from '@mui/material'
 
 import { Header } from '../Header'
 import { NavBar } from '../NavBar'

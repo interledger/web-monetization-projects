@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { styled, SvgIcon, SvgIconProps } from '@material-ui/core'
+import { styled, SvgIcon, SvgIconProps } from '@mui/material'
 
 import { Colors } from '../../shared-theme/colors'
 import { useStore } from '../context/storeContext'

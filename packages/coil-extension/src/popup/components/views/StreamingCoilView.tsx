@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, styled, Theme, useTheme, Box } from '@material-ui/core'
+import { Typography, styled, Theme, useTheme, Box } from '@mui/material'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 import { CtaButton } from '../CtaButton'

@@ -1,6 +1,6 @@
 import React from 'react'
-import { styled, Theme } from '@material-ui/core'
-import CloseRoundedIcon from '@material-ui/icons/CloseRounded'
+import { styled, Theme } from '@mui/material'
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
 
 import { CoilLogo } from './icons/CoilLogo'
 

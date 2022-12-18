@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, styled, Theme } from '@material-ui/core'
+import { Box, Typography, styled, Theme } from '@mui/material'
 
 import { useStore } from '../../context/storeContext'
 

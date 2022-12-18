@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import lottie from 'lottie-web'
-import { Typography, styled, Theme, useTheme, Box } from '@material-ui/core'
+import { Typography, styled, Theme, useTheme, Box } from '@mui/material'
 
 import { useHost } from '../../context/popupHostContext'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'

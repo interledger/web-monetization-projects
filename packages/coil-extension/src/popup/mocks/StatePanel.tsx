@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Typography from '@material-ui/core/Typography'
-import makeStyles from '@material-ui/core/styles/makeStyles'
-import { Grid } from '@material-ui/core'
+import Typography from '@mui/material/Typography'
+import makeStyles from '@mui/styles/makeStyles'
+import { Grid } from '@mui/material'
 
 import { PopupStateType } from '../services/PopupState'
 
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => {
       whiteSpace: 'pre-wrap',
       overflowX: 'auto'
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       root: {
         position: 'relative'
       }

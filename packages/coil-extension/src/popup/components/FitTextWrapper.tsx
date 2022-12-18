@@ -1,6 +1,6 @@
 // this will assume that any variable lengths have been added prior to this component
 import React, { useEffect, useRef, useState } from 'react'
-import { styled } from '@material-ui/core'
+import { styled } from '@mui/material'
 
 import { Colors } from '../../shared-theme/colors'
 

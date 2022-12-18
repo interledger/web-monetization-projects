@@ -1,5 +1,5 @@
 import React from 'react'
-import { SvgIconProps } from '@material-ui/core'
+import { SvgIconProps } from '@mui/material'
 
 import { AmericanExpress } from './AmericanExpress'
 import { DinersClub } from './DinersClub'

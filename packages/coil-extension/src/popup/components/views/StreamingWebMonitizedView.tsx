@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import lottie, { AnimationItem } from 'lottie-web'
-import { styled, Theme, Typography, useTheme } from '@material-ui/core'
+import { styled, Theme, Typography, useTheme } from '@mui/material'
 
 import { useStore } from '../../context/storeContext'
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'

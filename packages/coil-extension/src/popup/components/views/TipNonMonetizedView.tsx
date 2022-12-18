@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Box, useTheme } from '@material-ui/core'
+import { Typography, Box, useTheme } from '@mui/material'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'
 

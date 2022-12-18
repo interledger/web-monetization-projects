@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { styled } from '@material-ui/core'
+import { styled } from '@mui/material'
 
 import { Colors } from '../../shared-theme/colors'
 import { useStore } from '../context/storeContext'

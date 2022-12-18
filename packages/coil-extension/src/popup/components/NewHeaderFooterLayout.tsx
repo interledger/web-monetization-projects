@@ -1,7 +1,7 @@
 // * This needs to be renamed once the old HeaderFooterLayout can be removed
 
 import React from 'react'
-import { styled } from '@material-ui/core'
+import { styled } from '@mui/material'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import { Header } from './Header'

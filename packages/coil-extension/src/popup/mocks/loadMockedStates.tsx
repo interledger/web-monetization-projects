@@ -1,9 +1,9 @@
 import { EventEmitter } from 'events'
 
 import React, { useRef, useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import { Typography } from '@material-ui/core'
+import makeStyles from '@mui/styles/makeStyles'
+import Grid from '@mui/material/Grid'
+import { Typography } from '@mui/material'
 
 import { PopupStateType } from '../services/PopupState'
 import { PopupHost, PopupRuntime } from '../types'
@@ -413,7 +413,7 @@ export const mockPopupsPage = () => {
             setPopupSelectedState(state)
             setSelected(i)
           }}
-          justify='space-around'
+          justifyContent='space-around'
           alignContent='center'
           className={`${classes.popup} ${
             i === selected ? classes.active : classes.popup
@@ -436,7 +436,7 @@ export const mockPopupsPage = () => {
           <Grid
             container
             className={classes.layoutContainer}
-            justify='center'
+            justifyContent='center'
             alignContent='center'
             spacing={4}
             alignItems='stretch'

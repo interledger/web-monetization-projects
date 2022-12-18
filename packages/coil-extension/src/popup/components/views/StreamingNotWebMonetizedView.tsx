@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { styled, Theme, Typography, useTheme } from '@material-ui/core'
+import { styled, Theme, Typography, useTheme } from '@mui/material'
 import lottie from 'lottie-web'
 
 import { NewHeaderFooterLayout } from '../NewHeaderFooterLayout'

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { styled, Box } from '@material-ui/core'
+import { styled, Box } from '@mui/material'
 
 import { AmountInput } from '../AmountInput'
 import { HotkeyAmountButtons } from '../HotkeyAmountButtons'

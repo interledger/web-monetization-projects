@@ -1,5 +1,5 @@
 import React from 'react'
-import { MuiThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider } from '@material-ui/core/styles'
 import { CssBaseline } from '@material-ui/core'
 
 import { theme } from './theme'
@@ -9,10 +9,10 @@ export function withSharedTheme<P extends object>(
 ) {
   return function WithTheme(props: P) {
     return (
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...props} />
-      </MuiThemeProvider>
+      </ThemeProvider>
     )
   }
 }

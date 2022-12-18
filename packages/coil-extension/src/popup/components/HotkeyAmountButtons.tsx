@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, Theme } from '@material-ui/core'
+import { styled, Theme } from '@mui/material'
 
 import { useStore } from '../context/storeContext'
 import { useTip } from '../context/tipContext'

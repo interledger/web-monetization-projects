@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box, styled, Theme } from '@material-ui/core'
-import SettingsIcon from '@material-ui/icons/Settings'
+import { Box, styled, Theme } from '@mui/material'
+import SettingsIcon from '@mui/icons-material/Settings'
 
 import { useStore } from '../context/storeContext'
 import { useRouter } from '../context/routerContext'

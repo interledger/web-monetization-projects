@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, Theme } from '@material-ui/core'
+import { styled, Theme } from '@mui/material'
 
 import { useHost } from '../context/popupHostContext'
 

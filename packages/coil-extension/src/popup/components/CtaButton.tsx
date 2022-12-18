@@ -1,4 +1,4 @@
-import { styled, Theme } from '@material-ui/core'
+import { styled, Theme } from '@mui/material'
 
 export const CtaButton = styled('button')(({ theme }: { theme: Theme }) => ({
   position: 'relative',

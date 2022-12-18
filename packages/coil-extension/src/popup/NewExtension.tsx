@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '@material-ui/core'
+import { styled } from '@mui/material'
 import { AnimatePresence } from 'framer-motion'
 
 import { useRouter } from './context/routerContext'
