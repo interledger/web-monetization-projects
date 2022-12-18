@@ -1649,6 +1649,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.14.8":
+  version: 7.20.6
+  resolution: "@babel/runtime@npm:7.20.6"
+  dependencies:
+    regenerator-runtime: "npm:^0.13.11"
+  checksum: 78950a4a005ede7d262fd678764fe0aaa202d517a5f024800dcbcf15065a7dee6f628de764c1f6ccefc82efa4d6bb17ff9b1eb13c00d8b7f618cea08a45816fa
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.18.10, @babel/template@npm:^7.3.3":
   version: 7.18.10
   resolution: "@babel/template@npm:7.18.10"
@@ -1879,9 +1888,9 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.3.0"
     "@dier-makr/annotations": "npm:^0.0.0"
     "@dier-makr/inversify": "npm:^0.0.0"
-    "@material-ui/core": "npm:^4.12.4"
-    "@material-ui/icons": "npm:^4.11.3"
-    "@material-ui/styles": "npm:^4.11.5"
+    "@material-ui/core": "npm:^5.0.0-beta.5"
+    "@material-ui/icons": "npm:^5.0.0-beta.5"
+    "@material-ui/styles": "npm:^5.0.0-beta.5"
     "@nut-tree/nut-js": "npm:2.3.0"
     "@swc/core": "npm:1.3.23"
     "@swc/jest": "npm:0.2.24"
@@ -2875,6 +2884,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/cache@npm:^11.4.0":
+  version: 11.10.5
+  resolution: "@emotion/cache@npm:11.10.5"
+  dependencies:
+    "@emotion/memoize": "npm:^0.8.0"
+    "@emotion/sheet": "npm:^1.2.1"
+    "@emotion/utils": "npm:^1.2.0"
+    "@emotion/weak-memoize": "npm:^0.3.0"
+    stylis: "npm:4.1.3"
+  checksum: 40c744c5eea3d4438186ea4be71bf691cf3ac16774bda3d6d825960286fa35d735492ae881c028e01881101890f79568107877faefa58d027c760a4207ebe738
+  languageName: node
+  linkType: hard
+
 "@emotion/hash@npm:^0.8.0":
   version: 0.8.0
   resolution: "@emotion/hash@npm:0.8.0"
@@ -2891,10 +2913,47 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/is-prop-valid@npm:^1.1.0":
+  version: 1.2.0
+  resolution: "@emotion/is-prop-valid@npm:1.2.0"
+  dependencies:
+    "@emotion/memoize": "npm:^0.8.0"
+  checksum: cb06940c166c33a075b5c8660d96ab56a91bf37d9a0cb28665bb6cad2528468f6833c58d745feb67154e5710f50aca341b34440afc188f25562025377758c6ff
+  languageName: node
+  linkType: hard
+
 "@emotion/memoize@npm:0.7.4":
   version: 0.7.4
   resolution: "@emotion/memoize@npm:0.7.4"
   checksum: 6ea6add503898a3ffa90d549c7d841ba31652a37fd12c1517574d7aebcfa7735583489ff0678e28626e33c34f701cb1e9ced71dd4684cb8d43efc054f11bcaff
+  languageName: node
+  linkType: hard
+
+"@emotion/memoize@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@emotion/memoize@npm:0.8.0"
+  checksum: f6814c7588ff86f60818cfc08514d210d65651ba54ac306f9fdb66126f3f53ef4d895404822a42b36d0af771c842151c7a12bf855f23d40f46392aa55d14c9c1
+  languageName: node
+  linkType: hard
+
+"@emotion/sheet@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@emotion/sheet@npm:1.2.1"
+  checksum: bf811e2557855c53daa3ffb3fdee3ce5da4b7f3f9fcf3be7571edb8388b437dd33afc831190bb473be6b1065276efea9b5ba2290589ea367510832d9d1f971e4
+  languageName: node
+  linkType: hard
+
+"@emotion/utils@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@emotion/utils@npm:1.2.0"
+  checksum: a4d6eac30b641e01393f90fde80ebdafefbef5f86f44d002dc9190b313120c1a5e62be9eb8c8f84e37015fa6b505e9a4083393ede3158c0babf87c75f5e753ba
+  languageName: node
+  linkType: hard
+
+"@emotion/weak-memoize@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@emotion/weak-memoize@npm:0.3.0"
+  checksum: a54c661998fa78cf05db8dfd33b8e06512356e908954542665e1e487e7901724c6a10816ae714db02471d1c5715b980aecbceee32d92fc4c957e6909ee2f8ed8
   languageName: node
   linkType: hard
 
@@ -4422,6 +4481,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-ui/core@npm:^5.0.0-beta.5":
+  version: 5.0.0-beta.5
+  resolution: "@material-ui/core@npm:5.0.0-beta.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.14.8"
+    "@material-ui/system": "npm:5.0.0-beta.5"
+    "@material-ui/types": "npm:6.0.2"
+    "@material-ui/unstyled": "npm:5.0.0-alpha.44"
+    "@material-ui/utils": "npm:5.0.0-beta.5"
+    "@popperjs/core": "npm:^2.4.4"
+    "@types/react-transition-group": "npm:^4.2.0"
+    clsx: "npm:^1.0.4"
+    csstype: "npm:^3.0.2"
+    hoist-non-react-statics: "npm:^3.3.2"
+    prop-types: "npm:^15.7.2"
+    react-is: "npm:^17.0.2"
+    react-transition-group: "npm:^4.4.0"
+  peerDependencies:
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependenciesMeta:
+    "@emotion/react":
+      optional: true
+    "@emotion/styled":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 51ccc8ab9055837ff960ed1e185cab8d26608cf789e589df4e66fc08dc8240bb0e874fae3434268ed775bc78a8792f11924fe408b89ed669dbde6106c19d91e1
+  languageName: node
+  linkType: hard
+
 "@material-ui/icons@npm:^4.11.3":
   version: 4.11.3
   resolution: "@material-ui/icons@npm:4.11.3"
@@ -4436,6 +4529,59 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 99f1c724e6fa17a0508b7a13f300e65ccbc0c5c118cb76870595947a2b1874a798373aebcba073ea27e6b457da64a7e3b49886256cf6c11a95afd657ad703b56
+  languageName: node
+  linkType: hard
+
+"@material-ui/icons@npm:^5.0.0-beta.5":
+  version: 5.0.0-beta.5
+  resolution: "@material-ui/icons@npm:5.0.0-beta.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.14.8"
+  peerDependencies:
+    "@material-ui/core": ^5.0.0-alpha.36
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^17.0.2
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 3c6b6a8f9510bf5ccf9bbef67c2123abf5b6cf62a36645663e3160ad1ea05f7f8349ef6402da06aa063ed526500d89a53742fbc4ad7550dcedd5c91492cf1bbf
+  languageName: node
+  linkType: hard
+
+"@material-ui/private-theming@npm:5.0.0-beta.5":
+  version: 5.0.0-beta.5
+  resolution: "@material-ui/private-theming@npm:5.0.0-beta.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.14.8"
+    "@material-ui/utils": "npm:5.0.0-beta.5"
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^17.0.2
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: b6dcb9ab787022c961c75a797f48537110b457bc9105a47e59e7f4645a4755845532724a42a05d13ac25bbf1f25c0e08e0817c90a61cee7771885486cc043993
+  languageName: node
+  linkType: hard
+
+"@material-ui/styled-engine@npm:5.0.0-beta.5":
+  version: 5.0.0-beta.5
+  resolution: "@material-ui/styled-engine@npm:5.0.0-beta.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.14.8"
+    "@emotion/cache": "npm:^11.4.0"
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    react: ^17.0.2
+  peerDependenciesMeta:
+    "@emotion/react":
+      optional: true
+    "@emotion/styled":
+      optional: true
+  checksum: 89a632477f33a4993d6394becc41e7ed6ae8199d2db915e6628ea79da9cbb307922399f376e5c990d8a90e605d103662ad1d8df8f758cbf37912ec8c81541b6e
   languageName: node
   linkType: hard
 
@@ -4470,6 +4616,65 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-ui/styles@npm:^5.0.0-beta.5":
+  version: 5.0.0-beta.5
+  resolution: "@material-ui/styles@npm:5.0.0-beta.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.14.8"
+    "@emotion/hash": "npm:^0.8.0"
+    "@material-ui/private-theming": "npm:5.0.0-beta.5"
+    "@material-ui/types": "npm:6.0.2"
+    "@material-ui/utils": "npm:5.0.0-beta.5"
+    clsx: "npm:^1.0.4"
+    csstype: "npm:^3.0.2"
+    hoist-non-react-statics: "npm:^3.3.2"
+    jss: "npm:^10.7.1"
+    jss-plugin-camel-case: "npm:^10.7.1"
+    jss-plugin-default-unit: "npm:^10.7.1"
+    jss-plugin-global: "npm:^10.7.1"
+    jss-plugin-nested: "npm:^10.7.1"
+    jss-plugin-props-sort: "npm:^10.7.1"
+    jss-plugin-rule-value-function: "npm:^10.7.1"
+    jss-plugin-vendor-prefixer: "npm:^10.7.1"
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^17.0.2
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 3a70fb1a48dab8639db97c97aaf22f31c4a5b38cea8a80c3ffe78a5ccbb4cec484d0682ab30d13c54f04f56087ece515d099eb2c281c660da02c478fb7e524a1
+  languageName: node
+  linkType: hard
+
+"@material-ui/system@npm:5.0.0-beta.5":
+  version: 5.0.0-beta.5
+  resolution: "@material-ui/system@npm:5.0.0-beta.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.14.8"
+    "@material-ui/private-theming": "npm:5.0.0-beta.5"
+    "@material-ui/styled-engine": "npm:5.0.0-beta.5"
+    "@material-ui/types": "npm:6.0.2"
+    "@material-ui/utils": "npm:5.0.0-beta.5"
+    clsx: "npm:^1.0.4"
+    csstype: "npm:^3.0.2"
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^17.0.2
+  peerDependenciesMeta:
+    "@emotion/react":
+      optional: true
+    "@emotion/styled":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 78e227191320fe1797625e8c98a55c5435bbd72502bf95ed018278ae178c11451c60b23abefd2b6813f750e9e59cd150454256c3ceb323abc1bbf832fd086e53
+  languageName: node
+  linkType: hard
+
 "@material-ui/system@npm:^4.12.2":
   version: 4.12.2
   resolution: "@material-ui/system@npm:4.12.2"
@@ -4498,6 +4703,54 @@ __metadata:
     "@types/react":
       optional: true
   checksum: f14d1a29fe7b02e93d0d8b2b1044326c3ad03be7d3d35ec85ab3326bb721193215497fefbadd10505bd4c48b445eaf4dce433efadbc44e504a3474e6b2e52c3e
+  languageName: node
+  linkType: hard
+
+"@material-ui/types@npm:6.0.2":
+  version: 6.0.2
+  resolution: "@material-ui/types@npm:6.0.2"
+  peerDependencies:
+    "@types/react": "*"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: ec27d7ed343a72f7aa45db7f424f6896d23aecda02186d4cc92f14ca344966b94ff7dc2c7d41f72c473625d7ad09b779fe81278e612be8648c9724eea8618e5b
+  languageName: node
+  linkType: hard
+
+"@material-ui/unstyled@npm:5.0.0-alpha.44":
+  version: 5.0.0-alpha.44
+  resolution: "@material-ui/unstyled@npm:5.0.0-alpha.44"
+  dependencies:
+    "@babel/runtime": "npm:^7.14.8"
+    "@emotion/is-prop-valid": "npm:^1.1.0"
+    "@material-ui/utils": "npm:5.0.0-beta.5"
+    clsx: "npm:^1.0.4"
+    prop-types: "npm:^15.7.2"
+    react-is: "npm:^17.0.2"
+  peerDependencies:
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 0fff6f92597eee37b5b6bb853a6c92cb5a2d73167cce44e4339dd921f80e9f00957512397ff6971914df448459272af2709e225a2902d4881751a2919b2cc46a
+  languageName: node
+  linkType: hard
+
+"@material-ui/utils@npm:5.0.0-beta.5":
+  version: 5.0.0-beta.5
+  resolution: "@material-ui/utils@npm:5.0.0-beta.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.14.8"
+    "@types/prop-types": "npm:^15.7.4"
+    "@types/react-is": "npm:^16.7.1 || ^17.0.0"
+    prop-types: "npm:^15.7.2"
+    react-is: "npm:^17.0.2"
+  peerDependencies:
+    react: ^17.0.2
+  checksum: 652be2dcad755a3ae68c5bbbe074a062c629a694b73fae69ae558dd5236165bd8180e7e187de63d34d5fadd08fcb9ec652d23d6a6688e5fd8abf04c369272d14
   languageName: node
   linkType: hard
 
@@ -4759,6 +5012,13 @@ __metadata:
   version: 1.0.0-next.11
   resolution: "@polka/url@npm:1.0.0-next.11"
   checksum: 661b2268e8f1907c4ca72baff41e3ed12f77f5a28429f1b4dd311650f8e376cdedf828830cdce8cdb328e0cd112577b4c46d682da5c46d2b0eb489f4389b6df1
+  languageName: node
+  linkType: hard
+
+"@popperjs/core@npm:^2.4.4":
+  version: 2.11.6
+  resolution: "@popperjs/core@npm:2.11.6"
+  checksum: 39ed8d02c4d16dbe90bc537f7d4702320a95276d1fd902f74a48f544c6214a89a51a13f81603cb08786156350734f54834c41e011857637ae25340519d6160df
   languageName: node
   linkType: hard
 
@@ -5680,6 +5940,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prop-types@npm:^15.7.4":
+  version: 15.7.5
+  resolution: "@types/prop-types@npm:15.7.5"
+  checksum: a6e04a01e1f632cc3fa5fffd79779f2f83a8fec1293cdf29b5a02aa4e1a1b38a124e824205a40de4e66532a0fa33c4f60337b55cec635080ea2571e55910460f
+  languageName: node
+  linkType: hard
+
 "@types/qs@npm:*":
   version: 6.9.5
   resolution: "@types/qs@npm:6.9.5"
@@ -5709,6 +5976,15 @@ __metadata:
   dependencies:
     "@types/react": "npm:*"
   checksum: cc2d444a0c50ca83a62785ec5aa36ddb31ebd88c0f07d414c8390e7e5f1af27fdbc31e245b28b9c8f7ab4cdc2d20c313d1acef45e4525bf9c2323c2bd2df35ab
+  languageName: node
+  linkType: hard
+
+"@types/react-is@npm:^16.7.1 || ^17.0.0":
+  version: 17.0.3
+  resolution: "@types/react-is@npm:17.0.3"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: bed46f5dfa83f5eac4ad2f40cd80cb68f80e93b7bfb01b2d7eae2fd84d0d46dd5b06dad264f4d71daeb0fe2d9e34db994d48fdfb46b87daaa71c8744a9bda121
   languageName: node
   linkType: hard
 
@@ -17257,6 +17533,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jss-plugin-camel-case@npm:^10.7.1":
+  version: 10.9.2
+  resolution: "jss-plugin-camel-case@npm:10.9.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.3.1"
+    hyphenate-style-name: "npm:^1.0.3"
+    jss: "npm:10.9.2"
+  checksum: bfc9a19659df1f0e1c0e01152b1c68151e0842292a5e572817c8ace3b7cfcf8bf12a0120fab46e27fbb0ecd37157ce534dffb122793decee476ee6e14bd64d32
+  languageName: node
+  linkType: hard
+
 "jss-plugin-default-unit@npm:^10.5.1":
   version: 10.5.1
   resolution: "jss-plugin-default-unit@npm:10.5.1"
@@ -17267,6 +17554,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jss-plugin-default-unit@npm:^10.7.1":
+  version: 10.9.2
+  resolution: "jss-plugin-default-unit@npm:10.9.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.3.1"
+    jss: "npm:10.9.2"
+  checksum: a85da9b7860cf4fff49951e8bf212df60631cfbe44f931262adbdd0f8d0af0a448cd4955486db28d11509535d2233d239b07c6e178532fc7ce81714d79d39732
+  languageName: node
+  linkType: hard
+
 "jss-plugin-global@npm:^10.5.1":
   version: 10.5.1
   resolution: "jss-plugin-global@npm:10.5.1"
@@ -17274,6 +17571,16 @@ __metadata:
     "@babel/runtime": "npm:^7.3.1"
     jss: "npm:10.5.1"
   checksum: da86d723c4e62f80627def1be44f677def844078f7dd1bca93b15740a3d131e291db89047689818592c8af534e5d5c866aadee286301f06533efae00988ba114
+  languageName: node
+  linkType: hard
+
+"jss-plugin-global@npm:^10.7.1":
+  version: 10.9.2
+  resolution: "jss-plugin-global@npm:10.9.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.3.1"
+    jss: "npm:10.9.2"
+  checksum: 69a47120e744aba80de707d47ad946664158f4741a81cb617f5a26a7e2f55534bf8fe7acdad9965ec200400979e314ea96a963fbe1c473b97617639742680b63
   languageName: node
   linkType: hard
 
@@ -17288,6 +17595,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jss-plugin-nested@npm:^10.7.1":
+  version: 10.9.2
+  resolution: "jss-plugin-nested@npm:10.9.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.3.1"
+    jss: "npm:10.9.2"
+    tiny-warning: "npm:^1.0.2"
+  checksum: 29cc336bb3ce18e577a5a3e5139fb20f0d7b0050a69db2a773c230605108a46847fd3329836747dc85cb3317474735ca72bdd1cd085b6516069bebdd6dc62540
+  languageName: node
+  linkType: hard
+
 "jss-plugin-props-sort@npm:^10.5.1":
   version: 10.5.1
   resolution: "jss-plugin-props-sort@npm:10.5.1"
@@ -17295,6 +17613,16 @@ __metadata:
     "@babel/runtime": "npm:^7.3.1"
     jss: "npm:10.5.1"
   checksum: a8ba7031f24bd154e3037eef099ae07e8b6ada6067aeac0d193fcb8e500ee60d03309bacc5fa72c80e5a96d1c6c62f5a2f4436c54077bc6445311aaefd1a5007
+  languageName: node
+  linkType: hard
+
+"jss-plugin-props-sort@npm:^10.7.1":
+  version: 10.9.2
+  resolution: "jss-plugin-props-sort@npm:10.9.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.3.1"
+    jss: "npm:10.9.2"
+  checksum: 999cfdbfe2006d64b4181a8d3f389752c7603d8e65cfe3dc62227b1c4202a3fdaa4156babc7e4c193c7bdbacbd59b498d511fdf99fe6ab031626189b9aeb2cad
   languageName: node
   linkType: hard
 
@@ -17309,6 +17637,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jss-plugin-rule-value-function@npm:^10.7.1":
+  version: 10.9.2
+  resolution: "jss-plugin-rule-value-function@npm:10.9.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.3.1"
+    jss: "npm:10.9.2"
+    tiny-warning: "npm:^1.0.2"
+  checksum: acab03e60daeeeea67ae045b37fe587ad18cae05a82c39d120047b56eda40f0c5c778229da7be4d9814fa91b123c9ab45de204ce1bad26aea2519cffd6a67fbb
+  languageName: node
+  linkType: hard
+
 "jss-plugin-vendor-prefixer@npm:^10.5.1":
   version: 10.5.1
   resolution: "jss-plugin-vendor-prefixer@npm:10.5.1"
@@ -17317,6 +17656,17 @@ __metadata:
     css-vendor: "npm:^2.0.8"
     jss: "npm:10.5.1"
   checksum: 3be3f1b3c60de28dc53d20e7daa1ef0d78d3a2748458533777c47c2e842aa442ba332a9860bfb8b2b1f8e4e1c8b211c93912b9ea191c388963d823624ea3025b
+  languageName: node
+  linkType: hard
+
+"jss-plugin-vendor-prefixer@npm:^10.7.1":
+  version: 10.9.2
+  resolution: "jss-plugin-vendor-prefixer@npm:10.9.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.3.1"
+    css-vendor: "npm:^2.0.8"
+    jss: "npm:10.9.2"
+  checksum: 550981d1706d50d743a36b45b38bb58c99723fcc1b9df88e851a587723464efc04d55958ff04bd1a2247bc8ae04610131d4aad64907db069bdac264f464c580c
   languageName: node
   linkType: hard
 
@@ -17330,6 +17680,18 @@ __metadata:
     is-in-browser: "npm:^1.1.3"
     tiny-warning: "npm:^1.0.2"
   checksum: 95a4877bd1d72f54f30b152b05276427f66ad285484aa2d05ac794011c10e55ca3159a3a26a05fb8a5204f1a835b0fdec1b5d822f7d8978cc75c4571e4930188
+  languageName: node
+  linkType: hard
+
+"jss@npm:10.9.2, jss@npm:^10.7.1":
+  version: 10.9.2
+  resolution: "jss@npm:10.9.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.3.1"
+    csstype: "npm:^3.0.2"
+    is-in-browser: "npm:^1.1.3"
+    tiny-warning: "npm:^1.0.2"
+  checksum: c9ad401d4d4ae25be2566b51a1a65b4aea6047c360af034666e6dc9bfee4f561311c575bd110b1d18d138e6070be7fe8bd10ac083507a2cdb2a166bb07fb7fe5
   languageName: node
   linkType: hard
 
@@ -21313,6 +21675,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-is@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react-is@npm:17.0.2"
+  checksum: 24af7af3abd0bf94d4eb018a70db25fd4e23648eec7bb8b203bf59e24a715ac4eec8279939e15a4d90cbad19ed6be243a0f2c9aa0b1faec0a1c102d9c89ca3f9
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^18.0.0":
   version: 18.1.0
   resolution: "react-is@npm:18.1.0"
@@ -21611,7 +21980,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:0.13.11, regenerator-runtime@npm:^0.13.10, regenerator-runtime@npm:^0.13.2, regenerator-runtime@npm:^0.13.3, regenerator-runtime@npm:^0.13.4":
+"regenerator-runtime@npm:0.13.11, regenerator-runtime@npm:^0.13.10, regenerator-runtime@npm:^0.13.11, regenerator-runtime@npm:^0.13.2, regenerator-runtime@npm:^0.13.3, regenerator-runtime@npm:^0.13.4":
   version: 0.13.11
   resolution: "regenerator-runtime@npm:0.13.11"
   checksum: 0485db63ce47760e28329590cb9f8b208365d076dbf2edaa32e551a7c0451fc6f7557b225268422c960ffa4fbc6ff86d63d6a747aacbf6b10ed6a747b432e3c8
@@ -23658,6 +24027,13 @@ __metadata:
     hey-listen: "npm:^1.0.8"
     tslib: "npm:^2.1.0"
   checksum: b9b09a935af810c0470bbe005e1cee1211088bc242dbb0f5ec03b7bd08ce7b3edb452096990ed09415aeb340012d8b826990b34639b4b058bbd3b8d82f35ccfb
+  languageName: node
+  linkType: hard
+
+"stylis@npm:4.1.3":
+  version: 4.1.3
+  resolution: "stylis@npm:4.1.3"
+  checksum: 5040211532a8bb23414072ed9ec44fd563f40be013cbc131a50250f2ce19469ec6bb17dec5db6f942442ef548b456bc4e5d4b8f61a5a9249231c01fc761d0d6d
   languageName: node
   linkType: hard
 
