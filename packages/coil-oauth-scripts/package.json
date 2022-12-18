@@ -67,7 +67,7 @@
     "@swc/jest": "0.2.24",
     "@types/jest": "29.2.4",
     "@types/long": "4.0.2",
-    "@types/node": "16.18.9",
+    "@types/node": "16.18.10",
     "@types/node-fetch": "2.6.2",
     "@types/uuid": "9.0.0",
     "@typescript-eslint/eslint-plugin": "5.46.1",
