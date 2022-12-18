@@ -1944,7 +1944,7 @@ __metadata:
     node-window-manager: "npm:2.2.4"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.1"
-    puppeteer: "npm:19.4.0"
+    puppeteer: "npm:19.4.1"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reconnecting-websocket: "npm:^4.4.0"
@@ -2178,7 +2178,7 @@ __metadata:
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.1"
-    puppeteer: "npm:19.4.0"
+    puppeteer: "npm:19.4.1"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:3.0.2"
@@ -21044,9 +21044,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:19.4.0":
-  version: 19.4.0
-  resolution: "puppeteer-core@npm:19.4.0"
+"puppeteer-core@npm:19.4.1":
+  version: 19.4.1
+  resolution: "puppeteer-core@npm:19.4.1"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
@@ -21057,22 +21057,21 @@ __metadata:
     rimraf: "npm:3.0.2"
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
-    ws: "npm:8.10.0"
-  checksum: 6d39ab3073d4bb43d0c2f45ddbda99ce52ef143dacff5b2a6ab5dc2ccf96e71abca5608d277ca485598dcef50099f22572f38f9d6a34bdbf118ee8aafe64c8fb
+    ws: "npm:8.11.0"
+  checksum: bc857fbf6130db138907796d875b5db4ebaadbf9b90fa0a1fb68aa4b7e94560f712708bf380950a4f761c21781e749c4f6ceab7ed84f712ca199c9eda20155f2
   languageName: node
   linkType: hard
 
-"puppeteer@npm:19.4.0, puppeteer@npm:^19.0.0":
-  version: 19.4.0
-  resolution: "puppeteer@npm:19.4.0"
+"puppeteer@npm:19.4.1, puppeteer@npm:^19.0.0":
+  version: 19.4.1
+  resolution: "puppeteer@npm:19.4.1"
   dependencies:
     cosmiconfig: "npm:8.0.0"
-    devtools-protocol: "npm:0.0.1068969"
     https-proxy-agent: "npm:5.0.1"
     progress: "npm:2.0.3"
     proxy-from-env: "npm:1.1.0"
-    puppeteer-core: "npm:19.4.0"
-  checksum: a123c3c56e6fd584d0317cc41f4649bd448eb0fb9779b84e223ba7a2525a70d66c9a274d53531c823678a787529dc8c9303c74eb75ce47fa894950f6faad831e
+    puppeteer-core: "npm:19.4.1"
+  checksum: 585d7ee4410012bf6614a9a2fd31ecc2f56366ff1697f5c2b1de27ce5b3c96ec35343efd3c9975b48cb4c0b9f8b47cdcc178f1fba884734f02571dcfc3abd49e
   languageName: node
   linkType: hard
 
@@ -25861,21 +25860,6 @@ __metadata:
   dependencies:
     async-limiter: "npm:^1.0.0"
   checksum: ac2775525d96fef3f9933d2d0e96a746ed97f44fd52ba27092dc9dc3429369db0a83d2c6610de6ec36cb009c7a212182122d44c730fd187ab25ee319823cb825
-  languageName: node
-  linkType: hard
-
-"ws@npm:8.10.0":
-  version: 8.10.0
-  resolution: "ws@npm:8.10.0"
-  peerDependencies:
-    bufferutil: ^4.0.1
-    utf-8-validate: ^5.0.2
-  peerDependenciesMeta:
-    bufferutil:
-      optional: true
-    utf-8-validate:
-      optional: true
-  checksum: 29af9b14bfc76fd7df9f480173f6e6f24b04a305b648cd79792bfc0245ea53208fc1195e2f0bf2034a25d60bae25b8125e1b839b954d979989df966f9bd65f8f
   languageName: node
   linkType: hard
 
