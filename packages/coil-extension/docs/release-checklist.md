@@ -11,7 +11,7 @@ When releasing, we can copy this markdown into the PR for a release.
 
 ## Chores
 
-- [ ] Make sure the manifest version was bumped but doesn't skip versions
+- [ ] Make sure the manifest version was bumped (TODO: versions may be skipped, due to bad builds)
 
 - [ ] Update the [apktool.yml](../six-apktool-decoded/apktool.yml) versionCode/versionName
       and commit it to the repository.
