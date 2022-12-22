@@ -1774,7 +1774,7 @@ __metadata:
     husky: "npm:8.0.2"
     jest: "npm:29.3.1"
     jest-environment-jsdom: "npm:29.3.1"
-    jsonwebtoken: "npm:8.5.1"
+    jsonwebtoken: "npm:9.0.0"
     lint-staged: "npm:13.1.0"
     localforage: "npm:1.10.0"
     node-fetch: "npm:^2.6.1"
@@ -1838,7 +1838,7 @@ __metadata:
     husky: "npm:8.0.2"
     jest: "npm:29.3.1"
     jest-environment-jsdom: "npm:29.3.1"
-    jsonwebtoken: "npm:^8.5.1"
+    jsonwebtoken: "npm:^9.0.0"
     lint-staged: "npm:13.1.0"
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.20"
@@ -1937,7 +1937,7 @@ __metadata:
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:29.3.1"
     jest-environment-jsdom: "npm:29.3.1"
-    jsonwebtoken: "npm:^8.5.1"
+    jsonwebtoken: "npm:^9.0.0"
     jss: "npm:^10.6.0"
     lint-staged: "npm:13.1.0"
     lottie-web: "npm:^5.8.1"
@@ -2039,7 +2039,7 @@ __metadata:
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:29.3.1"
     jest-environment-jsdom: "npm:29.3.1"
-    jsonwebtoken: "npm:^8.5.1"
+    jsonwebtoken: "npm:^9.0.0"
     lint-staged: "npm:13.1.0"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.1"
@@ -3594,7 +3594,7 @@ __metadata:
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:29.3.1"
     jest-environment-jsdom: "npm:29.3.1"
-    jsonwebtoken: "npm:^8.5.1"
+    jsonwebtoken: "npm:^9.0.0"
     lint-staged: "npm:13.1.0"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.1"
@@ -17280,6 +17280,18 @@ __metadata:
     ms: "npm:^2.1.1"
     semver: "npm:^5.6.0"
   checksum: 64198d5b0b69fce8e2c73e66b8d7923e177e960675333db349be16509d6f1549567568c5816c890ae10686cdd061035ba833221d35395d572b7947c0d3039b1c
+  languageName: node
+  linkType: hard
+
+"jsonwebtoken@npm:9.0.0, jsonwebtoken@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "jsonwebtoken@npm:9.0.0"
+  dependencies:
+    jws: "npm:^3.2.2"
+    lodash: "npm:^4.17.21"
+    ms: "npm:^2.1.1"
+    semver: "npm:^7.3.8"
+  checksum: 7ccbd0b7bf6a8058458d84cf7551a96a9ad7c31094b9a1b83d90728b8008e5e3c42c8acb324b08511affef5d088d49499fe08e23b3347010ed2c1a069622066c
   languageName: node
   linkType: hard
 
