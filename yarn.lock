@@ -2029,7 +2029,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.6.0"
     eslint-plugin-standard: "npm:5.0.0"
     express: "npm:^4.18.1"
-    express-jwt: "npm:^7.7.0"
+    express-jwt: "npm:^8.0.0"
     express-ws: "npm:^5.0.2"
     graphql: "npm:^16.4.0"
     graphql-tools: "npm:^8.2.9"
@@ -5437,15 +5437,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-unless@npm:^0.5.3":
-  version: 0.5.3
-  resolution: "@types/express-unless@npm:0.5.3"
-  dependencies:
-    "@types/express": "npm:*"
-  checksum: dad109b664565d3f0c33e1f2ec511f67dbfc6ea1967e890fcc9d2473b012198aed215b109e5811a369c2c4ec5734019c5bf5db0780b066c0e563b6f427e64f02
-  languageName: node
-  linkType: hard
-
 "@types/express@npm:*, @types/express@npm:4.17.15, @types/express@npm:^4.17.13":
   version: 4.17.15
   resolution: "@types/express@npm:4.17.15"
@@ -5632,12 +5623,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:8.5.9, @types/jsonwebtoken@npm:^8.5.0, @types/jsonwebtoken@npm:^8.5.8":
+"@types/jsonwebtoken@npm:8.5.9, @types/jsonwebtoken@npm:^8.5.0":
   version: 8.5.9
   resolution: "@types/jsonwebtoken@npm:8.5.9"
   dependencies:
     "@types/node": "npm:*"
   checksum: 3f15a76cd58fb56272cdcb1cf475e8f03b3127000ed9c49670b7be450a24460edeef6fa69837bb7feee554c1ead7d9ff4584eef0ea48d810282872dcfa03508e
+  languageName: node
+  linkType: hard
+
+"@types/jsonwebtoken@npm:^9":
+  version: 9.0.0
+  resolution: "@types/jsonwebtoken@npm:9.0.0"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 6779fa3ea5ae8ca443d33201464d67801c48a9d11558d127903ffeec6afcacba963bf8b89111e0cafc7fcb8febc1a40fb18eb34424031692d1cc881e2c931066
   languageName: node
   linkType: hard
 
@@ -12820,22 +12820,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-jwt@npm:^7.7.0":
-  version: 7.7.2
-  resolution: "express-jwt@npm:7.7.2"
+"express-jwt@npm:^8.0.0":
+  version: 8.2.1
+  resolution: "express-jwt@npm:8.2.1"
   dependencies:
-    "@types/express-unless": "npm:^0.5.3"
-    "@types/jsonwebtoken": "npm:^8.5.8"
-    express-unless: "npm:^1.0.0"
-    jsonwebtoken: "npm:^8.5.1"
-  checksum: 498184c5e40f054071d6c042381b81e7eb8b4380408e66a2859fcf02826beb2744ea7b35c241ad65060702708520d0aaa3f302d136f913caf6e9d05b1bc4c611
+    "@types/jsonwebtoken": "npm:^9"
+    express-unless: "npm:^2.1.3"
+    jsonwebtoken: "npm:^9.0.0"
+  checksum: 3308beb9daea690742e542c821e7ed928efa7d36fd76f5bd26169240154ec0fe26085f84a810be16d56bcdfdb56a598a496c1d6f2c15fc85d0780493d5325973
   languageName: node
   linkType: hard
 
-"express-unless@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "express-unless@npm:1.0.0"
-  checksum: 83d999580b3706833ec1c4eb5f518fbb137b2770ec3fd6329faa23a4e27a94778651cfa0232f4a60c0b3d19239a77a1c06ca44da38051bc33f59b92a55ba2187
+"express-unless@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "express-unless@npm:2.1.3"
+  checksum: ebe46a5f7242d9cc030fad0461704b55e5281935381d2466f6698afa54b382d4cc34648028aa5ea0643761f0360ad19d8f95a25341b8cd7f3f7ec332d1edf3e0
   languageName: node
   linkType: hard
 
