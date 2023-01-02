@@ -34,7 +34,7 @@ references:
   node-version-matrix: &node-version-matrix
     matrix:
       parameters:
-        node-version: &node-versions [ "16.19.0", "16.19.0" ]
+        node-version: &node-versions [ "16.19.0", "18.4.0" ]
   just-one-node-version-matrix: &just-latest-lts-node-version
     matrix:
       parameters:
