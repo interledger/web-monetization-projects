@@ -35,7 +35,3 @@
 - enable android developer mode
 - enable usb debugging
 - go to chrome://inspect on host
-
-### scripts
-
-see scripts/sixpacker.sh
