@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 export const LogMethods = ['info', 'warn', 'debug', 'trace', 'error'] as const
-export type LogMethod = typeof LogMethods[number]
+export type LogMethod = (typeof LogMethods)[number]
 export type Logger = typeof console.log & Pick<typeof console, LogMethod>
 
 export const makeConsoleLogger = (...bindArgs: unknown[]): Logger => {
