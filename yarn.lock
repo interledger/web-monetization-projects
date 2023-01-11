@@ -1986,7 +1986,7 @@ __metadata:
     "@coil/puppeteer-utils": "npm:0.0.0"
     "@commitlint/cli": "npm:17.4.0"
     "@commitlint/config-conventional": "npm:17.4.0"
-    "@graphql-codegen/cli": "npm:2.16.3"
+    "@graphql-codegen/cli": "npm:2.16.4"
     "@graphql-codegen/introspection": "npm:2.2.3"
     "@graphql-codegen/typescript": "npm:2.8.7"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.12"
@@ -2923,9 +2923,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.16.3":
-  version: 2.16.3
-  resolution: "@graphql-codegen/cli@npm:2.16.3"
+"@graphql-codegen/cli@npm:2.16.4":
+  version: 2.16.4
+  resolution: "@graphql-codegen/cli@npm:2.16.4"
   dependencies:
     "@babel/generator": "npm:^7.18.13"
     "@babel/template": "npm:^7.18.10"
@@ -2942,14 +2942,14 @@ __metadata:
     "@graphql-tools/prisma-loader": "npm:^7.2.49"
     "@graphql-tools/url-loader": "npm:^7.13.2"
     "@graphql-tools/utils": "npm:^9.0.0"
-    "@whatwg-node/fetch": "npm:^0.5.0"
+    "@whatwg-node/fetch": "npm:^0.6.0"
     chalk: "npm:^4.1.0"
     chokidar: "npm:^3.5.2"
     cosmiconfig: "npm:^7.0.0"
     cosmiconfig-typescript-loader: "npm:4.3.0"
     debounce: "npm:^1.2.0"
     detect-indent: "npm:^6.0.0"
-    graphql-config: "npm:4.3.6"
+    graphql-config: "npm:4.4.0"
     inquirer: "npm:^8.0.0"
     is-glob: "npm:^4.0.1"
     json-to-pretty-yaml: "npm:^1.2.2"
@@ -2969,7 +2969,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: c224f1a7d73974b0562ce79b6d08c009e0b5018e8df54f1133d740c9afdae4c6724385714b96ff96c591cbd5ef92e40ddefb971cc0747cde735861241f91c286
+  checksum: d1902a2532290cf1dc2650fe832f34bcbd290243a04d77e52153e71327b5198a2f4f65e420a6bc6417490b0f20f8033f85bc87a4988d12c6b396679eea037eaa
   languageName: node
   linkType: hard
 
@@ -3502,7 +3502,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-tools/utils@npm:8.12.0, @graphql-tools/utils@npm:^8.6.5":
+"@graphql-tools/utils@npm:8.12.0":
   version: 8.12.0
   resolution: "@graphql-tools/utils@npm:8.12.0"
   dependencies:
@@ -3627,13 +3627,6 @@ __metadata:
   version: 1.2.1
   resolution: "@humanwhocodes/object-schema@npm:1.2.1"
   checksum: c860f96faaaaecd6c5c4ee6912f7c761579031b464c3cf55832e59e18b116968d89b570ef6a9a10b1670a67e7998a530c8c549b4a41b118153340772ad10cea9
-  languageName: node
-  linkType: hard
-
-"@iarna/toml@npm:^2.2.5":
-  version: 2.2.5
-  resolution: "@iarna/toml@npm:2.2.5"
-  checksum: dd5b332f9324eba8449da0922fe461d273d6d0498254ff0ed34c74b4ee549418dc57073686b6e641e4e2f74239a404a4b33a1997e2d4bb4581fdaa4136235ae4
   languageName: node
   linkType: hard
 
@@ -6824,6 +6817,23 @@ __metadata:
     undici: "npm:^5.8.0"
     web-streams-polyfill: "npm:^3.2.0"
   checksum: 798fdf22555bf122b9a0de5c56d6ce99e59c1e4b10fa3b722ea5881594c713e40dceccbf3607c80f9cc7a8783b190527990bfab0a77972ea3899111ab5d1ca4e
+  languageName: node
+  linkType: hard
+
+"@whatwg-node/fetch@npm:^0.6.0":
+  version: 0.6.1
+  resolution: "@whatwg-node/fetch@npm:0.6.1"
+  dependencies:
+    "@peculiar/webcrypto": "npm:^1.4.0"
+    abort-controller: "npm:^3.0.0"
+    busboy: "npm:^1.6.0"
+    form-data-encoder: "npm:^1.7.1"
+    formdata-node: "npm:^4.3.1"
+    node-fetch: "npm:^2.6.7"
+    undici: "npm:^5.12.0"
+    urlpattern-polyfill: "npm:^6.0.2"
+    web-streams-polyfill: "npm:^3.2.0"
+  checksum: b9084fe3a0ea55b74ba378963ca9c904c228d30776bc28c6770428c8d929e842492354cbfb6d50c5008380eda5d139c3bb5d591842909723450758f4bb0b4006
   languageName: node
   linkType: hard
 
@@ -10436,15 +10446,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig-toml-loader@npm:1.0.0":
-  version: 1.0.0
-  resolution: "cosmiconfig-toml-loader@npm:1.0.0"
-  dependencies:
-    "@iarna/toml": "npm:^2.2.5"
-  checksum: 0097478b3cdb06e48b0e6429279edb4c58231e0a670e6bb45f4e7fa751cdad1b64f00ee342bad34edfebc3e2188b5f6015749f82cc30f296bc02b9a6ff73aec2
-  languageName: node
-  linkType: hard
-
 "cosmiconfig-typescript-loader@npm:4.3.0, cosmiconfig-typescript-loader@npm:^4.0.0":
   version: 4.3.0
   resolution: "cosmiconfig-typescript-loader@npm:4.3.0"
@@ -10457,19 +10458,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig@npm:7.0.1, cosmiconfig@npm:^7.0.0":
-  version: 7.0.1
-  resolution: "cosmiconfig@npm:7.0.1"
-  dependencies:
-    "@types/parse-json": "npm:^4.0.0"
-    import-fresh: "npm:^3.2.1"
-    parse-json: "npm:^5.0.0"
-    path-type: "npm:^4.0.0"
-    yaml: "npm:^1.10.0"
-  checksum: f5b0588faeb39d1bcb846504cb6693121bf6af4d09a5a0523a9201d189a769a067db33e36d6c6fe23937cc24f9771ad0e76ecb3056a4e244697867d62aa50ec0
-  languageName: node
-  linkType: hard
-
 "cosmiconfig@npm:8.0.0, cosmiconfig@npm:^8.0.0":
   version: 8.0.0
   resolution: "cosmiconfig@npm:8.0.0"
@@ -10479,6 +10467,19 @@ __metadata:
     parse-json: "npm:^5.0.0"
     path-type: "npm:^4.0.0"
   checksum: 436a849ca0a434b4a7344e9213db6314512c6af23c0b187728d21b0292736eec8c2df046a95b8c796a9304afbd9d154bf5e9aeeae535e6303d835d44835cad6d
+  languageName: node
+  linkType: hard
+
+"cosmiconfig@npm:^7.0.0":
+  version: 7.0.1
+  resolution: "cosmiconfig@npm:7.0.1"
+  dependencies:
+    "@types/parse-json": "npm:^4.0.0"
+    import-fresh: "npm:^3.2.1"
+    parse-json: "npm:^5.0.0"
+    path-type: "npm:^4.0.0"
+    yaml: "npm:^1.10.0"
+  checksum: f5b0588faeb39d1bcb846504cb6693121bf6af4d09a5a0523a9201d189a769a067db33e36d6c6fe23937cc24f9771ad0e76ecb3056a4e244697867d62aa50ec0
   languageName: node
   linkType: hard
 
@@ -14422,26 +14423,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-config@npm:4.3.6":
-  version: 4.3.6
-  resolution: "graphql-config@npm:4.3.6"
+"graphql-config@npm:4.4.0":
+  version: 4.4.0
+  resolution: "graphql-config@npm:4.4.0"
   dependencies:
     "@graphql-tools/graphql-file-loader": "npm:^7.3.7"
     "@graphql-tools/json-file-loader": "npm:^7.3.7"
     "@graphql-tools/load": "npm:^7.5.5"
     "@graphql-tools/merge": "npm:^8.2.6"
     "@graphql-tools/url-loader": "npm:^7.9.7"
-    "@graphql-tools/utils": "npm:^8.6.5"
-    cosmiconfig: "npm:7.0.1"
-    cosmiconfig-toml-loader: "npm:1.0.0"
-    cosmiconfig-typescript-loader: "npm:^4.0.0"
+    "@graphql-tools/utils": "npm:^9.0.0"
+    cosmiconfig: "npm:8.0.0"
     minimatch: "npm:4.2.1"
     string-env-interpolation: "npm:1.0.1"
-    ts-node: "npm:^10.8.1"
     tslib: "npm:^2.4.0"
   peerDependencies:
+    cosmiconfig-toml-loader: ^1.0.0
+    cosmiconfig-typescript-loader: ^4.0.0
     graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 80cd871ac7fa46671159a5a7e141bbcc0bccc59e5d3b9af5439aec21ab1f1f500e6dd467a51b56c25580b193de6c741fd03411e6c21b39d0e073a8c4eb2b637e
+  checksum: 64f26d71ce3e3cf9913742b2d29046a60023a566ad472868746a38e21968b6cb919239b738088c97ecc378f1e7a9ba3f6ffb58b97df77456c64903fbf4a3bf7e
   languageName: node
   linkType: hard
 
@@ -25140,6 +25140,15 @@ __metadata:
   dependencies:
     prepend-http: "npm:^2.0.0"
   checksum: f5e84305a7ed1e087bc1c0d263fe05ab432619b4f3ce957a78dcd2b2d989e28b1a3169a7cf8ce9e780e4c45d613f029d38dcf68d7b39b77dbdff197dceb3ac53
+  languageName: node
+  linkType: hard
+
+"urlpattern-polyfill@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "urlpattern-polyfill@npm:6.0.2"
+  dependencies:
+    braces: "npm:^3.0.2"
+  checksum: 336b75058ac882055a6369d3eaf4a14006e238258f338e27b5aaf5afecd7e0c6d0b707c4409472a71b12f06755be2bb2a533baa9947decdf30a0d782dbe23ad2
   languageName: node
   linkType: hard
 
