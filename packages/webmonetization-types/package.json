@@ -77,7 +77,7 @@
     "prettier": "2.8.2",
     "regenerator-runtime": "0.13.11",
     "rimraf": "4.0.4",
-    "ts-jest": "29.0.3",
+    "ts-jest": "29.0.4",
     "ts-json-schema-generator": "1.2.0",
     "ts-loader": "9.4.2",
     "ts-node": "10.9.1",
