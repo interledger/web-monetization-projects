@@ -25,6 +25,7 @@ export class SuperTokensService {
     private buildConfig: BuildConfig
   ) {}
 
+  // TODO: we only actually need the async versions
   makeCookieHandler(): CookieHandlerInterface {
     this.log('makeCookieHandler called')
     return {
@@ -54,6 +55,7 @@ export class SuperTokensService {
     return this.store.superTokensCookie || ''
   }
 
+  // TODO: we only actually need location.getHostName and location.getOrigin
   makeWindowHandler(): WindowHandlerInterface {
     this.log('makeWindowHandler called')
     return {
