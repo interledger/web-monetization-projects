@@ -1955,7 +1955,7 @@ __metadata:
     node-window-manager: "npm:2.2.4"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.2"
-    puppeteer: "npm:19.5.0"
+    puppeteer: "npm:19.5.2"
     react: "npm:^17.0.0"
     react-dom: "npm:^17.0.0"
     reconnecting-websocket: "npm:^4.4.0"
@@ -2189,7 +2189,7 @@ __metadata:
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.2"
-    puppeteer: "npm:19.5.0"
+    puppeteer: "npm:19.5.2"
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:3.0.2"
@@ -21348,9 +21348,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:19.5.0":
-  version: 19.5.0
-  resolution: "puppeteer-core@npm:19.5.0"
+"puppeteer-core@npm:19.5.2":
+  version: 19.5.2
+  resolution: "puppeteer-core@npm:19.5.2"
   dependencies:
     cross-fetch: "npm:3.1.5"
     debug: "npm:4.3.4"
@@ -21362,20 +21362,20 @@ __metadata:
     tar-fs: "npm:2.1.1"
     unbzip2-stream: "npm:1.4.3"
     ws: "npm:8.11.0"
-  checksum: ac7b72817b870c19c6dc605a0d1d639a619ed6a4c2c37e06d3b3e69c73f60ba97da3d72db9455eb202ae2ac0e8e9b53618c16721fcefa2cd0cb1d4f619e11d54
+  checksum: 65fd00ff5ba2a6499d8e05477ecf2d725550e422985e17b81a250c7c6c19f32756ee9e1dbdd1a0efebdbba0fed09f37c7e29084d3afae40c77104fc0ab10426d
   languageName: node
   linkType: hard
 
-"puppeteer@npm:19.5.0, puppeteer@npm:^19.0.0":
-  version: 19.5.0
-  resolution: "puppeteer@npm:19.5.0"
+"puppeteer@npm:19.5.2, puppeteer@npm:^19.0.0":
+  version: 19.5.2
+  resolution: "puppeteer@npm:19.5.2"
   dependencies:
     cosmiconfig: "npm:8.0.0"
     https-proxy-agent: "npm:5.0.1"
     progress: "npm:2.0.3"
     proxy-from-env: "npm:1.1.0"
-    puppeteer-core: "npm:19.5.0"
-  checksum: 420d7181fe5cdafcfbd9180f911c38e5b90d5c15b4d5e3f2df93029763ca99c58c0f6becf2cf8b825df8d7cdcafa40b5facd2116b581db8e49fe250bb03e89d6
+    puppeteer-core: "npm:19.5.2"
+  checksum: 4d8ce3a038031398fc81d70a402cd89a87e8de77a0623afdbca07335f96b10b18c4b1862be6ef764b3e7cdfe4f63c16d1ab16ba9706993fa929d7740fbd40dd8
   languageName: node
   linkType: hard
 
