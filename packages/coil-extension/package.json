@@ -146,7 +146,7 @@
     "prettier": "2.8.2",
     "puppeteer": "19.5.2",
     "regenerator-runtime": "0.13.11",
-    "rimraf": "4.0.4",
+    "rimraf": "4.0.7",
     "ts-jest": "29.0.4",
     "ts-loader": "9.4.2",
     "ts-node": "10.9.1",
