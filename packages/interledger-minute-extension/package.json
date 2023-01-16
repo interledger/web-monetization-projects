@@ -105,7 +105,7 @@
     "regenerator-runtime": "0.13.11",
     "rimraf": "4.0.7",
     "style-loader": "3.3.1",
-    "ts-jest": "29.0.4",
+    "ts-jest": "29.0.5",
     "ts-loader": "9.4.2",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.1.2",
