@@ -32,7 +32,7 @@ import { SPSPState } from './SPSPState'
 
 type MessageSender = chrome.runtime.MessageSender
 
-type ChromeTabs = typeof chrome['tabs']
+type ChromeTabs = (typeof chrome)['tabs']
 
 @injectable()
 export class MonetizationService {
