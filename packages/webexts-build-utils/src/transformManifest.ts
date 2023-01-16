@@ -57,7 +57,8 @@ function convertToMV3(v2: ManifestV2) {
   if (v2.permissions.find(p => p === ALL_URLS)) {
     v3.permissions = v2.permissions.filter(perm => perm !== ALL_URLS)
     const host_permissions = (v3.host_permissions ??= [])
-    host_permissions.push('*://*/*')
+    // host_permissions.push('*://*/*')
+    host_permissions.push(ALL_URLS)
   }
 
   if (v2.web_accessible_resources) {
@@ -67,9 +68,11 @@ function convertToMV3(v2: ManifestV2) {
     }))
   }
 
-  // Add scripting permission
-  if (!v3.permissions.includes('scripting')) {
-    v3.permissions.push('scripting')
+  const mv3ExtraPerms = ['scripting', 'cookies']
+  for (const perm of mv3ExtraPerms) {
+    if (!v3.permissions.includes(perm)) {
+      v3.permissions.push(perm)
+    }
   }
 
   // Replace content.js with contentMV3.js
