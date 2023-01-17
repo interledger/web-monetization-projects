@@ -11,7 +11,7 @@ import { BuildConfig } from '../../types/BuildConfig'
 import { Logger, logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { formatTipSettings } from './formatTipSettings.util'
-import { SuperTokensService } from './SuperTokensService'
+import { SuperTokensService } from './supertokens/SuperTokensService'
 
 /**
  ## Extension Authentication

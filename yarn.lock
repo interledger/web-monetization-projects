@@ -23996,15 +23996,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supertokens-website@npm:^11.0.2":
-  version: 11.0.2
-  resolution: "supertokens-website@npm:11.0.2"
+"supertokens-website@portal:/Users/nicholasdudfield/projects/supertokens-website::locator=web-monetization%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "supertokens-website@portal:/Users/nicholasdudfield/projects/supertokens-website::locator=web-monetization%40workspace%3A."
   dependencies:
     browser-tabs-lock: "npm:^1.2.14"
     supertokens-js-override: "npm:^0.0.4"
-  checksum: e7de7908bd728bf097e39330cfc16857a2a76a5d23b1d9a08492663c299644bf66a9d739ab0f03b6d10952a416c29a0fcea92621aa953cb463a0cad3a26f6c5d
   languageName: node
-  linkType: hard
+  linkType: soft
 
 "supports-color@npm:^2.0.0":
   version: 2.0.0
