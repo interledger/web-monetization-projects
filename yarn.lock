@@ -1962,7 +1962,7 @@ __metadata:
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.0.7"
-    supertokens-website: "npm:^11.0.2"
+    supertokens-website: "https://github.com/sublimator/supertokens-website.git#commit=7bc252aa8225344b7350a4818e25b04400905fe1"
     ts-jest: "npm:29.0.5"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
@@ -23996,14 +23996,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supertokens-website@portal:/Users/nicholasdudfield/projects/supertokens-website::locator=web-monetization%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "supertokens-website@portal:/Users/nicholasdudfield/projects/supertokens-website::locator=web-monetization%40workspace%3A."
+"supertokens-website@https://github.com/sublimator/supertokens-website.git#commit=7bc252aa8225344b7350a4818e25b04400905fe1":
+  version: 14.0.3
+  resolution: "supertokens-website@https://github.com/sublimator/supertokens-website.git#commit=7bc252aa8225344b7350a4818e25b04400905fe1"
   dependencies:
     browser-tabs-lock: "npm:^1.2.14"
     supertokens-js-override: "npm:^0.0.4"
+  checksum: 000cd452965ed053904befe80c54e6a5628d54d578807bb079527fcf313915fabdfdffae6d5f32a9af82393065c519e1fb2b21a6f0cbb7cd92f4e894c7921b53
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "supports-color@npm:^2.0.0":
   version: 2.0.0
