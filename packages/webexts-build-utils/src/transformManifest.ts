@@ -120,8 +120,13 @@ function applyEnvVarSettings(v2: ManifestV2, browser: string) {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function transformManifest(v2: ManifestV2, polyfill?: Polyfill) {
+// TODO: this should only ever be called once
+// It's currently called in multiple places
+export function transformManifest(
+  v2: ManifestV2,
+  polyfill?: Polyfill,
+  addToManifest?: (manifest: ManifestV2) => ManifestV2
+) {
   const browser = BROWSER
   const targets = v2['$targets']
   delete v2['$targets']
@@ -142,6 +147,10 @@ export function transformManifest(v2: ManifestV2, polyfill?: Polyfill) {
   const rules = WEXT_MANIFEST_PERMISSIONS
   const parsedRules: string[] = rules ? JSON.parse(rules) : []
   applyManifestPermissions(v2, parsedRules)
+
+  if (addToManifest) {
+    v2 = addToManifest(v2)
+  }
 
   if (MV3) {
     return convertToMV3(v2)

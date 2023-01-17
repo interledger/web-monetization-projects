@@ -62,13 +62,17 @@ function patchAndHashPolyFill(
 
 export function makeWebpackConfig({
   rootDir,
+  addToManifest,
+  addToEntry,
   polyfill: polyfillOption
 }: MakeWebpackConfigParams): Configuration {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const paths = getPaths(rootDir)
   const packageVersion = getPackageVersion(paths.PACKAGE_JSON)
   const manifest = transformManifest(
-    JSON.parse(fs.readFileSync(rootDir + '/manifest.json').toString())
+    JSON.parse(fs.readFileSync(rootDir + '/manifest.json').toString()),
+    undefined,
+    addToManifest
   )
   const polyfill = patchAndHashPolyFill(
     manifest,
@@ -76,6 +80,8 @@ export function makeWebpackConfig({
     polyfillOption
   )
   const mode = PRODUCTION ? 'production' : 'development'
+
+  const entry = makeEntry(rootDir)
 
   const config: webpack.Configuration = {
     mode: mode,
@@ -100,11 +106,13 @@ export function makeWebpackConfig({
 
     devtool: PRODUCTION ? undefined : 'inline-source-map',
 
-    entry: makeEntry(rootDir),
+    entry: addToEntry ? addToEntry(entry) : entry,
 
     plugins: [
       makeDefinePlugin(packageVersion, polyfill),
-      new CopyPlugin({ patterns: makeCopyToDistPattern(polyfill) }),
+      new CopyPlugin({
+        patterns: makeCopyToDistPattern(polyfill, addToManifest)
+      }),
       new AfterDoneShellCommandPlugin()
     ],
 
@@ -133,8 +141,8 @@ export function makeWebpackConfig({
         [polyfillJs]: polyfill.content
       })
     )
-    const entry = config.entry as Record<string, string>
-    entry[polyfill.name] = polyfillJs
+    const configEntry = config.entry as Record<string, string>
+    configEntry[polyfill.name] = polyfillJs
   }
 
   if (MV3) {

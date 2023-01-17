@@ -1921,6 +1921,7 @@ __metadata:
     addons-linter: "npm:5.26.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
+    browser-tabs-lock: "npm:^1.2.15"
     copy-webpack-plugin: "npm:11.0.0"
     crx-hotreload: "npm:1.0.6"
     debug: "npm:^4.3.1"
@@ -8904,7 +8905,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browser-tabs-lock@npm:^1.2.14":
+"browser-tabs-lock@npm:^1.2.14, browser-tabs-lock@npm:^1.2.15":
   version: 1.2.15
   resolution: "browser-tabs-lock@npm:1.2.15"
   dependencies:

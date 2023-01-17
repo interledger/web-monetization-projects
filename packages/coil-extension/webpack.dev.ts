@@ -1,12 +1,4 @@
-import * as webpack from 'webpack'
-import merge from 'webpack-merge'
-
+process.env.COIL_DOMAIN = 'http://localhost:3000'
 import { config } from './webpack.common'
 
-module.exports = merge(config, {
-  plugins: [
-    new webpack.DefinePlugin({
-      WEBPACK_DEFINE_COIL_DOMAIN: JSON.stringify('http://localhost:3000')
-    })
-  ]
-})
+module.exports = config

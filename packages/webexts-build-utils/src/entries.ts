@@ -3,8 +3,9 @@ import fs from 'fs'
 
 import { BROWSER, MV3 } from './env'
 
+export type WebpackEntry = Record<string, string>
 export const makeEntry = (rootDir: string) => {
-  const entry: Record<string, string> = {
+  const entry: WebpackEntry = {
     content: './src/content/content.ts',
     popup: './src/popup/popup.tsx',
     options: './src/options/options.tsx',

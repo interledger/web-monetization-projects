@@ -1,6 +1,7 @@
 import { PackageVersion } from '@coil/webpack-utils'
 
-import { ManifestAny } from './types/manifest'
+import { ManifestAny, ManifestV2 } from './types/manifest'
+import { WebpackEntry } from './entries'
 
 export interface PolyFillWithoutHash {
   content: string
@@ -23,4 +24,6 @@ export interface Polyfill extends PolyFillWithoutHash {
 export interface MakeWebpackConfigParams {
   rootDir: string
   polyfill?: PolyFillOption
+  addToManifest?: (manifest: ManifestV2) => ManifestV2
+  addToEntry?: (entry: WebpackEntry) => WebpackEntry
 }

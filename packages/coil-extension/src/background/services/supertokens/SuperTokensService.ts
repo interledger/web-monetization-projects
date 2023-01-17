@@ -1,7 +1,7 @@
 import type { CookieHandlerInterface } from 'supertokens-website/utils/cookieHandler/types'
 import type { WindowHandlerInterface } from 'supertokens-website/utils/windowHandler/types'
 import { inject, injectable } from 'inversify'
-import SuperTokens, { getUserId } from 'supertokens-website'
+import SuperTokens from 'supertokens-website'
 
 import { StoreProxy } from '../../../types/storage'
 import * as tokens from '../../../types/tokens'
@@ -25,7 +25,6 @@ export class SuperTokensService {
     private api: typeof window.chrome
   ) {}
 
-  // TODO: we only actually need the async versions
   makeCookieHandler(): CookieHandlerInterface {
     this.log('makeCookieHandler called')
     return {
@@ -42,33 +41,21 @@ export class SuperTokensService {
         this.log('getCookie', cookie)
         return cookie
       }
-      // setCookieSync: val => {
-      //   this.log(`setCookieSync ${val}`)
-      //   this.store.superTokensCookie = val
-      // },
-      // getCookieSync: () => {
-      //   const cookie = this.getCookieFromStore()
-      //   this.log(`getCookieSync ${cookie}`)
-      //   return cookie
-      // }
     }
   }
 
-  // TODO: we only actually need location.getHostName and location.getOrigin
+  /**
+   * We only actually need location.getHostName and location.getOrigin
+   */
   makeWindowHandler(): WindowHandlerInterface {
     this.log('makeWindowHandler called')
     return {
       localStorage: this.makeProxy('windowHandler.localStorage'),
-      // getLocalStorage: () => {
-      //   return this.makeProxy('windowHandler.getLocalStorage')
-      // },
       history: this.makeProxy('windowHandler.history'),
       location: this.makeProxy('windowHandler.location', {
         getHostName: () => 'coil.com',
         getOrigin: () => 'https://coil.com'
       } as Partial<WindowHandlerInterface['location']>),
-      // getSessionStorage: () =>
-      //   this.makeProxy('windowHandler.getSessionStorage'),
       sessionStorage: this.makeProxy('windowHandler.sessionStorage'),
       getDocument: this.makeProxy('windowHandler.document')
     }
@@ -126,14 +113,6 @@ export class SuperTokensService {
       lockFactory: async () => lock,
       cookieHandler: this.makeCookieHandler.bind(this),
       windowHandler: this.makeWindowHandler.bind(this)
-    })
-
-    SuperTokens.doesSessionExist().then(sessionExists => {
-      console.log('session exists', sessionExists)
-    })
-
-    SuperTokens.getUserId().then(userId => {
-      console.log('userId', userId)
     })
 
     if (this.buildConfig.isMV3) {

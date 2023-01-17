@@ -37,12 +37,12 @@ export function setCookie({ cookie, domainUrl }: SetCookieParams): SetCookie {
   }
 }
 
-interface Cookie {
+interface GetCookieParams {
   api: typeof window.chrome
   domainUrl: string
 }
 
-export async function getCookie({ api, domainUrl }: Cookie) {
+export async function getCookie({ api, domainUrl }: GetCookieParams) {
   const cookies = await api.cookies.getAll({ domain: domainFromUrl(domainUrl) })
   const nowSeconds = Date.now() / 1e3
   const relevant = cookies.filter(
