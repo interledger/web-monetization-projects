@@ -51,6 +51,7 @@ export class SuperTokensService {
     this.log('makeWindowHandler called')
     return {
       localStorage: this.makeProxy('windowHandler.localStorage'),
+      getWindowUnsafe: () => self,
       history: this.makeProxy('windowHandler.history'),
       location: this.makeProxy('windowHandler.location', {
         getHostName: () => 'coil.com',
@@ -78,7 +79,7 @@ export class SuperTokensService {
     const anySelf = self as any
 
     if (this.buildConfig.isMV3) {
-      anySelf.window = self
+      // anySelf.window = self
     }
 
     // Initializing the SuperTokens library wraps the native fetch and
@@ -116,7 +117,7 @@ export class SuperTokensService {
     })
 
     if (this.buildConfig.isMV3) {
-      delete anySelf.window
+      // delete anySelf.window
     }
   }
 }
