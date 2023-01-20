@@ -276,15 +276,19 @@ export interface ClearToken {
 export interface MonetizationProgress {
   command: 'monetizationProgress'
   data: {
-    // received
-    amount: string
-    receipt?: string
-    // source
-    sentAmount: string
-    assetCode: string
-    assetScale: number
     requestId: string
     paymentPointer: string
+    receipt?: string
+
+    // received
+    amount: string
+    assetCode: string
+    assetScale: number
+
+    // source
+    sourceAmount: string
+    sourceAssetScale: number
+    sourceAssetCode: string
   }
 }
 

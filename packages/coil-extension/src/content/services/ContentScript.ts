@@ -171,12 +171,20 @@ export class ContentScript {
           }
           this.monetization.dispatchMonetizationProgressEvent(detail)
           const data = request.data
+          const amountSent = {
+            currency: data.sourceAssetCode,
+            value: String(
+              // TODO: sourceAmount q
+              Number(data.sourceAmount) / 10 ** data.sourceAssetScale
+            )
+          }
           const eventDetail = {
             paymentPointer: data.paymentPointer,
             receipt: data.receipt,
             assetScale: data.assetScale,
             assetCode: data.assetCode,
-            amount: /*BigInt*/ data.amount
+            amount: /*BigInt*/ data.amount,
+            amountSent
           }
           const firefoxProof = mozClone(eventDetail, this.document)
           this.tagManager.dispatchEventByLinkId(

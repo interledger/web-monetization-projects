@@ -95,8 +95,10 @@ export class MonetizationService {
           assetCode: details.assetCode,
           requestId: details.requestId,
           assetScale: details.assetScale,
-          sentAmount: details.sentAmount,
-          receipt: details.receipt
+          receipt: details.receipt,
+          sourceAmount: details.sourceAmount,
+          sourceAssetScale: details.sourceAssetScale,
+          sourceAssetCode: details.sourceAssetCode
         }
       }
       this.handleMonetizationProgress(frame, details)
