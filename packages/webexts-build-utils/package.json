@@ -50,7 +50,7 @@
     "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch",
     "@babel/core": "7.20.12",
     "@babel/plugin-proposal-class-properties": "7.18.6",
-    "@babel/plugin-proposal-decorators": "7.20.7",
+    "@babel/plugin-proposal-decorators": "7.20.13",
     "@babel/plugin-proposal-object-rest-spread": "7.20.7",
     "@babel/preset-env": "7.20.2",
     "@babel/preset-react": "7.18.6",
