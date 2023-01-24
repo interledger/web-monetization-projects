@@ -84,7 +84,7 @@
     "react-dom": "^17.0.0",
     "reconnecting-websocket": "^4.4.0",
     "reduct": "^3.3.1",
-    "supertokens-website": "https://github.com/sublimator/supertokens-website.git#commit=e7c136fbbb6a659e8cd2942486fcb9266064ad46",
+    "supertokens-website": "^15.0.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

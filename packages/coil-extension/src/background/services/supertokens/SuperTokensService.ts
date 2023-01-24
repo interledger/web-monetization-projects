@@ -75,15 +75,9 @@ export class SuperTokensService {
   }
 
   init() {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const anySelf = self as any
-
-    if (this.buildConfig.isMV3) {
-      // anySelf.window = self
-    }
-
     // Initializing the SuperTokens library wraps the native fetch and
     // automates refreshing the user's access token after it's expired.
+
     const lock = {
       acquireLock: async (lockKey: string, timeout?: number) => {
         this.log('acquireLock ', lockKey, timeout)
@@ -115,9 +109,5 @@ export class SuperTokensService {
       cookieHandler: this.makeCookieHandler.bind(this),
       windowHandler: this.makeWindowHandler.bind(this)
     })
-
-    if (this.buildConfig.isMV3) {
-      // delete anySelf.window
-    }
   }
 }

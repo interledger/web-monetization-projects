@@ -1963,7 +1963,7 @@ __metadata:
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.0.7"
-    supertokens-website: "https://github.com/sublimator/supertokens-website.git#commit=e7c136fbbb6a659e8cd2942486fcb9266064ad46"
+    supertokens-website: "npm:^15.0.0"
     ts-jest: "npm:29.0.5"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
@@ -23997,9 +23997,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supertokens-website@https://github.com/sublimator/supertokens-website.git#commit=e7c136fbbb6a659e8cd2942486fcb9266064ad46":
+"supertokens-website@npm:^15.0.0":
   version: 15.0.0
-  resolution: "supertokens-website@https://github.com/sublimator/supertokens-website.git#commit=e7c136fbbb6a659e8cd2942486fcb9266064ad46"
+  resolution: "supertokens-website@npm:15.0.0"
   dependencies:
     browser-tabs-lock: "npm:^1.2.14"
     supertokens-js-override: "npm:^0.0.4"
