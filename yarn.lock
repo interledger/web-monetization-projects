@@ -1944,7 +1944,7 @@ __metadata:
     husky: "npm:8.0.3"
     idb-keyval: "npm:^6.2.0"
     ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
-    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
+    ilp-protocol-stream: "npm:^2.7.2-alpha.2"
     inversify: "npm:^6.0.0"
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:29.3.1"
@@ -2045,7 +2045,7 @@ __metadata:
     graphql-tools: "npm:^8.2.9"
     husky: "npm:8.0.3"
     ilp-plugin-mini-accounts: "npm:^4.2.0"
-    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
+    ilp-protocol-stream: "npm:^2.7.2-alpha.2"
     inversify: "npm:^6.0.1"
     inversify-express-utils: "npm:^6.4.3"
     inversify-logger-middleware: "npm:^3.1.0"
@@ -2183,7 +2183,7 @@ __metadata:
     eslint-plugin-standard: "npm:5.0.0"
     husky: "npm:8.0.3"
     ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
-    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
+    ilp-protocol-stream: "npm:^2.7.2-alpha.2"
     jest: "npm:29.3.1"
     jest-environment-jsdom: "npm:29.3.1"
     lint-staged: "npm:13.1.0"
@@ -3696,7 +3696,7 @@ __metadata:
     file-loader: "npm:6.2.0"
     husky: "npm:8.0.3"
     ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
-    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
+    ilp-protocol-stream: "npm:^2.7.2-alpha.2"
     inversify: "npm:^6.0.0"
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:29.3.1"
@@ -5734,7 +5734,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^10.1.0, @types/node@npm:^10.14.22, @types/node@npm:^10.5.1, @types/node@npm:^10.7.1":
+"@types/node@npm:^10.1.0, @types/node@npm:^10.5.1, @types/node@npm:^10.7.1":
   version: 10.17.60
   resolution: "@types/node@npm:10.17.60"
   checksum: 40a5535f8a2d839799b41557a170a334415bab485ee73dd30534eefad9a63254d12d2faf61ce7cbce2521d736ed0570e18f75d780daad2129d6ca21e8d1811ef
@@ -6378,7 +6378,7 @@ __metadata:
     husky: "npm:8.0.3"
     ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
     ilp-plugin-mini-accounts: "npm:^4.2.0"
-    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch"
+    ilp-protocol-stream: "npm:^2.7.2-alpha.2"
     inversify: "npm:^6.0.0"
     inversify-express-utils: "npm:^6.3.2"
     jest: "npm:29.3.1"
@@ -15261,14 +15261,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ilp-logger@npm:^1.1.3, ilp-logger@npm:^1.3.1":
-  version: 1.4.2
-  resolution: "ilp-logger@npm:1.4.2"
+"ilp-logger@npm:^1.1.3, ilp-logger@npm:^1.4.4":
+  version: 1.4.4
+  resolution: "ilp-logger@npm:1.4.4"
   dependencies:
     "@types/debug": "npm:^4.1.0"
-    debug: "npm:^4.1.0"
+    debug: "npm:^4.3.0"
     supports-color: "npm:^7.1.0"
-  checksum: b7ab4bc1149f32727f68ee091a8566fd6d73bc044012b38141f35ea22e435882605800f57a6830c2613b02d26730e7cbd38a95f56a4653d8e49faf9d35dcfe41
+  checksum: fa3550d85cdd653fbeb83bdb45933419b612c58d4ea277979c1f3214eba682b981796de9c5114431b5836cc93eb8376f4a3a8cf5d22bb20a6fcea3bec7d890e1
   languageName: node
   linkType: hard
 
@@ -15283,7 +15283,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ilp-packet@npm:^3.0.8, ilp-packet@npm:^3.0.9, ilp-packet@npm:^3.1.2":
+"ilp-packet@npm:^3.0.8, ilp-packet@npm:^3.1.2":
   version: 3.1.2
   resolution: "ilp-packet@npm:3.1.2"
   dependencies:
@@ -15293,13 +15293,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ilp-packet@npm:^3.1.4-alpha.1":
-  version: 3.1.4-alpha.1
-  resolution: "ilp-packet@npm:3.1.4-alpha.1"
+"ilp-packet@npm:^3.1.4-alpha.1, ilp-packet@npm:^3.1.4-alpha.2":
+  version: 3.1.4-alpha.2
+  resolution: "ilp-packet@npm:3.1.4-alpha.2"
   dependencies:
-    extensible-error: "npm:^1.0.2"
-    oer-utils: "npm:^5.1.3-alpha.1"
-  checksum: f4775281dbf79e5524922ecfffb33b1c8cb4a516ea6db96ae51e3c53e4b2b200ceee6b9af8526bac8a983c1a23c7dec66e3e08730c2ca244f954be01d7891cfc
+    oer-utils: "npm:^5.1.3-alpha.2"
+  checksum: fc61970db6730c6d5518ec16f08d2a9066d11649b540ef99510cc105e788859250d5a60df7ce14d24bba0db8f9d2333c967ea8126fac6d38c849e613890c2725
   languageName: node
   linkType: hard
 
@@ -15354,7 +15353,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ilp-protocol-ildcp@npm:^2.0.1, ilp-protocol-ildcp@npm:^2.1.4":
+"ilp-protocol-ildcp@npm:^2.0.1":
   version: 2.2.2
   resolution: "ilp-protocol-ildcp@npm:2.2.2"
   dependencies:
@@ -15365,33 +15364,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ilp-protocol-stream@npm:2.7.2-alpha.0":
-  version: 2.7.2-alpha.0
-  resolution: "ilp-protocol-stream@npm:2.7.2-alpha.0"
+"ilp-protocol-ildcp@npm:^2.2.4-alpha.2":
+  version: 2.2.4-alpha.2
+  resolution: "ilp-protocol-ildcp@npm:2.2.4-alpha.2"
   dependencies:
-    "@types/node": "npm:^10.14.22"
-    ilp-logger: "npm:^1.3.1"
-    ilp-packet: "npm:^3.0.9"
-    ilp-protocol-ildcp: "npm:^2.1.4"
-    long: "npm:^4.0.0"
-    oer-utils: "npm:^5.0.1"
-    uuid: "npm:^3.4.0"
-  checksum: d1669ddcc372b1c4cb092e156ff7cc415b02d386287a7ba742b3847f79d6efc7e6a5163dd1f7bf9a823c8a4da0d3f2c0996acad81c84c4c3d16cef75c4ae40ae
+    debug: "npm:^4.3.4"
+    ilp-packet: "npm:^3.1.4-alpha.2"
+    oer-utils: "npm:^5.1.3-alpha.2"
+  checksum: 96bfd8e2af95be47677d430deae05f01b05f291e987e2303fa475421ca8cd3912dfbd49a8d1801dcc2af58201e989d6221f24a9c7243a2756b14a1092119fd1f
   languageName: node
   linkType: hard
 
-"ilp-protocol-stream@patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch":
-  version: 2.7.2-alpha.0
-  resolution: "ilp-protocol-stream@patch:ilp-protocol-stream@npm%3A2.7.2-alpha.0#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.0-4bc7861dde.patch::version=2.7.2-alpha.0&hash=ea4fdb"
+"ilp-protocol-stream@npm:^2.7.2-alpha.0, ilp-protocol-stream@npm:^2.7.2-alpha.2":
+  version: 2.7.2-alpha.2
+  resolution: "ilp-protocol-stream@npm:2.7.2-alpha.2"
   dependencies:
-    "@types/node": "npm:^10.14.22"
-    ilp-logger: "npm:^1.3.1"
-    ilp-packet: "npm:^3.0.9"
-    ilp-protocol-ildcp: "npm:^2.1.4"
+    ilp-logger: "npm:^1.4.4"
+    ilp-packet: "npm:^3.1.4-alpha.2"
+    ilp-protocol-ildcp: "npm:^2.2.4-alpha.2"
     long: "npm:^4.0.0"
-    oer-utils: "npm:^5.0.1"
-    uuid: "npm:^3.4.0"
-  checksum: fdcd5a320430de8b63c5337d406a93911b62ab169e2ae8d519f15489cc89ae7500c42c6ab3ad7956f438c3d438b8b252ad0495ae7f67177885660fc30c98374f
+    oer-utils: "npm:^5.1.3-alpha.2"
+    uuid: "npm:^8.3.2"
+  checksum: dcb96e5f19c58cd260a020e268628c51ac9bda939f696518cb66f0b1f443b4e6cac6997c0b73d96f8e339f23e9e4647bd03f8ad40bd64d9f611e092eaa3fcee8
   languageName: node
   linkType: hard
 
@@ -19894,7 +19888,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oer-utils@npm:^5.0.0, oer-utils@npm:^5.0.1, oer-utils@npm:^5.1.2":
+"oer-utils@npm:^5.0.0, oer-utils@npm:^5.1.2":
   version: 5.1.2
   resolution: "oer-utils@npm:5.1.2"
   dependencies:
@@ -19904,13 +19898,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oer-utils@npm:^5.1.3-alpha.1":
-  version: 5.1.3-alpha.1
-  resolution: "oer-utils@npm:5.1.3-alpha.1"
+"oer-utils@npm:^5.1.3-alpha.1, oer-utils@npm:^5.1.3-alpha.2":
+  version: 5.1.3-alpha.2
+  resolution: "oer-utils@npm:5.1.3-alpha.2"
   dependencies:
-    "@types/long": "npm:4.0.1"
+    "@types/long": "npm:4.0.2"
     long: "npm:^4.0.0"
-  checksum: b7a0c4f77576b6c911520f4ad284eaad6d92e2d3ae3520fe5ae28193cec4ef3a6cf644b377a3098e63df4f5e7457a56955e9d2db277dc325e19b9898083274fb
+  checksum: 032a09142179c4986113b6e53a7cb1f4c97b806f0d987e9167967002d36f7b28ee82c7b3e26b0e9216e40d10308d55141f765f8e30970f36e0defdfc5811cfa5
   languageName: node
   linkType: hard
 
@@ -25321,7 +25315,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:^3.0.0, uuid@npm:^3.1.0, uuid@npm:^3.3.2, uuid@npm:^3.4.0":
+"uuid@npm:^3.0.0, uuid@npm:^3.1.0, uuid@npm:^3.3.2":
   version: 3.4.0
   resolution: "uuid@npm:3.4.0"
   bin:
