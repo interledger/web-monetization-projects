@@ -1,3 +1,5 @@
+// TODO: reuse chrome.runtime.ManifestV2
+
 export interface Manifest {
   manifest_version: number
   browser_specific_settings?: {

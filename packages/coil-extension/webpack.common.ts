@@ -15,6 +15,7 @@ if (!COIL_DOMAIN) {
 const options: MakeWebpackConfigParams = {
   rootDir: __dirname,
   addToManifest: manifest => {
+    // This will only run in the top frame of coil.com tabs
     manifest.content_scripts?.push({
       matches: [`${COIL_DOMAIN}/*`],
       all_frames: false,
@@ -26,6 +27,8 @@ const options: MakeWebpackConfigParams = {
   },
   addToEntry: entry => {
     // TODO: need to do an MV3 flavoring too
+    // Maybe not ? contentMV3 doesn't even seem to require anything different
+    // it simply does `import ./content`.
     // will need to update safari
     entry['contentCoilOnly'] = './src/content/contentCoilOnly.ts'
     return entry

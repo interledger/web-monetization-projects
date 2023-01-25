@@ -9,10 +9,12 @@ import { BuildConfig } from '../../../types/BuildConfig'
 import { logger, Logger } from '../utils'
 
 import { getCookie, setCookie } from './cookies'
+import { SuperTokensLockService } from './SuperTokensLockService'
 
 @injectable()
 export class SuperTokensService {
   constructor(
+    private locks: SuperTokensLockService,
     @inject(tokens.CoilDomain)
     private domain: string,
     @inject(tokens.StoreProxy)
@@ -38,7 +40,7 @@ export class SuperTokensService {
           api: this.api,
           domainUrl: this.domain
         })
-        this.log('getCookie', cookie)
+        this.log('get cookie', cookie)
         return cookie
       }
     }
@@ -77,26 +79,11 @@ export class SuperTokensService {
   init() {
     // Initializing the SuperTokens library wraps the native fetch and
     // automates refreshing the user's access token after it's expired.
-
-    const lock = {
-      acquireLock: async (lockKey: string, timeout?: number) => {
-        this.log('acquireLock ', lockKey, timeout)
-        return Promise.resolve(true)
-      },
-      releaseLock: async (lockKey: string) => {
-        this.log('releaseLock ', lockKey)
-        return undefined
-      }
-    }
-
     SuperTokens.init({
       apiDomain: this.domain,
       apiBasePath: '/api/auth',
       override: {
         functions: (originalImplementation, builder) => {
-          if (builder) {
-            this.log('override keys', Object.keys(builder))
-          }
           return {
             ...originalImplementation,
             addXMLHttpRequestInterceptor: () => {
@@ -105,9 +92,13 @@ export class SuperTokensService {
           }
         }
       },
-      lockFactory: async () => lock,
+      lockFactory: this.locks.getLock.bind(this.locks),
       cookieHandler: this.makeCookieHandler.bind(this),
       windowHandler: this.makeWindowHandler.bind(this)
+    })
+
+    SuperTokens.doesSessionExist().then(exists => {
+      this.log('session exists', exists)
     })
   }
 }

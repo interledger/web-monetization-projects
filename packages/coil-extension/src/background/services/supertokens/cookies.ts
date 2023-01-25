@@ -27,7 +27,8 @@ export function setCookie({ cookie, domainUrl }: SetCookieParams): SetCookie {
   })
   return {
     url: `${domainUrl}/extension`,
-    domain: domainFromUrl(domainUrl),
+    // We want the cookies to be host-only
+    // domain: domainFromUrl(domainUrl),
     name,
     value,
     sameSite,

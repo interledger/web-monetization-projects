@@ -112,7 +112,7 @@ export class BackgroundScript {
 
   private async initAuth() {
     this.auth.initialize()
-    const isLoggedIn = await this.auth.refreshAuthentication()
+    const isLoggedIn = await this.auth.refreshAndStoreState()
     if (!isLoggedIn) {
       this.logout()
     } else {
@@ -386,7 +386,7 @@ export class BackgroundScript {
   }
 
   private async refreshUser() {
-    await this.auth.refreshAuthentication()
+    await this.auth.refreshAndStoreState()
     this.tabStates.reloadTabState({ from: 'refreshUser' })
   }
 

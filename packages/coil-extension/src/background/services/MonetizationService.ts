@@ -173,7 +173,7 @@ export class MonetizationService {
     this.log('loading token for monetization', requestId)
     let isAuthenticated: boolean
     try {
-      isAuthenticated = await this.auth.maybeRefreshAndStoreState()
+      isAuthenticated = await this.auth.refreshAndStoreState()
     } catch (e) {
       isAuthenticated = false
     }

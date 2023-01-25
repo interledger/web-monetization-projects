@@ -89,7 +89,7 @@ export class AuthService extends EventEmitter {
   private _op: Promise<boolean> | null = null
 
   // TODO: what if the reason for failure is bad net ?
-  async refreshAuthentication(): Promise<boolean> {
+  private async refreshAuthentication(): Promise<boolean> {
     let loggedIn = false
     try {
       const [resp, tipResp] = await Promise.all([
@@ -116,7 +116,8 @@ export class AuthService extends EventEmitter {
     return loggedIn
   }
 
-  async maybeRefreshAndStoreState(): Promise<boolean> {
+  // TODO: this should be a bit lazier/defensive of wasting perf
+  async refreshAndStoreState(): Promise<boolean> {
     this.activeTabs.log(`maybeRefreshAndStoreState ${Date.now()}`)
     if (!this._op) {
       this._op = this.refreshAuthentication()
