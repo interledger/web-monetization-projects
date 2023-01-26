@@ -88,6 +88,7 @@ export class SuperTokensLockService {
       // in practice, around a second, 1020ms
       // stale locks (e.g. tab closed before lock released) are cleaned up
       //  after 5 seconds
+      //    TODO: link to relevant browser-tabs-lock code
 
       /**
        * @param lockKey - parameter is unused here, it's always the same key
