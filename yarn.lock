@@ -2000,7 +2000,7 @@ __metadata:
     "@swc/jest": "npm:0.2.24"
     "@types/body-parser": "npm:1.19.2"
     "@types/cookie-parser": "npm:1.4.3"
-    "@types/express": "npm:4.17.15"
+    "@types/express": "npm:4.17.16"
     "@types/jest": "npm:29.4.0"
     "@types/jsonwebtoken": "npm:8.5.9"
     "@types/node": "npm:16.18.11"
@@ -5423,15 +5423,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:*, @types/express@npm:4.17.15, @types/express@npm:^4.17.13":
-  version: 4.17.15
-  resolution: "@types/express@npm:4.17.15"
+"@types/express@npm:*, @types/express@npm:4.17.16, @types/express@npm:^4.17.13":
+  version: 4.17.16
+  resolution: "@types/express@npm:4.17.16"
   dependencies:
     "@types/body-parser": "npm:*"
     "@types/express-serve-static-core": "npm:^4.17.31"
     "@types/qs": "npm:*"
     "@types/serve-static": "npm:*"
-  checksum: 24fd75dbb8eb9b134bb3acf4b2e87a04402a3bdb4200dd3e9a477153a61a4d027f9b237510f1d48628965884e7f7ebf9fdfd54818683c8d7e2b3074d86d462ae
+  checksum: e415f59e44f9728165cb1a67d02472781a5bca0bd4b5a339f34be3a33977f1019b8d9205ba967d1d4a47775b25f882f8fed3d1de04b9bcb090d16dfa0fa0e2af
   languageName: node
   linkType: hard
 
@@ -6326,7 +6326,7 @@ __metadata:
     "@swc/core": "npm:1.3.30"
     "@swc/jest": "npm:0.2.24"
     "@types/body-parser": "npm:1.19.2"
-    "@types/express": "npm:4.17.15"
+    "@types/express": "npm:4.17.16"
     "@types/figlet": "npm:1.5.5"
     "@types/jest": "npm:29.4.0"
     "@types/node": "npm:16.18.11"
