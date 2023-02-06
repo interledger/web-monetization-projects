@@ -39,7 +39,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch",
+    "@abraham/reflection": "^0.12.0",
     "@babel/core": "7.20.12",
     "@babel/plugin-proposal-class-properties": "7.18.6",
     "@babel/plugin-proposal-decorators": "7.20.13",
