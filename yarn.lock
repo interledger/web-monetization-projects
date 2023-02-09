@@ -1903,7 +1903,7 @@ __metadata:
     "@wext/shipit": "npm:0.2.1"
     "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
-    addons-linter: "npm:5.27.0"
+    addons-linter: "npm:5.28.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
@@ -3686,7 +3686,7 @@ __metadata:
     "@webmonetization/wext": "npm:^0.0.0"
     "@yarnpkg/pnpify": "npm:3.1.6"
     JSON2016: "npm:1.0.0"
-    addons-linter: "npm:5.27.0"
+    addons-linter: "npm:5.28.0"
     babel-plugin-parameter-decorator: "npm:1.0.16"
     babel-plugin-transform-typescript-metadata: "npm:0.3.2"
     copy-webpack-plugin: "npm:11.0.0"
@@ -4638,6 +4638,13 @@ __metadata:
   version: 5.2.29
   resolution: "@mdn/browser-compat-data@npm:5.2.29"
   checksum: aa2bfabcea0e291b8d1a99072efe1ff54eba766706deae14213a3eec64b6f419bd53caa31892f9d94470bfa86f4325a97bf754f56a8c167d43b462f1dab7d774
+  languageName: node
+  linkType: hard
+
+"@mdn/browser-compat-data@npm:5.2.33":
+  version: 5.2.33
+  resolution: "@mdn/browser-compat-data@npm:5.2.33"
+  checksum: 2d5ff40f100b1bcc9d779dd123b6e8f0f98bb426f66ac45e286db2e2cf87b0c9fdf231745d30b0ea71aa6de0dd083416ddd5dc0043f81cfd325d98d98a863ef4
   languageName: node
   linkType: hard
 
@@ -7306,6 +7313,48 @@ __metadata:
   bin:
     addons-linter: bin/addons-linter
   checksum: 22a811b3128c26b741fc8ee04b6ff738e473b2d5fac87a0bf578dfd0a34e867f6927fd548dfc7a47724abe500be4430606c06b35042edde5346d9e264914d51c
+  languageName: node
+  linkType: hard
+
+"addons-linter@npm:5.28.0":
+  version: 5.28.0
+  resolution: "addons-linter@npm:5.28.0"
+  dependencies:
+    "@mdn/browser-compat-data": "npm:5.2.33"
+    addons-moz-compare: "npm:1.3.0"
+    addons-scanner-utils: "npm:8.3.0"
+    ajv: "npm:8.12.0"
+    chalk: "npm:4.1.2"
+    cheerio: "npm:1.0.0-rc.12"
+    columnify: "npm:1.6.0"
+    common-tags: "npm:1.8.2"
+    deepmerge: "npm:4.3.0"
+    eslint: "npm:8.33.0"
+    eslint-plugin-no-unsanitized: "npm:4.0.2"
+    eslint-visitor-keys: "npm:3.3.0"
+    espree: "npm:9.4.1"
+    esprima: "npm:4.0.1"
+    fast-json-patch: "npm:3.1.1"
+    fluent-syntax: "npm:0.14.0"
+    glob: "npm:8.1.0"
+    image-size: "npm:1.0.2"
+    is-mergeable-object: "npm:1.1.1"
+    jed: "npm:1.1.1"
+    json-merge-patch: "npm:1.0.2"
+    os-locale: "npm:5.0.0"
+    pino: "npm:8.8.0"
+    postcss: "npm:8.4.21"
+    relaxed-json: "npm:1.0.3"
+    semver: "npm:7.3.8"
+    sha.js: "npm:2.4.11"
+    source-map-support: "npm:0.5.21"
+    tosource: "npm:1.0.0"
+    upath: "npm:2.0.1"
+    yargs: "npm:17.6.2"
+    yauzl: "npm:2.10.0"
+  bin:
+    addons-linter: bin/addons-linter
+  checksum: fbf203046283c7262a27d20d4d51e00a69e1cbe4a42cbc3378a8f636a71a20f269d072709f0afe8daad9dd3782ab8d589708ae84eadf3bbfb93a9b9a45308a85
   languageName: node
   linkType: hard
 
@@ -10990,10 +11039,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:4.2.2, deepmerge@npm:^4.0.0, deepmerge@npm:^4.2.2":
+"deepmerge@npm:4.2.2":
   version: 4.2.2
   resolution: "deepmerge@npm:4.2.2"
   checksum: f37e1f5e8cfca71833a43a5d14ad1bf533689b1e5acff72eefa9bdd26f1a4fe80153e29238e8b3052e5f8c4169a95992456f3b60cd50a9db94a84680712a9aca
+  languageName: node
+  linkType: hard
+
+"deepmerge@npm:4.3.0, deepmerge@npm:^4.0.0, deepmerge@npm:^4.2.2":
+  version: 4.3.0
+  resolution: "deepmerge@npm:4.3.0"
+  checksum: 2240994bc74955ad60f0e182725b887a50508916824fd7dd750f642a1561749efda958a56fbe6e9778bf297bc0c4401ee281f774565c33afae6bf4d2c162c801
   languageName: node
   linkType: hard
 
