@@ -1780,7 +1780,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.4.2"
     jest-environment-jsdom: "npm:29.4.2"
-    jsonwebtoken: "npm:8.5.1"
+    jsonwebtoken: "npm:9.0.0"
     lint-staged: "npm:13.1.1"
     localforage: "npm:1.10.0"
     node-fetch: "npm:^2.6.1"
@@ -1844,7 +1844,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.4.2"
     jest-environment-jsdom: "npm:29.4.2"
-    jsonwebtoken: "npm:^8.5.1"
+    jsonwebtoken: "npm:^9.0.0"
     lint-staged: "npm:13.1.1"
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.20"
@@ -1943,7 +1943,7 @@ __metadata:
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:29.4.2"
     jest-environment-jsdom: "npm:29.4.2"
-    jsonwebtoken: "npm:^8.5.1"
+    jsonwebtoken: "npm:^9.0.0"
     jss: "npm:^10.6.0"
     lint-staged: "npm:13.1.1"
     lottie-web: "npm:^5.8.1"
@@ -2045,7 +2045,7 @@ __metadata:
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:29.4.2"
     jest-environment-jsdom: "npm:29.4.2"
-    jsonwebtoken: "npm:^8.5.1"
+    jsonwebtoken: "npm:^9.0.0"
     lint-staged: "npm:13.1.1"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.4"
@@ -3723,7 +3723,7 @@ __metadata:
     inversify-logger-middleware: "npm:^3.1.0"
     jest: "npm:29.4.2"
     jest-environment-jsdom: "npm:29.4.2"
-    jsonwebtoken: "npm:^8.5.1"
+    jsonwebtoken: "npm:^9.0.0"
     lint-staged: "npm:13.1.1"
     nodemon: "npm:2.0.20"
     prettier: "npm:2.8.4"
@@ -17430,24 +17430,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonwebtoken@npm:8.5.1, jsonwebtoken@npm:^8.5.1":
-  version: 8.5.1
-  resolution: "jsonwebtoken@npm:8.5.1"
-  dependencies:
-    jws: "npm:^3.2.2"
-    lodash.includes: "npm:^4.3.0"
-    lodash.isboolean: "npm:^3.0.3"
-    lodash.isinteger: "npm:^4.0.4"
-    lodash.isnumber: "npm:^3.0.3"
-    lodash.isplainobject: "npm:^4.0.6"
-    lodash.isstring: "npm:^4.0.1"
-    lodash.once: "npm:^4.0.0"
-    ms: "npm:^2.1.1"
-    semver: "npm:^5.6.0"
-  checksum: 64198d5b0b69fce8e2c73e66b8d7923e177e960675333db349be16509d6f1549567568c5816c890ae10686cdd061035ba833221d35395d572b7947c0d3039b1c
-  languageName: node
-  linkType: hard
-
 "jsonwebtoken@npm:9.0.0, jsonwebtoken@npm:^9.0.0":
   version: 9.0.0
   resolution: "jsonwebtoken@npm:9.0.0"
@@ -22613,7 +22595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.0.3, semver@npm:^5.5.0, semver@npm:^5.5.1, semver@npm:^5.6.0, semver@npm:^5.7.1":
+"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.0.3, semver@npm:^5.5.0, semver@npm:^5.5.1, semver@npm:^5.7.1":
   version: 5.7.1
   resolution: "semver@npm:5.7.1"
   bin:
