@@ -76,7 +76,7 @@
     "ilp-protocol-stream": "^2.7.2-alpha.2",
     "inversify": "^6.0.0",
     "inversify-logger-middleware": "^3.1.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "jss": "^10.6.0",
     "lottie-web": "^5.8.1",
     "react": "^17.0.0",
