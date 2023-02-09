@@ -43,10 +43,7 @@ let config = {
       isolatedModules: ISOLATED_MODULES,
       diagnostics: false
     }
-  },
-  coverageReporters: ['json', 'lcov', 'text', 'clover', 'html'],
-  coveragePathIgnorePatterns: ['/node_modules/'],
-  coverageDirectory: 'results/coverage'
+  }
 }
 
 const localConfPath = `${__dirname}/jest.config.local.js`
