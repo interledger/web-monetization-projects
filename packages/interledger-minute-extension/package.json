@@ -35,7 +35,7 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
-    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch",
+    "@abraham/reflection": "^0.12.0",
     "@coil/polyfill-utils": "^0.0.0",
     "@dier-makr/inversify": "^0.0.0",
     "@material-ui/core": "^4.12.4",

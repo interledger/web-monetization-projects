@@ -54,7 +54,7 @@
     "web-ext-reload": "web-ext run --reload -s $PWD/dist -p default-release"
   },
   "dependencies": {
-    "@abraham/reflection": "patch:@abraham/reflection@npm%3A0.11.0#~/.yarn/patches/@abraham-reflection-npm-0.11.0-f628c65096.patch",
+    "@abraham/reflection": "^0.12.0",
     "@coil/anonymous-tokens": "^0.0.0",
     "@coil/client": "^0.0.0",
     "@coil/polyfill-utils": "^0.0.0",
