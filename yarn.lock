@@ -19,7 +19,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@abraham/reflection@npm:^0.12.0":
+"@abraham/reflection@npm:0.12.0":
   version: 0.12.0
   resolution: "@abraham/reflection@npm:0.12.0"
   checksum: 9811e7ef81e83b20b49abfb7e7d67b7079470186e84f1c1fa8dae0b1efc58fd017cd0dd564003b29adbe529f10683c97b7bc45b00f9c34ab0da46079bff68f5e
@@ -1730,7 +1730,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/anonymous-tokens@workspace:packages/coil-anonymous-tokens"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -1795,7 +1795,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/client@workspace:packages/coil-client"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -1858,7 +1858,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/extension@workspace:packages/coil-extension"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -1966,7 +1966,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/local-server@workspace:packages/coil-local-server"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@apollo/utils.logger": "npm:^2.0.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
@@ -2058,7 +2058,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/monorepo-upkeep@workspace:packages/coil-monorepo-upkeep"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -2123,7 +2123,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -2196,7 +2196,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -2255,7 +2255,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -2319,7 +2319,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/puppeteer-utils@workspace:packages/coil-puppeteer-utils"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -2387,7 +2387,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -2454,7 +2454,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coil/wm-utils@workspace:packages/coil-wm-utils"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -2750,7 +2750,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/annotations@workspace:packages/dier-makr-annotations"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -2808,7 +2808,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dier-makr/inversify@workspace:packages/dier-makr-inversify"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -3657,7 +3657,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -4995,7 +4995,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@stacktracejs/stacktrace-js@workspace:packages/stacktracejs-stacktrace-js"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -6261,7 +6261,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -6333,7 +6333,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/demo@workspace:packages/webmonetization-demo"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -6417,7 +6417,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/polyfill-utils@workspace:packages/webmonetization-polyfill-utils"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -6481,7 +6481,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/react@workspace:packages/webmonetization-react"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -6544,7 +6544,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/testing-utils@workspace:packages/webmonetization-testing-utils"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -6615,7 +6615,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/types@workspace:packages/webmonetization-types"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -6674,7 +6674,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@webmonetization/wext@workspace:packages/webmonetization-wext"
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
@@ -25396,7 +25396,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web-monetization@workspace:."
   dependencies:
-    "@abraham/reflection": "npm:^0.12.0"
+    "@abraham/reflection": "npm:0.12.0"
     "@babel/core": "npm:7.20.12"
     "@babel/plugin-proposal-class-properties": "npm:7.18.6"
     "@babel/plugin-proposal-decorators": "npm:7.20.13"
