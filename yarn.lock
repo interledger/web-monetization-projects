@@ -24868,11 +24868,11 @@ __metadata:
   linkType: hard
 
 "undici@npm:^5.12.0, undici@npm:^5.8.0":
-  version: 5.12.0
-  resolution: "undici@npm:5.12.0"
+  version: 5.19.1
+  resolution: "undici@npm:5.19.1"
   dependencies:
     busboy: "npm:^1.6.0"
-  checksum: 7b1060fdd2e041a4f7589f6c053f0741ade2431b91a4d2664fad2a7826c2561bac5179b18eb9d6c51cc6554f96fe0aba063d46b657d9a9fa2a4e8e5ba88bc6c9
+  checksum: 999c4ad5d08b9082b3a3e7a1e66bf3b9c08dac89ef8b9951da8e00959fafc03319028ed83f161ddb8d4e157ce6a9b6c8a50194daa64fd21dd5e493cddb039bbe
   languageName: node
   linkType: hard
 
