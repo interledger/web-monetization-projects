@@ -81,9 +81,9 @@ export class BackgroundScript {
   }
 
   /**
-   * See {@link setTabsOnActivatedListener}
-   * See {@link setWindowsOnFocusedListener}
-   * See {@link initializeActiveTab}
+   // * See {@link setTabsOnActivatedListener}
+   // * See {@link setWindowsOnFocusedListener}
+   // * See {@link initializeActiveTab}
    */
   set activeTab(value: number) {
     this.tabStates.activeTab = value

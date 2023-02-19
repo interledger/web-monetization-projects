@@ -1,16 +1,17 @@
 import * as fs from 'fs'
 
 import { logErr } from '../utils/log'
-import { fromRoot, getPackages, writeFileJSON } from '../utils'
+import { fromRoot, writeFileJSON } from '../utils'
 import { PackageJSON } from '../types'
 import { cmd } from '../utils/cmd'
+import { loadWorkspacePackages } from '../utils/loadWorkspaces'
 
 import { doUpKeep } from './doUpKeep/doUpKeep'
 
-export function doNewPackage(): void {
+export async function doNewPackage(): Promise<void> {
   const args = process.argv.slice(2)
   if (args.length) {
-    const subPackages = getPackages()
+    const subPackages = await loadWorkspacePackages(fromRoot('.'))
     const fullName = args[0]
     const [atNameSpace, packageName] = fullName.split('/')
     const namespace = atNameSpace.slice(1) // @($namespace)

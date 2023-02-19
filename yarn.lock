@@ -2080,6 +2080,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.4.2"
     "@swc/core": "npm:1.3.35"
     "@swc/jest": "npm:0.2.24"
+    "@types/glob": "npm:^8"
     "@types/jest": "npm:29.4.0"
     "@types/node": "npm:16.18.12"
     "@typescript-eslint/eslint-plugin": "npm:5.51.0"
@@ -2103,6 +2104,7 @@ __metadata:
     eslint-plugin-react: "npm:7.32.2"
     eslint-plugin-react-hooks: "npm:4.6.0"
     eslint-plugin-standard: "npm:5.0.0"
+    glob: "npm:^8.1.0"
     husky: "npm:8.0.3"
     jest: "npm:29.4.2"
     jest-environment-jsdom: "npm:29.4.2"
@@ -2125,7 +2127,7 @@ __metadata:
     webpack-cli: "npm:5.0.1"
     webpack-dev-server: "npm:4.11.1"
     webpack-merge: "npm:5.8.0"
-    yaml: "npm:^2.0.0"
+    yaml: "npm:^2.2.1"
   languageName: unknown
   linkType: soft
 
@@ -5534,6 +5536,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/glob@npm:^8":
+  version: 8.0.1
+  resolution: "@types/glob@npm:8.0.1"
+  dependencies:
+    "@types/minimatch": "npm:^5.1.2"
+    "@types/node": "npm:*"
+  checksum: dce949c9e79703532b39d60806f9313e9e06c0e6f849a81c63c0ce069f8faf5f1776489745f92f5b267d0e8966e527d99231ba5f7293c8f203b7ab4e64157dff
+  languageName: node
+  linkType: hard
+
 "@types/graceful-fs@npm:^4.1.3":
   version: 4.1.5
   resolution: "@types/graceful-fs@npm:4.1.5"
@@ -5708,6 +5720,13 @@ __metadata:
   version: 3.0.5
   resolution: "@types/minimatch@npm:3.0.5"
   checksum: 1e3ad77c3a101452cb52919d33e5f47f13b4fe66a6566409e1b555b975831cf127fb9ee347d6d9d1648784dac816dc955f8766991de9c3de80a80cc15890c5f1
+  languageName: node
+  linkType: hard
+
+"@types/minimatch@npm:^5.1.2":
+  version: 5.1.2
+  resolution: "@types/minimatch@npm:5.1.2"
+  checksum: 698855336a92f768d02526d019efcf80e32d65ea5d044a5a0a909a923a9cfccc55e61284fd2c5dc71a51e9b5f0b4dc651cb187683f811582815a5206f534d04b
   languageName: node
   linkType: hard
 
@@ -14170,7 +14189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:8.1.0, glob@npm:^8.0.1, glob@npm:^8.0.3":
+"glob@npm:8.1.0, glob@npm:^8.0.1, glob@npm:^8.0.3, glob@npm:^8.1.0":
   version: 8.1.0
   resolution: "glob@npm:8.1.0"
   dependencies:
@@ -26255,10 +26274,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.0.0, yaml@npm:^2.1.1, yaml@npm:^2.1.3":
+"yaml@npm:^2.1.1, yaml@npm:^2.1.3":
   version: 2.1.3
   resolution: "yaml@npm:2.1.3"
   checksum: 2747f51351cbf5f0d8b1cdd0e25ddfbf3cf3b7604822a1f4024f059af90679f0f6a51943f75dcac6ba119c26c58cf29ce4326aed175c2c17071414c724582389
+  languageName: node
+  linkType: hard
+
+"yaml@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "yaml@npm:2.2.1"
+  checksum: 6a9e540d14030184df84ea8b79adbfe5c40fad79d10cb9fef28625cd6cfcfa3f28e09eda1b9f0d6f2f8354878f71ed3e6bf972d8d787bea1e8c6bf468f2c9cca
   languageName: node
   linkType: hard
 

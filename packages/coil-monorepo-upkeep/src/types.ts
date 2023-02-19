@@ -44,19 +44,3 @@ export interface TSConfig {
   exclude?: string[]
   include?: string[]
 }
-
-export interface DependabotUpdateConfigsItem {
-  package_manager: 'javascript' | string
-  directory: string
-  update_schedule: 'live' | string
-  target_branch: 'main' | string
-}
-
-export interface DependabotConfig {
-  version: 1
-  update_configs: DependabotUpdateConfigsItem[]
-}
-
-export interface NcuRcJson {
-  reject: string[]
-}
