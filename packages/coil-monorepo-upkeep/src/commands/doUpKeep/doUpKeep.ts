@@ -4,7 +4,6 @@ import { existsSync, writeFileSync } from 'fs'
 import { log } from '../../utils/log'
 import {
   fromRoot,
-  getPackages,
   readFileJSON,
   readPackageJSON,
   relativeToRoot,
