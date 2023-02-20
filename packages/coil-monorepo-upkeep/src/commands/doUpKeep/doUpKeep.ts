@@ -4,7 +4,6 @@ import { existsSync, writeFileSync } from 'fs'
 import { log } from '../../utils/log'
 import {
   fromRoot,
-  getPackages,
   readFileJSON,
   readPackageJSON,
   relativeToRoot,
@@ -14,6 +13,7 @@ import {
 import { LernaListItem, PackageJSON, TSConfig } from '../../types'
 import { flatMapSlow } from '../../utils/flatMapSlow'
 import { cmd } from '../../utils/cmd'
+import { loadWorkspacePackages } from '../../utils/loadWorkspaces'
 
 const OVER_RIDE_UP_KEEP = '$overRideUpKeep'
 const PACKAGE_LOCATION = pathModule.resolve(__dirname, '../../..')
@@ -323,10 +323,10 @@ function upKeepIntelliJExcludes(subPackages: LernaListItem[]) {
   }
 }
 
-export function doUpKeep() {
+export async function doUpKeep() {
   log({ upKeeping: true })
 
-  const subPackages = getPackages()
+  const subPackages = await loadWorkspacePackages(fromRoot('.'))
   const rootPackageJSON = readPackageJSON(fromRoot('package.json'))
 
   for (const subPackage of subPackages) {

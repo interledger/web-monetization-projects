@@ -64,12 +64,3 @@ export const relativeToRoot = (path: string) => {
 export interface GetPackagesParameters {
   withDependencies?: boolean
 }
-
-export function getPackages({
-  withDependencies = true
-}: GetPackagesParameters = {}): LernaListItem[] {
-  const opts = { cwd: fromRoot('.') }
-  return cmd('yarn workspaces list-with-dependencies', opts)
-    .split('\n')
-    .map(v => JSON.parse(v) as LernaListItem)
-}
