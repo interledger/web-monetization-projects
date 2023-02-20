@@ -2080,7 +2080,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.4.4"
     "@swc/core": "npm:1.3.35"
     "@swc/jest": "npm:0.2.24"
-    "@types/glob": "npm:^8"
+    "@types/glob": "npm:8.0.1"
     "@types/jest": "npm:29.4.0"
     "@types/node": "npm:16.18.12"
     "@typescript-eslint/eslint-plugin": "npm:5.51.0"
@@ -5526,6 +5526,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/glob@npm:8.0.1":
+  version: 8.0.1
+  resolution: "@types/glob@npm:8.0.1"
+  dependencies:
+    "@types/minimatch": "npm:^5.1.2"
+    "@types/node": "npm:*"
+  checksum: dce949c9e79703532b39d60806f9313e9e06c0e6f849a81c63c0ce069f8faf5f1776489745f92f5b267d0e8966e527d99231ba5f7293c8f203b7ab4e64157dff
+  languageName: node
+  linkType: hard
+
 "@types/glob@npm:^7.1.1":
   version: 7.1.3
   resolution: "@types/glob@npm:7.1.3"
@@ -5533,16 +5543,6 @@ __metadata:
     "@types/minimatch": "npm:*"
     "@types/node": "npm:*"
   checksum: 1cee358f993df5aa12610572f8a8742162be3d2c94190209170dc2374b85c086fc4d9ddf59111ed65a9c0d6c56422f1d925603df67cf43376528c394ce501605
-  languageName: node
-  linkType: hard
-
-"@types/glob@npm:^8":
-  version: 8.0.1
-  resolution: "@types/glob@npm:8.0.1"
-  dependencies:
-    "@types/minimatch": "npm:^5.1.2"
-    "@types/node": "npm:*"
-  checksum: dce949c9e79703532b39d60806f9313e9e06c0e6f849a81c63c0ce069f8faf5f1776489745f92f5b267d0e8966e527d99231ba5f7293c8f203b7ab4e64157dff
   languageName: node
   linkType: hard
 
