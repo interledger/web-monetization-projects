@@ -14,7 +14,7 @@
     "test:coverage": "yarn test --coverage --verbose",
     "prettier": "prettier --write 'packages/*/*.{html,js,ts,tsx,jsx,md}' 'packages/*/{src,test}/**/*.{ts,tsx,js,jsx,html,md}'",
     "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",
-    "upkeep": "ts-node -T packages/coil-monorepo-upkeep/upkeep.ts",
+    "upkeep": "ts-node -T packages/coil-monorepo-upkeep/src/bin/upkeep.ts",
     "upkeep:new-package": "ts-node -T packages/coil-monorepo-upkeep/new-package.ts",
     "clean:build": "rimraf packages/*/build",
     "build:ts": "tsc --build tsconfig.references.json",
