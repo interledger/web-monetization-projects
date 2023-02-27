@@ -5908,13 +5908,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/serve-static@npm:1.15.0":
-  version: 1.15.0
-  resolution: "@types/serve-static@npm:1.15.0"
+"@types/serve-static@npm:1.15.1":
+  version: 1.15.1
+  resolution: "@types/serve-static@npm:1.15.1"
   dependencies:
     "@types/mime": "npm:*"
     "@types/node": "npm:*"
-  checksum: 7db8fd127cfdfdb161922fb9a6fcb2022418755c375ae8550b8d53a4fcd686af1b71fb35c81c4e223a16b74bbfadfc810de06172eef7ee3394d94294fc3536f1
+  checksum: 7be402450ea4e3fddbe51a7320d36a329201abb3ad07edc2c805e4e52ff62702b38ac25fd42b7db9885162ebd37ec958d4a0b9e7794257555d3d21381a687eb2
   languageName: node
   linkType: hard
 
