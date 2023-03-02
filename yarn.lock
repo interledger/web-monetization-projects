@@ -11297,11 +11297,11 @@ __metadata:
   linkType: hard
 
 "dns-packet@npm:^5.2.2":
-  version: 5.3.1
-  resolution: "dns-packet@npm:5.3.1"
+  version: 5.4.0
+  resolution: "dns-packet@npm:5.4.0"
   dependencies:
     "@leichtgewicht/ip-codec": "npm:^2.0.1"
-  checksum: 6bb47ae4acc4d47bb6e94d25b0140d4a2faac9554b4939297c3e51c11fb004801d2b7858ab936c1c16461174638b830e106f91c98f973b4b8875d4a77b39b3bd
+  checksum: 91e914f15152cae5268d8a21a12afbdfecbdc23971820c62ac4468bf96e07d166463b995d066d78807d3de3d7e5381ee636cbb2d2e2c10911c44f54a8a3556b1
   languageName: node
   linkType: hard
 
