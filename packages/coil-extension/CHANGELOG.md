@@ -4,7 +4,7 @@
 
 ### New Features
 
-- Simply show whether a site is monetization ready (has payment pointer)
+- Simply show whether a site is monetization ready (has payment pointer) [#3672](https://github.com/coilhq/web-monetization-projects/pull/3672)
 
 - <a name="coil-extension@0.0.65"></a>
 
