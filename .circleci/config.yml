@@ -432,19 +432,20 @@ workflows:
             parameters:
               node-version: *node-versions
               command: [ "test:coverage", "test:e2e:coverage" ]
-      - coil-extension-puppeteer:
-          context: web-monetization-tests
-          filters:
-            branches:
-              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-              ignore: /pull\/[0-9]+/
-          <<: *node-version-matrix
-      - coil-extension-puppeteer-transpile-only-mv3:
-          context: web-monetization-tests
-          filters:
-            branches:
-              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-              ignore: /pull\/[0-9]+/
+# These are disabled due to the extension no longer initiating streams, simply showing state
+#      - coil-extension-puppeteer:
+#          context: web-monetization-tests
+#          filters:
+#            branches:
+#              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+#              ignore: /pull\/[0-9]+/
+#          <<: *node-version-matrix
+#      - coil-extension-puppeteer-transpile-only-mv3:
+#          context: web-monetization-tests
+#          filters:
+#            branches:
+#              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+#              ignore: /pull\/[0-9]+/
           <<: *node-version-matrix
       - build-extension-e2e-coil:
           requires:
