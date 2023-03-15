@@ -9,6 +9,9 @@ import { StoreContext, useStoreState } from './context/storeContext'
 import { ViewRouter } from './components/views/ViewRouter'
 import { RouterProvider } from './context/routerContext'
 import { TipProvider } from './context/tipContext'
+import { ShowMonetizationReadiness } from './components/dummy/ShowMonetizationReadiness'
+
+const SHOW_MINIMAL_POPUP = true
 
 export function Index(props: {
   storage: Pick<StoreService, 'get' | 'set'>
@@ -16,7 +19,11 @@ export function Index(props: {
 }) {
   const store = useStoreState(props.storage, props.host)
 
-  return (
+  return SHOW_MINIMAL_POPUP ? (
+    <ShowMonetizationReadiness
+      monetized={store.monetized}
+    ></ShowMonetizationReadiness>
+  ) : (
     <PopupHostContext.Provider value={props.host}>
       <StoreContext.Provider value={store}>
         <RouterProvider storage={props.storage}>

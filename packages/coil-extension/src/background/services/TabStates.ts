@@ -27,6 +27,8 @@ import { TippingService } from './TippingService'
 
 const dbg = noop
 
+const DISABLED = true
+
 @injectable()
 export class TabStates {
   private tabStates: { [tab: number]: TabState } = {}
@@ -252,15 +254,16 @@ export class TabStates {
         dbg({ from, hasStream })
 
         const isStreaming: boolean =
-          hasStream &&
-          Boolean(
-            frameStates.find(
-              f =>
-                isFrameStreaming(f) &&
-                getFrameTotal(f) > 0 &&
-                frameHasRecentPacket(f)
-            )
-          )
+          (hasStream &&
+            Boolean(
+              frameStates.find(
+                f =>
+                  isFrameStreaming(f) &&
+                  getFrameTotal(f) > 0 &&
+                  frameHasRecentPacket(f)
+              )
+            )) ||
+          DISABLED
 
         if (hasStream) {
           this.setIcon(tabId, 'monetized')

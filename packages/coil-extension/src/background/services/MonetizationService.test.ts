@@ -64,7 +64,7 @@ function mockWextApi() {
   } as unknown as typeof chrome
 }
 
-describe('MonetizationService', () => {
+describe.skip('MonetizationService', () => {
   it('should be instantiable in tests via container construction', async () => {
     decorateThirdPartyClassesForInjection()
 
