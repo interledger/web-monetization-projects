@@ -1,6 +1,22 @@
+- <a name="coil-extension@0.0.66"></a>
+
+# [coil-extension@0.0.66](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.65...coil-extension@0.0.66) (2023-03-15)
+
+### New Features
+
+- Simply show whether a site is monetization ready (has payment pointer)
+
+- <a name="coil-extension@0.0.65"></a>
+
+# [coil-extension@0.0.65](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.63...coil-extension@0.0.65) (2022-12-19)
+
+### New Features
+
+- Simply a version bump to support publishing a fixed build for Samsung Internet
+
 - <a name="coil-extension@0.0.63"></a>
 
-# [coil-extension@0.0.63](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.62...coil-extension@0.0.63) (2021-10-04)
+# [coil-extension@0.0.63](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.62...coil-extension@0.0.63) (2022-10-04)
 
 ### Bug Fixes / Enhancements
 
@@ -9,7 +25,7 @@
 
 - <a name="coil-extension@0.0.62"></a>
 
-# [coil-extension@0.0.62](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.61...coil-extension@0.0.62) (2021-09-21)
+# [coil-extension@0.0.62](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.61...coil-extension@0.0.62) (2022-09-21)
 
 ### Bug Fixes / Enhancements
 
@@ -18,7 +34,7 @@
 
 - <a name="coil-extension@0.0.61"></a>
 
-# [coil-extension@0.0.61](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.60...coil-extension@0.0.61) (2021-09-15)
+# [coil-extension@0.0.61](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.60...coil-extension@0.0.61) (2022-09-15)
 
 ### New Features
 
@@ -40,7 +56,7 @@
 
 - <a name="coil-extension@0.0.60"></a>
 
-# [coil-extension@0.0.60](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.59...coil-extension@0.0.60) (2021-08-11)
+# [coil-extension@0.0.60](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.59...coil-extension@0.0.60) (2022-08-11)
 
 ### New Features
 
@@ -75,7 +91,7 @@
 
 - <a name="coil-extension@0.0.59"></a>
 
-# [coil-extension@0.0.59](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.58...coil-extension@0.0.59) (2021-05-09)
+# [coil-extension@0.0.59](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.58...coil-extension@0.0.59) (2022-05-09)
 
 ### New Features
 
@@ -89,7 +105,7 @@
 - Use tabs permission on Firefox to fix logout issues [#2679](https://github.com/coilhq/web-monetization-projects/pull/2679)
 - Omit Cookies at source as well as CF from anon tokens requests [#2814](https://github.com/coilhq/web-monetization-projects/pull/2814)[#2842](https://github.com/coilhq/web-monetization-projects/pull/2842)
 
-# [coil-extension@0.0.58](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.57...coil-extension@0.0.58) (2021-02-25)
+# [coil-extension@0.0.58](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.57...coil-extension@0.0.58) (2022-02-25)
 
 ### Bug Fixes
 
