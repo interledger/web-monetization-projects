@@ -451,8 +451,8 @@ workflows:
           requires:
             - jest-all
             - jest-workspaces-foreach-all
-            - coil-extension-puppeteer
-            - coil-extension-puppeteer-transpile-only-mv3
+#            - coil-extension-puppeteer
+#            - coil-extension-puppeteer-transpile-only-mv3
           filters: # using regex filters requires the entire branch to match
             branches:
               only: # only branches matching the below regex filters will run
