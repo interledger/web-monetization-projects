@@ -1,3 +1,11 @@
+- <a name="coil-extension@0.0.67"></a>
+
+# [coil-extension@0.0.67](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.66...coil-extension@0.0.67) (2023-03-17)
+
+### Fixes
+
+- Make sure not to disable the popup when there is no stored token [#3676](https://github.com/coilhq/web-monetization-projects/pull/3676)
+
 - <a name="coil-extension@0.0.66"></a>
 
 # [coil-extension@0.0.66](https://github.com/coilhq/web-monetization-projects/compare/coil-extension@0.0.65...coil-extension@0.0.66) (2023-03-15)
