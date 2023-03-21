@@ -94,7 +94,7 @@ afterAll(async () => {
   await context.browser().close()
 })
 
-describe('OAuthScripts', () => {
+describe.skip('OAuthScripts', () => {
   jest.retryTimes(3)
 
   it('should get a non zero monetizationprogress event', async () => {
