@@ -36,9 +36,7 @@ We can put together some solution using the following tools:
 
 ### Security Concerns:
 
-The use of postMessage() to send messages between frames must be done with caution to prevent potential security vulnerabilities.
-CorrelationIds (uuid.v4) should be used in the message payloads to prevent eavesdropping.
-Nothing else, including (but not limited to) frameId, tabId, parentFrameId.
+To prevent potential security vulnerabilities, message payloads sent between frames using postMessage() should only include correlationIds and not include other information, such as frameId or tabId. This is because correlationIds can be generated randomly and do not reveal any sensitive information about the frame or tab. If other information is included, it could potentially reveal sensitive information and open up the possibility for eavesdropping.
 
 It's possible to do matching of event.source (of 'message' event) against iframe.contentWindow
 to do correlation though it's unclear how that could be done with out sending the frameId/tabId.
