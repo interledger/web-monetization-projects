@@ -2,10 +2,10 @@
 
 ### Problem Statement:
 
-We need to determine if monetization is allowed in the initiatorContent (the content script running inside the `<iframe>` that initiates the monetization check).
+We need to determine if monetization is allowed in the initiatorContentScript (the content script running inside the `<iframe>` that initiates the monetization check).
 
-To do this, we must identify the `<iframe>` element in the parentFrameContent
-(content script running in the parent frame) that corresponds to the initiatorContent.
+To do this, we must identify the `<iframe>` element in the parentContentScript
+(content script running in the parent frame) that corresponds to the initiatorContentScript.
 Then, we must verify if the monetization is allowed based on the `<iframe>` element's attributes,
 such as its allow attribute, which should include 'monetization' in its feature set policy for
 monetization to be allowed.
@@ -17,16 +17,18 @@ Note that iframes may be from various origins, not necessarily the top frame in 
 
 ### Terms:
 
-- **parentFrameContent**: Content script running in the parent frame.
-- **initiatorContent**: Content script running inside the `<iframe>` that initiates the monetization check.
+- **parentContentScript**: Content script running in the parent frame.
+- **initiatorContentScript**: Content script running inside the `<iframe>` that initiates the monetization check.
 - **backgroundScript**: The background script of the extension.
 
 ### Available Tools and Methods:
 
+We can put together some solution using the following tools:
+
 - **webNavigation API**: It can be used in the backgroundScript to obtain details about frames, including their parent frames and frame IDs. Useful methods include webNavigation.getAllFrames() to get a list of frames in a tab, and webNavigation.getFrame() to get details about a specific frame in a tab.
-- **window.parent**: This property in the initiatorContent can be used to reference the parent window (the window containing the iframe).
-- **window.postMessage()**: This method can be used to send messages between windows (or iframes) in a secure way. It can be used to communicate between the initiatorContent and the parentFrameContent.
-- **event.source**: When handling a message event, this property can be used to get the Window object of the message sender. It can be used in the parentFrameContent to compare the source of the message with the contentWindow property of each iframe.
+- **window.parent**: This property in the initiatorContentScript can be used to reference the parent window (the window containing the iframe).
+- **window.postMessage()**: This method can be used to send messages between windows (or iframes) in a secure way. It can be used to communicate between the initiatorContentScript and the parentContentScript.
+- **event.source**: When handling a message event, this property can be used to get the Window object of the message sender. It can be used in the parentContentScript to compare the source of the message with the contentWindow property of each iframe.
 - **chrome.runtime.sendMessage()**: This method allows content scripts to send messages to the background script.
 - **chrome.runtime.onMessage**: This event can be used to listen for messages sent by content scripts in the background script.
 - **chrome.tabs.sendMessage()**: This method can be used to send messages from the background script to a specific content script running in a frame identified by a tabId and frameId.
@@ -34,13 +36,21 @@ Note that iframes may be from various origins, not necessarily the top frame in 
 
 ### Security Concerns:
 
-The use of postMessage() to send messages between frames must be done with caution to prevent potential security vulnerabilities such as cross-site scripting attacks.
-CorrelationIds (uuid.v4) should be used in the message payloads to prevent eavesdropping and replay attacks.
+The use of postMessage() to send messages between frames must be done with caution to prevent potential security vulnerabilities.
+CorrelationIds (uuid.v4) should be used in the message payloads to prevent eavesdropping.
 Nothing else, including (but not limited to) frameId, tabId, parentFrameId.
 
-It's possible to do matching of event.source against iframe.contentWindow to do correlation.
+It's possible to do matching of event.source (of 'message' event) against iframe.contentWindow
+to do correlation though it's unclear how that could be done with out sending the frameId/tabId.
 
 ### Solution overview
+
+1. The initiatorContentScript sends a request to the backgroundScript to check if monetization is allowed for the iframe.
+2. The backgroundScript determines the parent frame and sends a request to the parentContentScript to verify if the iframe's monetization is allowed based on its attributes.
+3. The parentContentScript generates a unique correlationId for each unknown iframe, sends it to the corresponding content script using window.postMessage(), and awaits a response. Note that the message might be sent to a random iframe's content script and not necessarily the initiatorContentScript.
+4. The content script that receives the correlationId (which could be the initiatorContentScript or another content script) sends the correlationId to the backgroundScript.
+5. The backgroundScript forwards the correlationId to the parentContentScript.
+6. The parentContentScript matches the iframe element with the received correlationId and completes the request, allowing the backgroundScript to respond to the initiatorContentScript with the iframe's monetization status.
 
 (This section is ripped from the PR and could do with some rewriting)
 
@@ -54,7 +64,7 @@ To do so, it takes advantage of:
      - This will not actually give us any more private information than we already have. This may not be clear to all users though.
 2. [MessageSender](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/chrome/index.d.ts#L5500-L5505)['frameId'], MessageSender['tab'] attributes
    Messages sent using `chrome.runtime.sendMessage` api from content scripts
-   will be recieved in the background script onMessage listener with
+   will be received in the background script onMessage listener with
    tabId/frameId implied (i.e. not inside the message payload).
 
 Whenever a monetization request occurs inside an iframe a request will be sent to the background page to check if that iframe is allowed.
@@ -96,10 +106,17 @@ The request handler in the background page consults the BackgroundFramesService 
 | 1   | checkIFrameIsAllowedFromIFrameContentScript | InitiatorContent | Background       | runtime.sendMessage              | { command: 'checkIFrameIsAllowedFromIFrameContentScript'}                                                | Yes             |
 | 2   | checkIFrameIsAllowedFromBackground          | Background       | ParentContent    | tabs.sendMessage                 | { command: 'checkIFrameIsAllowedFromBackground', data: { frame: FrameSpec } }                            | Yes             |
 | 3   | wmIFrameCorrelationId                       | ParentContent    | InitiatorContent | iframe.contentWindow.postMessage | { wmIFrameCorrelationId: string }                                                                        | No              |
-| 4   | reportCorrelationIdFromIFrameContentScript  | InitiatorContent | Background       | runtime.sendMessage              | {command: 'reportCorrelationIdToParentContentScript', data: {frame: FrameSpec, correlationId: string } } | No              |
+| 4   | reportCorrelationIdFromIFrameContentScript  | InitiatorContent | Background       | runtime.sendMessage              | {command: 'reportCorrelationIdFromIFrameContentScript', data: {correlationId: string } }                 | No              |
 | 5   | reportCorrelationIdToParentContentScript    | Background       | ParentContent    | tabs.sendMessage                 | {command: 'reportCorrelationIdToParentContentScript', data: {frame: FrameSpec, correlationId: string } } | No              |
 
-TODO: need to add the replies here above ^^
+1. The initiating script sends a "checkIFrameIsAllowedFromIFrameContentScript" request (1) to the background script and awaits a response.
+2. The background script identifies the frameId and tabId, consults the frame service to find the parent id, and sends a "checkIFrameIsAllowedFromBackground" request (2) to the parent content script, awaiting a response.
+3. The parent content script generates a unique correlationId for each unknown iframe element, stores them in a map with the correlationId as the key and a frame resolve callback as the value. It then `await`s for the frames to resolve.
+4. The parent script sends a "wmIFrameCorrelationId" (3) message to the iframes using window.postMessage.
+5. Each iframe sends a "reportCorrelationIdFromIFrameContentScript" (4) message to the background script, with the frameId implied by the sender.
+6. The background script looks up the parent frame and sends the "reportCorrelationIdToParentContentScript" (5) message (along with the implied frameId and tabId) to the parent script.
+7. The parent script looks up the iframe associated with the given correlationId from the map, retrieves the corresponding frame resolve callback, and invokes it.
+8. The parent script can now check which iframe element matches the frame spec and complete the request (2), allowing the background script to provide the response (1) to the initiator content script.
 
 TODO: rename for clarity ?
 checkIFrameIsAllowedFromIFrameContentScript -> initiatorRequestMonetizationCheck
@@ -107,6 +124,8 @@ checkIFrameIsAllowedFromBackground -> backgroundRequestParentIFrameCheck
 wmIFrameCorrelationId -> parentSendCorrelationIdToInitiator
 reportCorrelationIdFromIFrameContentScript -> initiatorReportCorrelationIdToBackground
 reportCorrelationIdToParentContentScript -> backgroundForwardCorrelationIdToParent
+
+TODO: need to add the replies to the table
 
 ### Relevant Code Excerpts
 
