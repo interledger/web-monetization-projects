@@ -15,6 +15,12 @@ feature set in their allow attributes for monetization to be allowed in the nest
 
 Note that iframes may be from various origins, not necessarily the top frame in a tab.
 
+Unfortunately, there's currently no extension api for getting a frameId from a frame element.
+One has been proposed, and the api implemented by Apple/Mozilla as experimental, however Google have security concerns
+and the issue has stalled. See: https://github.com/w3c/webextensions/issues/12
+
+We must therefore use whatever tools we have at our disposal to determine the frame.
+
 ### Terms:
 
 - **parentContentScript**: Content script running in the parent frame.
@@ -23,16 +29,16 @@ Note that iframes may be from various origins, not necessarily the top frame in 
 
 ### Available Tools and Methods:
 
-We can put together some solution using the following tools:
+We can put together some solution using some of the following:
 
 - **webNavigation API**: It can be used in the backgroundScript to obtain details about frames, including their parent frames and frame IDs. Useful methods include webNavigation.getAllFrames() to get a list of frames in a tab, and webNavigation.getFrame() to get details about a specific frame in a tab.
-- **window.parent**: This property in the initiatorContentScript can be used to reference the parent window (the window containing the iframe).
-- **window.postMessage()**: This method can be used to send messages between windows (or iframes) in a secure way. It can be used to communicate between the initiatorContentScript and the parentContentScript.
-- **event.source**: When handling a message event, this property can be used to get the Window object of the message sender. It can be used in the parentContentScript to compare the source of the message with the contentWindow property of each iframe.
 - **chrome.runtime.sendMessage()**: This method allows content scripts to send messages to the background script.
-- **chrome.runtime.onMessage**: This event can be used to listen for messages sent by content scripts in the background script.
-- **chrome.tabs.sendMessage()**: This method can be used to send messages from the background script to a specific content script running in a frame identified by a tabId and frameId.
-- **contentWindow**: This property of an `<iframe>` element provides access to the Window object of the document inside the iframe and can be used to send messages between the parent and child documents using the postMessage() method.
+- **chrome.tabs.sendMessage()**: This method can be used to send messages from the background script to a specific content script running in a frame identified by a tabId and frameId (or all frames).
+- **chrome.runtime.onMessage**: This event can be used to listen for messages sent between components.
+- **window.postMessage()**: This method can be used to send messages between windows (or iframes) in a secure way. It can be used to communicate between the initiatorContentScript and the parentContentScript.
+- **iframe.contentWindow**: This property of an `<iframe>` element provides access to the Window object of the document inside the iframe and can be used to send messages between the parent and child documents using the postMessage() method.
+- **window.parent**: This property in the initiatorContentScript can be used to reference the parent window (the window containing the iframe).
+- **event.source**: When handling a message event, this property can be used to get the Window object of the message sender. It can be used in the parentContentScript to compare the source of the message with the contentWindow property of each iframe.
 
 ### Security Concerns:
 
@@ -42,6 +48,10 @@ It's possible to do matching of event.source (of 'message' event) against iframe
 to do correlation though it's unclear how that could be done with out sending the frameId/tabId.
 
 ### Solution overview
+
+The following is how iframe monetization is implemented. It's possible there's a simpler way which
+doesn't need the webNavigation api (maybe using window.parent.postMessage to get frame ancestry),
+though if you are requesting <all_urls> the permission UX is largely unchanged.
 
 1. The initiatorContentScript sends a request to the backgroundScript to check if monetization is allowed for the iframe.
 2. The backgroundScript determines the parent frame and sends a request to the parentContentScript to verify if the iframe's monetization is allowed based on its attributes.
@@ -55,10 +65,10 @@ to do correlation though it's unclear how that could be done with out sending th
 To do so, it takes advantage of:
 
 1. [webNavigation](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation) wext apis
-   - New BackgroundFrameService
+   - BackgroundFrameService
      - Keeps track of frames, including the current readyState/url/parentFrameId etc.
      - use `frameChanged` event where using chrome.tabs.onUpdated before (which was [problematic](https://github.com/coilhq/web-monetization-projects/issues/203))
-   - Will require extra permissions which may be off-putting to some users
+   - Requires extra permissions which may be off-putting to some users
      - This will not actually give us any more private information than we already have. This may not be clear to all users though.
 2. [MessageSender](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/chrome/index.d.ts#L5500-L5505)['frameId'], MessageSender['tab'] attributes
    Messages sent using `chrome.runtime.sendMessage` api from content scripts
@@ -79,10 +89,11 @@ The request handler in the background page consults the BackgroundFramesService 
     - We could take extra measures from the background page to ensure ids are only ever used once but it does not really seem necessary.
       - unknown correlationIds are ignored
 
-### Questions:
+### Questions That Came up:
 
 - Should we limit the amount of concurrently monetized frames ?
   - If so, how ?
+    - We just let the backend do the limiting
 - Do we need to do anything special client side to adjust bandwidth? Or will the server do it all ?
 
   - Is there anything needed server side to optimally support this ?
@@ -117,11 +128,11 @@ The request handler in the background page consults the BackgroundFramesService 
 8. The parent script can now check which iframe element matches the frame spec and complete the request (2), allowing the background script to provide the response (1) to the initiator content script.
 
 TODO: rename for clarity ?
-checkIFrameIsAllowedFromIFrameContentScript -> initiatorRequestMonetizationCheck
-checkIFrameIsAllowedFromBackground -> backgroundRequestParentIFrameCheck
-wmIFrameCorrelationId -> parentSendCorrelationIdToInitiator
-reportCorrelationIdFromIFrameContentScript -> initiatorReportCorrelationIdToBackground
-reportCorrelationIdToParentContentScript -> backgroundForwardCorrelationIdToParent
+checkIFrameIsAllowedFromIFrameContentScript -> iframesInitiatorRequestMonetizationCheck
+checkIFrameIsAllowedFromBackground -> iframesBackgroundRequestParentIFrameCheck
+wmIFrameCorrelationId -> iframesParentSendCorrelationIdToInitiator
+reportCorrelationIdFromIFrameContentScript -> iframesInitiatorReportCorrelationIdToBackground
+reportCorrelationIdToParentContentScript -> iframesBackgroundForwardCorrelationIdToParent
 
 TODO: need to add the replies to the table
 
