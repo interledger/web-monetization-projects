@@ -3733,7 +3733,7 @@ __metadata:
     react-dom: "npm:^17.0.0"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    style-loader: "npm:3.3.1"
+    style-loader: "npm:3.3.2"
     ts-jest: "npm:29.0.5"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
@@ -23898,12 +23898,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-loader@npm:3.3.1":
-  version: 3.3.1
-  resolution: "style-loader@npm:3.3.1"
+"style-loader@npm:3.3.2":
+  version: 3.3.2
+  resolution: "style-loader@npm:3.3.2"
   peerDependencies:
     webpack: ^5.0.0
-  checksum: 74e11f0307646c6b4809c6e410e694d3011cce9498de0415fedbf7e8d5ae97055e34e887473a149c9f4feca8602acc9a9a4caa2344ac58d5280343dbc13bce4d
+  checksum: 87b3c4d0c81c1da239a99d53e683fbb0518b50e6b175685f2e1bb262d9613b31a5931024998b1b26b10a7fd45527546f631b632ba63a213d63bc1dfb6d1c3c35
   languageName: node
   linkType: hard
 
