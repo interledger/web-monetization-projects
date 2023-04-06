@@ -59,7 +59,7 @@
     "@types/ajv": "1.0.0",
     "@types/jest": "29.4.0",
     "@types/node": "16.18.18",
-    "@types/react": "17.0.53",
+    "@types/react": "17.0.56",
     "@types/react-dom": "17.0.19",
     "@types/uuid": "9.0.1",
     "@typescript-eslint/eslint-plugin": "5.52.0",
