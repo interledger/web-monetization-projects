@@ -52,7 +52,7 @@
     "@types/jest": "29.5.0",
     "@types/jsonwebtoken": "9.0.1",
     "@types/node": "16.18.23",
-    "@types/node-fetch": "2.6.2",
+    "@types/node-fetch": "2.6.3",
     "@typescript-eslint/eslint-plugin": "5.52.0",
     "@typescript-eslint/parser": "5.52.0",
     "@yarnpkg/pnpify": "3.1.6",

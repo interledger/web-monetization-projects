@@ -1755,7 +1755,7 @@ __metadata:
     "@types/jest": "npm:29.5.0"
     "@types/jsonwebtoken": "npm:9.0.1"
     "@types/node": "npm:16.18.23"
-    "@types/node-fetch": "npm:2.6.2"
+    "@types/node-fetch": "npm:2.6.3"
     "@types/sjcl": "npm:1.0.30"
     "@typescript-eslint/eslint-plugin": "npm:5.52.0"
     "@typescript-eslint/parser": "npm:5.52.0"
@@ -1820,7 +1820,7 @@ __metadata:
     "@types/jest": "npm:29.5.0"
     "@types/jsonwebtoken": "npm:9.0.1"
     "@types/node": "npm:16.18.23"
-    "@types/node-fetch": "npm:2.6.2"
+    "@types/node-fetch": "npm:2.6.3"
     "@typescript-eslint/eslint-plugin": "npm:5.52.0"
     "@typescript-eslint/parser": "npm:5.52.0"
     "@yarnpkg/pnpify": "npm:3.1.6"
@@ -1899,7 +1899,7 @@ __metadata:
     "@types/jsonwebtoken": "npm:9.0.1"
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.18.23"
-    "@types/node-fetch": "npm:2.6.2"
+    "@types/node-fetch": "npm:2.6.3"
     "@types/react": "npm:17.0.56"
     "@types/react-dom": "npm:17.0.19"
     "@types/uuid": "npm:9.0.1"
@@ -2153,7 +2153,7 @@ __metadata:
     "@types/jest": "npm:29.5.0"
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:16.18.23"
-    "@types/node-fetch": "npm:2.6.2"
+    "@types/node-fetch": "npm:2.6.3"
     "@types/uuid": "npm:9.0.1"
     "@typescript-eslint/eslint-plugin": "npm:5.52.0"
     "@typescript-eslint/parser": "npm:5.52.0"
@@ -5827,13 +5827,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:2.6.2":
-  version: 2.6.2
-  resolution: "@types/node-fetch@npm:2.6.2"
+"@types/node-fetch@npm:2.6.3":
+  version: 2.6.3
+  resolution: "@types/node-fetch@npm:2.6.3"
   dependencies:
     "@types/node": "npm:*"
     form-data: "npm:^3.0.0"
-  checksum: bd268ca1129439b1e2c9d6291c64401b82ec50f72d5554d59ff4d52723a30dff86a175ad159f812e07795804e832afaaeffeea6f8350eb512497b8eab6c932a1
+  checksum: 727026e70cfb6e1b5839cf3dc0a69984294a685ad48f22b466f36011ba5cacaee74511a124e10318a395ff28ddb8ed9f6b7467930cf8158b159164047084e411
   languageName: node
   linkType: hard
 
@@ -6471,7 +6471,7 @@ __metadata:
     "@types/figlet": "npm:1.5.5"
     "@types/jest": "npm:29.5.0"
     "@types/node": "npm:16.18.23"
-    "@types/node-fetch": "npm:2.6.2"
+    "@types/node-fetch": "npm:2.6.3"
     "@types/react": "npm:17.0.56"
     "@types/react-dom": "npm:17.0.19"
     "@types/react-helmet": "npm:6.1.6"
@@ -6550,7 +6550,7 @@ __metadata:
     "@swc/jest": "npm:0.2.24"
     "@types/jest": "npm:29.5.0"
     "@types/node": "npm:16.18.23"
-    "@types/node-fetch": "npm:2.6.2"
+    "@types/node-fetch": "npm:2.6.3"
     "@types/uuid": "npm:9.0.1"
     "@typescript-eslint/eslint-plugin": "npm:5.52.0"
     "@typescript-eslint/parser": "npm:5.52.0"
@@ -26430,7 +26430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:8.13.0, ws@npm:^8.4.2, ws@npm:^8.8.0":
+"ws@npm:8.13.0, ws@npm:^8.13.0, ws@npm:^8.8.0":
   version: 8.13.0
   resolution: "ws@npm:8.13.0"
   peerDependencies:
@@ -26466,21 +26466,6 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: d67af3da809fbc571486e5e25ed0be62b1d400b8136f4c9e0812c901377dbff5d7e75152c8b478a2ecce643318f3878d216aaa4c44e9e346efb83f609ff59293
-  languageName: node
-  linkType: hard
-
-"ws@npm:^8.13.0, ws@npm:^8.8.0":
-  version: 8.13.0
-  resolution: "ws@npm:8.13.0"
-  peerDependencies:
-    bufferutil: ^4.0.1
-    utf-8-validate: ">=5.0.2"
-  peerDependenciesMeta:
-    bufferutil:
-      optional: true
-    utf-8-validate:
-      optional: true
-  checksum: af5cfb5a7031d1183e3c33d9ea917b2f36b127aac3ecd6a7890927fed583aa65b464242f2bd570ad83114ffefc21daf442d02a23fb9bc93a8c6a199febbd9304
   languageName: node
   linkType: hard
 
