@@ -65,7 +65,7 @@
     "@swc/jest": "0.2.24",
     "@types/glob": "8.0.1",
     "@types/jest": "29.5.0",
-    "@types/node": "16.18.18",
+    "@types/node": "16.18.23",
     "@typescript-eslint/eslint-plugin": "5.52.0",
     "@typescript-eslint/parser": "5.52.0",
     "@yarnpkg/pnpify": "3.1.6",
