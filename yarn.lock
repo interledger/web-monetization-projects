@@ -1801,7 +1801,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -1864,7 +1864,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -1970,7 +1970,7 @@ __metadata:
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2064,7 +2064,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2130,7 +2130,7 @@ __metadata:
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
     sort-package-json: "npm:1.57.0"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2203,7 +2203,7 @@ __metadata:
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2263,7 +2263,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2327,7 +2327,7 @@ __metadata:
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
     sjcl: "https://github.com/sublimator/sjcl.git#commit=6d8756dcf7d04ffc854d61d81b9781a37a82d500"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2394,7 +2394,7 @@ __metadata:
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
     tmp: "npm:^0.2.1"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2461,7 +2461,7 @@ __metadata:
     setimmediate: "npm:^1.0.5"
     stream-browserify: "npm:^3.0.0"
     string_decoder: "npm:^1.3.0"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2521,7 +2521,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2816,7 +2816,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -2876,7 +2876,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -3796,7 +3796,7 @@ __metadata:
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
     style-loader: "npm:3.3.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -5128,7 +5128,7 @@ __metadata:
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
     source-map: "npm:0.5.6"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -6421,7 +6421,7 @@ __metadata:
     setimmediate: "npm:^1.0.5"
     stream-browserify: "npm:^3.0.0"
     string_decoder: "npm:^1.3.0"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -6508,7 +6508,7 @@ __metadata:
     react-hot-loader: "npm:^4.13.0"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -6571,7 +6571,7 @@ __metadata:
     reduct: "npm:^3.3.1"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -6633,7 +6633,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -6705,7 +6705,7 @@ __metadata:
     react-hot-loader: "npm:^4.13.0"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -6764,7 +6764,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-json-schema-generator: "npm:1.2.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
@@ -6826,7 +6826,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
@@ -24696,9 +24696,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:29.0.5":
-  version: 29.0.5
-  resolution: "ts-jest@npm:29.0.5"
+"ts-jest@npm:29.1.0":
+  version: 29.1.0
+  resolution: "ts-jest@npm:29.1.0"
   dependencies:
     bs-logger: "npm:0.x"
     fast-json-stable-stringify: "npm:2.x"
@@ -24713,7 +24713,7 @@ __metadata:
     "@jest/types": ^29.0.0
     babel-jest: ^29.0.0
     jest: ^29.0.0
-    typescript: ">=4.3"
+    typescript: ">=4.3 <6"
   peerDependenciesMeta:
     "@babel/core":
       optional: true
@@ -24725,7 +24725,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 4dfe1712b6b510075666e8354bafc3de2043985604eb80ced72dca9d3a2165d2a248cd6a1d488e11e3348f0728a69bd7a58a72c63b39643d355578f548e49738
+  checksum: 0a30822a27a3cafdb40b0473816544b0ae92de7861671e6842080e3baa17cdf9f66a34d52b456043a7417c50abe9110ab26cf681bc8f3b26afc9c5cdb5d8ce9d
   languageName: node
   linkType: hard
 
@@ -25755,7 +25755,7 @@ __metadata:
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
     rimraf: "npm:4.1.2"
-    ts-jest: "npm:29.0.5"
+    ts-jest: "npm:29.1.0"
     ts-loader: "npm:9.4.2"
     ts-node: "npm:10.9.1"
     tsconfig-paths: "npm:4.2.0"
