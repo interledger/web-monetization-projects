@@ -63,7 +63,7 @@
     "@dier-makr/annotations": "^0.0.0",
     "@dier-makr/inversify": "^0.0.0",
     "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.0.0",
     "@material-ui/styles": "^4.11.5",
     "@webmonetization/polyfill-utils": "^0.0.0",
     "@webmonetization/types": "^0.0.0",
