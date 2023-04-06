@@ -5,20 +5,6 @@ __metadata:
   version: 7
   cacheKey: 9
 
-"#ansi-styles@npm:ansi-styles@6.1.0, ansi-styles@npm:^6.0.0, ansi-styles@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "ansi-styles@npm:6.1.0"
-  checksum: cd798a83b2e8d55f609e2a77aed1a34a578388604634e326784cb7fe7e4153ff6bb5ae68e037521feacd6cc8ea899963d0bc17b3f3d01f378a0fb615faf41d91
-  languageName: node
-  linkType: hard
-
-"#supports-color@npm:supports-color@9.2.2":
-  version: 9.2.2
-  resolution: "supports-color@npm:9.2.2"
-  checksum: 19d162c9d98d2c040770d8aad14566dd0fcc2f6e0524d3d9cbe1fdbead10bed683d45dab8f34d9e51bc64b336b00ceb5992b6619c78fc4e5a911802538468264
-  languageName: node
-  linkType: hard
-
 "@abraham/reflection@npm:0.12.0":
   version: 0.12.0
   resolution: "@abraham/reflection@npm:0.12.0"
@@ -1794,7 +1780,7 @@ __metadata:
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
     jsonwebtoken: "npm:9.0.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     localforage: "npm:1.10.0"
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.22"
@@ -1858,7 +1844,7 @@ __metadata:
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
     jsonwebtoken: "npm:^9.0.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
@@ -1958,7 +1944,7 @@ __metadata:
     jest-environment-jsdom: "npm:29.5.0"
     jsonwebtoken: "npm:^9.0.0"
     jss: "npm:^10.6.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     lottie-web: "npm:^5.8.1"
     node-window-manager: "npm:2.2.4"
     nodemon: "npm:2.0.22"
@@ -2059,7 +2045,7 @@ __metadata:
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
     jsonwebtoken: "npm:^9.0.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
@@ -2122,7 +2108,7 @@ __metadata:
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
     json5: "npm:^2.2.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     npm-check-updates: "npm:^16.0.0"
     prettier: "npm:2.8.4"
@@ -2195,7 +2181,7 @@ __metadata:
     ilp-protocol-stream: "npm:^2.7.2-alpha.2"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
@@ -2257,7 +2243,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
@@ -2320,7 +2306,7 @@ __metadata:
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
     keccak: "npm:^3.0.1"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
@@ -2387,7 +2373,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     puppeteer: "npm:^19.0.0"
@@ -2452,7 +2438,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     process: "npm:^0.11.10"
@@ -2516,7 +2502,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
@@ -2811,7 +2797,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
@@ -2871,7 +2857,7 @@ __metadata:
     inversify: "npm:^6.0.0"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
@@ -3788,7 +3774,7 @@ __metadata:
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
     jsonwebtoken: "npm:^9.0.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     react: "npm:^17.0.0"
@@ -5122,7 +5108,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
@@ -6412,7 +6398,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     process: "npm:^0.11.10"
@@ -6497,7 +6483,7 @@ __metadata:
     inversify-express-utils: "npm:^6.3.2"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.22"
     oer-utils: "npm:^5.1.2"
@@ -6564,7 +6550,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     node-fetch: "npm:^2.6.1"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
@@ -6628,7 +6614,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
@@ -6697,7 +6683,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     react: "npm:^17.0.0"
@@ -6759,7 +6745,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
@@ -6821,7 +6807,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
@@ -7794,6 +7780,13 @@ __metadata:
   version: 5.2.0
   resolution: "ansi-styles@npm:5.2.0"
   checksum: be68c7c5f374e8d72174b43ff3ab5bdd0e2e024bcaace9c0d2bbcd0edef71281424a1d23e5b29c8c7911143e4c34090088287a15f36ed710167c5bcccc867c7e
+  languageName: node
+  linkType: hard
+
+"ansi-styles@npm:^6.0.0, ansi-styles@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "ansi-styles@npm:6.1.0"
+  checksum: cd798a83b2e8d55f609e2a77aed1a34a578388604634e326784cb7fe7e4153ff6bb5ae68e037521feacd6cc8ea899963d0bc17b3f3d01f378a0fb615faf41d91
   languageName: node
   linkType: hard
 
@@ -9517,6 +9510,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chalk@npm:5.2.0, chalk@npm:^5.0.1":
+  version: 5.2.0
+  resolution: "chalk@npm:5.2.0"
+  checksum: c3c31253b9cb445ca917aab30767282a1c1951fb8d60e1e8389a3d6434eee296dae28a2b02871c89a866ed7e560438aaea4c5d290242e5fb50b5eda2b4ea4061
+  languageName: node
+  linkType: hard
+
 "chalk@npm:^1.0.0, chalk@npm:^1.1.1, chalk@npm:^1.1.3":
   version: 1.1.3
   resolution: "chalk@npm:1.1.3"
@@ -9537,13 +9537,6 @@ __metadata:
     ansi-styles: "npm:^4.1.0"
     supports-color: "npm:^7.1.0"
   checksum: b72cc49b5655487fe118f9074f1d18b2782bdea5b75e0c185e687c8d1218ec51fb2ac4d3480a8473e879383256cfa11059f0ef48b8b2ec137e0b3d80205cc9ef
-  languageName: node
-  linkType: hard
-
-"chalk@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "chalk@npm:5.0.1"
-  checksum: 0902c556d549b64dacd1eeb46fa2679789dcd0455ec9c050b9e1cfe60a144170708f040a6486489532672332fcfaca61e68fecf28d35560d8c77a9291400d72e
   languageName: node
   linkType: hard
 
@@ -10200,6 +10193,13 @@ __metadata:
   dependencies:
     graceful-readlink: "npm:>= 1.0.0"
   checksum: 6ca4a6f7344b26c6e35c2e1ea3bc4ba8e5e3782a4561675858d3239637d60efb6cac7a6b3ee6d536587130ee5468bbeddb2657684561cdf2cd8ae403ec6bdea2
+  languageName: node
+  linkType: hard
+
+"commander@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "commander@npm:10.0.0"
+  checksum: 1b6c9c0a4bbb4b8aa1f123445f74972c5ddd1b83e7c3fc70a74e7fa679b685dccb7a230f56c1a951e5906da1db4accc61be99884ab6a28a50898906f652efc4d
   languageName: node
   linkType: hard
 
@@ -12951,20 +12951,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "execa@npm:6.1.0"
+"execa@npm:^7.0.0":
+  version: 7.1.1
+  resolution: "execa@npm:7.1.1"
   dependencies:
     cross-spawn: "npm:^7.0.3"
     get-stream: "npm:^6.0.1"
-    human-signals: "npm:^3.0.1"
+    human-signals: "npm:^4.3.0"
     is-stream: "npm:^3.0.0"
     merge-stream: "npm:^2.0.0"
     npm-run-path: "npm:^5.1.0"
     onetime: "npm:^6.0.0"
     signal-exit: "npm:^3.0.7"
     strip-final-newline: "npm:^3.0.0"
-  checksum: ebe384facfb5c4e7007828a518fedb2d7704bd10e69d4584de4427d47ceadf1e9377203f4ca754c17e1a82a492b5eefad64dda65fa473bf756ab6de62124651e
+  checksum: 36b171e01b83a88303917916618611b6d83bb9779fac0788d37bba32db92791c2da323605a6a1fa39dcc0c58f220d9f1ace4839481be913ae028a5f390b44a7c
   languageName: node
   linkType: hard
 
@@ -15297,10 +15297,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"human-signals@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "human-signals@npm:3.0.1"
-  checksum: 00cff8f78516e925bef0d0bc65dfbf8bfad876ef3dc1aeec98f2ba845b56e9a58972a9e002323ef7e6de08b2a2fc0cb9a27ddadf7fae608b2828d241d6ae32b3
+"human-signals@npm:^4.3.0":
+  version: 4.3.1
+  resolution: "human-signals@npm:4.3.1"
+  checksum: 516afaf3bce1d9ddcc81cfb453c7e7684ae4767f7cff807287195d1f328eea3ccc8cfb63fd4b78de7e3850bcc4587701df767f36f6af353285fe20aa8433b697
   languageName: node
   linkType: hard
 
@@ -18013,10 +18013,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lilconfig@npm:2.0.6":
-  version: 2.0.6
-  resolution: "lilconfig@npm:2.0.6"
-  checksum: 12b2f81da97b0f00a06d13a0a86d40c00ce46cc24fcb46b70b374af9593adf4e8a013047101535611c98b5edd10fdeb30942823cb237361c01d033049725a8aa
+"lilconfig@npm:2.1.0":
+  version: 2.1.0
+  resolution: "lilconfig@npm:2.1.0"
+  checksum: 1c7c643ccda7eb00b0d904912c1d7ea9cc36fe2e4e7e752b940daa9ba9550049c5ec1375f835cda58b9a917f6b0fbcae63617c1f63c139c1a20217dae4e58f39
   languageName: node
   linkType: hard
 
@@ -18034,26 +18034,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:13.1.2":
-  version: 13.1.2
-  resolution: "lint-staged@npm:13.1.2"
+"lint-staged@npm:13.2.0":
+  version: 13.2.0
+  resolution: "lint-staged@npm:13.2.0"
   dependencies:
+    chalk: "npm:5.2.0"
     cli-truncate: "npm:^3.1.0"
-    colorette: "npm:^2.0.19"
-    commander: "npm:^9.4.1"
+    commander: "npm:^10.0.0"
     debug: "npm:^4.3.4"
-    execa: "npm:^6.1.0"
-    lilconfig: "npm:2.0.6"
-    listr2: "npm:^5.0.5"
+    execa: "npm:^7.0.0"
+    lilconfig: "npm:2.1.0"
+    listr2: "npm:^5.0.7"
     micromatch: "npm:^4.0.5"
     normalize-path: "npm:^3.0.0"
-    object-inspect: "npm:^1.12.2"
+    object-inspect: "npm:^1.12.3"
     pidtree: "npm:^0.6.0"
     string-argv: "npm:^0.3.1"
-    yaml: "npm:^2.1.3"
+    yaml: "npm:^2.2.1"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: f359c7629a1e94f8c849435aecb6101b4379bfb735d9e9d1ae278b4c640e5c2d0ab640044daebf50a988acd55275c06718654e74d98b76ed7daf57a44f9bc466
+  checksum: 404babeea99de6d2e0141d1807d92c9853b3619476ad151e91584d91b398b0e95237be504eea892ea7d04f74555a7e8054dc7cbf1c6b8872f8d550dc43b4624b
   languageName: node
   linkType: hard
 
@@ -18085,16 +18085,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"listr2@npm:^5.0.5":
-  version: 5.0.5
-  resolution: "listr2@npm:5.0.5"
+"listr2@npm:^5.0.7":
+  version: 5.0.8
+  resolution: "listr2@npm:5.0.8"
   dependencies:
     cli-truncate: "npm:^2.1.0"
     colorette: "npm:^2.0.19"
     log-update: "npm:^4.0.0"
     p-map: "npm:^4.0.0"
     rfdc: "npm:^1.3.0"
-    rxjs: "npm:^7.5.6"
+    rxjs: "npm:^7.8.0"
     through: "npm:^2.3.8"
     wrap-ansi: "npm:^7.0.0"
   peerDependencies:
@@ -18102,7 +18102,7 @@ __metadata:
   peerDependenciesMeta:
     enquirer:
       optional: true
-  checksum: d7d9789a38f7c90257bdcb303ed313d4af6e38bf01a84f3e1c3d1805586943e5e3073d2a67c4e2ccbf5cd5349c358553a27b26cff5ebb8fb9a7f38ce6f14d738
+  checksum: 312f812e597c03e7c01c9765e684341f07836ae98fcf2e767ae45f73f667f42fb47ed5a3854c82af64a7b30016b276cb6c3ebc4eb115a58ba6b6c9212a1b7950
   languageName: node
   linkType: hard
 
@@ -19944,10 +19944,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-inspect@npm:^1.12.2, object-inspect@npm:^1.9.0":
-  version: 1.12.2
-  resolution: "object-inspect@npm:1.12.2"
-  checksum: 46e3fc4cb6a51a37c21c68bdf682befc2e50a0d1643d1f7cbdce9a5fd13e9d44ae8cbbf1b05f0c8daf739c02eb9044d825544e25c3aef2a7d315980c8c7ccb71
+"object-inspect@npm:^1.12.2, object-inspect@npm:^1.12.3, object-inspect@npm:^1.9.0":
+  version: 1.12.3
+  resolution: "object-inspect@npm:1.12.3"
+  checksum: 052c374ab0a4c85201480374c1039dddac0aaa8ef0fcbe1b04026f4c832c5632db6cb63617d6403b2b9dca08d4302d781aeb6c4d0260de4a84118ecaf1b5ebda
   languageName: node
   linkType: hard
 
@@ -22691,12 +22691,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.5.5, rxjs@npm:^7.5.6":
-  version: 7.5.7
-  resolution: "rxjs@npm:7.5.7"
+"rxjs@npm:^7.5.5, rxjs@npm:^7.8.0":
+  version: 7.8.0
+  resolution: "rxjs@npm:7.8.0"
   dependencies:
     tslib: "npm:^2.1.0"
-  checksum: 9f40c5ba7904afbffe4a8c5fec9cb35dbd21cac55e20e004fe405f9712efef11d23a0baa23682a16d448976d5795ed66fd843c5f00329dd6e491676373610a79
+  checksum: 56dfebbd1f868935809688075a33d940954a66ddec9ea3b92cc7031e50fc4040e9962416d5ca009b9da9e1edda6ff4f1fc3155786e7e521ec6eb3100e30f0317
   languageName: node
   linkType: hard
 
@@ -25750,7 +25750,7 @@ __metadata:
     husky: "npm:8.0.3"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.1.2"
+    lint-staged: "npm:13.2.0"
     nodemon: "npm:2.0.22"
     prettier: "npm:2.8.4"
     regenerator-runtime: "npm:0.13.11"
@@ -26527,7 +26527,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.1.1, yaml@npm:^2.1.3, yaml@npm:^2.2.1":
+"yaml@npm:^2.1.1, yaml@npm:^2.2.1":
   version: 2.2.1
   resolution: "yaml@npm:2.2.1"
   checksum: 6a9e540d14030184df84ea8b79adbfe5c40fad79d10cb9fef28625cd6cfcfa3f28e09eda1b9f0d6f2f8354878f71ed3e6bf972d8d787bea1e8c6bf468f2c9cca
