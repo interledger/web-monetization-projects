@@ -8,6 +8,9 @@ const pretty = (val: unknown) => JSON.stringify(val, null, 2)
 // eslint-disable-next-line no-console
 const dbg = console.log
 
+const fromRoot = (...segments: string[]) =>
+  resolve(__dirname, '../../..', ...segments)
+
 export interface Environment {
   os: string
   tools: string[]
@@ -125,63 +128,76 @@ yarn rebuild puppeteer`
 const firstSteps = steps.slice(0, 4)
 const lastSteps = steps.slice(5)
 
+function parseInnerSteps(job: Job) {
+  return job['inner-steps'].map(step => {
+    if (!step.run) {
+      throw new Error('step must be an object with a run field')
+    }
+
+    const command = step.run.command
+    const rendered = nunjucksEnv.renderString(command, {})
+    return { name: step.run.name, run: rendered }
+  })
+}
+
+function getJobMatrix(job: Job, config: Configuration) {
+  const matrix = config.matrices
+
+  const jobEnvName = job.environments[0]
+  const env = config.environments[jobEnvName]
+
+  const matrixCombined: Record<string, string[]> = {}
+  if (env.matrices) {
+    const matrices = env.matrices
+    matrices.forEach(val => {
+      if (typeof val === 'string') {
+        matrixCombined[val] = matrix[val]
+      } else {
+        Object.assign(matrixCombined, val)
+      }
+    })
+  }
+  return matrixCombined
+}
+
+function makeJobStrategy(job: Job, config: Configuration) {
+  const matrixCombined = getJobMatrix(job, config)
+  return Object.keys(matrixCombined).length
+    ? {
+        strategy: {
+          matrix: matrixCombined
+        }
+      }
+    : undefined
+}
+
 function convertConfigToGithubActions(parsed: Configuration) {
   const base = { ...actionsBase }
-  Object.entries(parsed.jobs).forEach(([k, v]) => {
-    const matrix = parsed.matrices
+
+  Object.entries(parsed.jobs).forEach(([jobName, job]) => {
     // Support only one environment now
-    if (v.environments.length !== 1) {
+    if (job.environments.length !== 1) {
       throw new Error('more than one environment currently not supported')
     }
-    const jobEnvName = v.environments[0]
-    const env = parsed.environments[jobEnvName]
-
-    const matrixCombined: Record<string, string[]> = {}
-    if (env.matrices) {
-      const matrices = env.matrices
-      matrices.forEach(val => {
-        if (typeof val === 'string') {
-          matrixCombined[val] = matrix[val]
-        } else {
-          Object.assign(matrixCombined, val)
-        }
-      })
-    }
-
-    const extra = Object.keys(matrixCombined).length
-      ? {
-          strategy: {
-            matrix: matrixCombined
-          }
-        }
-      : undefined
-
-    const innerSteps = v['inner-steps'].map(step => {
-      if (!step.run) {
-        throw new Error('step must be an object with a run field')
-      }
-
-      const command = step.run.command
-      const rendered = nunjucksEnv.renderString(command, {})
-      return { name: step.run.name, run: rendered }
-    })
-    base.jobs[k] = {
+    const extra = makeJobStrategy(job, parsed)
+    const innerSteps = parseInnerSteps(job)
+    base.jobs[jobName] = {
       ...extra,
-      'runs-on': jobEnvName.includes('macos')
+      'runs-on': job.environments[0].includes('macos')
         ? 'macos-latest'
         : 'ubuntu-latest',
       steps: [
         ...firstSteps,
         ...innerSteps,
         ...lastSteps
-      ] as Array<GithubActionsStep> // TODO
+      ] as Array<GithubActionsStep>
     }
   })
   return base
 }
 
 async function generateConfig() {
-  const jobsFile = resolve(__dirname, '../../../.ci/jobs.yml')
+  const jobsFile = fromRoot('.ci/jobs.yml')
   const file = await readFile(jobsFile, 'utf-8')
   const parsed = yaml.load(file) as Configuration
 
@@ -193,10 +209,9 @@ async function generateConfig() {
     lineWidth: Infinity
   })
   dbg(yml)
-  await writeFile(
-    resolve(__dirname, '../../../.github/workflows/generated-jobs.yml'),
-    yml
-  )
+  const fn = fromRoot('.github/workflows/generated-jobs.yml')
+  await writeFile(fn, yml)
+  dbg('wrote config to', fn)
 }
 
 if (require.main === module) {
