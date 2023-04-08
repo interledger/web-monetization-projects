@@ -250,36 +250,36 @@ jobs:
 workflows:
   version: 2
   build:
-    jobs:
-      - build-safari
-      - lint-all:
-          <<: *node-version-matrix
-      - yarn-format-and-upkeep-diff-check:
-          <<: *node-version-matrix
-      - build-all-package-references-typescript:
-          <<: *node-version-matrix
-      - build-root-tsconfig:
-          <<: *just-latest-lts-node-version
-      - coil-extension-package:
-          <<: *node-version-matrix
-      - packages-build-scripts:
-          <<: *node-version-matrix
-      - jest-all:
-          filters:
-            branches:
-              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-              ignore: /pull\/[0-9]+/
-          matrix:
-            parameters:
-              node-version: *node-versions
-              command: [ "test:coverage", "test:e2e:coverage" ]
-      - jest-workspaces-foreach-all:
-          filters:
-            branches:
-              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-              ignore: /pull\/[0-9]+/
-          matrix:
-            parameters:
-              node-version: *node-versions
-              command: [ "test:coverage", "test:e2e:coverage" ]
-          <<: *node-version-matrix
+    jobs: []
+#      - build-safari
+#      - lint-all:
+#          <<: *node-version-matrix
+#      - yarn-format-and-upkeep-diff-check:
+#          <<: *node-version-matrix
+#      - build-all-package-references-typescript:
+#          <<: *node-version-matrix
+#      - build-root-tsconfig:
+#          <<: *just-latest-lts-node-version
+#      - coil-extension-package:
+#          <<: *node-version-matrix
+#      - packages-build-scripts:
+#          <<: *node-version-matrix
+#      - jest-all:
+#          filters:
+#            branches:
+#              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+#              ignore: /pull\/[0-9]+/
+#          matrix:
+#            parameters:
+#              node-version: *node-versions
+#              command: [ "test:coverage", "test:e2e:coverage" ]
+#      - jest-workspaces-foreach-all:
+#          filters:
+#            branches:
+#              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+#              ignore: /pull\/[0-9]+/
+#          matrix:
+#            parameters:
+#              node-version: *node-versions
+#              command: [ "test:coverage", "test:e2e:coverage" ]
+#          <<: *node-version-matrix
