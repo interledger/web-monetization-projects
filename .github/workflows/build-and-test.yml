@@ -1,0 +1,93 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  lint-all:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["16.19.0", "18.4.0"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Add steps here for lint-all
+
+  yarn-format-and-upkeep-diff-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["16.19.0", "18.4.0"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Add steps here for yarn-format-and-upkeep-diff-check
+
+  build-all-package-references-typescript:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["16.19.0", "18.4.0"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Add steps here for build-all-package-references-typescript
+
+  build-root-tsconfig:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["16.19.0"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Add steps here for build-root-tsconfig
+
+  coil-extension-package:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["16.19.0", "18.4.0"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Add steps here for coil-extension-package
+
+  packages-build-scripts:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["16.19.0", "18.4.0"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Add steps here for packages-build-scripts
+
+  jest-all:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["16.19.0", "18.4.0"]
+        command: ["test:coverage", "test:e2e:coverage"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Add steps here for jest-all
+
+  jest-workspaces-foreach-all:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["16.19.0", "18.4.0"]
+        command: ["test:coverage", "test:e2e:coverage"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Add steps here for jest-workspaces-foreach-all
+
+  build-safari:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Add steps here for build-safari

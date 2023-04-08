@@ -28,12 +28,7 @@ jobs:
     <<: *parameterized-node-version
     steps:
       - checkout
-      # Download and cache dependencies
       - &restore_cache
-        #        run:
-        #         name: Restore Cache Dummy
-        #         command: |
-        #           echo Restore Cache Dummy!
         restore_cache:
           keys:
             - v6-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
@@ -104,101 +99,6 @@ jobs:
             yarn addons-linter coilfirefoxextension@coil.com.xpi
       - *save_cache
 
-  publish-packages:
-    docker:
-      - image: cimg/node:14-browsers
-    steps:
-      - checkout
-      - *restore_cache
-      - *yarn_install
-      - run:
-          name: Configure NPM authentication
-          command: |
-            yarn config set "npmRegistries['https://registry.yarnpkg.com'].npmAuthToken" "$NPM_AUTH_TOKEN" -H
-      - run:
-          name: Build the webmonetization-types package
-          command: |
-            cd packages/webmonetization-types
-            yarn build:ts:verbose
-      - run:
-          name: Publish the webmonetization-types package
-          command: |
-            cd packages/webmonetization-types
-            yarn npm publish --access public
-      - *save_cache
-
-  coil-extension-puppeteer:
-    <<: *parameterized-node-version
-    environment:
-      COIL_DOMAIN: << pipeline.parameters.coil_domain >>
-    # resource_class: xlarge
-    steps:
-      - checkout
-      - *restore_cache
-      - *yarn_install
-      - run:
-          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
-          command: |
-            export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            cd packages/coil-extension
-            export BROWSER_TYPE=chrome
-            [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
-            yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
-            xvfb-run -a ./test.sh test/puppeteer/multiple-tags-test.ts
-      # - run:
-      #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
-      #     command: |
-      #       cd packages/coil-extension
-      #       export PUPPETEER_PRODUCT='firefox'
-      #       yarn rebuild puppeteer
-      #       export BROWSER_TYPE=firefox
-      #       [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
-      #       yarn $build_cmd $BROWSER_TYPE
-      #       xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
-      # - *save_cache
-
-  # There have been and likely will be again issues that only surface in transpileOnly mode,
-  # so we test this specifically and separately.
-  coil-extension-puppeteer-transpile-only-mv3:
-    # It may be overkill, but the jobs are run in parallel, so it doesn't generally slow
-    # anyone down and sometimes provides extra data points. There have been regressions
-    # introduced in dependencies that only show up on particular versions of node.
-
-    # A shameful thing to say, but when tests are flakey (as e2e tests are bound to be
-    # when they touch live servers), it's helpful to have multiple runs for more data points
-    # so the node matrix is helpful again.
-    <<: *parameterized-node-version
-    environment:
-      COIL_DOMAIN: << pipeline.parameters.coil_domain >>
-    # resource_class: xlarge
-    steps:
-      - checkout
-      - *restore_cache
-      - *yarn_install
-      - run:
-          name: BROWSER_TYPE=chrome ./test.sh test/puppeteer/{logout,multiple-tags}-test.ts
-          command: |
-            export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            cd packages/coil-extension
-            export BROWSER_TYPE=chrome
-            export MV3=serviceworker
-            [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
-            BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
-            xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
-
-      # - run:
-      #     name: BROWSER_TYPE=firefox test.sh test/puppeteer/logout-test.ts
-      #     command: |
-      #       cd packages/coil-extension
-      #       export PUPPETEER_PRODUCT='firefox'
-      #       yarn rebuild puppeteer
-      #       export BROWSER_TYPE=firefox
-      #       [[ $COIL_DOMAIN = "https://coil.com" ]] && build_cmd="build-prod" || build_cmd="build-staging"
-      #       BUILD_TS=false TS_LOADER_TRANSPILE_ONLY=true yarn $build_cmd $BROWSER_TYPE
-      #       xvfb-run -a ./test.sh test/puppeteer/logout-test.ts
-      # - *save_cache
-
   build-all-package-references-typescript:
     <<: *parameterized-node-version
     steps:
@@ -237,12 +137,6 @@ jobs:
       - image: cimg/node:<< parameters.node-version >>-browsers
     resource_class: large
     steps:
-      - run:
-          name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be masked
-          command: |
-            echo TESTING_ENV_VAR $TESTING_ENV_VAR
-            # check the node version
-            node --version
       - checkout
       - *restore_cache
       - *yarn_install
@@ -278,7 +172,6 @@ jobs:
         type: string
     docker:
       - image: cimg/node:<< parameters.node-version >>-browsers
-    # resource_class: xlarge
     steps:
       - checkout
       - *restore_cache
@@ -314,9 +207,6 @@ jobs:
   yarn-format-and-upkeep-diff-check:
     <<: *parameterized-node-version
     steps:
-      - run:
-          name: echo TESTING_ENV_VAR $TESTING_ENV_VAR should be empty
-          command: echo TESTING_ENV_VAR $TESTING_ENV_VAR
       - checkout
       - *restore_cache
       - *yarn_install
@@ -350,8 +240,6 @@ workflows:
   build:
     jobs:
       - build-safari
-#          requires:
-##            - lint-all
       - lint-all:
           <<: *node-version-matrix
       - yarn-format-and-upkeep-diff-check:
@@ -364,19 +252,6 @@ workflows:
           <<: *node-version-matrix
       - packages-build-scripts:
           <<: *node-version-matrix
-      - hold-publish-packages:
-          type: approval
-          filters:
-            branches:
-              only:
-                - main
-#      - publish-packages:
-#          requires:
-#            - hold-publish-packages
-#          filters:
-#            branches:
-#              only:
-#                - main
       - jest-all:
           context: web-monetization-tests
           filters:
@@ -397,18 +272,4 @@ workflows:
             parameters:
               node-version: *node-versions
               command: [ "test:coverage", "test:e2e:coverage" ]
-# These are disabled due to the extension no longer initiating streams, simply showing state
-#      - coil-extension-puppeteer:
-#          context: web-monetization-tests
-#          filters:
-#            branches:
-#              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-#              ignore: /pull\/[0-9]+/
-#          <<: *node-version-matrix
-#      - coil-extension-puppeteer-transpile-only-mv3:
-#          context: web-monetization-tests
-#          filters:
-#            branches:
-#              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-#              ignore: /pull\/[0-9]+/
           <<: *node-version-matrix
