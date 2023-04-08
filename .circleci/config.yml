@@ -253,7 +253,7 @@ workflows:
     jobs:
 #      - build-safari
       - lint-all:
-          <<: *node-version-matrix
+          <<: *just-latest-lts-node-version
 #      - yarn-format-and-upkeep-diff-check:
 #          <<: *node-version-matrix
 #      - build-all-package-references-typescript:
