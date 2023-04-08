@@ -16,6 +16,8 @@ jobs:
       matrix:
         node-version: [16, 18]
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
       - name: Run Outer
         uses: ./.github/actions/node-matrixed-runner
         with:
