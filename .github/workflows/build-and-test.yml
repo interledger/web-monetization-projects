@@ -48,7 +48,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-{{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-${{ matrix.node-version }}
+          key: v1-dependencies-{{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
 
 #  yarn-format-and-upkeep-diff-check:
 #    runs-on: ubuntu-latest
