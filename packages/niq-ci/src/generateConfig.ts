@@ -4,8 +4,6 @@ import { resolve } from 'path'
 import * as yaml from 'js-yaml'
 import * as nunjucks from 'nunjucks'
 
-import write = chrome.socket.write
-
 const pretty = (val: unknown) => JSON.stringify(val, null, 2)
 // eslint-disable-next-line no-console
 const dbg = console.log
@@ -83,6 +81,48 @@ class MatrixExtension implements nunjucks.Extension {
 const nunjucksEnv = new nunjucks.Environment()
 nunjucksEnv.addExtension('matrix', new MatrixExtension())
 
+const cacheKey =
+  "v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}"
+const steps = [
+  {
+    name: 'Checkout',
+    uses: 'actions/checkout@v3'
+  },
+  {
+    name: 'Setup Node.js',
+    uses: 'actions/setup-node@v3',
+    with: {
+      'node-version': '${{ matrix.node-version }}'
+    }
+  },
+  {
+    name: 'Restore Cache',
+    uses: 'actions/cache@v3',
+    with: {
+      path: '${{ github.workspace }}/.yarn',
+      key: cacheKey
+    }
+  },
+  {
+    name: 'Yarn Install',
+    command: `export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+yarn --immutable
+export PUPPETEER_PRODUCT='firefox'
+yarn rebuild puppeteer`
+  },
+  {
+    name: 'Save Cache',
+    uses: 'actions/cache@v3',
+    with: {
+      path: '${{ github.workspace }}/.yarn',
+      key: cacheKey
+    }
+  }
+]
+
+const firstSteps = steps.slice(0, 4)
+const lastSteps = steps.slice(5)
+
 async function generateConfig() {
   const jobsFile = resolve(__dirname, '../../../.ci/jobs.yml')
   const file = await readFile(jobsFile, 'utf-8')
@@ -90,7 +130,11 @@ async function generateConfig() {
   const base = { ...actionsBase }
   Object.entries(parsed.jobs).forEach(([k, v]) => {
     const matrix = parsed.matrices
-    const env = parsed.environments[v.environments[0]]
+    const jobEnvName = v.environments[0]
+    const env = parsed.environments[jobEnvName]
+    if (jobEnvName.includes('macos')) {
+      return
+    }
 
     const matrixCombined: Record<string, string[]> = {}
     if (env.matrices) {
@@ -112,14 +156,15 @@ async function generateConfig() {
         }
       : undefined
 
+    const innerSteps = v['inner-steps'].map(step => {
+      const command = step.run.command
+      const rendered = nunjucksEnv.renderString(command, {})
+      return { name: step.run.name, run: rendered }
+    })
     base.jobs[k] = {
       ...extra,
-      'runs-on': 'ubuntu-latest',
-      steps: v['inner-steps'].map(step => {
-        const command = step.run.command
-        const rendered = nunjucksEnv.renderString(command, {})
-        return { name: step.run.name, run: rendered }
-      })
+      'runs-on': jobEnvName.includes('macos') ? '' : 'ubuntu-latest',
+      steps: [...firstSteps, ...innerSteps, ...lastSteps] as any // TODO
     }
   })
   dbg(pretty(base))

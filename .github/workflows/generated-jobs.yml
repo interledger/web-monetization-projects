@@ -15,22 +15,27 @@ jobs:
           - 18
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: Yarn Install
+        command: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
       - name: Lint Project
         run: |
           # show only errors with --quiet
           yarn lint:all --quiet
-  build-safari:
-    strategy:
-      matrix:
-        node-version:
-          - 16
-    runs-on: ubuntu-latest
-    steps:
-      - name: Build Safari
-        run: |
-          cd packages/coil-extension
-          yarn build-prod safari
-          scripts/build-safari.sh
   coil-extension-package:
     strategy:
       matrix:
@@ -39,6 +44,23 @@ jobs:
           - 18
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: Yarn Install
+        command: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
       - name: Package for firefox
         run: |
           cd packages/coil-extension
@@ -59,6 +81,23 @@ jobs:
           - 18
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: Yarn Install
+        command: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
       - name: Build Root TypeScript Project - tsconfig.build.json
         run: |
           yarn build:ts --verbose
@@ -70,6 +109,23 @@ jobs:
           - 18
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: Yarn Install
+        command: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
       - name: Build Root TypeScript Project - tsconfig.json
         run: |
           yarn tsc -b tsconfig.json --verbose
@@ -84,6 +140,23 @@ jobs:
           - test:e2e:coverage
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: Yarn Install
+        command: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
       - name: Run jest via dynamic compilation
         run: |
           export DEBUG='coil*'
@@ -113,6 +186,23 @@ jobs:
           - test:e2e:coverage
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: Yarn Install
+        command: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
       - name: Yarn workspaces foreach run jest via dynamic compilation
         run: |
           export TS_JEST_MAP_PATHS_TO_MODULES=true
@@ -133,6 +223,23 @@ jobs:
           - 18
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: Yarn Install
+        command: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
       - name: Packages Build Scripts
         run: |
           yarn workspaces foreach -v --exclude=web-monetization run build
@@ -144,6 +251,23 @@ jobs:
           - 18
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: Yarn Install
+        command: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
       - name: Yarn Dedupe Check
         run: |
           yarn dedupe --check
