@@ -1,5 +1,4 @@
 name: Outer Runner
-description: Runs an inner action between setup/teardown steps
 
 inputs:
   node-version:
@@ -10,7 +9,6 @@ inputs:
     required: true
 
 runs:
-  using: composite
   steps:
     - name: Checkout
       uses: actions/checkout@v3

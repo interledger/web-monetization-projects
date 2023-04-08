@@ -17,10 +17,10 @@ jobs:
         node-version: [16, 18]
     steps:
       - name: Run Outer
-        uses: ./.github/actions/node-matrixed-runner
+        uses: ./.github/actions/node-matrixed-runner.yml
         with:
           node-version: ${{ matrix.version }}
-          inner-steps: ./.github/actions/lint-all-steps
+          inner-steps: ./.github/actions/lint-all-steps.yml
 
 #  yarn-format-and-upkeep-diff-check:
 #    runs-on: ubuntu-latest
