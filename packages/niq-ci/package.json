@@ -31,6 +31,10 @@
     "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.js",
     "upkeep": "cd ../.. && yarn upkeep"
   },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "nunjucks": "^3.2.3"
+  },
   "devDependencies": {
     "@abraham/reflection": "0.12.0",
     "@babel/core": "7.21.4",
@@ -85,9 +89,5 @@
     "webpack-cli": "5.0.1",
     "webpack-dev-server": "4.13.2",
     "webpack-merge": "5.8.0"
-  },
-  "dependencies": {
-    "js-yaml": "^4.1.0",
-    "nunjucks": "^3.2.3"
   }
 }
