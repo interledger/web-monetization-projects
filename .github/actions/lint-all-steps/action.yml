@@ -1,8 +1,11 @@
 name: Lint All
+description: Lints the source
 
 runs:
+  using: composite
   steps:
     - name: Lint Project
+      shell: bash
       run: |
         # show only errors with --quiet
         yarn lint:all --quiet
