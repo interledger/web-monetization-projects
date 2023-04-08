@@ -83,14 +83,14 @@ jobs:
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            xvfb-run -a yarn {% matrix.test-command %}
+            xvfb-run -a yarn {% matrix "test-command" %}
       - run:
           name: Run jest via babel
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             cp jest.config.local.example.js jest.config.local.js 
-            xvfb-run -a yarn {% matrix.test-command %}
+            xvfb-run -a yarn {% matrix "test-command" %}
       - run:
           name: Run jest from build
           command: |
@@ -98,7 +98,7 @@ jobs:
             yarn clean:build || echo "already clean"
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
-            xvfb-run -a yarn {% matrix.test-command %}
+            xvfb-run -a yarn {% matrix "test-command" %}
 
   jest-workspaces-foreach-all:
     environments: [linux-node-jest]
@@ -108,7 +108,7 @@ jobs:
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run {% matrix.test-command %}
+            xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run {% matrix "test-command" %}
       - run:
           name: Yarn workspaces foreach run jest from build
           command: |
@@ -116,7 +116,7 @@ jobs:
             yarn build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run {% matrix.test-command %}
+            xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run {% matrix "test-command" %}
 
   packages-build-scripts:
     environments: [linux-node]

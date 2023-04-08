@@ -1,0 +1,168 @@
+name: CI
+'on':
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+jobs:
+  lint-all:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+    runs_on: ubuntu-latest
+    steps:
+      - name: Lint Project
+        run: |
+          # show only errors with --quiet
+          yarn lint:all --quiet
+  build-safari:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+    runs_on: ubuntu-latest
+    steps:
+      - name: Build Safari
+        run: |
+          cd packages/coil-extension
+          yarn build-prod safari
+          scripts/build-safari.sh
+  coil-extension-package:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+    runs_on: ubuntu-latest
+    steps:
+      - name: Package for firefox
+        run: |
+          cd packages/coil-extension
+          ./package.sh firefox
+      - name: Package for chrome
+        run: |
+          cd packages/coil-extension
+          ./package.sh chrome
+      - name: Lint firefox package
+        run: |
+          cd packages/coil-extension
+          yarn addons-linter coilfirefoxextension@coil.com.xpi
+  build-all-package-references-typescript:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+    runs_on: ubuntu-latest
+    steps:
+      - name: Build Root TypeScript Project - tsconfig.build.json
+        run: |
+          yarn build:ts --verbose
+  build-root-tsconfig:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+    runs_on: ubuntu-latest
+    steps:
+      - name: Build Root TypeScript Project - tsconfig.json
+        run: |
+          yarn tsc -b tsconfig.json --verbose
+  jest-all:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+        test-command:
+          - test:coverage
+          - test:e2e:coverage
+    runs_on: ubuntu-latest
+    steps:
+      - name: Run jest via dynamic compilation
+        run: |
+          export DEBUG='coil*'
+          export TS_JEST_MAP_PATHS_TO_MODULES=true
+          xvfb-run -a yarn ${{ matrix.test-command }}
+      - name: Run jest via babel
+        run: |
+          export DEBUG='coil*'
+          export TS_JEST_MAP_PATHS_TO_MODULES=true
+          cp jest.config.local.example.js jest.config.local.js 
+          xvfb-run -a yarn ${{ matrix.test-command }}
+      - name: Run jest from build
+        run: |
+          export DEBUG='coil*'
+          yarn clean:build || echo "already clean"
+          yarn build:ts:verbose
+          export TS_JEST_MAP_PATHS_TO_MODULES=false
+          xvfb-run -a yarn ${{ matrix.test-command }}
+  jest-workspaces-foreach-all:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+        test-command:
+          - test:coverage
+          - test:e2e:coverage
+    runs_on: ubuntu-latest
+    steps:
+      - name: Yarn workspaces foreach run jest via dynamic compilation
+        run: |
+          export TS_JEST_MAP_PATHS_TO_MODULES=true
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run ${{ matrix.test-command }}
+      - name: Yarn workspaces foreach run jest from build
+        run: |
+          yarn clean:build || echo "already clean"
+          yarn build:ts:verbose
+          export TS_JEST_MAP_PATHS_TO_MODULES=false
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run ${{ matrix.test-command }}
+  packages-build-scripts:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+    runs_on: ubuntu-latest
+    steps:
+      - name: Packages Build Scripts
+        run: |
+          yarn workspaces foreach -v --exclude=web-monetization run build
+  yarn-format-and-upkeep-diff-check:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+    runs_on: ubuntu-latest
+    steps:
+      - name: Yarn Dedupe Check
+        run: |
+          yarn dedupe --check
+      - name: yarn dlx @yarnpkg/sdks vscode
+        run: |
+          yarn dlx @yarnpkg/sdks vscode
+          git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+      - name: Yarn format git diff --exit-code
+        run: |
+          yarn format
+          yarn upkeep
+          # yarn.lock sometimes (rarely) changes for unknown reasons
+          # perhaps different versions of yarn ??
+          # we don't *really* care so exclude it from the diff check
+          git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+      - name: Build generated code git diff --exit-code
+        run: |
+          yarn workspaces foreach -v --exclude=web-monetization run generate-code
+          git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
