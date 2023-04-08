@@ -16,11 +16,39 @@ jobs:
       matrix:
         node-version: [16, 18]
     steps:
-      - name: Run Outer
-        uses: ./.github/actions/node-matrixed-runner.yml
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.version }}
-          inner-steps: ./.github/actions/lint-all-steps.yml
+          node-version: ${{ matrix.node-version }}
+
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+
+      - name: Yarn Install
+#        class: inner
+        run: |
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
+
+      - name: Lint Project
+#        class: inner
+        run: |
+          # show only errors with --quiet
+          yarn lint:all --quiet
+
+      - name: Save Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
 
 #  yarn-format-and-upkeep-diff-check:
 #    runs-on: ubuntu-latest
