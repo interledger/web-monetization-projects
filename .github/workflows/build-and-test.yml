@@ -11,83 +11,113 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Add steps here for lint-all
 
-  yarn-format-and-upkeep-diff-check:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ["16.19.0", "18.4.0"]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Add steps here for yarn-format-and-upkeep-diff-check
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-  build-all-package-references-typescript:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ["16.19.0", "18.4.0"]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Add steps here for build-all-package-references-typescript
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-{{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
 
-  build-root-tsconfig:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ["16.19.0"]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Add steps here for build-root-tsconfig
+      - name: Yarn Install
+        class: inner
+        run: |
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
 
-  coil-extension-package:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ["16.19.0", "18.4.0"]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Add steps here for coil-extension-package
+      - name: Lint Project
+        class: inner
+        run: |
+          # show only errors with --quiet
+          yarn lint:all --quiet
 
-  packages-build-scripts:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ["16.19.0", "18.4.0"]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Add steps here for packages-build-scripts
+      - name: Save Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-{{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-${{ matrix.node-version }}
 
-  jest-all:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ["16.19.0", "18.4.0"]
-        command: ["test:coverage", "test:e2e:coverage"]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Add steps here for jest-all
-
-  jest-workspaces-foreach-all:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ["16.19.0", "18.4.0"]
-        command: ["test:coverage", "test:e2e:coverage"]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Add steps here for jest-workspaces-foreach-all
-
-  build-safari:
-    runs-on: macos-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Add steps here for build-safari
+#  yarn-format-and-upkeep-diff-check:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: ["16.19.0", "18.4.0"]
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      # Add steps here for yarn-format-and-upkeep-diff-check
+#
+#  build-all-package-references-typescript:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: ["16.19.0", "18.4.0"]
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      # Add steps here for build-all-package-references-typescript
+#
+#  build-root-tsconfig:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: ["16.19.0"]
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      # Add steps here for build-root-tsconfig
+#
+#  coil-extension-package:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: ["16.19.0", "18.4.0"]
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      # Add steps here for coil-extension-package
+#
+#  packages-build-scripts:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: ["16.19.0", "18.4.0"]
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      # Add steps here for packages-build-scripts
+#
+#  jest-all:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: ["16.19.0", "18.4.0"]
+#        command: ["test:coverage", "test:e2e:coverage"]
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      # Add steps here for jest-all
+#
+#  jest-workspaces-foreach-all:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: ["16.19.0", "18.4.0"]
+#        command: ["test:coverage", "test:e2e:coverage"]
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      # Add steps here for jest-workspaces-foreach-all
+#
+#  build-safari:
+#    runs-on: macos-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      # Add steps here for build-safari
