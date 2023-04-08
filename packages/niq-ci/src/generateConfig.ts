@@ -55,8 +55,7 @@ const actionsBase = {
       branches: ['main']
     },
     pull_request: {
-      branches: ['main'],
-      types: ['opened', 'synchronize']
+      branches: ['main']
     }
   },
   jobs: {} as Record<string, GithubActionsJob>

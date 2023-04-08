@@ -1,5 +1,4 @@
 name: CI
-
 'on':
   push:
     branches:
@@ -7,7 +6,6 @@ name: CI
   pull_request:
     branches:
       - main
-
 jobs:
   lint-all:
     strategy:
@@ -15,7 +13,7 @@ jobs:
         node-version:
           - 16
           - 18
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Lint Project
         run: |
@@ -26,7 +24,7 @@ jobs:
       matrix:
         node-version:
           - 16
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Build Safari
         run: |
@@ -39,7 +37,7 @@ jobs:
         node-version:
           - 16
           - 18
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Package for firefox
         run: |
@@ -59,7 +57,7 @@ jobs:
         node-version:
           - 16
           - 18
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Build Root TypeScript Project - tsconfig.build.json
         run: |
@@ -70,7 +68,7 @@ jobs:
         node-version:
           - 16
           - 18
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Build Root TypeScript Project - tsconfig.json
         run: |
@@ -84,7 +82,7 @@ jobs:
         test-command:
           - test:coverage
           - test:e2e:coverage
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Run jest via dynamic compilation
         run: |
@@ -113,7 +111,7 @@ jobs:
         test-command:
           - test:coverage
           - test:e2e:coverage
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Yarn workspaces foreach run jest via dynamic compilation
         run: |
@@ -133,7 +131,7 @@ jobs:
         node-version:
           - 16
           - 18
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Packages Build Scripts
         run: |
@@ -144,7 +142,7 @@ jobs:
         node-version:
           - 16
           - 18
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Yarn Dedupe Check
         run: |
