@@ -250,10 +250,10 @@ jobs:
 workflows:
   version: 2
   build:
-    jobs: []
+    jobs:
 #      - build-safari
-#      - lint-all:
-#          <<: *node-version-matrix
+      - lint-all:
+          <<: *node-version-matrix
 #      - yarn-format-and-upkeep-diff-check:
 #          <<: *node-version-matrix
 #      - build-all-package-references-typescript:
