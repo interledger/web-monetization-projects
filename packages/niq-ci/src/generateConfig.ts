@@ -37,7 +37,7 @@ export interface Configuration {
 }
 
 interface GithubActionsJob {
-  runs_on: string
+  'runs-on': string
   strategy?: {
     matrix: Record<string, string[]>
     fail_fast?: boolean
@@ -115,7 +115,7 @@ async function generateConfig() {
 
     base.jobs[k] = {
       ...extra,
-      runs_on: 'ubuntu-latest',
+      'runs-on': 'ubuntu-latest',
       steps: v['inner-steps'].map(step => {
         const command = step.run.command
         const rendered = nunjucksEnv.renderString(command, {})
