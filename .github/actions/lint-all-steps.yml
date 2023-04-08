@@ -1,0 +1,8 @@
+name: Lint All
+
+runs:
+  steps:
+    - name: Lint Project
+      run: |
+        # show only errors with --quiet
+        yarn lint:all --quiet

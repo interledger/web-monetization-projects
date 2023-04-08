@@ -24,13 +24,24 @@ function makeNodeVersionMatrix(nodeVersion: string[] = nodeVersions) {
   return {
     matrix: {
       parameters: {
-        nodeVersion
+        'node-version': nodeVersion
       }
     }
   }
 }
 
 const nodeVersionMatrix = makeNodeVersionMatrix()
+const withCommand = (command: string[]) => {
+  return {
+    matrix: {
+      parameters: {
+        'node-version': nodeVersions,
+        command
+      }
+    }
+  }
+}
+
 const firstNodeVersion = nodeVersions.slice(0, 1)
 const justOneVersionMatrix = makeNodeVersionMatrix(firstNodeVersion)
 const defaultCache = cache(cacheKey)
@@ -250,7 +261,11 @@ const config: CircleCIConfig = {
       jobs: Object.entries(jobs).map(([k, v]) => {
         return {
           [k]: {
-            ...(k === 'build-safari' ? justOneVersionMatrix : nodeVersionMatrix)
+            ...(k === 'build-safari'
+              ? justOneVersionMatrix
+              : k.includes('jest')
+              ? { ...nodeVersionMatrix }
+              : nodeVersionMatrix)
           }
         }
       })

@@ -28,7 +28,6 @@ jobs:
             - v6-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
       - &yarn_install
         run:
-          class: inner
           name: Yarn Install
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
