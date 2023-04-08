@@ -211,6 +211,7 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
+          class: inner
           name: Yarn Dedupe Check
           command: |
             yarn dedupe --check
