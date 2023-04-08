@@ -1,11 +1,5 @@
 version: 2.1
 
-parameters:
-  coil_domain:
-    type: enum
-    default: "https://coil.com"
-    enum: [ "https://coil.com", "https://staging.coil.com" ]
-
 references:
   parameterized-node-version: &parameterized-node-version
     parameters:
@@ -34,6 +28,7 @@ jobs:
             - v6-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
       - &yarn_install
         run:
+          class: inner
           name: Yarn Install
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
@@ -41,6 +36,7 @@ jobs:
             export PUPPETEER_PRODUCT='firefox'
             yarn rebuild puppeteer
       - run:
+          class: inner
           name: Lint Project
           command: |
             # show only errors with --quiet
@@ -64,6 +60,7 @@ jobs:
             - safari-build-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
       - *yarn_install
       - run:
+          class: inner
           name: Build Safari
           command: |
             cd packages/coil-extension
@@ -83,16 +80,19 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
+          class: inner
           name: Package for firefox
           command: |
             cd packages/coil-extension
             ./package.sh firefox
       - run:
+          class: inner
           name: Package for chrome
           command: |
             cd packages/coil-extension
             ./package.sh chrome
       - run:
+          class: inner
           name: Lint firefox package
           command: |
             cd packages/coil-extension
@@ -106,6 +106,7 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
+          class: inner
           name: Build Root TypeScript Project - tsconfig.build.json
           command: |
             yarn build:ts --verbose
@@ -121,6 +122,7 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
+          class: inner
           name: Build Root TypeScript Project - tsconfig.json
           command: |
             yarn tsc -b tsconfig.json --verbose
@@ -141,12 +143,14 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
+          class: inner
           name: Run jest via dynamic compilation
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             xvfb-run -a yarn << parameters.command >>
       - run:
+          class: inner
           name: Run jest via babel
           command: |
             export DEBUG='coil*'
@@ -154,6 +158,7 @@ jobs:
             cp jest.config.local.example.js jest.config.local.js 
             xvfb-run -a yarn << parameters.command >>
       - run:
+          class: inner
           name: Run jest from build
           command: |
             export DEBUG='coil*'
@@ -177,12 +182,14 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
+          class: inner
           name: Yarn workspaces foreach run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
             xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run << parameters.command >>
       - run:
+          class: inner
           name: Yarn workspaces foreach run jest from build
           command: |
             yarn clean:build || echo "already clean"
@@ -199,6 +206,7 @@ jobs:
       - *restore_cache
       - *yarn_install
       - run:
+          class: inner
           name: Packages Build Scripts
           command: |
             yarn workspaces foreach -v --exclude=web-monetization run build
@@ -216,11 +224,13 @@ jobs:
           command: |
             yarn dedupe --check
       - run:
+          class: inner
           name: yarn dlx @yarnpkg/sdks vscode
           command: |
             yarn dlx @yarnpkg/sdks vscode
             git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
       - run:
+          class: inner
           name: Yarn format git diff --exit-code
           command: |
             yarn format
@@ -230,6 +240,7 @@ jobs:
             # we don't *really* care so exclude it from the diff check
             git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
       - run:
+          class: inner
           name: Build generated code git diff --exit-code
           command: |
             yarn workspaces foreach -v --exclude=web-monetization run generate-code
@@ -254,7 +265,6 @@ workflows:
       - packages-build-scripts:
           <<: *node-version-matrix
       - jest-all:
-          context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
@@ -264,7 +274,6 @@ workflows:
               node-version: *node-versions
               command: [ "test:coverage", "test:e2e:coverage" ]
       - jest-workspaces-foreach-all:
-          context: web-monetization-tests
           filters:
             branches:
               # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
