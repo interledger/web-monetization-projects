@@ -27,7 +27,7 @@ jobs:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
       - name: Yarn Install
-        command: |-
+        run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
           export PUPPETEER_PRODUCT='firefox'
@@ -56,7 +56,7 @@ jobs:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
       - name: Yarn Install
-        command: |-
+        run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
           export PUPPETEER_PRODUCT='firefox'
@@ -93,7 +93,7 @@ jobs:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
       - name: Yarn Install
-        command: |-
+        run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
           export PUPPETEER_PRODUCT='firefox'
@@ -121,7 +121,7 @@ jobs:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
       - name: Yarn Install
-        command: |-
+        run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
           export PUPPETEER_PRODUCT='firefox'
@@ -152,7 +152,7 @@ jobs:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
       - name: Yarn Install
-        command: |-
+        run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
           export PUPPETEER_PRODUCT='firefox'
@@ -198,7 +198,7 @@ jobs:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
       - name: Yarn Install
-        command: |-
+        run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
           export PUPPETEER_PRODUCT='firefox'
@@ -235,7 +235,7 @@ jobs:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
       - name: Yarn Install
-        command: |-
+        run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
           export PUPPETEER_PRODUCT='firefox'
@@ -263,7 +263,7 @@ jobs:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
       - name: Yarn Install
-        command: |-
+        run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
           export PUPPETEER_PRODUCT='firefox'
