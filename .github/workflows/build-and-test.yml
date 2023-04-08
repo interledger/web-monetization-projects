@@ -31,7 +31,6 @@ jobs:
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
 
       - name: Yarn Install
-#        class: inner
         run: |
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
