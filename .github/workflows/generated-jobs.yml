@@ -36,6 +36,35 @@ jobs:
         run: |
           # show only errors with --quiet
           yarn lint:all --quiet
+  build-safari:
+    strategy:
+      matrix:
+        node-version:
+          - 16
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Restore Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/.yarn
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: Yarn Install
+        run: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          yarn --immutable
+          export PUPPETEER_PRODUCT='firefox'
+          yarn rebuild puppeteer
+      - name: Build Safari
+        run: |
+          cd packages/coil-extension
+          yarn build-prod safari
+          scripts/build-safari.sh
   coil-extension-package:
     strategy:
       matrix:

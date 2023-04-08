@@ -34,16 +34,18 @@ export interface Configuration {
   jobs: Record<string, Job>
 }
 
-interface GithubActionsJob {
+export interface GithubActionsStep {
+  name: string
+  run: string
+}
+
+export interface GithubActionsJob {
   'runs-on': string
   strategy?: {
     matrix: Record<string, string[]>
     fail_fast?: boolean
   }
-  steps: {
-    name: string
-    run: string
-  }[]
+  steps: GithubActionsStep[]
 }
 
 const actionsBase = {
@@ -123,18 +125,16 @@ yarn rebuild puppeteer`
 const firstSteps = steps.slice(0, 4)
 const lastSteps = steps.slice(5)
 
-async function generateConfig() {
-  const jobsFile = resolve(__dirname, '../../../.ci/jobs.yml')
-  const file = await readFile(jobsFile, 'utf-8')
-  const parsed = yaml.load(file) as Configuration
+function convertConfigToGithubActions(parsed: Configuration) {
   const base = { ...actionsBase }
   Object.entries(parsed.jobs).forEach(([k, v]) => {
     const matrix = parsed.matrices
+    // Support only one environment now
+    if (v.environments.length !== 1) {
+      throw new Error('more than one environment currently not supported')
+    }
     const jobEnvName = v.environments[0]
     const env = parsed.environments[jobEnvName]
-    if (jobEnvName.includes('macos')) {
-      return
-    }
 
     const matrixCombined: Record<string, string[]> = {}
     if (env.matrices) {
@@ -157,16 +157,35 @@ async function generateConfig() {
       : undefined
 
     const innerSteps = v['inner-steps'].map(step => {
+      if (!step.run) {
+        throw new Error('step must be an object with a run field')
+      }
+
       const command = step.run.command
       const rendered = nunjucksEnv.renderString(command, {})
       return { name: step.run.name, run: rendered }
     })
     base.jobs[k] = {
       ...extra,
-      'runs-on': jobEnvName.includes('macos') ? '' : 'ubuntu-latest',
-      steps: [...firstSteps, ...innerSteps, ...lastSteps] as any // TODO
+      'runs-on': jobEnvName.includes('macos')
+        ? 'macos-latest'
+        : 'ubuntu-latest',
+      steps: [
+        ...firstSteps,
+        ...innerSteps,
+        ...lastSteps
+      ] as Array<GithubActionsStep> // TODO
     }
   })
+  return base
+}
+
+async function generateConfig() {
+  const jobsFile = resolve(__dirname, '../../../.ci/jobs.yml')
+  const file = await readFile(jobsFile, 'utf-8')
+  const parsed = yaml.load(file) as Configuration
+
+  const base = convertConfigToGithubActions(parsed)
   dbg(pretty(base))
   const yml = yaml.dump(base, {
     indent: 2,
