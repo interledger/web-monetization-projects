@@ -31,7 +31,7 @@ jobs:
           key: v1-dependencies-{{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
 
       - name: Yarn Install
-        class: inner
+#        class: inner
         run: |
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           yarn --immutable
@@ -39,7 +39,7 @@ jobs:
           yarn rebuild puppeteer
 
       - name: Lint Project
-        class: inner
+#        class: inner
         run: |
           # show only errors with --quiet
           yarn lint:all --quiet
