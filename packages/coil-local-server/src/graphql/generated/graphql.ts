@@ -311,6 +311,16 @@ export type DirectiveResolverFn<
   info: GraphQLResolveInfo
 ) => TResult | Promise<TResult>
 
+/** Mapping of union types */
+export type ResolversUnionTypes = {
+  PaymentMethodDetails: Partial<StripeCardDetails>
+}
+
+/** Mapping of union parent types */
+export type ResolversUnionParentTypes = {
+  PaymentMethodDetails: Partial<StripeCardDetails>
+}
+
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
   AdaptedPagePayload: ResolverTypeWrapper<Partial<AdaptedPagePayload>>
@@ -333,7 +343,9 @@ export type ResolversTypes = {
       }
     >
   >
-  PaymentMethodDetails: Partial<ResolversTypes['StripeCardDetails']>
+  PaymentMethodDetails: Partial<
+    ResolverTypeWrapper<ResolversUnionTypes['PaymentMethodDetails']>
+  >
   PaymentMethodStatus: ResolverTypeWrapper<Partial<PaymentMethodStatus>>
   PaymentMethodType: ResolverTypeWrapper<Partial<PaymentMethodType>>
   Query: ResolverTypeWrapper<{}>
@@ -368,7 +380,9 @@ export type ResolversParentTypes = {
       details?: Maybe<ResolversParentTypes['PaymentMethodDetails']>
     }
   >
-  PaymentMethodDetails: Partial<ResolversParentTypes['StripeCardDetails']>
+  PaymentMethodDetails: Partial<
+    ResolversUnionParentTypes['PaymentMethodDetails']
+  >
   Query: {}
   String: Partial<Scalars['String']>
   StripeCardDetails: Partial<StripeCardDetails>
