@@ -4725,9 +4725,9 @@ __metadata:
     "@swc/core": "npm:1.3.46"
     "@swc/jest": "npm:0.2.24"
     "@types/jest": "npm:29.5.0"
-    "@types/js-yaml": "npm:^4.0.5"
+    "@types/js-yaml": "npm:4.0.5"
     "@types/node": "npm:16.18.23"
-    "@types/nunjucks": "npm:^3"
+    "@types/nunjucks": "npm:3.2.2"
     "@typescript-eslint/eslint-plugin": "npm:5.57.1"
     "@typescript-eslint/parser": "npm:5.57.1"
     "@yarnpkg/pnpify": "npm:3.1.6"
@@ -5768,7 +5768,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/js-yaml@npm:^4.0.0, @types/js-yaml@npm:^4.0.5":
+"@types/js-yaml@npm:4.0.5, @types/js-yaml@npm:^4.0.0":
   version: 4.0.5
   resolution: "@types/js-yaml@npm:4.0.5"
   checksum: 586a99838928dc20d7e8826b3d8cab16ae131e36c00e7be4c519c51d30e90d0cbdfa92b4b5564bb1f3168c830e9750816c5e004577da0d207496da16bb0d0487
@@ -5944,7 +5944,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/nunjucks@npm:^3":
+"@types/nunjucks@npm:3.2.2":
   version: 3.2.2
   resolution: "@types/nunjucks@npm:3.2.2"
   checksum: 681068af5dbc30e8442341948751765e3f9af6065d31a8ef20d96cf40f95ed1d0683d200c193b3b5e5b6d8d627f1282e324cf6801c892b3cc4adeab94a671ac3
