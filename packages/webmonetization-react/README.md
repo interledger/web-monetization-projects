@@ -73,9 +73,7 @@ const MyCounter = props => {
 
   return (
     <p>
-      {(monetization.totalAmount / 10 ** monetization.assetScale).toFixed(
-        monetization.assetScale
-      )}
+      {(monetization.totalAmount / 10 ** monetization.assetScale).toFixed(monetization.assetScale)}
       {monetization.assetCode}
     </p>
   )
