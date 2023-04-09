@@ -1,0 +1,154 @@
+matrices:
+  node-version: [16, 18]
+  test-command: [test:coverage, test:e2e:coverage]
+
+environments:
+  linux-node:
+    os: linux
+    tools: [node]
+    matrices: [node-version]
+  linux-node-jest:
+    os: linux
+    tools: [node]
+    matrices: [node-version, test-command]
+  macos-node:
+    os: macos
+    tools: [node]
+    matrices: [ { node-version: [16] }]
+
+jobs:
+  lint-all:
+    environments: [linux-node]
+    inner-steps:
+      - run:
+          name: Lint Project
+          command: |
+            # show only errors with --quiet
+            yarn lint:all --quiet
+
+  build-safari:
+    environments: [macos-node]
+    inner-steps:
+      - run:
+          name: Build Safari
+          command: |
+            cd packages/coil-extension
+            yarn build-prod safari
+            scripts/build-safari.sh
+
+  coil-extension-package:
+    environments: [linux-node]
+    inner-steps:
+      - run:
+          name: Package for firefox
+          command: |
+            cd packages/coil-extension
+            ./package.sh firefox
+      - run:
+          name: Package for chrome
+          command: |
+            cd packages/coil-extension
+            ./package.sh chrome
+      - run:
+          name: Lint firefox package
+          command: |
+            cd packages/coil-extension
+            yarn addons-linter coilfirefoxextension@coil.com.xpi
+
+  build-all-package-references-typescript:
+    environments: [linux-node]
+    inner-steps:
+      - run:
+          name: Build Root TypeScript Project - tsconfig.build.json
+          command: |
+            yarn build:ts --verbose
+
+  # This builds the root tsconfig that the IDE uses and the tests are run under.
+  # Make sure there are no issues here that somehow other jobs haven't captured.
+  # This has been a problem in the past and could be again.
+  build-root-tsconfig:
+    environments: [linux-node]
+    inner-steps:
+      - run:
+          class: inner
+          name: Build Root TypeScript Project - tsconfig.json
+          command: |
+            yarn tsc -b tsconfig.json --verbose
+
+  jest-all:
+    environments: [linux-node-jest]
+    inner-steps:
+      - run:
+          name: Run jest via dynamic compilation
+          command: |
+            export DEBUG='coil*'
+            export TS_JEST_MAP_PATHS_TO_MODULES=true
+            xvfb-run -a yarn {% matrix "test-command" %}
+      - run:
+          name: Run jest via babel
+          command: |
+            export DEBUG='coil*'
+            export TS_JEST_MAP_PATHS_TO_MODULES=true
+            cp jest.config.local.example.js jest.config.local.js 
+            xvfb-run -a yarn {% matrix "test-command" %}
+      - run:
+          name: Run jest from build
+          command: |
+            export DEBUG='coil*'
+            yarn clean:build || echo "already clean"
+            yarn build:ts:verbose
+            export TS_JEST_MAP_PATHS_TO_MODULES=false
+            xvfb-run -a yarn {% matrix "test-command" %}
+
+  jest-workspaces-foreach-all:
+    environments: [linux-node-jest]
+    inner-steps:
+      - run:
+          name: Yarn workspaces foreach run jest via dynamic compilation
+          command: |
+            export TS_JEST_MAP_PATHS_TO_MODULES=true
+            export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+            xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run {% matrix "test-command" %}
+      - run:
+          name: Yarn workspaces foreach run jest from build
+          command: |
+            yarn clean:build || echo "already clean"
+            yarn build:ts:verbose
+            export TS_JEST_MAP_PATHS_TO_MODULES=false
+            export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+            xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run {% matrix "test-command" %}
+
+  packages-build-scripts:
+    environments: [linux-node]
+    inner-steps:
+      - run:
+          name: Packages Build Scripts
+          command: |
+            yarn workspaces foreach -v --exclude=web-monetization run build
+
+  yarn-format-and-upkeep-diff-check:
+    environments: [linux-node]
+    inner-steps:
+      - run:
+          name: Yarn Dedupe Check
+          command: |
+            yarn dedupe --check
+      - run:
+          name: yarn dlx @yarnpkg/sdks vscode
+          command: |
+            yarn dlx @yarnpkg/sdks vscode
+            git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+      - run:
+          name: Yarn format git diff --exit-code
+          command: |
+            yarn format
+            yarn upkeep
+            # yarn.lock sometimes (rarely) changes for unknown reasons
+            # perhaps different versions of yarn ??
+            # we don't *really* care so exclude it from the diff check
+            git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+      - run:
+          name: Build generated code git diff --exit-code
+          command: |
+            yarn workspaces foreach -v --exclude=web-monetization run generate-code
+            git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'

@@ -45,6 +45,9 @@
       "path": "packages/interledger-minute-extension/tsconfig.build.json"
     },
     {
+      "path": "packages/niq-ci/tsconfig.build.json"
+    },
+    {
       "path": "packages/stacktracejs-stacktrace-js/tsconfig.build.json"
     },
     {

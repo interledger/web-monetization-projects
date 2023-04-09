@@ -48,6 +48,9 @@
       "@interledger/minute-extension": [
         "packages/interledger-minute-extension/src"
       ],
+      "@niq/ci": [
+        "packages/niq-ci/src"
+      ],
       "@stacktracejs/stacktrace-js": [
         "packages/stacktracejs-stacktrace-js/src"
       ],
