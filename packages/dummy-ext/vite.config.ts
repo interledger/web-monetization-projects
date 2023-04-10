@@ -23,6 +23,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       plugins: [
+        // TODO: maybe mismatch of rollup versions ?
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         rollupNodePolyFill() as any
       ]
