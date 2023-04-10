@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-import glob from 'glob'
+import { glob } from 'glob'
 import YAML from 'yaml'
 
 import { LernaListItem } from '../types'
@@ -40,19 +40,7 @@ async function executeGlobs(workspaceGlobs: WorkspaceGlob[]) {
   const workspaceFolders: string[] = (
     await Promise.all(
       workspaceGlobs.map(async (workspaceGlob: WorkspaceGlob) => {
-        return new Promise<string[]>((resolve, reject) => {
-          glob(
-            workspaceGlob.pattern,
-            { ignore: workspaceGlob.exclusions },
-            (err, folders) => {
-              if (err) {
-                reject(err)
-              } else {
-                resolve(folders)
-              }
-            }
-          )
-        })
+        return glob(workspaceGlob.pattern, { ignore: workspaceGlob.exclusions })
       })
     )
   ).flat()
