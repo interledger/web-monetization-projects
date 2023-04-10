@@ -8,7 +8,7 @@ export function logger(name?: string) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return function decorator(
     target: any,
-    targetKey: string,
+    targetKey: string | undefined,
     index?: number | undefined
   ) {
     inject(tokens.Logger)(target, targetKey, index)
