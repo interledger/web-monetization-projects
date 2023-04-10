@@ -31,7 +31,7 @@
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "precommit": "echo lint-staged runs from root",
     "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
-    "test": "jest --passWithNoTests",
+    "test": "PROJECT_JEST=1 jest --passWithNoTests --config jest.config.cjs",
     "test:coverage": "yarn test --verbose --coverage",
     "test:e2e": "yarn test --config jest-e2e.config.cjs",
     "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.cjs",
