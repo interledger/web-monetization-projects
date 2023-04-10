@@ -1,5 +1,6 @@
 # Web Monetization Projects
 
+![Github Actions CI](https://github.com/interledger/web-monetization-projects/actions/workflows/generated-jobs.yml/badge.svg?branch=main)
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io/)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
 
