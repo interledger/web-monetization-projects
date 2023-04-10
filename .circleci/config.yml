@@ -10,7 +10,7 @@ references:
   just-one-node-version-matrix: &just-latest-lts-node-version
     matrix:
       parameters:
-        node-version: [ "16.19.0" ]
+        node-version: [ "18" ]
 
 jobs:
   # Run Linting
