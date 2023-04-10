@@ -8,9 +8,9 @@
   },
   "scripts": {
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint",
-    "test": "jest --passWithNoTests",
-    "test:e2e": "yarn test --config jest-e2e.config.js",
-    "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.js",
+    "test": "jest --passWithNoTests --config jest.config.cjs",
+    "test:e2e": "yarn test --config jest-e2e.config.cjs",
+    "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.cjs",
     "test:coverage": "yarn test --coverage --verbose",
     "prettier": "prettier --write 'packages/*/*.{html,js,ts,tsx,jsx,md}' 'packages/*/{src,test}/**/*.{ts,tsx,js,jsx,html,md}'",
     "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",

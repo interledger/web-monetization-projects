@@ -32,8 +32,8 @@
     "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --verbose --coverage",
-    "test:e2e": "yarn test --config jest-e2e.config.js",
-    "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.js",
+    "test:e2e": "yarn test --config jest-e2e.config.cjs",
+    "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.cjs",
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {

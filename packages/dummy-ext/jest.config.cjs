@@ -2,7 +2,7 @@
 const path = require('path')
 
 const displayName = path.basename(__dirname)
-const rootConfig = { ...require('../../jest.config') }
+const rootConfig = { ...require('jest.config.cjs') }
 delete rootConfig.projects
 delete rootConfig.rootDir
 
