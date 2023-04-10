@@ -1,7 +1,7 @@
 {
   "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
   "$overRideUpKeep": {
-    "type": "commonjs",
+    "type": "module",
     "scripts": {
       "dev": "vite"
     }
@@ -19,7 +19,7 @@
   },
   "license": "Apache-2.0",
   "author": "Coil Team <info@coil.com>",
-  "type": "commonjs",
+  "type": "module",
   "main": "./build",
   "types": "./build",
   "scripts": {
