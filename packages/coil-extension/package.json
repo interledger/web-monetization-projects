@@ -19,10 +19,10 @@
   "main": "./build",
   "types": "./build",
   "scripts": {
-    "build": "$SHELL ./build.sh dev",
+    "build": "sh ./build.sh dev",
     "build-detect-devdist2": "WEXT_MANIFEST_PERMISSIONS='[\"+notifications\"]' EXPECTED_ID=deofcdfbmgdlnbdhpdmmegpokkaoadam TS_LOADER_TRANSPILE_ONLY=true WEXT_MANIFEST_KEY=DevDist2 WEXT_MANIFEST_SUFFIX=DevDist2 OUTPUT_TO=dist2 ./build.sh prod",
-    "build-prod": "$SHELL ./build.sh prod",
-    "build-staging": "$SHELL ./build.sh staging",
+    "build-prod": "sh ./build.sh prod",
+    "build-staging": "sh ./build.sh staging",
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",
