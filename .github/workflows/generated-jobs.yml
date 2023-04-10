@@ -13,8 +13,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16
           - 18
+          - 19
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -47,7 +47,7 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16
+          - 18
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -81,8 +81,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16
           - 18
+          - 19
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -123,8 +123,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16
           - 18
+          - 19
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -156,8 +156,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16
           - 18
+          - 19
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -189,8 +189,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16
           - 18
+          - 19
         test-command:
           - test:coverage
           - test:e2e:coverage
@@ -240,8 +240,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16
           - 18
+          - 19
         test-command:
           - test:coverage
           - test:e2e:coverage
@@ -285,8 +285,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16
           - 18
+          - 19
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -318,8 +318,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 16
           - 18
+          - 19
     steps:
       - name: Checkout
         uses: actions/checkout@v3
