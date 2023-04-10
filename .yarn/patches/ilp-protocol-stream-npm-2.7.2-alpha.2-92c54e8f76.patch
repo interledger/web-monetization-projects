@@ -1,0 +1,13 @@
+diff --git a/dist/src/stream.d.ts b/dist/src/stream.d.ts
+index a1c295b89912d7bb76f0b53030165d754374f7f8..99e2852379eff07aba03eae486c4d73f3c1472bf 100644
+--- a/dist/src/stream.d.ts
++++ b/dist/src/stream.d.ts
+@@ -53,7 +53,7 @@ export declare class DataAndMoneyStream extends Duplex {
+     get sendMax(): string;
+     get receiveMax(): string;
+     get receipt(): Buffer | undefined;
+-    get closed(): boolean;
++    // get closed(): boolean;
+     isOpen(): boolean;
+     setSendMax(limit: LongValue): void;
+     setReceiveMax(limit: LongValue): void;
