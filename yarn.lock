@@ -7626,14 +7626,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn-walk@npm:^8.0.0, acorn-walk@npm:^8.1.1":
-  version: 8.1.1
-  resolution: "acorn-walk@npm:8.1.1"
-  checksum: aafa72b7a5adc095dda133739a197c6f6a768358caea0b72674dd46746373a959245437249145832ba120bffb983e0023dd07cab76c483c3528b7e6ef44f8d4c
-  languageName: node
-  linkType: hard
-
-"acorn-walk@npm:^8.2.0":
+"acorn-walk@npm:^8.0.0, acorn-walk@npm:^8.1.1, acorn-walk@npm:^8.2.0":
   version: 8.2.0
   resolution: "acorn-walk@npm:8.2.0"
   checksum: 389d3f19998ac0924a590485a6502b72059e3ab67cc820477c2c40cca06b6c50bb8d424bfbb8fe97955eb489b88cb5dc7ee6979fcf9321dce7eb451ba3456d3d
