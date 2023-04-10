@@ -1,6 +1,5 @@
 import { SPSPResponse as SPSPResponseRaw } from '@webmonetization/types'
 
-import { portableFetch } from './portableFetch'
 import { CustomError } from './CustomError'
 
 export interface SPSPResponse {
@@ -29,7 +28,7 @@ export class SPSPError extends CustomError {
 export async function getSPSPResponse(
   spspUrl: string,
   monetizationId: string,
-  fetchFunc = portableFetch
+  fetchFunc = fetch
 ): Promise<SPSPResponse> {
   let response: Response
 

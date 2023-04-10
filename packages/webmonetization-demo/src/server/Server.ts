@@ -9,7 +9,6 @@ import {
 } from 'inversify-express-utils'
 import * as express from 'express'
 import figlet from 'figlet'
-import fetch from 'node-fetch'
 
 @controller('/')
 export class Server extends BaseHttpController {

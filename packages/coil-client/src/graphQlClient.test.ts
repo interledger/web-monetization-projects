@@ -4,7 +4,6 @@ import {
   loginMutation,
   queryTokenQuery
 } from '@coil/client'
-import fetch from 'node-fetch'
 
 import { testToken } from '../test/fixtures/testToken'
 

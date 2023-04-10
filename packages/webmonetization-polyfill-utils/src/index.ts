@@ -11,7 +11,6 @@ export { whenDocumentReady } from './lib/whenDocumentReady'
 export { getSPSPResponse, SPSPError } from './lib/getSPSPResponse'
 export type { SPSPResponse } from './lib/getSPSPResponse'
 
-export { portableFetch } from './lib/portableFetch'
 export { AdaptiveBandwidth } from './lib/AdaptiveBandwidth'
 export type { StreamControl } from './lib/idle'
 export { watchPageEvents } from './lib/idle'

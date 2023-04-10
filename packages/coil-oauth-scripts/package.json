@@ -46,7 +46,6 @@
     "@webmonetization/types": "0.0.0",
     "ilp-plugin-btp": "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch",
     "ilp-protocol-stream": "^2.7.2-alpha.2",
-    "node-fetch": "^2.6.1",
     "reduct": "^3.3.1",
     "uuid": "^9.0.0"
   },
@@ -68,7 +67,6 @@
     "@types/jest": "29.5.0",
     "@types/long": "4.0.2",
     "@types/node": "16.18.23",
-    "@types/node-fetch": "2.6.3",
     "@types/uuid": "9.0.1",
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",

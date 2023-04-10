@@ -34,7 +34,6 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1",
     "reduct": "^3.3.1",
     "uuid": "^9.0.0"
   },
@@ -53,7 +52,6 @@
     "@swc/jest": "0.2.24",
     "@types/jest": "29.5.0",
     "@types/node": "16.18.23",
-    "@types/node-fetch": "2.6.3",
     "@types/uuid": "9.0.1",
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",

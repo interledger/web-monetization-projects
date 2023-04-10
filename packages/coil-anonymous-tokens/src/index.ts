@@ -17,8 +17,6 @@ import {
 } from '@coil/privacypass-sjcl'
 import type { SjclEllipticalPoint } from 'sjcl'
 
-import { portableFetch } from './portableFetch'
-
 export function base64url(buf: Buffer): string {
   return buf
     .toString('base64')
@@ -156,7 +154,7 @@ export class AnonymousTokens implements AnonymousTokensService {
   ): Promise<string | undefined> {
     const usableToken = deserializeToken(token)
     const redeemRequest = BuildRedeemHeader(usableToken, '', '')
-    const response = await portableFetch(this.redeemerUrl + '/redeem', {
+    const response = await fetch(this.redeemerUrl + '/redeem', {
       method: 'POST',
       credentials: 'omit',
       headers: { 'content-type': 'application/json' },
@@ -214,7 +212,7 @@ export class AnonymousTokens implements AnonymousTokensService {
     coilAuthToken: string,
     request: string
   ): Promise<IssueResponse> {
-    const signRes = await portableFetch(this.signerUrl + '/issue', {
+    const signRes = await fetch(this.signerUrl + '/issue', {
       method: 'POST',
       // We need this for staging due to cloudflare auth
       credentials: this.signerUrl.includes('staging.coil.com')
@@ -287,7 +285,7 @@ export class AnonymousTokens implements AnonymousTokensService {
   }
 
   private async _getCommitments(): Promise<Commitment[]> {
-    const response = await portableFetch(this.redeemerUrl + '/commitments', {
+    const response = await fetch(this.redeemerUrl + '/commitments', {
       credentials: 'omit',
       method: 'GET'
     })

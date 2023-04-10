@@ -1,6 +1,5 @@
 import { inject, injectable } from '@dier-makr/annotations'
 
-import { portableFetch } from './utils/portableFetch'
 import { GraphQlResponse } from './types'
 import {
   adaptedPage,
@@ -18,7 +17,7 @@ import {
 @injectable()
 export class GraphQlClientOptions {
   public coilDomain = 'https://coil.com'
-  public fetch: typeof fetch = portableFetch
+  public fetch = fetch
   public log?: typeof console.log
   public extraHeaders: Record<string, string> = {}
 }

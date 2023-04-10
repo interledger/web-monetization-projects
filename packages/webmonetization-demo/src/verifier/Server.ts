@@ -8,7 +8,6 @@ import {
   response
 } from 'inversify-express-utils'
 import * as express from 'express'
-import fetch from 'node-fetch'
 
 import { dbg } from '../utils/logging'
 import { resolvePointer } from '../utils/payment-pointer'

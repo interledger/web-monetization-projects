@@ -1,6 +1,5 @@
 import { inspect } from 'util'
 
-import fetch from 'node-fetch'
 import IlpPluginBtp from 'ilp-plugin-btp'
 import * as IlpStream from 'ilp-protocol-stream'
 import * as uuid from 'uuid'
