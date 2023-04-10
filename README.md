@@ -40,9 +40,9 @@ git clone git@github.com:coilhq/web-monetization-projects.git
 yarn
 ```
 
-### Node >= 16
+### Node >= 18
 
-The TypeScript is compiled into es2020 and the CI only tests 16 (currently the LTS) and on.
+The TypeScript is compiled into es2020 and the CI only tests 18 (currently the LTS) and on.
 See [nvm](https://github.com/nvm-sh/nvm#install--update-script) for an easy way to manage multiple versions
 
 ### Visual Studio Code
