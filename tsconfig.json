@@ -45,6 +45,9 @@
       "@dier-makr/inversify": [
         "packages/dier-makr-inversify/src"
       ],
+      "@dummy/ext": [
+        "packages/dummy-ext/src"
+      ],
       "@interledger/minute-extension": [
         "packages/interledger-minute-extension/src"
       ],
