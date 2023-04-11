@@ -136,9 +136,9 @@ function setCommonScriptsAndMergeOverrides(
       upkeep: 'cd ../.. && yarn upkeep',
       'lint:all': "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
-      'test:e2e': 'yarn test --config jest-e2e.config.js',
-      'test:e2e:coverage': 'yarn test:coverage --config jest-e2e.config.js',
-      test: 'jest --passWithNoTests',
+      'test:e2e': 'yarn test --config jest-e2e.config.cjs',
+      'test:e2e:coverage': 'yarn test:coverage --config jest-e2e.config.cjs',
+      test: 'PROJECT_JEST=1 jest --passWithNoTests',
       'test:coverage': 'yarn test --verbose --coverage'
     }
   }

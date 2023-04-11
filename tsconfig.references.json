@@ -42,6 +42,9 @@
       "path": "packages/dier-makr-inversify/tsconfig.build.json"
     },
     {
+      "path": "packages/dummy-ext/tsconfig.build.json"
+    },
+    {
       "path": "packages/interledger-minute-extension/tsconfig.build.json"
     },
     {

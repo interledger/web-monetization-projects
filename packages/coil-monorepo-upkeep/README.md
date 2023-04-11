@@ -11,7 +11,7 @@
 This ensures the package configuration follows a convention by scripting the updates
 of various files like:
 
-- jest.config.js
+- jest.config.cjs
 - tsconfig.build.json
 - package.json
   - various `scripts` such as

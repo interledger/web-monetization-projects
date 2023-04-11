@@ -1,5 +1,5 @@
 matrices:
-  node-version: [16, 18]
+  node-version: [18, 19]
   test-command: [test:coverage, test:e2e:coverage]
 
 environments:
@@ -14,7 +14,7 @@ environments:
   macos-node:
     os: macos
     tools: [node]
-    matrices: [ { node-version: [16] }]
+    matrices: [ { node-version: [18] }]
 
 jobs:
   lint-all:
@@ -89,7 +89,7 @@ jobs:
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            cp jest.config.local.example.js jest.config.local.js 
+            cp jest.config.local.example.cjs jest.config.local.cjs 
             xvfb-run -a yarn {% matrix "test-command" %}
       - run:
           name: Run jest from build
