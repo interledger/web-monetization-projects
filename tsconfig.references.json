@@ -18,12 +18,6 @@
       "path": "packages/coil-monorepo-upkeep/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-oauth-scripts/tsconfig.build.json"
-    },
-    {
-      "path": "packages/coil-polyfill-utils/tsconfig.build.json"
-    },
-    {
       "path": "packages/coil-privacypass-sjcl/tsconfig.build.json"
     },
     {
@@ -43,9 +37,6 @@
     },
     {
       "path": "packages/dummy-ext/tsconfig.build.json"
-    },
-    {
-      "path": "packages/interledger-minute-extension/tsconfig.build.json"
     },
     {
       "path": "packages/niq-ci/tsconfig.build.json"

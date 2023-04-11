@@ -17,11 +17,11 @@ import {
   SPSPResponse
 } from '@webmonetization/polyfill-utils'
 import { Container, inject, injectable, optional } from 'inversify'
-import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
 import { BuildConfig } from '../../types/BuildConfig'
+import { BandwidthTiers } from '../../services/BandwidthTiers'
 
 import { AnonymousTokens } from './AnonymousTokens'
 import { Logger, logger } from './utils'

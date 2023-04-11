@@ -21,12 +21,6 @@
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
       ],
-      "@coil/oauth-scripts": [
-        "packages/coil-oauth-scripts/src"
-      ],
-      "@coil/polyfill-utils": [
-        "packages/coil-polyfill-utils/src"
-      ],
       "@coil/privacypass-sjcl": [
         "packages/coil-privacypass-sjcl/src"
       ],
@@ -47,9 +41,6 @@
       ],
       "@dummy/ext": [
         "packages/dummy-ext/src"
-      ],
-      "@interledger/minute-extension": [
-        "packages/interledger-minute-extension/src"
       ],
       "@niq/ci": [
         "packages/niq-ci/src"
