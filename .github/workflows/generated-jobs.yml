@@ -267,14 +267,14 @@ jobs:
         run: |
           export TS_JEST_MAP_PATHS_TO_MODULES=true
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run ${{ matrix.test-command }}
+          xvfb-run -a yarn workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
       - name: Yarn workspaces foreach run jest from build
         run: |
           yarn clean:build || echo "already clean"
           yarn build:ts:verbose
           export TS_JEST_MAP_PATHS_TO_MODULES=false
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          xvfb-run -a yarn workspaces foreach -v --exclude=web-monetization run ${{ matrix.test-command }}
+          xvfb-run -a yarn workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
       - name: Save Cache
         uses: actions/cache@v3
         with:
