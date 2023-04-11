@@ -10,7 +10,7 @@ environments:
   linux-node-jest:
     os: linux
     tools: [node]
-    matrices: [node-version, test-command]
+    matrices: [{ node-version: [18] }, test-command]
   macos-node:
     os: macos
     tools: [node]
