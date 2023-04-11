@@ -18,6 +18,7 @@
     "upkeep:new-package": "ts-node -T packages/coil-monorepo-upkeep/new-package.ts",
     "clean:build": "rimraf packages/*/build",
     "build:ts": "tsc --build tsconfig.references.json",
+    "build:ci": "ts-node packages/niq-ci/src/generate/generateGAWorkflow.ts",
     "build:ts:verbose": "yarn build:ts --verbose",
     "lint:all": "yarn lint 'packages/*/{src,test}/**/*.ts*'",
     "lint:staged": "lint-staged --shell",
