@@ -2,9 +2,9 @@ import { EventEmitter } from 'events'
 
 import { PaymentDetails } from '@webmonetization/polyfill-utils'
 import { Container, injectable } from 'inversify'
-import { BandwidthTiers } from '@coil/polyfill-utils'
 
 import * as tokens from '../../types/tokens'
+import { BandwidthTiers } from '../../services/BandwidthTiers'
 
 import { Stream } from './Stream'
 
