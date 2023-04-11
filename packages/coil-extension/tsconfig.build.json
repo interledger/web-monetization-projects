@@ -24,9 +24,6 @@
       "path": "../coil-client/tsconfig.build.json"
     },
     {
-      "path": "../coil-polyfill-utils/tsconfig.build.json"
-    },
-    {
       "path": "../coil-privacypass-sjcl/tsconfig.build.json"
     },
     {

@@ -1873,7 +1873,6 @@ __metadata:
     "@babel/preset-typescript": "npm:7.21.4"
     "@coil/anonymous-tokens": "npm:^0.0.0"
     "@coil/client": "npm:^0.0.0"
-    "@coil/polyfill-utils": "npm:^0.0.0"
     "@coil/privacypass-sjcl": "npm:^0.0.0"
     "@coil/puppeteer-utils": "npm:^0.0.0"
     "@commitlint/cli": "npm:17.5.1"
@@ -2124,135 +2123,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@coil/oauth-scripts@workspace:packages/coil-oauth-scripts":
-  version: 0.0.0-use.local
-  resolution: "@coil/oauth-scripts@workspace:packages/coil-oauth-scripts"
-  dependencies:
-    "@abraham/reflection": "npm:0.12.0"
-    "@babel/core": "npm:7.21.4"
-    "@babel/plugin-proposal-class-properties": "npm:7.18.6"
-    "@babel/plugin-proposal-decorators": "npm:7.21.0"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.20.7"
-    "@babel/preset-env": "npm:7.21.4"
-    "@babel/preset-react": "npm:7.18.6"
-    "@babel/preset-typescript": "npm:7.21.4"
-    "@coil/client": "npm:0.0.0"
-    "@coil/polyfill-utils": "npm:^0.0.0"
-    "@coil/puppeteer-utils": "npm:^0.0.0"
-    "@coil/webpack-utils": "npm:0.0.0"
-    "@commitlint/cli": "npm:17.5.1"
-    "@commitlint/config-conventional": "npm:17.4.4"
-    "@swc/core": "npm:1.3.46"
-    "@swc/jest": "npm:0.2.24"
-    "@types/jest": "npm:29.5.0"
-    "@types/long": "npm:4.0.2"
-    "@types/node": "npm:^18.15.11"
-    "@types/uuid": "npm:9.0.1"
-    "@typescript-eslint/eslint-plugin": "npm:5.57.1"
-    "@typescript-eslint/parser": "npm:5.57.1"
-    "@webmonetization/polyfill-utils": "npm:0.0.0"
-    "@webmonetization/types": "npm:0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.6"
-    JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
-    copy-webpack-plugin: "npm:11.0.0"
-    eslint: "npm:8.38.0"
-    eslint-config-prettier: "npm:8.8.0"
-    eslint-import-resolver-node: "npm:0.3.7"
-    eslint-plugin-import: "npm:2.27.5"
-    eslint-plugin-jest: "npm:27.2.1"
-    eslint-plugin-jsx-a11y: "npm:6.7.1"
-    eslint-plugin-node: "npm:11.1.0"
-    eslint-plugin-prettier: "npm:4.2.1"
-    eslint-plugin-promise: "npm:6.1.1"
-    eslint-plugin-react: "npm:7.32.2"
-    eslint-plugin-react-hooks: "npm:4.6.0"
-    eslint-plugin-standard: "npm:5.0.0"
-    husky: "npm:8.0.3"
-    ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
-    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.2#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.2-92c54e8f76.patch"
-    jest: "npm:29.5.0"
-    jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.2.1"
-    nodemon: "npm:2.0.22"
-    prettier: "npm:2.8.7"
-    puppeteer: "npm:19.8.5"
-    reduct: "npm:^3.3.1"
-    regenerator-runtime: "npm:0.13.11"
-    rimraf: "npm:5.0.0"
-    ts-jest: "npm:29.1.0"
-    ts-loader: "npm:9.4.2"
-    ts-node: "npm:10.9.1"
-    tsconfig-paths: "npm:4.2.0"
-    typescript: "npm:5.0.4"
-    uuid: "npm:^9.0.0"
-    webpack: "npm:5.78.0"
-    webpack-bundle-analyzer: "npm:4.8.0"
-    webpack-cli: "npm:5.0.1"
-    webpack-dev-server: "npm:4.13.2"
-    webpack-merge: "npm:5.8.0"
-  languageName: unknown
-  linkType: soft
-
-"@coil/polyfill-utils@npm:^0.0.0, @coil/polyfill-utils@workspace:packages/coil-polyfill-utils":
-  version: 0.0.0-use.local
-  resolution: "@coil/polyfill-utils@workspace:packages/coil-polyfill-utils"
-  dependencies:
-    "@abraham/reflection": "npm:0.12.0"
-    "@babel/core": "npm:7.21.4"
-    "@babel/plugin-proposal-class-properties": "npm:7.18.6"
-    "@babel/plugin-proposal-decorators": "npm:7.21.0"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.20.7"
-    "@babel/preset-env": "npm:7.21.4"
-    "@babel/preset-react": "npm:7.18.6"
-    "@babel/preset-typescript": "npm:7.21.4"
-    "@commitlint/cli": "npm:17.5.1"
-    "@commitlint/config-conventional": "npm:17.4.4"
-    "@swc/core": "npm:1.3.46"
-    "@swc/jest": "npm:0.2.24"
-    "@types/jest": "npm:29.5.0"
-    "@types/node": "npm:^18.15.11"
-    "@typescript-eslint/eslint-plugin": "npm:5.57.1"
-    "@typescript-eslint/parser": "npm:5.57.1"
-    "@yarnpkg/pnpify": "npm:3.1.6"
-    JSON2016: "npm:1.0.0"
-    babel-plugin-parameter-decorator: "npm:1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
-    copy-webpack-plugin: "npm:11.0.0"
-    eslint: "npm:8.38.0"
-    eslint-config-prettier: "npm:8.8.0"
-    eslint-import-resolver-node: "npm:0.3.7"
-    eslint-plugin-import: "npm:2.27.5"
-    eslint-plugin-jest: "npm:27.2.1"
-    eslint-plugin-jsx-a11y: "npm:6.7.1"
-    eslint-plugin-node: "npm:11.1.0"
-    eslint-plugin-prettier: "npm:4.2.1"
-    eslint-plugin-promise: "npm:6.1.1"
-    eslint-plugin-react: "npm:7.32.2"
-    eslint-plugin-react-hooks: "npm:4.6.0"
-    eslint-plugin-standard: "npm:5.0.0"
-    husky: "npm:8.0.3"
-    jest: "npm:29.5.0"
-    jest-environment-jsdom: "npm:29.5.0"
-    lint-staged: "npm:13.2.1"
-    nodemon: "npm:2.0.22"
-    prettier: "npm:2.8.7"
-    regenerator-runtime: "npm:0.13.11"
-    rimraf: "npm:5.0.0"
-    ts-jest: "npm:29.1.0"
-    ts-loader: "npm:9.4.2"
-    ts-node: "npm:10.9.1"
-    tsconfig-paths: "npm:4.2.0"
-    typescript: "npm:5.0.4"
-    webpack: "npm:5.78.0"
-    webpack-bundle-analyzer: "npm:4.8.0"
-    webpack-cli: "npm:5.0.1"
-    webpack-dev-server: "npm:4.13.2"
-    webpack-merge: "npm:5.8.0"
-  languageName: unknown
-  linkType: soft
-
 "@coil/privacypass-sjcl@npm:0.0.0, @coil/privacypass-sjcl@npm:^0.0.0, @coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl":
   version: 0.0.0-use.local
   resolution: "@coil/privacypass-sjcl@workspace:packages/coil-privacypass-sjcl"
@@ -2384,7 +2254,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@coil/webpack-utils@npm:0.0.0, @coil/webpack-utils@npm:^0.0.0, @coil/webpack-utils@workspace:packages/coil-webpack-utils":
+"@coil/webpack-utils@npm:^0.0.0, @coil/webpack-utils@workspace:packages/coil-webpack-utils":
   version: 0.0.0-use.local
   resolution: "@coil/webpack-utils@workspace:packages/coil-webpack-utils"
   dependencies:
@@ -3945,91 +3815,6 @@ __metadata:
   checksum: c860f96faaaaecd6c5c4ee6912f7c761579031b464c3cf55832e59e18b116968d89b570ef6a9a10b1670a67e7998a530c8c549b4a41b118153340772ad10cea9
   languageName: node
   linkType: hard
-
-"@interledger/minute-extension@workspace:packages/interledger-minute-extension":
-  version: 0.0.0-use.local
-  resolution: "@interledger/minute-extension@workspace:packages/interledger-minute-extension"
-  dependencies:
-    "@abraham/reflection": "npm:0.12.0"
-    "@babel/core": "npm:7.21.4"
-    "@babel/plugin-proposal-class-properties": "npm:7.18.6"
-    "@babel/plugin-proposal-decorators": "npm:7.21.0"
-    "@babel/plugin-proposal-object-rest-spread": "npm:7.20.7"
-    "@babel/preset-env": "npm:7.21.4"
-    "@babel/preset-react": "npm:7.18.6"
-    "@babel/preset-typescript": "npm:7.21.4"
-    "@coil/polyfill-utils": "npm:^0.0.0"
-    "@commitlint/cli": "npm:17.5.1"
-    "@commitlint/config-conventional": "npm:17.4.4"
-    "@dier-makr/inversify": "npm:^0.0.0"
-    "@material-ui/core": "npm:^4.12.4"
-    "@material-ui/icons": "npm:^4.11.3"
-    "@swc/core": "npm:1.3.46"
-    "@swc/jest": "npm:0.2.24"
-    "@types/jest": "npm:29.5.0"
-    "@types/node": "npm:^18.15.11"
-    "@types/react": "npm:17.0.56"
-    "@types/react-dom": "npm:17.0.19"
-    "@types/uuid": "npm:9.0.1"
-    "@typescript-eslint/eslint-plugin": "npm:5.57.1"
-    "@typescript-eslint/parser": "npm:5.57.1"
-    "@webexts/build-utils": "npm:0.0.0"
-    "@webmonetization/polyfill-utils": "npm:^0.0.0"
-    "@webmonetization/types": "npm:^0.0.0"
-    "@webmonetization/wext": "npm:^0.0.0"
-    "@yarnpkg/pnpify": "npm:3.1.6"
-    JSON2016: "npm:1.0.0"
-    addons-linter: "npm:6.1.0"
-    babel-plugin-parameter-decorator: "npm:1.0.16"
-    babel-plugin-transform-typescript-metadata: "npm:0.3.2"
-    copy-webpack-plugin: "npm:11.0.0"
-    crx-hotreload: "npm:1.0.6"
-    css-loader: "npm:6.7.3"
-    debug: "npm:^4.3.1"
-    eslint: "npm:8.38.0"
-    eslint-config-prettier: "npm:8.8.0"
-    eslint-import-resolver-node: "npm:0.3.7"
-    eslint-plugin-import: "npm:2.27.5"
-    eslint-plugin-jest: "npm:27.2.1"
-    eslint-plugin-jsx-a11y: "npm:6.7.1"
-    eslint-plugin-node: "npm:11.1.0"
-    eslint-plugin-prettier: "npm:4.2.1"
-    eslint-plugin-promise: "npm:6.1.1"
-    eslint-plugin-react: "npm:7.32.2"
-    eslint-plugin-react-hooks: "npm:4.6.0"
-    eslint-plugin-standard: "npm:5.0.0"
-    file-loader: "npm:6.2.0"
-    husky: "npm:8.0.3"
-    ilp-plugin-btp: "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch"
-    ilp-protocol-stream: "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.2#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.2-92c54e8f76.patch"
-    inversify: "npm:^6.0.0"
-    inversify-logger-middleware: "npm:^3.1.0"
-    jest: "npm:29.5.0"
-    jest-environment-jsdom: "npm:29.5.0"
-    jsonwebtoken: "npm:^9.0.0"
-    lint-staged: "npm:13.2.1"
-    nodemon: "npm:2.0.22"
-    prettier: "npm:2.8.7"
-    react: "npm:^17.0.0"
-    react-dom: "npm:^17.0.0"
-    regenerator-runtime: "npm:0.13.11"
-    rimraf: "npm:5.0.0"
-    style-loader: "npm:3.3.2"
-    ts-jest: "npm:29.1.0"
-    ts-loader: "npm:9.4.2"
-    ts-node: "npm:10.9.1"
-    tsconfig-paths: "npm:4.2.0"
-    typeface-roboto: "npm:^1.1.13"
-    typescript: "npm:5.0.4"
-    uuid: "npm:^9.0.0"
-    web-ext: "npm:7.6.0"
-    webpack: "npm:5.78.0"
-    webpack-bundle-analyzer: "npm:4.8.0"
-    webpack-cli: "npm:5.0.1"
-    webpack-dev-server: "npm:4.13.2"
-    webpack-merge: "npm:5.8.0"
-  languageName: unknown
-  linkType: soft
 
 "@interledger/stream-receiver@npm:^0.3.3-alpha.1":
   version: 0.3.3-alpha.1
@@ -6701,7 +6486,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webexts/build-utils@npm:0.0.0, @webexts/build-utils@npm:^0.0.0, @webexts/build-utils@workspace:packages/webexts-build-utils":
+"@webexts/build-utils@npm:^0.0.0, @webexts/build-utils@workspace:packages/webexts-build-utils":
   version: 0.0.0-use.local
   resolution: "@webexts/build-utils@workspace:packages/webexts-build-utils"
   dependencies:
@@ -11171,24 +10956,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:6.7.3":
-  version: 6.7.3
-  resolution: "css-loader@npm:6.7.3"
-  dependencies:
-    icss-utils: "npm:^5.1.0"
-    postcss: "npm:^8.4.19"
-    postcss-modules-extract-imports: "npm:^3.0.0"
-    postcss-modules-local-by-default: "npm:^4.0.0"
-    postcss-modules-scope: "npm:^3.0.0"
-    postcss-modules-values: "npm:^4.0.0"
-    postcss-value-parser: "npm:^4.2.0"
-    semver: "npm:^7.3.8"
-  peerDependencies:
-    webpack: ^5.0.0
-  checksum: d40860763af7b0c4528112ef47d690df230b612623769982734f3becf7ceb26f03be15074d2657b459893536f35926ba4260173ea0769dbc646fcab420fa5d6e
-  languageName: node
-  linkType: hard
-
 "css-select@npm:^4.1.3":
   version: 4.1.3
   resolution: "css-select@npm:4.1.3"
@@ -11255,15 +11022,6 @@ __metadata:
   version: 6.1.0
   resolution: "css-what@npm:6.1.0"
   checksum: 60dfd497e518f5d7ff78a5091ad21c610e2c58c3463ad3191ef7e22a51d01fc0c3401d8bac55f511f119d14c3dcf606f1e37f1590274003722055dee849e2302
-  languageName: node
-  linkType: hard
-
-"cssesc@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "cssesc@npm:3.0.0"
-  bin:
-    cssesc: bin/cssesc
-  checksum: 5e8fcfb6a0fa7f9c05fd6d5a6a6580586310c7dd85c3938e1f199736fd392a9317998e639fde58f63ea786ff1bae5078d6342321c1deddab595fc5bf1764e66e
   languageName: node
   linkType: hard
 
@@ -13967,18 +13725,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-loader@npm:6.2.0":
-  version: 6.2.0
-  resolution: "file-loader@npm:6.2.0"
-  dependencies:
-    loader-utils: "npm:^2.0.0"
-    schema-utils: "npm:^3.0.0"
-  peerDependencies:
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: 437c5fd08f2ec95c017510d8b14a490c1af4b01201efe228eaace5313c4eb61f3510137adf0945cf1fc64dec5f4bf1359d0bd6c67d51778801f6574f336cc08f
-  languageName: node
-  linkType: hard
-
 "file-type@npm:^9.0.0":
   version: 9.0.0
   resolution: "file-type@npm:9.0.0"
@@ -15885,15 +15631,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"icss-utils@npm:^5.0.0, icss-utils@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "icss-utils@npm:5.1.0"
-  peerDependencies:
-    postcss: ^8.1.0
-  checksum: 19cb70f105e8af6b53aa518012a5aae6788985b93ee76b8a9fabed8efdfd39f5d14dbad7f15723b470794bac862d33a7d2bccedf43ece5d84f874bb0346d5abf
-  languageName: node
-  linkType: hard
-
 "idb-keyval@npm:^6.2.0":
   version: 6.2.0
   resolution: "idb-keyval@npm:6.2.0"
@@ -16226,13 +15963,6 @@ __metadata:
   version: 4.0.0
   resolution: "indent-string@npm:4.0.0"
   checksum: f4ab9e229c120377a63fce905062e5fdf1c300ca01b72401dda5aa991e8f614fdb2f99fe7cc37ef3234413da4ab43d5a4f905356fdffb9d078e83806d274719c
-  languageName: node
-  linkType: hard
-
-"indexes-of@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "indexes-of@npm:1.0.1"
-  checksum: c4174d164474c446bdb03f884036982368466859622218e92aef49fa22321d167a55c8dba4ef84168f2d3be32d396d559b5df4bd561573c697c04741a4280f04
   languageName: node
   linkType: hard
 
@@ -18731,7 +18461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:*, loader-utils@npm:^2.0.0":
+"loader-utils@npm:*":
   version: 2.0.0
   resolution: "loader-utils@npm:2.0.0"
   dependencies:
@@ -21746,69 +21476,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-modules-extract-imports@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "postcss-modules-extract-imports@npm:3.0.0"
-  peerDependencies:
-    postcss: ^8.1.0
-  checksum: 9eead40b23ac311ea99b1558f18d48aefe513d46bd5aa26c7ca0534f6e78799fd4116606665c353a3d536ee85d81673b667400a61059621543d41fb557e5f812
-  languageName: node
-  linkType: hard
-
-"postcss-modules-local-by-default@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "postcss-modules-local-by-default@npm:4.0.0"
-  dependencies:
-    icss-utils: "npm:^5.0.0"
-    postcss-selector-parser: "npm:^6.0.2"
-    postcss-value-parser: "npm:^4.1.0"
-  peerDependencies:
-    postcss: ^8.1.0
-  checksum: 73a20c73e928310a1d2dd574b599f81d37e1b34ebbbfeb04823981fb2dc624e81a776bc391b497e0f607eb148d1c14e8e6d4968238243440acf31492272cca02
-  languageName: node
-  linkType: hard
-
-"postcss-modules-scope@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "postcss-modules-scope@npm:3.0.0"
-  dependencies:
-    postcss-selector-parser: "npm:^6.0.4"
-  peerDependencies:
-    postcss: ^8.1.0
-  checksum: 27e4f42a44c5b60d351969edf7a29e80700228046f91d9533ee636e8f8801b23bff32ad95a3fb154f2a974b03ccb4524e545c97c297af094a1d20e469a162355
-  languageName: node
-  linkType: hard
-
-"postcss-modules-values@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "postcss-modules-values@npm:4.0.0"
-  dependencies:
-    icss-utils: "npm:^5.0.0"
-  peerDependencies:
-    postcss: ^8.1.0
-  checksum: 8059640ce936034d05cccc73bc7327a4a7fcf5ce41d077f97b37e123b49971fdc3360ff1b428356d32d7e7d645f858451e362c5b355ea990deba40cf83d56f52
-  languageName: node
-  linkType: hard
-
-"postcss-selector-parser@npm:^6.0.2, postcss-selector-parser@npm:^6.0.4":
-  version: 6.0.4
-  resolution: "postcss-selector-parser@npm:6.0.4"
-  dependencies:
-    cssesc: "npm:^3.0.0"
-    indexes-of: "npm:^1.0.1"
-    uniq: "npm:^1.0.1"
-    util-deprecate: "npm:^1.0.2"
-  checksum: c7215e433a0db8ad1ca97edac4074dbf662c3dc0b153b56087701d3706147e1fac249f779bb6429055d04528c920ec46a56e09c6ad294ef46edfa215530fd1e4
-  languageName: node
-  linkType: hard
-
-"postcss-value-parser@npm:^4.1.0, postcss-value-parser@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "postcss-value-parser@npm:4.2.0"
-  checksum: edc490e9f11336a2efb136d8a52350b5c680ca9a91ee64285732e796177eb888f559a4eafc94cdbf7ce065a388e65b3cc21a32c92458a90efc445f30e8a679dc
-  languageName: node
-  linkType: hard
-
 "postcss@npm:7.0.18":
   version: 7.0.18
   resolution: "postcss@npm:7.0.18"
@@ -21820,7 +21487,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.21, postcss@npm:^8.4.19, postcss@npm:^8.4.21":
+"postcss@npm:8.4.21, postcss@npm:^8.4.21":
   version: 8.4.21
   resolution: "postcss@npm:8.4.21"
   dependencies:
@@ -24864,15 +24531,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-loader@npm:3.3.2":
-  version: 3.3.2
-  resolution: "style-loader@npm:3.3.2"
-  peerDependencies:
-    webpack: ^5.0.0
-  checksum: 87b3c4d0c81c1da239a99d53e683fbb0518b50e6b175685f2e1bb262d9613b31a5931024998b1b26b10a7fd45527546f631b632ba63a213d63bc1dfb6d1c3c35
-  languageName: node
-  linkType: hard
-
 "style-value-types@npm:5.0.0":
   version: 5.0.0
   resolution: "style-value-types@npm:5.0.0"
@@ -25796,13 +25454,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typeface-roboto@npm:^1.1.13":
-  version: 1.1.13
-  resolution: "typeface-roboto@npm:1.1.13"
-  checksum: 6c43da89823eb8788d204a0d08eca2a754716df5c033fb396615b9dc44f4eaee611dae38d84fdd8d83d7f256d748f49f8655545543e2866962667718e180e4b0
-  languageName: node
-  linkType: hard
-
 "typeon@npm:^0.3.0":
   version: 0.3.1
   resolution: "typeon@npm:0.3.1"
@@ -25965,13 +25616,6 @@ __metadata:
   dependencies:
     qs: "npm:^6.4.0"
   checksum: 51036afb14fd3ea044071b1dadcc299c274d616f74dc84ac929b27a74230fcf163e3111489c8746654ad6d614edc21a89b6b0cd408b2d3897f178e74a7d67a88
-  languageName: node
-  linkType: hard
-
-"uniq@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "uniq@npm:1.0.1"
-  checksum: bf54e28a4ff4fa232f927061ce91d623256078dccdfaaa845a69a87868dad7a4437031f2a90c627acb7113bc70b68d7992f1ef5bc72d9a6eed20858e8e8258df
   languageName: node
   linkType: hard
 
@@ -26245,7 +25889,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
+"util-deprecate@npm:^1.0.1, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 6a88ed8344d07f2324b304ee36def365d967953b5a9c15baa3213eb3909e86a7da1ee70a4c2133e80c23d6c1987590e9c3c57d874e20a124f9e41620b462fa57
