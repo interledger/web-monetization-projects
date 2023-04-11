@@ -190,7 +190,6 @@ jobs:
       matrix:
         node-version:
           - 18
-          - 19
         test-command:
           - test:coverage
           - test:e2e:coverage
@@ -241,7 +240,6 @@ jobs:
       matrix:
         node-version:
           - 18
-          - 19
         test-command:
           - test:coverage
           - test:e2e:coverage
