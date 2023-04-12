@@ -16,7 +16,9 @@ import { cmd } from '../../utils/cmd'
 import { loadWorkspacePackages } from '../../utils/loadWorkspaces'
 
 const OVER_RIDE_UP_KEEP = '$overRideUpKeep'
-const PACKAGE_LOCATION = pathModule.resolve(__dirname, '../../..')
+const PACKAGE_LOCATION =
+  process.env.UPKEEP_PACKAGE_LOCATION ??
+  pathModule.resolve(__dirname, '../../..')
 const PACKAGE_FOLDER_NAME = pathModule.basename(PACKAGE_LOCATION)
 
 const STATIC_SHARED_DUPLICATED_PATH = 'templates/static-shared-duplicated'
@@ -237,7 +239,7 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
         cmd(`rm -rf ${packagePath}/${name}`, { cwd: fromRoot('.') })
         cmd(`mkdir ${packagePath}/${name}`, { cwd: fromRoot('.') })
 
-        writeFileJSON(`${packagePath}/${name}/package.json`, {
+        writeFileJSON(fromRoot(`${packagePath}/${name}/package.json`), {
           name: `${li.name}/${name}`,
           private: true,
           version: '0.0.0',
