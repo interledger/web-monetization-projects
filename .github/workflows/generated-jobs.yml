@@ -63,7 +63,7 @@ jobs:
           yarn rebuild puppeteer
       - name: Build Safari
         run: |
-          cd packages/coil-extension
+          cd packages-archived/coil-extension
           yarn build-prod safari
           scripts/build-safari.sh
   coil-extension-package:
@@ -93,15 +93,15 @@ jobs:
           yarn rebuild puppeteer
       - name: Package for firefox
         run: |
-          cd packages/coil-extension
+          cd packages-archived/coil-extension
           ./package.sh firefox
       - name: Package for chrome
         run: |
-          cd packages/coil-extension
+          cd packages-archived/coil-extension
           ./package.sh chrome
       - name: Lint firefox package
         run: |
-          cd packages/coil-extension
+          cd packages-archived/coil-extension
           yarn addons-linter coilfirefoxextension@coil.com.xpi
   build-all-package-references-typescript:
     runs-on: ubuntu-latest
