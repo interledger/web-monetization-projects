@@ -3,13 +3,11 @@ import { readFileSync, writeFileSync } from 'fs'
 import * as pathModule from 'path'
 
 import sortPackageJson from 'sort-package-json'
+import JSON5 from 'json5'
 
 import { LernaListItem, PackageJSON } from '../types'
 
 import { packageJSONKeysOrder } from './packageJSONKeysOrder'
-import { cmd } from './cmd'
-
-const JSON5: typeof JSON = require('json5')
 
 export const pretty = (val: any) => inspect(val, { depth: Infinity })
 
@@ -19,7 +17,7 @@ export function readFileJSON<T = any>(path: string) {
 
 export function writeFileJSON(
   path: string,
-  val: any,
+  val: unknown,
   opts: { prefix?: string; suffix?: string } = {}
 ) {
   const { prefix = '', suffix = '' } = opts
@@ -54,7 +52,8 @@ export function readPackageJSON(path: string): PackageJSON {
 }
 
 export const fromRoot = (path: string) => {
-  return pathModule.resolve(__dirname, '../../../..', path)
+  const root = process.env.UPKEEP_MONOREPO_ROOT ?? `${__dirname}/../../../..`
+  return pathModule.resolve(root, path)
 }
 
 export const relativeToRoot = (path: string) => {
