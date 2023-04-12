@@ -3,31 +3,31 @@
   "files": [],
   "references": [
     {
-      "path": "packages/coil-anonymous-tokens/tsconfig.build.json"
+      "path": "packages-archived/coil-anonymous-tokens/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-client/tsconfig.build.json"
+      "path": "packages-archived/coil-client/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-extension/tsconfig.build.json"
+      "path": "packages-archived/coil-extension/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-local-server/tsconfig.build.json"
+      "path": "packages-archived/coil-local-server/tsconfig.build.json"
     },
     {
       "path": "packages/coil-monorepo-upkeep/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-privacypass-sjcl/tsconfig.build.json"
+      "path": "packages-archived/coil-privacypass-sjcl/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-puppeteer-utils/tsconfig.build.json"
+      "path": "packages-archived/coil-puppeteer-utils/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-webpack-utils/tsconfig.build.json"
+      "path": "packages-archived/coil-webpack-utils/tsconfig.build.json"
     },
     {
-      "path": "packages/coil-wm-utils/tsconfig.build.json"
+      "path": "packages-archived/coil-wm-utils/tsconfig.build.json"
     },
     {
       "path": "packages/dier-makr-annotations/tsconfig.build.json"
@@ -45,19 +45,19 @@
       "path": "packages/stacktracejs-stacktrace-js/tsconfig.build.json"
     },
     {
-      "path": "packages/webexts-build-utils/tsconfig.build.json"
+      "path": "packages-archived/webexts-build-utils/tsconfig.build.json"
     },
     {
-      "path": "packages/webmonetization-demo/tsconfig.build.json"
+      "path": "packages-archived/webmonetization-demo/tsconfig.build.json"
     },
     {
       "path": "packages/webmonetization-polyfill-utils/tsconfig.build.json"
     },
     {
-      "path": "packages/webmonetization-react/tsconfig.build.json"
+      "path": "packages-archived/webmonetization-react/tsconfig.build.json"
     },
     {
-      "path": "packages/webmonetization-testing-utils/tsconfig.build.json"
+      "path": "packages-archived/webmonetization-testing-utils/tsconfig.build.json"
     },
     {
       "path": "packages/webmonetization-types/tsconfig.build.json"

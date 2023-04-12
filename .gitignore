@@ -19,6 +19,13 @@ packages/*/results
 packages/*/dist
 packages/*/dist2
 
+# Clean out stuff
+packages-archived/*/build
+packages-archived/*/coverage
+packages-archived/*/results
+packages-archived/*/dist
+packages-archived/*/dist2
+
 .eslintrc.local.js
 jest.config.local.cjs
 

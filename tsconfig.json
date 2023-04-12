@@ -7,31 +7,31 @@
     "skipLibCheck": false,
     "paths": {
       "@coil/anonymous-tokens": [
-        "packages/coil-anonymous-tokens/src"
+        "packages-archived/coil-anonymous-tokens/src"
       ],
       "@coil/client": [
-        "packages/coil-client/src"
+        "packages-archived/coil-client/src"
       ],
       "@coil/extension": [
-        "packages/coil-extension/src"
+        "packages-archived/coil-extension/src"
       ],
       "@coil/local-server": [
-        "packages/coil-local-server/src"
+        "packages-archived/coil-local-server/src"
       ],
       "@coil/monorepo-upkeep": [
         "packages/coil-monorepo-upkeep/src"
       ],
       "@coil/privacypass-sjcl": [
-        "packages/coil-privacypass-sjcl/src"
+        "packages-archived/coil-privacypass-sjcl/src"
       ],
       "@coil/puppeteer-utils": [
-        "packages/coil-puppeteer-utils/src"
+        "packages-archived/coil-puppeteer-utils/src"
       ],
       "@coil/webpack-utils": [
-        "packages/coil-webpack-utils/src"
+        "packages-archived/coil-webpack-utils/src"
       ],
       "@coil/wm-utils": [
-        "packages/coil-wm-utils/src"
+        "packages-archived/coil-wm-utils/src"
       ],
       "@dier-makr/annotations": [
         "packages/dier-makr-annotations/src"
@@ -49,19 +49,19 @@
         "packages/stacktracejs-stacktrace-js/src"
       ],
       "@webexts/build-utils": [
-        "packages/webexts-build-utils/src"
+        "packages-archived/webexts-build-utils/src"
       ],
       "@webmonetization/demo": [
-        "packages/webmonetization-demo/src"
+        "packages-archived/webmonetization-demo/src"
       ],
       "@webmonetization/polyfill-utils": [
         "packages/webmonetization-polyfill-utils/src"
       ],
       "@webmonetization/react": [
-        "packages/webmonetization-react/src"
+        "packages-archived/webmonetization-react/src"
       ],
       "@webmonetization/testing-utils": [
-        "packages/webmonetization-testing-utils/src"
+        "packages-archived/webmonetization-testing-utils/src"
       ],
       "@webmonetization/types": [
         "packages/webmonetization-types/src"
@@ -88,10 +88,16 @@
     "packages/*/build/**/*",
     "packages/*/node_modules/**/*",
     "packages/*/dist/**/*",
-    "packages/*/hidden-src/**/*"
+    "packages/*/hidden-src/**/*",
+    "packages-archived/*/build/**/*",
+    "packages-archived/*/node_modules/**/*",
+    "packages-archived/*/dist/**/*",
+    "packages-archived/*/hidden-src/**/*"
   ],
   "include": [
     "packages/**/*.ts",
-    "packages/**/*.tsx"
+    "packages/**/*.tsx",
+    "packages-archived/**/*.ts",
+    "packages-archived/**/*.tsx"
   ]
 }

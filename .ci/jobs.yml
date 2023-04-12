@@ -32,7 +32,7 @@ jobs:
       - run:
           name: Build Safari
           command: |
-            cd packages/coil-extension
+            cd packages-archived/coil-extension
             yarn build-prod safari
             scripts/build-safari.sh
 
@@ -42,17 +42,17 @@ jobs:
       - run:
           name: Package for firefox
           command: |
-            cd packages/coil-extension
+            cd packages-archived/coil-extension
             ./package.sh firefox
       - run:
           name: Package for chrome
           command: |
-            cd packages/coil-extension
+            cd packages-archived/coil-extension
             ./package.sh chrome
       - run:
           name: Lint firefox package
           command: |
-            cd packages/coil-extension
+            cd packages-archived/coil-extension
             yarn addons-linter coilfirefoxextension@coil.com.xpi
 
   build-all-package-references-typescript:

@@ -1,27 +1,18 @@
 {
-  "$schema": "/resources/package-json-schema-nested-overrides.json",
-  "$overRideUpKeep": {
-    "author": "niq@coil.com",
-    "keywords": [
-      "groundskeeper",
-      "monorepo",
-      "willy"
-    ]
-  },
-  "name": "@coil/monorepo-upkeep",
+  "$schema": "../../packages/coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
+  "name": "@webexts/build-utils",
   "version": "0.0.0",
   "keywords": [
-    "groundskeeper",
-    "monorepo",
-    "willy"
+    "ilp",
+    "web-monetization"
   ],
-  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/coil-monorepo-upkeep",
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages-archived/webexts-build-utils",
   "repository": {
     "type": "git",
     "url": "git@github.com:coilhq/web-monetization-projects.git"
   },
   "license": "Apache-2.0",
-  "author": "niq@coil.com",
+  "author": "Coil Team <info@coil.com>",
   "main": "./build",
   "types": "./build",
   "scripts": {
@@ -41,14 +32,19 @@
     "upkeep": "cd ../.. && yarn upkeep"
   },
   "dependencies": {
-    "copy-dir": "^1.3.0",
-    "deepmerge": "^4.2.2",
-    "glob": "^10.0.0",
-    "json5": "^2.2.0",
-    "npm-check-updates": "^16.0.0",
-    "reduct": "^3.3.1",
-    "sort-package-json": "1.57.0",
-    "yaml": "^2.2.1"
+    "@coil/webpack-utils": "^0.0.0",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "crx-hotreload": "^1.0.6",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "process": "^0.11.10",
+    "setimmediate": "^1.0.5",
+    "stream-browserify": "^3.0.0",
+    "string_decoder": "^1.3.0",
+    "util": "^0.12.4",
+    "webpack-virtual-modules": "^0.5.0",
+    "ws": "^8.8.0"
   },
   "devDependencies": {
     "@abraham/reflection": "0.12.0",
@@ -65,6 +61,7 @@
     "@swc/jest": "0.2.24",
     "@types/jest": "29.5.0",
     "@types/node": "^18.15.11",
+    "@types/ws": "8.5.4",
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",
     "@yarnpkg/pnpify": "3.1.6",

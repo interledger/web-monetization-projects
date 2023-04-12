@@ -24,7 +24,7 @@ const moduleNameMapper = MAP_PATHS_TO_MODULES ? pathsToModuleNames : undefined
 
 let config = {
   preset: 'ts-jest',
-  projects: ['<rootDir>/packages/*/jest.config.cjs'],
+  projects: ['<rootDir>/{packages,packages-archived}/*/jest.config.cjs'],
   testEnvironment: `${__dirname}/commands/jest/jsdomWithFetchEnv.js`,
   rootDir: '.',
   moduleNameMapper,
