@@ -1,4 +1,4 @@
-import { GraphQlClient } from '@coil/client/src'
+import { GraphQlClient } from '@coil/client'
 
 export const env = (key: string, defaultValue?: string): string => {
   const value = process.env[key]
