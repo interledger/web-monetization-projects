@@ -37,11 +37,6 @@ jobs:
         run: |
           # show only errors with --quiet
           yarn lint:all --quiet
-      - name: Save Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
   build-safari:
     runs-on: macos-latest
     strategy:
@@ -71,11 +66,6 @@ jobs:
           cd packages/coil-extension
           yarn build-prod safari
           scripts/build-safari.sh
-      - name: Save Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
   coil-extension-package:
     runs-on: ubuntu-latest
     strategy:
@@ -113,11 +103,6 @@ jobs:
         run: |
           cd packages/coil-extension
           yarn addons-linter coilfirefoxextension@coil.com.xpi
-      - name: Save Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
   build-all-package-references-typescript:
     runs-on: ubuntu-latest
     strategy:
@@ -146,11 +131,6 @@ jobs:
       - name: Build Root TypeScript Project - tsconfig.build.json
         run: |
           yarn build:ts --verbose
-      - name: Save Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
   build-root-tsconfig:
     runs-on: ubuntu-latest
     strategy:
@@ -179,11 +159,6 @@ jobs:
       - name: Build Root TypeScript Project - tsconfig.json
         run: |
           yarn tsc -b tsconfig.json --verbose
-      - name: Save Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
   jest-all:
     runs-on: ubuntu-latest
     strategy:
@@ -229,11 +204,6 @@ jobs:
           yarn build:ts:verbose
           export TS_JEST_MAP_PATHS_TO_MODULES=false
           xvfb-run -a yarn ${{ matrix.test-command }}
-      - name: Save Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
   jest-workspaces-foreach-all:
     runs-on: ubuntu-latest
     strategy:
@@ -273,11 +243,6 @@ jobs:
           export TS_JEST_MAP_PATHS_TO_MODULES=false
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           xvfb-run -a yarn workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
-      - name: Save Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
   packages-build-scripts:
     runs-on: ubuntu-latest
     strategy:
@@ -306,11 +271,6 @@ jobs:
       - name: Packages Build Scripts
         run: |
           yarn workspaces foreach -v --exclude=web-monetization run build
-      - name: Save Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
   yarn-format-and-upkeep-diff-check:
     runs-on: ubuntu-latest
     strategy:
@@ -355,8 +315,3 @@ jobs:
         run: |
           yarn workspaces foreach -v --exclude=web-monetization run generate-code
           git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
-      - name: Save Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}

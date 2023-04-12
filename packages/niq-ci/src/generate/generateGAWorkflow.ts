@@ -49,16 +49,16 @@ const steps = [
 yarn --immutable
 export PUPPETEER_PRODUCT='firefox'
 yarn rebuild puppeteer`
-  },
-  // Inner steps go here
-  {
-    name: 'Save Cache',
-    uses: 'actions/cache@v3',
-    with: {
-      path: '${{ github.workspace }}/.yarn',
-      key: cacheKey
-    }
   }
+  // Inner steps go here
+  // {
+  //   name: 'Save Cache',
+  //   uses: 'actions/cache@v3',
+  //   with: {
+  //     path: '${{ github.workspace }}/.yarn',
+  //     key: cacheKey
+  //   }
+  // }
 ]
 
 const firstSteps = steps.slice(0, 4)
