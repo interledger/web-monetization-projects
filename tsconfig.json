@@ -45,6 +45,9 @@
       "@niq/ci": [
         "packages/niq-ci/src"
       ],
+      "@niq/web-cash": [
+        "packages/niq-web-cash/src"
+      ],
       "@stacktracejs/stacktrace-js": [
         "packages/stacktracejs-stacktrace-js/src"
       ],

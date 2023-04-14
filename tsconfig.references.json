@@ -42,6 +42,9 @@
       "path": "packages/niq-ci/tsconfig.build.json"
     },
     {
+      "path": "packages/niq-web-cash/tsconfig.build.json"
+    },
+    {
       "path": "packages/stacktracejs-stacktrace-js/tsconfig.build.json"
     },
     {
