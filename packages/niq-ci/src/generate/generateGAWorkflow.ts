@@ -46,7 +46,7 @@ const steps = [
   {
     name: 'Yarn Install',
     run: `export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-yarn --immutable
+yarn # --immutable
 export PUPPETEER_PRODUCT='firefox'
 yarn rebuild puppeteer`
   }

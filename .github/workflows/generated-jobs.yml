@@ -30,7 +30,7 @@ jobs:
       - name: Yarn Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          yarn # --immutable
           export PUPPETEER_PRODUCT='firefox'
           yarn rebuild puppeteer
       - name: Lint Project
@@ -58,7 +58,7 @@ jobs:
       - name: Yarn Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          yarn # --immutable
           export PUPPETEER_PRODUCT='firefox'
           yarn rebuild puppeteer
       - name: Build Safari
@@ -88,7 +88,7 @@ jobs:
       - name: Yarn Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          yarn # --immutable
           export PUPPETEER_PRODUCT='firefox'
           yarn rebuild puppeteer
       - name: Package for firefox
@@ -125,7 +125,7 @@ jobs:
       - name: Yarn Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          yarn # --immutable
           export PUPPETEER_PRODUCT='firefox'
           yarn rebuild puppeteer
       - name: Build Root TypeScript Project - tsconfig.build.json
@@ -153,7 +153,7 @@ jobs:
       - name: Yarn Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          yarn # --immutable
           export PUPPETEER_PRODUCT='firefox'
           yarn rebuild puppeteer
       - name: Build Root TypeScript Project - tsconfig.json
@@ -183,7 +183,7 @@ jobs:
       - name: Yarn Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          yarn # --immutable
           export PUPPETEER_PRODUCT='firefox'
           yarn rebuild puppeteer
       - name: Run jest via dynamic compilation
@@ -228,7 +228,7 @@ jobs:
       - name: Yarn Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          yarn # --immutable
           export PUPPETEER_PRODUCT='firefox'
           yarn rebuild puppeteer
       - name: Yarn workspaces foreach run jest via dynamic compilation
@@ -265,7 +265,7 @@ jobs:
       - name: Yarn Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          yarn # --immutable
           export PUPPETEER_PRODUCT='firefox'
           yarn rebuild puppeteer
       - name: Packages Build Scripts
@@ -293,7 +293,7 @@ jobs:
       - name: Yarn Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          yarn # --immutable
           export PUPPETEER_PRODUCT='firefox'
           yarn rebuild puppeteer
       - name: Yarn Dedupe Check
