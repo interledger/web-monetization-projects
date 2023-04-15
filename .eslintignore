@@ -1,3 +1,5 @@
 packages/*/node_modules/*
+packages-archived/*/node_modules/*
 packages/webmonetization-react/example
+packages-archived/webmonetization-react/example
 .yarn/sdks/*

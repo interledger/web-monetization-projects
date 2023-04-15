@@ -1,5 +1,5 @@
 {
-  "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
+  "$schema": "/resources/package-json-schema-nested-overrides.json",
   "$overRideUpKeep": {
     "author": "niq@coil.com",
     "keywords": [
