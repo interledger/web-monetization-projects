@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from 'fs'
 import * as pathModule from 'path'
 
 import sortPackageJson from 'sort-package-json'
-import JSON5 from 'json5'
+import * as JSON5 from 'json5'
 
 import { LernaListItem, PackageJSON } from '../types'
 
@@ -58,6 +58,10 @@ export const fromRoot = (path: string) => {
 
 export const relativeToRoot = (path: string) => {
   return pathModule.relative(fromRoot('.'), path)
+}
+
+export const relativeTo = (from: string, to: string) => {
+  return pathModule.relative(from, to)
 }
 
 export interface GetPackagesParameters {

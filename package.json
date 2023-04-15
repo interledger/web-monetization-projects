@@ -12,15 +12,15 @@
     "test:e2e": "yarn test --config jest-e2e.config.cjs",
     "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.cjs",
     "test:coverage": "yarn test --coverage --verbose",
-    "prettier": "prettier --write 'packages/*/*.{html,js,ts,tsx,jsx,md}' 'packages/*/{src,test}/**/*.{ts,tsx,js,jsx,html,md}'",
+    "prettier": "prettier --write 'packages{-archived,}/*/*.{html,js,ts,tsx,jsx,md}' 'packages{-archived,}/*/{src,test}/**/*.{ts,tsx,js,jsx,html,md}'",
     "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",
     "upkeep": "ts-node -T packages/coil-monorepo-upkeep/src/bin/upkeep.ts",
     "upkeep:new-package": "ts-node -T packages/coil-monorepo-upkeep/new-package.ts",
-    "clean:build": "rimraf packages/*/build",
+    "clean:build": "rimraf packages{-archived,}/*/build",
     "build:ts": "tsc --build tsconfig.references.json",
     "build:ci": "ts-node packages/niq-ci/src/generate/generateGAWorkflow.ts",
     "build:ts:verbose": "yarn build:ts --verbose",
-    "lint:all": "yarn lint 'packages/*/{src,test}/**/*.ts*'",
+    "lint:all": "yarn lint 'packages{-archived,}/*/{src,test}/**/*.ts*'",
     "lint:staged": "lint-staged --shell",
     "postinstall": "husky install"
   },
@@ -31,7 +31,7 @@
   "author": "Coil Team <info@coil.com>",
   "license": "Apache-2.0",
   "workspaces": [
-    "packages/*"
+    "packages{-archived,}/*"
   ],
   "lint-staged": {
     "*.{md,js,jsx,html}": [
@@ -62,10 +62,10 @@
     "@babel/preset-typescript": "7.21.4",
     "@commitlint/cli": "17.5.1",
     "@commitlint/config-conventional": "17.4.4",
-    "@swc/core": "1.3.50",
+    "@swc/core": "1.3.46",
     "@swc/jest": "0.2.24",
     "@types/jest": "29.5.0",
-    "@types/node": "18.15.11",
+    "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",
     "@yarnpkg/pnpify": "3.1.6",

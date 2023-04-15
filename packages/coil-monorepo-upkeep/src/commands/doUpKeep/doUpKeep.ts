@@ -6,6 +6,7 @@ import {
   fromRoot,
   readFileJSON,
   readPackageJSON,
+  relativeTo,
   relativeToRoot,
   writeFileJSON,
   writePackageJSON
@@ -16,10 +17,11 @@ import { cmd } from '../../utils/cmd'
 import { loadWorkspacePackages } from '../../utils/loadWorkspaces'
 
 const OVER_RIDE_UP_KEEP = '$overRideUpKeep'
+
+// TODO: may need to make it abs path
 const PACKAGE_LOCATION =
   process.env.UPKEEP_PACKAGE_LOCATION ??
   pathModule.resolve(__dirname, '../../..')
-const PACKAGE_FOLDER_NAME = pathModule.basename(PACKAGE_LOCATION)
 
 const STATIC_SHARED_DUPLICATED_PATH = 'templates/static-shared-duplicated'
 const CREATE_IF_DONT_EXIST_PATH = 'templates/create-if-dont-exist'
@@ -97,7 +99,7 @@ function setCommonScriptsAndMergeOverrides(
   subPackage: LernaListItem,
   subPackageJSON: PackageJSON
 ) {
-  const folderName = getPackageFolder(subPackage)
+  const pathFromRoot = relativeToRoot(subPackage.location)
   if (
     !rootPackageJSON.repository ||
     !rootPackageJSON.repository.url ||
@@ -111,7 +113,7 @@ function setCommonScriptsAndMergeOverrides(
     ...subPackageJSON,
     version: '0.0.0',
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    homepage: `https://github.com/${githubPath}/tree/main/packages/${folderName}`,
+    homepage: `https://github.com/${githubPath}/tree/main/${pathFromRoot}`,
     keywords: rootPackageJSON.keywords,
     repository: rootPackageJSON.repository,
     main: './build',
@@ -119,7 +121,10 @@ function setCommonScriptsAndMergeOverrides(
     private: rootPackageJSON.upkeep?.privatePackages ?? undefined,
     author: rootPackageJSON.author,
     license: rootPackageJSON.license,
-    $schema: `../${PACKAGE_FOLDER_NAME}/resources/package-json-schema-nested-overrides.json`,
+    $schema: `${relativeTo(
+      subPackage.location,
+      PACKAGE_LOCATION
+    )}/resources/package-json-schema-nested-overrides.json`,
     scripts: {
       ...(subPackageJSON.scripts || {}),
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -181,8 +186,12 @@ function upKeepTypeScriptBuildConfig(subPackage: LernaListItem) {
   }
   if (subPackage.dependencies.length) {
     tsconfig.references = subPackage.dependencies.map(li => {
-      const packageFolder = getPackageFolder(li)
-      return { path: `../${packageFolder}/tsconfig.build.json` }
+      return {
+        path: `${relativeTo(
+          subPackage.location,
+          li.location
+        )}/tsconfig.build.json`
+      }
     })
   }
   writeFileJSON(
@@ -217,7 +226,8 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
   tsconfig.compilerOptions = tsconfig.compilerOptions || {}
   const paths: Record<string, string[]> = {}
   subPackages.forEach(li => {
-    const packagePath = `packages/${getPackageFolder(li)}`
+    const packagePath = relativeToRoot(li.location)
+
     const path = `${packagePath}/src`
     paths[li.name] = [path]
     const subPackageJSON = readPackageJSON(`${li.location}/package.json`)

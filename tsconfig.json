@@ -88,10 +88,16 @@
     "packages/*/build/**/*",
     "packages/*/node_modules/**/*",
     "packages/*/dist/**/*",
-    "packages/*/hidden-src/**/*"
+    "packages/*/hidden-src/**/*",
+    "packages-archived/*/build/**/*",
+    "packages-archived/*/node_modules/**/*",
+    "packages-archived/*/dist/**/*",
+    "packages-archived/*/hidden-src/**/*"
   ],
   "include": [
     "packages/**/*.ts",
-    "packages/**/*.tsx"
+    "packages/**/*.tsx",
+    "packages-archived/**/*.ts",
+    "packages-archived/**/*.tsx"
   ]
 }
