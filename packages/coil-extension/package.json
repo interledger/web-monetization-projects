@@ -97,7 +97,7 @@
     "@commitlint/config-conventional": "17.4.4",
     "@nut-tree/nut-js": "2.3.0",
     "@swc/core": "1.3.50",
-    "@swc/jest": "0.2.24",
+    "@swc/jest": "0.2.26",
     "@types/debug": "4.1.7",
     "@types/filesystem": "0.0.32",
     "@types/firefox": "0.0.31",
