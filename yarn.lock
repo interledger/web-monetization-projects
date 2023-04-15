@@ -1894,7 +1894,7 @@ __metadata:
     "@types/jsonwebtoken": "npm:9.0.1"
     "@types/long": "npm:4.0.2"
     "@types/node": "npm:18.15.11"
-    "@types/react": "npm:17.0.56"
+    "@types/react": "npm:17.0.58"
     "@types/react-dom": "npm:17.0.19"
     "@types/uuid": "npm:9.0.1"
     "@typescript-eslint/eslint-plugin": "npm:5.57.1"
@@ -6036,14 +6036,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.56":
-  version: 17.0.56
-  resolution: "@types/react@npm:17.0.56"
+"@types/react@npm:17.0.58":
+  version: 17.0.58
+  resolution: "@types/react@npm:17.0.58"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 32f4819424808a623a78a2d6470b05976ad9d04c9862ef2087df08b82d271d9703483134c617138f198e5d539de7e1ccec5cca991012de6df1f67ac3986c015b
+  checksum: 82c1aec517b6202612e01d4eeadfc247648ba956248d6d2ba9eab7541695e27d656982e71cda95208491cd7e51f58613369437c92492c559c88afb31e1778154
   languageName: node
   linkType: hard
 
@@ -6584,7 +6584,7 @@ __metadata:
     "@types/figlet": "npm:1.5.5"
     "@types/jest": "npm:29.5.0"
     "@types/node": "npm:18.15.11"
-    "@types/react": "npm:17.0.56"
+    "@types/react": "npm:17.0.58"
     "@types/react-dom": "npm:17.0.19"
     "@types/react-helmet": "npm:6.1.6"
     "@typescript-eslint/eslint-plugin": "npm:5.57.1"
@@ -6724,7 +6724,7 @@ __metadata:
     "@swc/jest": "npm:0.2.26"
     "@types/jest": "npm:29.5.0"
     "@types/node": "npm:18.15.11"
-    "@types/react": "npm:17.0.56"
+    "@types/react": "npm:17.0.58"
     "@typescript-eslint/eslint-plugin": "npm:5.57.1"
     "@typescript-eslint/parser": "npm:5.57.1"
     "@webmonetization/types": "npm:0.0.0"
@@ -6789,7 +6789,7 @@ __metadata:
     "@types/ajv": "npm:1.0.0"
     "@types/jest": "npm:29.5.0"
     "@types/node": "npm:18.15.11"
-    "@types/react": "npm:17.0.56"
+    "@types/react": "npm:17.0.58"
     "@types/react-dom": "npm:17.0.19"
     "@types/uuid": "npm:9.0.1"
     "@typescript-eslint/eslint-plugin": "npm:5.57.1"
