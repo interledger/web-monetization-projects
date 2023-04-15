@@ -13,18 +13,13 @@ results
 yarn-error.log
 
 # Clean out stuff
-packages/*/build
-packages/*/coverage
-packages/*/results
-packages/*/dist
-packages/*/dist2
-
-# Clean out stuff
-packages-archived/*/build
-packages-archived/*/coverage
-packages-archived/*/results
-packages-archived/*/dist
-packages-archived/*/dist2
+# packages{-archived,} syntax doesn't work
+# deal with it, if and when it's a problem
+packages*/*/build
+packages*/*/coverage
+packages*/*/results
+packages*/*/dist
+packages*/*/dist2
 
 .eslintrc.local.js
 jest.config.local.cjs
