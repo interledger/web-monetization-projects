@@ -4,7 +4,9 @@ import { crx } from '@crxjs/vite-plugin'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import rollupNodePolyFill from 'rollup-plugin-node-polyfills'
 
-import manifest from './manifest.json'
+import { manifest, applyBuildConfig } from './src/manifest/manifest'
+
+const configured = applyBuildConfig(process.env, manifest)
 
 // https://vitejs.dev/config/
 // eslint-disable-next-line import/no-default-export
@@ -18,7 +20,7 @@ export default defineConfig({
     tsconfigPaths({ projects: [__dirname + '/../..'] }),
     react(),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    crx({ manifest: manifest as any })
+    crx({ manifest: configured })
   ],
   build: {
     rollupOptions: {
