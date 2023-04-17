@@ -2,7 +2,7 @@ import assert from 'assert'
 
 import { ManifestV3 } from './types'
 
-export const manifest: Awaited<ManifestV3> = {
+export const manifest: ManifestV3 = {
   manifest_version: 3,
   name: 'WM Dummy',
   version: '1.0.0',
@@ -28,7 +28,7 @@ export const manifest: Awaited<ManifestV3> = {
 
 export function applyBuildConfig(
   env: typeof process.env,
-  manifestV3: Awaited<ManifestV3>
+  manifestV3: ManifestV3
 ): ManifestV3 {
   const out = manifestV3
   assert(out.permissions)
