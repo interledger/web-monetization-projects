@@ -1,8 +1,8 @@
 import assert from 'assert'
 
-import ManifestV3 = chrome.runtime.ManifestV3
+import { ManifestV3 } from './types'
 
-export const manifest: ManifestV3 = {
+export const manifest: Awaited<ManifestV3> = {
   manifest_version: 3,
   name: 'WM Dummy',
   version: '1.0.0',
@@ -28,10 +28,10 @@ export const manifest: ManifestV3 = {
 
 export function applyBuildConfig(
   env: typeof process.env,
-  manifestV3: ManifestV3
+  manifestV3: Awaited<ManifestV3>
 ): ManifestV3 {
-  const out = { ...manifestV3 }
+  const out = manifestV3
   assert(out.permissions)
-  // out.permissions.push('webRequest')
+  out.permissions.push('webRequest')
   return out
 }
