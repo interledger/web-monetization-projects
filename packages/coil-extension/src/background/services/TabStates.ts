@@ -15,13 +15,14 @@ import {
 import { IconState } from '../../types/commands'
 import { FrameSpec } from '../../types/FrameSpec'
 import * as tokens from '../../types/tokens'
-import { StoreProxy } from '../../types/storage'
-import { BuildConfig } from '../../types/BuildConfig'
+import type { StoreProxy } from '../../types/storage'
+import type { BuildConfig } from '../../types/BuildConfig'
 import { noop } from '../util/dbg'
 
 import { AuthService } from './AuthService'
 import { PopupBrowserAction } from './PopupBrowserAction'
-import { Logger, logger } from './utils'
+import { logger } from './utils'
+import type { Logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { TippingService } from './TippingService'
 

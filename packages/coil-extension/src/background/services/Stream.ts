@@ -20,11 +20,12 @@ import { Container, inject, injectable, optional } from 'inversify'
 
 import { notNullOrUndef } from '../../util/nullables'
 import * as tokens from '../../types/tokens'
-import { BuildConfig } from '../../types/BuildConfig'
+import type { BuildConfig } from '../../types/BuildConfig'
 import { BandwidthTiers } from '../../services/BandwidthTiers'
 
 import { AnonymousTokens } from './AnonymousTokens'
-import { Logger, logger } from './utils'
+import { logger } from './utils'
+import type { Logger } from './utils'
 
 const { timeout } = asyncUtils
 

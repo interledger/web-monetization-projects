@@ -1,5 +1,3 @@
-import { EventEmitter } from 'events'
-
 import { inject, injectable } from 'inversify'
 import {
   MonetizationTagManager,
@@ -26,10 +24,10 @@ import {
   StopWebMonetization,
   ToContentMessage
 } from '../../types/commands'
-import { ContentRuntime } from '../types/ContentRunTime'
+import type { ContentRuntime } from '../types/ContentRunTime'
 import { debug } from '../util/logging'
 import { addCoilExtensionInstalledMarker } from '../util/addCoilExtensionMarker'
-import { BuildConfig } from '../../types/BuildConfig'
+import type { BuildConfig } from '../../types/BuildConfig'
 
 import { Frames } from './Frames'
 import { AdaptedContentService } from './AdaptedContentService'
