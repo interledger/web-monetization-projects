@@ -42,15 +42,15 @@ fi
 
 if [[ ${BUILD_ENV} = "dev" ]]
 then
-  WEBPACK=webpack.dev.ts
+  WEBPACK=cjsconf/webpack.dev.ts
 elif [[ ${BUILD_ENV} = "staging" ]]
 then
-  WEBPACK=webpack.staging.ts
+  WEBPACK=cjsconf/webpack.staging.ts
 elif [[ ${BUILD_ENV} = "prod" ]]
 then
-  WEBPACK=webpack.prod.ts
+  WEBPACK=cjsconf/webpack.prod.ts
 else
-  WEBPACK=webpack.prod.ts
+  WEBPACK=cjsconf/webpack.prod.ts
 fi
 
 echo Running ${BUILD_ENV} build for ${BROWSER_NAME}...
