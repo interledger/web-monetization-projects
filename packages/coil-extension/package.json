@@ -35,7 +35,7 @@
     "dev-firefox-prod": "yarn dev build-prod firefox --watch",
     "dev-firefox-staging": "yarn dev build-staging firefox --watch",
     "ff:launch-mac": "open -a /Applications/Firefox.app/Contents/MacOS/firefox --args --marionette",
-    "ff:load-ext": "ts-node --transpileOnly src/scripts/load-extension-into-ff.ts",
+    "ff:load-ext": "ts-node --swc src/scripts/load-extension-into-ff.ts",
     "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
     "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",

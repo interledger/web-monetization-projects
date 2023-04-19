@@ -1,33 +1,37 @@
 {
   "compilerOptions": {
+    "jsx": "react",
+
     "lib": [
-      "esnext",
-      "dom"
+      "ESNext",
+      "DOM"
     ],
+
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
 
     "noEmit": false,
 
-    "useUnknownInCatchVariables": false,
-
-    "jsx": "react",
     "downlevelIteration": true,
-
-    "isolatedModules": true,
+    "useUnknownInCatchVariables": false,
 
     "declarationMap": false,
     "sourceMap": false,
     "declaration": false,
 
     "preserveSymlinks": false,
+
     "strict": true,
     "noImplicitAny": true,
-    "esModuleInterop": true,
+
     "allowJs": false,
+
     "removeComments": true,
     "resolveJsonModule": true,
+
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   }
