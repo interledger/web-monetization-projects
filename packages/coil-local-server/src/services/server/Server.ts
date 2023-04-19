@@ -13,7 +13,7 @@ import {
   THttpServerPort,
   TLogger
 } from '../../di/tokens'
-import { Logger } from '../../utils/logger'
+import type { Logger } from '../../utils/logger'
 import { Env } from '../util/env'
 import { StreamService } from '../stream/StreamService'
 

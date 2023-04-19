@@ -1,19 +1,19 @@
 {
-  "$schema": "packages/coil-monorepo-upkeep/resources/tsconfig-schema.json",
   "compilerOptions": {
     "lib": [
       "esnext",
       "dom"
     ],
-    "target": "es2020",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+
     "noEmit": false,
 
     "useUnknownInCatchVariables": false,
 
     "jsx": "react",
     "downlevelIteration": true,
-    "moduleResolution": "node",
 
     "isolatedModules": true,
 

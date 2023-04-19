@@ -4,7 +4,7 @@ import { inject, injectable } from 'inversify'
 import MiniAccountsPlugin from 'ilp-plugin-mini-accounts'
 
 import { THttpServer, TLogger } from '../../di/tokens'
-import { Logger } from '../../utils/logger'
+import type { Logger } from '../../utils/logger'
 
 @injectable()
 export class BTPService {
