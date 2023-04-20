@@ -44,11 +44,11 @@ const steps = [
     }
   },
   {
-    name: 'Yarn Install',
+    name: 'PNPM Install',
     run: `export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-yarn --immutable
+pnpm install
 export PUPPETEER_PRODUCT='firefox'
-yarn rebuild puppeteer`
+pnpm install`
   }
   // Inner steps go here
   // {

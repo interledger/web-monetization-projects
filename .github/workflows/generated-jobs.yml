@@ -27,12 +27,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Lint Project
         run: |
           # show only errors with --quiet
@@ -55,12 +55,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Build Safari
         run: |
           cd packages/coil-extension
@@ -85,12 +85,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Package for firefox
         run: |
           cd packages/coil-extension
@@ -122,12 +122,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Build Root TypeScript Project - tsconfig.build.json
         run: |
           pnpm build:ts --verbose
@@ -150,12 +150,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Build Root TypeScript Project - tsconfig.json
         run: |
           pnpm tsc -b tsconfig.json --verbose
@@ -186,12 +186,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Run jest via dynamic compilation
         run: |
           export DEBUG='coil*'
@@ -231,12 +231,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Yarn workspaces foreach run jest via dynamic compilation
         run: |
           export TS_JEST_MAP_PATHS_TO_MODULES=true
@@ -268,12 +268,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Packages Build Scripts
         run: |
           pnpm workspaces foreach -v --exclude=web-monetization run build
@@ -296,12 +296,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/.yarn
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Yarn Dedupe Check
         run: |
           pnpm dedupe --check
