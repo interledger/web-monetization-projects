@@ -53,7 +53,8 @@ const steps = [
   {
     name: 'PNPM Install',
     run: `export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-pnpm install
+pnpm install --no-frozen-lockfile
+git diff
 export PUPPETEER_PRODUCT='firefox'
 pnpm install`
   }

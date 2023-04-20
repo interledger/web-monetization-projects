@@ -34,7 +34,8 @@ jobs:
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
+          pnpm install --no-frozen-lockfile
+          git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
       - name: Lint Project
@@ -66,7 +67,8 @@ jobs:
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
+          pnpm install --no-frozen-lockfile
+          git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
       - name: Build Safari
@@ -100,7 +102,8 @@ jobs:
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
+          pnpm install --no-frozen-lockfile
+          git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
       - name: Package for firefox
@@ -141,7 +144,8 @@ jobs:
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
+          pnpm install --no-frozen-lockfile
+          git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
       - name: Build Root TypeScript Project - tsconfig.build.json
@@ -173,7 +177,8 @@ jobs:
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
+          pnpm install --no-frozen-lockfile
+          git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
       - name: Build Root TypeScript Project - tsconfig.json
@@ -213,7 +218,8 @@ jobs:
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
+          pnpm install --no-frozen-lockfile
+          git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
       - name: Run jest via dynamic compilation
@@ -262,7 +268,8 @@ jobs:
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
+          pnpm install --no-frozen-lockfile
+          git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
       - name: Yarn workspaces foreach run jest via dynamic compilation
@@ -303,7 +310,8 @@ jobs:
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
+          pnpm install --no-frozen-lockfile
+          git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
       - name: Packages Build Scripts
@@ -335,7 +343,8 @@ jobs:
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
+          pnpm install --no-frozen-lockfile
+          git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
       - name: Yarn Dedupe Check
