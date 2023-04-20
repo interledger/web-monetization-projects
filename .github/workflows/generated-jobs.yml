@@ -31,16 +31,16 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Lint Project
-        run: |
-          # show only errors with --quiet
-          pnpm lint:all --quiet
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
+      - name: Lint Project
+        run: |
+          # show only errors with --quiet
+          pnpm lint:all --quiet
   build-safari:
     runs-on: macos-latest
     strategy:
@@ -63,17 +63,17 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Build Safari
-        run: |
-          cd packages/coil-extension
-          pnpm build-prod safari
-          scripts/build-safari.sh
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
+      - name: Build Safari
+        run: |
+          cd packages/coil-extension
+          pnpm build-prod safari
+          scripts/build-safari.sh
   coil-extension-package:
     runs-on: ubuntu-latest
     strategy:
@@ -97,6 +97,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: PNPM Install
+        run: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          pnpm install
+          export PUPPETEER_PRODUCT='firefox'
+          pnpm install
       - name: Package for firefox
         run: |
           cd packages/coil-extension
@@ -109,12 +115,6 @@ jobs:
         run: |
           cd packages/coil-extension
           pnpm addons-linter coilfirefoxextension@coil.com.xpi
-      - name: PNPM Install
-        run: |-
-          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
   build-all-package-references-typescript:
     runs-on: ubuntu-latest
     strategy:
@@ -138,15 +138,15 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Build Root TypeScript Project - tsconfig.build.json
-        run: |
-          pnpm build:ts --verbose
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
+      - name: Build Root TypeScript Project - tsconfig.build.json
+        run: |
+          pnpm build:ts --verbose
   build-root-tsconfig:
     runs-on: ubuntu-latest
     strategy:
@@ -170,6 +170,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: PNPM Install
+        run: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          pnpm install
+          export PUPPETEER_PRODUCT='firefox'
+          pnpm install
       - name: Build Root TypeScript Project - tsconfig.json
         run: |
           pnpm tsc -b tsconfig.json --verbose
@@ -179,12 +185,6 @@ jobs:
       - name: Build Root TypeScript Project - tsconfig.esm.json
         run: |
           pnpm tsc -b tsconfig.esm.json --verbose
-      - name: PNPM Install
-        run: |-
-          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
   jest-all:
     runs-on: ubuntu-latest
     strategy:
@@ -210,6 +210,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: PNPM Install
+        run: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          pnpm install
+          export PUPPETEER_PRODUCT='firefox'
+          pnpm install
       - name: Run jest via dynamic compilation
         run: |
           export DEBUG='coil*'
@@ -228,12 +234,6 @@ jobs:
           pnpm build:ts:verbose
           export TS_JEST_MAP_PATHS_TO_MODULES=false
           xvfb-run -a pnpm ${{ matrix.test-command }}
-      - name: PNPM Install
-        run: |-
-          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
   jest-workspaces-foreach-all:
     runs-on: ubuntu-latest
     strategy:
@@ -259,6 +259,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: PNPM Install
+        run: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          pnpm install
+          export PUPPETEER_PRODUCT='firefox'
+          pnpm install
       - name: Yarn workspaces foreach run jest via dynamic compilation
         run: |
           export TS_JEST_MAP_PATHS_TO_MODULES=true
@@ -271,12 +277,6 @@ jobs:
           export TS_JEST_MAP_PATHS_TO_MODULES=false
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           xvfb-run -a pnpm workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
-      - name: PNPM Install
-        run: |-
-          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
   packages-build-scripts:
     runs-on: ubuntu-latest
     strategy:
@@ -300,15 +300,15 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Packages Build Scripts
-        run: |
-          pnpm workspaces foreach -v --exclude=web-monetization run build
       - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
+      - name: Packages Build Scripts
+        run: |
+          pnpm workspaces foreach -v --exclude=web-monetization run build
   pnpm-format-and-upkeep-diff-check:
     runs-on: ubuntu-latest
     strategy:
@@ -332,6 +332,12 @@ jobs:
         with:
           path: ${{ github.workspace }}/node_modules
           key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
+      - name: PNPM Install
+        run: |-
+          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+          pnpm install
+          export PUPPETEER_PRODUCT='firefox'
+          pnpm install
       - name: Yarn Dedupe Check
         run: |
           pnpm dedupe --check
@@ -351,9 +357,3 @@ jobs:
         run: |
           pnpm workspaces foreach -v --exclude=web-monetization run generate-code
           git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'
-      - name: PNPM Install
-        run: |-
-          export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          pnpm install
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install

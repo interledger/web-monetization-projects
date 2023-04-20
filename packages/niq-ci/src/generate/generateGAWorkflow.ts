@@ -68,8 +68,8 @@ pnpm install`
   // }
 ]
 
-const firstSteps = steps.slice(0, 4)
-const lastSteps = steps.slice(4)
+const firstSteps = steps
+const lastSteps: Array<(typeof steps)[0]> = []
 
 function parseInnerSteps(job: Job) {
   return job['inner-steps'].map(step => {
