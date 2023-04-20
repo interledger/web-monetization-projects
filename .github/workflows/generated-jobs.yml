@@ -36,7 +36,7 @@ jobs:
       - name: Lint Project
         run: |
           # show only errors with --quiet
-          yarn lint:all --quiet
+          pnpm lint:all --quiet
   build-safari:
     runs-on: macos-latest
     strategy:
@@ -64,7 +64,7 @@ jobs:
       - name: Build Safari
         run: |
           cd packages/coil-extension
-          yarn build-prod safari
+          pnpm build-prod safari
           scripts/build-safari.sh
   coil-extension-package:
     runs-on: ubuntu-latest
@@ -102,7 +102,7 @@ jobs:
       - name: Lint firefox package
         run: |
           cd packages/coil-extension
-          yarn addons-linter coilfirefoxextension@coil.com.xpi
+          pnpm addons-linter coilfirefoxextension@coil.com.xpi
   build-all-package-references-typescript:
     runs-on: ubuntu-latest
     strategy:
@@ -130,7 +130,7 @@ jobs:
           yarn rebuild puppeteer
       - name: Build Root TypeScript Project - tsconfig.build.json
         run: |
-          yarn build:ts --verbose
+          pnpm build:ts --verbose
   build-root-tsconfig:
     runs-on: ubuntu-latest
     strategy:
@@ -158,13 +158,13 @@ jobs:
           yarn rebuild puppeteer
       - name: Build Root TypeScript Project - tsconfig.json
         run: |
-          yarn tsc -b tsconfig.json --verbose
+          pnpm tsc -b tsconfig.json --verbose
       - name: Build Root TypeScript Project - tsconfig.cjs.json
         run: |
-          yarn tsc -b tsconfig.cjs.json --verbose
+          pnpm tsc -b tsconfig.cjs.json --verbose
       - name: Build Root TypeScript Project - tsconfig.esm.json
         run: |
-          yarn tsc -b tsconfig.esm.json --verbose
+          pnpm tsc -b tsconfig.esm.json --verbose
   jest-all:
     runs-on: ubuntu-latest
     strategy:
@@ -196,20 +196,20 @@ jobs:
         run: |
           export DEBUG='coil*'
           export TS_JEST_MAP_PATHS_TO_MODULES=true
-          xvfb-run -a yarn ${{ matrix.test-command }}
+          xvfb-run -a pnpm ${{ matrix.test-command }}
       - name: Run jest via babel
         run: |
           export DEBUG='coil*'
           export TS_JEST_MAP_PATHS_TO_MODULES=true
           cp jest.config.local.example.cjs jest.config.local.cjs 
-          xvfb-run -a yarn ${{ matrix.test-command }}
+          xvfb-run -a pnpm ${{ matrix.test-command }}
       - name: Run jest from build
         run: |
           export DEBUG='coil*'
-          yarn clean:build || echo "already clean"
-          yarn build:ts:verbose
+          pnpm clean:build || echo "already clean"
+          pnpm build:ts:verbose
           export TS_JEST_MAP_PATHS_TO_MODULES=false
-          xvfb-run -a yarn ${{ matrix.test-command }}
+          xvfb-run -a pnpm ${{ matrix.test-command }}
   jest-workspaces-foreach-all:
     runs-on: ubuntu-latest
     strategy:
@@ -241,14 +241,14 @@ jobs:
         run: |
           export TS_JEST_MAP_PATHS_TO_MODULES=true
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          xvfb-run -a yarn workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
+          xvfb-run -a pnpm workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
       - name: Yarn workspaces foreach run jest from build
         run: |
-          yarn clean:build || echo "already clean"
-          yarn build:ts:verbose
+          pnpm clean:build || echo "already clean"
+          pnpm build:ts:verbose
           export TS_JEST_MAP_PATHS_TO_MODULES=false
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          xvfb-run -a yarn workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
+          xvfb-run -a pnpm workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
   packages-build-scripts:
     runs-on: ubuntu-latest
     strategy:
@@ -276,8 +276,8 @@ jobs:
           yarn rebuild puppeteer
       - name: Packages Build Scripts
         run: |
-          yarn workspaces foreach -v --exclude=web-monetization run build
-  yarn-format-and-upkeep-diff-check:
+          pnpm workspaces foreach -v --exclude=web-monetization run build
+  pnpm-format-and-upkeep-diff-check:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -304,20 +304,20 @@ jobs:
           yarn rebuild puppeteer
       - name: Yarn Dedupe Check
         run: |
-          yarn dedupe --check
-      - name: yarn dlx @yarnpkg/sdks vscode
+          pnpm dedupe --check
+      - name: pnpm dlx @pnpmpkg/sdks vscode
         run: |
-          yarn dlx @yarnpkg/sdks vscode
-          git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+          pnpm dlx @pnpmpkg/sdks vscode
+          git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'
       - name: Yarn format git diff --exit-code
         run: |
-          yarn format
-          yarn upkeep
-          # yarn.lock sometimes (rarely) changes for unknown reasons
-          # perhaps different versions of yarn ??
+          pnpm format
+          pnpm upkeep
+          # pnpm.lock sometimes (rarely) changes for unknown reasons
+          # perhaps different versions of pnpm ??
           # we don't *really* care so exclude it from the diff check
-          git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+          git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'
       - name: Build generated code git diff --exit-code
         run: |
-          yarn workspaces foreach -v --exclude=web-monetization run generate-code
-          git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+          pnpm workspaces foreach -v --exclude=web-monetization run generate-code
+          git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'
