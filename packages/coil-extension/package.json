@@ -16,7 +16,6 @@
   },
   "license": "Apache-2.0",
   "author": "Coil Team <info@coil.com>",
-  "type": "module",
   "main": "./build",
   "types": "./build",
   "scripts": {

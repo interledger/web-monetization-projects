@@ -3,12 +3,12 @@
     "jsx": "react",
 
     "lib": [
-      "ESNext",
+      "ES2020",
       "DOM"
     ],
 
-    "target": "ESNext",
-    "module": "ESNext",
+    "target": "ES2020",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "isolatedModules": true,
