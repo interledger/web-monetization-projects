@@ -36,10 +36,17 @@ const steps = [
     }
   },
   {
+    name: 'Setup PNPM',
+    uses: 'pnpm/action-setup@v2',
+    with: {
+      version: 7
+    }
+  },
+  {
     name: 'Restore Cache',
     uses: 'actions/cache@v3',
     with: {
-      path: '${{ github.workspace }}/.yarn',
+      path: '${{ github.workspace }}/node_modules',
       key: cacheKey
     }
   },
