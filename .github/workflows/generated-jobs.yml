@@ -25,7 +25,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Restore Cache
         uses: actions/cache@v3
         with:
@@ -58,7 +58,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Restore Cache
         uses: actions/cache@v3
         with:
@@ -93,7 +93,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Restore Cache
         uses: actions/cache@v3
         with:
@@ -135,7 +135,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Restore Cache
         uses: actions/cache@v3
         with:
@@ -168,7 +168,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Restore Cache
         uses: actions/cache@v3
         with:
@@ -209,7 +209,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Restore Cache
         uses: actions/cache@v3
         with:
@@ -259,7 +259,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Restore Cache
         uses: actions/cache@v3
         with:
@@ -301,7 +301,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Restore Cache
         uses: actions/cache@v3
         with:
@@ -334,7 +334,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Restore Cache
         uses: actions/cache@v3
         with:

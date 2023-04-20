@@ -39,7 +39,7 @@ const steps = [
     name: 'Setup PNPM',
     uses: 'pnpm/action-setup@v2',
     with: {
-      version: 7
+      version: 8
     }
   },
   {
