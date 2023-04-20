@@ -9,4 +9,4 @@ export WEXT_MANIFEST_VERSION="$COIL_DEV_VERSION"
 export WEXT_MANIFEST_SUFFIX='Dev'
 export WEXT_MANIFEST_SUFFIX_NO_DATE='true'
 ./build.sh prod chrome
-yarn dlx shipit chrome dist
+pnpx shipit chrome dist

@@ -132,21 +132,21 @@ function setCommonScriptsAndMergeOverrides(
       precommit: 'echo lint-staged runs from root',
       prettier:
         "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
-      format: 'yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet',
+      format: 'pnpm prettier && LINT_FIX=1 pnpm lint:all --fix --quiet',
       'build:ts': 'tsc --build tsconfig.build.json',
-      'build:ts:watch': 'yarn build:ts --watch',
-      'build:ts:verbose': 'yarn build:ts --verbose',
+      'build:ts:watch': 'pnpm build:ts --watch',
+      'build:ts:verbose': 'pnpm build:ts --verbose',
       'clean:build': 'rimraf build',
       // example of deleting an old script
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       root: undefined!,
-      upkeep: 'cd ../.. && yarn upkeep',
-      'lint:all': "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+      upkeep: 'cd ../.. && pnpm upkeep',
+      'lint:all': "pnpm lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
-      'test:e2e': 'yarn test --config jest-e2e.config.cjs',
-      'test:e2e:coverage': 'yarn test:coverage --config jest-e2e.config.cjs',
+      'test:e2e': 'pnpm test --config jest-e2e.config.cjs',
+      'test:e2e:coverage': 'pnpm test:coverage --config jest-e2e.config.cjs',
       test: 'PROJECT_JEST=1 jest --passWithNoTests',
-      'test:coverage': 'yarn test --verbose --coverage'
+      'test:coverage': 'pnpm test --verbose --coverage'
     }
   }
 

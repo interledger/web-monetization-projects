@@ -41,4 +41,4 @@ fi
 
 export DEBUG='coil*'
 
-retry 3 yarn "$COMMAND" "$TESTFILE"
+retry 3 pnpm "$COMMAND" "$TESTFILE"

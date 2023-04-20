@@ -20,27 +20,27 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v6-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
+            - v6-dependencies-{{ checksum "package.json" }}-{{ checksum "pnpm-lock.yaml" }}-<< parameters.node-version >>
       - run:
           class: inner
           name: Yarn Install
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            yarn --immutable
+            pnpm --immutable
             export PUPPETEER_PRODUCT='firefox'
-            yarn rebuild puppeteer
+            pnpm rebuild puppeteer
       - run:
           class: inner
           name: Lint Project
           command: |
             # show only errors with --quiet
-            yarn lint:all --quiet
+            pnpm lint:all --quiet
       - save_cache:
           paths:
             - node_modules
-            - .yarn
+            - .pnpm
             - puppeteer-cache
-          key: v6-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
+          key: v6-dependencies-{{ checksum "package.json" }}-{{ checksum "pnpm-lock.yaml" }}-<< parameters.node-version >>
 
 workflows:
   version: 2

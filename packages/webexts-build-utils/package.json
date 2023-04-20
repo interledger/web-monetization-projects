@@ -17,19 +17,19 @@
   "types": "./build",
   "scripts": {
     "build:ts": "tsc --build tsconfig.build.json",
-    "build:ts:verbose": "yarn build:ts --verbose",
-    "build:ts:watch": "yarn build:ts --watch",
+    "build:ts:verbose": "pnpm build:ts --verbose",
+    "build:ts:watch": "pnpm build:ts --watch",
     "clean:build": "rimraf build",
-    "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",
+    "format": "pnpm prettier && LINT_FIX=1 pnpm lint:all --fix --quiet",
     "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
-    "lint:all": "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "lint:all": "pnpm lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "precommit": "echo lint-staged runs from root",
     "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
     "test": "PROJECT_JEST=1 jest --passWithNoTests",
-    "test:coverage": "yarn test --verbose --coverage",
-    "test:e2e": "yarn test --config jest-e2e.config.cjs",
-    "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.cjs",
-    "upkeep": "cd ../.. && yarn upkeep"
+    "test:coverage": "pnpm test --verbose --coverage",
+    "test:e2e": "pnpm test --config jest-e2e.config.cjs",
+    "test:e2e:coverage": "pnpm test:coverage --config jest-e2e.config.cjs",
+    "upkeep": "cd ../.. && pnpm upkeep"
   },
   "dependencies": {
     "@coil/webpack-utils": "^0.0.0",

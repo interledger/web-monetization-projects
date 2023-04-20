@@ -5,12 +5,12 @@
 # debugging.
 set -ex
 
-WEXT_SKIP_YARN=${WEXT_SKIP_YARN:-false}
-if [[ ${WEXT_SKIP_YARN} = 'true' ]]
+WEXT_SKIP_PNPM=${WEXT_SKIP_PNPM:-false}
+if [[ ${WEXT_SKIP_PNPM} = 'true' ]]
 then
-  echo 'skipping yarn'
+  echo 'skipping pnpm install'
 else
-  yarn
+  pnpm
 fi
 
 BUILD_TS=${BUILD_TS:-true}
@@ -20,7 +20,7 @@ if [[ ${BUILD_TS} = 'false' ]] || [[ ${TS_LOADER_TRANSPILE_ONLY} = 'true' ]]
 then
   echo 'skipping build typescript step'
 else
-  time yarn build:ts:verbose
+  time pnpm build:ts:verbose
 fi
 
 BROWSER_NAME=${2:-chrome}
@@ -54,5 +54,5 @@ else
 fi
 
 echo Running ${BUILD_ENV} build for ${BROWSER_NAME}...
-# See yarn plugin for TSCONFIG_PATHS_REGISTER
-TS_NODE_TRANSPILE_ONLY=${TS_NODE_TRANSPILE_ONLY:-true} BROWSER=${BROWSER_NAME} API=${BROWSER_API} yarn run webpack-cli --config ${WEBPACK} ${EXTRA_ARGS}
+# See pnpm plugin for TSCONFIG_PATHS_REGISTER
+TS_NODE_TRANSPILE_ONLY=${TS_NODE_TRANSPILE_ONLY:-true} BROWSER=${BROWSER_NAME} API=${BROWSER_API} pnpm run webpack-cli --config ${WEBPACK} ${EXTRA_ARGS}
