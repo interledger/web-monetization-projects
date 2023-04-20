@@ -5,7 +5,7 @@ import { DocumentMonetization } from '@webmonetization/wext/content'
 import * as tokens from '../../types/tokens'
 import { getAdaptedSite } from '../util/getAdaptedSite'
 import { debug } from '../util/logging'
-import { ContentRuntime } from '../types/ContentRunTime'
+import type { ContentRuntime } from '../types/ContentRunTime'
 import { AdaptedPageDetails, FetchYoutubeChannelId } from '../../types/commands'
 
 interface GetPageData {

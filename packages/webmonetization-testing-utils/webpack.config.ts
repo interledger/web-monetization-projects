@@ -81,4 +81,5 @@ const config: webpack.Configuration = {
   }
 }
 
-export = configureNodePolyfills(config)
+// eslint-disable-next-line import/no-default-export
+export default configureNodePolyfills(config)

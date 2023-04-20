@@ -9,7 +9,7 @@ import {
 import * as express from 'express'
 import { inject } from 'inversify'
 
-import { Logger } from '../../utils/logger'
+import type { Logger } from '../../utils/logger'
 import { TLogger } from '../../di/tokens'
 
 import { SPSPService } from './SPSPService'

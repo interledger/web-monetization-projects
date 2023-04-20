@@ -1,3 +1,5 @@
+import * as path from 'path'
+
 import {
   makeWebpackConfig,
   MakeWebpackConfigParams
@@ -7,7 +9,7 @@ import merge from 'webpack-merge'
 import * as webpack from 'webpack'
 
 const options: MakeWebpackConfigParams = {
-  rootDir: __dirname,
+  rootDir: path.resolve(__dirname, '..'),
   polyfill: {
     content: wmPolyfill,
     name: 'wm-polyfill',

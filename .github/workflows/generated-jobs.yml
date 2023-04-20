@@ -159,6 +159,12 @@ jobs:
       - name: Build Root TypeScript Project - tsconfig.json
         run: |
           yarn tsc -b tsconfig.json --verbose
+      - name: Build Root TypeScript Project - tsconfig.cjs.json
+        run: |
+          yarn tsc -b tsconfig.cjs.json --verbose
+      - name: Build Root TypeScript Project - tsconfig.esm.json
+        run: |
+          yarn tsc -b tsconfig.esm.json --verbose
   jest-all:
     runs-on: ubuntu-latest
     strategy:

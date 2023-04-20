@@ -14,17 +14,17 @@ import {
   PauseWebMonetization,
   ResumeWebMonetization,
   SetMonetizationState,
-  StartWebMonetization,
   StopWebMonetization
 } from '../../types/commands'
-import { StoreProxy } from '../../types/storage'
-import { getFrameSpec, getTab } from '../../util/tabs'
+import type { StoreProxy } from '../../types/storage'
+import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
 
 import { AuthService } from './AuthService'
 import { TabStates } from './TabStates'
 import { Streams } from './Streams'
-import { Logger, logger } from './utils'
+import { logger } from './utils'
+import type { Logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
 import { StreamAssociations } from './StreamAssociations'
 import { StreamMoneyEvent } from './Stream'

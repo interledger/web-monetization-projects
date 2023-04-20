@@ -16,7 +16,7 @@
   "main": "./build",
   "types": "./build",
   "scripts": {
-    "adapt": "ts-node -P ../../tsconfig.json -r tsconfig-paths/register -T src/bin/adapted-page.ts",
+    "adapt": "ts-node --swc src/bin/adapted-page.ts",
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "yarn build:ts --verbose",
     "build:ts:watch": "yarn build:ts --watch",

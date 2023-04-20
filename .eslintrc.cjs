@@ -93,8 +93,9 @@ let config = {
   }
 }
 
-if (fs.existsSync(`${__dirname}/.eslintrc.local.js`)) {
-  config = require('./.eslintrc.local.js')(config)
+const path = `${__dirname}/.eslintrc.local.cjs`
+if (fs.existsSync(path)) {
+  config = require(path)(config)
 }
 
 module.exports = config

@@ -5,9 +5,10 @@ import { BlindToken, CurvePoints } from '@coil/privacypass-sjcl'
 import { StorableBlindToken } from '@coil/anonymous-tokens'
 
 import * as tokens from '../../types/tokens'
-import { BuildConfig } from '../../types/BuildConfig'
+import type { BuildConfig } from '../../types/BuildConfig'
 
-import { Logger, logger } from './utils'
+import { logger } from './utils'
+import type { Logger } from './utils'
 
 decorate(injectable(), anonymousTokens.AnonymousTokens)
 

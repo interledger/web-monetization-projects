@@ -1,3 +1,4 @@
+# Run 'yarn build:ci' to build the .github/workflows/generated-jobs.yml
 matrices:
   node-version: [18, 19]
   test-command: [test:coverage, test:e2e:coverage]
@@ -70,10 +71,17 @@ jobs:
     environments: [linux-node]
     inner-steps:
       - run:
-          class: inner
           name: Build Root TypeScript Project - tsconfig.json
           command: |
             yarn tsc -b tsconfig.json --verbose
+      - run:
+          name: Build Root TypeScript Project - tsconfig.cjs.json
+          command: |
+            yarn tsc -b tsconfig.cjs.json --verbose
+      - run:
+          name: Build Root TypeScript Project - tsconfig.esm.json
+          command: |
+            yarn tsc -b tsconfig.esm.json --verbose
 
   jest-all:
     environments: [linux-node-jest]
