@@ -22,7 +22,7 @@ cd_dist_zip () {
 rm -rf dist
 
 # Install deps
-pnpm
+pnpm install
 # Build typescript, including dependency project references
 NODE_ENV=production pnpm build-prod ${BROWSER_NAME}
 
