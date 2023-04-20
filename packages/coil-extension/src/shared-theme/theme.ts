@@ -27,16 +27,16 @@ const body = {
 }
 
 // wrapper allows us to add custom props to the theme
-const createMuiThemeWrapper = (options: ThemeOptions): Theme => {
-  return createTheme({
-    ...options
-  })
-}
+// const createMuiThemeWrapper = (options: ThemeOptions): Theme => {
+//   return createTheme({
+//     ...options
+//   })
+// }
 
 //
 // Theme settings
 //
-export const theme = createMuiThemeWrapper({
+export const theme = createTheme({
   spacing: spacing,
   palette: {
     ...Colors,
