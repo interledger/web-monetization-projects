@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Typography from '@material-ui/core/Typography'
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import { Theme } from '@material-ui/core/styles'
 import { Grid } from '@material-ui/core'
 
 import { PopupStateType } from '../services/PopupState'
 
-const useStyles = makeStyles<Theme>(theme => {
+const useStyles = makeStyles(theme => {
   return {
     root: {
       paddingLeft: '1rem',
@@ -14,7 +13,7 @@ const useStyles = makeStyles<Theme>(theme => {
     },
     heading: {
       fontSize: theme.typography.pxToRem(24),
-      fontWeight: theme.typography.fontWeightBold as number,
+      fontWeight: theme.typography.fontWeightBold,
       padding: '1.75rem 0',
       variant: 'h2'
     },
