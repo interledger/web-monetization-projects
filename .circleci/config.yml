@@ -26,7 +26,7 @@ jobs:
           name: Yarn Install
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            pnpm --immutable
+            pnpm install
             export PUPPETEER_PRODUCT='firefox'
             pnpm rebuild puppeteer
       - run:

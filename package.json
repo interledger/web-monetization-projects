@@ -9,9 +9,9 @@
   "scripts": {
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint",
     "test": "jest --passWithNoTests",
-    "test:e2e": "pnpm test --config jest-e2e.config.cjs",
+    "test:e2e": "pnpm run test --config jest-e2e.config.cjs",
     "test:e2e:coverage": "pnpm test:coverage --config jest-e2e.config.cjs",
-    "test:coverage": "pnpm test --coverage --verbose",
+    "test:coverage": "pnpm run test --coverage --verbose",
     "prettier": "prettier --write 'packages{-archived,}/*/*.{html,js,ts,tsx,jsx,md}' 'packages{-archived,}/*/{src,test}/**/*.{ts,tsx,js,jsx,html,md}'",
     "format": "pnpm prettier && LINT_FIX=1 pnpm lint:all --fix --quiet",
     "upkeep": "ts-node --swc packages/coil-monorepo-upkeep/src/bin/upkeep.ts",
