@@ -15,10 +15,10 @@ https://webmonetization.org/docs/receipt-verifier/
 In 4 different terminals:
 
 ```
-yarn client:dev
-yarn receiver:dev
-yarn server:dev
-yarn verifier:dev
+pnpm client:dev
+pnpm receiver:dev
+pnpm server:dev
+pnpm verifier:dev
 ```
 
 ### Configuration
@@ -36,8 +36,8 @@ yarn verifier:dev
 For an example using a custom receiver and the [public receipt verifier](https://webmonetization.org/docs/receipt-verifier/#use-our-publicly-available-receipt-verifier):
 
 ```
-PAYMENT_POINTER=\$ilp.uphold.com/example VERIFIER_URL=https://webmonetization.org/api/receipts yarn client:dev
-VERIFIER_URL=https://webmonetization.org/api/receipts/verify yarn server:dev
+PAYMENT_POINTER=\$ilp.uphold.com/example VERIFIER_URL=https://webmonetization.org/api/receipts pnpm client:dev
+VERIFIER_URL=https://webmonetization.org/api/receipts/verify pnpm server:dev
 ```
 
 ### Configuring Extension
@@ -49,5 +49,5 @@ to use the local btp endpoint (with the configured [BTP_PORT](#configuration)) r
 cd packages/coil-extension
 export BTP_ENDPOINT=btp+ws://localhost:3000
 # build in development mode
-yarn dev-chrome-prod
+pnpm dev-chrome-prod
 ```

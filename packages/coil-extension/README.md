@@ -57,7 +57,7 @@ The following browser aliases can be used:
 ### Developing with live reload of extension
 
 ```
-yarn dev-chrome-prod
+pnpm dev-chrome-prod
 ```
 
 ### Logging
@@ -74,19 +74,19 @@ The following `localStorage` entries control logging.
 
 ### Building for other environments
 
-During development, the extension can be built for various environments using yarn scripts. To do this, use the following commands:
+During development, the extension can be built for various environments using pnpm scripts. To do this, use the following commands:
 
 ```
-yarn build #development
-yarn build-staging #staging
-yarn build-prod #production
+pnpm build #development
+pnpm build-staging #staging
+pnpm build-prod #production
 ```
 
 By default, these scripts build the extension for Google Chrome. To build for a different browser, append the parameter as per the examples below:
 
 ```
-yarn build -- firefox
-yarn build-prod -- firefox
+pnpm build -- firefox
+pnpm build-prod -- firefox
 ```
 
 The browsers available to build to are the same as those described in the previous section.

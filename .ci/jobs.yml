@@ -137,10 +137,11 @@ jobs:
   pnpm-format-and-upkeep-diff-check:
     environments: [linux-node]
     inner-steps:
-#      - run:
-#          name: Yarn Dedupe Check
-#          command: |
-#            pnpm dedupe --check
+      - run:
+          name: PNPM Dedupe Check
+          command: |
+            pnpm dedupe
+            git diff --exit-code
       - run:
           name: PNPM format git diff --exit-code
           command: |

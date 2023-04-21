@@ -37,7 +37,7 @@ async function run() {
   const fixturesDir = pathMod.resolve(__dirname, '../fixtures')
   const port = await getPort()
   debug('Starting server on port: ', port)
-  const server = new Server('yarn', [
+  const server = new Server('pnpm', [
     'http-server',
     fixturesDir,
     '-p',

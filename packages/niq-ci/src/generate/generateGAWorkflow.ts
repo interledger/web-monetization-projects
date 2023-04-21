@@ -23,7 +23,7 @@ const actionsBase = {
 
 // TODO: move this into the jobs file which could allow use of references/vars
 const cacheKey =
-  "v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}"
+  "v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}"
 const steps = [
   {
     name: 'Checkout',
@@ -59,15 +59,6 @@ git diff
 export PUPPETEER_PRODUCT='firefox'
 pnpm install`
   }
-  // Inner steps go here
-  // {
-  //   name: 'Save Cache',
-  //   uses: 'actions/cache@v3',
-  //   with: {
-  //     path: '${{ github.workspace }}/.yarn',
-  //     key: cacheKey
-  //   }
-  // }
 ]
 
 const firstSteps = steps
