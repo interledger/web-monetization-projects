@@ -140,6 +140,8 @@ function setCommonScriptsAndMergeOverrides(
       // example of deleting an old script
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       root: undefined!,
+      setenv:
+        'NODE_OPTIONS="${NODE_OPTIONS:-} --require tsconfig-paths/register" TS_NODE_PROJECT="../../tsconfig.cjs.json"',
       upkeep: 'cd ../.. && pnpm upkeep',
       'lint:all': "pnpm lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
