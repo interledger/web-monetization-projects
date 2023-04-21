@@ -116,7 +116,7 @@ jobs:
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            xvfb-run -a pnpm run -j 1 -v --filter="!(web-monetization)" run {% matrix "test-command" %}
+            xvfb-run -a pnpm run -v --filter="!(web-monetization)" run {% matrix "test-command" %}
       - run:
           name: PNPM run jest from build
           command: |
@@ -124,7 +124,7 @@ jobs:
             pnpm build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            xvfb-run -a pnpm run -j 1 -v --filter="!(web-monetization)"  {% matrix "test-command" %}
+            xvfb-run -a pnpm run -v --filter="!(web-monetization)"  {% matrix "test-command" %}
 
   packages-build-scripts:
     environments: [linux-node]
@@ -132,7 +132,7 @@ jobs:
       - run:
           name: Packages Build Scripts
           command: |
-            pnpm run -j 1 -v --filter="!(web-monetization)" build
+            pnpm run -v --filter="!(web-monetization)" build
 
   pnpm-format-and-upkeep-diff-check:
     environments: [linux-node]
