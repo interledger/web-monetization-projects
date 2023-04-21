@@ -108,23 +108,23 @@ jobs:
             export TS_JEST_MAP_PATHS_TO_MODULES=false
             xvfb-run -a pnpm {% matrix "test-command" %}
 
-  jest-workspaces-foreach-all:
+  jest-pnpm-run-all:
     environments: [linux-node-jest]
     inner-steps:
       - run:
-          name: Yarn workspaces foreach run jest via dynamic compilation
+          name: PNPM run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            xvfb-run -a pnpm workspaces foreach -j=1 -v --exclude=web-monetization run {% matrix "test-command" %}
+            xvfb-run -a pnpm run -j 1 -v --filter="!(web-monetization)" run {% matrix "test-command" %}
       - run:
-          name: Yarn workspaces foreach run jest from build
+          name: PNPM run jest from build
           command: |
             pnpm clean:build || echo "already clean"
             pnpm build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            xvfb-run -a pnpm workspaces foreach -j=1 -v --exclude=web-monetization run {% matrix "test-command" %}
+            xvfb-run -a pnpm run -j 1 -v --filter="!(web-monetization)"  {% matrix "test-command" %}
 
   packages-build-scripts:
     environments: [linux-node]
@@ -132,7 +132,7 @@ jobs:
       - run:
           name: Packages Build Scripts
           command: |
-            pnpm workspaces foreach -v --exclude=web-monetization run build
+            pnpm run -j 1 -v --filter="!(web-monetization)" build
 
   pnpm-format-and-upkeep-diff-check:
     environments: [linux-node]
@@ -158,5 +158,5 @@ jobs:
       - run:
           name: Build generated code git diff --exit-code
           command: |
-            pnpm workspaces foreach -v --exclude=web-monetization run generate-code
+            pnpm run --stream --filter="!(web-monetization)" generate-code
             git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'

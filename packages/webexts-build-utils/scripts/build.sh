@@ -10,7 +10,7 @@ if [[ ${WEXT_SKIP_PNPM} = 'true' ]]
 then
   echo 'skipping pnpm install'
 else
-  pnpm
+  pnpm install
 fi
 
 BUILD_TS=${BUILD_TS:-true}
@@ -55,4 +55,4 @@ fi
 
 echo Running ${BUILD_ENV} build for ${BROWSER_NAME}...
 # See pnpm plugin for TSCONFIG_PATHS_REGISTER
-TS_NODE_TRANSPILE_ONLY=${TS_NODE_TRANSPILE_ONLY:-true} BROWSER=${BROWSER_NAME} API=${BROWSER_API} pnpm run webpack-cli --config ${WEBPACK} ${EXTRA_ARGS}
+NODE_OPTIONS="${NODE_OPTIONS:-} --require tsconfig-paths/register" TS_NODE_PROJECT="../../tsconfig.cjs.json" TS_NODE_TRANSPILE_ONLY=${TS_NODE_TRANSPILE_ONLY:-true} BROWSER=${BROWSER_NAME} API=${BROWSER_API} pnpm webpack-cli --config ${WEBPACK} ${EXTRA_ARGS}
