@@ -44,10 +44,15 @@ const steps = [
     }
   },
   {
-    name: 'Restore Cache',
+    name: 'Get PNPM Store Path',
+    id: 'pnpm-store-path',
+    run: 'echo "::set-output name=path::$(pnpm store path)"'
+  },
+  {
+    name: 'Cache',
     uses: 'actions/cache@v3',
     with: {
-      path: `/home/circleci/.local/share/pnpm/store/v3
+      path: `\${{ steps.pnpm-store-path.outputs.path }}
 \${{ github.workspace }}/node_modules
 \${{ github.workspace }}/puppeteer-cache`,
       key: cacheKey
