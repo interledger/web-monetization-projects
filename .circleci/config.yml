@@ -44,8 +44,8 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-            - .pnpm
             - puppeteer-cache
+            - /home/circleci/.local/share/pnpm/store/v3
           key: *cache_key
 
 workflows:
