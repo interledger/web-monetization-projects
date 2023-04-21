@@ -10,7 +10,10 @@ if [[ ${WEXT_SKIP_PNPM} = 'true' ]]
 then
   echo 'skipping pnpm install'
 else
-  pnpm install
+  # PNPM will strip packages if package.sh sets NODE_ENV=production
+  # which the webpack script picks up and build minified code.
+  # Override here just for pnpm installation
+  NODE_ENV=development pnpm install
 fi
 
 BUILD_TS=${BUILD_TS:-true}
