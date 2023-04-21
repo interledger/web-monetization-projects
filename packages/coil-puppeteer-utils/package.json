@@ -35,7 +35,7 @@
   "dependencies": {
     "@coil/client": "0.0.0",
     "@webmonetization/types": "0.0.0",
-    "debug": "^4.3.1",
+    "debug": "4.3.4",
     "get-port": "^5.1.1",
     "puppeteer": "^19.0.0",
     "tmp": "^0.2.1",
