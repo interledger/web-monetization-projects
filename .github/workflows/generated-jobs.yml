@@ -405,6 +405,10 @@ jobs:
         run: |
           pnpm dedupe
           git diff --exit-code
+      - name: PNPM build:ci git diff --exit-code
+        run: |
+          pnpm build:ci
+          git diff --exit-code
       - name: PNPM format git diff --exit-code
         run: |
           pnpm format
