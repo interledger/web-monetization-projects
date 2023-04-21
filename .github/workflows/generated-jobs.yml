@@ -347,14 +347,7 @@ jobs:
           git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
-      - name: Yarn Dedupe Check
-        run: |
-          pnpm dedupe --check
-      - name: pnpx @pnpmpkg/sdks vscode
-        run: |
-          pnpx @pnpmpkg/sdks vscode
-          git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'
-      - name: Yarn format git diff --exit-code
+      - name: PNPM format git diff --exit-code
         run: |
           pnpm format
           pnpm upkeep

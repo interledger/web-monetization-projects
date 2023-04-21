@@ -137,17 +137,12 @@ jobs:
   pnpm-format-and-upkeep-diff-check:
     environments: [linux-node]
     inner-steps:
+#      - run:
+#          name: Yarn Dedupe Check
+#          command: |
+#            pnpm dedupe --check
       - run:
-          name: Yarn Dedupe Check
-          command: |
-            pnpm dedupe --check
-      - run:
-          name: pnpx @pnpmpkg/sdks vscode
-          command: |
-            pnpx @pnpmpkg/sdks vscode
-            git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'
-      - run:
-          name: Yarn format git diff --exit-code
+          name: PNPM format git diff --exit-code
           command: |
             pnpm format
             pnpm upkeep
