@@ -21,6 +21,7 @@ const actionsBase = {
   jobs: {} as Record<string, GithubActionsJob>
 }
 
+// TODO: move this into the jobs file which could allow use of references/vars
 const cacheKey =
   "v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}"
 const steps = [
@@ -53,7 +54,7 @@ const steps = [
   {
     name: 'PNPM Install',
     run: `export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-pnpm install --no-frozen-lockfile
+pnpm install # --no-frozen-lockfile 
 git diff
 export PUPPETEER_PRODUCT='firefox'
 pnpm install`
