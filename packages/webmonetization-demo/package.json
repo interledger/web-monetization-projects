@@ -30,8 +30,8 @@
     "server:dev": "ts-node  --swc src/server/main.ts",
     "setenv": "NODE_OPTIONS=\"${NODE_OPTIONS:-} --require tsconfig-paths/register\" TS_NODE_PROJECT=\"../../tsconfig.cjs.json\"",
     "test": "PROJECT_JEST=1 jest --passWithNoTests",
-    "test:coverage": "pnpm test --verbose --coverage",
-    "test:e2e": "pnpm test --config jest-e2e.config.cjs",
+    "test:coverage": "pnpm run test --verbose --coverage",
+    "test:e2e": "pnpm run test --config jest-e2e.config.cjs",
     "test:e2e:coverage": "pnpm test:coverage --config jest-e2e.config.cjs",
     "upkeep": "cd ../.. && pnpm upkeep",
     "verifier:dev": "ts-node --swc src/verifier/main.ts"

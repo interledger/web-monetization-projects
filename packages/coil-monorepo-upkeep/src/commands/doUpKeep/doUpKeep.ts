@@ -145,10 +145,10 @@ function setCommonScriptsAndMergeOverrides(
       upkeep: 'cd ../.. && pnpm upkeep',
       'lint:all': "pnpm lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
-      'test:e2e': 'pnpm test --config jest-e2e.config.cjs',
+      'test:e2e': 'pnpm run test --config jest-e2e.config.cjs',
       'test:e2e:coverage': 'pnpm test:coverage --config jest-e2e.config.cjs',
       test: 'PROJECT_JEST=1 jest --passWithNoTests',
-      'test:coverage': 'pnpm test --verbose --coverage'
+      'test:coverage': 'pnpm run test --verbose --coverage'
     }
   }
 
