@@ -147,12 +147,9 @@ jobs:
           command: |
             pnpm format
             pnpm upkeep
-            # pnpm.lock sometimes (rarely) changes for unknown reasons
-            # perhaps different versions of pnpm ??
-            # we don't *really* care so exclude it from the diff check
-            git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'
+            git diff --exit-code
       - run:
           name: Build generated code git diff --exit-code
           command: |
             pnpm run --stream --filter="!(web-monetization)" generate-code
-            git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'
+            git diff --exit-code
