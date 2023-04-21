@@ -3,8 +3,7 @@ import {
   GraphQlClient,
   loginMutation,
   queryTokenQuery
-} from '@coil/client'
-
+} from '../src'
 import { testToken } from '../test/fixtures/testToken'
 
 describe('GraphQlClient#login', () => {

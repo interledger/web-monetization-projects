@@ -2,7 +2,7 @@ import {
   IDLE_TIMEOUT,
   IdleDetection,
   IdleDetectionDocument
-} from '@webmonetization/wext/content'
+} from '../../../src/content'
 
 type VisibilityState = Document['visibilityState']
 
