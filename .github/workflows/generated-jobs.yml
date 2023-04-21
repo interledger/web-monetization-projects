@@ -350,9 +350,9 @@ jobs:
       - name: Yarn Dedupe Check
         run: |
           pnpm dedupe --check
-      - name: pnpm dlx @pnpmpkg/sdks vscode
+      - name: pnpx @pnpmpkg/sdks vscode
         run: |
-          pnpm dlx @pnpmpkg/sdks vscode
+          pnpx @pnpmpkg/sdks vscode
           git diff --exit-code -- . ':!pnpm.lock' ':!.pnp.cjs'
       - name: Yarn format git diff --exit-code
         run: |
