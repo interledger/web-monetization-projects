@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('jest.config.cjs')
+  ...require('./jest.config.cjs')
 }
