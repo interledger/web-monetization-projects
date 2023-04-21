@@ -57,5 +57,4 @@ else
 fi
 
 echo Running ${BUILD_ENV} build for ${BROWSER_NAME}...
-# See pnpm plugin for TSCONFIG_PATHS_REGISTER
 NODE_OPTIONS="${NODE_OPTIONS:-} --require tsconfig-paths/register" TS_NODE_PROJECT="../../tsconfig.cjs.json" TS_NODE_TRANSPILE_ONLY=${TS_NODE_TRANSPILE_ONLY:-true} BROWSER=${BROWSER_NAME} API=${BROWSER_API} pnpm webpack-cli --config ${WEBPACK} ${EXTRA_ARGS}
