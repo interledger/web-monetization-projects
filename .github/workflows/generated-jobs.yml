@@ -276,7 +276,7 @@ jobs:
         run: |
           export TS_JEST_MAP_PATHS_TO_MODULES=true
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          xvfb-run -a pnpm run --filter="!(web-monetization)" run ${{ matrix.test-command }}
+          xvfb-run -a pnpm run --filter="!(web-monetization)" ${{ matrix.test-command }}
       - name: PNPM run jest from build
         run: |
           pnpm clean:build || echo "already clean"
