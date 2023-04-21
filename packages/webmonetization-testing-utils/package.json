@@ -16,7 +16,7 @@
   "main": "./build",
   "types": "./build",
   "scripts": {
-    "build": "webpack-cli",
+    "build": "pnpm setenv webpack-cli",
     "build:ts": "tsc --build tsconfig.build.json",
     "build:ts:verbose": "pnpm build:ts --verbose",
     "build:ts:watch": "pnpm build:ts --watch",
