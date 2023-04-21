@@ -47,7 +47,9 @@ const steps = [
     name: 'Restore Cache',
     uses: 'actions/cache@v3',
     with: {
-      path: '${{ github.workspace }}/node_modules',
+      path: `/home/circleci/.local/share/pnpm/store/v3
+\${{ github.workspace }}/node_modules
+\${{ github.workspace }}/puppeteer-cache`,
       key: cacheKey
     }
   },
