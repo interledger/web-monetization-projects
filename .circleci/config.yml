@@ -24,8 +24,12 @@ jobs:
           keys:
             - *cache_key
       - run:
-          class: inner
-          name: Yarn Install
+          name: Install pnpm
+          command: |
+            npm install -g pnpm
+            pnpm --version
+      - run:
+          name: PNPM Install
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
             pnpm install --no-frozen-lockfile
@@ -33,7 +37,6 @@ jobs:
             export PUPPETEER_PRODUCT='firefox'
             pnpm rebuild puppeteer
       - run:
-          class: inner
           name: Lint Project
           command: |
             # show only errors with --quiet
