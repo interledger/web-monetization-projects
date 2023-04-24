@@ -1,6 +1,8 @@
 version: 2.1
 
 references:
+  cache-key: &cache_key v7-dependencies-{{ checksum "package.json" }}-{{ checksum "pnpm-lock.yaml" }}-<< parameters.node-version >>
+
   parameterized-node-version: &parameterized-node-version
     parameters:
       node-version:
@@ -20,27 +22,31 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v6-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
+            - *cache_key
       - run:
-          class: inner
-          name: Yarn Install
+          name: Install pnpm
+          command: |
+            sudo npm install -g pnpm
+            pnpm --version
+      - run:
+          name: PNPM Install
           command: |
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            yarn --immutable
+            pnpm install # --no-frozen-lockfile
+            git diff
             export PUPPETEER_PRODUCT='firefox'
-            yarn rebuild puppeteer
+            pnpm rebuild puppeteer
       - run:
-          class: inner
           name: Lint Project
           command: |
             # show only errors with --quiet
-            yarn lint:all --quiet
+            pnpm lint:all --quiet
       - save_cache:
           paths:
             - node_modules
-            - .yarn
             - puppeteer-cache
-          key: v6-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}-<< parameters.node-version >>
+            - /home/circleci/.local/share/pnpm/store/v3
+          key: *cache_key
 
 workflows:
   version: 2

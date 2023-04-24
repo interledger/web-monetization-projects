@@ -19,6 +19,5 @@ export WEXT_BUILD_CONFIG_LOGGING_ENABLED='true'
 
 # shellcheck disable=SC2155
 ./build.sh $COIL_DEV_ENV chrome
-echo "using $(yarn bin shipit)"
 # https://github.com/LinusU/wext-shipit
-yarn shipit chrome dist
+pnpm shipit chrome dist

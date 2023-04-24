@@ -1,5 +1,6 @@
-import { getSPSPResponse } from '@webmonetization/polyfill-utils'
 import { SPSPResponse as SPSPResponseRaw } from '@webmonetization/types'
+
+import { getSPSPResponse } from './getSPSPResponse'
 
 function makeMockFetch(resp: Partial<Response>) {
   const fn = jest.fn()

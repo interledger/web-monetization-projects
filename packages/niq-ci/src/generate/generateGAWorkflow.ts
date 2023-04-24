@@ -21,8 +21,9 @@ const actionsBase = {
   jobs: {} as Record<string, GithubActionsJob>
 }
 
+// TODO: move this into the jobs file which could allow use of references/vars
 const cacheKey =
-  "v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}"
+  "v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}"
 const steps = [
   {
     name: 'Checkout',
@@ -36,33 +37,39 @@ const steps = [
     }
   },
   {
-    name: 'Restore Cache',
+    name: 'Setup PNPM',
+    uses: 'pnpm/action-setup@v2',
+    with: {
+      version: 8
+    }
+  },
+  {
+    name: 'Get PNPM Store Path',
+    id: 'pnpm-store-path',
+    run: 'echo "::set-output name=path::$(pnpm store path)"'
+  },
+  {
+    name: 'Cache',
     uses: 'actions/cache@v3',
     with: {
-      path: '${{ github.workspace }}/.yarn',
+      path: `\${{ steps.pnpm-store-path.outputs.path }}
+\${{ github.workspace }}/node_modules
+\${{ github.workspace }}/puppeteer-cache`,
       key: cacheKey
     }
   },
   {
-    name: 'Yarn Install',
+    name: 'PNPM Install',
     run: `export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-yarn --immutable
+pnpm install # --no-frozen-lockfile 
+git diff
 export PUPPETEER_PRODUCT='firefox'
-yarn rebuild puppeteer`
+pnpm install`
   }
-  // Inner steps go here
-  // {
-  //   name: 'Save Cache',
-  //   uses: 'actions/cache@v3',
-  //   with: {
-  //     path: '${{ github.workspace }}/.yarn',
-  //     key: cacheKey
-  //   }
-  // }
 ]
 
-const firstSteps = steps.slice(0, 4)
-const lastSteps = steps.slice(4)
+const firstSteps = steps
+const lastSteps: Array<(typeof steps)[0]> = []
 
 function parseInnerSteps(job: Job) {
   return job['inner-steps'].map(step => {

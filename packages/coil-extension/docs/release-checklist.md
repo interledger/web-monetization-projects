@@ -39,7 +39,7 @@ makes sense.
 
 - [ ] Build for prod with release settings
 
-  - e.g. `yarn build-prod chrome -p --run-prod --devtool=none`
+  - e.g. `pnpm build-prod chrome -p --run-prod --devtool=none`
     - as per [package.sh](../package.sh)
 
 - [ ] Import unpacked/temporary extension/add-on
@@ -129,7 +129,7 @@ makes sense.
 
 - [ ] Open the [reloading-every-15s.html](http://localhost:4000/reloading-every-15s.html) file:
 
-  - Use a localhost server so WM works (e.g. with `yarn serve:fixtures`)
+  - Use a localhost server so WM works (e.g. with `pnpm serve:fixtures`)
   - Open the developer tools console undocked so can view while **PAGE IS BACKGROUNDED**
     - Note the `Reloading page` logging
   - Open the extension background page developer tools and look at the stream logging
@@ -166,7 +166,7 @@ makes sense.
   - Open the extension popup and click on "Send \$1!" in the tipping tab
   - Check that the tip event occurs
 
-- [ ] Run a local web server (with `yarn run serve:dist`) serving
+- [ ] Run a local web server (with `pnpm run serve:dist`) serving
       the dist folder, then open [static/popup.html](static/popup.html) in a
       normal tab and check the popup rendering in various states.
 
@@ -180,7 +180,7 @@ makes sense.
   - `adb shell pm grant org.mozilla.firefox android.permission.READ_EXTERNAL_STORAGE`
   - `adb shell pm grant org.mozilla.firefox android.permission.WRITE_EXTERNAL_STORAGE`
   - Build the extension
-  - `yarn web-ext run -s $PWD/dist --target=firefox-android --android-device=WUJ01PNSVY # from adb devices step`
+  - `pnpm web-ext run -s $PWD/dist --target=firefox-android --android-device=WUJ01PNSVY # from adb devices step`
   - Issue: [coil/coilhq#2084][ci2084]
   - Fix PRs: [#166][p166] [#295][p295]
 
@@ -233,7 +233,7 @@ makes sense.
 ### Iframe testing
 
 1. - [ ] Open a terminal
-2. - [ ] Start server (via `yarn serve:fixtures-iframes` )
+2. - [ ] Start server (via `pnpm serve:fixtures-iframes` )
 3. - [ ] Open http://localhost:4000/top-nested-allowed-iframe.html in browser
 4. Open developer tools and look at the structure of the dom
 
