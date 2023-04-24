@@ -7,7 +7,7 @@ import {
   OnFrameAllowedChanged,
   UnloadFrame
 } from '../../types/commands'
-import { ContentRuntime } from '../types/ContentRunTime'
+import type { ContentRuntime } from '../types/ContentRunTime'
 import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { isMonetizationAllowed } from '../util/isMonetizationAllowed'
 import { notNullOrUndef } from '../../util/nullables'

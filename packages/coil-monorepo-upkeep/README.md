@@ -2,11 +2,11 @@
 
 ### Commands
 
-- yarn upkeep
-- yarn upkeep:new-package
-- yarn upkeep:check-updates
+- pnpm upkeep
+- pnpm upkeep:new-package
+- pnpm upkeep:check-updates
 
-### yarn upkeep
+### pnpm upkeep
 
 This ensures the package configuration follows a convention by scripting the updates
 of various files like:
@@ -15,8 +15,8 @@ of various files like:
 - tsconfig.build.json
 - package.json
   - various `scripts` such as
-    - yarn build:ts
-    - yarn format
+    - pnpm build:ts
+    - pnpm format
     - etc
 - etc
 
@@ -44,7 +44,7 @@ The requirements were the following:
   while allowing overrides
 
 - Uniform naming for the set of local commands in each package
-  (yarn test, yarn lint:all, etc)
+  (pnpm test, pnpm lint:all, etc)
 
 - Able to use IDE refactoring tools across package boundaries
 

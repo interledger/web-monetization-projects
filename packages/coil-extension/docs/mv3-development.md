@@ -35,7 +35,7 @@ bug in Safari cross component messaging (since fixed)).
 To build for MV3, just export a truthy `MV3` env value and build the extension as normal:
 
 ```bash
-MV3=1 yarn dev-chrome-prod # or yarn dev-firefox-prod
+MV3=1 pnpm dev-chrome-prod # or pnpm dev-firefox-prod
 ```
 
 #### Safari notes
@@ -44,7 +44,7 @@ The reloader is not needed and will not work because `chrome.runtime.reload` wil
 To get reload on save working with safari:
 
 ```bash
-AFTER_DONE_SHELL_CMD="./scripts/build-safari.sh" MV3=true yarn dev-chrome-prod
+AFTER_DONE_SHELL_CMD="./scripts/build-safari.sh" MV3=true pnpm dev-chrome-prod
 ```
 
 #### Firefox notes

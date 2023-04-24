@@ -1,8 +1,8 @@
 import { inject, injectable } from 'inversify'
 
-import { ContentRuntime } from '../types/ContentRunTime'
+import type { ContentRuntime } from '../types/ContentRunTime'
 import * as tokens from '../../types/tokens'
-import { BuildConfig } from '../../types/BuildConfig'
+import type { BuildConfig } from '../../types/BuildConfig'
 
 @injectable()
 export class ContentAuthService {

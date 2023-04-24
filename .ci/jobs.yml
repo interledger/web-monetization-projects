@@ -1,3 +1,4 @@
+# Run 'pnpm build:ci' to build the .github/workflows/generated-jobs.yml
 matrices:
   node-version: [18, 19]
   test-command: [test:coverage, test:e2e:coverage]
@@ -24,7 +25,7 @@ jobs:
           name: Lint Project
           command: |
             # show only errors with --quiet
-            yarn lint:all --quiet
+            pnpm lint:all --quiet
 
   build-safari:
     environments: [macos-node]
@@ -33,7 +34,7 @@ jobs:
           name: Build Safari
           command: |
             cd packages/coil-extension
-            yarn build-prod safari
+            pnpm build-prod safari
             scripts/build-safari.sh
 
   coil-extension-package:
@@ -53,7 +54,7 @@ jobs:
           name: Lint firefox package
           command: |
             cd packages/coil-extension
-            yarn addons-linter coilfirefoxextension@coil.com.xpi
+            pnpm addons-linter coilfirefoxextension@coil.com.xpi
 
   build-all-package-references-typescript:
     environments: [linux-node]
@@ -61,7 +62,7 @@ jobs:
       - run:
           name: Build Root TypeScript Project - tsconfig.build.json
           command: |
-            yarn build:ts --verbose
+            pnpm build:ts --verbose
 
   # This builds the root tsconfig that the IDE uses and the tests are run under.
   # Make sure there are no issues here that somehow other jobs haven't captured.
@@ -70,10 +71,17 @@ jobs:
     environments: [linux-node]
     inner-steps:
       - run:
-          class: inner
           name: Build Root TypeScript Project - tsconfig.json
           command: |
-            yarn tsc -b tsconfig.json --verbose
+            pnpm tsc -b tsconfig.json --verbose
+      - run:
+          name: Build Root TypeScript Project - tsconfig.cjs.json
+          command: |
+            pnpm tsc -b tsconfig.cjs.json --verbose
+      - run:
+          name: Build Root TypeScript Project - tsconfig.esm.json
+          command: |
+            pnpm tsc -b tsconfig.esm.json --verbose
 
   jest-all:
     environments: [linux-node-jest]
@@ -83,40 +91,40 @@ jobs:
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
-            xvfb-run -a yarn {% matrix "test-command" %}
+            xvfb-run -a pnpm {% matrix "test-command" %}
       - run:
           name: Run jest via babel
           command: |
             export DEBUG='coil*'
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             cp jest.config.local.example.cjs jest.config.local.cjs 
-            xvfb-run -a yarn {% matrix "test-command" %}
+            xvfb-run -a pnpm {% matrix "test-command" %}
       - run:
           name: Run jest from build
           command: |
             export DEBUG='coil*'
-            yarn clean:build || echo "already clean"
-            yarn build:ts:verbose
+            pnpm clean:build || echo "already clean"
+            pnpm build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
-            xvfb-run -a yarn {% matrix "test-command" %}
+            xvfb-run -a pnpm {% matrix "test-command" %}
 
-  jest-workspaces-foreach-all:
+  jest-pnpm-run-all:
     environments: [linux-node-jest]
     inner-steps:
       - run:
-          name: Yarn workspaces foreach run jest via dynamic compilation
+          name: PNPM run jest via dynamic compilation
           command: |
             export TS_JEST_MAP_PATHS_TO_MODULES=true
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            xvfb-run -a yarn workspaces foreach -j=1 -v --exclude=web-monetization run {% matrix "test-command" %}
+            xvfb-run -a pnpm run -r {% matrix "test-command" %}
       - run:
-          name: Yarn workspaces foreach run jest from build
+          name: PNPM run jest from build
           command: |
-            yarn clean:build || echo "already clean"
-            yarn build:ts:verbose
+            pnpm clean:build || echo "already clean"
+            pnpm build:ts:verbose
             export TS_JEST_MAP_PATHS_TO_MODULES=false
             export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-            xvfb-run -a yarn workspaces foreach -j=1 -v --exclude=web-monetization run {% matrix "test-command" %}
+            xvfb-run -a pnpm run -r  {% matrix "test-command" %}
 
   packages-build-scripts:
     environments: [linux-node]
@@ -124,31 +132,29 @@ jobs:
       - run:
           name: Packages Build Scripts
           command: |
-            yarn workspaces foreach -v --exclude=web-monetization run build
+            pnpm run -r build
 
-  yarn-format-and-upkeep-diff-check:
+  pnpm-format-and-upkeep-diff-check:
     environments: [linux-node]
     inner-steps:
       - run:
-          name: Yarn Dedupe Check
+          name: PNPM Dedupe Check
           command: |
-            yarn dedupe --check
+            pnpm dedupe
+            git diff --exit-code
       - run:
-          name: yarn dlx @yarnpkg/sdks vscode
+          name: PNPM build:ci git diff --exit-code
           command: |
-            yarn dlx @yarnpkg/sdks vscode
-            git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+            pnpm build:ci
+            git diff --exit-code
       - run:
-          name: Yarn format git diff --exit-code
+          name: PNPM format git diff --exit-code
           command: |
-            yarn format
-            yarn upkeep
-            # yarn.lock sometimes (rarely) changes for unknown reasons
-            # perhaps different versions of yarn ??
-            # we don't *really* care so exclude it from the diff check
-            git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+            pnpm format
+            pnpm upkeep
+            git diff --exit-code
       - run:
           name: Build generated code git diff --exit-code
           command: |
-            yarn workspaces foreach -v --exclude=web-monetization run generate-code
-            git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+            pnpm run --stream -r generate-code
+            git diff --exit-code

@@ -14,7 +14,8 @@ import {
 import { FrameSpec, sameFrame } from '../../types/FrameSpec'
 import { timeout } from '../../content/util/timeout'
 
-import { logger, Logger } from './utils'
+import { logger } from './utils'
+import type { Logger } from './utils'
 
 type GetFrameResultDetails = chrome.webNavigation.GetFrameResultDetails
 type MessageSender = chrome.runtime.MessageSender

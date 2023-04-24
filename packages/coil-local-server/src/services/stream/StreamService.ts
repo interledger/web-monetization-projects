@@ -6,7 +6,7 @@ import {
 } from 'ilp-protocol-stream'
 
 import { TLogger, TStreamServer } from '../../di/tokens'
-import { Logger } from '../../utils/logger'
+import type { Logger } from '../../utils/logger'
 
 @injectable()
 export class StreamService {

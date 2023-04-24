@@ -9,18 +9,18 @@
   "scripts": {
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint",
     "test": "jest --passWithNoTests",
-    "test:e2e": "yarn test --config jest-e2e.config.cjs",
-    "test:e2e:coverage": "yarn test:coverage --config jest-e2e.config.cjs",
-    "test:coverage": "yarn test --coverage --verbose",
+    "test:e2e": "pnpm run test --config jest-e2e.config.cjs",
+    "test:e2e:coverage": "pnpm test:coverage --config jest-e2e.config.cjs",
+    "test:coverage": "pnpm run test --coverage --verbose",
     "prettier": "prettier --write 'packages{-archived,}/*/*.{html,js,ts,tsx,jsx,md}' 'packages{-archived,}/*/{src,test}/**/*.{ts,tsx,js,jsx,html,md}'",
-    "format": "yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet",
-    "upkeep": "ts-node -T packages/coil-monorepo-upkeep/src/bin/upkeep.ts",
-    "upkeep:new-package": "ts-node -T packages/coil-monorepo-upkeep/new-package.ts",
+    "format": "pnpm prettier && LINT_FIX=1 pnpm lint:all --fix --quiet",
+    "upkeep": "ts-node --swc packages/coil-monorepo-upkeep/src/bin/upkeep.ts",
+    "upkeep:new-package": "ts-node --swc packages/coil-monorepo-upkeep/new-package.ts",
     "clean:build": "rimraf packages{-archived,}/*/build",
     "build:ts": "tsc --build tsconfig.references.json",
-    "build:ci": "ts-node packages/niq-ci/src/generate/generateGAWorkflow.ts",
-    "build:ts:verbose": "yarn build:ts --verbose",
-    "lint:all": "yarn lint 'packages{-archived,}/*/{src,test}/**/*.ts*'",
+    "build:ci": "ts-node --swc packages/niq-ci/src/generate/generateGAWorkflow.ts",
+    "build:ts:verbose": "pnpm build:ts --verbose",
+    "lint:all": "pnpm lint 'packages{-archived,}/*/{src,test}/**/*.ts*'",
     "lint:staged": "lint-staged --shell",
     "postinstall": "husky install"
   },
@@ -39,17 +39,23 @@
     ],
     "*.ts*": [
       "prettier --write",
-      "yarn lint --fix"
+      "pnpm lint --fix"
     ]
   },
-  "resolutions": {
-    "@types/react": "17.0.58",
-    "@types/serve-static": "1.15.1",
-    "inversify": "patch:inversify@npm:6.0.1#.yarn/patches/inversify-npm-6.0.1-39ef6784da",
-    "@wext/shipit": "patch:@wext/shipit@npm:0.2.1#.yarn/patches/@wext-shipit-npm-0.2.1-0aefb3f515",
-    "debug": "patch:debug@npm%3A4.3.4#~/.yarn/patches/debug-npm-4.3.4-4513954577.patch",
-    "ilp-plugin-btp@npm:^1.3.5": "patch:ilp-plugin-btp@npm%3A1.5.0#~/.yarn/patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch",
-    "ilp-protocol-stream@npm:^2.7.2-alpha.0": "patch:ilp-protocol-stream@npm%3A2.7.2-alpha.2#~/.yarn/patches/ilp-protocol-stream-npm-2.7.2-alpha.2-92c54e8f76.patch"
+  "pnpm": {
+    "overrides": {
+      "csstype": "2.6.21",
+      "@types/react": "17.0.58",
+      "@types/react-transition-group": "4.2.0",
+      "@types/express-serve-static-core": "4.17.33"
+    },
+    "patchedDependencies": {
+      "inversify@6.0.1": "patches/inversify-npm-6.0.1-39ef6784da",
+      "@wext/shipit@0.2.1": "patches/@wext-shipit-npm-0.2.1-0aefb3f515",
+      "debug@4.3.4": "patches/debug-npm-4.3.4-4513954577.patch",
+      "ilp-plugin-btp@1.5.0": "patches/ilp-plugin-btp-npm-1.5.0-f669b16b57.patch",
+      "ilp-protocol-stream@2.7.2-alpha.2": "patches/ilp-protocol-stream-npm-2.7.2-alpha.2-92c54e8f76.patch"
+    }
   },
   "devDependencies": {
     "@abraham/reflection": "0.12.0",
@@ -60,15 +66,14 @@
     "@babel/preset-env": "7.21.4",
     "@babel/preset-react": "7.18.6",
     "@babel/preset-typescript": "7.21.4",
-    "@commitlint/cli": "17.5.1",
-    "@commitlint/config-conventional": "17.4.4",
+    "@commitlint/cli": "17.6.1",
+    "@commitlint/config-conventional": "17.6.1",
     "@swc/core": "1.3.51",
     "@swc/jest": "0.2.26",
     "@types/jest": "29.5.0",
     "@types/node": "18.15.11",
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",
-    "@yarnpkg/pnpify": "3.1.6",
     "JSON2016": "1.0.0",
     "babel-plugin-parameter-decorator": "1.0.16",
     "babel-plugin-transform-typescript-metadata": "0.3.2",
@@ -106,6 +111,5 @@
   },
   "engines": {
     "node": ">= 14.0.0"
-  },
-  "packageManager": "yarn@4.0.0-rc.42"
+  }
 }

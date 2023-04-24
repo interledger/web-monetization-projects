@@ -22,21 +22,32 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Restore Cache
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get PNPM Store Path
+        id: pnpm-store-path
+        run: echo "::set-output name=path::$(pnpm store path)"
+      - name: Cache
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+          path: |-
+            ${{ steps.pnpm-store-path.outputs.path }}
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/puppeteer-cache
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install # --no-frozen-lockfile 
+          git diff
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Lint Project
         run: |
           # show only errors with --quiet
-          yarn lint:all --quiet
+          pnpm lint:all --quiet
   build-safari:
     runs-on: macos-latest
     strategy:
@@ -50,21 +61,32 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Restore Cache
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get PNPM Store Path
+        id: pnpm-store-path
+        run: echo "::set-output name=path::$(pnpm store path)"
+      - name: Cache
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+          path: |-
+            ${{ steps.pnpm-store-path.outputs.path }}
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/puppeteer-cache
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install # --no-frozen-lockfile 
+          git diff
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Build Safari
         run: |
           cd packages/coil-extension
-          yarn build-prod safari
+          pnpm build-prod safari
           scripts/build-safari.sh
   coil-extension-package:
     runs-on: ubuntu-latest
@@ -80,17 +102,28 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Restore Cache
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get PNPM Store Path
+        id: pnpm-store-path
+        run: echo "::set-output name=path::$(pnpm store path)"
+      - name: Cache
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+          path: |-
+            ${{ steps.pnpm-store-path.outputs.path }}
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/puppeteer-cache
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install # --no-frozen-lockfile 
+          git diff
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Package for firefox
         run: |
           cd packages/coil-extension
@@ -102,7 +135,7 @@ jobs:
       - name: Lint firefox package
         run: |
           cd packages/coil-extension
-          yarn addons-linter coilfirefoxextension@coil.com.xpi
+          pnpm addons-linter coilfirefoxextension@coil.com.xpi
   build-all-package-references-typescript:
     runs-on: ubuntu-latest
     strategy:
@@ -117,20 +150,31 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Restore Cache
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get PNPM Store Path
+        id: pnpm-store-path
+        run: echo "::set-output name=path::$(pnpm store path)"
+      - name: Cache
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+          path: |-
+            ${{ steps.pnpm-store-path.outputs.path }}
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/puppeteer-cache
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install # --no-frozen-lockfile 
+          git diff
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Build Root TypeScript Project - tsconfig.build.json
         run: |
-          yarn build:ts --verbose
+          pnpm build:ts --verbose
   build-root-tsconfig:
     runs-on: ubuntu-latest
     strategy:
@@ -145,20 +189,37 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Restore Cache
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get PNPM Store Path
+        id: pnpm-store-path
+        run: echo "::set-output name=path::$(pnpm store path)"
+      - name: Cache
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+          path: |-
+            ${{ steps.pnpm-store-path.outputs.path }}
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/puppeteer-cache
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install # --no-frozen-lockfile 
+          git diff
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Build Root TypeScript Project - tsconfig.json
         run: |
-          yarn tsc -b tsconfig.json --verbose
+          pnpm tsc -b tsconfig.json --verbose
+      - name: Build Root TypeScript Project - tsconfig.cjs.json
+        run: |
+          pnpm tsc -b tsconfig.cjs.json --verbose
+      - name: Build Root TypeScript Project - tsconfig.esm.json
+        run: |
+          pnpm tsc -b tsconfig.esm.json --verbose
   jest-all:
     runs-on: ubuntu-latest
     strategy:
@@ -175,36 +236,47 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Restore Cache
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get PNPM Store Path
+        id: pnpm-store-path
+        run: echo "::set-output name=path::$(pnpm store path)"
+      - name: Cache
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+          path: |-
+            ${{ steps.pnpm-store-path.outputs.path }}
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/puppeteer-cache
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install # --no-frozen-lockfile 
+          git diff
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Run jest via dynamic compilation
         run: |
           export DEBUG='coil*'
           export TS_JEST_MAP_PATHS_TO_MODULES=true
-          xvfb-run -a yarn ${{ matrix.test-command }}
+          xvfb-run -a pnpm ${{ matrix.test-command }}
       - name: Run jest via babel
         run: |
           export DEBUG='coil*'
           export TS_JEST_MAP_PATHS_TO_MODULES=true
           cp jest.config.local.example.cjs jest.config.local.cjs 
-          xvfb-run -a yarn ${{ matrix.test-command }}
+          xvfb-run -a pnpm ${{ matrix.test-command }}
       - name: Run jest from build
         run: |
           export DEBUG='coil*'
-          yarn clean:build || echo "already clean"
-          yarn build:ts:verbose
+          pnpm clean:build || echo "already clean"
+          pnpm build:ts:verbose
           export TS_JEST_MAP_PATHS_TO_MODULES=false
-          xvfb-run -a yarn ${{ matrix.test-command }}
-  jest-workspaces-foreach-all:
+          xvfb-run -a pnpm ${{ matrix.test-command }}
+  jest-pnpm-run-all:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -220,29 +292,40 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Restore Cache
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get PNPM Store Path
+        id: pnpm-store-path
+        run: echo "::set-output name=path::$(pnpm store path)"
+      - name: Cache
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+          path: |-
+            ${{ steps.pnpm-store-path.outputs.path }}
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/puppeteer-cache
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install # --no-frozen-lockfile 
+          git diff
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
-      - name: Yarn workspaces foreach run jest via dynamic compilation
+          pnpm install
+      - name: PNPM run jest via dynamic compilation
         run: |
           export TS_JEST_MAP_PATHS_TO_MODULES=true
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          xvfb-run -a yarn workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
-      - name: Yarn workspaces foreach run jest from build
+          xvfb-run -a pnpm run -r ${{ matrix.test-command }}
+      - name: PNPM run jest from build
         run: |
-          yarn clean:build || echo "already clean"
-          yarn build:ts:verbose
+          pnpm clean:build || echo "already clean"
+          pnpm build:ts:verbose
           export TS_JEST_MAP_PATHS_TO_MODULES=false
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          xvfb-run -a yarn workspaces foreach -j=1 -v --exclude=web-monetization run ${{ matrix.test-command }}
+          xvfb-run -a pnpm run -r  ${{ matrix.test-command }}
   packages-build-scripts:
     runs-on: ubuntu-latest
     strategy:
@@ -257,21 +340,32 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Restore Cache
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get PNPM Store Path
+        id: pnpm-store-path
+        run: echo "::set-output name=path::$(pnpm store path)"
+      - name: Cache
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+          path: |-
+            ${{ steps.pnpm-store-path.outputs.path }}
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/puppeteer-cache
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install # --no-frozen-lockfile 
+          git diff
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
+          pnpm install
       - name: Packages Build Scripts
         run: |
-          yarn workspaces foreach -v --exclude=web-monetization run build
-  yarn-format-and-upkeep-diff-check:
+          pnpm run -r build
+  pnpm-format-and-upkeep-diff-check:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -285,33 +379,42 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Restore Cache
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Get PNPM Store Path
+        id: pnpm-store-path
+        run: echo "::set-output name=path::$(pnpm store path)"
+      - name: Cache
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.yarn
-          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock') }}-${{ matrix.node-version }}
-      - name: Yarn Install
+          path: |-
+            ${{ steps.pnpm-store-path.outputs.path }}
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/puppeteer-cache
+          key: v1-dependencies-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}-${{ matrix.node-version }}
+      - name: PNPM Install
         run: |-
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-          yarn --immutable
+          pnpm install # --no-frozen-lockfile 
+          git diff
           export PUPPETEER_PRODUCT='firefox'
-          yarn rebuild puppeteer
-      - name: Yarn Dedupe Check
+          pnpm install
+      - name: PNPM Dedupe Check
         run: |
-          yarn dedupe --check
-      - name: yarn dlx @yarnpkg/sdks vscode
+          pnpm dedupe
+          git diff --exit-code
+      - name: PNPM build:ci git diff --exit-code
         run: |
-          yarn dlx @yarnpkg/sdks vscode
-          git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
-      - name: Yarn format git diff --exit-code
+          pnpm build:ci
+          git diff --exit-code
+      - name: PNPM format git diff --exit-code
         run: |
-          yarn format
-          yarn upkeep
-          # yarn.lock sometimes (rarely) changes for unknown reasons
-          # perhaps different versions of yarn ??
-          # we don't *really* care so exclude it from the diff check
-          git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+          pnpm format
+          pnpm upkeep
+          git diff --exit-code
       - name: Build generated code git diff --exit-code
         run: |
-          yarn workspaces foreach -v --exclude=web-monetization run generate-code
-          git diff --exit-code -- . ':!yarn.lock' ':!.pnp.cjs'
+          pnpm run --stream -r generate-code
+          git diff --exit-code

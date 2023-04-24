@@ -5,12 +5,15 @@
 # debugging.
 set -ex
 
-WEXT_SKIP_YARN=${WEXT_SKIP_YARN:-false}
-if [[ ${WEXT_SKIP_YARN} = 'true' ]]
+WEXT_SKIP_PNPM=${WEXT_SKIP_PNPM:-false}
+if [[ ${WEXT_SKIP_PNPM} = 'true' ]]
 then
-  echo 'skipping yarn'
+  echo 'skipping pnpm install'
 else
-  yarn
+  # PNPM will strip packages if package.sh sets NODE_ENV=production
+  # which the webpack script picks up and build minified code.
+  # Override here just for pnpm installation
+  NODE_ENV=development pnpm install
 fi
 
 BUILD_TS=${BUILD_TS:-true}
@@ -20,7 +23,7 @@ if [[ ${BUILD_TS} = 'false' ]] || [[ ${TS_LOADER_TRANSPILE_ONLY} = 'true' ]]
 then
   echo 'skipping build typescript step'
 else
-  time yarn build:ts:verbose
+  time pnpm build:ts:verbose
 fi
 
 BROWSER_NAME=${2:-chrome}
@@ -42,17 +45,16 @@ fi
 
 if [[ ${BUILD_ENV} = "dev" ]]
 then
-  WEBPACK=webpack.dev.ts
+  WEBPACK=cjsconf/webpack.dev.ts
 elif [[ ${BUILD_ENV} = "staging" ]]
 then
-  WEBPACK=webpack.staging.ts
+  WEBPACK=cjsconf/webpack.staging.ts
 elif [[ ${BUILD_ENV} = "prod" ]]
 then
-  WEBPACK=webpack.prod.ts
+  WEBPACK=cjsconf/webpack.prod.ts
 else
-  WEBPACK=webpack.prod.ts
+  WEBPACK=cjsconf/webpack.prod.ts
 fi
 
 echo Running ${BUILD_ENV} build for ${BROWSER_NAME}...
-# See yarn plugin for TSCONFIG_PATHS_REGISTER
-TS_NODE_TRANSPILE_ONLY=${TS_NODE_TRANSPILE_ONLY:-true} BROWSER=${BROWSER_NAME} API=${BROWSER_API} yarn run webpack-cli --config ${WEBPACK} ${EXTRA_ARGS}
+TS_NODE_TRANSPILE_ONLY=${TS_NODE_TRANSPILE_ONLY:-true} BROWSER=${BROWSER_NAME} API=${BROWSER_API} pnpm tsnodeenv webpack-cli --config ${WEBPACK} ${EXTRA_ARGS}

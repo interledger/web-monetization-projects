@@ -7,7 +7,7 @@ import {
 import { inject } from 'inversify'
 
 import { TLogger } from '../../di/tokens'
-import { Logger } from '../../utils/logger'
+import type { Logger } from '../../utils/logger'
 
 @controller('/issuer')
 export class AnonTokenIssuerController extends BaseHttpController {

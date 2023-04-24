@@ -17,7 +17,7 @@ import {
 } from '../../types/commands'
 import { getFrameSpec } from '../../util/tabs'
 import { FrameSpec } from '../../types/FrameSpec'
-import { BuildConfig } from '../../types/BuildConfig'
+import type { BuildConfig } from '../../types/BuildConfig'
 import { getAdaptedSite } from '../../content/util/getAdaptedSite'
 import { notNullOrUndef } from '../../util/nullables'
 
@@ -26,7 +26,8 @@ import { AuthService } from './AuthService'
 import { TabStates } from './TabStates'
 import { Streams } from './Streams'
 import { PopupBrowserAction } from './PopupBrowserAction'
-import { Logger, logger } from './utils'
+import { logger } from './utils'
+import type { Logger } from './utils'
 import { YoutubeService } from './YoutubeService'
 import {
   BackgroundFramesService,

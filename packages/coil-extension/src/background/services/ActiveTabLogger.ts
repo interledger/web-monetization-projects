@@ -2,11 +2,13 @@ import { inject, injectable } from 'inversify'
 
 import * as tokens from '../../types/tokens'
 import { FrameSpec } from '../../types/FrameSpec'
-import { StoreProxy } from '../../types/storage'
+import type { StoreProxy } from '../../types/storage'
 
 @injectable()
 export class ActiveTabLogger {
-  sendLogs = Boolean(this.store.ACTIVE_TAB_LOGGING)
+  get sendLogs() {
+    return Boolean(this.store.ACTIVE_TAB_LOGGING)
+  }
 
   constructor(
     @inject(tokens.StoreProxy)

@@ -35,7 +35,7 @@ export async function doNewPackage(): Promise<void> {
     })
     writeFileJSON(`${folder}/package.json`, packageJSON)
     doUpKeep()
-    cmd('yarn')
+    cmd('pnpm install')
   } else {
     logErr(
       'expecting namespaced package name as first arg, and dependencies as subsequent args'

@@ -1,7 +1,7 @@
 /*
 These can be configured by setting WEXT_BUILD_CONFIG_$UPPER_CASED env vars.
 e.g.
-$ WEXT_BUILD_CONFIG_WM2_ALWAYS=true yarn dev-chrome-prod
+$ WEXT_BUILD_CONFIG_WM2_ALWAYS=true pnpm dev-chrome-prod
  */
 export interface BuildConfig extends Record<string, unknown> {
   logTabsApiEvents?: boolean
