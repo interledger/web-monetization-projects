@@ -1,14 +1,10 @@
 import type { ManifestV3Export } from '@crxjs/vite-plugin'
 
-// We just use this to get the type which is mv3 | Promise<mv3> | () => mv3
-// Use Awaited to strip the Promise and then a branch to strip the function
-// We should be left with simply mv3
-function _(__: Awaited<ManifestV3Export>) {
-  if (typeof __ === 'function') {
-    throw new Error()
-  } else {
-    return __
-  }
-}
+type Unwrap<T> = T extends Promise<infer U>
+  ? U
+  : // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  T extends (_: any) => infer U | Promise<infer U>
+  ? U
+  : T
 
-export type ManifestV3 = ReturnType<typeof _>
+export type ManifestV3 = Unwrap<ManifestV3Export>

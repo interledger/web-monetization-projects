@@ -13,7 +13,9 @@ const configured = applyBuildConfig(process.env, manifest)
 export default defineConfig({
   resolve: {
     alias: {
-      events: 'rollup-plugin-node-polyfills/polyfills/events'
+      // For some reason you need the damn node_modules with pnpm, as opposed
+      // to yarn 2 with nodeLinker: node-modules
+      events: 'node_modules/rollup-plugin-node-polyfills/polyfills/events.js'
     }
   },
   plugins: [
