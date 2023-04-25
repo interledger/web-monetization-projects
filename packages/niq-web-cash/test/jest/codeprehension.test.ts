@@ -1,14 +1,13 @@
 import { randomBytes } from '@noble/hashes/utils'
-import { hashToCurve, p256 } from '@noble/curves/p256'
+import { p256 } from '@noble/curves/p256'
 import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 import { mod } from '@noble/curves/abstract/modular'
 
 import { randomPoint } from '../../src/tokens'
-import { Point } from '../../src/types'
 import {
   divPoint,
-  hashBytesToCurve,
   hashBigIntToCurve,
+  hashBytesToCurve,
   hashPoints,
   HMAC,
   randomNumber,
