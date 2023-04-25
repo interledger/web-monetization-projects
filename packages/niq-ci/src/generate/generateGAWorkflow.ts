@@ -45,8 +45,10 @@ const steps = [
   // },
   {
     name: 'Setup PNPM',
-    run: `npm install -g pnpm@7 
-pnpm --version`
+    uses: 'pnpm/action-setup@v2',
+    with: {
+      version: 7
+    }
   },
   {
     name: 'Get PNPM Store Path',

@@ -64,17 +64,17 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -88,41 +88,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -164,16 +164,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -221,8 +221,8 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/jsonwebtoken':
         specifier: 9.0.1
         version: 9.0.1
@@ -233,11 +233,11 @@ importers:
         specifier: 1.0.30
         version: 1.0.30
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -251,41 +251,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -333,16 +333,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -393,8 +393,8 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/jsonwebtoken':
         specifier: 9.0.1
         version: 9.0.1
@@ -402,11 +402,11 @@ importers:
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -420,41 +420,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -496,16 +496,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -652,8 +652,8 @@ importers:
         specifier: 1.2.10
         version: 1.2.10
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/jsonwebtoken':
         specifier: 9.0.1
         version: 9.0.1
@@ -673,11 +673,11 @@ importers:
         specifier: 9.0.1
         version: 9.0.1
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       '@webexts/build-utils':
         specifier: ^0.0.0
         version: link:../webexts-build-utils
@@ -703,41 +703,41 @@ importers:
         specifier: 1.0.6
         version: 1.0.6
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       foxr:
         specifier: 0.10.1
         version: 0.10.1
@@ -766,8 +766,8 @@ importers:
         specifier: 2.8.8
         version: 2.8.8
       puppeteer:
-        specifier: 19.8.5
-        version: 19.8.5(typescript@5.0.4)
+        specifier: 19.11.0
+        version: 19.11.0(typescript@5.0.4)
       regenerator-runtime:
         specifier: 0.13.11
         version: 0.13.11
@@ -794,16 +794,16 @@ importers:
         version: 7.6.1
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(debug@4.3.4)(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(debug@4.3.4)(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -845,7 +845,7 @@ importers:
         version: 3.12.0(express@4.18.2)(graphql@16.6.0)
       body-parser:
         specifier: ^1.20.0
-        version: 1.20.1
+        version: 1.20.2
       compose-middleware:
         specifier: ^5.0.1
         version: 5.0.1
@@ -917,17 +917,17 @@ importers:
         specifier: 17.6.1
         version: 17.6.1
       '@graphql-codegen/cli':
-        specifier: 3.3.0
-        version: 3.3.0(@babel/core@7.21.4)(@types/node@18.16.0)(graphql@16.6.0)
+        specifier: 3.3.1
+        version: 3.3.1(@babel/core@7.21.4)(@types/node@18.16.0)(graphql@16.6.0)
       '@graphql-codegen/introspection':
         specifier: 3.0.1
         version: 3.0.1(graphql@16.6.0)
       '@graphql-codegen/typescript':
-        specifier: 3.0.3
-        version: 3.0.3(graphql@16.6.0)
+        specifier: 3.0.4
+        version: 3.0.4(graphql@16.6.0)
       '@graphql-codegen/typescript-resolvers':
-        specifier: 3.2.0
-        version: 3.2.0(graphql@16.6.0)
+        specifier: 3.2.1
+        version: 3.2.1(graphql@16.6.0)
       '@swc/core':
         specifier: 1.3.54
         version: 1.3.54
@@ -944,8 +944,8 @@ importers:
         specifier: 4.17.17
         version: 4.17.17
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/jsonwebtoken':
         specifier: 9.0.1
         version: 9.0.1
@@ -953,11 +953,11 @@ importers:
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       '@webmonetization/types':
         specifier: 0.0.0
         version: link:../webmonetization-types
@@ -974,41 +974,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -1050,16 +1050,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1128,17 +1128,17 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1152,41 +1152,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -1228,16 +1228,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1291,8 +1291,8 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/keccak':
         specifier: 3.0.1
         version: 3.0.1
@@ -1303,11 +1303,11 @@ importers:
         specifier: 1.0.30
         version: 1.0.30
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1321,41 +1321,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -1397,16 +1397,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1427,7 +1427,7 @@ importers:
         version: 5.1.1
       puppeteer:
         specifier: ^19.0.0
-        version: 19.8.5(typescript@5.0.4)
+        version: 19.11.0(typescript@5.0.4)
       tmp:
         specifier: ^0.2.1
         version: 0.2.1
@@ -1478,8 +1478,8 @@ importers:
         specifier: 4.2.0
         version: 4.2.0
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
@@ -1487,11 +1487,11 @@ importers:
         specifier: 0.2.3
         version: 0.2.3
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1505,41 +1505,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -1581,16 +1581,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(debug@4.3.4)(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(debug@4.3.4)(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1662,17 +1662,17 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1686,41 +1686,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -1762,16 +1762,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1819,17 +1819,17 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1843,41 +1843,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -1919,16 +1919,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1972,17 +1972,17 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1996,41 +1996,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -2072,16 +2072,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2132,17 +2132,17 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -2156,41 +2156,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -2232,16 +2232,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2304,8 +2304,8 @@ importers:
         specifier: 0.0.233
         version: 0.0.233
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
@@ -2316,11 +2316,11 @@ importers:
         specifier: 18.0.11
         version: 18.0.11
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       '@vitejs/plugin-react-swc':
         specifier: 3.3.0
         version: 3.3.0(vite@4.3.1)
@@ -2337,41 +2337,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -2418,20 +2418,20 @@ importers:
         specifier: 4.3.1
         version: 4.3.1(@types/node@18.16.0)
       vite-tsconfig-paths:
-        specifier: 4.0.8
-        version: 4.0.8(typescript@5.0.4)(vite@4.3.1)
+        specifier: 4.2.0
+        version: 4.2.0(typescript@5.0.4)(vite@4.3.1)
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2482,8 +2482,8 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/js-yaml':
         specifier: 4.0.5
         version: 4.0.5
@@ -2494,11 +2494,11 @@ importers:
         specifier: 3.2.2
         version: 3.2.2
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -2512,41 +2512,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -2588,176 +2588,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
-      webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
-
-  packages/niq-privacypass-noble:
-    dependencies:
-      '@noble/curves':
-        specifier: ^1.0.0
-        version: 1.0.0
-      '@noble/hashes':
-        specifier: ^1.3.0
-        version: 1.3.0
-    devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.21.4
-        version: 7.21.4
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.21.4)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.21.0
-        version: 7.21.0(@babel/core@7.21.4)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.21.4)
-      '@babel/preset-env':
-        specifier: 7.21.4
-        version: 7.21.4(@babel/core@7.21.4)
-      '@babel/preset-react':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.21.4)
-      '@babel/preset-typescript':
-        specifier: 7.21.4
-        version: 7.21.4(@babel/core@7.21.4)
-      '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
-      '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
-      '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
-      '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
-      '@types/node':
-        specifier: 18.16.0
-        version: 18.16.0
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
-      '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.80.0)
-      eslint:
-        specifier: 8.38.0
-        version: 8.38.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
-      eslint-plugin-jest:
-        specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.0)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.0
-        version: 5.0.0
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.21.4)(jest@29.5.0)(typescript@5.0.4)
-      ts-loader:
-        specifier: 9.4.2
-        version: 9.4.2(typescript@5.0.4)(webpack@5.80.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.0)(typescript@5.0.4)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.0.4
-        version: 5.0.4
-      webpack:
-        specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
-      webpack-bundle-analyzer:
-        specifier: 4.8.0
-        version: 4.8.0
-      webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
-      webpack-dev-server:
-        specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2805,17 +2645,17 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -2829,41 +2669,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -2905,16 +2745,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2998,8 +2838,8 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
@@ -3007,11 +2847,11 @@ importers:
         specifier: 8.5.4
         version: 8.5.4
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3025,41 +2865,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -3101,16 +2941,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3128,7 +2968,7 @@ importers:
         version: link:../webmonetization-types
       body-parser:
         specifier: ^1.19.0
-        version: 1.20.1
+        version: 1.20.2
       express:
         specifier: ^4.17.1
         version: 4.18.2
@@ -3215,8 +3055,8 @@ importers:
         specifier: 1.5.5
         version: 1.5.5
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
@@ -3230,11 +3070,11 @@ importers:
         specifier: 6.1.6
         version: 6.1.6
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3248,41 +3088,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       html-webpack-plugin:
         specifier: 5.5.1
         version: 5.5.1(webpack@5.80.0)
@@ -3327,16 +3167,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3387,8 +3227,8 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
@@ -3396,11 +3236,11 @@ importers:
         specifier: 9.0.1
         version: 9.0.1
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       '@webmonetization/types':
         specifier: 0.0.0
         version: link:../webmonetization-types
@@ -3417,41 +3257,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -3493,16 +3333,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3553,8 +3393,8 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
@@ -3562,11 +3402,11 @@ importers:
         specifier: 17.0.58
         version: 17.0.58
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3580,41 +3420,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -3656,16 +3496,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3737,8 +3577,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
@@ -3752,11 +3592,11 @@ importers:
         specifier: 9.0.1
         version: 9.0.1
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3770,41 +3610,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       html-webpack-plugin:
         specifier: 5.5.1
         version: 5.5.1(webpack@5.80.0)
@@ -3849,16 +3689,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3902,17 +3742,17 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3926,41 +3766,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -4005,16 +3845,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -4068,17 +3908,17 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.54)
       '@types/jest':
-        specifier: 29.5.0
-        version: 29.5.0
+        specifier: 29.5.1
+        version: 29.5.1
       '@types/node':
         specifier: 18.16.0
         version: 18.16.0
       '@typescript-eslint/eslint-plugin':
-        specifier: 5.57.1
-        version: 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/parser':
-        specifier: 5.57.1
-        version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+        specifier: 5.59.1
+        version: 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -4092,41 +3932,41 @@ importers:
         specifier: 11.0.0
         version: 11.0.0(webpack@5.80.0)
       eslint:
-        specifier: 8.38.0
-        version: 8.38.0
+        specifier: 8.39.0
+        version: 8.39.0
       eslint-config-prettier:
         specifier: 8.8.0
-        version: 8.8.0(eslint@8.38.0)
+        version: 8.8.0(eslint@8.39.0)
       eslint-import-resolver-node:
         specifier: 0.3.7
         version: 0.3.7
       eslint-plugin-import:
         specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)
+        version: 2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
-        version: 6.7.1(eslint@8.38.0)
+        version: 6.7.1(eslint@8.39.0)
       eslint-plugin-node:
         specifier: 11.1.0
-        version: 11.1.0(eslint@8.38.0)
+        version: 11.1.0(eslint@8.39.0)
       eslint-plugin-prettier:
         specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
       eslint-plugin-promise:
         specifier: 6.1.1
-        version: 6.1.1(eslint@8.38.0)
+        version: 6.1.1(eslint@8.39.0)
       eslint-plugin-react:
         specifier: 7.32.2
-        version: 7.32.2(eslint@8.38.0)
+        version: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks:
         specifier: 4.6.0
-        version: 4.6.0(eslint@8.38.0)
+        version: 4.6.0(eslint@8.39.0)
       eslint-plugin-standard:
         specifier: 5.0.0
-        version: 5.0.0(eslint@8.38.0)
+        version: 5.0.0(eslint@8.39.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -4168,16 +4008,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.80.0
-        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+        version: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.1
-        version: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+        specifier: 5.0.2
+        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-server:
         specifier: 4.13.3
-        version: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+        version: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -6230,13 +6070,13 @@ packages:
       eslint-visitor-keys: 3.4.0
     dev: true
 
-  /@eslint-community/eslint-utils@4.4.0(eslint@8.38.0):
+  /@eslint-community/eslint-utils@4.4.0(eslint@8.39.0):
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
     dependencies:
-      eslint: 8.38.0
+      eslint: 8.39.0
       eslint-visitor-keys: 3.4.0
     dev: true
 
@@ -6269,8 +6109,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@eslint/js@8.38.0:
-    resolution: {integrity: sha512-IoD2MfUnOV58ghIHCiil01PcohxjbYR/qCxsoC+xNgUwh1EY8jOOrYmu3d3a71+tJJ23uscEV4X2HJWMsPJu4g==}
+  /@eslint/js@8.39.0:
+    resolution: {integrity: sha512-kf9RB0Fg7NZfap83B3QOqOGg9QmD9yBudqQXzzOtn3i4y7ZUXe5ONeW34Gwi+TxhH4mvj72R1Zc300KUMa9Bng==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
@@ -6282,8 +6122,8 @@ packages:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: false
 
-  /@graphql-codegen/cli@3.3.0(@babel/core@7.21.4)(@types/node@18.16.0)(graphql@16.6.0):
-    resolution: {integrity: sha512-KRQoAG0stor/ztMsBxHqxnwQzcM1DEZigwzah1LFej8bh6TT1WpUt37zt6PH0EdlMpelmeN3keY4Pq6GMd4ADw==}
+  /@graphql-codegen/cli@3.3.1(@babel/core@7.21.4)(@types/node@18.16.0)(graphql@16.6.0):
+    resolution: {integrity: sha512-4Es8Y9zFeT0Zx2qRL7L3qXDbbqvXK6aID+8v8lP6gaYD+uWx3Jd4Hsq5vxwVBR+6flm0BW/C85Qm0cvmT7O6LA==}
     hasBin: true
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
@@ -6353,7 +6193,7 @@ packages:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
       '@graphql-codegen/plugin-helpers': 4.2.0(graphql@16.6.0)
-      '@graphql-codegen/visitor-plugin-common': 3.1.0(graphql@16.6.0)
+      '@graphql-codegen/visitor-plugin-common': 3.1.1(graphql@16.6.0)
       graphql: 16.6.0
       tslib: 2.5.0
     transitivePeerDependencies:
@@ -6386,14 +6226,14 @@ packages:
       tslib: 2.5.0
     dev: true
 
-  /@graphql-codegen/typescript-resolvers@3.2.0(graphql@16.6.0):
-    resolution: {integrity: sha512-119zDHVb/DYuPW76VYRwYAVRFABHpMN0OZgXe/g2PIHlb/Vlfof4TLjrKkRM7iBFbZPWGL92jqiI8hWFHhpqdg==}
+  /@graphql-codegen/typescript-resolvers@3.2.1(graphql@16.6.0):
+    resolution: {integrity: sha512-2ZIHk5J6HTuylse5ZIxw+aega54prHxvj7vM8hiKJ6vejZ94kvVPAq4aWmSFOkZ5lqU3YnM/ZyWfnhT5CUDj1g==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
       '@graphql-codegen/plugin-helpers': 4.2.0(graphql@16.6.0)
-      '@graphql-codegen/typescript': 3.0.3(graphql@16.6.0)
-      '@graphql-codegen/visitor-plugin-common': 3.1.0(graphql@16.6.0)
+      '@graphql-codegen/typescript': 3.0.4(graphql@16.6.0)
+      '@graphql-codegen/visitor-plugin-common': 3.1.1(graphql@16.6.0)
       '@graphql-tools/utils': 9.2.1(graphql@16.6.0)
       auto-bind: 4.0.0
       graphql: 16.6.0
@@ -6403,14 +6243,14 @@ packages:
       - supports-color
     dev: true
 
-  /@graphql-codegen/typescript@3.0.3(graphql@16.6.0):
-    resolution: {integrity: sha512-oVV4/RPs3Lmr2XqywlNDmLhNBCIhefA8rYcuxoWcnd/WRc6GNRm1b2NOIzDhhF4xriVluMyk3QQVRepkdj9enw==}
+  /@graphql-codegen/typescript@3.0.4(graphql@16.6.0):
+    resolution: {integrity: sha512-x4O47447DZrWNtE/l5CU9QzzW4m1RbmCEdijlA3s2flG/y1Ckqdemob4CWfilSm5/tZ3w1junVDY616RDTSvZw==}
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
       '@graphql-codegen/plugin-helpers': 4.2.0(graphql@16.6.0)
       '@graphql-codegen/schema-ast': 3.0.1(graphql@16.6.0)
-      '@graphql-codegen/visitor-plugin-common': 3.1.0(graphql@16.6.0)
+      '@graphql-codegen/visitor-plugin-common': 3.1.1(graphql@16.6.0)
       auto-bind: 4.0.0
       graphql: 16.6.0
       tslib: 2.5.0
@@ -6419,8 +6259,8 @@ packages:
       - supports-color
     dev: true
 
-  /@graphql-codegen/visitor-plugin-common@3.1.0(graphql@16.6.0):
-    resolution: {integrity: sha512-S4BO/xP38eoEDULwbem5QeV7yWA8DpbcSGkvwrnMfVQW08nL6uHliCSV8hiuAi7Mhx7snVir4Iumk8uIDRVu6Q==}
+  /@graphql-codegen/visitor-plugin-common@3.1.1(graphql@16.6.0):
+    resolution: {integrity: sha512-uAfp+zu/009R3HUAuTK2AamR1bxIltM6rrYYI6EXSmkM3rFtFsLTuJhjUDj98HcUCszJZrADppz8KKLGRUVlNg==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
@@ -7965,8 +7805,8 @@ packages:
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
     dev: false
 
-  /@puppeteer/browsers@0.4.0(typescript@5.0.4):
-    resolution: {integrity: sha512-3iB5pWn9Sr55PKKwqFWSWjLsTKCOEhKNI+uV3BZesgXuA3IhsX8I3hW0HI+3ksMIPkh2mVYzKSpvgq3oicjG2Q==}
+  /@puppeteer/browsers@0.5.0(typescript@5.0.4):
+    resolution: {integrity: sha512-Uw6oB7VvmPRLE4iKsjuOh8zgDabhNX67dzo8U/BB0f9527qx+4eeUs+korU98OhG5C4ubg7ufBgVi63XYwS6TQ==}
     engines: {node: '>=14.1.0'}
     hasBin: true
     peerDependencies:
@@ -8432,8 +8272,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest@29.5.0:
-    resolution: {integrity: sha512-3Emr5VOl/aoBwnWcH/EFQvlSAmjV+XtV9GGu5mwdYew5vhQh0IUZx/60x0TzHDu09Bi7HMx10t/namdJw5QIcg==}
+  /@types/jest@29.5.1:
+    resolution: {integrity: sha512-tEuVcHrpaixS36w7hpsfLBLpjtMRJUE09/MHXn923LOVojDwyC14cWcfc0rDs0VEfUyYmt/+iX1kxxp+gZMcaQ==}
     dependencies:
       expect: 29.5.0
       pretty-format: 29.5.0
@@ -8658,8 +8498,8 @@ packages:
     dependencies:
       '@types/node': 18.16.0
 
-  /@typescript-eslint/eslint-plugin@5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4):
-    resolution: {integrity: sha512-1MeobQkQ9tztuleT3v72XmY0XuKXVXusAhryoLuU5YZ+mXoYKZP9SQ7Flulh1NX4DTjpGTc2b/eMu4u7M7dhnQ==}
+  /@typescript-eslint/eslint-plugin@5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4):
+    resolution: {integrity: sha512-AVi0uazY5quFB9hlp2Xv+ogpfpk77xzsgsIEWyVS7uK/c7MZ5tw7ZPbapa0SbfkqE0fsAMkz5UwtgMLVk2BQAg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       '@typescript-eslint/parser': ^5.0.0
@@ -8670,12 +8510,12 @@ packages:
         optional: true
     dependencies:
       '@eslint-community/regexpp': 4.5.0
-      '@typescript-eslint/parser': 5.57.1(eslint@8.38.0)(typescript@5.0.4)
-      '@typescript-eslint/scope-manager': 5.57.1
-      '@typescript-eslint/type-utils': 5.57.1(eslint@8.38.0)(typescript@5.0.4)
-      '@typescript-eslint/utils': 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+      '@typescript-eslint/parser': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
+      '@typescript-eslint/scope-manager': 5.59.1
+      '@typescript-eslint/type-utils': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
+      '@typescript-eslint/utils': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
-      eslint: 8.38.0
+      eslint: 8.39.0
       grapheme-splitter: 1.0.4
       ignore: 5.2.4
       natural-compare-lite: 1.4.0
@@ -8686,8 +8526,8 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/parser@5.57.1(eslint@8.38.0)(typescript@5.0.4):
-    resolution: {integrity: sha512-hlA0BLeVSA/wBPKdPGxoVr9Pp6GutGoY380FEhbVi0Ph4WNe8kLvqIRx76RSQt1lynZKfrXKs0/XeEk4zZycuA==}
+  /@typescript-eslint/parser@5.59.1(eslint@8.39.0)(typescript@5.0.4):
+    resolution: {integrity: sha512-nzjFAN8WEu6yPRDizIFyzAfgK7nybPodMNFGNH0M9tei2gYnYszRDqVA0xlnRjkl7Hkx2vYrEdb6fP2a21cG1g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -8696,34 +8536,26 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/scope-manager': 5.57.1
-      '@typescript-eslint/types': 5.57.1
-      '@typescript-eslint/typescript-estree': 5.57.1(typescript@5.0.4)
+      '@typescript-eslint/scope-manager': 5.59.1
+      '@typescript-eslint/types': 5.59.1
+      '@typescript-eslint/typescript-estree': 5.59.1(typescript@5.0.4)
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
-      eslint: 8.38.0
+      eslint: 8.39.0
       typescript: 5.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/scope-manager@5.57.1:
-    resolution: {integrity: sha512-N/RrBwEUKMIYxSKl0oDK5sFVHd6VI7p9K5MyUlVYAY6dyNb/wHUqndkTd3XhpGlXgnQsBkRZuu4f9kAHghvgPw==}
+  /@typescript-eslint/scope-manager@5.59.1:
+    resolution: {integrity: sha512-mau0waO5frJctPuAzcxiNWqJR5Z8V0190FTSqRw1Q4Euop6+zTwHAf8YIXNwDOT29tyUDrQ65jSg9aTU/H0omA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
-      '@typescript-eslint/types': 5.57.1
-      '@typescript-eslint/visitor-keys': 5.57.1
+      '@typescript-eslint/types': 5.59.1
+      '@typescript-eslint/visitor-keys': 5.59.1
     dev: true
 
-  /@typescript-eslint/scope-manager@5.59.0:
-    resolution: {integrity: sha512-tsoldKaMh7izN6BvkK6zRMINj4Z2d6gGhO2UsI8zGZY3XhLq1DndP3Ycjhi1JwdwPRwtLMW4EFPgpuKhbCGOvQ==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      '@typescript-eslint/types': 5.59.0
-      '@typescript-eslint/visitor-keys': 5.59.0
-    dev: true
-
-  /@typescript-eslint/type-utils@5.57.1(eslint@8.38.0)(typescript@5.0.4):
-    resolution: {integrity: sha512-/RIPQyx60Pt6ga86hKXesXkJ2WOS4UemFrmmq/7eOyiYjYv/MUSHPlkhU6k9T9W1ytnTJueqASW+wOmW4KrViw==}
+  /@typescript-eslint/type-utils@5.59.1(eslint@8.39.0)(typescript@5.0.4):
+    resolution: {integrity: sha512-ZMWQ+Oh82jWqWzvM3xU+9y5U7MEMVv6GLioM3R5NJk6uvP47kZ7YvlgSHJ7ERD6bOY7Q4uxWm25c76HKEwIjZw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '*'
@@ -8732,28 +8564,23 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/typescript-estree': 5.57.1(typescript@5.0.4)
-      '@typescript-eslint/utils': 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+      '@typescript-eslint/typescript-estree': 5.59.1(typescript@5.0.4)
+      '@typescript-eslint/utils': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
-      eslint: 8.38.0
+      eslint: 8.39.0
       tsutils: 3.21.0(typescript@5.0.4)
       typescript: 5.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/types@5.57.1:
-    resolution: {integrity: sha512-bSs4LOgyV3bJ08F5RDqO2KXqg3WAdwHCu06zOqcQ6vqbTJizyBhuh1o1ImC69X4bV2g1OJxbH71PJqiO7Y1RuA==}
+  /@typescript-eslint/types@5.59.1:
+    resolution: {integrity: sha512-dg0ICB+RZwHlysIy/Dh1SP+gnXNzwd/KS0JprD3Lmgmdq+dJAJnUPe1gNG34p0U19HvRlGX733d/KqscrGC1Pg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@typescript-eslint/types@5.59.0:
-    resolution: {integrity: sha512-yR2h1NotF23xFFYKHZs17QJnB51J/s+ud4PYU4MqdZbzeNxpgUr05+dNeCN/bb6raslHvGdd6BFCkVhpPk/ZeA==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
-  /@typescript-eslint/typescript-estree@5.57.1(typescript@5.0.4):
-    resolution: {integrity: sha512-A2MZqD8gNT0qHKbk2wRspg7cHbCDCk2tcqt6ScCFLr5Ru8cn+TCfM786DjPhqwseiS+PrYwcXht5ztpEQ6TFTw==}
+  /@typescript-eslint/typescript-estree@5.59.1(typescript@5.0.4):
+    resolution: {integrity: sha512-lYLBBOCsFltFy7XVqzX0Ju+Lh3WPIAWxYpmH/Q7ZoqzbscLiCW00LeYCdsUnnfnj29/s1WovXKh2gwCoinHNGA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       typescript: '*'
@@ -8761,8 +8588,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/types': 5.57.1
-      '@typescript-eslint/visitor-keys': 5.57.1
+      '@typescript-eslint/types': 5.59.1
+      '@typescript-eslint/visitor-keys': 5.59.1
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
       globby: 11.1.0
       is-glob: 4.0.3
@@ -8773,40 +8600,19 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/typescript-estree@5.59.0(typescript@5.0.4):
-    resolution: {integrity: sha512-sUNnktjmI8DyGzPdZ8dRwW741zopGxltGs/SAPgGL/AAgDpiLsCFLcMNSpbfXfmnNeHmK9h3wGmCkGRGAoUZAg==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/types': 5.59.0
-      '@typescript-eslint/visitor-keys': 5.59.0
-      debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
-      globby: 11.1.0
-      is-glob: 4.0.3
-      semver: 7.5.0
-      tsutils: 3.21.0(typescript@5.0.4)
-      typescript: 5.0.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/utils@5.57.1(eslint@8.38.0)(typescript@5.0.4):
-    resolution: {integrity: sha512-kN6vzzf9NkEtawECqze6v99LtmDiUJCVpvieTFA1uL7/jDghiJGubGZ5csicYHU1Xoqb3oH/R5cN5df6W41Nfg==}
+  /@typescript-eslint/utils@5.59.1(eslint@8.39.0)(typescript@5.0.4):
+    resolution: {integrity: sha512-MkTe7FE+K1/GxZkP5gRj3rCztg45bEhsd8HYjczBuYm+qFHP5vtZmjx3B0yUCDotceQ4sHgTyz60Ycl225njmA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.38.0)
+      '@eslint-community/eslint-utils': 4.4.0(eslint@8.39.0)
       '@types/json-schema': 7.0.11
       '@types/semver': 7.3.13
-      '@typescript-eslint/scope-manager': 5.57.1
-      '@typescript-eslint/types': 5.57.1
-      '@typescript-eslint/typescript-estree': 5.57.1(typescript@5.0.4)
-      eslint: 8.38.0
+      '@typescript-eslint/scope-manager': 5.59.1
+      '@typescript-eslint/types': 5.59.1
+      '@typescript-eslint/typescript-estree': 5.59.1(typescript@5.0.4)
+      eslint: 8.39.0
       eslint-scope: 5.1.1
       semver: 7.5.0
     transitivePeerDependencies:
@@ -8814,39 +8620,11 @@ packages:
       - typescript
     dev: true
 
-  /@typescript-eslint/utils@5.59.0(eslint@8.38.0)(typescript@5.0.4):
-    resolution: {integrity: sha512-GGLFd+86drlHSvPgN/el6dRQNYYGOvRSDVydsUaQluwIW3HvbXuxyuD5JETvBt/9qGYe+lOrDk6gRrWOHb/FvA==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.38.0)
-      '@types/json-schema': 7.0.11
-      '@types/semver': 7.3.13
-      '@typescript-eslint/scope-manager': 5.59.0
-      '@typescript-eslint/types': 5.59.0
-      '@typescript-eslint/typescript-estree': 5.59.0(typescript@5.0.4)
-      eslint: 8.38.0
-      eslint-scope: 5.1.1
-      semver: 7.5.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
-  /@typescript-eslint/visitor-keys@5.57.1:
-    resolution: {integrity: sha512-RjQrAniDU0CEk5r7iphkm731zKlFiUjvcBS2yHAg8WWqFMCaCrD0rKEVOMUyMMcbGPZ0bPp56srkGWrgfZqLRA==}
+  /@typescript-eslint/visitor-keys@5.59.1:
+    resolution: {integrity: sha512-6waEYwBTCWryx0VJmP7JaM4FpipLsFl9CvYf2foAE8Qh/Y0s+bxWysciwOs0LTBED4JCaNxTZ5rGadB14M6dwA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
-      '@typescript-eslint/types': 5.57.1
-      eslint-visitor-keys: 3.4.0
-    dev: true
-
-  /@typescript-eslint/visitor-keys@5.59.0:
-    resolution: {integrity: sha512-qZ3iXxQhanchCeaExlKPV3gDQFxMUmU35xfd5eCXB6+kUw1TUAbIy2n7QIrwz9s98DQLzNWyHp61fY0da4ZcbA==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      '@typescript-eslint/types': 5.59.0
+      '@typescript-eslint/types': 5.59.1
       eslint-visitor-keys: 3.4.0
     dev: true
 
@@ -8971,30 +8749,30 @@ packages:
     resolution: {integrity: sha512-CqTpxOlUCPWRNUPZDxT5v2NnHXA4oox612iUGnmTUGQFhZ1Gkj8kirtl/2wcF6MqX7+PqqicZzOCBKKfIn0dww==}
     dev: true
 
-  /@webpack-cli/configtest@2.0.1(webpack-cli@5.0.1)(webpack@5.80.0):
+  /@webpack-cli/configtest@2.0.1(webpack-cli@5.0.2)(webpack@5.80.0):
     resolution: {integrity: sha512-njsdJXJSiS2iNbQVS0eT8A/KPnmyH4pv1APj2K0d1wrZcBLw+yppxOy4CGqa0OxDJkzfL/XELDhD8rocnIwB5A==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       webpack: 5.x.x
       webpack-cli: 5.x.x
     dependencies:
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
-      webpack-cli: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
     dev: true
 
-  /@webpack-cli/info@2.0.1(webpack-cli@5.0.1)(webpack@5.80.0):
+  /@webpack-cli/info@2.0.1(webpack-cli@5.0.2)(webpack@5.80.0):
     resolution: {integrity: sha512-fE1UEWTwsAxRhrJNikE7v4EotYflkEhBL7EbajfkPlf6E37/2QshOy/D48Mw8G5XMFlQtS6YV42vtbG9zBpIQA==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       webpack: 5.x.x
       webpack-cli: 5.x.x
     dependencies:
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
-      webpack-cli: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
     dev: true
 
-  /@webpack-cli/serve@2.0.1(webpack-cli@5.0.1)(webpack-dev-server@4.13.3)(webpack@5.80.0):
-    resolution: {integrity: sha512-0G7tNyS+yW8TdgHwZKlDWYXFA6OJQnoLCQvYKkQP0Q2X205PSQ6RNUj0M+1OB/9gRQaUZ/ccYfaxd0nhaWKfjw==}
+  /@webpack-cli/serve@2.0.2(webpack-cli@5.0.2)(webpack-dev-server@4.13.3)(webpack@5.80.0):
+    resolution: {integrity: sha512-S9h3GmOmzUseyeFW3tYNnWS7gNUuwxZ3mmMq0JyW78Vx1SGKPSkt5bT4pB0rUnVfHjP0EL9gW2bOzmtiTfQt0A==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       webpack: 5.x.x
@@ -9004,9 +8782,9 @@ packages:
       webpack-dev-server:
         optional: true
     dependencies:
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
-      webpack-cli: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
-      webpack-dev-server: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+      webpack-dev-server: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
     dev: true
 
   /@wext/shipit@0.2.1(patch_hash=5qxn472p55dc3l27ceuqp24iz4):
@@ -11139,8 +10917,8 @@ packages:
       got: 11.5.2
     dev: true
 
-  /chromium-bidi@0.4.6(devtools-protocol@0.0.1107588):
-    resolution: {integrity: sha512-TQOkWRaLI/IWvoP8XC+7jO4uHTIiAUiklXU1T0qszlUFEai9LgKXIBXy3pOS3EnQZ3bQtMbKUPkug0fTAEHCSw==}
+  /chromium-bidi@0.4.7(devtools-protocol@0.0.1107588):
+    resolution: {integrity: sha512-6+mJuFXwTMU6I3vYLs6IL8A1DyQTPjCfIL971X0aMPVGRbGnNfl6i6Cl0NMbxi2bRYLGESt9T2ZIMRM5PAEcIQ==}
     peerDependencies:
       devtools-protocol: '*'
     dependencies:
@@ -11687,7 +11465,7 @@ packages:
       normalize-path: 3.0.0
       schema-utils: 4.0.1
       serialize-javascript: 6.0.1
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
     dev: true
 
   /core-js-compat@3.30.1:
@@ -12884,13 +12662,13 @@ packages:
       estraverse: 4.3.0
     dev: true
 
-  /eslint-config-prettier@8.8.0(eslint@8.38.0):
+  /eslint-config-prettier@8.8.0(eslint@8.39.0):
     resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
-      eslint: 8.38.0
+      eslint: 8.39.0
     dev: true
 
   /eslint-import-resolver-node@0.3.7:
@@ -12903,7 +12681,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-module-utils@2.8.0(@typescript-eslint/parser@5.57.1)(eslint-import-resolver-node@0.3.7)(eslint@8.38.0):
+  /eslint-module-utils@2.8.0(@typescript-eslint/parser@5.59.1)(eslint-import-resolver-node@0.3.7)(eslint@8.39.0):
     resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -12924,26 +12702,26 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+      '@typescript-eslint/parser': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       debug: 3.2.7
-      eslint: 8.38.0
+      eslint: 8.39.0
       eslint-import-resolver-node: 0.3.7
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /eslint-plugin-es@3.0.1(eslint@8.38.0):
+  /eslint-plugin-es@3.0.1(eslint@8.39.0):
     resolution: {integrity: sha512-GUmAsJaN4Fc7Gbtl8uOBlayo2DqhwWvEzykMHSCZHU3XdJ+NSzzZcVhXh3VxX5icqQ+oQdIEawXX8xkR3mIFmQ==}
     engines: {node: '>=8.10.0'}
     peerDependencies:
       eslint: '>=4.19.1'
     dependencies:
-      eslint: 8.38.0
+      eslint: 8.39.0
       eslint-utils: 2.1.0
       regexpp: 3.2.0
     dev: true
 
-  /eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.57.1)(eslint@8.38.0):
+  /eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.59.1)(eslint@8.39.0):
     resolution: {integrity: sha512-LmEt3GVofgiGuiE+ORpnvP+kAm3h6MLZJ4Q5HCyHADofsb4VzXFsRiWj3c0OFiV+3DWFh0qg3v9gcPlfc3zRow==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -12953,15 +12731,15 @@ packages:
       '@typescript-eslint/parser':
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.57.1(eslint@8.38.0)(typescript@5.0.4)
+      '@typescript-eslint/parser': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       array-includes: 3.1.6
       array.prototype.flat: 1.3.1
       array.prototype.flatmap: 1.3.1
       debug: 3.2.7
       doctrine: 2.1.0
-      eslint: 8.38.0
+      eslint: 8.39.0
       eslint-import-resolver-node: 0.3.7
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.57.1)(eslint-import-resolver-node@0.3.7)(eslint@8.38.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.59.1)(eslint-import-resolver-node@0.3.7)(eslint@8.39.0)
       has: 1.0.3
       is-core-module: 2.12.0
       is-glob: 4.0.3
@@ -12976,7 +12754,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-jest@27.2.1(@typescript-eslint/eslint-plugin@5.57.1)(eslint@8.38.0)(jest@29.5.0)(typescript@5.0.4):
+  /eslint-plugin-jest@27.2.1(@typescript-eslint/eslint-plugin@5.59.1)(eslint@8.39.0)(jest@29.5.0)(typescript@5.0.4):
     resolution: {integrity: sha512-l067Uxx7ZT8cO9NJuf+eJHvt6bqJyz2Z29wykyEdz/OtmcELQl2MQGQLX8J94O1cSJWAwUSEvCjwjA7KEK3Hmg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
@@ -12989,16 +12767,16 @@ packages:
       jest:
         optional: true
     dependencies:
-      '@typescript-eslint/eslint-plugin': 5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
-      '@typescript-eslint/utils': 5.59.0(eslint@8.38.0)(typescript@5.0.4)
-      eslint: 8.38.0
+      '@typescript-eslint/eslint-plugin': 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
+      '@typescript-eslint/utils': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
+      eslint: 8.39.0
       jest: 29.5.0(@types/node@18.16.0)(ts-node@10.9.1)
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true
 
-  /eslint-plugin-jsx-a11y@6.7.1(eslint@8.38.0):
+  /eslint-plugin-jsx-a11y@6.7.1(eslint@8.39.0):
     resolution: {integrity: sha512-63Bog4iIethyo8smBklORknVjB0T2dwB8Mr/hIC+fBS0uyHdYYpzM/Ed+YC8VxTjlXHEWFOdmgwcDn1U2L9VCA==}
     engines: {node: '>=4.0'}
     peerDependencies:
@@ -13013,7 +12791,7 @@ packages:
       axobject-query: 3.1.1
       damerau-levenshtein: 1.0.8
       emoji-regex: 9.2.2
-      eslint: 8.38.0
+      eslint: 8.39.0
       has: 1.0.3
       jsx-ast-utils: 3.3.3
       language-tags: 1.0.5
@@ -13047,14 +12825,14 @@ packages:
       eslint: 8.37.0
     dev: true
 
-  /eslint-plugin-node@11.1.0(eslint@8.38.0):
+  /eslint-plugin-node@11.1.0(eslint@8.39.0):
     resolution: {integrity: sha512-oUwtPJ1W0SKD0Tr+wqu92c5xuCeQqB3hSCHasn/ZgjFdA9iDGNkNf2Zi9ztY7X+hNuMib23LNGRm6+uN+KLE3g==}
     engines: {node: '>=8.10.0'}
     peerDependencies:
       eslint: '>=5.16.0'
     dependencies:
-      eslint: 8.38.0
-      eslint-plugin-es: 3.0.1(eslint@8.38.0)
+      eslint: 8.39.0
+      eslint-plugin-es: 3.0.1(eslint@8.39.0)
       eslint-utils: 2.1.0
       ignore: 5.2.4
       minimatch: 3.1.2
@@ -13062,7 +12840,7 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.8.0)(eslint@8.38.0)(prettier@2.8.8):
+  /eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8):
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -13073,31 +12851,31 @@ packages:
       eslint-config-prettier:
         optional: true
     dependencies:
-      eslint: 8.38.0
-      eslint-config-prettier: 8.8.0(eslint@8.38.0)
+      eslint: 8.39.0
+      eslint-config-prettier: 8.8.0(eslint@8.39.0)
       prettier: 2.8.8
       prettier-linter-helpers: 1.0.0
     dev: true
 
-  /eslint-plugin-promise@6.1.1(eslint@8.38.0):
+  /eslint-plugin-promise@6.1.1(eslint@8.39.0):
     resolution: {integrity: sha512-tjqWDwVZQo7UIPMeDReOpUgHCmCiH+ePnVT+5zVapL0uuHnegBUs2smM13CzOs2Xb5+MHMRFTs9v24yjba4Oig==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
     dependencies:
-      eslint: 8.38.0
+      eslint: 8.39.0
     dev: true
 
-  /eslint-plugin-react-hooks@4.6.0(eslint@8.38.0):
+  /eslint-plugin-react-hooks@4.6.0(eslint@8.39.0):
     resolution: {integrity: sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
     dependencies:
-      eslint: 8.38.0
+      eslint: 8.39.0
     dev: true
 
-  /eslint-plugin-react@7.32.2(eslint@8.38.0):
+  /eslint-plugin-react@7.32.2(eslint@8.39.0):
     resolution: {integrity: sha512-t2fBMa+XzonrrNkyVirzKlvn5RXzzPwRHtMvLAtVZrt8oxgnTQaYbU6SXTOO1mwQgp1y5+toMSKInnzGr0Knqg==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -13107,7 +12885,7 @@ packages:
       array.prototype.flatmap: 1.3.1
       array.prototype.tosorted: 1.1.1
       doctrine: 2.1.0
-      eslint: 8.38.0
+      eslint: 8.39.0
       estraverse: 5.3.0
       jsx-ast-utils: 3.3.3
       minimatch: 3.1.2
@@ -13121,13 +12899,13 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-standard@5.0.0(eslint@8.38.0):
+  /eslint-plugin-standard@5.0.0(eslint@8.39.0):
     resolution: {integrity: sha512-eSIXPc9wBM4BrniMzJRBm2uoVuXz2EPa+NXPk2+itrVt+r5SbKFERx/IgrK/HmfjddyKVz2f+j+7gBRvu19xLg==}
     deprecated: 'standard 16.0.0 and eslint-config-standard 16.0.0 no longer require the eslint-plugin-standard package. You can remove it from your dependencies with ''npm rm eslint-plugin-standard''. More info here: https://github.com/standard/standard/issues/1316'
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
-      eslint: 8.38.0
+      eslint: 8.39.0
     dev: true
 
   /eslint-scope@4.0.3:
@@ -13371,15 +13149,15 @@ packages:
       - supports-color
     dev: true
 
-  /eslint@8.38.0:
-    resolution: {integrity: sha512-pIdsD2jwlUGf/U38Jv97t8lq6HpaU/G9NKbYmpWpZGw3LdTNhZLbJePqxOXGB5+JEKfOPU/XLxYxFh03nr1KTg==}
+  /eslint@8.39.0:
+    resolution: {integrity: sha512-mwiok6cy7KTW7rBpo05k6+p4YVZByLNjAZ/ACB9DRCu4YDRwjXI01tWHp6KAUWelsBetTxKK/2sHB0vdS8Z2Og==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     hasBin: true
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.38.0)
+      '@eslint-community/eslint-utils': 4.4.0(eslint@8.39.0)
       '@eslint-community/regexpp': 4.5.0
       '@eslint/eslintrc': 2.0.2
-      '@eslint/js': 8.38.0
+      '@eslint/js': 8.39.0
       '@humanwhocodes/config-array': 0.11.8
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
@@ -15190,7 +14968,7 @@ packages:
       lodash: 4.17.21
       pretty-error: 4.0.0
       tapable: 2.2.1
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
     dev: true
 
   /htmlparser2@3.10.1:
@@ -19821,8 +19599,8 @@ packages:
     dependencies:
       escape-goat: 4.0.0
 
-  /puppeteer-core@19.8.5(typescript@5.0.4):
-    resolution: {integrity: sha512-zoGhim/oBQbkND6h4Xz4X7l5DkWVH9wH7z0mVty5qa/c0P1Yad47t/npVtt2xS10BiQwzztWKx7Pa2nJ5yykdw==}
+  /puppeteer-core@19.11.0(typescript@5.0.4):
+    resolution: {integrity: sha512-UBlwpyTEKcaOt7bIWWhlhIXDlFbR1wVBcxpMibBhImwagkwDB8ld8ehT5dOdfKIcCHjxXzVEaMtgDKzfwcf7Rg==}
     engines: {node: '>=14.14.0'}
     peerDependencies:
       typescript: '>= 4.7.4'
@@ -19830,8 +19608,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@puppeteer/browsers': 0.4.0(typescript@5.0.4)
-      chromium-bidi: 0.4.6(devtools-protocol@0.0.1107588)
+      '@puppeteer/browsers': 0.5.0(typescript@5.0.4)
+      chromium-bidi: 0.4.7(devtools-protocol@0.0.1107588)
       cross-fetch: 3.1.5
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
       devtools-protocol: 0.0.1107588
@@ -19868,16 +19646,16 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer@19.8.5(typescript@5.0.4):
-    resolution: {integrity: sha512-WSjouU7eux6cwBMEz4A7mDRVZWTQQTDXrb1R6AhKDdeEgpiBBkAzcAusPhILxiJOKj60rULZpWuCZ7HZIO6GTA==}
+  /puppeteer@19.11.0(typescript@5.0.4):
+    resolution: {integrity: sha512-xE0BTOFIR/fEXEHQNfGGMWGr3IQBB2AY760K+pE11kjBKe5P0jivzWG1LHr0TA1/xiHxu9nAhQzv5zh2Dy0YEQ==}
     requiresBuild: true
     dependencies:
-      '@puppeteer/browsers': 0.4.0(typescript@5.0.4)
+      '@puppeteer/browsers': 0.5.0(typescript@5.0.4)
       cosmiconfig: 8.1.3
       https-proxy-agent: 5.0.1
       progress: 2.0.3
       proxy-from-env: 1.1.0
-      puppeteer-core: 19.8.5(typescript@5.0.4)
+      puppeteer-core: 19.11.0(typescript@5.0.4)
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -22032,7 +21810,7 @@ packages:
       schema-utils: 3.1.2
       serialize-javascript: 6.0.1
       terser: 5.17.1
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
     dev: true
 
   /terser@5.17.1:
@@ -22341,7 +22119,7 @@ packages:
       micromatch: 4.0.5
       semver: 7.5.0
       typescript: 5.0.4
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
     dev: true
 
   /ts-log@2.2.5:
@@ -22937,8 +22715,8 @@ packages:
       core-util-is: 1.0.2
       extsprintf: 1.3.0
 
-  /vite-tsconfig-paths@4.0.8(typescript@5.0.4)(vite@4.3.1):
-    resolution: {integrity: sha512-p04zH+Ey+NT78571x0pdX7nVRIJSlmKVvYryFglSWOK3Hc72eDL0+JJfbyQiugaIBApJkaEqbBQvqpsFZOSVGg==}
+  /vite-tsconfig-paths@4.2.0(typescript@5.0.4)(vite@4.3.1):
+    resolution: {integrity: sha512-jGpus0eUy5qbbMVGiTxCL1iB9ZGN6Bd37VGLJU39kTDD6ZfULTTb1bcc5IeTWqWJKiWV5YihCaibeASPiGi8kw==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -23164,8 +22942,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /webpack-cli@5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0):
-    resolution: {integrity: sha512-S3KVAyfwUqr0Mo/ur3NzIp6jnerNpo7GUO6so51mxLi1spqsA17YcMXy0WOIJtBSnj748lthxC6XLbNKh/ZC+A==}
+  /webpack-cli@5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0):
+    resolution: {integrity: sha512-4y3W5Dawri5+8dXm3+diW6Mn1Ya+Dei6eEVAdIduAmYNLzv1koKVAqsfgrrc9P2mhrYHQphx5htnGkcNwtubyQ==}
     engines: {node: '>=14.15.0'}
     hasBin: true
     peerDependencies:
@@ -23182,20 +22960,20 @@ packages:
         optional: true
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      '@webpack-cli/configtest': 2.0.1(webpack-cli@5.0.1)(webpack@5.80.0)
-      '@webpack-cli/info': 2.0.1(webpack-cli@5.0.1)(webpack@5.80.0)
-      '@webpack-cli/serve': 2.0.1(webpack-cli@5.0.1)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+      '@webpack-cli/configtest': 2.0.1(webpack-cli@5.0.2)(webpack@5.80.0)
+      '@webpack-cli/info': 2.0.1(webpack-cli@5.0.2)(webpack@5.80.0)
+      '@webpack-cli/serve': 2.0.2(webpack-cli@5.0.2)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       colorette: 2.0.20
-      commander: 9.5.0
+      commander: 10.0.1
       cross-spawn: 7.0.3
       envinfo: 7.8.1
       fastest-levenshtein: 1.0.16
       import-local: 3.1.0
       interpret: 3.1.1
       rechoir: 0.8.0
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
       webpack-bundle-analyzer: 4.8.0
-      webpack-dev-server: 4.13.3(webpack-cli@5.0.1)(webpack@5.80.0)
+      webpack-dev-server: 4.13.3(webpack-cli@5.0.2)(webpack@5.80.0)
       webpack-merge: 5.8.0
     dev: true
 
@@ -23210,10 +22988,10 @@ packages:
       mime-types: 2.1.35
       range-parser: 1.2.1
       schema-utils: 4.0.1
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
     dev: true
 
-  /webpack-dev-server@4.13.3(debug@4.3.4)(webpack-cli@5.0.1)(webpack@5.80.0):
+  /webpack-dev-server@4.13.3(debug@4.3.4)(webpack-cli@5.0.2)(webpack@5.80.0):
     resolution: {integrity: sha512-KqqzrzMRSRy5ePz10VhjyL27K2dxqwXQLP5rAKwRJBPUahe7Z2bBWzHw37jeb8GCPKxZRO79ZdQUAPesMh/Nug==}
     engines: {node: '>= 12.13.0'}
     hasBin: true
@@ -23254,8 +23032,60 @@ packages:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1)
-      webpack-cli: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+      webpack-dev-middleware: 5.3.3(webpack@5.80.0)
+      ws: 8.13.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+    dev: true
+
+  /webpack-dev-server@4.13.3(webpack-cli@5.0.2)(webpack@5.80.0):
+    resolution: {integrity: sha512-KqqzrzMRSRy5ePz10VhjyL27K2dxqwXQLP5rAKwRJBPUahe7Z2bBWzHw37jeb8GCPKxZRO79ZdQUAPesMh/Nug==}
+    engines: {node: '>= 12.13.0'}
+    hasBin: true
+    peerDependencies:
+      webpack: ^4.37.0 || ^5.0.0
+      webpack-cli: '*'
+    peerDependenciesMeta:
+      webpack:
+        optional: true
+      webpack-cli:
+        optional: true
+    dependencies:
+      '@types/bonjour': 3.5.10
+      '@types/connect-history-api-fallback': 1.3.5
+      '@types/express': 4.17.17
+      '@types/serve-index': 1.9.1
+      '@types/serve-static': 1.15.1
+      '@types/sockjs': 0.3.33
+      '@types/ws': 8.5.4
+      ansi-html-community: 0.0.8
+      bonjour-service: 1.1.1
+      chokidar: 3.5.3
+      colorette: 2.0.20
+      compression: 1.7.4
+      connect-history-api-fallback: 2.0.0
+      default-gateway: 6.0.3
+      express: 4.18.2
+      graceful-fs: 4.2.11
+      html-entities: 2.3.3
+      http-proxy-middleware: 2.0.6(@types/express@4.17.17)
+      ipaddr.js: 2.0.1
+      launch-editor: 2.6.0
+      open: 8.4.2
+      p-retry: 4.6.2
+      rimraf: 3.0.2
+      schema-utils: 4.0.1
+      selfsigned: 2.1.1
+      serve-index: 1.9.1
+      sockjs: 0.3.24
+      spdy: 4.0.2
+      webpack: 5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-dev-middleware: 5.3.3(webpack@5.80.0)
       ws: 8.13.0
     transitivePeerDependencies:
@@ -23334,7 +23164,7 @@ packages:
     resolution: {integrity: sha512-kyDivFZ7ZM0BVOUteVbDFhlRt7Ah/CSPwJdi8hBpkK7QLumUqdLtVfm/PX/hkcnrvr0i77fO5+TjZ94Pe+C9iw==}
     dev: false
 
-  /webpack@5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.1):
+  /webpack@5.80.0(@swc/core@1.3.54)(webpack-cli@5.0.2):
     resolution: {integrity: sha512-OIMiq37XK1rWO8mH9ssfFKZsXg4n6klTEDL7S8/HqbAOBBaiy8ABvXvz0dDCXeEF9gqwxSvVk611zFPjS8hJxA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -23367,7 +23197,7 @@ packages:
       tapable: 2.2.1
       terser-webpack-plugin: 5.3.7(@swc/core@1.3.54)(webpack@5.80.0)
       watchpack: 2.4.0
-      webpack-cli: 5.0.1(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
+      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.80.0)
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - '@swc/core'
