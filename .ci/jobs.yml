@@ -1,6 +1,6 @@
 # Run 'pnpm build:ci' to build the .github/workflows/generated-jobs.yml
 matrices:
-  node-version: [18, 19]
+  node-version: [18, 20]
   test-command: [test:coverage, test:e2e:coverage]
 
 environments:
