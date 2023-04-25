@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@abraham/reflection": "^0.12.0",
-    "@apollo/utils.logger": "^2.0.0",
+    "@apollo/utils.logger": "^3.0.0",
     "@coil/privacypass-sjcl": "0.0.0",
     "@coil/puppeteer-utils": "0.0.0",
     "@graphql-tools/graphql-file-loader": "^7.3.12",
