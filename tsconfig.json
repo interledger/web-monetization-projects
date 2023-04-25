@@ -45,6 +45,9 @@
       "@niq/ci": [
         "packages/niq-ci/src"
       ],
+      "@niq/privacypass-noble": [
+        "packages/niq-privacypass-noble/src"
+      ],
       "@stacktracejs/stacktrace-js": [
         "packages/stacktracejs-stacktrace-js/src"
       ],
