@@ -66,7 +66,7 @@ pnpm --version`
   {
     name: 'PNPM Install',
     run: `export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
-pnpm install # --no-frozen-lockfile 
+pnpm install --no-frozen-lockfile 
 git diff
 export PUPPETEER_PRODUCT='firefox'
 pnpm install`
