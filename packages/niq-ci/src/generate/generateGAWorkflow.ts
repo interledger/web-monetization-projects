@@ -45,7 +45,7 @@ const steps = [
   // },
   {
     name: 'Setup PNPM',
-    run: `npm install -g pnpm 
+    run: `npm install -g pnpm@7 
 pnpm --version`
   },
   {

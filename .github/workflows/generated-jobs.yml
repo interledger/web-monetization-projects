@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
         run: |-
-          npm install -g pnpm 
+          npm install -g pnpm@7 
           pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
@@ -63,7 +63,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
         run: |-
-          npm install -g pnpm 
+          npm install -g pnpm@7 
           pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
@@ -104,7 +104,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
         run: |-
-          npm install -g pnpm 
+          npm install -g pnpm@7 
           pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
@@ -152,7 +152,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
         run: |-
-          npm install -g pnpm 
+          npm install -g pnpm@7 
           pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
@@ -191,7 +191,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
         run: |-
-          npm install -g pnpm 
+          npm install -g pnpm@7 
           pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
@@ -238,7 +238,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
         run: |-
-          npm install -g pnpm 
+          npm install -g pnpm@7 
           pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
@@ -294,7 +294,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
         run: |-
-          npm install -g pnpm 
+          npm install -g pnpm@7 
           pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
@@ -342,7 +342,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
         run: |-
-          npm install -g pnpm 
+          npm install -g pnpm@7 
           pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
@@ -381,7 +381,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
         run: |-
-          npm install -g pnpm 
+          npm install -g pnpm@7 
           pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
