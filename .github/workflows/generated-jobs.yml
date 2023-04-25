@@ -25,7 +25,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 7
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -64,7 +64,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 7
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -105,7 +105,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 7
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -153,7 +153,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 7
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -192,7 +192,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 7
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -239,7 +239,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 7
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -295,7 +295,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 7
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -343,7 +343,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 7
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -382,7 +382,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 7
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
