@@ -5,11 +5,15 @@
   },
   "exclude": [
     "node_modules",
-    "packages/*/{build,node_modules,dist}/**/*"
+    "packages/*/{build,node_modules,dist}/**/*",
+    "packages-archived/*/{build,node_modules,dist}/**/*"
   ],
   "include": [
     "packages/**/*.js",
     "packages/**/*.ts",
-    "packages/**/*.tsx"
+    "packages/**/*.tsx",
+    "packages-archived/**/*.js",
+    "packages-archived/**/*.ts",
+    "packages-archived/**/*.tsx"
   ]
 }

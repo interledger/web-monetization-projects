@@ -1,33 +1,37 @@
 {
-  "$schema": "packages/coil-monorepo-upkeep/resources/tsconfig-schema.json",
   "compilerOptions": {
+    "jsx": "react",
+
     "lib": [
-      "esnext",
-      "dom"
+      "ES2020",
+      "DOM"
     ],
-    "target": "es2020",
-    "module": "commonjs",
+
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+
     "noEmit": false,
 
-    "useUnknownInCatchVariables": false,
-
-    "jsx": "react",
     "downlevelIteration": true,
-    "moduleResolution": "node",
-
-    "isolatedModules": true,
+    "useUnknownInCatchVariables": false,
 
     "declarationMap": false,
     "sourceMap": false,
     "declaration": false,
 
     "preserveSymlinks": false,
+
     "strict": true,
     "noImplicitAny": true,
-    "esModuleInterop": true,
+
     "allowJs": false,
+
     "removeComments": true,
     "resolveJsonModule": true,
+
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   }

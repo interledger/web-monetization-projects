@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify'
 
 import { TabState } from '../../types/TabState'
 import * as tokens from '../../types/tokens'
-import { BuildConfig } from '../../types/BuildConfig'
+import type { BuildConfig } from '../../types/BuildConfig'
 
 import { TabOpener } from './TabOpener'
 import { PopupIconService } from './PopupIconService'

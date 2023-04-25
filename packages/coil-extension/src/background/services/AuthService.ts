@@ -3,14 +3,14 @@ import { EventEmitter } from 'events'
 import { GraphQlClient, tokenUtils } from '@coil/client'
 import { inject, injectable } from 'inversify'
 
-import { StoreProxy } from '../../types/storage'
+import type { StoreProxy } from '../../types/storage'
 import * as tokens from '../../types/tokens'
 import { TimeoutError } from '../../util/timeout'
 
 import { SiteToken } from './SiteToken'
-import { Logger, logger } from './utils'
+import { logger } from './utils'
+import type { Logger } from './utils'
 import { ActiveTabLogger } from './ActiveTabLogger'
-import { TippingService } from './TippingService'
 import { formatTipSettings } from './formatTipSettings.util'
 
 /**

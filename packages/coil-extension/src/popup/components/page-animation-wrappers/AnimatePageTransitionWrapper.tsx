@@ -22,7 +22,7 @@ const MotionComponentWrapper = styled(motion.div)({
 //
 
 /*
-    This animation is only for primary navigation transitions. 
+    This animation is only for primary navigation transitions.
     This does not handle the sub route navigation transitions such as from TipView -> TipConfirmView -> TipCompleteView
 */
 export const AnimatePageTransitionWrapper = (

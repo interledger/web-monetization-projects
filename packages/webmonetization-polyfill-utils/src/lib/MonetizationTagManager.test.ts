@@ -1,7 +1,4 @@
-import {
-  PaymentEndpointError,
-  resolvePaymentEndpoint
-} from '@webmonetization/polyfill-utils'
+import { PaymentEndpointError, resolvePaymentEndpoint } from '..'
 
 import {
   metaDeprecatedMessage,

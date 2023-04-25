@@ -21,9 +21,10 @@ cd_dist_zip () {
 
 rm -rf dist
 
-yarn
+# Install deps
+pnpm install
 # Build typescript, including dependency project references
-NODE_ENV=production yarn build-prod ${BROWSER_NAME}
+NODE_ENV=production pnpm build-prod ${BROWSER_NAME}
 
 if [[ ${BROWSER_NAME} = "firefox" ]]
 then

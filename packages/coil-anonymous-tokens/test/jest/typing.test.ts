@@ -1,5 +1,6 @@
 import localForage from 'localforage'
-import { TokenStore } from '@coil/anonymous-tokens'
+
+import { TokenStore } from '../../src/index'
 
 describe('TokenStore', () => {
   it('should be a subset of the LocalForage interface', async () => {

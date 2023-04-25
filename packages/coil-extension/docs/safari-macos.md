@@ -4,7 +4,7 @@
 
 ```
 export AFTER_DONE_SHELL_CMD="./scripts/build-safari.sh"
-yarn dev-chrome-prod
+pnpm dev-chrome-prod
 ```
 
 ### Loading unsigned extensions

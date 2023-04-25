@@ -1,5 +1,8 @@
 import { inject, injectable } from 'inversify'
-import { StorePersistence, StoreValue } from '@webmonetization/wext/services'
+import type {
+  StorePersistence,
+  StoreValue
+} from '@webmonetization/wext/services'
 import * as idbKv from 'idb-keyval'
 
 import { StoreService } from '../../services/storage'

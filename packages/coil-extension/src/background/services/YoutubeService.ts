@@ -1,6 +1,7 @@
 import { injectable } from 'inversify'
 
-import { logger, Logger } from './utils'
+import { logger } from './utils'
+import type { Logger } from './utils'
 
 @injectable()
 export class YoutubeService {

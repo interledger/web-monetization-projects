@@ -10,9 +10,9 @@ export WEXT_MANIFEST_VERSION="$COIL_DEV_VERSION"
 export WEXT_MANIFEST_SUFFIX_NO_DATE=true
 export WEXT_MANIFEST_SUFFIX=WM2Preview
 export WEXT_MANIFEST_BROWSER_SPECIFIC_SETTINGS_GECKO_ID="coilwm2previewfirefoxextension@niq.coil.com.xpi"
-NODE_ENV=production yarn build-prod firefox
+NODE_ENV=production pnpm build-prod firefox
 
 # See: https://github.com/mozilla/web-ext/issues/1773 re: ETIMEOUT
-yarn web-ext sign --timeout 3600000 --source-dir dist \
+pnpm web-ext sign --timeout 3600000 --source-dir dist \
     --api-key $WEXT_SHIPIT_FIREFOX_JWT_ISSUER \
     --api-secret $WEXT_SHIPIT_FIREFOX_JWT_SECRET

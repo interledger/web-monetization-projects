@@ -1,7 +1,6 @@
 import assert from 'assert'
 
-import { CoilTokenUtils, DecodedToken, decodeToken } from '@coil/client'
-
+import { CoilTokenUtils, DecodedToken, decodeToken } from '../src'
 import { testToken } from '../test/fixtures/testToken'
 
 /**

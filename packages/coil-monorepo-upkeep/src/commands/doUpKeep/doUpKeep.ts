@@ -6,6 +6,7 @@ import {
   fromRoot,
   readFileJSON,
   readPackageJSON,
+  relativeTo,
   relativeToRoot,
   writeFileJSON,
   writePackageJSON
@@ -16,10 +17,11 @@ import { cmd } from '../../utils/cmd'
 import { loadWorkspacePackages } from '../../utils/loadWorkspaces'
 
 const OVER_RIDE_UP_KEEP = '$overRideUpKeep'
+
+// TODO: may need to make it abs path
 const PACKAGE_LOCATION =
   process.env.UPKEEP_PACKAGE_LOCATION ??
   pathModule.resolve(__dirname, '../../..')
-const PACKAGE_FOLDER_NAME = pathModule.basename(PACKAGE_LOCATION)
 
 const STATIC_SHARED_DUPLICATED_PATH = 'templates/static-shared-duplicated'
 const CREATE_IF_DONT_EXIST_PATH = 'templates/create-if-dont-exist'
@@ -97,7 +99,7 @@ function setCommonScriptsAndMergeOverrides(
   subPackage: LernaListItem,
   subPackageJSON: PackageJSON
 ) {
-  const folderName = getPackageFolder(subPackage)
+  const pathFromRoot = relativeToRoot(subPackage.location)
   if (
     !rootPackageJSON.repository ||
     !rootPackageJSON.repository.url ||
@@ -111,7 +113,7 @@ function setCommonScriptsAndMergeOverrides(
     ...subPackageJSON,
     version: '0.0.0',
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    homepage: `https://github.com/${githubPath}/tree/main/packages/${folderName}`,
+    homepage: `https://github.com/${githubPath}/tree/main/${pathFromRoot}`,
     keywords: rootPackageJSON.keywords,
     repository: rootPackageJSON.repository,
     main: './build',
@@ -119,7 +121,10 @@ function setCommonScriptsAndMergeOverrides(
     private: rootPackageJSON.upkeep?.privatePackages ?? undefined,
     author: rootPackageJSON.author,
     license: rootPackageJSON.license,
-    $schema: `../${PACKAGE_FOLDER_NAME}/resources/package-json-schema-nested-overrides.json`,
+    $schema: `${relativeTo(
+      subPackage.location,
+      PACKAGE_LOCATION
+    )}/resources/package-json-schema-nested-overrides.json`,
     scripts: {
       ...(subPackageJSON.scripts || {}),
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -127,21 +132,25 @@ function setCommonScriptsAndMergeOverrides(
       precommit: 'echo lint-staged runs from root',
       prettier:
         "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
-      format: 'yarn prettier && LINT_FIX=1 yarn lint:all --fix --quiet',
+      format: 'pnpm prettier && LINT_FIX=1 pnpm lint:all --fix --quiet',
       'build:ts': 'tsc --build tsconfig.build.json',
-      'build:ts:watch': 'yarn build:ts --watch',
-      'build:ts:verbose': 'yarn build:ts --verbose',
+      'build:ts:watch': 'pnpm build:ts --watch',
+      'build:ts:verbose': 'pnpm build:ts --verbose',
       'clean:build': 'rimraf build',
       // example of deleting an old script
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       root: undefined!,
-      upkeep: 'cd ../.. && yarn upkeep',
-      'lint:all': "yarn lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      setenv: undefined!,
+      tsnodeenv:
+        'NODE_OPTIONS="${NODE_OPTIONS:-} --require tsconfig-paths/register" TS_NODE_PROJECT="../../tsconfig.cjs.json"',
+      upkeep: 'cd ../.. && pnpm upkeep',
+      'lint:all': "pnpm lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
-      'test:e2e': 'yarn test --config jest-e2e.config.cjs',
-      'test:e2e:coverage': 'yarn test:coverage --config jest-e2e.config.cjs',
+      'test:e2e': 'pnpm run test --config jest-e2e.config.cjs',
+      'test:e2e:coverage': 'pnpm test:coverage --config jest-e2e.config.cjs',
       test: 'PROJECT_JEST=1 jest --passWithNoTests',
-      'test:coverage': 'yarn test --verbose --coverage'
+      'test:coverage': 'pnpm run test --verbose --coverage'
     }
   }
 
@@ -181,8 +190,12 @@ function upKeepTypeScriptBuildConfig(subPackage: LernaListItem) {
   }
   if (subPackage.dependencies.length) {
     tsconfig.references = subPackage.dependencies.map(li => {
-      const packageFolder = getPackageFolder(li)
-      return { path: `../${packageFolder}/tsconfig.build.json` }
+      return {
+        path: `${relativeTo(
+          subPackage.location,
+          li.location
+        )}/tsconfig.build.json`
+      }
     })
   }
   writeFileJSON(
@@ -217,7 +230,8 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
   tsconfig.compilerOptions = tsconfig.compilerOptions || {}
   const paths: Record<string, string[]> = {}
   subPackages.forEach(li => {
-    const packagePath = `packages/${getPackageFolder(li)}`
+    const packagePath = relativeToRoot(li.location)
+
     const path = `${packagePath}/src`
     paths[li.name] = [path]
     const subPackageJSON = readPackageJSON(`${li.location}/package.json`)

@@ -13,11 +13,11 @@ No problem. We'll walk you through it! You can wash your hands after!
 - Chrome Browser
 - Git - Version control system
 - NodeJS 14 - JavaScript Engine
-- Yarn - NodeJS Package Managers
+- PNPM - NodeJS Package Managers
 
 Given you're a designer, let us be a little presumptive and assume you're on a Mac.
 We also trust you can install Chrome without any special instruction.
-If you already have NodeJS/Git/Yarn installed, then skip to "Cloning The Repo"
+If you already have NodeJS/Git/PNPM installed, then skip to "Cloning The Repo"
 
 #### Open that Terminal!
 
@@ -106,13 +106,9 @@ It should echo something like the following:
 v14.9.0
 ```
 
-### Installing Yarn
+### Installing PNPM
 
-Yarn is a package manager for NodeJS.
-Follow the steps [here](https://classic.yarnpkg.com/en/docs/install#mac-stable)
-
-If you aren't sure which option to use to install, choose "Installation Script":
-![yarn-installation-script](./images/build-for-designers-yarn-installation-script.png)
+https://pnpm.io/installation
 
 ### Cloning The Extension Repository
 
@@ -148,7 +144,7 @@ cd ~/web-monetization-projects
 Then you will have to install the dependencies:
 
 ```
-yarn
+pnpm install
 ```
 
 It will download various packages from the NPM (Node Package Manager) registry.
@@ -164,7 +160,7 @@ cd ~/web-monetization-projects/packages/coil-extension
 Then run the following command:
 
 ```
-yarn dev-chrome-prod
+pnpm dev-chrome-prod
 ```
 
 This command builds the extension.
