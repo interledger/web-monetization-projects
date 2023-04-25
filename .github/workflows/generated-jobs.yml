@@ -23,9 +23,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        run: |-
+          npm install -g pnpm 
+          pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -62,9 +62,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        run: |-
+          npm install -g pnpm 
+          pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -103,9 +103,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        run: |-
+          npm install -g pnpm 
+          pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -151,9 +151,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        run: |-
+          npm install -g pnpm 
+          pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -190,9 +190,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        run: |-
+          npm install -g pnpm 
+          pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -237,9 +237,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        run: |-
+          npm install -g pnpm 
+          pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -293,9 +293,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        run: |-
+          npm install -g pnpm 
+          pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -341,9 +341,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        run: |-
+          npm install -g pnpm 
+          pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
@@ -380,9 +380,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        run: |-
+          npm install -g pnpm 
+          pnpm --version
       - name: Get PNPM Store Path
         id: pnpm-store-path
         run: echo "::set-output name=path::$(pnpm store path)"
