@@ -2300,6 +2300,9 @@ importers:
       '@swc/jest':
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.51)
+      '@types/chrome':
+        specifier: ^0.0.233
+        version: 0.0.233
       '@types/jest':
         specifier: 29.5.0
         version: 29.5.0
@@ -2320,7 +2323,7 @@ importers:
         version: 5.57.1(eslint@8.38.0)(typescript@5.0.4)
       '@vitejs/plugin-react-swc':
         specifier: 3.3.0
-        version: 3.3.0(vite@4.2.1)
+        version: 3.3.0(vite@4.3.1)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -2412,11 +2415,11 @@ importers:
         specifier: 5.0.4
         version: 5.0.4
       vite:
-        specifier: 4.2.1
-        version: 4.2.1(@types/node@18.15.11)
+        specifier: 4.3.1
+        version: 4.3.1(@types/node@18.15.11)
       vite-tsconfig-paths:
         specifier: 4.0.8
-        version: 4.0.8(typescript@5.0.4)(vite@4.2.1)
+        version: 4.0.8(typescript@5.0.4)(vite@4.3.1)
       webpack:
         specifier: 5.78.0
         version: 5.78.0(@swc/core@1.3.51)(webpack-cli@5.0.1)
@@ -8107,6 +8110,13 @@ packages:
       '@types/responselike': 1.0.0
     dev: true
 
+  /@types/chrome@0.0.233:
+    resolution: {integrity: sha512-T3HUW8LDhHfYPbUkOZilhnqX04sZqEFIQO0OIG8byZ7PBIk2jYys1AkNg56UbtKbsh3dABmOniK+0Q3oyo7Sxg==}
+    dependencies:
+      '@types/filesystem': 0.0.32
+      '@types/har-format': 1.2.10
+    dev: true
+
   /@types/connect-history-api-fallback@1.3.5:
     resolution: {integrity: sha512-h8QJa8xSb1WD4fpKBDcATDNGXghFj6/3GRWG6dhmRcu0RX1Ubasur2Uvx5aeEwlf0MwblEC2bMzzMQntxnw/Cw==}
     dependencies:
@@ -8673,13 +8683,13 @@ packages:
       eslint-visitor-keys: 3.4.0
     dev: true
 
-  /@vitejs/plugin-react-swc@3.3.0(vite@4.2.1):
+  /@vitejs/plugin-react-swc@3.3.0(vite@4.3.1):
     resolution: {integrity: sha512-Ycg+n2eyCOTpn/wRy+evVo859+hw7qCj9iaX5CMny6x1fx1Uoq0xBG+a98lFtwLNGfGEnpI0F26YigRuxCRkwg==}
     peerDependencies:
       vite: ^4
     dependencies:
       '@swc/core': 1.3.51
-      vite: 4.2.1(@types/node@18.15.11)
+      vite: 4.3.1(@types/node@18.15.11)
     transitivePeerDependencies:
       - '@swc/helpers'
     dev: true
@@ -22704,7 +22714,7 @@ packages:
       core-util-is: 1.0.2
       extsprintf: 1.3.0
 
-  /vite-tsconfig-paths@4.0.8(typescript@5.0.4)(vite@4.2.1):
+  /vite-tsconfig-paths@4.0.8(typescript@5.0.4)(vite@4.3.1):
     resolution: {integrity: sha512-p04zH+Ey+NT78571x0pdX7nVRIJSlmKVvYryFglSWOK3Hc72eDL0+JJfbyQiugaIBApJkaEqbBQvqpsFZOSVGg==}
     peerDependencies:
       vite: '*'
@@ -22715,14 +22725,14 @@ packages:
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)(supports-color@9.3.1)
       globrex: 0.1.2
       tsconfck: 2.1.1(typescript@5.0.4)
-      vite: 4.2.1(@types/node@18.15.11)
+      vite: 4.3.1(@types/node@18.15.11)
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true
 
-  /vite@4.2.1(@types/node@18.15.11):
-    resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
+  /vite@4.3.1(@types/node@18.15.11):
+    resolution: {integrity: sha512-EPmfPLAI79Z/RofuMvkIS0Yr091T2ReUoXQqc5ppBX/sjFRhHKiPPF/R46cTdoci/XgeQpB23diiJxq5w30vdg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -22749,7 +22759,6 @@ packages:
       '@types/node': 18.15.11
       esbuild: 0.17.17
       postcss: 8.4.23
-      resolve: 1.22.2
       rollup: 3.20.6
     optionalDependencies:
       fsevents: 2.3.2
