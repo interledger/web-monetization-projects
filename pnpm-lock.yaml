@@ -53,16 +53,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -155,7 +155,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -164,7 +164,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -210,16 +210,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -324,7 +324,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -333,7 +333,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -382,16 +382,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -487,7 +487,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -496,7 +496,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -623,7 +623,7 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
@@ -631,11 +631,11 @@ importers:
         specifier: 2.3.0
         version: 2.3.0
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/debug':
         specifier: 4.1.7
         version: 4.1.7
@@ -782,7 +782,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -794,7 +794,7 @@ importers:
         version: 7.6.2
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -912,7 +912,7 @@ importers:
         version: link:../coil-client
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
@@ -929,11 +929,11 @@ importers:
         specifier: 3.2.1
         version: 3.2.1(graphql@16.6.0)
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/body-parser':
         specifier: 1.19.2
         version: 1.19.2
@@ -1041,7 +1041,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -1050,7 +1050,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -1117,16 +1117,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -1219,7 +1219,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -1228,7 +1228,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -1280,16 +1280,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -1388,7 +1388,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -1397,7 +1397,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -1461,16 +1461,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/debug':
         specifier: 4.1.7
         version: 4.1.7
@@ -1572,7 +1572,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -1581,7 +1581,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -1651,16 +1651,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -1753,7 +1753,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -1762,7 +1762,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -1808,16 +1808,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -1910,7 +1910,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -1919,7 +1919,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -1961,16 +1961,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -2063,7 +2063,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -2072,7 +2072,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -2121,16 +2121,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -2223,7 +2223,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -2232,7 +2232,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -2287,7 +2287,7 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
@@ -2295,11 +2295,11 @@ importers:
         specifier: 2.0.0-beta.16
         version: 2.0.0-beta.16
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/chrome':
         specifier: 0.0.233
         version: 0.0.233
@@ -2407,7 +2407,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -2422,7 +2422,7 @@ importers:
         version: 4.2.0(typescript@5.0.4)(vite@4.3.3)
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -2471,16 +2471,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -2579,7 +2579,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -2588,7 +2588,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -2634,16 +2634,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -2736,7 +2736,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -2745,7 +2745,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -2827,16 +2827,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -2932,7 +2932,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -2941,7 +2941,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -3032,7 +3032,7 @@ importers:
         version: link:../coil-webpack-utils
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
@@ -3040,11 +3040,11 @@ importers:
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/body-parser':
         specifier: 1.19.2
         version: 1.19.2
@@ -3158,7 +3158,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -3167,7 +3167,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -3216,16 +3216,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -3324,7 +3324,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -3333,7 +3333,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -3382,16 +3382,16 @@ importers:
         version: link:../coil-webpack-utils
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -3487,7 +3487,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -3496,7 +3496,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -3560,7 +3560,7 @@ importers:
         version: link:../coil-webpack-utils
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
@@ -3568,11 +3568,11 @@ importers:
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/ajv':
         specifier: 1.0.0
         version: 1.0.0
@@ -3680,7 +3680,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -3689,7 +3689,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -3731,16 +3731,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -3836,7 +3836,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -3845,7 +3845,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -3897,16 +3897,16 @@ importers:
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
         specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.54)
+        version: 17.6.1(@swc/core@1.3.55)
       '@commitlint/config-conventional':
         specifier: 17.6.1
         version: 17.6.1
       '@swc/core':
-        specifier: 1.3.54
-        version: 1.3.54
+        specifier: 1.3.55
+        version: 1.3.55
       '@swc/jest':
         specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.54)
+        version: 0.2.26(@swc/core@1.3.55)
       '@types/jest':
         specifier: 29.5.1
         version: 29.5.1
@@ -3999,7 +3999,7 @@ importers:
         version: 9.4.2(typescript@5.0.4)(webpack@5.81.0)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
@@ -4008,7 +4008,7 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.81.0
-        version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+        version: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
@@ -5611,14 +5611,14 @@ packages:
     dev: false
     optional: true
 
-  /@commitlint/cli@17.6.1(@swc/core@1.3.54):
+  /@commitlint/cli@17.6.1(@swc/core@1.3.55):
     resolution: {integrity: sha512-kCnDD9LE2ySiTnj/VPaxy4/oRayRcdv4aCuVxtoum8SxIU7OADHc0nJPQfheE8bHcs3zZdWzDMWltRosuT13bg==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
       '@commitlint/format': 17.4.4
       '@commitlint/lint': 17.6.1
-      '@commitlint/load': 17.5.0(@swc/core@1.3.54)
+      '@commitlint/load': 17.5.0(@swc/core@1.3.55)
       '@commitlint/read': 17.5.1
       '@commitlint/types': 17.4.4
       execa: 5.1.1
@@ -5689,7 +5689,7 @@ packages:
       '@commitlint/types': 17.4.4
     dev: true
 
-  /@commitlint/load@17.5.0(@swc/core@1.3.54):
+  /@commitlint/load@17.5.0(@swc/core@1.3.55):
     resolution: {integrity: sha512-l+4W8Sx4CD5rYFsrhHH8HP01/8jEP7kKf33Xlx2Uk2out/UKoKPYMOIRcDH5ppT8UXLMV+x6Wm5osdRKKgaD1Q==}
     engines: {node: '>=v14'}
     dependencies:
@@ -5705,7 +5705,7 @@ packages:
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+      ts-node: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       typescript: 5.0.4
     transitivePeerDependencies:
       - '@swc/core'
@@ -7864,8 +7864,8 @@ packages:
       '@sinonjs/commons': 2.0.0
     dev: true
 
-  /@swc/core-darwin-arm64@1.3.54:
-    resolution: {integrity: sha512-B1nTlkhTfzt95C/p+iWRaqwHTqqVWcqpHatnieIKxMCaceuZjvd7PeddbHmmrFFfjQqfs8UNzwrTVpgsFwCJWg==}
+  /@swc/core-darwin-arm64@1.3.55:
+    resolution: {integrity: sha512-UnHC8aPg/JvHhgXxTU6EhTtfnYNS7nhq8EKB8laNPxlHbwEyMBVQ2QuJHlNCtFtvSfX/uH5l04Ld1iGXnBTfdQ==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [darwin]
@@ -7873,8 +7873,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-darwin-x64@1.3.54:
-    resolution: {integrity: sha512-FM+46dRyvJySCrDIDARamycjl/LB9taQCFQg5QpQmQFwIkZ7GIaiQUZO9cdrZUBGPJJCsm7o2FG4ufwnVsCHHA==}
+  /@swc/core-darwin-x64@1.3.55:
+    resolution: {integrity: sha512-VNJkFVARrktIqtaLrD1NFA54gqekH7eAUcUY2U2SdHwO67HYjfMXMxlugLP5PDasSKpTkrVooUdhkffoA5W50g==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [darwin]
@@ -7882,8 +7882,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-arm-gnueabihf@1.3.54:
-    resolution: {integrity: sha512-5EfxTKllNm+ucjuo3WNhwHfY417UwqCsaqjJnveXgn5DU+6/ft96skdpD+xrBp5ejMNzem8xYambOrBLzs2QDw==}
+  /@swc/core-linux-arm-gnueabihf@1.3.55:
+    resolution: {integrity: sha512-6OcohhIFKKNW/TpJt26Tpul8zyL7dmp1Lnyj2BX9ycsZZ5UnsNiGqn37mrqJgVTx/ansEmbyOmKu2mzm/Ct6cQ==}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [linux]
@@ -7891,8 +7891,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-arm64-gnu@1.3.54:
-    resolution: {integrity: sha512-4AmBlRaelUYcW9aR/q3z8UiNYsQ/1JtinETCZBye08wnwK81ITriYcHTBPP8Ix8IZtkcvpsN/SsGAnLNcrpRBQ==}
+  /@swc/core-linux-arm64-gnu@1.3.55:
+    resolution: {integrity: sha512-MfZtXGBv21XWwvrSMP0CMxScDolT/iv5PRl9UBprYUehwWr7BNjA3V9W7QQ+kKoPyORWk7LX7OpJZF3FnO618Q==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -7900,8 +7900,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-arm64-musl@1.3.54:
-    resolution: {integrity: sha512-twgmC6wfH2WW5mlG/rHk4GnbDZ2UDetF0PMJt/ICmgBwJsDSf71WSI9CA5b/F1wE9DE0ofyo+yukjuj9TtPvOQ==}
+  /@swc/core-linux-arm64-musl@1.3.55:
+    resolution: {integrity: sha512-iZJo+7L5lv10W0f0C6SlyteAyMJt5Tp+aH3+nlAwKdtc+VjyL1sGhR8DJMXp2/buBRZJ9tjEtpXKDaWUdSdF7Q==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -7909,8 +7909,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-x64-gnu@1.3.54:
-    resolution: {integrity: sha512-/dE+z0pF1R0vvXPTQ43+cypltfbZDI0C3WuDMkb1KIaQS7yiaufzzWIVGfJisoKGxpyk3ABSSPcStEqedpvJ+w==}
+  /@swc/core-linux-x64-gnu@1.3.55:
+    resolution: {integrity: sha512-Rmc8ny/mslzzz0+wNK9/mLdyAWVbMZHRSvljhpzASmq48NBkmZ5vk9/WID6MnUz2e9cQ0JxJQs8t39KlFJtW3g==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -7918,8 +7918,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-linux-x64-musl@1.3.54:
-    resolution: {integrity: sha512-/dGU5pCaPYEaaPAPt+Fa+9cCTNuhmtdTpxwUX0ZF3VlWAf3QPoTcPYkUDEOvWcl3g8RpEr7ZGp9beVCp2NpLpA==}
+  /@swc/core-linux-x64-musl@1.3.55:
+    resolution: {integrity: sha512-Ymoc4xxINzS93ZjVd2UZfLZk1jF6wHjdCbC1JF+0zK3IrNrxCIDoWoaAj0+Bbvyo3hD1Xg/cneSTsqX8amnnuQ==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -7927,8 +7927,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-win32-arm64-msvc@1.3.54:
-    resolution: {integrity: sha512-gpqOqHB7fHqTApS8pvW1/oMCcfEH1LxRU81KqUGY/MXR3DDwpnDY3ycyCzRB4tpNr91ZpgzUtrlx8OQCHq75uw==}
+  /@swc/core-win32-arm64-msvc@1.3.55:
+    resolution: {integrity: sha512-OhnmFstq2qRU2GI5I0G/8L+vc2rx8+w+IOA6EZBrY4FuMCbPIZKKzlnAIxYn2W+yD4gvBzYP3tgEcaDfQk6EkA==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [win32]
@@ -7936,8 +7936,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-win32-ia32-msvc@1.3.54:
-    resolution: {integrity: sha512-2h+EnYoEDZcPfoGCKU4F/gbDz0Dw+vQG7b5rxwo6IWFhB2mGOMiYZzbIo6LVyFRoSXNVNa88Yov18pgfeM9gMw==}
+  /@swc/core-win32-ia32-msvc@1.3.55:
+    resolution: {integrity: sha512-3VR5rHZ6uoL/Vo3djV30GgX2oyDwWWsk+Yp+nyvYyBaKYiH2zeHfxdYRLSQV3W7kSlCAH3oDYpSljrWZ0t5XEQ==}
     engines: {node: '>=10'}
     cpu: [ia32]
     os: [win32]
@@ -7945,8 +7945,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core-win32-x64-msvc@1.3.54:
-    resolution: {integrity: sha512-//W/mqIVuOxMRVI3ojCF6jKLpugu6sSSsCaBpM9GdDVGAaAt0UdivKzecqHIt2PGoN6l1mT73Zy+083PvkPhHQ==}
+  /@swc/core-win32-x64-msvc@1.3.55:
+    resolution: {integrity: sha512-KBtMFtRwnbxBugYf6i2ePqEGdxsk715KcqGMjGhxNg7BTACnXnhj37irHu2e7A7wZffbkUVUYuj/JEgVkEjSxg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
@@ -7954,8 +7954,8 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core@1.3.54:
-    resolution: {integrity: sha512-/BCIn698CHkQz3d3VY5W5BHagbwkKen295mDM+JPfDepLsLy3lKtD1+GZqZYKVQDebUj90eAn7OD+qBrAxPtaA==}
+  /@swc/core@1.3.55:
+    resolution: {integrity: sha512-w/lN3OuJsuy868yJZKop+voZLVzI5pVSoopQVtgDNkEzejnPuRp9XaeAValvuMaWqKoTMtOjLzEPyv/xiAGYQQ==}
     engines: {node: '>=10'}
     requiresBuild: true
     peerDependencies:
@@ -7964,26 +7964,26 @@ packages:
       '@swc/helpers':
         optional: true
     optionalDependencies:
-      '@swc/core-darwin-arm64': 1.3.54
-      '@swc/core-darwin-x64': 1.3.54
-      '@swc/core-linux-arm-gnueabihf': 1.3.54
-      '@swc/core-linux-arm64-gnu': 1.3.54
-      '@swc/core-linux-arm64-musl': 1.3.54
-      '@swc/core-linux-x64-gnu': 1.3.54
-      '@swc/core-linux-x64-musl': 1.3.54
-      '@swc/core-win32-arm64-msvc': 1.3.54
-      '@swc/core-win32-ia32-msvc': 1.3.54
-      '@swc/core-win32-x64-msvc': 1.3.54
+      '@swc/core-darwin-arm64': 1.3.55
+      '@swc/core-darwin-x64': 1.3.55
+      '@swc/core-linux-arm-gnueabihf': 1.3.55
+      '@swc/core-linux-arm64-gnu': 1.3.55
+      '@swc/core-linux-arm64-musl': 1.3.55
+      '@swc/core-linux-x64-gnu': 1.3.55
+      '@swc/core-linux-x64-musl': 1.3.55
+      '@swc/core-win32-arm64-msvc': 1.3.55
+      '@swc/core-win32-ia32-msvc': 1.3.55
+      '@swc/core-win32-x64-msvc': 1.3.55
     dev: true
 
-  /@swc/jest@0.2.26(@swc/core@1.3.54):
+  /@swc/jest@0.2.26(@swc/core@1.3.55):
     resolution: {integrity: sha512-7lAi7q7ShTO3E5Gt1Xqf3pIhRbERxR1DUxvtVa9WKzIB+HGQ7wZP5sYx86zqnaEoKKGhmOoZ7gyW0IRu8Br5+A==}
     engines: {npm: '>= 7.0.0'}
     peerDependencies:
       '@swc/core': '*'
     dependencies:
       '@jest/create-cache-key-function': 27.5.1
-      '@swc/core': 1.3.54
+      '@swc/core': 1.3.55
       jsonc-parser: 3.2.0
     dev: true
 
@@ -8623,7 +8623,7 @@ packages:
     peerDependencies:
       vite: ^4
     dependencies:
-      '@swc/core': 1.3.54
+      '@swc/core': 1.3.55
       vite: 4.3.3(@types/node@18.16.1)
     transitivePeerDependencies:
       - '@swc/helpers'
@@ -8746,7 +8746,7 @@ packages:
       webpack: 5.x.x
       webpack-cli: 5.x.x
     dependencies:
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.81.0)
     dev: true
 
@@ -8757,7 +8757,7 @@ packages:
       webpack: 5.x.x
       webpack-cli: 5.x.x
     dependencies:
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.81.0)
     dev: true
 
@@ -8772,7 +8772,7 @@ packages:
       webpack-dev-server:
         optional: true
     dependencies:
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.81.0)
       webpack-dev-server: 4.13.3(webpack-cli@5.0.2)(webpack@5.81.0)
     dev: true
@@ -11455,7 +11455,7 @@ packages:
       normalize-path: 3.0.0
       schema-utils: 4.0.1
       serialize-javascript: 6.0.1
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
     dev: true
 
   /core-js-compat@3.30.1:
@@ -11509,7 +11509,7 @@ packages:
     dependencies:
       '@types/node': 18.16.1
       cosmiconfig: 8.1.3
-      ts-node: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+      ts-node: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
       typescript: 5.0.4
     dev: true
 
@@ -14958,7 +14958,7 @@ packages:
       lodash: 4.17.21
       pretty-error: 4.0.0
       tapable: 2.2.1
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
     dev: true
 
   /htmlparser2@3.10.1:
@@ -16280,7 +16280,7 @@ packages:
       pretty-format: 29.5.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4)
+      ts-node: 10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -21778,7 +21778,7 @@ packages:
       execa: 0.7.0
     dev: true
 
-  /terser-webpack-plugin@5.3.7(@swc/core@1.3.54)(webpack@5.81.0):
+  /terser-webpack-plugin@5.3.7(@swc/core@1.3.55)(webpack@5.81.0):
     resolution: {integrity: sha512-AfKwIktyP7Cu50xNjXF/6Qb5lBNzYaWpU6YfoX3uZicTx0zTy0stDDCsvjDapKsSDvOeWo5MEq4TmdBy2cNoHw==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -21795,12 +21795,12 @@ packages:
         optional: true
     dependencies:
       '@jridgewell/trace-mapping': 0.3.18
-      '@swc/core': 1.3.54
+      '@swc/core': 1.3.55
       jest-worker: 27.5.1
       schema-utils: 3.1.2
       serialize-javascript: 6.0.1
       terser: 5.17.1
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
     dev: true
 
   /terser@5.17.1:
@@ -22109,14 +22109,14 @@ packages:
       micromatch: 4.0.5
       semver: 7.5.0
       typescript: 5.0.4
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
     dev: true
 
   /ts-log@2.2.5:
     resolution: {integrity: sha512-PGcnJoTBnVGy6yYNFxWVNkdcAuAMstvutN9MgDJIV6L0oG8fB+ZNNy1T+wJzah8RPGor1mZuPQkVfXNDpy9eHA==}
     dev: true
 
-  /ts-node@10.9.1(@swc/core@1.3.54)(@types/node@18.16.1)(typescript@5.0.4):
+  /ts-node@10.9.1(@swc/core@1.3.55)(@types/node@18.16.1)(typescript@5.0.4):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -22131,7 +22131,7 @@ packages:
         optional: true
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
-      '@swc/core': 1.3.54
+      '@swc/core': 1.3.55
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
@@ -22961,7 +22961,7 @@ packages:
       import-local: 3.1.0
       interpret: 3.1.1
       rechoir: 0.8.0
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-bundle-analyzer: 4.8.0
       webpack-dev-server: 4.13.3(webpack-cli@5.0.2)(webpack@5.81.0)
       webpack-merge: 5.8.0
@@ -22978,7 +22978,7 @@ packages:
       mime-types: 2.1.35
       range-parser: 1.2.1
       schema-utils: 4.0.1
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
     dev: true
 
   /webpack-dev-server@4.13.3(debug@4.3.4)(webpack-cli@5.0.2)(webpack@5.81.0):
@@ -23022,7 +23022,7 @@ packages:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.81.0)
       webpack-dev-middleware: 5.3.3(webpack@5.81.0)
       ws: 8.13.0
@@ -23074,7 +23074,7 @@ packages:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
+      webpack: 5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2)
       webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.81.0)
       webpack-dev-middleware: 5.3.3(webpack@5.81.0)
       ws: 8.13.0
@@ -23102,7 +23102,7 @@ packages:
     resolution: {integrity: sha512-kyDivFZ7ZM0BVOUteVbDFhlRt7Ah/CSPwJdi8hBpkK7QLumUqdLtVfm/PX/hkcnrvr0i77fO5+TjZ94Pe+C9iw==}
     dev: false
 
-  /webpack@5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2):
+  /webpack@5.81.0(@swc/core@1.3.55)(webpack-cli@5.0.2):
     resolution: {integrity: sha512-AAjaJ9S4hYCVODKLQTgG5p5e11hiMawBwV2v8MYLE0C/6UAGLuAF4n1qa9GOwdxnicaP+5k6M5HrLmD4+gIB8Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -23133,7 +23133,7 @@ packages:
       neo-async: 2.6.2
       schema-utils: 3.1.2
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.7(@swc/core@1.3.54)(webpack@5.81.0)
+      terser-webpack-plugin: 5.3.7(@swc/core@1.3.55)(webpack@5.81.0)
       watchpack: 2.4.0
       webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.13.3)(webpack@5.81.0)
       webpack-sources: 3.2.3
