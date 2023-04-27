@@ -133,8 +133,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -299,8 +299,8 @@ importers:
         specifier: 9.0.0
         version: 9.0.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       localforage:
         specifier: 1.10.0
         version: 1.10.0
@@ -465,8 +465,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -754,8 +754,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       node-window-manager:
         specifier: 2.2.4
         version: 2.2.4
@@ -1019,8 +1019,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -1089,7 +1089,7 @@ importers:
         version: 1.57.0
       yaml:
         specifier: ^2.2.1
-        version: 2.2.1
+        version: 2.2.2
     devDependencies:
       '@abraham/reflection':
         specifier: 0.12.0
@@ -1197,8 +1197,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -1366,8 +1366,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -1550,8 +1550,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -1731,8 +1731,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -1888,8 +1888,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -2041,8 +2041,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -2201,8 +2201,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -2382,8 +2382,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -2557,8 +2557,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -2714,8 +2714,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -2910,8 +2910,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -3136,8 +3136,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -3302,8 +3302,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -3465,8 +3465,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -3658,8 +3658,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -3811,8 +3811,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -3977,8 +3977,8 @@ importers:
         specifier: 29.5.0
         version: 29.5.0
       lint-staged:
-        specifier: 13.2.1
-        version: 13.2.1
+        specifier: 13.2.2
+        version: 13.2.2
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -17163,8 +17163,8 @@ packages:
     resolution: {integrity: sha512-cNOjgCnLB+FnvWWtyRTzmB3POJ+cXxTA81LoW7u8JdmhfXzriropYwpjShnz1QLLWsQwY7nIxoDmcPTwphDK9w==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  /lint-staged@13.2.1:
-    resolution: {integrity: sha512-8gfzinVXoPfga5Dz/ZOn8I2GOhf81Wvs+KwbEXQn/oWZAvCVS2PivrXfVbFJc93zD16uC0neS47RXHIjXKYZQw==}
+  /lint-staged@13.2.2:
+    resolution: {integrity: sha512-71gSwXKy649VrSU09s10uAT0rWCcY3aewhMaHyl2N84oBk4Xs9HgxvUp3AYu+bNsK4NrOYYxvSgg7FyGJ+jGcA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -17180,7 +17180,7 @@ packages:
       object-inspect: 1.12.3
       pidtree: 0.6.0
       string-argv: 0.3.1
-      yaml: 2.2.1
+      yaml: 2.2.2
     transitivePeerDependencies:
       - enquirer
       - supports-color
@@ -23528,8 +23528,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /yaml@2.2.1:
-    resolution: {integrity: sha512-e0WHiYql7+9wr4cWMx3TVQrNwejKaEe7/rHNmQmqRjazfOP5W8PB6Jpebb5o6fIapbz9o9+2ipcaTM2ZwDI6lw==}
+  /yaml@2.2.2:
+    resolution: {integrity: sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==}
     engines: {node: '>= 14'}
 
   /yargs-parser@10.1.0:
