@@ -790,8 +790,8 @@ importers:
         specifier: 5.0.4
         version: 5.0.4
       web-ext:
-        specifier: 7.6.1
-        version: 7.6.1
+        specifier: 7.6.2
+        version: 7.6.2
       webpack:
         specifier: 5.81.0
         version: 5.81.0(@swc/core@1.3.54)(webpack-cli@5.0.2)
@@ -1433,7 +1433,7 @@ importers:
         version: 0.2.1
       web-ext:
         specifier: ^7.2.0
-        version: 7.6.1
+        version: 7.6.2
     devDependencies:
       '@abraham/reflection':
         specifier: 0.12.0
@@ -22841,8 +22841,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /web-ext@7.6.1:
-    resolution: {integrity: sha512-zU7nCiUiNgrZbiF1M9f1HJmwoeyKqb/QTahsEF8ke6aBFQYK6x3NcASi7Mrd7vUrPUvhWLvWB1YFC72VZnARAg==}
+  /web-ext@7.6.2:
+    resolution: {integrity: sha512-xlxbzgFBIS/UWWlvWxyR1PIqRRzDj1cutoHh+VZu4ZTcJTfv35KVdKkLRZv4PQwHu4dg8VfTg7WEcNP4QLaaFQ==}
     engines: {node: '>=14.0.0', npm: '>=6.9.0'}
     hasBin: true
     dependencies:
