@@ -15,8 +15,8 @@ const YBYTE = new Uint8Array([0x02])
 
 export function hashAndInc(
   seed: Uint8Array,
-  HashClass: CHash = sha256,
   label: Uint8Array = INC_H2C_LABEL,
+  HashClass: CHash = sha256,
   curve: CurveFn = p256
 ): ProjPointType<bigint> {
   let h = HashClass.create()
