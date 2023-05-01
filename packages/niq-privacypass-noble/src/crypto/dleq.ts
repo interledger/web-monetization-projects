@@ -4,7 +4,7 @@ import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 
 import { Point } from './types'
 import { defaultContext } from './config'
-import { randScalar } from './randScalar'
+import { randomScalar } from './randomScalar'
 import { CryptoContext } from './context'
 import { Commitment } from './commitment'
 
@@ -39,7 +39,7 @@ export class DLEQ {
     context: CryptoContext = defaultContext
   ): DLEQProof {
     // TODO: this should use the H2Config curve config
-    const { scalar: nonce } = randScalar(context.config.curve, randomBytes)
+    const { scalar: nonce } = randomScalar(context.config.curve, randomBytes)
     const A = p1.multiply(nonce)
     const B = p2.multiply(nonce)
     const challenge = context.hashUncompressedPoints(p1, xp1, p2, xp2, A, B)

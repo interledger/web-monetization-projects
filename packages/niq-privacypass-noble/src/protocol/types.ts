@@ -1,10 +1,14 @@
 export type ReqType = 'Issue' | 'Redeem'
+export type EncodedToken = string
+export type EncodedRequestBinder = string
+export type EncodedPoint = string
+export type B64Json = string
 
 export const ISSUE: ReqType = 'Issue'
 export const REDEEM: ReqType = 'Redeem'
 
 export interface BlindTokenRequestWrapper {
-  bl_sig_req: string
+  bl_sig_req: B64Json
   host?: string
   path?: string
 }
@@ -17,10 +21,12 @@ export interface BlindTokenRequest {
 
 export interface IssueTokenRequest extends BlindTokenRequest {
   type: 'Issue'
+  contents: EncodedPoint[]
 }
 
 export interface RedeemTokenRequest extends BlindTokenRequest {
   type: 'Redeem'
+  contents: [EncodedToken, EncodedRequestBinder]
 }
 
 export interface IssueTokenResponse {
@@ -39,5 +45,6 @@ export interface IssueTokenResponse {
    )
    */
   proof: string
-  version: string
+
+  version: string | '1.1.0'
 }

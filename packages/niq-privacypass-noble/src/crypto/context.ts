@@ -6,7 +6,7 @@ import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 
 import { Base64Utils, createB64Utils } from './b64'
 import { BlindToken, H2Config, Point, PrngFn } from './types'
-import { randScalar } from './randScalar'
+import { randomScalar } from './randomScalar'
 
 export class CryptoContext {
   constructor(public config: H2Config) {
@@ -14,7 +14,7 @@ export class CryptoContext {
   }
 
   blindPoint(p: Point): { point: Point; blind: bigint } {
-    const { scalar: r } = randScalar(this.config.curve, randomBytes)
+    const { scalar: r } = randomScalar(this.config.curve, randomBytes)
     const point = p.multiply(r)
     return { point, blind: r }
   }
@@ -43,11 +43,11 @@ export class CryptoContext {
   }
 
   randomScalar(rand: PrngFn = randomBytes) {
-    return randScalar(this.config.curve, rand).scalar
+    return randomScalar(this.config.curve, rand).scalar
   }
 
   randomScalarWithBuf(rand: PrngFn = randomBytes) {
-    return randScalar(this.config.curve, rand)
+    return randomScalar(this.config.curve, rand)
   }
 
   decodePoint(data: string | Uint8Array) {

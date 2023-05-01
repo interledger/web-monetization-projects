@@ -6,7 +6,10 @@ import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 // number of bytes, we mask off the unnecessary bits. h/t agl
 const MASK = [0xff, 0x01, 0x03, 0x07, 0x0f, 0x1f, 0x3f, 0x7f]
 
-export function randScalar(curve: CurveFn, rand: (size: number) => Uint8Array) {
+export function randomScalar(
+  curve: CurveFn,
+  rand: (size: number) => Uint8Array
+) {
   const N = curve.CURVE.n // base point subgroup order
   const bitLen = curve.CURVE.nBitLength
   const byteLen = curve.CURVE.nByteLength
