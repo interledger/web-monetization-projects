@@ -1,8 +1,7 @@
 import { bytesToHex } from '@noble/hashes/utils'
 
-import { computeComposites } from '../../src/crypto/computeComposites'
-
-import { testConfig, testContext } from './testconfig'
+import { computeComposites } from '../../../src/crypto/computeComposites'
+import { testConfig, testContext } from '../testconfig'
 
 const P = (hex: string) => testContext.decodePoint(hex)
 

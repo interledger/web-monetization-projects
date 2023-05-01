@@ -1,6 +1,5 @@
-import { DLEQ } from '../../src/crypto/dleq'
-
-import { testContext } from './testconfig'
+import { DLEQ } from '../../../src/crypto/dleq'
+import { testContext } from '../testconfig'
 
 describe('DLEQ proofs', () => {
   it('should describe DLEQ', () => {

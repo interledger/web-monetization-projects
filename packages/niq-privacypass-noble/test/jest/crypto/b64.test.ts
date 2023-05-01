@@ -1,4 +1,4 @@
-import { testContext } from './testconfig'
+import { testContext } from '../testconfig'
 
 const { b64db, b64eb, b64dpt } = testContext
 
