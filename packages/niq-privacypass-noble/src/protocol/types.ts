@@ -30,12 +30,12 @@ export interface IssueTokenResponse {
   sigs: string[]
 
   /**
-   B64('batch-proof=' + B64(JSON({
+   B64('batch-proof=' + JSON({
       P: B64(JSON({
         C: B64(C_bigint),
         R: B64(R_bigint),
       })),
-    })),
+    }),
    )
    */
   proof: string

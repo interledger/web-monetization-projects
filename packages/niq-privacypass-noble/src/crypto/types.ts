@@ -10,7 +10,8 @@ export interface BlindToken {
 }
 
 export type Hash2CurveFn = (bytes: Uint8Array) => Point
-export type PrngFactory = (seed: Uint8Array) => (n: number) => Uint8Array
+export type PrngFn = (n: number) => Uint8Array
+export type PrngFactory = (seed: Uint8Array) => PrngFn
 
 export interface H2Config {
   curve: CurveFn
