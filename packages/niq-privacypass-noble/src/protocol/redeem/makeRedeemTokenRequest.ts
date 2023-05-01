@@ -4,23 +4,20 @@ import { SignedToken } from '../../crypto/types'
 
 export function makeRedeemTokenRequest(
   context: CryptoContext,
-  blindToken: SignedToken,
-  testHost: Uint8Array,
-  testPath: Uint8Array
+  signedToken: SignedToken,
+  //
+  host: Uint8Array,
+  path: Uint8Array
 ): BlindTokenRequest {
   // Unblind a point
-  const token = blindToken.seed
-  const blindedPoint = blindToken.signedPoint
-  const blindFactor = blindToken.blind
-
-  const xT = context.unblindPoint(blindedPoint, blindFactor)
+  const xT = context.unblindPoint(signedToken.signedPoint, signedToken.blind)
   // Derive MAC key
-  const sk = context.deriveKey(xT, token)
+  const sk = context.deriveKey(xT, signedToken.seed)
 
   // MAC the request binding data
-  const reqData = [testHost, testPath]
+  const reqData = [host, path]
   const reqBinder = context.createRequestBinding(sk, reqData)
-  const contents = [token, reqBinder]
+  const contents = [signedToken.seed, reqBinder]
 
   const redeemRequest: BlindTokenRequest = {
     type: 'Redeem',
