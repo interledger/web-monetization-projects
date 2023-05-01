@@ -36,17 +36,17 @@ export class CryptoContext {
     }
   }
 
-  public randomPoint() {
+  randomPoint() {
     const seed = randomBytes(this.config.curve.CURVE.nByteLength)
     const point = this.config.hash2Curve(seed)
     return { seed, point }
   }
 
-  public randomNumber() {
+  randomNumber() {
     return bytesToNumberBE(randomBytes(this.config.curve.CURVE.nByteLength))
   }
 
-  public decodePoint(data: string | Uint8Array) {
+  decodePoint(data: string | Uint8Array) {
     return this.config.curve.ProjectivePoint.fromHex(data)
   }
 

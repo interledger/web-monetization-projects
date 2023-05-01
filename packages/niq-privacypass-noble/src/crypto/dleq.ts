@@ -1,4 +1,3 @@
-import { p256 } from '@noble/curves/p256'
 import { mod } from '@noble/curves/abstract/modular'
 import { randomBytes } from '@noble/hashes/utils'
 import { bytesToNumberBE } from '@noble/curves/abstract/utils'
@@ -7,6 +6,7 @@ import { Point } from './types'
 import { defaultContext } from './config'
 import { randScalar } from './randScalar'
 import { CryptoContext } from './context'
+import { Commitment } from './commitment'
 
 export interface DLEQProof {
   c: Uint8Array
@@ -14,6 +14,22 @@ export interface DLEQProof {
 }
 
 export class DLEQ {
+  constructor(private context: CryptoContext) {}
+
+  create(commitment: Commitment, m: Point, z: Point, secret: bigint) {
+    return DLEQ.create(commitment.g, commitment.h, m, z, secret, this.context)
+  }
+
+  verifySome(commitments: Commitment[], m: Point, z: Point, proof: DLEQProof) {
+    return commitments.some(c => {
+      return this.verify(c, m, z, proof)
+    })
+  }
+
+  verify(c: Commitment, m: Point, z: Point, proof: DLEQProof) {
+    return DLEQ.prove(c.h, c.g, m, z, proof, this.context)
+  }
+
   static create(
     p1: Point,
     xp1: Point,
@@ -28,7 +44,7 @@ export class DLEQ {
     const B = p2.multiply(nonce)
     const challenge = context.hashUncompressedPoints(p1, xp1, p2, xp2, A, B)
     const c = bytesToNumberBE(challenge)
-    const response = mod(nonce - c * x, p256.CURVE.n)
+    const response = mod(nonce - c * x, context.config.curve.CURVE.n)
     return { c: challenge, r: response }
   }
 
