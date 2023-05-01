@@ -9,6 +9,12 @@ export interface BlindToken {
   blind: bigint
 }
 
+export interface SignedToken extends BlindToken {
+  seed: Uint8Array
+  signedPoint: Point
+  blind: bigint
+}
+
 export type Hash2CurveFn = (bytes: Uint8Array) => Point
 export type PrngFn = (n: number) => Uint8Array
 export type PrngFactory = (seed: Uint8Array) => PrngFn

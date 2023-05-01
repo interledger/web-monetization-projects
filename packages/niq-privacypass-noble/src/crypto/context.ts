@@ -2,7 +2,7 @@
 import { randomBytes } from '@noble/hashes/utils'
 import { invert } from '@noble/curves/abstract/modular'
 import { hmac } from '@noble/hashes/hmac'
-import { bytesToNumberBE } from '@noble/curves/abstract/utils'
+import { bytesToNumberBE, equalBytes } from '@noble/curves/abstract/utils'
 
 import { Base64Utils, createB64Utils } from './b64'
 import { BlindToken, H2Config, Point, PrngFn } from './types'
@@ -59,6 +59,10 @@ export class CryptoContext {
     return hmac(this.config.hash, keyBuffer, message)
   }
 
+  makeHMAC(key: string | Uint8Array) {
+    return hmac.create(this.config.hash, key)
+  }
+
   hashUncompressedPoints(...pts: Point[]) {
     const h = this.config.hash.create()
     pts.forEach(pt => h.update(pt.toRawBytes(false)))
@@ -67,6 +71,36 @@ export class CryptoContext {
 
   hashPointsBigInt(...pts: Point[]) {
     return bytesToNumberBE(this.hashUncompressedPoints(...pts))
+  }
+
+  deriveKey(N: Point, token: Uint8Array): Uint8Array {
+    const h = this.makeHMAC('hash_derive_key')
+    h.update(token)
+    h.update(N.toRawBytes(false))
+    return h.digest()
+  }
+
+  createRequestBinding(key: Uint8Array, data: Uint8Array[]): Uint8Array {
+    const h = this.makeHMAC(key)
+    h.update('hash_request_binding')
+    for (const item of data) {
+      h.update(item as Uint8Array)
+    }
+    return h.digest()
+  }
+
+  checkRequestBinding(
+    key: Uint8Array,
+    supplied: Uint8Array,
+    observed: Uint8Array[]
+  ): boolean {
+    const h = this.makeHMAC(key)
+    h.update('hash_request_binding')
+    for (const item of observed) {
+      h.update(item)
+    }
+    const expected = h.digest()
+    return equalBytes(supplied, expected)
   }
 }
 
