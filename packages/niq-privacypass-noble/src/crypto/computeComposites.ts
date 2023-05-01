@@ -1,12 +1,14 @@
-import { p256 } from '@noble/curves/p256'
-
 import { H2Config, Point } from './types'
 import { randScalar } from './randScalar'
 
 export function computeComposites(
+  // point
   g: Point,
+  // signed point
   y: Point,
+  // points
   p: Point[],
+  // signed points
   q: Point[],
   config: H2Config
 ) {
@@ -43,8 +45,8 @@ export function computeComposites(
       return acc
     },
     {
-      m: p256.ProjectivePoint.ZERO,
-      z: p256.ProjectivePoint.ZERO,
+      m: config.curve.ProjectivePoint.ZERO,
+      z: config.curve.ProjectivePoint.ZERO,
       c: [] as Uint8Array[]
     }
   )

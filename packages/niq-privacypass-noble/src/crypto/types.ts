@@ -9,9 +9,12 @@ export interface BlindToken {
   blind: bigint
 }
 
+export type Hash2CurveFn = (bytes: Uint8Array) => Point
+export type PrngFactory = (seed: Uint8Array) => (n: number) => Uint8Array
+
 export interface H2Config {
   curve: CurveFn
   hash: CHash
-  hash2Curve: (bytes: Uint8Array) => Point
-  prng: (seed: Uint8Array) => (n: number) => Uint8Array
+  hash2Curve: Hash2CurveFn
+  prng: PrngFactory
 }
