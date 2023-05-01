@@ -5,8 +5,8 @@ import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 import { Point } from './types'
 import { defaultContext } from './config'
 import { randomScalar } from './randomScalar'
-import { CryptoContext } from './context'
 import { Commitment } from './commitment'
+import { CryptoContext } from './context'
 
 export interface DLEQProof {
   c: Uint8Array
@@ -16,8 +16,8 @@ export interface DLEQProof {
 export class DLEQ {
   constructor(private context: CryptoContext) {}
 
-  create(commitment: Commitment, m: Point, z: Point, secret: bigint) {
-    return DLEQ.create(commitment.g, commitment.h, m, z, secret, this.context)
+  create(c: Commitment, m: Point, z: Point, secret: bigint) {
+    return DLEQ.create(c.g, c.h, m, z, secret, this.context)
   }
 
   verifySome(commitments: Commitment[], m: Point, z: Point, proof: DLEQProof) {
@@ -27,7 +27,7 @@ export class DLEQ {
   }
 
   verify(c: Commitment, m: Point, z: Point, proof: DLEQProof) {
-    return DLEQ.prove(c.h, c.g, m, z, proof, this.context)
+    return DLEQ.prove(c.g, c.h, m, z, proof, this.context)
   }
 
   static create(

@@ -12,13 +12,16 @@ describe('DLEQ proofs', () => {
     const { point: G } = testContext.randomPoint()
     const H = G.multiply(x)
 
+    const commitment = { g: G, h: H }
+    const dleq = new DLEQ(testContext)
+
     // The blinded token point as submitted by the client
     const { point: M } = testContext.randomPoint()
     // The Server signed token point
     const Z = M.multiply(x)
 
-    const proof = DLEQ.create(G, H, M, Z, x)
-    const verified = DLEQ.prove(G, H, M, Z, proof)
+    const proof = dleq.create(commitment, M, Z, x)
+    const verified = dleq.verify(commitment, M, Z, proof)
     expect(verified).toBe(true)
   })
 })
