@@ -64,13 +64,14 @@ export function createB64Utils(curve: CurveFn): Base64Utils {
 
   return {
     b64db,
-    b64eb,
-    b64ep,
-    b64ej,
-    b64ebn,
-    b64ds,
-    b64dj,
     b64dbn,
-    b64dpt
+    b64dj,
+    b64dpt,
+    b64ds,
+
+    b64eb,
+    b64ebn,
+    b64ej,
+    b64ep
   }
 }
