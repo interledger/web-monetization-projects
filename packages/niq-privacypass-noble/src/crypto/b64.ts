@@ -2,7 +2,7 @@ import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 import { CurveFn, ProjPointType } from '@noble/curves/abstract/weierstrass'
 import { hexToBytes } from '@noble/hashes/utils'
 
-import { Point } from './crypto/types'
+import { Point } from './types'
 
 export interface Base64Utils {
   b64db: (data: string) => Uint8Array

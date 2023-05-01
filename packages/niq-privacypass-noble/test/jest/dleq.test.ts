@@ -1,21 +1,20 @@
-import { randomSecret } from '../../src/crypto/utils'
 import { DLEQ } from '../../src/crypto/dleq'
 
-import { randomPoint } from './tokens'
+import { testContext } from './testconfig'
 
 describe('DLEQ proofs', () => {
   it('should describe DLEQ', () => {
     // https://blog.cloudflare.com/privacy-pass-the-math/
     // See DLEQ proofs
     // Servers secret
-    const x = randomSecret()
+    const x = testContext.randomNumber()
 
     // Servers Commitment
-    const G = randomPoint()
+    const { point: G } = testContext.randomPoint()
     const H = G.multiply(x)
 
     // The blinded token point as submitted by the client
-    const M = randomPoint()
+    const { point: M } = testContext.randomPoint()
     // The Server signed token point
     const Z = M.multiply(x)
 

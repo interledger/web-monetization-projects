@@ -2,10 +2,9 @@
 import { randomBytes } from '@noble/hashes/utils'
 import { invert } from '@noble/curves/abstract/modular'
 import { hmac } from '@noble/hashes/hmac'
-import { sha256 } from '@noble/hashes/sha256'
+import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 
-import { Base64Utils, createB64Utils } from '../b64'
-
+import { Base64Utils, createB64Utils } from './b64'
 import { BlindToken, H2Config, Point } from './types'
 import { randScalar } from './randScalar'
 
@@ -30,17 +29,40 @@ export class CryptoContext {
   }
 
   createBlind(): BlindToken {
-    const seed = randomBytes(this.config.curve.CURVE.nByteLength)
-    const point = this.config.hash2Curve(seed)
+    const { seed, point } = this.randomPoint()
     return {
       seed,
       ...this.blindPoint(point)
     }
   }
 
+  public randomPoint() {
+    const seed = randomBytes(this.config.curve.CURVE.nByteLength)
+    const point = this.config.hash2Curve(seed)
+    return { seed, point }
+  }
+
+  public randomNumber() {
+    return bytesToNumberBE(randomBytes(this.config.curve.CURVE.nByteLength))
+  }
+
+  public decodePoint(data: string | Uint8Array) {
+    return this.config.curve.ProjectivePoint.fromHex(data)
+  }
+
   HMAC(key: Point, message: Buffer) {
-    const keyBuffer = Buffer.from(key.toRawBytes(false))
+    const keyBuffer = key.toRawBytes(false)
     return hmac(this.config.hash, keyBuffer, message)
+  }
+
+  hashUncompressedPoints(...pts: Point[]) {
+    const h = this.config.hash.create()
+    pts.forEach(pt => h.update(pt.toRawBytes(false)))
+    return h.digest()
+  }
+
+  hashPointsBigInt(...pts: Point[]) {
+    return bytesToNumberBE(this.hashUncompressedPoints(...pts))
   }
 }
 

@@ -1,7 +1,7 @@
 // makeIssueTokenRequest.test.ts
 import { makeIssueTokenRequest } from '../../../src/protocol/issue/makeIssueTokenRequest'
-import { cryptoContext } from '../tesconfig'
-import { b64eb, b64ebn, b64ej, b64ep } from '../../../src/b64'
+import { testContext } from '../testconfig'
+import { b64eb, b64ebn, b64ej, b64ep } from '../../../src/crypto/b64'
 
 function logTokenRequest(
   tokenRequest: ReturnType<typeof makeIssueTokenRequest>
@@ -25,7 +25,7 @@ function logTokenRequest(
 
 describe('makeIssueTokenRequest', () => {
   it('should generate valid request and tokens', () => {
-    const tokenRequest = makeIssueTokenRequest(cryptoContext)
+    const tokenRequest = makeIssueTokenRequest(testContext)
     const { request, tokens, bP, bF } = tokenRequest
 
     // Check request type

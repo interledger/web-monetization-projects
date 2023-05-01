@@ -3,8 +3,9 @@ import { sha256 } from '@noble/hashes/sha256'
 // TODO: report typing issue with hashToCurve
 import { hashToCurve } from '@noble/curves/p256'
 
-import { BlindToken, Point } from '../../src/crypto/types'
-import { computeSecret, randomSecret } from '../../src/crypto/utils'
+import { BlindToken, Point } from '../../../../src/crypto/types'
+
+import { computeSecret, randomSecret } from './utils'
 
 function newRandomPoint(seedString?: string): {
   seed: Uint8Array

@@ -1,8 +1,6 @@
-import { p256 } from '@noble/curves/p256'
+import { testContext } from './testconfig'
 
-import { createB64Utils } from '../../src/b64'
-
-const { b64db, b64eb, b64dpt } = createB64Utils(p256)
+const { b64db, b64eb, b64dpt } = testContext
 
 describe('base64 functions', () => {
   describe('b64db', () => {

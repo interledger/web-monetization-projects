@@ -4,9 +4,9 @@ import { makeIssueTokenResponse } from '../../../src/protocol/issue/makeIssueTok
 import { IssueTokenResponse } from '../../../src/protocol/types'
 import { DLEQ } from '../../../src/crypto/dleq'
 import { computeComposites } from '../../../src/crypto/computeComposites'
-import { h2Config, cryptoContext } from '../tesconfig'
+import { testConfig, testContext } from '../testconfig'
 
-const { b64db, b64dbn, b64dj, b64dpt, b64ds } = cryptoContext
+const { b64db, b64dbn, b64dj, b64dpt, b64ds } = testContext
 
 const commitment = {
   G: b64dpt(
@@ -88,7 +88,7 @@ describe('verifyIssueTokenResponse', () => {
       commitment.H,
       issueTokenRequest.bP,
       signedPoints,
-      h2Config
+      testConfig
     )
 
     const proved = DLEQ.prove(

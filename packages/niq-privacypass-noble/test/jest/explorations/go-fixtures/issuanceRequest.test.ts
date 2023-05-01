@@ -1,7 +1,7 @@
 import { BlindTokenRequest } from '../../../../src/protocol/types'
-import { cryptoContext } from '../../tesconfig'
+import { testContext } from '../../testconfig'
 
-const { b64dj, b64dpt, b64ds } = cryptoContext
+const { b64dj, b64dpt, b64ds } = testContext
 
 const BL_SIG_REQ = {
   bl_sig_req:
