@@ -59,7 +59,14 @@ export class CryptoContext {
     return hmac(this.config.hash, keyBuffer, message)
   }
 
-  makeHMAC(key: string | Uint8Array) {
+  makeHMAC(key: string | Uint8Array): {
+    // TODO: for some reason typescript complains when try to export
+    // hmac.create
+    // Error: packages/niq-privacypass-noble/src/crypto/context.ts(62,3): error TS4094: Property 'destroyed' of exported class expression may not be private or protected.
+    // Error: packages/niq-privacypass-noble/src/crypto/context.ts(62,3): error TS4094: Property 'finished' of exported class expression may not be private or protected.
+    update: (bytes: string | Uint8Array) => void
+    digest: () => Uint8Array
+  } {
     return hmac.create(this.config.hash, key)
   }
 
