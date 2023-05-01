@@ -1,13 +1,16 @@
 import { p256 } from '@noble/curves/p256'
 import { mod } from '@noble/curves/abstract/modular'
+import { randomBytes } from '@noble/hashes/utils'
 
-import { Point } from './types'
+import { H2Config, Point } from './types'
 import {
   bytesToNumberBE,
   hashUncompressedPoints,
   hashPointsBigInt,
   randomSecret
 } from './utils'
+import { defaultConfig } from './configuration'
+import { randScalar } from './randScalar'
 
 export interface DLEQProof {
   c: Uint8Array
@@ -20,10 +23,11 @@ export class DLEQ {
     xp1: Point,
     p2: Point,
     xp2: Point,
-    x: bigint
+    x: bigint,
+    config: H2Config = defaultConfig
   ): DLEQProof {
     // TODO: this should use the H2Config curve config
-    const nonce = randomSecret()
+    const { scalar: nonce } = randScalar(config.curve, randomBytes)
     const A = p1.multiply(nonce)
     const B = p2.multiply(nonce)
     const challenge = hashUncompressedPoints(p1, xp1, p2, xp2, A, B)
