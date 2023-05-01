@@ -1,26 +1,21 @@
 import { p256 } from '@noble/curves/p256'
-import { CHash } from '@noble/hashes/utils'
-import { sha256 } from '@noble/hashes/sha256'
-import { CurveFn } from '@noble/curves/abstract/weierstrass'
 
-import { Point } from './types'
+import { H2Config, Point } from './types'
 import { randScalar } from './randScalar'
-import { shakePrng } from './shakePrng'
 
 export function computeComposites(
   g: Point,
   y: Point,
   p: Point[],
   q: Point[],
-  hashFunc: CHash = sha256,
-  curve: CurveFn = p256
+  config: H2Config
 ) {
   if (p.length !== q.length) {
     throw new Error('Unequal point counts')
   }
 
   // seed = H(G, Y, [P], [Q])
-  const hash = hashFunc.create()
+  const hash = config.hash.create()
   // All the points must match the go server implementation which hashes the
   // points in uncompressed form
   hash.update(g.toRawBytes(false))
@@ -31,11 +26,11 @@ export function computeComposites(
   }
 
   const seed = hash.digest()
-  const rand = shakePrng(seed)
+  const rand = config.prng(seed)
 
   return p.reduce(
     (acc, pt, i) => {
-      const { scalar: ci, buf } = randScalar(curve, rand)
+      const { scalar: ci, buf } = randScalar(config.curve, rand)
 
       const cM = pt.multiply(ci)
       const cZ = q[i].multiply(ci)

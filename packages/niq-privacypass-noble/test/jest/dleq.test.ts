@@ -1,6 +1,7 @@
 import { randomSecret } from '../../src/crypto/utils'
-import { randomPoint } from '../../src/crypto/tokens'
 import { DLEQ } from '../../src/crypto/dleq'
+
+import { randomPoint } from './tokens'
 
 describe('DLEQ proofs', () => {
   it('should describe DLEQ', () => {

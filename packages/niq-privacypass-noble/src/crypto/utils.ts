@@ -9,7 +9,7 @@ export { bytesToNumberBE, numberToBytesBE } from '@noble/curves/abstract/utils'
 import { Point } from './types'
 
 export const HMAC = (key: Point, message: Buffer) => {
-  const keyBuffer = Buffer.from(key.toRawBytes(true))
+  const keyBuffer = Buffer.from(key.toRawBytes(false))
   return hmac(sha256, keyBuffer, message)
 }
 

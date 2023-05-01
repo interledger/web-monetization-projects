@@ -1,7 +1,7 @@
 import { p256 } from '@noble/curves/p256'
 
-import { IssueTokenResponse } from '../../../src/protocol/types'
-import { b64dbn, b64ds } from '../../../src/b64'
+import { IssueTokenResponse } from '../../../../src/protocol/types'
+import { b64dbn, b64ds } from '../../../../src/b64'
 
 const P = p256.ProjectivePoint.fromHex.bind(p256.ProjectivePoint)
 

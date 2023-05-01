@@ -1,6 +1,9 @@
-import { bytesToNumberBE } from '@noble/curves/abstract/utils'
+import { bytesToNumberBE, numberToBytesBE } from '@noble/curves/abstract/utils'
 import { p256 } from '@noble/curves/p256'
 import { CurveFn } from '@noble/curves/abstract/weierstrass'
+import { hexToBytes } from '@noble/hashes/utils'
+
+import { Point } from './crypto/types'
 
 export const b64db = (data: string): Uint8Array => {
   const binaryString = atob(data)
@@ -24,6 +27,18 @@ export const b64eb = (bytes: Uint8Array): string => {
 
   const binaryString = chars.join('')
   return btoa(binaryString)
+}
+export const b64ep = (point: Point) => b64eb(point.toRawBytes(false))
+export const b64ej = (data: object) => btoa(JSON.stringify(data))
+
+export const b64ebn = (data: bigint) => {
+  let hexData = data.toString(16)
+  if (hexData.length % 2 !== 0) {
+    hexData = '0' + hexData
+  }
+
+  const paddedBytes = hexToBytes(hexData)
+  return b64eb(paddedBytes)
 }
 
 export const b64ds = (data: string) => atob(data)

@@ -3,6 +3,8 @@ import { bytesToHex } from '@noble/hashes/utils'
 
 import { computeComposites } from '../../src/crypto/computeComposites'
 
+import { h2Config } from './tesconfig'
+
 const P = (hex: string) => p256.ProjectivePoint.fromHex(hex)
 
 const Fixture = {
@@ -64,7 +66,7 @@ describe('computeComposites', () => {
     const m = P(Fixture.output.compositeM)
     const z = P(Fixture.output.compositeZ)
 
-    const composites = computeComposites(g, y, p, q)
+    const composites = computeComposites(g, y, p, q, h2Config)
 
     expect(composites.m.equals(m)).toBe(true)
     expect(composites.z.equals(z)).toBe(true)

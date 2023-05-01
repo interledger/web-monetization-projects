@@ -1,45 +1,34 @@
+// src/crypto/blindPoints.ts
 import { randomBytes } from '@noble/hashes/utils'
-import { sha256 } from '@noble/hashes/sha256'
-// TODO: report typing issue with hashToCurve
-import { hashToCurve } from '@noble/curves/p256'
+import { invert } from '@noble/curves/abstract/modular'
 
-import { BlindToken, Point } from './types'
-import { computeSecret, randomSecret } from './utils'
+import { BlindToken, H2Config, Point } from './types'
+import { randScalar } from './randScalar'
 
-function newRandomPoint(seedString?: string): {
-  seed: Uint8Array
-  point: Point
-} {
-  const seed = seedString
-    ? sha256(`random-point:${seedString}`)
-    : randomBytes(32)
-  const point = hashToCurve(seed) as Point
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  return {
-    seed,
-    point
+export class BlindPoints {
+  constructor(private config: H2Config) {}
+
+  blind(p: Point): { point: Point; blind: bigint } {
+    const { scalar: r, buf } = randScalar(this.config.curve, randomBytes)
+    const point = p.multiply(r)
+    return { point, blind: r }
   }
-}
 
-export function blindPoint(
-  point: Point,
-  seedString?: string
-): { point: Point; blind: bigint } {
-  const bF = seedString ? computeSecret(seedString) : randomSecret()
-  const bP = point.multiply(bF)
-  return { point: bP, blind: bF }
-}
-
-export function createBlindToken(seedString?: string): BlindToken {
-  const randomPoint = newRandomPoint(seedString)
-  const blindedPoint = blindPoint(randomPoint.point, seedString)
-  return {
-    seed: randomPoint.seed,
-    point: blindedPoint.point,
-    blind: blindedPoint.blind
+  unblind(p: Point, blind: bigint): Point {
+    const rInv = invert(blind, this.config.curve.CURVE.n)
+    return p.multiply(rInv)
   }
-}
 
-export const randomPoint = () => {
-  return newRandomPoint().point
+  sign(p: Point, secret: bigint): Point {
+    return p.multiply(secret)
+  }
+
+  createBlind(): BlindToken {
+    const seed = randomBytes(this.config.curve.CURVE.nByteLength)
+    const point = this.config.hash2Curve(seed)
+    return {
+      seed,
+      ...this.blind(point)
+    }
+  }
 }

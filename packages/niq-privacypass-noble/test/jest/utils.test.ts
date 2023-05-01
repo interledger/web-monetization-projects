@@ -1,5 +1,6 @@
-import { createBlindToken } from '../../src/crypto/tokens'
 import { computeSecret, divPoint } from '../../src/crypto/utils'
+
+import { createBlindToken } from './tokens'
 
 describe('createBlindToken', () => {
   test('returns a BlindToken object', () => {
