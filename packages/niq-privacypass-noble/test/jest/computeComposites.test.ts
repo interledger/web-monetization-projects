@@ -65,7 +65,7 @@ describe('computeComposites', () => {
     const m = P(Fixture.output.compositeM)
     const z = P(Fixture.output.compositeZ)
 
-    const composites = computeComposites(g, y, p, q, testConfig)
+    const composites = computeComposites(g, y, p, q, testContext)
 
     expect(composites.m.equals(m)).toBe(true)
     expect(composites.z.equals(z)).toBe(true)

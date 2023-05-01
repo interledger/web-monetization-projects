@@ -5,7 +5,7 @@ import { hmac } from '@noble/hashes/hmac'
 import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 
 import { Base64Utils, createB64Utils } from './b64'
-import { BlindToken, H2Config, Point } from './types'
+import { BlindToken, H2Config, Point, PrngFn } from './types'
 import { randScalar } from './randScalar'
 
 export class CryptoContext {
@@ -42,8 +42,12 @@ export class CryptoContext {
     return { seed, point }
   }
 
-  randomNumber() {
-    return bytesToNumberBE(randomBytes(this.config.curve.CURVE.nByteLength))
+  randomScalar(rand: PrngFn = randomBytes) {
+    return randScalar(this.config.curve, rand).scalar
+  }
+
+  randomScalarWithBuf(rand: PrngFn = randomBytes) {
+    return randScalar(this.config.curve, rand)
   }
 
   decodePoint(data: string | Uint8Array) {

@@ -88,7 +88,7 @@ describe('verifyIssueTokenResponse', () => {
       commitment.H,
       issueTokenRequest.bP,
       signedPoints,
-      testConfig
+      testContext
     )
 
     const proved = DLEQ.prove(

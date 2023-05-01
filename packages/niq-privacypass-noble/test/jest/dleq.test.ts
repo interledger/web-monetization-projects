@@ -7,7 +7,7 @@ describe('DLEQ proofs', () => {
     // https://blog.cloudflare.com/privacy-pass-the-math/
     // See DLEQ proofs
     // Servers secret
-    const x = testContext.randomNumber()
+    const x = testContext.randomScalar()
 
     // Servers Commitment
     const { point: G } = testContext.randomPoint()

@@ -1,5 +1,5 @@
 import { CHash, concatBytes } from '@noble/hashes/utils'
-import { ProjPointType, CurveFn } from '@noble/curves/abstract/weierstrass'
+import { CurveFn, ProjPointType } from '@noble/curves/abstract/weierstrass'
 import { p256 } from '@noble/curves/p256'
 import { sha256 } from '@noble/hashes/sha256'
 

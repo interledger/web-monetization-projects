@@ -1,5 +1,5 @@
-import { H2Config, Point } from './types'
-import { randScalar } from './randScalar'
+import { Point } from './types'
+import { CryptoContext } from './context'
 
 export function computeComposites(
   // point
@@ -10,14 +10,14 @@ export function computeComposites(
   p: Point[],
   // signed points
   q: Point[],
-  config: H2Config
+  context: CryptoContext
 ) {
   if (p.length !== q.length) {
     throw new Error('Unequal point counts')
   }
 
   // seed = H(G, Y, [P], [Q])
-  const hash = config.hash.create()
+  const hash = context.config.hash.create()
   // All the points must match the go server implementation which hashes the
   // points in uncompressed form
   hash.update(g.toRawBytes(false))
@@ -28,11 +28,13 @@ export function computeComposites(
   }
 
   const seed = hash.digest()
-  const rand = config.prng(seed)
+  const rand = context.config.prng(seed)
+
+  const Zero = context.config.curve.ProjectivePoint.ZERO
 
   return p.reduce(
     (acc, pt, i) => {
-      const { scalar: ci, buf } = randScalar(config.curve, rand)
+      const { scalar: ci, buf } = context.randomScalarWithBuf(rand)
 
       const cM = pt.multiply(ci)
       const cZ = q[i].multiply(ci)
@@ -45,8 +47,8 @@ export function computeComposites(
       return acc
     },
     {
-      m: config.curve.ProjectivePoint.ZERO,
-      z: config.curve.ProjectivePoint.ZERO,
+      m: Zero,
+      z: Zero,
       c: [] as Uint8Array[]
     }
   )
