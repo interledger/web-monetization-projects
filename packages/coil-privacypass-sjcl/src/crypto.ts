@@ -467,16 +467,16 @@ export function verifyProof(
     pointH,
     prngName
   )
-  const cZ = _scalarMult(dleq.C, composites.z)
-  const rM = _scalarMult(dleq.R, composites.m)
+  const cZ = _scalarMult(dleq.C, composites.Z)
+  const rM = _scalarMult(dleq.R, composites.M)
   const B = cZ.toJac().add(rM).toAffine()
 
   // Recalculate C' and check if C =?= C'
   const h = new CURVE_H2C_HASH() // use the h2c hash for convenience
   h.update(sec1EncodeToBits(pointG, signatures.compressed))
   h.update(sec1EncodeToBits(pointH, signatures.compressed))
-  h.update(sec1EncodeToBits(composites.m, signatures.compressed))
-  h.update(sec1EncodeToBits(composites.z, signatures.compressed))
+  h.update(sec1EncodeToBits(composites.M, signatures.compressed))
+  h.update(sec1EncodeToBits(composites.Z, signatures.compressed))
   h.update(sec1EncodeToBits(A, signatures.compressed))
   h.update(sec1EncodeToBits(B, signatures.compressed))
   const digestBits = h.finalize()
@@ -535,7 +535,7 @@ export function recomputeComposites(
     cM = cM.add(cMi)
     cZ = cZ.add(cZi)
   }
-  return { m: cM.toAffine(), z: cZ.toAffine() }
+  return { M: cM.toAffine(), Z: cZ.toAffine() }
 }
 
 type PRNGImpl =
