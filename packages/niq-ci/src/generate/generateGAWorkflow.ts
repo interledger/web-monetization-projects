@@ -53,13 +53,14 @@ const steps = [
   {
     name: 'Get PNPM Store Path',
     id: 'pnpm-store-path',
-    run: 'echo "::set-output name=path::$(pnpm store path)"'
+    // run: 'echo "::set-output name=path::$(pnpm store path)"'
+    run: `printf 'STORE_PATH=%q\\n' "$(pnpm store path)" >> $GITHUB_OUTPUT`
   },
   {
     name: 'Cache',
     uses: 'actions/cache@v3',
     with: {
-      path: `\${{ steps.pnpm-store-path.outputs.path }}
+      path: `\${{ steps.pnpm-store-path.outputs.STORE_PATH }}
 \${{ github.workspace }}/node_modules
 \${{ github.workspace }}/puppeteer-cache`,
       key: cacheKey
