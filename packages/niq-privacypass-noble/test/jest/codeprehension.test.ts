@@ -175,13 +175,13 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     // ### Client Redeem Request
     const msg = Buffer.from('in a bottle')
     const sT = divPoint(issueResponse.sbT, b)
-    const redeemRequest = { t, M: msg, mac: HMAC(sT, msg) }
+    const redeemRequest = { t, m: msg, mac: HMAC(sT, msg) }
 
     // ### Server Redeem Validation
     {
       const T = hashBigIntToCurve(redeemRequest.t)
       const sT = T.multiply(s)
-      const mac = HMAC(sT, redeemRequest.M)
+      const mac = HMAC(sT, redeemRequest.m)
       expect(mac).toEqual(redeemRequest.mac)
     }
 

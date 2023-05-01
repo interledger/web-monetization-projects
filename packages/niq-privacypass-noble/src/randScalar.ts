@@ -7,10 +7,7 @@ import { bytesToHex } from '@noble/hashes/utils'
 // number of bytes, we mask off the unnecessary bits. h/t agl
 const mask = [0xff, 0x01, 0x03, 0x07, 0x0f, 0x1f, 0x3f, 0x7f]
 
-export function randScalar(
-  curve: CurveFn,
-  rand: (size: number) => Uint8Array
-): bigint {
+export function randScalar(curve: CurveFn, rand: (size: number) => Uint8Array) {
   const N = curve.CURVE.n // base point subgroup order
   const bitLen = bitLength(N)
   const byteLen = (bitLen + 7) >> 3
@@ -30,6 +27,6 @@ export function randScalar(
     if (candidate >= N) {
       continue
     }
-    return candidate
+    return { scalar: candidate, buf }
   }
 }
