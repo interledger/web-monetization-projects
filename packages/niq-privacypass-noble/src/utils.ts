@@ -16,13 +16,13 @@ export const HMAC = (key: Point, message: Buffer) => {
 export const divPoint = (point: Point, scalar: bigint) =>
   point.multiply(invert(scalar, p256.CURVE.n))
 
-export const hashPoints = (...pts: Point[]) => {
+export const hashUncompressedPoints = (...pts: Point[]) => {
   const h = sha256.create()
-  pts.forEach(pt => h.update(Buffer.from(pt.toRawBytes(true))))
+  pts.forEach(pt => h.update(Buffer.from(pt.toRawBytes(false))))
   return h.digest()
 }
 export const hashPointsBigInt = (...pts: Point[]) => {
-  return bytesToNumberBE(hashPoints(...pts))
+  return bytesToNumberBE(hashUncompressedPoints(...pts))
 }
 
 export const randomSecret = () => bytesToNumberBE(p256.utils.randomPrivateKey())

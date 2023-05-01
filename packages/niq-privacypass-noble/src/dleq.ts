@@ -4,7 +4,7 @@ import { mod } from '@noble/curves/abstract/modular'
 import { Point } from './types'
 import {
   bytesToNumberBE,
-  hashPoints,
+  hashUncompressedPoints,
   hashPointsBigInt,
   randomSecret
 } from './utils'
@@ -19,7 +19,7 @@ export class DLEQ {
     const nonce = randomSecret()
     const A = p1.multiply(nonce)
     const B = p2.multiply(nonce)
-    const challenge = hashPoints(p1, xp1, p2, xp2, A, B)
+    const challenge = hashUncompressedPoints(p1, xp1, p2, xp2, A, B)
     const c = bytesToNumberBE(challenge)
     const response = mod(nonce - c * x, p256.CURVE.n)
     return { c: challenge, s: response }

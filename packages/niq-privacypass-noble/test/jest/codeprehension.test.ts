@@ -8,7 +8,7 @@ import {
   divPoint,
   hashBigIntToCurve,
   hashBytesToCurve,
-  hashPoints,
+  hashUncompressedPoints,
   HMAC,
   randomNumber,
   randomSecret
@@ -233,7 +233,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
     const k = randomSecret() // nonce
     const A = G.multiply(k)
     const B = issueRequest.bT.multiply(k)
-    const c = hashPoints(G, sG, issueRequest.bT, sBT, A, B)
+    const c = hashUncompressedPoints(G, sG, issueRequest.bT, sBT, A, B)
     const cn = bytesToNumberBE(c)
     const s = mod(k - cn * x, p256.CURVE.n)
     const DLEQ = { c, s }
@@ -248,7 +248,7 @@ describe('PrivacyPass Scenarios as code scribbles', () => {
       const cn = bytesToNumberBE(c)
       const A2 = G.multiply(s).add(sG.multiply(cn))
       const B2 = bT.multiply(s).add(sBT.multiply(cn))
-      const c2 = hashPoints(G, sG, bT, sBT, A2, B2)
+      const c2 = hashUncompressedPoints(G, sG, bT, sBT, A2, B2)
       expect(A.equals(A2)).toBe(true)
       expect(B.equals(B2)).toBe(true)
       expect(c).toEqual(c2)
