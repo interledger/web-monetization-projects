@@ -1,10 +1,8 @@
-import { Point } from '../crypto/types'
-import { b64ep } from '../b64'
-import { BlindPoints } from '../crypto/tokens'
+import { Point } from '../../crypto/types'
+import { CryptoContext } from '../../crypto/context'
+import { BlindTokenRequest } from '../types'
 
-import { BlindTokenRequest } from './types'
-
-export function makeIssueTokenRequest(points: BlindPoints): {
+export function makeIssueTokenRequest(context: CryptoContext): {
   request: BlindTokenRequest
   tokens: Uint8Array[]
   bP: Point[]
@@ -15,7 +13,7 @@ export function makeIssueTokenRequest(points: BlindPoints): {
   const bP: Point[] = Array(tokens.length)
 
   for (let i = 0; i < tokens.length; i++) {
-    const blindToken = points.createBlind()
+    const blindToken = context.createBlind()
     tokens[i] = blindToken.seed
     bP[i] = blindToken.point
     bF[i] = blindToken.blind
@@ -23,7 +21,7 @@ export function makeIssueTokenRequest(points: BlindPoints): {
 
   const request: BlindTokenRequest = {
     type: 'Issue',
-    contents: bP.map(b64ep)
+    contents: bP.map(context.b64ep)
   }
 
   return { request, tokens, bP, bF }

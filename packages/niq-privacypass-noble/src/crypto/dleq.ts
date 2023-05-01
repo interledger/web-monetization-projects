@@ -5,9 +5,8 @@ import { randomBytes } from '@noble/hashes/utils'
 import { H2Config, Point } from './types'
 import {
   bytesToNumberBE,
-  hashUncompressedPoints,
   hashPointsBigInt,
-  randomSecret
+  hashUncompressedPoints
 } from './utils'
 import { defaultConfig } from './configuration'
 import { randScalar } from './randScalar'

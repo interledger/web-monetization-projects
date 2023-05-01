@@ -1,11 +1,12 @@
 import { ProjPointType } from '@noble/curves/abstract/weierstrass'
 
-import { b64db, b64dbn, b64dj, b64dpt, b64ds } from '../../../src/b64'
-import { makeIssueTokenResponse } from '../../../src/protocol/makeIssueTokenResponse'
+import { makeIssueTokenResponse } from '../../../src/protocol/issue/makeIssueTokenResponse'
 import { IssueTokenResponse } from '../../../src/protocol/types'
 import { DLEQ } from '../../../src/crypto/dleq'
 import { computeComposites } from '../../../src/crypto/computeComposites'
-import { h2Config } from '../tesconfig'
+import { h2Config, cryptoContext } from '../tesconfig'
+
+const { b64db, b64dbn, b64dj, b64dpt, b64ds } = cryptoContext
 
 const commitment = {
   G: b64dpt(

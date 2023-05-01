@@ -1,7 +1,9 @@
 import { p256 } from '@noble/curves/p256'
 
 import { IssueTokenResponse } from '../../../../src/protocol/types'
-import { b64dbn, b64ds } from '../../../../src/b64'
+import { cryptoContext } from '../../tesconfig'
+
+const { b64dbn, b64ds } = cryptoContext
 
 const P = p256.ProjectivePoint.fromHex.bind(p256.ProjectivePoint)
 

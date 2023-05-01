@@ -15,9 +15,10 @@ const YBYTE = new Uint8Array([0x02])
 
 export function hashAndInc(
   seed: Uint8Array,
-  label: Uint8Array = INC_H2C_LABEL,
   HashClass: CHash = sha256,
-  curve: CurveFn = p256
+  // We can't use CryptoContext or Config here
+  curve: CurveFn = p256,
+  label: Uint8Array = INC_H2C_LABEL
 ): ProjPointType<bigint> {
   let h = HashClass.create()
   h.update(label)

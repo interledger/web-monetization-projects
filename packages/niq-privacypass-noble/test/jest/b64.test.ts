@@ -1,4 +1,8 @@
-import { b64db, b64eb, b64dpt } from '../../src/b64'
+import { p256 } from '@noble/curves/p256'
+
+import { createB64Utils } from '../../src/b64'
+
+const { b64db, b64eb, b64dpt } = createB64Utils(p256)
 
 describe('base64 functions', () => {
   describe('b64db', () => {

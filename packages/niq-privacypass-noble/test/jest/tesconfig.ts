@@ -3,7 +3,7 @@ import { sha256 } from '@noble/hashes/sha256'
 
 import { H2Config, Point } from '../../src/crypto/types'
 import { hashAndInc } from '../../src/crypto/hashAndInc'
-import { BlindPoints } from '../../src/crypto/tokens'
+import { CryptoContext } from '../../src/crypto/context'
 import { shakePrng } from '../../src/crypto/shakePrng'
 
 export const h2Config: H2Config = {
@@ -14,4 +14,4 @@ export const h2Config: H2Config = {
     return hashAndInc(bytes) as Point
   }
 }
-export const points = new BlindPoints(h2Config)
+export const cryptoContext = new CryptoContext(h2Config)
