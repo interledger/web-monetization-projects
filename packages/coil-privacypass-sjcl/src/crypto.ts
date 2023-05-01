@@ -704,7 +704,7 @@ export function parseDleqProof(proofStr: string): {
   const dleqProofM = JSON.parse(proofStr)
   return {
     R: getBigNumFromB64(dleqProofM.R),
-    c: getBigNumFromB64(dleqProofM.C)
+    C: getBigNumFromB64(dleqProofM.C)
   }
 }
 

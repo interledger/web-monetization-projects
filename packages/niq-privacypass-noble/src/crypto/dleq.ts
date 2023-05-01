@@ -22,6 +22,7 @@ export class DLEQ {
     xp2: Point,
     x: bigint
   ): DLEQProof {
+    // TODO: this should use the H2Config curve config
     const nonce = randomSecret()
     const A = p1.multiply(nonce)
     const B = p2.multiply(nonce)
