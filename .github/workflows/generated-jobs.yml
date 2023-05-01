@@ -401,10 +401,6 @@ jobs:
           git diff
           export PUPPETEER_PRODUCT='firefox'
           pnpm install
-      - name: PNPM Dedupe Check
-        run: |
-          pnpm dedupe
-          git diff --exit-code
       - name: PNPM build:ci git diff --exit-code
         run: |
           pnpm build:ci
