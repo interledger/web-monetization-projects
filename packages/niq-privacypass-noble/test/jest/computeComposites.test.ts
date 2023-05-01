@@ -1,7 +1,7 @@
 import { p256 } from '@noble/curves/p256'
 import { bytesToHex } from '@noble/hashes/utils'
 
-import { computeComposites } from '../../src/computeComposites'
+import { computeComposites } from '../../src/crypto/computeComposites'
 
 const P = (hex: string) => p256.ProjectivePoint.fromHex(hex)
 

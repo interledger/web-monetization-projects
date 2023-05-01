@@ -1,6 +1,7 @@
 import { p256 } from '@noble/curves/p256'
 import { CHash } from '@noble/hashes/utils'
 import { sha256 } from '@noble/hashes/sha256'
+import { CurveFn } from '@noble/curves/abstract/weierstrass'
 
 import { Point } from './types'
 import { randScalar } from './randScalar'
@@ -11,7 +12,8 @@ export function computeComposites(
   y: Point,
   p: Point[],
   q: Point[],
-  hashFunc: CHash = sha256
+  hashFunc: CHash = sha256,
+  curve: CurveFn = p256
 ) {
   if (p.length !== q.length) {
     throw new Error('Unequal point counts')
@@ -33,7 +35,7 @@ export function computeComposites(
 
   return p.reduce(
     (acc, pt, i) => {
-      const { scalar: ci, buf } = randScalar(p256, rand)
+      const { scalar: ci, buf } = randScalar(curve, rand)
 
       const cM = pt.multiply(ci)
       const cZ = q[i].multiply(ci)

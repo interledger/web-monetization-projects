@@ -2,7 +2,7 @@ import { shake256, Keccak } from '@noble/hashes/sha3'
 import { p256 } from '@noble/curves/p256'
 import { hexToBytes } from '@noble/hashes/utils'
 
-import { randScalar } from '../../src/randScalar'
+import { randScalar } from '../../src/crypto/randScalar'
 
 describe('randScalar', () => {
   const seed =

@@ -3,7 +3,7 @@ import { p256 } from '@noble/curves/p256'
 import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 import { mod } from '@noble/curves/abstract/modular'
 
-import { randomPoint } from '../../src/tokens'
+import { randomPoint } from '../../src/crypto/tokens'
 import {
   divPoint,
   hashBigIntToCurve,
@@ -12,8 +12,8 @@ import {
   HMAC,
   randomNumber,
   randomSecret
-} from '../../src/utils'
-import { DLEQ } from '../../src/dleq'
+} from '../../src/crypto/utils'
+import { DLEQ } from '../../src/crypto/dleq'
 
 describe('PrivacyPass Scenarios as code scribbles', () => {
   it('should describe scenario 1 - linkability', () => {

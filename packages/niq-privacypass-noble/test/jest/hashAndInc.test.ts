@@ -1,6 +1,6 @@
 import { hexToBytes } from '@noble/hashes/utils'
 
-import { hashAndInc } from '../../src/hashAndInc'
+import { hashAndInc } from '../../src/crypto/hashAndInc'
 
 const TEST_CASES = [
   {
