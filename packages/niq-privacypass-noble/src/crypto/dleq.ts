@@ -32,7 +32,6 @@ export class DLEQ {
     x: bigint,
     context: CryptoContext = defaultContext
   ): DLEQProof {
-    // TODO: this should use the H2Config curve config
     const { scalar: nonce } = randomScalar(context.config.curve, randomBytes)
     const A = p1.multiply(nonce)
     const B = p2.multiply(nonce)
