@@ -21,7 +21,7 @@ describe('DLEQ proofs', () => {
     const Z = M.multiply(x)
 
     const proof = dleq.create(commitment, M, Z, x)
-    const verified = dleq.verify(commitment, M, Z, proof)
+    const verified = dleq.prove(commitment, M, Z, proof)
     expect(verified).toBe(true)
   })
 })

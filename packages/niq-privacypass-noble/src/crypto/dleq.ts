@@ -6,7 +6,7 @@ import { Point } from './types'
 import { defaultContext } from './config'
 import { randomScalar } from './randomScalar'
 import { Commitment } from './commitment'
-import { CryptoContext } from './context'
+import type { CryptoContext } from './context'
 
 export interface DLEQProof {
   c: Uint8Array
@@ -20,13 +20,7 @@ export class DLEQ {
     return DLEQ.create(c.g, c.h, m, z, secret, this.context)
   }
 
-  verifySome(commitments: Commitment[], m: Point, z: Point, proof: DLEQProof) {
-    return commitments.some(c => {
-      return this.verify(c, m, z, proof)
-    })
-  }
-
-  verify(c: Commitment, m: Point, z: Point, proof: DLEQProof) {
+  prove(c: Commitment, m: Point, z: Point, proof: DLEQProof) {
     return DLEQ.prove(c.g, c.h, m, z, proof, this.context)
   }
 

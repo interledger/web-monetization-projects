@@ -1,5 +1,5 @@
 import { Point } from './types'
-import { CryptoContext } from './context'
+import type { CryptoContext } from './context'
 
 export function computeComposites(
   // point

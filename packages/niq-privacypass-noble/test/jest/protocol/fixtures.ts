@@ -1,6 +1,10 @@
 import { testContext } from '../testconfig'
 import { Point } from '../../../src/crypto/types'
 import { b64db, b64dbn } from '../../../src/crypto/b64'
+import {
+  IssueTokenRequestDes,
+  IssueTokenResponseDes
+} from '../../../src/protocol/types/des'
 
 export const commitment = {
   G: testContext.decodePointB64(
@@ -51,6 +55,10 @@ export const issueTokenRequest: {
     'fHkiRzI/o94RoqZVCxOnprgZ7c83b9nAJjcSa8idkrs=',
     '6BWZn/2vP4QLC2VIBxcsUsqtIiTOTCGCiW5hLlkZjYc='
   ].map(b64dbn)
+}
+
+export const issueTokenRequestDes: IssueTokenRequestDes = {
+  contents: issueTokenRequest.bP
 }
 
 export const issueResponse =
