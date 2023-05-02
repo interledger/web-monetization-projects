@@ -96,16 +96,11 @@ export class CryptoContext {
   }
 
   checkRequestBinding(
+    mac: Uint8Array,
     key: Uint8Array,
-    supplied: Uint8Array,
-    observed: Uint8Array[]
+    data: Hashable[]
   ): boolean {
-    const h = this.makeHMAC(key)
-    h.update('hash_request_binding')
-    for (const item of observed) {
-      h.update(item)
-    }
-    const expected = h.digest()
-    return equalBytes(supplied, expected)
+    const expected = this.createRequestBinding(key, data)
+    return equalBytes(mac, expected)
   }
 }
