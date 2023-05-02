@@ -31,7 +31,7 @@ describe('bl_sig_req', () => {
         "type": "Issue",
       }
     `)
-    expect(actual.contents.map(v => testContext.decodePointB64(v)).shift())
+    expect(actual.contents.map(v => testContext.b64dpt(v)).shift())
       .toMatchInlineSnapshot(`
       Point {
         "px": 30732376281519287560868674779110792350007175663169242228025832276419458133493n,

@@ -30,7 +30,3 @@ describe('randScalar', () => {
     )
   })
 })
-
-describe('Point at infinity - Zero', () => {
-  it('the point plus another point should equalt the 2nd point', () => {})
-})

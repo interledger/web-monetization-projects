@@ -35,7 +35,7 @@ export function parseIssueTokenResponse(
   context: CryptoContext
 ): IssueTokenResponseDes {
   const inner = b64dj(response) as IssueTokenResponseInnerSer
-  const sig = inner.sigs.map(context.decodePointB64)
+  const sig = inner.sigs.map(context.b64dpt)
 
   const proofString = b64ds(inner.proof)
   const proof = JSON.parse(proofString.slice(BATCH_PROOF_HEADER.length))

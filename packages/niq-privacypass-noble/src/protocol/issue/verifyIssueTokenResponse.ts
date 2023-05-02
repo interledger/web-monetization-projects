@@ -3,7 +3,7 @@ import { CryptoContext } from '../../crypto/context'
 import { computeComposites } from '../../crypto/computeComposites'
 import { issueTokenRequest } from '../../../test/jest/protocol/fixtures'
 import { DLEQ } from '../../crypto/dleq'
-import { Commitment } from '../../crypto/commitment'
+import { Commitment } from '../../crypto/types'
 
 export function verifyIssueTokenResponse(
   request: IssueTokenRequestDes,

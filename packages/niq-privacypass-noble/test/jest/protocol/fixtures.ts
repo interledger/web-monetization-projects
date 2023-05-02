@@ -1,16 +1,13 @@
 import { testContext } from '../testconfig'
-import { Point } from '../../../src/crypto/types'
+import { Point, Commitment } from '../../../src/crypto/types'
 import { b64db, b64dbn } from '../../../src/crypto/b64'
-import {
-  IssueTokenRequestDes,
-  IssueTokenResponseDes
-} from '../../../src/protocol/types/des'
+import { IssueTokenRequestDes } from '../../../src/protocol/types/des'
 
-export const commitment = {
-  G: testContext.decodePointB64(
+export const commitment: Commitment = {
+  g: testContext.b64dpt(
     'BCyENEmEdWz3Wivy7iwXFcLZ0xOW7PCe2BtoMD6sYBqUK+PBZad5euc1tP9ekcdSDxxK3ijgHsQ1PqQim4VqDGo='
   ),
-  H: testContext.decodePointB64(
+  h: testContext.b64dpt(
     'BJj8hRLfPSe+GNfbS3Jd2XmYU3XTEJw+TaTxx7M9lxVY9BDI6toWVpmffMR0P28XJcV3W0SGWX2OOrRLaBYGhwM='
   )
 }
@@ -42,7 +39,7 @@ export const issueTokenRequest: {
     'BMl7uA5ZNMu58lNpTtwIV52p1nFM5pwnKMPxM00/vR7weReClPUeQ7IX2shDx7lIFKBtfGGERm+zT5VZBIqgMD0=',
     'BMSjrSRJf5U9FvZ0N0hHXnHn7oLUrMBP9+F+SGsyBZaMWKX9cyUSmUyZd0jHpzWagDN41nLpK7yPL9W2itOtd2w=',
     'BFLWW9txBn+cwXAdy/1bqILZUS9QWWfTJ7P4cnOE5MGPymHKs5xI+2uB9WSQ6q00V7FtTuIM4jkkwFS+S73k4ak='
-  ].map(v => testContext.decodePointB64(v)),
+  ].map(v => testContext.b64dpt(v)),
   bF: [
     'lPb9JM6oxQlMC7HxZOScd/feaGVr4aB2uaF1i1dTSes=',
     'Y7ePm5mHNVUKl32VNdr9KEa8bjCyXbcb8nBjZ3XRhts=',

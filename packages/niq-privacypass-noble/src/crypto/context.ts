@@ -10,7 +10,7 @@ import { b64db } from './b64'
 export class CryptoContext {
   constructor(public config: H2Config) {
     // bind this so can be used in map() calls
-    this.decodePointB64 = this.decodePointB64.bind(this)
+    this.b64dpt = this.b64dpt.bind(this)
   }
 
   blindPoint(p: Point): { blindedPoint: Point; blind: bigint } {
@@ -54,7 +54,7 @@ export class CryptoContext {
     return this.config.curve.ProjectivePoint.fromHex(data)
   }
 
-  decodePointB64(data: string) {
+  b64dpt(data: string) {
     return this.decodePoint(b64db(data))
   }
 

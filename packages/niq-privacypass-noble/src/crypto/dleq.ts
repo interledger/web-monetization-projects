@@ -2,10 +2,9 @@ import { mod } from '@noble/curves/abstract/modular'
 import { randomBytes } from '@noble/hashes/utils'
 import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 
-import { Point } from './types'
+import { Commitment, Point } from './types'
 import { defaultContext } from './config'
 import { randomScalar } from './randomScalar'
-import { Commitment } from './commitment'
 import type { CryptoContext } from './context'
 
 export interface DLEQProof {

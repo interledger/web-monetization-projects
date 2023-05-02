@@ -28,3 +28,9 @@ export interface H2Config {
   hash2Curve: Hash2CurveFn
   prng: PrngFactory
 }
+
+export interface Commitment {
+  g: Point
+  // g * sK
+  h: Point
+}
