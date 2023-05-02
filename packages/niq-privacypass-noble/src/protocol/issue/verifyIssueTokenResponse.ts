@@ -1,7 +1,6 @@
 import { IssueTokenRequestDes, IssueTokenResponseDes } from '../types/des'
 import { CryptoContext } from '../../crypto/context'
 import { computeComposites } from '../../crypto/computeComposites'
-import { issueTokenRequest } from '../../../test/jest/protocol/fixtures'
 import { DLEQ } from '../../crypto/dleq'
 import { Commitment } from '../../crypto/types'
 
@@ -17,7 +16,9 @@ export function verifyIssueTokenResponse(
     const composites = computeComposites(
       c.g,
       c.h,
-      issueTokenRequest.bP,
+      // Blinded points
+      request.contents,
+      // Signed blinded points
       response.sigs,
       context
     )

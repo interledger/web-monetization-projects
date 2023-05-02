@@ -14,22 +14,21 @@ describe('makeIssueTokenResponse', () => {
 describe('verifyIssueTokenResponse', () => {
   it('should be possible to verify the response', () => {
     const parsed = parseIssueTokenResponse(issueResponse, testContext)
-    const commitmentDes = { g: commitment.G, h: commitment.H }
     const verified = verifyIssueTokenResponse(
       issueTokenRequestDes,
       parsed,
-      [commitmentDes],
+      [commitment],
       testContext
     )
     expect(verified).toBe(true)
   })
   it('should be not verify with incorrect commitment', () => {
     const parsed = parseIssueTokenResponse(issueResponse, testContext)
-    const commitmentDes = { g: commitment.G, h: commitment.G.multiply(123n) }
+    const bustedCommitment = { g: commitment.g, h: commitment.g }
     const verified = verifyIssueTokenResponse(
       issueTokenRequestDes,
       parsed,
-      [commitmentDes],
+      [bustedCommitment],
       testContext
     )
     expect(verified).toBe(false)
