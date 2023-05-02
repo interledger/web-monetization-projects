@@ -7,10 +7,10 @@ export function makeRedeemTokenRequest(
   context: CryptoContext,
   signedToken: SignedToken,
   //
-  host: Uint8Array,
-  path: Uint8Array
+  host: Uint8Array | string,
+  path: Uint8Array | string
 ): BlindTokenRequestSer {
-  // Unblind a point
+  // Un-blind a point
   const xT = context.unblindPoint(signedToken.signedPoint, signedToken.blind)
   // Derive MAC key
   const sk = context.deriveKey(xT, signedToken.seed)
@@ -20,10 +20,8 @@ export function makeRedeemTokenRequest(
   const reqBinder = context.createRequestBinding(sk, reqData)
   const contents = [signedToken.seed, reqBinder]
 
-  const redeemRequest: BlindTokenRequestSer = {
+  return {
     type: 'Redeem',
     contents: contents.map(content => b64eb(content))
   }
-
-  return redeemRequest
 }

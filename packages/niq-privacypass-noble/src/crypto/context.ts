@@ -92,11 +92,14 @@ export class CryptoContext {
     return h.digest()
   }
 
-  createRequestBinding(key: Uint8Array, data: Uint8Array[]): Uint8Array {
+  createRequestBinding(
+    key: Uint8Array,
+    data: (Uint8Array | string)[]
+  ): Uint8Array {
     const h = this.makeHMAC(key)
     h.update('hash_request_binding')
     for (const item of data) {
-      h.update(item as Uint8Array)
+      h.update(item)
     }
     return h.digest()
   }
