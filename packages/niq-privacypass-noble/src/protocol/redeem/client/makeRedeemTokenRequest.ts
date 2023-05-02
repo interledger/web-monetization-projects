@@ -1,7 +1,6 @@
 import { RedeemTokenRequestSer } from '../../types/ser'
 import { CryptoContext } from '../../../crypto/context'
 import { Hashable, SignedToken } from '../../../crypto/types'
-import { b64eb } from '../../../crypto/b64'
 import { RedeemTokenRequestDes } from '../../types/des'
 import { serializeRedeemTokenRequest } from '../../serdes'
 
