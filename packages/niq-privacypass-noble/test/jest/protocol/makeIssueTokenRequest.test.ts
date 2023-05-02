@@ -17,7 +17,7 @@ describe('makeIssueTokenRequest', () => {
     for (const token of tokens) {
       expect(token.seed).toBeInstanceOf(Uint8Array)
       expect(typeof token.blind).toBe('bigint')
-      expect(token.point).toBeInstanceOf(curve.ProjectivePoint)
+      expect(token.blindedPoint).toBeInstanceOf(curve.ProjectivePoint)
     }
   })
 })

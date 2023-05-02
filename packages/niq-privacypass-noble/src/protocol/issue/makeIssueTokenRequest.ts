@@ -1,11 +1,11 @@
-import { BlindToken } from '../../crypto/types'
+import { BlindedToken } from '../../crypto/types'
 import { CryptoContext } from '../../crypto/context'
 import { BlindTokenRequestSer } from '../types/ser'
 import { b64ept } from '../../crypto/b64'
 
 export type TokenRequestReturn = {
   request: BlindTokenRequestSer
-  tokens: BlindToken[]
+  tokens: BlindedToken[]
 }
 
 export function makeIssueTokenRequest(
@@ -23,7 +23,7 @@ export function makeIssueTokenRequest(
   for (let i = 0; i < numTokens; i++) {
     const blindToken = context.createBlind()
     result.tokens.push(blindToken)
-    result.request.contents.push(b64ept(blindToken.point))
+    result.request.contents.push(b64ept(blindToken.blindedPoint))
   }
 
   return result

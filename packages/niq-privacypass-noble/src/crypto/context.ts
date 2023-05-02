@@ -1,10 +1,9 @@
-// src/crypto/blindPoints.ts
 import { randomBytes } from '@noble/hashes/utils'
 import { invert } from '@noble/curves/abstract/modular'
 import { hmac } from '@noble/hashes/hmac'
 import { bytesToNumberBE, equalBytes } from '@noble/curves/abstract/utils'
 
-import { BlindToken, H2Config, Point, PrngFn } from './types'
+import { BlindedToken, H2Config, Hashable, Point, PrngFn } from './types'
 import { randomScalar } from './randomScalar'
 import { b64db } from './b64'
 
@@ -14,10 +13,10 @@ export class CryptoContext {
     this.decodePointB64 = this.decodePointB64.bind(this)
   }
 
-  blindPoint(p: Point): { point: Point; blind: bigint } {
-    const { scalar: r } = randomScalar(this.config.curve, randomBytes)
-    const point = p.multiply(r)
-    return { point, blind: r }
+  blindPoint(p: Point): { blindedPoint: Point; blind: bigint } {
+    const { scalar: blind } = randomScalar(this.config.curve, randomBytes)
+    const blindedPoint = p.multiply(blind)
+    return { blindedPoint, blind }
   }
 
   unblindPoint(p: Point, blind: bigint): Point {
@@ -29,7 +28,7 @@ export class CryptoContext {
     return p.multiply(secret)
   }
 
-  createBlind(): BlindToken {
+  createBlind(): BlindedToken {
     const { seed, point } = this.randomPoint()
     return {
       seed,
@@ -59,17 +58,12 @@ export class CryptoContext {
     return this.decodePoint(b64db(data))
   }
 
-  HMAC(key: Point, message: Buffer) {
-    const keyBuffer = key.toRawBytes(false)
-    return hmac(this.config.hash, keyBuffer, message)
-  }
-
-  makeHMAC(key: string | Uint8Array): {
+  makeHMAC(key: Hashable): {
     // TODO: for some reason typescript complains when try to export
     // hmac.create
     // Error: packages/niq-privacypass-noble/src/crypto/context.ts(62,3): error TS4094: Property 'destroyed' of exported class expression may not be private or protected.
     // Error: packages/niq-privacypass-noble/src/crypto/context.ts(62,3): error TS4094: Property 'finished' of exported class expression may not be private or protected.
-    update: (bytes: string | Uint8Array) => void
+    update: (bytes: Hashable) => void
     digest: () => Uint8Array
   } {
     return hmac.create(this.config.hash, key)
@@ -92,10 +86,7 @@ export class CryptoContext {
     return h.digest()
   }
 
-  createRequestBinding(
-    key: Uint8Array,
-    data: (Uint8Array | string)[]
-  ): Uint8Array {
+  createRequestBinding(key: Uint8Array, data: Hashable[]): Uint8Array {
     const h = this.makeHMAC(key)
     h.update('hash_request_binding')
     for (const item of data) {
@@ -118,6 +109,3 @@ export class CryptoContext {
     return equalBytes(supplied, expected)
   }
 }
-
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-// export interface CryptoContext extends Base64Utils {}

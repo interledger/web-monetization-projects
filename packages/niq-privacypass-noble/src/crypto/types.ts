@@ -2,14 +2,19 @@ import { CurveFn, ProjPointType } from '@noble/curves/abstract/weierstrass'
 import { CHash } from '@noble/hashes/utils'
 
 export type Point = ProjPointType<bigint>
+export type Hashable = string | Uint8Array
 
-export interface BlindToken {
+export interface BlindedToken {
   seed: Uint8Array
-  point: Point
+  // T=H2C(seed) we don't use it
+  // point: Point
   blind: bigint
+  // (T=H2C(seed)) * blind
+  blindedPoint: Point
 }
 
-export interface SignedToken extends BlindToken {
+export interface SignedToken extends BlindedToken {
+  // (T=H2C(seed)) * blind * serverSecret
   signedPoint: Point
 }
 

@@ -1,14 +1,14 @@
 import { BlindTokenRequestSer } from '../types/ser'
 import { CryptoContext } from '../../crypto/context'
-import { SignedToken } from '../../crypto/types'
+import { Hashable, SignedToken } from '../../crypto/types'
 import { b64eb } from '../../crypto/b64'
 
 export function makeRedeemTokenRequest(
   context: CryptoContext,
   signedToken: SignedToken,
   //
-  host: Uint8Array | string,
-  path: Uint8Array | string
+  host: Hashable,
+  path: Hashable
 ): BlindTokenRequestSer {
   // Un-blind a point
   const xT = context.unblindPoint(signedToken.signedPoint, signedToken.blind)

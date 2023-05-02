@@ -14,7 +14,7 @@ describe('makeRedeemTokenRequest', () => {
 
     const blindToken: SignedToken = {
       seed: issueTokenRequest.tokens[0],
-      point: issueTokenRequest.bP[0],
+      blindedPoint: issueTokenRequest.bP[0],
       blind: issueTokenRequest.bF[0],
       signedPoint: signedPoints[0]
     }

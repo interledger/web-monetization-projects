@@ -3,7 +3,7 @@ import { sha256 } from '@noble/hashes/sha256'
 // TODO: report typing issue with hashToCurve
 import { hashToCurve } from '@noble/curves/p256'
 
-import { BlindToken, Point } from '../../../../src/crypto/types'
+import { BlindedToken, Point } from '../../../../src/crypto/types'
 
 import { computeSecret, randomSecret } from './utils'
 
@@ -25,19 +25,18 @@ function newRandomPoint(seedString?: string): {
 export function blindPoint(
   point: Point,
   seedString?: string
-): { point: Point; blind: bigint } {
+): { blindedPoint: Point; blind: bigint } {
   const bF = seedString ? computeSecret(seedString) : randomSecret()
   const bP = point.multiply(bF)
-  return { point: bP, blind: bF }
+  return { blindedPoint: bP, blind: bF }
 }
 
-export function createBlindToken(seedString?: string): BlindToken {
+export function createBlindToken(seedString?: string): BlindedToken {
   const randomPoint = newRandomPoint(seedString)
   const blindedPoint = blindPoint(randomPoint.point, seedString)
   return {
     seed: randomPoint.seed,
-    point: blindedPoint.point,
-    blind: blindedPoint.blind
+    ...blindedPoint
   }
 }
 
