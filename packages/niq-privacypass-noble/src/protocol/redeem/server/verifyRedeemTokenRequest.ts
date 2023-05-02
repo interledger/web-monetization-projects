@@ -4,9 +4,7 @@ import { CryptoContext } from '../../../crypto/context'
 export function verifyRedeemTokenRequest(
   req: RedeemTokenRequestDes,
   keys: bigint[],
-  context: CryptoContext,
-  host = '',
-  path = ''
+  context: CryptoContext
 ) {
   const token = req.token
   const requestBinder = req.requestBinding
@@ -14,6 +12,9 @@ export function verifyRedeemTokenRequest(
   return keys.some(secret => {
     const sharedPoint = context.signPoint(T, secret)
     const sharedKey = context.deriveKey(sharedPoint, token)
-    return context.checkRequestBinding(requestBinder, sharedKey, [host, path])
+    return context.checkRequestBinding(requestBinder, sharedKey, [
+      req.host,
+      req.path
+    ])
   })
 }

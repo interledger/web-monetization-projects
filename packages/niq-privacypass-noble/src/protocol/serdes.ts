@@ -32,7 +32,14 @@ export function wrapRequest(request: BlindTokenRequestSer, meta?: RequestMeta) {
     bl_sig_req: b64ej(request),
     ...meta
   }
-  return JSON.stringify(value)
+  return value
+}
+
+export function wrapAndSerializeRequest(
+  request: BlindTokenRequestSer,
+  meta?: RequestMeta
+) {
+  return JSON.stringify(wrapRequest(request, meta))
 }
 
 export function unwrapRequest<T>(request: string): {
@@ -40,7 +47,7 @@ export function unwrapRequest<T>(request: string): {
   meta: RequestMeta
 } {
   const value = JSON.parse(request) as BlindTokenRequestWrapper
-  const meta: RequestMeta = {}
+  const meta = {} as RequestMeta
   for (const key of ['host', 'path'] as const) {
     const configured = value[key]
     if (configured) {
@@ -51,12 +58,14 @@ export function unwrapRequest<T>(request: string): {
 }
 
 export function parseRedeemTokenRequest(
-  request: string
+  request: string,
+  requestMeta: RequestMeta
 ): RedeemTokenRequestDes {
   const { unwrapped } = unwrapRequest<RedeemTokenRequestSer>(request)
   return {
     token: b64db(unwrapped.contents[0]),
-    requestBinding: b64db(unwrapped.contents[1])
+    requestBinding: b64db(unwrapped.contents[1]),
+    ...requestMeta
   }
 }
 

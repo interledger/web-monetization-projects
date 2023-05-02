@@ -20,6 +20,8 @@ export interface IssueTokenResponseDes {
 export interface RedeemTokenRequestDes {
   token: Uint8Array
   requestBinding: Uint8Array
+  host: string
+  path: string
 }
 
 export type RedeemTokenResponseDes =

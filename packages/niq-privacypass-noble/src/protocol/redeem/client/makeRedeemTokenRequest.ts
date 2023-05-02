@@ -1,16 +1,23 @@
-import { RedeemTokenRequestSer } from '../../types/ser'
+import {
+  BlindTokenRequestWrapper,
+  RedeemTokenRequestSer
+} from '../../types/ser'
 import { CryptoContext } from '../../../crypto/context'
-import { Hashable, SignedToken } from '../../../crypto/types'
+import { SignedToken } from '../../../crypto/types'
 import { RedeemTokenRequestDes } from '../../types/des'
-import { serializeRedeemTokenRequest } from '../../serdes'
+import { serializeRedeemTokenRequest, wrapRequest } from '../../serdes'
 
 export function makeRedeemTokenRequest(
   context: CryptoContext,
   signedToken: SignedToken,
   //
-  host: Hashable,
-  path: Hashable
-): { des: RedeemTokenRequestDes; ser: RedeemTokenRequestSer } {
+  host: string,
+  path: string
+): {
+  wrapped: BlindTokenRequestWrapper
+  des: RedeemTokenRequestDes
+  ser: RedeemTokenRequestSer
+} {
   // Un-blind a point
   const xT = context.unblindPoint(signedToken.signedPoint, signedToken.blind)
   // Derive MAC key
@@ -20,12 +27,19 @@ export function makeRedeemTokenRequest(
   const reqData = [host, path]
   const reqBinder = context.createRequestBinding(sk, reqData)
 
-  const des = {
+  const des: RedeemTokenRequestDes = {
     token: signedToken.seed,
-    requestBinding: reqBinder
+    requestBinding: reqBinder,
+    host,
+    path
   }
+
+  const ser = serializeRedeemTokenRequest(des)
+  const wrapped = wrapRequest(ser, { host, path })
+
   return {
     des: des,
-    ser: serializeRedeemTokenRequest(des)
+    ser: ser,
+    wrapped
   }
 }

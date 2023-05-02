@@ -8,7 +8,8 @@ import { verifyRedeemTokenRequest } from '../../../../../src/protocol/redeem/ser
 import { parseRedeemTokenRequest } from '../../../../../src/protocol/serdes'
 
 describe('verifyRedeemRequest', () => {
-  const parsed = parseRedeemTokenRequest(wrappedRedeemTokenRequest)
+  const requestMeta = { path: '', host: '' }
+  const parsed = parseRedeemTokenRequest(wrappedRedeemTokenRequest, requestMeta)
   it('should start with having the right private key', () => {
     const signedG = testContext.signPoint(commitment.g, serverKey)
     expect(signedG.equals(commitment.h)).toBe(true)
@@ -27,11 +28,13 @@ describe('verifyRedeemRequest', () => {
   })
   it('should not verify the request when using incorrect host/path', () => {
     const verified = verifyRedeemTokenRequest(
-      parsed,
+      {
+        ...parsed,
+        host: 'bla.com',
+        path: '/'
+      },
       [serverKey],
-      testContext,
-      'bla.com',
-      '/'
+      testContext
     )
     expect(verified).toBe(false)
   })

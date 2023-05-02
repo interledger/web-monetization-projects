@@ -25,7 +25,7 @@ export interface BlindTokenRequestWrapper {
   path?: string
 }
 
-export type RequestMeta = Pick<BlindTokenRequestWrapper, 'host' | 'path'>
+export type RequestMeta = { host: string; path: string }
 
 export interface BlindTokenRequestSer {
   type: ReqType
