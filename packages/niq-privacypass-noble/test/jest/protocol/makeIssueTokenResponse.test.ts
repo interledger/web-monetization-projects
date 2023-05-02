@@ -1,5 +1,5 @@
 import { makeIssueTokenResponse } from '../../../src/protocol/issue/makeIssueTokenResponse'
-import { IssueTokenResponse } from '../../../src/protocol/types'
+import { IssueTokenResponseInnerSer } from '../../../src/protocol/types/ser'
 import { DLEQ } from '../../../src/crypto/dleq'
 import { computeComposites } from '../../../src/crypto/computeComposites'
 import { testContext } from '../testconfig'
@@ -15,7 +15,7 @@ describe('makeIssueTokenResponse', () => {
 
 describe('verifyIssueTokenResponse', () => {
   it('should be possible to verify the response', () => {
-    const parsed: IssueTokenResponse = b64dj(issueResponse)
+    const parsed: IssueTokenResponseInnerSer = b64dj(issueResponse)
     const signedPoints = parsed.sigs.map(v => testContext.decodePointB64(v))
     const proof = JSON.parse(b64ds(parsed.proof).slice('batch-proof='.length))
     const P = b64dj(proof.P)

@@ -1,10 +1,10 @@
 import { b64ej } from '../crypto/b64'
 
-import { BlindTokenRequest, BlindTokenRequestWrapper } from './types'
+import { BlindTokenRequestSer, BlindTokenRequestWrapper } from './types/ser'
 
 type RequestMeta = Pick<BlindTokenRequestWrapper, 'host' | 'path'>
 
-export function wrapRequest(request: BlindTokenRequest, meta?: RequestMeta) {
+export function wrapRequest(request: BlindTokenRequestSer, meta?: RequestMeta) {
   const value: BlindTokenRequestWrapper = {
     bl_sig_req: b64ej(request),
     ...meta

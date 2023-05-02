@@ -1,4 +1,4 @@
-import { BlindTokenRequest } from '../../../../src/protocol/types'
+import { BlindTokenRequestSer } from '../../../../src/protocol/types/ser'
 import { b64dj, b64ds } from '../../../../src/crypto/b64'
 import { testContext } from '../../testconfig'
 
@@ -13,7 +13,7 @@ describe('bl_sig_req', () => {
     expect(jsonString).toMatchInlineSnapshot(
       `"{"type":"Issue","contents":["BEPx6JdJWRcGEeD7D94ggp0h+EearSWl8Xxz9Y0qAG31v1myps23mGJ6XGxQCadyRNVslfP+V2UWYFxph2Dxrqs=","BBN9rAzfDb/rUr6wCMLME2w18zeQVqMV6kJ0PuI7WYO9APY67j3i4Fvnkg5s7A7uSe9bFh4BXp/Lowy4XtgUDKM=","BJESLKOs0yIbR/XU9dLNcaYjqif5qVwmghh66u4kL/nm7u9x4C4mu3sGY7Bicq57uVlR9Keu7knoBVXyGPgBG+Y=","BFcHV8qM2SOYz/TgWuyfof12j+Cd3s8ErM8SQGZuJVbEIJfQxHvHcAnkZx3s2QaCyd2r8x3Q5nIdXKYaIhXDG20=","BLUbXbLXCAxXbDnvn/Ok5COLaPMIxRSE+357cwD1kZKg9WCxgvbippk4HeaSATU2NjZDDcA5h84K8aVaCKcYFmw=","BDavFa117tjyWCKXqpJ7XRcCZfm5HyAjfoRqpWFSEwkHXxfTFYOq3rdQiqNjTKVeTodOJ6otaaNPDMLznXiQiKA=","BP+8HTw/kYeQ3hDJzzRPMsCuzhEhBJIKUu8nfYp93V9YQ/tPM+eQdyE067r8HMSSfZkq/SqgxB3Ct1rKgruK9Tg=","BE+CpJMwEIeq+Klx87FmhmKu71aBxO//+7zxAtd56y/XkZu/cIRpq0t4dTpK2ic7leVvYL5iAwig2tbxLEJ/3Nc=","BJn6SeYxnk2rbyXiFN+SkjbhliUVnqNO1g60b2hg9atFGdVm+Nnj2fNWfIvgP8rhPQjGL0ImBRTW3c5+60sz10Y=","BDJkndE9csK3f/fY/lJVJL+U4gbDyitiAReBrIEXoEvfUq4DSV8kqjKyB64juaSRL03VBt8CskVCBZRhoKwrWeI="]}"`
     )
-    const actual: BlindTokenRequest = JSON.parse(jsonString)
+    const actual: BlindTokenRequestSer = JSON.parse(jsonString)
     expect(actual).toMatchInlineSnapshot(`
       {
         "contents": [

@@ -1,10 +1,10 @@
 import { Point } from '../../crypto/types'
 import { CryptoContext } from '../../crypto/context'
-import { BlindTokenRequest } from '../types'
+import { BlindTokenRequestSer } from '../types/ser'
 import { b64ept } from '../../crypto/b64'
 
 export type TokenRequestReturn = {
-  request: BlindTokenRequest
+  request: BlindTokenRequestSer
   tokens: Uint8Array[]
   bP: Point[]
   bF: bigint[]

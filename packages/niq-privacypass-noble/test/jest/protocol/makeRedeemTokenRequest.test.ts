@@ -1,7 +1,7 @@
 import { makeRedeemTokenRequest } from '../../../src/protocol/redeem/makeRedeemTokenRequest'
 import { SignedToken } from '../../../src/crypto/types'
 import { testContext } from '../testconfig'
-import { IssueTokenResponse } from '../../../src/protocol/types'
+import { IssueTokenResponseInnerSer } from '../../../src/protocol/types/ser'
 import { b64dj } from '../../../src/crypto/b64'
 import { wrapRequest } from '../../../src/protocol/serdes'
 
@@ -9,7 +9,7 @@ import { issueResponse, issueTokenRequest } from './fixtures'
 
 describe('makeRedeemTokenRequest', () => {
   it('should be possible to create a request to redeem a token', () => {
-    const parsed: IssueTokenResponse = b64dj(issueResponse)
+    const parsed: IssueTokenResponseInnerSer = b64dj(issueResponse)
     const signedPoints = parsed.sigs.map(testContext.decodePointB64)
 
     const blindToken: SignedToken = {

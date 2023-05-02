@@ -1,4 +1,4 @@
-import { BlindTokenRequest } from '../types'
+import { BlindTokenRequestSer } from '../types/ser'
 import { CryptoContext } from '../../crypto/context'
 import { SignedToken } from '../../crypto/types'
 import { b64eb } from '../../crypto/b64'
@@ -9,7 +9,7 @@ export function makeRedeemTokenRequest(
   //
   host: Uint8Array,
   path: Uint8Array
-): BlindTokenRequest {
+): BlindTokenRequestSer {
   // Unblind a point
   const xT = context.unblindPoint(signedToken.signedPoint, signedToken.blind)
   // Derive MAC key
@@ -20,7 +20,7 @@ export function makeRedeemTokenRequest(
   const reqBinder = context.createRequestBinding(sk, reqData)
   const contents = [signedToken.seed, reqBinder]
 
-  const redeemRequest: BlindTokenRequest = {
+  const redeemRequest: BlindTokenRequestSer = {
     type: 'Redeem',
     contents: contents.map(content => b64eb(content))
   }
