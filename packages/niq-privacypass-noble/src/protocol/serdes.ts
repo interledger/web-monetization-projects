@@ -47,25 +47,21 @@ export function unwrapRequest<T>(request: string): {
   meta: RequestMeta
 } {
   const value = JSON.parse(request) as BlindTokenRequestWrapper
-  const meta = {} as RequestMeta
-  for (const key of ['host', 'path'] as const) {
-    const configured = value[key]
-    if (configured) {
-      meta[key] = configured
-    }
+  const meta = {
+    path: value.path ?? '',
+    host: value.host ?? ''
   }
   return { unwrapped: b64dj(value.bl_sig_req) as T, meta }
 }
 
 export function parseRedeemTokenRequest(
-  request: string,
-  requestMeta: RequestMeta
+  request: string
 ): RedeemTokenRequestDes {
-  const { unwrapped } = unwrapRequest<RedeemTokenRequestSer>(request)
+  const { unwrapped, meta } = unwrapRequest<RedeemTokenRequestSer>(request)
   return {
     token: b64db(unwrapped.contents[0]),
     requestBinding: b64db(unwrapped.contents[1]),
-    ...requestMeta
+    ...meta
   }
 }
 

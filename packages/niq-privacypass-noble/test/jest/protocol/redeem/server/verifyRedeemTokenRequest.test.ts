@@ -8,8 +8,7 @@ import { verifyRedeemTokenRequest } from '../../../../../src/protocol/redeem/ser
 import { parseRedeemTokenRequest } from '../../../../../src/protocol/serdes'
 
 describe('verifyRedeemRequest', () => {
-  const requestMeta = { path: '', host: '' }
-  const parsed = parseRedeemTokenRequest(wrappedRedeemTokenRequest, requestMeta)
+  const parsed = parseRedeemTokenRequest(wrappedRedeemTokenRequest)
   it('should start with having the right private key', () => {
     const signedG = testContext.signPoint(commitment.g, serverKey)
     expect(signedG.equals(commitment.h)).toBe(true)
