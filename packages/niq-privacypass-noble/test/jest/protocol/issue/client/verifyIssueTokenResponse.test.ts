@@ -1,9 +1,8 @@
-import { makeIssueTokenResponse } from '../../../src/protocol/issue/makeIssueTokenResponse'
-import { testContext } from '../testconfig'
-import { verifyIssueTokenResponse } from '../../../src/protocol/issue/verifyIssueTokenResponse'
-import { parseIssueTokenResponse } from '../../../src/protocol/serdes'
-
-import { commitment, issueResponse, issueTokenRequestDes } from './fixtures'
+import { makeIssueTokenResponse } from '../../../../../src/protocol/issue/server/makeIssueTokenResponse'
+import { testContext } from '../../../testconfig'
+import { verifyIssueTokenResponse } from '../../../../../src/protocol/issue/client/verifyIssueTokenResponse'
+import { parseIssueTokenResponse } from '../../../../../src/protocol/serdes'
+import { commitment, issueResponse, issueTokenRequestDes } from '../../fixtures'
 
 describe('makeIssueTokenResponse', () => {
   it('should be defined', () => {

@@ -25,6 +25,8 @@ export interface BlindTokenRequestWrapper {
   path?: string
 }
 
+export type RequestMeta = Pick<BlindTokenRequestWrapper, 'host' | 'path'>
+
 export interface BlindTokenRequestSer {
   type: ReqType
   // Base64 encoded data

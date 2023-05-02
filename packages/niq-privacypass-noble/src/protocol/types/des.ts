@@ -5,8 +5,10 @@ import { IssueTokenResponseInnerSer } from './ser'
 
 export interface IssueTokenRequestDes {
   contents: Point[]
-  host?: string
-  path?: string
+  // // will be empty string, rather than undefined
+  // host: string
+  // // will be empty string, rather than undefined
+  // path: string
 }
 
 export interface IssueTokenResponseDes {

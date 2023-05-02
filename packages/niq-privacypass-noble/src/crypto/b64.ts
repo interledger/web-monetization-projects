@@ -40,5 +40,6 @@ export const b64ebn = (data: bigint) => {
 }
 
 export const b64ds = (data: string) => atob(data)
+export const b64es = (data: string) => btoa(data)
 export const b64dj = (data: string) => JSON.parse(b64ds(data))
 export const b64dbn = (data: string) => bytesToNumberBE(b64db(data))

@@ -1,10 +1,10 @@
-import { makeRedeemTokenRequest } from '../../../../src/protocol/redeem/makeRedeemTokenRequest'
-import { SignedToken } from '../../../../src/crypto/types'
-import { testContext } from '../../testconfig'
-import { IssueTokenResponseInnerSer } from '../../../../src/protocol/types/ser'
-import { b64dj } from '../../../../src/crypto/b64'
-import { wrapRequest } from '../../../../src/protocol/serdes'
-import { issueResponse, issueTokenRequest } from '../fixtures'
+import { makeRedeemTokenRequest } from '../../../../../src/protocol/redeem/client/makeRedeemTokenRequest'
+import { SignedToken } from '../../../../../src/crypto/types'
+import { testContext } from '../../../testconfig'
+import { IssueTokenResponseInnerSer } from '../../../../../src/protocol/types/ser'
+import { b64dj } from '../../../../../src/crypto/b64'
+import { wrapRequest } from '../../../../../src/protocol/serdes'
+import { issueResponse, issueTokenRequest } from '../../fixtures'
 
 describe('makeRedeemTokenRequest', () => {
   it('should be possible to create a request to redeem a token', () => {
@@ -17,12 +17,11 @@ describe('makeRedeemTokenRequest', () => {
       blind: issueTokenRequest.bF[0],
       signedPoint: signedPoints[0]
     }
-    const Empty = new Uint8Array(0)
-    const request = makeRedeemTokenRequest(
+    const { ser: request } = makeRedeemTokenRequest(
       testContext,
       blindToken,
-      Empty,
-      Empty
+      '',
+      ''
     )
     const wrapped = wrapRequest(request)
     expect(wrapped).toMatchInlineSnapshot(
