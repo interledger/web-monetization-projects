@@ -1,7 +1,6 @@
 import { BlindTokenRequest } from '../../../../src/protocol/types'
+import { b64dj, b64ds } from '../../../../src/crypto/b64'
 import { testContext } from '../../testconfig'
-
-const { b64dj, b64dpt, b64ds } = testContext
 
 const BL_SIG_REQ = {
   bl_sig_req:
@@ -32,7 +31,8 @@ describe('bl_sig_req', () => {
         "type": "Issue",
       }
     `)
-    expect(actual.contents.map(v => b64dpt(v)).shift()).toMatchInlineSnapshot(`
+    expect(actual.contents.map(v => testContext.decodePointB64(v)).shift())
+      .toMatchInlineSnapshot(`
       Point {
         "px": 30732376281519287560868674779110792350007175663169242228025832276419458133493n,
         "py": 86550236476034578350288846928780944922334589109482887485581043623436540292779n,

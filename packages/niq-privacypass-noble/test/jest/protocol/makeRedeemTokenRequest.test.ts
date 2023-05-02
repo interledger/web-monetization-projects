@@ -10,7 +10,7 @@ import { issueResponse, issueTokenRequest } from './fixtures'
 describe('makeRedeemTokenRequest', () => {
   it('should be possible to create a request to redeem a token', () => {
     const parsed: IssueTokenResponse = b64dj(issueResponse)
-    const signedPoints = parsed.sigs.map(testContext.b64dpt)
+    const signedPoints = parsed.sigs.map(testContext.decodePointB64)
 
     const blindToken: SignedToken = {
       seed: issueTokenRequest.tokens[0],

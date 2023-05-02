@@ -10,9 +10,7 @@ export interface BlindToken {
 }
 
 export interface SignedToken extends BlindToken {
-  seed: Uint8Array
   signedPoint: Point
-  blind: bigint
 }
 
 export type Hash2CurveFn = (bytes: Uint8Array) => Point

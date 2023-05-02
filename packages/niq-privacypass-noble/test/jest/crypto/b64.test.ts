@@ -1,6 +1,4 @@
-import { testContext } from '../testconfig'
-
-const { b64db, b64eb, b64dpt } = testContext
+import { b64db, b64eb } from '../../../src/crypto/b64'
 
 describe('base64 functions', () => {
   describe('b64db', () => {
@@ -32,25 +30,6 @@ describe('base64 functions', () => {
       const bytes = new Uint8Array([])
       const expected = ''
       expect(b64eb(bytes)).toEqual(expected)
-    })
-  })
-
-  describe('b64dpt', () => {
-    it('should correctly decode a base64-encoded ProjectivePoint', () => {
-      const encoded =
-        'BEPx6JdJWRcGEeD7D94ggp0h+EearSWl8Xxz9Y0qAG31v1myps23mGJ6XGxQCadyRNVslfP+V2UWYFxph2Dxrqs='
-      expect(b64dpt(encoded)).toMatchInlineSnapshot(`
-        Point {
-          "px": 30732376281519287560868674779110792350007175663169242228025832276419458133493n,
-          "py": 86550236476034578350288846928780944922334589109482887485581043623436540292779n,
-          "pz": 1n,
-        }
-      `)
-    })
-
-    it('should thrown on an empty base64-encoded ProjectivePoint', () => {
-      const encoded = ''
-      expect(() => b64dpt(encoded)).toThrow()
     })
   })
 

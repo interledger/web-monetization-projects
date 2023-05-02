@@ -1,21 +1,7 @@
 import { bytesToNumberBE } from '@noble/curves/abstract/utils'
-import { CurveFn, ProjPointType } from '@noble/curves/abstract/weierstrass'
 import { hexToBytes } from '@noble/hashes/utils'
 
-import { Point } from './types'
-
-export interface Base64Utils {
-  b64db: (data: string) => Uint8Array
-  b64ds: (data: string) => string
-  b64eb: (bytes: Uint8Array) => string
-  b64ep: (point: Point) => string
-  b64dpt: (data: string) => ProjPointType<bigint>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  b64dj: (data: string) => any
-  b64ej: (data: object) => string
-  b64ebn: (data: bigint) => string
-  b64dbn: (data: string) => bigint
-}
+import type { Point } from './types'
 
 export const b64db = (data: string): Uint8Array => {
   const binaryString = atob(data)
@@ -40,7 +26,7 @@ export const b64eb = (bytes: Uint8Array): string => {
   const binaryString = chars.join('')
   return btoa(binaryString)
 }
-export const b64ep = (point: Point) => b64eb(point.toRawBytes(false))
+export const b64ept = (point: Point) => b64eb(point.toRawBytes(false))
 export const b64ej = (data: object) => btoa(JSON.stringify(data))
 
 export const b64ebn = (data: bigint) => {
@@ -56,22 +42,3 @@ export const b64ebn = (data: bigint) => {
 export const b64ds = (data: string) => atob(data)
 export const b64dj = (data: string) => JSON.parse(b64ds(data))
 export const b64dbn = (data: string) => bytesToNumberBE(b64db(data))
-
-export function createB64Utils(curve: CurveFn): Base64Utils {
-  const b64dpt = (data: string) => {
-    return curve.ProjectivePoint.fromHex(b64db(data))
-  }
-
-  return {
-    b64db,
-    b64dbn,
-    b64dj,
-    b64dpt,
-    b64ds,
-
-    b64eb,
-    b64ebn,
-    b64ej,
-    b64ep
-  }
-}

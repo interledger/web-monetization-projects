@@ -1,6 +1,7 @@
 import { BlindTokenRequest } from '../types'
 import { CryptoContext } from '../../crypto/context'
 import { SignedToken } from '../../crypto/types'
+import { b64eb } from '../../crypto/b64'
 
 export function makeRedeemTokenRequest(
   context: CryptoContext,
@@ -21,7 +22,7 @@ export function makeRedeemTokenRequest(
 
   const redeemRequest: BlindTokenRequest = {
     type: 'Redeem',
-    contents: contents.map(content => context.b64eb(content))
+    contents: contents.map(content => b64eb(content))
   }
 
   return redeemRequest

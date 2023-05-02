@@ -4,13 +4,14 @@ import { invert } from '@noble/curves/abstract/modular'
 import { hmac } from '@noble/hashes/hmac'
 import { bytesToNumberBE, equalBytes } from '@noble/curves/abstract/utils'
 
-import { Base64Utils, createB64Utils } from './b64'
 import { BlindToken, H2Config, Point, PrngFn } from './types'
 import { randomScalar } from './randomScalar'
+import { b64db } from './b64'
 
 export class CryptoContext {
   constructor(public config: H2Config) {
-    Object.assign(this, createB64Utils(this.config.curve))
+    // bind this so can be used in map() calls
+    this.decodePointB64 = this.decodePointB64.bind(this)
   }
 
   blindPoint(p: Point): { point: Point; blind: bigint } {
@@ -54,6 +55,10 @@ export class CryptoContext {
     return this.config.curve.ProjectivePoint.fromHex(data)
   }
 
+  decodePointB64(data: string) {
+    return this.decodePoint(b64db(data))
+  }
+
   HMAC(key: Point, message: Buffer) {
     const keyBuffer = key.toRawBytes(false)
     return hmac(this.config.hash, keyBuffer, message)
@@ -80,10 +85,10 @@ export class CryptoContext {
     return bytesToNumberBE(this.hashUncompressedPoints(...pts))
   }
 
-  deriveKey(N: Point, token: Uint8Array): Uint8Array {
+  deriveKey(p: Point, token: Uint8Array): Uint8Array {
     const h = this.makeHMAC('hash_derive_key')
     h.update(token)
-    h.update(N.toRawBytes(false))
+    h.update(p.toRawBytes(false))
     return h.digest()
   }
 
@@ -112,4 +117,4 @@ export class CryptoContext {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface CryptoContext extends Base64Utils {}
+// export interface CryptoContext extends Base64Utils {}

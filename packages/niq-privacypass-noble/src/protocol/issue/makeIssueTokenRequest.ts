@@ -1,6 +1,7 @@
 import { Point } from '../../crypto/types'
 import { CryptoContext } from '../../crypto/context'
 import { BlindTokenRequest } from '../types'
+import { b64ept } from '../../crypto/b64'
 
 export type TokenRequestReturn = {
   request: BlindTokenRequest
@@ -29,7 +30,7 @@ export function makeIssueTokenRequest(
     result.tokens.push(blindToken.seed)
     result.bF.push(blindToken.blind)
     result.bP.push(blindToken.point)
-    result.request.contents.push(context.b64ep(blindToken.point))
+    result.request.contents.push(b64ept(blindToken.point))
   }
 
   return result

@@ -1,7 +1,7 @@
 // makeIssueTokenRequest.test.ts
 import { makeIssueTokenRequest } from '../../../src/protocol/issue/makeIssueTokenRequest'
 import { testContext } from '../testconfig'
-import { b64eb, b64ebn, b64ej, b64ep } from '../../../src/crypto/b64'
+import { b64eb, b64ebn, b64ej, b64ept } from '../../../src/crypto/b64'
 
 function logTokenRequest(
   tokenRequest: ReturnType<typeof makeIssueTokenRequest>
@@ -12,7 +12,7 @@ function logTokenRequest(
     JSON.stringify(
       {
         tokens: tokens.map(b64eb),
-        bP: bP.map(b64ep),
+        bP: bP.map(b64ept),
         bF: bF.map(b64ebn)
       },
       null,

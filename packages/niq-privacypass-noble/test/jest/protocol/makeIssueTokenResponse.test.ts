@@ -3,10 +3,9 @@ import { IssueTokenResponse } from '../../../src/protocol/types'
 import { DLEQ } from '../../../src/crypto/dleq'
 import { computeComposites } from '../../../src/crypto/computeComposites'
 import { testContext } from '../testconfig'
+import { b64db, b64dbn, b64dj, b64ds } from '../../../src/crypto/b64'
 
 import { commitment, issueResponse, issueTokenRequest } from './fixtures'
-
-const { b64db, b64dbn, b64dj, b64dpt, b64ds } = testContext
 
 describe('makeIssueTokenResponse', () => {
   it('should be defined', () => {
@@ -17,7 +16,7 @@ describe('makeIssueTokenResponse', () => {
 describe('verifyIssueTokenResponse', () => {
   it('should be possible to verify the response', () => {
     const parsed: IssueTokenResponse = b64dj(issueResponse)
-    const signedPoints = parsed.sigs.map(v => b64dpt(v))
+    const signedPoints = parsed.sigs.map(v => testContext.decodePointB64(v))
     const proof = JSON.parse(b64ds(parsed.proof).slice('batch-proof='.length))
     const P = b64dj(proof.P)
     const R = b64dbn(P.R)
