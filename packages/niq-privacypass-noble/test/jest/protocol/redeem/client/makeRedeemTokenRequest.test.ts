@@ -2,7 +2,7 @@ import { makeRedeemTokenRequest } from '../../../../../src/protocol/redeem/clien
 import { SignedToken } from '../../../../../src/crypto/voprf/types'
 import { testContext } from '../../../testconfig'
 import { IssueTokenResponseInnerSer } from '../../../../../src/protocol/types/ser'
-import { b64dj } from '../../../../../src/crypto/b64'
+import { b64dj } from '../../../../../src/crypto/voprf/b64'
 import { wrapAndSerializeRequest } from '../../../../../src/protocol/serdes'
 import { issueResponse, issueTokenRequest } from '../../fixtures'
 

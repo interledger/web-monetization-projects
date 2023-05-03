@@ -3,8 +3,7 @@ import { invert } from '@noble/curves/abstract/modular'
 import { hmac } from '@noble/hashes/hmac'
 import { bytesToNumberBE, equalBytes } from '@noble/curves/abstract/utils'
 
-import { b64db } from '../b64'
-
+import { b64db } from './b64'
 import { BlindedToken, H2Config, Hashable, Point, PrngFn } from './types'
 import { randomScalar } from './randomScalar'
 

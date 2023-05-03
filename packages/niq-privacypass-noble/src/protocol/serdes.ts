@@ -8,7 +8,7 @@ import {
   b64ej,
   b64ept,
   b64es
-} from '../crypto/b64'
+} from '../crypto/voprf/b64'
 import { CryptoContext } from '../crypto/voprf/context'
 
 import {

@@ -1,5 +1,5 @@
 import { BlindTokenRequestSer } from '../../../../src/protocol/types/ser'
-import { b64dj, b64ds } from '../../../../src/crypto/b64'
+import { b64dj, b64ds } from '../../../../src/crypto/voprf/b64'
 import { testContext } from '../../testconfig'
 
 const BL_SIG_REQ = {

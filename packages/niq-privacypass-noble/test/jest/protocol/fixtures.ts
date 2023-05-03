@@ -1,6 +1,6 @@
 import { testContext } from '../testconfig'
 import { Point, Commitment } from '../../../src/crypto/voprf/types'
-import { b64db, b64dbn } from '../../../src/crypto/b64'
+import { b64db, b64dbn } from '../../../src/crypto/voprf/b64'
 import { IssueTokenRequestDes } from '../../../src/protocol/types/des'
 
 export const commitment: Commitment = {

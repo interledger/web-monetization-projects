@@ -1,7 +1,7 @@
 import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 import { hexToBytes } from '@noble/hashes/utils'
 
-import type { Point } from './voprf/types'
+import type { Point } from './types'
 
 export const b64db = (data: string): Uint8Array => {
   const binaryString = atob(data)
