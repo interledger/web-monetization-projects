@@ -1,18 +1,18 @@
-import { IssueTokenRequestDes, IssueTokenResponseDes } from '../../types/des'
+import { IssueRequestDes, IssueResponseDes } from '../../types/des'
 import { CryptoContext } from '../../../crypto/voprf/context'
 import { Commitment } from '../../../crypto/voprf/types'
 import { computeComposites } from '../../../crypto/voprf/computeComposites'
 import { DLEQ } from '../../../crypto/voprf/dleq'
-import { IssueTokenResponseInnerSer } from '../../types/ser'
-import { serializeIssueTokenResponse } from '../../serdes'
+import { IssueResponseInnerSer } from '../../types/ser'
+import { serializeIssueResponse } from '../../serdes'
 
-export function makeIssueTokenResponse(
-  request: IssueTokenRequestDes,
+export function makeIssueResponse(
+  request: IssueRequestDes,
   key: bigint,
   commitment: Commitment,
   context: CryptoContext,
   keyVersion: string
-): { des: IssueTokenResponseDes; ser: IssueTokenResponseInnerSer } {
+): { des: IssueResponseDes; ser: IssueResponseInnerSer } {
   const sigs = request.contents.map(pt => {
     return context.signPoint(pt, key)
   })
@@ -30,5 +30,5 @@ export function makeIssueTokenResponse(
     sigs,
     version: keyVersion
   }
-  return { des, ser: serializeIssueTokenResponse(des) }
+  return { des, ser: serializeIssueResponse(des) }
 }

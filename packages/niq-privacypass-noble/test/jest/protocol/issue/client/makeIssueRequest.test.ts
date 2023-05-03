@@ -1,11 +1,10 @@
-// makeIssueTokenRequest.test.ts
-import { makeIssueTokenRequest } from '../../../../../src/protocol/issue/client/makeIssueTokenRequest'
+import { makeIssueRequest } from '../../../../../src/protocol/issue/client/makeIssueRequest'
 import { testContext } from '../../../testconfig'
 
-describe('makeIssueTokenRequest', () => {
+describe('makeIssueRequest', () => {
   it('should generate valid request and tokens', () => {
     const curve = testContext.config.curve
-    const tokenRequest = makeIssueTokenRequest(testContext, 10)
+    const tokenRequest = makeIssueRequest(testContext, 10)
     const {
       request: { ser: request },
       tokens

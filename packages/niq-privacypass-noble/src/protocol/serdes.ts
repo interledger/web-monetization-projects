@@ -12,23 +12,26 @@ import {
 import { CryptoContext } from '../crypto/voprf/context'
 
 import {
-  BlindTokenRequestSer,
-  BlindTokenRequestWrapper,
-  IssueTokenRequestSer,
-  IssueTokenResponseInnerSer,
-  RedeemTokenRequestSer,
+  PrivacyPassRequestSer,
+  PrivacyPassRequestWrapper,
+  IssueRequestSer,
+  IssueResponseInnerSer,
+  RedeemRequestSer,
   RequestMeta
 } from './types/ser'
 import {
-  IssueTokenRequestDes,
-  IssueTokenResponseDes,
-  RedeemTokenRequestDes
+  IssueRequestDes,
+  IssueResponseDes,
+  RedeemRequestDes
 } from './types/des'
 
 const BATCH_PROOF_HEADER = 'batch-proof='
 
-export function wrapRequest(request: BlindTokenRequestSer, meta?: RequestMeta) {
-  const value: BlindTokenRequestWrapper = {
+export function wrapRequest(
+  request: PrivacyPassRequestSer,
+  meta?: RequestMeta
+) {
+  const value: PrivacyPassRequestWrapper = {
     bl_sig_req: b64ej(request),
     ...meta
   }
@@ -36,7 +39,7 @@ export function wrapRequest(request: BlindTokenRequestSer, meta?: RequestMeta) {
 }
 
 export function wrapAndSerializeRequest(
-  request: BlindTokenRequestSer,
+  request: PrivacyPassRequestSer,
   meta?: RequestMeta
 ) {
   return JSON.stringify(wrapRequest(request, meta))
@@ -46,7 +49,7 @@ export function unwrapRequest<T>(request: string): {
   unwrapped: T
   meta: RequestMeta
 } {
-  const value = JSON.parse(request) as BlindTokenRequestWrapper
+  const value = JSON.parse(request) as PrivacyPassRequestWrapper
   const meta = {
     path: value.path ?? '',
     host: value.host ?? ''
@@ -54,10 +57,8 @@ export function unwrapRequest<T>(request: string): {
   return { unwrapped: b64dj(value.bl_sig_req) as T, meta }
 }
 
-export function parseRedeemTokenRequest(
-  request: string
-): RedeemTokenRequestDes {
-  const { unwrapped, meta } = unwrapRequest<RedeemTokenRequestSer>(request)
+export function parseRedeemRequest(request: string): RedeemRequestDes {
+  const { unwrapped, meta } = unwrapRequest<RedeemRequestSer>(request)
   return {
     token: b64db(unwrapped.contents[0]),
     requestBinding: b64db(unwrapped.contents[1]),
@@ -65,37 +66,37 @@ export function parseRedeemTokenRequest(
   }
 }
 
-export function parseIssueTokenRequest(
+export function parseIssueRequest(
   request: string,
   context: CryptoContext
-): IssueTokenRequestDes {
-  const { unwrapped } = unwrapRequest<IssueTokenRequestSer>(request)
+): IssueRequestDes {
+  const { unwrapped } = unwrapRequest<IssueRequestSer>(request)
   return {
     contents: unwrapped.contents.map(context.b64dpt)
   }
 }
 
-export function serializeRedeemTokenRequest(
-  request: RedeemTokenRequestDes
-): RedeemTokenRequestSer {
+export function serializeRedeemRequest(
+  request: RedeemRequestDes
+): RedeemRequestSer {
   return {
     type: 'Redeem',
     contents: [b64eb(request.token), b64eb(request.requestBinding)]
   }
 }
 
-export function serializeIssueTokenRequest(
-  request: IssueTokenRequestDes
-): IssueTokenRequestSer {
+export function serializeIssueRequest(
+  request: IssueRequestDes
+): IssueRequestSer {
   return {
     type: 'Issue',
     contents: request.contents.map(b64ept)
   }
 }
 
-export function serializeIssueTokenResponse(
-  response: IssueTokenResponseDes
-): IssueTokenResponseInnerSer {
+export function serializeIssueResponse(
+  response: IssueResponseDes
+): IssueResponseInnerSer {
   const proof = {
     P: b64ej({
       C: b64eb(response.proof.c),
@@ -109,11 +110,11 @@ export function serializeIssueTokenResponse(
   }
 }
 
-export function parseIssueTokenResponse(
+export function parseIssueResponse(
   response: string,
   context: CryptoContext
-): IssueTokenResponseDes {
-  const inner = b64dj(response) as IssueTokenResponseInnerSer
+): IssueResponseDes {
+  const inner = b64dj(response) as IssueResponseInnerSer
   const sig = inner.sigs.map(context.b64dpt)
 
   const proofString = b64ds(inner.proof)

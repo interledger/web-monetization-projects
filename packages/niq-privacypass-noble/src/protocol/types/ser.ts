@@ -2,8 +2,8 @@ export type B64Json = string
 export type B64 = string
 export type ReqType = 'Issue' | 'Redeem'
 export type PointSer = B64
-export type RequestBinderSer = string
-export type TokenSer = string
+export type RequestBinderSer = B64
+export type TokenSer = B64
 
 export const Errors = {
   ErrInvalidMAC: "binding MAC didn't match derived MAC",
@@ -19,7 +19,7 @@ export const Errors = {
 
 export type ErrorValue = (typeof Errors)[keyof typeof Errors] | string // There would be others
 
-export interface BlindTokenRequestWrapper {
+export interface PrivacyPassRequestWrapper {
   bl_sig_req: B64Json
   host?: string
   path?: string
@@ -27,27 +27,27 @@ export interface BlindTokenRequestWrapper {
 
 export type RequestMeta = { host: string; path: string }
 
-export interface BlindTokenRequestSer {
+export interface PrivacyPassRequestSer {
   type: ReqType
   // Base64 encoded data
   contents: string[]
 }
 
-export interface IssueTokenRequestSer extends BlindTokenRequestSer {
+export interface IssueRequestSer extends PrivacyPassRequestSer {
   type: 'Issue'
   contents: PointSer[]
 }
 
-export interface RedeemTokenRequestSer extends BlindTokenRequestSer {
+export interface RedeemRequestSer extends PrivacyPassRequestSer {
   type: 'Redeem'
   contents: [TokenSer, RequestBinderSer]
 }
 
-export type RedeemTokenResponseSer = 'success' | ErrorValue
+export type RedeemResponseSer = 'success' | ErrorValue
 
-export type IssueTokenResponseOuterSer = B64Json
+export type IssueResponseOuterSer = B64Json
 
-export interface IssueTokenResponseInnerSer {
+export interface IssueResponseInnerSer {
   /**
    * Array of base64 encoded signatures ( P*s )
    */

@@ -1,22 +1,19 @@
-import {
-  BlindTokenRequestWrapper,
-  RedeemTokenRequestSer
-} from '../../types/ser'
+import { PrivacyPassRequestWrapper, RedeemRequestSer } from '../../types/ser'
 import { CryptoContext } from '../../../crypto/voprf/context'
 import { SignedToken } from '../../../crypto/voprf/types'
-import { RedeemTokenRequestDes } from '../../types/des'
-import { serializeRedeemTokenRequest, wrapRequest } from '../../serdes'
+import { RedeemRequestDes } from '../../types/des'
+import { serializeRedeemRequest, wrapRequest } from '../../serdes'
 
-export function makeRedeemTokenRequest(
+export function makeRedeemRequest(
   context: CryptoContext,
   signedToken: SignedToken,
   //
   host: string,
   path: string
 ): {
-  wrapped: BlindTokenRequestWrapper
-  des: RedeemTokenRequestDes
-  ser: RedeemTokenRequestSer
+  wrapped: PrivacyPassRequestWrapper
+  des: RedeemRequestDes
+  ser: RedeemRequestSer
 } {
   // Un-blind a point
   const xT = context.unblindPoint(signedToken.signedPoint, signedToken.blind)
@@ -27,14 +24,14 @@ export function makeRedeemTokenRequest(
   const reqData = [host, path]
   const reqBinder = context.createRequestBinding(sk, reqData)
 
-  const des: RedeemTokenRequestDes = {
+  const des: RedeemRequestDes = {
     token: signedToken.seed,
     requestBinding: reqBinder,
     host,
     path
   }
 
-  const ser = serializeRedeemTokenRequest(des)
+  const ser = serializeRedeemRequest(des)
   const wrapped = wrapRequest(ser, { host, path })
 
   return {
