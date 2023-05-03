@@ -246,23 +246,28 @@ export function rsasp1(skS: { n: bigint; d: bigint }, m: bigint): bigint {
   return s
 }
 
-function normalize(base64url: string) {
+function normalizeB64(base64url: string) {
   return (
     base64url.replace(/-/g, '+').replace(/_/g, '/') +
     '='.repeat((4 - (base64url.length % 4)) % 4)
   )
 }
 
-export function base64urlToBigInt(base64url: string): bigint {
+export function b64urlToBytes(base64url: string): Uint8Array {
   // Convert base64url to base64
-  const base64 = normalize(base64url)
-
+  const base64 = normalizeB64(base64url)
   // Decode base64 to Uint8Array
   const binaryString = atob(base64)
-  const bytes = new Uint8Array(
-    [...binaryString].map(char => char.charCodeAt(0))
-  )
+  const len = binaryString.length
+  const bytes = new Uint8Array(len)
 
-  // Convert Uint8Array to bigint
-  return os2ip(bytes)
+  for (let i = 0; i < len; i++) {
+    bytes[i] = binaryString.charCodeAt(i)
+  }
+
+  return bytes
+}
+
+export function b64urlToBigInt(base64url: string): bigint {
+  return os2ip(b64urlToBytes(base64url))
 }

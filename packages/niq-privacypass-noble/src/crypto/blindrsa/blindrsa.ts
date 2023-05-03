@@ -1,5 +1,5 @@
 import {
-  base64urlToBigInt,
+  b64urlToBigInt,
   emsa_pss_encode,
   i2osp,
   os2ip,
@@ -43,8 +43,8 @@ export async function blind(
   if (!jwkKey.n || !jwkKey.e) {
     throw new Error('key has invalid parameters')
   }
-  const n = base64urlToBigInt(jwkKey.n)
-  const e = base64urlToBigInt(jwkKey.e)
+  const n = b64urlToBigInt(jwkKey.n)
+  const e = b64urlToBigInt(jwkKey.e)
 
   // 4. r = random_integer_uniform(1, n)
   let r: bigint
@@ -110,7 +110,7 @@ export async function finalize(
   if (!jwkKey.n) {
     throw new Error('key has invalid parameters')
   }
-  const n = base64urlToBigInt(jwkKey.n)
+  const n = b64urlToBigInt(jwkKey.n)
   const s = mod(z * r_inv, n)
 
   // 6. sig = int_to_bytes(s, kLen)
@@ -157,8 +157,8 @@ export async function blindSign(
   if (!jwkKey.n || !jwkKey.d) {
     throw new Error('key is not a private key')
   }
-  const n = base64urlToBigInt(jwkKey.n)
-  const d = base64urlToBigInt(jwkKey.d)
+  const n = b64urlToBigInt(jwkKey.n)
+  const d = b64urlToBigInt(jwkKey.d)
   if (m >= n) {
     throw new Error('invalid message length')
   }
