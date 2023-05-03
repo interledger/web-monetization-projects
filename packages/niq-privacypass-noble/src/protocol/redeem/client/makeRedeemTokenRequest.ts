@@ -2,8 +2,8 @@ import {
   BlindTokenRequestWrapper,
   RedeemTokenRequestSer
 } from '../../types/ser'
-import { CryptoContext } from '../../../crypto/context'
-import { SignedToken } from '../../../crypto/types'
+import { CryptoContext } from '../../../crypto/voprf/context'
+import { SignedToken } from '../../../crypto/voprf/types'
 import { RedeemTokenRequestDes } from '../../types/des'
 import { serializeRedeemTokenRequest, wrapRequest } from '../../serdes'
 

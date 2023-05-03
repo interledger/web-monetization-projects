@@ -1,4 +1,4 @@
-import { b64db, b64eb } from '../../../src/crypto/b64'
+import { b64db, b64eb } from '../../../../src/crypto/b64'
 
 describe('base64 functions', () => {
   describe('b64db', () => {

@@ -1,8 +1,8 @@
 import { IssueTokenRequestDes, IssueTokenResponseDes } from '../../types/des'
-import { CryptoContext } from '../../../crypto/context'
-import { computeComposites } from '../../../crypto/computeComposites'
-import { DLEQ } from '../../../crypto/dleq'
-import { Commitment } from '../../../crypto/types'
+import { CryptoContext } from '../../../crypto/voprf/context'
+import { computeComposites } from '../../../crypto/voprf/computeComposites'
+import { DLEQ } from '../../../crypto/voprf/dleq'
+import { Commitment } from '../../../crypto/voprf/types'
 
 export function verifyIssueTokenResponse(
   request: IssueTokenRequestDes,

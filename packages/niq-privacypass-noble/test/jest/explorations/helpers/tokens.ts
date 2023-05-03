@@ -3,7 +3,7 @@ import { sha256 } from '@noble/hashes/sha256'
 // TODO: report typing issue with hashToCurve
 import { hashToCurve } from '@noble/curves/p256'
 
-import { BlindedToken, Point } from '../../../../src/crypto/types'
+import { BlindedToken, Point } from '../../../../src/crypto/voprf/types'
 
 import { computeSecret, randomSecret } from './utils'
 

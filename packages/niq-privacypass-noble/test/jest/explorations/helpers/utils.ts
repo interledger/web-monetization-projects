@@ -6,7 +6,7 @@ import { bytesToNumberBE, numberToBytesBE } from '@noble/curves/abstract/utils'
 
 export { bytesToNumberBE, numberToBytesBE } from '@noble/curves/abstract/utils'
 
-import { Point } from '../../../../src/crypto/types'
+import { Point } from '../../../../src/crypto/voprf/types'
 
 export const HMAC = (key: Point, message: Buffer) => {
   const keyBuffer = Buffer.from(key.toRawBytes(false))

@@ -3,7 +3,7 @@ import { p256 } from '@noble/curves/p256'
 import { bytesToNumberBE } from '@noble/curves/abstract/utils'
 import { mod } from '@noble/curves/abstract/modular'
 
-import { DLEQ } from '../../../src/crypto/dleq'
+import { DLEQ } from '../../../src/crypto/voprf/dleq'
 
 import {
   divPoint,

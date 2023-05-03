@@ -9,7 +9,7 @@ import {
   b64ept,
   b64es
 } from '../crypto/b64'
-import { CryptoContext } from '../crypto/context'
+import { CryptoContext } from '../crypto/voprf/context'
 
 import {
   BlindTokenRequestSer,

@@ -1,8 +1,8 @@
 import { IssueTokenRequestDes, IssueTokenResponseDes } from '../../types/des'
-import { CryptoContext } from '../../../crypto/context'
-import { Commitment } from '../../../crypto/types'
-import { computeComposites } from '../../../crypto/computeComposites'
-import { DLEQ } from '../../../crypto/dleq'
+import { CryptoContext } from '../../../crypto/voprf/context'
+import { Commitment } from '../../../crypto/voprf/types'
+import { computeComposites } from '../../../crypto/voprf/computeComposites'
+import { DLEQ } from '../../../crypto/voprf/dleq'
 import { IssueTokenResponseInnerSer } from '../../types/ser'
 import { serializeIssueTokenResponse } from '../../serdes'
 

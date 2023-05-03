@@ -1,5 +1,5 @@
-import { BlindedToken } from '../../../crypto/types'
-import { CryptoContext } from '../../../crypto/context'
+import { BlindedToken } from '../../../crypto/voprf/types'
+import { CryptoContext } from '../../../crypto/voprf/context'
 import { IssueTokenRequestSer } from '../../types/ser'
 import { IssueTokenRequestDes } from '../../types/des'
 import { serializeIssueTokenRequest } from '../../serdes'

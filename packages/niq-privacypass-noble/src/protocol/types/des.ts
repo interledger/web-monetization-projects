@@ -1,5 +1,5 @@
-import { Point } from '../../crypto/types'
-import { DLEQProof } from '../../crypto/dleq'
+import { Point } from '../../crypto/voprf/types'
+import { DLEQProof } from '../../crypto/voprf/dleq'
 
 import { IssueTokenResponseInnerSer } from './ser'
 

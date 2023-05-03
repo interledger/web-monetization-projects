@@ -1,5 +1,5 @@
 import { makeRedeemTokenRequest } from '../../../../../src/protocol/redeem/client/makeRedeemTokenRequest'
-import { SignedToken } from '../../../../../src/crypto/types'
+import { SignedToken } from '../../../../../src/crypto/voprf/types'
 import { testContext } from '../../../testconfig'
 import { IssueTokenResponseInnerSer } from '../../../../../src/protocol/types/ser'
 import { b64dj } from '../../../../../src/crypto/b64'

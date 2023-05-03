@@ -1,5 +1,5 @@
 import { RedeemTokenRequestDes } from '../../types/des'
-import { CryptoContext } from '../../../crypto/context'
+import { CryptoContext } from '../../../crypto/voprf/context'
 
 export function verifyRedeemTokenRequest(
   req: RedeemTokenRequestDes,
