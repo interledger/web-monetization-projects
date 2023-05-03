@@ -29,8 +29,7 @@ export type RequestMeta = { host: string; path: string }
 
 export interface PrivacyPassRequestSer {
   type: ReqType
-  // Base64 encoded data
-  contents: string[]
+  contents: B64[]
 }
 
 export interface IssueRequestSer extends PrivacyPassRequestSer {
@@ -64,5 +63,5 @@ export interface IssueResponseInnerSer {
    */
   proof: B64
 
-  version: string | '1.1.0'
+  version: string
 }
