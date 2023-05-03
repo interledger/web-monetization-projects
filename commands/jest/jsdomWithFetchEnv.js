@@ -17,6 +17,8 @@ class CustomizedTestEnvironment extends TestEnvironment {
     // These seem to be needed for @noble/hashes
     this.global.TextEncoder = globalThis.TextEncoder
     this.global.Uint8Array = globalThis.Uint8Array
+    // TODO: is there a better way to do this?
+    this.global.crypto.subtle ??= require('crypto').webcrypto.subtle
   }
 }
 

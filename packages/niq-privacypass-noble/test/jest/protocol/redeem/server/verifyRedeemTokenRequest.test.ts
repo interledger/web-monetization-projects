@@ -13,7 +13,7 @@ describe('verifyRedeemRequest', () => {
     const signedG = testContext.signPoint(commitment.g, serverKey)
     expect(signedG.equals(commitment.h)).toBe(true)
   })
-  it('should verify if the request when using correct key', () => {
+  it('should verify the request when using correct key', () => {
     const verified = verifyRedeemTokenRequest(parsed, [serverKey], testContext)
     expect(verified).toBe(true)
   })
