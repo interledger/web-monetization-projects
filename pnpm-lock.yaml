@@ -2292,8 +2292,8 @@ importers:
         specifier: 17.6.1
         version: 17.6.1
       '@crxjs/vite-plugin':
-        specifier: 2.0.0-beta.16
-        version: 2.0.0-beta.16
+        specifier: 2.0.0-beta.17
+        version: 2.0.0-beta.17
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -5779,14 +5779,15 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@crxjs/vite-plugin@2.0.0-beta.16:
-    resolution: {integrity: sha512-/XO6sWmVKcBiHFyCpTD1RtbKbFh7gLOUZxymBQ5EuLnlW/hD80yDWDNvYKFr2xl2YwWkM1100RusR+HwaRssHA==}
+  /@crxjs/vite-plugin@2.0.0-beta.17:
+    resolution: {integrity: sha512-44CavnsY01jvF2uHfRdqA3j6bg6IcVc+ZrSayYS+H7eqb6BHWh619A2jJ3Y0eHVh9H65041ob4g6I1VMxWx4qw==}
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@webcomponents/custom-elements': 1.6.0
       acorn-walk: 8.2.0
       cheerio: 1.0.0-rc.12
       connect-injector: 0.4.4
+      convert-source-map: 1.9.0
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
       es-module-lexer: 0.10.5
       fast-glob: 3.2.12
