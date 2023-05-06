@@ -52,7 +52,7 @@
     "@babel/preset-typescript": "7.21.4",
     "@commitlint/cli": "17.6.3",
     "@commitlint/config-conventional": "17.6.3",
-    "@swc/core": "1.3.55",
+    "@swc/core": "1.3.56",
     "@swc/jest": "0.2.26",
     "@types/debug": "4.1.7",
     "@types/get-port": "4.2.0",
