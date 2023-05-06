@@ -52,11 +52,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -209,11 +209,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -381,11 +381,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -622,11 +622,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@nut-tree/nut-js':
         specifier: 2.3.0
         version: 2.3.0
@@ -911,11 +911,11 @@ importers:
         specifier: 0.0.0
         version: link:../coil-client
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@graphql-codegen/cli':
         specifier: 3.3.1
         version: 3.3.1(@babel/core@7.21.4)(@types/node@18.16.1)(graphql@16.6.0)
@@ -1116,11 +1116,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -1279,11 +1279,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -1460,11 +1460,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -1650,11 +1650,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -1807,11 +1807,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -1960,11 +1960,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -2120,11 +2120,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -2286,11 +2286,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@crxjs/vite-plugin':
         specifier: 2.0.0-beta.17
         version: 2.0.0-beta.17
@@ -2470,11 +2470,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -2633,11 +2633,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -2826,11 +2826,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -3031,11 +3031,11 @@ importers:
         specifier: ^0.0.0
         version: link:../coil-webpack-utils
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@hot-loader/react-dom':
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
@@ -3215,11 +3215,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -3381,11 +3381,11 @@ importers:
         specifier: ^0.0.0
         version: link:../coil-webpack-utils
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -3559,11 +3559,11 @@ importers:
         specifier: ^0.0.0
         version: link:../coil-webpack-utils
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@hot-loader/react-dom':
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
@@ -3730,11 +3730,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -3896,11 +3896,11 @@ importers:
         specifier: 7.21.4
         version: 7.21.4(@babel/core@7.21.4)
       '@commitlint/cli':
-        specifier: 17.6.1
-        version: 17.6.1(@swc/core@1.3.55)
+        specifier: 17.6.3
+        version: 17.6.3(@swc/core@1.3.55)
       '@commitlint/config-conventional':
-        specifier: 17.6.1
-        version: 17.6.1
+        specifier: 17.6.3
+        version: 17.6.3
       '@swc/core':
         specifier: 1.3.55
         version: 1.3.55
@@ -5611,13 +5611,13 @@ packages:
     dev: false
     optional: true
 
-  /@commitlint/cli@17.6.1(@swc/core@1.3.55):
-    resolution: {integrity: sha512-kCnDD9LE2ySiTnj/VPaxy4/oRayRcdv4aCuVxtoum8SxIU7OADHc0nJPQfheE8bHcs3zZdWzDMWltRosuT13bg==}
+  /@commitlint/cli@17.6.3(@swc/core@1.3.55):
+    resolution: {integrity: sha512-ItSz2fd4F+CujgIbQOfNNerDF1eFlsBGEfp9QcCb1kxTYMuKTYZzA6Nu1YRRrIaaWwe2E7awUGpIMrPoZkOG3A==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
       '@commitlint/format': 17.4.4
-      '@commitlint/lint': 17.6.1
+      '@commitlint/lint': 17.6.3
       '@commitlint/load': 17.5.0(@swc/core@1.3.55)
       '@commitlint/read': 17.5.1
       '@commitlint/types': 17.4.4
@@ -5631,8 +5631,8 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@commitlint/config-conventional@17.6.1:
-    resolution: {integrity: sha512-ng/ybaSLuTCH9F+7uavSOnEQ9EFMl7lHEjfAEgRh1hwmEe8SpLKpQeMo2aT1IWvHaGMuTb+gjfbzoRf2IR23NQ==}
+  /@commitlint/config-conventional@17.6.3:
+    resolution: {integrity: sha512-bLyHEjjRWqlLQWIgYFHmUPbEFMOOLXeF3QbUinDIJev/u9e769tkoTH9YPknEywiuIrAgZaVo+OfzAIsJP0fsw==}
     engines: {node: '>=v14'}
     dependencies:
       conventional-changelog-conventionalcommits: 5.0.0
@@ -5671,19 +5671,19 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@commitlint/is-ignored@17.4.4:
-    resolution: {integrity: sha512-Y3eo1SFJ2JQDik4rWkBC4tlRIxlXEFrRWxcyrzb1PUT2k3kZ/XGNuCDfk/u0bU2/yS0tOA/mTjFsV+C4qyACHw==}
+  /@commitlint/is-ignored@17.6.3:
+    resolution: {integrity: sha512-LQbNdnPbxrpbcrVKR5yf51SvquqktpyZJwqXx3lUMF6+nT9PHB8xn3wLy8pi2EQv5Zwba484JnUwDE1ygVYNQA==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/types': 17.4.4
-      semver: 7.3.8
+      semver: 7.5.0
     dev: true
 
-  /@commitlint/lint@17.6.1:
-    resolution: {integrity: sha512-VARJ9kxH64isgwVnC+ABPafCYzqxpsWJIpDaTuI0gh8aX4GQ0i7cn9tvxtFNfJj4ER2BAJeWJ0vURdNYjK2RQQ==}
+  /@commitlint/lint@17.6.3:
+    resolution: {integrity: sha512-fBlXwt6SHJFgm3Tz+luuo3DkydAx9HNC5y4eBqcKuDuMVqHd2ugMNr+bQtx6riv9mXFiPoKp7nE4Xn/ls3iVDA==}
     engines: {node: '>=v14'}
     dependencies:
-      '@commitlint/is-ignored': 17.4.4
+      '@commitlint/is-ignored': 17.6.3
       '@commitlint/parse': 17.4.4
       '@commitlint/rules': 17.6.1
       '@commitlint/types': 17.4.4
