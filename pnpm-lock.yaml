@@ -164,16 +164,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -333,16 +333,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -496,16 +496,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -794,16 +794,16 @@ importers:
         version: 7.6.2
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(debug@4.3.4)(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(debug@4.3.4)(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1050,16 +1050,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1228,16 +1228,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1397,16 +1397,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1581,16 +1581,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(debug@4.3.4)(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(debug@4.3.4)(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1762,16 +1762,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -1919,16 +1919,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2072,16 +2072,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2232,16 +2232,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2422,16 +2422,16 @@ importers:
         version: 4.2.0(typescript@5.0.4)(vite@4.3.5)
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2588,16 +2588,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2745,16 +2745,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -2941,16 +2941,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3167,16 +3167,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3333,16 +3333,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3496,16 +3496,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3689,16 +3689,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -3845,16 +3845,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -4008,16 +4008,16 @@ importers:
         version: 5.0.4
       webpack:
         specifier: 5.82.0
-        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+        version: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer:
         specifier: 4.8.0
         version: 4.8.0
       webpack-cli:
-        specifier: 5.0.2
-        version: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+        specifier: 5.1.0
+        version: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-server:
         specifier: 4.15.0
-        version: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+        version: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge:
         specifier: 5.8.0
         version: 5.8.0
@@ -8742,30 +8742,30 @@ packages:
     resolution: {integrity: sha512-CqTpxOlUCPWRNUPZDxT5v2NnHXA4oox612iUGnmTUGQFhZ1Gkj8kirtl/2wcF6MqX7+PqqicZzOCBKKfIn0dww==}
     dev: true
 
-  /@webpack-cli/configtest@2.0.1(webpack-cli@5.0.2)(webpack@5.82.0):
-    resolution: {integrity: sha512-njsdJXJSiS2iNbQVS0eT8A/KPnmyH4pv1APj2K0d1wrZcBLw+yppxOy4CGqa0OxDJkzfL/XELDhD8rocnIwB5A==}
+  /@webpack-cli/configtest@2.1.0(webpack-cli@5.1.0)(webpack@5.82.0):
+    resolution: {integrity: sha512-K/vuv72vpfSEZoo5KIU0a2FsEoYdW0DUMtMpB5X3LlUwshetMZRZRxB7sCsVji/lFaSxtQQ3aM9O4eMolXkU9w==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       webpack: 5.x.x
       webpack-cli: 5.x.x
     dependencies:
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
-      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
+      webpack-cli: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
     dev: true
 
-  /@webpack-cli/info@2.0.1(webpack-cli@5.0.2)(webpack@5.82.0):
+  /@webpack-cli/info@2.0.1(webpack-cli@5.1.0)(webpack@5.82.0):
     resolution: {integrity: sha512-fE1UEWTwsAxRhrJNikE7v4EotYflkEhBL7EbajfkPlf6E37/2QshOy/D48Mw8G5XMFlQtS6YV42vtbG9zBpIQA==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       webpack: 5.x.x
       webpack-cli: 5.x.x
     dependencies:
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
-      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
+      webpack-cli: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
     dev: true
 
-  /@webpack-cli/serve@2.0.2(webpack-cli@5.0.2)(webpack-dev-server@4.15.0)(webpack@5.82.0):
-    resolution: {integrity: sha512-S9h3GmOmzUseyeFW3tYNnWS7gNUuwxZ3mmMq0JyW78Vx1SGKPSkt5bT4pB0rUnVfHjP0EL9gW2bOzmtiTfQt0A==}
+  /@webpack-cli/serve@2.0.3(webpack-cli@5.1.0)(webpack-dev-server@4.15.0)(webpack@5.82.0):
+    resolution: {integrity: sha512-Bwxd73pHuYc0cyl7vulPp2I6kAYtmJPkfUivbts7by6wDAVyFdKzGX3AksbvCRyNVFUJu7o2ZTcWXdT90T3qbg==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       webpack: 5.x.x
@@ -8775,9 +8775,9 @@ packages:
       webpack-dev-server:
         optional: true
     dependencies:
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
-      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
-      webpack-dev-server: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
+      webpack-cli: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+      webpack-dev-server: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
     dev: true
 
   /@wext/shipit@0.2.1(patch_hash=5qxn472p55dc3l27ceuqp24iz4):
@@ -11458,7 +11458,7 @@ packages:
       normalize-path: 3.0.0
       schema-utils: 4.0.1
       serialize-javascript: 6.0.1
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
     dev: true
 
   /core-js-compat@3.30.1:
@@ -14964,7 +14964,7 @@ packages:
       lodash: 4.17.21
       pretty-error: 4.0.0
       tapable: 2.2.1
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
     dev: true
 
   /htmlparser2@3.10.1:
@@ -21824,7 +21824,7 @@ packages:
       schema-utils: 3.1.2
       serialize-javascript: 6.0.1
       terser: 5.17.1
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
     dev: true
 
   /terser@5.17.1:
@@ -22133,7 +22133,7 @@ packages:
       micromatch: 4.0.5
       semver: 7.5.0
       typescript: 5.0.4
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
     dev: true
 
   /ts-log@2.2.5:
@@ -22956,8 +22956,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /webpack-cli@5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0):
-    resolution: {integrity: sha512-4y3W5Dawri5+8dXm3+diW6Mn1Ya+Dei6eEVAdIduAmYNLzv1koKVAqsfgrrc9P2mhrYHQphx5htnGkcNwtubyQ==}
+  /webpack-cli@5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0):
+    resolution: {integrity: sha512-a7KRJnCxejFoDpYTOwzm5o21ZXMaNqtRlvS183XzGDUPRdVEzJNImcQokqYZ8BNTnk9DkKiuWxw75+DCCoZ26w==}
     engines: {node: '>=14.15.0'}
     hasBin: true
     peerDependencies:
@@ -22974,9 +22974,9 @@ packages:
         optional: true
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      '@webpack-cli/configtest': 2.0.1(webpack-cli@5.0.2)(webpack@5.82.0)
-      '@webpack-cli/info': 2.0.1(webpack-cli@5.0.2)(webpack@5.82.0)
-      '@webpack-cli/serve': 2.0.2(webpack-cli@5.0.2)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+      '@webpack-cli/configtest': 2.1.0(webpack-cli@5.1.0)(webpack@5.82.0)
+      '@webpack-cli/info': 2.0.1(webpack-cli@5.1.0)(webpack@5.82.0)
+      '@webpack-cli/serve': 2.0.3(webpack-cli@5.1.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       colorette: 2.0.20
       commander: 10.0.1
       cross-spawn: 7.0.3
@@ -22985,9 +22985,9 @@ packages:
       import-local: 3.1.0
       interpret: 3.1.1
       rechoir: 0.8.0
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
       webpack-bundle-analyzer: 4.8.0
-      webpack-dev-server: 4.15.0(webpack-cli@5.0.2)(webpack@5.82.0)
+      webpack-dev-server: 4.15.0(webpack-cli@5.1.0)(webpack@5.82.0)
       webpack-merge: 5.8.0
     dev: true
 
@@ -23002,10 +23002,10 @@ packages:
       mime-types: 2.1.35
       range-parser: 1.2.1
       schema-utils: 4.0.1
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
     dev: true
 
-  /webpack-dev-server@4.15.0(debug@4.3.4)(webpack-cli@5.0.2)(webpack@5.82.0):
+  /webpack-dev-server@4.15.0(debug@4.3.4)(webpack-cli@5.1.0)(webpack@5.82.0):
     resolution: {integrity: sha512-HmNB5QeSl1KpulTBQ8UT4FPrByYyaLxpJoQ0+s7EvUrMc16m0ZS1sgb1XGqzmgCPk0c9y+aaXxn11tbLzuM7NQ==}
     engines: {node: '>= 12.13.0'}
     hasBin: true
@@ -23046,8 +23046,8 @@ packages:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
-      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
+      webpack-cli: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-middleware: 5.3.3(webpack@5.82.0)
       ws: 8.13.0
     transitivePeerDependencies:
@@ -23057,7 +23057,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /webpack-dev-server@4.15.0(webpack-cli@5.0.2)(webpack@5.82.0):
+  /webpack-dev-server@4.15.0(webpack-cli@5.1.0)(webpack@5.82.0):
     resolution: {integrity: sha512-HmNB5QeSl1KpulTBQ8UT4FPrByYyaLxpJoQ0+s7EvUrMc16m0ZS1sgb1XGqzmgCPk0c9y+aaXxn11tbLzuM7NQ==}
     engines: {node: '>= 12.13.0'}
     hasBin: true
@@ -23098,8 +23098,8 @@ packages:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2)
-      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+      webpack: 5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0)
+      webpack-cli: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-dev-middleware: 5.3.3(webpack@5.82.0)
       ws: 8.13.0
     transitivePeerDependencies:
@@ -23126,7 +23126,7 @@ packages:
     resolution: {integrity: sha512-kyDivFZ7ZM0BVOUteVbDFhlRt7Ah/CSPwJdi8hBpkK7QLumUqdLtVfm/PX/hkcnrvr0i77fO5+TjZ94Pe+C9iw==}
     dev: false
 
-  /webpack@5.82.0(@swc/core@1.3.56)(webpack-cli@5.0.2):
+  /webpack@5.82.0(@swc/core@1.3.56)(webpack-cli@5.1.0):
     resolution: {integrity: sha512-iGNA2fHhnDcV1bONdUu554eZx+XeldsaeQ8T67H6KKHl2nUSwX8Zm7cmzOA46ox/X1ARxf7Bjv8wQ/HsB5fxBg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -23159,7 +23159,7 @@ packages:
       tapable: 2.2.1
       terser-webpack-plugin: 5.3.7(@swc/core@1.3.56)(webpack@5.82.0)
       watchpack: 2.4.0
-      webpack-cli: 5.0.2(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
+      webpack-cli: 5.1.0(webpack-bundle-analyzer@4.8.0)(webpack-dev-server@4.15.0)(webpack@5.82.0)
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - '@swc/core'
