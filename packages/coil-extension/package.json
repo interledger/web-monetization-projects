@@ -97,7 +97,7 @@
     "@commitlint/cli": "17.6.3",
     "@commitlint/config-conventional": "17.6.3",
     "@nut-tree/nut-js": "2.3.0",
-    "@swc/core": "1.3.56",
+    "@swc/core": "1.3.57",
     "@swc/jest": "0.2.26",
     "@types/debug": "4.1.7",
     "@types/filesystem": "0.0.32",
