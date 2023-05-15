@@ -230,12 +230,9 @@ export class TabStates {
   private setBrowserActionStateFromAuthAndTabState(from?: string) {
     dbg('setBrowserActionStateFromAuthAndTabState', { from })
     const token = this.auth.getStoredToken()
-    const haveAuth = Boolean(token || DISABLED)
 
     if (!token || !this.store.validToken) {
-      if (!DISABLED) {
-        this.popup.disable()
-      }
+      this.popup.disable()
     }
 
     const tabId = this.activeTab
@@ -247,9 +244,9 @@ export class TabStates {
         this.setIcon(tabId, 'monetized')
       }
 
-      if (!haveAuth) {
+      if (token == null) {
         this.setIcon(tabId, 'unavailable')
-      } else if (haveAuth) {
+      } else if (token) {
         this.popup.enable()
 
         const tabState = this.getActiveOrDefault()
@@ -258,7 +255,6 @@ export class TabStates {
         dbg({ from, hasStream })
 
         const isStreaming: boolean =
-          DISABLED ||
           (hasStream &&
             Boolean(
               frameStates.find(
@@ -267,7 +263,8 @@ export class TabStates {
                   getFrameTotal(f) > 0 &&
                   frameHasRecentPacket(f)
               )
-            ))
+            )) ||
+          DISABLED
 
         if (hasStream) {
           this.setIcon(tabId, 'monetized')
