@@ -34,8 +34,6 @@ type MessageSender = chrome.runtime.MessageSender
 
 type ChromeTabs = (typeof chrome)['tabs']
 
-const DISABLED = true
-
 @injectable()
 export class MonetizationService {
   constructor(
@@ -137,10 +135,6 @@ export class MonetizationService {
 
     // This used to be sent from content script as a separate message
     this.setFrameMonetized(frame, requestId, 0, 'startWebMonetization')
-
-    if (DISABLED) {
-      return true
-    }
 
     // TODO:WM2
     setTimeout(() => {
@@ -308,10 +302,6 @@ export class MonetizationService {
   }
 
   pauseWebMonetization(request: PauseWebMonetization, sender: MessageSender) {
-    if (DISABLED) {
-      return true
-    }
-
     return this.doPauseWebMonetization(
       getFrameSpec(sender),
       request.data.requestIds
@@ -319,9 +309,6 @@ export class MonetizationService {
   }
 
   resumeWebMonetization(request: ResumeWebMonetization, sender: MessageSender) {
-    if (DISABLED) {
-      return true
-    }
     // Note that this gets sent regardless of whether actually monetized or not
     // it's more like 'set tab interactive'
     return this.doResumeWebMonetization(
@@ -331,10 +318,6 @@ export class MonetizationService {
   }
 
   stopWebMonetization(request: StopWebMonetization, sender: MessageSender) {
-    if (DISABLED) {
-      return true
-    }
-
     return this.stopWebMonetizationStream(request.data.requestId)
   }
 
