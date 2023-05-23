@@ -637,8 +637,8 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.58)
       '@types/debug':
-        specifier: 4.1.7
-        version: 4.1.7
+        specifier: 4.1.8
+        version: 4.1.8
       '@types/filesystem':
         specifier: 0.0.32
         version: 0.0.32
@@ -1472,8 +1472,8 @@ importers:
         specifier: 0.2.26
         version: 0.2.26(@swc/core@1.3.58)
       '@types/debug':
-        specifier: 4.1.7
-        version: 4.1.7
+        specifier: 4.1.8
+        version: 4.1.8
       '@types/get-port':
         specifier: 4.2.0
         version: 4.2.0
@@ -8132,8 +8132,8 @@ packages:
     resolution: {integrity: sha512-LS1MCPaQKqspg7FvexuhmDbWUhE2yIJ+4AgVIyObfc06/UKZ8REgxGNjZc82wPLWmbeOm7S+gSsLgo75TanG4A==}
     dev: false
 
-  /@types/debug@4.1.7:
-    resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
+  /@types/debug@4.1.8:
+    resolution: {integrity: sha512-/vPO1EPOs306Cvhwv7KfVfYvOJqA/S/AXjaHQiJboCZzcNDb+TIJFN9/2C9DZ//ijSKWioNyUxD792QmDJ+HKQ==}
     dependencies:
       '@types/ms': 0.7.31
 
@@ -15165,7 +15165,7 @@ packages:
   /ilp-logger@1.4.4:
     resolution: {integrity: sha512-R7F+SH6Aiipuqoq63gtzy6/HVIfcCK1rEmq8bE8NLSufXJPRoXszNs6RpypQi9HJcZvTcIUPFE15bS/HI+T+/A==}
     dependencies:
-      '@types/debug': 4.1.7
+      '@types/debug': 4.1.8
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)(supports-color@7.2.0)
       supports-color: 7.2.0
     dev: false
@@ -15173,7 +15173,7 @@ packages:
   /ilp-logger@1.4.5-alpha.2:
     resolution: {integrity: sha512-WtbscdjUUPVseRkDpRlfb/YUpsq4zfoOz6PlJSkx+aqJot1P5N+YGd4YKW1g9wm6O8muo5e/xBotyJqCQs0g+Q==}
     dependencies:
-      '@types/debug': 4.1.7
+      '@types/debug': 4.1.8
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)(supports-color@9.3.1)
       supports-color: 9.3.1
     dev: false
