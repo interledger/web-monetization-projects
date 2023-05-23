@@ -175,8 +175,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/coil-anonymous-tokens:
     dependencies:
@@ -344,8 +344,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/coil-client:
     dependencies:
@@ -507,8 +507,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/coil-extension:
     dependencies:
@@ -805,8 +805,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(debug@4.3.4)(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/coil-local-server:
     dependencies:
@@ -1061,8 +1061,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/coil-monorepo-upkeep:
     dependencies:
@@ -1239,8 +1239,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/coil-privacypass-sjcl:
     dependencies:
@@ -1408,8 +1408,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/coil-puppeteer-utils:
     dependencies:
@@ -1592,8 +1592,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(debug@4.3.4)(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/coil-webpack-utils:
     dependencies:
@@ -1773,8 +1773,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/coil-wm-utils:
     dependencies:
@@ -1930,8 +1930,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/dier-makr-annotations:
     devDependencies:
@@ -2083,8 +2083,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/dier-makr-inversify:
     dependencies:
@@ -2243,8 +2243,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/dummy-ext:
     dependencies:
@@ -2433,8 +2433,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/niq-ci:
     dependencies:
@@ -2599,8 +2599,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/stacktracejs-stacktrace-js:
     dependencies:
@@ -2756,8 +2756,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/webexts-build-utils:
     dependencies:
@@ -2952,8 +2952,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/webmonetization-demo:
     dependencies:
@@ -3178,8 +3178,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/webmonetization-polyfill-utils:
     dependencies:
@@ -3344,8 +3344,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/webmonetization-react:
     dependencies:
@@ -3507,8 +3507,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/webmonetization-testing-utils:
     dependencies:
@@ -3700,8 +3700,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/webmonetization-types:
     devDependencies:
@@ -3856,8 +3856,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
   packages/webmonetization-wext:
     dependencies:
@@ -4019,8 +4019,8 @@ importers:
         specifier: 4.15.0
         version: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
       webpack-merge:
-        specifier: 5.8.0
-        version: 5.8.0
+        specifier: 5.9.0
+        version: 5.9.0
 
 packages:
 
@@ -22918,7 +22918,7 @@ packages:
       webpack: 5.82.1(@swc/core@1.3.58)(webpack-cli@5.1.1)
       webpack-bundle-analyzer: 4.8.0
       webpack-dev-server: 4.15.0(webpack-cli@5.1.1)(webpack@5.82.1)
-      webpack-merge: 5.8.0
+      webpack-merge: 5.9.0
     dev: true
 
   /webpack-dev-middleware@5.3.3(webpack@5.82.1):
@@ -23039,8 +23039,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /webpack-merge@5.8.0:
-    resolution: {integrity: sha512-/SaI7xY0831XwP6kzuwhKWVKDP9t1QY1h65lAFLbZqMPIuYcD9QAW4u9STIbU9kaJbPBB/geU/gLr1wDjOhQ+Q==}
+  /webpack-merge@5.9.0:
+    resolution: {integrity: sha512-6NbRQw4+Sy50vYNTw7EyOn41OZItPiXB8GNv3INSoe3PSFaHJEz3SHTrYVaRm2LilNGnFUzh0FAwqPEmU/CwDg==}
     engines: {node: '>=10.0.0'}
     dependencies:
       clone-deep: 4.0.1
