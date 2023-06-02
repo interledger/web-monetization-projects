@@ -71,10 +71,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -101,7 +101,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -149,19 +149,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -234,10 +234,10 @@ importers:
         version: 1.0.30
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -264,7 +264,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -318,19 +318,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -403,10 +403,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -433,7 +433,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -481,19 +481,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -674,10 +674,10 @@ importers:
         version: 9.0.1
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       '@webexts/build-utils':
         specifier: ^0.0.0
         version: link:../webexts-build-utils
@@ -716,7 +716,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -767,7 +767,7 @@ importers:
         version: 2.8.8
       puppeteer:
         specifier: 20.1.1
-        version: 20.1.1(typescript@5.0.4)
+        version: 20.1.1(typescript@5.1.3)
       regenerator-runtime:
         specifier: 0.13.11
         version: 0.13.11
@@ -776,19 +776,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       web-ext:
         specifier: 7.6.2
         version: 7.6.2
@@ -954,10 +954,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       '@webmonetization/types':
         specifier: 0.0.0
         version: link:../webmonetization-types
@@ -987,7 +987,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -1035,19 +1035,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -1135,10 +1135,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1165,7 +1165,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -1213,19 +1213,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -1304,10 +1304,10 @@ importers:
         version: 1.0.30
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1334,7 +1334,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -1382,19 +1382,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -1427,7 +1427,7 @@ importers:
         version: 5.1.1
       puppeteer:
         specifier: ^20.0.0
-        version: 20.1.1(typescript@5.0.4)
+        version: 20.1.1(typescript@5.1.3)
       tmp:
         specifier: ^0.2.1
         version: 0.2.1
@@ -1488,10 +1488,10 @@ importers:
         version: 0.2.3
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1518,7 +1518,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -1566,19 +1566,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -1669,10 +1669,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1699,7 +1699,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -1747,19 +1747,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -1826,10 +1826,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -1856,7 +1856,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -1904,19 +1904,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -1979,10 +1979,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -2009,7 +2009,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -2057,19 +2057,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -2139,10 +2139,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -2169,7 +2169,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -2217,19 +2217,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -2317,10 +2317,10 @@ importers:
         version: 18.0.11
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       '@vitejs/plugin-react-swc':
         specifier: 3.3.1
         version: 3.3.1(vite@4.3.9)
@@ -2350,7 +2350,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -2401,25 +2401,25 @@ importers:
         version: 0.2.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       vite:
         specifier: 4.3.9
         version: 4.3.9(@types/node@18.16.16)
       vite-tsconfig-paths:
         specifier: 4.2.0
-        version: 4.2.0(typescript@5.0.4)(vite@4.3.9)
+        version: 4.2.0(typescript@5.1.3)(vite@4.3.9)
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -2495,10 +2495,10 @@ importers:
         version: 3.2.2
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -2525,7 +2525,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -2573,19 +2573,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -2652,10 +2652,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -2682,7 +2682,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -2730,19 +2730,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -2848,10 +2848,10 @@ importers:
         version: 8.5.4
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -2878,7 +2878,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -2926,19 +2926,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -3071,10 +3071,10 @@ importers:
         version: 6.1.6
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3101,7 +3101,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -3152,19 +3152,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -3237,10 +3237,10 @@ importers:
         version: 9.0.1
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       '@webmonetization/types':
         specifier: 0.0.0
         version: link:../webmonetization-types
@@ -3270,7 +3270,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -3318,19 +3318,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -3403,10 +3403,10 @@ importers:
         version: 17.0.58
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3433,7 +3433,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -3481,19 +3481,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -3593,10 +3593,10 @@ importers:
         version: 9.0.1
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3623,7 +3623,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -3674,19 +3674,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -3749,10 +3749,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3779,7 +3779,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -3827,22 +3827,22 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-json-schema-generator:
         specifier: 1.2.0
         version: 1.2.0
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -3915,10 +3915,10 @@ importers:
         version: 18.16.16
       '@typescript-eslint/eslint-plugin':
         specifier: 5.59.8
-        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/parser':
         specifier: 5.59.8
-        version: 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+        version: 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       JSON2016:
         specifier: 1.0.0
         version: 1.0.0
@@ -3945,7 +3945,7 @@ importers:
         version: 2.27.5(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)
       eslint-plugin-jest:
         specifier: 27.2.1
-        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4)
+        version: 27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3)
       eslint-plugin-jsx-a11y:
         specifier: 6.7.1
         version: 6.7.1(eslint@8.41.0)
@@ -3993,19 +3993,19 @@ importers:
         version: 5.0.1
       ts-jest:
         specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4)
+        version: 29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3)
       ts-loader:
         specifier: 9.4.3
-        version: 9.4.3(typescript@5.0.4)(webpack@5.84.1)
+        version: 9.4.3(typescript@5.1.3)(webpack@5.84.1)
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+        version: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
       tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0
       typescript:
-        specifier: 5.0.4
-        version: 5.0.4
+        specifier: 5.1.3
+        version: 5.1.3
       webpack:
         specifier: 5.84.1
         version: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
@@ -5792,13 +5792,13 @@ packages:
       '@types/node': 18.16.16
       chalk: 4.1.2
       cosmiconfig: 8.1.3
-      cosmiconfig-typescript-loader: 4.3.0(@types/node@18.16.16)(cosmiconfig@8.1.3)(ts-node@10.9.1)(typescript@5.0.4)
+      cosmiconfig-typescript-loader: 4.3.0(@types/node@18.16.16)(cosmiconfig@8.1.3)(ts-node@10.9.1)(typescript@5.1.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
-      typescript: 5.0.4
+      ts-node: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
+      typescript: 5.1.3
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -7965,7 +7965,7 @@ packages:
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
     dev: false
 
-  /@puppeteer/browsers@1.0.1(typescript@5.0.4):
+  /@puppeteer/browsers@1.0.1(typescript@5.1.3):
     resolution: {integrity: sha512-9wkYhON9zBgtjYRE3FcokGCfjG25zjzNAYmsHpiWitRZ/4DeT3v125/fCUU66SaPJ4nUsxGNPgpS1TOcQ+8StA==}
     engines: {node: '>=16.0.0'}
     hasBin: true
@@ -7982,7 +7982,7 @@ packages:
       progress: 2.0.3
       proxy-from-env: 1.1.0
       tar-fs: 2.1.1
-      typescript: 5.0.4
+      typescript: 5.1.3
       unbzip2-stream: 1.4.3
       yargs: 17.7.1
     transitivePeerDependencies:
@@ -8659,7 +8659,7 @@ packages:
     dependencies:
       '@types/node': 18.16.16
 
-  /@typescript-eslint/eslint-plugin@5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4):
+  /@typescript-eslint/eslint-plugin@5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3):
     resolution: {integrity: sha512-JDMOmhXteJ4WVKOiHXGCoB96ADWg9q7efPWHRViT/f09bA8XOMLAVHHju3l0MkZnG1izaWXYmgvQcUjTRcpShQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -8671,23 +8671,23 @@ packages:
         optional: true
     dependencies:
       '@eslint-community/regexpp': 4.5.0
-      '@typescript-eslint/parser': 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+      '@typescript-eslint/parser': 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       '@typescript-eslint/scope-manager': 5.59.8
-      '@typescript-eslint/type-utils': 5.59.8(eslint@8.41.0)(typescript@5.0.4)
-      '@typescript-eslint/utils': 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+      '@typescript-eslint/type-utils': 5.59.8(eslint@8.41.0)(typescript@5.1.3)
+      '@typescript-eslint/utils': 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
       eslint: 8.41.0
       grapheme-splitter: 1.0.4
       ignore: 5.2.4
       natural-compare-lite: 1.4.0
       semver: 7.5.1
-      tsutils: 3.21.0(typescript@5.0.4)
-      typescript: 5.0.4
+      tsutils: 3.21.0(typescript@5.1.3)
+      typescript: 5.1.3
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/parser@5.59.8(eslint@8.41.0)(typescript@5.0.4):
+  /@typescript-eslint/parser@5.59.8(eslint@8.41.0)(typescript@5.1.3):
     resolution: {integrity: sha512-AnR19RjJcpjoeGojmwZtCwBX/RidqDZtzcbG3xHrmz0aHHoOcbWnpDllenRDmDvsV0RQ6+tbb09/kyc+UT9Orw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -8699,10 +8699,10 @@ packages:
     dependencies:
       '@typescript-eslint/scope-manager': 5.59.8
       '@typescript-eslint/types': 5.59.8
-      '@typescript-eslint/typescript-estree': 5.59.8(typescript@5.0.4)
+      '@typescript-eslint/typescript-estree': 5.59.8(typescript@5.1.3)
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
       eslint: 8.41.0
-      typescript: 5.0.4
+      typescript: 5.1.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8715,7 +8715,7 @@ packages:
       '@typescript-eslint/visitor-keys': 5.59.8
     dev: true
 
-  /@typescript-eslint/type-utils@5.59.8(eslint@8.41.0)(typescript@5.0.4):
+  /@typescript-eslint/type-utils@5.59.8(eslint@8.41.0)(typescript@5.1.3):
     resolution: {integrity: sha512-+5M518uEIHFBy3FnyqZUF3BMP+AXnYn4oyH8RF012+e7/msMY98FhGL5SrN29NQ9xDgvqCgYnsOiKp1VjZ/fpA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -8725,12 +8725,12 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/typescript-estree': 5.59.8(typescript@5.0.4)
-      '@typescript-eslint/utils': 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+      '@typescript-eslint/typescript-estree': 5.59.8(typescript@5.1.3)
+      '@typescript-eslint/utils': 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
       eslint: 8.41.0
-      tsutils: 3.21.0(typescript@5.0.4)
-      typescript: 5.0.4
+      tsutils: 3.21.0(typescript@5.1.3)
+      typescript: 5.1.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8740,7 +8740,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@typescript-eslint/typescript-estree@5.59.8(typescript@5.0.4):
+  /@typescript-eslint/typescript-estree@5.59.8(typescript@5.1.3):
     resolution: {integrity: sha512-Jy/lPSDJGNow14vYu6IrW790p7HIf/SOV1Bb6lZ7NUkLc2iB2Z9elESmsaUtLw8kVqogSbtLH9tut5GCX1RLDg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -8755,13 +8755,13 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.5.1
-      tsutils: 3.21.0(typescript@5.0.4)
-      typescript: 5.0.4
+      tsutils: 3.21.0(typescript@5.1.3)
+      typescript: 5.1.3
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/utils@5.59.8(eslint@8.41.0)(typescript@5.0.4):
+  /@typescript-eslint/utils@5.59.8(eslint@8.41.0)(typescript@5.1.3):
     resolution: {integrity: sha512-Tr65630KysnNn9f9G7ROF3w1b5/7f6QVCJ+WK9nhIocWmx9F+TmCAcglF26Vm7z8KCTwoKcNEBZrhlklla3CKg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -8772,7 +8772,7 @@ packages:
       '@types/semver': 7.3.13
       '@typescript-eslint/scope-manager': 5.59.8
       '@typescript-eslint/types': 5.59.8
-      '@typescript-eslint/typescript-estree': 5.59.8(typescript@5.0.4)
+      '@typescript-eslint/typescript-estree': 5.59.8(typescript@5.1.3)
       eslint: 8.41.0
       eslint-scope: 5.1.1
       semver: 7.5.1
@@ -11669,7 +11669,7 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /cosmiconfig-typescript-loader@4.3.0(@types/node@18.16.16)(cosmiconfig@8.1.3)(ts-node@10.9.1)(typescript@5.0.4):
+  /cosmiconfig-typescript-loader@4.3.0(@types/node@18.16.16)(cosmiconfig@8.1.3)(ts-node@10.9.1)(typescript@5.1.3):
     resolution: {integrity: sha512-NTxV1MFfZDLPiBMjxbHRwSh5LaLcPMwNdCutmnHJCKoVnlvldPWlllonKwrsRJ5pYZBIBGRWWU2tfvzxgeSW5Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -11680,8 +11680,8 @@ packages:
     dependencies:
       '@types/node': 18.16.16
       cosmiconfig: 8.1.3
-      ts-node: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
-      typescript: 5.0.4
+      ts-node: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
+      typescript: 5.1.3
     dev: true
 
   /cosmiconfig@7.1.0:
@@ -12863,7 +12863,7 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+      '@typescript-eslint/parser': 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       debug: 3.2.7
       eslint: 8.41.0
       eslint-import-resolver-node: 0.3.7
@@ -12892,7 +12892,7 @@ packages:
       '@typescript-eslint/parser':
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+      '@typescript-eslint/parser': 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       array-includes: 3.1.6
       array.prototype.flat: 1.3.1
       array.prototype.flatmap: 1.3.1
@@ -12915,7 +12915,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-jest@27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.0.4):
+  /eslint-plugin-jest@27.2.1(@typescript-eslint/eslint-plugin@5.59.8)(eslint@8.41.0)(jest@29.5.0)(typescript@5.1.3):
     resolution: {integrity: sha512-l067Uxx7ZT8cO9NJuf+eJHvt6bqJyz2Z29wykyEdz/OtmcELQl2MQGQLX8J94O1cSJWAwUSEvCjwjA7KEK3Hmg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
@@ -12928,8 +12928,8 @@ packages:
       jest:
         optional: true
     dependencies:
-      '@typescript-eslint/eslint-plugin': 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.0.4)
-      '@typescript-eslint/utils': 5.59.8(eslint@8.41.0)(typescript@5.0.4)
+      '@typescript-eslint/eslint-plugin': 5.59.8(@typescript-eslint/parser@5.59.8)(eslint@8.41.0)(typescript@5.1.3)
+      '@typescript-eslint/utils': 5.59.8(eslint@8.41.0)(typescript@5.1.3)
       eslint: 8.41.0
       jest: 29.5.0(@types/node@18.16.16)(ts-node@10.9.1)
     transitivePeerDependencies:
@@ -16456,7 +16456,7 @@ packages:
       pretty-format: 29.5.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4)
+      ts-node: 10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -19783,7 +19783,7 @@ packages:
     dependencies:
       escape-goat: 4.0.0
 
-  /puppeteer-core@20.1.1(typescript@5.0.4):
+  /puppeteer-core@20.1.1(typescript@5.1.3):
     resolution: {integrity: sha512-iB9F2Om8J+nU4qi30oYw0hMWOw6eQN7kFkLLI/u3UvxONOCx5o0KmM6+byaK2/QGIuQu2ly1mPaJnC1DyoW07Q==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -19792,7 +19792,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@puppeteer/browsers': 1.0.1(typescript@5.0.4)
+      '@puppeteer/browsers': 1.0.1(typescript@5.1.3)
       chromium-bidi: 0.4.7(devtools-protocol@0.0.1120988)
       cross-fetch: 3.1.5
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
@@ -19801,7 +19801,7 @@ packages:
       https-proxy-agent: 5.0.1
       proxy-from-env: 1.1.0
       tar-fs: 2.1.1
-      typescript: 5.0.4
+      typescript: 5.1.3
       unbzip2-stream: 1.4.3
       ws: 8.13.0
     transitivePeerDependencies:
@@ -19830,16 +19830,16 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer@20.1.1(typescript@5.0.4):
+  /puppeteer@20.1.1(typescript@5.1.3):
     resolution: {integrity: sha512-agGDvDPIgYYwXL1WFP/O+HiDnFHJxtkmqyg4QOiHhgAgopyjOc+itL8SuXkJzXNSh9pnjGcZvl7ouJy/rU3SRg==}
     requiresBuild: true
     dependencies:
-      '@puppeteer/browsers': 1.0.1(typescript@5.0.4)
+      '@puppeteer/browsers': 1.0.1(typescript@5.1.3)
       cosmiconfig: 8.1.3
       https-proxy-agent: 5.0.1
       progress: 2.0.3
       proxy-from-env: 1.1.0
-      puppeteer-core: 20.1.1(typescript@5.0.4)
+      puppeteer-core: 20.1.1(typescript@5.1.3)
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -22251,7 +22251,7 @@ packages:
     dev: false
     optional: true
 
-  /ts-jest@29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.0.4):
+  /ts-jest@29.1.0(@babel/core@7.22.1)(jest@29.5.0)(typescript@5.1.3):
     resolution: {integrity: sha512-ZhNr7Z4PcYa+JjMl62ir+zPiNJfXJN6E8hSLnaUKhOgqcn8vb3e537cpkd0FuAfRK3sR1LSqM1MOhliXNgOFPA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -22281,7 +22281,7 @@ packages:
       lodash.memoize: 4.1.2
       make-error: 1.3.6
       semver: 7.5.1
-      typescript: 5.0.4
+      typescript: 5.1.3
       yargs-parser: 21.1.1
     dev: true
 
@@ -22299,7 +22299,7 @@ packages:
       typescript: 4.9.5
     dev: true
 
-  /ts-loader@9.4.3(typescript@5.0.4)(webpack@5.84.1):
+  /ts-loader@9.4.3(typescript@5.1.3)(webpack@5.84.1):
     resolution: {integrity: sha512-n3hBnm6ozJYzwiwt5YRiJZkzktftRpMiBApHaJPoWLA+qetQBAXkHqCLM6nwSdRDimqVtA5ocIkcTRLMTt7yzA==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -22310,7 +22310,7 @@ packages:
       enhanced-resolve: 5.14.1
       micromatch: 4.0.5
       semver: 7.5.1
-      typescript: 5.0.4
+      typescript: 5.1.3
       webpack: 5.84.1(@swc/core@1.3.60)(webpack-cli@5.1.1)
     dev: true
 
@@ -22318,7 +22318,7 @@ packages:
     resolution: {integrity: sha512-PGcnJoTBnVGy6yYNFxWVNkdcAuAMstvutN9MgDJIV6L0oG8fB+ZNNy1T+wJzah8RPGor1mZuPQkVfXNDpy9eHA==}
     dev: true
 
-  /ts-node@10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.0.4):
+  /ts-node@10.9.1(@swc/core@1.3.60)(@types/node@18.16.16)(typescript@5.1.3):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -22345,12 +22345,12 @@ packages:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.0.4
+      typescript: 5.1.3
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
 
-  /tsconfck@2.1.1(typescript@5.0.4):
+  /tsconfck@2.1.1(typescript@5.1.3):
     resolution: {integrity: sha512-ZPCkJBKASZBmBUNqGHmRhdhM8pJYDdOXp4nRgj/O0JwUwsMq50lCDRQP/M5GBNAA0elPrq4gAeu4dkaVCuKWww==}
     engines: {node: ^14.13.1 || ^16 || >=18}
     hasBin: true
@@ -22360,7 +22360,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      typescript: 5.0.4
+      typescript: 5.1.3
     dev: true
 
   /tsconfig-paths@3.14.2:
@@ -22388,14 +22388,14 @@ packages:
   /tslib@2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
 
-  /tsutils@3.21.0(typescript@5.0.4):
+  /tsutils@3.21.0(typescript@5.1.3):
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: 1.14.1
-      typescript: 5.0.4
+      typescript: 5.1.3
     dev: true
 
   /tuf-js@1.1.4:
@@ -22513,9 +22513,9 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.0.4:
-    resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
-    engines: {node: '>=12.20'}
+  /typescript@5.1.3:
+    resolution: {integrity: sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==}
+    engines: {node: '>=14.17'}
     hasBin: true
 
   /ua-parser-js@0.7.35:
@@ -22907,7 +22907,7 @@ packages:
       core-util-is: 1.0.2
       extsprintf: 1.3.0
 
-  /vite-tsconfig-paths@4.2.0(typescript@5.0.4)(vite@4.3.9):
+  /vite-tsconfig-paths@4.2.0(typescript@5.1.3)(vite@4.3.9):
     resolution: {integrity: sha512-jGpus0eUy5qbbMVGiTxCL1iB9ZGN6Bd37VGLJU39kTDD6ZfULTTb1bcc5IeTWqWJKiWV5YihCaibeASPiGi8kw==}
     peerDependencies:
       vite: '*'
@@ -22917,7 +22917,7 @@ packages:
     dependencies:
       debug: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)
       globrex: 0.1.2
-      tsconfck: 2.1.1(typescript@5.0.4)
+      tsconfck: 2.1.1(typescript@5.1.3)
       vite: 4.3.9(@types/node@18.16.16)
     transitivePeerDependencies:
       - supports-color
