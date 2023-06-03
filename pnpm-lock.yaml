@@ -849,7 +849,7 @@ importers:
         version: 3.12.0(express@4.18.2)(graphql@16.6.0)
       body-parser:
         specifier: ^1.20.0
-        version: 1.20.2
+        version: 1.20.1
       compose-middleware:
         specifier: ^5.0.1
         version: 5.0.1
@@ -1078,7 +1078,7 @@ importers:
         version: 4.3.1
       glob:
         specifier: ^10.0.0
-        version: 10.2.6
+        version: 10.2.4
       json5:
         specifier: ^2.2.0
         version: 2.2.3
@@ -2972,7 +2972,7 @@ importers:
         version: link:../webmonetization-types
       body-parser:
         specifier: ^1.19.0
-        version: 1.20.2
+        version: 1.20.1
       express:
         specifier: ^4.17.1
         version: 4.18.2
@@ -14530,7 +14530,6 @@ packages:
       minimatch: 9.0.1
       minipass: 5.0.0
       path-scurry: 1.7.0
-    dev: true
 
   /glob@10.2.6:
     resolution: {integrity: sha512-U/rnDpXJGF414QQQZv5uVsabTVxMSwzS5CH0p3DRCIV6ownl4f7PzGnkGmvlum2wB+9RlJWJZ6ACU1INnBqiPA==}
@@ -14542,6 +14541,7 @@ packages:
       minimatch: 9.0.1
       minipass: 5.0.0
       path-scurry: 1.7.0
+    dev: true
 
   /glob@6.0.4:
     resolution: {integrity: sha512-MKZeRNyYZAVVVG1oZeLaWie1uweH40m9AZwIwxyPbTSX4hHrVYSzLg0Ro5Z5R7XKkIX+Cc6oD1rqeDJnwsB8/A==}
