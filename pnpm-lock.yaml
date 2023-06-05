@@ -562,8 +562,8 @@ importers:
         specifier: ^5.0.0
         version: 5.6.0(react-dom@17.0.2)(react@17.0.2)
       get-port:
-        specifier: ^5.1.1
-        version: 5.1.1
+        specifier: ^7.0.0
+        version: 7.0.0
       idb-keyval:
         specifier: ^6.2.0
         version: 6.2.0
@@ -1427,8 +1427,8 @@ importers:
         specifier: 4.3.4
         version: 4.3.4(patch_hash=vu7d3xqz3myp3udmyif2wq7f6y)(supports-color@9.3.1)
       get-port:
-        specifier: ^5.1.1
-        version: 5.1.1
+        specifier: ^7.0.0
+        version: 7.0.0
       puppeteer:
         specifier: ^20.0.0
         version: 20.1.1(typescript@5.0.4)
@@ -8392,7 +8392,7 @@ packages:
     resolution: {integrity: sha512-Iv2FAb5RnIk/eFO2CTu8k+0VMmIR15pKbcqRWi+s3ydW+aKXlN2yemP92SrO++ERyJx+p6Ie1ggbLBMbU1SjiQ==}
     deprecated: This is a stub types definition. get-port provides its own type definitions, so you do not need this installed.
     dependencies:
-      get-port: 5.1.1
+      get-port: 7.0.0
     dev: true
 
   /@types/glob@7.2.0:
@@ -14412,9 +14412,9 @@ packages:
     engines: {node: '>=8.0.0'}
     dev: true
 
-  /get-port@5.1.1:
-    resolution: {integrity: sha512-g/Q1aTSDOxFpchXC4i8ZWvxA1lnPqx/JHqcpIw0/LX9T8x/GBbi6YnlN5nhaKIFkT8oFsscUKgDJYxfwfS6QsQ==}
-    engines: {node: '>=8'}
+  /get-port@7.0.0:
+    resolution: {integrity: sha512-mDHFgApoQd+azgMdwylJrv2DX47ywGq1i5VFJE7fZ0dttNq3iQMfsU4IvEgBHojA3KqEudyu7Vq+oN8kNaNkWw==}
+    engines: {node: '>=16'}
 
   /get-stdin@8.0.0:
     resolution: {integrity: sha512-sY22aA6xchAzprjyqmSEQv4UbAAzRN0L2dQB0NlN5acTTK9Don6nhoc3eAbUnpZiCANAMfd/+40kVdKfFygohg==}
