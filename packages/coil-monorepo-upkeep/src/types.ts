@@ -19,6 +19,7 @@ export interface PackageJSON extends Record<string, string | any> {
   resolutions?: StringMap
   upkeep?: {
     privatePackages?: boolean
+    tsconfigPatch?: TSConfig
   }
 }
 
