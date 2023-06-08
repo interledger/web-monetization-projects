@@ -174,19 +174,27 @@ function getPackageFolder(li: LernaListItem) {
   return path[path.length - 1]
 }
 
-function upKeepTypeScriptBuildConfig(subPackage: LernaListItem) {
+function upKeepTypeScriptBuildConfig(
+  subPackageJSON: PackageJSON,
+  subPackage: LernaListItem
+) {
+  const rootDir = subPackageJSON.upkeep?.rootDir ?? 'src'
   const tsconfig: TSConfig = {
     extends: '../../tsconfig.build.settings.json',
     compilerOptions: {
       composite: true,
       outDir: './build',
       tsBuildInfoFile: './build/tsconfig.build.tsbuildinfo',
-      rootDir: 'src'
+      rootDir
     },
     // Unfortunately, resolveJsonModule: true and simply `src` does
     // not seem to work
-    include: ['src/**/*.tsx', 'src/**/*.ts', 'src/**/*.json'],
-    exclude: ['src/**/*.test.ts', 'src/**/*.test.tsx']
+    include: [
+      `${rootDir}/**/*.tsx`,
+      `${rootDir}/**/*.ts`,
+      `${rootDir}/**/*.json`
+    ],
+    exclude: [`${rootDir}/**/*.test.ts`, `${rootDir}/**/*.test.tsx`]
   }
   if (subPackage.dependencies.length) {
     tsconfig.references = subPackage.dependencies.map(li => {
@@ -224,15 +232,19 @@ function copyTemplatesDir({
   })
 }
 
-function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
+function upKeepIDETsConfigPaths(
+  subPackages: LernaListItem[],
+  rootPackageJSON: PackageJSON
+) {
   const path = fromRoot(IDE_TSCONFIG)
   const tsconfig = readFileJSON<TSConfig>(path)
   tsconfig.compilerOptions = tsconfig.compilerOptions || {}
-  const paths: Record<string, string[]> = {}
+  const paths: Record<string, string[]> =
+    rootPackageJSON.upkeep?.tsconfigPaths ?? {}
   subPackages.forEach(li => {
     const packagePath = relativeToRoot(li.location)
 
-    const path = `${packagePath}/src`
+    const path = `./${packagePath}/src`
     paths[li.name] = [path]
     const subPackageJSON = readPackageJSON(`${li.location}/package.json`)
     // Handle any @ns/package/derp redirects
@@ -243,10 +255,10 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
         let isFolder = true
         if (existsSync(folderPath)) {
           // folder
-          paths[`${li.name}/${name}`] = [`${path}/${name}`]
+          paths[`${li.name}/${name}`] = [`./${path}/${name}`]
         } else if (existsSync(tsPath)) {
           isFolder = false
-          paths[`${li.name}/${name}`] = [`${path}/${name}.ts`]
+          paths[`${li.name}/${name}`] = [`./${path}/${name}.ts`]
         } else {
           throw new Error()
         }
@@ -356,13 +368,13 @@ export async function doUpKeep() {
       subPackage,
       subPackageJSON
     )
-    upKeepTypeScriptBuildConfig(subPackage)
+    upKeepTypeScriptBuildConfig(subPackageJSON, subPackage)
     upKeepStaticSharedTemplates(subPackage)
     copyInDefaultFiles(subPackage)
     createDefaultReadmeFile(subPackage)
   }
 
-  upKeepIDETsConfigPaths(subPackages)
+  upKeepIDETsConfigPaths(subPackages, rootPackageJSON)
   upKeepReferencesTsConfig(subPackages)
   upKeepIntelliJExcludes(subPackages)
   // Not using "manual" dependabot configuration currently.
