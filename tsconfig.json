@@ -70,16 +70,16 @@
         "./packages/webmonetization-wext/src"
       ],
       "@webmonetization/wext/tokens": [
-        "././packages/webmonetization-wext/src/tokens.ts"
+        "./packages/webmonetization-wext/src/tokens.ts"
       ],
       "@webmonetization/wext/undecorated": [
-        "././packages/webmonetization-wext/src/undecorated"
+        "./packages/webmonetization-wext/src/undecorated"
       ],
       "@webmonetization/wext/services": [
-        "././packages/webmonetization-wext/src/services"
+        "./packages/webmonetization-wext/src/services"
       ],
       "@webmonetization/wext/content": [
-        "././packages/webmonetization-wext/src/content"
+        "./packages/webmonetization-wext/src/content"
       ]
     }
   },

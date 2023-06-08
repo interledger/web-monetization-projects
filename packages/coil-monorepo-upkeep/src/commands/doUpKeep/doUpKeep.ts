@@ -253,10 +253,10 @@ function upKeepIDETsConfigPaths(
         let isFolder = true
         if (existsSync(folderPath)) {
           // folder
-          paths[`${li.name}/${name}`] = [`./${path}/${name}`]
+          paths[`${li.name}/${name}`] = [`${path}/${name}`]
         } else if (existsSync(tsPath)) {
           isFolder = false
-          paths[`${li.name}/${name}`] = [`./${path}/${name}.ts`]
+          paths[`${li.name}/${name}`] = [`${path}/${name}.ts`]
         } else {
           throw new Error()
         }
