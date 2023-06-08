@@ -168,34 +168,32 @@ function setCommonScriptsAndMergeOverrides(
   return updated
 }
 
-function getPackageFolder(li: LernaListItem) {
-  // TODO: pathModule.basename
-  const path = li.location.split('/')
-  return path[path.length - 1]
-}
-
 function upKeepTypeScriptBuildConfig(
   subPackageJSON: PackageJSON,
   subPackage: LernaListItem
 ) {
-  const rootDir = subPackageJSON.upkeep?.rootDir ?? 'src'
+  const tsconfigPatch = subPackageJSON.upkeep?.tsconfigPatch
+  const rootDir = tsconfigPatch?.compilerOptions?.rootDir ?? 'src'
   const tsconfig: TSConfig = {
     extends: '../../tsconfig.build.settings.json',
     compilerOptions: {
       composite: true,
       outDir: './build',
       tsBuildInfoFile: './build/tsconfig.build.tsbuildinfo',
-      rootDir
+      rootDir,
+      ...tsconfigPatch?.compilerOptions
     },
     // Unfortunately, resolveJsonModule: true and simply `src` does
     // not seem to work
     include: [
       `${rootDir}/**/*.tsx`,
       `${rootDir}/**/*.ts`,
-      `${rootDir}/**/*.json`
+      `${rootDir}/**/*.json`,
+      ...(tsconfigPatch?.include ?? [])
     ],
     exclude: [`${rootDir}/**/*.test.ts`, `${rootDir}/**/*.test.tsx`]
   }
+
   if (subPackage.dependencies.length) {
     tsconfig.references = subPackage.dependencies.map(li => {
       return {
@@ -240,7 +238,7 @@ function upKeepIDETsConfigPaths(
   const tsconfig = readFileJSON<TSConfig>(path)
   tsconfig.compilerOptions = tsconfig.compilerOptions || {}
   const paths: Record<string, string[]> =
-    rootPackageJSON.upkeep?.tsconfigPaths ?? {}
+    rootPackageJSON.upkeep?.tsconfigPatch?.compilerOptions?.paths ?? {}
   subPackages.forEach(li => {
     const packagePath = relativeToRoot(li.location)
 

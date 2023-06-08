@@ -19,8 +19,7 @@ export interface PackageJSON extends Record<string, string | any> {
   resolutions?: StringMap
   upkeep?: {
     privatePackages?: boolean
-    tsconfigPaths?: Record<string, string[]>
-    rootDir?: string
+    tsconfigPatch?: TSConfig
   }
 }
 
