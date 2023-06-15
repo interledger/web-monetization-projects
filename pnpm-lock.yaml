@@ -4373,9 +4373,9 @@ packages:
       '@babel/helper-function-name': 7.21.0
       '@babel/helper-member-expression-to-functions': 7.22.3
       '@babel/helper-optimise-call-expression': 7.18.6
-      '@babel/helper-replace-supers': 7.22.5
+      '@babel/helper-replace-supers': 7.22.1
       '@babel/helper-skip-transparent-expression-wrappers': 7.20.0
-      '@babel/helper-split-export-declaration': 7.22.5
+      '@babel/helper-split-export-declaration': 7.18.6
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -4550,6 +4550,20 @@ packages:
       - supports-color
     dev: true
 
+  /@babel/helper-replace-supers@7.22.1:
+    resolution: {integrity: sha512-ut4qrkE4AuSfrwHSps51ekR1ZY/ygrP1tp0WFm8oVq6nzc/hvfV/22JylndIbsf2U2M9LOMwiSddr6y+78j+OQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-environment-visitor': 7.22.1
+      '@babel/helper-member-expression-to-functions': 7.22.3
+      '@babel/helper-optimise-call-expression': 7.18.6
+      '@babel/template': 7.22.5
+      '@babel/traverse': 7.22.5
+      '@babel/types': 7.22.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@babel/helper-replace-supers@7.22.5:
     resolution: {integrity: sha512-aLdNM5I3kdI/V9xGNyKSF3X/gTyMUBohTZ+/3QdQKAA9vxIiy12E+8E2HoOP1/DjeqU+g6as35QHJNMDDYpuCg==}
     engines: {node: '>=6.9.0'}
@@ -4580,6 +4594,13 @@ packages:
 
   /@babel/helper-skip-transparent-expression-wrappers@7.22.5:
     resolution: {integrity: sha512-tK14r66JZKiC43p8Ki33yLBVJKlQDFoA8GYN67lWCDCqoL6EMMSuM9b+Iff2jHaM/RRFYl7K+iiru7hbRqNx8Q==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.22.5
+    dev: true
+
+  /@babel/helper-split-export-declaration@7.18.6:
+    resolution: {integrity: sha512-bde1etTx6ZyTmobl9LLMMQsaizFVZrquTEHOqKeQESMKo4PlObf+8+JA25ZsIpZhT/WEd39+vOdLXAFG/nELpA==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.22.5
@@ -4911,7 +4932,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.22.5
-      '@babel/helper-plugin-utils': 7.22.5
+      '@babel/helper-plugin-utils': 7.21.5
     dev: true
 
   /@babel/plugin-syntax-optional-catch-binding@7.8.3(@babel/core@7.22.5):
@@ -5394,7 +5415,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.22.5
-      '@babel/helper-plugin-utils': 7.22.5
+      '@babel/helper-plugin-utils': 7.21.5
     dev: true
 
   /@babel/plugin-transform-parameters@7.22.5(@babel/core@7.22.5):
@@ -11932,14 +11953,6 @@ packages:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
     dev: true
 
-  /cross-fetch@3.1.5:
-    resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
-    dependencies:
-      node-fetch: 2.6.7
-    transitivePeerDependencies:
-      - encoding
-    dev: true
-
   /cross-fetch@3.1.6:
     resolution: {integrity: sha512-riRvo06crlE8HiqOwIpQhxwdOk4fOeR7FVM/wXoxchFEqMNUjvbs3bfo4OTgMEMHzppd4DxFBDbyySj8Cv781g==}
     dependencies:
@@ -14991,7 +15004,7 @@ packages:
       graphql: 14 - 16
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.6.0)
-      cross-fetch: 3.1.5
+      cross-fetch: 3.1.6
       graphql: 16.6.0
     transitivePeerDependencies:
       - encoding
@@ -18539,18 +18552,6 @@ packages:
         optional: true
     dependencies:
       whatwg-url: 5.0.0
-
-  /node-fetch@2.6.7:
-    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
-    engines: {node: 4.x || >=6.0.0}
-    peerDependencies:
-      encoding: ^0.1.0
-    peerDependenciesMeta:
-      encoding:
-        optional: true
-    dependencies:
-      whatwg-url: 5.0.0
-    dev: true
 
   /node-fetch@2.6.9:
     resolution: {integrity: sha512-DJm/CJkZkRjKKj4Zi4BsKVZh3ValV5IR5s7LVZnW+6YMh0W1BfNA8XSs6DLMGYlId5F3KnA70uu2qepcR08Qqg==}
