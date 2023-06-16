@@ -64,8 +64,9 @@ const steps = [
     run: `export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
 pnpm install # --no-frozen-lockfile 
 git diff
-export PUPPETEER_PRODUCT='firefox'
-pnpm install`
+# TODO: Don't test with FF anymore
+# export PUPPETEER_PRODUCT='firefox'
+# pnpm install`
   }
 ]
 
