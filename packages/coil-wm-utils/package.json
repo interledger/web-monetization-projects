@@ -34,7 +34,7 @@
     "upkeep": "cd ../.. && pnpm upkeep"
   },
   "dependencies": {
-    "@coil/client": "0.0.0"
+    "@coil/client": "workspace:*"
   },
   "devDependencies": {
     "@abraham/reflection": "0.12.0",

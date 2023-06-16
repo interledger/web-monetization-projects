@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "asn1-parser": "^1.1.8",
-    "keccak": "^3.0.1",
+    "keccak": "^3.0.3",
     "sjcl": "github:sublimator/sjcl#6d8756dcf7d04ffc854d61d81b9781a37a82d500"
   },
   "devDependencies": {

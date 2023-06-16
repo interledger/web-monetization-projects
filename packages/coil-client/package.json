@@ -33,7 +33,7 @@
     "upkeep": "cd ../.. && pnpm upkeep"
   },
   "dependencies": {
-    "@dier-makr/annotations": "0.0.0",
+    "@dier-makr/annotations": "workspace:*",
     "jsonwebtoken": "^9.0.0"
   },
   "devDependencies": {
