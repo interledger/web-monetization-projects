@@ -39,9 +39,9 @@
     "upkeep": "cd ../.. && pnpm upkeep"
   },
   "dependencies": {
-    "@dier-makr/annotations": "0.0.0",
-    "@webmonetization/polyfill-utils": "0.0.0",
-    "@webmonetization/types": "0.0.0"
+    "@dier-makr/annotations": "workspace:*",
+    "@webmonetization/polyfill-utils": "workspace:*",
+    "@webmonetization/types": "workspace:*"
   },
   "devDependencies": {
     "@abraham/reflection": "0.12.0",

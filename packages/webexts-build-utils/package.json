@@ -33,7 +33,7 @@
     "upkeep": "cd ../.. && pnpm upkeep"
   },
   "dependencies": {
-    "@coil/webpack-utils": "^0.0.0",
+    "@coil/webpack-utils": "workspace:^",
     "assert": "^2.0.0",
     "buffer": "^6.0.3",
     "crx-hotreload": "^1.0.6",
@@ -43,9 +43,9 @@
     "setimmediate": "^1.0.5",
     "stream-browserify": "^3.0.0",
     "string_decoder": "^1.3.0",
-    "util": "^0.12.4",
+    "util": "^0.12.5",
     "webpack-virtual-modules": "^0.5.0",
-    "ws": "^8.8.0"
+    "ws": "^8.13.0"
   },
   "devDependencies": {
     "@abraham/reflection": "0.12.0",

@@ -33,7 +33,7 @@
     "upkeep": "cd ../.. && pnpm upkeep"
   },
   "dependencies": {
-    "@coil/privacypass-sjcl": "0.0.0"
+    "@coil/privacypass-sjcl": "workspace:*"
   },
   "devDependencies": {
     "@abraham/reflection": "0.12.0",

@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "js-yaml": "^4.1.0",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.4"
   },
   "devDependencies": {
     "@abraham/reflection": "0.12.0",
