@@ -62,7 +62,7 @@
     "@swc/jest": "0.2.26",
     "@types/jest": "29.5.1",
     "@types/node": "18.16.16",
-    "@types/ws": "8.5.4",
+    "@types/ws": "8.5.5",
     "@typescript-eslint/eslint-plugin": "5.59.9",
     "@typescript-eslint/parser": "5.59.9",
     "JSON2016": "1.0.0",
