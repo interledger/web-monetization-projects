@@ -42,8 +42,9 @@ jobs:
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install # --no-frozen-lockfile 
           git diff
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
+          # TODO: Don't test with FF anymore
+          # export PUPPETEER_PRODUCT='firefox'
+          # pnpm install
       - name: Lint Project
         run: |
           # show only errors with --quiet
@@ -81,8 +82,9 @@ jobs:
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install # --no-frozen-lockfile 
           git diff
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
+          # TODO: Don't test with FF anymore
+          # export PUPPETEER_PRODUCT='firefox'
+          # pnpm install
       - name: Build Safari
         run: |
           cd packages/coil-extension
@@ -122,8 +124,9 @@ jobs:
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install # --no-frozen-lockfile 
           git diff
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
+          # TODO: Don't test with FF anymore
+          # export PUPPETEER_PRODUCT='firefox'
+          # pnpm install
       - name: Package for firefox
         run: |
           cd packages/coil-extension
@@ -170,8 +173,9 @@ jobs:
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install # --no-frozen-lockfile 
           git diff
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
+          # TODO: Don't test with FF anymore
+          # export PUPPETEER_PRODUCT='firefox'
+          # pnpm install
       - name: Build Root TypeScript Project - tsconfig.build.json
         run: |
           pnpm build:ts --verbose
@@ -209,8 +213,9 @@ jobs:
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install # --no-frozen-lockfile 
           git diff
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
+          # TODO: Don't test with FF anymore
+          # export PUPPETEER_PRODUCT='firefox'
+          # pnpm install
       - name: Build Root TypeScript Project - tsconfig.json
         run: |
           pnpm tsc -b tsconfig.json --verbose
@@ -256,8 +261,9 @@ jobs:
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install # --no-frozen-lockfile 
           git diff
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
+          # TODO: Don't test with FF anymore
+          # export PUPPETEER_PRODUCT='firefox'
+          # pnpm install
       - name: Run jest via dynamic compilation
         run: |
           export DEBUG='coil*'
@@ -312,8 +318,9 @@ jobs:
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install # --no-frozen-lockfile 
           git diff
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
+          # TODO: Don't test with FF anymore
+          # export PUPPETEER_PRODUCT='firefox'
+          # pnpm install
       - name: PNPM run jest via dynamic compilation
         run: |
           export TS_JEST_MAP_PATHS_TO_MODULES=true
@@ -360,8 +367,9 @@ jobs:
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install # --no-frozen-lockfile 
           git diff
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
+          # TODO: Don't test with FF anymore
+          # export PUPPETEER_PRODUCT='firefox'
+          # pnpm install
       - name: Packages Build Scripts
         run: |
           pnpm run -r build
@@ -399,8 +407,9 @@ jobs:
           export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
           pnpm install # --no-frozen-lockfile 
           git diff
-          export PUPPETEER_PRODUCT='firefox'
-          pnpm install
+          # TODO: Don't test with FF anymore
+          # export PUPPETEER_PRODUCT='firefox'
+          # pnpm install
       - name: PNPM Dedupe Check
         run: |
           pnpm dedupe
