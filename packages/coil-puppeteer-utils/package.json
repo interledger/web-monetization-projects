@@ -57,7 +57,7 @@
     "@types/debug": "4.1.8",
     "@types/get-port": "4.2.0",
     "@types/jest": "29.5.1",
-    "@types/node": "18.16.16",
+    "@types/node": "18.16.18",
     "@types/tmp": "0.2.3",
     "@typescript-eslint/eslint-plugin": "5.59.11",
     "@typescript-eslint/parser": "5.59.11",
