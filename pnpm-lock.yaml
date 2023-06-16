@@ -3128,8 +3128,8 @@ importers:
         specifier: 5.0.0
         version: 5.0.0(eslint@8.42.0)
       html-webpack-plugin:
-        specifier: 5.5.1
-        version: 5.5.1(webpack@5.85.1)
+        specifier: 5.5.3
+        version: 5.5.3(webpack@5.85.1)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -3653,8 +3653,8 @@ importers:
         specifier: 5.0.0
         version: 5.0.0(eslint@8.42.0)
       html-webpack-plugin:
-        specifier: 5.5.1
-        version: 5.5.1(webpack@5.85.1)
+        specifier: 5.5.3
+        version: 5.5.3(webpack@5.85.1)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -15042,8 +15042,8 @@ packages:
       terser: 5.17.1
     dev: true
 
-  /html-webpack-plugin@5.5.1(webpack@5.85.1):
-    resolution: {integrity: sha512-cTUzZ1+NqjGEKjmVgZKLMdiFg3m9MdRXkZW2OEe69WYVi5ONLMmlnSZdXzGGMOq0C8jGDrL6EWyEDDUioHO/pA==}
+  /html-webpack-plugin@5.5.3(webpack@5.85.1):
+    resolution: {integrity: sha512-6YrDKTuqaP/TquFH7h4srYWsZx+x6k6+FbsTm0ziCwGHDP78Unr1r9F/H4+sGmMbX08GQcJ+K64x55b+7VM/jg==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
       webpack: ^5.20.0
