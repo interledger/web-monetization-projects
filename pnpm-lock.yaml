@@ -692,8 +692,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       addons-linter:
-        specifier: 6.8.0
-        version: 6.8.0
+        specifier: 6.9.0
+        version: 6.9.0
       babel-plugin-parameter-decorator:
         specifier: 1.0.16
         version: 1.0.16
@@ -9429,8 +9429,8 @@ packages:
       - safe-compare
       - supports-color
 
-  /addons-linter@6.8.0:
-    resolution: {integrity: sha512-/GeskVadfS+lC4V4l+cn3nFCjzfJecI1SDvysVHBT/Qsm3vPO290aW8a35bHf+frZOFkaNLxonfrWsSAXC2EEw==}
+  /addons-linter@6.9.0:
+    resolution: {integrity: sha512-8pYhL2iI+ffLLPwTks4Xgvc+SJnMoM8bFNe0GE/EKDtKRVtupt5v5CYeoSZSwYAkQl7+Zw9s9gUovkPW2nYzdw==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
