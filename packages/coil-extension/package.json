@@ -142,7 +142,7 @@
     "node-window-manager": "2.2.4",
     "nodemon": "2.0.22",
     "prettier": "2.8.8",
-    "puppeteer": "20.7.2",
+    "puppeteer": "20.7.3",
     "regenerator-runtime": "0.13.11",
     "rimraf": "5.0.1",
     "ts-jest": "29.1.0",
