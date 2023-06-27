@@ -141,7 +141,7 @@ function setCommonScriptsAndMergeOverrides(
       postinstall: undefined!,
       precommit: 'echo lint-staged runs from root',
       prettier:
-        "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
+        "prettier --write '*.{mts,ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{mts,ts,tsx,js,html,jsx,md}'",
       format: 'pnpm prettier && LINT_FIX=1 pnpm lint:all --fix --quiet',
       'build:ts': 'tsc --build tsconfig.build.json',
       'build:ts:watch': 'pnpm build:ts --watch',
@@ -155,7 +155,7 @@ function setCommonScriptsAndMergeOverrides(
       tsnodeenv:
         'NODE_OPTIONS="${NODE_OPTIONS:-} --require tsconfig-paths/register" TS_NODE_PROJECT="../../tsconfig.cjs.json"',
       upkeep: 'cd ../.. && pnpm upkeep',
-      'lint:all': "pnpm lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+      'lint:all': "pnpm lint 'src/**/*.{mts,ts,tsx}' 'test/**/*.{mts,ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
       'test:e2e': jest(e2eConf),
       'test:e2e:coverage': jest(coverage, e2eConf),
