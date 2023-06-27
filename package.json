@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint",
-    "test": "jest --passWithNoTests",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
     "test:e2e": "pnpm run test --config jest-e2e.config.cjs",
     "test:e2e:coverage": "pnpm test:coverage --config jest-e2e.config.cjs",
     "test:coverage": "pnpm run test --coverage --verbose",

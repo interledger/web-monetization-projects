@@ -3,7 +3,8 @@
   "$overRideUpKeep": {
     "type": "module",
     "scripts": {
-      "dev": "vite"
+      "dev": "vite",
+      "test": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=1 jest --passWithNoTests --config jest.config.mjs"
     }
   },
   "name": "@dummy/ext",
@@ -33,7 +34,7 @@
     "lint:all": "pnpm lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "precommit": "echo lint-staged runs from root",
     "prettier": "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
-    "test": "PROJECT_JEST=1 jest --passWithNoTests",
+    "test": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=1 jest --passWithNoTests --config jest.config.mjs",
     "test:coverage": "pnpm run test --verbose --coverage",
     "test:e2e": "pnpm run test --config jest-e2e.config.cjs",
     "test:e2e:coverage": "pnpm test:coverage --config jest-e2e.config.cjs",
@@ -41,6 +42,7 @@
     "upkeep": "cd ../.. && pnpm upkeep"
   },
   "dependencies": {
+    "@cloudflare/voprf-ts": "^0.11.0",
     "@webmonetization/polyfill-utils": "0.0.0",
     "@webmonetization/types": "0.0.0",
     "react": "^18.2.0",
