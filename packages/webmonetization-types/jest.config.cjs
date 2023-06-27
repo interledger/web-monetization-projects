@@ -11,11 +11,12 @@ const coverage = {
   coveragePathIgnorePatterns: ['/node_modules/'],
   coverageDirectory: 'results/coverage',
 }
+const PROJECT_JEST = Boolean(process.env.PROJECT_JEST)
 
 module.exports = {
   ...rootConfig,
-  displayName,
-  ...(process.env.PROJECT_JEST === '1' ? coverage : undefined),
+  displayName: displayName + '-cjs',
+  ...(PROJECT_JEST ? coverage : undefined),
   testMatch: [
     '<rootDir>/test/jest/**/*.test.ts?(x)',
     '<rootDir>/src/**/*.test.ts?(x)'
