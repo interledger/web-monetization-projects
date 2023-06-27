@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
       "dev": "vite",
-      "test": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=esm jest --passWithNoTests --config jest.config.mjs"
+      "test": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=esm jest --passWithNoTests --config jest.config.mjs",
+      "test:coverage": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=esm jest --passWithNoTests --verbose --coverage --config jest.config.cjs"
     }
   },
   "name": "@dummy/ext",
@@ -35,7 +36,7 @@
     "precommit": "echo lint-staged runs from root",
     "prettier": "prettier --write '*.{mts,ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{mts,ts,tsx,js,html,jsx,md}'",
     "test": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=esm jest --passWithNoTests --config jest.config.mjs",
-    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=1 jest --passWithNoTests --verbose --coverage --config jest.config.cjs",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=esm jest --passWithNoTests --verbose --coverage --config jest.config.cjs",
     "test:e2e": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=1 jest --passWithNoTests --config jest-e2e.config.cjs",
     "test:e2e:coverage": "NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=1 jest --passWithNoTests --verbose --coverage --config jest-e2e.config.cjs",
     "tsnodeenv": "NODE_OPTIONS=\"${NODE_OPTIONS:-} --require tsconfig-paths/register\" TS_NODE_PROJECT=\"../../tsconfig.cjs.json\"",
