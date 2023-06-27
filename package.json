@@ -12,7 +12,7 @@
     "test": "pnpm jest --config jest.config.mjs",
     "test:coverage": "pnpm run test --coverage --verbose",
     "test:e2e": "pnpm jest --config jest-e2e.config.cjs",
-    "test:e2e:coverage": "pnpm --coverage --verbose --config jest-e2e.config.cjs",
+    "test:e2e:coverage": "pnpm jest --coverage --verbose --config jest-e2e.config.cjs",
     "prettier": "prettier --write 'packages{-archived,}/*/*.{html,js,ts,mts,tsx,jsx,md}' 'packages{-archived,}/*/{src,test}/**/*.{mts,ts,tsx,js,jsx,html,md}'",
     "format": "pnpm prettier && LINT_FIX=1 pnpm lint:all --fix --quiet",
     "upkeep": "ts-node --swc packages/coil-monorepo-upkeep/src/bin/upkeep.ts",
