@@ -221,6 +221,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -393,6 +396,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -634,6 +640,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@nut-tree/nut-js':
         specifier: 2.3.0
         version: 2.3.0
@@ -935,6 +944,9 @@ importers:
       '@graphql-codegen/typescript-resolvers':
         specifier: 3.2.1
         version: 3.2.1(graphql@16.6.0)
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -1128,6 +1140,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -1291,6 +1306,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -1472,6 +1490,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -1662,6 +1683,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -1819,6 +1843,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -1972,6 +1999,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -2132,6 +2162,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -2304,6 +2337,9 @@ importers:
       '@crxjs/vite-plugin':
         specifier: 2.0.0-beta.18
         version: 2.0.0-beta.18
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -2485,6 +2521,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -2648,6 +2687,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -2841,6 +2883,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -3049,6 +3094,9 @@ importers:
       '@hot-loader/react-dom':
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -3230,6 +3278,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -3399,6 +3450,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -3580,6 +3634,9 @@ importers:
       '@hot-loader/react-dom':
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -3748,6 +3805,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
@@ -3914,6 +3974,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 17.6.6
         version: 17.6.6
+      '@jest/globals':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@swc/core':
         specifier: 1.3.66
         version: 1.3.66
