@@ -109,8 +109,18 @@ function setCommonScriptsAndMergeOverrides(
   }
   const githubPath = rootPackageJSON.repository.url.split(':')[1].slice(0, -4)
 
+  const jest = (...rest: string[]) => {
+    return `NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=1 jest --passWithNoTests ${rest.join(
+      ' '
+    )}`
+  }
+
+  const coverage = '--verbose --coverage'
+  const e2eConf = '--config jest-e2e.config.cjs'
+  const unitConf = '--config jest.config.cjs'
   let updated: PackageJSON = {
     ...subPackageJSON,
+    // TODO: use workspace
     version: '0.0.0',
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     homepage: `https://github.com/${githubPath}/tree/main/${pathFromRoot}`,
@@ -147,10 +157,10 @@ function setCommonScriptsAndMergeOverrides(
       upkeep: 'cd ../.. && pnpm upkeep',
       'lint:all': "pnpm lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
-      'test:e2e': 'pnpm run test --config jest-e2e.config.cjs',
-      'test:e2e:coverage': 'pnpm test:coverage --config jest-e2e.config.cjs',
-      test: 'PROJECT_JEST=1 jest --passWithNoTests',
-      'test:coverage': 'pnpm run test --verbose --coverage'
+      'test:e2e': jest(e2eConf),
+      'test:e2e:coverage': jest(coverage, e2eConf),
+      test: jest(unitConf),
+      'test:coverage': jest(coverage, unitConf)
     }
   }
 

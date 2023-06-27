@@ -1,3 +1,4 @@
+// import { jest } from '@jest/globals'
 import { PaymentEndpointError, resolvePaymentEndpoint } from '..'
 
 import {
@@ -148,7 +149,7 @@ describe('MonetizationTagManager', () => {
     const [_, callback] = makeChangesCallback()
     manager = makeManager(callback)
     document.body.innerHTML = `
-    <div><p id="ptag" onmonetization="console.log('OK')"></p></div>
+    <div><p id='ptag' onmonetization="console.log('OK')"></p></div>
     `
     const ptag = document.getElementById('ptag')
     let firing = 1
@@ -525,7 +526,7 @@ describe('MonetizationTagManager', () => {
     const callback = jest.fn()
     manager = makeManager(callback)
     const spy = jest.spyOn(manager, '_onWholeDocumentObserved')
-    document.body.innerHTML = `<p id="ptag" onmonetization="console.log('hello')"></p>`
+    document.body.innerHTML = `<p id='ptag' onmonetization="console.log('hello')"></p>`
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const ptag = document.getElementById('ptag')!
     manager.startWhenDocumentReady()

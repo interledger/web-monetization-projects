@@ -6,7 +6,7 @@ const config = require('./jest.config.cjs')
 
 config.extensionsToTreatAsEsm = ['.mts']
 config.moduleFileExtensions.push('mts')
-config.testMatch = /*config.testMatch.concat*/(
+config.testMatch = config.testMatch.concat(
   config.testMatch.map( tm => tm.replace('.ts?', '.mts?')))
 
 export default config
