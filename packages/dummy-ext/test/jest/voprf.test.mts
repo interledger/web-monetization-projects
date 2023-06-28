@@ -1,5 +1,6 @@
 import { randomBytes } from 'node:crypto'
 
+import { jest } from '@jest/globals'
 import { Oprf, VOPRFClient, generateKeyPair } from '@cloudflare/voprf-ts'
 
 describe('ESM Works', () => {
