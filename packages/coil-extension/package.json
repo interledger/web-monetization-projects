@@ -47,7 +47,7 @@
     "serve:fixtures": "http-server -p 4000 test/fixtures",
     "serve:fixtures-iframes": "http-server -p 4000 test/fixtures/iframes",
     "test": "NODE_OPTIONS=--experimental-vm-modules  PROJECT_JEST=1 jest --passWithNoTests",
-    "test:coverage": "pnpm run test --coverage --verbose",
+    "test:coverage": "pnpm run test --verbose --coverage",
     "test:e2e": "JEST_E2E=1 pnpm run test",
     "test:e2e:coverage": "JEST_E2E=1 pnpm run test:coverage",
     "tsnodeenv": "NODE_OPTIONS=\"${NODE_OPTIONS:-} --require tsconfig-paths/register\" TS_NODE_PROJECT=\"../../tsconfig.cjs.json\"",

@@ -153,7 +153,7 @@ function setCommonScriptsAndMergeOverrides(
       'test:e2e': 'JEST_E2E=1 pnpm run test',
       'test:e2e:coverage': 'JEST_E2E=1 pnpm run test:coverage',
       test: 'NODE_OPTIONS=--experimental-vm-modules  PROJECT_JEST=1 jest --passWithNoTests',
-      'test:coverage': 'pnpm run test --coverage --verbose'
+      'test:coverage': 'pnpm run test --verbose --coverage'
     }
   }
 

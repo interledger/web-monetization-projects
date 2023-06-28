@@ -28,7 +28,7 @@
     "prettier": "prettier --write '*.{mts,ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{mts,ts,tsx,js,html,jsx,md}'",
     "serve": "python -m http.server 4000",
     "test": "NODE_OPTIONS=--experimental-vm-modules  PROJECT_JEST=1 jest --passWithNoTests",
-    "test:coverage": "pnpm run test --coverage --verbose",
+    "test:coverage": "pnpm run test --verbose --coverage",
     "test:e2e": "JEST_E2E=1 pnpm run test",
     "test:e2e:coverage": "JEST_E2E=1 pnpm run test:coverage",
     "tsnodeenv": "NODE_OPTIONS=\"${NODE_OPTIONS:-} --require tsconfig-paths/register\" TS_NODE_PROJECT=\"../../tsconfig.cjs.json\"",
