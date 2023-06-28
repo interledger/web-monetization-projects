@@ -1,3 +1,4 @@
+import { beforeEach, describe, expect, it } from '@jest/globals'
 import * as jwt from 'jsonwebtoken'
 
 import { AnonymousTokens } from '../../src/index'

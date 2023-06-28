@@ -1,5 +1,7 @@
+import { afterEach, describe, expect, it, jest } from '@jest/globals'
+
 // import { jest } from '@jest/globals'
-import { PaymentEndpointError, resolvePaymentEndpoint } from '..'
+import { resolvePaymentEndpoint } from '..'
 
 import {
   metaDeprecatedMessage,

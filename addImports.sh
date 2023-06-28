@@ -1,10 +1,14 @@
 #!/bin/zsh
 
-importLine="import {expect, test, describe, it, should, beforeAll} from '@jest/globals';\n"
+# enable globstar
+setopt EXTENDED_GLOB
+setopt NO_NOMATCH
 
-for file in packages/*/{src,test}/**/*.{mts,ts}; do
+importLine="import {jest, beforeEach, afterEach, afterAll, expect, test, describe, it, beforeAll} from '@jest/globals';"
+
+for file in packages/*/{src,test}/**/*.test.{mts,ts}; do
   if [ -f "$file" ]; then
     echo "Processing $file"
-    echo -e "$importLine$(cat $file)" > $file
+    printf "%s\n%s" "$importLine" "$(cat $file)" > "$file"
   fi
 done

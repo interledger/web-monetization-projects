@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 describe('Web-Monetization', () => {
   describe('Deprecated fields scribbles', () => {
     // Note that this may not work due to requirements for type serialization

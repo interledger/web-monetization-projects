@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { FrameState, isFrameMonetized } from './TabState'
 
 describe('isFrameStateMonetized', () => {
