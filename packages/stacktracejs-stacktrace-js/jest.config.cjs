@@ -22,7 +22,7 @@ const srcFolderTests = '<rootDir>/src/**/*.test.ts?(x)'
 
 module.exports = {
   ...rootConfig,
-  displayName: displayName + '-cjs',
+  displayName: displayName,
   ...(PROJECT_JEST ? coverage : undefined),
   testMatch: E2E ? [testFolderTests] : [testFolderTests, srcFolderTests]
 }
