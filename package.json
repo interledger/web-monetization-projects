@@ -38,7 +38,7 @@
     "*.{md,js,jsx,html}": [
       "prettier --write"
     ],
-    "*.ts*": [
+    "*.{mts,ts}*": [
       "prettier --write",
       "pnpm lint --fix"
     ]
