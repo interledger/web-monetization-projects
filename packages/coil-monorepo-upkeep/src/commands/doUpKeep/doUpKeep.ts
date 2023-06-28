@@ -111,13 +111,6 @@ function setCommonScriptsAndMergeOverrides(
 
   const githubPath = rootPackageJSON.repository.url.split(':')[1].slice(0, -4)
 
-  const jest = ({ e2e, coverage }: { e2e: boolean; coverage: boolean }) => {
-    const mjsAndCjs = '--config jest.config.cjs'
-    const JEST_E2E = e2e ? 'JEST_E2E=1' : ''
-    const rest = coverage ? '--verbose --coverage' : ''
-    return `NODE_OPTIONS=--experimental-vm-modules ${JEST_E2E} PROJECT_JEST=1 jest --passWithNoTests ${rest} ${mjsAndCjs}`
-  }
-
   let updated: PackageJSON = {
     ...subPackageJSON,
     // TODO: use workspace
@@ -157,10 +150,10 @@ function setCommonScriptsAndMergeOverrides(
       upkeep: 'cd ../.. && pnpm upkeep',
       'lint:all': "pnpm lint 'src/**/*.{mts,ts,tsx}' 'test/**/*.{mts,ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
-      'test:e2e': jest({ e2e: true, coverage: false }),
-      'test:e2e:coverage': jest({ e2e: true, coverage: true }),
-      test: jest({ e2e: false, coverage: false }),
-      'test:coverage': jest({ e2e: false, coverage: true })
+      'test:e2e': 'JEST_E2E=1 pnpm run test',
+      'test:e2e:coverage': 'JEST_E2E=1 pnpm run test:coverage',
+      test: 'NODE_OPTIONS=--experimental-vm-modules  PROJECT_JEST=1 jest --passWithNoTests',
+      'test:coverage': 'pnpm run test --coverage --verbose'
     }
   }
 
