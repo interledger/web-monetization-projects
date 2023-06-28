@@ -56,38 +56,39 @@ function checkDependencies(
     // if (!subPackageDeps) {
     //   continue
     // }
-    const rootPackageDepsForType = rootPackageJSON[depsType] ?? {}
-    Object.keys(rootPackageDepsForType).forEach(depKey => {
-      const rootVer = rootPackageDepsForType[depKey]
-      const subPackageVer = subPackageDeps[depKey]
-      if (!subPackageVer) {
+    // const rootPackageDepsForType = rootPackageJSON[depsType] ?? {}
+    // Object.keys(rootPackageDepsForType).forEach(depKey => {
+    //   const rootVer = rootPackageDepsForType[depKey]
+    //   const subPackageVer = subPackageDeps[depKey]
+    //   if (!subPackageVer) {
+    //     changed = true
+    //     log(subPackage.name, 'adding root version', depKey, rootVer)
+    //     subPackageDeps[depKey] = rootVer
+    //   } else if (subPackageVer !== rootVer) {
+    //     changed = true
+    //     log(subPackage.name, 'list', depKey, 'in root package.json')
+    //     log(subPackage.name, 'removing', depKey, subPackageVer)
+    //     log(subPackage.name, 'using root version', depKey, rootVer)
+    //     subPackageDeps[depKey] = rootVer
+    //   }
+    // })
+
+    Object.keys(subPackageDeps).forEach(depKey => {
+      const rootPackageDepsForType = rootPackageJSON[depsType]
+      if (rootPackageDepsForType && rootPackageDepsForType[depKey]) {
+        log(
+          'subpackage',
+          subPackageJSON.name,
+          `has redundant ${depsType} from root`,
+          depKey
+        )
+        log('root version', rootPackageDepsForType[depKey])
+        log('subpackage version', subPackageDeps[depKey])
+        log('removing')
+        delete subPackageDeps[depKey]
         changed = true
-        log(subPackage.name, 'adding root version', depKey, rootVer)
-        subPackageDeps[depKey] = rootVer
-      } else if (subPackageVer !== rootVer) {
-        changed = true
-        log(subPackage.name, 'list', depKey, 'in root package.json')
-        log(subPackage.name, 'removing', depKey, subPackageVer)
-        log(subPackage.name, 'using root version', depKey, rootVer)
-        subPackageDeps[depKey] = rootVer
       }
     })
-    // Object.keys(subPackageDeps).forEach(depKey => {
-    //   // const rootPackageDepsForType = rootPackageJSON[depsType]
-    //   // if (rootPackageDepsForType && rootPackageDepsForType[depKey]) {
-    //   //   log(
-    //   //     'subpackage',
-    //   //     subPackageJSON.name,
-    //   //     `has redundant ${depsType} from root`,
-    //   //     depKey
-    //   //   )
-    //   //   log('root version', rootPackageDepsForType[depKey])
-    //   //   log('subpackage version', subPackageDeps[depKey])
-    //   //   log('removing')
-    //   //   delete subPackageDeps[depKey]
-    //   //   removed = true
-    //   // }
-    // })
   }
   if (changed) {
     writePackageJSON(packageJSONPath, subPackageJSON)

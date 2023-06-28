@@ -177,7 +177,7 @@ importers:
         version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
       webpack-dev-server:
         specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
+        version: 4.15.1(webpack-cli@5.1.4)(webpack@5.88.0)
       webpack-merge:
         specifier: 5.9.0
         version: 5.9.0
@@ -188,168 +188,18 @@ importers:
         specifier: 0.0.0
         version: link:../coil-privacypass-sjcl
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
       '@types/jsonwebtoken':
         specifier: 9.0.2
         version: 9.0.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/sjcl':
         specifier: 1.0.30
         version: 1.0.30
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
       jsonwebtoken:
         specifier: 9.0.0
         version: 9.0.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
       localforage:
         specifier: 1.10.0
         version: 1.10.0
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/coil-client:
     dependencies:
@@ -360,159 +210,9 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
       '@types/jsonwebtoken':
         specifier: 9.0.2
         version: 9.0.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/coil-extension:
     dependencies:
@@ -604,42 +304,9 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
     devDependencies:
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
       '@nut-tree/nut-js':
         specifier: 2.3.0
         version: 2.3.0
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
       '@types/debug':
         specifier: 4.1.8
         version: 4.1.8
@@ -655,18 +322,12 @@ importers:
       '@types/har-format':
         specifier: 1.2.11
         version: 1.2.11
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
       '@types/jsonwebtoken':
         specifier: 9.0.2
         version: 9.0.2
       '@types/long':
         specifier: 4.0.2
         version: 4.0.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/react':
         specifier: 17.0.58
         version: 17.0.58
@@ -676,141 +337,33 @@ importers:
       '@types/uuid':
         specifier: 9.0.2
         version: 9.0.2
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
       '@webexts/build-utils':
         specifier: ^0.0.0
         version: link:../webexts-build-utils
       '@wext/shipit':
         specifier: 0.2.1
         version: 0.2.1(patch_hash=5qxn472p55dc3l27ceuqp24iz4)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
       addons-linter:
         specifier: 6.9.0
         version: 6.9.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
       crx-hotreload:
         specifier: 1.0.6
         version: 1.0.6
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
       foxr:
         specifier: 0.10.1
         version: 0.10.1
       http-server:
         specifier: 14.1.1
         version: 14.1.1(debug@4.3.4)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
       node-window-manager:
         specifier: 2.2.4
         version: 2.2.4
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
       puppeteer:
         specifier: 20.7.3
         version: 20.7.3(typescript@5.1.3)
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
       web-ext:
         specifier: 7.6.2
         version: 7.6.2
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/coil-local-server:
     dependencies:
@@ -890,36 +443,9 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
     devDependencies:
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
       '@coil/client':
         specifier: 0.0.0
         version: link:../coil-client
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
       '@graphql-codegen/cli':
         specifier: 3.3.1
         version: 3.3.1(@babel/core@7.22.5)(@types/node@18.16.18)(graphql@16.6.0)
@@ -932,12 +458,6 @@ importers:
       '@graphql-codegen/typescript-resolvers':
         specifier: 3.2.1
         version: 3.2.1(graphql@16.6.0)
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
       '@types/body-parser':
         specifier: 1.19.2
         version: 1.19.2
@@ -947,126 +467,12 @@ importers:
       '@types/express':
         specifier: 4.17.17
         version: 4.17.17
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
       '@types/jsonwebtoken':
         specifier: 9.0.2
         version: 9.0.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
       '@webmonetization/types':
         specifier: 0.0.0
         version: link:../webmonetization-types
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/coil-monorepo-upkeep:
     dependencies:
@@ -1094,157 +500,6 @@ importers:
       yaml:
         specifier: ^2.2.1
         version: 2.2.2
-    devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/coil-privacypass-sjcl:
     dependencies:
@@ -1258,162 +513,12 @@ importers:
         specifier: github:sublimator/sjcl#6d8756dcf7d04ffc854d61d81b9781a37a82d500
         version: github.com/sublimator/sjcl/6d8756dcf7d04ffc854d61d81b9781a37a82d500
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
       '@types/keccak':
         specifier: 3.0.1
         version: 3.0.1
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/sjcl':
         specifier: 1.0.30
         version: 1.0.30
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/coil-puppeteer-utils:
     dependencies:
@@ -1439,165 +544,15 @@ importers:
         specifier: ^7.2.0
         version: 7.6.2
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
       '@types/debug':
         specifier: 4.1.8
         version: 4.1.8
       '@types/get-port':
         specifier: 4.2.0
         version: 4.2.0
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/tmp':
         specifier: 0.2.3
         version: 0.2.3
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/coil-webpack-utils:
     dependencies:
@@ -1628,467 +583,14 @@ importers:
       util:
         specifier: ^0.12.4
         version: 0.12.5
-    devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/coil-wm-utils:
     dependencies:
       '@coil/client':
         specifier: 0.0.0
         version: link:../coil-client
-    devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
-  packages/dier-makr-annotations:
-    devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
+  packages/dier-makr-annotations: {}
 
   packages/dier-makr-inversify:
     dependencies:
@@ -2098,157 +600,6 @@ importers:
       inversify:
         specifier: ^6.0.0
         version: 6.0.1(patch_hash=vhnktvj3xcaujxiabozgx3fsge)
-    devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/dummy-ext:
     dependencies:
@@ -2268,180 +619,30 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
       '@crxjs/vite-plugin':
         specifier: 2.0.0-beta.18
         version: 2.0.0-beta.18
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
       '@types/chrome':
         specifier: 0.0.238
         version: 0.0.238
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/react':
         specifier: 17.0.58
         version: 17.0.58
       '@types/react-dom':
         specifier: 18.0.11
         version: 18.0.11
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
       '@vitejs/plugin-react-swc':
         specifier: 3.3.2
         version: 3.3.2(vite@4.3.9)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
       rollup-plugin-node-polyfills:
         specifier: 0.2.1
         version: 0.2.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
       vite:
         specifier: 4.3.9
         version: 4.3.9(@types/node@18.16.18)
       vite-tsconfig-paths:
         specifier: 4.2.0
         version: 4.2.0(typescript@5.1.3)(vite@4.3.9)
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/niq-ci:
     dependencies:
@@ -2452,319 +653,18 @@ importers:
         specifier: ^3.2.3
         version: 3.2.4
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
       '@types/js-yaml':
         specifier: 4.0.5
         version: 4.0.5
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/nunjucks':
         specifier: 3.2.2
         version: 3.2.2
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/stacktracejs-stacktrace-js:
     dependencies:
       source-map:
         specifier: 0.5.6
         version: 0.5.6
-    devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/webexts-build-utils:
     dependencies:
@@ -2808,159 +708,9 @@ importers:
         specifier: ^8.8.0
         version: 8.13.0
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/ws':
         specifier: 8.5.5
         version: 8.5.5
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/webmonetization-demo:
     dependencies:
@@ -3013,45 +763,12 @@ importers:
         specifier: ^4.13.0
         version: 4.13.1(@types/react@17.0.58)(react-dom@17.0.2)(react@17.0.2)
     devDependencies:
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
       '@coil/webpack-utils':
         specifier: ^0.0.0
         version: link:../coil-webpack-utils
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
       '@hot-loader/react-dom':
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
       '@types/body-parser':
         specifier: 1.19.2
         version: 1.19.2
@@ -3061,12 +778,6 @@ importers:
       '@types/figlet':
         specifier: 1.5.6
         version: 1.5.6
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/react':
         specifier: 17.0.58
         version: 17.0.58
@@ -3076,117 +787,9 @@ importers:
       '@types/react-helmet':
         specifier: 6.1.6
         version: 6.1.6
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
       html-webpack-plugin:
         specifier: 5.5.3
         version: 5.5.3(webpack@5.88.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/webmonetization-polyfill-utils:
     dependencies:
@@ -3197,162 +800,12 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/uuid':
         specifier: 9.0.2
         version: 9.0.2
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
       '@webmonetization/types':
         specifier: 0.0.0
         version: link:../webmonetization-types
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/webmonetization-react:
     dependencies:
@@ -3363,162 +816,12 @@ importers:
         specifier: ^16.13.1 || ^17.0.0
         version: 17.0.2
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
       '@coil/webpack-utils':
         specifier: ^0.0.0
         version: link:../coil-webpack-utils
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/react':
         specifier: 17.0.58
         version: 17.0.58
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/webmonetization-testing-utils:
     dependencies:
@@ -3541,57 +844,15 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
       '@coil/webpack-utils':
         specifier: ^0.0.0
         version: link:../coil-webpack-utils
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
       '@hot-loader/react-dom':
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
       '@types/ajv':
         specifier: 1.0.0
         version: 1.0.0
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
       '@types/react':
         specifier: 17.0.58
         version: 17.0.58
@@ -3601,273 +862,15 @@ importers:
       '@types/uuid':
         specifier: 9.0.2
         version: 9.0.2
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
       html-webpack-plugin:
         specifier: 5.5.3
         version: 5.5.3(webpack@5.88.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/webmonetization-types:
     devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
       ts-json-schema-generator:
         specifier: 1.2.0
         version: 1.2.0
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
   packages/webmonetization-wext:
     dependencies:
@@ -3880,157 +883,6 @@ importers:
       '@webmonetization/types':
         specifier: 0.0.0
         version: link:../webmonetization-types
-    devDependencies:
-      '@abraham/reflection':
-        specifier: 0.12.0
-        version: 0.12.0
-      '@babel/core':
-        specifier: 7.22.5
-        version: 7.22.5
-      '@babel/plugin-proposal-class-properties':
-        specifier: 7.18.6
-        version: 7.18.6(@babel/core@7.22.5)
-      '@babel/plugin-proposal-decorators':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/plugin-proposal-object-rest-spread':
-        specifier: 7.20.7
-        version: 7.20.7(@babel/core@7.22.5)
-      '@babel/preset-env':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-react':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@babel/preset-typescript':
-        specifier: 7.22.5
-        version: 7.22.5(@babel/core@7.22.5)
-      '@commitlint/cli':
-        specifier: 17.6.6
-        version: 17.6.6(@swc/core@1.3.66)
-      '@commitlint/config-conventional':
-        specifier: 17.6.6
-        version: 17.6.6
-      '@swc/core':
-        specifier: 1.3.66
-        version: 1.3.66
-      '@swc/jest':
-        specifier: 0.2.26
-        version: 0.2.26(@swc/core@1.3.66)
-      '@types/jest':
-        specifier: 29.5.2
-        version: 29.5.2
-      '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.60.0
-        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-      '@typescript-eslint/parser':
-        specifier: 5.60.0
-        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-      JSON2016:
-        specifier: 1.0.0
-        version: 1.0.0
-      babel-plugin-parameter-decorator:
-        specifier: 1.0.16
-        version: 1.0.16
-      babel-plugin-transform-typescript-metadata:
-        specifier: 0.3.2
-        version: 0.3.2(@babel/core@7.22.5)
-      copy-webpack-plugin:
-        specifier: 11.0.0
-        version: 11.0.0(webpack@5.88.0)
-      eslint:
-        specifier: 8.43.0
-        version: 8.43.0
-      eslint-config-prettier:
-        specifier: 8.8.0
-        version: 8.8.0(eslint@8.43.0)
-      eslint-import-resolver-node:
-        specifier: 0.3.7
-        version: 0.3.7
-      eslint-plugin-import:
-        specifier: 2.27.5
-        version: 2.27.5(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)
-      eslint-plugin-jest:
-        specifier: 27.2.2
-        version: 27.2.2(@typescript-eslint/eslint-plugin@5.60.0)(eslint@8.43.0)(jest@29.5.0)(typescript@5.1.3)
-      eslint-plugin-jsx-a11y:
-        specifier: 6.7.1
-        version: 6.7.1(eslint@8.43.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.43.0)
-      eslint-plugin-prettier:
-        specifier: 4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-      eslint-plugin-promise:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@8.43.0)
-      eslint-plugin-react:
-        specifier: 7.32.2
-        version: 7.32.2(eslint@8.43.0)
-      eslint-plugin-react-hooks:
-        specifier: 4.6.0
-        version: 4.6.0(eslint@8.43.0)
-      eslint-plugin-standard:
-        specifier: 5.0.0
-        version: 5.0.0(eslint@8.43.0)
-      husky:
-        specifier: 8.0.3
-        version: 8.0.3
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.16.18)(ts-node@10.9.1)
-      jest-environment-jsdom:
-        specifier: 29.5.0
-        version: 29.5.0
-      lint-staged:
-        specifier: 13.2.2
-        version: 13.2.2
-      nodemon:
-        specifier: 2.0.22
-        version: 2.0.22
-      prettier:
-        specifier: 2.8.8
-        version: 2.8.8
-      regenerator-runtime:
-        specifier: 0.13.11
-        version: 0.13.11
-      rimraf:
-        specifier: 5.0.1
-        version: 5.0.1
-      ts-jest:
-        specifier: 29.1.0
-        version: 29.1.0(@babel/core@7.22.5)(jest@29.5.0)(typescript@5.1.3)
-      ts-loader:
-        specifier: 9.4.3
-        version: 9.4.3(typescript@5.1.3)(webpack@5.88.0)
-      ts-node:
-        specifier: 10.9.1
-        version: 10.9.1(@swc/core@1.3.66)(@types/node@18.16.18)(typescript@5.1.3)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: 5.1.3
-        version: 5.1.3
-      webpack:
-        specifier: 5.88.0
-        version: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
-      webpack-bundle-analyzer:
-        specifier: 4.9.0
-        version: 4.9.0
-      webpack-cli:
-        specifier: 5.1.4
-        version: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server:
-        specifier: 4.15.1
-        version: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
-      webpack-merge:
-        specifier: 5.9.0
-        version: 5.9.0
 
 packages:
 
@@ -8941,7 +5793,7 @@ packages:
     dependencies:
       webpack: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack-bundle-analyzer@4.9.0)(webpack-dev-server@4.15.1)(webpack@5.88.0)
-      webpack-dev-server: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
+      webpack-dev-server: 4.15.1(webpack-cli@5.1.4)(webpack@5.88.0)
     dev: true
 
   /@wext/shipit@0.2.1(patch_hash=5qxn472p55dc3l27ceuqp24iz4):
@@ -15207,7 +12059,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /http-proxy-middleware@2.0.6(@types/express@4.17.17)(debug@4.3.4):
+  /http-proxy-middleware@2.0.6(@types/express@4.17.17):
     resolution: {integrity: sha512-ya/UeJ6HVBYxrgYotAZo1KvPWlgB48kUJLDePFeneHsVujFaW5WNj2NgWCAE//B1Dl02BIfYlpNgBy8Kf8Rjmw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -23179,7 +20031,7 @@ packages:
       rechoir: 0.8.0
       webpack: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
       webpack-bundle-analyzer: 4.9.0
-      webpack-dev-server: 4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0)
+      webpack-dev-server: 4.15.1(webpack-cli@5.1.4)(webpack@5.88.0)
       webpack-merge: 5.9.0
     dev: true
 
@@ -23197,7 +20049,7 @@ packages:
       webpack: 5.88.0(@swc/core@1.3.66)(webpack-cli@5.1.4)
     dev: true
 
-  /webpack-dev-server@4.15.1(debug@4.3.4)(webpack-cli@5.1.4)(webpack@5.88.0):
+  /webpack-dev-server@4.15.1(webpack-cli@5.1.4)(webpack@5.88.0):
     resolution: {integrity: sha512-5hbAst3h3C3L8w6W4P96L5vaV0PxSmJhxZvWKYIdgxOQm8pNZ5dEOmmSLBVpP85ReeyRt6AS1QJNyo/oFFPeVA==}
     engines: {node: '>= 12.13.0'}
     hasBin: true
@@ -23227,7 +20079,7 @@ packages:
       express: 4.18.2
       graceful-fs: 4.2.11
       html-entities: 2.3.3
-      http-proxy-middleware: 2.0.6(@types/express@4.17.17)(debug@4.3.4)
+      http-proxy-middleware: 2.0.6(@types/express@4.17.17)
       ipaddr.js: 2.0.1
       launch-editor: 2.6.0
       open: 8.4.2
