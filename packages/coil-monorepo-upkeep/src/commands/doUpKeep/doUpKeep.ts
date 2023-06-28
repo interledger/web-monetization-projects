@@ -112,7 +112,7 @@ function setCommonScriptsAndMergeOverrides(
   const githubPath = rootPackageJSON.repository.url.split(':')[1].slice(0, -4)
 
   const jest = ({ e2e, coverage }: { e2e: boolean; coverage: boolean }) => {
-    const mjsAndCjs = '--config jest.config.all.cjs'
+    const mjsAndCjs = '--config jest.config.cjs'
     const JEST_E2E = e2e ? 'JEST_E2E=1' : ''
     const rest = coverage ? '--verbose --coverage' : ''
     return `NODE_OPTIONS=--experimental-vm-modules ${JEST_E2E} PROJECT_JEST=1 jest --passWithNoTests ${rest} ${mjsAndCjs}`
