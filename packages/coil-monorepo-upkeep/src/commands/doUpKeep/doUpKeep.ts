@@ -110,7 +110,8 @@ function setCommonScriptsAndMergeOverrides(
   const githubPath = rootPackageJSON.repository.url.split(':')[1].slice(0, -4)
 
   const jest = (...rest: string[]) => {
-    return `NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=1 jest --passWithNoTests ${rest.join(
+    const config = subPackageJSON.type === 'module' ? 'esm' : '1'
+    return `NODE_OPTIONS=--experimental-vm-modules PROJECT_JEST=${config} jest --passWithNoTests ${rest.join(
       ' '
     )}`
   }
@@ -286,6 +287,7 @@ function upKeepIDETsConfigPaths(
   tsconfig.compilerOptions.paths = paths
   writeFileJSON(path, tsconfig, UPKEEP_JSON_OPTS)
 }
+
 function upKeepStaticSharedTemplates(subPackage: LernaListItem) {
   copyTemplatesDir({
     subPackage,

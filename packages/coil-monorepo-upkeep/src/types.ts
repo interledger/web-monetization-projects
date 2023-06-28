@@ -14,6 +14,7 @@ export interface PackageJSON extends Record<string, string | any> {
   author?: string
   $schema?: string
   types?: string
+  type?: 'module' | 'commonjs'
   main?: string
   subpackages?: string[]
   resolutions?: StringMap
