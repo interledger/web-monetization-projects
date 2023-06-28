@@ -67,7 +67,7 @@ describe('GraphQlClient#login', () => {
         }
 
         whoami {
-
+          
           id
           fullName
           shortName
