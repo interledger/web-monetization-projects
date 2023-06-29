@@ -10,14 +10,15 @@ class CustomizedTestEnvironment extends TestEnvironment {
   constructor(config, context) {
     super(config, context)
   }
-
   async setup() {
     await super.setup()
     this.global.Uint8Array = globalThis.Uint8Array
     this.global.fetch = globalThis.fetch
-    this.global.TextDecoder = globalThis.TextDecoder
+    // These seem to be needed for @noble/hashes
     this.global.TextEncoder = globalThis.TextEncoder
-    this.global.crypto.subtle = crypto.webcrypto.subtle
+    this.global.TextDecoder = globalThis.TextDecoder
+    // TODO: is there a better way to do this?
+    this.global.crypto.subtle ??= crypto.webcrypto.subtle
   }
 }
 

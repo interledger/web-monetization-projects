@@ -1,0 +1,41 @@
+{
+  "$schema": "../coil-monorepo-upkeep/resources/package-json-schema-nested-overrides.json",
+  "name": "@niq/privacypass-noble",
+  "version": "0.0.0",
+  "keywords": [
+    "ilp",
+    "web-monetization"
+  ],
+  "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/niq-privacypass-noble",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coilhq/web-monetization-projects.git",
+    "directory": "packages/niq-privacypass-noble"
+  },
+  "license": "Apache-2.0",
+  "author": "Coil Team <info@coil.com>",
+  "main": "./build",
+  "types": "./build",
+  "scripts": {
+    "build:ts": "tsc --build tsconfig.build.json",
+    "build:ts:verbose": "pnpm build:ts --verbose",
+    "build:ts:watch": "pnpm build:ts --watch",
+    "clean:build": "rimraf build",
+    "format": "pnpm prettier && LINT_FIX=1 pnpm lint:all --fix --quiet",
+    "lint": "eslint --cache --cache-location ../../node_modules/.cache/eslint",
+    "lint:all": "pnpm lint 'src/**/*.{mts,ts,tsx}' 'test/**/*.{mts,ts,tsx}'",
+    "precommit": "echo lint-staged runs from root",
+    "prettier": "prettier --write '*.{mts,ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{mts,ts,tsx,js,html,jsx,md}'",
+    "test": "NODE_OPTIONS=--experimental-vm-modules  PROJECT_JEST=1 jest --passWithNoTests",
+    "test:coverage": "pnpm run test --verbose --coverage",
+    "test:e2e": "JEST_E2E=1 pnpm run test",
+    "test:e2e:coverage": "JEST_E2E=1 pnpm run test:coverage",
+    "tsnodeenv": "NODE_OPTIONS=\"${NODE_OPTIONS:-} --require tsconfig-paths/register\" TS_NODE_PROJECT=\"../../tsconfig.cjs.json\"",
+    "upkeep": "cd ../.. && pnpm upkeep"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.0.0",
+    "@noble/hashes": "^1.3.0"
+  },
+  "devDependencies": {}
+}

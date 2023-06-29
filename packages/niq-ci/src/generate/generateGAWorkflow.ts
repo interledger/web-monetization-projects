@@ -36,6 +36,13 @@ const steps = [
       'node-version': '${{ matrix.node-version }}'
     }
   },
+  // {
+  //   name: 'Setup PNPM',
+  //   uses: 'pnpm/action-setup@v2',
+  //   with: {
+  //     version: 8
+  //   }
+  // },
   {
     name: 'Setup PNPM',
     uses: 'pnpm/action-setup@v2',
