@@ -6,9 +6,9 @@ import {
 import { loginMutation } from '@coil/client'
 import { initCoilSelectors } from '@coil/puppeteer-utils'
 
-const attr = (a: string) => a.slice(1, a.length - 1)
+const selToAttr = (a: string) => a.slice(1, a.length - 1)
 
-@controller('/login')
+@controller('/auth/login')
 export class LoginController extends BaseHttpController {
   @httpGet('/')
   login() {
@@ -29,7 +29,7 @@ export class LoginController extends BaseHttpController {
             const innerHTML = args.map(val => JSON.stringify(val)).join('')
             document.getElementById('log').innerHTML = innerHTML
           }
-
+          
           function submit() {
             try {
               const variables = {
@@ -81,6 +81,12 @@ export class LoginController extends BaseHttpController {
                   return false
                 }
               )
+              if (localStorage.token) {
+                const domain = new URL(window.location.href)
+                domain.pathname = '/settings'
+                log('redirecting to ', domain.href)
+                window.location.href = domain.href
+              }
             }
           })
         </script>
@@ -88,13 +94,15 @@ export class LoginController extends BaseHttpController {
       </head>
       <body>
       <form id="form">
-        <input ${attr(
+        <input ${selToAttr(
           initCoilSelectors.loginSelector
         )} id="email" type="email" placeholder="email">
-        <input ${attr(
+        <input ${selToAttr(
           initCoilSelectors.passwordSelector
         )} id="password" type="password" placeholder="password">
-        <button ${attr(initCoilSelectors.nextSelector)} type="submit">Log in
+        <button ${selToAttr(
+          initCoilSelectors.nextSelector
+        )} type="submit">Log in
         </button>
       </form>
       <pre id="log"></pre>

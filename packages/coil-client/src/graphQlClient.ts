@@ -17,7 +17,7 @@ import {
 @injectable()
 export class GraphQlClientOptions {
   public coilDomain = 'https://coil.com'
-  public fetch = fetch
+  public fetch = typeof window !== 'undefined' ? fetch.bind(window) : fetch
   public log?: typeof console.log
   public extraHeaders: Record<string, string> = {}
 }
@@ -82,7 +82,8 @@ export class GraphQlClient {
       res = await this.fetch(`${this.config.coilDomain}/gateway`, init)
     } catch (e) {
       throw new Error(
-        `graphql query failed. failed to fetch, query=\`${query}\``
+        `graphql query failed. failed to fetch, query=\`${query}\`,` +
+          `\nerr.message=${e.message},\nerr.stack=${e.stack}`
       )
     }
     if (!res.ok) {

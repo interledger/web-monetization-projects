@@ -1,3 +1,4 @@
+import { describe, expect, it, jest } from '@jest/globals'
 import { SPSPResponse as SPSPResponseRaw } from '@webmonetization/types'
 
 import { getSPSPResponse } from './getSPSPResponse'
@@ -44,7 +45,7 @@ describe('getSPSPResponse', () => {
     expect(response).toMatchObject(SPSPResponseMatcher)
   })
   it('should throw an error when there is no response', async () => {
-    const fn = jest.fn()
+    const fn = jest.fn<typeof fetch>()
     // noinspection TypeScriptValidateJSTypes
     fn.mockReturnValue(Promise.reject(new Error()))
     await expect(async () => {

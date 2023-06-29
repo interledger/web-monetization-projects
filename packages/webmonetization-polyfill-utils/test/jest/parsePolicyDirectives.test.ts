@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { parsePolicyDirectives } from '../../src/lib/parsePolicyDirectives'
 
 describe('parsePolicyDirectives', () => {

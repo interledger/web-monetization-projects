@@ -1,3 +1,5 @@
+import { describe, expect, it, jest } from '@jest/globals'
+
 import {
   decodeToken,
   GraphQlClient,
@@ -8,7 +10,7 @@ import { testToken } from '../test/fixtures/testToken'
 
 describe('GraphQlClient#login', () => {
   it('should return a token via login method', async () => {
-    const testFetch = jest.fn()
+    const testFetch = jest.fn<typeof fetch>()
 
     class TestOptions extends GraphQlClient.Options {
       public fetch = testFetch
@@ -19,7 +21,7 @@ describe('GraphQlClient#login', () => {
         return { data: { auth: { token: testToken } } }
       }
     }
-    testFetch.mockResolvedValue(response)
+    testFetch.mockResolvedValue(response as Response)
 
     const client = new GraphQlClient(new TestOptions())
     const password = 'thereisnoplacelikearstdhneio'

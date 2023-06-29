@@ -1,3 +1,5 @@
+import { beforeAll, describe, expect, it, test } from '@jest/globals'
+
 // noinspection ES6PreferShortImport
 import { wmPolyfill } from '../../../src/content/wmPolyfill'
 

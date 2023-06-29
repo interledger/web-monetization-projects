@@ -1,7 +1,8 @@
 export type StringMap = Record<string, string>
 
-export interface PackageJSON extends Record<string, string | any> {
-  repository?: { type: string; url: string }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export interface PackageJSON extends Record<string, any> {
+  repository?: { type: string; url: string; directory: string }
   keywords?: string[]
   homepage?: string
   private?: boolean
@@ -14,11 +15,13 @@ export interface PackageJSON extends Record<string, string | any> {
   author?: string
   $schema?: string
   types?: string
+  type?: 'module' | 'commonjs'
   main?: string
   subpackages?: string[]
   resolutions?: StringMap
   upkeep?: {
     privatePackages?: boolean
+    tsconfigPatch?: TSConfig
   }
 }
 

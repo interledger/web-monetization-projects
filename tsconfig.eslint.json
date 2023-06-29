@@ -10,9 +10,11 @@
   ],
   "include": [
     "packages/**/*.js",
+    "packages/**/*.mts",
     "packages/**/*.ts",
     "packages/**/*.tsx",
     "packages-archived/**/*.js",
+    "packages-archived/**/*.mts",
     "packages-archived/**/*.ts",
     "packages-archived/**/*.tsx"
   ]

@@ -47,7 +47,7 @@ const steps = [
     name: 'Setup PNPM',
     uses: 'pnpm/action-setup@v2',
     with: {
-      version: 7
+      version: 8
     }
   },
   {
@@ -69,10 +69,13 @@ const steps = [
   {
     name: 'PNPM Install',
     run: `export PUPPETEER_CACHE_DIR=$PWD/puppeteer-cache
+# TODO: disabled due to CI error: ERROR: Failed to set up Chrome r113.0.5672.63! Set "PUPPETEER_SKIP_DOWNLOAD" env variable to skip download.
+export PUPPETEER_SKIP_DOWNLOAD=1    
 pnpm install # --no-frozen-lockfile 
 git diff
-export PUPPETEER_PRODUCT='firefox'
-pnpm install`
+# TODO: Don't test with FF anymore
+# export PUPPETEER_PRODUCT='firefox'
+# pnpm install`
   }
 ]
 

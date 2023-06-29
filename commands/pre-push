@@ -1,35 +1,23 @@
 #!/bin/bash
-# Prevents force-pushing to master
+# Prevents pushing to protected branches
 
-echo -e "Pre-push Hook: Checking branch name"
+# List of branches where push is not allowed
+protected_branches=("main" "develop")
 
-BRANCH=$(git rev-parse --abbrev-ref HEAD)
-PROTECTED_BRANCHES="^(main|develop)"
-# Get refs list from STDIN
-REFS=$(cat)
-
-parent_pid=$PPID
-push_command=''
-
-until [[ "$push_command" == git* ]]; do
-  push_command=$(ps -ocommand= -p $parent_pid)
-  parent_pid=$(ps -o ppid= $parent_pid)
-  # echo "command = $push_command"
+# Read the standard input provided by Git
+while read local_ref local_sha remote_ref remote_sha
+do
+    # Iterate over the protected branches
+    for branch in "${protected_branches[@]}"
+    do
+        # Check if we're pushing to a protected branch
+        if [[ "$remote_ref" == *"refs/heads/$branch"* ]]; then
+            echo -e "\n🚫 Cannot push to remote $branch branch, please create your own branch and use PR.\n"
+            exit 1
+        fi
+    done
 done
 
-if [[ -n $REFS && $REFS != *"$BRANCH"* && -z $SKIP_HUSKY_PRE_PUSH ]]
-then
-  echo "\$push_command = $push_command"
-  echo "\$BRANCH = $BRANCH"
-  echo "\$REFS = $REFS"
-  echo -e "\n🚫 You must use (git push origin $BRANCH)\n" && exit 1
-fi
-
-if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]
-then
-  echo -e "\n🚫 Cannot push to remote $BRANCH branch, please create your own branch and use PR.\n" && exit 1
-fi
-
-echo -e ">> Finished checking branch name"
+echo -e ">> Push allowed\n"
 
 exit 0

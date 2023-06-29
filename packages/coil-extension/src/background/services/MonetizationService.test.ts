@@ -1,3 +1,4 @@
+import { describe, expect, it, jest } from '@jest/globals'
 import '@abraham/reflection'
 
 import { Container } from 'inversify'
@@ -64,7 +65,7 @@ function mockWextApi() {
   } as unknown as typeof chrome
 }
 
-describe.skip('MonetizationService', () => {
+describe('MonetizationService', () => {
   it('should be instantiable in tests via container construction', async () => {
     decorateThirdPartyClassesForInjection()
 

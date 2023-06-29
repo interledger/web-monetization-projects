@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { calculateInputWidth, normalizeAmountInput } from './AmountInput.utils'
 
 describe('handleAmountInputChange', () => {

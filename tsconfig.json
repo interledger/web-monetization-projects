@@ -7,82 +7,82 @@
     "skipLibCheck": false,
     "paths": {
       "@coil/anonymous-tokens": [
-        "packages/coil-anonymous-tokens/src"
+        "./packages/coil-anonymous-tokens/src"
       ],
       "@coil/client": [
-        "packages/coil-client/src"
+        "./packages/coil-client/src"
       ],
       "@coil/extension": [
-        "packages/coil-extension/src"
+        "./packages/coil-extension/src"
       ],
       "@coil/local-server": [
-        "packages/coil-local-server/src"
+        "./packages/coil-local-server/src"
       ],
       "@coil/monorepo-upkeep": [
-        "packages/coil-monorepo-upkeep/src"
+        "./packages/coil-monorepo-upkeep/src"
       ],
       "@coil/privacypass-sjcl": [
-        "packages/coil-privacypass-sjcl/src"
+        "./packages/coil-privacypass-sjcl/src"
       ],
       "@coil/puppeteer-utils": [
-        "packages/coil-puppeteer-utils/src"
+        "./packages/coil-puppeteer-utils/src"
       ],
       "@coil/webpack-utils": [
-        "packages/coil-webpack-utils/src"
+        "./packages/coil-webpack-utils/src"
       ],
       "@coil/wm-utils": [
-        "packages/coil-wm-utils/src"
+        "./packages/coil-wm-utils/src"
       ],
       "@dier-makr/annotations": [
-        "packages/dier-makr-annotations/src"
+        "./packages/dier-makr-annotations/src"
       ],
       "@dier-makr/inversify": [
-        "packages/dier-makr-inversify/src"
+        "./packages/dier-makr-inversify/src"
       ],
       "@dummy/ext": [
-        "packages/dummy-ext/src"
+        "./packages/dummy-ext/src"
       ],
       "@niq/ci": [
-        "packages/niq-ci/src"
+        "./packages/niq-ci/src"
       ],
       "@niq/privacypass-noble": [
         "packages/niq-privacypass-noble/src"
       ],
       "@stacktracejs/stacktrace-js": [
-        "packages/stacktracejs-stacktrace-js/src"
+        "./packages/stacktracejs-stacktrace-js/src"
       ],
       "@webexts/build-utils": [
-        "packages/webexts-build-utils/src"
+        "./packages/webexts-build-utils/src"
       ],
       "@webmonetization/demo": [
-        "packages/webmonetization-demo/src"
+        "./packages/webmonetization-demo/src"
       ],
       "@webmonetization/polyfill-utils": [
-        "packages/webmonetization-polyfill-utils/src"
+        "./packages/webmonetization-polyfill-utils/src"
       ],
       "@webmonetization/react": [
-        "packages/webmonetization-react/src"
+        "./packages/webmonetization-react/src"
       ],
       "@webmonetization/testing-utils": [
-        "packages/webmonetization-testing-utils/src"
+        "./packages/webmonetization-testing-utils/src"
       ],
       "@webmonetization/types": [
-        "packages/webmonetization-types/src"
+        "./packages/webmonetization-types/src"
       ],
       "@webmonetization/wext": [
-        "packages/webmonetization-wext/src"
+        "./packages/webmonetization-wext/src"
       ],
       "@webmonetization/wext/tokens": [
-        "packages/webmonetization-wext/src/tokens.ts"
+        "./packages/webmonetization-wext/src/tokens.ts"
       ],
       "@webmonetization/wext/undecorated": [
-        "packages/webmonetization-wext/src/undecorated"
+        "./packages/webmonetization-wext/src/undecorated"
       ],
       "@webmonetization/wext/services": [
-        "packages/webmonetization-wext/src/services"
+        "./packages/webmonetization-wext/src/services"
       ],
       "@webmonetization/wext/content": [
-        "packages/webmonetization-wext/src/content"
+        "./packages/webmonetization-wext/src/content"
       ]
     }
   },
@@ -98,8 +98,10 @@
     "packages-archived/*/hidden-src/**/*"
   ],
   "include": [
+    "packages/**/*.mts",
     "packages/**/*.ts",
     "packages/**/*.tsx",
+    "packages-archived/**/*.mts",
     "packages-archived/**/*.ts",
     "packages-archived/**/*.tsx"
   ]

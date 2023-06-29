@@ -56,38 +56,39 @@ function checkDependencies(
     // if (!subPackageDeps) {
     //   continue
     // }
-    const rootPackageDepsForType = rootPackageJSON[depsType] ?? {}
-    Object.keys(rootPackageDepsForType).forEach(depKey => {
-      const rootVer = rootPackageDepsForType[depKey]
-      const subPackageVer = subPackageDeps[depKey]
-      if (!subPackageVer) {
+    // const rootPackageDepsForType = rootPackageJSON[depsType] ?? {}
+    // Object.keys(rootPackageDepsForType).forEach(depKey => {
+    //   const rootVer = rootPackageDepsForType[depKey]
+    //   const subPackageVer = subPackageDeps[depKey]
+    //   if (!subPackageVer) {
+    //     changed = true
+    //     log(subPackage.name, 'adding root version', depKey, rootVer)
+    //     subPackageDeps[depKey] = rootVer
+    //   } else if (subPackageVer !== rootVer) {
+    //     changed = true
+    //     log(subPackage.name, 'list', depKey, 'in root package.json')
+    //     log(subPackage.name, 'removing', depKey, subPackageVer)
+    //     log(subPackage.name, 'using root version', depKey, rootVer)
+    //     subPackageDeps[depKey] = rootVer
+    //   }
+    // })
+
+    Object.keys(subPackageDeps).forEach(depKey => {
+      const rootPackageDepsForType = rootPackageJSON[depsType]
+      if (rootPackageDepsForType && rootPackageDepsForType[depKey]) {
+        log(
+          'subpackage',
+          subPackageJSON.name,
+          `has redundant ${depsType} from root`,
+          depKey
+        )
+        log('root version', rootPackageDepsForType[depKey])
+        log('subpackage version', subPackageDeps[depKey])
+        log('removing')
+        delete subPackageDeps[depKey]
         changed = true
-        log(subPackage.name, 'adding root version', depKey, rootVer)
-        subPackageDeps[depKey] = rootVer
-      } else if (subPackageVer !== rootVer) {
-        changed = true
-        log(subPackage.name, 'list', depKey, 'in root package.json')
-        log(subPackage.name, 'removing', depKey, subPackageVer)
-        log(subPackage.name, 'using root version', depKey, rootVer)
-        subPackageDeps[depKey] = rootVer
       }
     })
-    // Object.keys(subPackageDeps).forEach(depKey => {
-    //   // const rootPackageDepsForType = rootPackageJSON[depsType]
-    //   // if (rootPackageDepsForType && rootPackageDepsForType[depKey]) {
-    //   //   log(
-    //   //     'subpackage',
-    //   //     subPackageJSON.name,
-    //   //     `has redundant ${depsType} from root`,
-    //   //     depKey
-    //   //   )
-    //   //   log('root version', rootPackageDepsForType[depKey])
-    //   //   log('subpackage version', subPackageDeps[depKey])
-    //   //   log('removing')
-    //   //   delete subPackageDeps[depKey]
-    //   //   removed = true
-    //   // }
-    // })
   }
   if (changed) {
     writePackageJSON(packageJSONPath, subPackageJSON)
@@ -107,15 +108,17 @@ function setCommonScriptsAndMergeOverrides(
   ) {
     throw new Error('expecting git url for repository in root package.json')
   }
+
   const githubPath = rootPackageJSON.repository.url.split(':')[1].slice(0, -4)
 
   let updated: PackageJSON = {
     ...subPackageJSON,
+    // TODO: use workspace
     version: '0.0.0',
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     homepage: `https://github.com/${githubPath}/tree/main/${pathFromRoot}`,
     keywords: rootPackageJSON.keywords,
-    repository: rootPackageJSON.repository,
+    repository: { ...rootPackageJSON.repository, directory: pathFromRoot },
     main: './build',
     types: './build',
     private: rootPackageJSON.upkeep?.privatePackages ?? undefined,
@@ -131,7 +134,7 @@ function setCommonScriptsAndMergeOverrides(
       postinstall: undefined!,
       precommit: 'echo lint-staged runs from root',
       prettier:
-        "prettier --write '*.{ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{ts,tsx,js,html,jsx,md}'",
+        "prettier --write '*.{mts,ts,tsx,js,html,jsx,md}' '{src,test}/**/*.{mts,ts,tsx,js,html,jsx,md}'",
       format: 'pnpm prettier && LINT_FIX=1 pnpm lint:all --fix --quiet',
       'build:ts': 'tsc --build tsconfig.build.json',
       'build:ts:watch': 'pnpm build:ts --watch',
@@ -145,11 +148,11 @@ function setCommonScriptsAndMergeOverrides(
       tsnodeenv:
         'NODE_OPTIONS="${NODE_OPTIONS:-} --require tsconfig-paths/register" TS_NODE_PROJECT="../../tsconfig.cjs.json"',
       upkeep: 'cd ../.. && pnpm upkeep',
-      'lint:all': "pnpm lint 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+      'lint:all': "pnpm lint 'src/**/*.{mts,ts,tsx}' 'test/**/*.{mts,ts,tsx}'",
       lint: 'eslint --cache --cache-location ../../node_modules/.cache/eslint',
-      'test:e2e': 'pnpm run test --config jest-e2e.config.cjs',
-      'test:e2e:coverage': 'pnpm test:coverage --config jest-e2e.config.cjs',
-      test: 'PROJECT_JEST=1 jest --passWithNoTests',
+      'test:e2e': 'JEST_E2E=1 pnpm run test',
+      'test:e2e:coverage': 'JEST_E2E=1 pnpm run test:coverage',
+      test: 'NODE_OPTIONS=--experimental-vm-modules  PROJECT_JEST=1 jest --passWithNoTests',
       'test:coverage': 'pnpm run test --verbose --coverage'
     }
   }
@@ -168,26 +171,32 @@ function setCommonScriptsAndMergeOverrides(
   return updated
 }
 
-function getPackageFolder(li: LernaListItem) {
-  // TODO: pathModule.basename
-  const path = li.location.split('/')
-  return path[path.length - 1]
-}
-
-function upKeepTypeScriptBuildConfig(subPackage: LernaListItem) {
+function upKeepTypeScriptBuildConfig(
+  subPackageJSON: PackageJSON,
+  subPackage: LernaListItem
+) {
+  const tsconfigPatch = subPackageJSON.upkeep?.tsconfigPatch
+  const rootDir = tsconfigPatch?.compilerOptions?.rootDir ?? 'src'
   const tsconfig: TSConfig = {
     extends: '../../tsconfig.build.settings.json',
     compilerOptions: {
       composite: true,
       outDir: './build',
       tsBuildInfoFile: './build/tsconfig.build.tsbuildinfo',
-      rootDir: 'src'
+      rootDir,
+      ...tsconfigPatch?.compilerOptions
     },
     // Unfortunately, resolveJsonModule: true and simply `src` does
     // not seem to work
-    include: ['src/**/*.tsx', 'src/**/*.ts', 'src/**/*.json'],
-    exclude: ['src/**/*.test.ts', 'src/**/*.test.tsx']
+    include: [
+      `${rootDir}/**/*.tsx`,
+      `${rootDir}/**/*.ts`,
+      `${rootDir}/**/*.json`,
+      ...(tsconfigPatch?.include ?? [])
+    ],
+    exclude: [`${rootDir}/**/*.test.ts`, `${rootDir}/**/*.test.tsx`]
   }
+
   if (subPackage.dependencies.length) {
     tsconfig.references = subPackage.dependencies.map(li => {
       return {
@@ -224,15 +233,19 @@ function copyTemplatesDir({
   })
 }
 
-function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
+function upKeepIDETsConfigPaths(
+  subPackages: LernaListItem[],
+  rootPackageJSON: PackageJSON
+) {
   const path = fromRoot(IDE_TSCONFIG)
   const tsconfig = readFileJSON<TSConfig>(path)
   tsconfig.compilerOptions = tsconfig.compilerOptions || {}
-  const paths: Record<string, string[]> = {}
+  const paths: Record<string, string[]> =
+    rootPackageJSON.upkeep?.tsconfigPatch?.compilerOptions?.paths ?? {}
   subPackages.forEach(li => {
     const packagePath = relativeToRoot(li.location)
 
-    const path = `${packagePath}/src`
+    const path = `./${packagePath}/src`
     paths[li.name] = [path]
     const subPackageJSON = readPackageJSON(`${li.location}/package.json`)
     // Handle any @ns/package/derp redirects
@@ -266,6 +279,7 @@ function upKeepIDETsConfigPaths(subPackages: LernaListItem[]) {
   tsconfig.compilerOptions.paths = paths
   writeFileJSON(path, tsconfig, UPKEEP_JSON_OPTS)
 }
+
 function upKeepStaticSharedTemplates(subPackage: LernaListItem) {
   copyTemplatesDir({
     subPackage,
@@ -356,13 +370,13 @@ export async function doUpKeep() {
       subPackage,
       subPackageJSON
     )
-    upKeepTypeScriptBuildConfig(subPackage)
+    upKeepTypeScriptBuildConfig(subPackageJSON, subPackage)
     upKeepStaticSharedTemplates(subPackage)
     copyInDefaultFiles(subPackage)
     createDefaultReadmeFile(subPackage)
   }
 
-  upKeepIDETsConfigPaths(subPackages)
+  upKeepIDETsConfigPaths(subPackages, rootPackageJSON)
   upKeepReferencesTsConfig(subPackages)
   upKeepIntelliJExcludes(subPackages)
   // Not using "manual" dependabot configuration currently.

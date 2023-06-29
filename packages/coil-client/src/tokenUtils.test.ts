@@ -1,5 +1,7 @@
 import assert from 'assert'
 
+import { describe, expect, it } from '@jest/globals'
+
 import { CoilTokenUtils, DecodedToken, decodeToken } from '../src'
 import { testToken } from '../test/fixtures/testToken'
 

@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals'
 import '@abraham/reflection'
 
 import { StreamAssociations } from './StreamAssociations'
