@@ -22,8 +22,6 @@ const srcFolderTests = '<rootDir>/src/**/*.test.{ts,mts}?(x)'
 
 module.exports = {
   ...rootConfig,
-  moduleFileExtensions: rootConfig.moduleFileExtensions.concat('mts'),
-  extensionsToTreatAsEsm: ['.mts'],
   displayName: displayName,
   ...(PROJECT_JEST ? coverage : undefined),
   testMatch: E2E ? [testFolderTests] : [testFolderTests, srcFolderTests]
