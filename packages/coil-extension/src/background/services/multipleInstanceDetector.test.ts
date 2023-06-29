@@ -1,3 +1,4 @@
+import { describe, expect, it, jest } from '@jest/globals'
 import '@abraham/reflection'
 
 import { EXTENSIONS } from '../consts/extensionInstances'
@@ -31,23 +32,24 @@ describe('DetectExtensions', () => {
   describe('detectExtensions', () => {
     const mockApi = {
       notifications: {
-        create: jest.fn()
+        create: jest.fn<typeof chrome.notifications.create>()
       },
       permissions: {
-        contains: jest.fn()
+        contains: jest.fn<typeof chrome.permissions.contains>()
       },
       runtime: {
         onMessageExternal: {
-          addListener: jest.fn()
+          addListener:
+            jest.fn<typeof chrome.runtime.onMessageExternal.addListener>()
         },
-        sendMessage: jest.fn(),
+        sendMessage: jest.fn<typeof chrome.runtime.sendMessage>(),
         lastError: undefined
       },
       tabs: {
-        create: jest.fn()
+        create: jest.fn<typeof chrome.tabs.create>()
       },
       extension: {
-        getURL: jest.fn()
+        getURL: jest.fn<typeof chrome.extension.getURL>()
       }
     }
     const chromeNavigator = {
@@ -57,7 +59,7 @@ describe('DetectExtensions', () => {
     it('should send a cross extension message', async () => {
       const detector = new MultipleInstanceDetector(
         chromeNavigator,
-        mockApi as WextApiSubset
+        mockApi as unknown as WextApiSubset
       )
       const showNotificationSpy = jest.spyOn(
         detector,
@@ -73,8 +75,8 @@ describe('DetectExtensions', () => {
         EXTENSIONS.chrome[0].id,
         { command: 'checkActive' },
         expect.any(Function)
-      ])
-      const callback = sendMessageCalls[0][2]
+      ] as unknown as Record<string, unknown>)
+      const callback = sendMessageCalls[0][2] as (arg: unknown) => unknown
 
       const reply: CheckActiveResponse = {
         active: true

@@ -95,8 +95,10 @@
     "packages-archived/*/hidden-src/**/*"
   ],
   "include": [
+    "packages/**/*.mts",
     "packages/**/*.ts",
     "packages/**/*.tsx",
+    "packages-archived/**/*.mts",
     "packages-archived/**/*.ts",
     "packages-archived/**/*.tsx"
   ]

@@ -1,4 +1,13 @@
 import {
+  afterEach,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  jest
+} from '@jest/globals'
+
+import {
   IDLE_TIMEOUT,
   IdleDetection,
   IdleDetectionDocument

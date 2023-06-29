@@ -29,7 +29,8 @@ let config = {
   rootDir: '.',
   moduleNameMapper,
   resolver: `${__dirname}/commands/jest/resolver.js`,
-  moduleFileExtensions: ['js', 'ts', 'tsx', 'jsx', 'json'],
+  extensionsToTreatAsEsm: ['.mts'],
+  moduleFileExtensions: ['js', 'ts', 'tsx', 'jsx', 'json', 'mts'],
   transform: {
     '^.+\\.(t|j)sx?$': ['@swc/jest']
   },
