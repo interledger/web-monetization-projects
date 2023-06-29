@@ -1,3 +1,5 @@
+import { describe, expect, it, test } from '@jest/globals'
+
 import { computeSecret, divPoint } from './utils'
 import { createBlindToken } from './tokens'
 

@@ -1,8 +1,10 @@
+import { describe, expect, jest, test } from '@jest/globals'
+
 import * as blindRSA from '../../../../src/crypto/blindrsa/blindrsa'
 
 // Test vector
 // https://www.ietf.org/archive/id/draft-irtf-cfrg-rsa-blind-signatures-03.html#appendix-A
-import { modInv, mod } from '../../../../src/crypto/blindrsa/modular'
+import { mod, modInv } from '../../../../src/crypto/blindrsa/modular'
 
 import vectors from './testdata/rsablind_vectors.json'
 

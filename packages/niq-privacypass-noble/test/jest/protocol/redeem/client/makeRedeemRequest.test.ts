@@ -1,10 +1,12 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { makeRedeemRequest } from '../../../../../src/protocol/redeem/client/makeRedeemRequest'
 import { SignedToken } from '../../../../../src/crypto/voprf/types'
 import { testContext } from '../../../testconfig'
 import { IssueResponseInnerSer } from '../../../../../src/protocol/types/ser'
 import { b64dj } from '../../../../../src/crypto/voprf/b64'
 import { wrapAndSerializeRequest } from '../../../../../src/protocol/serdes'
-import { issueResponseRaw, issueRequestUntyped } from '../../fixtures'
+import { issueRequestUntyped, issueResponseRaw } from '../../fixtures'
 
 describe('makeRedeemRequest', () => {
   it('should be possible to create a request to redeem a token', () => {

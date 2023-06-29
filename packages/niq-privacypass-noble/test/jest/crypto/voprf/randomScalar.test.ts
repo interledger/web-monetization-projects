@@ -1,4 +1,5 @@
-import { shake256, Keccak } from '@noble/hashes/sha3'
+import { describe, expect, it } from '@jest/globals'
+import { Keccak, shake256 } from '@noble/hashes/sha3'
 import { p256 } from '@noble/curves/p256'
 import { hexToBytes } from '@noble/hashes/utils'
 

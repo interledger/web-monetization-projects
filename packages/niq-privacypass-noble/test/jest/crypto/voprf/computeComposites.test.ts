@@ -1,7 +1,8 @@
+import { describe, expect, it } from '@jest/globals'
 import { bytesToHex } from '@noble/hashes/utils'
 
 import { computeComposites } from '../../../../src/crypto/voprf/computeComposites'
-import { testConfig, testContext } from '../../testconfig'
+import { testContext } from '../../testconfig'
 
 const P = (hex: string) => testContext.decodePoint(hex)
 

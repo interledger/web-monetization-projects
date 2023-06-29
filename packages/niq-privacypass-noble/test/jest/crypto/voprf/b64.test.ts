@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { b64db, b64eb } from '../../../../src/crypto/voprf/b64'
 
 describe('base64 functions', () => {

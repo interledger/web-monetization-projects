@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals'
 import { hexToBytes } from '@noble/hashes/utils'
 
 import { hashAndInc } from '../../../../src/crypto/voprf/hashAndInc'

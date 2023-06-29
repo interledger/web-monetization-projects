@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { makeIssueRequest } from '../../../../../src/protocol/issue/client/makeIssueRequest'
 import { testContext } from '../../../testconfig'
 import { makeIssueResponse } from '../../../../../src/protocol/issue/server/makeIssueResponse'

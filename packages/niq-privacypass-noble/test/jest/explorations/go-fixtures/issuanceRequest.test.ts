@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { PrivacyPassRequestSer } from '../../../../src/protocol/types/ser'
 import { b64dj, b64ds } from '../../../../src/crypto/voprf/b64'
 import { testContext } from '../../testconfig'

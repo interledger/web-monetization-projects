@@ -1,3 +1,5 @@
+import { describe, expect, it, jest } from '@jest/globals'
+
 import { emsa_pss_encode } from '../../../../src/crypto/blindrsa/util'
 
 // Test vector in file pss_test.go from: https://cs.opensource.google/go/go/+/refs/tags/go1.18.2:src/crypto/rsa/pss_test.go

@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { IssueResponseInnerSer } from '../../../../src/protocol/types/ser'
 import { b64dbn, b64ds } from '../../../../src/crypto/voprf/b64'
 

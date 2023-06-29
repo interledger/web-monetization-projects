@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals'
 import { p256 } from '@noble/curves/p256'
 
 const REQUEST = {

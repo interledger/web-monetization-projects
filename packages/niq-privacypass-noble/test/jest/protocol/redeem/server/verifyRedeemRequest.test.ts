@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { testContext } from '../../../testconfig'
 import { commitment, serverKey, wrappedRedeemRequest } from '../../fixtures'
 import { verifyRedeemRequest } from '../../../../../src/protocol/redeem/server/verifyRedeemRequest'

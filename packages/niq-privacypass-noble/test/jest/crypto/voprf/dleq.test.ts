@@ -1,3 +1,5 @@
+import { describe, expect, it } from '@jest/globals'
+
 import { DLEQ } from '../../../../src/crypto/voprf/dleq'
 import { testContext } from '../../testconfig'
 
