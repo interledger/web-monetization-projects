@@ -14,7 +14,8 @@
   "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/coil-privacypass-sjcl",
   "repository": {
     "type": "git",
-    "url": "git@github.com:coilhq/web-monetization-projects.git"
+    "url": "git@github.com:coilhq/web-monetization-projects.git",
+    "directory": "packages/coil-privacypass-sjcl"
   },
   "license": "BSD-3-Clause",
   "author": "Alex Davidson <coela@alxdavids.xyz>",

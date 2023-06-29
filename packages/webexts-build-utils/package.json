@@ -9,7 +9,8 @@
   "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/webexts-build-utils",
   "repository": {
     "type": "git",
-    "url": "git@github.com:coilhq/web-monetization-projects.git"
+    "url": "git@github.com:coilhq/web-monetization-projects.git",
+    "directory": "packages/webexts-build-utils"
   },
   "license": "Apache-2.0",
   "author": "Coil Team <info@coil.com>",

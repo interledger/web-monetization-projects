@@ -9,7 +9,8 @@
   "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/niq-ci",
   "repository": {
     "type": "git",
-    "url": "git@github.com:coilhq/web-monetization-projects.git"
+    "url": "git@github.com:coilhq/web-monetization-projects.git",
+    "directory": "packages/niq-ci"
   },
   "license": "Apache-2.0",
   "author": "Coil Team <info@coil.com>",

@@ -18,7 +18,8 @@
   "homepage": "https://github.com/coilhq/web-monetization-projects/tree/main/packages/coil-monorepo-upkeep",
   "repository": {
     "type": "git",
-    "url": "git@github.com:coilhq/web-monetization-projects.git"
+    "url": "git@github.com:coilhq/web-monetization-projects.git",
+    "directory": "packages/coil-monorepo-upkeep"
   },
   "license": "Apache-2.0",
   "author": "niq@coil.com",

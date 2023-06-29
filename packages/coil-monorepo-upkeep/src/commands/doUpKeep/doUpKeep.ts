@@ -118,7 +118,7 @@ function setCommonScriptsAndMergeOverrides(
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     homepage: `https://github.com/${githubPath}/tree/main/${pathFromRoot}`,
     keywords: rootPackageJSON.keywords,
-    repository: rootPackageJSON.repository,
+    repository: { ...rootPackageJSON.repository, directory: pathFromRoot },
     main: './build',
     types: './build',
     private: rootPackageJSON.upkeep?.privatePackages ?? undefined,
