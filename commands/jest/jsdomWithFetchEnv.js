@@ -1,5 +1,5 @@
 const { TestEnvironment } = require('jest-environment-jsdom')
-const crypto = require('crypto')
+const crypto = require('node:crypto')
 
 /**
  * Jest creates a new VM context for each test and doesn't add in the node
@@ -13,10 +13,11 @@ class CustomizedTestEnvironment extends TestEnvironment {
 
   async setup() {
     await super.setup()
+    this.global.Uint8Array = globalThis.Uint8Array
     this.global.fetch = globalThis.fetch
     this.global.TextDecoder = globalThis.TextDecoder
     this.global.TextEncoder = globalThis.TextEncoder
-    this.global.crypto.subtle = require('crypto').webcrypto.subtle
+    this.global.crypto.subtle = crypto.webcrypto.subtle
   }
 }
 
