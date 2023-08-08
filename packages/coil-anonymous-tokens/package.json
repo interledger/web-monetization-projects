@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/jsonwebtoken": "9.0.2",
     "@types/sjcl": "1.0.30",
-    "jsonwebtoken": "9.0.0",
+    "jsonwebtoken": "9.0.1",
     "localforage": "1.10.0"
   }
 }
