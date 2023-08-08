@@ -100,7 +100,7 @@
     "@types/uuid": "9.0.2",
     "@webexts/build-utils": "^0.0.0",
     "@wext/shipit": "0.2.1",
-    "addons-linter": "6.9.0",
+    "addons-linter": "6.12.0",
     "crx-hotreload": "1.0.6",
     "foxr": "0.10.1",
     "http-server": "14.1.1",
