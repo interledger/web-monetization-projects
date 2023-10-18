@@ -1,3 +1,5 @@
+This repository is deprecated. See https://github.com/WICG/webmonetization/issues/306.
+
 # Web Monetization Projects
 
 ![Github Actions CI](https://github.com/interledger/web-monetization-projects/actions/workflows/generated-jobs.yml/badge.svg?branch=main)
