@@ -1,4 +1,5 @@
 This repository is deprecated. See https://github.com/WICG/webmonetization/issues/306.
+The new Web Monetization extension is being developed at https://github.com/interledger/web-monetization-extension.
 
 # Web Monetization Projects
 
